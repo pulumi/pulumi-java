@@ -172,7 +172,7 @@ jobs:
           pulumi plugin install resource gcp v6.11.0;
           pulumi plugin install resource random v4.3.1;
       - name: Auth
-        uses: Azure/login@v1
+        uses: azure/login@v1
         with:
           creds: ${{ secrets.AZURE_IAM_SP_CREDS }}
       - env:
@@ -410,7 +410,7 @@ jobs:
           pulumi plugin install resource gcp v6.11.0;
           pulumi plugin install resource random v4.3.1;
       - name: Auth
-        uses: Azure/login@v1
+        uses: azure/login@v1
         with:
           creds: ${{ secrets.AZURE_IAM_SP_CREDS }}
       - env:
