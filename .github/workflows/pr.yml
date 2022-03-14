@@ -113,10 +113,6 @@ jobs:
       - name: Install Pulumi Resource Plugins
         run: |
           pulumi plugin install resource aws v4.37.3;
-          pulumi plugin install resource azure-native v1.56.0;
-          pulumi plugin install resource kubernetes v3.15.1;
-          pulumi plugin install resource gcp v6.11.0;
-          pulumi plugin install resource random v4.3.1;
       - name: run example aws-java-webserver
         run: |
           make install_sdk
@@ -127,7 +123,6 @@ jobs:
             ./gradlew install &&
             pulumi stack rm dev --yes || true
             pulumi stack init dev;
-            pulumi plugin install &&
             pulumi preview"
   example3:
     runs-on: ubuntu-latest
@@ -166,11 +161,7 @@ jobs:
         uses: pulumi/action-install-pulumi-cli@v2
       - name: Install Pulumi Resource Plugins
         run: |
-          pulumi plugin install resource aws v4.37.3;
           pulumi plugin install resource azure-native v1.56.0;
-          pulumi plugin install resource kubernetes v3.15.1;
-          pulumi plugin install resource gcp v6.11.0;
-          pulumi plugin install resource random v4.3.1;
       #- name: Auth
       #  uses: azure/login@v1
       #  with:
@@ -184,8 +175,7 @@ jobs:
         name: run example azure-java-appservice-sql
         run: |
           make install_sdk
-          make provider.azure-native.build
-          make provider.azure-native.install
+          make provider.azure-native.build provider.azure-native.install
           make bin/pulumi-language-jvm
           bash -c  "export PATH=\"$PATH:$(pwd)/bin/\" &&
             cd tests/examples/azure-java-appservice-sql &&
@@ -194,7 +184,6 @@ jobs:
             pulumi stack init dev;
             pulumi config set azure-native:location westus
             pulumi config set azure-java-appservice-sql:sqlPassword not-a-real-password
-            pulumi plugin install &&
             pulumi preview"
   example4:
     runs-on: ubuntu-latest
@@ -232,11 +221,8 @@ jobs:
         uses: pulumi/action-install-pulumi-cli@v2
       - name: Install Pulumi Resource Plugins
         run: |
-          pulumi plugin install resource aws v4.37.3;
-          pulumi plugin install resource azure-native v1.56.0;
           pulumi plugin install resource kubernetes v3.15.1;
           pulumi plugin install resource gcp v6.11.0;
-          pulumi plugin install resource random v4.3.1;
       - uses: google-github-actions/setup-gcloud@master
         with:
           project_id: pulumi-development
@@ -254,7 +240,6 @@ jobs:
             pulumi stack rm dev --yes || true
             pulumi stack init dev;
             pulumi config set gcp:zone us-west1-a
-            pulumi plugin install &&
             pulumi preview"
   example5:
     runs-on: ubuntu-latest
@@ -290,13 +275,6 @@ jobs:
       ###
       - name: Install Pulumi CLI
         uses: pulumi/action-install-pulumi-cli@v2
-      - name: Install Pulumi Resource Plugins
-        run: |
-          pulumi plugin install resource aws v4.37.3;
-          pulumi plugin install resource azure-native v1.56.0;
-          pulumi plugin install resource kubernetes v3.15.1;
-          pulumi plugin install resource gcp v6.11.0;
-          pulumi plugin install resource random v4.3.1;
       - name: run example minimal
         run: |
           make install_sdk
@@ -308,7 +286,6 @@ jobs:
             pulumi stack init dev;
             pulumi config set minimal:name foo &&
             pulumi config set minimal:secret bar &&
-            pulumi plugin install &&
             pulumi preview"
   example6:
     runs-on: ubuntu-latest
@@ -357,10 +334,6 @@ jobs:
         run: |
           pulumi plugin install resource aws v4.37.3;
           pulumi plugin install resource aws-native v0.12.0
-          pulumi plugin install resource azure-native v1.56.0;
-          pulumi plugin install resource kubernetes v3.15.1;
-          pulumi plugin install resource gcp v6.11.0;
-          pulumi plugin install resource random v4.3.1;
       - name: run example aws-native-java-s3-folder
         run: |
           make install_sdk
@@ -373,7 +346,6 @@ jobs:
             pulumi destroy -s dev --yes || true
             pulumi stack rm dev --yes || true
             pulumi stack init dev;
-            pulumi plugin install &&
             pulumi preview"
   example7:
     runs-on: ubuntu-latest
@@ -411,11 +383,7 @@ jobs:
         uses: pulumi/action-install-pulumi-cli@v2
       - name: Install Pulumi Resource Plugins
         run: |
-          pulumi plugin install resource aws v4.37.3;
           pulumi plugin install resource azure-native v1.56.0;
-          pulumi plugin install resource kubernetes v3.15.1;
-          pulumi plugin install resource gcp v6.11.0;
-          pulumi plugin install resource random v4.3.1;
       #- name: Auth
       #  uses: azure/login@v1
       #  with:
@@ -437,7 +405,6 @@ jobs:
             pulumi stack rm dev --yes || true
             pulumi stack init dev;
             pulumi config set azure-native:location westus
-            pulumi plugin install &&
             pulumi preview"
   example8:
     runs-on: ubuntu-latest
@@ -475,10 +442,6 @@ jobs:
         uses: pulumi/action-install-pulumi-cli@v2
       - name: Install Pulumi Resource Plugins
         run: |
-          pulumi plugin install resource aws v4.37.3;
-          pulumi plugin install resource azure-native v1.56.0;
-          pulumi plugin install resource kubernetes v3.15.1;
-          pulumi plugin install resource gcp v6.11.0;
           pulumi plugin install resource random v4.3.1;
       - name: run example random
         run: |
