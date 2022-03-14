@@ -14,7 +14,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.OutputTests;
 import io.pulumi.core.TypeShape;
 import io.pulumi.core.annotations.EnumType;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.core.annotations.OutputCustomType.Constructor;
 import io.pulumi.core.annotations.OutputCustomType.Parameter;
@@ -80,7 +80,7 @@ class ConverterTests {
     @Nested
     class ArgsConverterTest {
         public class SimpleInvokeArgs1 extends InvokeArgs {
-            @InputImport(name = "s")
+            @Import(name = "s")
             @Nullable
             public final String s;
 
@@ -90,7 +90,7 @@ class ConverterTests {
         }
 
         public class ComplexInvokeArgs1 extends InvokeArgs {
-            @InputImport(name = "v")
+            @Import(name = "v")
             @Nullable
             public final SimpleInvokeArgs1 v;
 
@@ -100,7 +100,7 @@ class ConverterTests {
         }
 
         public class SimpleResourceArgs1 extends ResourceArgs {
-            @InputImport(name = "s")
+            @Import(name = "s")
             @Nullable
             public final Output<String> s;
 
@@ -110,7 +110,7 @@ class ConverterTests {
         }
 
         public class ComplexResourceArgs1 extends ResourceArgs {
-            @InputImport(name = "v")
+            @Import(name = "v")
             @Nullable
             public final Output<SimpleResourceArgs1> v;
 

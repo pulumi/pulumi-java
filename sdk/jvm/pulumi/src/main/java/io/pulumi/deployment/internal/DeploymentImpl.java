@@ -13,7 +13,7 @@ import io.pulumi.core.OutputDefault;
 import io.pulumi.core.Tuples;
 import io.pulumi.core.Tuples.Tuple4;
 import io.pulumi.core.TypeShape;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.core.internal.Maps;
 import io.pulumi.core.internal.*;
 import io.pulumi.core.internal.annotations.InternalUse;
@@ -1190,7 +1190,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
 
     // Arguments type for the `getResource` invoke.
     private static class GetResourceInvokeArgs extends InvokeArgs {
-        @InputImport(name = Constants.UrnPropertyName, required = true)
+        @Import(name = Constants.UrnPropertyName, required = true)
         @Nullable
         private final String urn;
 

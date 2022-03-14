@@ -48,7 +48,7 @@ var Objects = JavaUtil.Dot("Objects")
 
 var OutputCustomType = PulumiAnnotations.Dot("OutputCustomType")
 
-var InputImport = PulumiAnnotations.Dot("InputImport")
+var Import = PulumiAnnotations.Dot("Import")
 
 var OutputExport = PulumiAnnotations.Dot("OutputExport")
 

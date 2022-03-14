@@ -508,7 +508,7 @@ func (pt *plainType) genInputProperty(ctx *classFileContext, prop *schema.Proper
 		propertyModifiers = append(propertyModifiers, "final")
 	}
 	printObsoleteAttribute(ctx, prop.DeprecationMessage, indent)
-	fprintf(w, "    @%s(name=\"%s\"%s)\n", ctx.ref(names.InputImport), wireName, attributeArgs)
+	fprintf(w, "    @%s(name=\"%s\"%s)\n", ctx.ref(names.Import), wireName, attributeArgs)
 	fprintf(w, "    %s %s %s;\n\n",
 		strings.Join(propertyModifiers, " "), propertyType.ToCode(ctx.imports), propertyName)
 

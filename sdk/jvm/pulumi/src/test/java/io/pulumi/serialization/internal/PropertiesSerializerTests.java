@@ -5,7 +5,7 @@ import com.google.protobuf.Struct;
 import com.google.protobuf.util.JsonFormat;
 import io.pulumi.Log;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.core.annotations.OutputCustomType.Constructor;
 import io.pulumi.core.annotations.OutputCustomType.Parameter;
 import io.pulumi.core.internal.Internal;
@@ -21,7 +21,7 @@ public class PropertiesSerializerTests {
 
     @Test
     void verifyJsonAttribute() {
-        // InputImport can be marked with json=true.
+        // Import can be marked with json=true.
         // This is currently only used on arguments to provider resources.
         // When serializing json=true properties to protobuf Struct, instead of sending their native
         // Struct representation, we send a protobuf String value with a JSON-formatted Struct representation
@@ -66,27 +66,27 @@ public class PropertiesSerializerTests {
     @SuppressWarnings("unused")
     private static class ExampleResourceArgs extends ResourceArgs {
 
-        @InputImport(name = "str")
+        @Import(name = "str")
         private @Nullable
         Output<String> str;
 
-        @InputImport(name = "strJson", json = true)
+        @Import(name = "strJson", json = true)
         private @Nullable
         Output<String> strJson;
 
-        @InputImport(name = "b")
+        @Import(name = "b")
         private @Nullable
         Output<Boolean> b;
 
-        @InputImport(name = "bJson", json = true)
+        @Import(name = "bJson", json = true)
         private @Nullable
         Output<Boolean> bJson;
 
-        @InputImport(name = "helper")
+        @Import(name = "helper")
         private @Nullable
         Output<HelperArgs> helper;
 
-        @InputImport(name = "helperJson", json = true)
+        @Import(name = "helperJson", json = true)
         private @Nullable
         Output<HelperArgs> helperJson;
 
@@ -132,7 +132,7 @@ public class PropertiesSerializerTests {
 
     private static class HelperArgs extends ResourceArgs {
 
-        @InputImport()
+        @Import()
         @SuppressWarnings({"FieldCanBeLocal", "unused"})
         @Nullable
         private final Output<Integer> intProp;

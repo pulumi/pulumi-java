@@ -3,7 +3,7 @@ package io.pulumi.core.internal;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.TypeShape;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.InputMetadata;
 import io.pulumi.core.internal.annotations.OutputMetadata;
@@ -38,34 +38,34 @@ class InputOutputMetadataTest {
         @OutputExport(type = Double.class)
         private Output<Double> incomplete;
 
-        @InputImport(name = "bar")
+        @Import(name = "bar")
         public final Output<String> explicitBar = Output.of("");
 
-        @InputImport
+        @Import
         final Output<String> implicitBar = Output.of("");
 
         @SuppressWarnings("DefaultAnnotationParam")
-        @InputImport(name = "", required = true, json = true)
+        @Import(name = "", required = true, json = true)
         public final Output<Map<String, Integer>> inputMap = Output.ofMap("k1", 1, "k2", 2);
 
         @SuppressWarnings("DefaultAnnotationParam")
-        @InputImport(name = "", required = true, json = true)
+        @Import(name = "", required = true, json = true)
         public final Output<Map<String, Integer>> inputMapNullsJson = Output.of(nullfulMap("k1", null, "k2", null));
 
         @SuppressWarnings("DefaultAnnotationParam")
-        @InputImport(name = "", required = true, json = false)
+        @Import(name = "", required = true, json = false)
         public final Output<Map<String, Integer>> inputMapNulls = Output.of(nullfulMap("k1", null, "k2", null));
 
-        @InputImport
+        @Import
         public final Output<List<Boolean>> inputList = Output.ofList(true, false);
 
-        @InputImport
+        @Import
         public final String inputless = "test";
 
-        @InputImport
+        @Import
         public final Integer inputlessNull = null;
 
-        @InputImport(json = true)
+        @Import(json = true)
         public final Integer inputlessNullJson = null;
     }
 
