@@ -1,7 +1,6 @@
 package io.pulumi.core.internal;
 
 import com.google.common.collect.ImmutableSet;
-import io.pulumi.core.InputOutput;
 import io.pulumi.core.Output;
 import io.pulumi.core.Tuples;
 import io.pulumi.core.internal.annotations.InternalUse;
@@ -16,8 +15,8 @@ import java.util.concurrent.CompletableFuture;
 
 @ParametersAreNonnullByDefault
 @InternalUse
-public abstract class InputOutputInternal<T, IO extends InputOutput<T, IO> & Copyable<IO>>
-        implements InputOutput<T, IO> {
+public abstract class InputOutputInternal<T>
+        implements Copyable<Output<T>> {
 
     @InternalUse
     public static final Output<Tuples.Tuple0> TupleZeroOut = Output.of(Tuples.Tuple0.Empty);
@@ -49,23 +48,23 @@ public abstract class InputOutputInternal<T, IO extends InputOutput<T, IO> & Cop
         ));
     }
 
-    protected abstract IO newInstance(CompletableFuture<InputOutputData<T>> dataFuture);
+    protected abstract Output<T> newInstance(CompletableFuture<InputOutputData<T>> dataFuture);
 
-    public IO copy() {
+    public Output<T> copy() {
         // we do not copy the OutputData, because it should be immutable
         return newInstance(this.dataFuture.copy()); // TODO: is the copy deep enough
     }
 
-    public IO asPlaintext() { // TODO: this look very unsafe to be exposed, what are the use cases? do we need this?
+    public Output<T> asPlaintext() { // TODO: this look very unsafe to be exposed, what are the use cases? do we need this?
         return withIsSecret(CompletableFuture.completedFuture(false));
     }
 
-    public IO asSecret() {
+    public Output<T> asSecret() {
         return withIsSecret(CompletableFuture.completedFuture(true));
     }
 
     @InternalUse
-    public IO withIsSecret(CompletableFuture<Boolean> isSecretFuture) {
+    public Output<T> withIsSecret(CompletableFuture<Boolean> isSecretFuture) {
         return newInstance(
                 isSecretFuture.thenCompose(
                         secret -> this.dataFuture.thenApply(
@@ -120,16 +119,17 @@ public abstract class InputOutputInternal<T, IO extends InputOutput<T, IO> & Cop
         return this.dataFuture.thenApply(InputOutputData::isPresent);
     }
 
-    static <T, IO extends InputOutput<T, IO> & Copyable<IO>> InputOutputInternal<T, IO> cast(
-            InputOutput<T, IO> inputOutput
+    static <T> InputOutputInternal<T> cast(
+            Output<T> output
     ) {
-        Objects.requireNonNull(inputOutput);
-        if (inputOutput instanceof InputOutputInternal) {
-            return (InputOutputInternal<T, IO>) inputOutput;
+        Objects.requireNonNull(output);
+        if (output instanceof InputOutputInternal) {
+            //noinspection unchecked
+            return (InputOutputInternal<T>) output;
         } else {
             throw new IllegalArgumentException(String.format(
-                    "Expected a 'InputOutputInternal<T, IO>' instance, got: %s",
-                    inputOutput.getClass().getSimpleName()
+                    "Expected a 'InputOutputInternal<T>' instance, got: %s",
+                    output.getClass().getSimpleName()
             ));
         }
     }

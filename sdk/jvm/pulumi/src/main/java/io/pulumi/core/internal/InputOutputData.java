@@ -4,7 +4,6 @@ import com.google.common.base.MoreObjects;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableSet;
 import com.google.errorprone.annotations.CanIgnoreReturnValue;
-import io.pulumi.core.InputOutput;
 import io.pulumi.core.Output;
 import io.pulumi.core.Tuples.*;
 import io.pulumi.core.internal.annotations.InternalUse;
@@ -255,7 +254,7 @@ public final class InputOutputData<T> implements Copyable<InputOutputData<T>> {
 
     @InternalUse
     public static CompletableFuture<InputOutputData<Object>> copyInputOutputData(
-            @SuppressWarnings("rawtypes") @Nullable InputOutput obj
+            @SuppressWarnings("rawtypes") @Nullable Output obj
     ) {
         if (obj == null) {
             return CompletableFuture.completedFuture(InputOutputData.empty());

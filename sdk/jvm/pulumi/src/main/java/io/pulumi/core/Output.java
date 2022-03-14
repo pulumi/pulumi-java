@@ -25,7 +25,7 @@ import static com.google.common.collect.ImmutableMap.toImmutableMap;
 import static io.pulumi.core.internal.InputOutputData.allHelperAsync;
 import static io.pulumi.core.internal.InputOutputInternal.TupleZeroOut;
 
-public interface Output<T> extends InputOutput<T, Output<T>> {
+public interface Output<T> extends Copyable<Output<T>> {
 
     /**
      * Transforms the data of this @see {@link Output<T>} with the provided {@code func}.
@@ -86,6 +86,24 @@ public interface Output<T> extends InputOutput<T, Output<T>> {
             return Output.empty();
         });
     }
+
+    /**
+     * Creates a shallow copy (the underlying CompletableFuture is copied) of this @see {@link Output<T>}
+     * @return a shallow copy of the @see {@link Output<T>}
+     */
+    Output<T> copy();
+
+    /**
+     * Returns a new @see {@link Output<T>} which is a copy of the existing output but marked as
+     * a non-secret. The original output or input is not modified in any way.
+     */
+    Output<T> asPlaintext();
+
+    /**
+     * Returns a new @see {@link Output<T>} which is a copy of the existing output but marked as
+     * a secret. The original output or input is not modified in any way.
+     */
+    Output<T> asSecret();
 
     // Static section -----
 
@@ -173,9 +191,8 @@ public interface Output<T> extends InputOutput<T, Output<T>> {
      * Similarly, if any of the @see {@link Output}s are secrets,
      * then the final result will be a secret.
      */
-    static Output<String> format(String formattableString, @SuppressWarnings("rawtypes") InputOutput... arguments) {
-        var data = Lists.newArrayList(arguments)
-                .stream()
+    static Output<String> format(String formattableString, @SuppressWarnings("rawtypes") Output... arguments) {
+        var data = Lists.newArrayList(arguments).stream()
                 .map(InputOutputData::copyInputOutputData)
                 .collect(Collectors.toList());
 
@@ -430,7 +447,7 @@ public interface Output<T> extends InputOutput<T, Output<T>> {
         }
 
         @CanIgnoreReturnValue
-        public <IO extends InputOutput<E, IO> & Copyable<IO>> Output.ListBuilder<E> add(InputOutput<E, IO> value) {
+        public Output.ListBuilder<E> add(Output<E> value) {
             this.builder.accumulate(
                     Internal.of(value).getDataAsync(),
                     (dataBuilder, data) -> dataBuilder.accumulate(data, ImmutableList.Builder::add)
@@ -644,7 +661,7 @@ public interface Output<T> extends InputOutput<T, Output<T>> {
         }
 
         @CanIgnoreReturnValue
-        public <IO extends InputOutput<V, IO> & Copyable<IO>> Output.MapBuilder<V> put(String key, InputOutput<V, IO> value) {
+        public Output.MapBuilder<V> put(String key, Output<V> value) {
             this.builder.accumulate(
                     Internal.of(value).getDataAsync(),
                     (dataBuilder, data) -> dataBuilder.accumulate(data,

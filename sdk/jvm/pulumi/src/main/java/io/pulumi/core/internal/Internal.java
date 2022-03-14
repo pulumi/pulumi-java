@@ -2,7 +2,7 @@ package io.pulumi.core.internal;
 
 import io.pulumi.Stack;
 import io.pulumi.core.AssetOrArchive;
-import io.pulumi.core.InputOutput;
+import io.pulumi.core.Output;
 import io.pulumi.deployment.CallOptions;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.resources.InputArgs;
@@ -22,8 +22,8 @@ public class Internal {
         throw new UnsupportedOperationException("static class");
     }
 
-    public static <T, IO extends InputOutput<T, IO> & Copyable<IO>> InputOutputInternal<T, IO> of(InputOutput<T, IO> inputOutput) {
-        return InputOutputInternal.cast(inputOutput);
+    public static <T> InputOutputInternal<T> of(Output<T> output) {
+        return InputOutputInternal.cast(output);
     }
 
     public static CallOptions.Internal from(CallOptions o) {

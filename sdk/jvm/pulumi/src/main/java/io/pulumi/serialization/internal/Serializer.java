@@ -10,7 +10,7 @@ import io.pulumi.core.Archive.InvalidArchive;
 import io.pulumi.core.Asset.InvalidAsset;
 import io.pulumi.core.AssetOrArchive;
 import io.pulumi.core.Either;
-import io.pulumi.core.InputOutput;
+import io.pulumi.core.Output;
 import io.pulumi.core.TypeShape;
 import io.pulumi.core.annotations.EnumType;
 import io.pulumi.core.internal.CompletableFutures;
@@ -149,9 +149,9 @@ public class Serializer {
             return CompletableFuture.completedFuture(serializeJson(ctx, element));
         }
 
-        if (prop instanceof InputOutput) {
+        if (prop instanceof Output) {
             //noinspection unchecked
-            var inputOutput = (InputOutput<Object, ?>) prop;
+            var inputOutput = (Output<Object>) prop;
             log.excessive(String.format("Serialize property[%s]: Recursion into InputOutput", ctx));
 
             return Internal.of(inputOutput).getDataAsync().thenCompose(

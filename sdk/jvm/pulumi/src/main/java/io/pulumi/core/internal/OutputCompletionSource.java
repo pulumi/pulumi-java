@@ -4,7 +4,6 @@ import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.ImmutableSet;
 import com.google.common.collect.Sets;
 import com.google.protobuf.Value;
-import io.pulumi.core.InputOutput;
 import io.pulumi.core.Output;
 import io.pulumi.core.TypeShape;
 import io.pulumi.core.internal.annotations.OutputMetadata;
@@ -95,12 +94,12 @@ public class OutputCompletionSource<T> {
         return dataTypeShape;
     }
 
-    public static <T, IO extends InputOutput<T, IO> & Copyable<IO>> OutputCompletionSource<T> of(
-            InputOutput<T, IO> inputOutput,
+    public static <T> OutputCompletionSource<T> of(
+            Output<T> output,
             ImmutableSet<Resource> resources,
             TypeShape<T> fieldTypeShape
     ) {
-        return new OutputCompletionSource<>(Internal.of(inputOutput).dataFuture, resources, fieldTypeShape);
+        return new OutputCompletionSource<>(Internal.of(output).dataFuture, resources, fieldTypeShape);
     }
 
     public static <T> OutputCompletionSource<T> from(

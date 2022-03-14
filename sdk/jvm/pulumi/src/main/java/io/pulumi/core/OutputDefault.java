@@ -15,7 +15,7 @@ import java.util.function.Function;
 
 @InternalUse
 @ParametersAreNonnullByDefault
-public final class OutputDefault<T> extends InputOutputInternal<T, Output<T>> implements Output<T> {
+public final class OutputDefault<T> extends InputOutputInternal<T> implements Output<T> {
 
     OutputDefault(T value) {
         super(value);
