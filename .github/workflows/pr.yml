@@ -171,10 +171,10 @@ jobs:
           pulumi plugin install resource kubernetes v3.15.1;
           pulumi plugin install resource gcp v6.11.0;
           pulumi plugin install resource random v4.3.1;
-      - name: Auth
-        uses: azure/login@v1
-        with:
-          creds: ${{ secrets.AZURE_IAM_SP_CREDS }}
+      #- name: Auth
+      #  uses: azure/login@v1
+      #  with:
+      #    creds: ${{ secrets.AZURE_IAM_SP_CREDS }}
       - env:
           PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
           ARM_CLIENT_ID: ${{ secrets.ARM_CLIENT_ID }}
@@ -412,10 +412,10 @@ jobs:
           pulumi plugin install resource kubernetes v3.15.1;
           pulumi plugin install resource gcp v6.11.0;
           pulumi plugin install resource random v4.3.1;
-      - name: Auth
-        uses: azure/login@v1
-        with:
-          creds: ${{ secrets.AZURE_IAM_SP_CREDS }}
+      #- name: Auth
+      #  uses: azure/login@v1
+      #  with:
+      #    creds: ${{ secrets.AZURE_IAM_SP_CREDS }}
       - env:
           PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
           ARM_CLIENT_ID: ${{ secrets.ARM_CLIENT_ID }}
