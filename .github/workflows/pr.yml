@@ -458,19 +458,11 @@ jobs:
             cd tests/examples/random &&
             ./gradlew install &&
             pulumi stack rm dev --yes;
-            pulumi stack init dev;"
-
-      #pulumi plugin install resource random v4.3.1"
-      - uses: pulumi/actions@v3
-        with:
-          command: up
-          stack-name: dev
-          work-dir: tests/examples/random
-      - uses: pulumi/actions@v3
-        with:
-          command: destroy
-          stack-name: dev
-          work-dir: tests/examples/random
+            pulumi stack init dev;
+            for plugin in `cat app/build.gradle | grep implementation | sed "s/'/ /g" | sed 's/:/ /g'`; do
+               eval echo $plugin | awk '{ print "pulumi plugin install resource " $3 " v" $4 }'
+            done;
+            pulumi preview"
       - name: Integration tests
         run: make integration_tests
     strategy:
