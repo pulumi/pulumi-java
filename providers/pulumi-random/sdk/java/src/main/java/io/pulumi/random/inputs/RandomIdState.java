@@ -4,7 +4,7 @@
 package io.pulumi.random.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class RandomIdState extends io.pulumi.resources.ResourceArgs {
      * The generated id presented in base64 without additional transformations.
      * 
      */
-    @InputImport(name="b64Std")
+    @Import(name="b64Std")
       private final @Nullable Output<String> b64Std;
 
     public Output<String> getB64Std() {
@@ -32,7 +32,7 @@ public final class RandomIdState extends io.pulumi.resources.ResourceArgs {
      * The generated id presented in base64, using the URL-friendly character set: case-sensitive letters, digits and the characters `_` and `-`.
      * 
      */
-    @InputImport(name="b64Url")
+    @Import(name="b64Url")
       private final @Nullable Output<String> b64Url;
 
     public Output<String> getB64Url() {
@@ -43,7 +43,7 @@ public final class RandomIdState extends io.pulumi.resources.ResourceArgs {
      * The number of random bytes to produce. The minimum value is 1, which produces eight bits of randomness.
      * 
      */
-    @InputImport(name="byteLength")
+    @Import(name="byteLength")
       private final @Nullable Output<Integer> byteLength;
 
     public Output<Integer> getByteLength() {
@@ -54,7 +54,7 @@ public final class RandomIdState extends io.pulumi.resources.ResourceArgs {
      * The generated id presented in non-padded decimal digits.
      * 
      */
-    @InputImport(name="dec")
+    @Import(name="dec")
       private final @Nullable Output<String> dec;
 
     public Output<String> getDec() {
@@ -65,7 +65,7 @@ public final class RandomIdState extends io.pulumi.resources.ResourceArgs {
      * The generated id presented in padded hexadecimal digits. This result will always be twice as long as the requested byte length.
      * 
      */
-    @InputImport(name="hex")
+    @Import(name="hex")
       private final @Nullable Output<String> hex;
 
     public Output<String> getHex() {
@@ -76,7 +76,7 @@ public final class RandomIdState extends io.pulumi.resources.ResourceArgs {
      * Arbitrary map of values that, when changed, will trigger recreation of resource. See the main provider documentation for more information.
      * 
      */
-    @InputImport(name="keepers")
+    @Import(name="keepers")
       private final @Nullable Output<Map<String,Object>> keepers;
 
     public Output<Map<String,Object>> getKeepers() {
@@ -87,7 +87,7 @@ public final class RandomIdState extends io.pulumi.resources.ResourceArgs {
      * Arbitrary string to prefix the output value with. This string is supplied as-is, meaning it is not guaranteed to be URL-safe or base64 encoded.
      * 
      */
-    @InputImport(name="prefix")
+    @Import(name="prefix")
       private final @Nullable Output<String> prefix;
 
     public Output<String> getPrefix() {

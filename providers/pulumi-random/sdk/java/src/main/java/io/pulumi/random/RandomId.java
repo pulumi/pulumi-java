@@ -4,7 +4,7 @@
 package io.pulumi.random;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.random.RandomIdArgs;
 import io.pulumi.random.Utilities;
@@ -52,7 +52,7 @@ public class RandomId extends io.pulumi.resources.CustomResource {
      * The generated id presented in base64 without additional transformations.
      * 
      */
-    @OutputExport(name="b64Std", type=String.class, parameters={})
+    @Export(name="b64Std", type=String.class, parameters={})
     private Output<String> b64Std;
 
     /**
@@ -66,7 +66,7 @@ public class RandomId extends io.pulumi.resources.CustomResource {
      * The generated id presented in base64, using the URL-friendly character set: case-sensitive letters, digits and the characters `_` and `-`.
      * 
      */
-    @OutputExport(name="b64Url", type=String.class, parameters={})
+    @Export(name="b64Url", type=String.class, parameters={})
     private Output<String> b64Url;
 
     /**
@@ -80,7 +80,7 @@ public class RandomId extends io.pulumi.resources.CustomResource {
      * The number of random bytes to produce. The minimum value is 1, which produces eight bits of randomness.
      * 
      */
-    @OutputExport(name="byteLength", type=Integer.class, parameters={})
+    @Export(name="byteLength", type=Integer.class, parameters={})
     private Output<Integer> byteLength;
 
     /**
@@ -94,7 +94,7 @@ public class RandomId extends io.pulumi.resources.CustomResource {
      * The generated id presented in non-padded decimal digits.
      * 
      */
-    @OutputExport(name="dec", type=String.class, parameters={})
+    @Export(name="dec", type=String.class, parameters={})
     private Output<String> dec;
 
     /**
@@ -108,7 +108,7 @@ public class RandomId extends io.pulumi.resources.CustomResource {
      * The generated id presented in padded hexadecimal digits. This result will always be twice as long as the requested byte length.
      * 
      */
-    @OutputExport(name="hex", type=String.class, parameters={})
+    @Export(name="hex", type=String.class, parameters={})
     private Output<String> hex;
 
     /**
@@ -122,7 +122,7 @@ public class RandomId extends io.pulumi.resources.CustomResource {
      * Arbitrary map of values that, when changed, will trigger recreation of resource. See the main provider documentation for more information.
      * 
      */
-    @OutputExport(name="keepers", type=Map.class, parameters={String.class, Object.class})
+    @Export(name="keepers", type=Map.class, parameters={String.class, Object.class})
     private Output</* @Nullable */ Map<String,Object>> keepers;
 
     /**
@@ -136,7 +136,7 @@ public class RandomId extends io.pulumi.resources.CustomResource {
      * Arbitrary string to prefix the output value with. This string is supplied as-is, meaning it is not guaranteed to be URL-safe or base64 encoded.
      * 
      */
-    @OutputExport(name="prefix", type=String.class, parameters={})
+    @Export(name="prefix", type=String.class, parameters={})
     private Output</* @Nullable */ String> prefix;
 
     /**

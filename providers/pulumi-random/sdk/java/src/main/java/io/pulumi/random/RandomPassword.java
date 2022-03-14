@@ -4,7 +4,7 @@
 package io.pulumi.random;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.random.RandomPasswordArgs;
 import io.pulumi.random.Utilities;
@@ -38,7 +38,7 @@ public class RandomPassword extends io.pulumi.resources.CustomResource {
      * Arbitrary map of values that, when changed, will trigger recreation of resource. See the main provider documentation for more information.
      * 
      */
-    @OutputExport(name="keepers", type=Map.class, parameters={String.class, Object.class})
+    @Export(name="keepers", type=Map.class, parameters={String.class, Object.class})
     private Output</* @Nullable */ Map<String,Object>> keepers;
 
     /**
@@ -52,7 +52,7 @@ public class RandomPassword extends io.pulumi.resources.CustomResource {
      * The length of the string desired.
      * 
      */
-    @OutputExport(name="length", type=Integer.class, parameters={})
+    @Export(name="length", type=Integer.class, parameters={})
     private Output<Integer> length;
 
     /**
@@ -66,7 +66,7 @@ public class RandomPassword extends io.pulumi.resources.CustomResource {
      * Include lowercase alphabet characters in the result.
      * 
      */
-    @OutputExport(name="lower", type=Boolean.class, parameters={})
+    @Export(name="lower", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> lower;
 
     /**
@@ -80,7 +80,7 @@ public class RandomPassword extends io.pulumi.resources.CustomResource {
      * Minimum number of lowercase alphabet characters in the result.
      * 
      */
-    @OutputExport(name="minLower", type=Integer.class, parameters={})
+    @Export(name="minLower", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> minLower;
 
     /**
@@ -94,7 +94,7 @@ public class RandomPassword extends io.pulumi.resources.CustomResource {
      * Minimum number of numeric characters in the result.
      * 
      */
-    @OutputExport(name="minNumeric", type=Integer.class, parameters={})
+    @Export(name="minNumeric", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> minNumeric;
 
     /**
@@ -108,7 +108,7 @@ public class RandomPassword extends io.pulumi.resources.CustomResource {
      * Minimum number of special characters in the result.
      * 
      */
-    @OutputExport(name="minSpecial", type=Integer.class, parameters={})
+    @Export(name="minSpecial", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> minSpecial;
 
     /**
@@ -122,7 +122,7 @@ public class RandomPassword extends io.pulumi.resources.CustomResource {
      * Minimum number of uppercase alphabet characters in the result.
      * 
      */
-    @OutputExport(name="minUpper", type=Integer.class, parameters={})
+    @Export(name="minUpper", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> minUpper;
 
     /**
@@ -136,7 +136,7 @@ public class RandomPassword extends io.pulumi.resources.CustomResource {
      * Include numeric characters in the result.
      * 
      */
-    @OutputExport(name="number", type=Boolean.class, parameters={})
+    @Export(name="number", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> number;
 
     /**
@@ -150,7 +150,7 @@ public class RandomPassword extends io.pulumi.resources.CustomResource {
      * Supply your own list of special characters to use for string generation.  This overrides the default character list in the special argument.  The `special` argument must still be set to true for any overwritten characters to be used in generation.
      * 
      */
-    @OutputExport(name="overrideSpecial", type=String.class, parameters={})
+    @Export(name="overrideSpecial", type=String.class, parameters={})
     private Output</* @Nullable */ String> overrideSpecial;
 
     /**
@@ -164,7 +164,7 @@ public class RandomPassword extends io.pulumi.resources.CustomResource {
      * The generated random string.
      * 
      */
-    @OutputExport(name="result", type=String.class, parameters={})
+    @Export(name="result", type=String.class, parameters={})
     private Output<String> result;
 
     /**
@@ -178,7 +178,7 @@ public class RandomPassword extends io.pulumi.resources.CustomResource {
      * Include special characters in the result. These are `!@#$%&*()-_=+[]{}<>:?`
      * 
      */
-    @OutputExport(name="special", type=Boolean.class, parameters={})
+    @Export(name="special", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> special;
 
     /**
@@ -192,7 +192,7 @@ public class RandomPassword extends io.pulumi.resources.CustomResource {
      * Include uppercase alphabet characters in the result.
      * 
      */
-    @OutputExport(name="upper", type=Boolean.class, parameters={})
+    @Export(name="upper", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> upper;
 
     /**

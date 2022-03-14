@@ -4,7 +4,7 @@
 package io.pulumi.random.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -20,7 +20,7 @@ public final class RandomUuidState extends io.pulumi.resources.ResourceArgs {
      * Arbitrary map of values that, when changed, will trigger recreation of resource. See the main provider documentation for more information.
      * 
      */
-    @InputImport(name="keepers")
+    @Import(name="keepers")
       private final @Nullable Output<Map<String,Object>> keepers;
 
     public Output<Map<String,Object>> getKeepers() {
@@ -31,7 +31,7 @@ public final class RandomUuidState extends io.pulumi.resources.ResourceArgs {
      * The generated uuid presented in string format.
      * 
      */
-    @InputImport(name="result")
+    @Import(name="result")
       private final @Nullable Output<String> result;
 
     public Output<String> getResult() {
