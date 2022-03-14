@@ -459,8 +459,8 @@ jobs:
             ./gradlew install &&
             pulumi stack rm dev --yes;
             pulumi stack init dev;
-            for plugin in `cat app/build.gradle | grep implementation | sed "s/'/ /g" | sed 's/:/ /g'`; do
-               eval echo $plugin | awk '{ print "pulumi plugin install resource " $3 " v" $4 }'
+            for plugin in `cat ./app/build.gradle | grep implementation | awk '{ print $2 }' | sed "s/'//g"`; do
+               eval $(echo $plugin | sed 's/:/ /g' | awk '{ print "pulumi plugin install resource " $3 " v" $4 }')
             done;
             pulumi preview"
       - name: Integration tests
