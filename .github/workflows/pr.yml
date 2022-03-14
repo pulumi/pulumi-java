@@ -458,10 +458,19 @@ jobs:
             cd tests/examples/random &&
             ./gradlew install &&
             pulumi stack rm dev --yes;
-            pulumi stack init dev;
-            pulumi plugin install resource random v4.3.1
-            pulumi up --yes
-            pulumi destroy --yes"
+            pulumi stack init dev;"
+
+      #pulumi plugin install resource random v4.3.1"
+      - uses: pulumi/actions@v3
+        with:
+          command: up
+          stack-name: dev
+          work-dir: tests/examples/random
+      - uses: pulumi/actions@v3
+        with:
+          command: destroy
+          stack-name: dev
+          work-dir: tests/examples/random
       - name: Integration tests
         run: make integration_tests
     strategy:
