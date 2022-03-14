@@ -78,6 +78,6 @@ public final class MyStack extends Stack {
         this.randomTuple = Output.tuple(this.randomString, this.randomUuid)
                 .applyValue(t -> t.t1 + t.t2);
 
-        this.randomAll = Output.allOutputs(this.randomString, this.randomUuid);
+        this.randomAll = Output.all(this.randomString, this.randomUuid);
     }
 }

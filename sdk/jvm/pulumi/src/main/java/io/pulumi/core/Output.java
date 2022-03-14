@@ -146,31 +146,9 @@ public interface Output<T> extends InputOutput<T, Output<T>> {
     }
 
     /**
-     * Combines all the @see {@link Output<T>} values in {@code outputs}
-     * into a single @see {@link Output<T>} with an @see {@link java.util.List<T>}
-     * containing all their underlying values.
-     * <p/>
-     * If any of the @see {@link Output<T>}s are not known, the final result will be not known.
-     * Similarly, if any of the @see {@link Output<T>}s are secrets, then the final result will be a secret.
-     */
-    @Deprecated
-    @SafeVarargs // safe because we only call List.of, that is also @SafeVarargs
-    static <T> Output<List<T>> allOutputs(Output<T>... outputs) {
-        return all(List.of(outputs));
-    }
-
-    /**
-     * @see Output#allOutputs(Output[])  for more details.
+     * @see Output#all(Output[])  for more details.
      */
     static <T> Output<List<T>> all(Iterable<Output<T>> outputs) {
-        return all(Lists.newArrayList(outputs));
-    }
-
-    /**
-     * @see Output#allOutputs(Output[])  for more details.
-     */
-    @Deprecated
-    static <T> Output<List<T>> allOutputs(Iterable<Output<T>> outputs) {
         return all(Lists.newArrayList(outputs));
     }
 
