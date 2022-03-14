@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.devops.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class PipelineTemplateArgs extends io.pulumi.resources.ResourceArgs
      * Unique identifier of the pipeline template.
      * 
      */
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final Output<String> id;
 
     public Output<String> getId() {
@@ -34,7 +34,7 @@ public final class PipelineTemplateArgs extends io.pulumi.resources.ResourceArgs
      * Dictionary of input parameters used in the pipeline template.
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable Output<Map<String,String>> parameters;
 
     public Output<Map<String,String>> getParameters() {

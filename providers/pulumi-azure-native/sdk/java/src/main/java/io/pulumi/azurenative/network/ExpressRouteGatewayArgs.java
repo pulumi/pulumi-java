@@ -6,7 +6,7 @@ package io.pulumi.azurenative.network;
 import io.pulumi.azurenative.network.inputs.ExpressRouteGatewayPropertiesAutoScaleConfigurationArgs;
 import io.pulumi.azurenative.network.inputs.VirtualHubIdArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class ExpressRouteGatewayArgs extends io.pulumi.resources.ResourceA
      * Configuration for auto scaling.
      * 
      */
-    @InputImport(name="autoScaleConfiguration")
+    @Import(name="autoScaleConfiguration")
       private final @Nullable Output<ExpressRouteGatewayPropertiesAutoScaleConfigurationArgs> autoScaleConfiguration;
 
     public Output<ExpressRouteGatewayPropertiesAutoScaleConfigurationArgs> getAutoScaleConfiguration() {
@@ -32,7 +32,7 @@ public final class ExpressRouteGatewayArgs extends io.pulumi.resources.ResourceA
      * The name of the ExpressRoute gateway.
      * 
      */
-    @InputImport(name="expressRouteGatewayName")
+    @Import(name="expressRouteGatewayName")
       private final @Nullable Output<String> expressRouteGatewayName;
 
     public Output<String> getExpressRouteGatewayName() {
@@ -43,7 +43,7 @@ public final class ExpressRouteGatewayArgs extends io.pulumi.resources.ResourceA
      * Resource ID.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
@@ -54,7 +54,7 @@ public final class ExpressRouteGatewayArgs extends io.pulumi.resources.ResourceA
      * Resource location.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -65,7 +65,7 @@ public final class ExpressRouteGatewayArgs extends io.pulumi.resources.ResourceA
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -76,7 +76,7 @@ public final class ExpressRouteGatewayArgs extends io.pulumi.resources.ResourceA
      * Resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -87,7 +87,7 @@ public final class ExpressRouteGatewayArgs extends io.pulumi.resources.ResourceA
      * The Virtual Hub where the ExpressRoute gateway is or will be deployed.
      * 
      */
-    @InputImport(name="virtualHub", required=true)
+    @Import(name="virtualHub", required=true)
       private final Output<VirtualHubIdArgs> virtualHub;
 
     public Output<VirtualHubIdArgs> getVirtualHub() {

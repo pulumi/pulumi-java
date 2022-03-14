@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.customerinsights.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class ParticipantProfilePropertyReferenceResponse extends io.pulumi
      * The source interaction property that maps to the target profile property.
      * 
      */
-    @InputImport(name="interactionPropertyName", required=true)
+    @Import(name="interactionPropertyName", required=true)
       private final String interactionPropertyName;
 
     public String getInteractionPropertyName() {
@@ -31,7 +31,7 @@ public final class ParticipantProfilePropertyReferenceResponse extends io.pulumi
      * The target profile property that maps to the source interaction property.
      * 
      */
-    @InputImport(name="profilePropertyName", required=true)
+    @Import(name="profilePropertyName", required=true)
       private final String profilePropertyName;
 
     public String getProfilePropertyName() {

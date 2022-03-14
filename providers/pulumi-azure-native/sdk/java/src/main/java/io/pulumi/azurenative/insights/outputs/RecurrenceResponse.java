@@ -4,11 +4,11 @@
 package io.pulumi.azurenative.insights.outputs;
 
 import io.pulumi.azurenative.insights.outputs.RecurrentScheduleResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RecurrenceResponse {
     /**
      * the recurrence frequency. How often the schedule profile should take effect. This value must be Week, meaning each week will have the same set of profiles. For example, to set a daily schedule, set **schedule** to every day of the week. The frequency property specifies that the schedule is repeated weekly.
@@ -21,10 +21,10 @@ public final class RecurrenceResponse {
      */
     private final RecurrentScheduleResponse schedule;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RecurrenceResponse(
-        @OutputCustomType.Parameter("frequency") String frequency,
-        @OutputCustomType.Parameter("schedule") RecurrentScheduleResponse schedule) {
+        @CustomType.Parameter("frequency") String frequency,
+        @CustomType.Parameter("schedule") RecurrentScheduleResponse schedule) {
         this.frequency = frequency;
         this.schedule = schedule;
     }

@@ -8,7 +8,7 @@ import io.pulumi.azurenative.costmanagement.enums.StatusType;
 import io.pulumi.azurenative.costmanagement.inputs.ReportRecurrencePeriodArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +26,7 @@ public final class ReportScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * The schedule recurrence.
      * 
      */
-    @InputImport(name="recurrence", required=true)
+    @Import(name="recurrence", required=true)
       private final Output<Either<String,RecurrenceType>> recurrence;
 
     public Output<Either<String,RecurrenceType>> getRecurrence() {
@@ -37,7 +37,7 @@ public final class ReportScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * Has start and end date of the recurrence. The start date must be in future. If present, the end date must be greater than start date.
      * 
      */
-    @InputImport(name="recurrencePeriod")
+    @Import(name="recurrencePeriod")
       private final @Nullable Output<ReportRecurrencePeriodArgs> recurrencePeriod;
 
     public Output<ReportRecurrencePeriodArgs> getRecurrencePeriod() {
@@ -48,7 +48,7 @@ public final class ReportScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * The status of the schedule. Whether active or not. If inactive, the report's scheduled execution is paused.
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable Output<Either<String,StatusType>> status;
 
     public Output<Either<String,StatusType>> getStatus() {

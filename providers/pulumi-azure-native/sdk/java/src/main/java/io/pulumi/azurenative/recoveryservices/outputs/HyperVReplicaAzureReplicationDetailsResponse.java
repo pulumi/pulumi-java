@@ -7,7 +7,7 @@ import io.pulumi.azurenative.recoveryservices.outputs.AzureVmDiskDetailsResponse
 import io.pulumi.azurenative.recoveryservices.outputs.InitialReplicationDetailsResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.OSDetailsResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.VMNicDetailsResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -16,7 +16,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class HyperVReplicaAzureReplicationDetailsResponse {
     /**
      * Azure VM Disk details.
@@ -155,35 +155,35 @@ public final class HyperVReplicaAzureReplicationDetailsResponse {
      */
     private final @Nullable String vmProtectionStateDescription;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private HyperVReplicaAzureReplicationDetailsResponse(
-        @OutputCustomType.Parameter("azureVmDiskDetails") @Nullable List<AzureVmDiskDetailsResponse> azureVmDiskDetails,
-        @OutputCustomType.Parameter("enableRdpOnTargetOption") @Nullable String enableRdpOnTargetOption,
-        @OutputCustomType.Parameter("encryption") @Nullable String encryption,
-        @OutputCustomType.Parameter("initialReplicationDetails") @Nullable InitialReplicationDetailsResponse initialReplicationDetails,
-        @OutputCustomType.Parameter("instanceType") String instanceType,
-        @OutputCustomType.Parameter("lastReplicatedTime") @Nullable String lastReplicatedTime,
-        @OutputCustomType.Parameter("lastRpoCalculatedTime") @Nullable String lastRpoCalculatedTime,
-        @OutputCustomType.Parameter("licenseType") @Nullable String licenseType,
-        @OutputCustomType.Parameter("oSDetails") @Nullable OSDetailsResponse oSDetails,
-        @OutputCustomType.Parameter("recoveryAvailabilitySetId") @Nullable String recoveryAvailabilitySetId,
-        @OutputCustomType.Parameter("recoveryAzureLogStorageAccountId") @Nullable String recoveryAzureLogStorageAccountId,
-        @OutputCustomType.Parameter("recoveryAzureResourceGroupId") @Nullable String recoveryAzureResourceGroupId,
-        @OutputCustomType.Parameter("recoveryAzureStorageAccount") @Nullable String recoveryAzureStorageAccount,
-        @OutputCustomType.Parameter("recoveryAzureVMSize") @Nullable String recoveryAzureVMSize,
-        @OutputCustomType.Parameter("recoveryAzureVmName") @Nullable String recoveryAzureVmName,
-        @OutputCustomType.Parameter("rpoInSeconds") @Nullable Double rpoInSeconds,
-        @OutputCustomType.Parameter("selectedRecoveryAzureNetworkId") @Nullable String selectedRecoveryAzureNetworkId,
-        @OutputCustomType.Parameter("selectedSourceNicId") @Nullable String selectedSourceNicId,
-        @OutputCustomType.Parameter("sourceVmCpuCount") @Nullable Integer sourceVmCpuCount,
-        @OutputCustomType.Parameter("sourceVmRamSizeInMB") @Nullable Integer sourceVmRamSizeInMB,
-        @OutputCustomType.Parameter("targetAvailabilityZone") @Nullable String targetAvailabilityZone,
-        @OutputCustomType.Parameter("targetProximityPlacementGroupId") @Nullable String targetProximityPlacementGroupId,
-        @OutputCustomType.Parameter("useManagedDisks") @Nullable String useManagedDisks,
-        @OutputCustomType.Parameter("vmId") @Nullable String vmId,
-        @OutputCustomType.Parameter("vmNics") @Nullable List<VMNicDetailsResponse> vmNics,
-        @OutputCustomType.Parameter("vmProtectionState") @Nullable String vmProtectionState,
-        @OutputCustomType.Parameter("vmProtectionStateDescription") @Nullable String vmProtectionStateDescription) {
+        @CustomType.Parameter("azureVmDiskDetails") @Nullable List<AzureVmDiskDetailsResponse> azureVmDiskDetails,
+        @CustomType.Parameter("enableRdpOnTargetOption") @Nullable String enableRdpOnTargetOption,
+        @CustomType.Parameter("encryption") @Nullable String encryption,
+        @CustomType.Parameter("initialReplicationDetails") @Nullable InitialReplicationDetailsResponse initialReplicationDetails,
+        @CustomType.Parameter("instanceType") String instanceType,
+        @CustomType.Parameter("lastReplicatedTime") @Nullable String lastReplicatedTime,
+        @CustomType.Parameter("lastRpoCalculatedTime") @Nullable String lastRpoCalculatedTime,
+        @CustomType.Parameter("licenseType") @Nullable String licenseType,
+        @CustomType.Parameter("oSDetails") @Nullable OSDetailsResponse oSDetails,
+        @CustomType.Parameter("recoveryAvailabilitySetId") @Nullable String recoveryAvailabilitySetId,
+        @CustomType.Parameter("recoveryAzureLogStorageAccountId") @Nullable String recoveryAzureLogStorageAccountId,
+        @CustomType.Parameter("recoveryAzureResourceGroupId") @Nullable String recoveryAzureResourceGroupId,
+        @CustomType.Parameter("recoveryAzureStorageAccount") @Nullable String recoveryAzureStorageAccount,
+        @CustomType.Parameter("recoveryAzureVMSize") @Nullable String recoveryAzureVMSize,
+        @CustomType.Parameter("recoveryAzureVmName") @Nullable String recoveryAzureVmName,
+        @CustomType.Parameter("rpoInSeconds") @Nullable Double rpoInSeconds,
+        @CustomType.Parameter("selectedRecoveryAzureNetworkId") @Nullable String selectedRecoveryAzureNetworkId,
+        @CustomType.Parameter("selectedSourceNicId") @Nullable String selectedSourceNicId,
+        @CustomType.Parameter("sourceVmCpuCount") @Nullable Integer sourceVmCpuCount,
+        @CustomType.Parameter("sourceVmRamSizeInMB") @Nullable Integer sourceVmRamSizeInMB,
+        @CustomType.Parameter("targetAvailabilityZone") @Nullable String targetAvailabilityZone,
+        @CustomType.Parameter("targetProximityPlacementGroupId") @Nullable String targetProximityPlacementGroupId,
+        @CustomType.Parameter("useManagedDisks") @Nullable String useManagedDisks,
+        @CustomType.Parameter("vmId") @Nullable String vmId,
+        @CustomType.Parameter("vmNics") @Nullable List<VMNicDetailsResponse> vmNics,
+        @CustomType.Parameter("vmProtectionState") @Nullable String vmProtectionState,
+        @CustomType.Parameter("vmProtectionStateDescription") @Nullable String vmProtectionStateDescription) {
         this.azureVmDiskDetails = azureVmDiskDetails;
         this.enableRdpOnTargetOption = enableRdpOnTargetOption;
         this.encryption = encryption;

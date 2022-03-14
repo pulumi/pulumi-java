@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.SubResourceResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FirewallPolicyLogAnalyticsWorkspaceResponse {
     /**
      * Region to configure the Workspace.
@@ -23,10 +23,10 @@ public final class FirewallPolicyLogAnalyticsWorkspaceResponse {
      */
     private final @Nullable SubResourceResponse workspaceId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FirewallPolicyLogAnalyticsWorkspaceResponse(
-        @OutputCustomType.Parameter("region") @Nullable String region,
-        @OutputCustomType.Parameter("workspaceId") @Nullable SubResourceResponse workspaceId) {
+        @CustomType.Parameter("region") @Nullable String region,
+        @CustomType.Parameter("workspaceId") @Nullable SubResourceResponse workspaceId) {
         this.region = region;
         this.workspaceId = workspaceId;
     }

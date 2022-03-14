@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.servicefabricmesh.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SettingResponse {
     /**
      * The name of the setting.
@@ -22,10 +22,10 @@ public final class SettingResponse {
      */
     private final @Nullable String value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SettingResponse(
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("value") @Nullable String value) {
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("value") @Nullable String value) {
         this.name = name;
         this.value = value;
     }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class SqlDWUpsertSettingsResponse extends io.pulumi.resources.Invok
      * Schema name for interim table. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="interimSchemaName")
+    @Import(name="interimSchemaName")
       private final @Nullable Object interimSchemaName;
 
     public Optional<Object> getInterimSchemaName() {
@@ -33,7 +33,7 @@ public final class SqlDWUpsertSettingsResponse extends io.pulumi.resources.Invok
      * Key column names for unique row identification. Type: array of strings (or Expression with resultType array of strings).
      * 
      */
-    @InputImport(name="keys")
+    @Import(name="keys")
       private final @Nullable Object keys;
 
     public Optional<Object> getKeys() {

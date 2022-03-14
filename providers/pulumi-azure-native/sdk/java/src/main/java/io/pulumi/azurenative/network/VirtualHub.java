@@ -10,7 +10,7 @@ import io.pulumi.azurenative.network.outputs.VirtualHubRouteTableResponse;
 import io.pulumi.azurenative.network.outputs.VirtualHubRouteTableV2Response;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Double;
@@ -40,7 +40,7 @@ public class VirtualHub extends io.pulumi.resources.CustomResource {
      * Address-prefix for this VirtualHub.
      * 
      */
-    @OutputExport(name="addressPrefix", type=String.class, parameters={})
+    @Export(name="addressPrefix", type=String.class, parameters={})
     private Output</* @Nullable */ String> addressPrefix;
 
     /**
@@ -54,7 +54,7 @@ public class VirtualHub extends io.pulumi.resources.CustomResource {
      * Flag to control transit for VirtualRouter hub.
      * 
      */
-    @OutputExport(name="allowBranchToBranchTraffic", type=Boolean.class, parameters={})
+    @Export(name="allowBranchToBranchTraffic", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> allowBranchToBranchTraffic;
 
     /**
@@ -68,7 +68,7 @@ public class VirtualHub extends io.pulumi.resources.CustomResource {
      * The azureFirewall associated with this VirtualHub.
      * 
      */
-    @OutputExport(name="azureFirewall", type=SubResourceResponse.class, parameters={})
+    @Export(name="azureFirewall", type=SubResourceResponse.class, parameters={})
     private Output</* @Nullable */ SubResourceResponse> azureFirewall;
 
     /**
@@ -82,7 +82,7 @@ public class VirtualHub extends io.pulumi.resources.CustomResource {
      * List of references to Bgp Connections.
      * 
      */
-    @OutputExport(name="bgpConnections", type=List.class, parameters={SubResourceResponse.class})
+    @Export(name="bgpConnections", type=List.class, parameters={SubResourceResponse.class})
     private Output<List<SubResourceResponse>> bgpConnections;
 
     /**
@@ -96,7 +96,7 @@ public class VirtualHub extends io.pulumi.resources.CustomResource {
      * A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -110,7 +110,7 @@ public class VirtualHub extends io.pulumi.resources.CustomResource {
      * The expressRouteGateway associated with this VirtualHub.
      * 
      */
-    @OutputExport(name="expressRouteGateway", type=SubResourceResponse.class, parameters={})
+    @Export(name="expressRouteGateway", type=SubResourceResponse.class, parameters={})
     private Output</* @Nullable */ SubResourceResponse> expressRouteGateway;
 
     /**
@@ -124,7 +124,7 @@ public class VirtualHub extends io.pulumi.resources.CustomResource {
      * List of references to IpConfigurations.
      * 
      */
-    @OutputExport(name="ipConfigurations", type=List.class, parameters={SubResourceResponse.class})
+    @Export(name="ipConfigurations", type=List.class, parameters={SubResourceResponse.class})
     private Output<List<SubResourceResponse>> ipConfigurations;
 
     /**
@@ -138,7 +138,7 @@ public class VirtualHub extends io.pulumi.resources.CustomResource {
      * Resource location.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -152,7 +152,7 @@ public class VirtualHub extends io.pulumi.resources.CustomResource {
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -166,7 +166,7 @@ public class VirtualHub extends io.pulumi.resources.CustomResource {
      * The P2SVpnGateway associated with this VirtualHub.
      * 
      */
-    @OutputExport(name="p2SVpnGateway", type=SubResourceResponse.class, parameters={})
+    @Export(name="p2SVpnGateway", type=SubResourceResponse.class, parameters={})
     private Output</* @Nullable */ SubResourceResponse> p2SVpnGateway;
 
     /**
@@ -180,7 +180,7 @@ public class VirtualHub extends io.pulumi.resources.CustomResource {
      * The provisioning state of the virtual hub resource.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -194,7 +194,7 @@ public class VirtualHub extends io.pulumi.resources.CustomResource {
      * The routeTable associated with this virtual hub.
      * 
      */
-    @OutputExport(name="routeTable", type=VirtualHubRouteTableResponse.class, parameters={})
+    @Export(name="routeTable", type=VirtualHubRouteTableResponse.class, parameters={})
     private Output</* @Nullable */ VirtualHubRouteTableResponse> routeTable;
 
     /**
@@ -208,7 +208,7 @@ public class VirtualHub extends io.pulumi.resources.CustomResource {
      * The routing state.
      * 
      */
-    @OutputExport(name="routingState", type=String.class, parameters={})
+    @Export(name="routingState", type=String.class, parameters={})
     private Output<String> routingState;
 
     /**
@@ -222,7 +222,7 @@ public class VirtualHub extends io.pulumi.resources.CustomResource {
      * The securityPartnerProvider associated with this VirtualHub.
      * 
      */
-    @OutputExport(name="securityPartnerProvider", type=SubResourceResponse.class, parameters={})
+    @Export(name="securityPartnerProvider", type=SubResourceResponse.class, parameters={})
     private Output</* @Nullable */ SubResourceResponse> securityPartnerProvider;
 
     /**
@@ -236,7 +236,7 @@ public class VirtualHub extends io.pulumi.resources.CustomResource {
      * The Security Provider name.
      * 
      */
-    @OutputExport(name="securityProviderName", type=String.class, parameters={})
+    @Export(name="securityProviderName", type=String.class, parameters={})
     private Output</* @Nullable */ String> securityProviderName;
 
     /**
@@ -250,7 +250,7 @@ public class VirtualHub extends io.pulumi.resources.CustomResource {
      * The sku of this VirtualHub.
      * 
      */
-    @OutputExport(name="sku", type=String.class, parameters={})
+    @Export(name="sku", type=String.class, parameters={})
     private Output</* @Nullable */ String> sku;
 
     /**
@@ -264,7 +264,7 @@ public class VirtualHub extends io.pulumi.resources.CustomResource {
      * Resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -278,7 +278,7 @@ public class VirtualHub extends io.pulumi.resources.CustomResource {
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -292,7 +292,7 @@ public class VirtualHub extends io.pulumi.resources.CustomResource {
      * List of all virtual hub route table v2s associated with this VirtualHub.
      * 
      */
-    @OutputExport(name="virtualHubRouteTableV2s", type=List.class, parameters={VirtualHubRouteTableV2Response.class})
+    @Export(name="virtualHubRouteTableV2s", type=List.class, parameters={VirtualHubRouteTableV2Response.class})
     private Output</* @Nullable */ List<VirtualHubRouteTableV2Response>> virtualHubRouteTableV2s;
 
     /**
@@ -306,7 +306,7 @@ public class VirtualHub extends io.pulumi.resources.CustomResource {
      * VirtualRouter ASN.
      * 
      */
-    @OutputExport(name="virtualRouterAsn", type=Double.class, parameters={})
+    @Export(name="virtualRouterAsn", type=Double.class, parameters={})
     private Output</* @Nullable */ Double> virtualRouterAsn;
 
     /**
@@ -320,7 +320,7 @@ public class VirtualHub extends io.pulumi.resources.CustomResource {
      * VirtualRouter IPs.
      * 
      */
-    @OutputExport(name="virtualRouterIps", type=List.class, parameters={String.class})
+    @Export(name="virtualRouterIps", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> virtualRouterIps;
 
     /**
@@ -334,7 +334,7 @@ public class VirtualHub extends io.pulumi.resources.CustomResource {
      * The VirtualWAN to which the VirtualHub belongs.
      * 
      */
-    @OutputExport(name="virtualWan", type=SubResourceResponse.class, parameters={})
+    @Export(name="virtualWan", type=SubResourceResponse.class, parameters={})
     private Output</* @Nullable */ SubResourceResponse> virtualWan;
 
     /**
@@ -348,7 +348,7 @@ public class VirtualHub extends io.pulumi.resources.CustomResource {
      * The VpnGateway associated with this VirtualHub.
      * 
      */
-    @OutputExport(name="vpnGateway", type=SubResourceResponse.class, parameters={})
+    @Export(name="vpnGateway", type=SubResourceResponse.class, parameters={})
     private Output</* @Nullable */ SubResourceResponse> vpnGateway;
 
     /**

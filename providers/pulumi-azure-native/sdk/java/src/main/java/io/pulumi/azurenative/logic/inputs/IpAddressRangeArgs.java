@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.logic.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class IpAddressRangeArgs extends io.pulumi.resources.ResourceArgs {
      * The IP address range.
      * 
      */
-    @InputImport(name="addressRange")
+    @Import(name="addressRange")
       private final @Nullable Output<String> addressRange;
 
     public Output<String> getAddressRange() {

@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.machinelearning.outputs;
 
 import io.pulumi.azurenative.machinelearning.outputs.TableSpecificationResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ServiceInputOutputSpecificationResponse {
     /**
      * The description of the Swagger schema.
@@ -34,12 +34,12 @@ public final class ServiceInputOutputSpecificationResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServiceInputOutputSpecificationResponse(
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("properties") Map<String,TableSpecificationResponse> properties,
-        @OutputCustomType.Parameter("title") @Nullable String title,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("properties") Map<String,TableSpecificationResponse> properties,
+        @CustomType.Parameter("title") @Nullable String title,
+        @CustomType.Parameter("type") String type) {
         this.description = description;
         this.properties = properties;
         this.title = title;

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.aadiam.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetDiagnosticSettingArgs extends io.pulumi.resources.InvokeAr
      * The name of the diagnostic setting.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {

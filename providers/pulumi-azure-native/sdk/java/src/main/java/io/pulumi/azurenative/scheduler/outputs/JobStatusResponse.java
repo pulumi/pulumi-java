@@ -3,12 +3,12 @@
 
 package io.pulumi.azurenative.scheduler.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class JobStatusResponse {
     /**
      * Gets the number of times this job has executed.
@@ -36,13 +36,13 @@ public final class JobStatusResponse {
      */
     private final String nextExecutionTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private JobStatusResponse(
-        @OutputCustomType.Parameter("executionCount") Integer executionCount,
-        @OutputCustomType.Parameter("failureCount") Integer failureCount,
-        @OutputCustomType.Parameter("faultedCount") Integer faultedCount,
-        @OutputCustomType.Parameter("lastExecutionTime") String lastExecutionTime,
-        @OutputCustomType.Parameter("nextExecutionTime") String nextExecutionTime) {
+        @CustomType.Parameter("executionCount") Integer executionCount,
+        @CustomType.Parameter("failureCount") Integer failureCount,
+        @CustomType.Parameter("faultedCount") Integer faultedCount,
+        @CustomType.Parameter("lastExecutionTime") String lastExecutionTime,
+        @CustomType.Parameter("nextExecutionTime") String nextExecutionTime) {
         this.executionCount = executionCount;
         this.failureCount = failureCount;
         this.faultedCount = faultedCount;

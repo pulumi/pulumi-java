@@ -8,13 +8,13 @@ import io.pulumi.azurenative.media.outputs.CommonEncryptionCencResponse;
 import io.pulumi.azurenative.media.outputs.EnvelopeEncryptionResponse;
 import io.pulumi.azurenative.media.outputs.NoEncryptionResponse;
 import io.pulumi.azurenative.media.outputs.SystemDataResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetStreamingPolicyResult {
     /**
      * Configuration of CommonEncryptionCbcs
@@ -67,18 +67,18 @@ public final class GetStreamingPolicyResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetStreamingPolicyResult(
-        @OutputCustomType.Parameter("commonEncryptionCbcs") @Nullable CommonEncryptionCbcsResponse commonEncryptionCbcs,
-        @OutputCustomType.Parameter("commonEncryptionCenc") @Nullable CommonEncryptionCencResponse commonEncryptionCenc,
-        @OutputCustomType.Parameter("created") String created,
-        @OutputCustomType.Parameter("defaultContentKeyPolicyName") @Nullable String defaultContentKeyPolicyName,
-        @OutputCustomType.Parameter("envelopeEncryption") @Nullable EnvelopeEncryptionResponse envelopeEncryption,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("noEncryption") @Nullable NoEncryptionResponse noEncryption,
-        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("commonEncryptionCbcs") @Nullable CommonEncryptionCbcsResponse commonEncryptionCbcs,
+        @CustomType.Parameter("commonEncryptionCenc") @Nullable CommonEncryptionCencResponse commonEncryptionCenc,
+        @CustomType.Parameter("created") String created,
+        @CustomType.Parameter("defaultContentKeyPolicyName") @Nullable String defaultContentKeyPolicyName,
+        @CustomType.Parameter("envelopeEncryption") @Nullable EnvelopeEncryptionResponse envelopeEncryption,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("noEncryption") @Nullable NoEncryptionResponse noEncryption,
+        @CustomType.Parameter("systemData") SystemDataResponse systemData,
+        @CustomType.Parameter("type") String type) {
         this.commonEncryptionCbcs = commonEncryptionCbcs;
         this.commonEncryptionCenc = commonEncryptionCenc;
         this.created = created;

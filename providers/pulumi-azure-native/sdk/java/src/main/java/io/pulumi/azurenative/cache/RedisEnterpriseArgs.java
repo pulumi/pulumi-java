@@ -7,7 +7,7 @@ import io.pulumi.azurenative.cache.enums.TlsVersion;
 import io.pulumi.azurenative.cache.inputs.EnterpriseSkuArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -23,7 +23,7 @@ public final class RedisEnterpriseArgs extends io.pulumi.resources.ResourceArgs 
      * The name of the RedisEnterprise cluster.
      * 
      */
-    @InputImport(name="clusterName")
+    @Import(name="clusterName")
       private final @Nullable Output<String> clusterName;
 
     public Output<String> getClusterName() {
@@ -34,7 +34,7 @@ public final class RedisEnterpriseArgs extends io.pulumi.resources.ResourceArgs 
      * The geo-location where the resource lives
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -45,7 +45,7 @@ public final class RedisEnterpriseArgs extends io.pulumi.resources.ResourceArgs 
      * The minimum TLS version for the cluster to support, e.g. '1.2'
      * 
      */
-    @InputImport(name="minimumTlsVersion")
+    @Import(name="minimumTlsVersion")
       private final @Nullable Output<Either<String,TlsVersion>> minimumTlsVersion;
 
     public Output<Either<String,TlsVersion>> getMinimumTlsVersion() {
@@ -56,7 +56,7 @@ public final class RedisEnterpriseArgs extends io.pulumi.resources.ResourceArgs 
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -67,7 +67,7 @@ public final class RedisEnterpriseArgs extends io.pulumi.resources.ResourceArgs 
      * The SKU to create, which affects price, performance, and features.
      * 
      */
-    @InputImport(name="sku", required=true)
+    @Import(name="sku", required=true)
       private final Output<EnterpriseSkuArgs> sku;
 
     public Output<EnterpriseSkuArgs> getSku() {
@@ -78,7 +78,7 @@ public final class RedisEnterpriseArgs extends io.pulumi.resources.ResourceArgs 
      * Resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -89,7 +89,7 @@ public final class RedisEnterpriseArgs extends io.pulumi.resources.ResourceArgs 
      * The Availability Zones where this cluster will be deployed.
      * 
      */
-    @InputImport(name="zones")
+    @Import(name="zones")
       private final @Nullable Output<List<String>> zones;
 
     public Output<List<String>> getZones() {

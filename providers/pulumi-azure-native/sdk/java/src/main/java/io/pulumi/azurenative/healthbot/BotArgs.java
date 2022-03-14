@@ -5,7 +5,7 @@ package io.pulumi.azurenative.healthbot;
 
 import io.pulumi.azurenative.healthbot.inputs.SkuArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class BotArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the Bot resource.
      * 
      */
-    @InputImport(name="botName")
+    @Import(name="botName")
       private final @Nullable Output<String> botName;
 
     public Output<String> getBotName() {
@@ -31,7 +31,7 @@ public final class BotArgs extends io.pulumi.resources.ResourceArgs {
      * The geo-location where the resource lives
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -42,7 +42,7 @@ public final class BotArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the Bot resource group in the user subscription.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -53,7 +53,7 @@ public final class BotArgs extends io.pulumi.resources.ResourceArgs {
      * SKU of the HealthBot.
      * 
      */
-    @InputImport(name="sku", required=true)
+    @Import(name="sku", required=true)
       private final Output<SkuArgs> sku;
 
     public Output<SkuArgs> getSku() {
@@ -64,7 +64,7 @@ public final class BotArgs extends io.pulumi.resources.ResourceArgs {
      * Resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

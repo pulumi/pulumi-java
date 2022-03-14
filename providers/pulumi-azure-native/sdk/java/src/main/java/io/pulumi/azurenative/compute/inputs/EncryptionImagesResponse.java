@@ -5,7 +5,7 @@ package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.azurenative.compute.inputs.DataDiskImageEncryptionResponse;
 import io.pulumi.azurenative.compute.inputs.OSDiskImageEncryptionResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class EncryptionImagesResponse extends io.pulumi.resources.InvokeAr
      * A list of encryption specifications for data disk images.
      * 
      */
-    @InputImport(name="dataDiskImages")
+    @Import(name="dataDiskImages")
       private final @Nullable List<DataDiskImageEncryptionResponse> dataDiskImages;
 
     public List<DataDiskImageEncryptionResponse> getDataDiskImages() {
@@ -35,7 +35,7 @@ public final class EncryptionImagesResponse extends io.pulumi.resources.InvokeAr
      * Contains encryption settings for an OS disk image.
      * 
      */
-    @InputImport(name="osDiskImage")
+    @Import(name="osDiskImage")
       private final @Nullable OSDiskImageEncryptionResponse osDiskImage;
 
     public Optional<OSDiskImageEncryptionResponse> getOsDiskImage() {

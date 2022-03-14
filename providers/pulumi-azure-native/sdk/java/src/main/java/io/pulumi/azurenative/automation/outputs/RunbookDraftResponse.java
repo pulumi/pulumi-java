@@ -5,7 +5,7 @@ package io.pulumi.azurenative.automation.outputs;
 
 import io.pulumi.azurenative.automation.outputs.ContentLinkResponse;
 import io.pulumi.azurenative.automation.outputs.RunbookParameterResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -14,7 +14,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RunbookDraftResponse {
     /**
      * Gets or sets the creation time of the runbook draft.
@@ -47,14 +47,14 @@ public final class RunbookDraftResponse {
      */
     private final @Nullable Map<String,RunbookParameterResponse> parameters;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RunbookDraftResponse(
-        @OutputCustomType.Parameter("creationTime") @Nullable String creationTime,
-        @OutputCustomType.Parameter("draftContentLink") @Nullable ContentLinkResponse draftContentLink,
-        @OutputCustomType.Parameter("inEdit") @Nullable Boolean inEdit,
-        @OutputCustomType.Parameter("lastModifiedTime") @Nullable String lastModifiedTime,
-        @OutputCustomType.Parameter("outputTypes") @Nullable List<String> outputTypes,
-        @OutputCustomType.Parameter("parameters") @Nullable Map<String,RunbookParameterResponse> parameters) {
+        @CustomType.Parameter("creationTime") @Nullable String creationTime,
+        @CustomType.Parameter("draftContentLink") @Nullable ContentLinkResponse draftContentLink,
+        @CustomType.Parameter("inEdit") @Nullable Boolean inEdit,
+        @CustomType.Parameter("lastModifiedTime") @Nullable String lastModifiedTime,
+        @CustomType.Parameter("outputTypes") @Nullable List<String> outputTypes,
+        @CustomType.Parameter("parameters") @Nullable Map<String,RunbookParameterResponse> parameters) {
         this.creationTime = creationTime;
         this.draftContentLink = draftContentLink;
         this.inEdit = inEdit;

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.datamigration.inputs;
 
 import io.pulumi.azurenative.datamigration.inputs.FileShareArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class MigrateSqlServerSqlMIDatabaseInputArgs extends io.pulumi.reso
      * The list of backup files to be used in case of existing backups.
      * 
      */
-    @InputImport(name="backupFilePaths")
+    @Import(name="backupFilePaths")
       private final @Nullable Output<List<String>> backupFilePaths;
 
     public Output<List<String>> getBackupFilePaths() {
@@ -35,7 +35,7 @@ public final class MigrateSqlServerSqlMIDatabaseInputArgs extends io.pulumi.reso
      * Backup file share information for backing up this database.
      * 
      */
-    @InputImport(name="backupFileShare")
+    @Import(name="backupFileShare")
       private final @Nullable Output<FileShareArgs> backupFileShare;
 
     public Output<FileShareArgs> getBackupFileShare() {
@@ -46,7 +46,7 @@ public final class MigrateSqlServerSqlMIDatabaseInputArgs extends io.pulumi.reso
      * Name of the database
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -57,7 +57,7 @@ public final class MigrateSqlServerSqlMIDatabaseInputArgs extends io.pulumi.reso
      * Name of the database at destination
      * 
      */
-    @InputImport(name="restoreDatabaseName", required=true)
+    @Import(name="restoreDatabaseName", required=true)
       private final Output<String> restoreDatabaseName;
 
     public Output<String> getRestoreDatabaseName() {

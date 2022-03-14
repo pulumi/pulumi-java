@@ -5,7 +5,7 @@ package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.azurenative.web.inputs.ScaleRuleAuthArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class QueueScaleRuleArgs extends io.pulumi.resources.ResourceArgs {
      * Authentication secrets for the queue scale rule.
      * 
      */
-    @InputImport(name="auth")
+    @Import(name="auth")
       private final @Nullable Output<List<ScaleRuleAuthArgs>> auth;
 
     public Output<List<ScaleRuleAuthArgs>> getAuth() {
@@ -36,7 +36,7 @@ public final class QueueScaleRuleArgs extends io.pulumi.resources.ResourceArgs {
      * Queue length.
      * 
      */
-    @InputImport(name="queueLength")
+    @Import(name="queueLength")
       private final @Nullable Output<Integer> queueLength;
 
     public Output<Integer> getQueueLength() {
@@ -47,7 +47,7 @@ public final class QueueScaleRuleArgs extends io.pulumi.resources.ResourceArgs {
      * Queue name.
      * 
      */
-    @InputImport(name="queueName")
+    @Import(name="queueName")
       private final @Nullable Output<String> queueName;
 
     public Output<String> getQueueName() {

@@ -9,7 +9,7 @@ import io.pulumi.azurenative.network.inputs.PrivateLinkServiceIpConfigurationArg
 import io.pulumi.azurenative.network.inputs.PrivateLinkServicePropertiesAutoApprovalArgs;
 import io.pulumi.azurenative.network.inputs.PrivateLinkServicePropertiesVisibilityArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +26,7 @@ public final class PrivateLinkServiceArgs extends io.pulumi.resources.ResourceAr
      * The auto-approval list of the private link service.
      * 
      */
-    @InputImport(name="autoApproval")
+    @Import(name="autoApproval")
       private final @Nullable Output<PrivateLinkServicePropertiesAutoApprovalArgs> autoApproval;
 
     public Output<PrivateLinkServicePropertiesAutoApprovalArgs> getAutoApproval() {
@@ -37,7 +37,7 @@ public final class PrivateLinkServiceArgs extends io.pulumi.resources.ResourceAr
      * Whether the private link service is enabled for proxy protocol or not.
      * 
      */
-    @InputImport(name="enableProxyProtocol")
+    @Import(name="enableProxyProtocol")
       private final @Nullable Output<Boolean> enableProxyProtocol;
 
     public Output<Boolean> getEnableProxyProtocol() {
@@ -48,7 +48,7 @@ public final class PrivateLinkServiceArgs extends io.pulumi.resources.ResourceAr
      * The extended location of the load balancer.
      * 
      */
-    @InputImport(name="extendedLocation")
+    @Import(name="extendedLocation")
       private final @Nullable Output<ExtendedLocationArgs> extendedLocation;
 
     public Output<ExtendedLocationArgs> getExtendedLocation() {
@@ -59,7 +59,7 @@ public final class PrivateLinkServiceArgs extends io.pulumi.resources.ResourceAr
      * The list of Fqdn.
      * 
      */
-    @InputImport(name="fqdns")
+    @Import(name="fqdns")
       private final @Nullable Output<List<String>> fqdns;
 
     public Output<List<String>> getFqdns() {
@@ -70,7 +70,7 @@ public final class PrivateLinkServiceArgs extends io.pulumi.resources.ResourceAr
      * Resource ID.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
@@ -81,7 +81,7 @@ public final class PrivateLinkServiceArgs extends io.pulumi.resources.ResourceAr
      * An array of private link service IP configurations.
      * 
      */
-    @InputImport(name="ipConfigurations")
+    @Import(name="ipConfigurations")
       private final @Nullable Output<List<PrivateLinkServiceIpConfigurationArgs>> ipConfigurations;
 
     public Output<List<PrivateLinkServiceIpConfigurationArgs>> getIpConfigurations() {
@@ -92,7 +92,7 @@ public final class PrivateLinkServiceArgs extends io.pulumi.resources.ResourceAr
      * An array of references to the load balancer IP configurations.
      * 
      */
-    @InputImport(name="loadBalancerFrontendIpConfigurations")
+    @Import(name="loadBalancerFrontendIpConfigurations")
       private final @Nullable Output<List<FrontendIPConfigurationArgs>> loadBalancerFrontendIpConfigurations;
 
     public Output<List<FrontendIPConfigurationArgs>> getLoadBalancerFrontendIpConfigurations() {
@@ -103,7 +103,7 @@ public final class PrivateLinkServiceArgs extends io.pulumi.resources.ResourceAr
      * Resource location.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -114,7 +114,7 @@ public final class PrivateLinkServiceArgs extends io.pulumi.resources.ResourceAr
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -125,7 +125,7 @@ public final class PrivateLinkServiceArgs extends io.pulumi.resources.ResourceAr
      * The name of the private link service.
      * 
      */
-    @InputImport(name="serviceName")
+    @Import(name="serviceName")
       private final @Nullable Output<String> serviceName;
 
     public Output<String> getServiceName() {
@@ -136,7 +136,7 @@ public final class PrivateLinkServiceArgs extends io.pulumi.resources.ResourceAr
      * Resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -147,7 +147,7 @@ public final class PrivateLinkServiceArgs extends io.pulumi.resources.ResourceAr
      * The visibility list of the private link service.
      * 
      */
-    @InputImport(name="visibility")
+    @Import(name="visibility")
       private final @Nullable Output<PrivateLinkServicePropertiesVisibilityArgs> visibility;
 
     public Output<PrivateLinkServicePropertiesVisibilityArgs> getVisibility() {

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.insights.inputs;
 
 import io.pulumi.azurenative.insights.inputs.CriteriaArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class LogToMetricActionArgs extends io.pulumi.resources.ResourceArg
      * Criteria of Metric
      * 
      */
-    @InputImport(name="criteria", required=true)
+    @Import(name="criteria", required=true)
       private final Output<List<CriteriaArgs>> criteria;
 
     public Output<List<CriteriaArgs>> getCriteria() {
@@ -35,7 +35,7 @@ public final class LogToMetricActionArgs extends io.pulumi.resources.ResourceArg
      * Expected value is 'Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.LogToMetricAction'.
      * 
      */
-    @InputImport(name="odataType", required=true)
+    @Import(name="odataType", required=true)
       private final Output<String> odataType;
 
     public Output<String> getOdataType() {

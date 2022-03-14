@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.devices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RoutingStorageContainerPropertiesResponse {
     /**
      * Method used to authenticate against the storage endpoint
@@ -73,20 +73,20 @@ public final class RoutingStorageContainerPropertiesResponse {
      */
     private final @Nullable String subscriptionId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RoutingStorageContainerPropertiesResponse(
-        @OutputCustomType.Parameter("authenticationType") @Nullable String authenticationType,
-        @OutputCustomType.Parameter("batchFrequencyInSeconds") @Nullable Integer batchFrequencyInSeconds,
-        @OutputCustomType.Parameter("connectionString") @Nullable String connectionString,
-        @OutputCustomType.Parameter("containerName") String containerName,
-        @OutputCustomType.Parameter("encoding") @Nullable String encoding,
-        @OutputCustomType.Parameter("endpointUri") @Nullable String endpointUri,
-        @OutputCustomType.Parameter("fileNameFormat") @Nullable String fileNameFormat,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("maxChunkSizeInBytes") @Nullable Integer maxChunkSizeInBytes,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("resourceGroup") @Nullable String resourceGroup,
-        @OutputCustomType.Parameter("subscriptionId") @Nullable String subscriptionId) {
+        @CustomType.Parameter("authenticationType") @Nullable String authenticationType,
+        @CustomType.Parameter("batchFrequencyInSeconds") @Nullable Integer batchFrequencyInSeconds,
+        @CustomType.Parameter("connectionString") @Nullable String connectionString,
+        @CustomType.Parameter("containerName") String containerName,
+        @CustomType.Parameter("encoding") @Nullable String encoding,
+        @CustomType.Parameter("endpointUri") @Nullable String endpointUri,
+        @CustomType.Parameter("fileNameFormat") @Nullable String fileNameFormat,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("maxChunkSizeInBytes") @Nullable Integer maxChunkSizeInBytes,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("resourceGroup") @Nullable String resourceGroup,
+        @CustomType.Parameter("subscriptionId") @Nullable String subscriptionId) {
         this.authenticationType = authenticationType;
         this.batchFrequencyInSeconds = batchFrequencyInSeconds;
         this.connectionString = connectionString;

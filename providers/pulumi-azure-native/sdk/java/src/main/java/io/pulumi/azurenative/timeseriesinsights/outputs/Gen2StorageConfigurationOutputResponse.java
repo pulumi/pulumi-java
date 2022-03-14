@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.timeseriesinsights.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class Gen2StorageConfigurationOutputResponse {
     /**
      * The name of the storage account that will hold the environment's Gen2 data.
@@ -15,8 +15,8 @@ public final class Gen2StorageConfigurationOutputResponse {
      */
     private final String accountName;
 
-    @OutputCustomType.Constructor
-    private Gen2StorageConfigurationOutputResponse(@OutputCustomType.Parameter("accountName") String accountName) {
+    @CustomType.Constructor
+    private Gen2StorageConfigurationOutputResponse(@CustomType.Parameter("accountName") String accountName) {
         this.accountName = accountName;
     }
 

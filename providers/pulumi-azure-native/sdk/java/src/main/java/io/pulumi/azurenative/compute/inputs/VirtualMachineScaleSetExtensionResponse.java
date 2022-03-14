@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.compute.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class VirtualMachineScaleSetExtensionResponse extends io.pulumi.res
      * Indicates whether the extension should use a newer minor version if one is available at deployment time. Once deployed, however, the extension will not upgrade minor versions unless redeployed, even with this property set to true.
      * 
      */
-    @InputImport(name="autoUpgradeMinorVersion")
+    @Import(name="autoUpgradeMinorVersion")
       private final @Nullable Boolean autoUpgradeMinorVersion;
 
     public Optional<Boolean> getAutoUpgradeMinorVersion() {
@@ -36,7 +36,7 @@ public final class VirtualMachineScaleSetExtensionResponse extends io.pulumi.res
      * Indicates whether the extension should be automatically upgraded by the platform if there is a newer version of the extension available.
      * 
      */
-    @InputImport(name="enableAutomaticUpgrade")
+    @Import(name="enableAutomaticUpgrade")
       private final @Nullable Boolean enableAutomaticUpgrade;
 
     public Optional<Boolean> getEnableAutomaticUpgrade() {
@@ -47,7 +47,7 @@ public final class VirtualMachineScaleSetExtensionResponse extends io.pulumi.res
      * If a value is provided and is different from the previous value, the extension handler will be forced to update even if the extension configuration has not changed.
      * 
      */
-    @InputImport(name="forceUpdateTag")
+    @Import(name="forceUpdateTag")
       private final @Nullable String forceUpdateTag;
 
     public Optional<String> getForceUpdateTag() {
@@ -58,7 +58,7 @@ public final class VirtualMachineScaleSetExtensionResponse extends io.pulumi.res
      * Resource Id
      * 
      */
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final String id;
 
     public String getId() {
@@ -69,7 +69,7 @@ public final class VirtualMachineScaleSetExtensionResponse extends io.pulumi.res
      * The name of the extension.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -80,7 +80,7 @@ public final class VirtualMachineScaleSetExtensionResponse extends io.pulumi.res
      * The extension can contain either protectedSettings or protectedSettingsFromKeyVault or no protected settings at all.
      * 
      */
-    @InputImport(name="protectedSettings")
+    @Import(name="protectedSettings")
       private final @Nullable Object protectedSettings;
 
     public Optional<Object> getProtectedSettings() {
@@ -91,7 +91,7 @@ public final class VirtualMachineScaleSetExtensionResponse extends io.pulumi.res
      * Collection of extension names after which this extension needs to be provisioned.
      * 
      */
-    @InputImport(name="provisionAfterExtensions")
+    @Import(name="provisionAfterExtensions")
       private final @Nullable List<String> provisionAfterExtensions;
 
     public List<String> getProvisionAfterExtensions() {
@@ -102,7 +102,7 @@ public final class VirtualMachineScaleSetExtensionResponse extends io.pulumi.res
      * The provisioning state, which only appears in the response.
      * 
      */
-    @InputImport(name="provisioningState", required=true)
+    @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
     public String getProvisioningState() {
@@ -113,7 +113,7 @@ public final class VirtualMachineScaleSetExtensionResponse extends io.pulumi.res
      * The name of the extension handler publisher.
      * 
      */
-    @InputImport(name="publisher")
+    @Import(name="publisher")
       private final @Nullable String publisher;
 
     public Optional<String> getPublisher() {
@@ -124,7 +124,7 @@ public final class VirtualMachineScaleSetExtensionResponse extends io.pulumi.res
      * Json formatted public settings for the extension.
      * 
      */
-    @InputImport(name="settings")
+    @Import(name="settings")
       private final @Nullable Object settings;
 
     public Optional<Object> getSettings() {
@@ -135,7 +135,7 @@ public final class VirtualMachineScaleSetExtensionResponse extends io.pulumi.res
      * Resource type
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {
@@ -146,7 +146,7 @@ public final class VirtualMachineScaleSetExtensionResponse extends io.pulumi.res
      * Specifies the version of the script handler.
      * 
      */
-    @InputImport(name="typeHandlerVersion")
+    @Import(name="typeHandlerVersion")
       private final @Nullable String typeHandlerVersion;
 
     public Optional<String> getTypeHandlerVersion() {

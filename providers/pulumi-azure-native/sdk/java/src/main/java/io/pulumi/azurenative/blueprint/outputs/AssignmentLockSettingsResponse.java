@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.blueprint.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AssignmentLockSettingsResponse {
     /**
      * List of management operations that are excluded from blueprint locks. Up to 200 actions are permitted. If the lock mode is set to 'AllResourcesReadOnly', then the following actions are automatically appended to 'excludedActions': '*{@literal /}read', 'Microsoft.Network/virtualNetworks/subnets/join/action' and 'Microsoft.Authorization/locks/delete'. If the lock mode is set to 'AllResourcesDoNotDelete', then the following actions are automatically appended to 'excludedActions': 'Microsoft.Authorization/locks/delete'. Duplicate actions will get removed.
@@ -28,11 +28,11 @@ public final class AssignmentLockSettingsResponse {
      */
     private final @Nullable String mode;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AssignmentLockSettingsResponse(
-        @OutputCustomType.Parameter("excludedActions") @Nullable List<String> excludedActions,
-        @OutputCustomType.Parameter("excludedPrincipals") @Nullable List<String> excludedPrincipals,
-        @OutputCustomType.Parameter("mode") @Nullable String mode) {
+        @CustomType.Parameter("excludedActions") @Nullable List<String> excludedActions,
+        @CustomType.Parameter("excludedPrincipals") @Nullable List<String> excludedPrincipals,
+        @CustomType.Parameter("mode") @Nullable String mode) {
         this.excludedActions = excludedActions;
         this.excludedPrincipals = excludedPrincipals;
         this.mode = mode;

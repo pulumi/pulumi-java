@@ -7,7 +7,7 @@ import io.pulumi.azurenative.scheduler.enums.JobState;
 import io.pulumi.azurenative.scheduler.inputs.JobActionArgs;
 import io.pulumi.azurenative.scheduler.inputs.JobRecurrenceArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public final class JobPropertiesArgs extends io.pulumi.resources.ResourceArgs {
      * Gets or sets the job action.
      * 
      */
-    @InputImport(name="action")
+    @Import(name="action")
       private final @Nullable Output<JobActionArgs> action;
 
     public Output<JobActionArgs> getAction() {
@@ -32,7 +32,7 @@ public final class JobPropertiesArgs extends io.pulumi.resources.ResourceArgs {
      * Gets or sets the job recurrence.
      * 
      */
-    @InputImport(name="recurrence")
+    @Import(name="recurrence")
       private final @Nullable Output<JobRecurrenceArgs> recurrence;
 
     public Output<JobRecurrenceArgs> getRecurrence() {
@@ -43,7 +43,7 @@ public final class JobPropertiesArgs extends io.pulumi.resources.ResourceArgs {
      * Gets or sets the job start time.
      * 
      */
-    @InputImport(name="startTime")
+    @Import(name="startTime")
       private final @Nullable Output<String> startTime;
 
     public Output<String> getStartTime() {
@@ -54,7 +54,7 @@ public final class JobPropertiesArgs extends io.pulumi.resources.ResourceArgs {
      * Gets or set the job state.
      * 
      */
-    @InputImport(name="state")
+    @Import(name="state")
       private final @Nullable Output<JobState> state;
 
     public Output<JobState> getState() {

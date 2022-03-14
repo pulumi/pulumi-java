@@ -5,7 +5,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.azurenative.datafactory.inputs.LinkedServiceReferenceArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class LogStorageSettingsArgs extends io.pulumi.resources.ResourceAr
      * Specifies whether to enable reliable logging. Type: boolean (or Expression with resultType boolean).
      * 
      */
-    @InputImport(name="enableReliableLogging")
+    @Import(name="enableReliableLogging")
       private final @Nullable Output<Object> enableReliableLogging;
 
     public Output<Object> getEnableReliableLogging() {
@@ -34,7 +34,7 @@ public final class LogStorageSettingsArgs extends io.pulumi.resources.ResourceAr
      * Log storage linked service reference.
      * 
      */
-    @InputImport(name="linkedServiceName", required=true)
+    @Import(name="linkedServiceName", required=true)
       private final Output<LinkedServiceReferenceArgs> linkedServiceName;
 
     public Output<LinkedServiceReferenceArgs> getLinkedServiceName() {
@@ -45,7 +45,7 @@ public final class LogStorageSettingsArgs extends io.pulumi.resources.ResourceAr
      * Gets or sets the log level, support: Info, Warning. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="logLevel")
+    @Import(name="logLevel")
       private final @Nullable Output<Object> logLevel;
 
     public Output<Object> getLogLevel() {
@@ -56,7 +56,7 @@ public final class LogStorageSettingsArgs extends io.pulumi.resources.ResourceAr
      * The path to storage for storing detailed logs of activity execution. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="path")
+    @Import(name="path")
       private final @Nullable Output<Object> path;
 
     public Output<Object> getPath() {

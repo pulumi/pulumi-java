@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.videoanalyzer.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class EccTokenKeyResponse {
     /**
      * Elliptical curve algorithm to be used: ES256, ES384 or ES512.
@@ -36,13 +36,13 @@ public final class EccTokenKeyResponse {
      */
     private final String y;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EccTokenKeyResponse(
-        @OutputCustomType.Parameter("alg") String alg,
-        @OutputCustomType.Parameter("kid") String kid,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("x") String x,
-        @OutputCustomType.Parameter("y") String y) {
+        @CustomType.Parameter("alg") String alg,
+        @CustomType.Parameter("kid") String kid,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("x") String x,
+        @CustomType.Parameter("y") String y) {
         this.alg = alg;
         this.kid = kid;
         this.type = type;

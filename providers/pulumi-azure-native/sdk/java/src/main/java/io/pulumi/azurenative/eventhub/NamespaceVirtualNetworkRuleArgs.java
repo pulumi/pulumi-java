@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.eventhub;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class NamespaceVirtualNetworkRuleArgs extends io.pulumi.resources.R
      * The Namespace name
      * 
      */
-    @InputImport(name="namespaceName", required=true)
+    @Import(name="namespaceName", required=true)
       private final Output<String> namespaceName;
 
     public Output<String> getNamespaceName() {
@@ -29,7 +29,7 @@ public final class NamespaceVirtualNetworkRuleArgs extends io.pulumi.resources.R
      * Name of the resource group within the azure subscription.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -40,7 +40,7 @@ public final class NamespaceVirtualNetworkRuleArgs extends io.pulumi.resources.R
      * The Virtual Network Rule name.
      * 
      */
-    @InputImport(name="virtualNetworkRuleName")
+    @Import(name="virtualNetworkRuleName")
       private final @Nullable Output<String> virtualNetworkRuleName;
 
     public Output<String> getVirtualNetworkRuleName() {
@@ -51,7 +51,7 @@ public final class NamespaceVirtualNetworkRuleArgs extends io.pulumi.resources.R
      * ARM ID of Virtual Network Subnet
      * 
      */
-    @InputImport(name="virtualNetworkSubnetId")
+    @Import(name="virtualNetworkSubnetId")
       private final @Nullable Output<String> virtualNetworkSubnetId;
 
     public Output<String> getVirtualNetworkSubnetId() {

@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.databox.outputs;
 
 import io.pulumi.azurenative.databox.outputs.TransferFilterDetailsResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TransferConfigurationResponseTransferFilterDetails {
     /**
      * Details of the filtering the transfer of data.
@@ -17,8 +17,8 @@ public final class TransferConfigurationResponseTransferFilterDetails {
      */
     private final @Nullable TransferFilterDetailsResponse include;
 
-    @OutputCustomType.Constructor
-    private TransferConfigurationResponseTransferFilterDetails(@OutputCustomType.Parameter("include") @Nullable TransferFilterDetailsResponse include) {
+    @CustomType.Constructor
+    private TransferConfigurationResponseTransferFilterDetails(@CustomType.Parameter("include") @Nullable TransferFilterDetailsResponse include) {
         this.include = include;
     }
 

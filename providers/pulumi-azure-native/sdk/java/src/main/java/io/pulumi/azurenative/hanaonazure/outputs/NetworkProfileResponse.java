@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.hanaonazure.outputs;
 
 import io.pulumi.azurenative.hanaonazure.outputs.IpAddressResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class NetworkProfileResponse {
     /**
      * Specifies the circuit id for connecting to express route.
@@ -23,10 +23,10 @@ public final class NetworkProfileResponse {
      */
     private final @Nullable List<IpAddressResponse> networkInterfaces;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NetworkProfileResponse(
-        @OutputCustomType.Parameter("circuitId") String circuitId,
-        @OutputCustomType.Parameter("networkInterfaces") @Nullable List<IpAddressResponse> networkInterfaces) {
+        @CustomType.Parameter("circuitId") String circuitId,
+        @CustomType.Parameter("networkInterfaces") @Nullable List<IpAddressResponse> networkInterfaces) {
         this.circuitId = circuitId;
         this.networkInterfaces = networkInterfaces;
     }

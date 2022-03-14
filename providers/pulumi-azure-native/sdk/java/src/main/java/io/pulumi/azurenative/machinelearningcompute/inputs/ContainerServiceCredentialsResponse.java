@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearningcompute.inputs;
 
 import io.pulumi.azurenative.machinelearningcompute.inputs.ServicePrincipalPropertiesResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class ContainerServiceCredentialsResponse extends io.pulumi.resourc
      * The ACS kube config file.
      * 
      */
-    @InputImport(name="acsKubeConfig", required=true)
+    @Import(name="acsKubeConfig", required=true)
       private final String acsKubeConfig;
 
     public String getAcsKubeConfig() {
@@ -32,7 +32,7 @@ public final class ContainerServiceCredentialsResponse extends io.pulumi.resourc
      * The ACR image pull secret name which was created in Kubernetes.
      * 
      */
-    @InputImport(name="imagePullSecretName", required=true)
+    @Import(name="imagePullSecretName", required=true)
       private final String imagePullSecretName;
 
     public String getImagePullSecretName() {
@@ -43,7 +43,7 @@ public final class ContainerServiceCredentialsResponse extends io.pulumi.resourc
      * Service principal configuration used by Kubernetes.
      * 
      */
-    @InputImport(name="servicePrincipalConfiguration", required=true)
+    @Import(name="servicePrincipalConfiguration", required=true)
       private final ServicePrincipalPropertiesResponse servicePrincipalConfiguration;
 
     public ServicePrincipalPropertiesResponse getServicePrincipalConfiguration() {

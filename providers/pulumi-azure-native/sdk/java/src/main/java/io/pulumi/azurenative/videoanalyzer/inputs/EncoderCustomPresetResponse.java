@@ -5,7 +5,7 @@ package io.pulumi.azurenative.videoanalyzer.inputs;
 
 import io.pulumi.azurenative.videoanalyzer.inputs.AudioEncoderAacResponse;
 import io.pulumi.azurenative.videoanalyzer.inputs.VideoEncoderH264Response;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class EncoderCustomPresetResponse extends io.pulumi.resources.Invok
      * Describes a custom preset for encoding audio.
      * 
      */
-    @InputImport(name="audioEncoder")
+    @Import(name="audioEncoder")
       private final @Nullable AudioEncoderAacResponse audioEncoder;
 
     public Optional<AudioEncoderAacResponse> getAudioEncoder() {
@@ -36,7 +36,7 @@ public final class EncoderCustomPresetResponse extends io.pulumi.resources.Invok
      * Expected value is '#Microsoft.VideoAnalyzer.EncoderCustomPreset'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {
@@ -47,7 +47,7 @@ public final class EncoderCustomPresetResponse extends io.pulumi.resources.Invok
      * Describes a custom preset for encoding video.
      * 
      */
-    @InputImport(name="videoEncoder")
+    @Import(name="videoEncoder")
       private final @Nullable VideoEncoderH264Response videoEncoder;
 
     public Optional<VideoEncoderH264Response> getVideoEncoder() {

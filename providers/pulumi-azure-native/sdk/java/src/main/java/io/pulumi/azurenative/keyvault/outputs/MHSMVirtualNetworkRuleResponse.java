@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.keyvault.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class MHSMVirtualNetworkRuleResponse {
     /**
      * Full resource id of a vnet subnet, such as '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/test-vnet/subnets/subnet1'.
@@ -15,8 +15,8 @@ public final class MHSMVirtualNetworkRuleResponse {
      */
     private final String id;
 
-    @OutputCustomType.Constructor
-    private MHSMVirtualNetworkRuleResponse(@OutputCustomType.Parameter("id") String id) {
+    @CustomType.Constructor
+    private MHSMVirtualNetworkRuleResponse(@CustomType.Parameter("id") String id) {
         this.id = id;
     }
 

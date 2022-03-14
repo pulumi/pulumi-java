@@ -7,7 +7,7 @@ import io.pulumi.azurenative.web.inputs.AzureBlobStorageApplicationLogsConfigArg
 import io.pulumi.azurenative.web.inputs.AzureTableStorageApplicationLogsConfigArgs;
 import io.pulumi.azurenative.web.inputs.FileSystemApplicationLogsConfigArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -24,7 +24,7 @@ public final class ApplicationLogsConfigArgs extends io.pulumi.resources.Resourc
      * Application logs to blob storage configuration.
      * 
      */
-    @InputImport(name="azureBlobStorage")
+    @Import(name="azureBlobStorage")
       private final @Nullable Output<AzureBlobStorageApplicationLogsConfigArgs> azureBlobStorage;
 
     public Output<AzureBlobStorageApplicationLogsConfigArgs> getAzureBlobStorage() {
@@ -35,7 +35,7 @@ public final class ApplicationLogsConfigArgs extends io.pulumi.resources.Resourc
      * Application logs to azure table storage configuration.
      * 
      */
-    @InputImport(name="azureTableStorage")
+    @Import(name="azureTableStorage")
       private final @Nullable Output<AzureTableStorageApplicationLogsConfigArgs> azureTableStorage;
 
     public Output<AzureTableStorageApplicationLogsConfigArgs> getAzureTableStorage() {
@@ -46,7 +46,7 @@ public final class ApplicationLogsConfigArgs extends io.pulumi.resources.Resourc
      * Application logs to file system configuration.
      * 
      */
-    @InputImport(name="fileSystem")
+    @Import(name="fileSystem")
       private final @Nullable Output<FileSystemApplicationLogsConfigArgs> fileSystem;
 
     public Output<FileSystemApplicationLogsConfigArgs> getFileSystem() {

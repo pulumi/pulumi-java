@@ -3,12 +3,12 @@
 
 package io.pulumi.azurenative.migrate.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class MoveResourceErrorBodyResponse {
     /**
      * An identifier for the error. Codes are invariant and are intended to be consumed programmatically.
@@ -31,12 +31,12 @@ public final class MoveResourceErrorBodyResponse {
      */
     private final String target;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MoveResourceErrorBodyResponse(
-        @OutputCustomType.Parameter("code") String code,
-        @OutputCustomType.Parameter("details") List<MoveResourceErrorBodyResponse> details,
-        @OutputCustomType.Parameter("message") String message,
-        @OutputCustomType.Parameter("target") String target) {
+        @CustomType.Parameter("code") String code,
+        @CustomType.Parameter("details") List<MoveResourceErrorBodyResponse> details,
+        @CustomType.Parameter("message") String message,
+        @CustomType.Parameter("target") String target) {
         this.code = code;
         this.details = details;
         this.message = message;

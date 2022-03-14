@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.cdn.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,14 +23,14 @@ public final class UrlRewriteActionParametersResponse extends io.pulumi.resource
      * Define the relative URL to which the above requests will be rewritten by.
      * 
      */
-    @InputImport(name="destination", required=true)
+    @Import(name="destination", required=true)
       private final String destination;
 
     public String getDestination() {
         return this.destination;
     }
 
-    @InputImport(name="odataType", required=true)
+    @Import(name="odataType", required=true)
       private final String odataType;
 
     public String getOdataType() {
@@ -41,7 +41,7 @@ public final class UrlRewriteActionParametersResponse extends io.pulumi.resource
      * Whether to preserve unmatched path. Default value is true.
      * 
      */
-    @InputImport(name="preserveUnmatchedPath")
+    @Import(name="preserveUnmatchedPath")
       private final @Nullable Boolean preserveUnmatchedPath;
 
     public Optional<Boolean> getPreserveUnmatchedPath() {
@@ -52,7 +52,7 @@ public final class UrlRewriteActionParametersResponse extends io.pulumi.resource
      * define a request URI pattern that identifies the type of requests that may be rewritten. If value is blank, all strings are matched.
      * 
      */
-    @InputImport(name="sourcePattern", required=true)
+    @Import(name="sourcePattern", required=true)
       private final String sourcePattern;
 
     public String getSourcePattern() {

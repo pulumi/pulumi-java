@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.batch.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class WindowsConfigurationResponse {
     /**
      * If omitted, the default value is true.
@@ -17,8 +17,8 @@ public final class WindowsConfigurationResponse {
      */
     private final @Nullable Boolean enableAutomaticUpdates;
 
-    @OutputCustomType.Constructor
-    private WindowsConfigurationResponse(@OutputCustomType.Parameter("enableAutomaticUpdates") @Nullable Boolean enableAutomaticUpdates) {
+    @CustomType.Constructor
+    private WindowsConfigurationResponse(@CustomType.Parameter("enableAutomaticUpdates") @Nullable Boolean enableAutomaticUpdates) {
         this.enableAutomaticUpdates = enableAutomaticUpdates;
     }
 

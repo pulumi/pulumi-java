@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.migrate.inputs;
 
 import io.pulumi.azurenative.migrate.inputs.CollectorBodyAgentSpnPropertiesResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,28 +15,28 @@ public final class CollectorAgentPropertiesResponse extends io.pulumi.resources.
 
     public static final CollectorAgentPropertiesResponse Empty = new CollectorAgentPropertiesResponse();
 
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final String id;
 
     public String getId() {
         return this.id;
     }
 
-    @InputImport(name="lastHeartbeatUtc", required=true)
+    @Import(name="lastHeartbeatUtc", required=true)
       private final String lastHeartbeatUtc;
 
     public String getLastHeartbeatUtc() {
         return this.lastHeartbeatUtc;
     }
 
-    @InputImport(name="spnDetails")
+    @Import(name="spnDetails")
       private final @Nullable CollectorBodyAgentSpnPropertiesResponse spnDetails;
 
     public Optional<CollectorBodyAgentSpnPropertiesResponse> getSpnDetails() {
         return this.spnDetails == null ? Optional.empty() : Optional.ofNullable(this.spnDetails);
     }
 
-    @InputImport(name="version", required=true)
+    @Import(name="version", required=true)
       private final String version;
 
     public String getVersion() {

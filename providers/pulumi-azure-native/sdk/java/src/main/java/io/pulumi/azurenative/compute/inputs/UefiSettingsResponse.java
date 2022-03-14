@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.compute.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class UefiSettingsResponse extends io.pulumi.resources.InvokeArgs {
      * Specifies whether secure boot should be enabled on the virtual machine. <br><br>Minimum api-version: 2020-12-01
      * 
      */
-    @InputImport(name="secureBootEnabled")
+    @Import(name="secureBootEnabled")
       private final @Nullable Boolean secureBootEnabled;
 
     public Optional<Boolean> getSecureBootEnabled() {
@@ -33,7 +33,7 @@ public final class UefiSettingsResponse extends io.pulumi.resources.InvokeArgs {
      * Specifies whether vTPM should be enabled on the virtual machine. <br><br>Minimum api-version: 2020-12-01
      * 
      */
-    @InputImport(name="vTpmEnabled")
+    @Import(name="vTpmEnabled")
       private final @Nullable Boolean vTpmEnabled;
 
     public Optional<Boolean> getVTpmEnabled() {

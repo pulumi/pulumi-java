@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.PrivateLinkServiceConnectionStateResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PrivateLinkServiceConnectionResponse {
     /**
      * A unique read-only string that changes whenever the resource is updated.
@@ -59,17 +59,17 @@ public final class PrivateLinkServiceConnectionResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PrivateLinkServiceConnectionResponse(
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("groupIds") @Nullable List<String> groupIds,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("privateLinkServiceConnectionState") @Nullable PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState,
-        @OutputCustomType.Parameter("privateLinkServiceId") @Nullable String privateLinkServiceId,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("requestMessage") @Nullable String requestMessage,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("groupIds") @Nullable List<String> groupIds,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("privateLinkServiceConnectionState") @Nullable PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState,
+        @CustomType.Parameter("privateLinkServiceId") @Nullable String privateLinkServiceId,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("requestMessage") @Nullable String requestMessage,
+        @CustomType.Parameter("type") String type) {
         this.etag = etag;
         this.groupIds = groupIds;
         this.id = id;

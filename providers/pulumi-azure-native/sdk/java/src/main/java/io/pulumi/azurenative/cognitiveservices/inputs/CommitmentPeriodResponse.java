@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.cognitiveservices.inputs;
 
 import io.pulumi.azurenative.cognitiveservices.inputs.CommitmentQuotaResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class CommitmentPeriodResponse extends io.pulumi.resources.InvokeAr
      * Commitment period commitment count.
      * 
      */
-    @InputImport(name="count")
+    @Import(name="count")
       private final @Nullable Integer count;
 
     public Optional<Integer> getCount() {
@@ -35,7 +35,7 @@ public final class CommitmentPeriodResponse extends io.pulumi.resources.InvokeAr
      * Commitment period end date.
      * 
      */
-    @InputImport(name="endDate", required=true)
+    @Import(name="endDate", required=true)
       private final String endDate;
 
     public String getEndDate() {
@@ -46,7 +46,7 @@ public final class CommitmentPeriodResponse extends io.pulumi.resources.InvokeAr
      * Cognitive Services account commitment quota.
      * 
      */
-    @InputImport(name="quota", required=true)
+    @Import(name="quota", required=true)
       private final CommitmentQuotaResponse quota;
 
     public CommitmentQuotaResponse getQuota() {
@@ -57,7 +57,7 @@ public final class CommitmentPeriodResponse extends io.pulumi.resources.InvokeAr
      * Commitment period start date.
      * 
      */
-    @InputImport(name="startDate", required=true)
+    @Import(name="startDate", required=true)
       private final String startDate;
 
     public String getStartDate() {
@@ -68,7 +68,7 @@ public final class CommitmentPeriodResponse extends io.pulumi.resources.InvokeAr
      * Commitment period commitment tier.
      * 
      */
-    @InputImport(name="tier")
+    @Import(name="tier")
       private final @Nullable String tier;
 
     public Optional<String> getTier() {

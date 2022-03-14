@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.devices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class IotHubLocationDescriptionResponse extends io.pulumi.resources
      * The name of the Azure region
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable String location;
 
     public Optional<String> getLocation() {
@@ -33,7 +33,7 @@ public final class IotHubLocationDescriptionResponse extends io.pulumi.resources
      * The role of the region, can be either primary or secondary. The primary region is where the IoT hub is currently provisioned. The secondary region is the Azure disaster recovery (DR) paired region and also the region where the IoT hub can failover to.
      * 
      */
-    @InputImport(name="role")
+    @Import(name="role")
       private final @Nullable String role;
 
     public Optional<String> getRole() {

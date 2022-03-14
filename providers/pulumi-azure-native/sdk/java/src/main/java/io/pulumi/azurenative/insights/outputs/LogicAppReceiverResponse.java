@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.insights.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class LogicAppReceiverResponse {
     /**
      * The callback url where http request sent to.
@@ -33,12 +33,12 @@ public final class LogicAppReceiverResponse {
      */
     private final @Nullable Boolean useCommonAlertSchema;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LogicAppReceiverResponse(
-        @OutputCustomType.Parameter("callbackUrl") String callbackUrl,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("resourceId") String resourceId,
-        @OutputCustomType.Parameter("useCommonAlertSchema") @Nullable Boolean useCommonAlertSchema) {
+        @CustomType.Parameter("callbackUrl") String callbackUrl,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("resourceId") String resourceId,
+        @CustomType.Parameter("useCommonAlertSchema") @Nullable Boolean useCommonAlertSchema) {
         this.callbackUrl = callbackUrl;
         this.name = name;
         this.resourceId = resourceId;

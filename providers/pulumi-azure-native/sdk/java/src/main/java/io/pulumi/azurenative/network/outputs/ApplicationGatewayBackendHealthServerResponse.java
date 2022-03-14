@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.NetworkInterfaceIPConfigurationResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ApplicationGatewayBackendHealthServerResponse {
     /**
      * IP address or FQDN of backend server.
@@ -33,12 +33,12 @@ public final class ApplicationGatewayBackendHealthServerResponse {
      */
     private final @Nullable NetworkInterfaceIPConfigurationResponse ipConfiguration;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ApplicationGatewayBackendHealthServerResponse(
-        @OutputCustomType.Parameter("address") @Nullable String address,
-        @OutputCustomType.Parameter("health") @Nullable String health,
-        @OutputCustomType.Parameter("healthProbeLog") @Nullable String healthProbeLog,
-        @OutputCustomType.Parameter("ipConfiguration") @Nullable NetworkInterfaceIPConfigurationResponse ipConfiguration) {
+        @CustomType.Parameter("address") @Nullable String address,
+        @CustomType.Parameter("health") @Nullable String health,
+        @CustomType.Parameter("healthProbeLog") @Nullable String healthProbeLog,
+        @CustomType.Parameter("ipConfiguration") @Nullable NetworkInterfaceIPConfigurationResponse ipConfiguration) {
         this.address = address;
         this.health = health;
         this.healthProbeLog = healthProbeLog;

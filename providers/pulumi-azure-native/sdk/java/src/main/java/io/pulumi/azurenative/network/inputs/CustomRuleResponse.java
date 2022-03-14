@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.FrontDoorMatchConditionResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class CustomRuleResponse extends io.pulumi.resources.InvokeArgs {
      * Describes what action to be applied when rule matches.
      * 
      */
-    @InputImport(name="action", required=true)
+    @Import(name="action", required=true)
       private final String action;
 
     public String getAction() {
@@ -36,7 +36,7 @@ public final class CustomRuleResponse extends io.pulumi.resources.InvokeArgs {
      * Describes if the custom rule is in enabled or disabled state. Defaults to Enabled if not specified.
      * 
      */
-    @InputImport(name="enabledState")
+    @Import(name="enabledState")
       private final @Nullable String enabledState;
 
     public Optional<String> getEnabledState() {
@@ -47,7 +47,7 @@ public final class CustomRuleResponse extends io.pulumi.resources.InvokeArgs {
      * List of match conditions.
      * 
      */
-    @InputImport(name="matchConditions", required=true)
+    @Import(name="matchConditions", required=true)
       private final List<FrontDoorMatchConditionResponse> matchConditions;
 
     public List<FrontDoorMatchConditionResponse> getMatchConditions() {
@@ -58,7 +58,7 @@ public final class CustomRuleResponse extends io.pulumi.resources.InvokeArgs {
      * Describes the name of the rule.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -69,7 +69,7 @@ public final class CustomRuleResponse extends io.pulumi.resources.InvokeArgs {
      * Describes priority of the rule. Rules with a lower value will be evaluated before rules with a higher value.
      * 
      */
-    @InputImport(name="priority", required=true)
+    @Import(name="priority", required=true)
       private final Integer priority;
 
     public Integer getPriority() {
@@ -80,7 +80,7 @@ public final class CustomRuleResponse extends io.pulumi.resources.InvokeArgs {
      * Time window for resetting the rate limit count. Default is 1 minute.
      * 
      */
-    @InputImport(name="rateLimitDurationInMinutes")
+    @Import(name="rateLimitDurationInMinutes")
       private final @Nullable Integer rateLimitDurationInMinutes;
 
     public Optional<Integer> getRateLimitDurationInMinutes() {
@@ -91,7 +91,7 @@ public final class CustomRuleResponse extends io.pulumi.resources.InvokeArgs {
      * Number of allowed requests per client within the time window.
      * 
      */
-    @InputImport(name="rateLimitThreshold")
+    @Import(name="rateLimitThreshold")
       private final @Nullable Integer rateLimitThreshold;
 
     public Optional<Integer> getRateLimitThreshold() {
@@ -102,7 +102,7 @@ public final class CustomRuleResponse extends io.pulumi.resources.InvokeArgs {
      * Describes type of rule.
      * 
      */
-    @InputImport(name="ruleType", required=true)
+    @Import(name="ruleType", required=true)
       private final String ruleType;
 
     public String getRuleType() {

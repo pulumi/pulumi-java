@@ -6,7 +6,7 @@ package io.pulumi.azurenative.servicefabricmesh.inputs;
 import io.pulumi.azurenative.servicefabricmesh.inputs.GatewayDestinationArgs;
 import io.pulumi.azurenative.servicefabricmesh.inputs.HttpRouteMatchRuleArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class HttpRouteConfigArgs extends io.pulumi.resources.ResourceArgs 
      * Describes destination endpoint for routing traffic.
      * 
      */
-    @InputImport(name="destination", required=true)
+    @Import(name="destination", required=true)
       private final Output<GatewayDestinationArgs> destination;
 
     public Output<GatewayDestinationArgs> getDestination() {
@@ -34,7 +34,7 @@ public final class HttpRouteConfigArgs extends io.pulumi.resources.ResourceArgs 
      * Describes a rule for http route matching.
      * 
      */
-    @InputImport(name="match", required=true)
+    @Import(name="match", required=true)
       private final Output<HttpRouteMatchRuleArgs> match;
 
     public Output<HttpRouteMatchRuleArgs> getMatch() {
@@ -45,7 +45,7 @@ public final class HttpRouteConfigArgs extends io.pulumi.resources.ResourceArgs 
      * http route name.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {

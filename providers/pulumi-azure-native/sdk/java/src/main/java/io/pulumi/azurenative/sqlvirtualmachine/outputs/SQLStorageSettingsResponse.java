@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.sqlvirtualmachine.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SQLStorageSettingsResponse {
     /**
      * SQL Server default file path
@@ -24,10 +24,10 @@ public final class SQLStorageSettingsResponse {
      */
     private final @Nullable List<Integer> luns;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SQLStorageSettingsResponse(
-        @OutputCustomType.Parameter("defaultFilePath") @Nullable String defaultFilePath,
-        @OutputCustomType.Parameter("luns") @Nullable List<Integer> luns) {
+        @CustomType.Parameter("defaultFilePath") @Nullable String defaultFilePath,
+        @CustomType.Parameter("luns") @Nullable List<Integer> luns) {
         this.defaultFilePath = defaultFilePath;
         this.luns = luns;
     }

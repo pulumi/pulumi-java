@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.dbformariadb.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class PrivateEndpointPropertyArgs extends io.pulumi.resources.Resou
      * Resource id of the private endpoint.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {

@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.devtestlab.outputs;
 
 import io.pulumi.azurenative.devtestlab.outputs.ArtifactParameterPropertiesResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ArtifactInstallPropertiesResponse {
     /**
      * The artifact's identifier.
@@ -49,15 +49,15 @@ public final class ArtifactInstallPropertiesResponse {
      */
     private final @Nullable String vmExtensionStatusMessage;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ArtifactInstallPropertiesResponse(
-        @OutputCustomType.Parameter("artifactId") @Nullable String artifactId,
-        @OutputCustomType.Parameter("artifactTitle") @Nullable String artifactTitle,
-        @OutputCustomType.Parameter("deploymentStatusMessage") @Nullable String deploymentStatusMessage,
-        @OutputCustomType.Parameter("installTime") @Nullable String installTime,
-        @OutputCustomType.Parameter("parameters") @Nullable List<ArtifactParameterPropertiesResponse> parameters,
-        @OutputCustomType.Parameter("status") @Nullable String status,
-        @OutputCustomType.Parameter("vmExtensionStatusMessage") @Nullable String vmExtensionStatusMessage) {
+        @CustomType.Parameter("artifactId") @Nullable String artifactId,
+        @CustomType.Parameter("artifactTitle") @Nullable String artifactTitle,
+        @CustomType.Parameter("deploymentStatusMessage") @Nullable String deploymentStatusMessage,
+        @CustomType.Parameter("installTime") @Nullable String installTime,
+        @CustomType.Parameter("parameters") @Nullable List<ArtifactParameterPropertiesResponse> parameters,
+        @CustomType.Parameter("status") @Nullable String status,
+        @CustomType.Parameter("vmExtensionStatusMessage") @Nullable String vmExtensionStatusMessage) {
         this.artifactId = artifactId;
         this.artifactTitle = artifactTitle;
         this.deploymentStatusMessage = deploymentStatusMessage;

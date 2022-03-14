@@ -5,7 +5,7 @@ package io.pulumi.azurenative.logic.inputs;
 
 import io.pulumi.azurenative.logic.inputs.ResourceReferenceArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class IntegrationServiceEnvironmenEncryptionKeyReferenceArgs extend
      * Gets the key name in the Key Vault.
      * 
      */
-    @InputImport(name="keyName")
+    @Import(name="keyName")
       private final @Nullable Output<String> keyName;
 
     public Output<String> getKeyName() {
@@ -34,7 +34,7 @@ public final class IntegrationServiceEnvironmenEncryptionKeyReferenceArgs extend
      * The key vault reference.
      * 
      */
-    @InputImport(name="keyVault")
+    @Import(name="keyVault")
       private final @Nullable Output<ResourceReferenceArgs> keyVault;
 
     public Output<ResourceReferenceArgs> getKeyVault() {
@@ -45,7 +45,7 @@ public final class IntegrationServiceEnvironmenEncryptionKeyReferenceArgs extend
      * Gets the version of the key specified in the keyName property.
      * 
      */
-    @InputImport(name="keyVersion")
+    @Import(name="keyVersion")
       private final @Nullable Output<String> keyVersion;
 
     public Output<String> getKeyVersion() {

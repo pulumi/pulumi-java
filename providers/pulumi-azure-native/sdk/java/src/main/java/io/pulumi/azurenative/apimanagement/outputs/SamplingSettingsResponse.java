@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.apimanagement.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SamplingSettingsResponse {
     /**
      * Rate of sampling for fixed-rate sampling.
@@ -23,10 +23,10 @@ public final class SamplingSettingsResponse {
      */
     private final @Nullable String samplingType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SamplingSettingsResponse(
-        @OutputCustomType.Parameter("percentage") @Nullable Double percentage,
-        @OutputCustomType.Parameter("samplingType") @Nullable String samplingType) {
+        @CustomType.Parameter("percentage") @Nullable Double percentage,
+        @CustomType.Parameter("samplingType") @Nullable String samplingType) {
         this.percentage = percentage;
         this.samplingType = samplingType;
     }

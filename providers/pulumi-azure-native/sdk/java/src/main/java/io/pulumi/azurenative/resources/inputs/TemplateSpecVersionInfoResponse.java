@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.resources.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class TemplateSpecVersionInfoResponse extends io.pulumi.resources.I
      * Template Spec version description.
      * 
      */
-    @InputImport(name="description", required=true)
+    @Import(name="description", required=true)
       private final String description;
 
     public String getDescription() {
@@ -31,7 +31,7 @@ public final class TemplateSpecVersionInfoResponse extends io.pulumi.resources.I
      * The timestamp of when the version was created.
      * 
      */
-    @InputImport(name="timeCreated", required=true)
+    @Import(name="timeCreated", required=true)
       private final String timeCreated;
 
     public String getTimeCreated() {
@@ -42,7 +42,7 @@ public final class TemplateSpecVersionInfoResponse extends io.pulumi.resources.I
      * The timestamp of when the version was last modified.
      * 
      */
-    @InputImport(name="timeModified", required=true)
+    @Import(name="timeModified", required=true)
       private final String timeModified;
 
     public String getTimeModified() {

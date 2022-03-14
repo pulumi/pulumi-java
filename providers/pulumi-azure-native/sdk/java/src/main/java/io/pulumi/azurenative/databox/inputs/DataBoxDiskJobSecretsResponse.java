@@ -6,7 +6,7 @@ package io.pulumi.azurenative.databox.inputs;
 import io.pulumi.azurenative.databox.inputs.CloudErrorResponse;
 import io.pulumi.azurenative.databox.inputs.DcAccessSecurityCodeResponse;
 import io.pulumi.azurenative.databox.inputs.DiskSecretResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class DataBoxDiskJobSecretsResponse extends io.pulumi.resources.Inv
      * Dc Access Security Code for Customer Managed Shipping
      * 
      */
-    @InputImport(name="dcAccessSecurityCode", required=true)
+    @Import(name="dcAccessSecurityCode", required=true)
       private final DcAccessSecurityCodeResponse dcAccessSecurityCode;
 
     public DcAccessSecurityCodeResponse getDcAccessSecurityCode() {
@@ -36,7 +36,7 @@ public final class DataBoxDiskJobSecretsResponse extends io.pulumi.resources.Inv
      * Contains the list of secrets object for that device.
      * 
      */
-    @InputImport(name="diskSecrets", required=true)
+    @Import(name="diskSecrets", required=true)
       private final List<DiskSecretResponse> diskSecrets;
 
     public List<DiskSecretResponse> getDiskSecrets() {
@@ -47,7 +47,7 @@ public final class DataBoxDiskJobSecretsResponse extends io.pulumi.resources.Inv
      * Error while fetching the secrets.
      * 
      */
-    @InputImport(name="error", required=true)
+    @Import(name="error", required=true)
       private final CloudErrorResponse error;
 
     public CloudErrorResponse getError() {
@@ -58,7 +58,7 @@ public final class DataBoxDiskJobSecretsResponse extends io.pulumi.resources.Inv
      * Whether passkey was provided by user.
      * 
      */
-    @InputImport(name="isPasskeyUserDefined", required=true)
+    @Import(name="isPasskeyUserDefined", required=true)
       private final Boolean isPasskeyUserDefined;
 
     public Boolean getIsPasskeyUserDefined() {
@@ -70,7 +70,7 @@ public final class DataBoxDiskJobSecretsResponse extends io.pulumi.resources.Inv
      * Expected value is 'DataBoxDisk'.
      * 
      */
-    @InputImport(name="jobSecretsType", required=true)
+    @Import(name="jobSecretsType", required=true)
       private final String jobSecretsType;
 
     public String getJobSecretsType() {
@@ -81,7 +81,7 @@ public final class DataBoxDiskJobSecretsResponse extends io.pulumi.resources.Inv
      * PassKey for the disk Job.
      * 
      */
-    @InputImport(name="passKey", required=true)
+    @Import(name="passKey", required=true)
       private final String passKey;
 
     public String getPassKey() {

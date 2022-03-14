@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.eventhub.NamespaceVirtualNetworkRuleArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -34,7 +34,7 @@ public class NamespaceVirtualNetworkRule extends io.pulumi.resources.CustomResou
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -48,7 +48,7 @@ public class NamespaceVirtualNetworkRule extends io.pulumi.resources.CustomResou
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -62,7 +62,7 @@ public class NamespaceVirtualNetworkRule extends io.pulumi.resources.CustomResou
      * ARM ID of Virtual Network Subnet
      * 
      */
-    @OutputExport(name="virtualNetworkSubnetId", type=String.class, parameters={})
+    @Export(name="virtualNetworkSubnetId", type=String.class, parameters={})
     private Output</* @Nullable */ String> virtualNetworkSubnetId;
 
     /**

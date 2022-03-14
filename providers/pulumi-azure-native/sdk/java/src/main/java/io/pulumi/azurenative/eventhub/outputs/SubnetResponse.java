@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.eventhub.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SubnetResponse {
     /**
      * Resource ID of Virtual Network Subnet
@@ -15,8 +15,8 @@ public final class SubnetResponse {
      */
     private final String id;
 
-    @OutputCustomType.Constructor
-    private SubnetResponse(@OutputCustomType.Parameter("id") String id) {
+    @CustomType.Constructor
+    private SubnetResponse(@CustomType.Parameter("id") String id) {
         this.id = id;
     }
 

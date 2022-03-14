@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.devspaces.outputs;
 
 import io.pulumi.azurenative.devspaces.outputs.SkuResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetControllerResult {
     /**
      * DNS name for accessing DataPlane services
@@ -68,19 +68,19 @@ public final class GetControllerResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetControllerResult(
-        @OutputCustomType.Parameter("dataPlaneFqdn") String dataPlaneFqdn,
-        @OutputCustomType.Parameter("hostSuffix") String hostSuffix,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("sku") SkuResponse sku,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("targetContainerHostApiServerFqdn") String targetContainerHostApiServerFqdn,
-        @OutputCustomType.Parameter("targetContainerHostResourceId") String targetContainerHostResourceId,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("dataPlaneFqdn") String dataPlaneFqdn,
+        @CustomType.Parameter("hostSuffix") String hostSuffix,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("sku") SkuResponse sku,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("targetContainerHostApiServerFqdn") String targetContainerHostApiServerFqdn,
+        @CustomType.Parameter("targetContainerHostResourceId") String targetContainerHostResourceId,
+        @CustomType.Parameter("type") String type) {
         this.dataPlaneFqdn = dataPlaneFqdn;
         this.hostSuffix = hostSuffix;
         this.id = id;

@@ -3,12 +3,12 @@
 
 package io.pulumi.azurenative.containerinstance.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GpuResourceResponse {
     /**
      * The count of the GPU resource.
@@ -21,10 +21,10 @@ public final class GpuResourceResponse {
      */
     private final String sku;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GpuResourceResponse(
-        @OutputCustomType.Parameter("count") Integer count,
-        @OutputCustomType.Parameter("sku") String sku) {
+        @CustomType.Parameter("count") Integer count,
+        @CustomType.Parameter("sku") String sku) {
         this.count = count;
         this.sku = sku;
     }

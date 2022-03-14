@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.streamanalytics.outputs;
 
 import io.pulumi.azurenative.streamanalytics.outputs.StorageAccountResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BlobStreamInputDataSourceResponse {
     /**
      * The name of a container within the associated Storage account. This container contains either the blob(s) to be read from or written to. Required on PUT (CreateOrReplace) requests.
@@ -51,15 +51,15 @@ public final class BlobStreamInputDataSourceResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BlobStreamInputDataSourceResponse(
-        @OutputCustomType.Parameter("container") @Nullable String container,
-        @OutputCustomType.Parameter("dateFormat") @Nullable String dateFormat,
-        @OutputCustomType.Parameter("pathPattern") @Nullable String pathPattern,
-        @OutputCustomType.Parameter("sourcePartitionCount") @Nullable Integer sourcePartitionCount,
-        @OutputCustomType.Parameter("storageAccounts") @Nullable List<StorageAccountResponse> storageAccounts,
-        @OutputCustomType.Parameter("timeFormat") @Nullable String timeFormat,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("container") @Nullable String container,
+        @CustomType.Parameter("dateFormat") @Nullable String dateFormat,
+        @CustomType.Parameter("pathPattern") @Nullable String pathPattern,
+        @CustomType.Parameter("sourcePartitionCount") @Nullable Integer sourcePartitionCount,
+        @CustomType.Parameter("storageAccounts") @Nullable List<StorageAccountResponse> storageAccounts,
+        @CustomType.Parameter("timeFormat") @Nullable String timeFormat,
+        @CustomType.Parameter("type") String type) {
         this.container = container;
         this.dateFormat = dateFormat;
         this.pathPattern = pathPattern;

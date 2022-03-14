@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PtrRecordResponse {
     /**
      * The PTR target domain name for this PTR record.
@@ -17,8 +17,8 @@ public final class PtrRecordResponse {
      */
     private final @Nullable String ptrdname;
 
-    @OutputCustomType.Constructor
-    private PtrRecordResponse(@OutputCustomType.Parameter("ptrdname") @Nullable String ptrdname) {
+    @CustomType.Constructor
+    private PtrRecordResponse(@CustomType.Parameter("ptrdname") @Nullable String ptrdname) {
         this.ptrdname = ptrdname;
     }
 

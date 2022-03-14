@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class UserArtifactSourceResponse {
     /**
      * Optional. The defaultConfigurationLink of the artifact, must be a readable storage page blob.
@@ -22,10 +22,10 @@ public final class UserArtifactSourceResponse {
      */
     private final String mediaLink;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private UserArtifactSourceResponse(
-        @OutputCustomType.Parameter("defaultConfigurationLink") @Nullable String defaultConfigurationLink,
-        @OutputCustomType.Parameter("mediaLink") String mediaLink) {
+        @CustomType.Parameter("defaultConfigurationLink") @Nullable String defaultConfigurationLink,
+        @CustomType.Parameter("mediaLink") String mediaLink) {
         this.defaultConfigurationLink = defaultConfigurationLink;
         this.mediaLink = mediaLink;
     }

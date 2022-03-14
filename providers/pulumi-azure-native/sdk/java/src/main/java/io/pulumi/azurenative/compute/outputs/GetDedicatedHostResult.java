@@ -6,7 +6,7 @@ package io.pulumi.azurenative.compute.outputs;
 import io.pulumi.azurenative.compute.outputs.DedicatedHostInstanceViewResponse;
 import io.pulumi.azurenative.compute.outputs.SkuResponse;
 import io.pulumi.azurenative.compute.outputs.SubResourceReadOnlyResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -16,7 +16,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetDedicatedHostResult {
     /**
      * Specifies whether the dedicated host should be replaced automatically in case of a failure. The value is defaulted to 'true' when not provided.
@@ -89,22 +89,22 @@ public final class GetDedicatedHostResult {
      */
     private final List<SubResourceReadOnlyResponse> virtualMachines;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDedicatedHostResult(
-        @OutputCustomType.Parameter("autoReplaceOnFailure") @Nullable Boolean autoReplaceOnFailure,
-        @OutputCustomType.Parameter("hostId") String hostId,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("instanceView") DedicatedHostInstanceViewResponse instanceView,
-        @OutputCustomType.Parameter("licenseType") @Nullable String licenseType,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("platformFaultDomain") @Nullable Integer platformFaultDomain,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("provisioningTime") String provisioningTime,
-        @OutputCustomType.Parameter("sku") SkuResponse sku,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("virtualMachines") List<SubResourceReadOnlyResponse> virtualMachines) {
+        @CustomType.Parameter("autoReplaceOnFailure") @Nullable Boolean autoReplaceOnFailure,
+        @CustomType.Parameter("hostId") String hostId,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("instanceView") DedicatedHostInstanceViewResponse instanceView,
+        @CustomType.Parameter("licenseType") @Nullable String licenseType,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("platformFaultDomain") @Nullable Integer platformFaultDomain,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("provisioningTime") String provisioningTime,
+        @CustomType.Parameter("sku") SkuResponse sku,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("virtualMachines") List<SubResourceReadOnlyResponse> virtualMachines) {
         this.autoReplaceOnFailure = autoReplaceOnFailure;
         this.hostId = hostId;
         this.id = id;

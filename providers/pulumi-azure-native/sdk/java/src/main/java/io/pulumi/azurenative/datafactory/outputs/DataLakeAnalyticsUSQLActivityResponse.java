@@ -7,7 +7,7 @@ import io.pulumi.azurenative.datafactory.outputs.ActivityDependencyResponse;
 import io.pulumi.azurenative.datafactory.outputs.ActivityPolicyResponse;
 import io.pulumi.azurenative.datafactory.outputs.LinkedServiceReferenceResponse;
 import io.pulumi.azurenative.datafactory.outputs.UserPropertyResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -16,7 +16,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DataLakeAnalyticsUSQLActivityResponse {
     /**
      * Compilation mode of U-SQL. Must be one of these values : Semantic, Full and SingleBox. Type: string (or Expression with resultType string).
@@ -90,22 +90,22 @@ public final class DataLakeAnalyticsUSQLActivityResponse {
      */
     private final @Nullable List<UserPropertyResponse> userProperties;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DataLakeAnalyticsUSQLActivityResponse(
-        @OutputCustomType.Parameter("compilationMode") @Nullable Object compilationMode,
-        @OutputCustomType.Parameter("degreeOfParallelism") @Nullable Object degreeOfParallelism,
-        @OutputCustomType.Parameter("dependsOn") @Nullable List<ActivityDependencyResponse> dependsOn,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("linkedServiceName") @Nullable LinkedServiceReferenceResponse linkedServiceName,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("parameters") @Nullable Map<String,Object> parameters,
-        @OutputCustomType.Parameter("policy") @Nullable ActivityPolicyResponse policy,
-        @OutputCustomType.Parameter("priority") @Nullable Object priority,
-        @OutputCustomType.Parameter("runtimeVersion") @Nullable Object runtimeVersion,
-        @OutputCustomType.Parameter("scriptLinkedService") LinkedServiceReferenceResponse scriptLinkedService,
-        @OutputCustomType.Parameter("scriptPath") Object scriptPath,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("userProperties") @Nullable List<UserPropertyResponse> userProperties) {
+        @CustomType.Parameter("compilationMode") @Nullable Object compilationMode,
+        @CustomType.Parameter("degreeOfParallelism") @Nullable Object degreeOfParallelism,
+        @CustomType.Parameter("dependsOn") @Nullable List<ActivityDependencyResponse> dependsOn,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("linkedServiceName") @Nullable LinkedServiceReferenceResponse linkedServiceName,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("parameters") @Nullable Map<String,Object> parameters,
+        @CustomType.Parameter("policy") @Nullable ActivityPolicyResponse policy,
+        @CustomType.Parameter("priority") @Nullable Object priority,
+        @CustomType.Parameter("runtimeVersion") @Nullable Object runtimeVersion,
+        @CustomType.Parameter("scriptLinkedService") LinkedServiceReferenceResponse scriptLinkedService,
+        @CustomType.Parameter("scriptPath") Object scriptPath,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("userProperties") @Nullable List<UserPropertyResponse> userProperties) {
         this.compilationMode = compilationMode;
         this.degreeOfParallelism = degreeOfParallelism;
         this.dependsOn = dependsOn;

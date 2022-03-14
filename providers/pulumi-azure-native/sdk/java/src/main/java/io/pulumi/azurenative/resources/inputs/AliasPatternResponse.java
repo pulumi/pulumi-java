@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.resources.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class AliasPatternResponse extends io.pulumi.resources.InvokeArgs {
      * The alias pattern phrase.
      * 
      */
-    @InputImport(name="phrase")
+    @Import(name="phrase")
       private final @Nullable String phrase;
 
     public Optional<String> getPhrase() {
@@ -33,7 +33,7 @@ public final class AliasPatternResponse extends io.pulumi.resources.InvokeArgs {
      * The type of alias pattern
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable String type;
 
     public Optional<String> getType() {
@@ -44,7 +44,7 @@ public final class AliasPatternResponse extends io.pulumi.resources.InvokeArgs {
      * The alias pattern variable.
      * 
      */
-    @InputImport(name="variable")
+    @Import(name="variable")
       private final @Nullable String variable;
 
     public Optional<String> getVariable() {

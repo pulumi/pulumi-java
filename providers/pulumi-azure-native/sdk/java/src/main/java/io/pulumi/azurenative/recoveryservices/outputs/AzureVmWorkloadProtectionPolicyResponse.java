@@ -5,7 +5,7 @@ package io.pulumi.azurenative.recoveryservices.outputs;
 
 import io.pulumi.azurenative.recoveryservices.outputs.SettingsResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.SubProtectionPolicyResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -14,7 +14,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AzureVmWorkloadProtectionPolicyResponse {
     /**
      * This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
@@ -48,14 +48,14 @@ public final class AzureVmWorkloadProtectionPolicyResponse {
      */
     private final @Nullable String workLoadType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AzureVmWorkloadProtectionPolicyResponse(
-        @OutputCustomType.Parameter("backupManagementType") String backupManagementType,
-        @OutputCustomType.Parameter("makePolicyConsistent") @Nullable Boolean makePolicyConsistent,
-        @OutputCustomType.Parameter("protectedItemsCount") @Nullable Integer protectedItemsCount,
-        @OutputCustomType.Parameter("settings") @Nullable SettingsResponse settings,
-        @OutputCustomType.Parameter("subProtectionPolicy") @Nullable List<SubProtectionPolicyResponse> subProtectionPolicy,
-        @OutputCustomType.Parameter("workLoadType") @Nullable String workLoadType) {
+        @CustomType.Parameter("backupManagementType") String backupManagementType,
+        @CustomType.Parameter("makePolicyConsistent") @Nullable Boolean makePolicyConsistent,
+        @CustomType.Parameter("protectedItemsCount") @Nullable Integer protectedItemsCount,
+        @CustomType.Parameter("settings") @Nullable SettingsResponse settings,
+        @CustomType.Parameter("subProtectionPolicy") @Nullable List<SubProtectionPolicyResponse> subProtectionPolicy,
+        @CustomType.Parameter("workLoadType") @Nullable String workLoadType) {
         this.backupManagementType = backupManagementType;
         this.makePolicyConsistent = makePolicyConsistent;
         this.protectedItemsCount = protectedItemsCount;

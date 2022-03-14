@@ -3,12 +3,12 @@
 
 package io.pulumi.azurenative.importexport.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class PackageInformationResponse {
     /**
      * The name of the carrier that is used to ship the import or export drives.
@@ -31,12 +31,12 @@ public final class PackageInformationResponse {
      */
     private final String trackingNumber;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PackageInformationResponse(
-        @OutputCustomType.Parameter("carrierName") String carrierName,
-        @OutputCustomType.Parameter("driveCount") Double driveCount,
-        @OutputCustomType.Parameter("shipDate") String shipDate,
-        @OutputCustomType.Parameter("trackingNumber") String trackingNumber) {
+        @CustomType.Parameter("carrierName") String carrierName,
+        @CustomType.Parameter("driveCount") Double driveCount,
+        @CustomType.Parameter("shipDate") String shipDate,
+        @CustomType.Parameter("trackingNumber") String trackingNumber) {
         this.carrierName = carrierName;
         this.driveCount = driveCount;
         this.shipDate = shipDate;

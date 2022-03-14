@@ -6,7 +6,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 import io.pulumi.azurenative.datafactory.inputs.AzureKeyVaultSecretReferenceResponse;
 import io.pulumi.azurenative.datafactory.inputs.IntegrationRuntimeReferenceResponse;
 import io.pulumi.azurenative.datafactory.inputs.ParameterSpecificationResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -28,7 +28,7 @@ public final class OracleLinkedServiceResponse extends io.pulumi.resources.Invok
      * List of tags that can be used for describing the linked service.
      * 
      */
-    @InputImport(name="annotations")
+    @Import(name="annotations")
       private final @Nullable List<Object> annotations;
 
     public List<Object> getAnnotations() {
@@ -39,7 +39,7 @@ public final class OracleLinkedServiceResponse extends io.pulumi.resources.Invok
      * The integration runtime reference.
      * 
      */
-    @InputImport(name="connectVia")
+    @Import(name="connectVia")
       private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
     public Optional<IntegrationRuntimeReferenceResponse> getConnectVia() {
@@ -50,7 +50,7 @@ public final class OracleLinkedServiceResponse extends io.pulumi.resources.Invok
      * The connection string. Type: string, SecureString or AzureKeyVaultSecretReference.
      * 
      */
-    @InputImport(name="connectionString", required=true)
+    @Import(name="connectionString", required=true)
       private final Object connectionString;
 
     public Object getConnectionString() {
@@ -61,7 +61,7 @@ public final class OracleLinkedServiceResponse extends io.pulumi.resources.Invok
      * Linked service description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable String description;
 
     public Optional<String> getDescription() {
@@ -72,7 +72,7 @@ public final class OracleLinkedServiceResponse extends io.pulumi.resources.Invok
      * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="encryptedCredential")
+    @Import(name="encryptedCredential")
       private final @Nullable Object encryptedCredential;
 
     public Optional<Object> getEncryptedCredential() {
@@ -83,7 +83,7 @@ public final class OracleLinkedServiceResponse extends io.pulumi.resources.Invok
      * Parameters for linked service.
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
     public Map<String,ParameterSpecificationResponse> getParameters() {
@@ -94,7 +94,7 @@ public final class OracleLinkedServiceResponse extends io.pulumi.resources.Invok
      * The Azure key vault secret reference of password in connection string.
      * 
      */
-    @InputImport(name="password")
+    @Import(name="password")
       private final @Nullable AzureKeyVaultSecretReferenceResponse password;
 
     public Optional<AzureKeyVaultSecretReferenceResponse> getPassword() {
@@ -106,7 +106,7 @@ public final class OracleLinkedServiceResponse extends io.pulumi.resources.Invok
      * Expected value is 'Oracle'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

@@ -15,7 +15,7 @@ import io.pulumi.azurenative.network.outputs.VpnServerConfigVpnClientRevokedCert
 import io.pulumi.azurenative.network.outputs.VpnServerConfigVpnClientRootCertificateResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -43,7 +43,7 @@ public class VpnServerConfiguration extends io.pulumi.resources.CustomResource {
      * The set of aad vpn authentication parameters.
      * 
      */
-    @OutputExport(name="aadAuthenticationParameters", type=AadAuthenticationParametersResponse.class, parameters={})
+    @Export(name="aadAuthenticationParameters", type=AadAuthenticationParametersResponse.class, parameters={})
     private Output</* @Nullable */ AadAuthenticationParametersResponse> aadAuthenticationParameters;
 
     /**
@@ -57,7 +57,7 @@ public class VpnServerConfiguration extends io.pulumi.resources.CustomResource {
      * A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -71,7 +71,7 @@ public class VpnServerConfiguration extends io.pulumi.resources.CustomResource {
      * Resource location.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -85,7 +85,7 @@ public class VpnServerConfiguration extends io.pulumi.resources.CustomResource {
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -99,7 +99,7 @@ public class VpnServerConfiguration extends io.pulumi.resources.CustomResource {
      * List of references to P2SVpnGateways.
      * 
      */
-    @OutputExport(name="p2SVpnGateways", type=List.class, parameters={P2SVpnGatewayResponse.class})
+    @Export(name="p2SVpnGateways", type=List.class, parameters={P2SVpnGatewayResponse.class})
     private Output<List<P2SVpnGatewayResponse>> p2SVpnGateways;
 
     /**
@@ -113,7 +113,7 @@ public class VpnServerConfiguration extends io.pulumi.resources.CustomResource {
      * The provisioning state of the VpnServerConfiguration resource. Possible values are: 'Updating', 'Deleting', and 'Failed'.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -127,7 +127,7 @@ public class VpnServerConfiguration extends io.pulumi.resources.CustomResource {
      * Radius client root certificate of VpnServerConfiguration.
      * 
      */
-    @OutputExport(name="radiusClientRootCertificates", type=List.class, parameters={VpnServerConfigRadiusClientRootCertificateResponse.class})
+    @Export(name="radiusClientRootCertificates", type=List.class, parameters={VpnServerConfigRadiusClientRootCertificateResponse.class})
     private Output</* @Nullable */ List<VpnServerConfigRadiusClientRootCertificateResponse>> radiusClientRootCertificates;
 
     /**
@@ -141,7 +141,7 @@ public class VpnServerConfiguration extends io.pulumi.resources.CustomResource {
      * The radius server address property of the VpnServerConfiguration resource for point to site client connection.
      * 
      */
-    @OutputExport(name="radiusServerAddress", type=String.class, parameters={})
+    @Export(name="radiusServerAddress", type=String.class, parameters={})
     private Output</* @Nullable */ String> radiusServerAddress;
 
     /**
@@ -155,7 +155,7 @@ public class VpnServerConfiguration extends io.pulumi.resources.CustomResource {
      * Radius Server root certificate of VpnServerConfiguration.
      * 
      */
-    @OutputExport(name="radiusServerRootCertificates", type=List.class, parameters={VpnServerConfigRadiusServerRootCertificateResponse.class})
+    @Export(name="radiusServerRootCertificates", type=List.class, parameters={VpnServerConfigRadiusServerRootCertificateResponse.class})
     private Output</* @Nullable */ List<VpnServerConfigRadiusServerRootCertificateResponse>> radiusServerRootCertificates;
 
     /**
@@ -169,7 +169,7 @@ public class VpnServerConfiguration extends io.pulumi.resources.CustomResource {
      * The radius secret property of the VpnServerConfiguration resource for point to site client connection.
      * 
      */
-    @OutputExport(name="radiusServerSecret", type=String.class, parameters={})
+    @Export(name="radiusServerSecret", type=String.class, parameters={})
     private Output</* @Nullable */ String> radiusServerSecret;
 
     /**
@@ -183,7 +183,7 @@ public class VpnServerConfiguration extends io.pulumi.resources.CustomResource {
      * Multiple Radius Server configuration for VpnServerConfiguration.
      * 
      */
-    @OutputExport(name="radiusServers", type=List.class, parameters={RadiusServerResponse.class})
+    @Export(name="radiusServers", type=List.class, parameters={RadiusServerResponse.class})
     private Output</* @Nullable */ List<RadiusServerResponse>> radiusServers;
 
     /**
@@ -197,7 +197,7 @@ public class VpnServerConfiguration extends io.pulumi.resources.CustomResource {
      * Resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -211,7 +211,7 @@ public class VpnServerConfiguration extends io.pulumi.resources.CustomResource {
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -225,7 +225,7 @@ public class VpnServerConfiguration extends io.pulumi.resources.CustomResource {
      * VPN authentication types for the VpnServerConfiguration.
      * 
      */
-    @OutputExport(name="vpnAuthenticationTypes", type=List.class, parameters={String.class})
+    @Export(name="vpnAuthenticationTypes", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> vpnAuthenticationTypes;
 
     /**
@@ -239,7 +239,7 @@ public class VpnServerConfiguration extends io.pulumi.resources.CustomResource {
      * VpnClientIpsecPolicies for VpnServerConfiguration.
      * 
      */
-    @OutputExport(name="vpnClientIpsecPolicies", type=List.class, parameters={IpsecPolicyResponse.class})
+    @Export(name="vpnClientIpsecPolicies", type=List.class, parameters={IpsecPolicyResponse.class})
     private Output</* @Nullable */ List<IpsecPolicyResponse>> vpnClientIpsecPolicies;
 
     /**
@@ -253,7 +253,7 @@ public class VpnServerConfiguration extends io.pulumi.resources.CustomResource {
      * VPN client revoked certificate of VpnServerConfiguration.
      * 
      */
-    @OutputExport(name="vpnClientRevokedCertificates", type=List.class, parameters={VpnServerConfigVpnClientRevokedCertificateResponse.class})
+    @Export(name="vpnClientRevokedCertificates", type=List.class, parameters={VpnServerConfigVpnClientRevokedCertificateResponse.class})
     private Output</* @Nullable */ List<VpnServerConfigVpnClientRevokedCertificateResponse>> vpnClientRevokedCertificates;
 
     /**
@@ -267,7 +267,7 @@ public class VpnServerConfiguration extends io.pulumi.resources.CustomResource {
      * VPN client root certificate of VpnServerConfiguration.
      * 
      */
-    @OutputExport(name="vpnClientRootCertificates", type=List.class, parameters={VpnServerConfigVpnClientRootCertificateResponse.class})
+    @Export(name="vpnClientRootCertificates", type=List.class, parameters={VpnServerConfigVpnClientRootCertificateResponse.class})
     private Output</* @Nullable */ List<VpnServerConfigVpnClientRootCertificateResponse>> vpnClientRootCertificates;
 
     /**
@@ -281,7 +281,7 @@ public class VpnServerConfiguration extends io.pulumi.resources.CustomResource {
      * VPN protocols for the VpnServerConfiguration.
      * 
      */
-    @OutputExport(name="vpnProtocols", type=List.class, parameters={String.class})
+    @Export(name="vpnProtocols", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> vpnProtocols;
 
     /**

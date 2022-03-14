@@ -7,7 +7,7 @@ import io.pulumi.azurenative.scheduler.enums.JobCollectionState;
 import io.pulumi.azurenative.scheduler.inputs.JobCollectionQuotaArgs;
 import io.pulumi.azurenative.scheduler.inputs.SkuArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -20,7 +20,7 @@ public final class JobCollectionPropertiesArgs extends io.pulumi.resources.Resou
      * Gets or sets the job collection quota.
      * 
      */
-    @InputImport(name="quota")
+    @Import(name="quota")
       private final @Nullable Output<JobCollectionQuotaArgs> quota;
 
     public Output<JobCollectionQuotaArgs> getQuota() {
@@ -31,7 +31,7 @@ public final class JobCollectionPropertiesArgs extends io.pulumi.resources.Resou
      * Gets or sets the SKU.
      * 
      */
-    @InputImport(name="sku")
+    @Import(name="sku")
       private final @Nullable Output<SkuArgs> sku;
 
     public Output<SkuArgs> getSku() {
@@ -42,7 +42,7 @@ public final class JobCollectionPropertiesArgs extends io.pulumi.resources.Resou
      * Gets or sets the state.
      * 
      */
-    @InputImport(name="state")
+    @Import(name="state")
       private final @Nullable Output<JobCollectionState> state;
 
     public Output<JobCollectionState> getState() {

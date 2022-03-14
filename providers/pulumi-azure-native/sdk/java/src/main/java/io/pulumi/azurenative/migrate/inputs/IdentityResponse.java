@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.migrate.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class IdentityResponse extends io.pulumi.resources.InvokeArgs {
      * Gets or sets the principal id.
      * 
      */
-    @InputImport(name="principalId")
+    @Import(name="principalId")
       private final @Nullable String principalId;
 
     public Optional<String> getPrincipalId() {
@@ -33,7 +33,7 @@ public final class IdentityResponse extends io.pulumi.resources.InvokeArgs {
      * Gets or sets the tenant id.
      * 
      */
-    @InputImport(name="tenantId")
+    @Import(name="tenantId")
       private final @Nullable String tenantId;
 
     public Optional<String> getTenantId() {
@@ -44,7 +44,7 @@ public final class IdentityResponse extends io.pulumi.resources.InvokeArgs {
      * The type of identity used for the resource mover service.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable String type;
 
     public Optional<String> getType() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class StaticSiteBuildPropertiesResponse extends io.pulumi.resources
      * A custom command to run during deployment of the Azure Functions API application.
      * 
      */
-    @InputImport(name="apiBuildCommand")
+    @Import(name="apiBuildCommand")
       private final @Nullable String apiBuildCommand;
 
     public Optional<String> getApiBuildCommand() {
@@ -34,7 +34,7 @@ public final class StaticSiteBuildPropertiesResponse extends io.pulumi.resources
      * The path to the api code within the repository.
      * 
      */
-    @InputImport(name="apiLocation")
+    @Import(name="apiLocation")
       private final @Nullable String apiLocation;
 
     public Optional<String> getApiLocation() {
@@ -45,7 +45,7 @@ public final class StaticSiteBuildPropertiesResponse extends io.pulumi.resources
      * Deprecated: The path of the app artifacts after building (deprecated in favor of OutputLocation)
      * 
      */
-    @InputImport(name="appArtifactLocation")
+    @Import(name="appArtifactLocation")
       private final @Nullable String appArtifactLocation;
 
     public Optional<String> getAppArtifactLocation() {
@@ -56,7 +56,7 @@ public final class StaticSiteBuildPropertiesResponse extends io.pulumi.resources
      * A custom command to run during deployment of the static content application.
      * 
      */
-    @InputImport(name="appBuildCommand")
+    @Import(name="appBuildCommand")
       private final @Nullable String appBuildCommand;
 
     public Optional<String> getAppBuildCommand() {
@@ -67,7 +67,7 @@ public final class StaticSiteBuildPropertiesResponse extends io.pulumi.resources
      * The path to the app code within the repository.
      * 
      */
-    @InputImport(name="appLocation")
+    @Import(name="appLocation")
       private final @Nullable String appLocation;
 
     public Optional<String> getAppLocation() {
@@ -78,7 +78,7 @@ public final class StaticSiteBuildPropertiesResponse extends io.pulumi.resources
      * Github Action secret name override.
      * 
      */
-    @InputImport(name="githubActionSecretNameOverride")
+    @Import(name="githubActionSecretNameOverride")
       private final @Nullable String githubActionSecretNameOverride;
 
     public Optional<String> getGithubActionSecretNameOverride() {
@@ -89,7 +89,7 @@ public final class StaticSiteBuildPropertiesResponse extends io.pulumi.resources
      * The output path of the app after building.
      * 
      */
-    @InputImport(name="outputLocation")
+    @Import(name="outputLocation")
       private final @Nullable String outputLocation;
 
     public Optional<String> getOutputLocation() {
@@ -100,7 +100,7 @@ public final class StaticSiteBuildPropertiesResponse extends io.pulumi.resources
      * Skip Github Action workflow generation.
      * 
      */
-    @InputImport(name="skipGithubActionWorkflowGeneration")
+    @Import(name="skipGithubActionWorkflowGeneration")
       private final @Nullable Boolean skipGithubActionWorkflowGeneration;
 
     public Optional<Boolean> getSkipGithubActionWorkflowGeneration() {

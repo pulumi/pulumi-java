@@ -6,7 +6,7 @@ package io.pulumi.azurenative.devtestlab;
 import io.pulumi.azurenative.devtestlab.inputs.FormulaPropertiesFromVmArgs;
 import io.pulumi.azurenative.devtestlab.inputs.LabVirtualMachineCreationParameterArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class FormulaArgs extends io.pulumi.resources.ResourceArgs {
      * The description of the formula.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -32,7 +32,7 @@ public final class FormulaArgs extends io.pulumi.resources.ResourceArgs {
      * The content of the formula.
      * 
      */
-    @InputImport(name="formulaContent")
+    @Import(name="formulaContent")
       private final @Nullable Output<LabVirtualMachineCreationParameterArgs> formulaContent;
 
     public Output<LabVirtualMachineCreationParameterArgs> getFormulaContent() {
@@ -43,7 +43,7 @@ public final class FormulaArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the lab.
      * 
      */
-    @InputImport(name="labName", required=true)
+    @Import(name="labName", required=true)
       private final Output<String> labName;
 
     public Output<String> getLabName() {
@@ -54,7 +54,7 @@ public final class FormulaArgs extends io.pulumi.resources.ResourceArgs {
      * The location of the resource.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -65,7 +65,7 @@ public final class FormulaArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the formula.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -76,7 +76,7 @@ public final class FormulaArgs extends io.pulumi.resources.ResourceArgs {
      * The OS type of the formula.
      * 
      */
-    @InputImport(name="osType")
+    @Import(name="osType")
       private final @Nullable Output<String> osType;
 
     public Output<String> getOsType() {
@@ -87,7 +87,7 @@ public final class FormulaArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -98,7 +98,7 @@ public final class FormulaArgs extends io.pulumi.resources.ResourceArgs {
      * The tags of the resource.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -109,7 +109,7 @@ public final class FormulaArgs extends io.pulumi.resources.ResourceArgs {
      * Information about a VM from which a formula is to be created.
      * 
      */
-    @InputImport(name="vm")
+    @Import(name="vm")
       private final @Nullable Output<FormulaPropertiesFromVmArgs> vm;
 
     public Output<FormulaPropertiesFromVmArgs> getVm() {

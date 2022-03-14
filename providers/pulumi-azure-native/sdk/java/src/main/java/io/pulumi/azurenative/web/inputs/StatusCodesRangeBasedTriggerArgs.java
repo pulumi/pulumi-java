@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,14 +23,14 @@ public final class StatusCodesRangeBasedTriggerArgs extends io.pulumi.resources.
      * Request Count.
      * 
      */
-    @InputImport(name="count")
+    @Import(name="count")
       private final @Nullable Output<Integer> count;
 
     public Output<Integer> getCount() {
         return this.count == null ? Output.empty() : this.count;
     }
 
-    @InputImport(name="path")
+    @Import(name="path")
       private final @Nullable Output<String> path;
 
     public Output<String> getPath() {
@@ -41,7 +41,7 @@ public final class StatusCodesRangeBasedTriggerArgs extends io.pulumi.resources.
      * HTTP status code.
      * 
      */
-    @InputImport(name="statusCodes")
+    @Import(name="statusCodes")
       private final @Nullable Output<String> statusCodes;
 
     public Output<String> getStatusCodes() {
@@ -52,7 +52,7 @@ public final class StatusCodesRangeBasedTriggerArgs extends io.pulumi.resources.
      * Time interval.
      * 
      */
-    @InputImport(name="timeInterval")
+    @Import(name="timeInterval")
       private final @Nullable Output<String> timeInterval;
 
     public Output<String> getTimeInterval() {

@@ -9,7 +9,7 @@ import io.pulumi.azurenative.synapse.outputs.DatabaseStatisticsResponse;
 import io.pulumi.azurenative.synapse.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -37,7 +37,7 @@ public class ReadWriteDatabase extends io.pulumi.resources.CustomResource {
      * The time the data should be kept in cache for fast queries in TimeSpan.
      * 
      */
-    @OutputExport(name="hotCachePeriod", type=String.class, parameters={})
+    @Export(name="hotCachePeriod", type=String.class, parameters={})
     private Output</* @Nullable */ String> hotCachePeriod;
 
     /**
@@ -51,7 +51,7 @@ public class ReadWriteDatabase extends io.pulumi.resources.CustomResource {
      * Indicates whether the database is followed.
      * 
      */
-    @OutputExport(name="isFollowed", type=Boolean.class, parameters={})
+    @Export(name="isFollowed", type=Boolean.class, parameters={})
     private Output<Boolean> isFollowed;
 
     /**
@@ -66,7 +66,7 @@ public class ReadWriteDatabase extends io.pulumi.resources.CustomResource {
      * Expected value is 'ReadWrite'.
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
     /**
@@ -81,7 +81,7 @@ public class ReadWriteDatabase extends io.pulumi.resources.CustomResource {
      * Resource location.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -95,7 +95,7 @@ public class ReadWriteDatabase extends io.pulumi.resources.CustomResource {
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -109,7 +109,7 @@ public class ReadWriteDatabase extends io.pulumi.resources.CustomResource {
      * The provisioned state of the resource.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -123,7 +123,7 @@ public class ReadWriteDatabase extends io.pulumi.resources.CustomResource {
      * The time the data should be kept before it stops being accessible to queries in TimeSpan.
      * 
      */
-    @OutputExport(name="softDeletePeriod", type=String.class, parameters={})
+    @Export(name="softDeletePeriod", type=String.class, parameters={})
     private Output</* @Nullable */ String> softDeletePeriod;
 
     /**
@@ -137,7 +137,7 @@ public class ReadWriteDatabase extends io.pulumi.resources.CustomResource {
      * The statistics of the database.
      * 
      */
-    @OutputExport(name="statistics", type=DatabaseStatisticsResponse.class, parameters={})
+    @Export(name="statistics", type=DatabaseStatisticsResponse.class, parameters={})
     private Output<DatabaseStatisticsResponse> statistics;
 
     /**
@@ -151,7 +151,7 @@ public class ReadWriteDatabase extends io.pulumi.resources.CustomResource {
      * Azure Resource Manager metadata containing createdBy and modifiedBy information.
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -165,7 +165,7 @@ public class ReadWriteDatabase extends io.pulumi.resources.CustomResource {
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

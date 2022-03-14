@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.insights.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -14,14 +14,14 @@ public final class EventLogConfigurationResponse extends io.pulumi.resources.Inv
 
     public static final EventLogConfigurationResponse Empty = new EventLogConfigurationResponse();
 
-    @InputImport(name="filter")
+    @Import(name="filter")
       private final @Nullable String filter;
 
     public Optional<String> getFilter() {
         return this.filter == null ? Optional.empty() : Optional.ofNullable(this.filter);
     }
 
-    @InputImport(name="logName", required=true)
+    @Import(name="logName", required=true)
       private final String logName;
 
     public String getLogName() {

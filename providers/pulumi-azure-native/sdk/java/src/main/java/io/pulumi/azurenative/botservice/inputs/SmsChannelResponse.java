@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.botservice.inputs;
 
 import io.pulumi.azurenative.botservice.inputs.SmsChannelPropertiesResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class SmsChannelResponse extends io.pulumi.resources.InvokeArgs {
      * Expected value is 'SmsChannel'.
      * 
      */
-    @InputImport(name="channelName", required=true)
+    @Import(name="channelName", required=true)
       private final String channelName;
 
     public String getChannelName() {
@@ -35,7 +35,7 @@ public final class SmsChannelResponse extends io.pulumi.resources.InvokeArgs {
      * Entity Tag of the resource
      * 
      */
-    @InputImport(name="etag")
+    @Import(name="etag")
       private final @Nullable String etag;
 
     public Optional<String> getEtag() {
@@ -46,7 +46,7 @@ public final class SmsChannelResponse extends io.pulumi.resources.InvokeArgs {
      * Specifies the location of the resource.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable String location;
 
     public Optional<String> getLocation() {
@@ -57,7 +57,7 @@ public final class SmsChannelResponse extends io.pulumi.resources.InvokeArgs {
      * The set of properties specific to Sms channel resource
      * 
      */
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable SmsChannelPropertiesResponse properties;
 
     public Optional<SmsChannelPropertiesResponse> getProperties() {
@@ -68,7 +68,7 @@ public final class SmsChannelResponse extends io.pulumi.resources.InvokeArgs {
      * Provisioning state of the resource
      * 
      */
-    @InputImport(name="provisioningState", required=true)
+    @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
     public String getProvisioningState() {

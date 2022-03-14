@@ -6,7 +6,7 @@ package io.pulumi.azurenative.hybridnetwork.inputs;
 import io.pulumi.azurenative.hybridnetwork.enums.DiskCreateOptionTypes;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class DataDiskArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies how the virtual machine should be created.
      * 
      */
-    @InputImport(name="createOption")
+    @Import(name="createOption")
       private final @Nullable Output<Either<String,DiskCreateOptionTypes>> createOption;
 
     public Output<Either<String,DiskCreateOptionTypes>> getCreateOption() {
@@ -36,7 +36,7 @@ public final class DataDiskArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the size of an empty disk in gigabytes. This element can be used to overwrite the size of the disk in a virtual machine image.
      * 
      */
-    @InputImport(name="diskSizeGB")
+    @Import(name="diskSizeGB")
       private final @Nullable Output<Integer> diskSizeGB;
 
     public Output<Integer> getDiskSizeGB() {
@@ -47,7 +47,7 @@ public final class DataDiskArgs extends io.pulumi.resources.ResourceArgs {
      * The name of data disk.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {

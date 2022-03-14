@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.containerinstance.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EnvironmentVariableResponse {
     /**
      * The name of the environment variable.
@@ -27,11 +27,11 @@ public final class EnvironmentVariableResponse {
      */
     private final @Nullable String value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EnvironmentVariableResponse(
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("secureValue") @Nullable String secureValue,
-        @OutputCustomType.Parameter("value") @Nullable String value) {
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("secureValue") @Nullable String secureValue,
+        @CustomType.Parameter("value") @Nullable String value) {
         this.name = name;
         this.secureValue = secureValue;
         this.value = value;

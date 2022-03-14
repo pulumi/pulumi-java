@@ -3,18 +3,18 @@
 
 package io.pulumi.azurenative.resources.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TagsResponse {
     private final @Nullable Map<String,String> tags;
 
-    @OutputCustomType.Constructor
-    private TagsResponse(@OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags) {
+    @CustomType.Constructor
+    private TagsResponse(@CustomType.Parameter("tags") @Nullable Map<String,String> tags) {
         this.tags = tags;
     }
 

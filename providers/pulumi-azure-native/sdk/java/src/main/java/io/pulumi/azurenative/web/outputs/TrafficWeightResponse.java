@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TrafficWeightResponse {
     /**
      * Indicates that the traffic weight belongs to a latest stable revision
@@ -29,11 +29,11 @@ public final class TrafficWeightResponse {
      */
     private final @Nullable Integer weight;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TrafficWeightResponse(
-        @OutputCustomType.Parameter("latestRevision") @Nullable Boolean latestRevision,
-        @OutputCustomType.Parameter("revisionName") @Nullable String revisionName,
-        @OutputCustomType.Parameter("weight") @Nullable Integer weight) {
+        @CustomType.Parameter("latestRevision") @Nullable Boolean latestRevision,
+        @CustomType.Parameter("revisionName") @Nullable String revisionName,
+        @CustomType.Parameter("weight") @Nullable Integer weight) {
         this.latestRevision = latestRevision;
         this.revisionName = revisionName;
         this.weight = weight;

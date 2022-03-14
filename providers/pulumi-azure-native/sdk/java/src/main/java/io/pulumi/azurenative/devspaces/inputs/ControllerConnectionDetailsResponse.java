@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.devspaces.inputs;
 
 import io.pulumi.azurenative.devspaces.inputs.KubernetesConnectionDetailsResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class ControllerConnectionDetailsResponse extends io.pulumi.resourc
      * Base class for types that supply values used to connect to container orchestrators
      * 
      */
-    @InputImport(name="orchestratorSpecificConnectionDetails")
+    @Import(name="orchestratorSpecificConnectionDetails")
       private final @Nullable KubernetesConnectionDetailsResponse orchestratorSpecificConnectionDetails;
 
     public Optional<KubernetesConnectionDetailsResponse> getOrchestratorSpecificConnectionDetails() {

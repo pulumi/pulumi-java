@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.healthcareapis.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class IotMappingPropertiesResponse extends io.pulumi.resources.Invo
      * The mapping.
      * 
      */
-    @InputImport(name="content")
+    @Import(name="content")
       private final @Nullable Object content;
 
     public Optional<Object> getContent() {

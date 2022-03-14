@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.hdinsight.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class ScriptActionResponse extends io.pulumi.resources.InvokeArgs {
      * The name of the script action.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -31,7 +31,7 @@ public final class ScriptActionResponse extends io.pulumi.resources.InvokeArgs {
      * The parameters for the script provided.
      * 
      */
-    @InputImport(name="parameters", required=true)
+    @Import(name="parameters", required=true)
       private final String parameters;
 
     public String getParameters() {
@@ -42,7 +42,7 @@ public final class ScriptActionResponse extends io.pulumi.resources.InvokeArgs {
      * The URI to the script.
      * 
      */
-    @InputImport(name="uri", required=true)
+    @Import(name="uri", required=true)
       private final String uri;
 
     public String getUri() {

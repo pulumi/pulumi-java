@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.videoanalyzer.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TlsValidationOptionsResponse {
     /**
      * When set to 'true' causes the certificate subject name validation to be skipped. Default is 'false'.
@@ -22,10 +22,10 @@ public final class TlsValidationOptionsResponse {
      */
     private final @Nullable String ignoreSignature;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TlsValidationOptionsResponse(
-        @OutputCustomType.Parameter("ignoreHostname") @Nullable String ignoreHostname,
-        @OutputCustomType.Parameter("ignoreSignature") @Nullable String ignoreSignature) {
+        @CustomType.Parameter("ignoreHostname") @Nullable String ignoreHostname,
+        @CustomType.Parameter("ignoreSignature") @Nullable String ignoreSignature) {
         this.ignoreHostname = ignoreHostname;
         this.ignoreSignature = ignoreSignature;
     }

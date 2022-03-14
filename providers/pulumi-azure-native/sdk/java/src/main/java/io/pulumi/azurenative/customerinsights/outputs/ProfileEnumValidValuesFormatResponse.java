@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.customerinsights.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ProfileEnumValidValuesFormatResponse {
     /**
      * Localized names of the enum member.
@@ -24,10 +24,10 @@ public final class ProfileEnumValidValuesFormatResponse {
      */
     private final @Nullable Integer value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ProfileEnumValidValuesFormatResponse(
-        @OutputCustomType.Parameter("localizedValueNames") @Nullable Map<String,String> localizedValueNames,
-        @OutputCustomType.Parameter("value") @Nullable Integer value) {
+        @CustomType.Parameter("localizedValueNames") @Nullable Map<String,String> localizedValueNames,
+        @CustomType.Parameter("value") @Nullable Integer value) {
         this.localizedValueNames = localizedValueNames;
         this.value = value;
     }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.operationsmanagement.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class ArmTemplateParameterResponse extends io.pulumi.resources.Invo
      * name of the parameter.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -33,7 +33,7 @@ public final class ArmTemplateParameterResponse extends io.pulumi.resources.Invo
      * value for the parameter. In Jtoken
      * 
      */
-    @InputImport(name="value")
+    @Import(name="value")
       private final @Nullable String value;
 
     public Optional<String> getValue() {

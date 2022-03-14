@@ -8,7 +8,7 @@ import io.pulumi.azurenative.network.inputs.FirewallPolicyFilterRuleActionArgs;
 import io.pulumi.azurenative.network.inputs.NatRuleConditionArgs;
 import io.pulumi.azurenative.network.inputs.NetworkRuleConditionArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -29,7 +29,7 @@ public final class FirewallPolicyFilterRuleArgs extends io.pulumi.resources.Reso
      * The action type of a Filter rule.
      * 
      */
-    @InputImport(name="action")
+    @Import(name="action")
       private final @Nullable Output<FirewallPolicyFilterRuleActionArgs> action;
 
     public Output<FirewallPolicyFilterRuleActionArgs> getAction() {
@@ -40,7 +40,7 @@ public final class FirewallPolicyFilterRuleArgs extends io.pulumi.resources.Reso
      * The name of the rule.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -51,7 +51,7 @@ public final class FirewallPolicyFilterRuleArgs extends io.pulumi.resources.Reso
      * Priority of the Firewall Policy Rule resource.
      * 
      */
-    @InputImport(name="priority")
+    @Import(name="priority")
       private final @Nullable Output<Integer> priority;
 
     public Output<Integer> getPriority() {
@@ -62,7 +62,7 @@ public final class FirewallPolicyFilterRuleArgs extends io.pulumi.resources.Reso
      * Collection of rule conditions used by a rule.
      * 
      */
-    @InputImport(name="ruleConditions")
+    @Import(name="ruleConditions")
       private final @Nullable Output<List<Object>> ruleConditions;
 
     public Output<List<Object>> getRuleConditions() {
@@ -74,7 +74,7 @@ public final class FirewallPolicyFilterRuleArgs extends io.pulumi.resources.Reso
      * Expected value is 'FirewallPolicyFilterRule'.
      * 
      */
-    @InputImport(name="ruleType", required=true)
+    @Import(name="ruleType", required=true)
       private final Output<String> ruleType;
 
     public Output<String> getRuleType() {

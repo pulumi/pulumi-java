@@ -8,7 +8,7 @@ import io.pulumi.azurenative.automanage.ConfigurationProfilePreferenceArgs;
 import io.pulumi.azurenative.automanage.outputs.ConfigurationProfilePreferencePropertiesResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -36,7 +36,7 @@ public class ConfigurationProfilePreference extends io.pulumi.resources.CustomRe
      * The geo-location where the resource lives
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -50,7 +50,7 @@ public class ConfigurationProfilePreference extends io.pulumi.resources.CustomRe
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -64,7 +64,7 @@ public class ConfigurationProfilePreference extends io.pulumi.resources.CustomRe
      * Properties of the configuration profile preference.
      * 
      */
-    @OutputExport(name="properties", type=ConfigurationProfilePreferencePropertiesResponse.class, parameters={})
+    @Export(name="properties", type=ConfigurationProfilePreferencePropertiesResponse.class, parameters={})
     private Output<ConfigurationProfilePreferencePropertiesResponse> properties;
 
     /**
@@ -78,7 +78,7 @@ public class ConfigurationProfilePreference extends io.pulumi.resources.CustomRe
      * Resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -92,7 +92,7 @@ public class ConfigurationProfilePreference extends io.pulumi.resources.CustomRe
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

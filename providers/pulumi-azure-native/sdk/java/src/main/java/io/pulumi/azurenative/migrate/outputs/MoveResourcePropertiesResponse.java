@@ -20,7 +20,7 @@ import io.pulumi.azurenative.migrate.outputs.SqlElasticPoolResourceSettingsRespo
 import io.pulumi.azurenative.migrate.outputs.SqlServerResourceSettingsResponse;
 import io.pulumi.azurenative.migrate.outputs.VirtualMachineResourceSettingsResponse;
 import io.pulumi.azurenative.migrate.outputs.VirtualNetworkResourceSettingsResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -29,7 +29,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class MoveResourcePropertiesResponse {
     /**
      * Gets or sets the move resource dependencies.
@@ -87,19 +87,19 @@ public final class MoveResourcePropertiesResponse {
      */
     private final String targetId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MoveResourcePropertiesResponse(
-        @OutputCustomType.Parameter("dependsOn") List<MoveResourceDependencyResponse> dependsOn,
-        @OutputCustomType.Parameter("dependsOnOverrides") @Nullable List<MoveResourceDependencyOverrideResponse> dependsOnOverrides,
-        @OutputCustomType.Parameter("errors") MoveResourcePropertiesResponseErrors errors,
-        @OutputCustomType.Parameter("existingTargetId") @Nullable String existingTargetId,
-        @OutputCustomType.Parameter("isResolveRequired") Boolean isResolveRequired,
-        @OutputCustomType.Parameter("moveStatus") MoveResourcePropertiesResponseMoveStatus moveStatus,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("resourceSettings") @Nullable Object resourceSettings,
-        @OutputCustomType.Parameter("sourceId") String sourceId,
-        @OutputCustomType.Parameter("sourceResourceSettings") Object sourceResourceSettings,
-        @OutputCustomType.Parameter("targetId") String targetId) {
+        @CustomType.Parameter("dependsOn") List<MoveResourceDependencyResponse> dependsOn,
+        @CustomType.Parameter("dependsOnOverrides") @Nullable List<MoveResourceDependencyOverrideResponse> dependsOnOverrides,
+        @CustomType.Parameter("errors") MoveResourcePropertiesResponseErrors errors,
+        @CustomType.Parameter("existingTargetId") @Nullable String existingTargetId,
+        @CustomType.Parameter("isResolveRequired") Boolean isResolveRequired,
+        @CustomType.Parameter("moveStatus") MoveResourcePropertiesResponseMoveStatus moveStatus,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("resourceSettings") @Nullable Object resourceSettings,
+        @CustomType.Parameter("sourceId") String sourceId,
+        @CustomType.Parameter("sourceResourceSettings") Object sourceResourceSettings,
+        @CustomType.Parameter("targetId") String targetId) {
         this.dependsOn = dependsOn;
         this.dependsOnOverrides = dependsOnOverrides;
         this.errors = errors;

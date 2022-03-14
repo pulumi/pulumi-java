@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.recoveryservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class MabContainerExtendedInfoResponse {
     /**
      * Type of backup items associated with this container.
@@ -38,13 +38,13 @@ public final class MabContainerExtendedInfoResponse {
      */
     private final @Nullable String policyName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MabContainerExtendedInfoResponse(
-        @OutputCustomType.Parameter("backupItemType") @Nullable String backupItemType,
-        @OutputCustomType.Parameter("backupItems") @Nullable List<String> backupItems,
-        @OutputCustomType.Parameter("lastBackupStatus") @Nullable String lastBackupStatus,
-        @OutputCustomType.Parameter("lastRefreshedAt") @Nullable String lastRefreshedAt,
-        @OutputCustomType.Parameter("policyName") @Nullable String policyName) {
+        @CustomType.Parameter("backupItemType") @Nullable String backupItemType,
+        @CustomType.Parameter("backupItems") @Nullable List<String> backupItems,
+        @CustomType.Parameter("lastBackupStatus") @Nullable String lastBackupStatus,
+        @CustomType.Parameter("lastRefreshedAt") @Nullable String lastRefreshedAt,
+        @CustomType.Parameter("policyName") @Nullable String policyName) {
         this.backupItemType = backupItemType;
         this.backupItems = backupItems;
         this.lastBackupStatus = lastBackupStatus;

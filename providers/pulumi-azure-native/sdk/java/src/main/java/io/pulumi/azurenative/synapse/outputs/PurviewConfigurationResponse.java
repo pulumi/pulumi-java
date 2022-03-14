@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.synapse.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PurviewConfigurationResponse {
     /**
      * Purview Resource ID
@@ -17,8 +17,8 @@ public final class PurviewConfigurationResponse {
      */
     private final @Nullable String purviewResourceId;
 
-    @OutputCustomType.Constructor
-    private PurviewConfigurationResponse(@OutputCustomType.Parameter("purviewResourceId") @Nullable String purviewResourceId) {
+    @CustomType.Constructor
+    private PurviewConfigurationResponse(@CustomType.Parameter("purviewResourceId") @Nullable String purviewResourceId) {
         this.purviewResourceId = purviewResourceId;
     }
 

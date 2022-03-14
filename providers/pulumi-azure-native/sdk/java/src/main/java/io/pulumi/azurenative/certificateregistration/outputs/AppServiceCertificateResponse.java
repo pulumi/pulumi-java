@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.certificateregistration.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AppServiceCertificateResponse {
     /**
      * Key Vault resource Id.
@@ -27,11 +27,11 @@ public final class AppServiceCertificateResponse {
      */
     private final String provisioningState;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AppServiceCertificateResponse(
-        @OutputCustomType.Parameter("keyVaultId") @Nullable String keyVaultId,
-        @OutputCustomType.Parameter("keyVaultSecretName") @Nullable String keyVaultSecretName,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState) {
+        @CustomType.Parameter("keyVaultId") @Nullable String keyVaultId,
+        @CustomType.Parameter("keyVaultSecretName") @Nullable String keyVaultSecretName,
+        @CustomType.Parameter("provisioningState") String provisioningState) {
         this.keyVaultId = keyVaultId;
         this.keyVaultSecretName = keyVaultSecretName;
         this.provisioningState = provisioningState;

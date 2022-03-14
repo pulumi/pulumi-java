@@ -7,7 +7,7 @@ import io.pulumi.azurenative.network.outputs.ApplicationRuleConditionResponse;
 import io.pulumi.azurenative.network.outputs.FirewallPolicyFilterRuleActionResponse;
 import io.pulumi.azurenative.network.outputs.NatRuleConditionResponse;
 import io.pulumi.azurenative.network.outputs.NetworkRuleConditionResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -16,7 +16,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FirewallPolicyFilterRuleResponse {
     /**
      * The action type of a Filter rule.
@@ -45,13 +45,13 @@ public final class FirewallPolicyFilterRuleResponse {
      */
     private final String ruleType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FirewallPolicyFilterRuleResponse(
-        @OutputCustomType.Parameter("action") @Nullable FirewallPolicyFilterRuleActionResponse action,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("priority") @Nullable Integer priority,
-        @OutputCustomType.Parameter("ruleConditions") @Nullable List<Object> ruleConditions,
-        @OutputCustomType.Parameter("ruleType") String ruleType) {
+        @CustomType.Parameter("action") @Nullable FirewallPolicyFilterRuleActionResponse action,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("priority") @Nullable Integer priority,
+        @CustomType.Parameter("ruleConditions") @Nullable List<Object> ruleConditions,
+        @CustomType.Parameter("ruleType") String ruleType) {
         this.action = action;
         this.name = name;
         this.priority = priority;

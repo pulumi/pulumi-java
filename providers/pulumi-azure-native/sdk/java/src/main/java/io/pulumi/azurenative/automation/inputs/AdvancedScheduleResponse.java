@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.automation.inputs;
 
 import io.pulumi.azurenative.automation.inputs.AdvancedScheduleMonthlyOccurrenceResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class AdvancedScheduleResponse extends io.pulumi.resources.InvokeAr
      * Days of the month that the job should execute on. Must be between 1 and 31.
      * 
      */
-    @InputImport(name="monthDays")
+    @Import(name="monthDays")
       private final @Nullable List<Integer> monthDays;
 
     public List<Integer> getMonthDays() {
@@ -36,7 +36,7 @@ public final class AdvancedScheduleResponse extends io.pulumi.resources.InvokeAr
      * Occurrences of days within a month.
      * 
      */
-    @InputImport(name="monthlyOccurrences")
+    @Import(name="monthlyOccurrences")
       private final @Nullable List<AdvancedScheduleMonthlyOccurrenceResponse> monthlyOccurrences;
 
     public List<AdvancedScheduleMonthlyOccurrenceResponse> getMonthlyOccurrences() {
@@ -47,7 +47,7 @@ public final class AdvancedScheduleResponse extends io.pulumi.resources.InvokeAr
      * Days of the week that the job should execute on.
      * 
      */
-    @InputImport(name="weekDays")
+    @Import(name="weekDays")
       private final @Nullable List<String> weekDays;
 
     public List<String> getWeekDays() {

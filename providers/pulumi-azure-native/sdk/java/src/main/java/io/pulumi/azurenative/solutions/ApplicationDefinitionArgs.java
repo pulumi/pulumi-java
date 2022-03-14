@@ -13,7 +13,7 @@ import io.pulumi.azurenative.solutions.inputs.ApplicationPackageLockingPolicyDef
 import io.pulumi.azurenative.solutions.inputs.ApplicationPolicyArgs;
 import io.pulumi.azurenative.solutions.inputs.SkuArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -31,7 +31,7 @@ public final class ApplicationDefinitionArgs extends io.pulumi.resources.Resourc
      * The name of the managed application definition.
      * 
      */
-    @InputImport(name="applicationDefinitionName")
+    @Import(name="applicationDefinitionName")
       private final @Nullable Output<String> applicationDefinitionName;
 
     public Output<String> getApplicationDefinitionName() {
@@ -42,7 +42,7 @@ public final class ApplicationDefinitionArgs extends io.pulumi.resources.Resourc
      * The collection of managed application artifacts. The portal will use the files specified as artifacts to construct the user experience of creating a managed application from a managed application definition.
      * 
      */
-    @InputImport(name="artifacts")
+    @Import(name="artifacts")
       private final @Nullable Output<List<ApplicationDefinitionArtifactArgs>> artifacts;
 
     public Output<List<ApplicationDefinitionArtifactArgs>> getArtifacts() {
@@ -53,7 +53,7 @@ public final class ApplicationDefinitionArgs extends io.pulumi.resources.Resourc
      * The managed application provider authorizations.
      * 
      */
-    @InputImport(name="authorizations")
+    @Import(name="authorizations")
       private final @Nullable Output<List<ApplicationAuthorizationArgs>> authorizations;
 
     public Output<List<ApplicationAuthorizationArgs>> getAuthorizations() {
@@ -64,7 +64,7 @@ public final class ApplicationDefinitionArgs extends io.pulumi.resources.Resourc
      * The createUiDefinition json for the backing template with Microsoft.Solutions/applications resource. It can be a JObject or well-formed JSON string.
      * 
      */
-    @InputImport(name="createUiDefinition")
+    @Import(name="createUiDefinition")
       private final @Nullable Output<Object> createUiDefinition;
 
     public Output<Object> getCreateUiDefinition() {
@@ -75,7 +75,7 @@ public final class ApplicationDefinitionArgs extends io.pulumi.resources.Resourc
      * The managed application deployment policy.
      * 
      */
-    @InputImport(name="deploymentPolicy")
+    @Import(name="deploymentPolicy")
       private final @Nullable Output<ApplicationDeploymentPolicyArgs> deploymentPolicy;
 
     public Output<ApplicationDeploymentPolicyArgs> getDeploymentPolicy() {
@@ -86,7 +86,7 @@ public final class ApplicationDefinitionArgs extends io.pulumi.resources.Resourc
      * The managed application definition description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -97,7 +97,7 @@ public final class ApplicationDefinitionArgs extends io.pulumi.resources.Resourc
      * The managed application definition display name.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -108,7 +108,7 @@ public final class ApplicationDefinitionArgs extends io.pulumi.resources.Resourc
      * A value indicating whether the package is enabled or not.
      * 
      */
-    @InputImport(name="isEnabled")
+    @Import(name="isEnabled")
       private final @Nullable Output<Boolean> isEnabled;
 
     public Output<Boolean> getIsEnabled() {
@@ -119,7 +119,7 @@ public final class ApplicationDefinitionArgs extends io.pulumi.resources.Resourc
      * Resource location
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -130,7 +130,7 @@ public final class ApplicationDefinitionArgs extends io.pulumi.resources.Resourc
      * The managed application lock level.
      * 
      */
-    @InputImport(name="lockLevel", required=true)
+    @Import(name="lockLevel", required=true)
       private final Output<ApplicationLockLevel> lockLevel;
 
     public Output<ApplicationLockLevel> getLockLevel() {
@@ -141,7 +141,7 @@ public final class ApplicationDefinitionArgs extends io.pulumi.resources.Resourc
      * The managed application locking policy.
      * 
      */
-    @InputImport(name="lockingPolicy")
+    @Import(name="lockingPolicy")
       private final @Nullable Output<ApplicationPackageLockingPolicyDefinitionArgs> lockingPolicy;
 
     public Output<ApplicationPackageLockingPolicyDefinitionArgs> getLockingPolicy() {
@@ -152,7 +152,7 @@ public final class ApplicationDefinitionArgs extends io.pulumi.resources.Resourc
      * The inline main template json which has resources to be provisioned. It can be a JObject or well-formed JSON string.
      * 
      */
-    @InputImport(name="mainTemplate")
+    @Import(name="mainTemplate")
       private final @Nullable Output<Object> mainTemplate;
 
     public Output<Object> getMainTemplate() {
@@ -163,7 +163,7 @@ public final class ApplicationDefinitionArgs extends io.pulumi.resources.Resourc
      * ID of the resource that manages this resource.
      * 
      */
-    @InputImport(name="managedBy")
+    @Import(name="managedBy")
       private final @Nullable Output<String> managedBy;
 
     public Output<String> getManagedBy() {
@@ -174,7 +174,7 @@ public final class ApplicationDefinitionArgs extends io.pulumi.resources.Resourc
      * The managed application management policy that determines publisher's access to the managed resource group.
      * 
      */
-    @InputImport(name="managementPolicy")
+    @Import(name="managementPolicy")
       private final @Nullable Output<ApplicationManagementPolicyArgs> managementPolicy;
 
     public Output<ApplicationManagementPolicyArgs> getManagementPolicy() {
@@ -185,7 +185,7 @@ public final class ApplicationDefinitionArgs extends io.pulumi.resources.Resourc
      * The managed application notification policy.
      * 
      */
-    @InputImport(name="notificationPolicy")
+    @Import(name="notificationPolicy")
       private final @Nullable Output<ApplicationNotificationPolicyArgs> notificationPolicy;
 
     public Output<ApplicationNotificationPolicyArgs> getNotificationPolicy() {
@@ -196,7 +196,7 @@ public final class ApplicationDefinitionArgs extends io.pulumi.resources.Resourc
      * The managed application definition package file Uri. Use this element
      * 
      */
-    @InputImport(name="packageFileUri")
+    @Import(name="packageFileUri")
       private final @Nullable Output<String> packageFileUri;
 
     public Output<String> getPackageFileUri() {
@@ -207,7 +207,7 @@ public final class ApplicationDefinitionArgs extends io.pulumi.resources.Resourc
      * The managed application provider policies.
      * 
      */
-    @InputImport(name="policies")
+    @Import(name="policies")
       private final @Nullable Output<List<ApplicationPolicyArgs>> policies;
 
     public Output<List<ApplicationPolicyArgs>> getPolicies() {
@@ -218,7 +218,7 @@ public final class ApplicationDefinitionArgs extends io.pulumi.resources.Resourc
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -229,7 +229,7 @@ public final class ApplicationDefinitionArgs extends io.pulumi.resources.Resourc
      * The SKU of the resource.
      * 
      */
-    @InputImport(name="sku")
+    @Import(name="sku")
       private final @Nullable Output<SkuArgs> sku;
 
     public Output<SkuArgs> getSku() {
@@ -240,7 +240,7 @@ public final class ApplicationDefinitionArgs extends io.pulumi.resources.Resourc
      * Resource tags
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

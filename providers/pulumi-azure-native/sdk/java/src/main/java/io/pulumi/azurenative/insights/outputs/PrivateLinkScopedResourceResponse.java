@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.insights.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PrivateLinkScopedResourceResponse {
     /**
      * The full resource Id of the private link scope resource.
@@ -22,10 +22,10 @@ public final class PrivateLinkScopedResourceResponse {
      */
     private final @Nullable String scopeId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PrivateLinkScopedResourceResponse(
-        @OutputCustomType.Parameter("resourceId") @Nullable String resourceId,
-        @OutputCustomType.Parameter("scopeId") @Nullable String scopeId) {
+        @CustomType.Parameter("resourceId") @Nullable String resourceId,
+        @CustomType.Parameter("scopeId") @Nullable String scopeId) {
         this.resourceId = resourceId;
         this.scopeId = scopeId;
     }

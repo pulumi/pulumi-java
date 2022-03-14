@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.automation.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RunAsCredentialAssociationPropertyResponse {
     /**
      * Gets or sets the name of the credential.
@@ -17,8 +17,8 @@ public final class RunAsCredentialAssociationPropertyResponse {
      */
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor
-    private RunAsCredentialAssociationPropertyResponse(@OutputCustomType.Parameter("name") @Nullable String name) {
+    @CustomType.Constructor
+    private RunAsCredentialAssociationPropertyResponse(@CustomType.Parameter("name") @Nullable String name) {
         this.name = name;
     }
 

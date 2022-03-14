@@ -5,7 +5,7 @@ package io.pulumi.azurenative.logic.outputs;
 
 import io.pulumi.azurenative.logic.outputs.ContentLinkResponse;
 import io.pulumi.azurenative.logic.outputs.IntegrationAccountMapPropertiesResponseParametersSchema;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetIntegrationAccountMapResult {
     /**
      * The changed time.
@@ -81,21 +81,21 @@ public final class GetIntegrationAccountMapResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetIntegrationAccountMapResult(
-        @OutputCustomType.Parameter("changedTime") String changedTime,
-        @OutputCustomType.Parameter("content") @Nullable String content,
-        @OutputCustomType.Parameter("contentLink") ContentLinkResponse contentLink,
-        @OutputCustomType.Parameter("contentType") @Nullable String contentType,
-        @OutputCustomType.Parameter("createdTime") String createdTime,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("mapType") String mapType,
-        @OutputCustomType.Parameter("metadata") @Nullable Object metadata,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("parametersSchema") @Nullable IntegrationAccountMapPropertiesResponseParametersSchema parametersSchema,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("changedTime") String changedTime,
+        @CustomType.Parameter("content") @Nullable String content,
+        @CustomType.Parameter("contentLink") ContentLinkResponse contentLink,
+        @CustomType.Parameter("contentType") @Nullable String contentType,
+        @CustomType.Parameter("createdTime") String createdTime,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("mapType") String mapType,
+        @CustomType.Parameter("metadata") @Nullable Object metadata,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("parametersSchema") @Nullable IntegrationAccountMapPropertiesResponseParametersSchema parametersSchema,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type) {
         this.changedTime = changedTime;
         this.content = content;
         this.contentLink = contentLink;

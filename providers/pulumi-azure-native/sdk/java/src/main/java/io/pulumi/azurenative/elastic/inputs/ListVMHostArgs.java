@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.elastic.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class ListVMHostArgs extends io.pulumi.resources.InvokeArgs {
      * Monitor resource name
      * 
      */
-    @InputImport(name="monitorName", required=true)
+    @Import(name="monitorName", required=true)
       private final String monitorName;
 
     public String getMonitorName() {
@@ -27,7 +27,7 @@ public final class ListVMHostArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the resource group to which the Elastic resource belongs.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {

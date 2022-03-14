@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.datafactory.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class EnvironmentVariableSetupResponse {
     /**
      * The type of custom setup.
@@ -26,11 +26,11 @@ public final class EnvironmentVariableSetupResponse {
      */
     private final String variableValue;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EnvironmentVariableSetupResponse(
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("variableName") String variableName,
-        @OutputCustomType.Parameter("variableValue") String variableValue) {
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("variableName") String variableName,
+        @CustomType.Parameter("variableValue") String variableValue) {
         this.type = type;
         this.variableName = variableName;
         this.variableValue = variableValue;

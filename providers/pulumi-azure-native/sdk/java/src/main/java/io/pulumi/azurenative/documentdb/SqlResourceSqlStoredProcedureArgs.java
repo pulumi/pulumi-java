@@ -6,7 +6,7 @@ package io.pulumi.azurenative.documentdb;
 import io.pulumi.azurenative.documentdb.inputs.CreateUpdateOptionsArgs;
 import io.pulumi.azurenative.documentdb.inputs.SqlStoredProcedureResourceArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class SqlResourceSqlStoredProcedureArgs extends io.pulumi.resources
      * Cosmos DB database account name.
      * 
      */
-    @InputImport(name="accountName", required=true)
+    @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
     public Output<String> getAccountName() {
@@ -32,7 +32,7 @@ public final class SqlResourceSqlStoredProcedureArgs extends io.pulumi.resources
      * Cosmos DB container name.
      * 
      */
-    @InputImport(name="containerName", required=true)
+    @Import(name="containerName", required=true)
       private final Output<String> containerName;
 
     public Output<String> getContainerName() {
@@ -43,7 +43,7 @@ public final class SqlResourceSqlStoredProcedureArgs extends io.pulumi.resources
      * Cosmos DB database name.
      * 
      */
-    @InputImport(name="databaseName", required=true)
+    @Import(name="databaseName", required=true)
       private final Output<String> databaseName;
 
     public Output<String> getDatabaseName() {
@@ -54,7 +54,7 @@ public final class SqlResourceSqlStoredProcedureArgs extends io.pulumi.resources
      * The location of the resource group to which the resource belongs.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -65,7 +65,7 @@ public final class SqlResourceSqlStoredProcedureArgs extends io.pulumi.resources
      * A key-value pair of options to be applied for the request. This corresponds to the headers sent with the request.
      * 
      */
-    @InputImport(name="options")
+    @Import(name="options")
       private final @Nullable Output<CreateUpdateOptionsArgs> options;
 
     public Output<CreateUpdateOptionsArgs> getOptions() {
@@ -76,7 +76,7 @@ public final class SqlResourceSqlStoredProcedureArgs extends io.pulumi.resources
      * The standard JSON format of a storedProcedure
      * 
      */
-    @InputImport(name="resource", required=true)
+    @Import(name="resource", required=true)
       private final Output<SqlStoredProcedureResourceArgs> resource;
 
     public Output<SqlStoredProcedureResourceArgs> getResource() {
@@ -87,7 +87,7 @@ public final class SqlResourceSqlStoredProcedureArgs extends io.pulumi.resources
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -98,7 +98,7 @@ public final class SqlResourceSqlStoredProcedureArgs extends io.pulumi.resources
      * Cosmos DB storedProcedure name.
      * 
      */
-    @InputImport(name="storedProcedureName")
+    @Import(name="storedProcedureName")
       private final @Nullable Output<String> storedProcedureName;
 
     public Output<String> getStoredProcedureName() {
@@ -109,7 +109,7 @@ public final class SqlResourceSqlStoredProcedureArgs extends io.pulumi.resources
      * Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

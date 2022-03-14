@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.media.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class AbsoluteClipTimeResponse extends io.pulumi.resources.InvokeAr
      * Expected value is '#Microsoft.Media.AbsoluteClipTime'.
      * 
      */
-    @InputImport(name="odataType", required=true)
+    @Import(name="odataType", required=true)
       private final String odataType;
 
     public String getOdataType() {
@@ -32,7 +32,7 @@ public final class AbsoluteClipTimeResponse extends io.pulumi.resources.InvokeAr
      * The time position on the timeline of the input media. It is usually specified as an ISO8601 period. e.g PT30S for 30 seconds.
      * 
      */
-    @InputImport(name="time", required=true)
+    @Import(name="time", required=true)
       private final String time;
 
     public String getTime() {

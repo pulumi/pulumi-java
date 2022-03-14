@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.recoveryservices.outputs;
 
 import io.pulumi.azurenative.recoveryservices.outputs.RetentionDurationResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SimpleRetentionPolicyResponse {
     /**
      * Retention duration of the protection policy.
@@ -24,10 +24,10 @@ public final class SimpleRetentionPolicyResponse {
      */
     private final String retentionPolicyType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SimpleRetentionPolicyResponse(
-        @OutputCustomType.Parameter("retentionDuration") @Nullable RetentionDurationResponse retentionDuration,
-        @OutputCustomType.Parameter("retentionPolicyType") String retentionPolicyType) {
+        @CustomType.Parameter("retentionDuration") @Nullable RetentionDurationResponse retentionDuration,
+        @CustomType.Parameter("retentionPolicyType") String retentionPolicyType) {
         this.retentionDuration = retentionDuration;
         this.retentionPolicyType = retentionPolicyType;
     }

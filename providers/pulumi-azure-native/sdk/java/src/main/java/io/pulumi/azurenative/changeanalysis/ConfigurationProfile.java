@@ -10,7 +10,7 @@ import io.pulumi.azurenative.changeanalysis.outputs.ResourceIdentityResponse;
 import io.pulumi.azurenative.changeanalysis.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -37,7 +37,7 @@ public class ConfigurationProfile extends io.pulumi.resources.CustomResource {
      * The identity block returned by ARM resource that supports managed identity.
      * 
      */
-    @OutputExport(name="identity", type=ResourceIdentityResponse.class, parameters={})
+    @Export(name="identity", type=ResourceIdentityResponse.class, parameters={})
     private Output</* @Nullable */ ResourceIdentityResponse> identity;
 
     /**
@@ -51,7 +51,7 @@ public class ConfigurationProfile extends io.pulumi.resources.CustomResource {
      * The location where the resource is to be deployed.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -65,7 +65,7 @@ public class ConfigurationProfile extends io.pulumi.resources.CustomResource {
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -79,7 +79,7 @@ public class ConfigurationProfile extends io.pulumi.resources.CustomResource {
      * The properties of a configuration profile.
      * 
      */
-    @OutputExport(name="properties", type=ConfigurationProfileResourcePropertiesResponse.class, parameters={})
+    @Export(name="properties", type=ConfigurationProfileResourcePropertiesResponse.class, parameters={})
     private Output<ConfigurationProfileResourcePropertiesResponse> properties;
 
     /**
@@ -93,7 +93,7 @@ public class ConfigurationProfile extends io.pulumi.resources.CustomResource {
      * Top level metadata https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/common-api-contracts.md#system-metadata-for-all-azure-resources
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output</* @Nullable */ SystemDataResponse> systemData;
 
     /**
@@ -107,7 +107,7 @@ public class ConfigurationProfile extends io.pulumi.resources.CustomResource {
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

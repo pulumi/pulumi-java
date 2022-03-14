@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class CaaRecordResponse extends io.pulumi.resources.InvokeArgs {
      * The flags for this CAA record as an integer between 0 and 255.
      * 
      */
-    @InputImport(name="flags")
+    @Import(name="flags")
       private final @Nullable Integer flags;
 
     public Optional<Integer> getFlags() {
@@ -34,7 +34,7 @@ public final class CaaRecordResponse extends io.pulumi.resources.InvokeArgs {
      * The tag for this CAA record.
      * 
      */
-    @InputImport(name="tag")
+    @Import(name="tag")
       private final @Nullable String tag;
 
     public Optional<String> getTag() {
@@ -45,7 +45,7 @@ public final class CaaRecordResponse extends io.pulumi.resources.InvokeArgs {
      * The value for this CAA record.
      * 
      */
-    @InputImport(name="value")
+    @Import(name="value")
       private final @Nullable String value;
 
     public Optional<String> getValue() {

@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.logic.outputs;
 
 import io.pulumi.azurenative.logic.outputs.KeyVaultKeyResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ListIntegrationAccountKeyVaultKeysResult {
     /**
      * The skip token.
@@ -24,10 +24,10 @@ public final class ListIntegrationAccountKeyVaultKeysResult {
      */
     private final @Nullable List<KeyVaultKeyResponse> value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ListIntegrationAccountKeyVaultKeysResult(
-        @OutputCustomType.Parameter("skipToken") @Nullable String skipToken,
-        @OutputCustomType.Parameter("value") @Nullable List<KeyVaultKeyResponse> value) {
+        @CustomType.Parameter("skipToken") @Nullable String skipToken,
+        @CustomType.Parameter("value") @Nullable List<KeyVaultKeyResponse> value) {
         this.skipToken = skipToken;
         this.value = value;
     }

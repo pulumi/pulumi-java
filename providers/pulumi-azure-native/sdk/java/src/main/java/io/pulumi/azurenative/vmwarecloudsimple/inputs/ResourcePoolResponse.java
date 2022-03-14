@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.vmwarecloudsimple.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class ResourcePoolResponse extends io.pulumi.resources.InvokeArgs {
      * Hierarchical resource pool name
      * 
      */
-    @InputImport(name="fullName", required=true)
+    @Import(name="fullName", required=true)
       private final String fullName;
 
     public String getFullName() {
@@ -31,7 +31,7 @@ public final class ResourcePoolResponse extends io.pulumi.resources.InvokeArgs {
      * resource pool id (privateCloudId:vsphereId)
      * 
      */
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final String id;
 
     public String getId() {
@@ -42,7 +42,7 @@ public final class ResourcePoolResponse extends io.pulumi.resources.InvokeArgs {
      * Azure region
      * 
      */
-    @InputImport(name="location", required=true)
+    @Import(name="location", required=true)
       private final String location;
 
     public String getLocation() {
@@ -53,7 +53,7 @@ public final class ResourcePoolResponse extends io.pulumi.resources.InvokeArgs {
      * {ResourcePoolName}
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -64,7 +64,7 @@ public final class ResourcePoolResponse extends io.pulumi.resources.InvokeArgs {
      * The Private Cloud Id
      * 
      */
-    @InputImport(name="privateCloudId", required=true)
+    @Import(name="privateCloudId", required=true)
       private final String privateCloudId;
 
     public String getPrivateCloudId() {
@@ -75,7 +75,7 @@ public final class ResourcePoolResponse extends io.pulumi.resources.InvokeArgs {
      * {resourceProviderNamespace}/{resourceType}
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

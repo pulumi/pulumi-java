@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.netapp.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class VolumeBackupsResponse extends io.pulumi.resources.InvokeArgs 
      * Total count of backups for volume
      * 
      */
-    @InputImport(name="backupsCount")
+    @Import(name="backupsCount")
       private final @Nullable Integer backupsCount;
 
     public Optional<Integer> getBackupsCount() {
@@ -35,7 +35,7 @@ public final class VolumeBackupsResponse extends io.pulumi.resources.InvokeArgs 
      * Policy enabled
      * 
      */
-    @InputImport(name="policyEnabled")
+    @Import(name="policyEnabled")
       private final @Nullable Boolean policyEnabled;
 
     public Optional<Boolean> getPolicyEnabled() {
@@ -46,7 +46,7 @@ public final class VolumeBackupsResponse extends io.pulumi.resources.InvokeArgs 
      * Volume name
      * 
      */
-    @InputImport(name="volumeName")
+    @Import(name="volumeName")
       private final @Nullable String volumeName;
 
     public Optional<String> getVolumeName() {

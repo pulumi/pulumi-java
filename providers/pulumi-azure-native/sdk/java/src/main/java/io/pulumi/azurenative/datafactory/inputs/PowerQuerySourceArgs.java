@@ -7,7 +7,7 @@ import io.pulumi.azurenative.datafactory.inputs.DataFlowReferenceArgs;
 import io.pulumi.azurenative.datafactory.inputs.DatasetReferenceArgs;
 import io.pulumi.azurenative.datafactory.inputs.LinkedServiceReferenceArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class PowerQuerySourceArgs extends io.pulumi.resources.ResourceArgs
      * Dataset reference.
      * 
      */
-    @InputImport(name="dataset")
+    @Import(name="dataset")
       private final @Nullable Output<DatasetReferenceArgs> dataset;
 
     public Output<DatasetReferenceArgs> getDataset() {
@@ -36,7 +36,7 @@ public final class PowerQuerySourceArgs extends io.pulumi.resources.ResourceArgs
      * Transformation description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -47,7 +47,7 @@ public final class PowerQuerySourceArgs extends io.pulumi.resources.ResourceArgs
      * Flowlet Reference
      * 
      */
-    @InputImport(name="flowlet")
+    @Import(name="flowlet")
       private final @Nullable Output<DataFlowReferenceArgs> flowlet;
 
     public Output<DataFlowReferenceArgs> getFlowlet() {
@@ -58,7 +58,7 @@ public final class PowerQuerySourceArgs extends io.pulumi.resources.ResourceArgs
      * Linked service reference.
      * 
      */
-    @InputImport(name="linkedService")
+    @Import(name="linkedService")
       private final @Nullable Output<LinkedServiceReferenceArgs> linkedService;
 
     public Output<LinkedServiceReferenceArgs> getLinkedService() {
@@ -69,7 +69,7 @@ public final class PowerQuerySourceArgs extends io.pulumi.resources.ResourceArgs
      * Transformation name.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -80,7 +80,7 @@ public final class PowerQuerySourceArgs extends io.pulumi.resources.ResourceArgs
      * Schema linked service reference.
      * 
      */
-    @InputImport(name="schemaLinkedService")
+    @Import(name="schemaLinkedService")
       private final @Nullable Output<LinkedServiceReferenceArgs> schemaLinkedService;
 
     public Output<LinkedServiceReferenceArgs> getSchemaLinkedService() {
@@ -91,7 +91,7 @@ public final class PowerQuerySourceArgs extends io.pulumi.resources.ResourceArgs
      * source script.
      * 
      */
-    @InputImport(name="script")
+    @Import(name="script")
       private final @Nullable Output<String> script;
 
     public Output<String> getScript() {

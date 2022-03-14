@@ -10,7 +10,7 @@ import io.pulumi.azurenative.consumption.inputs.BudgetTimePeriodArgs;
 import io.pulumi.azurenative.consumption.inputs.NotificationArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Map;
@@ -26,7 +26,7 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
      * The total amount of cost to track with the budget
      * 
      */
-    @InputImport(name="amount", required=true)
+    @Import(name="amount", required=true)
       private final Output<Double> amount;
 
     public Output<Double> getAmount() {
@@ -37,7 +37,7 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
      * Budget Name.
      * 
      */
-    @InputImport(name="budgetName")
+    @Import(name="budgetName")
       private final @Nullable Output<String> budgetName;
 
     public Output<String> getBudgetName() {
@@ -48,7 +48,7 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
      * The category of the budget, whether the budget tracks cost or usage.
      * 
      */
-    @InputImport(name="category", required=true)
+    @Import(name="category", required=true)
       private final Output<Either<String,CategoryType>> category;
 
     public Output<Either<String,CategoryType>> getCategory() {
@@ -59,7 +59,7 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
      * eTag of the resource. To handle concurrent update scenario, this field will be used to determine whether the user is updating the latest version or not.
      * 
      */
-    @InputImport(name="eTag")
+    @Import(name="eTag")
       private final @Nullable Output<String> eTag;
 
     public Output<String> getETag() {
@@ -70,7 +70,7 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
      * May be used to filter budgets by user-specified dimensions and/or tags.
      * 
      */
-    @InputImport(name="filter")
+    @Import(name="filter")
       private final @Nullable Output<BudgetFilterArgs> filter;
 
     public Output<BudgetFilterArgs> getFilter() {
@@ -81,7 +81,7 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
      * Dictionary of notifications associated with the budget. Budget can have up to five notifications.
      * 
      */
-    @InputImport(name="notifications")
+    @Import(name="notifications")
       private final @Nullable Output<Map<String,NotificationArgs>> notifications;
 
     public Output<Map<String,NotificationArgs>> getNotifications() {
@@ -92,7 +92,7 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
      * The scope associated with budget operations. This includes '/subscriptions/{subscriptionId}/' for subscription scope, '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}' for resourceGroup scope, '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}' for Billing Account scope, '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/departments/{departmentId}' for Department scope, '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/enrollmentAccounts/{enrollmentAccountId}' for EnrollmentAccount scope, '/providers/Microsoft.Management/managementGroups/{managementGroupId}' for Management Group scope, '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}' for billingProfile scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/invoiceSections/{invoiceSectionId}' for invoiceSection scope.
      * 
      */
-    @InputImport(name="scope", required=true)
+    @Import(name="scope", required=true)
       private final Output<String> scope;
 
     public Output<String> getScope() {
@@ -103,7 +103,7 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
      * The time covered by a budget. Tracking of the amount will be reset based on the time grain. BillingMonth, BillingQuarter, and BillingAnnual are only supported by WD customers
      * 
      */
-    @InputImport(name="timeGrain", required=true)
+    @Import(name="timeGrain", required=true)
       private final Output<Either<String,TimeGrainType>> timeGrain;
 
     public Output<Either<String,TimeGrainType>> getTimeGrain() {
@@ -114,7 +114,7 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
      * Has start and end date of the budget. The start date must be first of the month and should be less than the end date. Budget start date must be on or after June 1, 2017. Future start date should not be more than twelve months. Past start date should  be selected within the timegrain period. There are no restrictions on the end date.
      * 
      */
-    @InputImport(name="timePeriod", required=true)
+    @Import(name="timePeriod", required=true)
       private final Output<BudgetTimePeriodArgs> timePeriod;
 
     public Output<BudgetTimePeriodArgs> getTimePeriod() {

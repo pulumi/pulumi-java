@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.redhatopenshift.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class MasterProfileArgs extends io.pulumi.resources.ResourceArgs {
      * The Azure resource ID of the master subnet (immutable).
      * 
      */
-    @InputImport(name="subnetId")
+    @Import(name="subnetId")
       private final @Nullable Output<String> subnetId;
 
     public Output<String> getSubnetId() {
@@ -33,7 +33,7 @@ public final class MasterProfileArgs extends io.pulumi.resources.ResourceArgs {
      * The size of the master VMs (immutable).
      * 
      */
-    @InputImport(name="vmSize")
+    @Import(name="vmSize")
       private final @Nullable Output<String> vmSize;
 
     public Output<String> getVmSize() {

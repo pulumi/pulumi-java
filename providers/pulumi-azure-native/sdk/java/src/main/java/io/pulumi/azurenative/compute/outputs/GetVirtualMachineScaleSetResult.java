@@ -13,7 +13,7 @@ import io.pulumi.azurenative.compute.outputs.SubResourceResponse;
 import io.pulumi.azurenative.compute.outputs.UpgradePolicyResponse;
 import io.pulumi.azurenative.compute.outputs.VirtualMachineScaleSetIdentityResponse;
 import io.pulumi.azurenative.compute.outputs.VirtualMachineScaleSetVMProfileResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,7 +23,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetVirtualMachineScaleSetResult {
     /**
      * Specifies additional capabilities enabled or disabled on the Virtual Machines in the Virtual Machine Scale Set. For instance: whether the Virtual Machines have the capability to support attaching managed data disks with UltraSSD_LRS storage account type.
@@ -151,33 +151,33 @@ public final class GetVirtualMachineScaleSetResult {
      */
     private final @Nullable List<String> zones;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetVirtualMachineScaleSetResult(
-        @OutputCustomType.Parameter("additionalCapabilities") @Nullable AdditionalCapabilitiesResponse additionalCapabilities,
-        @OutputCustomType.Parameter("automaticRepairsPolicy") @Nullable AutomaticRepairsPolicyResponse automaticRepairsPolicy,
-        @OutputCustomType.Parameter("doNotRunExtensionsOnOverprovisionedVMs") @Nullable Boolean doNotRunExtensionsOnOverprovisionedVMs,
-        @OutputCustomType.Parameter("extendedLocation") @Nullable ExtendedLocationResponse extendedLocation,
-        @OutputCustomType.Parameter("hostGroup") @Nullable SubResourceResponse hostGroup,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("identity") @Nullable VirtualMachineScaleSetIdentityResponse identity,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("orchestrationMode") @Nullable String orchestrationMode,
-        @OutputCustomType.Parameter("overprovision") @Nullable Boolean overprovision,
-        @OutputCustomType.Parameter("plan") @Nullable PlanResponse plan,
-        @OutputCustomType.Parameter("platformFaultDomainCount") @Nullable Integer platformFaultDomainCount,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("proximityPlacementGroup") @Nullable SubResourceResponse proximityPlacementGroup,
-        @OutputCustomType.Parameter("scaleInPolicy") @Nullable ScaleInPolicyResponse scaleInPolicy,
-        @OutputCustomType.Parameter("singlePlacementGroup") @Nullable Boolean singlePlacementGroup,
-        @OutputCustomType.Parameter("sku") @Nullable SkuResponse sku,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("uniqueId") String uniqueId,
-        @OutputCustomType.Parameter("upgradePolicy") @Nullable UpgradePolicyResponse upgradePolicy,
-        @OutputCustomType.Parameter("virtualMachineProfile") @Nullable VirtualMachineScaleSetVMProfileResponse virtualMachineProfile,
-        @OutputCustomType.Parameter("zoneBalance") @Nullable Boolean zoneBalance,
-        @OutputCustomType.Parameter("zones") @Nullable List<String> zones) {
+        @CustomType.Parameter("additionalCapabilities") @Nullable AdditionalCapabilitiesResponse additionalCapabilities,
+        @CustomType.Parameter("automaticRepairsPolicy") @Nullable AutomaticRepairsPolicyResponse automaticRepairsPolicy,
+        @CustomType.Parameter("doNotRunExtensionsOnOverprovisionedVMs") @Nullable Boolean doNotRunExtensionsOnOverprovisionedVMs,
+        @CustomType.Parameter("extendedLocation") @Nullable ExtendedLocationResponse extendedLocation,
+        @CustomType.Parameter("hostGroup") @Nullable SubResourceResponse hostGroup,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("identity") @Nullable VirtualMachineScaleSetIdentityResponse identity,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("orchestrationMode") @Nullable String orchestrationMode,
+        @CustomType.Parameter("overprovision") @Nullable Boolean overprovision,
+        @CustomType.Parameter("plan") @Nullable PlanResponse plan,
+        @CustomType.Parameter("platformFaultDomainCount") @Nullable Integer platformFaultDomainCount,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("proximityPlacementGroup") @Nullable SubResourceResponse proximityPlacementGroup,
+        @CustomType.Parameter("scaleInPolicy") @Nullable ScaleInPolicyResponse scaleInPolicy,
+        @CustomType.Parameter("singlePlacementGroup") @Nullable Boolean singlePlacementGroup,
+        @CustomType.Parameter("sku") @Nullable SkuResponse sku,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("uniqueId") String uniqueId,
+        @CustomType.Parameter("upgradePolicy") @Nullable UpgradePolicyResponse upgradePolicy,
+        @CustomType.Parameter("virtualMachineProfile") @Nullable VirtualMachineScaleSetVMProfileResponse virtualMachineProfile,
+        @CustomType.Parameter("zoneBalance") @Nullable Boolean zoneBalance,
+        @CustomType.Parameter("zones") @Nullable List<String> zones) {
         this.additionalCapabilities = additionalCapabilities;
         this.automaticRepairsPolicy = automaticRepairsPolicy;
         this.doNotRunExtensionsOnOverprovisionedVMs = doNotRunExtensionsOnOverprovisionedVMs;

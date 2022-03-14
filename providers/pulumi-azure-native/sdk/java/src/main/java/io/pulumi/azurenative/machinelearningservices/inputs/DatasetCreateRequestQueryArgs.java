@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class DatasetCreateRequestQueryArgs extends io.pulumi.resources.Res
      * The SQL/PostgreSQL/MySQL datastore name.
      * 
      */
-    @InputImport(name="datastoreName")
+    @Import(name="datastoreName")
       private final @Nullable Output<String> datastoreName;
 
     public Output<String> getDatastoreName() {
@@ -29,7 +29,7 @@ public final class DatasetCreateRequestQueryArgs extends io.pulumi.resources.Res
      * SQL Quey.
      * 
      */
-    @InputImport(name="query")
+    @Import(name="query")
       private final @Nullable Output<String> query;
 
     public Output<String> getQuery() {

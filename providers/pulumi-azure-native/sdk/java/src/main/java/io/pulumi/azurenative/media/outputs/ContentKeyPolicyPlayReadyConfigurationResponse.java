@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.media.outputs;
 
 import io.pulumi.azurenative.media.outputs.ContentKeyPolicyPlayReadyLicenseResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ContentKeyPolicyPlayReadyConfigurationResponse {
     /**
      * The PlayReady licenses.
@@ -30,11 +30,11 @@ public final class ContentKeyPolicyPlayReadyConfigurationResponse {
      */
     private final @Nullable String responseCustomData;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ContentKeyPolicyPlayReadyConfigurationResponse(
-        @OutputCustomType.Parameter("licenses") List<ContentKeyPolicyPlayReadyLicenseResponse> licenses,
-        @OutputCustomType.Parameter("odataType") String odataType,
-        @OutputCustomType.Parameter("responseCustomData") @Nullable String responseCustomData) {
+        @CustomType.Parameter("licenses") List<ContentKeyPolicyPlayReadyLicenseResponse> licenses,
+        @CustomType.Parameter("odataType") String odataType,
+        @CustomType.Parameter("responseCustomData") @Nullable String responseCustomData) {
         this.licenses = licenses;
         this.odataType = odataType;
         this.responseCustomData = responseCustomData;

@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.sql.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetEncryptionProtectorResult {
     /**
      * Key auto rotation opt-in flag. Either true or false.
@@ -68,19 +68,19 @@ public final class GetEncryptionProtectorResult {
      */
     private final String uri;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetEncryptionProtectorResult(
-        @OutputCustomType.Parameter("autoRotationEnabled") @Nullable Boolean autoRotationEnabled,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("serverKeyName") @Nullable String serverKeyName,
-        @OutputCustomType.Parameter("serverKeyType") String serverKeyType,
-        @OutputCustomType.Parameter("subregion") String subregion,
-        @OutputCustomType.Parameter("thumbprint") String thumbprint,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("uri") String uri) {
+        @CustomType.Parameter("autoRotationEnabled") @Nullable Boolean autoRotationEnabled,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("serverKeyName") @Nullable String serverKeyName,
+        @CustomType.Parameter("serverKeyType") String serverKeyType,
+        @CustomType.Parameter("subregion") String subregion,
+        @CustomType.Parameter("thumbprint") String thumbprint,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("uri") String uri) {
         this.autoRotationEnabled = autoRotationEnabled;
         this.id = id;
         this.kind = kind;

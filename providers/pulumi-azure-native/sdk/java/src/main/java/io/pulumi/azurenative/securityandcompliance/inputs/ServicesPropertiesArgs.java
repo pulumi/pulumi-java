@@ -12,7 +12,7 @@ import io.pulumi.azurenative.securityandcompliance.inputs.ServiceCosmosDbConfigu
 import io.pulumi.azurenative.securityandcompliance.inputs.ServiceExportConfigurationInfoArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -31,7 +31,7 @@ public final class ServicesPropertiesArgs extends io.pulumi.resources.ResourceAr
      * The access policies of the service instance.
      * 
      */
-    @InputImport(name="accessPolicies")
+    @Import(name="accessPolicies")
       private final @Nullable Output<List<ServiceAccessPolicyEntryArgs>> accessPolicies;
 
     public Output<List<ServiceAccessPolicyEntryArgs>> getAccessPolicies() {
@@ -42,7 +42,7 @@ public final class ServicesPropertiesArgs extends io.pulumi.resources.ResourceAr
      * The authentication configuration for the service instance.
      * 
      */
-    @InputImport(name="authenticationConfiguration")
+    @Import(name="authenticationConfiguration")
       private final @Nullable Output<ServiceAuthenticationConfigurationInfoArgs> authenticationConfiguration;
 
     public Output<ServiceAuthenticationConfigurationInfoArgs> getAuthenticationConfiguration() {
@@ -53,7 +53,7 @@ public final class ServicesPropertiesArgs extends io.pulumi.resources.ResourceAr
      * The settings for the CORS configuration of the service instance.
      * 
      */
-    @InputImport(name="corsConfiguration")
+    @Import(name="corsConfiguration")
       private final @Nullable Output<ServiceCorsConfigurationInfoArgs> corsConfiguration;
 
     public Output<ServiceCorsConfigurationInfoArgs> getCorsConfiguration() {
@@ -64,7 +64,7 @@ public final class ServicesPropertiesArgs extends io.pulumi.resources.ResourceAr
      * The settings for the Cosmos DB database backing the service.
      * 
      */
-    @InputImport(name="cosmosDbConfiguration")
+    @Import(name="cosmosDbConfiguration")
       private final @Nullable Output<ServiceCosmosDbConfigurationInfoArgs> cosmosDbConfiguration;
 
     public Output<ServiceCosmosDbConfigurationInfoArgs> getCosmosDbConfiguration() {
@@ -75,7 +75,7 @@ public final class ServicesPropertiesArgs extends io.pulumi.resources.ResourceAr
      * The settings for the export operation of the service instance.
      * 
      */
-    @InputImport(name="exportConfiguration")
+    @Import(name="exportConfiguration")
       private final @Nullable Output<ServiceExportConfigurationInfoArgs> exportConfiguration;
 
     public Output<ServiceExportConfigurationInfoArgs> getExportConfiguration() {
@@ -86,7 +86,7 @@ public final class ServicesPropertiesArgs extends io.pulumi.resources.ResourceAr
      * The list of private endpoint connections that are set up for this resource.
      * 
      */
-    @InputImport(name="privateEndpointConnections")
+    @Import(name="privateEndpointConnections")
       private final @Nullable Output<List<PrivateEndpointConnectionArgs>> privateEndpointConnections;
 
     public Output<List<PrivateEndpointConnectionArgs>> getPrivateEndpointConnections() {
@@ -97,7 +97,7 @@ public final class ServicesPropertiesArgs extends io.pulumi.resources.ResourceAr
      * Control permission for data plane traffic coming from public networks while private endpoint is enabled.
      * 
      */
-    @InputImport(name="publicNetworkAccess")
+    @Import(name="publicNetworkAccess")
       private final @Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess;
 
     public Output<Either<String,PublicNetworkAccess>> getPublicNetworkAccess() {

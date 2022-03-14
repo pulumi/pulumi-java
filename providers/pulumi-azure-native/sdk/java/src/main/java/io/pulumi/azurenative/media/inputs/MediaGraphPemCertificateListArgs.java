@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.media.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class MediaGraphPemCertificateListArgs extends io.pulumi.resources.
      * PEM formatted public certificates, one per entry.
      * 
      */
-    @InputImport(name="certificates", required=true)
+    @Import(name="certificates", required=true)
       private final Output<List<String>> certificates;
 
     public Output<List<String>> getCertificates() {
@@ -34,7 +34,7 @@ public final class MediaGraphPemCertificateListArgs extends io.pulumi.resources.
      * Expected value is '#Microsoft.Media.MediaGraphPemCertificateList'.
      * 
      */
-    @InputImport(name="odataType", required=true)
+    @Import(name="odataType", required=true)
       private final Output<String> odataType;
 
     public Output<String> getOdataType() {

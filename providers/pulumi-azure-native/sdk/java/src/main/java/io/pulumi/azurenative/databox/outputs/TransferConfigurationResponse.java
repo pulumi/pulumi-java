@@ -5,13 +5,13 @@ package io.pulumi.azurenative.databox.outputs;
 
 import io.pulumi.azurenative.databox.outputs.TransferConfigurationResponseTransferAllDetails;
 import io.pulumi.azurenative.databox.outputs.TransferConfigurationResponseTransferFilterDetails;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TransferConfigurationResponse {
     /**
      * Map of filter type and the details to transfer all data. This field is required only if the TransferConfigurationType is given as TransferAll
@@ -29,11 +29,11 @@ public final class TransferConfigurationResponse {
      */
     private final @Nullable TransferConfigurationResponseTransferFilterDetails transferFilterDetails;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TransferConfigurationResponse(
-        @OutputCustomType.Parameter("transferAllDetails") @Nullable TransferConfigurationResponseTransferAllDetails transferAllDetails,
-        @OutputCustomType.Parameter("transferConfigurationType") String transferConfigurationType,
-        @OutputCustomType.Parameter("transferFilterDetails") @Nullable TransferConfigurationResponseTransferFilterDetails transferFilterDetails) {
+        @CustomType.Parameter("transferAllDetails") @Nullable TransferConfigurationResponseTransferAllDetails transferAllDetails,
+        @CustomType.Parameter("transferConfigurationType") String transferConfigurationType,
+        @CustomType.Parameter("transferFilterDetails") @Nullable TransferConfigurationResponseTransferFilterDetails transferFilterDetails) {
         this.transferAllDetails = transferAllDetails;
         this.transferConfigurationType = transferConfigurationType;
         this.transferFilterDetails = transferFilterDetails;

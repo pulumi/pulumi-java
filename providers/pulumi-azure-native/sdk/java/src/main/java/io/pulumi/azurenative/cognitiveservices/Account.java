@@ -10,7 +10,7 @@ import io.pulumi.azurenative.cognitiveservices.outputs.IdentityResponse;
 import io.pulumi.azurenative.cognitiveservices.outputs.SkuResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -38,7 +38,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * Entity Tag
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -52,7 +52,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * The identity of Cognitive Services account.
      * 
      */
-    @OutputExport(name="identity", type=IdentityResponse.class, parameters={})
+    @Export(name="identity", type=IdentityResponse.class, parameters={})
     private Output</* @Nullable */ IdentityResponse> identity;
 
     /**
@@ -66,7 +66,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * The Kind of the resource.
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
     /**
@@ -80,7 +80,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * The location of the resource
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -94,7 +94,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * The name of the created account
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -108,7 +108,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * Properties of Cognitive Services account.
      * 
      */
-    @OutputExport(name="properties", type=CognitiveServicesAccountPropertiesResponse.class, parameters={})
+    @Export(name="properties", type=CognitiveServicesAccountPropertiesResponse.class, parameters={})
     private Output<CognitiveServicesAccountPropertiesResponse> properties;
 
     /**
@@ -122,7 +122,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * The SKU of Cognitive Services account.
      * 
      */
-    @OutputExport(name="sku", type=SkuResponse.class, parameters={})
+    @Export(name="sku", type=SkuResponse.class, parameters={})
     private Output</* @Nullable */ SkuResponse> sku;
 
     /**
@@ -136,7 +136,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * Gets or sets a list of key value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -150,7 +150,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * Resource type
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

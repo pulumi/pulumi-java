@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.azurearcdata.outputs;
 
 import io.pulumi.azurenative.azurearcdata.outputs.BasicLoginInformationResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SqlManagedInstancePropertiesResponse {
     /**
      * The instance admin user
@@ -50,16 +50,16 @@ public final class SqlManagedInstancePropertiesResponse {
      */
     private final @Nullable String startTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SqlManagedInstancePropertiesResponse(
-        @OutputCustomType.Parameter("admin") @Nullable String admin,
-        @OutputCustomType.Parameter("basicLoginInformation") @Nullable BasicLoginInformationResponse basicLoginInformation,
-        @OutputCustomType.Parameter("dataControllerId") @Nullable String dataControllerId,
-        @OutputCustomType.Parameter("endTime") @Nullable String endTime,
-        @OutputCustomType.Parameter("k8sRaw") @Nullable Object k8sRaw,
-        @OutputCustomType.Parameter("lastUploadedDate") @Nullable String lastUploadedDate,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("startTime") @Nullable String startTime) {
+        @CustomType.Parameter("admin") @Nullable String admin,
+        @CustomType.Parameter("basicLoginInformation") @Nullable BasicLoginInformationResponse basicLoginInformation,
+        @CustomType.Parameter("dataControllerId") @Nullable String dataControllerId,
+        @CustomType.Parameter("endTime") @Nullable String endTime,
+        @CustomType.Parameter("k8sRaw") @Nullable Object k8sRaw,
+        @CustomType.Parameter("lastUploadedDate") @Nullable String lastUploadedDate,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("startTime") @Nullable String startTime) {
         this.admin = admin;
         this.basicLoginInformation = basicLoginInformation;
         this.dataControllerId = dataControllerId;

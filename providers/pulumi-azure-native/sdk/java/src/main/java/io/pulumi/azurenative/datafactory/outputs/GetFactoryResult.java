@@ -9,14 +9,14 @@ import io.pulumi.azurenative.datafactory.outputs.FactoryIdentityResponse;
 import io.pulumi.azurenative.datafactory.outputs.FactoryVSTSConfigurationResponse;
 import io.pulumi.azurenative.datafactory.outputs.GlobalParameterSpecificationResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetFactoryResult {
     /**
      * Time the factory was created in ISO8601 format.
@@ -89,22 +89,22 @@ public final class GetFactoryResult {
      */
     private final String version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetFactoryResult(
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("eTag") String eTag,
-        @OutputCustomType.Parameter("encryption") @Nullable EncryptionConfigurationResponse encryption,
-        @OutputCustomType.Parameter("globalParameters") @Nullable Map<String,GlobalParameterSpecificationResponse> globalParameters,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("identity") @Nullable FactoryIdentityResponse identity,
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("publicNetworkAccess") @Nullable String publicNetworkAccess,
-        @OutputCustomType.Parameter("repoConfiguration") @Nullable Either<FactoryGitHubConfigurationResponse,FactoryVSTSConfigurationResponse> repoConfiguration,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("version") String version) {
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("eTag") String eTag,
+        @CustomType.Parameter("encryption") @Nullable EncryptionConfigurationResponse encryption,
+        @CustomType.Parameter("globalParameters") @Nullable Map<String,GlobalParameterSpecificationResponse> globalParameters,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("identity") @Nullable FactoryIdentityResponse identity,
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("publicNetworkAccess") @Nullable String publicNetworkAccess,
+        @CustomType.Parameter("repoConfiguration") @Nullable Either<FactoryGitHubConfigurationResponse,FactoryVSTSConfigurationResponse> repoConfiguration,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("version") String version) {
         this.createTime = createTime;
         this.eTag = eTag;
         this.encryption = encryption;

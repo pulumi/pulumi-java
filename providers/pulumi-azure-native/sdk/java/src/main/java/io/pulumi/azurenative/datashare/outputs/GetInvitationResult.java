@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.datashare.outputs;
 
 import io.pulumi.azurenative.datashare.outputs.SystemDataResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetInvitationResult {
     /**
      * The expiration date for the invitation and share subscription.
@@ -85,22 +85,22 @@ public final class GetInvitationResult {
      */
     private final String userName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetInvitationResult(
-        @OutputCustomType.Parameter("expirationDate") @Nullable String expirationDate,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("invitationId") String invitationId,
-        @OutputCustomType.Parameter("invitationStatus") String invitationStatus,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("respondedAt") String respondedAt,
-        @OutputCustomType.Parameter("sentAt") String sentAt,
-        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
-        @OutputCustomType.Parameter("targetActiveDirectoryId") @Nullable String targetActiveDirectoryId,
-        @OutputCustomType.Parameter("targetEmail") @Nullable String targetEmail,
-        @OutputCustomType.Parameter("targetObjectId") @Nullable String targetObjectId,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("userEmail") String userEmail,
-        @OutputCustomType.Parameter("userName") String userName) {
+        @CustomType.Parameter("expirationDate") @Nullable String expirationDate,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("invitationId") String invitationId,
+        @CustomType.Parameter("invitationStatus") String invitationStatus,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("respondedAt") String respondedAt,
+        @CustomType.Parameter("sentAt") String sentAt,
+        @CustomType.Parameter("systemData") SystemDataResponse systemData,
+        @CustomType.Parameter("targetActiveDirectoryId") @Nullable String targetActiveDirectoryId,
+        @CustomType.Parameter("targetEmail") @Nullable String targetEmail,
+        @CustomType.Parameter("targetObjectId") @Nullable String targetObjectId,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("userEmail") String userEmail,
+        @CustomType.Parameter("userName") String userName) {
         this.expirationDate = expirationDate;
         this.id = id;
         this.invitationId = invitationId;

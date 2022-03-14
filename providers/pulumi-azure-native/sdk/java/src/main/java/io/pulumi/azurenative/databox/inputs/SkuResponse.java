@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.databox.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
      * The display name of the sku.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable String displayName;
 
     public Optional<String> getDisplayName() {
@@ -33,7 +33,7 @@ public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
      * The sku family.
      * 
      */
-    @InputImport(name="family")
+    @Import(name="family")
       private final @Nullable String family;
 
     public Optional<String> getFamily() {
@@ -44,7 +44,7 @@ public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
      * The sku name.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {

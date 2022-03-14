@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.m365securityandcompliance.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class ServiceCorsConfigurationInfoResponse extends io.pulumi.resour
      * If credentials are allowed via CORS.
      * 
      */
-    @InputImport(name="allowCredentials")
+    @Import(name="allowCredentials")
       private final @Nullable Boolean allowCredentials;
 
     public Optional<Boolean> getAllowCredentials() {
@@ -36,7 +36,7 @@ public final class ServiceCorsConfigurationInfoResponse extends io.pulumi.resour
      * The headers to be allowed via CORS.
      * 
      */
-    @InputImport(name="headers")
+    @Import(name="headers")
       private final @Nullable List<String> headers;
 
     public List<String> getHeaders() {
@@ -47,7 +47,7 @@ public final class ServiceCorsConfigurationInfoResponse extends io.pulumi.resour
      * The max age to be allowed via CORS.
      * 
      */
-    @InputImport(name="maxAge")
+    @Import(name="maxAge")
       private final @Nullable Double maxAge;
 
     public Optional<Double> getMaxAge() {
@@ -58,7 +58,7 @@ public final class ServiceCorsConfigurationInfoResponse extends io.pulumi.resour
      * The methods to be allowed via CORS.
      * 
      */
-    @InputImport(name="methods")
+    @Import(name="methods")
       private final @Nullable List<String> methods;
 
     public List<String> getMethods() {
@@ -69,7 +69,7 @@ public final class ServiceCorsConfigurationInfoResponse extends io.pulumi.resour
      * The origins to be allowed via CORS.
      * 
      */
-    @InputImport(name="origins")
+    @Import(name="origins")
       private final @Nullable List<String> origins;
 
     public List<String> getOrigins() {

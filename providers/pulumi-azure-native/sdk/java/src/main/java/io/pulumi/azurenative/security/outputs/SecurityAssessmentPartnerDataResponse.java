@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.security.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SecurityAssessmentPartnerDataResponse {
     /**
      * Name of the company of the partner
@@ -20,10 +20,10 @@ public final class SecurityAssessmentPartnerDataResponse {
      */
     private final String secret;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SecurityAssessmentPartnerDataResponse(
-        @OutputCustomType.Parameter("partnerName") String partnerName,
-        @OutputCustomType.Parameter("secret") String secret) {
+        @CustomType.Parameter("partnerName") String partnerName,
+        @CustomType.Parameter("secret") String secret) {
         this.partnerName = partnerName;
         this.secret = secret;
     }

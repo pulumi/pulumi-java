@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.apimanagement.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetIdentityProviderResult {
     /**
      * List of Allowed Tenants when configuring Azure Active Directory login.
@@ -73,20 +73,20 @@ public final class GetIdentityProviderResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetIdentityProviderResult(
-        @OutputCustomType.Parameter("allowedTenants") @Nullable List<String> allowedTenants,
-        @OutputCustomType.Parameter("authority") @Nullable String authority,
-        @OutputCustomType.Parameter("clientId") String clientId,
-        @OutputCustomType.Parameter("clientSecret") @Nullable String clientSecret,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("passwordResetPolicyName") @Nullable String passwordResetPolicyName,
-        @OutputCustomType.Parameter("profileEditingPolicyName") @Nullable String profileEditingPolicyName,
-        @OutputCustomType.Parameter("signinPolicyName") @Nullable String signinPolicyName,
-        @OutputCustomType.Parameter("signinTenant") @Nullable String signinTenant,
-        @OutputCustomType.Parameter("signupPolicyName") @Nullable String signupPolicyName,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("allowedTenants") @Nullable List<String> allowedTenants,
+        @CustomType.Parameter("authority") @Nullable String authority,
+        @CustomType.Parameter("clientId") String clientId,
+        @CustomType.Parameter("clientSecret") @Nullable String clientSecret,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("passwordResetPolicyName") @Nullable String passwordResetPolicyName,
+        @CustomType.Parameter("profileEditingPolicyName") @Nullable String profileEditingPolicyName,
+        @CustomType.Parameter("signinPolicyName") @Nullable String signinPolicyName,
+        @CustomType.Parameter("signinTenant") @Nullable String signinTenant,
+        @CustomType.Parameter("signupPolicyName") @Nullable String signupPolicyName,
+        @CustomType.Parameter("type") String type) {
         this.allowedTenants = allowedTenants;
         this.authority = authority;
         this.clientId = clientId;

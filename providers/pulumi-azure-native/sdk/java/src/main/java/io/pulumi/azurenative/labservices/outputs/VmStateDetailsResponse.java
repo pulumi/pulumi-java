@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.labservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class VmStateDetailsResponse {
     /**
      * Last known compute power state captured in DTL
@@ -30,12 +30,12 @@ public final class VmStateDetailsResponse {
      */
     private final String sshAuthority;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VmStateDetailsResponse(
-        @OutputCustomType.Parameter("lastKnownPowerState") String lastKnownPowerState,
-        @OutputCustomType.Parameter("powerState") String powerState,
-        @OutputCustomType.Parameter("rdpAuthority") String rdpAuthority,
-        @OutputCustomType.Parameter("sshAuthority") String sshAuthority) {
+        @CustomType.Parameter("lastKnownPowerState") String lastKnownPowerState,
+        @CustomType.Parameter("powerState") String powerState,
+        @CustomType.Parameter("rdpAuthority") String rdpAuthority,
+        @CustomType.Parameter("sshAuthority") String sshAuthority) {
         this.lastKnownPowerState = lastKnownPowerState;
         this.powerState = powerState;
         this.rdpAuthority = rdpAuthority;

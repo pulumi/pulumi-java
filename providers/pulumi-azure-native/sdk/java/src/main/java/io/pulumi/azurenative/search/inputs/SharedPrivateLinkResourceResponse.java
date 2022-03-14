@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.search.inputs;
 
 import io.pulumi.azurenative.search.inputs.SharedPrivateLinkResourcePropertiesResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class SharedPrivateLinkResourceResponse extends io.pulumi.resources
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
      */
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final String id;
 
     public String getId() {
@@ -34,7 +34,7 @@ public final class SharedPrivateLinkResourceResponse extends io.pulumi.resources
      * The name of the resource
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -45,7 +45,7 @@ public final class SharedPrivateLinkResourceResponse extends io.pulumi.resources
      * Describes the properties of a Shared Private Link Resource managed by the Azure Cognitive Search service.
      * 
      */
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable SharedPrivateLinkResourcePropertiesResponse properties;
 
     public Optional<SharedPrivateLinkResourcePropertiesResponse> getProperties() {
@@ -56,7 +56,7 @@ public final class SharedPrivateLinkResourceResponse extends io.pulumi.resources
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.delegatednetwork;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class ControllerDetailsArgs extends io.pulumi.resources.ResourceArg
      * Location of the resource.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -30,7 +30,7 @@ public final class ControllerDetailsArgs extends io.pulumi.resources.ResourceArg
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -41,7 +41,7 @@ public final class ControllerDetailsArgs extends io.pulumi.resources.ResourceArg
      * The name of the resource. It must be a minimum of 3 characters, and a maximum of 63.
      * 
      */
-    @InputImport(name="resourceName")
+    @Import(name="resourceName")
       private final @Nullable Output<String> resourceName;
 
     public Output<String> getPropResourceName() {
@@ -52,7 +52,7 @@ public final class ControllerDetailsArgs extends io.pulumi.resources.ResourceArg
      * The resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

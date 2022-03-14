@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.containerregistry.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BuildArgumentResponse {
     /**
      * Flag to indicate whether the argument represents a secret and want to be removed from build logs.
@@ -33,12 +33,12 @@ public final class BuildArgumentResponse {
      */
     private final String value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BuildArgumentResponse(
-        @OutputCustomType.Parameter("isSecret") @Nullable Boolean isSecret,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("value") String value) {
+        @CustomType.Parameter("isSecret") @Nullable Boolean isSecret,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("value") String value) {
         this.isSecret = isSecret;
         this.name = name;
         this.type = type;

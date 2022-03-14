@@ -8,7 +8,7 @@ import io.pulumi.azurenative.machinelearningservices.LinkedWorkspaceArgs;
 import io.pulumi.azurenative.machinelearningservices.outputs.LinkedWorkspacePropsResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +35,7 @@ public class LinkedWorkspace extends io.pulumi.resources.CustomResource {
      * Friendly name of the linked workspace.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -49,7 +49,7 @@ public class LinkedWorkspace extends io.pulumi.resources.CustomResource {
      * LinkedWorkspace specific properties.
      * 
      */
-    @OutputExport(name="properties", type=LinkedWorkspacePropsResponse.class, parameters={})
+    @Export(name="properties", type=LinkedWorkspacePropsResponse.class, parameters={})
     private Output<LinkedWorkspacePropsResponse> properties;
 
     /**
@@ -63,7 +63,7 @@ public class LinkedWorkspace extends io.pulumi.resources.CustomResource {
      * Resource type of linked workspace.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

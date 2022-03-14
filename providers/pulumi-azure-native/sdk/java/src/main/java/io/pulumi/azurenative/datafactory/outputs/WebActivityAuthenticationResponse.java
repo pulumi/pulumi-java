@@ -7,14 +7,14 @@ import io.pulumi.azurenative.datafactory.outputs.AzureKeyVaultSecretReferenceRes
 import io.pulumi.azurenative.datafactory.outputs.CredentialReferenceResponse;
 import io.pulumi.azurenative.datafactory.outputs.SecureStringResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class WebActivityAuthenticationResponse {
     /**
      * The credential reference containing authentication information.
@@ -52,15 +52,15 @@ public final class WebActivityAuthenticationResponse {
      */
     private final @Nullable Object username;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WebActivityAuthenticationResponse(
-        @OutputCustomType.Parameter("credential") @Nullable CredentialReferenceResponse credential,
-        @OutputCustomType.Parameter("password") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password,
-        @OutputCustomType.Parameter("pfx") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> pfx,
-        @OutputCustomType.Parameter("resource") @Nullable Object resource,
-        @OutputCustomType.Parameter("type") @Nullable String type,
-        @OutputCustomType.Parameter("userTenant") @Nullable Object userTenant,
-        @OutputCustomType.Parameter("username") @Nullable Object username) {
+        @CustomType.Parameter("credential") @Nullable CredentialReferenceResponse credential,
+        @CustomType.Parameter("password") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password,
+        @CustomType.Parameter("pfx") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> pfx,
+        @CustomType.Parameter("resource") @Nullable Object resource,
+        @CustomType.Parameter("type") @Nullable String type,
+        @CustomType.Parameter("userTenant") @Nullable Object userTenant,
+        @CustomType.Parameter("username") @Nullable Object username) {
         this.credential = credential;
         this.password = password;
         this.pfx = pfx;

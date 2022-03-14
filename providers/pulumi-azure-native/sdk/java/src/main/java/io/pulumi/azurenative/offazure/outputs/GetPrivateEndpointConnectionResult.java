@@ -5,11 +5,11 @@ package io.pulumi.azurenative.offazure.outputs;
 
 import io.pulumi.azurenative.offazure.outputs.PrivateEndpointConnectionPropertiesResponse;
 import io.pulumi.azurenative.offazure.outputs.SystemDataResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetPrivateEndpointConnectionResult {
     /**
      * Gets the tag for optimistic concurrency control.
@@ -42,14 +42,14 @@ public final class GetPrivateEndpointConnectionResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetPrivateEndpointConnectionResult(
-        @OutputCustomType.Parameter("eTag") String eTag,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("properties") PrivateEndpointConnectionPropertiesResponse properties,
-        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("eTag") String eTag,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("properties") PrivateEndpointConnectionPropertiesResponse properties,
+        @CustomType.Parameter("systemData") SystemDataResponse systemData,
+        @CustomType.Parameter("type") String type) {
         this.eTag = eTag;
         this.id = id;
         this.name = name;

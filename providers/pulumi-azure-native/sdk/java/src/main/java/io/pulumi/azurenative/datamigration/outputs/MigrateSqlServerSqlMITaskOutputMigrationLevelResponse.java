@@ -6,13 +6,13 @@ package io.pulumi.azurenative.datamigration.outputs;
 import io.pulumi.azurenative.datamigration.outputs.OrphanedUserInfoResponse;
 import io.pulumi.azurenative.datamigration.outputs.ReportableExceptionResponse;
 import io.pulumi.azurenative.datamigration.outputs.StartMigrationScenarioServerRoleResultResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class MigrateSqlServerSqlMITaskOutputMigrationLevelResponse {
     /**
      * Selected agent jobs as a map from name to id
@@ -101,25 +101,25 @@ public final class MigrateSqlServerSqlMITaskOutputMigrationLevelResponse {
      */
     private final String targetServerVersion;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MigrateSqlServerSqlMITaskOutputMigrationLevelResponse(
-        @OutputCustomType.Parameter("agentJobs") Map<String,String> agentJobs,
-        @OutputCustomType.Parameter("databases") Map<String,String> databases,
-        @OutputCustomType.Parameter("endedOn") String endedOn,
-        @OutputCustomType.Parameter("exceptionsAndWarnings") List<ReportableExceptionResponse> exceptionsAndWarnings,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("logins") Map<String,String> logins,
-        @OutputCustomType.Parameter("message") String message,
-        @OutputCustomType.Parameter("orphanedUsersInfo") List<OrphanedUserInfoResponse> orphanedUsersInfo,
-        @OutputCustomType.Parameter("resultType") String resultType,
-        @OutputCustomType.Parameter("serverRoleResults") Map<String,StartMigrationScenarioServerRoleResultResponse> serverRoleResults,
-        @OutputCustomType.Parameter("sourceServerBrandVersion") String sourceServerBrandVersion,
-        @OutputCustomType.Parameter("sourceServerVersion") String sourceServerVersion,
-        @OutputCustomType.Parameter("startedOn") String startedOn,
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("status") String status,
-        @OutputCustomType.Parameter("targetServerBrandVersion") String targetServerBrandVersion,
-        @OutputCustomType.Parameter("targetServerVersion") String targetServerVersion) {
+        @CustomType.Parameter("agentJobs") Map<String,String> agentJobs,
+        @CustomType.Parameter("databases") Map<String,String> databases,
+        @CustomType.Parameter("endedOn") String endedOn,
+        @CustomType.Parameter("exceptionsAndWarnings") List<ReportableExceptionResponse> exceptionsAndWarnings,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("logins") Map<String,String> logins,
+        @CustomType.Parameter("message") String message,
+        @CustomType.Parameter("orphanedUsersInfo") List<OrphanedUserInfoResponse> orphanedUsersInfo,
+        @CustomType.Parameter("resultType") String resultType,
+        @CustomType.Parameter("serverRoleResults") Map<String,StartMigrationScenarioServerRoleResultResponse> serverRoleResults,
+        @CustomType.Parameter("sourceServerBrandVersion") String sourceServerBrandVersion,
+        @CustomType.Parameter("sourceServerVersion") String sourceServerVersion,
+        @CustomType.Parameter("startedOn") String startedOn,
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("status") String status,
+        @CustomType.Parameter("targetServerBrandVersion") String targetServerBrandVersion,
+        @CustomType.Parameter("targetServerVersion") String targetServerVersion) {
         this.agentJobs = agentJobs;
         this.databases = databases;
         this.endedOn = endedOn;

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.migrate.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class LoadBalancerBackendAddressPoolReferenceArgs extends io.pulumi
      * Gets the name of the proxy resource on the target side.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -33,7 +33,7 @@ public final class LoadBalancerBackendAddressPoolReferenceArgs extends io.pulumi
      * Gets the ARM resource ID of the tracked resource being referenced.
      * 
      */
-    @InputImport(name="sourceArmResourceId", required=true)
+    @Import(name="sourceArmResourceId", required=true)
       private final Output<String> sourceArmResourceId;
 
     public Output<String> getSourceArmResourceId() {

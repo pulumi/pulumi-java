@@ -5,7 +5,7 @@ package io.pulumi.azurenative.media.inputs;
 
 import io.pulumi.azurenative.media.inputs.RectangleArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class VideoOverlayArgs extends io.pulumi.resources.ResourceArgs {
      * The gain level of audio in the overlay. The value should be in the range [0, 1.0]. The default is 1.0.
      * 
      */
-    @InputImport(name="audioGainLevel")
+    @Import(name="audioGainLevel")
       private final @Nullable Output<Double> audioGainLevel;
 
     public Output<Double> getAudioGainLevel() {
@@ -35,7 +35,7 @@ public final class VideoOverlayArgs extends io.pulumi.resources.ResourceArgs {
      * An optional rectangular window used to crop the overlay image or video.
      * 
      */
-    @InputImport(name="cropRectangle")
+    @Import(name="cropRectangle")
       private final @Nullable Output<RectangleArgs> cropRectangle;
 
     public Output<RectangleArgs> getCropRectangle() {
@@ -46,7 +46,7 @@ public final class VideoOverlayArgs extends io.pulumi.resources.ResourceArgs {
      * The end position, with reference to the input video, at which the overlay ends. The value should be in ISO 8601 format. For example, PT30S to end the overlay at 30 seconds into the input video. If not specified or the value is greater than the input video duration, the overlay will be applied until the end of the input video if the overlay media duration is greater than the input video duration, else the overlay will last as long as the overlay media duration.
      * 
      */
-    @InputImport(name="end")
+    @Import(name="end")
       private final @Nullable Output<String> end;
 
     public Output<String> getEnd() {
@@ -57,7 +57,7 @@ public final class VideoOverlayArgs extends io.pulumi.resources.ResourceArgs {
      * The duration over which the overlay fades in onto the input video. The value should be in ISO 8601 duration format. If not specified the default behavior is to have no fade in (same as PT0S).
      * 
      */
-    @InputImport(name="fadeInDuration")
+    @Import(name="fadeInDuration")
       private final @Nullable Output<String> fadeInDuration;
 
     public Output<String> getFadeInDuration() {
@@ -68,7 +68,7 @@ public final class VideoOverlayArgs extends io.pulumi.resources.ResourceArgs {
      * The duration over which the overlay fades out of the input video. The value should be in ISO 8601 duration format. If not specified the default behavior is to have no fade out (same as PT0S).
      * 
      */
-    @InputImport(name="fadeOutDuration")
+    @Import(name="fadeOutDuration")
       private final @Nullable Output<String> fadeOutDuration;
 
     public Output<String> getFadeOutDuration() {
@@ -79,7 +79,7 @@ public final class VideoOverlayArgs extends io.pulumi.resources.ResourceArgs {
      * The label of the job input which is to be used as an overlay. The Input must specify exactly one file. You can specify an image file in JPG, PNG, GIF or BMP format, or an audio file (such as a WAV, MP3, WMA or M4A file), or a video file. See https://aka.ms/mesformats for the complete list of supported audio and video file formats.
      * 
      */
-    @InputImport(name="inputLabel", required=true)
+    @Import(name="inputLabel", required=true)
       private final Output<String> inputLabel;
 
     public Output<String> getInputLabel() {
@@ -91,7 +91,7 @@ public final class VideoOverlayArgs extends io.pulumi.resources.ResourceArgs {
      * Expected value is '#Microsoft.Media.VideoOverlay'.
      * 
      */
-    @InputImport(name="odataType", required=true)
+    @Import(name="odataType", required=true)
       private final Output<String> odataType;
 
     public Output<String> getOdataType() {
@@ -102,7 +102,7 @@ public final class VideoOverlayArgs extends io.pulumi.resources.ResourceArgs {
      * The opacity of the overlay. This is a value in the range [0 - 1.0]. Default is 1.0 which mean the overlay is opaque.
      * 
      */
-    @InputImport(name="opacity")
+    @Import(name="opacity")
       private final @Nullable Output<Double> opacity;
 
     public Output<Double> getOpacity() {
@@ -113,7 +113,7 @@ public final class VideoOverlayArgs extends io.pulumi.resources.ResourceArgs {
      * The location in the input video where the overlay is applied.
      * 
      */
-    @InputImport(name="position")
+    @Import(name="position")
       private final @Nullable Output<RectangleArgs> position;
 
     public Output<RectangleArgs> getPosition() {
@@ -124,7 +124,7 @@ public final class VideoOverlayArgs extends io.pulumi.resources.ResourceArgs {
      * The start position, with reference to the input video, at which the overlay starts. The value should be in ISO 8601 format. For example, PT05S to start the overlay at 5 seconds into the input video. If not specified the overlay starts from the beginning of the input video.
      * 
      */
-    @InputImport(name="start")
+    @Import(name="start")
       private final @Nullable Output<String> start;
 
     public Output<String> getStart() {

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.containerregistry.inputs;
 import io.pulumi.azurenative.containerregistry.enums.SourceRegistryLoginMode;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +26,7 @@ public final class SourceRegistryCredentialsArgs extends io.pulumi.resources.Res
      * the source registry during the run.
      * 
      */
-    @InputImport(name="loginMode")
+    @Import(name="loginMode")
       private final @Nullable Output<Either<String,SourceRegistryLoginMode>> loginMode;
 
     public Output<Either<String,SourceRegistryLoginMode>> getLoginMode() {

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.labservices.inputs;
 
 import io.pulumi.azurenative.labservices.inputs.LatestOperationResultResponse;
 import io.pulumi.azurenative.labservices.inputs.VirtualMachineDetailsResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class EnvironmentDetailsResponse extends io.pulumi.resources.Invoke
      * Description of the Environment
      * 
      */
-    @InputImport(name="description", required=true)
+    @Import(name="description", required=true)
       private final String description;
 
     public String getDescription() {
@@ -33,7 +33,7 @@ public final class EnvironmentDetailsResponse extends io.pulumi.resources.Invoke
      * Publishing state of the environment setting Possible values are Creating, Created, Failed
      * 
      */
-    @InputImport(name="environmentState", required=true)
+    @Import(name="environmentState", required=true)
       private final String environmentState;
 
     public String getEnvironmentState() {
@@ -44,7 +44,7 @@ public final class EnvironmentDetailsResponse extends io.pulumi.resources.Invoke
      * Resource Id of the environment
      * 
      */
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final String id;
 
     public String getId() {
@@ -55,7 +55,7 @@ public final class EnvironmentDetailsResponse extends io.pulumi.resources.Invoke
      * The details of the latest operation. ex: status, error
      * 
      */
-    @InputImport(name="latestOperationResult", required=true)
+    @Import(name="latestOperationResult", required=true)
       private final LatestOperationResultResponse latestOperationResult;
 
     public LatestOperationResultResponse getLatestOperationResult() {
@@ -66,7 +66,7 @@ public final class EnvironmentDetailsResponse extends io.pulumi.resources.Invoke
      * Name of the Environment
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -77,7 +77,7 @@ public final class EnvironmentDetailsResponse extends io.pulumi.resources.Invoke
      * When the password was last reset on the environment.
      * 
      */
-    @InputImport(name="passwordLastReset", required=true)
+    @Import(name="passwordLastReset", required=true)
       private final String passwordLastReset;
 
     public String getPasswordLastReset() {
@@ -88,7 +88,7 @@ public final class EnvironmentDetailsResponse extends io.pulumi.resources.Invoke
      * The provisioning state of the environment. This also includes LabIsFull and NotYetProvisioned status.
      * 
      */
-    @InputImport(name="provisioningState", required=true)
+    @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
     public String getProvisioningState() {
@@ -99,7 +99,7 @@ public final class EnvironmentDetailsResponse extends io.pulumi.resources.Invoke
      * How long the environment has been used by a lab user
      * 
      */
-    @InputImport(name="totalUsage", required=true)
+    @Import(name="totalUsage", required=true)
       private final String totalUsage;
 
     public String getTotalUsage() {
@@ -110,7 +110,7 @@ public final class EnvironmentDetailsResponse extends io.pulumi.resources.Invoke
      * Details of backing DTL virtual machine with compute and network details.
      * 
      */
-    @InputImport(name="virtualMachineDetails", required=true)
+    @Import(name="virtualMachineDetails", required=true)
       private final VirtualMachineDetailsResponse virtualMachineDetails;
 
     public VirtualMachineDetailsResponse getVirtualMachineDetails() {

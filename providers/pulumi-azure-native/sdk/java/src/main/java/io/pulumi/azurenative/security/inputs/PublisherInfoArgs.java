@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.security.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class PublisherInfoArgs extends io.pulumi.resources.ResourceArgs {
      * The "OriginalName" field taken from the file's version resource
      * 
      */
-    @InputImport(name="binaryName")
+    @Import(name="binaryName")
       private final @Nullable Output<String> binaryName;
 
     public Output<String> getBinaryName() {
@@ -33,7 +33,7 @@ public final class PublisherInfoArgs extends io.pulumi.resources.ResourceArgs {
      * The product name taken from the file's version resource
      * 
      */
-    @InputImport(name="productName")
+    @Import(name="productName")
       private final @Nullable Output<String> productName;
 
     public Output<String> getProductName() {
@@ -44,7 +44,7 @@ public final class PublisherInfoArgs extends io.pulumi.resources.ResourceArgs {
      * The Subject field of the x.509 certificate used to sign the code, using the following fields -  O = Organization, L = Locality, S = State or Province, and C = Country
      * 
      */
-    @InputImport(name="publisherName")
+    @Import(name="publisherName")
       private final @Nullable Output<String> publisherName;
 
     public Output<String> getPublisherName() {
@@ -55,7 +55,7 @@ public final class PublisherInfoArgs extends io.pulumi.resources.ResourceArgs {
      * The binary file version taken from the file's version resource
      * 
      */
-    @InputImport(name="version")
+    @Import(name="version")
       private final @Nullable Output<String> version;
 
     public Output<String> getVersion() {

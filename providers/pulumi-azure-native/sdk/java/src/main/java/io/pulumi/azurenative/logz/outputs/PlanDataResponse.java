@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.logz.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PlanDataResponse {
     /**
      * different billing cycles like MONTHLY/WEEKLY. this could be enum
@@ -32,12 +32,12 @@ public final class PlanDataResponse {
      */
     private final @Nullable String usageType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PlanDataResponse(
-        @OutputCustomType.Parameter("billingCycle") @Nullable String billingCycle,
-        @OutputCustomType.Parameter("effectiveDate") @Nullable String effectiveDate,
-        @OutputCustomType.Parameter("planDetails") @Nullable String planDetails,
-        @OutputCustomType.Parameter("usageType") @Nullable String usageType) {
+        @CustomType.Parameter("billingCycle") @Nullable String billingCycle,
+        @CustomType.Parameter("effectiveDate") @Nullable String effectiveDate,
+        @CustomType.Parameter("planDetails") @Nullable String planDetails,
+        @CustomType.Parameter("usageType") @Nullable String usageType) {
         this.billingCycle = billingCycle;
         this.effectiveDate = effectiveDate;
         this.planDetails = planDetails;

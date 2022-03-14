@@ -8,7 +8,7 @@ import io.pulumi.azurenative.streamanalytics.PrivateEndpointArgs;
 import io.pulumi.azurenative.streamanalytics.outputs.PrivateEndpointPropertiesResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +35,7 @@ public class PrivateEndpoint extends io.pulumi.resources.CustomResource {
      * Unique opaque string (generally a GUID) that represents the metadata state of the resource (private endpoint) and changes whenever the resource is updated. Required on PUT (CreateOrUpdate) requests.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -49,7 +49,7 @@ public class PrivateEndpoint extends io.pulumi.resources.CustomResource {
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -63,7 +63,7 @@ public class PrivateEndpoint extends io.pulumi.resources.CustomResource {
      * The properties associated with a private endpoint.
      * 
      */
-    @OutputExport(name="properties", type=PrivateEndpointPropertiesResponse.class, parameters={})
+    @Export(name="properties", type=PrivateEndpointPropertiesResponse.class, parameters={})
     private Output<PrivateEndpointPropertiesResponse> properties;
 
     /**
@@ -77,7 +77,7 @@ public class PrivateEndpoint extends io.pulumi.resources.CustomResource {
      * The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

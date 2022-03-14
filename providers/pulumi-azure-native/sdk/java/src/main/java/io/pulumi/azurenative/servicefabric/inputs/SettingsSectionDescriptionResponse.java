@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.servicefabric.inputs;
 
 import io.pulumi.azurenative.servicefabric.inputs.SettingsParameterDescriptionResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class SettingsSectionDescriptionResponse extends io.pulumi.resource
      * The section name of the fabric settings.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -33,7 +33,7 @@ public final class SettingsSectionDescriptionResponse extends io.pulumi.resource
      * The collection of parameters in the section.
      * 
      */
-    @InputImport(name="parameters", required=true)
+    @Import(name="parameters", required=true)
       private final List<SettingsParameterDescriptionResponse> parameters;
 
     public List<SettingsParameterDescriptionResponse> getParameters() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datalakeanalytics.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class VirtualNetworkRuleResponse extends io.pulumi.resources.Invoke
      * The resource identifier.
      * 
      */
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final String id;
 
     public String getId() {
@@ -31,7 +31,7 @@ public final class VirtualNetworkRuleResponse extends io.pulumi.resources.Invoke
      * The resource name.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -42,7 +42,7 @@ public final class VirtualNetworkRuleResponse extends io.pulumi.resources.Invoke
      * The resource identifier for the subnet
      * 
      */
-    @InputImport(name="subnetId", required=true)
+    @Import(name="subnetId", required=true)
       private final String subnetId;
 
     public String getSubnetId() {
@@ -53,7 +53,7 @@ public final class VirtualNetworkRuleResponse extends io.pulumi.resources.Invoke
      * The resource type.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {
@@ -64,7 +64,7 @@ public final class VirtualNetworkRuleResponse extends io.pulumi.resources.Invoke
      * The current state of the VirtualNetwork Rule
      * 
      */
-    @InputImport(name="virtualNetworkRuleState", required=true)
+    @Import(name="virtualNetworkRuleState", required=true)
       private final String virtualNetworkRuleState;
 
     public String getVirtualNetworkRuleState() {

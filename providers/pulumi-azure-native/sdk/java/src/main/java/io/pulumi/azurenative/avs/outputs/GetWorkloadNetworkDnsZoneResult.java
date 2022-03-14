@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.avs.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetWorkloadNetworkDnsZoneResult {
     /**
      * Display name of the DNS Zone.
@@ -64,18 +64,18 @@ public final class GetWorkloadNetworkDnsZoneResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetWorkloadNetworkDnsZoneResult(
-        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
-        @OutputCustomType.Parameter("dnsServerIps") @Nullable List<String> dnsServerIps,
-        @OutputCustomType.Parameter("dnsServices") @Nullable Double dnsServices,
-        @OutputCustomType.Parameter("domain") @Nullable List<String> domain,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("revision") @Nullable Double revision,
-        @OutputCustomType.Parameter("sourceIp") @Nullable String sourceIp,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("displayName") @Nullable String displayName,
+        @CustomType.Parameter("dnsServerIps") @Nullable List<String> dnsServerIps,
+        @CustomType.Parameter("dnsServices") @Nullable Double dnsServices,
+        @CustomType.Parameter("domain") @Nullable List<String> domain,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("revision") @Nullable Double revision,
+        @CustomType.Parameter("sourceIp") @Nullable String sourceIp,
+        @CustomType.Parameter("type") String type) {
         this.displayName = displayName;
         this.dnsServerIps = dnsServerIps;
         this.dnsServices = dnsServices;

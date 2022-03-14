@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class ApplicationGatewayBackendAddressArgs extends io.pulumi.resour
      * Fully qualified domain name (FQDN).
      * 
      */
-    @InputImport(name="fqdn")
+    @Import(name="fqdn")
       private final @Nullable Output<String> fqdn;
 
     public Output<String> getFqdn() {
@@ -33,7 +33,7 @@ public final class ApplicationGatewayBackendAddressArgs extends io.pulumi.resour
      * IP address.
      * 
      */
-    @InputImport(name="ipAddress")
+    @Import(name="ipAddress")
       private final @Nullable Output<String> ipAddress;
 
     public Output<String> getIpAddress() {

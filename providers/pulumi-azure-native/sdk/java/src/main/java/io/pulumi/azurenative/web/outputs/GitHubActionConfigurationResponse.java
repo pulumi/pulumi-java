@@ -5,13 +5,13 @@ package io.pulumi.azurenative.web.outputs;
 
 import io.pulumi.azurenative.web.outputs.GitHubActionCodeConfigurationResponse;
 import io.pulumi.azurenative.web.outputs.GitHubActionContainerConfigurationResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GitHubActionConfigurationResponse {
     /**
      * GitHub Action code configuration.
@@ -34,12 +34,12 @@ public final class GitHubActionConfigurationResponse {
      */
     private final @Nullable Boolean isLinux;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GitHubActionConfigurationResponse(
-        @OutputCustomType.Parameter("codeConfiguration") @Nullable GitHubActionCodeConfigurationResponse codeConfiguration,
-        @OutputCustomType.Parameter("containerConfiguration") @Nullable GitHubActionContainerConfigurationResponse containerConfiguration,
-        @OutputCustomType.Parameter("generateWorkflowFile") @Nullable Boolean generateWorkflowFile,
-        @OutputCustomType.Parameter("isLinux") @Nullable Boolean isLinux) {
+        @CustomType.Parameter("codeConfiguration") @Nullable GitHubActionCodeConfigurationResponse codeConfiguration,
+        @CustomType.Parameter("containerConfiguration") @Nullable GitHubActionContainerConfigurationResponse containerConfiguration,
+        @CustomType.Parameter("generateWorkflowFile") @Nullable Boolean generateWorkflowFile,
+        @CustomType.Parameter("isLinux") @Nullable Boolean isLinux) {
         this.codeConfiguration = codeConfiguration;
         this.containerConfiguration = containerConfiguration;
         this.generateWorkflowFile = generateWorkflowFile;

@@ -11,7 +11,7 @@ import io.pulumi.azurenative.hybridnetwork.inputs.OsProfileArgs;
 import io.pulumi.azurenative.hybridnetwork.inputs.StorageProfileArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -31,7 +31,7 @@ public final class NetworkFunctionRoleConfigurationArgs extends io.pulumi.resour
      * Specifies the custom settings for the virtual machine.
      * 
      */
-    @InputImport(name="customProfile")
+    @Import(name="customProfile")
       private final @Nullable Output<CustomProfileArgs> customProfile;
 
     public Output<CustomProfileArgs> getCustomProfile() {
@@ -42,7 +42,7 @@ public final class NetworkFunctionRoleConfigurationArgs extends io.pulumi.resour
      * The network interface configurations.
      * 
      */
-    @InputImport(name="networkInterfaces")
+    @Import(name="networkInterfaces")
       private final @Nullable Output<List<NetworkInterfaceArgs>> networkInterfaces;
 
     public Output<List<NetworkInterfaceArgs>> getNetworkInterfaces() {
@@ -53,7 +53,7 @@ public final class NetworkFunctionRoleConfigurationArgs extends io.pulumi.resour
      * Specifies the operating system settings for the role instance. This value can be updated during the deployment of network function.
      * 
      */
-    @InputImport(name="osProfile")
+    @Import(name="osProfile")
       private final @Nullable Output<OsProfileArgs> osProfile;
 
     public Output<OsProfileArgs> getOsProfile() {
@@ -64,7 +64,7 @@ public final class NetworkFunctionRoleConfigurationArgs extends io.pulumi.resour
      * The name of the network function role.
      * 
      */
-    @InputImport(name="roleName")
+    @Import(name="roleName")
       private final @Nullable Output<String> roleName;
 
     public Output<String> getRoleName() {
@@ -75,7 +75,7 @@ public final class NetworkFunctionRoleConfigurationArgs extends io.pulumi.resour
      * Role type.
      * 
      */
-    @InputImport(name="roleType")
+    @Import(name="roleType")
       private final @Nullable Output<Either<String,NetworkFunctionRoleConfigurationType>> roleType;
 
     public Output<Either<String,NetworkFunctionRoleConfigurationType>> getRoleType() {
@@ -86,7 +86,7 @@ public final class NetworkFunctionRoleConfigurationArgs extends io.pulumi.resour
      * Specifies the storage settings for the virtual machine disks.
      * 
      */
-    @InputImport(name="storageProfile")
+    @Import(name="storageProfile")
       private final @Nullable Output<StorageProfileArgs> storageProfile;
 
     public Output<StorageProfileArgs> getStorageProfile() {
@@ -97,7 +97,7 @@ public final class NetworkFunctionRoleConfigurationArgs extends io.pulumi.resour
      * The user parameters for customers. The format of user data parameters has to be matched with the provided user data template.
      * 
      */
-    @InputImport(name="userDataParameters")
+    @Import(name="userDataParameters")
       private final @Nullable Output<Object> userDataParameters;
 
     public Output<Object> getUserDataParameters() {
@@ -108,7 +108,7 @@ public final class NetworkFunctionRoleConfigurationArgs extends io.pulumi.resour
      * The user data template for customers. This is a json schema template describing the format and data type of user data parameters.
      * 
      */
-    @InputImport(name="userDataTemplate")
+    @Import(name="userDataTemplate")
       private final @Nullable Output<Object> userDataTemplate;
 
     public Output<Object> getUserDataTemplate() {
@@ -119,7 +119,7 @@ public final class NetworkFunctionRoleConfigurationArgs extends io.pulumi.resour
      * The size of the virtual machine.
      * 
      */
-    @InputImport(name="virtualMachineSize")
+    @Import(name="virtualMachineSize")
       private final @Nullable Output<Either<String,VirtualMachineSizeTypes>> virtualMachineSize;
 
     public Output<Either<String,VirtualMachineSizeTypes>> getVirtualMachineSize() {

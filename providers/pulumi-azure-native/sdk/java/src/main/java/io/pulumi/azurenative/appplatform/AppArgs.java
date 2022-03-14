@@ -6,7 +6,7 @@ package io.pulumi.azurenative.appplatform;
 import io.pulumi.azurenative.appplatform.inputs.AppResourcePropertiesArgs;
 import io.pulumi.azurenative.appplatform.inputs.ManagedIdentityPropertiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the App resource.
      * 
      */
-    @InputImport(name="appName")
+    @Import(name="appName")
       private final @Nullable Output<String> appName;
 
     public Output<String> getAppName() {
@@ -31,7 +31,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
      * The Managed Identity type of the app resource
      * 
      */
-    @InputImport(name="identity")
+    @Import(name="identity")
       private final @Nullable Output<ManagedIdentityPropertiesArgs> identity;
 
     public Output<ManagedIdentityPropertiesArgs> getIdentity() {
@@ -42,7 +42,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
      * The GEO location of the application, always the same with its parent resource
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -53,7 +53,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
      * Properties of the App resource
      * 
      */
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable Output<AppResourcePropertiesArgs> properties;
 
     public Output<AppResourcePropertiesArgs> getProperties() {
@@ -64,7 +64,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -75,7 +75,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the Service resource.
      * 
      */
-    @InputImport(name="serviceName", required=true)
+    @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
 
     public Output<String> getServiceName() {

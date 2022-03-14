@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.EndpointPropertiesResponseCustomHeaders;
 import io.pulumi.azurenative.network.outputs.EndpointPropertiesResponseSubnets;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetEndpointResult {
     /**
      * List of custom headers.
@@ -96,24 +96,24 @@ public final class GetEndpointResult {
      */
     private final @Nullable Double weight;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetEndpointResult(
-        @OutputCustomType.Parameter("customHeaders") @Nullable List<EndpointPropertiesResponseCustomHeaders> customHeaders,
-        @OutputCustomType.Parameter("endpointLocation") @Nullable String endpointLocation,
-        @OutputCustomType.Parameter("endpointMonitorStatus") @Nullable String endpointMonitorStatus,
-        @OutputCustomType.Parameter("endpointStatus") @Nullable String endpointStatus,
-        @OutputCustomType.Parameter("geoMapping") @Nullable List<String> geoMapping,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("minChildEndpoints") @Nullable Double minChildEndpoints,
-        @OutputCustomType.Parameter("minChildEndpointsIPv4") @Nullable Double minChildEndpointsIPv4,
-        @OutputCustomType.Parameter("minChildEndpointsIPv6") @Nullable Double minChildEndpointsIPv6,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("priority") @Nullable Double priority,
-        @OutputCustomType.Parameter("subnets") @Nullable List<EndpointPropertiesResponseSubnets> subnets,
-        @OutputCustomType.Parameter("target") @Nullable String target,
-        @OutputCustomType.Parameter("targetResourceId") @Nullable String targetResourceId,
-        @OutputCustomType.Parameter("type") @Nullable String type,
-        @OutputCustomType.Parameter("weight") @Nullable Double weight) {
+        @CustomType.Parameter("customHeaders") @Nullable List<EndpointPropertiesResponseCustomHeaders> customHeaders,
+        @CustomType.Parameter("endpointLocation") @Nullable String endpointLocation,
+        @CustomType.Parameter("endpointMonitorStatus") @Nullable String endpointMonitorStatus,
+        @CustomType.Parameter("endpointStatus") @Nullable String endpointStatus,
+        @CustomType.Parameter("geoMapping") @Nullable List<String> geoMapping,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("minChildEndpoints") @Nullable Double minChildEndpoints,
+        @CustomType.Parameter("minChildEndpointsIPv4") @Nullable Double minChildEndpointsIPv4,
+        @CustomType.Parameter("minChildEndpointsIPv6") @Nullable Double minChildEndpointsIPv6,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("priority") @Nullable Double priority,
+        @CustomType.Parameter("subnets") @Nullable List<EndpointPropertiesResponseSubnets> subnets,
+        @CustomType.Parameter("target") @Nullable String target,
+        @CustomType.Parameter("targetResourceId") @Nullable String targetResourceId,
+        @CustomType.Parameter("type") @Nullable String type,
+        @CustomType.Parameter("weight") @Nullable Double weight) {
         this.customHeaders = customHeaders;
         this.endpointLocation = endpointLocation;
         this.endpointMonitorStatus = endpointMonitorStatus;

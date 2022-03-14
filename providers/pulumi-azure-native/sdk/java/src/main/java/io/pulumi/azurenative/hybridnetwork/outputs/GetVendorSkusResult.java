@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.hybridnetwork.outputs;
 
 import io.pulumi.azurenative.hybridnetwork.outputs.NetworkFunctionTemplateResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetVendorSkusResult {
     /**
      * The sku deployment mode.
@@ -65,18 +65,18 @@ public final class GetVendorSkusResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetVendorSkusResult(
-        @OutputCustomType.Parameter("deploymentMode") @Nullable String deploymentMode,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("managedApplicationParameters") @Nullable Object managedApplicationParameters,
-        @OutputCustomType.Parameter("managedApplicationTemplate") @Nullable Object managedApplicationTemplate,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("networkFunctionTemplate") @Nullable NetworkFunctionTemplateResponse networkFunctionTemplate,
-        @OutputCustomType.Parameter("preview") @Nullable Boolean preview,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("skuType") @Nullable String skuType,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("deploymentMode") @Nullable String deploymentMode,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("managedApplicationParameters") @Nullable Object managedApplicationParameters,
+        @CustomType.Parameter("managedApplicationTemplate") @Nullable Object managedApplicationTemplate,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("networkFunctionTemplate") @Nullable NetworkFunctionTemplateResponse networkFunctionTemplate,
+        @CustomType.Parameter("preview") @Nullable Boolean preview,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("skuType") @Nullable String skuType,
+        @CustomType.Parameter("type") String type) {
         this.deploymentMode = deploymentMode;
         this.id = id;
         this.managedApplicationParameters = managedApplicationParameters;

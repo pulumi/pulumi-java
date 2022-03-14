@@ -6,13 +6,13 @@ package io.pulumi.azurenative.costmanagement.outputs;
 import io.pulumi.azurenative.costmanagement.outputs.ExportDefinitionResponse;
 import io.pulumi.azurenative.costmanagement.outputs.ExportDeliveryInfoResponse;
 import io.pulumi.azurenative.costmanagement.outputs.ExportExecutionListResultResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CommonExportPropertiesResponse {
     /**
      * Has the definition for the export.
@@ -40,13 +40,13 @@ public final class CommonExportPropertiesResponse {
      */
     private final @Nullable ExportExecutionListResultResponse runHistory;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CommonExportPropertiesResponse(
-        @OutputCustomType.Parameter("definition") ExportDefinitionResponse definition,
-        @OutputCustomType.Parameter("deliveryInfo") ExportDeliveryInfoResponse deliveryInfo,
-        @OutputCustomType.Parameter("format") @Nullable String format,
-        @OutputCustomType.Parameter("nextRunTimeEstimate") String nextRunTimeEstimate,
-        @OutputCustomType.Parameter("runHistory") @Nullable ExportExecutionListResultResponse runHistory) {
+        @CustomType.Parameter("definition") ExportDefinitionResponse definition,
+        @CustomType.Parameter("deliveryInfo") ExportDeliveryInfoResponse deliveryInfo,
+        @CustomType.Parameter("format") @Nullable String format,
+        @CustomType.Parameter("nextRunTimeEstimate") String nextRunTimeEstimate,
+        @CustomType.Parameter("runHistory") @Nullable ExportExecutionListResultResponse runHistory) {
         this.definition = definition;
         this.deliveryInfo = deliveryInfo;
         this.format = format;

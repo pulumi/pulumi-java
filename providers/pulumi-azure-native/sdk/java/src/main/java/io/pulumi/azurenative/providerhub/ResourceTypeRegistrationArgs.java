@@ -5,7 +5,7 @@ package io.pulumi.azurenative.providerhub;
 
 import io.pulumi.azurenative.providerhub.inputs.ResourceTypeRegistrationPropertiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,7 +15,7 @@ public final class ResourceTypeRegistrationArgs extends io.pulumi.resources.Reso
 
     public static final ResourceTypeRegistrationArgs Empty = new ResourceTypeRegistrationArgs();
 
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable Output<ResourceTypeRegistrationPropertiesArgs> properties;
 
     public Output<ResourceTypeRegistrationPropertiesArgs> getProperties() {
@@ -26,7 +26,7 @@ public final class ResourceTypeRegistrationArgs extends io.pulumi.resources.Reso
      * The name of the resource provider hosted within ProviderHub.
      * 
      */
-    @InputImport(name="providerNamespace", required=true)
+    @Import(name="providerNamespace", required=true)
       private final Output<String> providerNamespace;
 
     public Output<String> getProviderNamespace() {
@@ -37,7 +37,7 @@ public final class ResourceTypeRegistrationArgs extends io.pulumi.resources.Reso
      * The resource type.
      * 
      */
-    @InputImport(name="resourceType")
+    @Import(name="resourceType")
       private final @Nullable Output<String> resourceType;
 
     public Output<String> getPropResourceType() {

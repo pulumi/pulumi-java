@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetUserRuleArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the network manager security Configuration.
      * 
      */
-    @InputImport(name="configurationName", required=true)
+    @Import(name="configurationName", required=true)
       private final String configurationName;
 
     public String getConfigurationName() {
@@ -27,7 +27,7 @@ public final class GetUserRuleArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the network manager.
      * 
      */
-    @InputImport(name="networkManagerName", required=true)
+    @Import(name="networkManagerName", required=true)
       private final String networkManagerName;
 
     public String getNetworkManagerName() {
@@ -38,7 +38,7 @@ public final class GetUserRuleArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {
@@ -49,7 +49,7 @@ public final class GetUserRuleArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the network manager security Configuration rule collection.
      * 
      */
-    @InputImport(name="ruleCollectionName", required=true)
+    @Import(name="ruleCollectionName", required=true)
       private final String ruleCollectionName;
 
     public String getRuleCollectionName() {
@@ -60,7 +60,7 @@ public final class GetUserRuleArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the rule.
      * 
      */
-    @InputImport(name="ruleName", required=true)
+    @Import(name="ruleName", required=true)
       private final String ruleName;
 
     public String getRuleName() {

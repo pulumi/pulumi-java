@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.labservices.outputs;
 
 import io.pulumi.azurenative.labservices.outputs.ReferenceVmResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ResourceSettingsResponse {
     /**
      * The translated compute cores of the virtual machine
@@ -44,14 +44,14 @@ public final class ResourceSettingsResponse {
      */
     private final @Nullable String size;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ResourceSettingsResponse(
-        @OutputCustomType.Parameter("cores") Integer cores,
-        @OutputCustomType.Parameter("galleryImageResourceId") @Nullable String galleryImageResourceId,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("imageName") String imageName,
-        @OutputCustomType.Parameter("referenceVm") ReferenceVmResponse referenceVm,
-        @OutputCustomType.Parameter("size") @Nullable String size) {
+        @CustomType.Parameter("cores") Integer cores,
+        @CustomType.Parameter("galleryImageResourceId") @Nullable String galleryImageResourceId,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("imageName") String imageName,
+        @CustomType.Parameter("referenceVm") ReferenceVmResponse referenceVm,
+        @CustomType.Parameter("size") @Nullable String size) {
         this.cores = cores;
         this.galleryImageResourceId = galleryImageResourceId;
         this.id = id;

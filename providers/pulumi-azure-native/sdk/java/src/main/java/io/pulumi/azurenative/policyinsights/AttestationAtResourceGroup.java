@@ -9,7 +9,7 @@ import io.pulumi.azurenative.policyinsights.outputs.AttestationEvidenceResponse;
 import io.pulumi.azurenative.policyinsights.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -36,7 +36,7 @@ public class AttestationAtResourceGroup extends io.pulumi.resources.CustomResour
      * Comments describing why this attestation was created.
      * 
      */
-    @OutputExport(name="comments", type=String.class, parameters={})
+    @Export(name="comments", type=String.class, parameters={})
     private Output</* @Nullable */ String> comments;
 
     /**
@@ -50,7 +50,7 @@ public class AttestationAtResourceGroup extends io.pulumi.resources.CustomResour
      * The compliance state that should be set on the resource.
      * 
      */
-    @OutputExport(name="complianceState", type=String.class, parameters={})
+    @Export(name="complianceState", type=String.class, parameters={})
     private Output</* @Nullable */ String> complianceState;
 
     /**
@@ -64,7 +64,7 @@ public class AttestationAtResourceGroup extends io.pulumi.resources.CustomResour
      * The evidence supporting the compliance state set in this attestation.
      * 
      */
-    @OutputExport(name="evidence", type=List.class, parameters={AttestationEvidenceResponse.class})
+    @Export(name="evidence", type=List.class, parameters={AttestationEvidenceResponse.class})
     private Output</* @Nullable */ List<AttestationEvidenceResponse>> evidence;
 
     /**
@@ -78,7 +78,7 @@ public class AttestationAtResourceGroup extends io.pulumi.resources.CustomResour
      * The time the compliance state should expire.
      * 
      */
-    @OutputExport(name="expiresOn", type=String.class, parameters={})
+    @Export(name="expiresOn", type=String.class, parameters={})
     private Output</* @Nullable */ String> expiresOn;
 
     /**
@@ -92,7 +92,7 @@ public class AttestationAtResourceGroup extends io.pulumi.resources.CustomResour
      * The time the compliance state was last changed in this attestation.
      * 
      */
-    @OutputExport(name="lastComplianceStateChangeAt", type=String.class, parameters={})
+    @Export(name="lastComplianceStateChangeAt", type=String.class, parameters={})
     private Output<String> lastComplianceStateChangeAt;
 
     /**
@@ -106,7 +106,7 @@ public class AttestationAtResourceGroup extends io.pulumi.resources.CustomResour
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -120,7 +120,7 @@ public class AttestationAtResourceGroup extends io.pulumi.resources.CustomResour
      * The person responsible for setting the state of the resource. This value is typically an Azure Active Directory object ID.
      * 
      */
-    @OutputExport(name="owner", type=String.class, parameters={})
+    @Export(name="owner", type=String.class, parameters={})
     private Output</* @Nullable */ String> owner;
 
     /**
@@ -134,7 +134,7 @@ public class AttestationAtResourceGroup extends io.pulumi.resources.CustomResour
      * The resource ID of the policy assignment that the attestation is setting the state for.
      * 
      */
-    @OutputExport(name="policyAssignmentId", type=String.class, parameters={})
+    @Export(name="policyAssignmentId", type=String.class, parameters={})
     private Output<String> policyAssignmentId;
 
     /**
@@ -148,7 +148,7 @@ public class AttestationAtResourceGroup extends io.pulumi.resources.CustomResour
      * The policy definition reference ID from a policy set definition that the attestation is setting the state for. If the policy assignment assigns a policy set definition the attestation can choose a definition within the set definition with this property or omit this and set the state for the entire set definition.
      * 
      */
-    @OutputExport(name="policyDefinitionReferenceId", type=String.class, parameters={})
+    @Export(name="policyDefinitionReferenceId", type=String.class, parameters={})
     private Output</* @Nullable */ String> policyDefinitionReferenceId;
 
     /**
@@ -162,7 +162,7 @@ public class AttestationAtResourceGroup extends io.pulumi.resources.CustomResour
      * The status of the attestation.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -176,7 +176,7 @@ public class AttestationAtResourceGroup extends io.pulumi.resources.CustomResour
      * Azure Resource Manager metadata containing createdBy and modifiedBy information.
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -190,7 +190,7 @@ public class AttestationAtResourceGroup extends io.pulumi.resources.CustomResour
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

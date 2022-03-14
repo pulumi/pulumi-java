@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datamigration.outputs;
 
 import io.pulumi.azurenative.datamigration.outputs.BackupFileInfoResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BackupSetInfoResponse {
     /**
      * Date and time that the backup operation finished
@@ -65,18 +65,18 @@ public final class BackupSetInfoResponse {
      */
     private final @Nullable List<BackupFileInfoResponse> listOfBackupFiles;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BackupSetInfoResponse(
-        @OutputCustomType.Parameter("backupFinishedDate") @Nullable String backupFinishedDate,
-        @OutputCustomType.Parameter("backupSetId") @Nullable String backupSetId,
-        @OutputCustomType.Parameter("backupStartDate") @Nullable String backupStartDate,
-        @OutputCustomType.Parameter("backupType") @Nullable String backupType,
-        @OutputCustomType.Parameter("databaseName") @Nullable String databaseName,
-        @OutputCustomType.Parameter("firstLsn") @Nullable String firstLsn,
-        @OutputCustomType.Parameter("isBackupRestored") @Nullable Boolean isBackupRestored,
-        @OutputCustomType.Parameter("lastLsn") @Nullable String lastLsn,
-        @OutputCustomType.Parameter("lastModifiedTime") @Nullable String lastModifiedTime,
-        @OutputCustomType.Parameter("listOfBackupFiles") @Nullable List<BackupFileInfoResponse> listOfBackupFiles) {
+        @CustomType.Parameter("backupFinishedDate") @Nullable String backupFinishedDate,
+        @CustomType.Parameter("backupSetId") @Nullable String backupSetId,
+        @CustomType.Parameter("backupStartDate") @Nullable String backupStartDate,
+        @CustomType.Parameter("backupType") @Nullable String backupType,
+        @CustomType.Parameter("databaseName") @Nullable String databaseName,
+        @CustomType.Parameter("firstLsn") @Nullable String firstLsn,
+        @CustomType.Parameter("isBackupRestored") @Nullable Boolean isBackupRestored,
+        @CustomType.Parameter("lastLsn") @Nullable String lastLsn,
+        @CustomType.Parameter("lastModifiedTime") @Nullable String lastModifiedTime,
+        @CustomType.Parameter("listOfBackupFiles") @Nullable List<BackupFileInfoResponse> listOfBackupFiles) {
         this.backupFinishedDate = backupFinishedDate;
         this.backupSetId = backupSetId;
         this.backupStartDate = backupStartDate;

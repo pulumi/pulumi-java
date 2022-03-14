@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class UefiSettingsResponse {
     /**
      * Specifies whether secure boot should be enabled on the virtual machine. <br><br>Minimum api-version: 2020-12-01
@@ -22,10 +22,10 @@ public final class UefiSettingsResponse {
      */
     private final @Nullable Boolean vTpmEnabled;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private UefiSettingsResponse(
-        @OutputCustomType.Parameter("secureBootEnabled") @Nullable Boolean secureBootEnabled,
-        @OutputCustomType.Parameter("vTpmEnabled") @Nullable Boolean vTpmEnabled) {
+        @CustomType.Parameter("secureBootEnabled") @Nullable Boolean secureBootEnabled,
+        @CustomType.Parameter("vTpmEnabled") @Nullable Boolean vTpmEnabled) {
         this.secureBootEnabled = secureBootEnabled;
         this.vTpmEnabled = vTpmEnabled;
     }

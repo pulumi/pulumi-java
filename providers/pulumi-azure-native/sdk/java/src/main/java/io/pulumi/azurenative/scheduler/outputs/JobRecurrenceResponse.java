@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.scheduler.outputs;
 
 import io.pulumi.azurenative.scheduler.outputs.JobRecurrenceScheduleResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class JobRecurrenceResponse {
     /**
      * Gets or sets the maximum number of times that the job should run.
@@ -35,13 +35,13 @@ public final class JobRecurrenceResponse {
     private final @Nullable Integer interval;
     private final @Nullable JobRecurrenceScheduleResponse schedule;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private JobRecurrenceResponse(
-        @OutputCustomType.Parameter("count") @Nullable Integer count,
-        @OutputCustomType.Parameter("endTime") @Nullable String endTime,
-        @OutputCustomType.Parameter("frequency") @Nullable String frequency,
-        @OutputCustomType.Parameter("interval") @Nullable Integer interval,
-        @OutputCustomType.Parameter("schedule") @Nullable JobRecurrenceScheduleResponse schedule) {
+        @CustomType.Parameter("count") @Nullable Integer count,
+        @CustomType.Parameter("endTime") @Nullable String endTime,
+        @CustomType.Parameter("frequency") @Nullable String frequency,
+        @CustomType.Parameter("interval") @Nullable Integer interval,
+        @CustomType.Parameter("schedule") @Nullable JobRecurrenceScheduleResponse schedule) {
         this.count = count;
         this.endTime = endTime;
         this.frequency = frequency;

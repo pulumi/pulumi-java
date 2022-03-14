@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.servicefabric.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class NamedPartitionSchemeDescriptionResponse {
     /**
      * The number of partitions.
@@ -28,11 +28,11 @@ public final class NamedPartitionSchemeDescriptionResponse {
      */
     private final String partitionScheme;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NamedPartitionSchemeDescriptionResponse(
-        @OutputCustomType.Parameter("count") Integer count,
-        @OutputCustomType.Parameter("names") List<String> names,
-        @OutputCustomType.Parameter("partitionScheme") String partitionScheme) {
+        @CustomType.Parameter("count") Integer count,
+        @CustomType.Parameter("names") List<String> names,
+        @CustomType.Parameter("partitionScheme") String partitionScheme) {
         this.count = count;
         this.names = names;
         this.partitionScheme = partitionScheme;

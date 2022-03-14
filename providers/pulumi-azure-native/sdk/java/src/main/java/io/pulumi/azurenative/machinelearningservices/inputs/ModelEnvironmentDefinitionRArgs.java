@@ -6,7 +6,7 @@ package io.pulumi.azurenative.machinelearningservices.inputs;
 import io.pulumi.azurenative.machinelearningservices.inputs.RCranPackageArgs;
 import io.pulumi.azurenative.machinelearningservices.inputs.RGitHubPackageArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +26,7 @@ public final class ModelEnvironmentDefinitionRArgs extends io.pulumi.resources.R
      * The packages from Bioconductor.
      * 
      */
-    @InputImport(name="bioConductorPackages")
+    @Import(name="bioConductorPackages")
       private final @Nullable Output<List<String>> bioConductorPackages;
 
     public Output<List<String>> getBioConductorPackages() {
@@ -37,7 +37,7 @@ public final class ModelEnvironmentDefinitionRArgs extends io.pulumi.resources.R
      * The CRAN packages to use.
      * 
      */
-    @InputImport(name="cranPackages")
+    @Import(name="cranPackages")
       private final @Nullable Output<List<RCranPackageArgs>> cranPackages;
 
     public Output<List<RCranPackageArgs>> getCranPackages() {
@@ -48,7 +48,7 @@ public final class ModelEnvironmentDefinitionRArgs extends io.pulumi.resources.R
      * The packages from custom urls.
      * 
      */
-    @InputImport(name="customUrlPackages")
+    @Import(name="customUrlPackages")
       private final @Nullable Output<List<String>> customUrlPackages;
 
     public Output<List<String>> getCustomUrlPackages() {
@@ -59,7 +59,7 @@ public final class ModelEnvironmentDefinitionRArgs extends io.pulumi.resources.R
      * The packages directly from GitHub.
      * 
      */
-    @InputImport(name="gitHubPackages")
+    @Import(name="gitHubPackages")
       private final @Nullable Output<List<RGitHubPackageArgs>> gitHubPackages;
 
     public Output<List<RGitHubPackageArgs>> getGitHubPackages() {
@@ -70,7 +70,7 @@ public final class ModelEnvironmentDefinitionRArgs extends io.pulumi.resources.R
      * The version of R to be installed
      * 
      */
-    @InputImport(name="rVersion")
+    @Import(name="rVersion")
       private final @Nullable Output<String> rVersion;
 
     public Output<String> getRVersion() {
@@ -82,7 +82,7 @@ public final class ModelEnvironmentDefinitionRArgs extends io.pulumi.resources.R
      * The path specified gets used to call the user script.
      * 
      */
-    @InputImport(name="rscriptPath")
+    @Import(name="rscriptPath")
       private final @Nullable Output<String> rscriptPath;
 
     public Output<String> getRscriptPath() {
@@ -93,7 +93,7 @@ public final class ModelEnvironmentDefinitionRArgs extends io.pulumi.resources.R
      * Date of MRAN snapshot to use in YYYY-MM-DD format, e.g. "2019-04-17"
      * 
      */
-    @InputImport(name="snapshotDate")
+    @Import(name="snapshotDate")
       private final @Nullable Output<String> snapshotDate;
 
     public Output<String> getSnapshotDate() {
@@ -104,7 +104,7 @@ public final class ModelEnvironmentDefinitionRArgs extends io.pulumi.resources.R
      * Indicates whether the environment is managed by user or by AzureML.
      * 
      */
-    @InputImport(name="userManaged")
+    @Import(name="userManaged")
       private final @Nullable Output<Boolean> userManaged;
 
     public Output<Boolean> getUserManaged() {

@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.devtestlab.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ArtifactParameterPropertiesResponse {
     /**
      * The name of the artifact parameter.
@@ -22,10 +22,10 @@ public final class ArtifactParameterPropertiesResponse {
      */
     private final @Nullable String value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ArtifactParameterPropertiesResponse(
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("value") @Nullable String value) {
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("value") @Nullable String value) {
         this.name = name;
         this.value = value;
     }

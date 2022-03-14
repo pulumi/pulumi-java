@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.securityinsights.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class RepoResponse extends io.pulumi.resources.InvokeArgs {
      * Array of branches.
      * 
      */
-    @InputImport(name="branches")
+    @Import(name="branches")
       private final @Nullable List<String> branches;
 
     public List<String> getBranches() {
@@ -34,7 +34,7 @@ public final class RepoResponse extends io.pulumi.resources.InvokeArgs {
      * The name of the repository.
      * 
      */
-    @InputImport(name="fullName")
+    @Import(name="fullName")
       private final @Nullable String fullName;
 
     public Optional<String> getFullName() {
@@ -45,7 +45,7 @@ public final class RepoResponse extends io.pulumi.resources.InvokeArgs {
      * The url to access the repository.
      * 
      */
-    @InputImport(name="url")
+    @Import(name="url")
       private final @Nullable String url;
 
     public Optional<String> getUrl() {

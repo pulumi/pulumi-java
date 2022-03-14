@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.recoveryservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class InMageAzureV2ManagedDiskDetailsResponse {
     /**
      * The disk id.
@@ -27,11 +27,11 @@ public final class InMageAzureV2ManagedDiskDetailsResponse {
      */
     private final @Nullable String seedManagedDiskId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private InMageAzureV2ManagedDiskDetailsResponse(
-        @OutputCustomType.Parameter("diskId") @Nullable String diskId,
-        @OutputCustomType.Parameter("replicaDiskType") @Nullable String replicaDiskType,
-        @OutputCustomType.Parameter("seedManagedDiskId") @Nullable String seedManagedDiskId) {
+        @CustomType.Parameter("diskId") @Nullable String diskId,
+        @CustomType.Parameter("replicaDiskType") @Nullable String replicaDiskType,
+        @CustomType.Parameter("seedManagedDiskId") @Nullable String seedManagedDiskId) {
         this.diskId = diskId;
         this.replicaDiskType = replicaDiskType;
         this.seedManagedDiskId = seedManagedDiskId;

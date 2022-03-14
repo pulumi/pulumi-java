@@ -5,7 +5,7 @@ package io.pulumi.azurenative.dynamics365fraudprotection;
 
 import io.pulumi.azurenative.dynamics365fraudprotection.inputs.DFPInstanceAdministratorsArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class InstanceDetailsArgs extends io.pulumi.resources.ResourceArgs 
      * A collection of DFP instance administrators
      * 
      */
-    @InputImport(name="administration")
+    @Import(name="administration")
       private final @Nullable Output<DFPInstanceAdministratorsArgs> administration;
 
     public Output<DFPInstanceAdministratorsArgs> getAdministration() {
@@ -31,7 +31,7 @@ public final class InstanceDetailsArgs extends io.pulumi.resources.ResourceArgs 
      * The name of the DFP instances. It must be a minimum of 3 characters, and a maximum of 63.
      * 
      */
-    @InputImport(name="instanceName")
+    @Import(name="instanceName")
       private final @Nullable Output<String> instanceName;
 
     public Output<String> getInstanceName() {
@@ -42,7 +42,7 @@ public final class InstanceDetailsArgs extends io.pulumi.resources.ResourceArgs 
      * Location of the DFP resource.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -53,7 +53,7 @@ public final class InstanceDetailsArgs extends io.pulumi.resources.ResourceArgs 
      * The name of the Azure Resource group of which a given DFP instance is part. This name must be at least 1 character in length, and no more than 90.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -64,7 +64,7 @@ public final class InstanceDetailsArgs extends io.pulumi.resources.ResourceArgs 
      * Key-value pairs of additional resource provisioning properties.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

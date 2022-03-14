@@ -5,7 +5,7 @@ package io.pulumi.azurenative.streamanalytics;
 
 import io.pulumi.azurenative.streamanalytics.inputs.ScalarFunctionPropertiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the function.
      * 
      */
-    @InputImport(name="functionName")
+    @Import(name="functionName")
       private final @Nullable Output<String> functionName;
 
     public Output<String> getFunctionName() {
@@ -30,7 +30,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the streaming job.
      * 
      */
-    @InputImport(name="jobName", required=true)
+    @Import(name="jobName", required=true)
       private final Output<String> jobName;
 
     public Output<String> getJobName() {
@@ -41,7 +41,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * Resource name
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -52,7 +52,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * The properties that are associated with a function.
      * 
      */
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable Output<ScalarFunctionPropertiesArgs> properties;
 
     public Output<ScalarFunctionPropertiesArgs> getProperties() {
@@ -63,7 +63,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {

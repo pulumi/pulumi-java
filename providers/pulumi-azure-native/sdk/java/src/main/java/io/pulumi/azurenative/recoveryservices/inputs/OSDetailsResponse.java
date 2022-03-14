@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class OSDetailsResponse extends io.pulumi.resources.InvokeArgs {
      * The OS Major Version.
      * 
      */
-    @InputImport(name="oSMajorVersion")
+    @Import(name="oSMajorVersion")
       private final @Nullable String oSMajorVersion;
 
     public Optional<String> getOSMajorVersion() {
@@ -33,7 +33,7 @@ public final class OSDetailsResponse extends io.pulumi.resources.InvokeArgs {
      * The OS Minor Version.
      * 
      */
-    @InputImport(name="oSMinorVersion")
+    @Import(name="oSMinorVersion")
       private final @Nullable String oSMinorVersion;
 
     public Optional<String> getOSMinorVersion() {
@@ -44,7 +44,7 @@ public final class OSDetailsResponse extends io.pulumi.resources.InvokeArgs {
      * The OS Version.
      * 
      */
-    @InputImport(name="oSVersion")
+    @Import(name="oSVersion")
       private final @Nullable String oSVersion;
 
     public Optional<String> getOSVersion() {
@@ -55,7 +55,7 @@ public final class OSDetailsResponse extends io.pulumi.resources.InvokeArgs {
      * The OSEdition.
      * 
      */
-    @InputImport(name="osEdition")
+    @Import(name="osEdition")
       private final @Nullable String osEdition;
 
     public Optional<String> getOsEdition() {
@@ -66,7 +66,7 @@ public final class OSDetailsResponse extends io.pulumi.resources.InvokeArgs {
      * VM Disk details.
      * 
      */
-    @InputImport(name="osType")
+    @Import(name="osType")
       private final @Nullable String osType;
 
     public Optional<String> getOsType() {
@@ -77,7 +77,7 @@ public final class OSDetailsResponse extends io.pulumi.resources.InvokeArgs {
      * Product type.
      * 
      */
-    @InputImport(name="productType")
+    @Import(name="productType")
       private final @Nullable String productType;
 
     public Optional<String> getProductType() {

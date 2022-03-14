@@ -3,12 +3,12 @@
 
 package io.pulumi.azurenative.recoveryservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class InMageRcmPolicyDetailsResponse {
     /**
      * The app consistent snapshot frequency in minutes.
@@ -37,13 +37,13 @@ public final class InMageRcmPolicyDetailsResponse {
      */
     private final Integer recoveryPointHistoryInMinutes;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private InMageRcmPolicyDetailsResponse(
-        @OutputCustomType.Parameter("appConsistentFrequencyInMinutes") Integer appConsistentFrequencyInMinutes,
-        @OutputCustomType.Parameter("crashConsistentFrequencyInMinutes") Integer crashConsistentFrequencyInMinutes,
-        @OutputCustomType.Parameter("enableMultiVmSync") String enableMultiVmSync,
-        @OutputCustomType.Parameter("instanceType") String instanceType,
-        @OutputCustomType.Parameter("recoveryPointHistoryInMinutes") Integer recoveryPointHistoryInMinutes) {
+        @CustomType.Parameter("appConsistentFrequencyInMinutes") Integer appConsistentFrequencyInMinutes,
+        @CustomType.Parameter("crashConsistentFrequencyInMinutes") Integer crashConsistentFrequencyInMinutes,
+        @CustomType.Parameter("enableMultiVmSync") String enableMultiVmSync,
+        @CustomType.Parameter("instanceType") String instanceType,
+        @CustomType.Parameter("recoveryPointHistoryInMinutes") Integer recoveryPointHistoryInMinutes) {
         this.appConsistentFrequencyInMinutes = appConsistentFrequencyInMinutes;
         this.crashConsistentFrequencyInMinutes = crashConsistentFrequencyInMinutes;
         this.enableMultiVmSync = enableMultiVmSync;

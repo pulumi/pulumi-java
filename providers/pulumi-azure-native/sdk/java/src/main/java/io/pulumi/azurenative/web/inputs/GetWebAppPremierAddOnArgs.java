@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetWebAppPremierAddOnArgs extends io.pulumi.resources.InvokeA
      * Name of the app.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -27,7 +27,7 @@ public final class GetWebAppPremierAddOnArgs extends io.pulumi.resources.InvokeA
      * Add-on name.
      * 
      */
-    @InputImport(name="premierAddOnName", required=true)
+    @Import(name="premierAddOnName", required=true)
       private final String premierAddOnName;
 
     public String getPremierAddOnName() {
@@ -38,7 +38,7 @@ public final class GetWebAppPremierAddOnArgs extends io.pulumi.resources.InvokeA
      * Name of the resource group to which the resource belongs.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {

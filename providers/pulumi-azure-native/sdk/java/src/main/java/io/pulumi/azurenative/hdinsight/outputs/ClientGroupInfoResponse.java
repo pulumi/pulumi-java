@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.hdinsight.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ClientGroupInfoResponse {
     /**
      * The AAD security group id.
@@ -22,10 +22,10 @@ public final class ClientGroupInfoResponse {
      */
     private final @Nullable String groupName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ClientGroupInfoResponse(
-        @OutputCustomType.Parameter("groupId") @Nullable String groupId,
-        @OutputCustomType.Parameter("groupName") @Nullable String groupName) {
+        @CustomType.Parameter("groupId") @Nullable String groupId,
+        @CustomType.Parameter("groupName") @Nullable String groupName) {
         this.groupId = groupId;
         this.groupName = groupName;
     }

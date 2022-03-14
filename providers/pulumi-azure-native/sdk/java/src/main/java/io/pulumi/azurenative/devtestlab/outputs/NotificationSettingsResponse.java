@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.devtestlab.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class NotificationSettingsResponse {
     /**
      * The email recipient to send notifications to (can be a list of semi-colon separated email addresses).
@@ -38,13 +38,13 @@ public final class NotificationSettingsResponse {
      */
     private final @Nullable String webhookUrl;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NotificationSettingsResponse(
-        @OutputCustomType.Parameter("emailRecipient") @Nullable String emailRecipient,
-        @OutputCustomType.Parameter("notificationLocale") @Nullable String notificationLocale,
-        @OutputCustomType.Parameter("status") @Nullable String status,
-        @OutputCustomType.Parameter("timeInMinutes") @Nullable Integer timeInMinutes,
-        @OutputCustomType.Parameter("webhookUrl") @Nullable String webhookUrl) {
+        @CustomType.Parameter("emailRecipient") @Nullable String emailRecipient,
+        @CustomType.Parameter("notificationLocale") @Nullable String notificationLocale,
+        @CustomType.Parameter("status") @Nullable String status,
+        @CustomType.Parameter("timeInMinutes") @Nullable Integer timeInMinutes,
+        @CustomType.Parameter("webhookUrl") @Nullable String webhookUrl) {
         this.emailRecipient = emailRecipient;
         this.notificationLocale = notificationLocale;
         this.status = status;

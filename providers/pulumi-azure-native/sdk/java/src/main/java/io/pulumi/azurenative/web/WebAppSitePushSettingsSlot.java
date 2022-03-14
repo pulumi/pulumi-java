@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.web.WebAppSitePushSettingsSlotArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -32,7 +32,7 @@ public class WebAppSitePushSettingsSlot extends io.pulumi.resources.CustomResour
      * Gets or sets a JSON string containing a list of dynamic tags that will be evaluated from user claims in the push registration endpoint.
      * 
      */
-    @OutputExport(name="dynamicTagsJson", type=String.class, parameters={})
+    @Export(name="dynamicTagsJson", type=String.class, parameters={})
     private Output</* @Nullable */ String> dynamicTagsJson;
 
     /**
@@ -46,7 +46,7 @@ public class WebAppSitePushSettingsSlot extends io.pulumi.resources.CustomResour
      * Gets or sets a flag indicating whether the Push endpoint is enabled.
      * 
      */
-    @OutputExport(name="isPushEnabled", type=Boolean.class, parameters={})
+    @Export(name="isPushEnabled", type=Boolean.class, parameters={})
     private Output<Boolean> isPushEnabled;
 
     /**
@@ -60,7 +60,7 @@ public class WebAppSitePushSettingsSlot extends io.pulumi.resources.CustomResour
      * Kind of resource.
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
     /**
@@ -74,7 +74,7 @@ public class WebAppSitePushSettingsSlot extends io.pulumi.resources.CustomResour
      * Resource Name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -88,7 +88,7 @@ public class WebAppSitePushSettingsSlot extends io.pulumi.resources.CustomResour
      * Gets or sets a JSON string containing a list of tags that are whitelisted for use by the push registration endpoint.
      * 
      */
-    @OutputExport(name="tagWhitelistJson", type=String.class, parameters={})
+    @Export(name="tagWhitelistJson", type=String.class, parameters={})
     private Output</* @Nullable */ String> tagWhitelistJson;
 
     /**
@@ -105,7 +105,7 @@ public class WebAppSitePushSettingsSlot extends io.pulumi.resources.CustomResour
      * Validation should be performed at the PushRequestHandler.
      * 
      */
-    @OutputExport(name="tagsRequiringAuth", type=String.class, parameters={})
+    @Export(name="tagsRequiringAuth", type=String.class, parameters={})
     private Output</* @Nullable */ String> tagsRequiringAuth;
 
     /**
@@ -122,7 +122,7 @@ public class WebAppSitePushSettingsSlot extends io.pulumi.resources.CustomResour
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

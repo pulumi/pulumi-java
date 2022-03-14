@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.apimanagement.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class OAuth2AuthenticationSettingsContractResponse {
     /**
      * OAuth authorization server identifier.
@@ -22,10 +22,10 @@ public final class OAuth2AuthenticationSettingsContractResponse {
      */
     private final @Nullable String scope;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private OAuth2AuthenticationSettingsContractResponse(
-        @OutputCustomType.Parameter("authorizationServerId") @Nullable String authorizationServerId,
-        @OutputCustomType.Parameter("scope") @Nullable String scope) {
+        @CustomType.Parameter("authorizationServerId") @Nullable String authorizationServerId,
+        @CustomType.Parameter("scope") @Nullable String scope) {
         this.authorizationServerId = authorizationServerId;
         this.scope = scope;
     }

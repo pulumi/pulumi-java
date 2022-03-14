@@ -7,7 +7,7 @@ import io.pulumi.azurenative.testbase.enums.TestType;
 import io.pulumi.azurenative.testbase.inputs.CommandArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -27,7 +27,7 @@ public final class TestArgs extends io.pulumi.resources.ResourceArgs {
      * The commands used in the test.
      * 
      */
-    @InputImport(name="commands", required=true)
+    @Import(name="commands", required=true)
       private final Output<List<CommandArgs>> commands;
 
     public Output<List<CommandArgs>> getCommands() {
@@ -38,7 +38,7 @@ public final class TestArgs extends io.pulumi.resources.ResourceArgs {
      * Indicates if this test is active.It doesn't schedule test for not active Test.
      * 
      */
-    @InputImport(name="isActive")
+    @Import(name="isActive")
       private final @Nullable Output<Boolean> isActive;
 
     public Output<Boolean> getIsActive() {
@@ -49,7 +49,7 @@ public final class TestArgs extends io.pulumi.resources.ResourceArgs {
      * The type of the test.
      * 
      */
-    @InputImport(name="testType", required=true)
+    @Import(name="testType", required=true)
       private final Output<Either<String,TestType>> testType;
 
     public Output<Either<String,TestType>> getTestType() {

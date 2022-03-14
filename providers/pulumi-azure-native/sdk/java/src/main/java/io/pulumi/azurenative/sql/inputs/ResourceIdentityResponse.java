@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.sql.inputs;
 
 import io.pulumi.azurenative.sql.inputs.UserIdentityResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ResourceIdentityResponse extends io.pulumi.resources.InvokeAr
      * The Azure Active Directory principal id.
      * 
      */
-    @InputImport(name="principalId", required=true)
+    @Import(name="principalId", required=true)
       private final String principalId;
 
     public String getPrincipalId() {
@@ -35,7 +35,7 @@ public final class ResourceIdentityResponse extends io.pulumi.resources.InvokeAr
      * The Azure Active Directory tenant id.
      * 
      */
-    @InputImport(name="tenantId", required=true)
+    @Import(name="tenantId", required=true)
       private final String tenantId;
 
     public String getTenantId() {
@@ -46,7 +46,7 @@ public final class ResourceIdentityResponse extends io.pulumi.resources.InvokeAr
      * The identity type. Set this to 'SystemAssigned' in order to automatically create and assign an Azure Active Directory principal for the resource.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable String type;
 
     public Optional<String> getType() {
@@ -57,7 +57,7 @@ public final class ResourceIdentityResponse extends io.pulumi.resources.InvokeAr
      * The resource ids of the user assigned identities to use
      * 
      */
-    @InputImport(name="userAssignedIdentities")
+    @Import(name="userAssignedIdentities")
       private final @Nullable Map<String,UserIdentityResponse> userAssignedIdentities;
 
     public Map<String,UserIdentityResponse> getUserAssignedIdentities() {

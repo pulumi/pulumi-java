@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class JsonWriteSettingsResponse extends io.pulumi.resources.InvokeA
      * File pattern of JSON. This setting controls the way a collection of JSON objects will be treated. The default value is 'setOfObjects'. It is case-sensitive.
      * 
      */
-    @InputImport(name="filePattern")
+    @Import(name="filePattern")
       private final @Nullable Object filePattern;
 
     public Optional<Object> getFilePattern() {
@@ -35,7 +35,7 @@ public final class JsonWriteSettingsResponse extends io.pulumi.resources.InvokeA
      * Expected value is 'JsonWriteSettings'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

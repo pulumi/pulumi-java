@@ -4,25 +4,25 @@
 package io.pulumi.azurenative.migrate.outputs;
 
 import io.pulumi.azurenative.migrate.outputs.CollectorBodyAgentSpnPropertiesResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CollectorAgentPropertiesResponse {
     private final String id;
     private final String lastHeartbeatUtc;
     private final @Nullable CollectorBodyAgentSpnPropertiesResponse spnDetails;
     private final String version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CollectorAgentPropertiesResponse(
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("lastHeartbeatUtc") String lastHeartbeatUtc,
-        @OutputCustomType.Parameter("spnDetails") @Nullable CollectorBodyAgentSpnPropertiesResponse spnDetails,
-        @OutputCustomType.Parameter("version") String version) {
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("lastHeartbeatUtc") String lastHeartbeatUtc,
+        @CustomType.Parameter("spnDetails") @Nullable CollectorBodyAgentSpnPropertiesResponse spnDetails,
+        @CustomType.Parameter("version") String version) {
         this.id = id;
         this.lastHeartbeatUtc = lastHeartbeatUtc;
         this.spnDetails = spnDetails;

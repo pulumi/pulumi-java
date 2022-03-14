@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.videoanalyzer.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class VideoPublishingOptionsResponse extends io.pulumi.resources.In
      * When set to 'true' content will not be archived or recorded. This is used, for example, when the topology is used only for low latency video streaming. Default is 'false'.  If set to 'true', then "disableRtspPublishing" must be set to 'false'.
      * 
      */
-    @InputImport(name="disableArchive")
+    @Import(name="disableArchive")
       private final @Nullable String disableArchive;
 
     public Optional<String> getDisableArchive() {
@@ -33,7 +33,7 @@ public final class VideoPublishingOptionsResponse extends io.pulumi.resources.In
      * When set to 'true' the RTSP playback URL will not be published, disabling low latency streaming. This is used, for example, when the topology is used only for archiving content. Default is 'false'.  If set to 'true', then "disableArchive" must be set to 'false'.
      * 
      */
-    @InputImport(name="disableRtspPublishing")
+    @Import(name="disableRtspPublishing")
       private final @Nullable String disableRtspPublishing;
 
     public Optional<String> getDisableRtspPublishing() {

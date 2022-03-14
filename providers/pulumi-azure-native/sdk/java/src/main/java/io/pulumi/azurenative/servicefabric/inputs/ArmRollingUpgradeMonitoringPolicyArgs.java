@@ -6,7 +6,7 @@ package io.pulumi.azurenative.servicefabric.inputs;
 import io.pulumi.azurenative.servicefabric.enums.ArmUpgradeFailureAction;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class ArmRollingUpgradeMonitoringPolicyArgs extends io.pulumi.resou
      * The activation Mode of the service package
      * 
      */
-    @InputImport(name="failureAction")
+    @Import(name="failureAction")
       private final @Nullable Output<Either<String,ArmUpgradeFailureAction>> failureAction;
 
     public Output<Either<String,ArmUpgradeFailureAction>> getFailureAction() {
@@ -35,7 +35,7 @@ public final class ArmRollingUpgradeMonitoringPolicyArgs extends io.pulumi.resou
      * The amount of time to retry health evaluation when the application or cluster is unhealthy before FailureAction is executed. It is first interpreted as a string representing an ISO 8601 duration. If that fails, then it is interpreted as a number representing the total number of milliseconds.
      * 
      */
-    @InputImport(name="healthCheckRetryTimeout")
+    @Import(name="healthCheckRetryTimeout")
       private final @Nullable Output<String> healthCheckRetryTimeout;
 
     public Output<String> getHealthCheckRetryTimeout() {
@@ -46,7 +46,7 @@ public final class ArmRollingUpgradeMonitoringPolicyArgs extends io.pulumi.resou
      * The amount of time that the application or cluster must remain healthy before the upgrade proceeds to the next upgrade domain. It is first interpreted as a string representing an ISO 8601 duration. If that fails, then it is interpreted as a number representing the total number of milliseconds.
      * 
      */
-    @InputImport(name="healthCheckStableDuration")
+    @Import(name="healthCheckStableDuration")
       private final @Nullable Output<String> healthCheckStableDuration;
 
     public Output<String> getHealthCheckStableDuration() {
@@ -57,7 +57,7 @@ public final class ArmRollingUpgradeMonitoringPolicyArgs extends io.pulumi.resou
      * The amount of time to wait after completing an upgrade domain before applying health policies. It is first interpreted as a string representing an ISO 8601 duration. If that fails, then it is interpreted as a number representing the total number of milliseconds.
      * 
      */
-    @InputImport(name="healthCheckWaitDuration")
+    @Import(name="healthCheckWaitDuration")
       private final @Nullable Output<String> healthCheckWaitDuration;
 
     public Output<String> getHealthCheckWaitDuration() {
@@ -68,7 +68,7 @@ public final class ArmRollingUpgradeMonitoringPolicyArgs extends io.pulumi.resou
      * The amount of time each upgrade domain has to complete before FailureAction is executed. It is first interpreted as a string representing an ISO 8601 duration. If that fails, then it is interpreted as a number representing the total number of milliseconds.
      * 
      */
-    @InputImport(name="upgradeDomainTimeout")
+    @Import(name="upgradeDomainTimeout")
       private final @Nullable Output<String> upgradeDomainTimeout;
 
     public Output<String> getUpgradeDomainTimeout() {
@@ -79,7 +79,7 @@ public final class ArmRollingUpgradeMonitoringPolicyArgs extends io.pulumi.resou
      * The amount of time the overall upgrade has to complete before FailureAction is executed. It is first interpreted as a string representing an ISO 8601 duration. If that fails, then it is interpreted as a number representing the total number of milliseconds.
      * 
      */
-    @InputImport(name="upgradeTimeout")
+    @Import(name="upgradeTimeout")
       private final @Nullable Output<String> upgradeTimeout;
 
     public Output<String> getUpgradeTimeout() {

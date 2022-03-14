@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class MABContainerHealthDetailsResponse {
     /**
      * Health Code
@@ -34,12 +34,12 @@ public final class MABContainerHealthDetailsResponse {
      */
     private final @Nullable String title;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MABContainerHealthDetailsResponse(
-        @OutputCustomType.Parameter("code") @Nullable Integer code,
-        @OutputCustomType.Parameter("message") @Nullable String message,
-        @OutputCustomType.Parameter("recommendations") @Nullable List<String> recommendations,
-        @OutputCustomType.Parameter("title") @Nullable String title) {
+        @CustomType.Parameter("code") @Nullable Integer code,
+        @CustomType.Parameter("message") @Nullable String message,
+        @CustomType.Parameter("recommendations") @Nullable List<String> recommendations,
+        @CustomType.Parameter("title") @Nullable String title) {
         this.code = code;
         this.message = message;
         this.recommendations = recommendations;

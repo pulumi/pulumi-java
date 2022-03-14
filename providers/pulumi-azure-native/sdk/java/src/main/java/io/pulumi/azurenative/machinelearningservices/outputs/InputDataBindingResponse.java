@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class InputDataBindingResponse {
     /**
      * ARM resource ID of the registered dataVersion.
@@ -27,11 +27,11 @@ public final class InputDataBindingResponse {
      */
     private final @Nullable String pathOnCompute;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private InputDataBindingResponse(
-        @OutputCustomType.Parameter("dataId") @Nullable String dataId,
-        @OutputCustomType.Parameter("mode") @Nullable String mode,
-        @OutputCustomType.Parameter("pathOnCompute") @Nullable String pathOnCompute) {
+        @CustomType.Parameter("dataId") @Nullable String dataId,
+        @CustomType.Parameter("mode") @Nullable String mode,
+        @CustomType.Parameter("pathOnCompute") @Nullable String pathOnCompute) {
         this.dataId = dataId;
         this.mode = mode;
         this.pathOnCompute = pathOnCompute;

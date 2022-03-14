@@ -3,12 +3,12 @@
 
 package io.pulumi.azurenative.fluidrelay.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class FluidRelayEndpointsResponse {
     /**
      * The Fluid Relay Orderer endpoints.
@@ -21,10 +21,10 @@ public final class FluidRelayEndpointsResponse {
      */
     private final List<String> storageEndpoints;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FluidRelayEndpointsResponse(
-        @OutputCustomType.Parameter("ordererEndpoints") List<String> ordererEndpoints,
-        @OutputCustomType.Parameter("storageEndpoints") List<String> storageEndpoints) {
+        @CustomType.Parameter("ordererEndpoints") List<String> ordererEndpoints,
+        @CustomType.Parameter("storageEndpoints") List<String> storageEndpoints) {
         this.ordererEndpoints = ordererEndpoints;
         this.storageEndpoints = storageEndpoints;
     }

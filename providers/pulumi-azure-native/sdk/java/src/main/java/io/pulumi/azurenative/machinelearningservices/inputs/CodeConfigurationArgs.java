@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class CodeConfigurationArgs extends io.pulumi.resources.ResourceArg
      * ARM resource ID of the code asset.
      * 
      */
-    @InputImport(name="codeId")
+    @Import(name="codeId")
       private final @Nullable Output<String> codeId;
 
     public Output<String> getCodeId() {
@@ -33,7 +33,7 @@ public final class CodeConfigurationArgs extends io.pulumi.resources.ResourceArg
      * The script to execute on startup. eg. "score.py"
      * 
      */
-    @InputImport(name="scoringScript", required=true)
+    @Import(name="scoringScript", required=true)
       private final Output<String> scoringScript;
 
     public Output<String> getScoringScript() {

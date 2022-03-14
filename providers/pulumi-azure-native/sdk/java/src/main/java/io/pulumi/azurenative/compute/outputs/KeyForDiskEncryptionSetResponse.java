@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.compute.outputs;
 
 import io.pulumi.azurenative.compute.outputs.SourceVaultResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class KeyForDiskEncryptionSetResponse {
     /**
      * Fully versioned Key Url pointing to a key in KeyVault. Version segment of the Url is required regardless of rotationToLatestKeyVersionEnabled value.
@@ -23,10 +23,10 @@ public final class KeyForDiskEncryptionSetResponse {
      */
     private final @Nullable SourceVaultResponse sourceVault;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private KeyForDiskEncryptionSetResponse(
-        @OutputCustomType.Parameter("keyUrl") String keyUrl,
-        @OutputCustomType.Parameter("sourceVault") @Nullable SourceVaultResponse sourceVault) {
+        @CustomType.Parameter("keyUrl") String keyUrl,
+        @CustomType.Parameter("sourceVault") @Nullable SourceVaultResponse sourceVault) {
         this.keyUrl = keyUrl;
         this.sourceVault = sourceVault;
     }

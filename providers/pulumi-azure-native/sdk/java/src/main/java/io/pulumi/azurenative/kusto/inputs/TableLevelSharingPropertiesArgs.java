@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.kusto.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class TableLevelSharingPropertiesArgs extends io.pulumi.resources.R
      * List of external tables exclude from the follower database
      * 
      */
-    @InputImport(name="externalTablesToExclude")
+    @Import(name="externalTablesToExclude")
       private final @Nullable Output<List<String>> externalTablesToExclude;
 
     public Output<List<String>> getExternalTablesToExclude() {
@@ -34,7 +34,7 @@ public final class TableLevelSharingPropertiesArgs extends io.pulumi.resources.R
      * List of external tables to include in the follower database
      * 
      */
-    @InputImport(name="externalTablesToInclude")
+    @Import(name="externalTablesToInclude")
       private final @Nullable Output<List<String>> externalTablesToInclude;
 
     public Output<List<String>> getExternalTablesToInclude() {
@@ -45,7 +45,7 @@ public final class TableLevelSharingPropertiesArgs extends io.pulumi.resources.R
      * List of materialized views exclude from the follower database
      * 
      */
-    @InputImport(name="materializedViewsToExclude")
+    @Import(name="materializedViewsToExclude")
       private final @Nullable Output<List<String>> materializedViewsToExclude;
 
     public Output<List<String>> getMaterializedViewsToExclude() {
@@ -56,7 +56,7 @@ public final class TableLevelSharingPropertiesArgs extends io.pulumi.resources.R
      * List of materialized views to include in the follower database
      * 
      */
-    @InputImport(name="materializedViewsToInclude")
+    @Import(name="materializedViewsToInclude")
       private final @Nullable Output<List<String>> materializedViewsToInclude;
 
     public Output<List<String>> getMaterializedViewsToInclude() {
@@ -67,7 +67,7 @@ public final class TableLevelSharingPropertiesArgs extends io.pulumi.resources.R
      * List of tables to exclude from the follower database
      * 
      */
-    @InputImport(name="tablesToExclude")
+    @Import(name="tablesToExclude")
       private final @Nullable Output<List<String>> tablesToExclude;
 
     public Output<List<String>> getTablesToExclude() {
@@ -78,7 +78,7 @@ public final class TableLevelSharingPropertiesArgs extends io.pulumi.resources.R
      * List of tables to include in the follower database
      * 
      */
-    @InputImport(name="tablesToInclude")
+    @Import(name="tablesToInclude")
       private final @Nullable Output<List<String>> tablesToInclude;
 
     public Output<List<String>> getTablesToInclude() {

@@ -3,23 +3,23 @@
 
 package io.pulumi.azurenative.insights.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PerformanceCounterConfigurationResponse {
     private final @Nullable String instance;
     private final String name;
     private final String samplingPeriod;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PerformanceCounterConfigurationResponse(
-        @OutputCustomType.Parameter("instance") @Nullable String instance,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("samplingPeriod") String samplingPeriod) {
+        @CustomType.Parameter("instance") @Nullable String instance,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("samplingPeriod") String samplingPeriod) {
         this.instance = instance;
         this.name = name;
         this.samplingPeriod = samplingPeriod;

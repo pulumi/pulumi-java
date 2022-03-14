@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.devices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EventHubPropertiesResponse {
     /**
      * The Event Hub-compatible endpoint.
@@ -40,13 +40,13 @@ public final class EventHubPropertiesResponse {
      */
     private final @Nullable Double retentionTimeInDays;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EventHubPropertiesResponse(
-        @OutputCustomType.Parameter("endpoint") String endpoint,
-        @OutputCustomType.Parameter("partitionCount") @Nullable Integer partitionCount,
-        @OutputCustomType.Parameter("partitionIds") List<String> partitionIds,
-        @OutputCustomType.Parameter("path") String path,
-        @OutputCustomType.Parameter("retentionTimeInDays") @Nullable Double retentionTimeInDays) {
+        @CustomType.Parameter("endpoint") String endpoint,
+        @CustomType.Parameter("partitionCount") @Nullable Integer partitionCount,
+        @CustomType.Parameter("partitionIds") List<String> partitionIds,
+        @CustomType.Parameter("path") String path,
+        @CustomType.Parameter("retentionTimeInDays") @Nullable Double retentionTimeInDays) {
         this.endpoint = endpoint;
         this.partitionCount = partitionCount;
         this.partitionIds = partitionIds;

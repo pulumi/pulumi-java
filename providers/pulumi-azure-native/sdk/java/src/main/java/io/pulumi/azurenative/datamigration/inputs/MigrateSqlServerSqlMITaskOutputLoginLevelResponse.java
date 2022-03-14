@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datamigration.inputs;
 
 import io.pulumi.azurenative.datamigration.inputs.ReportableExceptionResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class MigrateSqlServerSqlMITaskOutputLoginLevelResponse extends io.
      * Login migration end time
      * 
      */
-    @InputImport(name="endedOn", required=true)
+    @Import(name="endedOn", required=true)
       private final String endedOn;
 
     public String getEndedOn() {
@@ -29,7 +29,7 @@ public final class MigrateSqlServerSqlMITaskOutputLoginLevelResponse extends io.
      * Login migration errors and warnings per login
      * 
      */
-    @InputImport(name="exceptionsAndWarnings", required=true)
+    @Import(name="exceptionsAndWarnings", required=true)
       private final List<ReportableExceptionResponse> exceptionsAndWarnings;
 
     public List<ReportableExceptionResponse> getExceptionsAndWarnings() {
@@ -40,7 +40,7 @@ public final class MigrateSqlServerSqlMITaskOutputLoginLevelResponse extends io.
      * Result identifier
      * 
      */
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final String id;
 
     public String getId() {
@@ -51,7 +51,7 @@ public final class MigrateSqlServerSqlMITaskOutputLoginLevelResponse extends io.
      * Login name.
      * 
      */
-    @InputImport(name="loginName", required=true)
+    @Import(name="loginName", required=true)
       private final String loginName;
 
     public String getLoginName() {
@@ -62,7 +62,7 @@ public final class MigrateSqlServerSqlMITaskOutputLoginLevelResponse extends io.
      * Login migration progress message
      * 
      */
-    @InputImport(name="message", required=true)
+    @Import(name="message", required=true)
       private final String message;
 
     public String getMessage() {
@@ -74,7 +74,7 @@ public final class MigrateSqlServerSqlMITaskOutputLoginLevelResponse extends io.
      * Expected value is 'LoginLevelOutput'.
      * 
      */
-    @InputImport(name="resultType", required=true)
+    @Import(name="resultType", required=true)
       private final String resultType;
 
     public String getResultType() {
@@ -85,7 +85,7 @@ public final class MigrateSqlServerSqlMITaskOutputLoginLevelResponse extends io.
      * Current stage of login
      * 
      */
-    @InputImport(name="stage", required=true)
+    @Import(name="stage", required=true)
       private final String stage;
 
     public String getStage() {
@@ -96,7 +96,7 @@ public final class MigrateSqlServerSqlMITaskOutputLoginLevelResponse extends io.
      * Login migration start time
      * 
      */
-    @InputImport(name="startedOn", required=true)
+    @Import(name="startedOn", required=true)
       private final String startedOn;
 
     public String getStartedOn() {
@@ -107,7 +107,7 @@ public final class MigrateSqlServerSqlMITaskOutputLoginLevelResponse extends io.
      * Current state of login
      * 
      */
-    @InputImport(name="state", required=true)
+    @Import(name="state", required=true)
       private final String state;
 
     public String getState() {

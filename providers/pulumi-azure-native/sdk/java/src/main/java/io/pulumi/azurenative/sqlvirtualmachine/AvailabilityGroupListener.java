@@ -8,7 +8,7 @@ import io.pulumi.azurenative.sqlvirtualmachine.AvailabilityGroupListenerArgs;
 import io.pulumi.azurenative.sqlvirtualmachine.outputs.LoadBalancerConfigurationResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -37,7 +37,7 @@ public class AvailabilityGroupListener extends io.pulumi.resources.CustomResourc
      * Name of the availability group.
      * 
      */
-    @OutputExport(name="availabilityGroupName", type=String.class, parameters={})
+    @Export(name="availabilityGroupName", type=String.class, parameters={})
     private Output</* @Nullable */ String> availabilityGroupName;
 
     /**
@@ -51,7 +51,7 @@ public class AvailabilityGroupListener extends io.pulumi.resources.CustomResourc
      * Create a default availability group if it does not exist.
      * 
      */
-    @OutputExport(name="createDefaultAvailabilityGroupIfNotExist", type=Boolean.class, parameters={})
+    @Export(name="createDefaultAvailabilityGroupIfNotExist", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> createDefaultAvailabilityGroupIfNotExist;
 
     /**
@@ -65,7 +65,7 @@ public class AvailabilityGroupListener extends io.pulumi.resources.CustomResourc
      * List of load balancer configurations for an availability group listener.
      * 
      */
-    @OutputExport(name="loadBalancerConfigurations", type=List.class, parameters={LoadBalancerConfigurationResponse.class})
+    @Export(name="loadBalancerConfigurations", type=List.class, parameters={LoadBalancerConfigurationResponse.class})
     private Output</* @Nullable */ List<LoadBalancerConfigurationResponse>> loadBalancerConfigurations;
 
     /**
@@ -79,7 +79,7 @@ public class AvailabilityGroupListener extends io.pulumi.resources.CustomResourc
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -93,7 +93,7 @@ public class AvailabilityGroupListener extends io.pulumi.resources.CustomResourc
      * Listener port.
      * 
      */
-    @OutputExport(name="port", type=Integer.class, parameters={})
+    @Export(name="port", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> port;
 
     /**
@@ -107,7 +107,7 @@ public class AvailabilityGroupListener extends io.pulumi.resources.CustomResourc
      * Provisioning state to track the async operation status.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -121,7 +121,7 @@ public class AvailabilityGroupListener extends io.pulumi.resources.CustomResourc
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

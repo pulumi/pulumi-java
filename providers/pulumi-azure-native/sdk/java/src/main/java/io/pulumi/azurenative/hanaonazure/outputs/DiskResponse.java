@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.hanaonazure.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DiskResponse {
     /**
      * Specifies the size of an empty data disk in gigabytes.
@@ -28,11 +28,11 @@ public final class DiskResponse {
      */
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DiskResponse(
-        @OutputCustomType.Parameter("diskSizeGB") @Nullable Integer diskSizeGB,
-        @OutputCustomType.Parameter("lun") Integer lun,
-        @OutputCustomType.Parameter("name") @Nullable String name) {
+        @CustomType.Parameter("diskSizeGB") @Nullable Integer diskSizeGB,
+        @CustomType.Parameter("lun") Integer lun,
+        @CustomType.Parameter("name") @Nullable String name) {
         this.diskSizeGB = diskSizeGB;
         this.lun = lun;
         this.name = name;

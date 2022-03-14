@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.MatchVariableResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class MatchConditionResponse {
     /**
      * Match value.
@@ -40,13 +40,13 @@ public final class MatchConditionResponse {
      */
     private final @Nullable List<String> transforms;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MatchConditionResponse(
-        @OutputCustomType.Parameter("matchValues") List<String> matchValues,
-        @OutputCustomType.Parameter("matchVariables") List<MatchVariableResponse> matchVariables,
-        @OutputCustomType.Parameter("negationConditon") @Nullable Boolean negationConditon,
-        @OutputCustomType.Parameter("operator") String operator,
-        @OutputCustomType.Parameter("transforms") @Nullable List<String> transforms) {
+        @CustomType.Parameter("matchValues") List<String> matchValues,
+        @CustomType.Parameter("matchVariables") List<MatchVariableResponse> matchVariables,
+        @CustomType.Parameter("negationConditon") @Nullable Boolean negationConditon,
+        @CustomType.Parameter("operator") String operator,
+        @CustomType.Parameter("transforms") @Nullable List<String> transforms) {
         this.matchValues = matchValues;
         this.matchVariables = matchVariables;
         this.negationConditon = negationConditon;

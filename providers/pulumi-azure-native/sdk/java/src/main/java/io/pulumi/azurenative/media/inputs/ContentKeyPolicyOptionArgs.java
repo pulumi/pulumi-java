@@ -12,7 +12,7 @@ import io.pulumi.azurenative.media.inputs.ContentKeyPolicyUnknownConfigurationAr
 import io.pulumi.azurenative.media.inputs.ContentKeyPolicyUnknownRestrictionArgs;
 import io.pulumi.azurenative.media.inputs.ContentKeyPolicyWidevineConfigurationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -31,7 +31,7 @@ public final class ContentKeyPolicyOptionArgs extends io.pulumi.resources.Resour
      * The key delivery configuration.
      * 
      */
-    @InputImport(name="configuration", required=true)
+    @Import(name="configuration", required=true)
       private final Output<Object> configuration;
 
     public Output<Object> getConfiguration() {
@@ -42,7 +42,7 @@ public final class ContentKeyPolicyOptionArgs extends io.pulumi.resources.Resour
      * The Policy Option description.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -53,7 +53,7 @@ public final class ContentKeyPolicyOptionArgs extends io.pulumi.resources.Resour
      * The requirements that must be met to deliver keys with this configuration
      * 
      */
-    @InputImport(name="restriction", required=true)
+    @Import(name="restriction", required=true)
       private final Output<Object> restriction;
 
     public Output<Object> getRestriction() {

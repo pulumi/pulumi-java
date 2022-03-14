@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.securityinsights.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class MetadataCategoriesResponse {
     /**
      * domain for the solution content item
@@ -22,10 +22,10 @@ public final class MetadataCategoriesResponse {
      */
     private final @Nullable List<String> verticals;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MetadataCategoriesResponse(
-        @OutputCustomType.Parameter("domains") @Nullable List<String> domains,
-        @OutputCustomType.Parameter("verticals") @Nullable List<String> verticals) {
+        @CustomType.Parameter("domains") @Nullable List<String> domains,
+        @CustomType.Parameter("verticals") @Nullable List<String> verticals) {
         this.domains = domains;
         this.verticals = verticals;
     }

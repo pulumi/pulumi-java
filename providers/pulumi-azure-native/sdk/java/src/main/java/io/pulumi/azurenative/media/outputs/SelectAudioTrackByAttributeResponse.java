@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.media.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SelectAudioTrackByAttributeResponse {
     /**
      * The TrackAttribute to filter the tracks by.
@@ -38,13 +38,13 @@ public final class SelectAudioTrackByAttributeResponse {
      */
     private final String odataType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SelectAudioTrackByAttributeResponse(
-        @OutputCustomType.Parameter("attribute") String attribute,
-        @OutputCustomType.Parameter("channelMapping") @Nullable String channelMapping,
-        @OutputCustomType.Parameter("filter") String filter,
-        @OutputCustomType.Parameter("filterValue") @Nullable String filterValue,
-        @OutputCustomType.Parameter("odataType") String odataType) {
+        @CustomType.Parameter("attribute") String attribute,
+        @CustomType.Parameter("channelMapping") @Nullable String channelMapping,
+        @CustomType.Parameter("filter") String filter,
+        @CustomType.Parameter("filterValue") @Nullable String filterValue,
+        @CustomType.Parameter("odataType") String odataType) {
         this.attribute = attribute;
         this.channelMapping = channelMapping;
         this.filter = filter;

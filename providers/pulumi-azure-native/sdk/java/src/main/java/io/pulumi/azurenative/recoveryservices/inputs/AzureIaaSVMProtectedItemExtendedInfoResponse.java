@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class AzureIaaSVMProtectedItemExtendedInfoResponse extends io.pulum
      * The oldest backup copy available for this backup item.
      * 
      */
-    @InputImport(name="oldestRecoveryPoint")
+    @Import(name="oldestRecoveryPoint")
       private final @Nullable String oldestRecoveryPoint;
 
     public Optional<String> getOldestRecoveryPoint() {
@@ -35,7 +35,7 @@ public final class AzureIaaSVMProtectedItemExtendedInfoResponse extends io.pulum
      * Specifies if backup policy associated with the backup item is inconsistent.
      * 
      */
-    @InputImport(name="policyInconsistent")
+    @Import(name="policyInconsistent")
       private final @Nullable Boolean policyInconsistent;
 
     public Optional<Boolean> getPolicyInconsistent() {
@@ -46,7 +46,7 @@ public final class AzureIaaSVMProtectedItemExtendedInfoResponse extends io.pulum
      * Number of backup copies available for this backup item.
      * 
      */
-    @InputImport(name="recoveryPointCount")
+    @Import(name="recoveryPointCount")
       private final @Nullable Integer recoveryPointCount;
 
     public Optional<Integer> getRecoveryPointCount() {

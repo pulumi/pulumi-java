@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.testbase.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetTestBaseAccountFileUploadUrlResult {
     /**
      * The blob path of the uploaded package. It will be used as the 'blobPath' property of PackageResource.
@@ -20,10 +20,10 @@ public final class GetTestBaseAccountFileUploadUrlResult {
      */
     private final String uploadUrl;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetTestBaseAccountFileUploadUrlResult(
-        @OutputCustomType.Parameter("blobPath") String blobPath,
-        @OutputCustomType.Parameter("uploadUrl") String uploadUrl) {
+        @CustomType.Parameter("blobPath") String blobPath,
+        @CustomType.Parameter("uploadUrl") String uploadUrl) {
         this.blobPath = blobPath;
         this.uploadUrl = uploadUrl;
     }

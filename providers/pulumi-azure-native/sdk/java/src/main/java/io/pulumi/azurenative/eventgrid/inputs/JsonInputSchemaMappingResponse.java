@@ -5,7 +5,7 @@ package io.pulumi.azurenative.eventgrid.inputs;
 
 import io.pulumi.azurenative.eventgrid.inputs.JsonFieldResponse;
 import io.pulumi.azurenative.eventgrid.inputs.JsonFieldWithDefaultResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class JsonInputSchemaMappingResponse extends io.pulumi.resources.In
      * The mapping information for the DataVersion property of the Event Grid Event.
      * 
      */
-    @InputImport(name="dataVersion")
+    @Import(name="dataVersion")
       private final @Nullable JsonFieldWithDefaultResponse dataVersion;
 
     public Optional<JsonFieldWithDefaultResponse> getDataVersion() {
@@ -35,7 +35,7 @@ public final class JsonInputSchemaMappingResponse extends io.pulumi.resources.In
      * The mapping information for the EventTime property of the Event Grid Event.
      * 
      */
-    @InputImport(name="eventTime")
+    @Import(name="eventTime")
       private final @Nullable JsonFieldResponse eventTime;
 
     public Optional<JsonFieldResponse> getEventTime() {
@@ -46,7 +46,7 @@ public final class JsonInputSchemaMappingResponse extends io.pulumi.resources.In
      * The mapping information for the EventType property of the Event Grid Event.
      * 
      */
-    @InputImport(name="eventType")
+    @Import(name="eventType")
       private final @Nullable JsonFieldWithDefaultResponse eventType;
 
     public Optional<JsonFieldWithDefaultResponse> getEventType() {
@@ -57,7 +57,7 @@ public final class JsonInputSchemaMappingResponse extends io.pulumi.resources.In
      * The mapping information for the Id property of the Event Grid Event.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable JsonFieldResponse id;
 
     public Optional<JsonFieldResponse> getId() {
@@ -69,7 +69,7 @@ public final class JsonInputSchemaMappingResponse extends io.pulumi.resources.In
      * Expected value is 'Json'.
      * 
      */
-    @InputImport(name="inputSchemaMappingType", required=true)
+    @Import(name="inputSchemaMappingType", required=true)
       private final String inputSchemaMappingType;
 
     public String getInputSchemaMappingType() {
@@ -80,7 +80,7 @@ public final class JsonInputSchemaMappingResponse extends io.pulumi.resources.In
      * The mapping information for the Subject property of the Event Grid Event.
      * 
      */
-    @InputImport(name="subject")
+    @Import(name="subject")
       private final @Nullable JsonFieldWithDefaultResponse subject;
 
     public Optional<JsonFieldWithDefaultResponse> getSubject() {
@@ -91,7 +91,7 @@ public final class JsonInputSchemaMappingResponse extends io.pulumi.resources.In
      * The mapping information for the Topic property of the Event Grid Event.
      * 
      */
-    @InputImport(name="topic")
+    @Import(name="topic")
       private final @Nullable JsonFieldResponse topic;
 
     public Optional<JsonFieldResponse> getTopic() {

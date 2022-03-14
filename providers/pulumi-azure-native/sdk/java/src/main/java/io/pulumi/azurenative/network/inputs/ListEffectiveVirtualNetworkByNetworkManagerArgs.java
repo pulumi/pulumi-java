@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class ListEffectiveVirtualNetworkByNetworkManagerArgs extends io.pu
      * Conditional Members.
      * 
      */
-    @InputImport(name="conditionalMembers")
+    @Import(name="conditionalMembers")
       private final @Nullable String conditionalMembers;
 
     public Optional<String> getConditionalMembers() {
@@ -30,7 +30,7 @@ public final class ListEffectiveVirtualNetworkByNetworkManagerArgs extends io.pu
      * The name of the network manager.
      * 
      */
-    @InputImport(name="networkManagerName", required=true)
+    @Import(name="networkManagerName", required=true)
       private final String networkManagerName;
 
     public String getNetworkManagerName() {
@@ -41,7 +41,7 @@ public final class ListEffectiveVirtualNetworkByNetworkManagerArgs extends io.pu
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {
@@ -52,7 +52,7 @@ public final class ListEffectiveVirtualNetworkByNetworkManagerArgs extends io.pu
      * Continuation token for pagination, capturing the next page size and offset, as well as the context of the query.
      * 
      */
-    @InputImport(name="skipToken")
+    @Import(name="skipToken")
       private final @Nullable String skipToken;
 
     public Optional<String> getSkipToken() {
@@ -63,7 +63,7 @@ public final class ListEffectiveVirtualNetworkByNetworkManagerArgs extends io.pu
      * An optional query parameter which specifies the maximum number of records to be returned by the server.
      * 
      */
-    @InputImport(name="top")
+    @Import(name="top")
       private final @Nullable Integer top;
 
     public Optional<Integer> getTop() {

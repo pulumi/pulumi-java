@@ -5,7 +5,7 @@ package io.pulumi.azurenative.appplatform;
 
 import io.pulumi.azurenative.appplatform.inputs.BuildpackBindingPropertiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class BuildpackBindingArgs extends io.pulumi.resources.ResourceArgs
      * The name of the build service resource.
      * 
      */
-    @InputImport(name="buildServiceName", required=true)
+    @Import(name="buildServiceName", required=true)
       private final Output<String> buildServiceName;
 
     public Output<String> getBuildServiceName() {
@@ -30,7 +30,7 @@ public final class BuildpackBindingArgs extends io.pulumi.resources.ResourceArgs
      * The name of the builder resource.
      * 
      */
-    @InputImport(name="builderName", required=true)
+    @Import(name="builderName", required=true)
       private final Output<String> builderName;
 
     public Output<String> getBuilderName() {
@@ -41,7 +41,7 @@ public final class BuildpackBindingArgs extends io.pulumi.resources.ResourceArgs
      * The name of the Buildpack Binding Name
      * 
      */
-    @InputImport(name="buildpackBindingName")
+    @Import(name="buildpackBindingName")
       private final @Nullable Output<String> buildpackBindingName;
 
     public Output<String> getBuildpackBindingName() {
@@ -52,7 +52,7 @@ public final class BuildpackBindingArgs extends io.pulumi.resources.ResourceArgs
      * Properties of a buildpack binding
      * 
      */
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable Output<BuildpackBindingPropertiesArgs> properties;
 
     public Output<BuildpackBindingPropertiesArgs> getProperties() {
@@ -63,7 +63,7 @@ public final class BuildpackBindingArgs extends io.pulumi.resources.ResourceArgs
      * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -74,7 +74,7 @@ public final class BuildpackBindingArgs extends io.pulumi.resources.ResourceArgs
      * The name of the Service resource.
      * 
      */
-    @InputImport(name="serviceName", required=true)
+    @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
 
     public Output<String> getServiceName() {

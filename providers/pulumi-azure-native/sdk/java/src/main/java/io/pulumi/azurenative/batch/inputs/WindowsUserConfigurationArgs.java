@@ -5,7 +5,7 @@ package io.pulumi.azurenative.batch.inputs;
 
 import io.pulumi.azurenative.batch.enums.LoginMode;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -18,7 +18,7 @@ public final class WindowsUserConfigurationArgs extends io.pulumi.resources.Reso
      * Specifies login mode for the user. The default value for VirtualMachineConfiguration pools is interactive mode and for CloudServiceConfiguration pools is batch mode.
      * 
      */
-    @InputImport(name="loginMode")
+    @Import(name="loginMode")
       private final @Nullable Output<LoginMode> loginMode;
 
     public Output<LoginMode> getLoginMode() {

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class JsonFormatArgs extends io.pulumi.resources.ResourceArgs {
      * Deserializer. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="deserializer")
+    @Import(name="deserializer")
       private final @Nullable Output<Object> deserializer;
 
     public Output<Object> getDeserializer() {
@@ -34,7 +34,7 @@ public final class JsonFormatArgs extends io.pulumi.resources.ResourceArgs {
      * The code page name of the preferred encoding. If not provided, the default value is 'utf-8', unless the byte order mark (BOM) denotes another Unicode encoding. The full list of supported values can be found in the 'Name' column of the table of encodings in the following reference: https://go.microsoft.com/fwlink/?linkid=861078. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="encodingName")
+    @Import(name="encodingName")
       private final @Nullable Output<Object> encodingName;
 
     public Output<Object> getEncodingName() {
@@ -45,7 +45,7 @@ public final class JsonFormatArgs extends io.pulumi.resources.ResourceArgs {
      * File pattern of JSON. To be more specific, the way of separating a collection of JSON objects. The default value is 'setOfObjects'. It is case-sensitive.
      * 
      */
-    @InputImport(name="filePattern")
+    @Import(name="filePattern")
       private final @Nullable Output<Object> filePattern;
 
     public Output<Object> getFilePattern() {
@@ -56,7 +56,7 @@ public final class JsonFormatArgs extends io.pulumi.resources.ResourceArgs {
      * The JSONPath of the JSON array element to be flattened. Example: "$.ArrayPath". Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="jsonNodeReference")
+    @Import(name="jsonNodeReference")
       private final @Nullable Output<Object> jsonNodeReference;
 
     public Output<Object> getJsonNodeReference() {
@@ -67,7 +67,7 @@ public final class JsonFormatArgs extends io.pulumi.resources.ResourceArgs {
      * The JSONPath definition for each column mapping with a customized column name to extract data from JSON file. For fields under root object, start with "$"; for fields inside the array chosen by jsonNodeReference property, start from the array element. Example: {"Column1": "$.Column1Path", "Column2": "Column2PathInArray"}. Type: object (or Expression with resultType object).
      * 
      */
-    @InputImport(name="jsonPathDefinition")
+    @Import(name="jsonPathDefinition")
       private final @Nullable Output<Object> jsonPathDefinition;
 
     public Output<Object> getJsonPathDefinition() {
@@ -78,7 +78,7 @@ public final class JsonFormatArgs extends io.pulumi.resources.ResourceArgs {
      * The character used to separate nesting levels. Default value is '.' (dot). Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="nestingSeparator")
+    @Import(name="nestingSeparator")
       private final @Nullable Output<Object> nestingSeparator;
 
     public Output<Object> getNestingSeparator() {
@@ -89,7 +89,7 @@ public final class JsonFormatArgs extends io.pulumi.resources.ResourceArgs {
      * Serializer. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="serializer")
+    @Import(name="serializer")
       private final @Nullable Output<Object> serializer;
 
     public Output<Object> getSerializer() {
@@ -101,7 +101,7 @@ public final class JsonFormatArgs extends io.pulumi.resources.ResourceArgs {
      * Expected value is 'JsonFormat'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {

@@ -9,7 +9,7 @@ import io.pulumi.azurenative.webpubsub.outputs.SystemDataResponse;
 import io.pulumi.azurenative.webpubsub.outputs.WebPubSubHubPropertiesResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -36,7 +36,7 @@ public class WebPubSubHub extends io.pulumi.resources.CustomResource {
      * The name of the resource.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -50,7 +50,7 @@ public class WebPubSubHub extends io.pulumi.resources.CustomResource {
      * Properties of a hub.
      * 
      */
-    @OutputExport(name="properties", type=WebPubSubHubPropertiesResponse.class, parameters={})
+    @Export(name="properties", type=WebPubSubHubPropertiesResponse.class, parameters={})
     private Output<WebPubSubHubPropertiesResponse> properties;
 
     /**
@@ -64,7 +64,7 @@ public class WebPubSubHub extends io.pulumi.resources.CustomResource {
      * Metadata pertaining to creation and last modification of the resource.
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -78,7 +78,7 @@ public class WebPubSubHub extends io.pulumi.resources.CustomResource {
      * The type of the resource - e.g. "Microsoft.SignalRService/SignalR"
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

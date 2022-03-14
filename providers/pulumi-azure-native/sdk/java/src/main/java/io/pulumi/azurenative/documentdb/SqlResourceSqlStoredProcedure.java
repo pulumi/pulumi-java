@@ -8,7 +8,7 @@ import io.pulumi.azurenative.documentdb.SqlResourceSqlStoredProcedureArgs;
 import io.pulumi.azurenative.documentdb.outputs.SqlStoredProcedureGetPropertiesResponseResource;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -36,7 +36,7 @@ public class SqlResourceSqlStoredProcedure extends io.pulumi.resources.CustomRes
      * The location of the resource group to which the resource belongs.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -50,7 +50,7 @@ public class SqlResourceSqlStoredProcedure extends io.pulumi.resources.CustomRes
      * The name of the ARM resource.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -60,7 +60,7 @@ public class SqlResourceSqlStoredProcedure extends io.pulumi.resources.CustomRes
     public Output<String> getName() {
         return this.name;
     }
-    @OutputExport(name="resource", type=SqlStoredProcedureGetPropertiesResponseResource.class, parameters={})
+    @Export(name="resource", type=SqlStoredProcedureGetPropertiesResponseResource.class, parameters={})
     private Output</* @Nullable */ SqlStoredProcedureGetPropertiesResponseResource> resource;
 
     public Output</* @Nullable */ SqlStoredProcedureGetPropertiesResponseResource> getResource() {
@@ -70,7 +70,7 @@ public class SqlResourceSqlStoredProcedure extends io.pulumi.resources.CustomRes
      * Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -84,7 +84,7 @@ public class SqlResourceSqlStoredProcedure extends io.pulumi.resources.CustomRes
      * The type of Azure resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

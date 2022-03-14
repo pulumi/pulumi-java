@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storagesync.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class CloudTieringDatePolicyStatusResponse extends io.pulumi.resour
      * Last updated timestamp
      * 
      */
-    @InputImport(name="lastUpdatedTimestamp", required=true)
+    @Import(name="lastUpdatedTimestamp", required=true)
       private final String lastUpdatedTimestamp;
 
     public String getLastUpdatedTimestamp() {
@@ -31,7 +31,7 @@ public final class CloudTieringDatePolicyStatusResponse extends io.pulumi.resour
      * Most recent access time of tiered files
      * 
      */
-    @InputImport(name="tieredFilesMostRecentAccessTimestamp", required=true)
+    @Import(name="tieredFilesMostRecentAccessTimestamp", required=true)
       private final String tieredFilesMostRecentAccessTimestamp;
 
     public String getTieredFilesMostRecentAccessTimestamp() {

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.network.inputs;
 import io.pulumi.azurenative.network.enums.HeaderActionType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class HeaderActionArgs extends io.pulumi.resources.ResourceArgs {
      * Which type of manipulation to apply to the header.
      * 
      */
-    @InputImport(name="headerActionType", required=true)
+    @Import(name="headerActionType", required=true)
       private final Output<Either<String,HeaderActionType>> headerActionType;
 
     public Output<Either<String,HeaderActionType>> getHeaderActionType() {
@@ -35,7 +35,7 @@ public final class HeaderActionArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the header this action will apply to.
      * 
      */
-    @InputImport(name="headerName", required=true)
+    @Import(name="headerName", required=true)
       private final Output<String> headerName;
 
     public Output<String> getHeaderName() {
@@ -46,7 +46,7 @@ public final class HeaderActionArgs extends io.pulumi.resources.ResourceArgs {
      * The value to update the given header name with. This value is not used if the actionType is Delete.
      * 
      */
-    @InputImport(name="value")
+    @Import(name="value")
       private final @Nullable Output<String> value;
 
     public Output<String> getValue() {

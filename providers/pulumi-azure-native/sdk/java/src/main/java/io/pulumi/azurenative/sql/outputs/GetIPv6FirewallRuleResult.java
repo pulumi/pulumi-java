@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.sql.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetIPv6FirewallRuleResult {
     /**
      * The end IP address of the firewall rule. Must be IPv6 format. Must be greater than or equal to startIpAddress.
@@ -37,13 +37,13 @@ public final class GetIPv6FirewallRuleResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetIPv6FirewallRuleResult(
-        @OutputCustomType.Parameter("endIPv6Address") @Nullable String endIPv6Address,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("startIPv6Address") @Nullable String startIPv6Address,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("endIPv6Address") @Nullable String endIPv6Address,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("startIPv6Address") @Nullable String startIPv6Address,
+        @CustomType.Parameter("type") String type) {
         this.endIPv6Address = endIPv6Address;
         this.id = id;
         this.name = name;

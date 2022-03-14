@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.servicefabricmesh.outputs;
 
 import io.pulumi.azurenative.servicefabricmesh.outputs.AutoScalingResourceMetricResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AverageLoadScalingTriggerResponse {
     /**
      * Enumerates the triggers for auto scaling.
@@ -39,13 +39,13 @@ public final class AverageLoadScalingTriggerResponse {
      */
     private final Double upperLoadThreshold;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AverageLoadScalingTriggerResponse(
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("lowerLoadThreshold") Double lowerLoadThreshold,
-        @OutputCustomType.Parameter("metric") AutoScalingResourceMetricResponse metric,
-        @OutputCustomType.Parameter("scaleIntervalInSeconds") Integer scaleIntervalInSeconds,
-        @OutputCustomType.Parameter("upperLoadThreshold") Double upperLoadThreshold) {
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("lowerLoadThreshold") Double lowerLoadThreshold,
+        @CustomType.Parameter("metric") AutoScalingResourceMetricResponse metric,
+        @CustomType.Parameter("scaleIntervalInSeconds") Integer scaleIntervalInSeconds,
+        @CustomType.Parameter("upperLoadThreshold") Double upperLoadThreshold) {
         this.kind = kind;
         this.lowerLoadThreshold = lowerLoadThreshold;
         this.metric = metric;

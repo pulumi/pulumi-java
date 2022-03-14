@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.NetworkInterfaceIPConfigurationResponse;
 import io.pulumi.azurenative.network.outputs.SubResourceResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetInboundNatRuleResult {
     /**
      * A reference to a private IP address defined on a network interface of a VM. Traffic sent to the frontend port of each of the frontend IP configurations is forwarded to the backend IP.
@@ -81,21 +81,21 @@ public final class GetInboundNatRuleResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetInboundNatRuleResult(
-        @OutputCustomType.Parameter("backendIPConfiguration") NetworkInterfaceIPConfigurationResponse backendIPConfiguration,
-        @OutputCustomType.Parameter("backendPort") @Nullable Integer backendPort,
-        @OutputCustomType.Parameter("enableFloatingIP") @Nullable Boolean enableFloatingIP,
-        @OutputCustomType.Parameter("enableTcpReset") @Nullable Boolean enableTcpReset,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("frontendIPConfiguration") @Nullable SubResourceResponse frontendIPConfiguration,
-        @OutputCustomType.Parameter("frontendPort") @Nullable Integer frontendPort,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("idleTimeoutInMinutes") @Nullable Integer idleTimeoutInMinutes,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("protocol") @Nullable String protocol,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("backendIPConfiguration") NetworkInterfaceIPConfigurationResponse backendIPConfiguration,
+        @CustomType.Parameter("backendPort") @Nullable Integer backendPort,
+        @CustomType.Parameter("enableFloatingIP") @Nullable Boolean enableFloatingIP,
+        @CustomType.Parameter("enableTcpReset") @Nullable Boolean enableTcpReset,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("frontendIPConfiguration") @Nullable SubResourceResponse frontendIPConfiguration,
+        @CustomType.Parameter("frontendPort") @Nullable Integer frontendPort,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("idleTimeoutInMinutes") @Nullable Integer idleTimeoutInMinutes,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("protocol") @Nullable String protocol,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("type") String type) {
         this.backendIPConfiguration = backendIPConfiguration;
         this.backendPort = backendPort;
         this.enableFloatingIP = enableFloatingIP;

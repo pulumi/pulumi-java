@@ -4,11 +4,11 @@
 package io.pulumi.azurenative.deploymentmanager.outputs;
 
 import io.pulumi.azurenative.deploymentmanager.outputs.WaitStepAttributesResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class WaitStepPropertiesResponse {
     /**
      * The Wait attributes
@@ -22,10 +22,10 @@ public final class WaitStepPropertiesResponse {
      */
     private final String stepType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WaitStepPropertiesResponse(
-        @OutputCustomType.Parameter("attributes") WaitStepAttributesResponse attributes,
-        @OutputCustomType.Parameter("stepType") String stepType) {
+        @CustomType.Parameter("attributes") WaitStepAttributesResponse attributes,
+        @CustomType.Parameter("stepType") String stepType) {
         this.attributes = attributes;
         this.stepType = stepType;
     }

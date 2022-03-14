@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ApplicationGatewayUrlConfigurationResponse extends io.pulumi.
      * Url path which user has provided for url rewrite. Null means no path will be updated. Default value is null.
      * 
      */
-    @InputImport(name="modifiedPath")
+    @Import(name="modifiedPath")
       private final @Nullable String modifiedPath;
 
     public Optional<String> getModifiedPath() {
@@ -34,7 +34,7 @@ public final class ApplicationGatewayUrlConfigurationResponse extends io.pulumi.
      * Query string which user has provided for url rewrite. Null means no query string will be updated. Default value is null.
      * 
      */
-    @InputImport(name="modifiedQueryString")
+    @Import(name="modifiedQueryString")
       private final @Nullable String modifiedQueryString;
 
     public Optional<String> getModifiedQueryString() {
@@ -45,7 +45,7 @@ public final class ApplicationGatewayUrlConfigurationResponse extends io.pulumi.
      * If set as true, it will re-evaluate the url path map provided in path based request routing rules using modified path. Default value is false.
      * 
      */
-    @InputImport(name="reroute")
+    @Import(name="reroute")
       private final @Nullable Boolean reroute;
 
     public Optional<Boolean> getReroute() {

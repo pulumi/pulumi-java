@@ -7,7 +7,7 @@ import io.pulumi.azurenative.devtestlab.outputs.CustomImagePropertiesCustomRespo
 import io.pulumi.azurenative.devtestlab.outputs.CustomImagePropertiesFromPlanResponse;
 import io.pulumi.azurenative.devtestlab.outputs.CustomImagePropertiesFromVmResponse;
 import io.pulumi.azurenative.devtestlab.outputs.DataDiskStorageTypeInfoResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -16,7 +16,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetCustomImageResult {
     /**
      * The author of the custom image.
@@ -104,25 +104,25 @@ public final class GetCustomImageResult {
      */
     private final @Nullable CustomImagePropertiesFromVmResponse vm;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetCustomImageResult(
-        @OutputCustomType.Parameter("author") @Nullable String author,
-        @OutputCustomType.Parameter("creationDate") String creationDate,
-        @OutputCustomType.Parameter("customImagePlan") @Nullable CustomImagePropertiesFromPlanResponse customImagePlan,
-        @OutputCustomType.Parameter("dataDiskStorageInfo") @Nullable List<DataDiskStorageTypeInfoResponse> dataDiskStorageInfo,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("isPlanAuthorized") @Nullable Boolean isPlanAuthorized,
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("managedImageId") @Nullable String managedImageId,
-        @OutputCustomType.Parameter("managedSnapshotId") @Nullable String managedSnapshotId,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("uniqueIdentifier") String uniqueIdentifier,
-        @OutputCustomType.Parameter("vhd") @Nullable CustomImagePropertiesCustomResponse vhd,
-        @OutputCustomType.Parameter("vm") @Nullable CustomImagePropertiesFromVmResponse vm) {
+        @CustomType.Parameter("author") @Nullable String author,
+        @CustomType.Parameter("creationDate") String creationDate,
+        @CustomType.Parameter("customImagePlan") @Nullable CustomImagePropertiesFromPlanResponse customImagePlan,
+        @CustomType.Parameter("dataDiskStorageInfo") @Nullable List<DataDiskStorageTypeInfoResponse> dataDiskStorageInfo,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("isPlanAuthorized") @Nullable Boolean isPlanAuthorized,
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("managedImageId") @Nullable String managedImageId,
+        @CustomType.Parameter("managedSnapshotId") @Nullable String managedSnapshotId,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("uniqueIdentifier") String uniqueIdentifier,
+        @CustomType.Parameter("vhd") @Nullable CustomImagePropertiesCustomResponse vhd,
+        @CustomType.Parameter("vm") @Nullable CustomImagePropertiesFromVmResponse vm) {
         this.author = author;
         this.creationDate = creationDate;
         this.customImagePlan = customImagePlan;

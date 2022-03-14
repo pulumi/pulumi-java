@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.botservice.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EnterpriseChannelNodeResponse {
     /**
      * The location of the Enterprise Channel Node.
@@ -37,13 +37,13 @@ public final class EnterpriseChannelNodeResponse {
      */
     private final @Nullable String state;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EnterpriseChannelNodeResponse(
-        @OutputCustomType.Parameter("azureLocation") String azureLocation,
-        @OutputCustomType.Parameter("azureSku") String azureSku,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("state") @Nullable String state) {
+        @CustomType.Parameter("azureLocation") String azureLocation,
+        @CustomType.Parameter("azureSku") String azureSku,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("state") @Nullable String state) {
         this.azureLocation = azureLocation;
         this.azureSku = azureSku;
         this.id = id;

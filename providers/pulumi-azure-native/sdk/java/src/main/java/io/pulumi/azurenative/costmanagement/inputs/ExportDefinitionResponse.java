@@ -5,7 +5,7 @@ package io.pulumi.azurenative.costmanagement.inputs;
 
 import io.pulumi.azurenative.costmanagement.inputs.ExportDatasetResponse;
 import io.pulumi.azurenative.costmanagement.inputs.ExportTimePeriodResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class ExportDefinitionResponse extends io.pulumi.resources.InvokeAr
      * The definition for data in the export.
      * 
      */
-    @InputImport(name="dataSet")
+    @Import(name="dataSet")
       private final @Nullable ExportDatasetResponse dataSet;
 
     public Optional<ExportDatasetResponse> getDataSet() {
@@ -35,7 +35,7 @@ public final class ExportDefinitionResponse extends io.pulumi.resources.InvokeAr
      * Has time period for pulling data for the export.
      * 
      */
-    @InputImport(name="timePeriod")
+    @Import(name="timePeriod")
       private final @Nullable ExportTimePeriodResponse timePeriod;
 
     public Optional<ExportTimePeriodResponse> getTimePeriod() {
@@ -46,7 +46,7 @@ public final class ExportDefinitionResponse extends io.pulumi.resources.InvokeAr
      * The time frame for pulling data for the export. If custom, then a specific time period must be provided.
      * 
      */
-    @InputImport(name="timeframe", required=true)
+    @Import(name="timeframe", required=true)
       private final String timeframe;
 
     public String getTimeframe() {
@@ -57,7 +57,7 @@ public final class ExportDefinitionResponse extends io.pulumi.resources.InvokeAr
      * The type of the export. Note that 'Usage' is equivalent to 'ActualCost' and is applicable to exports that do not yet provide data for charges or amortization for service reservations.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

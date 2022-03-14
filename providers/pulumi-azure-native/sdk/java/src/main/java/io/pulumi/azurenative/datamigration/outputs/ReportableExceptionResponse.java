@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.datamigration.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ReportableExceptionResponse {
     /**
      * Actionable steps for this exception
@@ -43,14 +43,14 @@ public final class ReportableExceptionResponse {
      */
     private final String stackTrace;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ReportableExceptionResponse(
-        @OutputCustomType.Parameter("actionableMessage") @Nullable String actionableMessage,
-        @OutputCustomType.Parameter("filePath") String filePath,
-        @OutputCustomType.Parameter("hResult") Integer hResult,
-        @OutputCustomType.Parameter("lineNumber") String lineNumber,
-        @OutputCustomType.Parameter("message") String message,
-        @OutputCustomType.Parameter("stackTrace") String stackTrace) {
+        @CustomType.Parameter("actionableMessage") @Nullable String actionableMessage,
+        @CustomType.Parameter("filePath") String filePath,
+        @CustomType.Parameter("hResult") Integer hResult,
+        @CustomType.Parameter("lineNumber") String lineNumber,
+        @CustomType.Parameter("message") String message,
+        @CustomType.Parameter("stackTrace") String stackTrace) {
         this.actionableMessage = actionableMessage;
         this.filePath = filePath;
         this.hResult = hResult;

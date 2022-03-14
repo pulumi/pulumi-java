@@ -6,7 +6,7 @@ package io.pulumi.azurenative.servicefabric.inputs;
 import io.pulumi.azurenative.servicefabric.enums.ServicePlacementPolicyType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class ServicePlacementPolicyDescriptionArgs extends io.pulumi.resou
      * The type of placement policy for a service fabric service. Following are the possible values.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<Either<String,ServicePlacementPolicyType>> type;
 
     public Output<Either<String,ServicePlacementPolicyType>> getType() {

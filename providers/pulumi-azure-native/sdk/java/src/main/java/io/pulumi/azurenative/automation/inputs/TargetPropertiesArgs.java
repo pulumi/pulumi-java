@@ -6,7 +6,7 @@ package io.pulumi.azurenative.automation.inputs;
 import io.pulumi.azurenative.automation.inputs.AzureQueryPropertiesArgs;
 import io.pulumi.azurenative.automation.inputs.NonAzureQueryPropertiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class TargetPropertiesArgs extends io.pulumi.resources.ResourceArgs
      * List of Azure queries in the software update configuration.
      * 
      */
-    @InputImport(name="azureQueries")
+    @Import(name="azureQueries")
       private final @Nullable Output<List<AzureQueryPropertiesArgs>> azureQueries;
 
     public Output<List<AzureQueryPropertiesArgs>> getAzureQueries() {
@@ -35,7 +35,7 @@ public final class TargetPropertiesArgs extends io.pulumi.resources.ResourceArgs
      * List of non Azure queries in the software update configuration.
      * 
      */
-    @InputImport(name="nonAzureQueries")
+    @Import(name="nonAzureQueries")
       private final @Nullable Output<List<NonAzureQueryPropertiesArgs>> nonAzureQueries;
 
     public Output<List<NonAzureQueryPropertiesArgs>> getNonAzureQueries() {

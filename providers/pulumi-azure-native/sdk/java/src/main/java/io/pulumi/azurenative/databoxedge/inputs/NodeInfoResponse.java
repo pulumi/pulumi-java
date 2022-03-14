@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.databoxedge.inputs;
 
 import io.pulumi.azurenative.databoxedge.inputs.KubernetesIPConfigurationResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class NodeInfoResponse extends io.pulumi.resources.InvokeArgs {
      * IP Configuration of the Kubernetes node.
      * 
      */
-    @InputImport(name="ipConfiguration")
+    @Import(name="ipConfiguration")
       private final @Nullable List<KubernetesIPConfigurationResponse> ipConfiguration;
 
     public List<KubernetesIPConfigurationResponse> getIpConfiguration() {
@@ -35,7 +35,7 @@ public final class NodeInfoResponse extends io.pulumi.resources.InvokeArgs {
      * Node name.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -46,7 +46,7 @@ public final class NodeInfoResponse extends io.pulumi.resources.InvokeArgs {
      * Node type - Master/Worker
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

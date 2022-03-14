@@ -4,17 +4,17 @@
 package io.pulumi.azurenative.providerhub.outputs;
 
 import io.pulumi.azurenative.providerhub.outputs.ResourceTypeExtensionOptionsResponseResourceCreationBegin;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ResourceTypeRegistrationPropertiesResponseExtensionOptions {
     private final @Nullable ResourceTypeExtensionOptionsResponseResourceCreationBegin resourceCreationBegin;
 
-    @OutputCustomType.Constructor
-    private ResourceTypeRegistrationPropertiesResponseExtensionOptions(@OutputCustomType.Parameter("resourceCreationBegin") @Nullable ResourceTypeExtensionOptionsResponseResourceCreationBegin resourceCreationBegin) {
+    @CustomType.Constructor
+    private ResourceTypeRegistrationPropertiesResponseExtensionOptions(@CustomType.Parameter("resourceCreationBegin") @Nullable ResourceTypeExtensionOptionsResponseResourceCreationBegin resourceCreationBegin) {
         this.resourceCreationBegin = resourceCreationBegin;
     }
 

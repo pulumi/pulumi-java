@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.migrate.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -24,7 +24,7 @@ public final class SolutionDetailsResponse extends io.pulumi.resources.InvokeArg
      * Gets or sets the count of assessments reported by the solution.
      * 
      */
-    @InputImport(name="assessmentCount")
+    @Import(name="assessmentCount")
       private final @Nullable Integer assessmentCount;
 
     public Optional<Integer> getAssessmentCount() {
@@ -35,7 +35,7 @@ public final class SolutionDetailsResponse extends io.pulumi.resources.InvokeArg
      * Gets or sets the extended details reported by the solution.
      * 
      */
-    @InputImport(name="extendedDetails")
+    @Import(name="extendedDetails")
       private final @Nullable Map<String,String> extendedDetails;
 
     public Map<String,String> getExtendedDetails() {
@@ -46,7 +46,7 @@ public final class SolutionDetailsResponse extends io.pulumi.resources.InvokeArg
      * Gets or sets the count of groups reported by the solution.
      * 
      */
-    @InputImport(name="groupCount")
+    @Import(name="groupCount")
       private final @Nullable Integer groupCount;
 
     public Optional<Integer> getGroupCount() {

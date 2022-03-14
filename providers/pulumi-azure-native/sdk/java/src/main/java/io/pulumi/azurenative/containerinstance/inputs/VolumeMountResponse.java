@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerinstance.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class VolumeMountResponse extends io.pulumi.resources.InvokeArgs {
      * The path within the container where the volume should be mounted. Must not contain colon (:).
      * 
      */
-    @InputImport(name="mountPath", required=true)
+    @Import(name="mountPath", required=true)
       private final String mountPath;
 
     public String getMountPath() {
@@ -34,7 +34,7 @@ public final class VolumeMountResponse extends io.pulumi.resources.InvokeArgs {
      * The name of the volume mount.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -45,7 +45,7 @@ public final class VolumeMountResponse extends io.pulumi.resources.InvokeArgs {
      * The flag indicating whether the volume mount is read-only.
      * 
      */
-    @InputImport(name="readOnly")
+    @Import(name="readOnly")
       private final @Nullable Boolean readOnly;
 
     public Optional<Boolean> getReadOnly() {

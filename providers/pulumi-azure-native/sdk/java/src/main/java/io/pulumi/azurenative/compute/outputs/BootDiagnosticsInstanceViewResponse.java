@@ -4,11 +4,11 @@
 package io.pulumi.azurenative.compute.outputs;
 
 import io.pulumi.azurenative.compute.outputs.InstanceViewStatusResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BootDiagnosticsInstanceViewResponse {
     /**
      * The console screenshot blob URI. <br><br>NOTE: This will **not** be set if boot diagnostics is currently enabled with managed storage.
@@ -26,11 +26,11 @@ public final class BootDiagnosticsInstanceViewResponse {
      */
     private final InstanceViewStatusResponse status;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BootDiagnosticsInstanceViewResponse(
-        @OutputCustomType.Parameter("consoleScreenshotBlobUri") String consoleScreenshotBlobUri,
-        @OutputCustomType.Parameter("serialConsoleLogBlobUri") String serialConsoleLogBlobUri,
-        @OutputCustomType.Parameter("status") InstanceViewStatusResponse status) {
+        @CustomType.Parameter("consoleScreenshotBlobUri") String consoleScreenshotBlobUri,
+        @CustomType.Parameter("serialConsoleLogBlobUri") String serialConsoleLogBlobUri,
+        @CustomType.Parameter("status") InstanceViewStatusResponse status) {
         this.consoleScreenshotBlobUri = consoleScreenshotBlobUri;
         this.serialConsoleLogBlobUri = serialConsoleLogBlobUri;
         this.status = status;

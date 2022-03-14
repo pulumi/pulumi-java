@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datadog.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class DatadogOrganizationPropertiesResponse extends io.pulumi.resou
      * Id of the Datadog organization.
      * 
      */
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final String id;
 
     public String getId() {
@@ -31,7 +31,7 @@ public final class DatadogOrganizationPropertiesResponse extends io.pulumi.resou
      * Name of the Datadog organization.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {

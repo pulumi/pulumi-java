@@ -8,7 +8,7 @@ import io.pulumi.azurenative.powerbi.inputs.ConnectionStateArgs;
 import io.pulumi.azurenative.powerbi.inputs.PrivateEndpointArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
      * The name of the Azure resource.
      * 
      */
-    @InputImport(name="azureResourceName", required=true)
+    @Import(name="azureResourceName", required=true)
       private final Output<String> azureResourceName;
 
     public Output<String> getAzureResourceName() {
@@ -33,7 +33,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
      * Specifies the private endpoint.
      * 
      */
-    @InputImport(name="privateEndpoint")
+    @Import(name="privateEndpoint")
       private final @Nullable Output<PrivateEndpointArgs> privateEndpoint;
 
     public Output<PrivateEndpointArgs> getPrivateEndpoint() {
@@ -44,7 +44,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
      * The name of the private endpoint.
      * 
      */
-    @InputImport(name="privateEndpointName")
+    @Import(name="privateEndpointName")
       private final @Nullable Output<String> privateEndpointName;
 
     public Output<String> getPrivateEndpointName() {
@@ -55,7 +55,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
      * Specifies the connection state.
      * 
      */
-    @InputImport(name="privateLinkServiceConnectionState")
+    @Import(name="privateLinkServiceConnectionState")
       private final @Nullable Output<ConnectionStateArgs> privateLinkServiceConnectionState;
 
     public Output<ConnectionStateArgs> getPrivateLinkServiceConnectionState() {
@@ -66,7 +66,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
      * Provisioning state of the Private Endpoint Connection.
      * 
      */
-    @InputImport(name="provisioningState")
+    @Import(name="provisioningState")
       private final @Nullable Output<Either<String,ResourceProvisioningState>> provisioningState;
 
     public Output<Either<String,ResourceProvisioningState>> getProvisioningState() {
@@ -77,7 +77,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {

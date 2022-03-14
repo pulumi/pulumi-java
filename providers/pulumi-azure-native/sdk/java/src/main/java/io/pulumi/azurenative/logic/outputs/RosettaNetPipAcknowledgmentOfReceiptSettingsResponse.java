@@ -3,12 +3,12 @@
 
 package io.pulumi.azurenative.logic.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RosettaNetPipAcknowledgmentOfReceiptSettingsResponse {
     /**
      * The non-repudiation is required or not.
@@ -21,10 +21,10 @@ public final class RosettaNetPipAcknowledgmentOfReceiptSettingsResponse {
      */
     private final Integer timeToAcknowledgeInSeconds;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RosettaNetPipAcknowledgmentOfReceiptSettingsResponse(
-        @OutputCustomType.Parameter("isNonRepudiationRequired") Boolean isNonRepudiationRequired,
-        @OutputCustomType.Parameter("timeToAcknowledgeInSeconds") Integer timeToAcknowledgeInSeconds) {
+        @CustomType.Parameter("isNonRepudiationRequired") Boolean isNonRepudiationRequired,
+        @CustomType.Parameter("timeToAcknowledgeInSeconds") Integer timeToAcknowledgeInSeconds) {
         this.isNonRepudiationRequired = isNonRepudiationRequired;
         this.timeToAcknowledgeInSeconds = timeToAcknowledgeInSeconds;
     }

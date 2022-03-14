@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.hybridcompute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class MachinePropertiesResponseOsProfile {
     /**
      * Specifies the host OS name of the hybrid machine.
@@ -15,8 +15,8 @@ public final class MachinePropertiesResponseOsProfile {
      */
     private final String computerName;
 
-    @OutputCustomType.Constructor
-    private MachinePropertiesResponseOsProfile(@OutputCustomType.Parameter("computerName") String computerName) {
+    @CustomType.Constructor
+    private MachinePropertiesResponseOsProfile(@CustomType.Parameter("computerName") String computerName) {
         this.computerName = computerName;
     }
 

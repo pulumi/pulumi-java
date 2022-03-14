@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datalakeanalytics.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class SasTokenInformationResponse extends io.pulumi.resources.Invok
      * The access token for the associated Azure Storage Container.
      * 
      */
-    @InputImport(name="accessToken", required=true)
+    @Import(name="accessToken", required=true)
       private final String accessToken;
 
     public String getAccessToken() {

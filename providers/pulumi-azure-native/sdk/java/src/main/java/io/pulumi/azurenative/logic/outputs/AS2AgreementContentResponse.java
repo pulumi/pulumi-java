@@ -4,10 +4,10 @@
 package io.pulumi.azurenative.logic.outputs;
 
 import io.pulumi.azurenative.logic.outputs.AS2OneWayAgreementResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AS2AgreementContentResponse {
     /**
      * The AS2 one-way receive agreement.
@@ -20,10 +20,10 @@ public final class AS2AgreementContentResponse {
      */
     private final AS2OneWayAgreementResponse sendAgreement;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AS2AgreementContentResponse(
-        @OutputCustomType.Parameter("receiveAgreement") AS2OneWayAgreementResponse receiveAgreement,
-        @OutputCustomType.Parameter("sendAgreement") AS2OneWayAgreementResponse sendAgreement) {
+        @CustomType.Parameter("receiveAgreement") AS2OneWayAgreementResponse receiveAgreement,
+        @CustomType.Parameter("sendAgreement") AS2OneWayAgreementResponse sendAgreement) {
         this.receiveAgreement = receiveAgreement;
         this.sendAgreement = sendAgreement;
     }

@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.FirewallPolicyRuleConditionApplicationProtocolResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ApplicationRuleConditionResponse {
     /**
      * Description of the rule condition.
@@ -60,17 +60,17 @@ public final class ApplicationRuleConditionResponse {
      */
     private final @Nullable List<String> targetFqdns;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ApplicationRuleConditionResponse(
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("destinationAddresses") @Nullable List<String> destinationAddresses,
-        @OutputCustomType.Parameter("fqdnTags") @Nullable List<String> fqdnTags,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("protocols") @Nullable List<FirewallPolicyRuleConditionApplicationProtocolResponse> protocols,
-        @OutputCustomType.Parameter("ruleConditionType") String ruleConditionType,
-        @OutputCustomType.Parameter("sourceAddresses") @Nullable List<String> sourceAddresses,
-        @OutputCustomType.Parameter("sourceIpGroups") @Nullable List<String> sourceIpGroups,
-        @OutputCustomType.Parameter("targetFqdns") @Nullable List<String> targetFqdns) {
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("destinationAddresses") @Nullable List<String> destinationAddresses,
+        @CustomType.Parameter("fqdnTags") @Nullable List<String> fqdnTags,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("protocols") @Nullable List<FirewallPolicyRuleConditionApplicationProtocolResponse> protocols,
+        @CustomType.Parameter("ruleConditionType") String ruleConditionType,
+        @CustomType.Parameter("sourceAddresses") @Nullable List<String> sourceAddresses,
+        @CustomType.Parameter("sourceIpGroups") @Nullable List<String> sourceIpGroups,
+        @CustomType.Parameter("targetFqdns") @Nullable List<String> targetFqdns) {
         this.description = description;
         this.destinationAddresses = destinationAddresses;
         this.fqdnTags = fqdnTags;

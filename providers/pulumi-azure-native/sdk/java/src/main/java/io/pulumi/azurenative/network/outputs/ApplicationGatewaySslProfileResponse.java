@@ -6,14 +6,14 @@ package io.pulumi.azurenative.network.outputs;
 import io.pulumi.azurenative.network.outputs.ApplicationGatewayClientAuthConfigurationResponse;
 import io.pulumi.azurenative.network.outputs.ApplicationGatewaySslPolicyResponse;
 import io.pulumi.azurenative.network.outputs.SubResourceResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ApplicationGatewaySslProfileResponse {
     /**
      * Client authentication configuration of the application gateway resource.
@@ -56,16 +56,16 @@ public final class ApplicationGatewaySslProfileResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ApplicationGatewaySslProfileResponse(
-        @OutputCustomType.Parameter("clientAuthConfiguration") @Nullable ApplicationGatewayClientAuthConfigurationResponse clientAuthConfiguration,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("sslPolicy") @Nullable ApplicationGatewaySslPolicyResponse sslPolicy,
-        @OutputCustomType.Parameter("trustedClientCertificates") @Nullable List<SubResourceResponse> trustedClientCertificates,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("clientAuthConfiguration") @Nullable ApplicationGatewayClientAuthConfigurationResponse clientAuthConfiguration,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("sslPolicy") @Nullable ApplicationGatewaySslPolicyResponse sslPolicy,
+        @CustomType.Parameter("trustedClientCertificates") @Nullable List<SubResourceResponse> trustedClientCertificates,
+        @CustomType.Parameter("type") String type) {
         this.clientAuthConfiguration = clientAuthConfiguration;
         this.etag = etag;
         this.id = id;

@@ -6,14 +6,14 @@ package io.pulumi.azurenative.storagesync.outputs;
 import io.pulumi.azurenative.storagesync.outputs.ServerEndpointCloudTieringStatusResponse;
 import io.pulumi.azurenative.storagesync.outputs.ServerEndpointRecallStatusResponse;
 import io.pulumi.azurenative.storagesync.outputs.ServerEndpointSyncStatusResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetServerEndpointResult {
     /**
      * Cloud Tiering.
@@ -121,29 +121,29 @@ public final class GetServerEndpointResult {
      */
     private final @Nullable Integer volumeFreeSpacePercent;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetServerEndpointResult(
-        @OutputCustomType.Parameter("cloudTiering") @Nullable String cloudTiering,
-        @OutputCustomType.Parameter("cloudTieringStatus") ServerEndpointCloudTieringStatusResponse cloudTieringStatus,
-        @OutputCustomType.Parameter("friendlyName") @Nullable String friendlyName,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("initialDownloadPolicy") @Nullable String initialDownloadPolicy,
-        @OutputCustomType.Parameter("lastOperationName") String lastOperationName,
-        @OutputCustomType.Parameter("lastWorkflowId") String lastWorkflowId,
-        @OutputCustomType.Parameter("localCacheMode") @Nullable String localCacheMode,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("offlineDataTransfer") @Nullable String offlineDataTransfer,
-        @OutputCustomType.Parameter("offlineDataTransferShareName") @Nullable String offlineDataTransferShareName,
-        @OutputCustomType.Parameter("offlineDataTransferStorageAccountResourceId") String offlineDataTransferStorageAccountResourceId,
-        @OutputCustomType.Parameter("offlineDataTransferStorageAccountTenantId") String offlineDataTransferStorageAccountTenantId,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("recallStatus") ServerEndpointRecallStatusResponse recallStatus,
-        @OutputCustomType.Parameter("serverLocalPath") @Nullable String serverLocalPath,
-        @OutputCustomType.Parameter("serverResourceId") @Nullable String serverResourceId,
-        @OutputCustomType.Parameter("syncStatus") ServerEndpointSyncStatusResponse syncStatus,
-        @OutputCustomType.Parameter("tierFilesOlderThanDays") @Nullable Integer tierFilesOlderThanDays,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("volumeFreeSpacePercent") @Nullable Integer volumeFreeSpacePercent) {
+        @CustomType.Parameter("cloudTiering") @Nullable String cloudTiering,
+        @CustomType.Parameter("cloudTieringStatus") ServerEndpointCloudTieringStatusResponse cloudTieringStatus,
+        @CustomType.Parameter("friendlyName") @Nullable String friendlyName,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("initialDownloadPolicy") @Nullable String initialDownloadPolicy,
+        @CustomType.Parameter("lastOperationName") String lastOperationName,
+        @CustomType.Parameter("lastWorkflowId") String lastWorkflowId,
+        @CustomType.Parameter("localCacheMode") @Nullable String localCacheMode,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("offlineDataTransfer") @Nullable String offlineDataTransfer,
+        @CustomType.Parameter("offlineDataTransferShareName") @Nullable String offlineDataTransferShareName,
+        @CustomType.Parameter("offlineDataTransferStorageAccountResourceId") String offlineDataTransferStorageAccountResourceId,
+        @CustomType.Parameter("offlineDataTransferStorageAccountTenantId") String offlineDataTransferStorageAccountTenantId,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("recallStatus") ServerEndpointRecallStatusResponse recallStatus,
+        @CustomType.Parameter("serverLocalPath") @Nullable String serverLocalPath,
+        @CustomType.Parameter("serverResourceId") @Nullable String serverResourceId,
+        @CustomType.Parameter("syncStatus") ServerEndpointSyncStatusResponse syncStatus,
+        @CustomType.Parameter("tierFilesOlderThanDays") @Nullable Integer tierFilesOlderThanDays,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("volumeFreeSpacePercent") @Nullable Integer volumeFreeSpacePercent) {
         this.cloudTiering = cloudTiering;
         this.cloudTieringStatus = cloudTieringStatus;
         this.friendlyName = friendlyName;

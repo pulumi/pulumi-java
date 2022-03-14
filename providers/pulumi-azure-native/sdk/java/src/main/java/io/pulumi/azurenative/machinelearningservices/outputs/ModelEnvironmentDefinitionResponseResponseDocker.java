@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
 import io.pulumi.azurenative.machinelearningservices.outputs.ModelDockerSectionResponseResponseBaseImageRegistry;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ModelEnvironmentDefinitionResponseResponseDocker {
     /**
      * Base Dockerfile used for Docker-based runs. Mutually exclusive with BaseImage.
@@ -28,11 +28,11 @@ public final class ModelEnvironmentDefinitionResponseResponseDocker {
      */
     private final @Nullable ModelDockerSectionResponseResponseBaseImageRegistry baseImageRegistry;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ModelEnvironmentDefinitionResponseResponseDocker(
-        @OutputCustomType.Parameter("baseDockerfile") @Nullable String baseDockerfile,
-        @OutputCustomType.Parameter("baseImage") @Nullable String baseImage,
-        @OutputCustomType.Parameter("baseImageRegistry") @Nullable ModelDockerSectionResponseResponseBaseImageRegistry baseImageRegistry) {
+        @CustomType.Parameter("baseDockerfile") @Nullable String baseDockerfile,
+        @CustomType.Parameter("baseImage") @Nullable String baseImage,
+        @CustomType.Parameter("baseImageRegistry") @Nullable ModelDockerSectionResponseResponseBaseImageRegistry baseImageRegistry) {
         this.baseDockerfile = baseDockerfile;
         this.baseImage = baseImage;
         this.baseImageRegistry = baseImageRegistry;

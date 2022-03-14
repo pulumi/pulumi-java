@@ -5,7 +5,7 @@ package io.pulumi.azurenative.appplatform;
 
 import io.pulumi.azurenative.appplatform.inputs.GatewayRouteConfigPropertiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class GatewayRouteConfigArgs extends io.pulumi.resources.ResourceAr
      * The name of Spring Cloud Gateway.
      * 
      */
-    @InputImport(name="gatewayName", required=true)
+    @Import(name="gatewayName", required=true)
       private final Output<String> gatewayName;
 
     public Output<String> getGatewayName() {
@@ -30,7 +30,7 @@ public final class GatewayRouteConfigArgs extends io.pulumi.resources.ResourceAr
      * API route config of the Spring Cloud Gateway
      * 
      */
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable Output<GatewayRouteConfigPropertiesArgs> properties;
 
     public Output<GatewayRouteConfigPropertiesArgs> getProperties() {
@@ -41,7 +41,7 @@ public final class GatewayRouteConfigArgs extends io.pulumi.resources.ResourceAr
      * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -52,7 +52,7 @@ public final class GatewayRouteConfigArgs extends io.pulumi.resources.ResourceAr
      * The name of the Spring Cloud Gateway route config.
      * 
      */
-    @InputImport(name="routeConfigName")
+    @Import(name="routeConfigName")
       private final @Nullable Output<String> routeConfigName;
 
     public Output<String> getRouteConfigName() {
@@ -63,7 +63,7 @@ public final class GatewayRouteConfigArgs extends io.pulumi.resources.ResourceAr
      * The name of the Service resource.
      * 
      */
-    @InputImport(name="serviceName", required=true)
+    @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
 
     public Output<String> getServiceName() {

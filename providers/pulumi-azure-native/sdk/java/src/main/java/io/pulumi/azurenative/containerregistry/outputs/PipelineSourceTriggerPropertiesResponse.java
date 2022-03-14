@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.containerregistry.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class PipelineSourceTriggerPropertiesResponse {
     /**
      * The current status of the source trigger.
@@ -15,8 +15,8 @@ public final class PipelineSourceTriggerPropertiesResponse {
      */
     private final String status;
 
-    @OutputCustomType.Constructor
-    private PipelineSourceTriggerPropertiesResponse(@OutputCustomType.Parameter("status") String status) {
+    @CustomType.Constructor
+    private PipelineSourceTriggerPropertiesResponse(@CustomType.Parameter("status") String status) {
         this.status = status;
     }
 

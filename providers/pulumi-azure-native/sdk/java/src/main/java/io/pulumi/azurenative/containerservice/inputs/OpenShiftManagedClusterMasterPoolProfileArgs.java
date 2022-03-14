@@ -7,7 +7,7 @@ import io.pulumi.azurenative.containerservice.enums.OSType;
 import io.pulumi.azurenative.containerservice.enums.OpenShiftContainerServiceVMSize;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class OpenShiftManagedClusterMasterPoolProfileArgs extends io.pulum
      * Number of masters (VMs) to host docker containers. The default value is 3.
      * 
      */
-    @InputImport(name="count", required=true)
+    @Import(name="count", required=true)
       private final Output<Integer> count;
 
     public Output<Integer> getCount() {
@@ -37,7 +37,7 @@ public final class OpenShiftManagedClusterMasterPoolProfileArgs extends io.pulum
      * Unique name of the master pool profile in the context of the subscription and resource group.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -48,7 +48,7 @@ public final class OpenShiftManagedClusterMasterPoolProfileArgs extends io.pulum
      * OsType to be used to specify os type. Choose from Linux and Windows. Default to Linux.
      * 
      */
-    @InputImport(name="osType")
+    @Import(name="osType")
       private final @Nullable Output<Either<String,OSType>> osType;
 
     public Output<Either<String,OSType>> getOsType() {
@@ -59,7 +59,7 @@ public final class OpenShiftManagedClusterMasterPoolProfileArgs extends io.pulum
      * Subnet CIDR for the peering.
      * 
      */
-    @InputImport(name="subnetCidr")
+    @Import(name="subnetCidr")
       private final @Nullable Output<String> subnetCidr;
 
     public Output<String> getSubnetCidr() {
@@ -70,7 +70,7 @@ public final class OpenShiftManagedClusterMasterPoolProfileArgs extends io.pulum
      * Size of agent VMs.
      * 
      */
-    @InputImport(name="vmSize", required=true)
+    @Import(name="vmSize", required=true)
       private final Output<Either<String,OpenShiftContainerServiceVMSize>> vmSize;
 
     public Output<Either<String,OpenShiftContainerServiceVMSize>> getVmSize() {

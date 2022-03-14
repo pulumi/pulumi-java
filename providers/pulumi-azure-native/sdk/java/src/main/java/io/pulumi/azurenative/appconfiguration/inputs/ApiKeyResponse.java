@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.appconfiguration.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class ApiKeyResponse extends io.pulumi.resources.InvokeArgs {
      * A connection string that can be used by supporting clients for authentication.
      * 
      */
-    @InputImport(name="connectionString", required=true)
+    @Import(name="connectionString", required=true)
       private final String connectionString;
 
     public String getConnectionString() {
@@ -32,7 +32,7 @@ public final class ApiKeyResponse extends io.pulumi.resources.InvokeArgs {
      * The key ID.
      * 
      */
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final String id;
 
     public String getId() {
@@ -43,7 +43,7 @@ public final class ApiKeyResponse extends io.pulumi.resources.InvokeArgs {
      * The last time any of the key's properties were modified.
      * 
      */
-    @InputImport(name="lastModified", required=true)
+    @Import(name="lastModified", required=true)
       private final String lastModified;
 
     public String getLastModified() {
@@ -54,7 +54,7 @@ public final class ApiKeyResponse extends io.pulumi.resources.InvokeArgs {
      * A name for the key describing its usage.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -65,7 +65,7 @@ public final class ApiKeyResponse extends io.pulumi.resources.InvokeArgs {
      * Whether this key can only be used for read operations.
      * 
      */
-    @InputImport(name="readOnly", required=true)
+    @Import(name="readOnly", required=true)
       private final Boolean readOnly;
 
     public Boolean getReadOnly() {
@@ -76,7 +76,7 @@ public final class ApiKeyResponse extends io.pulumi.resources.InvokeArgs {
      * The value of the key that is used for authentication purposes.
      * 
      */
-    @InputImport(name="value", required=true)
+    @Import(name="value", required=true)
       private final String value;
 
     public String getValue() {

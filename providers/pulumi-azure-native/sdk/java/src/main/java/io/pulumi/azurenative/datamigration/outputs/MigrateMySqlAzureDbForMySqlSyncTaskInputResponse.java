@@ -5,11 +5,11 @@ package io.pulumi.azurenative.datamigration.outputs;
 
 import io.pulumi.azurenative.datamigration.outputs.MigrateMySqlAzureDbForMySqlSyncDatabaseInputResponse;
 import io.pulumi.azurenative.datamigration.outputs.MySqlConnectionInfoResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class MigrateMySqlAzureDbForMySqlSyncTaskInputResponse {
     /**
      * Databases to migrate
@@ -27,11 +27,11 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskInputResponse {
      */
     private final MySqlConnectionInfoResponse targetConnectionInfo;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MigrateMySqlAzureDbForMySqlSyncTaskInputResponse(
-        @OutputCustomType.Parameter("selectedDatabases") List<MigrateMySqlAzureDbForMySqlSyncDatabaseInputResponse> selectedDatabases,
-        @OutputCustomType.Parameter("sourceConnectionInfo") MySqlConnectionInfoResponse sourceConnectionInfo,
-        @OutputCustomType.Parameter("targetConnectionInfo") MySqlConnectionInfoResponse targetConnectionInfo) {
+        @CustomType.Parameter("selectedDatabases") List<MigrateMySqlAzureDbForMySqlSyncDatabaseInputResponse> selectedDatabases,
+        @CustomType.Parameter("sourceConnectionInfo") MySqlConnectionInfoResponse sourceConnectionInfo,
+        @CustomType.Parameter("targetConnectionInfo") MySqlConnectionInfoResponse targetConnectionInfo) {
         this.selectedDatabases = selectedDatabases;
         this.sourceConnectionInfo = sourceConnectionInfo;
         this.targetConnectionInfo = targetConnectionInfo;

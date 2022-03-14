@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.sql.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class RecommendedActionErrorInfoResponse extends io.pulumi.resource
      * Gets the reason why the recommended action was put to error state. e.g., DatabaseHasQdsOff, IndexAlreadyExists
      * 
      */
-    @InputImport(name="errorCode", required=true)
+    @Import(name="errorCode", required=true)
       private final String errorCode;
 
     public String getErrorCode() {
@@ -31,7 +31,7 @@ public final class RecommendedActionErrorInfoResponse extends io.pulumi.resource
      * Gets whether the error could be ignored and recommended action could be retried. Possible values are: Yes/No
      * 
      */
-    @InputImport(name="isRetryable", required=true)
+    @Import(name="isRetryable", required=true)
       private final String isRetryable;
 
     public String getIsRetryable() {

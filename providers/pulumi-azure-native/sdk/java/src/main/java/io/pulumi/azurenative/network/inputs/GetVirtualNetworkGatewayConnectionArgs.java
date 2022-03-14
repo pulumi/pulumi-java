@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetVirtualNetworkGatewayConnectionArgs extends io.pulumi.reso
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {
@@ -27,7 +27,7 @@ public final class GetVirtualNetworkGatewayConnectionArgs extends io.pulumi.reso
      * The name of the virtual network gateway connection.
      * 
      */
-    @InputImport(name="virtualNetworkGatewayConnectionName", required=true)
+    @Import(name="virtualNetworkGatewayConnectionName", required=true)
       private final String virtualNetworkGatewayConnectionName;
 
     public String getVirtualNetworkGatewayConnectionName() {

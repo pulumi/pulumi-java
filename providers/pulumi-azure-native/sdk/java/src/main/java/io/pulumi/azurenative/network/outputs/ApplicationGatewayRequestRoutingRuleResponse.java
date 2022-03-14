@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.SubResourceResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ApplicationGatewayRequestRoutingRuleResponse {
     /**
      * Backend address pool resource of the application gateway.
@@ -79,21 +79,21 @@ public final class ApplicationGatewayRequestRoutingRuleResponse {
      */
     private final @Nullable SubResourceResponse urlPathMap;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ApplicationGatewayRequestRoutingRuleResponse(
-        @OutputCustomType.Parameter("backendAddressPool") @Nullable SubResourceResponse backendAddressPool,
-        @OutputCustomType.Parameter("backendHttpSettings") @Nullable SubResourceResponse backendHttpSettings,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("httpListener") @Nullable SubResourceResponse httpListener,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("priority") @Nullable Integer priority,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("redirectConfiguration") @Nullable SubResourceResponse redirectConfiguration,
-        @OutputCustomType.Parameter("rewriteRuleSet") @Nullable SubResourceResponse rewriteRuleSet,
-        @OutputCustomType.Parameter("ruleType") @Nullable String ruleType,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("urlPathMap") @Nullable SubResourceResponse urlPathMap) {
+        @CustomType.Parameter("backendAddressPool") @Nullable SubResourceResponse backendAddressPool,
+        @CustomType.Parameter("backendHttpSettings") @Nullable SubResourceResponse backendHttpSettings,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("httpListener") @Nullable SubResourceResponse httpListener,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("priority") @Nullable Integer priority,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("redirectConfiguration") @Nullable SubResourceResponse redirectConfiguration,
+        @CustomType.Parameter("rewriteRuleSet") @Nullable SubResourceResponse rewriteRuleSet,
+        @CustomType.Parameter("ruleType") @Nullable String ruleType,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("urlPathMap") @Nullable SubResourceResponse urlPathMap) {
         this.backendAddressPool = backendAddressPool;
         this.backendHttpSettings = backendHttpSettings;
         this.etag = etag;

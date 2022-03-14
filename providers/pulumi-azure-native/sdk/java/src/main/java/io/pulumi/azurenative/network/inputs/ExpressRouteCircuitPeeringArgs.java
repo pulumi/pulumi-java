@@ -12,7 +12,7 @@ import io.pulumi.azurenative.network.inputs.Ipv6ExpressRouteCircuitPeeringConfig
 import io.pulumi.azurenative.network.inputs.SubResourceArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -33,7 +33,7 @@ public final class ExpressRouteCircuitPeeringArgs extends io.pulumi.resources.Re
      * The Azure ASN.
      * 
      */
-    @InputImport(name="azureASN")
+    @Import(name="azureASN")
       private final @Nullable Output<Integer> azureASN;
 
     public Output<Integer> getAzureASN() {
@@ -44,7 +44,7 @@ public final class ExpressRouteCircuitPeeringArgs extends io.pulumi.resources.Re
      * The list of circuit connections associated with Azure Private Peering for this circuit.
      * 
      */
-    @InputImport(name="connections")
+    @Import(name="connections")
       private final @Nullable Output<List<ExpressRouteCircuitConnectionArgs>> connections;
 
     public Output<List<ExpressRouteCircuitConnectionArgs>> getConnections() {
@@ -55,7 +55,7 @@ public final class ExpressRouteCircuitPeeringArgs extends io.pulumi.resources.Re
      * The GatewayManager Etag.
      * 
      */
-    @InputImport(name="gatewayManagerEtag")
+    @Import(name="gatewayManagerEtag")
       private final @Nullable Output<String> gatewayManagerEtag;
 
     public Output<String> getGatewayManagerEtag() {
@@ -66,7 +66,7 @@ public final class ExpressRouteCircuitPeeringArgs extends io.pulumi.resources.Re
      * Resource ID.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
@@ -77,7 +77,7 @@ public final class ExpressRouteCircuitPeeringArgs extends io.pulumi.resources.Re
      * The IPv6 peering configuration.
      * 
      */
-    @InputImport(name="ipv6PeeringConfig")
+    @Import(name="ipv6PeeringConfig")
       private final @Nullable Output<Ipv6ExpressRouteCircuitPeeringConfigArgs> ipv6PeeringConfig;
 
     public Output<Ipv6ExpressRouteCircuitPeeringConfigArgs> getIpv6PeeringConfig() {
@@ -88,7 +88,7 @@ public final class ExpressRouteCircuitPeeringArgs extends io.pulumi.resources.Re
      * The Microsoft peering configuration.
      * 
      */
-    @InputImport(name="microsoftPeeringConfig")
+    @Import(name="microsoftPeeringConfig")
       private final @Nullable Output<ExpressRouteCircuitPeeringConfigArgs> microsoftPeeringConfig;
 
     public Output<ExpressRouteCircuitPeeringConfigArgs> getMicrosoftPeeringConfig() {
@@ -99,7 +99,7 @@ public final class ExpressRouteCircuitPeeringArgs extends io.pulumi.resources.Re
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -110,7 +110,7 @@ public final class ExpressRouteCircuitPeeringArgs extends io.pulumi.resources.Re
      * The peer ASN.
      * 
      */
-    @InputImport(name="peerASN")
+    @Import(name="peerASN")
       private final @Nullable Output<Double> peerASN;
 
     public Output<Double> getPeerASN() {
@@ -121,7 +121,7 @@ public final class ExpressRouteCircuitPeeringArgs extends io.pulumi.resources.Re
      * The peering type.
      * 
      */
-    @InputImport(name="peeringType")
+    @Import(name="peeringType")
       private final @Nullable Output<Either<String,ExpressRoutePeeringType>> peeringType;
 
     public Output<Either<String,ExpressRoutePeeringType>> getPeeringType() {
@@ -132,7 +132,7 @@ public final class ExpressRouteCircuitPeeringArgs extends io.pulumi.resources.Re
      * The primary port.
      * 
      */
-    @InputImport(name="primaryAzurePort")
+    @Import(name="primaryAzurePort")
       private final @Nullable Output<String> primaryAzurePort;
 
     public Output<String> getPrimaryAzurePort() {
@@ -143,7 +143,7 @@ public final class ExpressRouteCircuitPeeringArgs extends io.pulumi.resources.Re
      * The primary address prefix.
      * 
      */
-    @InputImport(name="primaryPeerAddressPrefix")
+    @Import(name="primaryPeerAddressPrefix")
       private final @Nullable Output<String> primaryPeerAddressPrefix;
 
     public Output<String> getPrimaryPeerAddressPrefix() {
@@ -154,7 +154,7 @@ public final class ExpressRouteCircuitPeeringArgs extends io.pulumi.resources.Re
      * The reference to the RouteFilter resource.
      * 
      */
-    @InputImport(name="routeFilter")
+    @Import(name="routeFilter")
       private final @Nullable Output<SubResourceArgs> routeFilter;
 
     public Output<SubResourceArgs> getRouteFilter() {
@@ -165,7 +165,7 @@ public final class ExpressRouteCircuitPeeringArgs extends io.pulumi.resources.Re
      * The secondary port.
      * 
      */
-    @InputImport(name="secondaryAzurePort")
+    @Import(name="secondaryAzurePort")
       private final @Nullable Output<String> secondaryAzurePort;
 
     public Output<String> getSecondaryAzurePort() {
@@ -176,7 +176,7 @@ public final class ExpressRouteCircuitPeeringArgs extends io.pulumi.resources.Re
      * The secondary address prefix.
      * 
      */
-    @InputImport(name="secondaryPeerAddressPrefix")
+    @Import(name="secondaryPeerAddressPrefix")
       private final @Nullable Output<String> secondaryPeerAddressPrefix;
 
     public Output<String> getSecondaryPeerAddressPrefix() {
@@ -187,7 +187,7 @@ public final class ExpressRouteCircuitPeeringArgs extends io.pulumi.resources.Re
      * The shared key.
      * 
      */
-    @InputImport(name="sharedKey")
+    @Import(name="sharedKey")
       private final @Nullable Output<String> sharedKey;
 
     public Output<String> getSharedKey() {
@@ -198,7 +198,7 @@ public final class ExpressRouteCircuitPeeringArgs extends io.pulumi.resources.Re
      * The peering state.
      * 
      */
-    @InputImport(name="state")
+    @Import(name="state")
       private final @Nullable Output<Either<String,ExpressRoutePeeringState>> state;
 
     public Output<Either<String,ExpressRoutePeeringState>> getState() {
@@ -209,7 +209,7 @@ public final class ExpressRouteCircuitPeeringArgs extends io.pulumi.resources.Re
      * The peering stats of express route circuit.
      * 
      */
-    @InputImport(name="stats")
+    @Import(name="stats")
       private final @Nullable Output<ExpressRouteCircuitStatsArgs> stats;
 
     public Output<ExpressRouteCircuitStatsArgs> getStats() {
@@ -220,7 +220,7 @@ public final class ExpressRouteCircuitPeeringArgs extends io.pulumi.resources.Re
      * The VLAN ID.
      * 
      */
-    @InputImport(name="vlanId")
+    @Import(name="vlanId")
       private final @Nullable Output<Integer> vlanId;
 
     public Output<Integer> getVlanId() {

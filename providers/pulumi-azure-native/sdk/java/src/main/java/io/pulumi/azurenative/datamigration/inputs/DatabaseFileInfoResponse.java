@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datamigration.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class DatabaseFileInfoResponse extends io.pulumi.resources.InvokeAr
      * Name of the database
      * 
      */
-    @InputImport(name="databaseName")
+    @Import(name="databaseName")
       private final @Nullable String databaseName;
 
     public Optional<String> getDatabaseName() {
@@ -34,7 +34,7 @@ public final class DatabaseFileInfoResponse extends io.pulumi.resources.InvokeAr
      * Database file type
      * 
      */
-    @InputImport(name="fileType")
+    @Import(name="fileType")
       private final @Nullable String fileType;
 
     public Optional<String> getFileType() {
@@ -45,7 +45,7 @@ public final class DatabaseFileInfoResponse extends io.pulumi.resources.InvokeAr
      * Unique identifier for database file
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable String id;
 
     public Optional<String> getId() {
@@ -56,7 +56,7 @@ public final class DatabaseFileInfoResponse extends io.pulumi.resources.InvokeAr
      * Logical name of the file
      * 
      */
-    @InputImport(name="logicalName")
+    @Import(name="logicalName")
       private final @Nullable String logicalName;
 
     public Optional<String> getLogicalName() {
@@ -67,7 +67,7 @@ public final class DatabaseFileInfoResponse extends io.pulumi.resources.InvokeAr
      * Operating-system full path of the file
      * 
      */
-    @InputImport(name="physicalFullName")
+    @Import(name="physicalFullName")
       private final @Nullable String physicalFullName;
 
     public Optional<String> getPhysicalFullName() {
@@ -78,7 +78,7 @@ public final class DatabaseFileInfoResponse extends io.pulumi.resources.InvokeAr
      * Suggested full path of the file for restoring
      * 
      */
-    @InputImport(name="restoreFullName")
+    @Import(name="restoreFullName")
       private final @Nullable String restoreFullName;
 
     public Optional<String> getRestoreFullName() {
@@ -89,7 +89,7 @@ public final class DatabaseFileInfoResponse extends io.pulumi.resources.InvokeAr
      * Size of the file in megabytes
      * 
      */
-    @InputImport(name="sizeMB")
+    @Import(name="sizeMB")
       private final @Nullable Double sizeMB;
 
     public Optional<Double> getSizeMB() {

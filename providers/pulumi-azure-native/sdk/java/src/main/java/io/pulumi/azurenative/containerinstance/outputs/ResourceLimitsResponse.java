@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.containerinstance.outputs;
 
 import io.pulumi.azurenative.containerinstance.outputs.GpuResourceResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ResourceLimitsResponse {
     /**
      * The CPU limit of this container instance.
@@ -28,11 +28,11 @@ public final class ResourceLimitsResponse {
      */
     private final @Nullable Double memoryInGB;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ResourceLimitsResponse(
-        @OutputCustomType.Parameter("cpu") @Nullable Double cpu,
-        @OutputCustomType.Parameter("gpu") @Nullable GpuResourceResponse gpu,
-        @OutputCustomType.Parameter("memoryInGB") @Nullable Double memoryInGB) {
+        @CustomType.Parameter("cpu") @Nullable Double cpu,
+        @CustomType.Parameter("gpu") @Nullable GpuResourceResponse gpu,
+        @CustomType.Parameter("memoryInGB") @Nullable Double memoryInGB) {
         this.cpu = cpu;
         this.gpu = gpu;
         this.memoryInGB = memoryInGB;

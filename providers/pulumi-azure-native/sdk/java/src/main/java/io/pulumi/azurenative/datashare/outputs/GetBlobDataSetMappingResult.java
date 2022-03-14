@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.datashare.outputs;
 
 import io.pulumi.azurenative.datashare.outputs.SystemDataResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetBlobDataSetMappingResult {
     /**
      * Container that has the file path.
@@ -84,22 +84,22 @@ public final class GetBlobDataSetMappingResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetBlobDataSetMappingResult(
-        @OutputCustomType.Parameter("containerName") String containerName,
-        @OutputCustomType.Parameter("dataSetId") String dataSetId,
-        @OutputCustomType.Parameter("dataSetMappingStatus") String dataSetMappingStatus,
-        @OutputCustomType.Parameter("filePath") String filePath,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("outputType") @Nullable String outputType,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("resourceGroup") String resourceGroup,
-        @OutputCustomType.Parameter("storageAccountName") String storageAccountName,
-        @OutputCustomType.Parameter("subscriptionId") String subscriptionId,
-        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("containerName") String containerName,
+        @CustomType.Parameter("dataSetId") String dataSetId,
+        @CustomType.Parameter("dataSetMappingStatus") String dataSetMappingStatus,
+        @CustomType.Parameter("filePath") String filePath,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("outputType") @Nullable String outputType,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("resourceGroup") String resourceGroup,
+        @CustomType.Parameter("storageAccountName") String storageAccountName,
+        @CustomType.Parameter("subscriptionId") String subscriptionId,
+        @CustomType.Parameter("systemData") SystemDataResponse systemData,
+        @CustomType.Parameter("type") String type) {
         this.containerName = containerName;
         this.dataSetId = dataSetId;
         this.dataSetMappingStatus = dataSetMappingStatus;

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.testbase.inputs;
 
 import io.pulumi.azurenative.testbase.inputs.TestBaseAccountSKUCapabilityResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class TestBaseAccountSKUResponse extends io.pulumi.resources.Invoke
      * The capabilities of a SKU.
      * 
      */
-    @InputImport(name="capabilities", required=true)
+    @Import(name="capabilities", required=true)
       private final List<TestBaseAccountSKUCapabilityResponse> capabilities;
 
     public List<TestBaseAccountSKUCapabilityResponse> getCapabilities() {
@@ -35,7 +35,7 @@ public final class TestBaseAccountSKUResponse extends io.pulumi.resources.Invoke
      * The locations that the SKU is available.
      * 
      */
-    @InputImport(name="locations")
+    @Import(name="locations")
       private final @Nullable List<String> locations;
 
     public List<String> getLocations() {
@@ -46,7 +46,7 @@ public final class TestBaseAccountSKUResponse extends io.pulumi.resources.Invoke
      * The name of the SKU. This is typically a letter + number code, such as B0 or S0.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -57,7 +57,7 @@ public final class TestBaseAccountSKUResponse extends io.pulumi.resources.Invoke
      * The type of resource the SKU applies to.
      * 
      */
-    @InputImport(name="resourceType")
+    @Import(name="resourceType")
       private final @Nullable String resourceType;
 
     public Optional<String> getPropResourceType() {
@@ -68,7 +68,7 @@ public final class TestBaseAccountSKUResponse extends io.pulumi.resources.Invoke
      * The tier of this particular SKU.
      * 
      */
-    @InputImport(name="tier", required=true)
+    @Import(name="tier", required=true)
       private final String tier;
 
     public String getTier() {

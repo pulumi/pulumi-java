@@ -5,14 +5,14 @@ package io.pulumi.azurenative.media.outputs;
 
 import io.pulumi.azurenative.media.outputs.LiveEventInputTrackSelectionResponse;
 import io.pulumi.azurenative.media.outputs.LiveEventOutputTranscriptionTrackResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class LiveEventTranscriptionResponse {
     /**
      * Provides a mechanism to select the audio track in the input live feed, to which speech-to-text transcription is applied. This property is reserved for future use, any value set on this property will be ignored.
@@ -30,11 +30,11 @@ public final class LiveEventTranscriptionResponse {
      */
     private final @Nullable LiveEventOutputTranscriptionTrackResponse outputTranscriptionTrack;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LiveEventTranscriptionResponse(
-        @OutputCustomType.Parameter("inputTrackSelection") @Nullable List<LiveEventInputTrackSelectionResponse> inputTrackSelection,
-        @OutputCustomType.Parameter("language") @Nullable String language,
-        @OutputCustomType.Parameter("outputTranscriptionTrack") @Nullable LiveEventOutputTranscriptionTrackResponse outputTranscriptionTrack) {
+        @CustomType.Parameter("inputTrackSelection") @Nullable List<LiveEventInputTrackSelectionResponse> inputTrackSelection,
+        @CustomType.Parameter("language") @Nullable String language,
+        @CustomType.Parameter("outputTranscriptionTrack") @Nullable LiveEventOutputTranscriptionTrackResponse outputTranscriptionTrack) {
         this.inputTrackSelection = inputTrackSelection;
         this.language = language;
         this.outputTranscriptionTrack = outputTranscriptionTrack;

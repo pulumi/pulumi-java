@@ -5,7 +5,7 @@ package io.pulumi.azurenative.botservice.inputs;
 
 import io.pulumi.azurenative.botservice.inputs.LineChannelPropertiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class LineChannelArgs extends io.pulumi.resources.ResourceArgs {
      * Expected value is 'LineChannel'.
      * 
      */
-    @InputImport(name="channelName", required=true)
+    @Import(name="channelName", required=true)
       private final Output<String> channelName;
 
     public Output<String> getChannelName() {
@@ -35,7 +35,7 @@ public final class LineChannelArgs extends io.pulumi.resources.ResourceArgs {
      * Entity Tag of the resource
      * 
      */
-    @InputImport(name="etag")
+    @Import(name="etag")
       private final @Nullable Output<String> etag;
 
     public Output<String> getEtag() {
@@ -46,7 +46,7 @@ public final class LineChannelArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the location of the resource.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -57,7 +57,7 @@ public final class LineChannelArgs extends io.pulumi.resources.ResourceArgs {
      * The set of properties specific to line channel resource
      * 
      */
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable Output<LineChannelPropertiesArgs> properties;
 
     public Output<LineChannelPropertiesArgs> getProperties() {

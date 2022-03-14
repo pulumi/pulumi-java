@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.keyvault.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class KeyAttributesResponse extends io.pulumi.resources.InvokeArgs 
      * Creation time in seconds since 1970-01-01T00:00:00Z.
      * 
      */
-    @InputImport(name="created", required=true)
+    @Import(name="created", required=true)
       private final Double created;
 
     public Double getCreated() {
@@ -35,7 +35,7 @@ public final class KeyAttributesResponse extends io.pulumi.resources.InvokeArgs 
      * Determines whether or not the object is enabled.
      * 
      */
-    @InputImport(name="enabled")
+    @Import(name="enabled")
       private final @Nullable Boolean enabled;
 
     public Optional<Boolean> getEnabled() {
@@ -46,7 +46,7 @@ public final class KeyAttributesResponse extends io.pulumi.resources.InvokeArgs 
      * Expiry date in seconds since 1970-01-01T00:00:00Z.
      * 
      */
-    @InputImport(name="expires")
+    @Import(name="expires")
       private final @Nullable Double expires;
 
     public Optional<Double> getExpires() {
@@ -57,7 +57,7 @@ public final class KeyAttributesResponse extends io.pulumi.resources.InvokeArgs 
      * Not before date in seconds since 1970-01-01T00:00:00Z.
      * 
      */
-    @InputImport(name="notBefore")
+    @Import(name="notBefore")
       private final @Nullable Double notBefore;
 
     public Optional<Double> getNotBefore() {
@@ -68,7 +68,7 @@ public final class KeyAttributesResponse extends io.pulumi.resources.InvokeArgs 
      * The deletion recovery level currently in effect for the object. If it contains 'Purgeable', then the object can be permanently deleted by a privileged user; otherwise, only the system can purge the object at the end of the retention interval.
      * 
      */
-    @InputImport(name="recoveryLevel", required=true)
+    @Import(name="recoveryLevel", required=true)
       private final String recoveryLevel;
 
     public String getRecoveryLevel() {
@@ -79,7 +79,7 @@ public final class KeyAttributesResponse extends io.pulumi.resources.InvokeArgs 
      * Last updated time in seconds since 1970-01-01T00:00:00Z.
      * 
      */
-    @InputImport(name="updated", required=true)
+    @Import(name="updated", required=true)
       private final Double updated;
 
     public Double getUpdated() {

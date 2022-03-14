@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datamigration.inputs;
 
 import io.pulumi.azurenative.datamigration.inputs.ReportableExceptionResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class MigrateMISyncCompleteCommandOutputResponse extends io.pulumi.
      * List of errors that happened during the command execution
      * 
      */
-    @InputImport(name="errors")
+    @Import(name="errors")
       private final @Nullable List<ReportableExceptionResponse> errors;
 
     public List<ReportableExceptionResponse> getErrors() {

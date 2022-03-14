@@ -6,7 +6,7 @@ package io.pulumi.azurenative.costmanagement;
 import io.pulumi.azurenative.costmanagement.enums.ConnectorBillingModel;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class CloudConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * Connector billing model
      * 
      */
-    @InputImport(name="billingModel")
+    @Import(name="billingModel")
       private final @Nullable Output<Either<String,ConnectorBillingModel>> billingModel;
 
     public Output<Either<String,ConnectorBillingModel>> getBillingModel() {
@@ -31,7 +31,7 @@ public final class CloudConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * Connector Name.
      * 
      */
-    @InputImport(name="connectorName")
+    @Import(name="connectorName")
       private final @Nullable Output<String> connectorName;
 
     public Output<String> getConnectorName() {
@@ -42,7 +42,7 @@ public final class CloudConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * Credentials authentication key (eg AWS ARN)
      * 
      */
-    @InputImport(name="credentialsKey")
+    @Import(name="credentialsKey")
       private final @Nullable Output<String> credentialsKey;
 
     public Output<String> getCredentialsKey() {
@@ -53,7 +53,7 @@ public final class CloudConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * Credentials secret (eg AWS ExternalId)
      * 
      */
-    @InputImport(name="credentialsSecret")
+    @Import(name="credentialsSecret")
       private final @Nullable Output<String> credentialsSecret;
 
     public Output<String> getCredentialsSecret() {
@@ -64,7 +64,7 @@ public final class CloudConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * Default ManagementGroupId
      * 
      */
-    @InputImport(name="defaultManagementGroupId")
+    @Import(name="defaultManagementGroupId")
       private final @Nullable Output<String> defaultManagementGroupId;
 
     public Output<String> getDefaultManagementGroupId() {
@@ -75,7 +75,7 @@ public final class CloudConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * Connector DisplayName
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -86,7 +86,7 @@ public final class CloudConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * Connector kind (eg aws)
      * 
      */
-    @InputImport(name="kind")
+    @Import(name="kind")
       private final @Nullable Output<String> kind;
 
     public Output<String> getKind() {
@@ -97,7 +97,7 @@ public final class CloudConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * Identifying source report. (For AWS this is a CUR report name, defined with Daily and with Resources)
      * 
      */
-    @InputImport(name="reportId")
+    @Import(name="reportId")
       private final @Nullable Output<String> reportId;
 
     public Output<String> getReportId() {
@@ -108,7 +108,7 @@ public final class CloudConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * Billing SubscriptionId
      * 
      */
-    @InputImport(name="subscriptionId")
+    @Import(name="subscriptionId")
       private final @Nullable Output<String> subscriptionId;
 
     public Output<String> getSubscriptionId() {

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.security.inputs;
 
 import io.pulumi.azurenative.security.inputs.DefenderForServersAwsOfferingResponseServicePrincipalSecretMetadata;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class DefenderForServersAwsOfferingResponseArcAutoProvisioning exte
      * Is arc auto provisioning enabled
      * 
      */
-    @InputImport(name="enabled")
+    @Import(name="enabled")
       private final @Nullable Boolean enabled;
 
     public Optional<Boolean> getEnabled() {
@@ -34,7 +34,7 @@ public final class DefenderForServersAwsOfferingResponseArcAutoProvisioning exte
      * Metadata of Service Principal secret for autoprovisioning
      * 
      */
-    @InputImport(name="servicePrincipalSecretMetadata")
+    @Import(name="servicePrincipalSecretMetadata")
       private final @Nullable DefenderForServersAwsOfferingResponseServicePrincipalSecretMetadata servicePrincipalSecretMetadata;
 
     public Optional<DefenderForServersAwsOfferingResponseServicePrincipalSecretMetadata> getServicePrincipalSecretMetadata() {

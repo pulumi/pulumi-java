@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storsimple.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class TimeResponse extends io.pulumi.resources.InvokeArgs {
      * The hour.
      * 
      */
-    @InputImport(name="hours", required=true)
+    @Import(name="hours", required=true)
       private final Integer hours;
 
     public Integer getHours() {
@@ -31,7 +31,7 @@ public final class TimeResponse extends io.pulumi.resources.InvokeArgs {
      * The minute.
      * 
      */
-    @InputImport(name="minutes", required=true)
+    @Import(name="minutes", required=true)
       private final Integer minutes;
 
     public Integer getMinutes() {
@@ -42,7 +42,7 @@ public final class TimeResponse extends io.pulumi.resources.InvokeArgs {
      * The second.
      * 
      */
-    @InputImport(name="seconds", required=true)
+    @Import(name="seconds", required=true)
       private final Integer seconds;
 
     public Integer getSeconds() {

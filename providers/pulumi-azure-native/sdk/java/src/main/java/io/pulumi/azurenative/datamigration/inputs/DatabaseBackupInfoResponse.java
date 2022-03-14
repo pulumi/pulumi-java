@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datamigration.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class DatabaseBackupInfoResponse extends io.pulumi.resources.Invoke
      * The list of backup files for the current database.
      * 
      */
-    @InputImport(name="backupFiles", required=true)
+    @Import(name="backupFiles", required=true)
       private final List<String> backupFiles;
 
     public List<String> getBackupFiles() {
@@ -34,7 +34,7 @@ public final class DatabaseBackupInfoResponse extends io.pulumi.resources.Invoke
      * Date and time when the backup operation finished.
      * 
      */
-    @InputImport(name="backupFinishDate", required=true)
+    @Import(name="backupFinishDate", required=true)
       private final String backupFinishDate;
 
     public String getBackupFinishDate() {
@@ -45,7 +45,7 @@ public final class DatabaseBackupInfoResponse extends io.pulumi.resources.Invoke
      * Backup Type.
      * 
      */
-    @InputImport(name="backupType", required=true)
+    @Import(name="backupType", required=true)
       private final String backupType;
 
     public String getBackupType() {
@@ -56,7 +56,7 @@ public final class DatabaseBackupInfoResponse extends io.pulumi.resources.Invoke
      * Database name.
      * 
      */
-    @InputImport(name="databaseName", required=true)
+    @Import(name="databaseName", required=true)
       private final String databaseName;
 
     public String getDatabaseName() {
@@ -67,7 +67,7 @@ public final class DatabaseBackupInfoResponse extends io.pulumi.resources.Invoke
      * Number of files in the backup set.
      * 
      */
-    @InputImport(name="familyCount", required=true)
+    @Import(name="familyCount", required=true)
       private final Integer familyCount;
 
     public Integer getFamilyCount() {
@@ -78,7 +78,7 @@ public final class DatabaseBackupInfoResponse extends io.pulumi.resources.Invoke
      * Whether the backup set is compressed
      * 
      */
-    @InputImport(name="isCompressed", required=true)
+    @Import(name="isCompressed", required=true)
       private final Boolean isCompressed;
 
     public Boolean getIsCompressed() {
@@ -89,7 +89,7 @@ public final class DatabaseBackupInfoResponse extends io.pulumi.resources.Invoke
      * Database was damaged when backed up, but the backup operation was requested to continue despite errors.
      * 
      */
-    @InputImport(name="isDamaged", required=true)
+    @Import(name="isDamaged", required=true)
       private final Boolean isDamaged;
 
     public Boolean getIsDamaged() {
@@ -100,7 +100,7 @@ public final class DatabaseBackupInfoResponse extends io.pulumi.resources.Invoke
      * Position of current database backup in the file.
      * 
      */
-    @InputImport(name="position", required=true)
+    @Import(name="position", required=true)
       private final Integer position;
 
     public Integer getPosition() {

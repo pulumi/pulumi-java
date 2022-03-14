@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.sql.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class JobStepActionResponse extends io.pulumi.resources.InvokeArgs 
      * The source of the action to execute.
      * 
      */
-    @InputImport(name="source")
+    @Import(name="source")
       private final @Nullable String source;
 
     public Optional<String> getSource() {
@@ -33,7 +33,7 @@ public final class JobStepActionResponse extends io.pulumi.resources.InvokeArgs 
      * Type of action being executed by the job step.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable String type;
 
     public Optional<String> getType() {
@@ -44,7 +44,7 @@ public final class JobStepActionResponse extends io.pulumi.resources.InvokeArgs 
      * The action value, for example the text of the T-SQL script to execute.
      * 
      */
-    @InputImport(name="value", required=true)
+    @Import(name="value", required=true)
       private final String value;
 
     public String getValue() {

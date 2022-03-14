@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.databox.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class DiskSecretResponse extends io.pulumi.resources.InvokeArgs {
      * Bit Locker key of the disk which can be used to unlock the disk to copy data.
      * 
      */
-    @InputImport(name="bitLockerKey", required=true)
+    @Import(name="bitLockerKey", required=true)
       private final String bitLockerKey;
 
     public String getBitLockerKey() {
@@ -31,7 +31,7 @@ public final class DiskSecretResponse extends io.pulumi.resources.InvokeArgs {
      * Serial number of the assigned disk.
      * 
      */
-    @InputImport(name="diskSerialNumber", required=true)
+    @Import(name="diskSerialNumber", required=true)
       private final String diskSerialNumber;
 
     public String getDiskSerialNumber() {

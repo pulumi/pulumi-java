@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.labservices;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the lab Account.
      * 
      */
-    @InputImport(name="labAccountName", required=true)
+    @Import(name="labAccountName", required=true)
       private final Output<String> labAccountName;
 
     public Output<String> getLabAccountName() {
@@ -30,7 +30,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the lab.
      * 
      */
-    @InputImport(name="labName", required=true)
+    @Import(name="labName", required=true)
       private final Output<String> labName;
 
     public Output<String> getLabName() {
@@ -41,7 +41,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * The location of the resource.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -52,7 +52,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * The provisioning status of the resource.
      * 
      */
-    @InputImport(name="provisioningState")
+    @Import(name="provisioningState")
       private final @Nullable Output<String> provisioningState;
 
     public Output<String> getProvisioningState() {
@@ -63,7 +63,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -74,7 +74,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * The tags of the resource.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -85,7 +85,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * The unique immutable identifier of a resource (Guid).
      * 
      */
-    @InputImport(name="uniqueIdentifier")
+    @Import(name="uniqueIdentifier")
       private final @Nullable Output<String> uniqueIdentifier;
 
     public Output<String> getUniqueIdentifier() {
@@ -96,7 +96,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the user.
      * 
      */
-    @InputImport(name="userName")
+    @Import(name="userName")
       private final @Nullable Output<String> userName;
 
     public Output<String> getUserName() {

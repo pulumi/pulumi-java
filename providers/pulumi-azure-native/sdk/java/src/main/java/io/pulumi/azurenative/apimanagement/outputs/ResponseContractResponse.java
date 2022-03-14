@@ -5,7 +5,7 @@ package io.pulumi.azurenative.apimanagement.outputs;
 
 import io.pulumi.azurenative.apimanagement.outputs.ParameterContractResponse;
 import io.pulumi.azurenative.apimanagement.outputs.RepresentationContractResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ResponseContractResponse {
     /**
      * Operation response description.
@@ -36,12 +36,12 @@ public final class ResponseContractResponse {
      */
     private final Integer statusCode;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ResponseContractResponse(
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("headers") @Nullable List<ParameterContractResponse> headers,
-        @OutputCustomType.Parameter("representations") @Nullable List<RepresentationContractResponse> representations,
-        @OutputCustomType.Parameter("statusCode") Integer statusCode) {
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("headers") @Nullable List<ParameterContractResponse> headers,
+        @CustomType.Parameter("representations") @Nullable List<RepresentationContractResponse> representations,
+        @CustomType.Parameter("statusCode") Integer statusCode) {
         this.description = description;
         this.headers = headers;
         this.representations = representations;

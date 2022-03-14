@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.billing;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class BillingRoleAssignmentByEnrollmentAccountArgs extends io.pulum
      * The ID that uniquely identifies a billing account.
      * 
      */
-    @InputImport(name="billingAccountName", required=true)
+    @Import(name="billingAccountName", required=true)
       private final Output<String> billingAccountName;
 
     public Output<String> getBillingAccountName() {
@@ -29,7 +29,7 @@ public final class BillingRoleAssignmentByEnrollmentAccountArgs extends io.pulum
      * The ID that uniquely identifies a role assignment.
      * 
      */
-    @InputImport(name="billingRoleAssignmentName")
+    @Import(name="billingRoleAssignmentName")
       private final @Nullable Output<String> billingRoleAssignmentName;
 
     public Output<String> getBillingRoleAssignmentName() {
@@ -40,7 +40,7 @@ public final class BillingRoleAssignmentByEnrollmentAccountArgs extends io.pulum
      * The ID that uniquely identifies an enrollment account.
      * 
      */
-    @InputImport(name="enrollmentAccountName", required=true)
+    @Import(name="enrollmentAccountName", required=true)
       private final Output<String> enrollmentAccountName;
 
     public Output<String> getEnrollmentAccountName() {
@@ -51,7 +51,7 @@ public final class BillingRoleAssignmentByEnrollmentAccountArgs extends io.pulum
      * The principal id of the user to whom the role was assigned.
      * 
      */
-    @InputImport(name="principalId")
+    @Import(name="principalId")
       private final @Nullable Output<String> principalId;
 
     public Output<String> getPrincipalId() {
@@ -62,7 +62,7 @@ public final class BillingRoleAssignmentByEnrollmentAccountArgs extends io.pulum
      * The principal tenant id of the user to whom the role was assigned.
      * 
      */
-    @InputImport(name="principalTenantId")
+    @Import(name="principalTenantId")
       private final @Nullable Output<String> principalTenantId;
 
     public Output<String> getPrincipalTenantId() {
@@ -73,7 +73,7 @@ public final class BillingRoleAssignmentByEnrollmentAccountArgs extends io.pulum
      * The ID of the role definition.
      * 
      */
-    @InputImport(name="roleDefinitionId")
+    @Import(name="roleDefinitionId")
       private final @Nullable Output<String> roleDefinitionId;
 
     public Output<String> getRoleDefinitionId() {
@@ -84,7 +84,7 @@ public final class BillingRoleAssignmentByEnrollmentAccountArgs extends io.pulum
      * The authentication type of the user, whether Organization or MSA, of the user to whom the role was assigned. This is supported only for billing accounts with agreement type Enterprise Agreement.
      * 
      */
-    @InputImport(name="userAuthenticationType")
+    @Import(name="userAuthenticationType")
       private final @Nullable Output<String> userAuthenticationType;
 
     public Output<String> getUserAuthenticationType() {
@@ -95,7 +95,7 @@ public final class BillingRoleAssignmentByEnrollmentAccountArgs extends io.pulum
      * The email address of the user to whom the role was assigned. This is supported only for billing accounts with agreement type Enterprise Agreement.
      * 
      */
-    @InputImport(name="userEmailAddress")
+    @Import(name="userEmailAddress")
       private final @Nullable Output<String> userEmailAddress;
 
     public Output<String> getUserEmailAddress() {

@@ -9,12 +9,12 @@ import io.pulumi.azurenative.machinelearningcompute.outputs.ContainerServiceCred
 import io.pulumi.azurenative.machinelearningcompute.outputs.ServiceAuthConfigurationResponse;
 import io.pulumi.azurenative.machinelearningcompute.outputs.SslConfigurationResponse;
 import io.pulumi.azurenative.machinelearningcompute.outputs.StorageAccountCredentialsResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ListOperationalizationClusterKeysResult {
     /**
      * Credentials for Azure AppInsights.
@@ -47,14 +47,14 @@ public final class ListOperationalizationClusterKeysResult {
      */
     private final @Nullable StorageAccountCredentialsResponse storageAccount;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ListOperationalizationClusterKeysResult(
-        @OutputCustomType.Parameter("appInsights") @Nullable AppInsightsCredentialsResponse appInsights,
-        @OutputCustomType.Parameter("containerRegistry") @Nullable ContainerRegistryCredentialsResponse containerRegistry,
-        @OutputCustomType.Parameter("containerService") @Nullable ContainerServiceCredentialsResponse containerService,
-        @OutputCustomType.Parameter("serviceAuthConfiguration") @Nullable ServiceAuthConfigurationResponse serviceAuthConfiguration,
-        @OutputCustomType.Parameter("sslConfiguration") @Nullable SslConfigurationResponse sslConfiguration,
-        @OutputCustomType.Parameter("storageAccount") @Nullable StorageAccountCredentialsResponse storageAccount) {
+        @CustomType.Parameter("appInsights") @Nullable AppInsightsCredentialsResponse appInsights,
+        @CustomType.Parameter("containerRegistry") @Nullable ContainerRegistryCredentialsResponse containerRegistry,
+        @CustomType.Parameter("containerService") @Nullable ContainerServiceCredentialsResponse containerService,
+        @CustomType.Parameter("serviceAuthConfiguration") @Nullable ServiceAuthConfigurationResponse serviceAuthConfiguration,
+        @CustomType.Parameter("sslConfiguration") @Nullable SslConfigurationResponse sslConfiguration,
+        @CustomType.Parameter("storageAccount") @Nullable StorageAccountCredentialsResponse storageAccount) {
         this.appInsights = appInsights;
         this.containerRegistry = containerRegistry;
         this.containerService = containerService;

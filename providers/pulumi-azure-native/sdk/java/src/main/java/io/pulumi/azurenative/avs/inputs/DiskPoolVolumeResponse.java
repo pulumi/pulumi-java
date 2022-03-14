@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.avs.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class DiskPoolVolumeResponse extends io.pulumi.resources.InvokeArgs
      * iSCSI provider target IP address list
      * 
      */
-    @InputImport(name="endpoints")
+    @Import(name="endpoints")
       private final @Nullable List<String> endpoints;
 
     public List<String> getEndpoints() {
@@ -34,7 +34,7 @@ public final class DiskPoolVolumeResponse extends io.pulumi.resources.InvokeArgs
      * Name of the LUN to be used
      * 
      */
-    @InputImport(name="lunName")
+    @Import(name="lunName")
       private final @Nullable String lunName;
 
     public Optional<String> getLunName() {

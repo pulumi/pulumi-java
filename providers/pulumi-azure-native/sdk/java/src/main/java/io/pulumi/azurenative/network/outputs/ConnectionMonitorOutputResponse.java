@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.ConnectionMonitorWorkspaceSettingsResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ConnectionMonitorOutputResponse {
     /**
      * Connection monitor output destination type. Currently, only "Workspace" is supported.
@@ -23,10 +23,10 @@ public final class ConnectionMonitorOutputResponse {
      */
     private final @Nullable ConnectionMonitorWorkspaceSettingsResponse workspaceSettings;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ConnectionMonitorOutputResponse(
-        @OutputCustomType.Parameter("type") @Nullable String type,
-        @OutputCustomType.Parameter("workspaceSettings") @Nullable ConnectionMonitorWorkspaceSettingsResponse workspaceSettings) {
+        @CustomType.Parameter("type") @Nullable String type,
+        @CustomType.Parameter("workspaceSettings") @Nullable ConnectionMonitorWorkspaceSettingsResponse workspaceSettings) {
         this.type = type;
         this.workspaceSettings = workspaceSettings;
     }

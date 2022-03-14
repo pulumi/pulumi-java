@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.insights.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class ScaleRuleMetricDimensionResponse extends io.pulumi.resources.
      * Name of the dimension.
      * 
      */
-    @InputImport(name="dimensionName", required=true)
+    @Import(name="dimensionName", required=true)
       private final String dimensionName;
 
     public String getDimensionName() {
@@ -32,7 +32,7 @@ public final class ScaleRuleMetricDimensionResponse extends io.pulumi.resources.
      * the dimension operator. Only 'Equals' and 'NotEquals' are supported. 'Equals' being equal to any of the values. 'NotEquals' being not equal to all of the values
      * 
      */
-    @InputImport(name="operator", required=true)
+    @Import(name="operator", required=true)
       private final String operator;
 
     public String getOperator() {
@@ -43,7 +43,7 @@ public final class ScaleRuleMetricDimensionResponse extends io.pulumi.resources.
      * list of dimension values. For example: ["App1","App2"].
      * 
      */
-    @InputImport(name="values", required=true)
+    @Import(name="values", required=true)
       private final List<String> values;
 
     public List<String> getValues() {

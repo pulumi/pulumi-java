@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.containerinstance.inputs;
 
 import io.pulumi.azurenative.containerinstance.inputs.PortResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class IpAddressResponse extends io.pulumi.resources.InvokeArgs {
      * The Dns name label for the IP.
      * 
      */
-    @InputImport(name="dnsNameLabel")
+    @Import(name="dnsNameLabel")
       private final @Nullable String dnsNameLabel;
 
     public Optional<String> getDnsNameLabel() {
@@ -35,7 +35,7 @@ public final class IpAddressResponse extends io.pulumi.resources.InvokeArgs {
      * The FQDN for the IP.
      * 
      */
-    @InputImport(name="fqdn", required=true)
+    @Import(name="fqdn", required=true)
       private final String fqdn;
 
     public String getFqdn() {
@@ -46,7 +46,7 @@ public final class IpAddressResponse extends io.pulumi.resources.InvokeArgs {
      * The IP exposed to the public internet.
      * 
      */
-    @InputImport(name="ip")
+    @Import(name="ip")
       private final @Nullable String ip;
 
     public Optional<String> getIp() {
@@ -57,7 +57,7 @@ public final class IpAddressResponse extends io.pulumi.resources.InvokeArgs {
      * The list of ports exposed on the container group.
      * 
      */
-    @InputImport(name="ports", required=true)
+    @Import(name="ports", required=true)
       private final List<PortResponse> ports;
 
     public List<PortResponse> getPorts() {
@@ -68,7 +68,7 @@ public final class IpAddressResponse extends io.pulumi.resources.InvokeArgs {
      * Specifies if the IP is exposed to the public internet or private VNET.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

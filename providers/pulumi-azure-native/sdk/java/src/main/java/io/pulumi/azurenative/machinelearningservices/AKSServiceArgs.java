@@ -12,7 +12,7 @@ import io.pulumi.azurenative.machinelearningservices.inputs.CreateServiceRequest
 import io.pulumi.azurenative.machinelearningservices.inputs.CreateServiceRequestKeysArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -30,7 +30,7 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
      * Whether or not AAD authentication is enabled.
      * 
      */
-    @InputImport(name="aadAuthEnabled")
+    @Import(name="aadAuthEnabled")
       private final @Nullable Output<Boolean> aadAuthEnabled;
 
     public Output<Boolean> getAadAuthEnabled() {
@@ -41,7 +41,7 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
      * Whether or not Application Insights is enabled.
      * 
      */
-    @InputImport(name="appInsightsEnabled")
+    @Import(name="appInsightsEnabled")
       private final @Nullable Output<Boolean> appInsightsEnabled;
 
     public Output<Boolean> getAppInsightsEnabled() {
@@ -52,7 +52,7 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
      * Whether or not authentication is enabled.
      * 
      */
-    @InputImport(name="authEnabled")
+    @Import(name="authEnabled")
       private final @Nullable Output<Boolean> authEnabled;
 
     public Output<Boolean> getAuthEnabled() {
@@ -63,7 +63,7 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
      * The auto scaler properties.
      * 
      */
-    @InputImport(name="autoScaler")
+    @Import(name="autoScaler")
       private final @Nullable Output<AKSServiceCreateRequestAutoScalerArgs> autoScaler;
 
     public Output<AKSServiceCreateRequestAutoScalerArgs> getAutoScaler() {
@@ -74,7 +74,7 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the compute resource.
      * 
      */
-    @InputImport(name="computeName")
+    @Import(name="computeName")
       private final @Nullable Output<String> computeName;
 
     public Output<String> getComputeName() {
@@ -86,7 +86,7 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
      * Expected value is 'AKS'.
      * 
      */
-    @InputImport(name="computeType", required=true)
+    @Import(name="computeType", required=true)
       private final Output<String> computeType;
 
     public Output<String> getComputeType() {
@@ -97,7 +97,7 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
      * The container resource requirements.
      * 
      */
-    @InputImport(name="containerResourceRequirements")
+    @Import(name="containerResourceRequirements")
       private final @Nullable Output<ContainerResourceRequirementsArgs> containerResourceRequirements;
 
     public Output<ContainerResourceRequirementsArgs> getContainerResourceRequirements() {
@@ -108,7 +108,7 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
      * Details of the data collection options specified.
      * 
      */
-    @InputImport(name="dataCollection")
+    @Import(name="dataCollection")
       private final @Nullable Output<AKSServiceCreateRequestDataCollectionArgs> dataCollection;
 
     public Output<AKSServiceCreateRequestDataCollectionArgs> getDataCollection() {
@@ -119,7 +119,7 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
      * The description of the service.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -130,7 +130,7 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
      * The Environment, models and assets needed for inferencing.
      * 
      */
-    @InputImport(name="environmentImageRequest")
+    @Import(name="environmentImageRequest")
       private final @Nullable Output<CreateServiceRequestEnvironmentImageRequestArgs> environmentImageRequest;
 
     public Output<CreateServiceRequestEnvironmentImageRequestArgs> getEnvironmentImageRequest() {
@@ -141,7 +141,7 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
      * Is this the default variant.
      * 
      */
-    @InputImport(name="isDefault")
+    @Import(name="isDefault")
       private final @Nullable Output<Boolean> isDefault;
 
     public Output<Boolean> getIsDefault() {
@@ -152,7 +152,7 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
      * The authentication keys.
      * 
      */
-    @InputImport(name="keys")
+    @Import(name="keys")
       private final @Nullable Output<CreateServiceRequestKeysArgs> keys;
 
     public Output<CreateServiceRequestKeysArgs> getKeys() {
@@ -163,7 +163,7 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
      * The service tag dictionary. Tags are mutable.
      * 
      */
-    @InputImport(name="kvTags")
+    @Import(name="kvTags")
       private final @Nullable Output<Map<String,String>> kvTags;
 
     public Output<Map<String,String>> getKvTags() {
@@ -174,7 +174,7 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
      * The liveness probe requirements.
      * 
      */
-    @InputImport(name="livenessProbeRequirements")
+    @Import(name="livenessProbeRequirements")
       private final @Nullable Output<AKSServiceCreateRequestLivenessProbeRequirementsArgs> livenessProbeRequirements;
 
     public Output<AKSServiceCreateRequestLivenessProbeRequirementsArgs> getLivenessProbeRequirements() {
@@ -185,7 +185,7 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the Azure location/region.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -196,7 +196,7 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
      * The maximum number of concurrent requests per container.
      * 
      */
-    @InputImport(name="maxConcurrentRequestsPerContainer")
+    @Import(name="maxConcurrentRequestsPerContainer")
       private final @Nullable Output<Integer> maxConcurrentRequestsPerContainer;
 
     public Output<Integer> getMaxConcurrentRequestsPerContainer() {
@@ -207,7 +207,7 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
      * Maximum time a request will wait in the queue (in milliseconds). After this time, the service will return 503 (Service Unavailable)
      * 
      */
-    @InputImport(name="maxQueueWaitMs")
+    @Import(name="maxQueueWaitMs")
       private final @Nullable Output<Integer> maxQueueWaitMs;
 
     public Output<Integer> getMaxQueueWaitMs() {
@@ -218,7 +218,7 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
      * Kubernetes namespace for the service.
      * 
      */
-    @InputImport(name="namespace")
+    @Import(name="namespace")
       private final @Nullable Output<String> namespace;
 
     public Output<String> getNamespace() {
@@ -229,7 +229,7 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
      * The number of replicas on the cluster.
      * 
      */
-    @InputImport(name="numReplicas")
+    @Import(name="numReplicas")
       private final @Nullable Output<Integer> numReplicas;
 
     public Output<Integer> getNumReplicas() {
@@ -240,7 +240,7 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
      * The service properties dictionary. Properties are immutable.
      * 
      */
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable Output<Map<String,String>> properties;
 
     public Output<Map<String,String>> getProperties() {
@@ -251,7 +251,7 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the resource group in which workspace is located.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -262,7 +262,7 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
      * The scoring timeout in milliseconds.
      * 
      */
-    @InputImport(name="scoringTimeoutMs")
+    @Import(name="scoringTimeoutMs")
       private final @Nullable Output<Integer> scoringTimeoutMs;
 
     public Output<Integer> getScoringTimeoutMs() {
@@ -273,7 +273,7 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the Azure Machine Learning service.
      * 
      */
-    @InputImport(name="serviceName")
+    @Import(name="serviceName")
       private final @Nullable Output<String> serviceName;
 
     public Output<String> getServiceName() {
@@ -284,7 +284,7 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
      * The amount of traffic variant receives.
      * 
      */
-    @InputImport(name="trafficPercentile")
+    @Import(name="trafficPercentile")
       private final @Nullable Output<Double> trafficPercentile;
 
     public Output<Double> getTrafficPercentile() {
@@ -295,7 +295,7 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
      * The type of the variant.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<Either<String,VariantType>> type;
 
     public Output<Either<String,VariantType>> getType() {
@@ -306,7 +306,7 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
      * Name of Azure Machine Learning workspace.
      * 
      */
-    @InputImport(name="workspaceName", required=true)
+    @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;
 
     public Output<String> getWorkspaceName() {

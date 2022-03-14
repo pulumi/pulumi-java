@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.sql.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetLongTermRetentionPolicyResult {
     /**
      * Resource ID.
@@ -48,15 +48,15 @@ public final class GetLongTermRetentionPolicyResult {
      */
     private final @Nullable String yearlyRetention;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetLongTermRetentionPolicyResult(
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("monthlyRetention") @Nullable String monthlyRetention,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("weekOfYear") @Nullable Integer weekOfYear,
-        @OutputCustomType.Parameter("weeklyRetention") @Nullable String weeklyRetention,
-        @OutputCustomType.Parameter("yearlyRetention") @Nullable String yearlyRetention) {
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("monthlyRetention") @Nullable String monthlyRetention,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("weekOfYear") @Nullable Integer weekOfYear,
+        @CustomType.Parameter("weeklyRetention") @Nullable String weeklyRetention,
+        @CustomType.Parameter("yearlyRetention") @Nullable String yearlyRetention) {
         this.id = id;
         this.monthlyRetention = monthlyRetention;
         this.name = name;

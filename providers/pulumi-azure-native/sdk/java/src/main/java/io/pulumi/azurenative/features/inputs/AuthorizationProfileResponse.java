@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.features.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class AuthorizationProfileResponse extends io.pulumi.resources.Invo
      * The approved time
      * 
      */
-    @InputImport(name="approvedTime", required=true)
+    @Import(name="approvedTime", required=true)
       private final String approvedTime;
 
     public String getApprovedTime() {
@@ -31,7 +31,7 @@ public final class AuthorizationProfileResponse extends io.pulumi.resources.Invo
      * The approver
      * 
      */
-    @InputImport(name="approver", required=true)
+    @Import(name="approver", required=true)
       private final String approver;
 
     public String getApprover() {
@@ -42,7 +42,7 @@ public final class AuthorizationProfileResponse extends io.pulumi.resources.Invo
      * The requested time
      * 
      */
-    @InputImport(name="requestedTime", required=true)
+    @Import(name="requestedTime", required=true)
       private final String requestedTime;
 
     public String getRequestedTime() {
@@ -53,7 +53,7 @@ public final class AuthorizationProfileResponse extends io.pulumi.resources.Invo
      * The requester
      * 
      */
-    @InputImport(name="requester", required=true)
+    @Import(name="requester", required=true)
       private final String requester;
 
     public String getRequester() {
@@ -64,7 +64,7 @@ public final class AuthorizationProfileResponse extends io.pulumi.resources.Invo
      * The requester object id
      * 
      */
-    @InputImport(name="requesterObjectId", required=true)
+    @Import(name="requesterObjectId", required=true)
       private final String requesterObjectId;
 
     public String getRequesterObjectId() {

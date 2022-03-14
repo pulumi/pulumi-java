@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.insights.outputs;
 
 import io.pulumi.azurenative.insights.outputs.CriteriaResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class LogToMetricActionResponse {
     /**
      * Criteria of Metric
@@ -23,10 +23,10 @@ public final class LogToMetricActionResponse {
      */
     private final String odataType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LogToMetricActionResponse(
-        @OutputCustomType.Parameter("criteria") List<CriteriaResponse> criteria,
-        @OutputCustomType.Parameter("odataType") String odataType) {
+        @CustomType.Parameter("criteria") List<CriteriaResponse> criteria,
+        @CustomType.Parameter("odataType") String odataType) {
         this.criteria = criteria;
         this.odataType = odataType;
     }

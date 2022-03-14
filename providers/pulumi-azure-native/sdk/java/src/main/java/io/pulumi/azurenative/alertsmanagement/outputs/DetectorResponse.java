@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.alertsmanagement.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DetectorResponse {
     /**
      * The Smart Detector description. By default this is not populated, unless it's specified in expandDetector
@@ -45,14 +45,14 @@ public final class DetectorResponse {
      */
     private final @Nullable List<String> supportedResourceTypes;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DetectorResponse(
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("imagePaths") @Nullable List<String> imagePaths,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("parameters") @Nullable Map<String,Object> parameters,
-        @OutputCustomType.Parameter("supportedResourceTypes") @Nullable List<String> supportedResourceTypes) {
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("imagePaths") @Nullable List<String> imagePaths,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("parameters") @Nullable Map<String,Object> parameters,
+        @CustomType.Parameter("supportedResourceTypes") @Nullable List<String> supportedResourceTypes) {
         this.description = description;
         this.id = id;
         this.imagePaths = imagePaths;

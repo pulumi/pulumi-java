@@ -5,7 +5,7 @@ package io.pulumi.azurenative.hdinsight.inputs;
 
 import io.pulumi.azurenative.hdinsight.inputs.SshPublicKeyArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class SshProfileArgs extends io.pulumi.resources.ResourceArgs {
      * The list of SSH public keys.
      * 
      */
-    @InputImport(name="publicKeys")
+    @Import(name="publicKeys")
       private final @Nullable Output<List<SshPublicKeyArgs>> publicKeys;
 
     public Output<List<SshPublicKeyArgs>> getPublicKeys() {

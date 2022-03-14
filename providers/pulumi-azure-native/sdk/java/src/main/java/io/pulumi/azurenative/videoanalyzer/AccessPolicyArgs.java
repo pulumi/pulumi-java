@@ -7,7 +7,7 @@ import io.pulumi.azurenative.videoanalyzer.enums.AccessPolicyRole;
 import io.pulumi.azurenative.videoanalyzer.inputs.JwtAuthenticationArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public final class AccessPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the access policy to create or update.
      * 
      */
-    @InputImport(name="accessPolicyName")
+    @Import(name="accessPolicyName")
       private final @Nullable Output<String> accessPolicyName;
 
     public Output<String> getAccessPolicyName() {
@@ -32,7 +32,7 @@ public final class AccessPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * The Azure Video Analyzer account name.
      * 
      */
-    @InputImport(name="accountName", required=true)
+    @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
     public Output<String> getAccountName() {
@@ -43,7 +43,7 @@ public final class AccessPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * Authentication method to be used when validating client API access.
      * 
      */
-    @InputImport(name="authentication")
+    @Import(name="authentication")
       private final @Nullable Output<JwtAuthenticationArgs> authentication;
 
     public Output<JwtAuthenticationArgs> getAuthentication() {
@@ -54,7 +54,7 @@ public final class AccessPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -65,7 +65,7 @@ public final class AccessPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * Defines the access level granted by this policy.
      * 
      */
-    @InputImport(name="role")
+    @Import(name="role")
       private final @Nullable Output<Either<String,AccessPolicyRole>> role;
 
     public Output<Either<String,AccessPolicyRole>> getRole() {

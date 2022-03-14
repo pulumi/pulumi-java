@@ -5,7 +5,7 @@ package io.pulumi.azurenative.securityinsights.inputs;
 
 import io.pulumi.azurenative.securityinsights.inputs.AutomationRuleModifyPropertiesActionActionConfigurationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class AutomationRuleModifyPropertiesActionArgs extends io.pulumi.re
      * The configuration of the modify properties automation rule action
      * 
      */
-    @InputImport(name="actionConfiguration", required=true)
+    @Import(name="actionConfiguration", required=true)
       private final Output<AutomationRuleModifyPropertiesActionActionConfigurationArgs> actionConfiguration;
 
     public Output<AutomationRuleModifyPropertiesActionActionConfigurationArgs> getActionConfiguration() {
@@ -35,7 +35,7 @@ public final class AutomationRuleModifyPropertiesActionArgs extends io.pulumi.re
      * Expected value is 'ModifyProperties'.
      * 
      */
-    @InputImport(name="actionType", required=true)
+    @Import(name="actionType", required=true)
       private final Output<String> actionType;
 
     public Output<String> getActionType() {
@@ -46,7 +46,7 @@ public final class AutomationRuleModifyPropertiesActionArgs extends io.pulumi.re
      * The order of execution of the automation rule action
      * 
      */
-    @InputImport(name="order", required=true)
+    @Import(name="order", required=true)
       private final Output<Integer> order;
 
     public Output<Integer> getOrder() {

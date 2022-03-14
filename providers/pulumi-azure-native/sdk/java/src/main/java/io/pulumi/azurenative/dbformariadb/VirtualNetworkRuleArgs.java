@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.dbformariadb;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class VirtualNetworkRuleArgs extends io.pulumi.resources.ResourceAr
      * Create firewall rule before the virtual network has vnet service endpoint enabled.
      * 
      */
-    @InputImport(name="ignoreMissingVnetServiceEndpoint")
+    @Import(name="ignoreMissingVnetServiceEndpoint")
       private final @Nullable Output<Boolean> ignoreMissingVnetServiceEndpoint;
 
     public Output<Boolean> getIgnoreMissingVnetServiceEndpoint() {
@@ -30,7 +30,7 @@ public final class VirtualNetworkRuleArgs extends io.pulumi.resources.ResourceAr
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -41,7 +41,7 @@ public final class VirtualNetworkRuleArgs extends io.pulumi.resources.ResourceAr
      * The name of the server.
      * 
      */
-    @InputImport(name="serverName", required=true)
+    @Import(name="serverName", required=true)
       private final Output<String> serverName;
 
     public Output<String> getServerName() {
@@ -52,7 +52,7 @@ public final class VirtualNetworkRuleArgs extends io.pulumi.resources.ResourceAr
      * The name of the virtual network rule.
      * 
      */
-    @InputImport(name="virtualNetworkRuleName")
+    @Import(name="virtualNetworkRuleName")
       private final @Nullable Output<String> virtualNetworkRuleName;
 
     public Output<String> getVirtualNetworkRuleName() {
@@ -63,7 +63,7 @@ public final class VirtualNetworkRuleArgs extends io.pulumi.resources.ResourceAr
      * The ARM resource id of the virtual network subnet.
      * 
      */
-    @InputImport(name="virtualNetworkSubnetId", required=true)
+    @Import(name="virtualNetworkSubnetId", required=true)
       private final Output<String> virtualNetworkSubnetId;
 
     public Output<String> getVirtualNetworkSubnetId() {

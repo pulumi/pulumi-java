@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class SystemServiceResponse extends io.pulumi.resources.InvokeArgs 
      * Public IP address
      * 
      */
-    @InputImport(name="publicIpAddress", required=true)
+    @Import(name="publicIpAddress", required=true)
       private final String publicIpAddress;
 
     public String getPublicIpAddress() {
@@ -31,7 +31,7 @@ public final class SystemServiceResponse extends io.pulumi.resources.InvokeArgs 
      * The type of this system service.
      * 
      */
-    @InputImport(name="systemServiceType", required=true)
+    @Import(name="systemServiceType", required=true)
       private final String systemServiceType;
 
     public String getSystemServiceType() {
@@ -42,7 +42,7 @@ public final class SystemServiceResponse extends io.pulumi.resources.InvokeArgs 
      * The version for this type.
      * 
      */
-    @InputImport(name="version", required=true)
+    @Import(name="version", required=true)
       private final String version;
 
     public String getVersion() {

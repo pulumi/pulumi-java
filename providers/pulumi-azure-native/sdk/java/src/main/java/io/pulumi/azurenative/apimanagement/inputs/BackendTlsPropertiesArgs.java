@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.apimanagement.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class BackendTlsPropertiesArgs extends io.pulumi.resources.Resource
      * Flag indicating whether SSL certificate chain validation should be done when using self-signed certificates for this backend host.
      * 
      */
-    @InputImport(name="validateCertificateChain")
+    @Import(name="validateCertificateChain")
       private final @Nullable Output<Boolean> validateCertificateChain;
 
     public Output<Boolean> getValidateCertificateChain() {
@@ -33,7 +33,7 @@ public final class BackendTlsPropertiesArgs extends io.pulumi.resources.Resource
      * Flag indicating whether SSL certificate name validation should be done when using self-signed certificates for this backend host.
      * 
      */
-    @InputImport(name="validateCertificateName")
+    @Import(name="validateCertificateName")
       private final @Nullable Output<Boolean> validateCertificateName;
 
     public Output<Boolean> getValidateCertificateName() {

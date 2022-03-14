@@ -6,7 +6,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 import io.pulumi.azurenative.datafactory.inputs.LinkedIntegrationRuntimeKeyAuthorizationResponse;
 import io.pulumi.azurenative.datafactory.inputs.LinkedIntegrationRuntimeRbacAuthorizationResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class SelfHostedIntegrationRuntimeResponse extends io.pulumi.resour
      * Integration runtime description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable String description;
 
     public Optional<String> getDescription() {
@@ -36,7 +36,7 @@ public final class SelfHostedIntegrationRuntimeResponse extends io.pulumi.resour
      * The base definition of a linked integration runtime.
      * 
      */
-    @InputImport(name="linkedInfo")
+    @Import(name="linkedInfo")
       private final @Nullable Either<LinkedIntegrationRuntimeKeyAuthorizationResponse,LinkedIntegrationRuntimeRbacAuthorizationResponse> linkedInfo;
 
     public Either<LinkedIntegrationRuntimeKeyAuthorizationResponse,LinkedIntegrationRuntimeRbacAuthorizationResponse> getLinkedInfo() {
@@ -48,7 +48,7 @@ public final class SelfHostedIntegrationRuntimeResponse extends io.pulumi.resour
      * Expected value is 'SelfHosted'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

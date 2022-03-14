@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.sqlvirtualmachine.inputs;
 
 import io.pulumi.azurenative.sqlvirtualmachine.inputs.PrivateIPAddressResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class LoadBalancerConfigurationResponse extends io.pulumi.resources
      * Resource id of the load balancer.
      * 
      */
-    @InputImport(name="loadBalancerResourceId")
+    @Import(name="loadBalancerResourceId")
       private final @Nullable String loadBalancerResourceId;
 
     public Optional<String> getLoadBalancerResourceId() {
@@ -36,7 +36,7 @@ public final class LoadBalancerConfigurationResponse extends io.pulumi.resources
      * Private IP address.
      * 
      */
-    @InputImport(name="privateIpAddress")
+    @Import(name="privateIpAddress")
       private final @Nullable PrivateIPAddressResponse privateIpAddress;
 
     public Optional<PrivateIPAddressResponse> getPrivateIpAddress() {
@@ -47,7 +47,7 @@ public final class LoadBalancerConfigurationResponse extends io.pulumi.resources
      * Probe port.
      * 
      */
-    @InputImport(name="probePort")
+    @Import(name="probePort")
       private final @Nullable Integer probePort;
 
     public Optional<Integer> getProbePort() {
@@ -58,7 +58,7 @@ public final class LoadBalancerConfigurationResponse extends io.pulumi.resources
      * Resource id of the public IP.
      * 
      */
-    @InputImport(name="publicIpAddressResourceId")
+    @Import(name="publicIpAddressResourceId")
       private final @Nullable String publicIpAddressResourceId;
 
     public Optional<String> getPublicIpAddressResourceId() {
@@ -69,7 +69,7 @@ public final class LoadBalancerConfigurationResponse extends io.pulumi.resources
      * List of the SQL virtual machine instance resource id's that are enrolled into the availability group listener.
      * 
      */
-    @InputImport(name="sqlVirtualMachineInstances")
+    @Import(name="sqlVirtualMachineInstances")
       private final @Nullable List<String> sqlVirtualMachineInstances;
 
     public List<String> getSqlVirtualMachineInstances() {

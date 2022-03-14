@@ -5,7 +5,7 @@ package io.pulumi.azurenative.containerinstance.inputs;
 
 import io.pulumi.azurenative.containerinstance.inputs.ContainerStateResponse;
 import io.pulumi.azurenative.containerinstance.inputs.EventResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class InitContainerPropertiesDefinitionResponseInstanceView extends
      * The current state of the init container.
      * 
      */
-    @InputImport(name="currentState", required=true)
+    @Import(name="currentState", required=true)
       private final ContainerStateResponse currentState;
 
     public ContainerStateResponse getCurrentState() {
@@ -34,7 +34,7 @@ public final class InitContainerPropertiesDefinitionResponseInstanceView extends
      * The events of the init container.
      * 
      */
-    @InputImport(name="events", required=true)
+    @Import(name="events", required=true)
       private final List<EventResponse> events;
 
     public List<EventResponse> getEvents() {
@@ -45,7 +45,7 @@ public final class InitContainerPropertiesDefinitionResponseInstanceView extends
      * The previous state of the init container.
      * 
      */
-    @InputImport(name="previousState", required=true)
+    @Import(name="previousState", required=true)
       private final ContainerStateResponse previousState;
 
     public ContainerStateResponse getPreviousState() {
@@ -56,7 +56,7 @@ public final class InitContainerPropertiesDefinitionResponseInstanceView extends
      * The number of times that the init container has been restarted.
      * 
      */
-    @InputImport(name="restartCount", required=true)
+    @Import(name="restartCount", required=true)
       private final Integer restartCount;
 
     public Integer getRestartCount() {

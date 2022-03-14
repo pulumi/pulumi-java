@@ -6,7 +6,7 @@ package io.pulumi.azurenative.sql;
 import io.pulumi.azurenative.sql.enums.TransparentDataEncryptionStatus;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class TransparentDataEncryptionArgs extends io.pulumi.resources.Res
      * The name of the database for which setting the transparent data encryption applies.
      * 
      */
-    @InputImport(name="databaseName", required=true)
+    @Import(name="databaseName", required=true)
       private final Output<String> databaseName;
 
     public Output<String> getDatabaseName() {
@@ -31,7 +31,7 @@ public final class TransparentDataEncryptionArgs extends io.pulumi.resources.Res
      * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -42,7 +42,7 @@ public final class TransparentDataEncryptionArgs extends io.pulumi.resources.Res
      * The name of the server.
      * 
      */
-    @InputImport(name="serverName", required=true)
+    @Import(name="serverName", required=true)
       private final Output<String> serverName;
 
     public Output<String> getServerName() {
@@ -53,7 +53,7 @@ public final class TransparentDataEncryptionArgs extends io.pulumi.resources.Res
      * The status of the database transparent data encryption.
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable Output<Either<String,TransparentDataEncryptionStatus>> status;
 
     public Output<Either<String,TransparentDataEncryptionStatus>> getStatus() {
@@ -64,7 +64,7 @@ public final class TransparentDataEncryptionArgs extends io.pulumi.resources.Res
      * The name of the transparent data encryption configuration.
      * 
      */
-    @InputImport(name="transparentDataEncryptionName")
+    @Import(name="transparentDataEncryptionName")
       private final @Nullable Output<String> transparentDataEncryptionName;
 
     public Output<String> getTransparentDataEncryptionName() {

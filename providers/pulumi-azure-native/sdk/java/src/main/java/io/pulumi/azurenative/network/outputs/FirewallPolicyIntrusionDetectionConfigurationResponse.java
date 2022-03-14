@@ -5,12 +5,12 @@ package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsResponse;
 import io.pulumi.azurenative.network.outputs.FirewallPolicyIntrusionDetectionSignatureSpecificationResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FirewallPolicyIntrusionDetectionConfigurationResponse {
     /**
      * List of rules for traffic to bypass.
@@ -23,10 +23,10 @@ public final class FirewallPolicyIntrusionDetectionConfigurationResponse {
      */
     private final @Nullable List<FirewallPolicyIntrusionDetectionSignatureSpecificationResponse> signatureOverrides;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FirewallPolicyIntrusionDetectionConfigurationResponse(
-        @OutputCustomType.Parameter("bypassTrafficSettings") @Nullable List<FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsResponse> bypassTrafficSettings,
-        @OutputCustomType.Parameter("signatureOverrides") @Nullable List<FirewallPolicyIntrusionDetectionSignatureSpecificationResponse> signatureOverrides) {
+        @CustomType.Parameter("bypassTrafficSettings") @Nullable List<FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsResponse> bypassTrafficSettings,
+        @CustomType.Parameter("signatureOverrides") @Nullable List<FirewallPolicyIntrusionDetectionSignatureSpecificationResponse> signatureOverrides) {
         this.bypassTrafficSettings = bypassTrafficSettings;
         this.signatureOverrides = signatureOverrides;
     }

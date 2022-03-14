@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.labservices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
      * PrivateIp address of the Compute VM
      * 
      */
-    @InputImport(name="privateIpAddress", required=true)
+    @Import(name="privateIpAddress", required=true)
       private final String privateIpAddress;
 
     public String getPrivateIpAddress() {
@@ -31,7 +31,7 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
      * Connection information for Windows
      * 
      */
-    @InputImport(name="rdpAuthority", required=true)
+    @Import(name="rdpAuthority", required=true)
       private final String rdpAuthority;
 
     public String getRdpAuthority() {
@@ -42,7 +42,7 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
      * Connection information for Linux
      * 
      */
-    @InputImport(name="sshAuthority", required=true)
+    @Import(name="sshAuthority", required=true)
       private final String sshAuthority;
 
     public String getSshAuthority() {
@@ -53,7 +53,7 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
      * Username of the VM
      * 
      */
-    @InputImport(name="username", required=true)
+    @Import(name="username", required=true)
       private final String username;
 
     public String getUsername() {

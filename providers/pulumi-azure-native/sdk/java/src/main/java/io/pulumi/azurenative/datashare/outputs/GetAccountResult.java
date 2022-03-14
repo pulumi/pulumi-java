@@ -5,14 +5,14 @@ package io.pulumi.azurenative.datashare.outputs;
 
 import io.pulumi.azurenative.datashare.outputs.IdentityResponse;
 import io.pulumi.azurenative.datashare.outputs.SystemDataResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetAccountResult {
     /**
      * Time at which the account was created.
@@ -70,19 +70,19 @@ public final class GetAccountResult {
      */
     private final String userName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetAccountResult(
-        @OutputCustomType.Parameter("createdAt") String createdAt,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("identity") IdentityResponse identity,
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("userEmail") String userEmail,
-        @OutputCustomType.Parameter("userName") String userName) {
+        @CustomType.Parameter("createdAt") String createdAt,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("identity") IdentityResponse identity,
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("systemData") SystemDataResponse systemData,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("userEmail") String userEmail,
+        @CustomType.Parameter("userName") String userName) {
         this.createdAt = createdAt;
         this.id = id;
         this.identity = identity;

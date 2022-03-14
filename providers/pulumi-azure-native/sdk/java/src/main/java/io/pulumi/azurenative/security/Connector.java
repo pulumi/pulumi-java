@@ -11,7 +11,7 @@ import io.pulumi.azurenative.security.outputs.GcpCredentialsDetailsPropertiesRes
 import io.pulumi.azurenative.security.outputs.HybridComputeSettingsPropertiesResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Object;
 import java.lang.String;
@@ -39,7 +39,7 @@ public class Connector extends io.pulumi.resources.CustomResource {
      * Settings for authentication management, these settings are relevant only for the cloud connector.
      * 
      */
-    @OutputExport(name="authenticationDetails", type=Object.class, parameters={})
+    @Export(name="authenticationDetails", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> authenticationDetails;
 
     /**
@@ -53,7 +53,7 @@ public class Connector extends io.pulumi.resources.CustomResource {
      * Settings for hybrid compute management. These settings are relevant only for Arc autoProvision (Hybrid Compute).
      * 
      */
-    @OutputExport(name="hybridComputeSettings", type=HybridComputeSettingsPropertiesResponse.class, parameters={})
+    @Export(name="hybridComputeSettings", type=HybridComputeSettingsPropertiesResponse.class, parameters={})
     private Output</* @Nullable */ HybridComputeSettingsPropertiesResponse> hybridComputeSettings;
 
     /**
@@ -67,7 +67,7 @@ public class Connector extends io.pulumi.resources.CustomResource {
      * Resource name
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -81,7 +81,7 @@ public class Connector extends io.pulumi.resources.CustomResource {
      * Resource type
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.datafactory.outputs;
 
 import io.pulumi.azurenative.datafactory.outputs.LinkedServiceReferenceResponse;
 import io.pulumi.azurenative.datafactory.outputs.TriggerPipelineReferenceResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -14,7 +14,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BlobTriggerResponse {
     /**
      * List of tags that can be used for describing the trigger.
@@ -58,16 +58,16 @@ public final class BlobTriggerResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BlobTriggerResponse(
-        @OutputCustomType.Parameter("annotations") @Nullable List<Object> annotations,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("folderPath") String folderPath,
-        @OutputCustomType.Parameter("linkedService") LinkedServiceReferenceResponse linkedService,
-        @OutputCustomType.Parameter("maxConcurrency") Integer maxConcurrency,
-        @OutputCustomType.Parameter("pipelines") @Nullable List<TriggerPipelineReferenceResponse> pipelines,
-        @OutputCustomType.Parameter("runtimeState") String runtimeState,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("annotations") @Nullable List<Object> annotations,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("folderPath") String folderPath,
+        @CustomType.Parameter("linkedService") LinkedServiceReferenceResponse linkedService,
+        @CustomType.Parameter("maxConcurrency") Integer maxConcurrency,
+        @CustomType.Parameter("pipelines") @Nullable List<TriggerPipelineReferenceResponse> pipelines,
+        @CustomType.Parameter("runtimeState") String runtimeState,
+        @CustomType.Parameter("type") String type) {
         this.annotations = annotations;
         this.description = description;
         this.folderPath = folderPath;

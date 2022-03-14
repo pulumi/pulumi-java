@@ -10,7 +10,7 @@ import io.pulumi.azurenative.datafactory.inputs.LinkedServiceReferenceArgs;
 import io.pulumi.azurenative.datafactory.inputs.UserPropertyArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -31,7 +31,7 @@ public final class HDInsightStreamingActivityArgs extends io.pulumi.resources.Re
      * User specified arguments to HDInsightActivity.
      * 
      */
-    @InputImport(name="arguments")
+    @Import(name="arguments")
       private final @Nullable Output<List<Object>> arguments;
 
     public Output<List<Object>> getArguments() {
@@ -42,7 +42,7 @@ public final class HDInsightStreamingActivityArgs extends io.pulumi.resources.Re
      * Combiner executable name. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="combiner")
+    @Import(name="combiner")
       private final @Nullable Output<Object> combiner;
 
     public Output<Object> getCombiner() {
@@ -53,7 +53,7 @@ public final class HDInsightStreamingActivityArgs extends io.pulumi.resources.Re
      * Command line environment values.
      * 
      */
-    @InputImport(name="commandEnvironment")
+    @Import(name="commandEnvironment")
       private final @Nullable Output<List<Object>> commandEnvironment;
 
     public Output<List<Object>> getCommandEnvironment() {
@@ -64,7 +64,7 @@ public final class HDInsightStreamingActivityArgs extends io.pulumi.resources.Re
      * Allows user to specify defines for streaming job request.
      * 
      */
-    @InputImport(name="defines")
+    @Import(name="defines")
       private final @Nullable Output<Map<String,Object>> defines;
 
     public Output<Map<String,Object>> getDefines() {
@@ -75,7 +75,7 @@ public final class HDInsightStreamingActivityArgs extends io.pulumi.resources.Re
      * Activity depends on condition.
      * 
      */
-    @InputImport(name="dependsOn")
+    @Import(name="dependsOn")
       private final @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
 
     public Output<List<ActivityDependencyArgs>> getDependsOn() {
@@ -86,7 +86,7 @@ public final class HDInsightStreamingActivityArgs extends io.pulumi.resources.Re
      * Activity description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -97,7 +97,7 @@ public final class HDInsightStreamingActivityArgs extends io.pulumi.resources.Re
      * Linked service reference where the files are located.
      * 
      */
-    @InputImport(name="fileLinkedService")
+    @Import(name="fileLinkedService")
       private final @Nullable Output<LinkedServiceReferenceArgs> fileLinkedService;
 
     public Output<LinkedServiceReferenceArgs> getFileLinkedService() {
@@ -108,7 +108,7 @@ public final class HDInsightStreamingActivityArgs extends io.pulumi.resources.Re
      * Paths to streaming job files. Can be directories.
      * 
      */
-    @InputImport(name="filePaths", required=true)
+    @Import(name="filePaths", required=true)
       private final Output<List<Object>> filePaths;
 
     public Output<List<Object>> getFilePaths() {
@@ -119,7 +119,7 @@ public final class HDInsightStreamingActivityArgs extends io.pulumi.resources.Re
      * Debug info option.
      * 
      */
-    @InputImport(name="getDebugInfo")
+    @Import(name="getDebugInfo")
       private final @Nullable Output<Either<String,HDInsightActivityDebugInfoOption>> getDebugInfo;
 
     public Output<Either<String,HDInsightActivityDebugInfoOption>> getGetDebugInfo() {
@@ -130,7 +130,7 @@ public final class HDInsightStreamingActivityArgs extends io.pulumi.resources.Re
      * Input blob path. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="input", required=true)
+    @Import(name="input", required=true)
       private final Output<Object> input;
 
     public Output<Object> getInput() {
@@ -141,7 +141,7 @@ public final class HDInsightStreamingActivityArgs extends io.pulumi.resources.Re
      * Linked service reference.
      * 
      */
-    @InputImport(name="linkedServiceName")
+    @Import(name="linkedServiceName")
       private final @Nullable Output<LinkedServiceReferenceArgs> linkedServiceName;
 
     public Output<LinkedServiceReferenceArgs> getLinkedServiceName() {
@@ -152,7 +152,7 @@ public final class HDInsightStreamingActivityArgs extends io.pulumi.resources.Re
      * Mapper executable name. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="mapper", required=true)
+    @Import(name="mapper", required=true)
       private final Output<Object> mapper;
 
     public Output<Object> getMapper() {
@@ -163,7 +163,7 @@ public final class HDInsightStreamingActivityArgs extends io.pulumi.resources.Re
      * Activity name.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -174,7 +174,7 @@ public final class HDInsightStreamingActivityArgs extends io.pulumi.resources.Re
      * Output blob path. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="output", required=true)
+    @Import(name="output", required=true)
       private final Output<Object> output;
 
     public Output<Object> getOutput() {
@@ -185,7 +185,7 @@ public final class HDInsightStreamingActivityArgs extends io.pulumi.resources.Re
      * Activity policy.
      * 
      */
-    @InputImport(name="policy")
+    @Import(name="policy")
       private final @Nullable Output<ActivityPolicyArgs> policy;
 
     public Output<ActivityPolicyArgs> getPolicy() {
@@ -196,7 +196,7 @@ public final class HDInsightStreamingActivityArgs extends io.pulumi.resources.Re
      * Reducer executable name. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="reducer", required=true)
+    @Import(name="reducer", required=true)
       private final Output<Object> reducer;
 
     public Output<Object> getReducer() {
@@ -207,7 +207,7 @@ public final class HDInsightStreamingActivityArgs extends io.pulumi.resources.Re
      * Storage linked service references.
      * 
      */
-    @InputImport(name="storageLinkedServices")
+    @Import(name="storageLinkedServices")
       private final @Nullable Output<List<LinkedServiceReferenceArgs>> storageLinkedServices;
 
     public Output<List<LinkedServiceReferenceArgs>> getStorageLinkedServices() {
@@ -219,7 +219,7 @@ public final class HDInsightStreamingActivityArgs extends io.pulumi.resources.Re
      * Expected value is 'HDInsightStreaming'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {
@@ -230,7 +230,7 @@ public final class HDInsightStreamingActivityArgs extends io.pulumi.resources.Re
      * Activity user properties.
      * 
      */
-    @InputImport(name="userProperties")
+    @Import(name="userProperties")
       private final @Nullable Output<List<UserPropertyArgs>> userProperties;
 
     public Output<List<UserPropertyArgs>> getUserProperties() {

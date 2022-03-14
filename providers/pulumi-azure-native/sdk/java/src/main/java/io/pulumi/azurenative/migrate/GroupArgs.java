@@ -5,7 +5,7 @@ package io.pulumi.azurenative.migrate;
 
 import io.pulumi.azurenative.migrate.inputs.GroupPropertiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * For optimistic concurrency control.
      * 
      */
-    @InputImport(name="eTag")
+    @Import(name="eTag")
       private final @Nullable Output<String> eTag;
 
     public Output<String> getETag() {
@@ -30,7 +30,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * Unique name of a group within a project.
      * 
      */
-    @InputImport(name="groupName")
+    @Import(name="groupName")
       private final @Nullable Output<String> groupName;
 
     public Output<String> getGroupName() {
@@ -41,7 +41,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the Azure Migrate project.
      * 
      */
-    @InputImport(name="projectName", required=true)
+    @Import(name="projectName", required=true)
       private final Output<String> projectName;
 
     public Output<String> getProjectName() {
@@ -52,7 +52,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * Properties of the group.
      * 
      */
-    @InputImport(name="properties", required=true)
+    @Import(name="properties", required=true)
       private final Output<GroupPropertiesArgs> properties;
 
     public Output<GroupPropertiesArgs> getProperties() {
@@ -63,7 +63,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the Azure Resource Group that project is part of.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {

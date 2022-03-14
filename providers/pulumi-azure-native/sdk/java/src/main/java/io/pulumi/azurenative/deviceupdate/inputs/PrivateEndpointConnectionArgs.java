@@ -5,7 +5,7 @@ package io.pulumi.azurenative.deviceupdate.inputs;
 
 import io.pulumi.azurenative.deviceupdate.inputs.PrivateLinkServiceConnectionStateArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
      * Array of group IDs.
      * 
      */
-    @InputImport(name="groupIds")
+    @Import(name="groupIds")
       private final @Nullable Output<List<String>> groupIds;
 
     public Output<List<String>> getGroupIds() {
@@ -35,7 +35,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
      * A collection of information about the state of the connection between service consumer and provider.
      * 
      */
-    @InputImport(name="privateLinkServiceConnectionState", required=true)
+    @Import(name="privateLinkServiceConnectionState", required=true)
       private final Output<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState;
 
     public Output<PrivateLinkServiceConnectionStateArgs> getPrivateLinkServiceConnectionState() {

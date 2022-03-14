@@ -7,7 +7,7 @@ import io.pulumi.azurenative.mixedreality.inputs.IdentityArgs;
 import io.pulumi.azurenative.mixedreality.inputs.ObjectAnchorsAccountIdentityArgs;
 import io.pulumi.azurenative.mixedreality.inputs.SkuArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -22,14 +22,14 @@ public final class ObjectAnchorsAccountArgs extends io.pulumi.resources.Resource
      * Name of an Mixed Reality Account.
      * 
      */
-    @InputImport(name="accountName")
+    @Import(name="accountName")
       private final @Nullable Output<String> accountName;
 
     public Output<String> getAccountName() {
         return this.accountName == null ? Output.empty() : this.accountName;
     }
 
-    @InputImport(name="identity")
+    @Import(name="identity")
       private final @Nullable Output<ObjectAnchorsAccountIdentityArgs> identity;
 
     public Output<ObjectAnchorsAccountIdentityArgs> getIdentity() {
@@ -40,7 +40,7 @@ public final class ObjectAnchorsAccountArgs extends io.pulumi.resources.Resource
      * The kind of account, if supported
      * 
      */
-    @InputImport(name="kind")
+    @Import(name="kind")
       private final @Nullable Output<SkuArgs> kind;
 
     public Output<SkuArgs> getKind() {
@@ -51,7 +51,7 @@ public final class ObjectAnchorsAccountArgs extends io.pulumi.resources.Resource
      * The geo-location where the resource lives
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -62,7 +62,7 @@ public final class ObjectAnchorsAccountArgs extends io.pulumi.resources.Resource
      * The plan associated with this account
      * 
      */
-    @InputImport(name="plan")
+    @Import(name="plan")
       private final @Nullable Output<IdentityArgs> plan;
 
     public Output<IdentityArgs> getPlan() {
@@ -73,7 +73,7 @@ public final class ObjectAnchorsAccountArgs extends io.pulumi.resources.Resource
      * Name of an Azure resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -84,7 +84,7 @@ public final class ObjectAnchorsAccountArgs extends io.pulumi.resources.Resource
      * The sku associated with this account
      * 
      */
-    @InputImport(name="sku")
+    @Import(name="sku")
       private final @Nullable Output<SkuArgs> sku;
 
     public Output<SkuArgs> getSku() {
@@ -95,7 +95,7 @@ public final class ObjectAnchorsAccountArgs extends io.pulumi.resources.Resource
      * The name of the storage account associated with this accountId
      * 
      */
-    @InputImport(name="storageAccountName")
+    @Import(name="storageAccountName")
       private final @Nullable Output<String> storageAccountName;
 
     public Output<String> getStorageAccountName() {
@@ -106,7 +106,7 @@ public final class ObjectAnchorsAccountArgs extends io.pulumi.resources.Resource
      * Resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

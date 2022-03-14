@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.datamigration.outputs;
 
 import io.pulumi.azurenative.datamigration.outputs.SyncMigrationDatabaseErrorEventResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class MigrateSqlServerSqlDbSyncTaskOutputDatabaseErrorResponse {
     /**
      * Error message
@@ -35,12 +35,12 @@ public final class MigrateSqlServerSqlDbSyncTaskOutputDatabaseErrorResponse {
      */
     private final String resultType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MigrateSqlServerSqlDbSyncTaskOutputDatabaseErrorResponse(
-        @OutputCustomType.Parameter("errorMessage") @Nullable String errorMessage,
-        @OutputCustomType.Parameter("events") @Nullable List<SyncMigrationDatabaseErrorEventResponse> events,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("resultType") String resultType) {
+        @CustomType.Parameter("errorMessage") @Nullable String errorMessage,
+        @CustomType.Parameter("events") @Nullable List<SyncMigrationDatabaseErrorEventResponse> events,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("resultType") String resultType) {
         this.errorMessage = errorMessage;
         this.events = events;
         this.id = id;

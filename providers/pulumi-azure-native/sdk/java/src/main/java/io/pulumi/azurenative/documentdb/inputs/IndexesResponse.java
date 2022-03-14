@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.documentdb.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class IndexesResponse extends io.pulumi.resources.InvokeArgs {
      * The datatype for which the indexing behavior is applied to.
      * 
      */
-    @InputImport(name="dataType")
+    @Import(name="dataType")
       private final @Nullable String dataType;
 
     public Optional<String> getDataType() {
@@ -34,7 +34,7 @@ public final class IndexesResponse extends io.pulumi.resources.InvokeArgs {
      * Indicates the type of index.
      * 
      */
-    @InputImport(name="kind")
+    @Import(name="kind")
       private final @Nullable String kind;
 
     public Optional<String> getKind() {
@@ -45,7 +45,7 @@ public final class IndexesResponse extends io.pulumi.resources.InvokeArgs {
      * The precision of the index. -1 is maximum precision.
      * 
      */
-    @InputImport(name="precision")
+    @Import(name="precision")
       private final @Nullable Integer precision;
 
     public Optional<Integer> getPrecision() {

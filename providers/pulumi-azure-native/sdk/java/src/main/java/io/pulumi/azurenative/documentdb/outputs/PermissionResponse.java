@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.documentdb.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PermissionResponse {
     /**
      * An array of data actions that are allowed.
@@ -22,10 +22,10 @@ public final class PermissionResponse {
      */
     private final @Nullable List<String> notDataActions;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PermissionResponse(
-        @OutputCustomType.Parameter("dataActions") @Nullable List<String> dataActions,
-        @OutputCustomType.Parameter("notDataActions") @Nullable List<String> notDataActions) {
+        @CustomType.Parameter("dataActions") @Nullable List<String> dataActions,
+        @CustomType.Parameter("notDataActions") @Nullable List<String> notDataActions) {
         this.dataActions = dataActions;
         this.notDataActions = notDataActions;
     }

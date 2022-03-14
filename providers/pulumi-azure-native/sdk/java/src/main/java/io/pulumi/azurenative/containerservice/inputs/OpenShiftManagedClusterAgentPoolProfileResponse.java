@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerservice.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class OpenShiftManagedClusterAgentPoolProfileResponse extends io.pu
      * Number of agents (VMs) to host docker containers.
      * 
      */
-    @InputImport(name="count", required=true)
+    @Import(name="count", required=true)
       private final Integer count;
 
     public Integer getCount() {
@@ -34,7 +34,7 @@ public final class OpenShiftManagedClusterAgentPoolProfileResponse extends io.pu
      * Unique name of the pool profile in the context of the subscription and resource group.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -45,7 +45,7 @@ public final class OpenShiftManagedClusterAgentPoolProfileResponse extends io.pu
      * OsType to be used to specify os type. Choose from Linux and Windows. Default to Linux.
      * 
      */
-    @InputImport(name="osType")
+    @Import(name="osType")
       private final @Nullable String osType;
 
     public Optional<String> getOsType() {
@@ -56,7 +56,7 @@ public final class OpenShiftManagedClusterAgentPoolProfileResponse extends io.pu
      * Define the role of the AgentPoolProfile.
      * 
      */
-    @InputImport(name="role")
+    @Import(name="role")
       private final @Nullable String role;
 
     public Optional<String> getRole() {
@@ -67,7 +67,7 @@ public final class OpenShiftManagedClusterAgentPoolProfileResponse extends io.pu
      * Subnet CIDR for the peering.
      * 
      */
-    @InputImport(name="subnetCidr")
+    @Import(name="subnetCidr")
       private final @Nullable String subnetCidr;
 
     public Optional<String> getSubnetCidr() {
@@ -78,7 +78,7 @@ public final class OpenShiftManagedClusterAgentPoolProfileResponse extends io.pu
      * Size of agent VMs.
      * 
      */
-    @InputImport(name="vmSize", required=true)
+    @Import(name="vmSize", required=true)
       private final String vmSize;
 
     public String getVmSize() {

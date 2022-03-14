@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.iotsecurity.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetSensorArgs extends io.pulumi.resources.InvokeArgs {
      * Scope of the query (IoT Hub, /providers/Microsoft.Devices/iotHubs/myHub)
      * 
      */
-    @InputImport(name="scope", required=true)
+    @Import(name="scope", required=true)
       private final String scope;
 
     public String getScope() {
@@ -27,7 +27,7 @@ public final class GetSensorArgs extends io.pulumi.resources.InvokeArgs {
      * Name of the IoT sensor
      * 
      */
-    @InputImport(name="sensorName", required=true)
+    @Import(name="sensorName", required=true)
       private final String sensorName;
 
     public String getSensorName() {

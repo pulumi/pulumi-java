@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.logic.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class ContentHashResponse extends io.pulumi.resources.InvokeArgs {
      * The algorithm of the content hash.
      * 
      */
-    @InputImport(name="algorithm")
+    @Import(name="algorithm")
       private final @Nullable String algorithm;
 
     public Optional<String> getAlgorithm() {
@@ -33,7 +33,7 @@ public final class ContentHashResponse extends io.pulumi.resources.InvokeArgs {
      * The value of the content hash.
      * 
      */
-    @InputImport(name="value")
+    @Import(name="value")
       private final @Nullable String value;
 
     public Optional<String> getValue() {

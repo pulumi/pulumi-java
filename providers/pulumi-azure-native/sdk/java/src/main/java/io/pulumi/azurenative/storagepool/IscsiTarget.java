@@ -8,7 +8,7 @@ import io.pulumi.azurenative.storagepool.IscsiTargetArgs;
 import io.pulumi.azurenative.storagepool.outputs.TargetPortalGroupResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +35,7 @@ public class IscsiTarget extends io.pulumi.resources.CustomResource {
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -49,7 +49,7 @@ public class IscsiTarget extends io.pulumi.resources.CustomResource {
      * State of the operation on the resource.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -63,7 +63,7 @@ public class IscsiTarget extends io.pulumi.resources.CustomResource {
      * Operational status of the iSCSI target.
      * 
      */
-    @OutputExport(name="status", type=String.class, parameters={})
+    @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
     /**
@@ -77,7 +77,7 @@ public class IscsiTarget extends io.pulumi.resources.CustomResource {
      * iSCSI target IQN (iSCSI Qualified Name); example: "iqn.2005-03.org.iscsi:server".
      * 
      */
-    @OutputExport(name="targetIqn", type=String.class, parameters={})
+    @Export(name="targetIqn", type=String.class, parameters={})
     private Output<String> targetIqn;
 
     /**
@@ -91,7 +91,7 @@ public class IscsiTarget extends io.pulumi.resources.CustomResource {
      * List of iSCSI target portal groups. Can have 1 portal group at most.
      * 
      */
-    @OutputExport(name="tpgs", type=List.class, parameters={TargetPortalGroupResponse.class})
+    @Export(name="tpgs", type=List.class, parameters={TargetPortalGroupResponse.class})
     private Output<List<TargetPortalGroupResponse>> tpgs;
 
     /**
@@ -105,7 +105,7 @@ public class IscsiTarget extends io.pulumi.resources.CustomResource {
      * The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

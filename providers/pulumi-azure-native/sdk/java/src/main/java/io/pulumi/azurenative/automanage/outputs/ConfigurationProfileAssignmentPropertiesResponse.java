@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.automanage.outputs;
 
 import io.pulumi.azurenative.automanage.outputs.ConfigurationProfileAssignmentComplianceResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ConfigurationProfileAssignmentPropertiesResponse {
     /**
      * The Automanage account ARM Resource URI
@@ -43,14 +43,14 @@ public final class ConfigurationProfileAssignmentPropertiesResponse {
      */
     private final @Nullable String targetId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ConfigurationProfileAssignmentPropertiesResponse(
-        @OutputCustomType.Parameter("accountId") @Nullable String accountId,
-        @OutputCustomType.Parameter("compliance") @Nullable ConfigurationProfileAssignmentComplianceResponse compliance,
-        @OutputCustomType.Parameter("configurationProfile") @Nullable String configurationProfile,
-        @OutputCustomType.Parameter("configurationProfilePreferenceId") @Nullable String configurationProfilePreferenceId,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("targetId") @Nullable String targetId) {
+        @CustomType.Parameter("accountId") @Nullable String accountId,
+        @CustomType.Parameter("compliance") @Nullable ConfigurationProfileAssignmentComplianceResponse compliance,
+        @CustomType.Parameter("configurationProfile") @Nullable String configurationProfile,
+        @CustomType.Parameter("configurationProfilePreferenceId") @Nullable String configurationProfilePreferenceId,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("targetId") @Nullable String targetId) {
         this.accountId = accountId;
         this.compliance = compliance;
         this.configurationProfile = configurationProfile;

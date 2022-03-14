@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.databox.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class StorageAccountDetailsArgs extends io.pulumi.resources.Resourc
      * Expected value is 'StorageAccount'.
      * 
      */
-    @InputImport(name="dataAccountType", required=true)
+    @Import(name="dataAccountType", required=true)
       private final Output<String> dataAccountType;
 
     public Output<String> getDataAccountType() {
@@ -34,7 +34,7 @@ public final class StorageAccountDetailsArgs extends io.pulumi.resources.Resourc
      * Password for all the shares to be created on the device. Should not be passed for TransferType:ExportFromAzure jobs. If this is not passed, the service will generate password itself. This will not be returned in Get Call. Password Requirements :  Password must be minimum of 12 and maximum of 64 characters. Password must have at least one uppercase alphabet, one number and one special character. Password cannot have the following characters : IilLoO0 Password can have only alphabets, numbers and these characters : @#\-$%^!+=;:_()]+
      * 
      */
-    @InputImport(name="sharePassword")
+    @Import(name="sharePassword")
       private final @Nullable Output<String> sharePassword;
 
     public Output<String> getSharePassword() {
@@ -45,7 +45,7 @@ public final class StorageAccountDetailsArgs extends io.pulumi.resources.Resourc
      * Storage Account Resource Id.
      * 
      */
-    @InputImport(name="storageAccountId", required=true)
+    @Import(name="storageAccountId", required=true)
       private final Output<String> storageAccountId;
 
     public Output<String> getStorageAccountId() {

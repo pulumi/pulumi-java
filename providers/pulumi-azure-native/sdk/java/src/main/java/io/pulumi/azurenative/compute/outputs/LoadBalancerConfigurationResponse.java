@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.compute.outputs;
 
 import io.pulumi.azurenative.compute.outputs.LoadBalancerConfigurationPropertiesResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class LoadBalancerConfigurationResponse {
     /**
      * Resource Id
@@ -28,11 +28,11 @@ public final class LoadBalancerConfigurationResponse {
      */
     private final LoadBalancerConfigurationPropertiesResponse properties;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LoadBalancerConfigurationResponse(
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("properties") LoadBalancerConfigurationPropertiesResponse properties) {
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("properties") LoadBalancerConfigurationPropertiesResponse properties) {
         this.id = id;
         this.name = name;
         this.properties = properties;

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datamigration.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class SelectedCertificateInputResponse extends io.pulumi.resources.
      * Name of certificate to be exported.
      * 
      */
-    @InputImport(name="certificateName", required=true)
+    @Import(name="certificateName", required=true)
       private final String certificateName;
 
     public String getCertificateName() {
@@ -31,7 +31,7 @@ public final class SelectedCertificateInputResponse extends io.pulumi.resources.
      * Password to use for encrypting the exported certificate.
      * 
      */
-    @InputImport(name="password", required=true)
+    @Import(name="password", required=true)
       private final String password;
 
     public String getPassword() {

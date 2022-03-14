@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.media.outputs;
 
 import io.pulumi.azurenative.media.outputs.ContentKeyPolicyFairPlayOfflineRentalConfigurationResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ContentKeyPolicyFairPlayConfigurationResponse {
     /**
      * The key that must be used as FairPlay Application Secret key.
@@ -50,15 +50,15 @@ public final class ContentKeyPolicyFairPlayConfigurationResponse {
      */
     private final Double rentalDuration;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ContentKeyPolicyFairPlayConfigurationResponse(
-        @OutputCustomType.Parameter("ask") String ask,
-        @OutputCustomType.Parameter("fairPlayPfx") String fairPlayPfx,
-        @OutputCustomType.Parameter("fairPlayPfxPassword") String fairPlayPfxPassword,
-        @OutputCustomType.Parameter("odataType") String odataType,
-        @OutputCustomType.Parameter("offlineRentalConfiguration") @Nullable ContentKeyPolicyFairPlayOfflineRentalConfigurationResponse offlineRentalConfiguration,
-        @OutputCustomType.Parameter("rentalAndLeaseKeyType") String rentalAndLeaseKeyType,
-        @OutputCustomType.Parameter("rentalDuration") Double rentalDuration) {
+        @CustomType.Parameter("ask") String ask,
+        @CustomType.Parameter("fairPlayPfx") String fairPlayPfx,
+        @CustomType.Parameter("fairPlayPfxPassword") String fairPlayPfxPassword,
+        @CustomType.Parameter("odataType") String odataType,
+        @CustomType.Parameter("offlineRentalConfiguration") @Nullable ContentKeyPolicyFairPlayOfflineRentalConfigurationResponse offlineRentalConfiguration,
+        @CustomType.Parameter("rentalAndLeaseKeyType") String rentalAndLeaseKeyType,
+        @CustomType.Parameter("rentalDuration") Double rentalDuration) {
         this.ask = ask;
         this.fairPlayPfx = fairPlayPfx;
         this.fairPlayPfxPassword = fairPlayPfxPassword;

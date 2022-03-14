@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.azurenative.compute.inputs.VirtualMachineScaleSetExtensionResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class VirtualMachineScaleSetExtensionProfileResponse extends io.pul
      * The virtual machine scale set child extension resources.
      * 
      */
-    @InputImport(name="extensions")
+    @Import(name="extensions")
       private final @Nullable List<VirtualMachineScaleSetExtensionResponse> extensions;
 
     public List<VirtualMachineScaleSetExtensionResponse> getExtensions() {
@@ -35,7 +35,7 @@ public final class VirtualMachineScaleSetExtensionProfileResponse extends io.pul
      * Specifies the time alloted for all extensions to start. The time duration should be between 15 minutes and 120 minutes (inclusive) and should be specified in ISO 8601 format. The default value is 90 minutes (PT1H30M). <br><br> Minimum api-version: 2020-06-01
      * 
      */
-    @InputImport(name="extensionsTimeBudget")
+    @Import(name="extensionsTimeBudget")
       private final @Nullable String extensionsTimeBudget;
 
     public Optional<String> getExtensionsTimeBudget() {

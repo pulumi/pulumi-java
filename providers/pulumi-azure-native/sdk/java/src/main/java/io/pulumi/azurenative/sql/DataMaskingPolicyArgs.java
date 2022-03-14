@@ -5,7 +5,7 @@ package io.pulumi.azurenative.sql;
 
 import io.pulumi.azurenative.sql.enums.DataMaskingState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class DataMaskingPolicyArgs extends io.pulumi.resources.ResourceArg
      * The name of the database for which the data masking rule applies.
      * 
      */
-    @InputImport(name="dataMaskingPolicyName")
+    @Import(name="dataMaskingPolicyName")
       private final @Nullable Output<String> dataMaskingPolicyName;
 
     public Output<String> getDataMaskingPolicyName() {
@@ -30,7 +30,7 @@ public final class DataMaskingPolicyArgs extends io.pulumi.resources.ResourceArg
      * The state of the data masking policy.
      * 
      */
-    @InputImport(name="dataMaskingState", required=true)
+    @Import(name="dataMaskingState", required=true)
       private final Output<DataMaskingState> dataMaskingState;
 
     public Output<DataMaskingState> getDataMaskingState() {
@@ -41,7 +41,7 @@ public final class DataMaskingPolicyArgs extends io.pulumi.resources.ResourceArg
      * The name of the database.
      * 
      */
-    @InputImport(name="databaseName", required=true)
+    @Import(name="databaseName", required=true)
       private final Output<String> databaseName;
 
     public Output<String> getDatabaseName() {
@@ -52,7 +52,7 @@ public final class DataMaskingPolicyArgs extends io.pulumi.resources.ResourceArg
      * The list of the exempt principals. Specifies the semicolon-separated list of database users for which the data masking policy does not apply. The specified users receive data results without masking for all of the database queries.
      * 
      */
-    @InputImport(name="exemptPrincipals")
+    @Import(name="exemptPrincipals")
       private final @Nullable Output<String> exemptPrincipals;
 
     public Output<String> getExemptPrincipals() {
@@ -63,7 +63,7 @@ public final class DataMaskingPolicyArgs extends io.pulumi.resources.ResourceArg
      * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -74,7 +74,7 @@ public final class DataMaskingPolicyArgs extends io.pulumi.resources.ResourceArg
      * The name of the server.
      * 
      */
-    @InputImport(name="serverName", required=true)
+    @Import(name="serverName", required=true)
       private final Output<String> serverName;
 
     public Output<String> getServerName() {

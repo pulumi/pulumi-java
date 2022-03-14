@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.enums.ConfigurationType;
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class ListNetworkManagerDeploymentStatusArgs extends io.pulumi.reso
      * List of deployment types.
      * 
      */
-    @InputImport(name="deploymentTypes")
+    @Import(name="deploymentTypes")
       private final @Nullable List<Either<String,ConfigurationType>> deploymentTypes;
 
     public List<Either<String,ConfigurationType>> getDeploymentTypes() {
@@ -32,7 +32,7 @@ public final class ListNetworkManagerDeploymentStatusArgs extends io.pulumi.reso
      * The name of the network manager.
      * 
      */
-    @InputImport(name="networkManagerName", required=true)
+    @Import(name="networkManagerName", required=true)
       private final String networkManagerName;
 
     public String getNetworkManagerName() {
@@ -43,7 +43,7 @@ public final class ListNetworkManagerDeploymentStatusArgs extends io.pulumi.reso
      * List of locations.
      * 
      */
-    @InputImport(name="regions")
+    @Import(name="regions")
       private final @Nullable List<String> regions;
 
     public List<String> getRegions() {
@@ -54,7 +54,7 @@ public final class ListNetworkManagerDeploymentStatusArgs extends io.pulumi.reso
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {
@@ -65,7 +65,7 @@ public final class ListNetworkManagerDeploymentStatusArgs extends io.pulumi.reso
      * Continuation token for pagination, capturing the next page size and offset, as well as the context of the query.
      * 
      */
-    @InputImport(name="skipToken")
+    @Import(name="skipToken")
       private final @Nullable String skipToken;
 
     public Optional<String> getSkipToken() {

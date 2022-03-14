@@ -5,7 +5,7 @@ package io.pulumi.azurenative.desktopvirtualization.outputs;
 
 import io.pulumi.azurenative.desktopvirtualization.outputs.MsixPackageApplicationsResponse;
 import io.pulumi.azurenative.desktopvirtualization.outputs.MsixPackageDependenciesResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetMSIXPackageResult {
     /**
      * User friendly Name to be displayed in the portal.
@@ -86,22 +86,22 @@ public final class GetMSIXPackageResult {
      */
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetMSIXPackageResult(
-        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("imagePath") @Nullable String imagePath,
-        @OutputCustomType.Parameter("isActive") @Nullable Boolean isActive,
-        @OutputCustomType.Parameter("isRegularRegistration") @Nullable Boolean isRegularRegistration,
-        @OutputCustomType.Parameter("lastUpdated") @Nullable String lastUpdated,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("packageApplications") @Nullable List<MsixPackageApplicationsResponse> packageApplications,
-        @OutputCustomType.Parameter("packageDependencies") @Nullable List<MsixPackageDependenciesResponse> packageDependencies,
-        @OutputCustomType.Parameter("packageFamilyName") @Nullable String packageFamilyName,
-        @OutputCustomType.Parameter("packageName") @Nullable String packageName,
-        @OutputCustomType.Parameter("packageRelativePath") @Nullable String packageRelativePath,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("version") @Nullable String version) {
+        @CustomType.Parameter("displayName") @Nullable String displayName,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("imagePath") @Nullable String imagePath,
+        @CustomType.Parameter("isActive") @Nullable Boolean isActive,
+        @CustomType.Parameter("isRegularRegistration") @Nullable Boolean isRegularRegistration,
+        @CustomType.Parameter("lastUpdated") @Nullable String lastUpdated,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("packageApplications") @Nullable List<MsixPackageApplicationsResponse> packageApplications,
+        @CustomType.Parameter("packageDependencies") @Nullable List<MsixPackageDependenciesResponse> packageDependencies,
+        @CustomType.Parameter("packageFamilyName") @Nullable String packageFamilyName,
+        @CustomType.Parameter("packageName") @Nullable String packageName,
+        @CustomType.Parameter("packageRelativePath") @Nullable String packageRelativePath,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("version") @Nullable String version) {
         this.displayName = displayName;
         this.id = id;
         this.imagePath = imagePath;

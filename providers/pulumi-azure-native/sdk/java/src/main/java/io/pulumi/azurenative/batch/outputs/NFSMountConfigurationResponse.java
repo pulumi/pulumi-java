@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.batch.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class NFSMountConfigurationResponse {
     /**
      * These are 'net use' options in Windows and 'mount' options in Linux.
@@ -23,11 +23,11 @@ public final class NFSMountConfigurationResponse {
     private final String relativeMountPath;
     private final String source;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NFSMountConfigurationResponse(
-        @OutputCustomType.Parameter("mountOptions") @Nullable String mountOptions,
-        @OutputCustomType.Parameter("relativeMountPath") String relativeMountPath,
-        @OutputCustomType.Parameter("source") String source) {
+        @CustomType.Parameter("mountOptions") @Nullable String mountOptions,
+        @CustomType.Parameter("relativeMountPath") String relativeMountPath,
+        @CustomType.Parameter("source") String source) {
         this.mountOptions = mountOptions;
         this.relativeMountPath = relativeMountPath;
         this.source = source;

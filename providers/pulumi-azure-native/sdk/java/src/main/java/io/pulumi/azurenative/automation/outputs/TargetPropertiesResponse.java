@@ -5,12 +5,12 @@ package io.pulumi.azurenative.automation.outputs;
 
 import io.pulumi.azurenative.automation.outputs.AzureQueryPropertiesResponse;
 import io.pulumi.azurenative.automation.outputs.NonAzureQueryPropertiesResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TargetPropertiesResponse {
     /**
      * List of Azure queries in the software update configuration.
@@ -23,10 +23,10 @@ public final class TargetPropertiesResponse {
      */
     private final @Nullable List<NonAzureQueryPropertiesResponse> nonAzureQueries;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TargetPropertiesResponse(
-        @OutputCustomType.Parameter("azureQueries") @Nullable List<AzureQueryPropertiesResponse> azureQueries,
-        @OutputCustomType.Parameter("nonAzureQueries") @Nullable List<NonAzureQueryPropertiesResponse> nonAzureQueries) {
+        @CustomType.Parameter("azureQueries") @Nullable List<AzureQueryPropertiesResponse> azureQueries,
+        @CustomType.Parameter("nonAzureQueries") @Nullable List<NonAzureQueryPropertiesResponse> nonAzureQueries) {
         this.azureQueries = azureQueries;
         this.nonAzureQueries = nonAzureQueries;
     }

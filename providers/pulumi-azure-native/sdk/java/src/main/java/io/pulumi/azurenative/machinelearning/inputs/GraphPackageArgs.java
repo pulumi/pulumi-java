@@ -7,7 +7,7 @@ import io.pulumi.azurenative.machinelearning.inputs.GraphEdgeArgs;
 import io.pulumi.azurenative.machinelearning.inputs.GraphNodeArgs;
 import io.pulumi.azurenative.machinelearning.inputs.GraphParameterArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -27,7 +27,7 @@ public final class GraphPackageArgs extends io.pulumi.resources.ResourceArgs {
      * The list of edges making up the graph.
      * 
      */
-    @InputImport(name="edges")
+    @Import(name="edges")
       private final @Nullable Output<List<GraphEdgeArgs>> edges;
 
     public Output<List<GraphEdgeArgs>> getEdges() {
@@ -38,7 +38,7 @@ public final class GraphPackageArgs extends io.pulumi.resources.ResourceArgs {
      * The collection of global parameters for the graph, given as a global parameter name to GraphParameter map. Each parameter here has a 1:1 match with the global parameters values map declared at the WebServiceProperties level.
      * 
      */
-    @InputImport(name="graphParameters")
+    @Import(name="graphParameters")
       private final @Nullable Output<Map<String,GraphParameterArgs>> graphParameters;
 
     public Output<Map<String,GraphParameterArgs>> getGraphParameters() {
@@ -49,7 +49,7 @@ public final class GraphPackageArgs extends io.pulumi.resources.ResourceArgs {
      * The set of nodes making up the graph, provided as a nodeId to GraphNode map
      * 
      */
-    @InputImport(name="nodes")
+    @Import(name="nodes")
       private final @Nullable Output<Map<String,GraphNodeArgs>> nodes;
 
     public Output<Map<String,GraphNodeArgs>> getNodes() {

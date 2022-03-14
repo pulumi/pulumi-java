@@ -21,7 +21,7 @@ import io.pulumi.azurenative.containerservice.inputs.ManagedClusterServicePrinci
 import io.pulumi.azurenative.containerservice.inputs.ManagedClusterWindowsProfileArgs;
 import io.pulumi.azurenative.containerservice.inputs.PrivateLinkResourceArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -38,7 +38,7 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
      * Profile of Azure Active Directory configuration.
      * 
      */
-    @InputImport(name="aadProfile")
+    @Import(name="aadProfile")
       private final @Nullable Output<ManagedClusterAADProfileArgs> aadProfile;
 
     public Output<ManagedClusterAADProfileArgs> getAadProfile() {
@@ -49,7 +49,7 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
      * Profile of managed cluster add-on.
      * 
      */
-    @InputImport(name="addonProfiles")
+    @Import(name="addonProfiles")
       private final @Nullable Output<Map<String,ManagedClusterAddonProfileArgs>> addonProfiles;
 
     public Output<Map<String,ManagedClusterAddonProfileArgs>> getAddonProfiles() {
@@ -60,7 +60,7 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
      * Properties of the agent pool.
      * 
      */
-    @InputImport(name="agentPoolProfiles")
+    @Import(name="agentPoolProfiles")
       private final @Nullable Output<List<ManagedClusterAgentPoolProfileArgs>> agentPoolProfiles;
 
     public Output<List<ManagedClusterAgentPoolProfileArgs>> getAgentPoolProfiles() {
@@ -71,7 +71,7 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
      * Access profile for managed cluster API server.
      * 
      */
-    @InputImport(name="apiServerAccessProfile")
+    @Import(name="apiServerAccessProfile")
       private final @Nullable Output<ManagedClusterAPIServerAccessProfileArgs> apiServerAccessProfile;
 
     public Output<ManagedClusterAPIServerAccessProfileArgs> getApiServerAccessProfile() {
@@ -82,7 +82,7 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
      * Parameters to be applied to the cluster-autoscaler when enabled
      * 
      */
-    @InputImport(name="autoScalerProfile")
+    @Import(name="autoScalerProfile")
       private final @Nullable Output<ManagedClusterPropertiesAutoScalerProfileArgs> autoScalerProfile;
 
     public Output<ManagedClusterPropertiesAutoScalerProfileArgs> getAutoScalerProfile() {
@@ -93,7 +93,7 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
      * Profile of auto upgrade configuration.
      * 
      */
-    @InputImport(name="autoUpgradeProfile")
+    @Import(name="autoUpgradeProfile")
       private final @Nullable Output<ManagedClusterAutoUpgradeProfileArgs> autoUpgradeProfile;
 
     public Output<ManagedClusterAutoUpgradeProfileArgs> getAutoUpgradeProfile() {
@@ -104,7 +104,7 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
      * If set to true, getting static credential will be disabled for this cluster. Expected to only be used for AAD clusters.
      * 
      */
-    @InputImport(name="disableLocalAccounts")
+    @Import(name="disableLocalAccounts")
       private final @Nullable Output<Boolean> disableLocalAccounts;
 
     public Output<Boolean> getDisableLocalAccounts() {
@@ -115,7 +115,7 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
      * ResourceId of the disk encryption set to use for enabling encryption at rest.
      * 
      */
-    @InputImport(name="diskEncryptionSetID")
+    @Import(name="diskEncryptionSetID")
       private final @Nullable Output<String> diskEncryptionSetID;
 
     public Output<String> getDiskEncryptionSetID() {
@@ -126,7 +126,7 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
      * DNS prefix specified when creating the managed cluster.
      * 
      */
-    @InputImport(name="dnsPrefix")
+    @Import(name="dnsPrefix")
       private final @Nullable Output<String> dnsPrefix;
 
     public Output<String> getDnsPrefix() {
@@ -137,7 +137,7 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
      * (DEPRECATING) Whether to enable Kubernetes pod security policy (preview). This feature is set for removal on October 15th, 2020. Learn more at aka.ms/aks/azpodpolicy.
      * 
      */
-    @InputImport(name="enablePodSecurityPolicy")
+    @Import(name="enablePodSecurityPolicy")
       private final @Nullable Output<Boolean> enablePodSecurityPolicy;
 
     public Output<Boolean> getEnablePodSecurityPolicy() {
@@ -148,7 +148,7 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
      * Whether to enable Kubernetes Role-Based Access Control.
      * 
      */
-    @InputImport(name="enableRBAC")
+    @Import(name="enableRBAC")
       private final @Nullable Output<Boolean> enableRBAC;
 
     public Output<Boolean> getEnableRBAC() {
@@ -159,7 +159,7 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
      * The extended location of the Virtual Machine.
      * 
      */
-    @InputImport(name="extendedLocation")
+    @Import(name="extendedLocation")
       private final @Nullable Output<ExtendedLocationArgs> extendedLocation;
 
     public Output<ExtendedLocationArgs> getExtendedLocation() {
@@ -170,7 +170,7 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
      * FQDN subdomain specified when creating private cluster with custom private dns zone.
      * 
      */
-    @InputImport(name="fqdnSubdomain")
+    @Import(name="fqdnSubdomain")
       private final @Nullable Output<String> fqdnSubdomain;
 
     public Output<String> getFqdnSubdomain() {
@@ -181,7 +181,7 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
      * Configurations for provisioning the cluster with HTTP proxy servers.
      * 
      */
-    @InputImport(name="httpProxyConfig")
+    @Import(name="httpProxyConfig")
       private final @Nullable Output<ManagedClusterHTTPProxyConfigArgs> httpProxyConfig;
 
     public Output<ManagedClusterHTTPProxyConfigArgs> getHttpProxyConfig() {
@@ -192,7 +192,7 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
      * The identity of the managed cluster, if configured.
      * 
      */
-    @InputImport(name="identity")
+    @Import(name="identity")
       private final @Nullable Output<ManagedClusterIdentityArgs> identity;
 
     public Output<ManagedClusterIdentityArgs> getIdentity() {
@@ -203,7 +203,7 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
      * Identities associated with the cluster.
      * 
      */
-    @InputImport(name="identityProfile")
+    @Import(name="identityProfile")
       private final @Nullable Output<Map<String,ManagedClusterPropertiesIdentityProfileArgs>> identityProfile;
 
     public Output<Map<String,ManagedClusterPropertiesIdentityProfileArgs>> getIdentityProfile() {
@@ -214,7 +214,7 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
      * Version of Kubernetes specified when creating the managed cluster.
      * 
      */
-    @InputImport(name="kubernetesVersion")
+    @Import(name="kubernetesVersion")
       private final @Nullable Output<String> kubernetesVersion;
 
     public Output<String> getKubernetesVersion() {
@@ -225,7 +225,7 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
      * Profile for Linux VMs in the container service cluster.
      * 
      */
-    @InputImport(name="linuxProfile")
+    @Import(name="linuxProfile")
       private final @Nullable Output<ContainerServiceLinuxProfileArgs> linuxProfile;
 
     public Output<ContainerServiceLinuxProfileArgs> getLinuxProfile() {
@@ -236,7 +236,7 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
      * Resource location
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -247,7 +247,7 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
      * Profile of network configuration.
      * 
      */
-    @InputImport(name="networkProfile")
+    @Import(name="networkProfile")
       private final @Nullable Output<ContainerServiceNetworkProfileArgs> networkProfile;
 
     public Output<ContainerServiceNetworkProfileArgs> getNetworkProfile() {
@@ -258,7 +258,7 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the resource group containing agent pool nodes.
      * 
      */
-    @InputImport(name="nodeResourceGroup")
+    @Import(name="nodeResourceGroup")
       private final @Nullable Output<String> nodeResourceGroup;
 
     public Output<String> getNodeResourceGroup() {
@@ -269,7 +269,7 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
      * Profile of managed cluster pod identity.
      * 
      */
-    @InputImport(name="podIdentityProfile")
+    @Import(name="podIdentityProfile")
       private final @Nullable Output<ManagedClusterPodIdentityProfileArgs> podIdentityProfile;
 
     public Output<ManagedClusterPodIdentityProfileArgs> getPodIdentityProfile() {
@@ -280,7 +280,7 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
      * Private link resources associated with the cluster.
      * 
      */
-    @InputImport(name="privateLinkResources")
+    @Import(name="privateLinkResources")
       private final @Nullable Output<List<PrivateLinkResourceArgs>> privateLinkResources;
 
     public Output<List<PrivateLinkResourceArgs>> getPrivateLinkResources() {
@@ -291,7 +291,7 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -302,7 +302,7 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the managed cluster resource.
      * 
      */
-    @InputImport(name="resourceName")
+    @Import(name="resourceName")
       private final @Nullable Output<String> resourceName;
 
     public Output<String> getPropResourceName() {
@@ -313,7 +313,7 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
      * Information about a service principal identity for the cluster to use for manipulating Azure APIs.
      * 
      */
-    @InputImport(name="servicePrincipalProfile")
+    @Import(name="servicePrincipalProfile")
       private final @Nullable Output<ManagedClusterServicePrincipalProfileArgs> servicePrincipalProfile;
 
     public Output<ManagedClusterServicePrincipalProfileArgs> getServicePrincipalProfile() {
@@ -324,7 +324,7 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
      * The managed cluster SKU.
      * 
      */
-    @InputImport(name="sku")
+    @Import(name="sku")
       private final @Nullable Output<ManagedClusterSKUArgs> sku;
 
     public Output<ManagedClusterSKUArgs> getSku() {
@@ -335,7 +335,7 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
      * Resource tags
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -346,7 +346,7 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
      * Profile for Windows VMs in the container service cluster.
      * 
      */
-    @InputImport(name="windowsProfile")
+    @Import(name="windowsProfile")
       private final @Nullable Output<ManagedClusterWindowsProfileArgs> windowsProfile;
 
     public Output<ManagedClusterWindowsProfileArgs> getWindowsProfile() {

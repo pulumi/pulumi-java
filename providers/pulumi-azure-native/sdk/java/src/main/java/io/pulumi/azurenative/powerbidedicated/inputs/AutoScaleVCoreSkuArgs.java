@@ -6,7 +6,7 @@ package io.pulumi.azurenative.powerbidedicated.inputs;
 import io.pulumi.azurenative.powerbidedicated.enums.VCoreSkuTier;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class AutoScaleVCoreSkuArgs extends io.pulumi.resources.ResourceArg
      * The capacity of an auto scale v-core resource.
      * 
      */
-    @InputImport(name="capacity")
+    @Import(name="capacity")
       private final @Nullable Output<Integer> capacity;
 
     public Output<Integer> getCapacity() {
@@ -36,7 +36,7 @@ public final class AutoScaleVCoreSkuArgs extends io.pulumi.resources.ResourceArg
      * Name of the SKU level.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -47,7 +47,7 @@ public final class AutoScaleVCoreSkuArgs extends io.pulumi.resources.ResourceArg
      * The name of the Azure pricing tier to which the SKU applies.
      * 
      */
-    @InputImport(name="tier")
+    @Import(name="tier")
       private final @Nullable Output<Either<String,VCoreSkuTier>> tier;
 
     public Output<Either<String,VCoreSkuTier>> getTier() {

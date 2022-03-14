@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.security.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AdditionalWorkspacesPropertiesResponse {
     /**
      * List of data types sent to workspace
@@ -28,11 +28,11 @@ public final class AdditionalWorkspacesPropertiesResponse {
      */
     private final @Nullable String workspace;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AdditionalWorkspacesPropertiesResponse(
-        @OutputCustomType.Parameter("dataTypes") @Nullable List<String> dataTypes,
-        @OutputCustomType.Parameter("type") @Nullable String type,
-        @OutputCustomType.Parameter("workspace") @Nullable String workspace) {
+        @CustomType.Parameter("dataTypes") @Nullable List<String> dataTypes,
+        @CustomType.Parameter("type") @Nullable String type,
+        @CustomType.Parameter("workspace") @Nullable String workspace) {
         this.dataTypes = dataTypes;
         this.type = type;
         this.workspace = workspace;

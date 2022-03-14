@@ -7,7 +7,7 @@ import io.pulumi.azurenative.keyvault.enums.SkuFamily;
 import io.pulumi.azurenative.keyvault.enums.SkuName;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -24,7 +24,7 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
      * SKU family name
      * 
      */
-    @InputImport(name="family", required=true)
+    @Import(name="family", required=true)
       private final Output<Either<String,SkuFamily>> family;
 
     public Output<Either<String,SkuFamily>> getFamily() {
@@ -35,7 +35,7 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
      * SKU name to specify whether the key vault is a standard vault or a premium vault.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<SkuName> name;
 
     public Output<SkuName> getName() {

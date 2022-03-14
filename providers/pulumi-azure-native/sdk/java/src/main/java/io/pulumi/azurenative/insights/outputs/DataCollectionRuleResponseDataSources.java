@@ -7,12 +7,12 @@ import io.pulumi.azurenative.insights.outputs.ExtensionDataSourceResponse;
 import io.pulumi.azurenative.insights.outputs.PerfCounterDataSourceResponse;
 import io.pulumi.azurenative.insights.outputs.SyslogDataSourceResponse;
 import io.pulumi.azurenative.insights.outputs.WindowsEventLogDataSourceResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DataCollectionRuleResponseDataSources {
     /**
      * The list of Azure VM extension data source configurations.
@@ -35,12 +35,12 @@ public final class DataCollectionRuleResponseDataSources {
      */
     private final @Nullable List<WindowsEventLogDataSourceResponse> windowsEventLogs;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DataCollectionRuleResponseDataSources(
-        @OutputCustomType.Parameter("extensions") @Nullable List<ExtensionDataSourceResponse> extensions,
-        @OutputCustomType.Parameter("performanceCounters") @Nullable List<PerfCounterDataSourceResponse> performanceCounters,
-        @OutputCustomType.Parameter("syslog") @Nullable List<SyslogDataSourceResponse> syslog,
-        @OutputCustomType.Parameter("windowsEventLogs") @Nullable List<WindowsEventLogDataSourceResponse> windowsEventLogs) {
+        @CustomType.Parameter("extensions") @Nullable List<ExtensionDataSourceResponse> extensions,
+        @CustomType.Parameter("performanceCounters") @Nullable List<PerfCounterDataSourceResponse> performanceCounters,
+        @CustomType.Parameter("syslog") @Nullable List<SyslogDataSourceResponse> syslog,
+        @CustomType.Parameter("windowsEventLogs") @Nullable List<WindowsEventLogDataSourceResponse> windowsEventLogs) {
         this.extensions = extensions;
         this.performanceCounters = performanceCounters;
         this.syslog = syslog;

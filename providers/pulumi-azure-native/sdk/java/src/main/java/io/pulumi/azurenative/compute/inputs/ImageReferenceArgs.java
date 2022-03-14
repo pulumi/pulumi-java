@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class ImageReferenceArgs extends io.pulumi.resources.ResourceArgs {
      * Resource Id
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
@@ -33,7 +33,7 @@ public final class ImageReferenceArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the offer of the platform image or marketplace image used to create the virtual machine.
      * 
      */
-    @InputImport(name="offer")
+    @Import(name="offer")
       private final @Nullable Output<String> offer;
 
     public Output<String> getOffer() {
@@ -44,7 +44,7 @@ public final class ImageReferenceArgs extends io.pulumi.resources.ResourceArgs {
      * The image publisher.
      * 
      */
-    @InputImport(name="publisher")
+    @Import(name="publisher")
       private final @Nullable Output<String> publisher;
 
     public Output<String> getPublisher() {
@@ -55,7 +55,7 @@ public final class ImageReferenceArgs extends io.pulumi.resources.ResourceArgs {
      * The image SKU.
      * 
      */
-    @InputImport(name="sku")
+    @Import(name="sku")
       private final @Nullable Output<String> sku;
 
     public Output<String> getSku() {
@@ -66,7 +66,7 @@ public final class ImageReferenceArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the version of the platform image or marketplace image used to create the virtual machine. The allowed formats are Major.Minor.Build or 'latest'. Major, Minor, and Build are decimal numbers. Specify 'latest' to use the latest version of an image available at deploy time. Even if you use 'latest', the VM image will not automatically update after deploy time even if a new version becomes available.
      * 
      */
-    @InputImport(name="version")
+    @Import(name="version")
       private final @Nullable Output<String> version;
 
     public Output<String> getVersion() {

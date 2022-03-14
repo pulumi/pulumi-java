@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.search.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class IpRuleResponse {
     /**
      * Value corresponding to a single IPv4 address (eg., 123.1.2.3) or an IP range in CIDR format (eg., 123.1.2.3/24) to be allowed.
@@ -17,8 +17,8 @@ public final class IpRuleResponse {
      */
     private final @Nullable String value;
 
-    @OutputCustomType.Constructor
-    private IpRuleResponse(@OutputCustomType.Parameter("value") @Nullable String value) {
+    @CustomType.Constructor
+    private IpRuleResponse(@CustomType.Parameter("value") @Nullable String value) {
         this.value = value;
     }
 

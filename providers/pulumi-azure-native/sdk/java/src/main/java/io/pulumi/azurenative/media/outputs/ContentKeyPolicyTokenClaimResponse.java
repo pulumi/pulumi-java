@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.media.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ContentKeyPolicyTokenClaimResponse {
     /**
      * Token claim type.
@@ -22,10 +22,10 @@ public final class ContentKeyPolicyTokenClaimResponse {
      */
     private final @Nullable String claimValue;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ContentKeyPolicyTokenClaimResponse(
-        @OutputCustomType.Parameter("claimType") @Nullable String claimType,
-        @OutputCustomType.Parameter("claimValue") @Nullable String claimValue) {
+        @CustomType.Parameter("claimType") @Nullable String claimType,
+        @CustomType.Parameter("claimValue") @Nullable String claimValue) {
         this.claimType = claimType;
         this.claimValue = claimValue;
     }

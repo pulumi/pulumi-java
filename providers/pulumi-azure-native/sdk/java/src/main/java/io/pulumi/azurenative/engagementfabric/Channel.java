@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.engagementfabric.ChannelArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +35,7 @@ public class Channel extends io.pulumi.resources.CustomResource {
      * The functions to be enabled for the channel
      * 
      */
-    @OutputExport(name="channelFunctions", type=List.class, parameters={String.class})
+    @Export(name="channelFunctions", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> channelFunctions;
 
     /**
@@ -49,7 +49,7 @@ public class Channel extends io.pulumi.resources.CustomResource {
      * The channel type
      * 
      */
-    @OutputExport(name="channelType", type=String.class, parameters={})
+    @Export(name="channelType", type=String.class, parameters={})
     private Output<String> channelType;
 
     /**
@@ -63,7 +63,7 @@ public class Channel extends io.pulumi.resources.CustomResource {
      * The channel credentials
      * 
      */
-    @OutputExport(name="credentials", type=Map.class, parameters={String.class, String.class})
+    @Export(name="credentials", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> credentials;
 
     /**
@@ -77,7 +77,7 @@ public class Channel extends io.pulumi.resources.CustomResource {
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -91,7 +91,7 @@ public class Channel extends io.pulumi.resources.CustomResource {
      * The fully qualified type of the resource
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

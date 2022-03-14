@@ -5,7 +5,7 @@ package io.pulumi.azurenative.cache.outputs;
 
 import io.pulumi.azurenative.cache.outputs.ModuleResponse;
 import io.pulumi.azurenative.cache.outputs.PersistenceResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetDatabaseResult {
     /**
      * Specifies whether redis clients can connect using TLS-encrypted or plaintext redis protocols. Default is TLS-encrypted.
@@ -71,19 +71,19 @@ public final class GetDatabaseResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDatabaseResult(
-        @OutputCustomType.Parameter("clientProtocol") @Nullable String clientProtocol,
-        @OutputCustomType.Parameter("clusteringPolicy") @Nullable String clusteringPolicy,
-        @OutputCustomType.Parameter("evictionPolicy") @Nullable String evictionPolicy,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("modules") @Nullable List<ModuleResponse> modules,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("persistence") @Nullable PersistenceResponse persistence,
-        @OutputCustomType.Parameter("port") @Nullable Integer port,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("resourceState") String resourceState,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("clientProtocol") @Nullable String clientProtocol,
+        @CustomType.Parameter("clusteringPolicy") @Nullable String clusteringPolicy,
+        @CustomType.Parameter("evictionPolicy") @Nullable String evictionPolicy,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("modules") @Nullable List<ModuleResponse> modules,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("persistence") @Nullable PersistenceResponse persistence,
+        @CustomType.Parameter("port") @Nullable Integer port,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("resourceState") String resourceState,
+        @CustomType.Parameter("type") String type) {
         this.clientProtocol = clientProtocol;
         this.clusteringPolicy = clusteringPolicy;
         this.evictionPolicy = evictionPolicy;

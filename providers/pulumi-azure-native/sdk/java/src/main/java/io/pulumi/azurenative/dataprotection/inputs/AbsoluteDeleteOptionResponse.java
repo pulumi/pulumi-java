@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.dataprotection.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class AbsoluteDeleteOptionResponse extends io.pulumi.resources.Invo
      * Duration of deletion after given timespan
      * 
      */
-    @InputImport(name="duration", required=true)
+    @Import(name="duration", required=true)
       private final String duration;
 
     public String getDuration() {
@@ -32,7 +32,7 @@ public final class AbsoluteDeleteOptionResponse extends io.pulumi.resources.Invo
      * Expected value is 'AbsoluteDeleteOption'.
      * 
      */
-    @InputImport(name="objectType", required=true)
+    @Import(name="objectType", required=true)
       private final String objectType;
 
     public String getObjectType() {

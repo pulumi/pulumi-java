@@ -10,7 +10,7 @@ import io.pulumi.azurenative.aad.outputs.NotificationSettingsResponse;
 import io.pulumi.azurenative.aad.outputs.ReplicaSetResponse;
 import io.pulumi.azurenative.aad.outputs.ResourceForestSettingsResponse;
 import io.pulumi.azurenative.aad.outputs.SystemDataResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -19,7 +19,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetDomainServiceResult {
     /**
      * Deployment Id
@@ -132,30 +132,30 @@ public final class GetDomainServiceResult {
      */
     private final Integer version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDomainServiceResult(
-        @OutputCustomType.Parameter("deploymentId") String deploymentId,
-        @OutputCustomType.Parameter("domainConfigurationType") @Nullable String domainConfigurationType,
-        @OutputCustomType.Parameter("domainName") @Nullable String domainName,
-        @OutputCustomType.Parameter("domainSecuritySettings") @Nullable DomainSecuritySettingsResponse domainSecuritySettings,
-        @OutputCustomType.Parameter("etag") @Nullable String etag,
-        @OutputCustomType.Parameter("filteredSync") @Nullable String filteredSync,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("ldapsSettings") @Nullable LdapsSettingsResponse ldapsSettings,
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("migrationProperties") MigrationPropertiesResponse migrationProperties,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("notificationSettings") @Nullable NotificationSettingsResponse notificationSettings,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("replicaSets") @Nullable List<ReplicaSetResponse> replicaSets,
-        @OutputCustomType.Parameter("resourceForestSettings") @Nullable ResourceForestSettingsResponse resourceForestSettings,
-        @OutputCustomType.Parameter("sku") @Nullable String sku,
-        @OutputCustomType.Parameter("syncOwner") String syncOwner,
-        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("tenantId") String tenantId,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("version") Integer version) {
+        @CustomType.Parameter("deploymentId") String deploymentId,
+        @CustomType.Parameter("domainConfigurationType") @Nullable String domainConfigurationType,
+        @CustomType.Parameter("domainName") @Nullable String domainName,
+        @CustomType.Parameter("domainSecuritySettings") @Nullable DomainSecuritySettingsResponse domainSecuritySettings,
+        @CustomType.Parameter("etag") @Nullable String etag,
+        @CustomType.Parameter("filteredSync") @Nullable String filteredSync,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("ldapsSettings") @Nullable LdapsSettingsResponse ldapsSettings,
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("migrationProperties") MigrationPropertiesResponse migrationProperties,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("notificationSettings") @Nullable NotificationSettingsResponse notificationSettings,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("replicaSets") @Nullable List<ReplicaSetResponse> replicaSets,
+        @CustomType.Parameter("resourceForestSettings") @Nullable ResourceForestSettingsResponse resourceForestSettings,
+        @CustomType.Parameter("sku") @Nullable String sku,
+        @CustomType.Parameter("syncOwner") String syncOwner,
+        @CustomType.Parameter("systemData") SystemDataResponse systemData,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("tenantId") String tenantId,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("version") Integer version) {
         this.deploymentId = deploymentId;
         this.domainConfigurationType = domainConfigurationType;
         this.domainName = domainName;

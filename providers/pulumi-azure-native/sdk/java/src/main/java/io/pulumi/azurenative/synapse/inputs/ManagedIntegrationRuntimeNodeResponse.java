@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.synapse.inputs;
 
 import io.pulumi.azurenative.synapse.inputs.ManagedIntegrationRuntimeErrorResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ManagedIntegrationRuntimeNodeResponse extends io.pulumi.resou
      * The errors that occurred on this integration runtime node.
      * 
      */
-    @InputImport(name="errors")
+    @Import(name="errors")
       private final @Nullable List<ManagedIntegrationRuntimeErrorResponse> errors;
 
     public List<ManagedIntegrationRuntimeErrorResponse> getErrors() {
@@ -35,7 +35,7 @@ public final class ManagedIntegrationRuntimeNodeResponse extends io.pulumi.resou
      * The managed integration runtime node id.
      * 
      */
-    @InputImport(name="nodeId", required=true)
+    @Import(name="nodeId", required=true)
       private final String nodeId;
 
     public String getNodeId() {
@@ -46,7 +46,7 @@ public final class ManagedIntegrationRuntimeNodeResponse extends io.pulumi.resou
      * The managed integration runtime node status.
      * 
      */
-    @InputImport(name="status", required=true)
+    @Import(name="status", required=true)
       private final String status;
 
     public String getStatus() {

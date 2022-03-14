@@ -5,7 +5,7 @@ package io.pulumi.azurenative.portal.inputs;
 
 import io.pulumi.azurenative.portal.inputs.MarkdownPartMetadataSettingsArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class MarkdownPartMetadataArgs extends io.pulumi.resources.Resource
      * Input to dashboard part.
      * 
      */
-    @InputImport(name="inputs")
+    @Import(name="inputs")
       private final @Nullable Output<List<Object>> inputs;
 
     public Output<List<Object>> getInputs() {
@@ -36,7 +36,7 @@ public final class MarkdownPartMetadataArgs extends io.pulumi.resources.Resource
      * Markdown part settings.
      * 
      */
-    @InputImport(name="settings")
+    @Import(name="settings")
       private final @Nullable Output<MarkdownPartMetadataSettingsArgs> settings;
 
     public Output<MarkdownPartMetadataSettingsArgs> getSettings() {
@@ -48,7 +48,7 @@ public final class MarkdownPartMetadataArgs extends io.pulumi.resources.Resource
      * Expected value is 'Extension/HubsExtension/PartType/MarkdownPart'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {

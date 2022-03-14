@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.providerhub.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -16,14 +16,14 @@ public final class ResourceTypeRegistrationPropertiesCheckNameAvailabilitySpecif
 
     public static final ResourceTypeRegistrationPropertiesCheckNameAvailabilitySpecificationsArgs Empty = new ResourceTypeRegistrationPropertiesCheckNameAvailabilitySpecificationsArgs();
 
-    @InputImport(name="enableDefaultValidation")
+    @Import(name="enableDefaultValidation")
       private final @Nullable Output<Boolean> enableDefaultValidation;
 
     public Output<Boolean> getEnableDefaultValidation() {
         return this.enableDefaultValidation == null ? Output.empty() : this.enableDefaultValidation;
     }
 
-    @InputImport(name="resourceTypesWithCustomValidation")
+    @Import(name="resourceTypesWithCustomValidation")
       private final @Nullable Output<List<String>> resourceTypesWithCustomValidation;
 
     public Output<List<String>> getResourceTypesWithCustomValidation() {

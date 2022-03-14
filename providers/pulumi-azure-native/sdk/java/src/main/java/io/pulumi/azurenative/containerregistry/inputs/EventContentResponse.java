@@ -7,7 +7,7 @@ import io.pulumi.azurenative.containerregistry.inputs.ActorResponse;
 import io.pulumi.azurenative.containerregistry.inputs.RequestResponse;
 import io.pulumi.azurenative.containerregistry.inputs.SourceResponse;
 import io.pulumi.azurenative.containerregistry.inputs.TargetResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -26,7 +26,7 @@ public final class EventContentResponse extends io.pulumi.resources.InvokeArgs {
      * The action that encompasses the provided event.
      * 
      */
-    @InputImport(name="action")
+    @Import(name="action")
       private final @Nullable String action;
 
     public Optional<String> getAction() {
@@ -37,7 +37,7 @@ public final class EventContentResponse extends io.pulumi.resources.InvokeArgs {
      * The agent that initiated the event. For most situations, this could be from the authorization context of the request.
      * 
      */
-    @InputImport(name="actor")
+    @Import(name="actor")
       private final @Nullable ActorResponse actor;
 
     public Optional<ActorResponse> getActor() {
@@ -48,7 +48,7 @@ public final class EventContentResponse extends io.pulumi.resources.InvokeArgs {
      * The event ID.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable String id;
 
     public Optional<String> getId() {
@@ -59,7 +59,7 @@ public final class EventContentResponse extends io.pulumi.resources.InvokeArgs {
      * The request that generated the event.
      * 
      */
-    @InputImport(name="request")
+    @Import(name="request")
       private final @Nullable RequestResponse request;
 
     public Optional<RequestResponse> getRequest() {
@@ -70,7 +70,7 @@ public final class EventContentResponse extends io.pulumi.resources.InvokeArgs {
      * The registry node that generated the event. Put differently, while the actor initiates the event, the source generates it.
      * 
      */
-    @InputImport(name="source")
+    @Import(name="source")
       private final @Nullable SourceResponse source;
 
     public Optional<SourceResponse> getSource() {
@@ -81,7 +81,7 @@ public final class EventContentResponse extends io.pulumi.resources.InvokeArgs {
      * The target of the event.
      * 
      */
-    @InputImport(name="target")
+    @Import(name="target")
       private final @Nullable TargetResponse target;
 
     public Optional<TargetResponse> getTarget() {
@@ -92,7 +92,7 @@ public final class EventContentResponse extends io.pulumi.resources.InvokeArgs {
      * The time at which the event occurred.
      * 
      */
-    @InputImport(name="timestamp")
+    @Import(name="timestamp")
       private final @Nullable String timestamp;
 
     public Optional<String> getTimestamp() {

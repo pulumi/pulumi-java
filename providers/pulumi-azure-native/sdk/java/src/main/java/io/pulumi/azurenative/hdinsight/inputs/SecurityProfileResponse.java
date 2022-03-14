@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.hdinsight.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class SecurityProfileResponse extends io.pulumi.resources.InvokeArg
      * The resource ID of the user's Azure Active Directory Domain Service.
      * 
      */
-    @InputImport(name="aaddsResourceId")
+    @Import(name="aaddsResourceId")
       private final @Nullable String aaddsResourceId;
 
     public Optional<String> getAaddsResourceId() {
@@ -34,7 +34,7 @@ public final class SecurityProfileResponse extends io.pulumi.resources.InvokeArg
      * Optional. The Distinguished Names for cluster user groups
      * 
      */
-    @InputImport(name="clusterUsersGroupDNs")
+    @Import(name="clusterUsersGroupDNs")
       private final @Nullable List<String> clusterUsersGroupDNs;
 
     public List<String> getClusterUsersGroupDNs() {
@@ -45,7 +45,7 @@ public final class SecurityProfileResponse extends io.pulumi.resources.InvokeArg
      * The directory type.
      * 
      */
-    @InputImport(name="directoryType")
+    @Import(name="directoryType")
       private final @Nullable String directoryType;
 
     public Optional<String> getDirectoryType() {
@@ -56,7 +56,7 @@ public final class SecurityProfileResponse extends io.pulumi.resources.InvokeArg
      * The organization's active directory domain.
      * 
      */
-    @InputImport(name="domain")
+    @Import(name="domain")
       private final @Nullable String domain;
 
     public Optional<String> getDomain() {
@@ -67,7 +67,7 @@ public final class SecurityProfileResponse extends io.pulumi.resources.InvokeArg
      * The domain admin password.
      * 
      */
-    @InputImport(name="domainUserPassword")
+    @Import(name="domainUserPassword")
       private final @Nullable String domainUserPassword;
 
     public Optional<String> getDomainUserPassword() {
@@ -78,7 +78,7 @@ public final class SecurityProfileResponse extends io.pulumi.resources.InvokeArg
      * The domain user account that will have admin privileges on the cluster.
      * 
      */
-    @InputImport(name="domainUsername")
+    @Import(name="domainUsername")
       private final @Nullable String domainUsername;
 
     public Optional<String> getDomainUsername() {
@@ -89,7 +89,7 @@ public final class SecurityProfileResponse extends io.pulumi.resources.InvokeArg
      * The LDAPS protocol URLs to communicate with the Active Directory.
      * 
      */
-    @InputImport(name="ldapsUrls")
+    @Import(name="ldapsUrls")
       private final @Nullable List<String> ldapsUrls;
 
     public List<String> getLdapsUrls() {
@@ -100,7 +100,7 @@ public final class SecurityProfileResponse extends io.pulumi.resources.InvokeArg
      * User assigned identity that has permissions to read and create cluster-related artifacts in the user's AADDS.
      * 
      */
-    @InputImport(name="msiResourceId")
+    @Import(name="msiResourceId")
       private final @Nullable String msiResourceId;
 
     public Optional<String> getMsiResourceId() {
@@ -111,7 +111,7 @@ public final class SecurityProfileResponse extends io.pulumi.resources.InvokeArg
      * The organizational unit within the Active Directory to place the cluster and service accounts.
      * 
      */
-    @InputImport(name="organizationalUnitDN")
+    @Import(name="organizationalUnitDN")
       private final @Nullable String organizationalUnitDN;
 
     public Optional<String> getOrganizationalUnitDN() {

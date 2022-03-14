@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.powerplatform.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SubnetPropertiesResponse {
     /**
      * Subnet name.
@@ -17,8 +17,8 @@ public final class SubnetPropertiesResponse {
      */
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor
-    private SubnetPropertiesResponse(@OutputCustomType.Parameter("name") @Nullable String name) {
+    @CustomType.Constructor
+    private SubnetPropertiesResponse(@CustomType.Parameter("name") @Nullable String name) {
         this.name = name;
     }
 

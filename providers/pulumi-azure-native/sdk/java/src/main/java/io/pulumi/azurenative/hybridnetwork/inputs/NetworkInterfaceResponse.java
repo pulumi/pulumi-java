@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.hybridnetwork.inputs;
 
 import io.pulumi.azurenative.hybridnetwork.inputs.NetworkInterfaceIPConfigurationResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
      * A list of IP configurations of the network interface.
      * 
      */
-    @InputImport(name="ipConfigurations")
+    @Import(name="ipConfigurations")
       private final @Nullable List<NetworkInterfaceIPConfigurationResponse> ipConfigurations;
 
     public List<NetworkInterfaceIPConfigurationResponse> getIpConfigurations() {
@@ -35,7 +35,7 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
      * The MAC address of the network interface.
      * 
      */
-    @InputImport(name="macAddress")
+    @Import(name="macAddress")
       private final @Nullable String macAddress;
 
     public Optional<String> getMacAddress() {
@@ -46,7 +46,7 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
      * The name of the network interface.
      * 
      */
-    @InputImport(name="networkInterfaceName")
+    @Import(name="networkInterfaceName")
       private final @Nullable String networkInterfaceName;
 
     public Optional<String> getNetworkInterfaceName() {
@@ -57,7 +57,7 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
      * The type of the VM switch.
      * 
      */
-    @InputImport(name="vmSwitchType")
+    @Import(name="vmSwitchType")
       private final @Nullable String vmSwitchType;
 
     public Optional<String> getVmSwitchType() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.botservice.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class DirectLineSpeechChannelPropertiesResponse extends io.pulumi.r
      * The cognitive service region with this channel registration.
      * 
      */
-    @InputImport(name="cognitiveServiceRegion", required=true)
+    @Import(name="cognitiveServiceRegion", required=true)
       private final String cognitiveServiceRegion;
 
     public String getCognitiveServiceRegion() {
@@ -34,7 +34,7 @@ public final class DirectLineSpeechChannelPropertiesResponse extends io.pulumi.r
      * The cognitive service subscription key to use with this channel registration.
      * 
      */
-    @InputImport(name="cognitiveServiceSubscriptionKey", required=true)
+    @Import(name="cognitiveServiceSubscriptionKey", required=true)
       private final String cognitiveServiceSubscriptionKey;
 
     public String getCognitiveServiceSubscriptionKey() {
@@ -45,7 +45,7 @@ public final class DirectLineSpeechChannelPropertiesResponse extends io.pulumi.r
      * Custom voice deployment id (optional).
      * 
      */
-    @InputImport(name="customSpeechModelId")
+    @Import(name="customSpeechModelId")
       private final @Nullable String customSpeechModelId;
 
     public Optional<String> getCustomSpeechModelId() {
@@ -56,7 +56,7 @@ public final class DirectLineSpeechChannelPropertiesResponse extends io.pulumi.r
      * Custom speech model id (optional).
      * 
      */
-    @InputImport(name="customVoiceDeploymentId")
+    @Import(name="customVoiceDeploymentId")
       private final @Nullable String customVoiceDeploymentId;
 
     public Optional<String> getCustomVoiceDeploymentId() {
@@ -67,7 +67,7 @@ public final class DirectLineSpeechChannelPropertiesResponse extends io.pulumi.r
      * Make this a default bot for chosen cognitive service account.
      * 
      */
-    @InputImport(name="isDefaultBotForCogSvcAccount")
+    @Import(name="isDefaultBotForCogSvcAccount")
       private final @Nullable Boolean isDefaultBotForCogSvcAccount;
 
     public Optional<Boolean> getIsDefaultBotForCogSvcAccount() {
@@ -78,7 +78,7 @@ public final class DirectLineSpeechChannelPropertiesResponse extends io.pulumi.r
      * Whether this channel is enabled or not.
      * 
      */
-    @InputImport(name="isEnabled")
+    @Import(name="isEnabled")
       private final @Nullable Boolean isEnabled;
 
     public Optional<Boolean> getIsEnabled() {

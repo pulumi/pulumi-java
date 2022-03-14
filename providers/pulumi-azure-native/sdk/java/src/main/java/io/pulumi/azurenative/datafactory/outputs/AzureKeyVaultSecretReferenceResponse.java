@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.datafactory.outputs;
 
 import io.pulumi.azurenative.datafactory.outputs.LinkedServiceReferenceResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AzureKeyVaultSecretReferenceResponse {
     /**
      * The name of the secret in Azure Key Vault. Type: string (or Expression with resultType string).
@@ -35,12 +35,12 @@ public final class AzureKeyVaultSecretReferenceResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AzureKeyVaultSecretReferenceResponse(
-        @OutputCustomType.Parameter("secretName") Object secretName,
-        @OutputCustomType.Parameter("secretVersion") @Nullable Object secretVersion,
-        @OutputCustomType.Parameter("store") LinkedServiceReferenceResponse store,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("secretName") Object secretName,
+        @CustomType.Parameter("secretVersion") @Nullable Object secretVersion,
+        @CustomType.Parameter("store") LinkedServiceReferenceResponse store,
+        @CustomType.Parameter("type") String type) {
         this.secretName = secretName;
         this.secretVersion = secretVersion;
         this.store = store;

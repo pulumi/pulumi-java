@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.sql.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class RecommendedActionImpactRecordResponse extends io.pulumi.resou
      * Gets the absolute value of this dimension if applicable. e.g., Number of Queries affected
      * 
      */
-    @InputImport(name="absoluteValue", required=true)
+    @Import(name="absoluteValue", required=true)
       private final Double absoluteValue;
 
     public Double getAbsoluteValue() {
@@ -32,7 +32,7 @@ public final class RecommendedActionImpactRecordResponse extends io.pulumi.resou
      * Gets the absolute change in the value of this dimension. e.g., Absolute Disk space change in Megabytes
      * 
      */
-    @InputImport(name="changeValueAbsolute", required=true)
+    @Import(name="changeValueAbsolute", required=true)
       private final Double changeValueAbsolute;
 
     public Double getChangeValueAbsolute() {
@@ -43,7 +43,7 @@ public final class RecommendedActionImpactRecordResponse extends io.pulumi.resou
      * Gets the relative change in the value of this dimension. e.g., Relative Disk space change in Percentage
      * 
      */
-    @InputImport(name="changeValueRelative", required=true)
+    @Import(name="changeValueRelative", required=true)
       private final Double changeValueRelative;
 
     public Double getChangeValueRelative() {
@@ -54,7 +54,7 @@ public final class RecommendedActionImpactRecordResponse extends io.pulumi.resou
      * Gets the name of the impact dimension. e.g., CPUChange, DiskSpaceChange, NumberOfQueriesAffected.
      * 
      */
-    @InputImport(name="dimensionName", required=true)
+    @Import(name="dimensionName", required=true)
       private final String dimensionName;
 
     public String getDimensionName() {
@@ -65,7 +65,7 @@ public final class RecommendedActionImpactRecordResponse extends io.pulumi.resou
      * Gets the name of the impact dimension. e.g., CPUChange, DiskSpaceChange, NumberOfQueriesAffected.
      * 
      */
-    @InputImport(name="unit", required=true)
+    @Import(name="unit", required=true)
       private final String unit;
 
     public String getUnit() {

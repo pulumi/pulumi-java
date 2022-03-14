@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class BootDiagnosticsArgs extends io.pulumi.resources.ResourceArgs 
      * Whether boot diagnostics should be enabled on the Virtual Machine.
      * 
      */
-    @InputImport(name="enabled")
+    @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
@@ -34,7 +34,7 @@ public final class BootDiagnosticsArgs extends io.pulumi.resources.ResourceArgs 
      * Uri of the storage account to use for placing the console output and screenshot. <br><br>If storageUri is not specified while enabling boot diagnostics, managed storage will be used.
      * 
      */
-    @InputImport(name="storageUri")
+    @Import(name="storageUri")
       private final @Nullable Output<String> storageUri;
 
     public Output<String> getStorageUri() {

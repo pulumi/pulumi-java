@@ -8,7 +8,7 @@ import io.pulumi.azurenative.providerhub.enums.LoggingDirections;
 import io.pulumi.azurenative.providerhub.inputs.LoggingRuleHiddenPropertyPathsArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,28 +18,28 @@ public final class LoggingRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final LoggingRuleArgs Empty = new LoggingRuleArgs();
 
-    @InputImport(name="action", required=true)
+    @Import(name="action", required=true)
       private final Output<String> action;
 
     public Output<String> getAction() {
         return this.action;
     }
 
-    @InputImport(name="detailLevel", required=true)
+    @Import(name="detailLevel", required=true)
       private final Output<Either<String,LoggingDetails>> detailLevel;
 
     public Output<Either<String,LoggingDetails>> getDetailLevel() {
         return this.detailLevel;
     }
 
-    @InputImport(name="direction", required=true)
+    @Import(name="direction", required=true)
       private final Output<Either<String,LoggingDirections>> direction;
 
     public Output<Either<String,LoggingDirections>> getDirection() {
         return this.direction;
     }
 
-    @InputImport(name="hiddenPropertyPaths")
+    @Import(name="hiddenPropertyPaths")
       private final @Nullable Output<LoggingRuleHiddenPropertyPathsArgs> hiddenPropertyPaths;
 
     public Output<LoggingRuleHiddenPropertyPathsArgs> getHiddenPropertyPaths() {

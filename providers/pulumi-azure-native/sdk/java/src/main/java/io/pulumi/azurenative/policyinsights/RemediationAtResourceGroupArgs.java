@@ -7,7 +7,7 @@ import io.pulumi.azurenative.policyinsights.enums.ResourceDiscoveryMode;
 import io.pulumi.azurenative.policyinsights.inputs.RemediationFiltersArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public final class RemediationAtResourceGroupArgs extends io.pulumi.resources.Re
      * The filters that will be applied to determine which resources to remediate.
      * 
      */
-    @InputImport(name="filters")
+    @Import(name="filters")
       private final @Nullable Output<RemediationFiltersArgs> filters;
 
     public Output<RemediationFiltersArgs> getFilters() {
@@ -32,7 +32,7 @@ public final class RemediationAtResourceGroupArgs extends io.pulumi.resources.Re
      * The resource ID of the policy assignment that should be remediated.
      * 
      */
-    @InputImport(name="policyAssignmentId")
+    @Import(name="policyAssignmentId")
       private final @Nullable Output<String> policyAssignmentId;
 
     public Output<String> getPolicyAssignmentId() {
@@ -43,7 +43,7 @@ public final class RemediationAtResourceGroupArgs extends io.pulumi.resources.Re
      * The policy definition reference ID of the individual definition that should be remediated. Required when the policy assignment being remediated assigns a policy set definition.
      * 
      */
-    @InputImport(name="policyDefinitionReferenceId")
+    @Import(name="policyDefinitionReferenceId")
       private final @Nullable Output<String> policyDefinitionReferenceId;
 
     public Output<String> getPolicyDefinitionReferenceId() {
@@ -54,7 +54,7 @@ public final class RemediationAtResourceGroupArgs extends io.pulumi.resources.Re
      * The name of the remediation.
      * 
      */
-    @InputImport(name="remediationName")
+    @Import(name="remediationName")
       private final @Nullable Output<String> remediationName;
 
     public Output<String> getRemediationName() {
@@ -65,7 +65,7 @@ public final class RemediationAtResourceGroupArgs extends io.pulumi.resources.Re
      * The way resources to remediate are discovered. Defaults to ExistingNonCompliant if not specified.
      * 
      */
-    @InputImport(name="resourceDiscoveryMode")
+    @Import(name="resourceDiscoveryMode")
       private final @Nullable Output<Either<String,ResourceDiscoveryMode>> resourceDiscoveryMode;
 
     public Output<Either<String,ResourceDiscoveryMode>> getResourceDiscoveryMode() {
@@ -76,7 +76,7 @@ public final class RemediationAtResourceGroupArgs extends io.pulumi.resources.Re
      * Resource group name.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {

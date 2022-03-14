@@ -6,14 +6,14 @@ package io.pulumi.azurenative.edgeorder.outputs;
 import io.pulumi.azurenative.edgeorder.outputs.ContactDetailsResponse;
 import io.pulumi.azurenative.edgeorder.outputs.ShippingAddressResponse;
 import io.pulumi.azurenative.edgeorder.outputs.SystemDataResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetAddressByNameResult {
     /**
      * Status of address validation
@@ -61,17 +61,17 @@ public final class GetAddressByNameResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetAddressByNameResult(
-        @OutputCustomType.Parameter("addressValidationStatus") String addressValidationStatus,
-        @OutputCustomType.Parameter("contactDetails") ContactDetailsResponse contactDetails,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("shippingAddress") @Nullable ShippingAddressResponse shippingAddress,
-        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("addressValidationStatus") String addressValidationStatus,
+        @CustomType.Parameter("contactDetails") ContactDetailsResponse contactDetails,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("shippingAddress") @Nullable ShippingAddressResponse shippingAddress,
+        @CustomType.Parameter("systemData") SystemDataResponse systemData,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type) {
         this.addressValidationStatus = addressValidationStatus;
         this.contactDetails = contactDetails;
         this.id = id;

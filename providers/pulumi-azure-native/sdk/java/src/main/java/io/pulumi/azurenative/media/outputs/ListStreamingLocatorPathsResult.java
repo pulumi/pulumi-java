@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.media.outputs;
 
 import io.pulumi.azurenative.media.outputs.StreamingPathResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ListStreamingLocatorPathsResult {
     /**
      * Download Paths supported by current Streaming Locator
@@ -23,10 +23,10 @@ public final class ListStreamingLocatorPathsResult {
      */
     private final @Nullable List<StreamingPathResponse> streamingPaths;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ListStreamingLocatorPathsResult(
-        @OutputCustomType.Parameter("downloadPaths") @Nullable List<String> downloadPaths,
-        @OutputCustomType.Parameter("streamingPaths") @Nullable List<StreamingPathResponse> streamingPaths) {
+        @CustomType.Parameter("downloadPaths") @Nullable List<String> downloadPaths,
+        @CustomType.Parameter("streamingPaths") @Nullable List<StreamingPathResponse> streamingPaths) {
         this.downloadPaths = downloadPaths;
         this.streamingPaths = streamingPaths;
     }

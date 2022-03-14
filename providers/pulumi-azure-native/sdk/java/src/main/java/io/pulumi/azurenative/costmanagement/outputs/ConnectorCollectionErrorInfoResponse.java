@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.costmanagement.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ConnectorCollectionErrorInfoResponse {
     /**
      * Short error code
@@ -30,12 +30,12 @@ public final class ConnectorCollectionErrorInfoResponse {
      */
     private final String errorStartTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ConnectorCollectionErrorInfoResponse(
-        @OutputCustomType.Parameter("errorCode") String errorCode,
-        @OutputCustomType.Parameter("errorInnerMessage") String errorInnerMessage,
-        @OutputCustomType.Parameter("errorMessage") String errorMessage,
-        @OutputCustomType.Parameter("errorStartTime") String errorStartTime) {
+        @CustomType.Parameter("errorCode") String errorCode,
+        @CustomType.Parameter("errorInnerMessage") String errorInnerMessage,
+        @CustomType.Parameter("errorMessage") String errorMessage,
+        @CustomType.Parameter("errorStartTime") String errorStartTime) {
         this.errorCode = errorCode;
         this.errorInnerMessage = errorInnerMessage;
         this.errorMessage = errorMessage;

@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.dbforpostgresql.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetConfigurationResult {
     /**
      * Allowed values of the configuration.
@@ -57,17 +57,17 @@ public final class GetConfigurationResult {
      */
     private final @Nullable String value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetConfigurationResult(
-        @OutputCustomType.Parameter("allowedValues") String allowedValues,
-        @OutputCustomType.Parameter("dataType") String dataType,
-        @OutputCustomType.Parameter("defaultValue") String defaultValue,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("source") @Nullable String source,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("value") @Nullable String value) {
+        @CustomType.Parameter("allowedValues") String allowedValues,
+        @CustomType.Parameter("dataType") String dataType,
+        @CustomType.Parameter("defaultValue") String defaultValue,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("source") @Nullable String source,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("value") @Nullable String value) {
         this.allowedValues = allowedValues;
         this.dataType = dataType;
         this.defaultValue = defaultValue;

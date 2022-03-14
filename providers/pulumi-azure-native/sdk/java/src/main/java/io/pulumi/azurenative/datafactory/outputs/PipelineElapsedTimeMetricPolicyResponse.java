@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.datafactory.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PipelineElapsedTimeMetricPolicyResponse {
     /**
      * TimeSpan value, after which an Azure Monitoring Metric is fired.
@@ -17,8 +17,8 @@ public final class PipelineElapsedTimeMetricPolicyResponse {
      */
     private final @Nullable Object duration;
 
-    @OutputCustomType.Constructor
-    private PipelineElapsedTimeMetricPolicyResponse(@OutputCustomType.Parameter("duration") @Nullable Object duration) {
+    @CustomType.Constructor
+    private PipelineElapsedTimeMetricPolicyResponse(@CustomType.Parameter("duration") @Nullable Object duration) {
         this.duration = duration;
     }
 

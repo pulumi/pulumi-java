@@ -8,7 +8,7 @@ import io.pulumi.azurenative.providerhub.DefaultRolloutArgs;
 import io.pulumi.azurenative.providerhub.outputs.DefaultRolloutResponseProperties;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +35,7 @@ public class DefaultRollout extends io.pulumi.resources.CustomResource {
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -49,7 +49,7 @@ public class DefaultRollout extends io.pulumi.resources.CustomResource {
      * Properties of the rollout.
      * 
      */
-    @OutputExport(name="properties", type=DefaultRolloutResponseProperties.class, parameters={})
+    @Export(name="properties", type=DefaultRolloutResponseProperties.class, parameters={})
     private Output<DefaultRolloutResponseProperties> properties;
 
     /**
@@ -63,7 +63,7 @@ public class DefaultRollout extends io.pulumi.resources.CustomResource {
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

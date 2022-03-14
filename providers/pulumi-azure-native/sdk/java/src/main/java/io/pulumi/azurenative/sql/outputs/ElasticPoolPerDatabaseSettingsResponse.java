@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.sql.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ElasticPoolPerDatabaseSettingsResponse {
     /**
      * The maximum capacity any one database can consume.
@@ -22,10 +22,10 @@ public final class ElasticPoolPerDatabaseSettingsResponse {
      */
     private final @Nullable Double minCapacity;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ElasticPoolPerDatabaseSettingsResponse(
-        @OutputCustomType.Parameter("maxCapacity") @Nullable Double maxCapacity,
-        @OutputCustomType.Parameter("minCapacity") @Nullable Double minCapacity) {
+        @CustomType.Parameter("maxCapacity") @Nullable Double maxCapacity,
+        @CustomType.Parameter("minCapacity") @Nullable Double minCapacity) {
         this.maxCapacity = maxCapacity;
         this.minCapacity = minCapacity;
     }

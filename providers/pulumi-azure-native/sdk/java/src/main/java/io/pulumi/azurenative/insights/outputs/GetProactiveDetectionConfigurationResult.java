@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.insights.outputs;
 
 import io.pulumi.azurenative.insights.outputs.ApplicationInsightsComponentProactiveDetectionConfigurationResponseRuleDefinitions;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetProactiveDetectionConfigurationResult {
     /**
      * Custom email addresses for this rule notifications
@@ -45,14 +45,14 @@ public final class GetProactiveDetectionConfigurationResult {
      */
     private final @Nullable Boolean sendEmailsToSubscriptionOwners;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetProactiveDetectionConfigurationResult(
-        @OutputCustomType.Parameter("customEmails") @Nullable List<String> customEmails,
-        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
-        @OutputCustomType.Parameter("lastUpdatedTime") @Nullable String lastUpdatedTime,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("ruleDefinitions") @Nullable ApplicationInsightsComponentProactiveDetectionConfigurationResponseRuleDefinitions ruleDefinitions,
-        @OutputCustomType.Parameter("sendEmailsToSubscriptionOwners") @Nullable Boolean sendEmailsToSubscriptionOwners) {
+        @CustomType.Parameter("customEmails") @Nullable List<String> customEmails,
+        @CustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @CustomType.Parameter("lastUpdatedTime") @Nullable String lastUpdatedTime,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("ruleDefinitions") @Nullable ApplicationInsightsComponentProactiveDetectionConfigurationResponseRuleDefinitions ruleDefinitions,
+        @CustomType.Parameter("sendEmailsToSubscriptionOwners") @Nullable Boolean sendEmailsToSubscriptionOwners) {
         this.customEmails = customEmails;
         this.enabled = enabled;
         this.lastUpdatedTime = lastUpdatedTime;

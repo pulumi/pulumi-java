@@ -8,7 +8,7 @@ import io.pulumi.azurenative.hybriddata.DataManagerArgs;
 import io.pulumi.azurenative.hybriddata.outputs.SkuResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -36,7 +36,7 @@ public class DataManager extends io.pulumi.resources.CustomResource {
      * Etag of the Resource.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output</* @Nullable */ String> etag;
 
     /**
@@ -52,7 +52,7 @@ public class DataManager extends io.pulumi.resources.CustomResource {
      * region is specified on update the request will succeed.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -68,7 +68,7 @@ public class DataManager extends io.pulumi.resources.CustomResource {
      * The Resource Name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -82,7 +82,7 @@ public class DataManager extends io.pulumi.resources.CustomResource {
      * The sku type.
      * 
      */
-    @OutputExport(name="sku", type=SkuResponse.class, parameters={})
+    @Export(name="sku", type=SkuResponse.class, parameters={})
     private Output</* @Nullable */ SkuResponse> sku;
 
     /**
@@ -97,7 +97,7 @@ public class DataManager extends io.pulumi.resources.CustomResource {
      * (across resource groups).
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -112,7 +112,7 @@ public class DataManager extends io.pulumi.resources.CustomResource {
      * The Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

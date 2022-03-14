@@ -5,7 +5,7 @@ package io.pulumi.azurenative.security.inputs;
 
 import io.pulumi.azurenative.security.inputs.AutomationTriggeringRuleArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class AutomationRuleSetArgs extends io.pulumi.resources.ResourceArg
 
     public static final AutomationRuleSetArgs Empty = new AutomationRuleSetArgs();
 
-    @InputImport(name="rules")
+    @Import(name="rules")
       private final @Nullable Output<List<AutomationTriggeringRuleArgs>> rules;
 
     public Output<List<AutomationTriggeringRuleArgs>> getRules() {

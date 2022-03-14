@@ -7,7 +7,7 @@ import io.pulumi.azurenative.network.enums.ManagedRuleExclusionMatchVariable;
 import io.pulumi.azurenative.network.enums.ManagedRuleExclusionSelectorMatchOperator;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -24,7 +24,7 @@ public final class ManagedRuleExclusionArgs extends io.pulumi.resources.Resource
      * The variable type to be excluded.
      * 
      */
-    @InputImport(name="matchVariable", required=true)
+    @Import(name="matchVariable", required=true)
       private final Output<Either<String,ManagedRuleExclusionMatchVariable>> matchVariable;
 
     public Output<Either<String,ManagedRuleExclusionMatchVariable>> getMatchVariable() {
@@ -35,7 +35,7 @@ public final class ManagedRuleExclusionArgs extends io.pulumi.resources.Resource
      * Selector value for which elements in the collection this exclusion applies to.
      * 
      */
-    @InputImport(name="selector", required=true)
+    @Import(name="selector", required=true)
       private final Output<String> selector;
 
     public Output<String> getSelector() {
@@ -46,7 +46,7 @@ public final class ManagedRuleExclusionArgs extends io.pulumi.resources.Resource
      * Comparison operator to apply to the selector when specifying which elements in the collection this exclusion applies to.
      * 
      */
-    @InputImport(name="selectorMatchOperator", required=true)
+    @Import(name="selectorMatchOperator", required=true)
       private final Output<Either<String,ManagedRuleExclusionSelectorMatchOperator>> selectorMatchOperator;
 
     public Output<Either<String,ManagedRuleExclusionSelectorMatchOperator>> getSelectorMatchOperator() {

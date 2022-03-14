@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SslConfigurationResponse {
     /**
      * Cert data
@@ -32,12 +32,12 @@ public final class SslConfigurationResponse {
      */
     private final @Nullable String status;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SslConfigurationResponse(
-        @OutputCustomType.Parameter("cert") @Nullable String cert,
-        @OutputCustomType.Parameter("cname") @Nullable String cname,
-        @OutputCustomType.Parameter("key") @Nullable String key,
-        @OutputCustomType.Parameter("status") @Nullable String status) {
+        @CustomType.Parameter("cert") @Nullable String cert,
+        @CustomType.Parameter("cname") @Nullable String cname,
+        @CustomType.Parameter("key") @Nullable String key,
+        @CustomType.Parameter("status") @Nullable String status) {
         this.cert = cert;
         this.cname = cname;
         this.key = key;

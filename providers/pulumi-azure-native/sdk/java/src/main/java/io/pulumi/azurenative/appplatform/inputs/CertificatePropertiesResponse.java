@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.appplatform.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class CertificatePropertiesResponse extends io.pulumi.resources.Inv
      * The activate date of certificate.
      * 
      */
-    @InputImport(name="activateDate", required=true)
+    @Import(name="activateDate", required=true)
       private final String activateDate;
 
     public String getActivateDate() {
@@ -34,7 +34,7 @@ public final class CertificatePropertiesResponse extends io.pulumi.resources.Inv
      * The certificate version of key vault.
      * 
      */
-    @InputImport(name="certVersion")
+    @Import(name="certVersion")
       private final @Nullable String certVersion;
 
     public Optional<String> getCertVersion() {
@@ -45,7 +45,7 @@ public final class CertificatePropertiesResponse extends io.pulumi.resources.Inv
      * The domain list of certificate.
      * 
      */
-    @InputImport(name="dnsNames", required=true)
+    @Import(name="dnsNames", required=true)
       private final List<String> dnsNames;
 
     public List<String> getDnsNames() {
@@ -56,7 +56,7 @@ public final class CertificatePropertiesResponse extends io.pulumi.resources.Inv
      * The expiration date of certificate.
      * 
      */
-    @InputImport(name="expirationDate", required=true)
+    @Import(name="expirationDate", required=true)
       private final String expirationDate;
 
     public String getExpirationDate() {
@@ -67,7 +67,7 @@ public final class CertificatePropertiesResponse extends io.pulumi.resources.Inv
      * The issue date of certificate.
      * 
      */
-    @InputImport(name="issuedDate", required=true)
+    @Import(name="issuedDate", required=true)
       private final String issuedDate;
 
     public String getIssuedDate() {
@@ -78,7 +78,7 @@ public final class CertificatePropertiesResponse extends io.pulumi.resources.Inv
      * The issuer of certificate.
      * 
      */
-    @InputImport(name="issuer", required=true)
+    @Import(name="issuer", required=true)
       private final String issuer;
 
     public String getIssuer() {
@@ -89,7 +89,7 @@ public final class CertificatePropertiesResponse extends io.pulumi.resources.Inv
      * The certificate name of key vault.
      * 
      */
-    @InputImport(name="keyVaultCertName", required=true)
+    @Import(name="keyVaultCertName", required=true)
       private final String keyVaultCertName;
 
     public String getKeyVaultCertName() {
@@ -100,7 +100,7 @@ public final class CertificatePropertiesResponse extends io.pulumi.resources.Inv
      * The subject name of certificate.
      * 
      */
-    @InputImport(name="subjectName", required=true)
+    @Import(name="subjectName", required=true)
       private final String subjectName;
 
     public String getSubjectName() {
@@ -111,7 +111,7 @@ public final class CertificatePropertiesResponse extends io.pulumi.resources.Inv
      * The thumbprint of certificate.
      * 
      */
-    @InputImport(name="thumbprint", required=true)
+    @Import(name="thumbprint", required=true)
       private final String thumbprint;
 
     public String getThumbprint() {
@@ -122,7 +122,7 @@ public final class CertificatePropertiesResponse extends io.pulumi.resources.Inv
      * The vault uri of user key vault.
      * 
      */
-    @InputImport(name="vaultUri", required=true)
+    @Import(name="vaultUri", required=true)
       private final String vaultUri;
 
     public String getVaultUri() {

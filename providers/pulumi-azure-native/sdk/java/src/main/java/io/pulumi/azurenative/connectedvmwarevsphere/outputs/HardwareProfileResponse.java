@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.connectedvmwarevsphere.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class HardwareProfileResponse {
     /**
      * Gets or sets a value indicating whether virtual processors can be added while this virtual machine is running.
@@ -43,14 +43,14 @@ public final class HardwareProfileResponse {
      */
     private final @Nullable Integer numCoresPerSocket;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private HardwareProfileResponse(
-        @OutputCustomType.Parameter("cpuHotAddEnabled") Boolean cpuHotAddEnabled,
-        @OutputCustomType.Parameter("cpuHotRemoveEnabled") Boolean cpuHotRemoveEnabled,
-        @OutputCustomType.Parameter("memoryHotAddEnabled") Boolean memoryHotAddEnabled,
-        @OutputCustomType.Parameter("memorySizeMB") @Nullable Integer memorySizeMB,
-        @OutputCustomType.Parameter("numCPUs") @Nullable Integer numCPUs,
-        @OutputCustomType.Parameter("numCoresPerSocket") @Nullable Integer numCoresPerSocket) {
+        @CustomType.Parameter("cpuHotAddEnabled") Boolean cpuHotAddEnabled,
+        @CustomType.Parameter("cpuHotRemoveEnabled") Boolean cpuHotRemoveEnabled,
+        @CustomType.Parameter("memoryHotAddEnabled") Boolean memoryHotAddEnabled,
+        @CustomType.Parameter("memorySizeMB") @Nullable Integer memorySizeMB,
+        @CustomType.Parameter("numCPUs") @Nullable Integer numCPUs,
+        @CustomType.Parameter("numCoresPerSocket") @Nullable Integer numCoresPerSocket) {
         this.cpuHotAddEnabled = cpuHotAddEnabled;
         this.cpuHotRemoveEnabled = cpuHotRemoveEnabled;
         this.memoryHotAddEnabled = memoryHotAddEnabled;

@@ -8,7 +8,7 @@ import io.pulumi.azurenative.offazure.HyperVSiteArgs;
 import io.pulumi.azurenative.offazure.outputs.SitePropertiesResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -36,7 +36,7 @@ public class HyperVSite extends io.pulumi.resources.CustomResource {
      * eTag for concurrency control.
      * 
      */
-    @OutputExport(name="eTag", type=String.class, parameters={})
+    @Export(name="eTag", type=String.class, parameters={})
     private Output</* @Nullable */ String> eTag;
 
     /**
@@ -50,7 +50,7 @@ public class HyperVSite extends io.pulumi.resources.CustomResource {
      * Azure location in which Sites is created.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -64,7 +64,7 @@ public class HyperVSite extends io.pulumi.resources.CustomResource {
      * Name of the Hyper-V site.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
@@ -78,7 +78,7 @@ public class HyperVSite extends io.pulumi.resources.CustomResource {
      * Nested properties of Hyper-V site.
      * 
      */
-    @OutputExport(name="properties", type=SitePropertiesResponse.class, parameters={})
+    @Export(name="properties", type=SitePropertiesResponse.class, parameters={})
     private Output<SitePropertiesResponse> properties;
 
     /**
@@ -88,7 +88,7 @@ public class HyperVSite extends io.pulumi.resources.CustomResource {
     public Output<SitePropertiesResponse> getProperties() {
         return this.properties;
     }
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     public Output</* @Nullable */ Map<String,String>> getTags() {
@@ -98,7 +98,7 @@ public class HyperVSite extends io.pulumi.resources.CustomResource {
      * Type of resource. Type = Microsoft.OffAzure/HyperVSites.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

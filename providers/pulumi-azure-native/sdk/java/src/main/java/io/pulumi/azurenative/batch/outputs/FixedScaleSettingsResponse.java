@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.batch.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FixedScaleSettingsResponse {
     /**
      * If omitted, the default value is Requeue.
@@ -33,12 +33,12 @@ public final class FixedScaleSettingsResponse {
      */
     private final @Nullable Integer targetLowPriorityNodes;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FixedScaleSettingsResponse(
-        @OutputCustomType.Parameter("nodeDeallocationOption") @Nullable String nodeDeallocationOption,
-        @OutputCustomType.Parameter("resizeTimeout") @Nullable String resizeTimeout,
-        @OutputCustomType.Parameter("targetDedicatedNodes") @Nullable Integer targetDedicatedNodes,
-        @OutputCustomType.Parameter("targetLowPriorityNodes") @Nullable Integer targetLowPriorityNodes) {
+        @CustomType.Parameter("nodeDeallocationOption") @Nullable String nodeDeallocationOption,
+        @CustomType.Parameter("resizeTimeout") @Nullable String resizeTimeout,
+        @CustomType.Parameter("targetDedicatedNodes") @Nullable Integer targetDedicatedNodes,
+        @CustomType.Parameter("targetLowPriorityNodes") @Nullable Integer targetLowPriorityNodes) {
         this.nodeDeallocationOption = nodeDeallocationOption;
         this.resizeTimeout = resizeTimeout;
         this.targetDedicatedNodes = targetDedicatedNodes;

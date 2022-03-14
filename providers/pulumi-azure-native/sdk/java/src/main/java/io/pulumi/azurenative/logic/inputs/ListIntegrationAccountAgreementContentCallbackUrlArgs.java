@@ -5,7 +5,7 @@ package io.pulumi.azurenative.logic.inputs;
 
 import io.pulumi.azurenative.logic.enums.KeyType;
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -20,7 +20,7 @@ public final class ListIntegrationAccountAgreementContentCallbackUrlArgs extends
      * The integration account agreement name.
      * 
      */
-    @InputImport(name="agreementName", required=true)
+    @Import(name="agreementName", required=true)
       private final String agreementName;
 
     public String getAgreementName() {
@@ -31,7 +31,7 @@ public final class ListIntegrationAccountAgreementContentCallbackUrlArgs extends
      * The integration account name.
      * 
      */
-    @InputImport(name="integrationAccountName", required=true)
+    @Import(name="integrationAccountName", required=true)
       private final String integrationAccountName;
 
     public String getIntegrationAccountName() {
@@ -42,7 +42,7 @@ public final class ListIntegrationAccountAgreementContentCallbackUrlArgs extends
      * The key type.
      * 
      */
-    @InputImport(name="keyType")
+    @Import(name="keyType")
       private final @Nullable Either<String,KeyType> keyType;
 
     public Either<String,KeyType> getKeyType() {
@@ -53,7 +53,7 @@ public final class ListIntegrationAccountAgreementContentCallbackUrlArgs extends
      * The expiry time.
      * 
      */
-    @InputImport(name="notAfter")
+    @Import(name="notAfter")
       private final @Nullable String notAfter;
 
     public Optional<String> getNotAfter() {
@@ -64,7 +64,7 @@ public final class ListIntegrationAccountAgreementContentCallbackUrlArgs extends
      * The resource group name.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {

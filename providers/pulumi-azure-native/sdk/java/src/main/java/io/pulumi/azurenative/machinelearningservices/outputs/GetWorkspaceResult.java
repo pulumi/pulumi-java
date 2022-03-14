@@ -11,7 +11,7 @@ import io.pulumi.azurenative.machinelearningservices.outputs.ServiceManagedResou
 import io.pulumi.azurenative.machinelearningservices.outputs.SharedPrivateLinkResourceResponse;
 import io.pulumi.azurenative.machinelearningservices.outputs.SkuResponse;
 import io.pulumi.azurenative.machinelearningservices.outputs.SystemDataResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,7 +21,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetWorkspaceResult {
     /**
      * The flag to indicate whether to allow public access when behind VNet.
@@ -164,36 +164,36 @@ public final class GetWorkspaceResult {
      */
     private final String workspaceId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetWorkspaceResult(
-        @OutputCustomType.Parameter("allowPublicAccessWhenBehindVnet") @Nullable Boolean allowPublicAccessWhenBehindVnet,
-        @OutputCustomType.Parameter("applicationInsights") @Nullable String applicationInsights,
-        @OutputCustomType.Parameter("containerRegistry") @Nullable String containerRegistry,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("discoveryUrl") @Nullable String discoveryUrl,
-        @OutputCustomType.Parameter("encryption") @Nullable EncryptionPropertyResponse encryption,
-        @OutputCustomType.Parameter("friendlyName") @Nullable String friendlyName,
-        @OutputCustomType.Parameter("hbiWorkspace") @Nullable Boolean hbiWorkspace,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("identity") @Nullable IdentityResponse identity,
-        @OutputCustomType.Parameter("imageBuildCompute") @Nullable String imageBuildCompute,
-        @OutputCustomType.Parameter("keyVault") @Nullable String keyVault,
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("notebookInfo") NotebookResourceInfoResponse notebookInfo,
-        @OutputCustomType.Parameter("primaryUserAssignedIdentity") @Nullable String primaryUserAssignedIdentity,
-        @OutputCustomType.Parameter("privateEndpointConnections") List<PrivateEndpointConnectionResponse> privateEndpointConnections,
-        @OutputCustomType.Parameter("privateLinkCount") Integer privateLinkCount,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("serviceManagedResourcesSettings") @Nullable ServiceManagedResourcesSettingsResponse serviceManagedResourcesSettings,
-        @OutputCustomType.Parameter("serviceProvisionedResourceGroup") String serviceProvisionedResourceGroup,
-        @OutputCustomType.Parameter("sharedPrivateLinkResources") @Nullable List<SharedPrivateLinkResourceResponse> sharedPrivateLinkResources,
-        @OutputCustomType.Parameter("sku") @Nullable SkuResponse sku,
-        @OutputCustomType.Parameter("storageAccount") @Nullable String storageAccount,
-        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("workspaceId") String workspaceId) {
+        @CustomType.Parameter("allowPublicAccessWhenBehindVnet") @Nullable Boolean allowPublicAccessWhenBehindVnet,
+        @CustomType.Parameter("applicationInsights") @Nullable String applicationInsights,
+        @CustomType.Parameter("containerRegistry") @Nullable String containerRegistry,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("discoveryUrl") @Nullable String discoveryUrl,
+        @CustomType.Parameter("encryption") @Nullable EncryptionPropertyResponse encryption,
+        @CustomType.Parameter("friendlyName") @Nullable String friendlyName,
+        @CustomType.Parameter("hbiWorkspace") @Nullable Boolean hbiWorkspace,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("identity") @Nullable IdentityResponse identity,
+        @CustomType.Parameter("imageBuildCompute") @Nullable String imageBuildCompute,
+        @CustomType.Parameter("keyVault") @Nullable String keyVault,
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("notebookInfo") NotebookResourceInfoResponse notebookInfo,
+        @CustomType.Parameter("primaryUserAssignedIdentity") @Nullable String primaryUserAssignedIdentity,
+        @CustomType.Parameter("privateEndpointConnections") List<PrivateEndpointConnectionResponse> privateEndpointConnections,
+        @CustomType.Parameter("privateLinkCount") Integer privateLinkCount,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("serviceManagedResourcesSettings") @Nullable ServiceManagedResourcesSettingsResponse serviceManagedResourcesSettings,
+        @CustomType.Parameter("serviceProvisionedResourceGroup") String serviceProvisionedResourceGroup,
+        @CustomType.Parameter("sharedPrivateLinkResources") @Nullable List<SharedPrivateLinkResourceResponse> sharedPrivateLinkResources,
+        @CustomType.Parameter("sku") @Nullable SkuResponse sku,
+        @CustomType.Parameter("storageAccount") @Nullable String storageAccount,
+        @CustomType.Parameter("systemData") SystemDataResponse systemData,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("workspaceId") String workspaceId) {
         this.allowPublicAccessWhenBehindVnet = allowPublicAccessWhenBehindVnet;
         this.applicationInsights = applicationInsights;
         this.containerRegistry = containerRegistry;

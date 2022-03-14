@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.AzureFirewallPublicIPAddressResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class HubPublicIPAddressesResponse extends io.pulumi.resources.Invo
      * The list of Public IP addresses associated with azure firewall or IP addresses to be retained.
      * 
      */
-    @InputImport(name="addresses")
+    @Import(name="addresses")
       private final @Nullable List<AzureFirewallPublicIPAddressResponse> addresses;
 
     public List<AzureFirewallPublicIPAddressResponse> getAddresses() {
@@ -35,7 +35,7 @@ public final class HubPublicIPAddressesResponse extends io.pulumi.resources.Invo
      * The number of Public IP addresses associated with azure firewall.
      * 
      */
-    @InputImport(name="count")
+    @Import(name="count")
       private final @Nullable Integer count;
 
     public Optional<Integer> getCount() {

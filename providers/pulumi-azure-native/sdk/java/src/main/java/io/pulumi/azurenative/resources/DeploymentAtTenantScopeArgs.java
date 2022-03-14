@@ -5,7 +5,7 @@ package io.pulumi.azurenative.resources;
 
 import io.pulumi.azurenative.resources.inputs.DeploymentPropertiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class DeploymentAtTenantScopeArgs extends io.pulumi.resources.Resou
      * The name of the deployment.
      * 
      */
-    @InputImport(name="deploymentName")
+    @Import(name="deploymentName")
       private final @Nullable Output<String> deploymentName;
 
     public Output<String> getDeploymentName() {
@@ -31,7 +31,7 @@ public final class DeploymentAtTenantScopeArgs extends io.pulumi.resources.Resou
      * The location to store the deployment data.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -42,7 +42,7 @@ public final class DeploymentAtTenantScopeArgs extends io.pulumi.resources.Resou
      * The deployment properties.
      * 
      */
-    @InputImport(name="properties", required=true)
+    @Import(name="properties", required=true)
       private final Output<DeploymentPropertiesArgs> properties;
 
     public Output<DeploymentPropertiesArgs> getProperties() {
@@ -53,7 +53,7 @@ public final class DeploymentAtTenantScopeArgs extends io.pulumi.resources.Resou
      * Deployment tags
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

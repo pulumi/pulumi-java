@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.subscription.AliasArgs;
 import io.pulumi.azurenative.subscription.outputs.PutAliasResponsePropertiesResponse;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -34,7 +34,7 @@ public class Alias extends io.pulumi.resources.CustomResource {
      * Alias ID.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -48,7 +48,7 @@ public class Alias extends io.pulumi.resources.CustomResource {
      * Put Alias response properties.
      * 
      */
-    @OutputExport(name="properties", type=PutAliasResponsePropertiesResponse.class, parameters={})
+    @Export(name="properties", type=PutAliasResponsePropertiesResponse.class, parameters={})
     private Output<PutAliasResponsePropertiesResponse> properties;
 
     /**
@@ -62,7 +62,7 @@ public class Alias extends io.pulumi.resources.CustomResource {
      * Resource type, Microsoft.Subscription/aliases.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

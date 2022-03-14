@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.videoanalyzer.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class PemCertificateListResponse extends io.pulumi.resources.Invoke
      * PEM formatted public certificates. One certificate per entry.
      * 
      */
-    @InputImport(name="certificates", required=true)
+    @Import(name="certificates", required=true)
       private final List<String> certificates;
 
     public List<String> getCertificates() {
@@ -33,7 +33,7 @@ public final class PemCertificateListResponse extends io.pulumi.resources.Invoke
      * Expected value is '#Microsoft.VideoAnalyzer.PemCertificateList'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

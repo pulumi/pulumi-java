@@ -10,7 +10,7 @@ import io.pulumi.azurenative.datafactory.inputs.ParameterSpecificationArgs;
 import io.pulumi.azurenative.datafactory.inputs.SecureStringArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -31,7 +31,7 @@ public final class AzureBlobStorageLinkedServiceArgs extends io.pulumi.resources
      * The Azure key vault secret reference of accountKey in connection string.
      * 
      */
-    @InputImport(name="accountKey")
+    @Import(name="accountKey")
       private final @Nullable Output<AzureKeyVaultSecretReferenceArgs> accountKey;
 
     public Output<AzureKeyVaultSecretReferenceArgs> getAccountKey() {
@@ -42,7 +42,7 @@ public final class AzureBlobStorageLinkedServiceArgs extends io.pulumi.resources
      * Specify the kind of your storage account. Allowed values are: Storage (general purpose v1), StorageV2 (general purpose v2), BlobStorage, or BlockBlobStorage. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="accountKind")
+    @Import(name="accountKind")
       private final @Nullable Output<String> accountKind;
 
     public Output<String> getAccountKind() {
@@ -53,7 +53,7 @@ public final class AzureBlobStorageLinkedServiceArgs extends io.pulumi.resources
      * List of tags that can be used for describing the linked service.
      * 
      */
-    @InputImport(name="annotations")
+    @Import(name="annotations")
       private final @Nullable Output<List<Object>> annotations;
 
     public Output<List<Object>> getAnnotations() {
@@ -64,7 +64,7 @@ public final class AzureBlobStorageLinkedServiceArgs extends io.pulumi.resources
      * Indicates the azure cloud type of the service principle auth. Allowed values are AzurePublic, AzureChina, AzureUsGovernment, AzureGermany. Default value is the data factory regions’ cloud type. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="azureCloudType")
+    @Import(name="azureCloudType")
       private final @Nullable Output<Object> azureCloudType;
 
     public Output<Object> getAzureCloudType() {
@@ -75,7 +75,7 @@ public final class AzureBlobStorageLinkedServiceArgs extends io.pulumi.resources
      * The integration runtime reference.
      * 
      */
-    @InputImport(name="connectVia")
+    @Import(name="connectVia")
       private final @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
 
     public Output<IntegrationRuntimeReferenceArgs> getConnectVia() {
@@ -86,7 +86,7 @@ public final class AzureBlobStorageLinkedServiceArgs extends io.pulumi.resources
      * The connection string. It is mutually exclusive with sasUri, serviceEndpoint property. Type: string, SecureString or AzureKeyVaultSecretReference.
      * 
      */
-    @InputImport(name="connectionString")
+    @Import(name="connectionString")
       private final @Nullable Output<Object> connectionString;
 
     public Output<Object> getConnectionString() {
@@ -97,7 +97,7 @@ public final class AzureBlobStorageLinkedServiceArgs extends io.pulumi.resources
      * The credential reference containing authentication information.
      * 
      */
-    @InputImport(name="credential")
+    @Import(name="credential")
       private final @Nullable Output<CredentialReferenceArgs> credential;
 
     public Output<CredentialReferenceArgs> getCredential() {
@@ -108,7 +108,7 @@ public final class AzureBlobStorageLinkedServiceArgs extends io.pulumi.resources
      * Linked service description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -119,7 +119,7 @@ public final class AzureBlobStorageLinkedServiceArgs extends io.pulumi.resources
      * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="encryptedCredential")
+    @Import(name="encryptedCredential")
       private final @Nullable Output<String> encryptedCredential;
 
     public Output<String> getEncryptedCredential() {
@@ -130,7 +130,7 @@ public final class AzureBlobStorageLinkedServiceArgs extends io.pulumi.resources
      * Parameters for linked service.
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
     public Output<Map<String,ParameterSpecificationArgs>> getParameters() {
@@ -141,7 +141,7 @@ public final class AzureBlobStorageLinkedServiceArgs extends io.pulumi.resources
      * The Azure key vault secret reference of sasToken in sas uri.
      * 
      */
-    @InputImport(name="sasToken")
+    @Import(name="sasToken")
       private final @Nullable Output<AzureKeyVaultSecretReferenceArgs> sasToken;
 
     public Output<AzureKeyVaultSecretReferenceArgs> getSasToken() {
@@ -152,7 +152,7 @@ public final class AzureBlobStorageLinkedServiceArgs extends io.pulumi.resources
      * SAS URI of the Azure Blob Storage resource. It is mutually exclusive with connectionString, serviceEndpoint property. Type: string, SecureString or AzureKeyVaultSecretReference.
      * 
      */
-    @InputImport(name="sasUri")
+    @Import(name="sasUri")
       private final @Nullable Output<Object> sasUri;
 
     public Output<Object> getSasUri() {
@@ -163,7 +163,7 @@ public final class AzureBlobStorageLinkedServiceArgs extends io.pulumi.resources
      * Blob service endpoint of the Azure Blob Storage resource. It is mutually exclusive with connectionString, sasUri property.
      * 
      */
-    @InputImport(name="serviceEndpoint")
+    @Import(name="serviceEndpoint")
       private final @Nullable Output<String> serviceEndpoint;
 
     public Output<String> getServiceEndpoint() {
@@ -174,7 +174,7 @@ public final class AzureBlobStorageLinkedServiceArgs extends io.pulumi.resources
      * The ID of the service principal used to authenticate against Azure SQL Data Warehouse. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="servicePrincipalId")
+    @Import(name="servicePrincipalId")
       private final @Nullable Output<Object> servicePrincipalId;
 
     public Output<Object> getServicePrincipalId() {
@@ -185,7 +185,7 @@ public final class AzureBlobStorageLinkedServiceArgs extends io.pulumi.resources
      * The key of the service principal used to authenticate against Azure SQL Data Warehouse.
      * 
      */
-    @InputImport(name="servicePrincipalKey")
+    @Import(name="servicePrincipalKey")
       private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalKey;
 
     public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getServicePrincipalKey() {
@@ -196,7 +196,7 @@ public final class AzureBlobStorageLinkedServiceArgs extends io.pulumi.resources
      * The name or ID of the tenant to which the service principal belongs. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="tenant")
+    @Import(name="tenant")
       private final @Nullable Output<Object> tenant;
 
     public Output<Object> getTenant() {
@@ -208,7 +208,7 @@ public final class AzureBlobStorageLinkedServiceArgs extends io.pulumi.resources
      * Expected value is 'AzureBlobStorage'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {

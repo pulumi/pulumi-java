@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.storagesync;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class RegisteredServerArgs extends io.pulumi.resources.ResourceArgs
      * Registered Server Agent Version
      * 
      */
-    @InputImport(name="agentVersion")
+    @Import(name="agentVersion")
       private final @Nullable Output<String> agentVersion;
 
     public Output<String> getAgentVersion() {
@@ -29,7 +29,7 @@ public final class RegisteredServerArgs extends io.pulumi.resources.ResourceArgs
      * Registered Server clusterId
      * 
      */
-    @InputImport(name="clusterId")
+    @Import(name="clusterId")
       private final @Nullable Output<String> clusterId;
 
     public Output<String> getClusterId() {
@@ -40,7 +40,7 @@ public final class RegisteredServerArgs extends io.pulumi.resources.ResourceArgs
      * Registered Server clusterName
      * 
      */
-    @InputImport(name="clusterName")
+    @Import(name="clusterName")
       private final @Nullable Output<String> clusterName;
 
     public Output<String> getClusterName() {
@@ -51,7 +51,7 @@ public final class RegisteredServerArgs extends io.pulumi.resources.ResourceArgs
      * Friendly Name
      * 
      */
-    @InputImport(name="friendlyName")
+    @Import(name="friendlyName")
       private final @Nullable Output<String> friendlyName;
 
     public Output<String> getFriendlyName() {
@@ -62,7 +62,7 @@ public final class RegisteredServerArgs extends io.pulumi.resources.ResourceArgs
      * Registered Server last heart beat
      * 
      */
-    @InputImport(name="lastHeartBeat")
+    @Import(name="lastHeartBeat")
       private final @Nullable Output<String> lastHeartBeat;
 
     public Output<String> getLastHeartBeat() {
@@ -73,7 +73,7 @@ public final class RegisteredServerArgs extends io.pulumi.resources.ResourceArgs
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -84,7 +84,7 @@ public final class RegisteredServerArgs extends io.pulumi.resources.ResourceArgs
      * Registered Server Certificate
      * 
      */
-    @InputImport(name="serverCertificate")
+    @Import(name="serverCertificate")
       private final @Nullable Output<String> serverCertificate;
 
     public Output<String> getServerCertificate() {
@@ -95,7 +95,7 @@ public final class RegisteredServerArgs extends io.pulumi.resources.ResourceArgs
      * Registered Server serverId
      * 
      */
-    @InputImport(name="serverId")
+    @Import(name="serverId")
       private final @Nullable Output<String> serverId;
 
     public Output<String> getServerId() {
@@ -106,7 +106,7 @@ public final class RegisteredServerArgs extends io.pulumi.resources.ResourceArgs
      * Registered Server OS Version
      * 
      */
-    @InputImport(name="serverOSVersion")
+    @Import(name="serverOSVersion")
       private final @Nullable Output<String> serverOSVersion;
 
     public Output<String> getServerOSVersion() {
@@ -117,7 +117,7 @@ public final class RegisteredServerArgs extends io.pulumi.resources.ResourceArgs
      * Registered Server serverRole
      * 
      */
-    @InputImport(name="serverRole")
+    @Import(name="serverRole")
       private final @Nullable Output<String> serverRole;
 
     public Output<String> getServerRole() {
@@ -128,7 +128,7 @@ public final class RegisteredServerArgs extends io.pulumi.resources.ResourceArgs
      * Name of Storage Sync Service resource.
      * 
      */
-    @InputImport(name="storageSyncServiceName", required=true)
+    @Import(name="storageSyncServiceName", required=true)
       private final Output<String> storageSyncServiceName;
 
     public Output<String> getStorageSyncServiceName() {

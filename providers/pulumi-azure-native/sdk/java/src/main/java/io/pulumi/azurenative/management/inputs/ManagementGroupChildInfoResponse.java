@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.management.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ManagementGroupChildInfoResponse extends io.pulumi.resources.
      * The list of children.
      * 
      */
-    @InputImport(name="children")
+    @Import(name="children")
       private final @Nullable List<ManagementGroupChildInfoResponse> children;
 
     public List<ManagementGroupChildInfoResponse> getChildren() {
@@ -34,7 +34,7 @@ public final class ManagementGroupChildInfoResponse extends io.pulumi.resources.
      * The friendly name of the child resource.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable String displayName;
 
     public Optional<String> getDisplayName() {
@@ -45,7 +45,7 @@ public final class ManagementGroupChildInfoResponse extends io.pulumi.resources.
      * The fully qualified ID for the child resource (management group or subscription).  For example, /providers/Microsoft.Management/managementGroups/0000000-0000-0000-0000-000000000000
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable String id;
 
     public Optional<String> getId() {
@@ -56,7 +56,7 @@ public final class ManagementGroupChildInfoResponse extends io.pulumi.resources.
      * The name of the child entity.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -67,7 +67,7 @@ public final class ManagementGroupChildInfoResponse extends io.pulumi.resources.
      * The fully qualified resource type which includes provider namespace (e.g. Microsoft.Management/managementGroups)
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable String type;
 
     public Optional<String> getType() {

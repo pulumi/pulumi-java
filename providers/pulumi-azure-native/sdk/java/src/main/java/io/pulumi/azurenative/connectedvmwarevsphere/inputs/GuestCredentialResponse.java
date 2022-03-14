@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.connectedvmwarevsphere.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class GuestCredentialResponse extends io.pulumi.resources.InvokeArg
      * Gets or sets username to connect with the guest.
      * 
      */
-    @InputImport(name="username")
+    @Import(name="username")
       private final @Nullable String username;
 
     public Optional<String> getUsername() {

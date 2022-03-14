@@ -3,12 +3,12 @@
 
 package io.pulumi.azurenative.vmwarecloudsimple.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class VirtualNetworkResponse {
     /**
      * can be used in vm creation/deletion
@@ -41,14 +41,14 @@ public final class VirtualNetworkResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VirtualNetworkResponse(
-        @OutputCustomType.Parameter("assignable") Boolean assignable,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("privateCloudId") String privateCloudId,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("assignable") Boolean assignable,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("privateCloudId") String privateCloudId,
+        @CustomType.Parameter("type") String type) {
         this.assignable = assignable;
         this.id = id;
         this.location = location;

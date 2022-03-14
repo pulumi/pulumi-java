@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.media.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class LiveEventEndpointResponse {
     /**
      * The endpoint protocol.
@@ -22,10 +22,10 @@ public final class LiveEventEndpointResponse {
      */
     private final @Nullable String url;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LiveEventEndpointResponse(
-        @OutputCustomType.Parameter("protocol") @Nullable String protocol,
-        @OutputCustomType.Parameter("url") @Nullable String url) {
+        @CustomType.Parameter("protocol") @Nullable String protocol,
+        @CustomType.Parameter("url") @Nullable String url) {
         this.protocol = protocol;
         this.url = url;
     }

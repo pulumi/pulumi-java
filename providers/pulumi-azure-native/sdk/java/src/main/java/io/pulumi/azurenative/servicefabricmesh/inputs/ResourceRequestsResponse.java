@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.servicefabricmesh.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class ResourceRequestsResponse extends io.pulumi.resources.InvokeAr
      * Requested number of CPU cores. At present, only full cores are supported.
      * 
      */
-    @InputImport(name="cpu", required=true)
+    @Import(name="cpu", required=true)
       private final Double cpu;
 
     public Double getCpu() {
@@ -31,7 +31,7 @@ public final class ResourceRequestsResponse extends io.pulumi.resources.InvokeAr
      * The memory request in GB for this container.
      * 
      */
-    @InputImport(name="memoryInGB", required=true)
+    @Import(name="memoryInGB", required=true)
       private final Double memoryInGB;
 
     public Double getMemoryInGB() {

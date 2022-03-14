@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class O365BreakOutCategoryPoliciesResponse extends io.pulumi.resour
      * Flag to control allow category.
      * 
      */
-    @InputImport(name="allow")
+    @Import(name="allow")
       private final @Nullable Boolean allow;
 
     public Optional<Boolean> getAllow() {
@@ -33,7 +33,7 @@ public final class O365BreakOutCategoryPoliciesResponse extends io.pulumi.resour
      * Flag to control default category.
      * 
      */
-    @InputImport(name="default")
+    @Import(name="default")
       private final @Nullable Boolean $default;
 
     public Optional<Boolean> get$default() {
@@ -44,7 +44,7 @@ public final class O365BreakOutCategoryPoliciesResponse extends io.pulumi.resour
      * Flag to control optimize category.
      * 
      */
-    @InputImport(name="optimize")
+    @Import(name="optimize")
       private final @Nullable Boolean optimize;
 
     public Optional<Boolean> getOptimize() {

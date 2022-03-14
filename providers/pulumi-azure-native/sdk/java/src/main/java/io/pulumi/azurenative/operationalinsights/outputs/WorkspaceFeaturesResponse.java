@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.operationalinsights.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class WorkspaceFeaturesResponse {
     /**
      * Dedicated LA cluster resourceId that is linked to the workspaces.
@@ -38,13 +38,13 @@ public final class WorkspaceFeaturesResponse {
      */
     private final @Nullable Boolean immediatePurgeDataOn30Days;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WorkspaceFeaturesResponse(
-        @OutputCustomType.Parameter("clusterResourceId") @Nullable String clusterResourceId,
-        @OutputCustomType.Parameter("disableLocalAuth") @Nullable Boolean disableLocalAuth,
-        @OutputCustomType.Parameter("enableDataExport") @Nullable Boolean enableDataExport,
-        @OutputCustomType.Parameter("enableLogAccessUsingOnlyResourcePermissions") @Nullable Boolean enableLogAccessUsingOnlyResourcePermissions,
-        @OutputCustomType.Parameter("immediatePurgeDataOn30Days") @Nullable Boolean immediatePurgeDataOn30Days) {
+        @CustomType.Parameter("clusterResourceId") @Nullable String clusterResourceId,
+        @CustomType.Parameter("disableLocalAuth") @Nullable Boolean disableLocalAuth,
+        @CustomType.Parameter("enableDataExport") @Nullable Boolean enableDataExport,
+        @CustomType.Parameter("enableLogAccessUsingOnlyResourcePermissions") @Nullable Boolean enableLogAccessUsingOnlyResourcePermissions,
+        @CustomType.Parameter("immediatePurgeDataOn30Days") @Nullable Boolean immediatePurgeDataOn30Days) {
         this.clusterResourceId = clusterResourceId;
         this.disableLocalAuth = disableLocalAuth;
         this.enableDataExport = enableDataExport;

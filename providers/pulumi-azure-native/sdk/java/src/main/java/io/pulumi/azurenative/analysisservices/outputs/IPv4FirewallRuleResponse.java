@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.analysisservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class IPv4FirewallRuleResponse {
     /**
      * The rule name.
@@ -27,11 +27,11 @@ public final class IPv4FirewallRuleResponse {
      */
     private final @Nullable String rangeStart;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private IPv4FirewallRuleResponse(
-        @OutputCustomType.Parameter("firewallRuleName") @Nullable String firewallRuleName,
-        @OutputCustomType.Parameter("rangeEnd") @Nullable String rangeEnd,
-        @OutputCustomType.Parameter("rangeStart") @Nullable String rangeStart) {
+        @CustomType.Parameter("firewallRuleName") @Nullable String firewallRuleName,
+        @CustomType.Parameter("rangeEnd") @Nullable String rangeEnd,
+        @CustomType.Parameter("rangeStart") @Nullable String rangeStart) {
         this.firewallRuleName = firewallRuleName;
         this.rangeEnd = rangeEnd;
         this.rangeStart = rangeStart;

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.marketplace;
 
 import io.pulumi.azurenative.marketplace.inputs.PlanArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class PrivateStoreOfferArgs extends io.pulumi.resources.ResourceArg
      * Identifier for purposes of race condition
      * 
      */
-    @InputImport(name="eTag")
+    @Import(name="eTag")
       private final @Nullable Output<String> eTag;
 
     public Output<String> getETag() {
@@ -33,7 +33,7 @@ public final class PrivateStoreOfferArgs extends io.pulumi.resources.ResourceArg
      * Icon File Uris
      * 
      */
-    @InputImport(name="iconFileUris")
+    @Import(name="iconFileUris")
       private final @Nullable Output<Map<String,String>> iconFileUris;
 
     public Output<Map<String,String>> getIconFileUris() {
@@ -44,7 +44,7 @@ public final class PrivateStoreOfferArgs extends io.pulumi.resources.ResourceArg
      * The offer ID to update or delete
      * 
      */
-    @InputImport(name="offerId")
+    @Import(name="offerId")
       private final @Nullable Output<String> offerId;
 
     public Output<String> getOfferId() {
@@ -55,7 +55,7 @@ public final class PrivateStoreOfferArgs extends io.pulumi.resources.ResourceArg
      * Offer plans
      * 
      */
-    @InputImport(name="plans")
+    @Import(name="plans")
       private final @Nullable Output<List<PlanArgs>> plans;
 
     public Output<List<PlanArgs>> getPlans() {
@@ -66,7 +66,7 @@ public final class PrivateStoreOfferArgs extends io.pulumi.resources.ResourceArg
      * The store ID - must use the tenant ID
      * 
      */
-    @InputImport(name="privateStoreId", required=true)
+    @Import(name="privateStoreId", required=true)
       private final Output<String> privateStoreId;
 
     public Output<String> getPrivateStoreId() {
@@ -77,7 +77,7 @@ public final class PrivateStoreOfferArgs extends io.pulumi.resources.ResourceArg
      * Plan ids limitation for this offer
      * 
      */
-    @InputImport(name="specificPlanIdsLimitation")
+    @Import(name="specificPlanIdsLimitation")
       private final @Nullable Output<List<String>> specificPlanIdsLimitation;
 
     public Output<List<String>> getSpecificPlanIdsLimitation() {
@@ -88,7 +88,7 @@ public final class PrivateStoreOfferArgs extends io.pulumi.resources.ResourceArg
      * Indicating whether the offer was not updated to db (true = not updated). If the allow list is identical to the existed one in db, the offer would not be updated.
      * 
      */
-    @InputImport(name="updateSuppressedDueIdempotence")
+    @Import(name="updateSuppressedDueIdempotence")
       private final @Nullable Output<Boolean> updateSuppressedDueIdempotence;
 
     public Output<Boolean> getUpdateSuppressedDueIdempotence() {

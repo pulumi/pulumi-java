@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.authorization.outputs;
 
 import io.pulumi.azurenative.authorization.outputs.PermissionResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetRoleDefinitionResult {
     /**
      * Role definition assignable scopes.
@@ -54,16 +54,16 @@ public final class GetRoleDefinitionResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetRoleDefinitionResult(
-        @OutputCustomType.Parameter("assignableScopes") @Nullable List<String> assignableScopes,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("permissions") @Nullable List<PermissionResponse> permissions,
-        @OutputCustomType.Parameter("roleName") @Nullable String roleName,
-        @OutputCustomType.Parameter("roleType") @Nullable String roleType,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("assignableScopes") @Nullable List<String> assignableScopes,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("permissions") @Nullable List<PermissionResponse> permissions,
+        @CustomType.Parameter("roleName") @Nullable String roleName,
+        @CustomType.Parameter("roleType") @Nullable String roleType,
+        @CustomType.Parameter("type") String type) {
         this.assignableScopes = assignableScopes;
         this.description = description;
         this.id = id;

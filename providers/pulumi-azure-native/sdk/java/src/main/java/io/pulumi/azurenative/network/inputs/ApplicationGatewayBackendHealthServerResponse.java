@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.NetworkInterfaceIPConfigurationResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class ApplicationGatewayBackendHealthServerResponse extends io.pulu
      * IP address or FQDN of backend server.
      * 
      */
-    @InputImport(name="address")
+    @Import(name="address")
       private final @Nullable String address;
 
     public Optional<String> getAddress() {
@@ -34,7 +34,7 @@ public final class ApplicationGatewayBackendHealthServerResponse extends io.pulu
      * Health of backend server.
      * 
      */
-    @InputImport(name="health")
+    @Import(name="health")
       private final @Nullable String health;
 
     public Optional<String> getHealth() {
@@ -45,7 +45,7 @@ public final class ApplicationGatewayBackendHealthServerResponse extends io.pulu
      * Health Probe Log.
      * 
      */
-    @InputImport(name="healthProbeLog")
+    @Import(name="healthProbeLog")
       private final @Nullable String healthProbeLog;
 
     public Optional<String> getHealthProbeLog() {
@@ -56,7 +56,7 @@ public final class ApplicationGatewayBackendHealthServerResponse extends io.pulu
      * Reference to IP configuration of backend server.
      * 
      */
-    @InputImport(name="ipConfiguration")
+    @Import(name="ipConfiguration")
       private final @Nullable NetworkInterfaceIPConfigurationResponse ipConfiguration;
 
     public Optional<NetworkInterfaceIPConfigurationResponse> getIpConfiguration() {

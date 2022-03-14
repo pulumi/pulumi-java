@@ -6,7 +6,7 @@ package io.pulumi.azurenative.batch.inputs;
 import io.pulumi.azurenative.batch.enums.CachingType;
 import io.pulumi.azurenative.batch.enums.StorageAccountType;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -30,14 +30,14 @@ public final class DataDiskArgs extends io.pulumi.resources.ResourceArgs {
      *  The default value for caching is none. For information about the caching options see: https://blogs.msdn.microsoft.com/windowsazurestorage/2012/06/27/exploring-windows-azure-drives-disks-and-images/.
      * 
      */
-    @InputImport(name="caching")
+    @Import(name="caching")
       private final @Nullable Output<CachingType> caching;
 
     public Output<CachingType> getCaching() {
         return this.caching == null ? Output.empty() : this.caching;
     }
 
-    @InputImport(name="diskSizeGB", required=true)
+    @Import(name="diskSizeGB", required=true)
       private final Output<Integer> diskSizeGB;
 
     public Output<Integer> getDiskSizeGB() {
@@ -48,7 +48,7 @@ public final class DataDiskArgs extends io.pulumi.resources.ResourceArgs {
      * The lun is used to uniquely identify each data disk. If attaching multiple disks, each should have a distinct lun. The value must be between 0 and 63, inclusive.
      * 
      */
-    @InputImport(name="lun", required=true)
+    @Import(name="lun", required=true)
       private final Output<Integer> lun;
 
     public Output<Integer> getLun() {
@@ -62,7 +62,7 @@ public final class DataDiskArgs extends io.pulumi.resources.ResourceArgs {
      *  Premium_LRS - The data disk should use premium locally redundant storage.
      * 
      */
-    @InputImport(name="storageAccountType")
+    @Import(name="storageAccountType")
       private final @Nullable Output<StorageAccountType> storageAccountType;
 
     public Output<StorageAccountType> getStorageAccountType() {

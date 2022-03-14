@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GalleryImageIdentifierResponse {
     /**
      * The name of the gallery image definition offer.
@@ -25,11 +25,11 @@ public final class GalleryImageIdentifierResponse {
      */
     private final String sku;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GalleryImageIdentifierResponse(
-        @OutputCustomType.Parameter("offer") String offer,
-        @OutputCustomType.Parameter("publisher") String publisher,
-        @OutputCustomType.Parameter("sku") String sku) {
+        @CustomType.Parameter("offer") String offer,
+        @CustomType.Parameter("publisher") String publisher,
+        @CustomType.Parameter("sku") String sku) {
         this.offer = offer;
         this.publisher = publisher;
         this.sku = sku;

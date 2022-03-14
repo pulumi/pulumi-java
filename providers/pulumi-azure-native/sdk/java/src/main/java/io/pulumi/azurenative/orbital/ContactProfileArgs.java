@@ -6,7 +6,7 @@ package io.pulumi.azurenative.orbital;
 import io.pulumi.azurenative.orbital.enums.AutoTrackingConfiguration;
 import io.pulumi.azurenative.orbital.inputs.ContactProfileLinkArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class ContactProfileArgs extends io.pulumi.resources.ResourceArgs {
      * Auto track configuration.
      * 
      */
-    @InputImport(name="autoTrackingConfiguration")
+    @Import(name="autoTrackingConfiguration")
       private final @Nullable Output<AutoTrackingConfiguration> autoTrackingConfiguration;
 
     public Output<AutoTrackingConfiguration> getAutoTrackingConfiguration() {
@@ -34,7 +34,7 @@ public final class ContactProfileArgs extends io.pulumi.resources.ResourceArgs {
      * Contact Profile Name
      * 
      */
-    @InputImport(name="contactProfileName")
+    @Import(name="contactProfileName")
       private final @Nullable Output<String> contactProfileName;
 
     public Output<String> getContactProfileName() {
@@ -45,7 +45,7 @@ public final class ContactProfileArgs extends io.pulumi.resources.ResourceArgs {
      * The URI of the Event Hub used for telemetry
      * 
      */
-    @InputImport(name="eventHubUri")
+    @Import(name="eventHubUri")
       private final @Nullable Output<String> eventHubUri;
 
     public Output<String> getEventHubUri() {
@@ -56,7 +56,7 @@ public final class ContactProfileArgs extends io.pulumi.resources.ResourceArgs {
      * Links of the Contact Profile
      * 
      */
-    @InputImport(name="links", required=true)
+    @Import(name="links", required=true)
       private final Output<List<ContactProfileLinkArgs>> links;
 
     public Output<List<ContactProfileLinkArgs>> getLinks() {
@@ -67,7 +67,7 @@ public final class ContactProfileArgs extends io.pulumi.resources.ResourceArgs {
      * The geo-location where the resource lives
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -78,7 +78,7 @@ public final class ContactProfileArgs extends io.pulumi.resources.ResourceArgs {
      * Minimum viable elevation for the contact in decimal degrees.
      * 
      */
-    @InputImport(name="minimumElevationDegrees")
+    @Import(name="minimumElevationDegrees")
       private final @Nullable Output<Double> minimumElevationDegrees;
 
     public Output<Double> getMinimumElevationDegrees() {
@@ -89,7 +89,7 @@ public final class ContactProfileArgs extends io.pulumi.resources.ResourceArgs {
      * Minimum viable contact duration in ISO 8601 format.
      * 
      */
-    @InputImport(name="minimumViableContactDuration")
+    @Import(name="minimumViableContactDuration")
       private final @Nullable Output<String> minimumViableContactDuration;
 
     public Output<String> getMinimumViableContactDuration() {
@@ -100,7 +100,7 @@ public final class ContactProfileArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -111,7 +111,7 @@ public final class ContactProfileArgs extends io.pulumi.resources.ResourceArgs {
      * Resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

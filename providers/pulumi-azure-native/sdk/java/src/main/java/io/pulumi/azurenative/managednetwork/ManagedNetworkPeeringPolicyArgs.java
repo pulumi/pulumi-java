@@ -5,7 +5,7 @@ package io.pulumi.azurenative.managednetwork;
 
 import io.pulumi.azurenative.managednetwork.inputs.ManagedNetworkPeeringPolicyPropertiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class ManagedNetworkPeeringPolicyArgs extends io.pulumi.resources.R
      * The geo-location where the resource lives
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -30,7 +30,7 @@ public final class ManagedNetworkPeeringPolicyArgs extends io.pulumi.resources.R
      * The name of the Managed Network.
      * 
      */
-    @InputImport(name="managedNetworkName", required=true)
+    @Import(name="managedNetworkName", required=true)
       private final Output<String> managedNetworkName;
 
     public Output<String> getManagedNetworkName() {
@@ -41,7 +41,7 @@ public final class ManagedNetworkPeeringPolicyArgs extends io.pulumi.resources.R
      * The name of the Managed Network Peering Policy.
      * 
      */
-    @InputImport(name="managedNetworkPeeringPolicyName")
+    @Import(name="managedNetworkPeeringPolicyName")
       private final @Nullable Output<String> managedNetworkPeeringPolicyName;
 
     public Output<String> getManagedNetworkPeeringPolicyName() {
@@ -52,7 +52,7 @@ public final class ManagedNetworkPeeringPolicyArgs extends io.pulumi.resources.R
      * Gets or sets the properties of a Managed Network Policy
      * 
      */
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable Output<ManagedNetworkPeeringPolicyPropertiesArgs> properties;
 
     public Output<ManagedNetworkPeeringPolicyPropertiesArgs> getProperties() {
@@ -63,7 +63,7 @@ public final class ManagedNetworkPeeringPolicyArgs extends io.pulumi.resources.R
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {

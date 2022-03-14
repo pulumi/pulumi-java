@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VpnLinkProviderPropertiesResponse {
     /**
      * Name of the link provider.
@@ -23,10 +23,10 @@ public final class VpnLinkProviderPropertiesResponse {
      */
     private final @Nullable Integer linkSpeedInMbps;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VpnLinkProviderPropertiesResponse(
-        @OutputCustomType.Parameter("linkProviderName") @Nullable String linkProviderName,
-        @OutputCustomType.Parameter("linkSpeedInMbps") @Nullable Integer linkSpeedInMbps) {
+        @CustomType.Parameter("linkProviderName") @Nullable String linkProviderName,
+        @CustomType.Parameter("linkSpeedInMbps") @Nullable Integer linkSpeedInMbps) {
         this.linkProviderName = linkProviderName;
         this.linkSpeedInMbps = linkSpeedInMbps;
     }

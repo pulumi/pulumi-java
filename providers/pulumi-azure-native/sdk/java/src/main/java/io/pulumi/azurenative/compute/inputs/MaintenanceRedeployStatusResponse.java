@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.compute.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class MaintenanceRedeployStatusResponse extends io.pulumi.resources
      * True, if customer is allowed to perform Maintenance.
      * 
      */
-    @InputImport(name="isCustomerInitiatedMaintenanceAllowed")
+    @Import(name="isCustomerInitiatedMaintenanceAllowed")
       private final @Nullable Boolean isCustomerInitiatedMaintenanceAllowed;
 
     public Optional<Boolean> getIsCustomerInitiatedMaintenanceAllowed() {
@@ -34,7 +34,7 @@ public final class MaintenanceRedeployStatusResponse extends io.pulumi.resources
      * Message returned for the last Maintenance Operation.
      * 
      */
-    @InputImport(name="lastOperationMessage")
+    @Import(name="lastOperationMessage")
       private final @Nullable String lastOperationMessage;
 
     public Optional<String> getLastOperationMessage() {
@@ -45,7 +45,7 @@ public final class MaintenanceRedeployStatusResponse extends io.pulumi.resources
      * The Last Maintenance Operation Result Code.
      * 
      */
-    @InputImport(name="lastOperationResultCode")
+    @Import(name="lastOperationResultCode")
       private final @Nullable String lastOperationResultCode;
 
     public Optional<String> getLastOperationResultCode() {
@@ -56,7 +56,7 @@ public final class MaintenanceRedeployStatusResponse extends io.pulumi.resources
      * End Time for the Maintenance Window.
      * 
      */
-    @InputImport(name="maintenanceWindowEndTime")
+    @Import(name="maintenanceWindowEndTime")
       private final @Nullable String maintenanceWindowEndTime;
 
     public Optional<String> getMaintenanceWindowEndTime() {
@@ -67,7 +67,7 @@ public final class MaintenanceRedeployStatusResponse extends io.pulumi.resources
      * Start Time for the Maintenance Window.
      * 
      */
-    @InputImport(name="maintenanceWindowStartTime")
+    @Import(name="maintenanceWindowStartTime")
       private final @Nullable String maintenanceWindowStartTime;
 
     public Optional<String> getMaintenanceWindowStartTime() {
@@ -78,7 +78,7 @@ public final class MaintenanceRedeployStatusResponse extends io.pulumi.resources
      * End Time for the Pre Maintenance Window.
      * 
      */
-    @InputImport(name="preMaintenanceWindowEndTime")
+    @Import(name="preMaintenanceWindowEndTime")
       private final @Nullable String preMaintenanceWindowEndTime;
 
     public Optional<String> getPreMaintenanceWindowEndTime() {
@@ -89,7 +89,7 @@ public final class MaintenanceRedeployStatusResponse extends io.pulumi.resources
      * Start Time for the Pre Maintenance Window.
      * 
      */
-    @InputImport(name="preMaintenanceWindowStartTime")
+    @Import(name="preMaintenanceWindowStartTime")
       private final @Nullable String preMaintenanceWindowStartTime;
 
     public Optional<String> getPreMaintenanceWindowStartTime() {

@@ -5,13 +5,13 @@ package io.pulumi.azurenative.connectedvmwarevsphere.outputs;
 
 import io.pulumi.azurenative.connectedvmwarevsphere.outputs.IdentityResponse;
 import io.pulumi.azurenative.connectedvmwarevsphere.outputs.SystemDataResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetHybridIdentityMetadatumResult {
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
@@ -54,16 +54,16 @@ public final class GetHybridIdentityMetadatumResult {
      */
     private final @Nullable String vmId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetHybridIdentityMetadatumResult(
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("identity") IdentityResponse identity,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("publicKey") @Nullable String publicKey,
-        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("vmId") @Nullable String vmId) {
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("identity") IdentityResponse identity,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("publicKey") @Nullable String publicKey,
+        @CustomType.Parameter("systemData") SystemDataResponse systemData,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("vmId") @Nullable String vmId) {
         this.id = id;
         this.identity = identity;
         this.name = name;

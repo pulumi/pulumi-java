@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.providerhub.outputs;
 
 import io.pulumi.azurenative.providerhub.outputs.ExtendedErrorInfoResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DefaultRolloutPropertiesResponseStatus {
     private final @Nullable List<String> completedRegions;
     private final @Nullable Map<String,ExtendedErrorInfoResponse> failedOrSkippedRegions;
@@ -20,13 +20,13 @@ public final class DefaultRolloutPropertiesResponseStatus {
     private final @Nullable String nextTrafficRegionScheduledTime;
     private final @Nullable String subscriptionReregistrationResult;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DefaultRolloutPropertiesResponseStatus(
-        @OutputCustomType.Parameter("completedRegions") @Nullable List<String> completedRegions,
-        @OutputCustomType.Parameter("failedOrSkippedRegions") @Nullable Map<String,ExtendedErrorInfoResponse> failedOrSkippedRegions,
-        @OutputCustomType.Parameter("nextTrafficRegion") @Nullable String nextTrafficRegion,
-        @OutputCustomType.Parameter("nextTrafficRegionScheduledTime") @Nullable String nextTrafficRegionScheduledTime,
-        @OutputCustomType.Parameter("subscriptionReregistrationResult") @Nullable String subscriptionReregistrationResult) {
+        @CustomType.Parameter("completedRegions") @Nullable List<String> completedRegions,
+        @CustomType.Parameter("failedOrSkippedRegions") @Nullable Map<String,ExtendedErrorInfoResponse> failedOrSkippedRegions,
+        @CustomType.Parameter("nextTrafficRegion") @Nullable String nextTrafficRegion,
+        @CustomType.Parameter("nextTrafficRegionScheduledTime") @Nullable String nextTrafficRegionScheduledTime,
+        @CustomType.Parameter("subscriptionReregistrationResult") @Nullable String subscriptionReregistrationResult) {
         this.completedRegions = completedRegions;
         this.failedOrSkippedRegions = failedOrSkippedRegions;
         this.nextTrafficRegion = nextTrafficRegion;

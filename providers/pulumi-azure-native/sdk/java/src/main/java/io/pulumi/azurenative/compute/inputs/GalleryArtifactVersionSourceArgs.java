@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class GalleryArtifactVersionSourceArgs extends io.pulumi.resources.
      * The id of the gallery artifact version source. Can specify a disk uri, snapshot uri, user image or storage account resource.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
@@ -33,7 +33,7 @@ public final class GalleryArtifactVersionSourceArgs extends io.pulumi.resources.
      * The uri of the gallery artifact version source. Currently used to specify vhd/blob source.
      * 
      */
-    @InputImport(name="uri")
+    @Import(name="uri")
       private final @Nullable Output<String> uri;
 
     public Output<String> getUri() {

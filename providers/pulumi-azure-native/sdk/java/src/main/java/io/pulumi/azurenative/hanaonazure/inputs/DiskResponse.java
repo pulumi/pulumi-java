@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.hanaonazure.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class DiskResponse extends io.pulumi.resources.InvokeArgs {
      * Specifies the size of an empty data disk in gigabytes.
      * 
      */
-    @InputImport(name="diskSizeGB")
+    @Import(name="diskSizeGB")
       private final @Nullable Integer diskSizeGB;
 
     public Optional<Integer> getDiskSizeGB() {
@@ -34,7 +34,7 @@ public final class DiskResponse extends io.pulumi.resources.InvokeArgs {
      * Specifies the logical unit number of the data disk. This value is used to identify data disks within the VM and therefore must be unique for each data disk attached to a VM.
      * 
      */
-    @InputImport(name="lun", required=true)
+    @Import(name="lun", required=true)
       private final Integer lun;
 
     public Integer getLun() {
@@ -45,7 +45,7 @@ public final class DiskResponse extends io.pulumi.resources.InvokeArgs {
      * The disk name.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {

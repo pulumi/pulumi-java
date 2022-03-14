@@ -6,7 +6,7 @@ package io.pulumi.azurenative.appplatform.inputs;
 import io.pulumi.azurenative.appplatform.enums.UserSourceType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class UserSourceInfoArgs extends io.pulumi.resources.ResourceArgs {
      * the relative path to the target module/project.
      * 
      */
-    @InputImport(name="artifactSelector")
+    @Import(name="artifactSelector")
       private final @Nullable Output<String> artifactSelector;
 
     public Output<String> getArtifactSelector() {
@@ -36,7 +36,7 @@ public final class UserSourceInfoArgs extends io.pulumi.resources.ResourceArgs {
      * Relative path of the storage which stores the source
      * 
      */
-    @InputImport(name="relativePath")
+    @Import(name="relativePath")
       private final @Nullable Output<String> relativePath;
 
     public Output<String> getRelativePath() {
@@ -47,7 +47,7 @@ public final class UserSourceInfoArgs extends io.pulumi.resources.ResourceArgs {
      * Type of the source uploaded
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<Either<String,UserSourceType>> type;
 
     public Output<Either<String,UserSourceType>> getType() {
@@ -58,7 +58,7 @@ public final class UserSourceInfoArgs extends io.pulumi.resources.ResourceArgs {
      * Version of the source
      * 
      */
-    @InputImport(name="version")
+    @Import(name="version")
       private final @Nullable Output<String> version;
 
     public Output<String> getVersion() {

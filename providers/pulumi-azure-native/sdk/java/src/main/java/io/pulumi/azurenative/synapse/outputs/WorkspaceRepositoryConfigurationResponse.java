@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.synapse.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class WorkspaceRepositoryConfigurationResponse {
     /**
      * Account name
@@ -57,17 +57,17 @@ public final class WorkspaceRepositoryConfigurationResponse {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WorkspaceRepositoryConfigurationResponse(
-        @OutputCustomType.Parameter("accountName") @Nullable String accountName,
-        @OutputCustomType.Parameter("collaborationBranch") @Nullable String collaborationBranch,
-        @OutputCustomType.Parameter("hostName") @Nullable String hostName,
-        @OutputCustomType.Parameter("lastCommitId") @Nullable String lastCommitId,
-        @OutputCustomType.Parameter("projectName") @Nullable String projectName,
-        @OutputCustomType.Parameter("repositoryName") @Nullable String repositoryName,
-        @OutputCustomType.Parameter("rootFolder") @Nullable String rootFolder,
-        @OutputCustomType.Parameter("tenantId") @Nullable String tenantId,
-        @OutputCustomType.Parameter("type") @Nullable String type) {
+        @CustomType.Parameter("accountName") @Nullable String accountName,
+        @CustomType.Parameter("collaborationBranch") @Nullable String collaborationBranch,
+        @CustomType.Parameter("hostName") @Nullable String hostName,
+        @CustomType.Parameter("lastCommitId") @Nullable String lastCommitId,
+        @CustomType.Parameter("projectName") @Nullable String projectName,
+        @CustomType.Parameter("repositoryName") @Nullable String repositoryName,
+        @CustomType.Parameter("rootFolder") @Nullable String rootFolder,
+        @CustomType.Parameter("tenantId") @Nullable String tenantId,
+        @CustomType.Parameter("type") @Nullable String type) {
         this.accountName = accountName;
         this.collaborationBranch = collaborationBranch;
         this.hostName = hostName;

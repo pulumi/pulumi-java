@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.cdn.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetEndpointArgs extends io.pulumi.resources.InvokeArgs {
      * Name of the endpoint under the profile which is unique globally.
      * 
      */
-    @InputImport(name="endpointName", required=true)
+    @Import(name="endpointName", required=true)
       private final String endpointName;
 
     public String getEndpointName() {
@@ -27,7 +27,7 @@ public final class GetEndpointArgs extends io.pulumi.resources.InvokeArgs {
      * Name of the CDN profile which is unique within the resource group.
      * 
      */
-    @InputImport(name="profileName", required=true)
+    @Import(name="profileName", required=true)
       private final String profileName;
 
     public String getProfileName() {
@@ -38,7 +38,7 @@ public final class GetEndpointArgs extends io.pulumi.resources.InvokeArgs {
      * Name of the Resource group within the Azure subscription.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {

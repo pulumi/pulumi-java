@@ -5,7 +5,7 @@ package io.pulumi.azurenative.logic.inputs;
 
 import io.pulumi.azurenative.logic.inputs.ContentLinkArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class AssemblyPropertiesArgs extends io.pulumi.resources.ResourceAr
      * The assembly culture.
      * 
      */
-    @InputImport(name="assemblyCulture")
+    @Import(name="assemblyCulture")
       private final @Nullable Output<String> assemblyCulture;
 
     public Output<String> getAssemblyCulture() {
@@ -35,7 +35,7 @@ public final class AssemblyPropertiesArgs extends io.pulumi.resources.ResourceAr
      * The assembly name.
      * 
      */
-    @InputImport(name="assemblyName", required=true)
+    @Import(name="assemblyName", required=true)
       private final Output<String> assemblyName;
 
     public Output<String> getAssemblyName() {
@@ -46,7 +46,7 @@ public final class AssemblyPropertiesArgs extends io.pulumi.resources.ResourceAr
      * The assembly public key token.
      * 
      */
-    @InputImport(name="assemblyPublicKeyToken")
+    @Import(name="assemblyPublicKeyToken")
       private final @Nullable Output<String> assemblyPublicKeyToken;
 
     public Output<String> getAssemblyPublicKeyToken() {
@@ -57,7 +57,7 @@ public final class AssemblyPropertiesArgs extends io.pulumi.resources.ResourceAr
      * The assembly version.
      * 
      */
-    @InputImport(name="assemblyVersion")
+    @Import(name="assemblyVersion")
       private final @Nullable Output<String> assemblyVersion;
 
     public Output<String> getAssemblyVersion() {
@@ -68,14 +68,14 @@ public final class AssemblyPropertiesArgs extends io.pulumi.resources.ResourceAr
      * The artifact changed time.
      * 
      */
-    @InputImport(name="changedTime")
+    @Import(name="changedTime")
       private final @Nullable Output<String> changedTime;
 
     public Output<String> getChangedTime() {
         return this.changedTime == null ? Output.empty() : this.changedTime;
     }
 
-    @InputImport(name="content")
+    @Import(name="content")
       private final @Nullable Output<Object> content;
 
     public Output<Object> getContent() {
@@ -86,7 +86,7 @@ public final class AssemblyPropertiesArgs extends io.pulumi.resources.ResourceAr
      * The content link.
      * 
      */
-    @InputImport(name="contentLink")
+    @Import(name="contentLink")
       private final @Nullable Output<ContentLinkArgs> contentLink;
 
     public Output<ContentLinkArgs> getContentLink() {
@@ -97,7 +97,7 @@ public final class AssemblyPropertiesArgs extends io.pulumi.resources.ResourceAr
      * The content type.
      * 
      */
-    @InputImport(name="contentType")
+    @Import(name="contentType")
       private final @Nullable Output<String> contentType;
 
     public Output<String> getContentType() {
@@ -108,14 +108,14 @@ public final class AssemblyPropertiesArgs extends io.pulumi.resources.ResourceAr
      * The artifact creation time.
      * 
      */
-    @InputImport(name="createdTime")
+    @Import(name="createdTime")
       private final @Nullable Output<String> createdTime;
 
     public Output<String> getCreatedTime() {
         return this.createdTime == null ? Output.empty() : this.createdTime;
     }
 
-    @InputImport(name="metadata")
+    @Import(name="metadata")
       private final @Nullable Output<Object> metadata;
 
     public Output<Object> getMetadata() {

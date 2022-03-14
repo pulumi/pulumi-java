@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.streamanalytics.inputs;
 
 import io.pulumi.azurenative.streamanalytics.inputs.PrivateLinkServiceConnectionResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class PrivateEndpointPropertiesResponse extends io.pulumi.resources
      * The date when this private endpoint was created.
      * 
      */
-    @InputImport(name="createdDate", required=true)
+    @Import(name="createdDate", required=true)
       private final String createdDate;
 
     public String getCreatedDate() {
@@ -35,7 +35,7 @@ public final class PrivateEndpointPropertiesResponse extends io.pulumi.resources
      * A list of connections to the remote resource. Immutable after it is set.
      * 
      */
-    @InputImport(name="manualPrivateLinkServiceConnections")
+    @Import(name="manualPrivateLinkServiceConnections")
       private final @Nullable List<PrivateLinkServiceConnectionResponse> manualPrivateLinkServiceConnections;
 
     public List<PrivateLinkServiceConnectionResponse> getManualPrivateLinkServiceConnections() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class PublicIPAddressDnsSettingsResponse extends io.pulumi.resource
      * The domain name label. The concatenation of the domain name label and the regionalized DNS zone make up the fully qualified domain name associated with the public IP address. If a domain name label is specified, an A DNS record is created for the public IP in the Microsoft Azure DNS system.
      * 
      */
-    @InputImport(name="domainNameLabel")
+    @Import(name="domainNameLabel")
       private final @Nullable String domainNameLabel;
 
     public Optional<String> getDomainNameLabel() {
@@ -33,7 +33,7 @@ public final class PublicIPAddressDnsSettingsResponse extends io.pulumi.resource
      * The Fully Qualified Domain Name of the A DNS record associated with the public IP. This is the concatenation of the domainNameLabel and the regionalized DNS zone.
      * 
      */
-    @InputImport(name="fqdn")
+    @Import(name="fqdn")
       private final @Nullable String fqdn;
 
     public Optional<String> getFqdn() {
@@ -44,7 +44,7 @@ public final class PublicIPAddressDnsSettingsResponse extends io.pulumi.resource
      * The reverse FQDN. A user-visible, fully qualified domain name that resolves to this public IP address. If the reverseFqdn is specified, then a PTR DNS record is created pointing from the IP address in the in-addr.arpa domain to the reverse FQDN.
      * 
      */
-    @InputImport(name="reverseFqdn")
+    @Import(name="reverseFqdn")
       private final @Nullable String reverseFqdn;
 
     public Optional<String> getReverseFqdn() {

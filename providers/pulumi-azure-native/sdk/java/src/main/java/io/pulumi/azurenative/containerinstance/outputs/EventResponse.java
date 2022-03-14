@@ -3,12 +3,12 @@
 
 package io.pulumi.azurenative.containerinstance.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class EventResponse {
     /**
      * The count of the event.
@@ -41,14 +41,14 @@ public final class EventResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EventResponse(
-        @OutputCustomType.Parameter("count") Integer count,
-        @OutputCustomType.Parameter("firstTimestamp") String firstTimestamp,
-        @OutputCustomType.Parameter("lastTimestamp") String lastTimestamp,
-        @OutputCustomType.Parameter("message") String message,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("count") Integer count,
+        @CustomType.Parameter("firstTimestamp") String firstTimestamp,
+        @CustomType.Parameter("lastTimestamp") String lastTimestamp,
+        @CustomType.Parameter("message") String message,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("type") String type) {
         this.count = count;
         this.firstTimestamp = firstTimestamp;
         this.lastTimestamp = lastTimestamp;

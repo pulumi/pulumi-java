@@ -7,7 +7,7 @@ import io.pulumi.azurenative.datafactory.inputs.FlowletArgs;
 import io.pulumi.azurenative.datafactory.inputs.MappingDataFlowArgs;
 import io.pulumi.azurenative.datafactory.inputs.WranglingDataFlowArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class DataFlowArgs extends io.pulumi.resources.ResourceArgs {
      * The data flow name.
      * 
      */
-    @InputImport(name="dataFlowName")
+    @Import(name="dataFlowName")
       private final @Nullable Output<String> dataFlowName;
 
     public Output<String> getDataFlowName() {
@@ -33,7 +33,7 @@ public final class DataFlowArgs extends io.pulumi.resources.ResourceArgs {
      * The factory name.
      * 
      */
-    @InputImport(name="factoryName", required=true)
+    @Import(name="factoryName", required=true)
       private final Output<String> factoryName;
 
     public Output<String> getFactoryName() {
@@ -44,7 +44,7 @@ public final class DataFlowArgs extends io.pulumi.resources.ResourceArgs {
      * Data flow properties.
      * 
      */
-    @InputImport(name="properties", required=true)
+    @Import(name="properties", required=true)
       private final Output<Object> properties;
 
     public Output<Object> getProperties() {
@@ -55,7 +55,7 @@ public final class DataFlowArgs extends io.pulumi.resources.ResourceArgs {
      * The resource group name.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {

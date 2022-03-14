@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.blueprint.inputs;
 
 import io.pulumi.azurenative.blueprint.inputs.KeyVaultReferenceResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class SecretValueReferenceResponse extends io.pulumi.resources.Invo
      * Specifies the reference to a given Azure Key Vault.
      * 
      */
-    @InputImport(name="keyVault", required=true)
+    @Import(name="keyVault", required=true)
       private final KeyVaultReferenceResponse keyVault;
 
     public KeyVaultReferenceResponse getKeyVault() {
@@ -34,7 +34,7 @@ public final class SecretValueReferenceResponse extends io.pulumi.resources.Invo
      * Name of the secret.
      * 
      */
-    @InputImport(name="secretName", required=true)
+    @Import(name="secretName", required=true)
       private final String secretName;
 
     public String getSecretName() {
@@ -45,7 +45,7 @@ public final class SecretValueReferenceResponse extends io.pulumi.resources.Invo
      * The version of the secret to use. If left blank, the latest version of the secret is used.
      * 
      */
-    @InputImport(name="secretVersion")
+    @Import(name="secretVersion")
       private final @Nullable String secretVersion;
 
     public Optional<String> getSecretVersion() {

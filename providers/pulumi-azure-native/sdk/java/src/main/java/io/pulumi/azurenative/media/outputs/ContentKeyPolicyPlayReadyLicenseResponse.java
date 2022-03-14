@@ -7,14 +7,14 @@ import io.pulumi.azurenative.media.outputs.ContentKeyPolicyPlayReadyContentEncry
 import io.pulumi.azurenative.media.outputs.ContentKeyPolicyPlayReadyContentEncryptionKeyFromKeyIdentifierResponse;
 import io.pulumi.azurenative.media.outputs.ContentKeyPolicyPlayReadyPlayRightResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ContentKeyPolicyPlayReadyLicenseResponse {
     /**
      * A flag indicating whether test devices can use the license.
@@ -67,18 +67,18 @@ public final class ContentKeyPolicyPlayReadyLicenseResponse {
      */
     private final @Nullable String relativeExpirationDate;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ContentKeyPolicyPlayReadyLicenseResponse(
-        @OutputCustomType.Parameter("allowTestDevices") Boolean allowTestDevices,
-        @OutputCustomType.Parameter("beginDate") @Nullable String beginDate,
-        @OutputCustomType.Parameter("contentKeyLocation") Either<ContentKeyPolicyPlayReadyContentEncryptionKeyFromHeaderResponse,ContentKeyPolicyPlayReadyContentEncryptionKeyFromKeyIdentifierResponse> contentKeyLocation,
-        @OutputCustomType.Parameter("contentType") String contentType,
-        @OutputCustomType.Parameter("expirationDate") @Nullable String expirationDate,
-        @OutputCustomType.Parameter("gracePeriod") @Nullable String gracePeriod,
-        @OutputCustomType.Parameter("licenseType") String licenseType,
-        @OutputCustomType.Parameter("playRight") @Nullable ContentKeyPolicyPlayReadyPlayRightResponse playRight,
-        @OutputCustomType.Parameter("relativeBeginDate") @Nullable String relativeBeginDate,
-        @OutputCustomType.Parameter("relativeExpirationDate") @Nullable String relativeExpirationDate) {
+        @CustomType.Parameter("allowTestDevices") Boolean allowTestDevices,
+        @CustomType.Parameter("beginDate") @Nullable String beginDate,
+        @CustomType.Parameter("contentKeyLocation") Either<ContentKeyPolicyPlayReadyContentEncryptionKeyFromHeaderResponse,ContentKeyPolicyPlayReadyContentEncryptionKeyFromKeyIdentifierResponse> contentKeyLocation,
+        @CustomType.Parameter("contentType") String contentType,
+        @CustomType.Parameter("expirationDate") @Nullable String expirationDate,
+        @CustomType.Parameter("gracePeriod") @Nullable String gracePeriod,
+        @CustomType.Parameter("licenseType") String licenseType,
+        @CustomType.Parameter("playRight") @Nullable ContentKeyPolicyPlayReadyPlayRightResponse playRight,
+        @CustomType.Parameter("relativeBeginDate") @Nullable String relativeBeginDate,
+        @CustomType.Parameter("relativeExpirationDate") @Nullable String relativeExpirationDate) {
         this.allowTestDevices = allowTestDevices;
         this.beginDate = beginDate;
         this.contentKeyLocation = contentKeyLocation;

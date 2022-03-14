@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.resources;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class ResourceGroupArgs extends io.pulumi.resources.ResourceArgs {
      * The location of the resource group. It cannot be changed after the resource group has been created. It must be one of the supported Azure locations.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -30,7 +30,7 @@ public final class ResourceGroupArgs extends io.pulumi.resources.ResourceArgs {
      * The ID of the resource that manages this resource group.
      * 
      */
-    @InputImport(name="managedBy")
+    @Import(name="managedBy")
       private final @Nullable Output<String> managedBy;
 
     public Output<String> getManagedBy() {
@@ -41,7 +41,7 @@ public final class ResourceGroupArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group to create or update. Can include alphanumeric, underscore, parentheses, hyphen, period (except at end), and Unicode characters that match the allowed characters.
      * 
      */
-    @InputImport(name="resourceGroupName")
+    @Import(name="resourceGroupName")
       private final @Nullable Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -52,7 +52,7 @@ public final class ResourceGroupArgs extends io.pulumi.resources.ResourceArgs {
      * The tags attached to the resource group.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

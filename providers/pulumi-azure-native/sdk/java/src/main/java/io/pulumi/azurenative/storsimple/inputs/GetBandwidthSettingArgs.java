@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storsimple.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetBandwidthSettingArgs extends io.pulumi.resources.InvokeArg
      * The name of bandwidth setting to be fetched.
      * 
      */
-    @InputImport(name="bandwidthSettingName", required=true)
+    @Import(name="bandwidthSettingName", required=true)
       private final String bandwidthSettingName;
 
     public String getBandwidthSettingName() {
@@ -27,7 +27,7 @@ public final class GetBandwidthSettingArgs extends io.pulumi.resources.InvokeArg
      * The manager name
      * 
      */
-    @InputImport(name="managerName", required=true)
+    @Import(name="managerName", required=true)
       private final String managerName;
 
     public String getManagerName() {
@@ -38,7 +38,7 @@ public final class GetBandwidthSettingArgs extends io.pulumi.resources.InvokeArg
      * The resource group name
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {

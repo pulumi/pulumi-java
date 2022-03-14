@@ -6,7 +6,7 @@ package io.pulumi.azurenative.network.inputs;
 import io.pulumi.azurenative.network.inputs.FlowLogFormatParametersResponse;
 import io.pulumi.azurenative.network.inputs.RetentionPolicyParametersResponse;
 import io.pulumi.azurenative.network.inputs.TrafficAnalyticsPropertiesResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -27,7 +27,7 @@ public final class FlowLogResponse extends io.pulumi.resources.InvokeArgs {
      * Flag to enable/disable flow logging.
      * 
      */
-    @InputImport(name="enabled")
+    @Import(name="enabled")
       private final @Nullable Boolean enabled;
 
     public Optional<Boolean> getEnabled() {
@@ -38,7 +38,7 @@ public final class FlowLogResponse extends io.pulumi.resources.InvokeArgs {
      * A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    @InputImport(name="etag", required=true)
+    @Import(name="etag", required=true)
       private final String etag;
 
     public String getEtag() {
@@ -49,7 +49,7 @@ public final class FlowLogResponse extends io.pulumi.resources.InvokeArgs {
      * Parameters that define the configuration of traffic analytics.
      * 
      */
-    @InputImport(name="flowAnalyticsConfiguration")
+    @Import(name="flowAnalyticsConfiguration")
       private final @Nullable TrafficAnalyticsPropertiesResponse flowAnalyticsConfiguration;
 
     public Optional<TrafficAnalyticsPropertiesResponse> getFlowAnalyticsConfiguration() {
@@ -60,7 +60,7 @@ public final class FlowLogResponse extends io.pulumi.resources.InvokeArgs {
      * Parameters that define the flow log format.
      * 
      */
-    @InputImport(name="format")
+    @Import(name="format")
       private final @Nullable FlowLogFormatParametersResponse format;
 
     public Optional<FlowLogFormatParametersResponse> getFormat() {
@@ -71,7 +71,7 @@ public final class FlowLogResponse extends io.pulumi.resources.InvokeArgs {
      * Resource ID.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable String id;
 
     public Optional<String> getId() {
@@ -82,7 +82,7 @@ public final class FlowLogResponse extends io.pulumi.resources.InvokeArgs {
      * Resource location.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable String location;
 
     public Optional<String> getLocation() {
@@ -93,7 +93,7 @@ public final class FlowLogResponse extends io.pulumi.resources.InvokeArgs {
      * Resource name.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -104,7 +104,7 @@ public final class FlowLogResponse extends io.pulumi.resources.InvokeArgs {
      * The provisioning state of the flow log.
      * 
      */
-    @InputImport(name="provisioningState", required=true)
+    @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
     public String getProvisioningState() {
@@ -115,7 +115,7 @@ public final class FlowLogResponse extends io.pulumi.resources.InvokeArgs {
      * Parameters that define the retention policy for flow log.
      * 
      */
-    @InputImport(name="retentionPolicy")
+    @Import(name="retentionPolicy")
       private final @Nullable RetentionPolicyParametersResponse retentionPolicy;
 
     public Optional<RetentionPolicyParametersResponse> getRetentionPolicy() {
@@ -126,7 +126,7 @@ public final class FlowLogResponse extends io.pulumi.resources.InvokeArgs {
      * ID of the storage account which is used to store the flow log.
      * 
      */
-    @InputImport(name="storageId", required=true)
+    @Import(name="storageId", required=true)
       private final String storageId;
 
     public String getStorageId() {
@@ -137,7 +137,7 @@ public final class FlowLogResponse extends io.pulumi.resources.InvokeArgs {
      * Resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {
@@ -148,7 +148,7 @@ public final class FlowLogResponse extends io.pulumi.resources.InvokeArgs {
      * Guid of network security group to which flow log will be applied.
      * 
      */
-    @InputImport(name="targetResourceGuid", required=true)
+    @Import(name="targetResourceGuid", required=true)
       private final String targetResourceGuid;
 
     public String getTargetResourceGuid() {
@@ -159,7 +159,7 @@ public final class FlowLogResponse extends io.pulumi.resources.InvokeArgs {
      * ID of network security group to which flow log will be applied.
      * 
      */
-    @InputImport(name="targetResourceId", required=true)
+    @Import(name="targetResourceId", required=true)
       private final String targetResourceId;
 
     public String getTargetResourceId() {
@@ -170,7 +170,7 @@ public final class FlowLogResponse extends io.pulumi.resources.InvokeArgs {
      * Resource type.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

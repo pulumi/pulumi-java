@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.automation.outputs;
 
 import io.pulumi.azurenative.automation.outputs.ContentHashResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ContentLinkResponse {
     /**
      * Gets or sets the hash.
@@ -28,11 +28,11 @@ public final class ContentLinkResponse {
      */
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ContentLinkResponse(
-        @OutputCustomType.Parameter("contentHash") @Nullable ContentHashResponse contentHash,
-        @OutputCustomType.Parameter("uri") @Nullable String uri,
-        @OutputCustomType.Parameter("version") @Nullable String version) {
+        @CustomType.Parameter("contentHash") @Nullable ContentHashResponse contentHash,
+        @CustomType.Parameter("uri") @Nullable String uri,
+        @CustomType.Parameter("version") @Nullable String version) {
         this.contentHash = contentHash;
         this.uri = uri;
         this.version = version;

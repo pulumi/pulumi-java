@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.appconfiguration.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class KeyVaultPropertiesArgs extends io.pulumi.resources.ResourceAr
      * The client id of the identity which will be used to access key vault.
      * 
      */
-    @InputImport(name="identityClientId")
+    @Import(name="identityClientId")
       private final @Nullable Output<String> identityClientId;
 
     public Output<String> getIdentityClientId() {
@@ -33,7 +33,7 @@ public final class KeyVaultPropertiesArgs extends io.pulumi.resources.ResourceAr
      * The URI of the key vault key used to encrypt data.
      * 
      */
-    @InputImport(name="keyIdentifier")
+    @Import(name="keyIdentifier")
       private final @Nullable Output<String> keyIdentifier;
 
     public Output<String> getKeyIdentifier() {

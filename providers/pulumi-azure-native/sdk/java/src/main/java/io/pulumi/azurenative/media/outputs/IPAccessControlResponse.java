@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.media.outputs;
 
 import io.pulumi.azurenative.media.outputs.IPRangeResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class IPAccessControlResponse {
     /**
      * The IP allow list.
@@ -17,8 +17,8 @@ public final class IPAccessControlResponse {
      */
     private final @Nullable List<IPRangeResponse> allow;
 
-    @OutputCustomType.Constructor
-    private IPAccessControlResponse(@OutputCustomType.Parameter("allow") @Nullable List<IPRangeResponse> allow) {
+    @CustomType.Constructor
+    private IPAccessControlResponse(@CustomType.Parameter("allow") @Nullable List<IPRangeResponse> allow) {
         this.allow = allow;
     }
 

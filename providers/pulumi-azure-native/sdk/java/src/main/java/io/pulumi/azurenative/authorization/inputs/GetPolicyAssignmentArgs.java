@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.authorization.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetPolicyAssignmentArgs extends io.pulumi.resources.InvokeArg
      * The name of the policy assignment to get.
      * 
      */
-    @InputImport(name="policyAssignmentName", required=true)
+    @Import(name="policyAssignmentName", required=true)
       private final String policyAssignmentName;
 
     public String getPolicyAssignmentName() {
@@ -27,7 +27,7 @@ public final class GetPolicyAssignmentArgs extends io.pulumi.resources.InvokeArg
      * The scope of the policy assignment. Valid scopes are: management group (format: '/providers/Microsoft.Management/managementGroups/{managementGroup}'), subscription (format: '/subscriptions/{subscriptionId}'), resource group (format: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}', or resource (format: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/[{parentResourcePath}/]{resourceType}/{resourceName}'
      * 
      */
-    @InputImport(name="scope", required=true)
+    @Import(name="scope", required=true)
       private final String scope;
 
     public String getScope() {

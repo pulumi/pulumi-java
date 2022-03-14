@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class JobOutputResponse {
     /**
      * ARM ID of the datastore where the job logs and artifacts are stored, or null for the default container ("azureml") in the workspace's storage account.
@@ -20,10 +20,10 @@ public final class JobOutputResponse {
      */
     private final String path;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private JobOutputResponse(
-        @OutputCustomType.Parameter("datastoreId") String datastoreId,
-        @OutputCustomType.Parameter("path") String path) {
+        @CustomType.Parameter("datastoreId") String datastoreId,
+        @CustomType.Parameter("path") String path) {
         this.datastoreId = datastoreId;
         this.path = path;
     }

@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.documentdb.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FailoverPolicyResponse {
     /**
      * The failover priority of the region. A failover priority of 0 indicates a write region. The maximum value for a failover priority = (total number of regions - 1). Failover priority values must be unique for each of the regions in which the database account exists.
@@ -28,11 +28,11 @@ public final class FailoverPolicyResponse {
      */
     private final @Nullable String locationName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FailoverPolicyResponse(
-        @OutputCustomType.Parameter("failoverPriority") @Nullable Integer failoverPriority,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("locationName") @Nullable String locationName) {
+        @CustomType.Parameter("failoverPriority") @Nullable Integer failoverPriority,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("locationName") @Nullable String locationName) {
         this.failoverPriority = failoverPriority;
         this.id = id;
         this.locationName = locationName;

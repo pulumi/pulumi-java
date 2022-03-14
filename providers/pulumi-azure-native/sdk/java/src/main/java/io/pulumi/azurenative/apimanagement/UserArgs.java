@@ -9,7 +9,7 @@ import io.pulumi.azurenative.apimanagement.enums.UserState;
 import io.pulumi.azurenative.apimanagement.inputs.UserIdentityContractArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * Determines the type of application which send the create user request. Default is legacy portal.
      * 
      */
-    @InputImport(name="appType")
+    @Import(name="appType")
       private final @Nullable Output<Either<String,AppType>> appType;
 
     public Output<Either<String,AppType>> getAppType() {
@@ -36,7 +36,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * Determines the type of confirmation e-mail that will be sent to the newly created user.
      * 
      */
-    @InputImport(name="confirmation")
+    @Import(name="confirmation")
       private final @Nullable Output<Either<String,Confirmation>> confirmation;
 
     public Output<Either<String,Confirmation>> getConfirmation() {
@@ -47,7 +47,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * Email address. Must not be empty and must be unique within the service instance.
      * 
      */
-    @InputImport(name="email", required=true)
+    @Import(name="email", required=true)
       private final Output<String> email;
 
     public Output<String> getEmail() {
@@ -58,7 +58,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * First name.
      * 
      */
-    @InputImport(name="firstName", required=true)
+    @Import(name="firstName", required=true)
       private final Output<String> firstName;
 
     public Output<String> getFirstName() {
@@ -69,7 +69,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * Collection of user identities.
      * 
      */
-    @InputImport(name="identities")
+    @Import(name="identities")
       private final @Nullable Output<List<UserIdentityContractArgs>> identities;
 
     public Output<List<UserIdentityContractArgs>> getIdentities() {
@@ -80,7 +80,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * Last name.
      * 
      */
-    @InputImport(name="lastName", required=true)
+    @Import(name="lastName", required=true)
       private final Output<String> lastName;
 
     public Output<String> getLastName() {
@@ -91,7 +91,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * Optional note about a user set by the administrator.
      * 
      */
-    @InputImport(name="note")
+    @Import(name="note")
       private final @Nullable Output<String> note;
 
     public Output<String> getNote() {
@@ -102,7 +102,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * Send an Email notification to the User.
      * 
      */
-    @InputImport(name="notify")
+    @Import(name="notify")
       private final @Nullable Output<Boolean> notify;
 
     public Output<Boolean> getNotify() {
@@ -113,7 +113,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * User Password. If no value is provided, a default password is generated.
      * 
      */
-    @InputImport(name="password")
+    @Import(name="password")
       private final @Nullable Output<String> password;
 
     public Output<String> getPassword() {
@@ -124,7 +124,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -135,7 +135,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the API Management service.
      * 
      */
-    @InputImport(name="serviceName", required=true)
+    @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
 
     public Output<String> getServiceName() {
@@ -146,7 +146,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * Account state. Specifies whether the user is active or not. Blocked users are unable to sign into the developer portal or call any APIs of subscribed products. Default state is Active.
      * 
      */
-    @InputImport(name="state")
+    @Import(name="state")
       private final @Nullable Output<Either<String,UserState>> state;
 
     public Output<Either<String,UserState>> getState() {
@@ -157,7 +157,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * User identifier. Must be unique in the current API Management service instance.
      * 
      */
-    @InputImport(name="userId")
+    @Import(name="userId")
       private final @Nullable Output<String> userId;
 
     public Output<String> getUserId() {

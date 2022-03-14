@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VaultCertificateResponse {
     /**
      * For Windows VMs, specifies the certificate store on the Virtual Machine to which the certificate should be added. The specified certificate store is implicitly in the LocalMachine account. <br><br>For Linux VMs, the certificate file is placed under the /var/lib/waagent directory, with the file name &lt;UppercaseThumbprint&gt;.crt for the X509 certificate file and &lt;UppercaseThumbprint&gt;.prv for private key. Both of these files are .pem formatted.
@@ -22,10 +22,10 @@ public final class VaultCertificateResponse {
      */
     private final @Nullable String certificateUrl;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VaultCertificateResponse(
-        @OutputCustomType.Parameter("certificateStore") @Nullable String certificateStore,
-        @OutputCustomType.Parameter("certificateUrl") @Nullable String certificateUrl) {
+        @CustomType.Parameter("certificateStore") @Nullable String certificateStore,
+        @CustomType.Parameter("certificateUrl") @Nullable String certificateUrl) {
         this.certificateStore = certificateStore;
         this.certificateUrl = certificateUrl;
     }

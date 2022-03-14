@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FirewallPolicyThreatIntelWhitelistResponse {
     /**
      * List of FQDNs for the ThreatIntel Whitelist.
@@ -22,10 +22,10 @@ public final class FirewallPolicyThreatIntelWhitelistResponse {
      */
     private final @Nullable List<String> ipAddresses;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FirewallPolicyThreatIntelWhitelistResponse(
-        @OutputCustomType.Parameter("fqdns") @Nullable List<String> fqdns,
-        @OutputCustomType.Parameter("ipAddresses") @Nullable List<String> ipAddresses) {
+        @CustomType.Parameter("fqdns") @Nullable List<String> fqdns,
+        @CustomType.Parameter("ipAddresses") @Nullable List<String> ipAddresses) {
         this.fqdns = fqdns;
         this.ipAddresses = ipAddresses;
     }

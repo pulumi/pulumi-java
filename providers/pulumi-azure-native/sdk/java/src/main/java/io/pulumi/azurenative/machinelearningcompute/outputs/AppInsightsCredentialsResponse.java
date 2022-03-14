@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.machinelearningcompute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AppInsightsCredentialsResponse {
     /**
      * The AppInsights application ID.
@@ -22,10 +22,10 @@ public final class AppInsightsCredentialsResponse {
      */
     private final @Nullable String instrumentationKey;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AppInsightsCredentialsResponse(
-        @OutputCustomType.Parameter("appId") @Nullable String appId,
-        @OutputCustomType.Parameter("instrumentationKey") @Nullable String instrumentationKey) {
+        @CustomType.Parameter("appId") @Nullable String appId,
+        @CustomType.Parameter("instrumentationKey") @Nullable String instrumentationKey) {
         this.appId = appId;
         this.instrumentationKey = instrumentationKey;
     }

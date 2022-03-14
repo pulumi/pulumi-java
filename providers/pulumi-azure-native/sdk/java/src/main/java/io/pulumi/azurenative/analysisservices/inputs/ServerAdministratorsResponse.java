@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.analysisservices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ServerAdministratorsResponse extends io.pulumi.resources.Invo
      * An array of administrator user identities.
      * 
      */
-    @InputImport(name="members")
+    @Import(name="members")
       private final @Nullable List<String> members;
 
     public List<String> getMembers() {

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.digitaltwins;
 
 import io.pulumi.azurenative.digitaltwins.inputs.AzureDataExplorerConnectionPropertiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class TimeSeriesDatabaseConnectionArgs extends io.pulumi.resources.
      * Properties of a specific time series database connection.
      * 
      */
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable Output<AzureDataExplorerConnectionPropertiesArgs> properties;
 
     public Output<AzureDataExplorerConnectionPropertiesArgs> getProperties() {
@@ -30,7 +30,7 @@ public final class TimeSeriesDatabaseConnectionArgs extends io.pulumi.resources.
      * The name of the resource group that contains the DigitalTwinsInstance.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -41,7 +41,7 @@ public final class TimeSeriesDatabaseConnectionArgs extends io.pulumi.resources.
      * The name of the DigitalTwinsInstance.
      * 
      */
-    @InputImport(name="resourceName", required=true)
+    @Import(name="resourceName", required=true)
       private final Output<String> resourceName;
 
     public Output<String> getPropResourceName() {
@@ -52,7 +52,7 @@ public final class TimeSeriesDatabaseConnectionArgs extends io.pulumi.resources.
      * Name of time series database connection.
      * 
      */
-    @InputImport(name="timeSeriesDatabaseConnectionName")
+    @Import(name="timeSeriesDatabaseConnectionName")
       private final @Nullable Output<String> timeSeriesDatabaseConnectionName;
 
     public Output<String> getTimeSeriesDatabaseConnectionName() {

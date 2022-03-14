@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.resources.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AliasPatternResponse {
     /**
      * The alias pattern phrase.
@@ -27,11 +27,11 @@ public final class AliasPatternResponse {
      */
     private final @Nullable String variable;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AliasPatternResponse(
-        @OutputCustomType.Parameter("phrase") @Nullable String phrase,
-        @OutputCustomType.Parameter("type") @Nullable String type,
-        @OutputCustomType.Parameter("variable") @Nullable String variable) {
+        @CustomType.Parameter("phrase") @Nullable String phrase,
+        @CustomType.Parameter("type") @Nullable String type,
+        @CustomType.Parameter("variable") @Nullable String variable) {
         this.phrase = phrase;
         this.type = type;
         this.variable = variable;

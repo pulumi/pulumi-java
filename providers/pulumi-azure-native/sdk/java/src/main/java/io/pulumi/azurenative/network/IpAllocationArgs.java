@@ -7,7 +7,7 @@ import io.pulumi.azurenative.network.enums.IPVersion;
 import io.pulumi.azurenative.network.enums.IpAllocationType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -23,7 +23,7 @@ public final class IpAllocationArgs extends io.pulumi.resources.ResourceArgs {
      * IpAllocation tags.
      * 
      */
-    @InputImport(name="allocationTags")
+    @Import(name="allocationTags")
       private final @Nullable Output<Map<String,String>> allocationTags;
 
     public Output<Map<String,String>> getAllocationTags() {
@@ -34,7 +34,7 @@ public final class IpAllocationArgs extends io.pulumi.resources.ResourceArgs {
      * Resource ID.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
@@ -45,7 +45,7 @@ public final class IpAllocationArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the IpAllocation.
      * 
      */
-    @InputImport(name="ipAllocationName")
+    @Import(name="ipAllocationName")
       private final @Nullable Output<String> ipAllocationName;
 
     public Output<String> getIpAllocationName() {
@@ -56,7 +56,7 @@ public final class IpAllocationArgs extends io.pulumi.resources.ResourceArgs {
      * The IPAM allocation ID.
      * 
      */
-    @InputImport(name="ipamAllocationId")
+    @Import(name="ipamAllocationId")
       private final @Nullable Output<String> ipamAllocationId;
 
     public Output<String> getIpamAllocationId() {
@@ -67,7 +67,7 @@ public final class IpAllocationArgs extends io.pulumi.resources.ResourceArgs {
      * Resource location.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -78,7 +78,7 @@ public final class IpAllocationArgs extends io.pulumi.resources.ResourceArgs {
      * The address prefix for the IpAllocation.
      * 
      */
-    @InputImport(name="prefix")
+    @Import(name="prefix")
       private final @Nullable Output<String> prefix;
 
     public Output<String> getPrefix() {
@@ -89,7 +89,7 @@ public final class IpAllocationArgs extends io.pulumi.resources.ResourceArgs {
      * The address prefix length for the IpAllocation.
      * 
      */
-    @InputImport(name="prefixLength")
+    @Import(name="prefixLength")
       private final @Nullable Output<Integer> prefixLength;
 
     public Output<Integer> getPrefixLength() {
@@ -100,7 +100,7 @@ public final class IpAllocationArgs extends io.pulumi.resources.ResourceArgs {
      * The address prefix Type for the IpAllocation.
      * 
      */
-    @InputImport(name="prefixType")
+    @Import(name="prefixType")
       private final @Nullable Output<Either<String,IPVersion>> prefixType;
 
     public Output<Either<String,IPVersion>> getPrefixType() {
@@ -111,7 +111,7 @@ public final class IpAllocationArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -122,7 +122,7 @@ public final class IpAllocationArgs extends io.pulumi.resources.ResourceArgs {
      * Resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -133,7 +133,7 @@ public final class IpAllocationArgs extends io.pulumi.resources.ResourceArgs {
      * The type for the IpAllocation.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<Either<String,IpAllocationType>> type;
 
     public Output<Either<String,IpAllocationType>> getType() {

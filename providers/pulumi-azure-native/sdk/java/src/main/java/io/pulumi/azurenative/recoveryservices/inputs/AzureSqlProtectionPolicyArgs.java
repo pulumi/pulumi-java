@@ -7,7 +7,7 @@ import io.pulumi.azurenative.recoveryservices.inputs.LongTermRetentionPolicyArgs
 import io.pulumi.azurenative.recoveryservices.inputs.SimpleRetentionPolicyArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +27,7 @@ public final class AzureSqlProtectionPolicyArgs extends io.pulumi.resources.Reso
      * Expected value is 'AzureSql'.
      * 
      */
-    @InputImport(name="backupManagementType", required=true)
+    @Import(name="backupManagementType", required=true)
       private final Output<String> backupManagementType;
 
     public Output<String> getBackupManagementType() {
@@ -38,7 +38,7 @@ public final class AzureSqlProtectionPolicyArgs extends io.pulumi.resources.Reso
      * Number of items associated with this policy.
      * 
      */
-    @InputImport(name="protectedItemsCount")
+    @Import(name="protectedItemsCount")
       private final @Nullable Output<Integer> protectedItemsCount;
 
     public Output<Integer> getProtectedItemsCount() {
@@ -49,7 +49,7 @@ public final class AzureSqlProtectionPolicyArgs extends io.pulumi.resources.Reso
      * Retention policy details.
      * 
      */
-    @InputImport(name="retentionPolicy")
+    @Import(name="retentionPolicy")
       private final @Nullable Output<Either<LongTermRetentionPolicyArgs,SimpleRetentionPolicyArgs>> retentionPolicy;
 
     public Output<Either<LongTermRetentionPolicyArgs,SimpleRetentionPolicyArgs>> getRetentionPolicy() {

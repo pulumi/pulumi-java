@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.avs.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ListPrivateCloudAdminCredentialsResult {
     /**
      * NSX-T Manager password
@@ -30,12 +30,12 @@ public final class ListPrivateCloudAdminCredentialsResult {
      */
     private final String vcenterUsername;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ListPrivateCloudAdminCredentialsResult(
-        @OutputCustomType.Parameter("nsxtPassword") String nsxtPassword,
-        @OutputCustomType.Parameter("nsxtUsername") String nsxtUsername,
-        @OutputCustomType.Parameter("vcenterPassword") String vcenterPassword,
-        @OutputCustomType.Parameter("vcenterUsername") String vcenterUsername) {
+        @CustomType.Parameter("nsxtPassword") String nsxtPassword,
+        @CustomType.Parameter("nsxtUsername") String nsxtUsername,
+        @CustomType.Parameter("vcenterPassword") String vcenterPassword,
+        @CustomType.Parameter("vcenterUsername") String vcenterUsername) {
         this.nsxtPassword = nsxtPassword;
         this.nsxtUsername = nsxtUsername;
         this.vcenterPassword = vcenterPassword;

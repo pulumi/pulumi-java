@@ -5,7 +5,7 @@ package io.pulumi.azurenative.providerhub.inputs;
 
 import io.pulumi.azurenative.providerhub.inputs.DefaultRolloutPropertiesResponseSpecification;
 import io.pulumi.azurenative.providerhub.inputs.DefaultRolloutPropertiesResponseStatus;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -20,21 +20,21 @@ public final class DefaultRolloutResponseProperties extends io.pulumi.resources.
 
     public static final DefaultRolloutResponseProperties Empty = new DefaultRolloutResponseProperties();
 
-    @InputImport(name="provisioningState")
+    @Import(name="provisioningState")
       private final @Nullable String provisioningState;
 
     public Optional<String> getProvisioningState() {
         return this.provisioningState == null ? Optional.empty() : Optional.ofNullable(this.provisioningState);
     }
 
-    @InputImport(name="specification")
+    @Import(name="specification")
       private final @Nullable DefaultRolloutPropertiesResponseSpecification specification;
 
     public Optional<DefaultRolloutPropertiesResponseSpecification> getSpecification() {
         return this.specification == null ? Optional.empty() : Optional.ofNullable(this.specification);
     }
 
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable DefaultRolloutPropertiesResponseStatus status;
 
     public Optional<DefaultRolloutPropertiesResponseStatus> getStatus() {

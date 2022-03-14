@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ComputeInstanceSshSettingsResponse {
     /**
      * Specifies the SSH rsa public key file as a string. Use "ssh-keygen -t rsa -b 2048" to generate your SSH key pairs.
@@ -33,12 +33,12 @@ public final class ComputeInstanceSshSettingsResponse {
      */
     private final @Nullable String sshPublicAccess;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ComputeInstanceSshSettingsResponse(
-        @OutputCustomType.Parameter("adminPublicKey") @Nullable String adminPublicKey,
-        @OutputCustomType.Parameter("adminUserName") String adminUserName,
-        @OutputCustomType.Parameter("sshPort") Integer sshPort,
-        @OutputCustomType.Parameter("sshPublicAccess") @Nullable String sshPublicAccess) {
+        @CustomType.Parameter("adminPublicKey") @Nullable String adminPublicKey,
+        @CustomType.Parameter("adminUserName") String adminUserName,
+        @CustomType.Parameter("sshPort") Integer sshPort,
+        @CustomType.Parameter("sshPublicAccess") @Nullable String sshPublicAccess) {
         this.adminPublicKey = adminPublicKey;
         this.adminUserName = adminUserName;
         this.sshPort = sshPort;

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.apimanagement.OpenIdConnectProviderArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -34,7 +34,7 @@ public class OpenIdConnectProvider extends io.pulumi.resources.CustomResource {
      * Client ID of developer console which is the client application.
      * 
      */
-    @OutputExport(name="clientId", type=String.class, parameters={})
+    @Export(name="clientId", type=String.class, parameters={})
     private Output<String> clientId;
 
     /**
@@ -48,7 +48,7 @@ public class OpenIdConnectProvider extends io.pulumi.resources.CustomResource {
      * Client Secret of developer console which is the client application.
      * 
      */
-    @OutputExport(name="clientSecret", type=String.class, parameters={})
+    @Export(name="clientSecret", type=String.class, parameters={})
     private Output</* @Nullable */ String> clientSecret;
 
     /**
@@ -62,7 +62,7 @@ public class OpenIdConnectProvider extends io.pulumi.resources.CustomResource {
      * User-friendly description of OpenID Connect Provider.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -76,7 +76,7 @@ public class OpenIdConnectProvider extends io.pulumi.resources.CustomResource {
      * User-friendly OpenID Connect Provider name.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
@@ -90,7 +90,7 @@ public class OpenIdConnectProvider extends io.pulumi.resources.CustomResource {
      * Metadata endpoint URI.
      * 
      */
-    @OutputExport(name="metadataEndpoint", type=String.class, parameters={})
+    @Export(name="metadataEndpoint", type=String.class, parameters={})
     private Output<String> metadataEndpoint;
 
     /**
@@ -104,7 +104,7 @@ public class OpenIdConnectProvider extends io.pulumi.resources.CustomResource {
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -118,7 +118,7 @@ public class OpenIdConnectProvider extends io.pulumi.resources.CustomResource {
      * Resource type for API Management resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

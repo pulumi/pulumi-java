@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.securityinsights.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ActivityEntityQueriesPropertiesResponseQueryDefinitions {
     /**
      * The Activity query to run on a given entity
@@ -17,8 +17,8 @@ public final class ActivityEntityQueriesPropertiesResponseQueryDefinitions {
      */
     private final @Nullable String query;
 
-    @OutputCustomType.Constructor
-    private ActivityEntityQueriesPropertiesResponseQueryDefinitions(@OutputCustomType.Parameter("query") @Nullable String query) {
+    @CustomType.Constructor
+    private ActivityEntityQueriesPropertiesResponseQueryDefinitions(@CustomType.Parameter("query") @Nullable String query) {
         this.query = query;
     }
 

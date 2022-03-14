@@ -5,7 +5,7 @@ package io.pulumi.azurenative.devtestlab.inputs;
 
 import io.pulumi.azurenative.devtestlab.inputs.ArtifactParameterPropertiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ArtifactInstallPropertiesArgs extends io.pulumi.resources.Res
      * The artifact's identifier.
      * 
      */
-    @InputImport(name="artifactId")
+    @Import(name="artifactId")
       private final @Nullable Output<String> artifactId;
 
     public Output<String> getArtifactId() {
@@ -35,7 +35,7 @@ public final class ArtifactInstallPropertiesArgs extends io.pulumi.resources.Res
      * The artifact's title.
      * 
      */
-    @InputImport(name="artifactTitle")
+    @Import(name="artifactTitle")
       private final @Nullable Output<String> artifactTitle;
 
     public Output<String> getArtifactTitle() {
@@ -46,7 +46,7 @@ public final class ArtifactInstallPropertiesArgs extends io.pulumi.resources.Res
      * The status message from the deployment.
      * 
      */
-    @InputImport(name="deploymentStatusMessage")
+    @Import(name="deploymentStatusMessage")
       private final @Nullable Output<String> deploymentStatusMessage;
 
     public Output<String> getDeploymentStatusMessage() {
@@ -57,7 +57,7 @@ public final class ArtifactInstallPropertiesArgs extends io.pulumi.resources.Res
      * The time that the artifact starts to install on the virtual machine.
      * 
      */
-    @InputImport(name="installTime")
+    @Import(name="installTime")
       private final @Nullable Output<String> installTime;
 
     public Output<String> getInstallTime() {
@@ -68,7 +68,7 @@ public final class ArtifactInstallPropertiesArgs extends io.pulumi.resources.Res
      * The parameters of the artifact.
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable Output<List<ArtifactParameterPropertiesArgs>> parameters;
 
     public Output<List<ArtifactParameterPropertiesArgs>> getParameters() {
@@ -79,7 +79,7 @@ public final class ArtifactInstallPropertiesArgs extends io.pulumi.resources.Res
      * The status of the artifact.
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable Output<String> status;
 
     public Output<String> getStatus() {
@@ -90,7 +90,7 @@ public final class ArtifactInstallPropertiesArgs extends io.pulumi.resources.Res
      * The status message from the virtual machine extension.
      * 
      */
-    @InputImport(name="vmExtensionStatusMessage")
+    @Import(name="vmExtensionStatusMessage")
       private final @Nullable Output<String> vmExtensionStatusMessage;
 
     public Output<String> getVmExtensionStatusMessage() {

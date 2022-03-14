@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.powerbi.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class PrivateEndpointArgs extends io.pulumi.resources.ResourceArgs 
      * Specifies the id of private endpoint.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {

@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.migrate.outputs;
 
 import io.pulumi.azurenative.migrate.outputs.ImportCollectorPropertiesResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetImportCollectorResult {
     private final @Nullable String eTag;
     private final String id;
@@ -18,13 +18,13 @@ public final class GetImportCollectorResult {
     private final ImportCollectorPropertiesResponse properties;
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetImportCollectorResult(
-        @OutputCustomType.Parameter("eTag") @Nullable String eTag,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("properties") ImportCollectorPropertiesResponse properties,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("eTag") @Nullable String eTag,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("properties") ImportCollectorPropertiesResponse properties,
+        @CustomType.Parameter("type") String type) {
         this.eTag = eTag;
         this.id = id;
         this.name = name;

@@ -8,7 +8,7 @@ import io.pulumi.azurenative.netapp.BackupPolicyArgs;
 import io.pulumi.azurenative.netapp.outputs.VolumeBackupsResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -38,7 +38,7 @@ public class BackupPolicy extends io.pulumi.resources.CustomResource {
      * Daily backups count to keep
      * 
      */
-    @OutputExport(name="dailyBackupsToKeep", type=Integer.class, parameters={})
+    @Export(name="dailyBackupsToKeep", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> dailyBackupsToKeep;
 
     /**
@@ -52,7 +52,7 @@ public class BackupPolicy extends io.pulumi.resources.CustomResource {
      * The property to decide policy is enabled or not
      * 
      */
-    @OutputExport(name="enabled", type=Boolean.class, parameters={})
+    @Export(name="enabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enabled;
 
     /**
@@ -66,7 +66,7 @@ public class BackupPolicy extends io.pulumi.resources.CustomResource {
      * Resource location
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -80,7 +80,7 @@ public class BackupPolicy extends io.pulumi.resources.CustomResource {
      * Monthly backups count to keep
      * 
      */
-    @OutputExport(name="monthlyBackupsToKeep", type=Integer.class, parameters={})
+    @Export(name="monthlyBackupsToKeep", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> monthlyBackupsToKeep;
 
     /**
@@ -94,7 +94,7 @@ public class BackupPolicy extends io.pulumi.resources.CustomResource {
      * Name of backup policy
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -108,7 +108,7 @@ public class BackupPolicy extends io.pulumi.resources.CustomResource {
      * Azure lifecycle management
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -122,7 +122,7 @@ public class BackupPolicy extends io.pulumi.resources.CustomResource {
      * Resource tags
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -136,7 +136,7 @@ public class BackupPolicy extends io.pulumi.resources.CustomResource {
      * Resource type
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -150,7 +150,7 @@ public class BackupPolicy extends io.pulumi.resources.CustomResource {
      * A list of volumes assigned to this policy
      * 
      */
-    @OutputExport(name="volumeBackups", type=List.class, parameters={VolumeBackupsResponse.class})
+    @Export(name="volumeBackups", type=List.class, parameters={VolumeBackupsResponse.class})
     private Output</* @Nullable */ List<VolumeBackupsResponse>> volumeBackups;
 
     /**
@@ -164,7 +164,7 @@ public class BackupPolicy extends io.pulumi.resources.CustomResource {
      * Volumes using current backup policy
      * 
      */
-    @OutputExport(name="volumesAssigned", type=Integer.class, parameters={})
+    @Export(name="volumesAssigned", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> volumesAssigned;
 
     /**
@@ -178,7 +178,7 @@ public class BackupPolicy extends io.pulumi.resources.CustomResource {
      * Weekly backups count to keep
      * 
      */
-    @OutputExport(name="weeklyBackupsToKeep", type=Integer.class, parameters={})
+    @Export(name="weeklyBackupsToKeep", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> weeklyBackupsToKeep;
 
     /**
@@ -192,7 +192,7 @@ public class BackupPolicy extends io.pulumi.resources.CustomResource {
      * Yearly backups count to keep
      * 
      */
-    @OutputExport(name="yearlyBackupsToKeep", type=Integer.class, parameters={})
+    @Export(name="yearlyBackupsToKeep", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> yearlyBackupsToKeep;
 
     /**

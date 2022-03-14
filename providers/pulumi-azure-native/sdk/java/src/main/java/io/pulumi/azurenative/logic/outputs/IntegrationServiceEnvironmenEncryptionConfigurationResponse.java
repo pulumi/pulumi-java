@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.logic.outputs;
 
 import io.pulumi.azurenative.logic.outputs.IntegrationServiceEnvironmenEncryptionKeyReferenceResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class IntegrationServiceEnvironmenEncryptionConfigurationResponse {
     /**
      * The encryption key reference.
@@ -17,8 +17,8 @@ public final class IntegrationServiceEnvironmenEncryptionConfigurationResponse {
      */
     private final @Nullable IntegrationServiceEnvironmenEncryptionKeyReferenceResponse encryptionKeyReference;
 
-    @OutputCustomType.Constructor
-    private IntegrationServiceEnvironmenEncryptionConfigurationResponse(@OutputCustomType.Parameter("encryptionKeyReference") @Nullable IntegrationServiceEnvironmenEncryptionKeyReferenceResponse encryptionKeyReference) {
+    @CustomType.Constructor
+    private IntegrationServiceEnvironmenEncryptionConfigurationResponse(@CustomType.Parameter("encryptionKeyReference") @Nullable IntegrationServiceEnvironmenEncryptionKeyReferenceResponse encryptionKeyReference) {
         this.encryptionKeyReference = encryptionKeyReference;
     }
 

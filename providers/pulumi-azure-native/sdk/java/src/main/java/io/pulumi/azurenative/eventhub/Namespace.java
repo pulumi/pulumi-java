@@ -8,7 +8,7 @@ import io.pulumi.azurenative.eventhub.NamespaceArgs;
 import io.pulumi.azurenative.eventhub.outputs.SkuResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -38,7 +38,7 @@ public class Namespace extends io.pulumi.resources.CustomResource {
      * The time the Namespace was created.
      * 
      */
-    @OutputExport(name="createdAt", type=String.class, parameters={})
+    @Export(name="createdAt", type=String.class, parameters={})
     private Output<String> createdAt;
 
     /**
@@ -52,7 +52,7 @@ public class Namespace extends io.pulumi.resources.CustomResource {
      * Value that indicates whether AutoInflate is enabled for eventhub namespace.
      * 
      */
-    @OutputExport(name="isAutoInflateEnabled", type=Boolean.class, parameters={})
+    @Export(name="isAutoInflateEnabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> isAutoInflateEnabled;
 
     /**
@@ -66,7 +66,7 @@ public class Namespace extends io.pulumi.resources.CustomResource {
      * Value that indicates whether Kafka is enabled for eventhub namespace.
      * 
      */
-    @OutputExport(name="kafkaEnabled", type=Boolean.class, parameters={})
+    @Export(name="kafkaEnabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> kafkaEnabled;
 
     /**
@@ -80,7 +80,7 @@ public class Namespace extends io.pulumi.resources.CustomResource {
      * Resource location.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -94,7 +94,7 @@ public class Namespace extends io.pulumi.resources.CustomResource {
      * Upper limit of throughput units when AutoInflate is enabled, value should be within 0 to 20 throughput units. ( '0' if AutoInflateEnabled = true)
      * 
      */
-    @OutputExport(name="maximumThroughputUnits", type=Integer.class, parameters={})
+    @Export(name="maximumThroughputUnits", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> maximumThroughputUnits;
 
     /**
@@ -108,7 +108,7 @@ public class Namespace extends io.pulumi.resources.CustomResource {
      * Identifier for Azure Insights metrics.
      * 
      */
-    @OutputExport(name="metricId", type=String.class, parameters={})
+    @Export(name="metricId", type=String.class, parameters={})
     private Output<String> metricId;
 
     /**
@@ -122,7 +122,7 @@ public class Namespace extends io.pulumi.resources.CustomResource {
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -136,7 +136,7 @@ public class Namespace extends io.pulumi.resources.CustomResource {
      * Provisioning state of the Namespace.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -150,7 +150,7 @@ public class Namespace extends io.pulumi.resources.CustomResource {
      * Endpoint you can use to perform Service Bus operations.
      * 
      */
-    @OutputExport(name="serviceBusEndpoint", type=String.class, parameters={})
+    @Export(name="serviceBusEndpoint", type=String.class, parameters={})
     private Output<String> serviceBusEndpoint;
 
     /**
@@ -164,7 +164,7 @@ public class Namespace extends io.pulumi.resources.CustomResource {
      * Properties of sku resource
      * 
      */
-    @OutputExport(name="sku", type=SkuResponse.class, parameters={})
+    @Export(name="sku", type=SkuResponse.class, parameters={})
     private Output</* @Nullable */ SkuResponse> sku;
 
     /**
@@ -178,7 +178,7 @@ public class Namespace extends io.pulumi.resources.CustomResource {
      * Resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -192,7 +192,7 @@ public class Namespace extends io.pulumi.resources.CustomResource {
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -206,7 +206,7 @@ public class Namespace extends io.pulumi.resources.CustomResource {
      * The time the Namespace was updated.
      * 
      */
-    @OutputExport(name="updatedAt", type=String.class, parameters={})
+    @Export(name="updatedAt", type=String.class, parameters={})
     private Output<String> updatedAt;
 
     /**

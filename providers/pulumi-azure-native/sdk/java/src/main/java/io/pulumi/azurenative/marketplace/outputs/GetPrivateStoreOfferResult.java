@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.marketplace.outputs;
 
 import io.pulumi.azurenative.marketplace.outputs.PlanResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetPrivateStoreOfferResult {
     /**
      * Private store offer creation date
@@ -86,22 +86,22 @@ public final class GetPrivateStoreOfferResult {
      */
     private final @Nullable Boolean updateSuppressedDueIdempotence;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetPrivateStoreOfferResult(
-        @OutputCustomType.Parameter("createdAt") String createdAt,
-        @OutputCustomType.Parameter("eTag") @Nullable String eTag,
-        @OutputCustomType.Parameter("iconFileUris") @Nullable Map<String,String> iconFileUris,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("modifiedAt") String modifiedAt,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("offerDisplayName") String offerDisplayName,
-        @OutputCustomType.Parameter("plans") @Nullable List<PlanResponse> plans,
-        @OutputCustomType.Parameter("privateStoreId") String privateStoreId,
-        @OutputCustomType.Parameter("publisherDisplayName") String publisherDisplayName,
-        @OutputCustomType.Parameter("specificPlanIdsLimitation") @Nullable List<String> specificPlanIdsLimitation,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("uniqueOfferId") String uniqueOfferId,
-        @OutputCustomType.Parameter("updateSuppressedDueIdempotence") @Nullable Boolean updateSuppressedDueIdempotence) {
+        @CustomType.Parameter("createdAt") String createdAt,
+        @CustomType.Parameter("eTag") @Nullable String eTag,
+        @CustomType.Parameter("iconFileUris") @Nullable Map<String,String> iconFileUris,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("modifiedAt") String modifiedAt,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("offerDisplayName") String offerDisplayName,
+        @CustomType.Parameter("plans") @Nullable List<PlanResponse> plans,
+        @CustomType.Parameter("privateStoreId") String privateStoreId,
+        @CustomType.Parameter("publisherDisplayName") String publisherDisplayName,
+        @CustomType.Parameter("specificPlanIdsLimitation") @Nullable List<String> specificPlanIdsLimitation,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("uniqueOfferId") String uniqueOfferId,
+        @CustomType.Parameter("updateSuppressedDueIdempotence") @Nullable Boolean updateSuppressedDueIdempotence) {
         this.createdAt = createdAt;
         this.eTag = eTag;
         this.iconFileUris = iconFileUris;

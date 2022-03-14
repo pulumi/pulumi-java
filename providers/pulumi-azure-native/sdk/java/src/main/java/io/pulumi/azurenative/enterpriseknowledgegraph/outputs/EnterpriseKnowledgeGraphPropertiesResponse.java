@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.enterpriseknowledgegraph.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EnterpriseKnowledgeGraphPropertiesResponse {
     /**
      * The description of the EnterpriseKnowledgeGraph
@@ -28,11 +28,11 @@ public final class EnterpriseKnowledgeGraphPropertiesResponse {
      */
     private final @Nullable String provisioningState;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EnterpriseKnowledgeGraphPropertiesResponse(
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("metadata") @Nullable Object metadata,
-        @OutputCustomType.Parameter("provisioningState") @Nullable String provisioningState) {
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("metadata") @Nullable Object metadata,
+        @CustomType.Parameter("provisioningState") @Nullable String provisioningState) {
         this.description = description;
         this.metadata = metadata;
         this.provisioningState = provisioningState;

@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.datafactory.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class MetadataItemResponse {
     /**
      * Metadata item key name. Type: string (or Expression with resultType string).
@@ -22,10 +22,10 @@ public final class MetadataItemResponse {
      */
     private final @Nullable Object value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MetadataItemResponse(
-        @OutputCustomType.Parameter("name") @Nullable Object name,
-        @OutputCustomType.Parameter("value") @Nullable Object value) {
+        @CustomType.Parameter("name") @Nullable Object name,
+        @CustomType.Parameter("value") @Nullable Object value) {
         this.name = name;
         this.value = value;
     }

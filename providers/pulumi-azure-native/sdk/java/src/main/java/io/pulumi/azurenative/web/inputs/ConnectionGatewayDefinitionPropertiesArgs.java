@@ -5,7 +5,7 @@ package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.azurenative.web.inputs.ConnectionGatewayReferenceArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class ConnectionGatewayDefinitionPropertiesArgs extends io.pulumi.r
      * The URI of the backend
      * 
      */
-    @InputImport(name="backendUri")
+    @Import(name="backendUri")
       private final @Nullable Output<String> backendUri;
 
     public Output<String> getBackendUri() {
@@ -32,7 +32,7 @@ public final class ConnectionGatewayDefinitionPropertiesArgs extends io.pulumi.r
      * The gateway installation reference
      * 
      */
-    @InputImport(name="connectionGatewayInstallation")
+    @Import(name="connectionGatewayInstallation")
       private final @Nullable Output<ConnectionGatewayReferenceArgs> connectionGatewayInstallation;
 
     public Output<ConnectionGatewayReferenceArgs> getConnectionGatewayInstallation() {
@@ -43,7 +43,7 @@ public final class ConnectionGatewayDefinitionPropertiesArgs extends io.pulumi.r
      * The gateway admin
      * 
      */
-    @InputImport(name="contactInformation")
+    @Import(name="contactInformation")
       private final @Nullable Output<List<String>> contactInformation;
 
     public Output<List<String>> getContactInformation() {
@@ -54,7 +54,7 @@ public final class ConnectionGatewayDefinitionPropertiesArgs extends io.pulumi.r
      * The gateway description
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -65,7 +65,7 @@ public final class ConnectionGatewayDefinitionPropertiesArgs extends io.pulumi.r
      * The gateway display name
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -76,7 +76,7 @@ public final class ConnectionGatewayDefinitionPropertiesArgs extends io.pulumi.r
      * The machine name of the gateway
      * 
      */
-    @InputImport(name="machineName")
+    @Import(name="machineName")
       private final @Nullable Output<String> machineName;
 
     public Output<String> getMachineName() {
@@ -87,7 +87,7 @@ public final class ConnectionGatewayDefinitionPropertiesArgs extends io.pulumi.r
      * The gateway status
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable Output<Object> status;
 
     public Output<Object> getStatus() {

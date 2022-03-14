@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.cdn.inputs;
 
 import io.pulumi.azurenative.cdn.inputs.MatchConditionResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class RateLimitRuleResponse extends io.pulumi.resources.InvokeArgs 
      * Describes what action to be applied when rule matches
      * 
      */
-    @InputImport(name="action", required=true)
+    @Import(name="action", required=true)
       private final String action;
 
     public String getAction() {
@@ -36,7 +36,7 @@ public final class RateLimitRuleResponse extends io.pulumi.resources.InvokeArgs 
      * Describes if the custom rule is in enabled or disabled state. Defaults to Enabled if not specified.
      * 
      */
-    @InputImport(name="enabledState")
+    @Import(name="enabledState")
       private final @Nullable String enabledState;
 
     public Optional<String> getEnabledState() {
@@ -47,7 +47,7 @@ public final class RateLimitRuleResponse extends io.pulumi.resources.InvokeArgs 
      * List of match conditions.
      * 
      */
-    @InputImport(name="matchConditions", required=true)
+    @Import(name="matchConditions", required=true)
       private final List<MatchConditionResponse> matchConditions;
 
     public List<MatchConditionResponse> getMatchConditions() {
@@ -58,7 +58,7 @@ public final class RateLimitRuleResponse extends io.pulumi.resources.InvokeArgs 
      * Defines the name of the custom rule
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -69,7 +69,7 @@ public final class RateLimitRuleResponse extends io.pulumi.resources.InvokeArgs 
      * Defines in what order this rule be evaluated in the overall list of custom rules
      * 
      */
-    @InputImport(name="priority", required=true)
+    @Import(name="priority", required=true)
       private final Integer priority;
 
     public Integer getPriority() {
@@ -80,7 +80,7 @@ public final class RateLimitRuleResponse extends io.pulumi.resources.InvokeArgs 
      * Defines rate limit duration. Default is 1 minute.
      * 
      */
-    @InputImport(name="rateLimitDurationInMinutes", required=true)
+    @Import(name="rateLimitDurationInMinutes", required=true)
       private final Integer rateLimitDurationInMinutes;
 
     public Integer getRateLimitDurationInMinutes() {
@@ -91,7 +91,7 @@ public final class RateLimitRuleResponse extends io.pulumi.resources.InvokeArgs 
      * Defines rate limit threshold.
      * 
      */
-    @InputImport(name="rateLimitThreshold", required=true)
+    @Import(name="rateLimitThreshold", required=true)
       private final Integer rateLimitThreshold;
 
     public Integer getRateLimitThreshold() {

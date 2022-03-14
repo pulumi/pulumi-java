@@ -11,7 +11,7 @@ import io.pulumi.azurenative.logic.inputs.ResourceReferenceArgs;
 import io.pulumi.azurenative.logic.inputs.WorkflowParameterArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -27,7 +27,7 @@ public final class WorkflowArgs extends io.pulumi.resources.ResourceArgs {
      * The access control configuration.
      * 
      */
-    @InputImport(name="accessControl")
+    @Import(name="accessControl")
       private final @Nullable Output<FlowAccessControlConfigurationArgs> accessControl;
 
     public Output<FlowAccessControlConfigurationArgs> getAccessControl() {
@@ -38,7 +38,7 @@ public final class WorkflowArgs extends io.pulumi.resources.ResourceArgs {
      * The definition.
      * 
      */
-    @InputImport(name="definition")
+    @Import(name="definition")
       private final @Nullable Output<Object> definition;
 
     public Output<Object> getDefinition() {
@@ -49,7 +49,7 @@ public final class WorkflowArgs extends io.pulumi.resources.ResourceArgs {
      * The endpoints configuration.
      * 
      */
-    @InputImport(name="endpointsConfiguration")
+    @Import(name="endpointsConfiguration")
       private final @Nullable Output<FlowEndpointsConfigurationArgs> endpointsConfiguration;
 
     public Output<FlowEndpointsConfigurationArgs> getEndpointsConfiguration() {
@@ -60,7 +60,7 @@ public final class WorkflowArgs extends io.pulumi.resources.ResourceArgs {
      * Managed service identity properties.
      * 
      */
-    @InputImport(name="identity")
+    @Import(name="identity")
       private final @Nullable Output<ManagedServiceIdentityArgs> identity;
 
     public Output<ManagedServiceIdentityArgs> getIdentity() {
@@ -71,7 +71,7 @@ public final class WorkflowArgs extends io.pulumi.resources.ResourceArgs {
      * The integration account.
      * 
      */
-    @InputImport(name="integrationAccount")
+    @Import(name="integrationAccount")
       private final @Nullable Output<ResourceReferenceArgs> integrationAccount;
 
     public Output<ResourceReferenceArgs> getIntegrationAccount() {
@@ -82,7 +82,7 @@ public final class WorkflowArgs extends io.pulumi.resources.ResourceArgs {
      * The integration service environment.
      * 
      */
-    @InputImport(name="integrationServiceEnvironment")
+    @Import(name="integrationServiceEnvironment")
       private final @Nullable Output<ResourceReferenceArgs> integrationServiceEnvironment;
 
     public Output<ResourceReferenceArgs> getIntegrationServiceEnvironment() {
@@ -93,7 +93,7 @@ public final class WorkflowArgs extends io.pulumi.resources.ResourceArgs {
      * The resource location.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -104,7 +104,7 @@ public final class WorkflowArgs extends io.pulumi.resources.ResourceArgs {
      * The parameters.
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable Output<Map<String,WorkflowParameterArgs>> parameters;
 
     public Output<Map<String,WorkflowParameterArgs>> getParameters() {
@@ -115,7 +115,7 @@ public final class WorkflowArgs extends io.pulumi.resources.ResourceArgs {
      * The resource group name.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -126,7 +126,7 @@ public final class WorkflowArgs extends io.pulumi.resources.ResourceArgs {
      * The state.
      * 
      */
-    @InputImport(name="state")
+    @Import(name="state")
       private final @Nullable Output<Either<String,WorkflowState>> state;
 
     public Output<Either<String,WorkflowState>> getState() {
@@ -137,7 +137,7 @@ public final class WorkflowArgs extends io.pulumi.resources.ResourceArgs {
      * The resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -148,7 +148,7 @@ public final class WorkflowArgs extends io.pulumi.resources.ResourceArgs {
      * The workflow name.
      * 
      */
-    @InputImport(name="workflowName")
+    @Import(name="workflowName")
       private final @Nullable Output<String> workflowName;
 
     public Output<String> getWorkflowName() {

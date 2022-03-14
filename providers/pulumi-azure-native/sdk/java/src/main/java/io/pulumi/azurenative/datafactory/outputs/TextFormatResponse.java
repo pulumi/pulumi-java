@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.datafactory.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TextFormatResponse {
     /**
      * The column delimiter. Type: string (or Expression with resultType string).
@@ -74,20 +74,20 @@ public final class TextFormatResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TextFormatResponse(
-        @OutputCustomType.Parameter("columnDelimiter") @Nullable Object columnDelimiter,
-        @OutputCustomType.Parameter("deserializer") @Nullable Object deserializer,
-        @OutputCustomType.Parameter("encodingName") @Nullable Object encodingName,
-        @OutputCustomType.Parameter("escapeChar") @Nullable Object escapeChar,
-        @OutputCustomType.Parameter("firstRowAsHeader") @Nullable Object firstRowAsHeader,
-        @OutputCustomType.Parameter("nullValue") @Nullable Object nullValue,
-        @OutputCustomType.Parameter("quoteChar") @Nullable Object quoteChar,
-        @OutputCustomType.Parameter("rowDelimiter") @Nullable Object rowDelimiter,
-        @OutputCustomType.Parameter("serializer") @Nullable Object serializer,
-        @OutputCustomType.Parameter("skipLineCount") @Nullable Object skipLineCount,
-        @OutputCustomType.Parameter("treatEmptyAsNull") @Nullable Object treatEmptyAsNull,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("columnDelimiter") @Nullable Object columnDelimiter,
+        @CustomType.Parameter("deserializer") @Nullable Object deserializer,
+        @CustomType.Parameter("encodingName") @Nullable Object encodingName,
+        @CustomType.Parameter("escapeChar") @Nullable Object escapeChar,
+        @CustomType.Parameter("firstRowAsHeader") @Nullable Object firstRowAsHeader,
+        @CustomType.Parameter("nullValue") @Nullable Object nullValue,
+        @CustomType.Parameter("quoteChar") @Nullable Object quoteChar,
+        @CustomType.Parameter("rowDelimiter") @Nullable Object rowDelimiter,
+        @CustomType.Parameter("serializer") @Nullable Object serializer,
+        @CustomType.Parameter("skipLineCount") @Nullable Object skipLineCount,
+        @CustomType.Parameter("treatEmptyAsNull") @Nullable Object treatEmptyAsNull,
+        @CustomType.Parameter("type") String type) {
         this.columnDelimiter = columnDelimiter;
         this.deserializer = deserializer;
         this.encodingName = encodingName;

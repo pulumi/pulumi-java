@@ -6,7 +6,7 @@ package io.pulumi.azurenative.avs;
 import io.pulumi.azurenative.avs.enums.AddonType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class AddonArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the addon for the private cloud
      * 
      */
-    @InputImport(name="addonName")
+    @Import(name="addonName")
       private final @Nullable Output<String> addonName;
 
     public Output<String> getAddonName() {
@@ -31,7 +31,7 @@ public final class AddonArgs extends io.pulumi.resources.ResourceArgs {
      * The type of private cloud addon
      * 
      */
-    @InputImport(name="addonType")
+    @Import(name="addonType")
       private final @Nullable Output<Either<String,AddonType>> addonType;
 
     public Output<Either<String,AddonType>> getAddonType() {
@@ -42,7 +42,7 @@ public final class AddonArgs extends io.pulumi.resources.ResourceArgs {
      * The SRM license
      * 
      */
-    @InputImport(name="licenseKey")
+    @Import(name="licenseKey")
       private final @Nullable Output<String> licenseKey;
 
     public Output<String> getLicenseKey() {
@@ -53,7 +53,7 @@ public final class AddonArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the private cloud.
      * 
      */
-    @InputImport(name="privateCloudName", required=true)
+    @Import(name="privateCloudName", required=true)
       private final Output<String> privateCloudName;
 
     public Output<String> getPrivateCloudName() {
@@ -64,7 +64,7 @@ public final class AddonArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {

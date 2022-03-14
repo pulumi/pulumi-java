@@ -6,7 +6,7 @@ package io.pulumi.azurenative.web.inputs;
 import io.pulumi.azurenative.web.inputs.AppRegistrationArgs;
 import io.pulumi.azurenative.web.inputs.LoginScopesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class FacebookArgs extends io.pulumi.resources.ResourceArgs {
      * <code>false</code> if the Facebook provider should not be enabled despite the set registration; otherwise, <code>true</code>.
      * 
      */
-    @InputImport(name="enabled")
+    @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
@@ -36,7 +36,7 @@ public final class FacebookArgs extends io.pulumi.resources.ResourceArgs {
      * The version of the Facebook api to be used while logging in.
      * 
      */
-    @InputImport(name="graphApiVersion")
+    @Import(name="graphApiVersion")
       private final @Nullable Output<String> graphApiVersion;
 
     public Output<String> getGraphApiVersion() {
@@ -47,7 +47,7 @@ public final class FacebookArgs extends io.pulumi.resources.ResourceArgs {
      * The configuration settings of the login flow.
      * 
      */
-    @InputImport(name="login")
+    @Import(name="login")
       private final @Nullable Output<LoginScopesArgs> login;
 
     public Output<LoginScopesArgs> getLogin() {
@@ -58,7 +58,7 @@ public final class FacebookArgs extends io.pulumi.resources.ResourceArgs {
      * The configuration settings of the app registration for the Facebook provider.
      * 
      */
-    @InputImport(name="registration")
+    @Import(name="registration")
       private final @Nullable Output<AppRegistrationArgs> registration;
 
     public Output<AppRegistrationArgs> getRegistration() {

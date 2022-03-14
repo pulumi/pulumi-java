@@ -6,7 +6,7 @@ package io.pulumi.azurenative.securityinsights;
 import io.pulumi.azurenative.securityinsights.inputs.IncidentInfoArgs;
 import io.pulumi.azurenative.securityinsights.inputs.UserInfoArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class BookmarkArgs extends io.pulumi.resources.ResourceArgs {
      * Bookmark ID
      * 
      */
-    @InputImport(name="bookmarkId")
+    @Import(name="bookmarkId")
       private final @Nullable Output<String> bookmarkId;
 
     public Output<String> getBookmarkId() {
@@ -32,7 +32,7 @@ public final class BookmarkArgs extends io.pulumi.resources.ResourceArgs {
      * The time the bookmark was created
      * 
      */
-    @InputImport(name="created")
+    @Import(name="created")
       private final @Nullable Output<String> created;
 
     public Output<String> getCreated() {
@@ -43,7 +43,7 @@ public final class BookmarkArgs extends io.pulumi.resources.ResourceArgs {
      * Describes a user that created the bookmark
      * 
      */
-    @InputImport(name="createdBy")
+    @Import(name="createdBy")
       private final @Nullable Output<UserInfoArgs> createdBy;
 
     public Output<UserInfoArgs> getCreatedBy() {
@@ -54,7 +54,7 @@ public final class BookmarkArgs extends io.pulumi.resources.ResourceArgs {
      * The display name of the bookmark
      * 
      */
-    @InputImport(name="displayName", required=true)
+    @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -65,7 +65,7 @@ public final class BookmarkArgs extends io.pulumi.resources.ResourceArgs {
      * The bookmark event time
      * 
      */
-    @InputImport(name="eventTime")
+    @Import(name="eventTime")
       private final @Nullable Output<String> eventTime;
 
     public Output<String> getEventTime() {
@@ -76,7 +76,7 @@ public final class BookmarkArgs extends io.pulumi.resources.ResourceArgs {
      * Describes an incident that relates to bookmark
      * 
      */
-    @InputImport(name="incidentInfo")
+    @Import(name="incidentInfo")
       private final @Nullable Output<IncidentInfoArgs> incidentInfo;
 
     public Output<IncidentInfoArgs> getIncidentInfo() {
@@ -87,7 +87,7 @@ public final class BookmarkArgs extends io.pulumi.resources.ResourceArgs {
      * List of labels relevant to this bookmark
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<List<String>> labels;
 
     public Output<List<String>> getLabels() {
@@ -98,7 +98,7 @@ public final class BookmarkArgs extends io.pulumi.resources.ResourceArgs {
      * The notes of the bookmark
      * 
      */
-    @InputImport(name="notes")
+    @Import(name="notes")
       private final @Nullable Output<String> notes;
 
     public Output<String> getNotes() {
@@ -109,7 +109,7 @@ public final class BookmarkArgs extends io.pulumi.resources.ResourceArgs {
      * The query of the bookmark.
      * 
      */
-    @InputImport(name="query", required=true)
+    @Import(name="query", required=true)
       private final Output<String> query;
 
     public Output<String> getQuery() {
@@ -120,7 +120,7 @@ public final class BookmarkArgs extends io.pulumi.resources.ResourceArgs {
      * The end time for the query
      * 
      */
-    @InputImport(name="queryEndTime")
+    @Import(name="queryEndTime")
       private final @Nullable Output<String> queryEndTime;
 
     public Output<String> getQueryEndTime() {
@@ -131,7 +131,7 @@ public final class BookmarkArgs extends io.pulumi.resources.ResourceArgs {
      * The query result of the bookmark.
      * 
      */
-    @InputImport(name="queryResult")
+    @Import(name="queryResult")
       private final @Nullable Output<String> queryResult;
 
     public Output<String> getQueryResult() {
@@ -142,7 +142,7 @@ public final class BookmarkArgs extends io.pulumi.resources.ResourceArgs {
      * The start time for the query
      * 
      */
-    @InputImport(name="queryStartTime")
+    @Import(name="queryStartTime")
       private final @Nullable Output<String> queryStartTime;
 
     public Output<String> getQueryStartTime() {
@@ -153,7 +153,7 @@ public final class BookmarkArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group within the user's subscription. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -164,7 +164,7 @@ public final class BookmarkArgs extends io.pulumi.resources.ResourceArgs {
      * The last time the bookmark was updated
      * 
      */
-    @InputImport(name="updated")
+    @Import(name="updated")
       private final @Nullable Output<String> updated;
 
     public Output<String> getUpdated() {
@@ -175,7 +175,7 @@ public final class BookmarkArgs extends io.pulumi.resources.ResourceArgs {
      * Describes a user that updated the bookmark
      * 
      */
-    @InputImport(name="updatedBy")
+    @Import(name="updatedBy")
       private final @Nullable Output<UserInfoArgs> updatedBy;
 
     public Output<UserInfoArgs> getUpdatedBy() {
@@ -186,7 +186,7 @@ public final class BookmarkArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the workspace.
      * 
      */
-    @InputImport(name="workspaceName", required=true)
+    @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;
 
     public Output<String> getWorkspaceName() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.operationalinsights.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class AssociatedWorkspaceResponse extends io.pulumi.resources.Invok
      * The time of workspace association.
      * 
      */
-    @InputImport(name="associateDate", required=true)
+    @Import(name="associateDate", required=true)
       private final String associateDate;
 
     public String getAssociateDate() {
@@ -31,7 +31,7 @@ public final class AssociatedWorkspaceResponse extends io.pulumi.resources.Invok
      * The ResourceId id the assigned workspace.
      * 
      */
-    @InputImport(name="resourceId", required=true)
+    @Import(name="resourceId", required=true)
       private final String resourceId;
 
     public String getResourceId() {
@@ -42,7 +42,7 @@ public final class AssociatedWorkspaceResponse extends io.pulumi.resources.Invok
      * The id of the assigned workspace.
      * 
      */
-    @InputImport(name="workspaceId", required=true)
+    @Import(name="workspaceId", required=true)
       private final String workspaceId;
 
     public String getWorkspaceId() {
@@ -53,7 +53,7 @@ public final class AssociatedWorkspaceResponse extends io.pulumi.resources.Invok
      * The name id the assigned workspace.
      * 
      */
-    @InputImport(name="workspaceName", required=true)
+    @Import(name="workspaceName", required=true)
       private final String workspaceName;
 
     public String getWorkspaceName() {

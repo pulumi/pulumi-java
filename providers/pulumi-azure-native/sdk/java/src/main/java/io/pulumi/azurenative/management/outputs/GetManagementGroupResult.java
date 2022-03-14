@@ -5,14 +5,14 @@ package io.pulumi.azurenative.management.outputs;
 
 import io.pulumi.azurenative.management.outputs.ManagementGroupChildInfoResponse;
 import io.pulumi.azurenative.management.outputs.ManagementGroupDetailsResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetManagementGroupResult {
     /**
      * The list of children.
@@ -50,15 +50,15 @@ public final class GetManagementGroupResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetManagementGroupResult(
-        @OutputCustomType.Parameter("children") @Nullable List<ManagementGroupChildInfoResponse> children,
-        @OutputCustomType.Parameter("details") @Nullable ManagementGroupDetailsResponse details,
-        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("tenantId") @Nullable String tenantId,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("children") @Nullable List<ManagementGroupChildInfoResponse> children,
+        @CustomType.Parameter("details") @Nullable ManagementGroupDetailsResponse details,
+        @CustomType.Parameter("displayName") @Nullable String displayName,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("tenantId") @Nullable String tenantId,
+        @CustomType.Parameter("type") String type) {
         this.children = children;
         this.details = details;
         this.displayName = displayName;

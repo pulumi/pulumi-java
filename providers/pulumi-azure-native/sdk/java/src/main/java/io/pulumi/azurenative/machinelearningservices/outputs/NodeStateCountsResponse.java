@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class NodeStateCountsResponse {
     /**
      * Number of compute nodes in idle state.
@@ -40,14 +40,14 @@ public final class NodeStateCountsResponse {
      */
     private final Integer unusableNodeCount;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NodeStateCountsResponse(
-        @OutputCustomType.Parameter("idleNodeCount") Integer idleNodeCount,
-        @OutputCustomType.Parameter("leavingNodeCount") Integer leavingNodeCount,
-        @OutputCustomType.Parameter("preemptedNodeCount") Integer preemptedNodeCount,
-        @OutputCustomType.Parameter("preparingNodeCount") Integer preparingNodeCount,
-        @OutputCustomType.Parameter("runningNodeCount") Integer runningNodeCount,
-        @OutputCustomType.Parameter("unusableNodeCount") Integer unusableNodeCount) {
+        @CustomType.Parameter("idleNodeCount") Integer idleNodeCount,
+        @CustomType.Parameter("leavingNodeCount") Integer leavingNodeCount,
+        @CustomType.Parameter("preemptedNodeCount") Integer preemptedNodeCount,
+        @CustomType.Parameter("preparingNodeCount") Integer preparingNodeCount,
+        @CustomType.Parameter("runningNodeCount") Integer runningNodeCount,
+        @CustomType.Parameter("unusableNodeCount") Integer unusableNodeCount) {
         this.idleNodeCount = idleNodeCount;
         this.leavingNodeCount = leavingNodeCount;
         this.preemptedNodeCount = preemptedNodeCount;

@@ -5,14 +5,14 @@ package io.pulumi.azurenative.documentdb.outputs;
 
 import io.pulumi.azurenative.documentdb.outputs.SqlContainerGetPropertiesResponseOptions;
 import io.pulumi.azurenative.documentdb.outputs.SqlContainerGetPropertiesResponseResource;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetSqlResourceSqlContainerResult {
     /**
      * The unique resource identifier of the ARM resource.
@@ -42,15 +42,15 @@ public final class GetSqlResourceSqlContainerResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetSqlResourceSqlContainerResult(
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("options") @Nullable SqlContainerGetPropertiesResponseOptions options,
-        @OutputCustomType.Parameter("resource") @Nullable SqlContainerGetPropertiesResponseResource resource,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("options") @Nullable SqlContainerGetPropertiesResponseOptions options,
+        @CustomType.Parameter("resource") @Nullable SqlContainerGetPropertiesResponseResource resource,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type) {
         this.id = id;
         this.location = location;
         this.name = name;

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.managedservices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetRegistrationDefinitionArgs extends io.pulumi.resources.Inv
      * Guid of the registration definition.
      * 
      */
-    @InputImport(name="registrationDefinitionId", required=true)
+    @Import(name="registrationDefinitionId", required=true)
       private final String registrationDefinitionId;
 
     public String getRegistrationDefinitionId() {
@@ -27,7 +27,7 @@ public final class GetRegistrationDefinitionArgs extends io.pulumi.resources.Inv
      * Scope of the resource.
      * 
      */
-    @InputImport(name="scope", required=true)
+    @Import(name="scope", required=true)
       private final String scope;
 
     public String getScope() {

@@ -103,7 +103,7 @@ import io.pulumi.azurenative.datafactory.outputs.WebSourceResponse;
 import io.pulumi.azurenative.datafactory.outputs.XeroSourceResponse;
 import io.pulumi.azurenative.datafactory.outputs.XmlSourceResponse;
 import io.pulumi.azurenative.datafactory.outputs.ZohoSourceResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -111,7 +111,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class LookupActivityResponse {
     /**
      * Lookup activity dataset reference.
@@ -165,18 +165,18 @@ public final class LookupActivityResponse {
      */
     private final @Nullable List<UserPropertyResponse> userProperties;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LookupActivityResponse(
-        @OutputCustomType.Parameter("dataset") DatasetReferenceResponse dataset,
-        @OutputCustomType.Parameter("dependsOn") @Nullable List<ActivityDependencyResponse> dependsOn,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("firstRowOnly") @Nullable Object firstRowOnly,
-        @OutputCustomType.Parameter("linkedServiceName") @Nullable LinkedServiceReferenceResponse linkedServiceName,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("policy") @Nullable ActivityPolicyResponse policy,
-        @OutputCustomType.Parameter("source") Object source,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("userProperties") @Nullable List<UserPropertyResponse> userProperties) {
+        @CustomType.Parameter("dataset") DatasetReferenceResponse dataset,
+        @CustomType.Parameter("dependsOn") @Nullable List<ActivityDependencyResponse> dependsOn,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("firstRowOnly") @Nullable Object firstRowOnly,
+        @CustomType.Parameter("linkedServiceName") @Nullable LinkedServiceReferenceResponse linkedServiceName,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("policy") @Nullable ActivityPolicyResponse policy,
+        @CustomType.Parameter("source") Object source,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("userProperties") @Nullable List<UserPropertyResponse> userProperties) {
         this.dataset = dataset;
         this.dependsOn = dependsOn;
         this.description = description;

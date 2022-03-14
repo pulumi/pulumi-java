@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.media.inputs;
 
 import io.pulumi.azurenative.media.inputs.JobErrorResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class JobOutputAssetResponse extends io.pulumi.resources.InvokeArgs
      * The name of the output Asset.
      * 
      */
-    @InputImport(name="assetName", required=true)
+    @Import(name="assetName", required=true)
       private final String assetName;
 
     public String getAssetName() {
@@ -35,7 +35,7 @@ public final class JobOutputAssetResponse extends io.pulumi.resources.InvokeArgs
      * The UTC date and time at which this Job Output finished processing.
      * 
      */
-    @InputImport(name="endTime", required=true)
+    @Import(name="endTime", required=true)
       private final String endTime;
 
     public String getEndTime() {
@@ -46,7 +46,7 @@ public final class JobOutputAssetResponse extends io.pulumi.resources.InvokeArgs
      * If the JobOutput is in the Error state, it contains the details of the error.
      * 
      */
-    @InputImport(name="error", required=true)
+    @Import(name="error", required=true)
       private final JobErrorResponse error;
 
     public JobErrorResponse getError() {
@@ -57,7 +57,7 @@ public final class JobOutputAssetResponse extends io.pulumi.resources.InvokeArgs
      * A label that is assigned to a JobOutput in order to help uniquely identify it. This is useful when your Transform has more than one TransformOutput, whereby your Job has more than one JobOutput. In such cases, when you submit the Job, you will add two or more JobOutputs, in the same order as TransformOutputs in the Transform. Subsequently, when you retrieve the Job, either through events or on a GET request, you can use the label to easily identify the JobOutput. If a label is not provided, a default value of '{presetName}_{outputIndex}' will be used, where the preset name is the name of the preset in the corresponding TransformOutput and the output index is the relative index of the this JobOutput within the Job. Note that this index is the same as the relative index of the corresponding TransformOutput within its Transform.
      * 
      */
-    @InputImport(name="label")
+    @Import(name="label")
       private final @Nullable String label;
 
     public Optional<String> getLabel() {
@@ -69,7 +69,7 @@ public final class JobOutputAssetResponse extends io.pulumi.resources.InvokeArgs
      * Expected value is '#Microsoft.Media.JobOutputAsset'.
      * 
      */
-    @InputImport(name="odataType", required=true)
+    @Import(name="odataType", required=true)
       private final String odataType;
 
     public String getOdataType() {
@@ -80,7 +80,7 @@ public final class JobOutputAssetResponse extends io.pulumi.resources.InvokeArgs
      * If the JobOutput is in a Processing state, this contains the Job completion percentage. The value is an estimate and not intended to be used to predict Job completion times. To determine if the JobOutput is complete, use the State property.
      * 
      */
-    @InputImport(name="progress", required=true)
+    @Import(name="progress", required=true)
       private final Integer progress;
 
     public Integer getProgress() {
@@ -91,7 +91,7 @@ public final class JobOutputAssetResponse extends io.pulumi.resources.InvokeArgs
      * The UTC date and time at which this Job Output began processing.
      * 
      */
-    @InputImport(name="startTime", required=true)
+    @Import(name="startTime", required=true)
       private final String startTime;
 
     public String getStartTime() {
@@ -102,7 +102,7 @@ public final class JobOutputAssetResponse extends io.pulumi.resources.InvokeArgs
      * Describes the state of the JobOutput.
      * 
      */
-    @InputImport(name="state", required=true)
+    @Import(name="state", required=true)
       private final String state;
 
     public String getState() {

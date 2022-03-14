@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.O365BreakOutCategoryPoliciesResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class O365PolicyPropertiesResponse {
     /**
      * Office365 breakout categories.
@@ -17,8 +17,8 @@ public final class O365PolicyPropertiesResponse {
      */
     private final @Nullable O365BreakOutCategoryPoliciesResponse breakOutCategories;
 
-    @OutputCustomType.Constructor
-    private O365PolicyPropertiesResponse(@OutputCustomType.Parameter("breakOutCategories") @Nullable O365BreakOutCategoryPoliciesResponse breakOutCategories) {
+    @CustomType.Constructor
+    private O365PolicyPropertiesResponse(@CustomType.Parameter("breakOutCategories") @Nullable O365BreakOutCategoryPoliciesResponse breakOutCategories) {
         this.breakOutCategories = breakOutCategories;
     }
 

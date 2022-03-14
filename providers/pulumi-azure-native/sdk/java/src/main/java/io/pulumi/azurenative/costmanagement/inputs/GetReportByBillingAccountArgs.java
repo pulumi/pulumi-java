@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.costmanagement.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetReportByBillingAccountArgs extends io.pulumi.resources.Inv
      * BillingAccount ID
      * 
      */
-    @InputImport(name="billingAccountId", required=true)
+    @Import(name="billingAccountId", required=true)
       private final String billingAccountId;
 
     public String getBillingAccountId() {
@@ -27,7 +27,7 @@ public final class GetReportByBillingAccountArgs extends io.pulumi.resources.Inv
      * Report Name.
      * 
      */
-    @InputImport(name="reportName", required=true)
+    @Import(name="reportName", required=true)
       private final String reportName;
 
     public String getReportName() {

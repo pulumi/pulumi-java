@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.peering.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BgpSessionResponse {
     /**
      * The maximum number of prefixes advertised over the IPv4 session.
@@ -68,19 +68,19 @@ public final class BgpSessionResponse {
      */
     private final String sessionStateV6;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BgpSessionResponse(
-        @OutputCustomType.Parameter("maxPrefixesAdvertisedV4") @Nullable Integer maxPrefixesAdvertisedV4,
-        @OutputCustomType.Parameter("maxPrefixesAdvertisedV6") @Nullable Integer maxPrefixesAdvertisedV6,
-        @OutputCustomType.Parameter("md5AuthenticationKey") @Nullable String md5AuthenticationKey,
-        @OutputCustomType.Parameter("microsoftSessionIPv4Address") @Nullable String microsoftSessionIPv4Address,
-        @OutputCustomType.Parameter("microsoftSessionIPv6Address") @Nullable String microsoftSessionIPv6Address,
-        @OutputCustomType.Parameter("peerSessionIPv4Address") @Nullable String peerSessionIPv4Address,
-        @OutputCustomType.Parameter("peerSessionIPv6Address") @Nullable String peerSessionIPv6Address,
-        @OutputCustomType.Parameter("sessionPrefixV4") @Nullable String sessionPrefixV4,
-        @OutputCustomType.Parameter("sessionPrefixV6") @Nullable String sessionPrefixV6,
-        @OutputCustomType.Parameter("sessionStateV4") String sessionStateV4,
-        @OutputCustomType.Parameter("sessionStateV6") String sessionStateV6) {
+        @CustomType.Parameter("maxPrefixesAdvertisedV4") @Nullable Integer maxPrefixesAdvertisedV4,
+        @CustomType.Parameter("maxPrefixesAdvertisedV6") @Nullable Integer maxPrefixesAdvertisedV6,
+        @CustomType.Parameter("md5AuthenticationKey") @Nullable String md5AuthenticationKey,
+        @CustomType.Parameter("microsoftSessionIPv4Address") @Nullable String microsoftSessionIPv4Address,
+        @CustomType.Parameter("microsoftSessionIPv6Address") @Nullable String microsoftSessionIPv6Address,
+        @CustomType.Parameter("peerSessionIPv4Address") @Nullable String peerSessionIPv4Address,
+        @CustomType.Parameter("peerSessionIPv6Address") @Nullable String peerSessionIPv6Address,
+        @CustomType.Parameter("sessionPrefixV4") @Nullable String sessionPrefixV4,
+        @CustomType.Parameter("sessionPrefixV6") @Nullable String sessionPrefixV6,
+        @CustomType.Parameter("sessionStateV4") String sessionStateV4,
+        @CustomType.Parameter("sessionStateV6") String sessionStateV6) {
         this.maxPrefixesAdvertisedV4 = maxPrefixesAdvertisedV4;
         this.maxPrefixesAdvertisedV6 = maxPrefixesAdvertisedV6;
         this.md5AuthenticationKey = md5AuthenticationKey;

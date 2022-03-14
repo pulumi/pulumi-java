@@ -6,7 +6,7 @@ package io.pulumi.azurenative.providerhub.inputs;
 import io.pulumi.azurenative.providerhub.enums.ThrottlingMetricType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -17,21 +17,21 @@ public final class ThrottlingMetricArgs extends io.pulumi.resources.ResourceArgs
 
     public static final ThrottlingMetricArgs Empty = new ThrottlingMetricArgs();
 
-    @InputImport(name="interval")
+    @Import(name="interval")
       private final @Nullable Output<String> interval;
 
     public Output<String> getInterval() {
         return this.interval == null ? Output.empty() : this.interval;
     }
 
-    @InputImport(name="limit", required=true)
+    @Import(name="limit", required=true)
       private final Output<Double> limit;
 
     public Output<Double> getLimit() {
         return this.limit;
     }
 
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<Either<String,ThrottlingMetricType>> type;
 
     public Output<Either<String,ThrottlingMetricType>> getType() {

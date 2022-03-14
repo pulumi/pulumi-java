@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.hanaonazure.SapMonitorArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -36,7 +36,7 @@ public class SapMonitor extends io.pulumi.resources.CustomResource {
      * The value indicating whether to send analytics to Microsoft
      * 
      */
-    @OutputExport(name="enableCustomerAnalytics", type=Boolean.class, parameters={})
+    @Export(name="enableCustomerAnalytics", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableCustomerAnalytics;
 
     /**
@@ -50,7 +50,7 @@ public class SapMonitor extends io.pulumi.resources.CustomResource {
      * The geo-location where the resource lives
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -64,7 +64,7 @@ public class SapMonitor extends io.pulumi.resources.CustomResource {
      * The ARM ID of the Log Analytics Workspace that is used for monitoring
      * 
      */
-    @OutputExport(name="logAnalyticsWorkspaceArmId", type=String.class, parameters={})
+    @Export(name="logAnalyticsWorkspaceArmId", type=String.class, parameters={})
     private Output</* @Nullable */ String> logAnalyticsWorkspaceArmId;
 
     /**
@@ -78,7 +78,7 @@ public class SapMonitor extends io.pulumi.resources.CustomResource {
      * The workspace ID of the log analytics workspace to be used for monitoring
      * 
      */
-    @OutputExport(name="logAnalyticsWorkspaceId", type=String.class, parameters={})
+    @Export(name="logAnalyticsWorkspaceId", type=String.class, parameters={})
     private Output</* @Nullable */ String> logAnalyticsWorkspaceId;
 
     /**
@@ -92,7 +92,7 @@ public class SapMonitor extends io.pulumi.resources.CustomResource {
      * The shared key of the log analytics workspace that is used for monitoring
      * 
      */
-    @OutputExport(name="logAnalyticsWorkspaceSharedKey", type=String.class, parameters={})
+    @Export(name="logAnalyticsWorkspaceSharedKey", type=String.class, parameters={})
     private Output</* @Nullable */ String> logAnalyticsWorkspaceSharedKey;
 
     /**
@@ -106,7 +106,7 @@ public class SapMonitor extends io.pulumi.resources.CustomResource {
      * The name of the resource group the SAP Monitor resources get deployed into.
      * 
      */
-    @OutputExport(name="managedResourceGroupName", type=String.class, parameters={})
+    @Export(name="managedResourceGroupName", type=String.class, parameters={})
     private Output<String> managedResourceGroupName;
 
     /**
@@ -120,7 +120,7 @@ public class SapMonitor extends io.pulumi.resources.CustomResource {
      * The subnet which the SAP monitor will be deployed in
      * 
      */
-    @OutputExport(name="monitorSubnet", type=String.class, parameters={})
+    @Export(name="monitorSubnet", type=String.class, parameters={})
     private Output</* @Nullable */ String> monitorSubnet;
 
     /**
@@ -134,7 +134,7 @@ public class SapMonitor extends io.pulumi.resources.CustomResource {
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -148,7 +148,7 @@ public class SapMonitor extends io.pulumi.resources.CustomResource {
      * State of provisioning of the HanaInstance
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -162,7 +162,7 @@ public class SapMonitor extends io.pulumi.resources.CustomResource {
      * The version of the payload running in the Collector VM
      * 
      */
-    @OutputExport(name="sapMonitorCollectorVersion", type=String.class, parameters={})
+    @Export(name="sapMonitorCollectorVersion", type=String.class, parameters={})
     private Output<String> sapMonitorCollectorVersion;
 
     /**
@@ -176,7 +176,7 @@ public class SapMonitor extends io.pulumi.resources.CustomResource {
      * Resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -190,7 +190,7 @@ public class SapMonitor extends io.pulumi.resources.CustomResource {
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

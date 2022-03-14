@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ListWebAppPublishingCredentialsSlotResult {
     /**
      * Resource Id.
@@ -57,17 +57,17 @@ public final class ListWebAppPublishingCredentialsSlotResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ListWebAppPublishingCredentialsSlotResult(
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("kind") @Nullable String kind,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("publishingPassword") @Nullable String publishingPassword,
-        @OutputCustomType.Parameter("publishingPasswordHash") @Nullable String publishingPasswordHash,
-        @OutputCustomType.Parameter("publishingPasswordHashSalt") @Nullable String publishingPasswordHashSalt,
-        @OutputCustomType.Parameter("publishingUserName") String publishingUserName,
-        @OutputCustomType.Parameter("scmUri") @Nullable String scmUri,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("kind") @Nullable String kind,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("publishingPassword") @Nullable String publishingPassword,
+        @CustomType.Parameter("publishingPasswordHash") @Nullable String publishingPasswordHash,
+        @CustomType.Parameter("publishingPasswordHashSalt") @Nullable String publishingPasswordHashSalt,
+        @CustomType.Parameter("publishingUserName") String publishingUserName,
+        @CustomType.Parameter("scmUri") @Nullable String scmUri,
+        @CustomType.Parameter("type") String type) {
         this.id = id;
         this.kind = kind;
         this.name = name;

@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.sql.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetDataMaskingPolicyResult {
     /**
      * The list of the application principals. This is a legacy parameter and is no longer used.
@@ -57,17 +57,17 @@ public final class GetDataMaskingPolicyResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDataMaskingPolicyResult(
-        @OutputCustomType.Parameter("applicationPrincipals") String applicationPrincipals,
-        @OutputCustomType.Parameter("dataMaskingState") String dataMaskingState,
-        @OutputCustomType.Parameter("exemptPrincipals") @Nullable String exemptPrincipals,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("maskingLevel") String maskingLevel,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("applicationPrincipals") String applicationPrincipals,
+        @CustomType.Parameter("dataMaskingState") String dataMaskingState,
+        @CustomType.Parameter("exemptPrincipals") @Nullable String exemptPrincipals,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("maskingLevel") String maskingLevel,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("type") String type) {
         this.applicationPrincipals = applicationPrincipals;
         this.dataMaskingState = dataMaskingState;
         this.exemptPrincipals = exemptPrincipals;

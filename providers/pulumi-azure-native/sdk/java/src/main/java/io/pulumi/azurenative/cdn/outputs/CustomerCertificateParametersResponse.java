@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.cdn.outputs;
 
 import io.pulumi.azurenative.cdn.outputs.ResourceReferenceResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CustomerCertificateParametersResponse {
     /**
      * Certificate issuing authority.
@@ -46,14 +46,14 @@ public final class CustomerCertificateParametersResponse {
      */
     private final @Nullable Boolean useLatestVersion;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CustomerCertificateParametersResponse(
-        @OutputCustomType.Parameter("certificateAuthority") @Nullable String certificateAuthority,
-        @OutputCustomType.Parameter("secretSource") ResourceReferenceResponse secretSource,
-        @OutputCustomType.Parameter("secretVersion") @Nullable String secretVersion,
-        @OutputCustomType.Parameter("subjectAlternativeNames") @Nullable List<String> subjectAlternativeNames,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("useLatestVersion") @Nullable Boolean useLatestVersion) {
+        @CustomType.Parameter("certificateAuthority") @Nullable String certificateAuthority,
+        @CustomType.Parameter("secretSource") ResourceReferenceResponse secretSource,
+        @CustomType.Parameter("secretVersion") @Nullable String secretVersion,
+        @CustomType.Parameter("subjectAlternativeNames") @Nullable List<String> subjectAlternativeNames,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("useLatestVersion") @Nullable Boolean useLatestVersion) {
         this.certificateAuthority = certificateAuthority;
         this.secretSource = secretSource;
         this.secretVersion = secretVersion;

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.testbase.inputs;
 import io.pulumi.azurenative.testbase.enums.Tier;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class TestBaseAccountSKUArgs extends io.pulumi.resources.ResourceAr
      * The locations that the SKU is available.
      * 
      */
-    @InputImport(name="locations")
+    @Import(name="locations")
       private final @Nullable Output<List<String>> locations;
 
     public Output<List<String>> getLocations() {
@@ -36,7 +36,7 @@ public final class TestBaseAccountSKUArgs extends io.pulumi.resources.ResourceAr
      * The name of the SKU. This is typically a letter + number code, such as B0 or S0.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -47,7 +47,7 @@ public final class TestBaseAccountSKUArgs extends io.pulumi.resources.ResourceAr
      * The type of resource the SKU applies to.
      * 
      */
-    @InputImport(name="resourceType")
+    @Import(name="resourceType")
       private final @Nullable Output<String> resourceType;
 
     public Output<String> getPropResourceType() {
@@ -58,7 +58,7 @@ public final class TestBaseAccountSKUArgs extends io.pulumi.resources.ResourceAr
      * The tier of this particular SKU.
      * 
      */
-    @InputImport(name="tier", required=true)
+    @Import(name="tier", required=true)
       private final Output<Either<String,Tier>> tier;
 
     public Output<Either<String,Tier>> getTier() {

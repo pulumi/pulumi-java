@@ -8,7 +8,7 @@ import io.pulumi.azurenative.servicebus.inputs.NWRuleSetIpRulesArgs;
 import io.pulumi.azurenative.servicebus.inputs.NWRuleSetVirtualNetworkRulesArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class NamespaceNetworkRuleSetArgs extends io.pulumi.resources.Resou
      * Default Action for Network Rule Set
      * 
      */
-    @InputImport(name="defaultAction")
+    @Import(name="defaultAction")
       private final @Nullable Output<Either<String,DefaultAction>> defaultAction;
 
     public Output<Either<String,DefaultAction>> getDefaultAction() {
@@ -34,7 +34,7 @@ public final class NamespaceNetworkRuleSetArgs extends io.pulumi.resources.Resou
      * List of IpRules
      * 
      */
-    @InputImport(name="ipRules")
+    @Import(name="ipRules")
       private final @Nullable Output<List<NWRuleSetIpRulesArgs>> ipRules;
 
     public Output<List<NWRuleSetIpRulesArgs>> getIpRules() {
@@ -45,7 +45,7 @@ public final class NamespaceNetworkRuleSetArgs extends io.pulumi.resources.Resou
      * The namespace name
      * 
      */
-    @InputImport(name="namespaceName", required=true)
+    @Import(name="namespaceName", required=true)
       private final Output<String> namespaceName;
 
     public Output<String> getNamespaceName() {
@@ -56,7 +56,7 @@ public final class NamespaceNetworkRuleSetArgs extends io.pulumi.resources.Resou
      * Name of the Resource group within the Azure subscription.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -67,7 +67,7 @@ public final class NamespaceNetworkRuleSetArgs extends io.pulumi.resources.Resou
      * List VirtualNetwork Rules
      * 
      */
-    @InputImport(name="virtualNetworkRules")
+    @Import(name="virtualNetworkRules")
       private final @Nullable Output<List<NWRuleSetVirtualNetworkRulesArgs>> virtualNetworkRules;
 
     public Output<List<NWRuleSetVirtualNetworkRulesArgs>> getVirtualNetworkRules() {

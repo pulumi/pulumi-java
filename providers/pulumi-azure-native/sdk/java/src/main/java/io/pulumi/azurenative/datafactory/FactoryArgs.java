@@ -11,7 +11,7 @@ import io.pulumi.azurenative.datafactory.inputs.FactoryVSTSConfigurationArgs;
 import io.pulumi.azurenative.datafactory.inputs.GlobalParameterSpecificationArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class FactoryArgs extends io.pulumi.resources.ResourceArgs {
      * Properties to enable Customer Managed Key for the factory.
      * 
      */
-    @InputImport(name="encryption")
+    @Import(name="encryption")
       private final @Nullable Output<EncryptionConfigurationArgs> encryption;
 
     public Output<EncryptionConfigurationArgs> getEncryption() {
@@ -37,7 +37,7 @@ public final class FactoryArgs extends io.pulumi.resources.ResourceArgs {
      * The factory name.
      * 
      */
-    @InputImport(name="factoryName")
+    @Import(name="factoryName")
       private final @Nullable Output<String> factoryName;
 
     public Output<String> getFactoryName() {
@@ -48,7 +48,7 @@ public final class FactoryArgs extends io.pulumi.resources.ResourceArgs {
      * List of parameters for factory.
      * 
      */
-    @InputImport(name="globalParameters")
+    @Import(name="globalParameters")
       private final @Nullable Output<Map<String,GlobalParameterSpecificationArgs>> globalParameters;
 
     public Output<Map<String,GlobalParameterSpecificationArgs>> getGlobalParameters() {
@@ -59,7 +59,7 @@ public final class FactoryArgs extends io.pulumi.resources.ResourceArgs {
      * Managed service identity of the factory.
      * 
      */
-    @InputImport(name="identity")
+    @Import(name="identity")
       private final @Nullable Output<FactoryIdentityArgs> identity;
 
     public Output<FactoryIdentityArgs> getIdentity() {
@@ -70,7 +70,7 @@ public final class FactoryArgs extends io.pulumi.resources.ResourceArgs {
      * The resource location.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -81,7 +81,7 @@ public final class FactoryArgs extends io.pulumi.resources.ResourceArgs {
      * Whether or not public network access is allowed for the data factory.
      * 
      */
-    @InputImport(name="publicNetworkAccess")
+    @Import(name="publicNetworkAccess")
       private final @Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess;
 
     public Output<Either<String,PublicNetworkAccess>> getPublicNetworkAccess() {
@@ -92,7 +92,7 @@ public final class FactoryArgs extends io.pulumi.resources.ResourceArgs {
      * Git repo information of the factory.
      * 
      */
-    @InputImport(name="repoConfiguration")
+    @Import(name="repoConfiguration")
       private final @Nullable Output<Either<FactoryGitHubConfigurationArgs,FactoryVSTSConfigurationArgs>> repoConfiguration;
 
     public Output<Either<FactoryGitHubConfigurationArgs,FactoryVSTSConfigurationArgs>> getRepoConfiguration() {
@@ -103,7 +103,7 @@ public final class FactoryArgs extends io.pulumi.resources.ResourceArgs {
      * The resource group name.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -114,7 +114,7 @@ public final class FactoryArgs extends io.pulumi.resources.ResourceArgs {
      * The resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

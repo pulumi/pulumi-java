@@ -5,7 +5,7 @@ package io.pulumi.azurenative.databoxedge.inputs;
 
 import io.pulumi.azurenative.databoxedge.inputs.AsymmetricEncryptedSecretArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class ImageRepositoryCredentialArgs extends io.pulumi.resources.Res
      * Image repository url (e.g.: mcr.microsoft.com).
      * 
      */
-    @InputImport(name="imageRepositoryUrl", required=true)
+    @Import(name="imageRepositoryUrl", required=true)
       private final Output<String> imageRepositoryUrl;
 
     public Output<String> getImageRepositoryUrl() {
@@ -34,7 +34,7 @@ public final class ImageRepositoryCredentialArgs extends io.pulumi.resources.Res
      * Repository user password.
      * 
      */
-    @InputImport(name="password")
+    @Import(name="password")
       private final @Nullable Output<AsymmetricEncryptedSecretArgs> password;
 
     public Output<AsymmetricEncryptedSecretArgs> getPassword() {
@@ -45,7 +45,7 @@ public final class ImageRepositoryCredentialArgs extends io.pulumi.resources.Res
      * Repository user name.
      * 
      */
-    @InputImport(name="userName", required=true)
+    @Import(name="userName", required=true)
       private final Output<String> userName;
 
     public Output<String> getUserName() {

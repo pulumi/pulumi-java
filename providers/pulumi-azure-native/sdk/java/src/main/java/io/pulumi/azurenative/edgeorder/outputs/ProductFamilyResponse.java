@@ -11,13 +11,13 @@ import io.pulumi.azurenative.edgeorder.outputs.HierarchyInformationResponse;
 import io.pulumi.azurenative.edgeorder.outputs.ImageInformationResponse;
 import io.pulumi.azurenative.edgeorder.outputs.ProductLineResponse;
 import io.pulumi.azurenative.edgeorder.outputs.ResourceProviderDetailsResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ProductFamilyResponse {
     /**
      * Availability information of the product system.
@@ -65,17 +65,17 @@ public final class ProductFamilyResponse {
      */
     private final @Nullable List<ResourceProviderDetailsResponse> resourceProviderDetails;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ProductFamilyResponse(
-        @OutputCustomType.Parameter("availabilityInformation") AvailabilityInformationResponse availabilityInformation,
-        @OutputCustomType.Parameter("costInformation") CostInformationResponse costInformation,
-        @OutputCustomType.Parameter("description") DescriptionResponse description,
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("filterableProperties") List<FilterablePropertyResponse> filterableProperties,
-        @OutputCustomType.Parameter("hierarchyInformation") HierarchyInformationResponse hierarchyInformation,
-        @OutputCustomType.Parameter("imageInformation") List<ImageInformationResponse> imageInformation,
-        @OutputCustomType.Parameter("productLines") List<ProductLineResponse> productLines,
-        @OutputCustomType.Parameter("resourceProviderDetails") @Nullable List<ResourceProviderDetailsResponse> resourceProviderDetails) {
+        @CustomType.Parameter("availabilityInformation") AvailabilityInformationResponse availabilityInformation,
+        @CustomType.Parameter("costInformation") CostInformationResponse costInformation,
+        @CustomType.Parameter("description") DescriptionResponse description,
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("filterableProperties") List<FilterablePropertyResponse> filterableProperties,
+        @CustomType.Parameter("hierarchyInformation") HierarchyInformationResponse hierarchyInformation,
+        @CustomType.Parameter("imageInformation") List<ImageInformationResponse> imageInformation,
+        @CustomType.Parameter("productLines") List<ProductLineResponse> productLines,
+        @CustomType.Parameter("resourceProviderDetails") @Nullable List<ResourceProviderDetailsResponse> resourceProviderDetails) {
         this.availabilityInformation = availabilityInformation;
         this.costInformation = costInformation;
         this.description = description;

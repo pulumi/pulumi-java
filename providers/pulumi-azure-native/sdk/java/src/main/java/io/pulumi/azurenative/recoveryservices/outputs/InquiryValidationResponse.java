@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.recoveryservices.outputs;
 
 import io.pulumi.azurenative.recoveryservices.outputs.ErrorDetailResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class InquiryValidationResponse {
     /**
      * Error Additional Detail in case the status is non-success.
@@ -28,11 +28,11 @@ public final class InquiryValidationResponse {
      */
     private final @Nullable String status;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private InquiryValidationResponse(
-        @OutputCustomType.Parameter("additionalDetail") String additionalDetail,
-        @OutputCustomType.Parameter("errorDetail") @Nullable ErrorDetailResponse errorDetail,
-        @OutputCustomType.Parameter("status") @Nullable String status) {
+        @CustomType.Parameter("additionalDetail") String additionalDetail,
+        @CustomType.Parameter("errorDetail") @Nullable ErrorDetailResponse errorDetail,
+        @CustomType.Parameter("status") @Nullable String status) {
         this.additionalDetail = additionalDetail;
         this.errorDetail = errorDetail;
         this.status = status;

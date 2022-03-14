@@ -6,7 +6,7 @@ package io.pulumi.azurenative.automanage.inputs;
 import io.pulumi.azurenative.automanage.inputs.ConfigurationProfilePreferenceAntiMalwareArgs;
 import io.pulumi.azurenative.automanage.inputs.ConfigurationProfilePreferenceVmBackupArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -23,7 +23,7 @@ public final class ConfigurationProfilePreferencePropertiesArgs extends io.pulum
      * The custom preferences for Azure Antimalware.
      * 
      */
-    @InputImport(name="antiMalware")
+    @Import(name="antiMalware")
       private final @Nullable Output<ConfigurationProfilePreferenceAntiMalwareArgs> antiMalware;
 
     public Output<ConfigurationProfilePreferenceAntiMalwareArgs> getAntiMalware() {
@@ -34,7 +34,7 @@ public final class ConfigurationProfilePreferencePropertiesArgs extends io.pulum
      * The custom preferences for Azure VM Backup.
      * 
      */
-    @InputImport(name="vmBackup")
+    @Import(name="vmBackup")
       private final @Nullable Output<ConfigurationProfilePreferenceVmBackupArgs> vmBackup;
 
     public Output<ConfigurationProfilePreferenceVmBackupArgs> getVmBackup() {

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.redhatopenshift.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class WorkerProfileArgs extends io.pulumi.resources.ResourceArgs {
      * The number of worker VMs.  Must be between 3 and 20 (immutable).
      * 
      */
-    @InputImport(name="count")
+    @Import(name="count")
       private final @Nullable Output<Integer> count;
 
     public Output<Integer> getCount() {
@@ -34,7 +34,7 @@ public final class WorkerProfileArgs extends io.pulumi.resources.ResourceArgs {
      * The disk size of the worker VMs.  Must be 128 or greater (immutable).
      * 
      */
-    @InputImport(name="diskSizeGB")
+    @Import(name="diskSizeGB")
       private final @Nullable Output<Integer> diskSizeGB;
 
     public Output<Integer> getDiskSizeGB() {
@@ -45,7 +45,7 @@ public final class WorkerProfileArgs extends io.pulumi.resources.ResourceArgs {
      * The worker profile name.  Must be "worker" (immutable).
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -56,7 +56,7 @@ public final class WorkerProfileArgs extends io.pulumi.resources.ResourceArgs {
      * The Azure resource ID of the worker subnet (immutable).
      * 
      */
-    @InputImport(name="subnetId")
+    @Import(name="subnetId")
       private final @Nullable Output<String> subnetId;
 
     public Output<String> getSubnetId() {
@@ -67,7 +67,7 @@ public final class WorkerProfileArgs extends io.pulumi.resources.ResourceArgs {
      * The size of the worker VMs (immutable).
      * 
      */
-    @InputImport(name="vmSize")
+    @Import(name="vmSize")
       private final @Nullable Output<String> vmSize;
 
     public Output<String> getVmSize() {

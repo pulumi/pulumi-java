@@ -6,7 +6,7 @@ package io.pulumi.azurenative.costmanagement.inputs;
 import io.pulumi.azurenative.costmanagement.enums.CostAllocationResourceType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class SourceCostAllocationResourceArgs extends io.pulumi.resources.
      * If resource type is dimension, this must be either ResourceGroupName or SubscriptionId. If resource type is tag, this must be a valid Azure tag
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -35,7 +35,7 @@ public final class SourceCostAllocationResourceArgs extends io.pulumi.resources.
      * Type of resources contained in this cost allocation rule
      * 
      */
-    @InputImport(name="resourceType", required=true)
+    @Import(name="resourceType", required=true)
       private final Output<Either<String,CostAllocationResourceType>> resourceType;
 
     public Output<Either<String,CostAllocationResourceType>> getPropResourceType() {
@@ -46,7 +46,7 @@ public final class SourceCostAllocationResourceArgs extends io.pulumi.resources.
      * Source Resources for cost allocation. This list cannot contain more than 25 values.
      * 
      */
-    @InputImport(name="values", required=true)
+    @Import(name="values", required=true)
       private final Output<List<String>> values;
 
     public Output<List<String>> getValues() {

@@ -18,7 +18,7 @@ import io.pulumi.azurenative.network.outputs.SubResourceResponse;
 import io.pulumi.azurenative.network.outputs.TxtRecordResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Double;
 import java.lang.String;
@@ -47,7 +47,7 @@ public class RecordSet extends io.pulumi.resources.CustomResource {
      * The list of A records in the record set.
      * 
      */
-    @OutputExport(name="aRecords", type=List.class, parameters={ARecordResponse.class})
+    @Export(name="aRecords", type=List.class, parameters={ARecordResponse.class})
     private Output</* @Nullable */ List<ARecordResponse>> aRecords;
 
     /**
@@ -61,7 +61,7 @@ public class RecordSet extends io.pulumi.resources.CustomResource {
      * The list of AAAA records in the record set.
      * 
      */
-    @OutputExport(name="aaaaRecords", type=List.class, parameters={AaaaRecordResponse.class})
+    @Export(name="aaaaRecords", type=List.class, parameters={AaaaRecordResponse.class})
     private Output</* @Nullable */ List<AaaaRecordResponse>> aaaaRecords;
 
     /**
@@ -75,7 +75,7 @@ public class RecordSet extends io.pulumi.resources.CustomResource {
      * The list of CAA records in the record set.
      * 
      */
-    @OutputExport(name="caaRecords", type=List.class, parameters={CaaRecordResponse.class})
+    @Export(name="caaRecords", type=List.class, parameters={CaaRecordResponse.class})
     private Output</* @Nullable */ List<CaaRecordResponse>> caaRecords;
 
     /**
@@ -89,7 +89,7 @@ public class RecordSet extends io.pulumi.resources.CustomResource {
      * The CNAME record in the  record set.
      * 
      */
-    @OutputExport(name="cnameRecord", type=CnameRecordResponse.class, parameters={})
+    @Export(name="cnameRecord", type=CnameRecordResponse.class, parameters={})
     private Output</* @Nullable */ CnameRecordResponse> cnameRecord;
 
     /**
@@ -103,7 +103,7 @@ public class RecordSet extends io.pulumi.resources.CustomResource {
      * The etag of the record set.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output</* @Nullable */ String> etag;
 
     /**
@@ -117,7 +117,7 @@ public class RecordSet extends io.pulumi.resources.CustomResource {
      * Fully qualified domain name of the record set.
      * 
      */
-    @OutputExport(name="fqdn", type=String.class, parameters={})
+    @Export(name="fqdn", type=String.class, parameters={})
     private Output<String> fqdn;
 
     /**
@@ -131,7 +131,7 @@ public class RecordSet extends io.pulumi.resources.CustomResource {
      * The metadata attached to the record set.
      * 
      */
-    @OutputExport(name="metadata", type=Map.class, parameters={String.class, String.class})
+    @Export(name="metadata", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> metadata;
 
     /**
@@ -145,7 +145,7 @@ public class RecordSet extends io.pulumi.resources.CustomResource {
      * The list of MX records in the record set.
      * 
      */
-    @OutputExport(name="mxRecords", type=List.class, parameters={MxRecordResponse.class})
+    @Export(name="mxRecords", type=List.class, parameters={MxRecordResponse.class})
     private Output</* @Nullable */ List<MxRecordResponse>> mxRecords;
 
     /**
@@ -159,7 +159,7 @@ public class RecordSet extends io.pulumi.resources.CustomResource {
      * The name of the record set.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -173,7 +173,7 @@ public class RecordSet extends io.pulumi.resources.CustomResource {
      * The list of NS records in the record set.
      * 
      */
-    @OutputExport(name="nsRecords", type=List.class, parameters={NsRecordResponse.class})
+    @Export(name="nsRecords", type=List.class, parameters={NsRecordResponse.class})
     private Output</* @Nullable */ List<NsRecordResponse>> nsRecords;
 
     /**
@@ -187,7 +187,7 @@ public class RecordSet extends io.pulumi.resources.CustomResource {
      * provisioning State of the record set.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -201,7 +201,7 @@ public class RecordSet extends io.pulumi.resources.CustomResource {
      * The list of PTR records in the record set.
      * 
      */
-    @OutputExport(name="ptrRecords", type=List.class, parameters={PtrRecordResponse.class})
+    @Export(name="ptrRecords", type=List.class, parameters={PtrRecordResponse.class})
     private Output</* @Nullable */ List<PtrRecordResponse>> ptrRecords;
 
     /**
@@ -215,7 +215,7 @@ public class RecordSet extends io.pulumi.resources.CustomResource {
      * The SOA record in the record set.
      * 
      */
-    @OutputExport(name="soaRecord", type=SoaRecordResponse.class, parameters={})
+    @Export(name="soaRecord", type=SoaRecordResponse.class, parameters={})
     private Output</* @Nullable */ SoaRecordResponse> soaRecord;
 
     /**
@@ -229,7 +229,7 @@ public class RecordSet extends io.pulumi.resources.CustomResource {
      * The list of SRV records in the record set.
      * 
      */
-    @OutputExport(name="srvRecords", type=List.class, parameters={SrvRecordResponse.class})
+    @Export(name="srvRecords", type=List.class, parameters={SrvRecordResponse.class})
     private Output</* @Nullable */ List<SrvRecordResponse>> srvRecords;
 
     /**
@@ -243,7 +243,7 @@ public class RecordSet extends io.pulumi.resources.CustomResource {
      * A reference to an azure resource from where the dns resource value is taken.
      * 
      */
-    @OutputExport(name="targetResource", type=SubResourceResponse.class, parameters={})
+    @Export(name="targetResource", type=SubResourceResponse.class, parameters={})
     private Output</* @Nullable */ SubResourceResponse> targetResource;
 
     /**
@@ -257,7 +257,7 @@ public class RecordSet extends io.pulumi.resources.CustomResource {
      * The TTL (time-to-live) of the records in the record set.
      * 
      */
-    @OutputExport(name="ttl", type=Double.class, parameters={})
+    @Export(name="ttl", type=Double.class, parameters={})
     private Output</* @Nullable */ Double> ttl;
 
     /**
@@ -271,7 +271,7 @@ public class RecordSet extends io.pulumi.resources.CustomResource {
      * The list of TXT records in the record set.
      * 
      */
-    @OutputExport(name="txtRecords", type=List.class, parameters={TxtRecordResponse.class})
+    @Export(name="txtRecords", type=List.class, parameters={TxtRecordResponse.class})
     private Output</* @Nullable */ List<TxtRecordResponse>> txtRecords;
 
     /**
@@ -285,7 +285,7 @@ public class RecordSet extends io.pulumi.resources.CustomResource {
      * The type of the record set.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

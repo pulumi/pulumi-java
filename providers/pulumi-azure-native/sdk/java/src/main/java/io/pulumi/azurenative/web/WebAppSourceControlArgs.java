@@ -5,7 +5,7 @@ package io.pulumi.azurenative.web;
 
 import io.pulumi.azurenative.web.inputs.GitHubActionConfigurationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class WebAppSourceControlArgs extends io.pulumi.resources.ResourceA
      * Name of branch to use for deployment.
      * 
      */
-    @InputImport(name="branch")
+    @Import(name="branch")
       private final @Nullable Output<String> branch;
 
     public Output<String> getBranch() {
@@ -31,7 +31,7 @@ public final class WebAppSourceControlArgs extends io.pulumi.resources.ResourceA
      * <code>true</code> to enable deployment rollback; otherwise, <code>false</code>.
      * 
      */
-    @InputImport(name="deploymentRollbackEnabled")
+    @Import(name="deploymentRollbackEnabled")
       private final @Nullable Output<Boolean> deploymentRollbackEnabled;
 
     public Output<Boolean> getDeploymentRollbackEnabled() {
@@ -42,7 +42,7 @@ public final class WebAppSourceControlArgs extends io.pulumi.resources.ResourceA
      * If GitHub Action is selected, than the associated configuration.
      * 
      */
-    @InputImport(name="gitHubActionConfiguration")
+    @Import(name="gitHubActionConfiguration")
       private final @Nullable Output<GitHubActionConfigurationArgs> gitHubActionConfiguration;
 
     public Output<GitHubActionConfigurationArgs> getGitHubActionConfiguration() {
@@ -53,7 +53,7 @@ public final class WebAppSourceControlArgs extends io.pulumi.resources.ResourceA
      * <code>true</code> if this is deployed via GitHub action.
      * 
      */
-    @InputImport(name="isGitHubAction")
+    @Import(name="isGitHubAction")
       private final @Nullable Output<Boolean> isGitHubAction;
 
     public Output<Boolean> getIsGitHubAction() {
@@ -64,7 +64,7 @@ public final class WebAppSourceControlArgs extends io.pulumi.resources.ResourceA
      * <code>true</code> to limit to manual integration; <code>false</code> to enable continuous integration (which configures webhooks into online repos like GitHub).
      * 
      */
-    @InputImport(name="isManualIntegration")
+    @Import(name="isManualIntegration")
       private final @Nullable Output<Boolean> isManualIntegration;
 
     public Output<Boolean> getIsManualIntegration() {
@@ -75,7 +75,7 @@ public final class WebAppSourceControlArgs extends io.pulumi.resources.ResourceA
      * <code>true</code> for a Mercurial repository; <code>false</code> for a Git repository.
      * 
      */
-    @InputImport(name="isMercurial")
+    @Import(name="isMercurial")
       private final @Nullable Output<Boolean> isMercurial;
 
     public Output<Boolean> getIsMercurial() {
@@ -86,7 +86,7 @@ public final class WebAppSourceControlArgs extends io.pulumi.resources.ResourceA
      * Kind of resource.
      * 
      */
-    @InputImport(name="kind")
+    @Import(name="kind")
       private final @Nullable Output<String> kind;
 
     public Output<String> getKind() {
@@ -97,7 +97,7 @@ public final class WebAppSourceControlArgs extends io.pulumi.resources.ResourceA
      * Name of the app.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -108,7 +108,7 @@ public final class WebAppSourceControlArgs extends io.pulumi.resources.ResourceA
      * Repository or source control URL.
      * 
      */
-    @InputImport(name="repoUrl")
+    @Import(name="repoUrl")
       private final @Nullable Output<String> repoUrl;
 
     public Output<String> getRepoUrl() {
@@ -119,7 +119,7 @@ public final class WebAppSourceControlArgs extends io.pulumi.resources.ResourceA
      * Name of the resource group to which the resource belongs.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {

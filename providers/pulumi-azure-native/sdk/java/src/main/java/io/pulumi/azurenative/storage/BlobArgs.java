@@ -7,7 +7,7 @@ import io.pulumi.azurenative.storage.enums.BlobAccessTier;
 import io.pulumi.azurenative.storage.enums.BlobType;
 import io.pulumi.core.AssetOrArchive;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class BlobArgs extends io.pulumi.resources.ResourceArgs {
      * The access tier of the storage blob.
      * 
      */
-    @InputImport(name="accessTier")
+    @Import(name="accessTier")
       private final @Nullable Output<BlobAccessTier> accessTier;
 
     public Output<BlobAccessTier> getAccessTier() {
@@ -33,7 +33,7 @@ public final class BlobArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the storage account in which to create the storage container.
      * 
      */
-    @InputImport(name="accountName", required=true)
+    @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
     public Output<String> getAccountName() {
@@ -44,7 +44,7 @@ public final class BlobArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the storage blob. Must be unique within the storage container the blob is located.
      * 
      */
-    @InputImport(name="blobName")
+    @Import(name="blobName")
       private final @Nullable Output<String> blobName;
 
     public Output<String> getBlobName() {
@@ -55,7 +55,7 @@ public final class BlobArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the storage container in which this blob should be created.
      * 
      */
-    @InputImport(name="containerName", required=true)
+    @Import(name="containerName", required=true)
       private final Output<String> containerName;
 
     public Output<String> getContainerName() {
@@ -66,7 +66,7 @@ public final class BlobArgs extends io.pulumi.resources.ResourceArgs {
      * The MD5 sum of the blob contents. Cannot be defined if blob type is Append.
      * 
      */
-    @InputImport(name="contentMd5")
+    @Import(name="contentMd5")
       private final @Nullable Output<String> contentMd5;
 
     public Output<String> getContentMd5() {
@@ -77,7 +77,7 @@ public final class BlobArgs extends io.pulumi.resources.ResourceArgs {
      * The content type of the storage blob. Defaults to `application/octet-stream`.
      * 
      */
-    @InputImport(name="contentType")
+    @Import(name="contentType")
       private final @Nullable Output<String> contentType;
 
     public Output<String> getContentType() {
@@ -88,7 +88,7 @@ public final class BlobArgs extends io.pulumi.resources.ResourceArgs {
      * A map of custom blob metadata.
      * 
      */
-    @InputImport(name="metadata")
+    @Import(name="metadata")
       private final @Nullable Output<Map<String,String>> metadata;
 
     public Output<Map<String,String>> getMetadata() {
@@ -99,7 +99,7 @@ public final class BlobArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group within the user's subscription.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -110,7 +110,7 @@ public final class BlobArgs extends io.pulumi.resources.ResourceArgs {
      * An asset to copy to the blob contents. This field cannot be specified for Append blobs.
      * 
      */
-    @InputImport(name="source")
+    @Import(name="source")
       private final @Nullable Output<AssetOrArchive> source;
 
     public Output<AssetOrArchive> getSource() {
@@ -121,7 +121,7 @@ public final class BlobArgs extends io.pulumi.resources.ResourceArgs {
      * The type of the storage blob to be created. Defaults to 'Block'.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<BlobType> type;
 
     public Output<BlobType> getType() {

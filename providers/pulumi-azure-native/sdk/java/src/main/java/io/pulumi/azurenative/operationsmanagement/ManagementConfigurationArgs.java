@@ -5,7 +5,7 @@ package io.pulumi.azurenative.operationsmanagement;
 
 import io.pulumi.azurenative.operationsmanagement.inputs.ManagementConfigurationPropertiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class ManagementConfigurationArgs extends io.pulumi.resources.Resou
      * Resource location
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -30,7 +30,7 @@ public final class ManagementConfigurationArgs extends io.pulumi.resources.Resou
      * User Management Configuration Name.
      * 
      */
-    @InputImport(name="managementConfigurationName")
+    @Import(name="managementConfigurationName")
       private final @Nullable Output<String> managementConfigurationName;
 
     public Output<String> getManagementConfigurationName() {
@@ -41,7 +41,7 @@ public final class ManagementConfigurationArgs extends io.pulumi.resources.Resou
      * Properties for ManagementConfiguration object supported by the OperationsManagement resource provider.
      * 
      */
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable Output<ManagementConfigurationPropertiesArgs> properties;
 
     public Output<ManagementConfigurationPropertiesArgs> getProperties() {
@@ -52,7 +52,7 @@ public final class ManagementConfigurationArgs extends io.pulumi.resources.Resou
      * The name of the resource group to get. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {

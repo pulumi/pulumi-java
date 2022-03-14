@@ -8,7 +8,7 @@ import io.pulumi.azurenative.servicebus.NamespaceArgs;
 import io.pulumi.azurenative.servicebus.outputs.SBSkuResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -36,7 +36,7 @@ public class Namespace extends io.pulumi.resources.CustomResource {
      * The time the namespace was created.
      * 
      */
-    @OutputExport(name="createdAt", type=String.class, parameters={})
+    @Export(name="createdAt", type=String.class, parameters={})
     private Output<String> createdAt;
 
     /**
@@ -50,7 +50,7 @@ public class Namespace extends io.pulumi.resources.CustomResource {
      * The Geo-location where the resource lives
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -64,7 +64,7 @@ public class Namespace extends io.pulumi.resources.CustomResource {
      * Identifier for Azure Insights metrics
      * 
      */
-    @OutputExport(name="metricId", type=String.class, parameters={})
+    @Export(name="metricId", type=String.class, parameters={})
     private Output<String> metricId;
 
     /**
@@ -78,7 +78,7 @@ public class Namespace extends io.pulumi.resources.CustomResource {
      * Resource name
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -92,7 +92,7 @@ public class Namespace extends io.pulumi.resources.CustomResource {
      * Provisioning state of the namespace.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -106,7 +106,7 @@ public class Namespace extends io.pulumi.resources.CustomResource {
      * Endpoint you can use to perform Service Bus operations.
      * 
      */
-    @OutputExport(name="serviceBusEndpoint", type=String.class, parameters={})
+    @Export(name="serviceBusEndpoint", type=String.class, parameters={})
     private Output<String> serviceBusEndpoint;
 
     /**
@@ -120,7 +120,7 @@ public class Namespace extends io.pulumi.resources.CustomResource {
      * Properties of Sku
      * 
      */
-    @OutputExport(name="sku", type=SBSkuResponse.class, parameters={})
+    @Export(name="sku", type=SBSkuResponse.class, parameters={})
     private Output</* @Nullable */ SBSkuResponse> sku;
 
     /**
@@ -134,7 +134,7 @@ public class Namespace extends io.pulumi.resources.CustomResource {
      * Resource tags
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -148,7 +148,7 @@ public class Namespace extends io.pulumi.resources.CustomResource {
      * Resource type
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -162,7 +162,7 @@ public class Namespace extends io.pulumi.resources.CustomResource {
      * The time the namespace was updated.
      * 
      */
-    @OutputExport(name="updatedAt", type=String.class, parameters={})
+    @Export(name="updatedAt", type=String.class, parameters={})
     private Output<String> updatedAt;
 
     /**

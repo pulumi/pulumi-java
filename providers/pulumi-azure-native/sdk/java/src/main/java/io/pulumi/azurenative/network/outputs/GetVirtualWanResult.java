@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.SubResourceResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetVirtualWanResult {
     /**
      * True if branch to branch traffic is allowed.
@@ -81,21 +81,21 @@ public final class GetVirtualWanResult {
      */
     private final List<SubResourceResponse> vpnSites;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetVirtualWanResult(
-        @OutputCustomType.Parameter("allowBranchToBranchTraffic") @Nullable Boolean allowBranchToBranchTraffic,
-        @OutputCustomType.Parameter("allowVnetToVnetTraffic") @Nullable Boolean allowVnetToVnetTraffic,
-        @OutputCustomType.Parameter("disableVpnEncryption") @Nullable Boolean disableVpnEncryption,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("office365LocalBreakoutCategory") String office365LocalBreakoutCategory,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("virtualHubs") List<SubResourceResponse> virtualHubs,
-        @OutputCustomType.Parameter("vpnSites") List<SubResourceResponse> vpnSites) {
+        @CustomType.Parameter("allowBranchToBranchTraffic") @Nullable Boolean allowBranchToBranchTraffic,
+        @CustomType.Parameter("allowVnetToVnetTraffic") @Nullable Boolean allowVnetToVnetTraffic,
+        @CustomType.Parameter("disableVpnEncryption") @Nullable Boolean disableVpnEncryption,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("office365LocalBreakoutCategory") String office365LocalBreakoutCategory,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("virtualHubs") List<SubResourceResponse> virtualHubs,
+        @CustomType.Parameter("vpnSites") List<SubResourceResponse> vpnSites) {
         this.allowBranchToBranchTraffic = allowBranchToBranchTraffic;
         this.allowVnetToVnetTraffic = allowVnetToVnetTraffic;
         this.disableVpnEncryption = disableVpnEncryption;

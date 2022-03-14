@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.netapp.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetBackupResult {
     /**
      * UUID v4 used to identify the Backup
@@ -73,20 +73,20 @@ public final class GetBackupResult {
      */
     private final String volumeName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetBackupResult(
-        @OutputCustomType.Parameter("backupId") String backupId,
-        @OutputCustomType.Parameter("backupType") String backupType,
-        @OutputCustomType.Parameter("creationDate") String creationDate,
-        @OutputCustomType.Parameter("failureReason") String failureReason,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("label") @Nullable String label,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("size") Double size,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("volumeName") String volumeName) {
+        @CustomType.Parameter("backupId") String backupId,
+        @CustomType.Parameter("backupType") String backupType,
+        @CustomType.Parameter("creationDate") String creationDate,
+        @CustomType.Parameter("failureReason") String failureReason,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("label") @Nullable String label,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("size") Double size,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("volumeName") String volumeName) {
         this.backupId = backupId;
         this.backupType = backupType;
         this.creationDate = creationDate;

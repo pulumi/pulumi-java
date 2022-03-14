@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.media.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class ContentKeyPolicyX509CertificateTokenKeyArgs extends io.pulumi
      * Expected value is '#Microsoft.Media.ContentKeyPolicyX509CertificateTokenKey'.
      * 
      */
-    @InputImport(name="odataType", required=true)
+    @Import(name="odataType", required=true)
       private final Output<String> odataType;
 
     public Output<String> getOdataType() {
@@ -33,7 +33,7 @@ public final class ContentKeyPolicyX509CertificateTokenKeyArgs extends io.pulumi
      * The raw data field of a certificate in PKCS 12 format (X509Certificate2 in .NET)
      * 
      */
-    @InputImport(name="rawBody", required=true)
+    @Import(name="rawBody", required=true)
       private final Output<String> rawBody;
 
     public Output<String> getRawBody() {

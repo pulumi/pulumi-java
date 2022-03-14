@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.containerservice.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AgentPoolUpgradeSettingsResponse {
     /**
      * Count or percentage of additional nodes to be added during upgrade. If empty uses AKS default
@@ -17,8 +17,8 @@ public final class AgentPoolUpgradeSettingsResponse {
      */
     private final @Nullable String maxSurge;
 
-    @OutputCustomType.Constructor
-    private AgentPoolUpgradeSettingsResponse(@OutputCustomType.Parameter("maxSurge") @Nullable String maxSurge) {
+    @CustomType.Constructor
+    private AgentPoolUpgradeSettingsResponse(@CustomType.Parameter("maxSurge") @Nullable String maxSurge) {
         this.maxSurge = maxSurge;
     }
 

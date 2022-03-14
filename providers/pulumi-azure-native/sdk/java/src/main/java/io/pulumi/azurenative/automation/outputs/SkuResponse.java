@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.automation.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SkuResponse {
     /**
      * Gets or sets the SKU capacity.
@@ -28,11 +28,11 @@ public final class SkuResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SkuResponse(
-        @OutputCustomType.Parameter("capacity") @Nullable Integer capacity,
-        @OutputCustomType.Parameter("family") @Nullable String family,
-        @OutputCustomType.Parameter("name") String name) {
+        @CustomType.Parameter("capacity") @Nullable Integer capacity,
+        @CustomType.Parameter("family") @Nullable String family,
+        @CustomType.Parameter("name") String name) {
         this.capacity = capacity;
         this.family = family;
         this.name = name;

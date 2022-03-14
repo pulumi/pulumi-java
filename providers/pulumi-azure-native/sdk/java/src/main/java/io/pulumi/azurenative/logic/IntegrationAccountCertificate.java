@@ -8,7 +8,7 @@ import io.pulumi.azurenative.logic.IntegrationAccountCertificateArgs;
 import io.pulumi.azurenative.logic.outputs.KeyVaultKeyReferenceResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Object;
 import java.lang.String;
@@ -37,7 +37,7 @@ public class IntegrationAccountCertificate extends io.pulumi.resources.CustomRes
      * The changed time.
      * 
      */
-    @OutputExport(name="changedTime", type=String.class, parameters={})
+    @Export(name="changedTime", type=String.class, parameters={})
     private Output<String> changedTime;
 
     /**
@@ -51,7 +51,7 @@ public class IntegrationAccountCertificate extends io.pulumi.resources.CustomRes
      * The created time.
      * 
      */
-    @OutputExport(name="createdTime", type=String.class, parameters={})
+    @Export(name="createdTime", type=String.class, parameters={})
     private Output<String> createdTime;
 
     /**
@@ -65,7 +65,7 @@ public class IntegrationAccountCertificate extends io.pulumi.resources.CustomRes
      * The key details in the key vault.
      * 
      */
-    @OutputExport(name="key", type=KeyVaultKeyReferenceResponse.class, parameters={})
+    @Export(name="key", type=KeyVaultKeyReferenceResponse.class, parameters={})
     private Output</* @Nullable */ KeyVaultKeyReferenceResponse> key;
 
     /**
@@ -79,7 +79,7 @@ public class IntegrationAccountCertificate extends io.pulumi.resources.CustomRes
      * The resource location.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -93,7 +93,7 @@ public class IntegrationAccountCertificate extends io.pulumi.resources.CustomRes
      * The metadata.
      * 
      */
-    @OutputExport(name="metadata", type=Object.class, parameters={})
+    @Export(name="metadata", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> metadata;
 
     /**
@@ -107,7 +107,7 @@ public class IntegrationAccountCertificate extends io.pulumi.resources.CustomRes
      * Gets the resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -121,7 +121,7 @@ public class IntegrationAccountCertificate extends io.pulumi.resources.CustomRes
      * The public certificate.
      * 
      */
-    @OutputExport(name="publicCertificate", type=String.class, parameters={})
+    @Export(name="publicCertificate", type=String.class, parameters={})
     private Output</* @Nullable */ String> publicCertificate;
 
     /**
@@ -135,7 +135,7 @@ public class IntegrationAccountCertificate extends io.pulumi.resources.CustomRes
      * The resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -149,7 +149,7 @@ public class IntegrationAccountCertificate extends io.pulumi.resources.CustomRes
      * Gets the resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

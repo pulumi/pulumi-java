@@ -5,7 +5,7 @@ package io.pulumi.azurenative.databoxedge.inputs;
 
 import io.pulumi.azurenative.databoxedge.inputs.ImageRepositoryCredentialArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class IoTEdgeAgentInfoArgs extends io.pulumi.resources.ResourceArgs
      * Name of the IoT edge agent image.
      * 
      */
-    @InputImport(name="imageName", required=true)
+    @Import(name="imageName", required=true)
       private final Output<String> imageName;
 
     public Output<String> getImageName() {
@@ -34,7 +34,7 @@ public final class IoTEdgeAgentInfoArgs extends io.pulumi.resources.ResourceArgs
      * Image repository details.
      * 
      */
-    @InputImport(name="imageRepository")
+    @Import(name="imageRepository")
       private final @Nullable Output<ImageRepositoryCredentialArgs> imageRepository;
 
     public Output<ImageRepositoryCredentialArgs> getImageRepository() {
@@ -45,7 +45,7 @@ public final class IoTEdgeAgentInfoArgs extends io.pulumi.resources.ResourceArgs
      * Image Tag.
      * 
      */
-    @InputImport(name="tag", required=true)
+    @Import(name="tag", required=true)
       private final Output<String> tag;
 
     public Output<String> getTag() {

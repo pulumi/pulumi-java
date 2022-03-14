@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.providerhub.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -15,21 +15,21 @@ public final class ResourceProviderCapabilitiesResponse extends io.pulumi.resour
 
     public static final ResourceProviderCapabilitiesResponse Empty = new ResourceProviderCapabilitiesResponse();
 
-    @InputImport(name="effect", required=true)
+    @Import(name="effect", required=true)
       private final String effect;
 
     public String getEffect() {
         return this.effect;
     }
 
-    @InputImport(name="quotaId", required=true)
+    @Import(name="quotaId", required=true)
       private final String quotaId;
 
     public String getQuotaId() {
         return this.quotaId;
     }
 
-    @InputImport(name="requiredFeatures")
+    @Import(name="requiredFeatures")
       private final @Nullable List<String> requiredFeatures;
 
     public List<String> getRequiredFeatures() {

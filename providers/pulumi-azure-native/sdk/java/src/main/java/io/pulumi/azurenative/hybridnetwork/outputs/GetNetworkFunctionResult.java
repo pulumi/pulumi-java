@@ -5,7 +5,7 @@ package io.pulumi.azurenative.hybridnetwork.outputs;
 
 import io.pulumi.azurenative.hybridnetwork.outputs.NetworkFunctionUserConfigurationResponse;
 import io.pulumi.azurenative.hybridnetwork.outputs.SubResourceResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -14,7 +14,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetNetworkFunctionResult {
     /**
      * The reference to the device resource.
@@ -97,24 +97,24 @@ public final class GetNetworkFunctionResult {
      */
     private final String vendorProvisioningState;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetNetworkFunctionResult(
-        @OutputCustomType.Parameter("device") @Nullable SubResourceResponse device,
-        @OutputCustomType.Parameter("etag") @Nullable String etag,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("managedApplication") SubResourceResponse managedApplication,
-        @OutputCustomType.Parameter("managedApplicationParameters") @Nullable Object managedApplicationParameters,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("networkFunctionUserConfigurations") @Nullable List<NetworkFunctionUserConfigurationResponse> networkFunctionUserConfigurations,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("serviceKey") String serviceKey,
-        @OutputCustomType.Parameter("skuName") @Nullable String skuName,
-        @OutputCustomType.Parameter("skuType") String skuType,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("vendorName") @Nullable String vendorName,
-        @OutputCustomType.Parameter("vendorProvisioningState") String vendorProvisioningState) {
+        @CustomType.Parameter("device") @Nullable SubResourceResponse device,
+        @CustomType.Parameter("etag") @Nullable String etag,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("managedApplication") SubResourceResponse managedApplication,
+        @CustomType.Parameter("managedApplicationParameters") @Nullable Object managedApplicationParameters,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("networkFunctionUserConfigurations") @Nullable List<NetworkFunctionUserConfigurationResponse> networkFunctionUserConfigurations,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("serviceKey") String serviceKey,
+        @CustomType.Parameter("skuName") @Nullable String skuName,
+        @CustomType.Parameter("skuType") String skuType,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("vendorName") @Nullable String vendorName,
+        @CustomType.Parameter("vendorProvisioningState") String vendorProvisioningState) {
         this.device = device;
         this.etag = etag;
         this.id = id;

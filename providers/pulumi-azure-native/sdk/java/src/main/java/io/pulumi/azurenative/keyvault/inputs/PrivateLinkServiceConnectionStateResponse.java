@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.keyvault.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class PrivateLinkServiceConnectionStateResponse extends io.pulumi.r
      * A message indicating if changes on the service provider require any updates on the consumer.
      * 
      */
-    @InputImport(name="actionsRequired")
+    @Import(name="actionsRequired")
       private final @Nullable String actionsRequired;
 
     public Optional<String> getActionsRequired() {
@@ -33,7 +33,7 @@ public final class PrivateLinkServiceConnectionStateResponse extends io.pulumi.r
      * The reason for approval or rejection.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable String description;
 
     public Optional<String> getDescription() {
@@ -44,7 +44,7 @@ public final class PrivateLinkServiceConnectionStateResponse extends io.pulumi.r
      * Indicates whether the connection has been approved, rejected or removed by the key vault owner.
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable String status;
 
     public Optional<String> getStatus() {

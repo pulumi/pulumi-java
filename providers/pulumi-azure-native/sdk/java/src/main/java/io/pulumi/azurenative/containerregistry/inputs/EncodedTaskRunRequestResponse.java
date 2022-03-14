@@ -7,7 +7,7 @@ import io.pulumi.azurenative.containerregistry.inputs.AgentPropertiesResponse;
 import io.pulumi.azurenative.containerregistry.inputs.CredentialsResponse;
 import io.pulumi.azurenative.containerregistry.inputs.PlatformPropertiesResponse;
 import io.pulumi.azurenative.containerregistry.inputs.SetValueResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -29,7 +29,7 @@ public final class EncodedTaskRunRequestResponse extends io.pulumi.resources.Inv
      * The machine configuration of the run agent.
      * 
      */
-    @InputImport(name="agentConfiguration")
+    @Import(name="agentConfiguration")
       private final @Nullable AgentPropertiesResponse agentConfiguration;
 
     public Optional<AgentPropertiesResponse> getAgentConfiguration() {
@@ -40,7 +40,7 @@ public final class EncodedTaskRunRequestResponse extends io.pulumi.resources.Inv
      * The dedicated agent pool for the run.
      * 
      */
-    @InputImport(name="agentPoolName")
+    @Import(name="agentPoolName")
       private final @Nullable String agentPoolName;
 
     public Optional<String> getAgentPoolName() {
@@ -51,7 +51,7 @@ public final class EncodedTaskRunRequestResponse extends io.pulumi.resources.Inv
      * The properties that describes a set of credentials that will be used when this run is invoked.
      * 
      */
-    @InputImport(name="credentials")
+    @Import(name="credentials")
       private final @Nullable CredentialsResponse credentials;
 
     public Optional<CredentialsResponse> getCredentials() {
@@ -62,7 +62,7 @@ public final class EncodedTaskRunRequestResponse extends io.pulumi.resources.Inv
      * Base64 encoded value of the template/definition file content.
      * 
      */
-    @InputImport(name="encodedTaskContent", required=true)
+    @Import(name="encodedTaskContent", required=true)
       private final String encodedTaskContent;
 
     public String getEncodedTaskContent() {
@@ -73,7 +73,7 @@ public final class EncodedTaskRunRequestResponse extends io.pulumi.resources.Inv
      * Base64 encoded value of the parameters/values file content.
      * 
      */
-    @InputImport(name="encodedValuesContent")
+    @Import(name="encodedValuesContent")
       private final @Nullable String encodedValuesContent;
 
     public Optional<String> getEncodedValuesContent() {
@@ -84,7 +84,7 @@ public final class EncodedTaskRunRequestResponse extends io.pulumi.resources.Inv
      * The value that indicates whether archiving is enabled for the run or not.
      * 
      */
-    @InputImport(name="isArchiveEnabled")
+    @Import(name="isArchiveEnabled")
       private final @Nullable Boolean isArchiveEnabled;
 
     public Optional<Boolean> getIsArchiveEnabled() {
@@ -95,7 +95,7 @@ public final class EncodedTaskRunRequestResponse extends io.pulumi.resources.Inv
      * The template that describes the repository and tag information for run log artifact.
      * 
      */
-    @InputImport(name="logTemplate")
+    @Import(name="logTemplate")
       private final @Nullable String logTemplate;
 
     public Optional<String> getLogTemplate() {
@@ -106,7 +106,7 @@ public final class EncodedTaskRunRequestResponse extends io.pulumi.resources.Inv
      * The platform properties against which the run has to happen.
      * 
      */
-    @InputImport(name="platform", required=true)
+    @Import(name="platform", required=true)
       private final PlatformPropertiesResponse platform;
 
     public PlatformPropertiesResponse getPlatform() {
@@ -118,7 +118,7 @@ public final class EncodedTaskRunRequestResponse extends io.pulumi.resources.Inv
      * If it is relative URL, the relative path should be obtained from calling listBuildSourceUploadUrl API.
      * 
      */
-    @InputImport(name="sourceLocation")
+    @Import(name="sourceLocation")
       private final @Nullable String sourceLocation;
 
     public Optional<String> getSourceLocation() {
@@ -129,7 +129,7 @@ public final class EncodedTaskRunRequestResponse extends io.pulumi.resources.Inv
      * Run timeout in seconds.
      * 
      */
-    @InputImport(name="timeout")
+    @Import(name="timeout")
       private final @Nullable Integer timeout;
 
     public Optional<Integer> getTimeout() {
@@ -141,7 +141,7 @@ public final class EncodedTaskRunRequestResponse extends io.pulumi.resources.Inv
      * Expected value is 'EncodedTaskRunRequest'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {
@@ -152,7 +152,7 @@ public final class EncodedTaskRunRequestResponse extends io.pulumi.resources.Inv
      * The collection of overridable values that can be passed when running a task.
      * 
      */
-    @InputImport(name="values")
+    @Import(name="values")
       private final @Nullable List<SetValueResponse> values;
 
     public List<SetValueResponse> getValues() {

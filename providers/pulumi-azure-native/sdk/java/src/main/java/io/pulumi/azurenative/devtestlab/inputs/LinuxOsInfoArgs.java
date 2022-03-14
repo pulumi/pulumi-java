@@ -6,7 +6,7 @@ package io.pulumi.azurenative.devtestlab.inputs;
 import io.pulumi.azurenative.devtestlab.enums.LinuxOsState;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class LinuxOsInfoArgs extends io.pulumi.resources.ResourceArgs {
      * The state of the Linux OS (i.e. NonDeprovisioned, DeprovisionRequested, DeprovisionApplied).
      * 
      */
-    @InputImport(name="linuxOsState")
+    @Import(name="linuxOsState")
       private final @Nullable Output<Either<String,LinuxOsState>> linuxOsState;
 
     public Output<Either<String,LinuxOsState>> getLinuxOsState() {

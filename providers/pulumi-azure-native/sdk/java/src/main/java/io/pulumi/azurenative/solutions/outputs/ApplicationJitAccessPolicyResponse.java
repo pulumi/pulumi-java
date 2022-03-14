@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.solutions.outputs;
 
 import io.pulumi.azurenative.solutions.outputs.JitApproverDefinitionResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ApplicationJitAccessPolicyResponse {
     /**
      * Whether the JIT access is enabled.
@@ -35,12 +35,12 @@ public final class ApplicationJitAccessPolicyResponse {
      */
     private final @Nullable String maximumJitAccessDuration;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ApplicationJitAccessPolicyResponse(
-        @OutputCustomType.Parameter("jitAccessEnabled") Boolean jitAccessEnabled,
-        @OutputCustomType.Parameter("jitApprovalMode") @Nullable String jitApprovalMode,
-        @OutputCustomType.Parameter("jitApprovers") @Nullable List<JitApproverDefinitionResponse> jitApprovers,
-        @OutputCustomType.Parameter("maximumJitAccessDuration") @Nullable String maximumJitAccessDuration) {
+        @CustomType.Parameter("jitAccessEnabled") Boolean jitAccessEnabled,
+        @CustomType.Parameter("jitApprovalMode") @Nullable String jitApprovalMode,
+        @CustomType.Parameter("jitApprovers") @Nullable List<JitApproverDefinitionResponse> jitApprovers,
+        @CustomType.Parameter("maximumJitAccessDuration") @Nullable String maximumJitAccessDuration) {
         this.jitAccessEnabled = jitAccessEnabled;
         this.jitApprovalMode = jitApprovalMode;
         this.jitApprovers = jitApprovers;

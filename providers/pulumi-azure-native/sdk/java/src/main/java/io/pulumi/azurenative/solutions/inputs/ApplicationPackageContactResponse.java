@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.solutions.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class ApplicationPackageContactResponse extends io.pulumi.resources
      * The contact name.
      * 
      */
-    @InputImport(name="contactName")
+    @Import(name="contactName")
       private final @Nullable String contactName;
 
     public Optional<String> getContactName() {
@@ -33,7 +33,7 @@ public final class ApplicationPackageContactResponse extends io.pulumi.resources
      * The contact email.
      * 
      */
-    @InputImport(name="email", required=true)
+    @Import(name="email", required=true)
       private final String email;
 
     public String getEmail() {
@@ -44,7 +44,7 @@ public final class ApplicationPackageContactResponse extends io.pulumi.resources
      * The contact phone number.
      * 
      */
-    @InputImport(name="phone", required=true)
+    @Import(name="phone", required=true)
       private final String phone;
 
     public String getPhone() {

@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.chaos.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DelayActionResponse {
     /**
      * ISO8601 formatted string that represents a duration.
@@ -26,11 +26,11 @@ public final class DelayActionResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DelayActionResponse(
-        @OutputCustomType.Parameter("duration") String duration,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("duration") String duration,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("type") String type) {
         this.duration = duration;
         this.name = name;
         this.type = type;

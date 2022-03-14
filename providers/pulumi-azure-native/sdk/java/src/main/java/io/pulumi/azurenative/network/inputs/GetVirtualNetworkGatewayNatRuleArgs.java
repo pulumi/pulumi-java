@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetVirtualNetworkGatewayNatRuleArgs extends io.pulumi.resourc
      * The name of the nat rule.
      * 
      */
-    @InputImport(name="natRuleName", required=true)
+    @Import(name="natRuleName", required=true)
       private final String natRuleName;
 
     public String getNatRuleName() {
@@ -27,7 +27,7 @@ public final class GetVirtualNetworkGatewayNatRuleArgs extends io.pulumi.resourc
      * The resource group name of the Virtual Network Gateway.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {
@@ -38,7 +38,7 @@ public final class GetVirtualNetworkGatewayNatRuleArgs extends io.pulumi.resourc
      * The name of the gateway.
      * 
      */
-    @InputImport(name="virtualNetworkGatewayName", required=true)
+    @Import(name="virtualNetworkGatewayName", required=true)
       private final String virtualNetworkGatewayName;
 
     public String getVirtualNetworkGatewayName() {

@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ApiErrorBaseResponse {
     /**
      * The error code.
@@ -27,11 +27,11 @@ public final class ApiErrorBaseResponse {
      */
     private final @Nullable String target;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ApiErrorBaseResponse(
-        @OutputCustomType.Parameter("code") @Nullable String code,
-        @OutputCustomType.Parameter("message") @Nullable String message,
-        @OutputCustomType.Parameter("target") @Nullable String target) {
+        @CustomType.Parameter("code") @Nullable String code,
+        @CustomType.Parameter("message") @Nullable String message,
+        @CustomType.Parameter("target") @Nullable String target) {
         this.code = code;
         this.message = message;
         this.target = target;

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.insights.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class LogAnalyticsDestinationResponse extends io.pulumi.resources.I
      * This name should be unique across all destinations (regardless of type) within the data collection rule.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -34,7 +34,7 @@ public final class LogAnalyticsDestinationResponse extends io.pulumi.resources.I
      * The Customer ID of the Log Analytics workspace.
      * 
      */
-    @InputImport(name="workspaceId", required=true)
+    @Import(name="workspaceId", required=true)
       private final String workspaceId;
 
     public String getWorkspaceId() {
@@ -45,7 +45,7 @@ public final class LogAnalyticsDestinationResponse extends io.pulumi.resources.I
      * The resource ID of the Log Analytics workspace.
      * 
      */
-    @InputImport(name="workspaceResourceId")
+    @Import(name="workspaceResourceId")
       private final @Nullable String workspaceResourceId;
 
     public Optional<String> getWorkspaceResourceId() {

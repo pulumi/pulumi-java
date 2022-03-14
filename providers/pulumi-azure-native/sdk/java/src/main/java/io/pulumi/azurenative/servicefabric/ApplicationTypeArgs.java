@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.servicefabric;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class ApplicationTypeArgs extends io.pulumi.resources.ResourceArgs 
      * The name of the application type name resource.
      * 
      */
-    @InputImport(name="applicationTypeName")
+    @Import(name="applicationTypeName")
       private final @Nullable Output<String> applicationTypeName;
 
     public Output<String> getApplicationTypeName() {
@@ -30,7 +30,7 @@ public final class ApplicationTypeArgs extends io.pulumi.resources.ResourceArgs 
      * The name of the cluster resource.
      * 
      */
-    @InputImport(name="clusterName", required=true)
+    @Import(name="clusterName", required=true)
       private final Output<String> clusterName;
 
     public Output<String> getClusterName() {
@@ -41,7 +41,7 @@ public final class ApplicationTypeArgs extends io.pulumi.resources.ResourceArgs 
      * It will be deprecated in New API, resource location depends on the parent resource.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -52,7 +52,7 @@ public final class ApplicationTypeArgs extends io.pulumi.resources.ResourceArgs 
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -63,7 +63,7 @@ public final class ApplicationTypeArgs extends io.pulumi.resources.ResourceArgs 
      * Azure resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

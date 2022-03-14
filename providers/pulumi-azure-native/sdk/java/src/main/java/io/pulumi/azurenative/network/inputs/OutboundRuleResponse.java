@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.SubResourceResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -26,7 +26,7 @@ public final class OutboundRuleResponse extends io.pulumi.resources.InvokeArgs {
      * The number of outbound ports to be used for NAT.
      * 
      */
-    @InputImport(name="allocatedOutboundPorts")
+    @Import(name="allocatedOutboundPorts")
       private final @Nullable Integer allocatedOutboundPorts;
 
     public Optional<Integer> getAllocatedOutboundPorts() {
@@ -37,7 +37,7 @@ public final class OutboundRuleResponse extends io.pulumi.resources.InvokeArgs {
      * A reference to a pool of DIPs. Outbound traffic is randomly load balanced across IPs in the backend IPs.
      * 
      */
-    @InputImport(name="backendAddressPool", required=true)
+    @Import(name="backendAddressPool", required=true)
       private final SubResourceResponse backendAddressPool;
 
     public SubResourceResponse getBackendAddressPool() {
@@ -48,7 +48,7 @@ public final class OutboundRuleResponse extends io.pulumi.resources.InvokeArgs {
      * Receive bidirectional TCP Reset on TCP flow idle timeout or unexpected connection termination. This element is only used when the protocol is set to TCP.
      * 
      */
-    @InputImport(name="enableTcpReset")
+    @Import(name="enableTcpReset")
       private final @Nullable Boolean enableTcpReset;
 
     public Optional<Boolean> getEnableTcpReset() {
@@ -59,7 +59,7 @@ public final class OutboundRuleResponse extends io.pulumi.resources.InvokeArgs {
      * A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    @InputImport(name="etag", required=true)
+    @Import(name="etag", required=true)
       private final String etag;
 
     public String getEtag() {
@@ -70,7 +70,7 @@ public final class OutboundRuleResponse extends io.pulumi.resources.InvokeArgs {
      * The Frontend IP addresses of the load balancer.
      * 
      */
-    @InputImport(name="frontendIPConfigurations", required=true)
+    @Import(name="frontendIPConfigurations", required=true)
       private final List<SubResourceResponse> frontendIPConfigurations;
 
     public List<SubResourceResponse> getFrontendIPConfigurations() {
@@ -81,7 +81,7 @@ public final class OutboundRuleResponse extends io.pulumi.resources.InvokeArgs {
      * Resource ID.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable String id;
 
     public Optional<String> getId() {
@@ -92,7 +92,7 @@ public final class OutboundRuleResponse extends io.pulumi.resources.InvokeArgs {
      * The timeout for the TCP idle connection.
      * 
      */
-    @InputImport(name="idleTimeoutInMinutes")
+    @Import(name="idleTimeoutInMinutes")
       private final @Nullable Integer idleTimeoutInMinutes;
 
     public Optional<Integer> getIdleTimeoutInMinutes() {
@@ -103,7 +103,7 @@ public final class OutboundRuleResponse extends io.pulumi.resources.InvokeArgs {
      * The name of the resource that is unique within the set of outbound rules used by the load balancer. This name can be used to access the resource.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -114,7 +114,7 @@ public final class OutboundRuleResponse extends io.pulumi.resources.InvokeArgs {
      * The protocol for the outbound rule in load balancer.
      * 
      */
-    @InputImport(name="protocol", required=true)
+    @Import(name="protocol", required=true)
       private final String protocol;
 
     public String getProtocol() {
@@ -125,7 +125,7 @@ public final class OutboundRuleResponse extends io.pulumi.resources.InvokeArgs {
      * The provisioning state of the outbound rule resource.
      * 
      */
-    @InputImport(name="provisioningState", required=true)
+    @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
     public String getProvisioningState() {
@@ -136,7 +136,7 @@ public final class OutboundRuleResponse extends io.pulumi.resources.InvokeArgs {
      * Type of the resource.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

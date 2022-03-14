@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.confidentialledger.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AADBasedSecurityPrincipalResponse {
     /**
      * LedgerRole associated with the Security Principal of Ledger
@@ -27,11 +27,11 @@ public final class AADBasedSecurityPrincipalResponse {
      */
     private final @Nullable String tenantId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AADBasedSecurityPrincipalResponse(
-        @OutputCustomType.Parameter("ledgerRoleName") @Nullable String ledgerRoleName,
-        @OutputCustomType.Parameter("principalId") @Nullable String principalId,
-        @OutputCustomType.Parameter("tenantId") @Nullable String tenantId) {
+        @CustomType.Parameter("ledgerRoleName") @Nullable String ledgerRoleName,
+        @CustomType.Parameter("principalId") @Nullable String principalId,
+        @CustomType.Parameter("tenantId") @Nullable String tenantId) {
         this.ledgerRoleName = ledgerRoleName;
         this.principalId = principalId;
         this.tenantId = tenantId;

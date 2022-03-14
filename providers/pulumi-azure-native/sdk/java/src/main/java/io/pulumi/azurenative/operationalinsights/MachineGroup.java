@@ -8,7 +8,7 @@ import io.pulumi.azurenative.operationalinsights.MachineGroupArgs;
 import io.pulumi.azurenative.operationalinsights.outputs.MachineReferenceWithHintsResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -36,7 +36,7 @@ public class MachineGroup extends io.pulumi.resources.CustomResource {
      * Count of machines in this group. The value of count may be bigger than the number of machines in case of the group has been truncated due to exceeding the max number of machines a group can handle.
      * 
      */
-    @OutputExport(name="count", type=Integer.class, parameters={})
+    @Export(name="count", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> count;
 
     /**
@@ -50,7 +50,7 @@ public class MachineGroup extends io.pulumi.resources.CustomResource {
      * User defined name for the group
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
@@ -64,7 +64,7 @@ public class MachineGroup extends io.pulumi.resources.CustomResource {
      * Resource ETAG.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output</* @Nullable */ String> etag;
 
     /**
@@ -78,7 +78,7 @@ public class MachineGroup extends io.pulumi.resources.CustomResource {
      * Type of the machine group
      * 
      */
-    @OutputExport(name="groupType", type=String.class, parameters={})
+    @Export(name="groupType", type=String.class, parameters={})
     private Output</* @Nullable */ String> groupType;
 
     /**
@@ -93,7 +93,7 @@ public class MachineGroup extends io.pulumi.resources.CustomResource {
      * Expected value is 'machineGroup'.
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
     /**
@@ -108,7 +108,7 @@ public class MachineGroup extends io.pulumi.resources.CustomResource {
      * References of the machines in this group. The hints within each reference do not represent the current value of the corresponding fields. They are a snapshot created during the last time the machine group was updated.
      * 
      */
-    @OutputExport(name="machines", type=List.class, parameters={MachineReferenceWithHintsResponse.class})
+    @Export(name="machines", type=List.class, parameters={MachineReferenceWithHintsResponse.class})
     private Output</* @Nullable */ List<MachineReferenceWithHintsResponse>> machines;
 
     /**
@@ -122,7 +122,7 @@ public class MachineGroup extends io.pulumi.resources.CustomResource {
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -136,7 +136,7 @@ public class MachineGroup extends io.pulumi.resources.CustomResource {
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

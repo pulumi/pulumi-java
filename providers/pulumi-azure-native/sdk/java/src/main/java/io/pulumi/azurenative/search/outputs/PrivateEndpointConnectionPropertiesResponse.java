@@ -5,12 +5,12 @@ package io.pulumi.azurenative.search.outputs;
 
 import io.pulumi.azurenative.search.outputs.PrivateEndpointConnectionPropertiesResponsePrivateEndpoint;
 import io.pulumi.azurenative.search.outputs.PrivateEndpointConnectionPropertiesResponsePrivateLinkServiceConnectionState;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PrivateEndpointConnectionPropertiesResponse {
     /**
      * The private endpoint resource from Microsoft.Network provider.
@@ -23,10 +23,10 @@ public final class PrivateEndpointConnectionPropertiesResponse {
      */
     private final @Nullable PrivateEndpointConnectionPropertiesResponsePrivateLinkServiceConnectionState privateLinkServiceConnectionState;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PrivateEndpointConnectionPropertiesResponse(
-        @OutputCustomType.Parameter("privateEndpoint") @Nullable PrivateEndpointConnectionPropertiesResponsePrivateEndpoint privateEndpoint,
-        @OutputCustomType.Parameter("privateLinkServiceConnectionState") @Nullable PrivateEndpointConnectionPropertiesResponsePrivateLinkServiceConnectionState privateLinkServiceConnectionState) {
+        @CustomType.Parameter("privateEndpoint") @Nullable PrivateEndpointConnectionPropertiesResponsePrivateEndpoint privateEndpoint,
+        @CustomType.Parameter("privateLinkServiceConnectionState") @Nullable PrivateEndpointConnectionPropertiesResponsePrivateLinkServiceConnectionState privateLinkServiceConnectionState) {
         this.privateEndpoint = privateEndpoint;
         this.privateLinkServiceConnectionState = privateLinkServiceConnectionState;
     }

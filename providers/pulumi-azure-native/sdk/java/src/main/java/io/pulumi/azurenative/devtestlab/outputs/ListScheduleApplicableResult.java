@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.devtestlab.outputs;
 
 import io.pulumi.azurenative.devtestlab.outputs.ScheduleResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ListScheduleApplicableResult {
     /**
      * Link for next set of results.
@@ -24,10 +24,10 @@ public final class ListScheduleApplicableResult {
      */
     private final @Nullable List<ScheduleResponse> value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ListScheduleApplicableResult(
-        @OutputCustomType.Parameter("nextLink") @Nullable String nextLink,
-        @OutputCustomType.Parameter("value") @Nullable List<ScheduleResponse> value) {
+        @CustomType.Parameter("nextLink") @Nullable String nextLink,
+        @CustomType.Parameter("value") @Nullable List<ScheduleResponse> value) {
         this.nextLink = nextLink;
         this.value = value;
     }

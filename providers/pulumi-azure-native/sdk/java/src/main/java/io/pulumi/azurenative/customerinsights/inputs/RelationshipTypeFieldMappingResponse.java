@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.customerinsights.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class RelationshipTypeFieldMappingResponse extends io.pulumi.resour
      * Specifies the fieldName in profile.
      * 
      */
-    @InputImport(name="profileFieldName", required=true)
+    @Import(name="profileFieldName", required=true)
       private final String profileFieldName;
 
     public String getProfileFieldName() {
@@ -31,7 +31,7 @@ public final class RelationshipTypeFieldMappingResponse extends io.pulumi.resour
      * Specifies the KeyProperty (from StrongId) of the related profile.
      * 
      */
-    @InputImport(name="relatedProfileKeyProperty", required=true)
+    @Import(name="relatedProfileKeyProperty", required=true)
       private final String relatedProfileKeyProperty;
 
     public String getRelatedProfileKeyProperty() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class IPConfigResponse extends io.pulumi.resources.InvokeArgs {
      * The backend address pools associated with the IP configuration.
      * 
      */
-    @InputImport(name="lBBackendAddressPoolIds")
+    @Import(name="lBBackendAddressPoolIds")
       private final @Nullable List<String> lBBackendAddressPoolIds;
 
     public List<String> getLBBackendAddressPoolIds() {
@@ -34,7 +34,7 @@ public final class IPConfigResponse extends io.pulumi.resources.InvokeArgs {
      * The Id of the public IP address associated with the IP configuration.
      * 
      */
-    @InputImport(name="publicIpAddressId")
+    @Import(name="publicIpAddressId")
       private final @Nullable String publicIpAddressId;
 
     public Optional<String> getPublicIpAddressId() {
@@ -45,7 +45,7 @@ public final class IPConfigResponse extends io.pulumi.resources.InvokeArgs {
      * The static IP address of the IP configuration.
      * 
      */
-    @InputImport(name="staticIPAddress")
+    @Import(name="staticIPAddress")
       private final @Nullable String staticIPAddress;
 
     public Optional<String> getStaticIPAddress() {

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.portal.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class DashboardPartsPositionArgs extends io.pulumi.resources.Resour
      * The dashboard's part column span.
      * 
      */
-    @InputImport(name="colSpan", required=true)
+    @Import(name="colSpan", required=true)
       private final Output<Integer> colSpan;
 
     public Output<Integer> getColSpan() {
@@ -36,7 +36,7 @@ public final class DashboardPartsPositionArgs extends io.pulumi.resources.Resour
      * The dashboard part's metadata.
      * 
      */
-    @InputImport(name="metadata")
+    @Import(name="metadata")
       private final @Nullable Output<Map<String,Object>> metadata;
 
     public Output<Map<String,Object>> getMetadata() {
@@ -47,7 +47,7 @@ public final class DashboardPartsPositionArgs extends io.pulumi.resources.Resour
      * The dashboard's part row span.
      * 
      */
-    @InputImport(name="rowSpan", required=true)
+    @Import(name="rowSpan", required=true)
       private final Output<Integer> rowSpan;
 
     public Output<Integer> getRowSpan() {
@@ -58,7 +58,7 @@ public final class DashboardPartsPositionArgs extends io.pulumi.resources.Resour
      * The dashboard's part x coordinate.
      * 
      */
-    @InputImport(name="x", required=true)
+    @Import(name="x", required=true)
       private final Output<Integer> x;
 
     public Output<Integer> getX() {
@@ -69,7 +69,7 @@ public final class DashboardPartsPositionArgs extends io.pulumi.resources.Resour
      * The dashboard's part y coordinate.
      * 
      */
-    @InputImport(name="y", required=true)
+    @Import(name="y", required=true)
       private final Output<Integer> y;
 
     public Output<Integer> getY() {

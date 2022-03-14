@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.billing.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AzurePlanResponse {
     /**
      * The sku description.
@@ -22,10 +22,10 @@ public final class AzurePlanResponse {
      */
     private final @Nullable String skuId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AzurePlanResponse(
-        @OutputCustomType.Parameter("skuDescription") String skuDescription,
-        @OutputCustomType.Parameter("skuId") @Nullable String skuId) {
+        @CustomType.Parameter("skuDescription") String skuDescription,
+        @CustomType.Parameter("skuId") @Nullable String skuId) {
         this.skuDescription = skuDescription;
         this.skuId = skuId;
     }

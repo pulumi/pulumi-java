@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.keyvault.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class KeyAttributesResponse {
     /**
      * Creation time in seconds since 1970-01-01T00:00:00Z.
@@ -44,14 +44,14 @@ public final class KeyAttributesResponse {
      */
     private final Double updated;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private KeyAttributesResponse(
-        @OutputCustomType.Parameter("created") Double created,
-        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
-        @OutputCustomType.Parameter("expires") @Nullable Double expires,
-        @OutputCustomType.Parameter("notBefore") @Nullable Double notBefore,
-        @OutputCustomType.Parameter("recoveryLevel") String recoveryLevel,
-        @OutputCustomType.Parameter("updated") Double updated) {
+        @CustomType.Parameter("created") Double created,
+        @CustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @CustomType.Parameter("expires") @Nullable Double expires,
+        @CustomType.Parameter("notBefore") @Nullable Double notBefore,
+        @CustomType.Parameter("recoveryLevel") String recoveryLevel,
+        @CustomType.Parameter("updated") Double updated) {
         this.created = created;
         this.enabled = enabled;
         this.expires = expires;

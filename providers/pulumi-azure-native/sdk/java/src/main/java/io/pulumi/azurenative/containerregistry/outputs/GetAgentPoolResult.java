@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.containerregistry.outputs;
 
 import io.pulumi.azurenative.containerregistry.outputs.SystemDataResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetAgentPoolResult {
     /**
      * The count of agent machine
@@ -70,19 +70,19 @@ public final class GetAgentPoolResult {
      */
     private final @Nullable String virtualNetworkSubnetResourceId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetAgentPoolResult(
-        @OutputCustomType.Parameter("count") @Nullable Integer count,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("os") @Nullable String os,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("tier") @Nullable String tier,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("virtualNetworkSubnetResourceId") @Nullable String virtualNetworkSubnetResourceId) {
+        @CustomType.Parameter("count") @Nullable Integer count,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("os") @Nullable String os,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("systemData") SystemDataResponse systemData,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("tier") @Nullable String tier,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("virtualNetworkSubnetResourceId") @Nullable String virtualNetworkSubnetResourceId) {
         this.count = count;
         this.id = id;
         this.location = location;

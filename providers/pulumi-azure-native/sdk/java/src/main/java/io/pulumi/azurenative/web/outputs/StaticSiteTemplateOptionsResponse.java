@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class StaticSiteTemplateOptionsResponse {
     /**
      * Description of the newly generated repository.
@@ -38,13 +38,13 @@ public final class StaticSiteTemplateOptionsResponse {
      */
     private final @Nullable String templateRepositoryUrl;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private StaticSiteTemplateOptionsResponse(
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("isPrivate") @Nullable Boolean isPrivate,
-        @OutputCustomType.Parameter("owner") @Nullable String owner,
-        @OutputCustomType.Parameter("repositoryName") @Nullable String repositoryName,
-        @OutputCustomType.Parameter("templateRepositoryUrl") @Nullable String templateRepositoryUrl) {
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("isPrivate") @Nullable Boolean isPrivate,
+        @CustomType.Parameter("owner") @Nullable String owner,
+        @CustomType.Parameter("repositoryName") @Nullable String repositoryName,
+        @CustomType.Parameter("templateRepositoryUrl") @Nullable String templateRepositoryUrl) {
         this.description = description;
         this.isPrivate = isPrivate;
         this.owner = owner;

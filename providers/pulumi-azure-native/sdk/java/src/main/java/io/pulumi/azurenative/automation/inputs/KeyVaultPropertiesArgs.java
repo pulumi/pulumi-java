@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.automation.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class KeyVaultPropertiesArgs extends io.pulumi.resources.ResourceAr
      * The name of key used to encrypt data.
      * 
      */
-    @InputImport(name="keyName")
+    @Import(name="keyName")
       private final @Nullable Output<String> keyName;
 
     public Output<String> getKeyName() {
@@ -33,7 +33,7 @@ public final class KeyVaultPropertiesArgs extends io.pulumi.resources.ResourceAr
      * The key version of the key used to encrypt data.
      * 
      */
-    @InputImport(name="keyVersion")
+    @Import(name="keyVersion")
       private final @Nullable Output<String> keyVersion;
 
     public Output<String> getKeyVersion() {
@@ -44,7 +44,7 @@ public final class KeyVaultPropertiesArgs extends io.pulumi.resources.ResourceAr
      * The URI of the key vault key used to encrypt data.
      * 
      */
-    @InputImport(name="keyvaultUri")
+    @Import(name="keyvaultUri")
       private final @Nullable Output<String> keyvaultUri;
 
     public Output<String> getKeyvaultUri() {

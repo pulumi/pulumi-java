@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datalakestore.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class CreateVirtualNetworkRuleWithAccountParametersArgs extends io.
      * The unique name of the virtual network rule to create.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -32,7 +32,7 @@ public final class CreateVirtualNetworkRuleWithAccountParametersArgs extends io.
      * The resource identifier for the subnet.
      * 
      */
-    @InputImport(name="subnetId", required=true)
+    @Import(name="subnetId", required=true)
       private final Output<String> subnetId;
 
     public Output<String> getSubnetId() {

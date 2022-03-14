@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.logic.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AS2SecuritySettingsResponse {
     /**
      * The value indicating whether to enable NRR for inbound decoded messages.
@@ -63,18 +63,18 @@ public final class AS2SecuritySettingsResponse {
      */
     private final @Nullable String signingCertificateName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AS2SecuritySettingsResponse(
-        @OutputCustomType.Parameter("enableNRRForInboundDecodedMessages") Boolean enableNRRForInboundDecodedMessages,
-        @OutputCustomType.Parameter("enableNRRForInboundEncodedMessages") Boolean enableNRRForInboundEncodedMessages,
-        @OutputCustomType.Parameter("enableNRRForInboundMDN") Boolean enableNRRForInboundMDN,
-        @OutputCustomType.Parameter("enableNRRForOutboundDecodedMessages") Boolean enableNRRForOutboundDecodedMessages,
-        @OutputCustomType.Parameter("enableNRRForOutboundEncodedMessages") Boolean enableNRRForOutboundEncodedMessages,
-        @OutputCustomType.Parameter("enableNRRForOutboundMDN") Boolean enableNRRForOutboundMDN,
-        @OutputCustomType.Parameter("encryptionCertificateName") @Nullable String encryptionCertificateName,
-        @OutputCustomType.Parameter("overrideGroupSigningCertificate") Boolean overrideGroupSigningCertificate,
-        @OutputCustomType.Parameter("sha2AlgorithmFormat") @Nullable String sha2AlgorithmFormat,
-        @OutputCustomType.Parameter("signingCertificateName") @Nullable String signingCertificateName) {
+        @CustomType.Parameter("enableNRRForInboundDecodedMessages") Boolean enableNRRForInboundDecodedMessages,
+        @CustomType.Parameter("enableNRRForInboundEncodedMessages") Boolean enableNRRForInboundEncodedMessages,
+        @CustomType.Parameter("enableNRRForInboundMDN") Boolean enableNRRForInboundMDN,
+        @CustomType.Parameter("enableNRRForOutboundDecodedMessages") Boolean enableNRRForOutboundDecodedMessages,
+        @CustomType.Parameter("enableNRRForOutboundEncodedMessages") Boolean enableNRRForOutboundEncodedMessages,
+        @CustomType.Parameter("enableNRRForOutboundMDN") Boolean enableNRRForOutboundMDN,
+        @CustomType.Parameter("encryptionCertificateName") @Nullable String encryptionCertificateName,
+        @CustomType.Parameter("overrideGroupSigningCertificate") Boolean overrideGroupSigningCertificate,
+        @CustomType.Parameter("sha2AlgorithmFormat") @Nullable String sha2AlgorithmFormat,
+        @CustomType.Parameter("signingCertificateName") @Nullable String signingCertificateName) {
         this.enableNRRForInboundDecodedMessages = enableNRRForInboundDecodedMessages;
         this.enableNRRForInboundEncodedMessages = enableNRRForInboundEncodedMessages;
         this.enableNRRForInboundMDN = enableNRRForInboundMDN;

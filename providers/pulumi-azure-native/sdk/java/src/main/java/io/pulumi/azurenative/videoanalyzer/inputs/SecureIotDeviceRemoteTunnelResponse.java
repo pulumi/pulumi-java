@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.videoanalyzer.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class SecureIotDeviceRemoteTunnelResponse extends io.pulumi.resourc
      * The IoT device id to use when establishing the remote tunnel. This string is case-sensitive.
      * 
      */
-    @InputImport(name="deviceId", required=true)
+    @Import(name="deviceId", required=true)
       private final String deviceId;
 
     public String getDeviceId() {
@@ -31,7 +31,7 @@ public final class SecureIotDeviceRemoteTunnelResponse extends io.pulumi.resourc
      * Name of the IoT Hub.
      * 
      */
-    @InputImport(name="iotHubName", required=true)
+    @Import(name="iotHubName", required=true)
       private final String iotHubName;
 
     public String getIotHubName() {
@@ -43,7 +43,7 @@ public final class SecureIotDeviceRemoteTunnelResponse extends io.pulumi.resourc
      * Expected value is '#Microsoft.VideoAnalyzer.SecureIotDeviceRemoteTunnel'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

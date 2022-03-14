@@ -11,7 +11,7 @@ import io.pulumi.azurenative.security.outputs.ThresholdCustomAlertRuleResponse;
 import io.pulumi.azurenative.security.outputs.TimeWindowCustomAlertRuleResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -38,7 +38,7 @@ public class DeviceSecurityGroup extends io.pulumi.resources.CustomResource {
      * The allow-list custom alert rules.
      * 
      */
-    @OutputExport(name="allowlistRules", type=List.class, parameters={AllowlistCustomAlertRuleResponse.class})
+    @Export(name="allowlistRules", type=List.class, parameters={AllowlistCustomAlertRuleResponse.class})
     private Output</* @Nullable */ List<AllowlistCustomAlertRuleResponse>> allowlistRules;
 
     /**
@@ -52,7 +52,7 @@ public class DeviceSecurityGroup extends io.pulumi.resources.CustomResource {
      * The deny-list custom alert rules.
      * 
      */
-    @OutputExport(name="denylistRules", type=List.class, parameters={DenylistCustomAlertRuleResponse.class})
+    @Export(name="denylistRules", type=List.class, parameters={DenylistCustomAlertRuleResponse.class})
     private Output</* @Nullable */ List<DenylistCustomAlertRuleResponse>> denylistRules;
 
     /**
@@ -66,7 +66,7 @@ public class DeviceSecurityGroup extends io.pulumi.resources.CustomResource {
      * Resource name
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -80,7 +80,7 @@ public class DeviceSecurityGroup extends io.pulumi.resources.CustomResource {
      * The list of custom alert threshold rules.
      * 
      */
-    @OutputExport(name="thresholdRules", type=List.class, parameters={ThresholdCustomAlertRuleResponse.class})
+    @Export(name="thresholdRules", type=List.class, parameters={ThresholdCustomAlertRuleResponse.class})
     private Output</* @Nullable */ List<ThresholdCustomAlertRuleResponse>> thresholdRules;
 
     /**
@@ -94,7 +94,7 @@ public class DeviceSecurityGroup extends io.pulumi.resources.CustomResource {
      * The list of custom alert time-window rules.
      * 
      */
-    @OutputExport(name="timeWindowRules", type=List.class, parameters={TimeWindowCustomAlertRuleResponse.class})
+    @Export(name="timeWindowRules", type=List.class, parameters={TimeWindowCustomAlertRuleResponse.class})
     private Output</* @Nullable */ List<TimeWindowCustomAlertRuleResponse>> timeWindowRules;
 
     /**
@@ -108,7 +108,7 @@ public class DeviceSecurityGroup extends io.pulumi.resources.CustomResource {
      * Resource type
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

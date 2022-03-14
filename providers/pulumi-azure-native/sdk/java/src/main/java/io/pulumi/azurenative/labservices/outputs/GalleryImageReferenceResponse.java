@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.labservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GalleryImageReferenceResponse {
     /**
      * The offer of the gallery image.
@@ -37,13 +37,13 @@ public final class GalleryImageReferenceResponse {
      */
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GalleryImageReferenceResponse(
-        @OutputCustomType.Parameter("offer") @Nullable String offer,
-        @OutputCustomType.Parameter("osType") @Nullable String osType,
-        @OutputCustomType.Parameter("publisher") @Nullable String publisher,
-        @OutputCustomType.Parameter("sku") @Nullable String sku,
-        @OutputCustomType.Parameter("version") @Nullable String version) {
+        @CustomType.Parameter("offer") @Nullable String offer,
+        @CustomType.Parameter("osType") @Nullable String osType,
+        @CustomType.Parameter("publisher") @Nullable String publisher,
+        @CustomType.Parameter("sku") @Nullable String sku,
+        @CustomType.Parameter("version") @Nullable String version) {
         this.offer = offer;
         this.osType = osType;
         this.publisher = publisher;

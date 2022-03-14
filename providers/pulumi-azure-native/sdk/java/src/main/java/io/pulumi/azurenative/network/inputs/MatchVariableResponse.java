@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class MatchVariableResponse extends io.pulumi.resources.InvokeArgs 
      * The selector of match variable.
      * 
      */
-    @InputImport(name="selector")
+    @Import(name="selector")
       private final @Nullable String selector;
 
     public Optional<String> getSelector() {
@@ -33,7 +33,7 @@ public final class MatchVariableResponse extends io.pulumi.resources.InvokeArgs 
      * Match Variable.
      * 
      */
-    @InputImport(name="variableName", required=true)
+    @Import(name="variableName", required=true)
       private final String variableName;
 
     public String getVariableName() {

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.logz.inputs;
 
 import io.pulumi.azurenative.logz.inputs.MetricRulesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class MetricsTagRulesPropertiesArgs extends io.pulumi.resources.Res
 
     public static final MetricsTagRulesPropertiesArgs Empty = new MetricsTagRulesPropertiesArgs();
 
-    @InputImport(name="metricRules")
+    @Import(name="metricRules")
       private final @Nullable Output<List<MetricRulesArgs>> metricRules;
 
     public Output<List<MetricRulesArgs>> getMetricRules() {
@@ -31,7 +31,7 @@ public final class MetricsTagRulesPropertiesArgs extends io.pulumi.resources.Res
      * Flag specifying if metrics from Azure resources should be sent for the Monitor resource.
      * 
      */
-    @InputImport(name="sendMetrics")
+    @Import(name="sendMetrics")
       private final @Nullable Output<Boolean> sendMetrics;
 
     public Output<Boolean> getSendMetrics() {

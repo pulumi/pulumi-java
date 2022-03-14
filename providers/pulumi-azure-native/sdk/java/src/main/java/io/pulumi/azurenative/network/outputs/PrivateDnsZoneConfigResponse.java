@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.RecordSetResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PrivateDnsZoneConfigResponse {
     /**
      * Name of the resource that is unique within a resource group. This name can be used to access the resource.
@@ -29,11 +29,11 @@ public final class PrivateDnsZoneConfigResponse {
      */
     private final List<RecordSetResponse> recordSets;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PrivateDnsZoneConfigResponse(
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("privateDnsZoneId") @Nullable String privateDnsZoneId,
-        @OutputCustomType.Parameter("recordSets") List<RecordSetResponse> recordSets) {
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("privateDnsZoneId") @Nullable String privateDnsZoneId,
+        @CustomType.Parameter("recordSets") List<RecordSetResponse> recordSets) {
         this.name = name;
         this.privateDnsZoneId = privateDnsZoneId;
         this.recordSets = recordSets;

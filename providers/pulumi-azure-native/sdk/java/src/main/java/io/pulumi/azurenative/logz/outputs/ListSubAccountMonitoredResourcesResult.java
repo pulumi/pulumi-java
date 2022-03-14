@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.logz.outputs;
 
 import io.pulumi.azurenative.logz.outputs.MonitoredResourceResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ListSubAccountMonitoredResourcesResult {
     /**
      * Link to the next set of results, if any.
@@ -24,10 +24,10 @@ public final class ListSubAccountMonitoredResourcesResult {
      */
     private final @Nullable List<MonitoredResourceResponse> value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ListSubAccountMonitoredResourcesResult(
-        @OutputCustomType.Parameter("nextLink") @Nullable String nextLink,
-        @OutputCustomType.Parameter("value") @Nullable List<MonitoredResourceResponse> value) {
+        @CustomType.Parameter("nextLink") @Nullable String nextLink,
+        @CustomType.Parameter("value") @Nullable List<MonitoredResourceResponse> value) {
         this.nextLink = nextLink;
         this.value = value;
     }

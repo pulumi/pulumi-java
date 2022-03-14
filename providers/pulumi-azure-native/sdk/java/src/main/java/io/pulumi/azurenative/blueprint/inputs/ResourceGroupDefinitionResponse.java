@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.blueprint.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -24,7 +24,7 @@ public final class ResourceGroupDefinitionResponse extends io.pulumi.resources.I
      * Artifacts which need to be deployed before this resource group.
      * 
      */
-    @InputImport(name="dependsOn")
+    @Import(name="dependsOn")
       private final @Nullable List<String> dependsOn;
 
     public List<String> getDependsOn() {
@@ -35,7 +35,7 @@ public final class ResourceGroupDefinitionResponse extends io.pulumi.resources.I
      * Description of this parameter/resourceGroup.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable String description;
 
     public Optional<String> getDescription() {
@@ -46,7 +46,7 @@ public final class ResourceGroupDefinitionResponse extends io.pulumi.resources.I
      * DisplayName of this parameter/resourceGroup.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable String displayName;
 
     public Optional<String> getDisplayName() {
@@ -57,7 +57,7 @@ public final class ResourceGroupDefinitionResponse extends io.pulumi.resources.I
      * Location of this resourceGroup. Leave empty if the resource group location will be specified during the blueprint assignment.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable String location;
 
     public Optional<String> getLocation() {
@@ -68,7 +68,7 @@ public final class ResourceGroupDefinitionResponse extends io.pulumi.resources.I
      * Name of this resourceGroup. Leave empty if the resource group name will be specified during the blueprint assignment.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -79,7 +79,7 @@ public final class ResourceGroupDefinitionResponse extends io.pulumi.resources.I
      * StrongType for UI to render rich experience during blueprint assignment. Supported strong types are resourceType, principalId and location.
      * 
      */
-    @InputImport(name="strongType")
+    @Import(name="strongType")
       private final @Nullable String strongType;
 
     public Optional<String> getStrongType() {
@@ -90,7 +90,7 @@ public final class ResourceGroupDefinitionResponse extends io.pulumi.resources.I
      * Tags to be assigned to this resource group.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {

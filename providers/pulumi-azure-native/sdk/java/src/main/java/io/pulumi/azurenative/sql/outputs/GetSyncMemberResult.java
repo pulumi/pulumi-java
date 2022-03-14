@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.sql.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetSyncMemberResult {
     /**
      * Database name of the member database in the sync member.
@@ -83,22 +83,22 @@ public final class GetSyncMemberResult {
      */
     private final @Nullable String userName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetSyncMemberResult(
-        @OutputCustomType.Parameter("databaseName") @Nullable String databaseName,
-        @OutputCustomType.Parameter("databaseType") @Nullable String databaseType,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("privateEndpointName") String privateEndpointName,
-        @OutputCustomType.Parameter("serverName") @Nullable String serverName,
-        @OutputCustomType.Parameter("sqlServerDatabaseId") @Nullable String sqlServerDatabaseId,
-        @OutputCustomType.Parameter("syncAgentId") @Nullable String syncAgentId,
-        @OutputCustomType.Parameter("syncDirection") @Nullable String syncDirection,
-        @OutputCustomType.Parameter("syncMemberAzureDatabaseResourceId") @Nullable String syncMemberAzureDatabaseResourceId,
-        @OutputCustomType.Parameter("syncState") String syncState,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("usePrivateLinkConnection") @Nullable Boolean usePrivateLinkConnection,
-        @OutputCustomType.Parameter("userName") @Nullable String userName) {
+        @CustomType.Parameter("databaseName") @Nullable String databaseName,
+        @CustomType.Parameter("databaseType") @Nullable String databaseType,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("privateEndpointName") String privateEndpointName,
+        @CustomType.Parameter("serverName") @Nullable String serverName,
+        @CustomType.Parameter("sqlServerDatabaseId") @Nullable String sqlServerDatabaseId,
+        @CustomType.Parameter("syncAgentId") @Nullable String syncAgentId,
+        @CustomType.Parameter("syncDirection") @Nullable String syncDirection,
+        @CustomType.Parameter("syncMemberAzureDatabaseResourceId") @Nullable String syncMemberAzureDatabaseResourceId,
+        @CustomType.Parameter("syncState") String syncState,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("usePrivateLinkConnection") @Nullable Boolean usePrivateLinkConnection,
+        @CustomType.Parameter("userName") @Nullable String userName) {
         this.databaseName = databaseName;
         this.databaseType = databaseType;
         this.id = id;

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datafactory.outputs;
 
 import io.pulumi.azurenative.datafactory.outputs.TriggerPipelineReferenceResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CustomEventsTriggerResponse {
     /**
      * List of tags that can be used for describing the trigger.
@@ -61,17 +61,17 @@ public final class CustomEventsTriggerResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CustomEventsTriggerResponse(
-        @OutputCustomType.Parameter("annotations") @Nullable List<Object> annotations,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("events") List<Object> events,
-        @OutputCustomType.Parameter("pipelines") @Nullable List<TriggerPipelineReferenceResponse> pipelines,
-        @OutputCustomType.Parameter("runtimeState") String runtimeState,
-        @OutputCustomType.Parameter("scope") String scope,
-        @OutputCustomType.Parameter("subjectBeginsWith") @Nullable String subjectBeginsWith,
-        @OutputCustomType.Parameter("subjectEndsWith") @Nullable String subjectEndsWith,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("annotations") @Nullable List<Object> annotations,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("events") List<Object> events,
+        @CustomType.Parameter("pipelines") @Nullable List<TriggerPipelineReferenceResponse> pipelines,
+        @CustomType.Parameter("runtimeState") String runtimeState,
+        @CustomType.Parameter("scope") String scope,
+        @CustomType.Parameter("subjectBeginsWith") @Nullable String subjectBeginsWith,
+        @CustomType.Parameter("subjectEndsWith") @Nullable String subjectEndsWith,
+        @CustomType.Parameter("type") String type) {
         this.annotations = annotations;
         this.description = description;
         this.events = events;

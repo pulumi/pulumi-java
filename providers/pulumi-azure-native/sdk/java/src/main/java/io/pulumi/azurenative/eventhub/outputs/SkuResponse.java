@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.eventhub.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SkuResponse {
     /**
      * The Event Hubs throughput units, value should be 0 to 20 throughput units.
@@ -28,11 +28,11 @@ public final class SkuResponse {
      */
     private final @Nullable String tier;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SkuResponse(
-        @OutputCustomType.Parameter("capacity") @Nullable Integer capacity,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("tier") @Nullable String tier) {
+        @CustomType.Parameter("capacity") @Nullable Integer capacity,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("tier") @Nullable String tier) {
         this.capacity = capacity;
         this.name = name;
         this.tier = tier;

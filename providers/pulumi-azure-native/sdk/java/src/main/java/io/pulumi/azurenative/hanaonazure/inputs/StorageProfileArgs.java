@@ -6,7 +6,7 @@ package io.pulumi.azurenative.hanaonazure.inputs;
 import io.pulumi.azurenative.hanaonazure.inputs.DiskArgs;
 import io.pulumi.azurenative.hanaonazure.inputs.SAPSystemIDArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class StorageProfileArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies information related to SAP system IDs for the hana instance.
      * 
      */
-    @InputImport(name="hanaSids")
+    @Import(name="hanaSids")
       private final @Nullable Output<List<SAPSystemIDArgs>> hanaSids;
 
     public Output<List<SAPSystemIDArgs>> getHanaSids() {
@@ -35,7 +35,7 @@ public final class StorageProfileArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies information about the operating system disk used by the hana instance.
      * 
      */
-    @InputImport(name="osDisks")
+    @Import(name="osDisks")
       private final @Nullable Output<List<DiskArgs>> osDisks;
 
     public Output<List<DiskArgs>> getOsDisks() {

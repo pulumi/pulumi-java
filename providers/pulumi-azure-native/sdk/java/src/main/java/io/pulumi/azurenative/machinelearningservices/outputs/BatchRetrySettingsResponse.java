@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BatchRetrySettingsResponse {
     /**
      * Maximum retry count for a mini-batch
@@ -23,10 +23,10 @@ public final class BatchRetrySettingsResponse {
      */
     private final @Nullable String timeout;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BatchRetrySettingsResponse(
-        @OutputCustomType.Parameter("maxRetries") @Nullable Integer maxRetries,
-        @OutputCustomType.Parameter("timeout") @Nullable String timeout) {
+        @CustomType.Parameter("maxRetries") @Nullable Integer maxRetries,
+        @CustomType.Parameter("timeout") @Nullable String timeout) {
         this.maxRetries = maxRetries;
         this.timeout = timeout;
     }

@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ForwardProxyResponse {
     /**
      * The convention used to determine the url of the request made.
@@ -27,11 +27,11 @@ public final class ForwardProxyResponse {
      */
     private final @Nullable String customProtoHeaderName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ForwardProxyResponse(
-        @OutputCustomType.Parameter("convention") @Nullable String convention,
-        @OutputCustomType.Parameter("customHostHeaderName") @Nullable String customHostHeaderName,
-        @OutputCustomType.Parameter("customProtoHeaderName") @Nullable String customProtoHeaderName) {
+        @CustomType.Parameter("convention") @Nullable String convention,
+        @CustomType.Parameter("customHostHeaderName") @Nullable String customHostHeaderName,
+        @CustomType.Parameter("customProtoHeaderName") @Nullable String customProtoHeaderName) {
         this.convention = convention;
         this.customHostHeaderName = customHostHeaderName;
         this.customProtoHeaderName = customProtoHeaderName;

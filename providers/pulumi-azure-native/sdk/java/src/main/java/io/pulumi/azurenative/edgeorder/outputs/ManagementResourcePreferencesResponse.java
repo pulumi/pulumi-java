@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.edgeorder.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ManagementResourcePreferencesResponse {
     /**
      * Customer preferred Management resource ARM ID
@@ -17,8 +17,8 @@ public final class ManagementResourcePreferencesResponse {
      */
     private final @Nullable String preferredManagementResourceId;
 
-    @OutputCustomType.Constructor
-    private ManagementResourcePreferencesResponse(@OutputCustomType.Parameter("preferredManagementResourceId") @Nullable String preferredManagementResourceId) {
+    @CustomType.Constructor
+    private ManagementResourcePreferencesResponse(@CustomType.Parameter("preferredManagementResourceId") @Nullable String preferredManagementResourceId) {
         this.preferredManagementResourceId = preferredManagementResourceId;
     }
 

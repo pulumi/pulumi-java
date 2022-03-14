@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.kusto.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetClusterPrincipalAssignmentArgs extends io.pulumi.resources
      * The name of the Kusto cluster.
      * 
      */
-    @InputImport(name="clusterName", required=true)
+    @Import(name="clusterName", required=true)
       private final String clusterName;
 
     public String getClusterName() {
@@ -27,7 +27,7 @@ public final class GetClusterPrincipalAssignmentArgs extends io.pulumi.resources
      * The name of the Kusto principalAssignment.
      * 
      */
-    @InputImport(name="principalAssignmentName", required=true)
+    @Import(name="principalAssignmentName", required=true)
       private final String principalAssignmentName;
 
     public String getPrincipalAssignmentName() {
@@ -38,7 +38,7 @@ public final class GetClusterPrincipalAssignmentArgs extends io.pulumi.resources
      * The name of the resource group containing the Kusto cluster.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {

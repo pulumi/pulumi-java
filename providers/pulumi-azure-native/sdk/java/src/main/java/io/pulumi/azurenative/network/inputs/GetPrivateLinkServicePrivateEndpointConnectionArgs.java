@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +18,7 @@ public final class GetPrivateLinkServicePrivateEndpointConnectionArgs extends io
      * Expands referenced resources.
      * 
      */
-    @InputImport(name="expand")
+    @Import(name="expand")
       private final @Nullable String expand;
 
     public Optional<String> getExpand() {
@@ -29,7 +29,7 @@ public final class GetPrivateLinkServicePrivateEndpointConnectionArgs extends io
      * The name of the private end point connection.
      * 
      */
-    @InputImport(name="peConnectionName", required=true)
+    @Import(name="peConnectionName", required=true)
       private final String peConnectionName;
 
     public String getPeConnectionName() {
@@ -40,7 +40,7 @@ public final class GetPrivateLinkServicePrivateEndpointConnectionArgs extends io
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {
@@ -51,7 +51,7 @@ public final class GetPrivateLinkServicePrivateEndpointConnectionArgs extends io
      * The name of the private link service.
      * 
      */
-    @InputImport(name="serviceName", required=true)
+    @Import(name="serviceName", required=true)
       private final String serviceName;
 
     public String getServiceName() {

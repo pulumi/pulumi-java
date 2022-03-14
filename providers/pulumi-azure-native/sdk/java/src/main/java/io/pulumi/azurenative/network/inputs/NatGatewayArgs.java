@@ -6,7 +6,7 @@ package io.pulumi.azurenative.network.inputs;
 import io.pulumi.azurenative.network.inputs.NatGatewaySkuArgs;
 import io.pulumi.azurenative.network.inputs.SubResourceArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -27,7 +27,7 @@ public final class NatGatewayArgs extends io.pulumi.resources.ResourceArgs {
      * Resource ID.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
@@ -38,7 +38,7 @@ public final class NatGatewayArgs extends io.pulumi.resources.ResourceArgs {
      * The idle timeout of the nat gateway.
      * 
      */
-    @InputImport(name="idleTimeoutInMinutes")
+    @Import(name="idleTimeoutInMinutes")
       private final @Nullable Output<Integer> idleTimeoutInMinutes;
 
     public Output<Integer> getIdleTimeoutInMinutes() {
@@ -49,7 +49,7 @@ public final class NatGatewayArgs extends io.pulumi.resources.ResourceArgs {
      * Resource location.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -60,7 +60,7 @@ public final class NatGatewayArgs extends io.pulumi.resources.ResourceArgs {
      * An array of public ip addresses associated with the nat gateway resource.
      * 
      */
-    @InputImport(name="publicIpAddresses")
+    @Import(name="publicIpAddresses")
       private final @Nullable Output<List<SubResourceArgs>> publicIpAddresses;
 
     public Output<List<SubResourceArgs>> getPublicIpAddresses() {
@@ -71,7 +71,7 @@ public final class NatGatewayArgs extends io.pulumi.resources.ResourceArgs {
      * An array of public ip prefixes associated with the nat gateway resource.
      * 
      */
-    @InputImport(name="publicIpPrefixes")
+    @Import(name="publicIpPrefixes")
       private final @Nullable Output<List<SubResourceArgs>> publicIpPrefixes;
 
     public Output<List<SubResourceArgs>> getPublicIpPrefixes() {
@@ -82,7 +82,7 @@ public final class NatGatewayArgs extends io.pulumi.resources.ResourceArgs {
      * The nat gateway SKU.
      * 
      */
-    @InputImport(name="sku")
+    @Import(name="sku")
       private final @Nullable Output<NatGatewaySkuArgs> sku;
 
     public Output<NatGatewaySkuArgs> getSku() {
@@ -93,7 +93,7 @@ public final class NatGatewayArgs extends io.pulumi.resources.ResourceArgs {
      * Resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -104,7 +104,7 @@ public final class NatGatewayArgs extends io.pulumi.resources.ResourceArgs {
      * A list of availability zones denoting the zone in which Nat Gateway should be deployed.
      * 
      */
-    @InputImport(name="zones")
+    @Import(name="zones")
       private final @Nullable Output<List<String>> zones;
 
     public Output<List<String>> getZones() {

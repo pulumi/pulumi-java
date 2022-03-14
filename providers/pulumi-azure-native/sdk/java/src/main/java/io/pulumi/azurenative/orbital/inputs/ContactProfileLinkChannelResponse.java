@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.orbital.inputs;
 
 import io.pulumi.azurenative.orbital.inputs.EndPointResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ContactProfileLinkChannelResponse extends io.pulumi.resources
      * Bandwidth in MHz
      * 
      */
-    @InputImport(name="bandwidthMHz", required=true)
+    @Import(name="bandwidthMHz", required=true)
       private final Double bandwidthMHz;
 
     public Double getBandwidthMHz() {
@@ -35,7 +35,7 @@ public final class ContactProfileLinkChannelResponse extends io.pulumi.resources
      * Center Frequency in MHz
      * 
      */
-    @InputImport(name="centerFrequencyMHz", required=true)
+    @Import(name="centerFrequencyMHz", required=true)
       private final Double centerFrequencyMHz;
 
     public Double getCenterFrequencyMHz() {
@@ -46,7 +46,7 @@ public final class ContactProfileLinkChannelResponse extends io.pulumi.resources
      * Configuration for decoding
      * 
      */
-    @InputImport(name="decodingConfiguration")
+    @Import(name="decodingConfiguration")
       private final @Nullable String decodingConfiguration;
 
     public Optional<String> getDecodingConfiguration() {
@@ -57,7 +57,7 @@ public final class ContactProfileLinkChannelResponse extends io.pulumi.resources
      * Configuration for demodulation
      * 
      */
-    @InputImport(name="demodulationConfiguration")
+    @Import(name="demodulationConfiguration")
       private final @Nullable String demodulationConfiguration;
 
     public Optional<String> getDemodulationConfiguration() {
@@ -68,7 +68,7 @@ public final class ContactProfileLinkChannelResponse extends io.pulumi.resources
      * Configuration for encoding
      * 
      */
-    @InputImport(name="encodingConfiguration")
+    @Import(name="encodingConfiguration")
       private final @Nullable String encodingConfiguration;
 
     public Optional<String> getEncodingConfiguration() {
@@ -79,7 +79,7 @@ public final class ContactProfileLinkChannelResponse extends io.pulumi.resources
      * Customer End point to store/retrieve data during a contact.
      * 
      */
-    @InputImport(name="endPoint", required=true)
+    @Import(name="endPoint", required=true)
       private final EndPointResponse endPoint;
 
     public EndPointResponse getEndPoint() {
@@ -90,7 +90,7 @@ public final class ContactProfileLinkChannelResponse extends io.pulumi.resources
      * Configuration for modulation
      * 
      */
-    @InputImport(name="modulationConfiguration")
+    @Import(name="modulationConfiguration")
       private final @Nullable String modulationConfiguration;
 
     public Optional<String> getModulationConfiguration() {

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.servicefabricmesh;
 
 import io.pulumi.azurenative.servicefabricmesh.inputs.NetworkResourcePropertiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class NetworkArgs extends io.pulumi.resources.ResourceArgs {
      * The geo-location where the resource lives
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -31,7 +31,7 @@ public final class NetworkArgs extends io.pulumi.resources.ResourceArgs {
      * The identity of the network.
      * 
      */
-    @InputImport(name="networkResourceName")
+    @Import(name="networkResourceName")
       private final @Nullable Output<String> networkResourceName;
 
     public Output<String> getNetworkResourceName() {
@@ -42,7 +42,7 @@ public final class NetworkArgs extends io.pulumi.resources.ResourceArgs {
      * Describes properties of a network resource.
      * 
      */
-    @InputImport(name="properties", required=true)
+    @Import(name="properties", required=true)
       private final Output<NetworkResourcePropertiesArgs> properties;
 
     public Output<NetworkResourcePropertiesArgs> getProperties() {
@@ -53,7 +53,7 @@ public final class NetworkArgs extends io.pulumi.resources.ResourceArgs {
      * Azure resource group name
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -64,7 +64,7 @@ public final class NetworkArgs extends io.pulumi.resources.ResourceArgs {
      * Resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

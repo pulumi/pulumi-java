@@ -13,7 +13,7 @@ import io.pulumi.azurenative.resources.outputs.StorageAccountConfigurationRespon
 import io.pulumi.azurenative.resources.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Object;
 import java.lang.String;
@@ -42,7 +42,7 @@ public class AzureCliScript extends io.pulumi.resources.CustomResource {
      * Command line arguments to pass to the script. Arguments are separated by spaces. ex: -Name blue* -Location 'West US 2'
      * 
      */
-    @OutputExport(name="arguments", type=String.class, parameters={})
+    @Export(name="arguments", type=String.class, parameters={})
     private Output</* @Nullable */ String> arguments;
 
     /**
@@ -56,7 +56,7 @@ public class AzureCliScript extends io.pulumi.resources.CustomResource {
      * Azure CLI module version to be used.
      * 
      */
-    @OutputExport(name="azCliVersion", type=String.class, parameters={})
+    @Export(name="azCliVersion", type=String.class, parameters={})
     private Output<String> azCliVersion;
 
     /**
@@ -70,7 +70,7 @@ public class AzureCliScript extends io.pulumi.resources.CustomResource {
      * The clean up preference when the script execution gets in a terminal state. Default setting is 'Always'.
      * 
      */
-    @OutputExport(name="cleanupPreference", type=String.class, parameters={})
+    @Export(name="cleanupPreference", type=String.class, parameters={})
     private Output</* @Nullable */ String> cleanupPreference;
 
     /**
@@ -84,7 +84,7 @@ public class AzureCliScript extends io.pulumi.resources.CustomResource {
      * Container settings.
      * 
      */
-    @OutputExport(name="containerSettings", type=ContainerConfigurationResponse.class, parameters={})
+    @Export(name="containerSettings", type=ContainerConfigurationResponse.class, parameters={})
     private Output</* @Nullable */ ContainerConfigurationResponse> containerSettings;
 
     /**
@@ -98,7 +98,7 @@ public class AzureCliScript extends io.pulumi.resources.CustomResource {
      * The environment variables to pass over to the script.
      * 
      */
-    @OutputExport(name="environmentVariables", type=List.class, parameters={EnvironmentVariableResponse.class})
+    @Export(name="environmentVariables", type=List.class, parameters={EnvironmentVariableResponse.class})
     private Output</* @Nullable */ List<EnvironmentVariableResponse>> environmentVariables;
 
     /**
@@ -112,7 +112,7 @@ public class AzureCliScript extends io.pulumi.resources.CustomResource {
      * Gets or sets how the deployment script should be forced to execute even if the script resource has not changed. Can be current time stamp or a GUID.
      * 
      */
-    @OutputExport(name="forceUpdateTag", type=String.class, parameters={})
+    @Export(name="forceUpdateTag", type=String.class, parameters={})
     private Output</* @Nullable */ String> forceUpdateTag;
 
     /**
@@ -126,7 +126,7 @@ public class AzureCliScript extends io.pulumi.resources.CustomResource {
      * Optional property. Managed identity to be used for this deployment script. Currently, only user-assigned MSI is supported.
      * 
      */
-    @OutputExport(name="identity", type=ManagedServiceIdentityResponse.class, parameters={})
+    @Export(name="identity", type=ManagedServiceIdentityResponse.class, parameters={})
     private Output</* @Nullable */ ManagedServiceIdentityResponse> identity;
 
     /**
@@ -141,7 +141,7 @@ public class AzureCliScript extends io.pulumi.resources.CustomResource {
      * Expected value is 'AzureCLI'.
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
     /**
@@ -156,7 +156,7 @@ public class AzureCliScript extends io.pulumi.resources.CustomResource {
      * The location of the ACI and the storage account for the deployment script.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -170,7 +170,7 @@ public class AzureCliScript extends io.pulumi.resources.CustomResource {
      * Name of this resource.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -184,7 +184,7 @@ public class AzureCliScript extends io.pulumi.resources.CustomResource {
      * List of script outputs.
      * 
      */
-    @OutputExport(name="outputs", type=Map.class, parameters={String.class, Object.class})
+    @Export(name="outputs", type=Map.class, parameters={String.class, Object.class})
     private Output<Map<String,Object>> outputs;
 
     /**
@@ -198,7 +198,7 @@ public class AzureCliScript extends io.pulumi.resources.CustomResource {
      * Uri for the script. This is the entry point for the external script.
      * 
      */
-    @OutputExport(name="primaryScriptUri", type=String.class, parameters={})
+    @Export(name="primaryScriptUri", type=String.class, parameters={})
     private Output</* @Nullable */ String> primaryScriptUri;
 
     /**
@@ -212,7 +212,7 @@ public class AzureCliScript extends io.pulumi.resources.CustomResource {
      * State of the script execution. This only appears in the response.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -226,7 +226,7 @@ public class AzureCliScript extends io.pulumi.resources.CustomResource {
      * Interval for which the service retains the script resource after it reaches a terminal state. Resource will be deleted when this duration expires. Duration is based on ISO 8601 pattern (for example P1D means one day).
      * 
      */
-    @OutputExport(name="retentionInterval", type=String.class, parameters={})
+    @Export(name="retentionInterval", type=String.class, parameters={})
     private Output<String> retentionInterval;
 
     /**
@@ -240,7 +240,7 @@ public class AzureCliScript extends io.pulumi.resources.CustomResource {
      * Script body.
      * 
      */
-    @OutputExport(name="scriptContent", type=String.class, parameters={})
+    @Export(name="scriptContent", type=String.class, parameters={})
     private Output</* @Nullable */ String> scriptContent;
 
     /**
@@ -254,7 +254,7 @@ public class AzureCliScript extends io.pulumi.resources.CustomResource {
      * Contains the results of script execution.
      * 
      */
-    @OutputExport(name="status", type=ScriptStatusResponse.class, parameters={})
+    @Export(name="status", type=ScriptStatusResponse.class, parameters={})
     private Output<ScriptStatusResponse> status;
 
     /**
@@ -268,7 +268,7 @@ public class AzureCliScript extends io.pulumi.resources.CustomResource {
      * Storage Account settings.
      * 
      */
-    @OutputExport(name="storageAccountSettings", type=StorageAccountConfigurationResponse.class, parameters={})
+    @Export(name="storageAccountSettings", type=StorageAccountConfigurationResponse.class, parameters={})
     private Output</* @Nullable */ StorageAccountConfigurationResponse> storageAccountSettings;
 
     /**
@@ -282,7 +282,7 @@ public class AzureCliScript extends io.pulumi.resources.CustomResource {
      * Supporting files for the external script.
      * 
      */
-    @OutputExport(name="supportingScriptUris", type=List.class, parameters={String.class})
+    @Export(name="supportingScriptUris", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> supportingScriptUris;
 
     /**
@@ -296,7 +296,7 @@ public class AzureCliScript extends io.pulumi.resources.CustomResource {
      * The system metadata related to this resource.
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -310,7 +310,7 @@ public class AzureCliScript extends io.pulumi.resources.CustomResource {
      * Resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -324,7 +324,7 @@ public class AzureCliScript extends io.pulumi.resources.CustomResource {
      * Maximum allowed script execution time specified in ISO 8601 format. Default value is P1D
      * 
      */
-    @OutputExport(name="timeout", type=String.class, parameters={})
+    @Export(name="timeout", type=String.class, parameters={})
     private Output</* @Nullable */ String> timeout;
 
     /**
@@ -338,7 +338,7 @@ public class AzureCliScript extends io.pulumi.resources.CustomResource {
      * Type of this resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

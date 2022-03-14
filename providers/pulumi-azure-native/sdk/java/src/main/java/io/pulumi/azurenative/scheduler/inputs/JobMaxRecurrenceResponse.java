@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.scheduler.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class JobMaxRecurrenceResponse extends io.pulumi.resources.InvokeAr
      * Gets or sets the frequency of recurrence (second, minute, hour, day, week, month).
      * 
      */
-    @InputImport(name="frequency")
+    @Import(name="frequency")
       private final @Nullable String frequency;
 
     public Optional<String> getFrequency() {
@@ -30,7 +30,7 @@ public final class JobMaxRecurrenceResponse extends io.pulumi.resources.InvokeAr
      * Gets or sets the interval between retries.
      * 
      */
-    @InputImport(name="interval")
+    @Import(name="interval")
       private final @Nullable Integer interval;
 
     public Optional<Integer> getInterval() {

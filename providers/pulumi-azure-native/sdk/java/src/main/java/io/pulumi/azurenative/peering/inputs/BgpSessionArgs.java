@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.peering.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class BgpSessionArgs extends io.pulumi.resources.ResourceArgs {
      * The maximum number of prefixes advertised over the IPv4 session.
      * 
      */
-    @InputImport(name="maxPrefixesAdvertisedV4")
+    @Import(name="maxPrefixesAdvertisedV4")
       private final @Nullable Output<Integer> maxPrefixesAdvertisedV4;
 
     public Output<Integer> getMaxPrefixesAdvertisedV4() {
@@ -34,7 +34,7 @@ public final class BgpSessionArgs extends io.pulumi.resources.ResourceArgs {
      * The maximum number of prefixes advertised over the IPv6 session.
      * 
      */
-    @InputImport(name="maxPrefixesAdvertisedV6")
+    @Import(name="maxPrefixesAdvertisedV6")
       private final @Nullable Output<Integer> maxPrefixesAdvertisedV6;
 
     public Output<Integer> getMaxPrefixesAdvertisedV6() {
@@ -45,7 +45,7 @@ public final class BgpSessionArgs extends io.pulumi.resources.ResourceArgs {
      * The MD5 authentication key of the session.
      * 
      */
-    @InputImport(name="md5AuthenticationKey")
+    @Import(name="md5AuthenticationKey")
       private final @Nullable Output<String> md5AuthenticationKey;
 
     public Output<String> getMd5AuthenticationKey() {
@@ -56,7 +56,7 @@ public final class BgpSessionArgs extends io.pulumi.resources.ResourceArgs {
      * The IPv4 session address on Microsoft's end.
      * 
      */
-    @InputImport(name="microsoftSessionIPv4Address")
+    @Import(name="microsoftSessionIPv4Address")
       private final @Nullable Output<String> microsoftSessionIPv4Address;
 
     public Output<String> getMicrosoftSessionIPv4Address() {
@@ -67,7 +67,7 @@ public final class BgpSessionArgs extends io.pulumi.resources.ResourceArgs {
      * The IPv6 session address on Microsoft's end.
      * 
      */
-    @InputImport(name="microsoftSessionIPv6Address")
+    @Import(name="microsoftSessionIPv6Address")
       private final @Nullable Output<String> microsoftSessionIPv6Address;
 
     public Output<String> getMicrosoftSessionIPv6Address() {
@@ -78,7 +78,7 @@ public final class BgpSessionArgs extends io.pulumi.resources.ResourceArgs {
      * The IPv4 session address on peer's end.
      * 
      */
-    @InputImport(name="peerSessionIPv4Address")
+    @Import(name="peerSessionIPv4Address")
       private final @Nullable Output<String> peerSessionIPv4Address;
 
     public Output<String> getPeerSessionIPv4Address() {
@@ -89,7 +89,7 @@ public final class BgpSessionArgs extends io.pulumi.resources.ResourceArgs {
      * The IPv6 session address on peer's end.
      * 
      */
-    @InputImport(name="peerSessionIPv6Address")
+    @Import(name="peerSessionIPv6Address")
       private final @Nullable Output<String> peerSessionIPv6Address;
 
     public Output<String> getPeerSessionIPv6Address() {
@@ -100,7 +100,7 @@ public final class BgpSessionArgs extends io.pulumi.resources.ResourceArgs {
      * The IPv4 prefix that contains both ends' IPv4 addresses.
      * 
      */
-    @InputImport(name="sessionPrefixV4")
+    @Import(name="sessionPrefixV4")
       private final @Nullable Output<String> sessionPrefixV4;
 
     public Output<String> getSessionPrefixV4() {
@@ -111,7 +111,7 @@ public final class BgpSessionArgs extends io.pulumi.resources.ResourceArgs {
      * The IPv6 prefix that contains both ends' IPv6 addresses.
      * 
      */
-    @InputImport(name="sessionPrefixV6")
+    @Import(name="sessionPrefixV6")
       private final @Nullable Output<String> sessionPrefixV6;
 
     public Output<String> getSessionPrefixV6() {

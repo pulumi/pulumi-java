@@ -5,12 +5,12 @@ package io.pulumi.azurenative.containerinstance.outputs;
 
 import io.pulumi.azurenative.containerinstance.outputs.ContainerStateResponse;
 import io.pulumi.azurenative.containerinstance.outputs.EventResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ContainerPropertiesResponseInstanceView {
     /**
      * Current container instance state.
@@ -33,12 +33,12 @@ public final class ContainerPropertiesResponseInstanceView {
      */
     private final Integer restartCount;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ContainerPropertiesResponseInstanceView(
-        @OutputCustomType.Parameter("currentState") ContainerStateResponse currentState,
-        @OutputCustomType.Parameter("events") List<EventResponse> events,
-        @OutputCustomType.Parameter("previousState") ContainerStateResponse previousState,
-        @OutputCustomType.Parameter("restartCount") Integer restartCount) {
+        @CustomType.Parameter("currentState") ContainerStateResponse currentState,
+        @CustomType.Parameter("events") List<EventResponse> events,
+        @CustomType.Parameter("previousState") ContainerStateResponse previousState,
+        @CustomType.Parameter("restartCount") Integer restartCount) {
         this.currentState = currentState;
         this.events = events;
         this.previousState = previousState;

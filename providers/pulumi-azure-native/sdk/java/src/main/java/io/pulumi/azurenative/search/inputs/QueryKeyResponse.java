@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.search.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class QueryKeyResponse extends io.pulumi.resources.InvokeArgs {
      * The value of the query API key.
      * 
      */
-    @InputImport(name="key", required=true)
+    @Import(name="key", required=true)
       private final String key;
 
     public String getKey() {
@@ -31,7 +31,7 @@ public final class QueryKeyResponse extends io.pulumi.resources.InvokeArgs {
      * The name of the query API key; may be empty.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {

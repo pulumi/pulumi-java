@@ -10,7 +10,7 @@ import io.pulumi.azurenative.network.outputs.NetworkInterfaceIPConfigurationResp
 import io.pulumi.azurenative.network.outputs.NetworkInterfaceTapConfigurationResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -39,7 +39,7 @@ public class VirtualNetworkTap extends io.pulumi.resources.CustomResource {
      * The reference to the private IP address on the internal Load Balancer that will receive the tap.
      * 
      */
-    @OutputExport(name="destinationLoadBalancerFrontEndIPConfiguration", type=FrontendIPConfigurationResponse.class, parameters={})
+    @Export(name="destinationLoadBalancerFrontEndIPConfiguration", type=FrontendIPConfigurationResponse.class, parameters={})
     private Output</* @Nullable */ FrontendIPConfigurationResponse> destinationLoadBalancerFrontEndIPConfiguration;
 
     /**
@@ -53,7 +53,7 @@ public class VirtualNetworkTap extends io.pulumi.resources.CustomResource {
      * The reference to the private IP Address of the collector nic that will receive the tap.
      * 
      */
-    @OutputExport(name="destinationNetworkInterfaceIPConfiguration", type=NetworkInterfaceIPConfigurationResponse.class, parameters={})
+    @Export(name="destinationNetworkInterfaceIPConfiguration", type=NetworkInterfaceIPConfigurationResponse.class, parameters={})
     private Output</* @Nullable */ NetworkInterfaceIPConfigurationResponse> destinationNetworkInterfaceIPConfiguration;
 
     /**
@@ -67,7 +67,7 @@ public class VirtualNetworkTap extends io.pulumi.resources.CustomResource {
      * The VXLAN destination port that will receive the tapped traffic.
      * 
      */
-    @OutputExport(name="destinationPort", type=Integer.class, parameters={})
+    @Export(name="destinationPort", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> destinationPort;
 
     /**
@@ -81,7 +81,7 @@ public class VirtualNetworkTap extends io.pulumi.resources.CustomResource {
      * A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -95,7 +95,7 @@ public class VirtualNetworkTap extends io.pulumi.resources.CustomResource {
      * Resource location.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -109,7 +109,7 @@ public class VirtualNetworkTap extends io.pulumi.resources.CustomResource {
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -123,7 +123,7 @@ public class VirtualNetworkTap extends io.pulumi.resources.CustomResource {
      * Specifies the list of resource IDs for the network interface IP configuration that needs to be tapped.
      * 
      */
-    @OutputExport(name="networkInterfaceTapConfigurations", type=List.class, parameters={NetworkInterfaceTapConfigurationResponse.class})
+    @Export(name="networkInterfaceTapConfigurations", type=List.class, parameters={NetworkInterfaceTapConfigurationResponse.class})
     private Output<List<NetworkInterfaceTapConfigurationResponse>> networkInterfaceTapConfigurations;
 
     /**
@@ -137,7 +137,7 @@ public class VirtualNetworkTap extends io.pulumi.resources.CustomResource {
      * The provisioning state of the virtual network tap resource.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -151,7 +151,7 @@ public class VirtualNetworkTap extends io.pulumi.resources.CustomResource {
      * The resource GUID property of the virtual network tap resource.
      * 
      */
-    @OutputExport(name="resourceGuid", type=String.class, parameters={})
+    @Export(name="resourceGuid", type=String.class, parameters={})
     private Output<String> resourceGuid;
 
     /**
@@ -165,7 +165,7 @@ public class VirtualNetworkTap extends io.pulumi.resources.CustomResource {
      * Resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -179,7 +179,7 @@ public class VirtualNetworkTap extends io.pulumi.resources.CustomResource {
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

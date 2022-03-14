@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.resources.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class OnErrorDeploymentExtendedResponse extends io.pulumi.resources
      * The deployment to be used on error case.
      * 
      */
-    @InputImport(name="deploymentName")
+    @Import(name="deploymentName")
       private final @Nullable String deploymentName;
 
     public Optional<String> getDeploymentName() {
@@ -33,7 +33,7 @@ public final class OnErrorDeploymentExtendedResponse extends io.pulumi.resources
      * The state of the provisioning for the on error deployment.
      * 
      */
-    @InputImport(name="provisioningState", required=true)
+    @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
     public String getProvisioningState() {
@@ -44,7 +44,7 @@ public final class OnErrorDeploymentExtendedResponse extends io.pulumi.resources
      * The deployment on error behavior type. Possible values are LastSuccessful and SpecificDeployment.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable String type;
 
     public Optional<String> getType() {

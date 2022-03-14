@@ -16,7 +16,7 @@ import io.pulumi.azurenative.webpubsub.outputs.WebPubSubNetworkACLsResponse;
 import io.pulumi.azurenative.webpubsub.outputs.WebPubSubTlsSettingsResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -45,7 +45,7 @@ public class WebPubSub extends io.pulumi.resources.CustomResource {
      * The settings for event handler in webpubsub service.
      * 
      */
-    @OutputExport(name="eventHandler", type=EventHandlerSettingsResponse.class, parameters={})
+    @Export(name="eventHandler", type=EventHandlerSettingsResponse.class, parameters={})
     private Output</* @Nullable */ EventHandlerSettingsResponse> eventHandler;
 
     /**
@@ -59,7 +59,7 @@ public class WebPubSub extends io.pulumi.resources.CustomResource {
      * The publicly accessible IP of the resource.
      * 
      */
-    @OutputExport(name="externalIP", type=String.class, parameters={})
+    @Export(name="externalIP", type=String.class, parameters={})
     private Output<String> externalIP;
 
     /**
@@ -78,7 +78,7 @@ public class WebPubSub extends io.pulumi.resources.CustomResource {
      * But keep in mind, the default value doesn't mean "false". It varies in terms of different FeatureFlags.
      * 
      */
-    @OutputExport(name="features", type=List.class, parameters={WebPubSubFeatureResponse.class})
+    @Export(name="features", type=List.class, parameters={WebPubSubFeatureResponse.class})
     private Output</* @Nullable */ List<WebPubSubFeatureResponse>> features;
 
     /**
@@ -97,7 +97,7 @@ public class WebPubSub extends io.pulumi.resources.CustomResource {
      * FQDN of the service instance.
      * 
      */
-    @OutputExport(name="hostName", type=String.class, parameters={})
+    @Export(name="hostName", type=String.class, parameters={})
     private Output<String> hostName;
 
     /**
@@ -111,7 +111,7 @@ public class WebPubSub extends io.pulumi.resources.CustomResource {
      * The managed identity response
      * 
      */
-    @OutputExport(name="identity", type=ManagedIdentityResponse.class, parameters={})
+    @Export(name="identity", type=ManagedIdentityResponse.class, parameters={})
     private Output</* @Nullable */ ManagedIdentityResponse> identity;
 
     /**
@@ -125,7 +125,7 @@ public class WebPubSub extends io.pulumi.resources.CustomResource {
      * The GEO location of the resource. e.g. West US | East US | North Central US | South Central US.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -139,7 +139,7 @@ public class WebPubSub extends io.pulumi.resources.CustomResource {
      * The name of the resource.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -153,7 +153,7 @@ public class WebPubSub extends io.pulumi.resources.CustomResource {
      * Network ACLs
      * 
      */
-    @OutputExport(name="networkACLs", type=WebPubSubNetworkACLsResponse.class, parameters={})
+    @Export(name="networkACLs", type=WebPubSubNetworkACLsResponse.class, parameters={})
     private Output</* @Nullable */ WebPubSubNetworkACLsResponse> networkACLs;
 
     /**
@@ -167,7 +167,7 @@ public class WebPubSub extends io.pulumi.resources.CustomResource {
      * Private endpoint connections to the resource.
      * 
      */
-    @OutputExport(name="privateEndpointConnections", type=List.class, parameters={PrivateEndpointConnectionResponse.class})
+    @Export(name="privateEndpointConnections", type=List.class, parameters={PrivateEndpointConnectionResponse.class})
     private Output<List<PrivateEndpointConnectionResponse>> privateEndpointConnections;
 
     /**
@@ -181,7 +181,7 @@ public class WebPubSub extends io.pulumi.resources.CustomResource {
      * Provisioning state of the resource.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -197,7 +197,7 @@ public class WebPubSub extends io.pulumi.resources.CustomResource {
      * When it's Disabled, public network access is always disabled no matter what you set in network ACLs.
      * 
      */
-    @OutputExport(name="publicNetworkAccess", type=String.class, parameters={})
+    @Export(name="publicNetworkAccess", type=String.class, parameters={})
     private Output</* @Nullable */ String> publicNetworkAccess;
 
     /**
@@ -213,7 +213,7 @@ public class WebPubSub extends io.pulumi.resources.CustomResource {
      * The publicly accessible port of the resource which is designed for browser/client side usage.
      * 
      */
-    @OutputExport(name="publicPort", type=Integer.class, parameters={})
+    @Export(name="publicPort", type=Integer.class, parameters={})
     private Output<Integer> publicPort;
 
     /**
@@ -227,7 +227,7 @@ public class WebPubSub extends io.pulumi.resources.CustomResource {
      * The publicly accessible port of the resource which is designed for customer server side usage.
      * 
      */
-    @OutputExport(name="serverPort", type=Integer.class, parameters={})
+    @Export(name="serverPort", type=Integer.class, parameters={})
     private Output<Integer> serverPort;
 
     /**
@@ -241,7 +241,7 @@ public class WebPubSub extends io.pulumi.resources.CustomResource {
      * The list of shared private link resources.
      * 
      */
-    @OutputExport(name="sharedPrivateLinkResources", type=List.class, parameters={SharedPrivateLinkResourceResponse.class})
+    @Export(name="sharedPrivateLinkResources", type=List.class, parameters={SharedPrivateLinkResourceResponse.class})
     private Output<List<SharedPrivateLinkResourceResponse>> sharedPrivateLinkResources;
 
     /**
@@ -255,7 +255,7 @@ public class WebPubSub extends io.pulumi.resources.CustomResource {
      * The billing information of the resource.(e.g. Free, Standard)
      * 
      */
-    @OutputExport(name="sku", type=ResourceSkuResponse.class, parameters={})
+    @Export(name="sku", type=ResourceSkuResponse.class, parameters={})
     private Output</* @Nullable */ ResourceSkuResponse> sku;
 
     /**
@@ -269,7 +269,7 @@ public class WebPubSub extends io.pulumi.resources.CustomResource {
      * Metadata pertaining to creation and last modification of the resource.
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -283,7 +283,7 @@ public class WebPubSub extends io.pulumi.resources.CustomResource {
      * Tags of the service which is a list of key value pairs that describe the resource.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -297,7 +297,7 @@ public class WebPubSub extends io.pulumi.resources.CustomResource {
      * TLS settings.
      * 
      */
-    @OutputExport(name="tls", type=WebPubSubTlsSettingsResponse.class, parameters={})
+    @Export(name="tls", type=WebPubSubTlsSettingsResponse.class, parameters={})
     private Output</* @Nullable */ WebPubSubTlsSettingsResponse> tls;
 
     /**
@@ -311,7 +311,7 @@ public class WebPubSub extends io.pulumi.resources.CustomResource {
      * The type of the resource - e.g. "Microsoft.SignalRService/SignalR"
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -325,7 +325,7 @@ public class WebPubSub extends io.pulumi.resources.CustomResource {
      * Version of the resource. Probably you need the same or higher version of client SDKs.
      * 
      */
-    @OutputExport(name="version", type=String.class, parameters={})
+    @Export(name="version", type=String.class, parameters={})
     private Output<String> version;
 
     /**

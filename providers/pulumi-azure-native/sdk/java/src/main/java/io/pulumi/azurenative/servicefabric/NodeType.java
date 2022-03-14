@@ -10,7 +10,7 @@ import io.pulumi.azurenative.servicefabric.outputs.VMSSExtensionResponse;
 import io.pulumi.azurenative.servicefabric.outputs.VaultSecretGroupResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -40,7 +40,7 @@ public class NodeType extends io.pulumi.resources.CustomResource {
      * The range of ports from which cluster assigned port to Service Fabric applications.
      * 
      */
-    @OutputExport(name="applicationPorts", type=EndpointRangeDescriptionResponse.class, parameters={})
+    @Export(name="applicationPorts", type=EndpointRangeDescriptionResponse.class, parameters={})
     private Output</* @Nullable */ EndpointRangeDescriptionResponse> applicationPorts;
 
     /**
@@ -54,7 +54,7 @@ public class NodeType extends io.pulumi.resources.CustomResource {
      * The capacity tags applied to the nodes in the node type, the cluster resource manager uses these tags to understand how much resource a node has.
      * 
      */
-    @OutputExport(name="capacities", type=Map.class, parameters={String.class, String.class})
+    @Export(name="capacities", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> capacities;
 
     /**
@@ -68,7 +68,7 @@ public class NodeType extends io.pulumi.resources.CustomResource {
      * Disk size for each vm in the node type in GBs.
      * 
      */
-    @OutputExport(name="dataDiskSizeGB", type=Integer.class, parameters={})
+    @Export(name="dataDiskSizeGB", type=Integer.class, parameters={})
     private Output<Integer> dataDiskSizeGB;
 
     /**
@@ -82,7 +82,7 @@ public class NodeType extends io.pulumi.resources.CustomResource {
      * The range of ephemeral ports that nodes in this node type should be configured with.
      * 
      */
-    @OutputExport(name="ephemeralPorts", type=EndpointRangeDescriptionResponse.class, parameters={})
+    @Export(name="ephemeralPorts", type=EndpointRangeDescriptionResponse.class, parameters={})
     private Output</* @Nullable */ EndpointRangeDescriptionResponse> ephemeralPorts;
 
     /**
@@ -96,7 +96,7 @@ public class NodeType extends io.pulumi.resources.CustomResource {
      * The node type on which system services will run. Only one node type should be marked as primary. Primary node type cannot be deleted or changed for existing clusters.
      * 
      */
-    @OutputExport(name="isPrimary", type=Boolean.class, parameters={})
+    @Export(name="isPrimary", type=Boolean.class, parameters={})
     private Output<Boolean> isPrimary;
 
     /**
@@ -110,7 +110,7 @@ public class NodeType extends io.pulumi.resources.CustomResource {
      * Azure resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -124,7 +124,7 @@ public class NodeType extends io.pulumi.resources.CustomResource {
      * The placement tags applied to nodes in the node type, which can be used to indicate where certain services (workload) should run.
      * 
      */
-    @OutputExport(name="placementProperties", type=Map.class, parameters={String.class, String.class})
+    @Export(name="placementProperties", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> placementProperties;
 
     /**
@@ -138,7 +138,7 @@ public class NodeType extends io.pulumi.resources.CustomResource {
      * The provisioning state of the managed cluster resource.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -152,7 +152,7 @@ public class NodeType extends io.pulumi.resources.CustomResource {
      * Azure resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -166,7 +166,7 @@ public class NodeType extends io.pulumi.resources.CustomResource {
      * Azure resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -180,7 +180,7 @@ public class NodeType extends io.pulumi.resources.CustomResource {
      * Set of extensions that should be installed onto the virtual machines.
      * 
      */
-    @OutputExport(name="vmExtensions", type=List.class, parameters={VMSSExtensionResponse.class})
+    @Export(name="vmExtensions", type=List.class, parameters={VMSSExtensionResponse.class})
     private Output</* @Nullable */ List<VMSSExtensionResponse>> vmExtensions;
 
     /**
@@ -194,7 +194,7 @@ public class NodeType extends io.pulumi.resources.CustomResource {
      * The offer type of the Azure Virtual Machines Marketplace image. For example, UbuntuServer or WindowsServer.
      * 
      */
-    @OutputExport(name="vmImageOffer", type=String.class, parameters={})
+    @Export(name="vmImageOffer", type=String.class, parameters={})
     private Output</* @Nullable */ String> vmImageOffer;
 
     /**
@@ -208,7 +208,7 @@ public class NodeType extends io.pulumi.resources.CustomResource {
      * The publisher of the Azure Virtual Machines Marketplace image. For example, Canonical or MicrosoftWindowsServer.
      * 
      */
-    @OutputExport(name="vmImagePublisher", type=String.class, parameters={})
+    @Export(name="vmImagePublisher", type=String.class, parameters={})
     private Output</* @Nullable */ String> vmImagePublisher;
 
     /**
@@ -222,7 +222,7 @@ public class NodeType extends io.pulumi.resources.CustomResource {
      * The SKU of the Azure Virtual Machines Marketplace image. For example, 14.04.0-LTS or 2012-R2-Datacenter.
      * 
      */
-    @OutputExport(name="vmImageSku", type=String.class, parameters={})
+    @Export(name="vmImageSku", type=String.class, parameters={})
     private Output</* @Nullable */ String> vmImageSku;
 
     /**
@@ -236,7 +236,7 @@ public class NodeType extends io.pulumi.resources.CustomResource {
      * The version of the Azure Virtual Machines Marketplace image. A value of 'latest' can be specified to select the latest version of an image. If omitted, the default is 'latest'.
      * 
      */
-    @OutputExport(name="vmImageVersion", type=String.class, parameters={})
+    @Export(name="vmImageVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> vmImageVersion;
 
     /**
@@ -250,7 +250,7 @@ public class NodeType extends io.pulumi.resources.CustomResource {
      * The number of nodes in the node type.
      * 
      */
-    @OutputExport(name="vmInstanceCount", type=Integer.class, parameters={})
+    @Export(name="vmInstanceCount", type=Integer.class, parameters={})
     private Output<Integer> vmInstanceCount;
 
     /**
@@ -264,7 +264,7 @@ public class NodeType extends io.pulumi.resources.CustomResource {
      * The secrets to install in the virtual machines.
      * 
      */
-    @OutputExport(name="vmSecrets", type=List.class, parameters={VaultSecretGroupResponse.class})
+    @Export(name="vmSecrets", type=List.class, parameters={VaultSecretGroupResponse.class})
     private Output</* @Nullable */ List<VaultSecretGroupResponse>> vmSecrets;
 
     /**
@@ -278,7 +278,7 @@ public class NodeType extends io.pulumi.resources.CustomResource {
      * The size of virtual machines in the pool. All virtual machines in a pool are the same size. For example, Standard_D3.
      * 
      */
-    @OutputExport(name="vmSize", type=String.class, parameters={})
+    @Export(name="vmSize", type=String.class, parameters={})
     private Output</* @Nullable */ String> vmSize;
 
     /**

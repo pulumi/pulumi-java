@@ -15,7 +15,7 @@ import io.pulumi.azurenative.machinelearning.outputs.ServiceInputOutputSpecifica
 import io.pulumi.azurenative.machinelearning.outputs.StorageAccountResponse;
 import io.pulumi.azurenative.machinelearning.outputs.WebServiceKeysResponse;
 import io.pulumi.azurenative.machinelearning.outputs.WebServiceParameterResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -23,7 +23,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class WebServicePropertiesForGraphResponse {
     /**
      * Contains user defined properties describing web service assets. Properties are expressed as Key/Value pairs.
@@ -142,31 +142,31 @@ public final class WebServicePropertiesForGraphResponse {
      */
     private final @Nullable String title;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WebServicePropertiesForGraphResponse(
-        @OutputCustomType.Parameter("assets") @Nullable Map<String,AssetItemResponse> assets,
-        @OutputCustomType.Parameter("commitmentPlan") @Nullable CommitmentPlanResponse commitmentPlan,
-        @OutputCustomType.Parameter("createdOn") String createdOn,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("diagnostics") @Nullable DiagnosticsConfigurationResponse diagnostics,
-        @OutputCustomType.Parameter("exampleRequest") @Nullable ExampleRequestResponse exampleRequest,
-        @OutputCustomType.Parameter("exposeSampleData") @Nullable Boolean exposeSampleData,
-        @OutputCustomType.Parameter("input") @Nullable ServiceInputOutputSpecificationResponse input,
-        @OutputCustomType.Parameter("keys") @Nullable WebServiceKeysResponse keys,
-        @OutputCustomType.Parameter("machineLearningWorkspace") @Nullable MachineLearningWorkspaceResponse machineLearningWorkspace,
-        @OutputCustomType.Parameter("modifiedOn") String modifiedOn,
-        @OutputCustomType.Parameter("output") @Nullable ServiceInputOutputSpecificationResponse output,
-        @OutputCustomType.Parameter("package") @Nullable GraphPackageResponse $package,
-        @OutputCustomType.Parameter("packageType") String packageType,
-        @OutputCustomType.Parameter("parameters") @Nullable Map<String,WebServiceParameterResponse> parameters,
-        @OutputCustomType.Parameter("payloadsInBlobStorage") @Nullable Boolean payloadsInBlobStorage,
-        @OutputCustomType.Parameter("payloadsLocation") @Nullable BlobLocationResponse payloadsLocation,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("readOnly") @Nullable Boolean readOnly,
-        @OutputCustomType.Parameter("realtimeConfiguration") @Nullable RealtimeConfigurationResponse realtimeConfiguration,
-        @OutputCustomType.Parameter("storageAccount") @Nullable StorageAccountResponse storageAccount,
-        @OutputCustomType.Parameter("swaggerLocation") String swaggerLocation,
-        @OutputCustomType.Parameter("title") @Nullable String title) {
+        @CustomType.Parameter("assets") @Nullable Map<String,AssetItemResponse> assets,
+        @CustomType.Parameter("commitmentPlan") @Nullable CommitmentPlanResponse commitmentPlan,
+        @CustomType.Parameter("createdOn") String createdOn,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("diagnostics") @Nullable DiagnosticsConfigurationResponse diagnostics,
+        @CustomType.Parameter("exampleRequest") @Nullable ExampleRequestResponse exampleRequest,
+        @CustomType.Parameter("exposeSampleData") @Nullable Boolean exposeSampleData,
+        @CustomType.Parameter("input") @Nullable ServiceInputOutputSpecificationResponse input,
+        @CustomType.Parameter("keys") @Nullable WebServiceKeysResponse keys,
+        @CustomType.Parameter("machineLearningWorkspace") @Nullable MachineLearningWorkspaceResponse machineLearningWorkspace,
+        @CustomType.Parameter("modifiedOn") String modifiedOn,
+        @CustomType.Parameter("output") @Nullable ServiceInputOutputSpecificationResponse output,
+        @CustomType.Parameter("package") @Nullable GraphPackageResponse $package,
+        @CustomType.Parameter("packageType") String packageType,
+        @CustomType.Parameter("parameters") @Nullable Map<String,WebServiceParameterResponse> parameters,
+        @CustomType.Parameter("payloadsInBlobStorage") @Nullable Boolean payloadsInBlobStorage,
+        @CustomType.Parameter("payloadsLocation") @Nullable BlobLocationResponse payloadsLocation,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("readOnly") @Nullable Boolean readOnly,
+        @CustomType.Parameter("realtimeConfiguration") @Nullable RealtimeConfigurationResponse realtimeConfiguration,
+        @CustomType.Parameter("storageAccount") @Nullable StorageAccountResponse storageAccount,
+        @CustomType.Parameter("swaggerLocation") String swaggerLocation,
+        @CustomType.Parameter("title") @Nullable String title) {
         this.assets = assets;
         this.commitmentPlan = commitmentPlan;
         this.createdOn = createdOn;

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.aadiam.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class AzureADMetricsPropertiesFormatResponse extends io.pulumi.reso
      * The provisioning state of the resource.
      * 
      */
-    @InputImport(name="provisioningState", required=true)
+    @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
     public String getProvisioningState() {

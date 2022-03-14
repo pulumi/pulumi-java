@@ -5,11 +5,11 @@ package io.pulumi.azurenative.portal.outputs;
 
 import io.pulumi.azurenative.portal.outputs.StorageProfileResponse;
 import io.pulumi.azurenative.portal.outputs.TerminalSettingsResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class UserPropertiesResponse {
     /**
      * The preferred location of the cloud shell.
@@ -37,13 +37,13 @@ public final class UserPropertiesResponse {
      */
     private final TerminalSettingsResponse terminalSettings;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private UserPropertiesResponse(
-        @OutputCustomType.Parameter("preferredLocation") String preferredLocation,
-        @OutputCustomType.Parameter("preferredOsType") String preferredOsType,
-        @OutputCustomType.Parameter("preferredShellType") String preferredShellType,
-        @OutputCustomType.Parameter("storageProfile") StorageProfileResponse storageProfile,
-        @OutputCustomType.Parameter("terminalSettings") TerminalSettingsResponse terminalSettings) {
+        @CustomType.Parameter("preferredLocation") String preferredLocation,
+        @CustomType.Parameter("preferredOsType") String preferredOsType,
+        @CustomType.Parameter("preferredShellType") String preferredShellType,
+        @CustomType.Parameter("storageProfile") StorageProfileResponse storageProfile,
+        @CustomType.Parameter("terminalSettings") TerminalSettingsResponse terminalSettings) {
         this.preferredLocation = preferredLocation;
         this.preferredOsType = preferredOsType;
         this.preferredShellType = preferredShellType;

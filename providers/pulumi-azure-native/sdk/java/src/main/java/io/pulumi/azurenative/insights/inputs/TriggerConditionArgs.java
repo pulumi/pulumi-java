@@ -7,7 +7,7 @@ import io.pulumi.azurenative.insights.enums.ConditionalOperator;
 import io.pulumi.azurenative.insights.inputs.LogMetricTriggerArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class TriggerConditionArgs extends io.pulumi.resources.ResourceArgs
      * Trigger condition for metric query rule
      * 
      */
-    @InputImport(name="metricTrigger")
+    @Import(name="metricTrigger")
       private final @Nullable Output<LogMetricTriggerArgs> metricTrigger;
 
     public Output<LogMetricTriggerArgs> getMetricTrigger() {
@@ -37,7 +37,7 @@ public final class TriggerConditionArgs extends io.pulumi.resources.ResourceArgs
      * Result or count threshold based on which rule should be triggered.
      * 
      */
-    @InputImport(name="threshold", required=true)
+    @Import(name="threshold", required=true)
       private final Output<Double> threshold;
 
     public Output<Double> getThreshold() {
@@ -48,7 +48,7 @@ public final class TriggerConditionArgs extends io.pulumi.resources.ResourceArgs
      * Evaluation operation for rule - 'GreaterThan' or 'LessThan.
      * 
      */
-    @InputImport(name="thresholdOperator", required=true)
+    @Import(name="thresholdOperator", required=true)
       private final Output<Either<String,ConditionalOperator>> thresholdOperator;
 
     public Output<Either<String,ConditionalOperator>> getThresholdOperator() {

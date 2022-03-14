@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datamigration.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -18,7 +18,7 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputDatabaseLe
      * Number of applied changes
      * 
      */
-    @InputImport(name="appliedChanges", required=true)
+    @Import(name="appliedChanges", required=true)
       private final Double appliedChanges;
 
     public Double getAppliedChanges() {
@@ -29,7 +29,7 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputDatabaseLe
      * Number of cdc deletes
      * 
      */
-    @InputImport(name="cdcDeleteCounter", required=true)
+    @Import(name="cdcDeleteCounter", required=true)
       private final Double cdcDeleteCounter;
 
     public Double getCdcDeleteCounter() {
@@ -40,7 +40,7 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputDatabaseLe
      * Number of cdc inserts
      * 
      */
-    @InputImport(name="cdcInsertCounter", required=true)
+    @Import(name="cdcInsertCounter", required=true)
       private final Double cdcInsertCounter;
 
     public Double getCdcInsertCounter() {
@@ -51,7 +51,7 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputDatabaseLe
      * Number of cdc updates
      * 
      */
-    @InputImport(name="cdcUpdateCounter", required=true)
+    @Import(name="cdcUpdateCounter", required=true)
       private final Double cdcUpdateCounter;
 
     public Double getCdcUpdateCounter() {
@@ -62,7 +62,7 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputDatabaseLe
      * Name of the database
      * 
      */
-    @InputImport(name="databaseName", required=true)
+    @Import(name="databaseName", required=true)
       private final String databaseName;
 
     public String getDatabaseName() {
@@ -73,7 +73,7 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputDatabaseLe
      * Migration end time
      * 
      */
-    @InputImport(name="endedOn", required=true)
+    @Import(name="endedOn", required=true)
       private final String endedOn;
 
     public String getEndedOn() {
@@ -84,7 +84,7 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputDatabaseLe
      * Number of tables completed in full load
      * 
      */
-    @InputImport(name="fullLoadCompletedTables", required=true)
+    @Import(name="fullLoadCompletedTables", required=true)
       private final Double fullLoadCompletedTables;
 
     public Double getFullLoadCompletedTables() {
@@ -95,7 +95,7 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputDatabaseLe
      * Number of tables errored in full load
      * 
      */
-    @InputImport(name="fullLoadErroredTables", required=true)
+    @Import(name="fullLoadErroredTables", required=true)
       private final Double fullLoadErroredTables;
 
     public Double getFullLoadErroredTables() {
@@ -106,7 +106,7 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputDatabaseLe
      * Number of tables loading in full load
      * 
      */
-    @InputImport(name="fullLoadLoadingTables", required=true)
+    @Import(name="fullLoadLoadingTables", required=true)
       private final Double fullLoadLoadingTables;
 
     public Double getFullLoadLoadingTables() {
@@ -117,7 +117,7 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputDatabaseLe
      * Number of tables queued in full load
      * 
      */
-    @InputImport(name="fullLoadQueuedTables", required=true)
+    @Import(name="fullLoadQueuedTables", required=true)
       private final Double fullLoadQueuedTables;
 
     public Double getFullLoadQueuedTables() {
@@ -128,7 +128,7 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputDatabaseLe
      * Result identifier
      * 
      */
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final String id;
 
     public String getId() {
@@ -139,7 +139,7 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputDatabaseLe
      * Number of incoming changes
      * 
      */
-    @InputImport(name="incomingChanges", required=true)
+    @Import(name="incomingChanges", required=true)
       private final Double incomingChanges;
 
     public Double getIncomingChanges() {
@@ -150,7 +150,7 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputDatabaseLe
      * Indicates if initial load (full load) has been completed
      * 
      */
-    @InputImport(name="initializationCompleted", required=true)
+    @Import(name="initializationCompleted", required=true)
       private final Boolean initializationCompleted;
 
     public Boolean getInitializationCompleted() {
@@ -161,7 +161,7 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputDatabaseLe
      * CDC apply latency
      * 
      */
-    @InputImport(name="latency", required=true)
+    @Import(name="latency", required=true)
       private final Double latency;
 
     public Double getLatency() {
@@ -172,7 +172,7 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputDatabaseLe
      * Migration state that this database is in
      * 
      */
-    @InputImport(name="migrationState", required=true)
+    @Import(name="migrationState", required=true)
       private final String migrationState;
 
     public String getMigrationState() {
@@ -184,7 +184,7 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputDatabaseLe
      * Expected value is 'DatabaseLevelOutput'.
      * 
      */
-    @InputImport(name="resultType", required=true)
+    @Import(name="resultType", required=true)
       private final String resultType;
 
     public String getResultType() {
@@ -195,7 +195,7 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputDatabaseLe
      * Migration start time
      * 
      */
-    @InputImport(name="startedOn", required=true)
+    @Import(name="startedOn", required=true)
       private final String startedOn;
 
     public String getStartedOn() {

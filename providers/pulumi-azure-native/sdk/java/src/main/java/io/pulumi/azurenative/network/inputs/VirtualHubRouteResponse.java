@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class VirtualHubRouteResponse extends io.pulumi.resources.InvokeArg
      * List of all addressPrefixes.
      * 
      */
-    @InputImport(name="addressPrefixes")
+    @Import(name="addressPrefixes")
       private final @Nullable List<String> addressPrefixes;
 
     public List<String> getAddressPrefixes() {
@@ -34,7 +34,7 @@ public final class VirtualHubRouteResponse extends io.pulumi.resources.InvokeArg
      * NextHop ip address.
      * 
      */
-    @InputImport(name="nextHopIpAddress")
+    @Import(name="nextHopIpAddress")
       private final @Nullable String nextHopIpAddress;
 
     public Optional<String> getNextHopIpAddress() {

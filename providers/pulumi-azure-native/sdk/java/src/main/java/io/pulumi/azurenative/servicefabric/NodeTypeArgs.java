@@ -7,7 +7,7 @@ import io.pulumi.azurenative.servicefabric.inputs.EndpointRangeDescriptionArgs;
 import io.pulumi.azurenative.servicefabric.inputs.VMSSExtensionArgs;
 import io.pulumi.azurenative.servicefabric.inputs.VaultSecretGroupArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class NodeTypeArgs extends io.pulumi.resources.ResourceArgs {
      * The range of ports from which cluster assigned port to Service Fabric applications.
      * 
      */
-    @InputImport(name="applicationPorts")
+    @Import(name="applicationPorts")
       private final @Nullable Output<EndpointRangeDescriptionArgs> applicationPorts;
 
     public Output<EndpointRangeDescriptionArgs> getApplicationPorts() {
@@ -36,7 +36,7 @@ public final class NodeTypeArgs extends io.pulumi.resources.ResourceArgs {
      * The capacity tags applied to the nodes in the node type, the cluster resource manager uses these tags to understand how much resource a node has.
      * 
      */
-    @InputImport(name="capacities")
+    @Import(name="capacities")
       private final @Nullable Output<Map<String,String>> capacities;
 
     public Output<Map<String,String>> getCapacities() {
@@ -47,7 +47,7 @@ public final class NodeTypeArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the cluster resource.
      * 
      */
-    @InputImport(name="clusterName", required=true)
+    @Import(name="clusterName", required=true)
       private final Output<String> clusterName;
 
     public Output<String> getClusterName() {
@@ -58,7 +58,7 @@ public final class NodeTypeArgs extends io.pulumi.resources.ResourceArgs {
      * Disk size for each vm in the node type in GBs.
      * 
      */
-    @InputImport(name="dataDiskSizeGB", required=true)
+    @Import(name="dataDiskSizeGB", required=true)
       private final Output<Integer> dataDiskSizeGB;
 
     public Output<Integer> getDataDiskSizeGB() {
@@ -69,7 +69,7 @@ public final class NodeTypeArgs extends io.pulumi.resources.ResourceArgs {
      * The range of ephemeral ports that nodes in this node type should be configured with.
      * 
      */
-    @InputImport(name="ephemeralPorts")
+    @Import(name="ephemeralPorts")
       private final @Nullable Output<EndpointRangeDescriptionArgs> ephemeralPorts;
 
     public Output<EndpointRangeDescriptionArgs> getEphemeralPorts() {
@@ -80,7 +80,7 @@ public final class NodeTypeArgs extends io.pulumi.resources.ResourceArgs {
      * The node type on which system services will run. Only one node type should be marked as primary. Primary node type cannot be deleted or changed for existing clusters.
      * 
      */
-    @InputImport(name="isPrimary", required=true)
+    @Import(name="isPrimary", required=true)
       private final Output<Boolean> isPrimary;
 
     public Output<Boolean> getIsPrimary() {
@@ -91,7 +91,7 @@ public final class NodeTypeArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the node type.
      * 
      */
-    @InputImport(name="nodeTypeName")
+    @Import(name="nodeTypeName")
       private final @Nullable Output<String> nodeTypeName;
 
     public Output<String> getNodeTypeName() {
@@ -102,7 +102,7 @@ public final class NodeTypeArgs extends io.pulumi.resources.ResourceArgs {
      * The placement tags applied to nodes in the node type, which can be used to indicate where certain services (workload) should run.
      * 
      */
-    @InputImport(name="placementProperties")
+    @Import(name="placementProperties")
       private final @Nullable Output<Map<String,String>> placementProperties;
 
     public Output<Map<String,String>> getPlacementProperties() {
@@ -113,7 +113,7 @@ public final class NodeTypeArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -124,7 +124,7 @@ public final class NodeTypeArgs extends io.pulumi.resources.ResourceArgs {
      * Azure resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -135,7 +135,7 @@ public final class NodeTypeArgs extends io.pulumi.resources.ResourceArgs {
      * Set of extensions that should be installed onto the virtual machines.
      * 
      */
-    @InputImport(name="vmExtensions")
+    @Import(name="vmExtensions")
       private final @Nullable Output<List<VMSSExtensionArgs>> vmExtensions;
 
     public Output<List<VMSSExtensionArgs>> getVmExtensions() {
@@ -146,7 +146,7 @@ public final class NodeTypeArgs extends io.pulumi.resources.ResourceArgs {
      * The offer type of the Azure Virtual Machines Marketplace image. For example, UbuntuServer or WindowsServer.
      * 
      */
-    @InputImport(name="vmImageOffer")
+    @Import(name="vmImageOffer")
       private final @Nullable Output<String> vmImageOffer;
 
     public Output<String> getVmImageOffer() {
@@ -157,7 +157,7 @@ public final class NodeTypeArgs extends io.pulumi.resources.ResourceArgs {
      * The publisher of the Azure Virtual Machines Marketplace image. For example, Canonical or MicrosoftWindowsServer.
      * 
      */
-    @InputImport(name="vmImagePublisher")
+    @Import(name="vmImagePublisher")
       private final @Nullable Output<String> vmImagePublisher;
 
     public Output<String> getVmImagePublisher() {
@@ -168,7 +168,7 @@ public final class NodeTypeArgs extends io.pulumi.resources.ResourceArgs {
      * The SKU of the Azure Virtual Machines Marketplace image. For example, 14.04.0-LTS or 2012-R2-Datacenter.
      * 
      */
-    @InputImport(name="vmImageSku")
+    @Import(name="vmImageSku")
       private final @Nullable Output<String> vmImageSku;
 
     public Output<String> getVmImageSku() {
@@ -179,7 +179,7 @@ public final class NodeTypeArgs extends io.pulumi.resources.ResourceArgs {
      * The version of the Azure Virtual Machines Marketplace image. A value of 'latest' can be specified to select the latest version of an image. If omitted, the default is 'latest'.
      * 
      */
-    @InputImport(name="vmImageVersion")
+    @Import(name="vmImageVersion")
       private final @Nullable Output<String> vmImageVersion;
 
     public Output<String> getVmImageVersion() {
@@ -190,7 +190,7 @@ public final class NodeTypeArgs extends io.pulumi.resources.ResourceArgs {
      * The number of nodes in the node type.
      * 
      */
-    @InputImport(name="vmInstanceCount", required=true)
+    @Import(name="vmInstanceCount", required=true)
       private final Output<Integer> vmInstanceCount;
 
     public Output<Integer> getVmInstanceCount() {
@@ -201,7 +201,7 @@ public final class NodeTypeArgs extends io.pulumi.resources.ResourceArgs {
      * The secrets to install in the virtual machines.
      * 
      */
-    @InputImport(name="vmSecrets")
+    @Import(name="vmSecrets")
       private final @Nullable Output<List<VaultSecretGroupArgs>> vmSecrets;
 
     public Output<List<VaultSecretGroupArgs>> getVmSecrets() {
@@ -212,7 +212,7 @@ public final class NodeTypeArgs extends io.pulumi.resources.ResourceArgs {
      * The size of virtual machines in the pool. All virtual machines in a pool are the same size. For example, Standard_D3.
      * 
      */
-    @InputImport(name="vmSize")
+    @Import(name="vmSize")
       private final @Nullable Output<String> vmSize;
 
     public Output<String> getVmSize() {

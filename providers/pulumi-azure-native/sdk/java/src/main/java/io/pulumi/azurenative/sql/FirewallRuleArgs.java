@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.sql;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class FirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
      * The end IP address of the firewall rule. Must be IPv4 format. Must be greater than or equal to startIpAddress. Use value '0.0.0.0' for all Azure-internal IP addresses.
      * 
      */
-    @InputImport(name="endIpAddress")
+    @Import(name="endIpAddress")
       private final @Nullable Output<String> endIpAddress;
 
     public Output<String> getEndIpAddress() {
@@ -29,7 +29,7 @@ public final class FirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the firewall rule.
      * 
      */
-    @InputImport(name="firewallRuleName")
+    @Import(name="firewallRuleName")
       private final @Nullable Output<String> firewallRuleName;
 
     public Output<String> getFirewallRuleName() {
@@ -40,7 +40,7 @@ public final class FirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
      * Resource name.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -51,7 +51,7 @@ public final class FirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -62,7 +62,7 @@ public final class FirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the server.
      * 
      */
-    @InputImport(name="serverName", required=true)
+    @Import(name="serverName", required=true)
       private final Output<String> serverName;
 
     public Output<String> getServerName() {
@@ -73,7 +73,7 @@ public final class FirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
      * The start IP address of the firewall rule. Must be IPv4 format. Use value '0.0.0.0' for all Azure-internal IP addresses.
      * 
      */
-    @InputImport(name="startIpAddress")
+    @Import(name="startIpAddress")
       private final @Nullable Output<String> startIpAddress;
 
     public Output<String> getStartIpAddress() {

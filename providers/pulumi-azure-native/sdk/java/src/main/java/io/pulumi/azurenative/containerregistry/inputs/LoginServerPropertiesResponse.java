@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.containerregistry.inputs;
 
 import io.pulumi.azurenative.containerregistry.inputs.TlsPropertiesResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class LoginServerPropertiesResponse extends io.pulumi.resources.Inv
      * The host of the connected registry. Can be FQDN or IP.
      * 
      */
-    @InputImport(name="host", required=true)
+    @Import(name="host", required=true)
       private final String host;
 
     public String getHost() {
@@ -32,7 +32,7 @@ public final class LoginServerPropertiesResponse extends io.pulumi.resources.Inv
      * The TLS properties of the connected registry login server.
      * 
      */
-    @InputImport(name="tls", required=true)
+    @Import(name="tls", required=true)
       private final TlsPropertiesResponse tls;
 
     public TlsPropertiesResponse getTls() {

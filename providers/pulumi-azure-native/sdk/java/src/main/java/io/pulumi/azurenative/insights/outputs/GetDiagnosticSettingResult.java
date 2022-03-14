@@ -5,14 +5,14 @@ package io.pulumi.azurenative.insights.outputs;
 
 import io.pulumi.azurenative.insights.outputs.LogSettingsResponse;
 import io.pulumi.azurenative.insights.outputs.MetricSettingsResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetDiagnosticSettingResult {
     /**
      * The resource Id for the event hub authorization rule.
@@ -70,19 +70,19 @@ public final class GetDiagnosticSettingResult {
      */
     private final @Nullable String workspaceId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDiagnosticSettingResult(
-        @OutputCustomType.Parameter("eventHubAuthorizationRuleId") @Nullable String eventHubAuthorizationRuleId,
-        @OutputCustomType.Parameter("eventHubName") @Nullable String eventHubName,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("logAnalyticsDestinationType") @Nullable String logAnalyticsDestinationType,
-        @OutputCustomType.Parameter("logs") @Nullable List<LogSettingsResponse> logs,
-        @OutputCustomType.Parameter("metrics") @Nullable List<MetricSettingsResponse> metrics,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("serviceBusRuleId") @Nullable String serviceBusRuleId,
-        @OutputCustomType.Parameter("storageAccountId") @Nullable String storageAccountId,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("workspaceId") @Nullable String workspaceId) {
+        @CustomType.Parameter("eventHubAuthorizationRuleId") @Nullable String eventHubAuthorizationRuleId,
+        @CustomType.Parameter("eventHubName") @Nullable String eventHubName,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("logAnalyticsDestinationType") @Nullable String logAnalyticsDestinationType,
+        @CustomType.Parameter("logs") @Nullable List<LogSettingsResponse> logs,
+        @CustomType.Parameter("metrics") @Nullable List<MetricSettingsResponse> metrics,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("serviceBusRuleId") @Nullable String serviceBusRuleId,
+        @CustomType.Parameter("storageAccountId") @Nullable String storageAccountId,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("workspaceId") @Nullable String workspaceId) {
         this.eventHubAuthorizationRuleId = eventHubAuthorizationRuleId;
         this.eventHubName = eventHubName;
         this.id = id;

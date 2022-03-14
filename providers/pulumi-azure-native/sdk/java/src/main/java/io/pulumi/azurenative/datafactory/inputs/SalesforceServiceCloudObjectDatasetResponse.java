@@ -6,7 +6,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 import io.pulumi.azurenative.datafactory.inputs.DatasetResponseFolder;
 import io.pulumi.azurenative.datafactory.inputs.LinkedServiceReferenceResponse;
 import io.pulumi.azurenative.datafactory.inputs.ParameterSpecificationResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -28,7 +28,7 @@ public final class SalesforceServiceCloudObjectDatasetResponse extends io.pulumi
      * List of tags that can be used for describing the Dataset.
      * 
      */
-    @InputImport(name="annotations")
+    @Import(name="annotations")
       private final @Nullable List<Object> annotations;
 
     public List<Object> getAnnotations() {
@@ -39,7 +39,7 @@ public final class SalesforceServiceCloudObjectDatasetResponse extends io.pulumi
      * Dataset description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable String description;
 
     public Optional<String> getDescription() {
@@ -50,7 +50,7 @@ public final class SalesforceServiceCloudObjectDatasetResponse extends io.pulumi
      * The folder that this Dataset is in. If not specified, Dataset will appear at the root level.
      * 
      */
-    @InputImport(name="folder")
+    @Import(name="folder")
       private final @Nullable DatasetResponseFolder folder;
 
     public Optional<DatasetResponseFolder> getFolder() {
@@ -61,7 +61,7 @@ public final class SalesforceServiceCloudObjectDatasetResponse extends io.pulumi
      * Linked service reference.
      * 
      */
-    @InputImport(name="linkedServiceName", required=true)
+    @Import(name="linkedServiceName", required=true)
       private final LinkedServiceReferenceResponse linkedServiceName;
 
     public LinkedServiceReferenceResponse getLinkedServiceName() {
@@ -72,7 +72,7 @@ public final class SalesforceServiceCloudObjectDatasetResponse extends io.pulumi
      * The Salesforce Service Cloud object API name. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="objectApiName")
+    @Import(name="objectApiName")
       private final @Nullable Object objectApiName;
 
     public Optional<Object> getObjectApiName() {
@@ -83,7 +83,7 @@ public final class SalesforceServiceCloudObjectDatasetResponse extends io.pulumi
      * Parameters for dataset.
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
     public Map<String,ParameterSpecificationResponse> getParameters() {
@@ -94,7 +94,7 @@ public final class SalesforceServiceCloudObjectDatasetResponse extends io.pulumi
      * Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.
      * 
      */
-    @InputImport(name="schema")
+    @Import(name="schema")
       private final @Nullable Object schema;
 
     public Optional<Object> getSchema() {
@@ -105,7 +105,7 @@ public final class SalesforceServiceCloudObjectDatasetResponse extends io.pulumi
      * Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.
      * 
      */
-    @InputImport(name="structure")
+    @Import(name="structure")
       private final @Nullable Object structure;
 
     public Optional<Object> getStructure() {
@@ -117,7 +117,7 @@ public final class SalesforceServiceCloudObjectDatasetResponse extends io.pulumi
      * Expected value is 'SalesforceServiceCloudObject'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

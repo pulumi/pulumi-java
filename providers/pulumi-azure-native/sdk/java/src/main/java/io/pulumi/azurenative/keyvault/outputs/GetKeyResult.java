@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.keyvault.outputs;
 
 import io.pulumi.azurenative.keyvault.outputs.KeyAttributesResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetKeyResult {
     /**
      * The attributes of the key.
@@ -72,20 +72,20 @@ public final class GetKeyResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetKeyResult(
-        @OutputCustomType.Parameter("attributes") @Nullable KeyAttributesResponse attributes,
-        @OutputCustomType.Parameter("curveName") @Nullable String curveName,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("keyOps") @Nullable List<String> keyOps,
-        @OutputCustomType.Parameter("keySize") @Nullable Integer keySize,
-        @OutputCustomType.Parameter("keyUri") String keyUri,
-        @OutputCustomType.Parameter("keyUriWithVersion") String keyUriWithVersion,
-        @OutputCustomType.Parameter("kty") @Nullable String kty,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("tags") Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("attributes") @Nullable KeyAttributesResponse attributes,
+        @CustomType.Parameter("curveName") @Nullable String curveName,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("keyOps") @Nullable List<String> keyOps,
+        @CustomType.Parameter("keySize") @Nullable Integer keySize,
+        @CustomType.Parameter("keyUri") String keyUri,
+        @CustomType.Parameter("keyUriWithVersion") String keyUriWithVersion,
+        @CustomType.Parameter("kty") @Nullable String kty,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("tags") Map<String,String> tags,
+        @CustomType.Parameter("type") String type) {
         this.attributes = attributes;
         this.curveName = curveName;
         this.id = id;

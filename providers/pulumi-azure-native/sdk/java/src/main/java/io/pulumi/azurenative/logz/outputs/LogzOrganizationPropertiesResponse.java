@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.logz.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class LogzOrganizationPropertiesResponse {
     /**
      * Name of the Logz organization.
@@ -32,12 +32,12 @@ public final class LogzOrganizationPropertiesResponse {
      */
     private final @Nullable String singleSignOnUrl;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LogzOrganizationPropertiesResponse(
-        @OutputCustomType.Parameter("companyName") @Nullable String companyName,
-        @OutputCustomType.Parameter("enterpriseAppId") @Nullable String enterpriseAppId,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("singleSignOnUrl") @Nullable String singleSignOnUrl) {
+        @CustomType.Parameter("companyName") @Nullable String companyName,
+        @CustomType.Parameter("enterpriseAppId") @Nullable String enterpriseAppId,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("singleSignOnUrl") @Nullable String singleSignOnUrl) {
         this.companyName = companyName;
         this.enterpriseAppId = enterpriseAppId;
         this.id = id;

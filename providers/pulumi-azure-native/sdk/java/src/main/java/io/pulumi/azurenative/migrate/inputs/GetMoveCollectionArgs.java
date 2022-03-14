@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.migrate.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetMoveCollectionArgs extends io.pulumi.resources.InvokeArgs 
      * The Move Collection Name.
      * 
      */
-    @InputImport(name="moveCollectionName", required=true)
+    @Import(name="moveCollectionName", required=true)
       private final String moveCollectionName;
 
     public String getMoveCollectionName() {
@@ -27,7 +27,7 @@ public final class GetMoveCollectionArgs extends io.pulumi.resources.InvokeArgs 
      * The Resource Group Name.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {

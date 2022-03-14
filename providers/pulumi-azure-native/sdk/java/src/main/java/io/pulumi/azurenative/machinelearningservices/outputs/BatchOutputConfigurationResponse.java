@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BatchOutputConfigurationResponse {
     /**
      * Customized output file name for append_row output action.
@@ -22,10 +22,10 @@ public final class BatchOutputConfigurationResponse {
      */
     private final @Nullable String outputAction;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BatchOutputConfigurationResponse(
-        @OutputCustomType.Parameter("appendRowFileName") @Nullable String appendRowFileName,
-        @OutputCustomType.Parameter("outputAction") @Nullable String outputAction) {
+        @CustomType.Parameter("appendRowFileName") @Nullable String appendRowFileName,
+        @CustomType.Parameter("outputAction") @Nullable String outputAction) {
         this.appendRowFileName = appendRowFileName;
         this.outputAction = outputAction;
     }

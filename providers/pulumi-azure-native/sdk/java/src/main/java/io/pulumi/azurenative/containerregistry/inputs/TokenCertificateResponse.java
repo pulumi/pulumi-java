@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerregistry.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class TokenCertificateResponse extends io.pulumi.resources.InvokeAr
      * Base 64 encoded string of the public certificate1 in PEM format that will be used for authenticating the token.
      * 
      */
-    @InputImport(name="encodedPemCertificate")
+    @Import(name="encodedPemCertificate")
       private final @Nullable String encodedPemCertificate;
 
     public Optional<String> getEncodedPemCertificate() {
@@ -33,14 +33,14 @@ public final class TokenCertificateResponse extends io.pulumi.resources.InvokeAr
      * The expiry datetime of the certificate.
      * 
      */
-    @InputImport(name="expiry")
+    @Import(name="expiry")
       private final @Nullable String expiry;
 
     public Optional<String> getExpiry() {
         return this.expiry == null ? Optional.empty() : Optional.ofNullable(this.expiry);
     }
 
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -51,7 +51,7 @@ public final class TokenCertificateResponse extends io.pulumi.resources.InvokeAr
      * The thumbprint of the certificate.
      * 
      */
-    @InputImport(name="thumbprint")
+    @Import(name="thumbprint")
       private final @Nullable String thumbprint;
 
     public Optional<String> getThumbprint() {

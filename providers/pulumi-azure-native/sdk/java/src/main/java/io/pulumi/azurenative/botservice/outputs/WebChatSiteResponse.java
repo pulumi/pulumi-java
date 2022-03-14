@@ -3,12 +3,12 @@
 
 package io.pulumi.azurenative.botservice.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class WebChatSiteResponse {
     /**
      * Whether this site is enabled for DirectLine channel
@@ -41,14 +41,14 @@ public final class WebChatSiteResponse {
      */
     private final String siteName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WebChatSiteResponse(
-        @OutputCustomType.Parameter("isEnabled") Boolean isEnabled,
-        @OutputCustomType.Parameter("isWebchatPreviewEnabled") Boolean isWebchatPreviewEnabled,
-        @OutputCustomType.Parameter("key") String key,
-        @OutputCustomType.Parameter("key2") String key2,
-        @OutputCustomType.Parameter("siteId") String siteId,
-        @OutputCustomType.Parameter("siteName") String siteName) {
+        @CustomType.Parameter("isEnabled") Boolean isEnabled,
+        @CustomType.Parameter("isWebchatPreviewEnabled") Boolean isWebchatPreviewEnabled,
+        @CustomType.Parameter("key") String key,
+        @CustomType.Parameter("key2") String key2,
+        @CustomType.Parameter("siteId") String siteId,
+        @CustomType.Parameter("siteName") String siteName) {
         this.isEnabled = isEnabled;
         this.isWebchatPreviewEnabled = isWebchatPreviewEnabled;
         this.key = key;

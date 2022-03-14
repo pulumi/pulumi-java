@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class AzureToAzureNetworkMappingSettingsResponse extends io.pulumi.
      * Expected value is 'AzureToAzure'.
      * 
      */
-    @InputImport(name="instanceType", required=true)
+    @Import(name="instanceType", required=true)
       private final String instanceType;
 
     public String getInstanceType() {
@@ -34,7 +34,7 @@ public final class AzureToAzureNetworkMappingSettingsResponse extends io.pulumi.
      * The primary fabric location.
      * 
      */
-    @InputImport(name="primaryFabricLocation")
+    @Import(name="primaryFabricLocation")
       private final @Nullable String primaryFabricLocation;
 
     public Optional<String> getPrimaryFabricLocation() {
@@ -45,7 +45,7 @@ public final class AzureToAzureNetworkMappingSettingsResponse extends io.pulumi.
      * The recovery fabric location.
      * 
      */
-    @InputImport(name="recoveryFabricLocation")
+    @Import(name="recoveryFabricLocation")
       private final @Nullable String recoveryFabricLocation;
 
     public Optional<String> getRecoveryFabricLocation() {

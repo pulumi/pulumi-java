@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.eventgrid.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class StorageQueueEventSubscriptionDestinationArgs extends io.pulum
      * Expected value is 'StorageQueue'.
      * 
      */
-    @InputImport(name="endpointType", required=true)
+    @Import(name="endpointType", required=true)
       private final Output<String> endpointType;
 
     public Output<String> getEndpointType() {
@@ -34,7 +34,7 @@ public final class StorageQueueEventSubscriptionDestinationArgs extends io.pulum
      * The name of the Storage queue under a storage account that is the destination of an event subscription.
      * 
      */
-    @InputImport(name="queueName")
+    @Import(name="queueName")
       private final @Nullable Output<String> queueName;
 
     public Output<String> getQueueName() {
@@ -45,7 +45,7 @@ public final class StorageQueueEventSubscriptionDestinationArgs extends io.pulum
      * The Azure Resource ID of the storage account that contains the queue that is the destination of an event subscription.
      * 
      */
-    @InputImport(name="resourceId")
+    @Import(name="resourceId")
       private final @Nullable Output<String> resourceId;
 
     public Output<String> getResourceId() {

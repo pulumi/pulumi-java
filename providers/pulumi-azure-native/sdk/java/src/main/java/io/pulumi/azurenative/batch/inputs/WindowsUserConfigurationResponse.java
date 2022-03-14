@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.batch.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +18,7 @@ public final class WindowsUserConfigurationResponse extends io.pulumi.resources.
      * Specifies login mode for the user. The default value for VirtualMachineConfiguration pools is interactive mode and for CloudServiceConfiguration pools is batch mode.
      * 
      */
-    @InputImport(name="loginMode")
+    @Import(name="loginMode")
       private final @Nullable String loginMode;
 
     public Optional<String> getLoginMode() {

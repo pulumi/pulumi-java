@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.storage.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ListStorageAccountServiceSASResult {
     /**
      * List service SAS credentials of specific resource.
@@ -15,8 +15,8 @@ public final class ListStorageAccountServiceSASResult {
      */
     private final String serviceSasToken;
 
-    @OutputCustomType.Constructor
-    private ListStorageAccountServiceSASResult(@OutputCustomType.Parameter("serviceSasToken") String serviceSasToken) {
+    @CustomType.Constructor
+    private ListStorageAccountServiceSASResult(@CustomType.Parameter("serviceSasToken") String serviceSasToken) {
         this.serviceSasToken = serviceSasToken;
     }
 

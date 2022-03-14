@@ -11,7 +11,7 @@ import io.pulumi.azurenative.connectedvmwarevsphere.outputs.SystemDataResponse;
 import io.pulumi.azurenative.connectedvmwarevsphere.outputs.VICredentialResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -40,7 +40,7 @@ public class VCenter extends io.pulumi.resources.CustomResource {
      * Gets or sets the connection status to the vCenter.
      * 
      */
-    @OutputExport(name="connectionStatus", type=String.class, parameters={})
+    @Export(name="connectionStatus", type=String.class, parameters={})
     private Output<String> connectionStatus;
 
     /**
@@ -54,7 +54,7 @@ public class VCenter extends io.pulumi.resources.CustomResource {
      * Username / Password Credentials to connect to vcenter.
      * 
      */
-    @OutputExport(name="credentials", type=VICredentialResponse.class, parameters={})
+    @Export(name="credentials", type=VICredentialResponse.class, parameters={})
     private Output</* @Nullable */ VICredentialResponse> credentials;
 
     /**
@@ -68,7 +68,7 @@ public class VCenter extends io.pulumi.resources.CustomResource {
      * Gets the name of the corresponding resource in Kubernetes.
      * 
      */
-    @OutputExport(name="customResourceName", type=String.class, parameters={})
+    @Export(name="customResourceName", type=String.class, parameters={})
     private Output<String> customResourceName;
 
     /**
@@ -82,7 +82,7 @@ public class VCenter extends io.pulumi.resources.CustomResource {
      * Gets or sets the extended location.
      * 
      */
-    @OutputExport(name="extendedLocation", type=ExtendedLocationResponse.class, parameters={})
+    @Export(name="extendedLocation", type=ExtendedLocationResponse.class, parameters={})
     private Output</* @Nullable */ ExtendedLocationResponse> extendedLocation;
 
     /**
@@ -96,7 +96,7 @@ public class VCenter extends io.pulumi.resources.CustomResource {
      * Gets or sets the FQDN/IPAddress of the vCenter.
      * 
      */
-    @OutputExport(name="fqdn", type=String.class, parameters={})
+    @Export(name="fqdn", type=String.class, parameters={})
     private Output<String> fqdn;
 
     /**
@@ -110,7 +110,7 @@ public class VCenter extends io.pulumi.resources.CustomResource {
      * Gets or sets the instance UUID of the vCenter.
      * 
      */
-    @OutputExport(name="instanceUuid", type=String.class, parameters={})
+    @Export(name="instanceUuid", type=String.class, parameters={})
     private Output<String> instanceUuid;
 
     /**
@@ -124,7 +124,7 @@ public class VCenter extends io.pulumi.resources.CustomResource {
      * Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
     /**
@@ -138,7 +138,7 @@ public class VCenter extends io.pulumi.resources.CustomResource {
      * Gets or sets the location.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -152,7 +152,7 @@ public class VCenter extends io.pulumi.resources.CustomResource {
      * Gets or sets the name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -166,7 +166,7 @@ public class VCenter extends io.pulumi.resources.CustomResource {
      * Gets or sets the port of the vCenter.
      * 
      */
-    @OutputExport(name="port", type=Integer.class, parameters={})
+    @Export(name="port", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> port;
 
     /**
@@ -180,7 +180,7 @@ public class VCenter extends io.pulumi.resources.CustomResource {
      * Gets or sets the provisioning state.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -194,7 +194,7 @@ public class VCenter extends io.pulumi.resources.CustomResource {
      * The resource status information.
      * 
      */
-    @OutputExport(name="statuses", type=List.class, parameters={ResourceStatusResponse.class})
+    @Export(name="statuses", type=List.class, parameters={ResourceStatusResponse.class})
     private Output<List<ResourceStatusResponse>> statuses;
 
     /**
@@ -208,7 +208,7 @@ public class VCenter extends io.pulumi.resources.CustomResource {
      * The system data.
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -222,7 +222,7 @@ public class VCenter extends io.pulumi.resources.CustomResource {
      * Gets or sets the Resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -236,7 +236,7 @@ public class VCenter extends io.pulumi.resources.CustomResource {
      * Gets or sets the type of the resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -250,7 +250,7 @@ public class VCenter extends io.pulumi.resources.CustomResource {
      * Gets or sets a unique identifier for this resource.
      * 
      */
-    @OutputExport(name="uuid", type=String.class, parameters={})
+    @Export(name="uuid", type=String.class, parameters={})
     private Output<String> uuid;
 
     /**
@@ -264,7 +264,7 @@ public class VCenter extends io.pulumi.resources.CustomResource {
      * Gets or sets the version of the vCenter.
      * 
      */
-    @OutputExport(name="version", type=String.class, parameters={})
+    @Export(name="version", type=String.class, parameters={})
     private Output<String> version;
 
     /**

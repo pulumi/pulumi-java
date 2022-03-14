@@ -8,14 +8,14 @@ import io.pulumi.azurenative.streamanalytics.outputs.FunctionInputResponse;
 import io.pulumi.azurenative.streamanalytics.outputs.FunctionOutputResponse;
 import io.pulumi.azurenative.streamanalytics.outputs.JavaScriptFunctionBindingResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ScalarFunctionPropertiesResponse {
     /**
      * The physical binding of the function. For example, in the Azure Machine Learning web service’s case, this describes the endpoint.
@@ -44,13 +44,13 @@ public final class ScalarFunctionPropertiesResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ScalarFunctionPropertiesResponse(
-        @OutputCustomType.Parameter("binding") @Nullable Either<AzureMachineLearningWebServiceFunctionBindingResponse,JavaScriptFunctionBindingResponse> binding,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("inputs") @Nullable List<FunctionInputResponse> inputs,
-        @OutputCustomType.Parameter("output") @Nullable FunctionOutputResponse output,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("binding") @Nullable Either<AzureMachineLearningWebServiceFunctionBindingResponse,JavaScriptFunctionBindingResponse> binding,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("inputs") @Nullable List<FunctionInputResponse> inputs,
+        @CustomType.Parameter("output") @Nullable FunctionOutputResponse output,
+        @CustomType.Parameter("type") String type) {
         this.binding = binding;
         this.etag = etag;
         this.inputs = inputs;

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.network;
 import io.pulumi.azurenative.network.inputs.ExpressRouteCircuitPeeringIdArgs;
 import io.pulumi.azurenative.network.inputs.RoutingConfigurationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class ExpressRouteConnectionArgs extends io.pulumi.resources.Resour
      * Authorization key to establish the connection.
      * 
      */
-    @InputImport(name="authorizationKey")
+    @Import(name="authorizationKey")
       private final @Nullable Output<String> authorizationKey;
 
     public Output<String> getAuthorizationKey() {
@@ -33,7 +33,7 @@ public final class ExpressRouteConnectionArgs extends io.pulumi.resources.Resour
      * The name of the connection subresource.
      * 
      */
-    @InputImport(name="connectionName")
+    @Import(name="connectionName")
       private final @Nullable Output<String> connectionName;
 
     public Output<String> getConnectionName() {
@@ -44,7 +44,7 @@ public final class ExpressRouteConnectionArgs extends io.pulumi.resources.Resour
      * Enable internet security.
      * 
      */
-    @InputImport(name="enableInternetSecurity")
+    @Import(name="enableInternetSecurity")
       private final @Nullable Output<Boolean> enableInternetSecurity;
 
     public Output<Boolean> getEnableInternetSecurity() {
@@ -55,7 +55,7 @@ public final class ExpressRouteConnectionArgs extends io.pulumi.resources.Resour
      * The ExpressRoute circuit peering.
      * 
      */
-    @InputImport(name="expressRouteCircuitPeering", required=true)
+    @Import(name="expressRouteCircuitPeering", required=true)
       private final Output<ExpressRouteCircuitPeeringIdArgs> expressRouteCircuitPeering;
 
     public Output<ExpressRouteCircuitPeeringIdArgs> getExpressRouteCircuitPeering() {
@@ -66,7 +66,7 @@ public final class ExpressRouteConnectionArgs extends io.pulumi.resources.Resour
      * Enable FastPath to vWan Firewall hub.
      * 
      */
-    @InputImport(name="expressRouteGatewayBypass")
+    @Import(name="expressRouteGatewayBypass")
       private final @Nullable Output<Boolean> expressRouteGatewayBypass;
 
     public Output<Boolean> getExpressRouteGatewayBypass() {
@@ -77,7 +77,7 @@ public final class ExpressRouteConnectionArgs extends io.pulumi.resources.Resour
      * The name of the ExpressRoute gateway.
      * 
      */
-    @InputImport(name="expressRouteGatewayName", required=true)
+    @Import(name="expressRouteGatewayName", required=true)
       private final Output<String> expressRouteGatewayName;
 
     public Output<String> getExpressRouteGatewayName() {
@@ -88,7 +88,7 @@ public final class ExpressRouteConnectionArgs extends io.pulumi.resources.Resour
      * Resource ID.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
@@ -99,7 +99,7 @@ public final class ExpressRouteConnectionArgs extends io.pulumi.resources.Resour
      * The name of the resource.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -110,7 +110,7 @@ public final class ExpressRouteConnectionArgs extends io.pulumi.resources.Resour
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -121,7 +121,7 @@ public final class ExpressRouteConnectionArgs extends io.pulumi.resources.Resour
      * The Routing Configuration indicating the associated and propagated route tables on this connection.
      * 
      */
-    @InputImport(name="routingConfiguration")
+    @Import(name="routingConfiguration")
       private final @Nullable Output<RoutingConfigurationArgs> routingConfiguration;
 
     public Output<RoutingConfigurationArgs> getRoutingConfiguration() {
@@ -132,7 +132,7 @@ public final class ExpressRouteConnectionArgs extends io.pulumi.resources.Resour
      * The routing weight associated to the connection.
      * 
      */
-    @InputImport(name="routingWeight")
+    @Import(name="routingWeight")
       private final @Nullable Output<Integer> routingWeight;
 
     public Output<Integer> getRoutingWeight() {

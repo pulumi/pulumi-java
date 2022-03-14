@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +18,7 @@ public final class GetIpGroupArgs extends io.pulumi.resources.InvokeArgs {
      * Expands resourceIds (of Firewalls/Network Security Groups etc.) back referenced by the IpGroups resource.
      * 
      */
-    @InputImport(name="expand")
+    @Import(name="expand")
       private final @Nullable String expand;
 
     public Optional<String> getExpand() {
@@ -29,7 +29,7 @@ public final class GetIpGroupArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the ipGroups.
      * 
      */
-    @InputImport(name="ipGroupsName", required=true)
+    @Import(name="ipGroupsName", required=true)
       private final String ipGroupsName;
 
     public String getIpGroupsName() {
@@ -40,7 +40,7 @@ public final class GetIpGroupArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {

@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.machinelearningcompute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class StorageAccountCredentialsResponse {
     /**
      * The primary key of the storage account.
@@ -25,11 +25,11 @@ public final class StorageAccountCredentialsResponse {
      */
     private final String secondaryKey;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private StorageAccountCredentialsResponse(
-        @OutputCustomType.Parameter("primaryKey") String primaryKey,
-        @OutputCustomType.Parameter("resourceId") String resourceId,
-        @OutputCustomType.Parameter("secondaryKey") String secondaryKey) {
+        @CustomType.Parameter("primaryKey") String primaryKey,
+        @CustomType.Parameter("resourceId") String resourceId,
+        @CustomType.Parameter("secondaryKey") String secondaryKey) {
         this.primaryKey = primaryKey;
         this.resourceId = resourceId;
         this.secondaryKey = secondaryKey;

@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.machinelearning.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GraphEdgeResponse {
     /**
      * The source graph node's identifier.
@@ -32,12 +32,12 @@ public final class GraphEdgeResponse {
      */
     private final @Nullable String targetPortId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GraphEdgeResponse(
-        @OutputCustomType.Parameter("sourceNodeId") @Nullable String sourceNodeId,
-        @OutputCustomType.Parameter("sourcePortId") @Nullable String sourcePortId,
-        @OutputCustomType.Parameter("targetNodeId") @Nullable String targetNodeId,
-        @OutputCustomType.Parameter("targetPortId") @Nullable String targetPortId) {
+        @CustomType.Parameter("sourceNodeId") @Nullable String sourceNodeId,
+        @CustomType.Parameter("sourcePortId") @Nullable String sourcePortId,
+        @CustomType.Parameter("targetNodeId") @Nullable String targetNodeId,
+        @CustomType.Parameter("targetPortId") @Nullable String targetPortId) {
         this.sourceNodeId = sourceNodeId;
         this.sourcePortId = sourcePortId;
         this.targetNodeId = targetNodeId;

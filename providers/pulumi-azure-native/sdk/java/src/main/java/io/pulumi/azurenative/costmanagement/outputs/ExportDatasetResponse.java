@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.costmanagement.outputs;
 
 import io.pulumi.azurenative.costmanagement.outputs.ExportDatasetConfigurationResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ExportDatasetResponse {
     /**
      * The export dataset configuration.
@@ -23,10 +23,10 @@ public final class ExportDatasetResponse {
      */
     private final @Nullable String granularity;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ExportDatasetResponse(
-        @OutputCustomType.Parameter("configuration") @Nullable ExportDatasetConfigurationResponse configuration,
-        @OutputCustomType.Parameter("granularity") @Nullable String granularity) {
+        @CustomType.Parameter("configuration") @Nullable ExportDatasetConfigurationResponse configuration,
+        @CustomType.Parameter("granularity") @Nullable String granularity) {
         this.configuration = configuration;
         this.granularity = granularity;
     }

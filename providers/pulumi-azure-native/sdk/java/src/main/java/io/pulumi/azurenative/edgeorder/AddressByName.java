@@ -10,7 +10,7 @@ import io.pulumi.azurenative.edgeorder.outputs.ShippingAddressResponse;
 import io.pulumi.azurenative.edgeorder.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -38,7 +38,7 @@ public class AddressByName extends io.pulumi.resources.CustomResource {
      * Status of address validation
      * 
      */
-    @OutputExport(name="addressValidationStatus", type=String.class, parameters={})
+    @Export(name="addressValidationStatus", type=String.class, parameters={})
     private Output<String> addressValidationStatus;
 
     /**
@@ -52,7 +52,7 @@ public class AddressByName extends io.pulumi.resources.CustomResource {
      * Contact details for the address
      * 
      */
-    @OutputExport(name="contactDetails", type=ContactDetailsResponse.class, parameters={})
+    @Export(name="contactDetails", type=ContactDetailsResponse.class, parameters={})
     private Output<ContactDetailsResponse> contactDetails;
 
     /**
@@ -66,7 +66,7 @@ public class AddressByName extends io.pulumi.resources.CustomResource {
      * The geo-location where the resource lives
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -80,7 +80,7 @@ public class AddressByName extends io.pulumi.resources.CustomResource {
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -94,7 +94,7 @@ public class AddressByName extends io.pulumi.resources.CustomResource {
      * Shipping details for the address
      * 
      */
-    @OutputExport(name="shippingAddress", type=ShippingAddressResponse.class, parameters={})
+    @Export(name="shippingAddress", type=ShippingAddressResponse.class, parameters={})
     private Output</* @Nullable */ ShippingAddressResponse> shippingAddress;
 
     /**
@@ -108,7 +108,7 @@ public class AddressByName extends io.pulumi.resources.CustomResource {
      * Represents resource creation and update time
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -122,7 +122,7 @@ public class AddressByName extends io.pulumi.resources.CustomResource {
      * Resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -136,7 +136,7 @@ public class AddressByName extends io.pulumi.resources.CustomResource {
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.insights.DataCollectionRuleAssociationArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -34,7 +34,7 @@ public class DataCollectionRuleAssociation extends io.pulumi.resources.CustomRes
      * The resource ID of the data collection rule that is to be associated.
      * 
      */
-    @OutputExport(name="dataCollectionRuleId", type=String.class, parameters={})
+    @Export(name="dataCollectionRuleId", type=String.class, parameters={})
     private Output</* @Nullable */ String> dataCollectionRuleId;
 
     /**
@@ -48,7 +48,7 @@ public class DataCollectionRuleAssociation extends io.pulumi.resources.CustomRes
      * Description of the association.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -62,7 +62,7 @@ public class DataCollectionRuleAssociation extends io.pulumi.resources.CustomRes
      * Resource entity tag (ETag).
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -76,7 +76,7 @@ public class DataCollectionRuleAssociation extends io.pulumi.resources.CustomRes
      * The name of the resource.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -90,7 +90,7 @@ public class DataCollectionRuleAssociation extends io.pulumi.resources.CustomRes
      * The resource provisioning state.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -104,7 +104,7 @@ public class DataCollectionRuleAssociation extends io.pulumi.resources.CustomRes
      * The type of the resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

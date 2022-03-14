@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.databoxedge.outputs;
 
 import io.pulumi.azurenative.databoxedge.outputs.AsymmetricEncryptedSecretResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SecretResponse {
     /**
      * Encrypted (using device public key) secret value.
@@ -23,10 +23,10 @@ public final class SecretResponse {
      */
     private final @Nullable String keyVaultId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SecretResponse(
-        @OutputCustomType.Parameter("encryptedSecret") @Nullable AsymmetricEncryptedSecretResponse encryptedSecret,
-        @OutputCustomType.Parameter("keyVaultId") @Nullable String keyVaultId) {
+        @CustomType.Parameter("encryptedSecret") @Nullable AsymmetricEncryptedSecretResponse encryptedSecret,
+        @CustomType.Parameter("keyVaultId") @Nullable String keyVaultId) {
         this.encryptedSecret = encryptedSecret;
         this.keyVaultId = keyVaultId;
     }

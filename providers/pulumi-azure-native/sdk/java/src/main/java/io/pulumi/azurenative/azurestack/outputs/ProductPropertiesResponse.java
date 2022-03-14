@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.azurestack.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ProductPropertiesResponse {
     /**
      * The version.
@@ -17,8 +17,8 @@ public final class ProductPropertiesResponse {
      */
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor
-    private ProductPropertiesResponse(@OutputCustomType.Parameter("version") @Nullable String version) {
+    @CustomType.Constructor
+    private ProductPropertiesResponse(@CustomType.Parameter("version") @Nullable String version) {
         this.version = version;
     }
 

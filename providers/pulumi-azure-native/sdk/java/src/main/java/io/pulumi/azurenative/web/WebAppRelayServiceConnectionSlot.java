@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.web.WebAppRelayServiceConnectionSlotArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -28,25 +28,25 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="azure-native:web:WebAppRelayServiceConnectionSlot")
 public class WebAppRelayServiceConnectionSlot extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="biztalkUri", type=String.class, parameters={})
+    @Export(name="biztalkUri", type=String.class, parameters={})
     private Output</* @Nullable */ String> biztalkUri;
 
     public Output</* @Nullable */ String> getBiztalkUri() {
         return this.biztalkUri;
     }
-    @OutputExport(name="entityConnectionString", type=String.class, parameters={})
+    @Export(name="entityConnectionString", type=String.class, parameters={})
     private Output</* @Nullable */ String> entityConnectionString;
 
     public Output</* @Nullable */ String> getEntityConnectionString() {
         return this.entityConnectionString;
     }
-    @OutputExport(name="entityName", type=String.class, parameters={})
+    @Export(name="entityName", type=String.class, parameters={})
     private Output</* @Nullable */ String> entityName;
 
     public Output</* @Nullable */ String> getEntityName() {
         return this.entityName;
     }
-    @OutputExport(name="hostname", type=String.class, parameters={})
+    @Export(name="hostname", type=String.class, parameters={})
     private Output</* @Nullable */ String> hostname;
 
     public Output</* @Nullable */ String> getHostname() {
@@ -56,7 +56,7 @@ public class WebAppRelayServiceConnectionSlot extends io.pulumi.resources.Custom
      * Kind of resource.
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
     /**
@@ -70,7 +70,7 @@ public class WebAppRelayServiceConnectionSlot extends io.pulumi.resources.Custom
      * Resource Name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -80,19 +80,19 @@ public class WebAppRelayServiceConnectionSlot extends io.pulumi.resources.Custom
     public Output<String> getName() {
         return this.name;
     }
-    @OutputExport(name="port", type=Integer.class, parameters={})
+    @Export(name="port", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> port;
 
     public Output</* @Nullable */ Integer> getPort() {
         return this.port;
     }
-    @OutputExport(name="resourceConnectionString", type=String.class, parameters={})
+    @Export(name="resourceConnectionString", type=String.class, parameters={})
     private Output</* @Nullable */ String> resourceConnectionString;
 
     public Output</* @Nullable */ String> getResourceConnectionString() {
         return this.resourceConnectionString;
     }
-    @OutputExport(name="resourceType", type=String.class, parameters={})
+    @Export(name="resourceType", type=String.class, parameters={})
     private Output</* @Nullable */ String> resourceType;
 
     public Output</* @Nullable */ String> getPropResourceType() {
@@ -102,7 +102,7 @@ public class WebAppRelayServiceConnectionSlot extends io.pulumi.resources.Custom
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.compute.outputs;
 
 import io.pulumi.azurenative.compute.outputs.SubResourceResponse;
 import io.pulumi.azurenative.compute.outputs.VirtualMachinePublicIPAddressConfigurationResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VirtualMachineNetworkInterfaceIPConfigurationResponse {
     /**
      * Specifies an array of references to backend address pools of application gateways. A virtual machine can reference backend address pools of multiple application gateways. Multiple virtual machines cannot use the same application gateway.
@@ -56,16 +56,16 @@ public final class VirtualMachineNetworkInterfaceIPConfigurationResponse {
      */
     private final @Nullable SubResourceResponse subnet;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VirtualMachineNetworkInterfaceIPConfigurationResponse(
-        @OutputCustomType.Parameter("applicationGatewayBackendAddressPools") @Nullable List<SubResourceResponse> applicationGatewayBackendAddressPools,
-        @OutputCustomType.Parameter("applicationSecurityGroups") @Nullable List<SubResourceResponse> applicationSecurityGroups,
-        @OutputCustomType.Parameter("loadBalancerBackendAddressPools") @Nullable List<SubResourceResponse> loadBalancerBackendAddressPools,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("primary") @Nullable Boolean primary,
-        @OutputCustomType.Parameter("privateIPAddressVersion") @Nullable String privateIPAddressVersion,
-        @OutputCustomType.Parameter("publicIPAddressConfiguration") @Nullable VirtualMachinePublicIPAddressConfigurationResponse publicIPAddressConfiguration,
-        @OutputCustomType.Parameter("subnet") @Nullable SubResourceResponse subnet) {
+        @CustomType.Parameter("applicationGatewayBackendAddressPools") @Nullable List<SubResourceResponse> applicationGatewayBackendAddressPools,
+        @CustomType.Parameter("applicationSecurityGroups") @Nullable List<SubResourceResponse> applicationSecurityGroups,
+        @CustomType.Parameter("loadBalancerBackendAddressPools") @Nullable List<SubResourceResponse> loadBalancerBackendAddressPools,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("primary") @Nullable Boolean primary,
+        @CustomType.Parameter("privateIPAddressVersion") @Nullable String privateIPAddressVersion,
+        @CustomType.Parameter("publicIPAddressConfiguration") @Nullable VirtualMachinePublicIPAddressConfigurationResponse publicIPAddressConfiguration,
+        @CustomType.Parameter("subnet") @Nullable SubResourceResponse subnet) {
         this.applicationGatewayBackendAddressPools = applicationGatewayBackendAddressPools;
         this.applicationSecurityGroups = applicationSecurityGroups;
         this.loadBalancerBackendAddressPools = loadBalancerBackendAddressPools;

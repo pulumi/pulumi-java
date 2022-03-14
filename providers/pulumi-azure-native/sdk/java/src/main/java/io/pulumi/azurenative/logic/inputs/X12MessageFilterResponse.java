@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.logic.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class X12MessageFilterResponse extends io.pulumi.resources.InvokeAr
      * The message filter type.
      * 
      */
-    @InputImport(name="messageFilterType", required=true)
+    @Import(name="messageFilterType", required=true)
       private final String messageFilterType;
 
     public String getMessageFilterType() {

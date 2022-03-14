@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.sql.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetManagedInstanceAdministratorResult {
     /**
      * Type of the managed instance administrator.
@@ -47,15 +47,15 @@ public final class GetManagedInstanceAdministratorResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetManagedInstanceAdministratorResult(
-        @OutputCustomType.Parameter("administratorType") String administratorType,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("login") String login,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("sid") String sid,
-        @OutputCustomType.Parameter("tenantId") @Nullable String tenantId,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("administratorType") String administratorType,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("login") String login,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("sid") String sid,
+        @CustomType.Parameter("tenantId") @Nullable String tenantId,
+        @CustomType.Parameter("type") String type) {
         this.administratorType = administratorType;
         this.id = id;
         this.login = login;

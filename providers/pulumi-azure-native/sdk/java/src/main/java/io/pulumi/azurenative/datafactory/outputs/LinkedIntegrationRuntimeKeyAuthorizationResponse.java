@@ -4,11 +4,11 @@
 package io.pulumi.azurenative.datafactory.outputs;
 
 import io.pulumi.azurenative.datafactory.outputs.SecureStringResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class LinkedIntegrationRuntimeKeyAuthorizationResponse {
     /**
      * The authorization type for integration runtime sharing.
@@ -22,10 +22,10 @@ public final class LinkedIntegrationRuntimeKeyAuthorizationResponse {
      */
     private final SecureStringResponse key;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LinkedIntegrationRuntimeKeyAuthorizationResponse(
-        @OutputCustomType.Parameter("authorizationType") String authorizationType,
-        @OutputCustomType.Parameter("key") SecureStringResponse key) {
+        @CustomType.Parameter("authorizationType") String authorizationType,
+        @CustomType.Parameter("key") SecureStringResponse key) {
         this.authorizationType = authorizationType;
         this.key = key;
     }

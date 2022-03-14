@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.storagecache.inputs;
 
 import io.pulumi.azurenative.storagecache.inputs.NfsAccessRuleResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class NfsAccessPolicyResponse extends io.pulumi.resources.InvokeArg
      * The set of rules describing client accesses allowed under this policy.
      * 
      */
-    @InputImport(name="accessRules", required=true)
+    @Import(name="accessRules", required=true)
       private final List<NfsAccessRuleResponse> accessRules;
 
     public List<NfsAccessRuleResponse> getAccessRules() {
@@ -33,7 +33,7 @@ public final class NfsAccessPolicyResponse extends io.pulumi.resources.InvokeArg
      * Name identifying this policy. Access Policy names are not case sensitive.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {

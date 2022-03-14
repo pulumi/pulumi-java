@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.operationalinsights.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class WorkspaceSkuResponse {
     /**
      * The capacity reservation level for this workspace, when CapacityReservation sku is selected.
@@ -28,11 +28,11 @@ public final class WorkspaceSkuResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WorkspaceSkuResponse(
-        @OutputCustomType.Parameter("capacityReservationLevel") @Nullable Integer capacityReservationLevel,
-        @OutputCustomType.Parameter("lastSkuUpdate") String lastSkuUpdate,
-        @OutputCustomType.Parameter("name") String name) {
+        @CustomType.Parameter("capacityReservationLevel") @Nullable Integer capacityReservationLevel,
+        @CustomType.Parameter("lastSkuUpdate") String lastSkuUpdate,
+        @CustomType.Parameter("name") String name) {
         this.capacityReservationLevel = capacityReservationLevel;
         this.lastSkuUpdate = lastSkuUpdate;
         this.name = name;

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.datafactory.outputs.ActivityDependencyResponse;
 import io.pulumi.azurenative.datafactory.outputs.ActivityPolicyResponse;
 import io.pulumi.azurenative.datafactory.outputs.LinkedServiceReferenceResponse;
 import io.pulumi.azurenative.datafactory.outputs.UserPropertyResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -15,7 +15,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AzureDataExplorerCommandActivityResponse {
     /**
      * A control command, according to the Azure Data Explorer command syntax. Type: string (or Expression with resultType string).
@@ -64,17 +64,17 @@ public final class AzureDataExplorerCommandActivityResponse {
      */
     private final @Nullable List<UserPropertyResponse> userProperties;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AzureDataExplorerCommandActivityResponse(
-        @OutputCustomType.Parameter("command") Object command,
-        @OutputCustomType.Parameter("commandTimeout") @Nullable Object commandTimeout,
-        @OutputCustomType.Parameter("dependsOn") @Nullable List<ActivityDependencyResponse> dependsOn,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("linkedServiceName") @Nullable LinkedServiceReferenceResponse linkedServiceName,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("policy") @Nullable ActivityPolicyResponse policy,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("userProperties") @Nullable List<UserPropertyResponse> userProperties) {
+        @CustomType.Parameter("command") Object command,
+        @CustomType.Parameter("commandTimeout") @Nullable Object commandTimeout,
+        @CustomType.Parameter("dependsOn") @Nullable List<ActivityDependencyResponse> dependsOn,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("linkedServiceName") @Nullable LinkedServiceReferenceResponse linkedServiceName,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("policy") @Nullable ActivityPolicyResponse policy,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("userProperties") @Nullable List<UserPropertyResponse> userProperties) {
         this.command = command;
         this.commandTimeout = commandTimeout;
         this.dependsOn = dependsOn;

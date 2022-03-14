@@ -7,7 +7,7 @@ import io.pulumi.azurenative.storage.inputs.ManagementPolicyBaseBlobArgs;
 import io.pulumi.azurenative.storage.inputs.ManagementPolicySnapShotArgs;
 import io.pulumi.azurenative.storage.inputs.ManagementPolicyVersionArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -24,7 +24,7 @@ public final class ManagementPolicyActionArgs extends io.pulumi.resources.Resour
      * The management policy action for base blob
      * 
      */
-    @InputImport(name="baseBlob")
+    @Import(name="baseBlob")
       private final @Nullable Output<ManagementPolicyBaseBlobArgs> baseBlob;
 
     public Output<ManagementPolicyBaseBlobArgs> getBaseBlob() {
@@ -35,7 +35,7 @@ public final class ManagementPolicyActionArgs extends io.pulumi.resources.Resour
      * The management policy action for snapshot
      * 
      */
-    @InputImport(name="snapshot")
+    @Import(name="snapshot")
       private final @Nullable Output<ManagementPolicySnapShotArgs> snapshot;
 
     public Output<ManagementPolicySnapShotArgs> getSnapshot() {
@@ -46,7 +46,7 @@ public final class ManagementPolicyActionArgs extends io.pulumi.resources.Resour
      * The management policy action for version
      * 
      */
-    @InputImport(name="version")
+    @Import(name="version")
       private final @Nullable Output<ManagementPolicyVersionArgs> version;
 
     public Output<ManagementPolicyVersionArgs> getVersion() {

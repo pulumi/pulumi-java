@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.storagesync.outputs;
 
 import io.pulumi.azurenative.storagesync.outputs.ServerEndpointFilesNotSyncingErrorResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ServerEndpointSyncSessionStatusResponse {
     /**
      * Array of per-item errors coming from the last sync session.
@@ -54,16 +54,16 @@ public final class ServerEndpointSyncSessionStatusResponse {
      */
     private final Double transientFilesNotSyncingCount;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServerEndpointSyncSessionStatusResponse(
-        @OutputCustomType.Parameter("filesNotSyncingErrors") List<ServerEndpointFilesNotSyncingErrorResponse> filesNotSyncingErrors,
-        @OutputCustomType.Parameter("lastSyncMode") String lastSyncMode,
-        @OutputCustomType.Parameter("lastSyncPerItemErrorCount") Double lastSyncPerItemErrorCount,
-        @OutputCustomType.Parameter("lastSyncResult") Integer lastSyncResult,
-        @OutputCustomType.Parameter("lastSyncSuccessTimestamp") String lastSyncSuccessTimestamp,
-        @OutputCustomType.Parameter("lastSyncTimestamp") String lastSyncTimestamp,
-        @OutputCustomType.Parameter("persistentFilesNotSyncingCount") Double persistentFilesNotSyncingCount,
-        @OutputCustomType.Parameter("transientFilesNotSyncingCount") Double transientFilesNotSyncingCount) {
+        @CustomType.Parameter("filesNotSyncingErrors") List<ServerEndpointFilesNotSyncingErrorResponse> filesNotSyncingErrors,
+        @CustomType.Parameter("lastSyncMode") String lastSyncMode,
+        @CustomType.Parameter("lastSyncPerItemErrorCount") Double lastSyncPerItemErrorCount,
+        @CustomType.Parameter("lastSyncResult") Integer lastSyncResult,
+        @CustomType.Parameter("lastSyncSuccessTimestamp") String lastSyncSuccessTimestamp,
+        @CustomType.Parameter("lastSyncTimestamp") String lastSyncTimestamp,
+        @CustomType.Parameter("persistentFilesNotSyncingCount") Double persistentFilesNotSyncingCount,
+        @CustomType.Parameter("transientFilesNotSyncingCount") Double transientFilesNotSyncingCount) {
         this.filesNotSyncingErrors = filesNotSyncingErrors;
         this.lastSyncMode = lastSyncMode;
         this.lastSyncPerItemErrorCount = lastSyncPerItemErrorCount;

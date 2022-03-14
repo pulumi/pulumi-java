@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.databox.outputs;
 
 import io.pulumi.azurenative.databox.outputs.IdentityPropertiesResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class KeyEncryptionKeyResponse {
     /**
      * Managed identity properties used for key encryption.
@@ -33,12 +33,12 @@ public final class KeyEncryptionKeyResponse {
      */
     private final @Nullable String kekVaultResourceID;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private KeyEncryptionKeyResponse(
-        @OutputCustomType.Parameter("identityProperties") @Nullable IdentityPropertiesResponse identityProperties,
-        @OutputCustomType.Parameter("kekType") String kekType,
-        @OutputCustomType.Parameter("kekUrl") @Nullable String kekUrl,
-        @OutputCustomType.Parameter("kekVaultResourceID") @Nullable String kekVaultResourceID) {
+        @CustomType.Parameter("identityProperties") @Nullable IdentityPropertiesResponse identityProperties,
+        @CustomType.Parameter("kekType") String kekType,
+        @CustomType.Parameter("kekUrl") @Nullable String kekUrl,
+        @CustomType.Parameter("kekVaultResourceID") @Nullable String kekVaultResourceID) {
         this.identityProperties = identityProperties;
         this.kekType = kekType;
         this.kekUrl = kekUrl;

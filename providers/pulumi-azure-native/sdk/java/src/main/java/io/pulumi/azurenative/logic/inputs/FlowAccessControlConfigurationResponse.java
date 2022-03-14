@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.logic.inputs;
 
 import io.pulumi.azurenative.logic.inputs.FlowAccessControlConfigurationPolicyResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class FlowAccessControlConfigurationResponse extends io.pulumi.reso
      * The access control configuration for workflow actions.
      * 
      */
-    @InputImport(name="actions")
+    @Import(name="actions")
       private final @Nullable FlowAccessControlConfigurationPolicyResponse actions;
 
     public Optional<FlowAccessControlConfigurationPolicyResponse> getActions() {
@@ -33,7 +33,7 @@ public final class FlowAccessControlConfigurationResponse extends io.pulumi.reso
      * The access control configuration for accessing workflow run contents.
      * 
      */
-    @InputImport(name="contents")
+    @Import(name="contents")
       private final @Nullable FlowAccessControlConfigurationPolicyResponse contents;
 
     public Optional<FlowAccessControlConfigurationPolicyResponse> getContents() {
@@ -44,7 +44,7 @@ public final class FlowAccessControlConfigurationResponse extends io.pulumi.reso
      * The access control configuration for invoking workflow triggers.
      * 
      */
-    @InputImport(name="triggers")
+    @Import(name="triggers")
       private final @Nullable FlowAccessControlConfigurationPolicyResponse triggers;
 
     public Optional<FlowAccessControlConfigurationPolicyResponse> getTriggers() {
@@ -55,7 +55,7 @@ public final class FlowAccessControlConfigurationResponse extends io.pulumi.reso
      * The access control configuration for workflow management.
      * 
      */
-    @InputImport(name="workflowManagement")
+    @Import(name="workflowManagement")
       private final @Nullable FlowAccessControlConfigurationPolicyResponse workflowManagement;
 
     public Optional<FlowAccessControlConfigurationPolicyResponse> getWorkflowManagement() {

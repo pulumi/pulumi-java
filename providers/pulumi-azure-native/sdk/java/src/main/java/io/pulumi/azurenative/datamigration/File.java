@@ -8,7 +8,7 @@ import io.pulumi.azurenative.datamigration.FileArgs;
 import io.pulumi.azurenative.datamigration.outputs.ProjectFilePropertiesResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +35,7 @@ public class File extends io.pulumi.resources.CustomResource {
      * HTTP strong entity tag value. This is ignored if submitted.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output</* @Nullable */ String> etag;
 
     /**
@@ -49,7 +49,7 @@ public class File extends io.pulumi.resources.CustomResource {
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -63,7 +63,7 @@ public class File extends io.pulumi.resources.CustomResource {
      * Custom file properties
      * 
      */
-    @OutputExport(name="properties", type=ProjectFilePropertiesResponse.class, parameters={})
+    @Export(name="properties", type=ProjectFilePropertiesResponse.class, parameters={})
     private Output<ProjectFilePropertiesResponse> properties;
 
     /**
@@ -77,7 +77,7 @@ public class File extends io.pulumi.resources.CustomResource {
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

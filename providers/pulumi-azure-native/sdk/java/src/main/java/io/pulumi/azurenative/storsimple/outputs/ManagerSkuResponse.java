@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.storsimple.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ManagerSkuResponse {
     /**
      * Refers to the sku name which should be "Standard"
@@ -15,8 +15,8 @@ public final class ManagerSkuResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor
-    private ManagerSkuResponse(@OutputCustomType.Parameter("name") String name) {
+    @CustomType.Constructor
+    private ManagerSkuResponse(@CustomType.Parameter("name") String name) {
         this.name = name;
     }
 

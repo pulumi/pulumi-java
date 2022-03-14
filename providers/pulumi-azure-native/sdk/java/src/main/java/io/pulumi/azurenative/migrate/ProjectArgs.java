@@ -5,7 +5,7 @@ package io.pulumi.azurenative.migrate;
 
 import io.pulumi.azurenative.migrate.inputs.ProjectPropertiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
      * For optimistic concurrency control.
      * 
      */
-    @InputImport(name="eTag")
+    @Import(name="eTag")
       private final @Nullable Output<String> eTag;
 
     public Output<String> getETag() {
@@ -31,7 +31,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
      * Azure location in which project is created.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -42,7 +42,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the Azure Migrate project.
      * 
      */
-    @InputImport(name="projectName")
+    @Import(name="projectName")
       private final @Nullable Output<String> projectName;
 
     public Output<String> getProjectName() {
@@ -53,7 +53,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
      * Properties of the project.
      * 
      */
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable Output<ProjectPropertiesArgs> properties;
 
     public Output<ProjectPropertiesArgs> getProperties() {
@@ -64,7 +64,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the Azure Resource Group that project is part of.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -75,7 +75,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
      * Tags provided by Azure Tagging service.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Object> tags;
 
     public Output<Object> getTags() {

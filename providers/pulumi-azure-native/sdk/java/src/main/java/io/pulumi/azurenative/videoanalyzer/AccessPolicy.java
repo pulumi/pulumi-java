@@ -9,7 +9,7 @@ import io.pulumi.azurenative.videoanalyzer.outputs.JwtAuthenticationResponse;
 import io.pulumi.azurenative.videoanalyzer.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -36,7 +36,7 @@ public class AccessPolicy extends io.pulumi.resources.CustomResource {
      * Authentication method to be used when validating client API access.
      * 
      */
-    @OutputExport(name="authentication", type=JwtAuthenticationResponse.class, parameters={})
+    @Export(name="authentication", type=JwtAuthenticationResponse.class, parameters={})
     private Output</* @Nullable */ JwtAuthenticationResponse> authentication;
 
     /**
@@ -50,7 +50,7 @@ public class AccessPolicy extends io.pulumi.resources.CustomResource {
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -64,7 +64,7 @@ public class AccessPolicy extends io.pulumi.resources.CustomResource {
      * Defines the access level granted by this policy.
      * 
      */
-    @OutputExport(name="role", type=String.class, parameters={})
+    @Export(name="role", type=String.class, parameters={})
     private Output</* @Nullable */ String> role;
 
     /**
@@ -78,7 +78,7 @@ public class AccessPolicy extends io.pulumi.resources.CustomResource {
      * The system metadata relating to this resource.
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -92,7 +92,7 @@ public class AccessPolicy extends io.pulumi.resources.CustomResource {
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

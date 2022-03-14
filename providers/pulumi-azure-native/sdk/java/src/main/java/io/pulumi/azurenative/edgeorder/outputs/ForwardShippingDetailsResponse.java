@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.edgeorder.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ForwardShippingDetailsResponse {
     /**
      * Carrier Name for display purpose. Not to be used for any processing.
@@ -30,12 +30,12 @@ public final class ForwardShippingDetailsResponse {
      */
     private final String trackingUrl;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ForwardShippingDetailsResponse(
-        @OutputCustomType.Parameter("carrierDisplayName") String carrierDisplayName,
-        @OutputCustomType.Parameter("carrierName") String carrierName,
-        @OutputCustomType.Parameter("trackingId") String trackingId,
-        @OutputCustomType.Parameter("trackingUrl") String trackingUrl) {
+        @CustomType.Parameter("carrierDisplayName") String carrierDisplayName,
+        @CustomType.Parameter("carrierName") String carrierName,
+        @CustomType.Parameter("trackingId") String trackingId,
+        @CustomType.Parameter("trackingUrl") String trackingUrl) {
         this.carrierDisplayName = carrierDisplayName;
         this.carrierName = carrierName;
         this.trackingId = trackingId;

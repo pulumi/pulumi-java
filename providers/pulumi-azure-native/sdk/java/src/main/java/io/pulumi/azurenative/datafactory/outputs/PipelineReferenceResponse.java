@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.datafactory.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PipelineReferenceResponse {
     /**
      * Reference name.
@@ -27,11 +27,11 @@ public final class PipelineReferenceResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PipelineReferenceResponse(
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("referenceName") String referenceName,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("referenceName") String referenceName,
+        @CustomType.Parameter("type") String type) {
         this.name = name;
         this.referenceName = referenceName;
         this.type = type;

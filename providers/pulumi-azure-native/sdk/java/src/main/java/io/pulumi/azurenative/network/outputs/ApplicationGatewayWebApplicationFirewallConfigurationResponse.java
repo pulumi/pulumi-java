@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.ApplicationGatewayFirewallDisabledRuleGroupResponse;
 import io.pulumi.azurenative.network.outputs.ApplicationGatewayFirewallExclusionResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -14,7 +14,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ApplicationGatewayWebApplicationFirewallConfigurationResponse {
     /**
      * The disabled rule groups.
@@ -67,18 +67,18 @@ public final class ApplicationGatewayWebApplicationFirewallConfigurationResponse
      */
     private final String ruleSetVersion;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ApplicationGatewayWebApplicationFirewallConfigurationResponse(
-        @OutputCustomType.Parameter("disabledRuleGroups") @Nullable List<ApplicationGatewayFirewallDisabledRuleGroupResponse> disabledRuleGroups,
-        @OutputCustomType.Parameter("enabled") Boolean enabled,
-        @OutputCustomType.Parameter("exclusions") @Nullable List<ApplicationGatewayFirewallExclusionResponse> exclusions,
-        @OutputCustomType.Parameter("fileUploadLimitInMb") @Nullable Integer fileUploadLimitInMb,
-        @OutputCustomType.Parameter("firewallMode") String firewallMode,
-        @OutputCustomType.Parameter("maxRequestBodySize") @Nullable Integer maxRequestBodySize,
-        @OutputCustomType.Parameter("maxRequestBodySizeInKb") @Nullable Integer maxRequestBodySizeInKb,
-        @OutputCustomType.Parameter("requestBodyCheck") @Nullable Boolean requestBodyCheck,
-        @OutputCustomType.Parameter("ruleSetType") String ruleSetType,
-        @OutputCustomType.Parameter("ruleSetVersion") String ruleSetVersion) {
+        @CustomType.Parameter("disabledRuleGroups") @Nullable List<ApplicationGatewayFirewallDisabledRuleGroupResponse> disabledRuleGroups,
+        @CustomType.Parameter("enabled") Boolean enabled,
+        @CustomType.Parameter("exclusions") @Nullable List<ApplicationGatewayFirewallExclusionResponse> exclusions,
+        @CustomType.Parameter("fileUploadLimitInMb") @Nullable Integer fileUploadLimitInMb,
+        @CustomType.Parameter("firewallMode") String firewallMode,
+        @CustomType.Parameter("maxRequestBodySize") @Nullable Integer maxRequestBodySize,
+        @CustomType.Parameter("maxRequestBodySizeInKb") @Nullable Integer maxRequestBodySizeInKb,
+        @CustomType.Parameter("requestBodyCheck") @Nullable Boolean requestBodyCheck,
+        @CustomType.Parameter("ruleSetType") String ruleSetType,
+        @CustomType.Parameter("ruleSetVersion") String ruleSetVersion) {
         this.disabledRuleGroups = disabledRuleGroups;
         this.enabled = enabled;
         this.exclusions = exclusions;

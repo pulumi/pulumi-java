@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class CnameRecordArgs extends io.pulumi.resources.ResourceArgs {
      * The canonical name for this CNAME record.
      * 
      */
-    @InputImport(name="cname")
+    @Import(name="cname")
       private final @Nullable Output<String> cname;
 
     public Output<String> getCname() {

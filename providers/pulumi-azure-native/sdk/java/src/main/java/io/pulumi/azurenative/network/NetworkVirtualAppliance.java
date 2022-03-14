@@ -11,7 +11,7 @@ import io.pulumi.azurenative.network.outputs.VirtualApplianceNicPropertiesRespon
 import io.pulumi.azurenative.network.outputs.VirtualApplianceSkuPropertiesResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Double;
 import java.lang.String;
@@ -40,7 +40,7 @@ public class NetworkVirtualAppliance extends io.pulumi.resources.CustomResource 
      * Address Prefix.
      * 
      */
-    @OutputExport(name="addressPrefix", type=String.class, parameters={})
+    @Export(name="addressPrefix", type=String.class, parameters={})
     private Output<String> addressPrefix;
 
     /**
@@ -54,7 +54,7 @@ public class NetworkVirtualAppliance extends io.pulumi.resources.CustomResource 
      * BootStrapConfigurationBlobs storage URLs.
      * 
      */
-    @OutputExport(name="bootStrapConfigurationBlobs", type=List.class, parameters={String.class})
+    @Export(name="bootStrapConfigurationBlobs", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> bootStrapConfigurationBlobs;
 
     /**
@@ -68,7 +68,7 @@ public class NetworkVirtualAppliance extends io.pulumi.resources.CustomResource 
      * CloudInitConfiguration string in plain text.
      * 
      */
-    @OutputExport(name="cloudInitConfiguration", type=String.class, parameters={})
+    @Export(name="cloudInitConfiguration", type=String.class, parameters={})
     private Output</* @Nullable */ String> cloudInitConfiguration;
 
     /**
@@ -82,7 +82,7 @@ public class NetworkVirtualAppliance extends io.pulumi.resources.CustomResource 
      * CloudInitConfigurationBlob storage URLs.
      * 
      */
-    @OutputExport(name="cloudInitConfigurationBlobs", type=List.class, parameters={String.class})
+    @Export(name="cloudInitConfigurationBlobs", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> cloudInitConfigurationBlobs;
 
     /**
@@ -96,7 +96,7 @@ public class NetworkVirtualAppliance extends io.pulumi.resources.CustomResource 
      * A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -110,7 +110,7 @@ public class NetworkVirtualAppliance extends io.pulumi.resources.CustomResource 
      * The service principal that has read access to cloud-init and config blob.
      * 
      */
-    @OutputExport(name="identity", type=ManagedServiceIdentityResponse.class, parameters={})
+    @Export(name="identity", type=ManagedServiceIdentityResponse.class, parameters={})
     private Output</* @Nullable */ ManagedServiceIdentityResponse> identity;
 
     /**
@@ -124,7 +124,7 @@ public class NetworkVirtualAppliance extends io.pulumi.resources.CustomResource 
      * List of references to InboundSecurityRules.
      * 
      */
-    @OutputExport(name="inboundSecurityRules", type=List.class, parameters={SubResourceResponse.class})
+    @Export(name="inboundSecurityRules", type=List.class, parameters={SubResourceResponse.class})
     private Output<List<SubResourceResponse>> inboundSecurityRules;
 
     /**
@@ -138,7 +138,7 @@ public class NetworkVirtualAppliance extends io.pulumi.resources.CustomResource 
      * Resource location.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -152,7 +152,7 @@ public class NetworkVirtualAppliance extends io.pulumi.resources.CustomResource 
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -166,7 +166,7 @@ public class NetworkVirtualAppliance extends io.pulumi.resources.CustomResource 
      * Network Virtual Appliance SKU.
      * 
      */
-    @OutputExport(name="nvaSku", type=VirtualApplianceSkuPropertiesResponse.class, parameters={})
+    @Export(name="nvaSku", type=VirtualApplianceSkuPropertiesResponse.class, parameters={})
     private Output</* @Nullable */ VirtualApplianceSkuPropertiesResponse> nvaSku;
 
     /**
@@ -180,7 +180,7 @@ public class NetworkVirtualAppliance extends io.pulumi.resources.CustomResource 
      * The provisioning state of the resource.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -194,7 +194,7 @@ public class NetworkVirtualAppliance extends io.pulumi.resources.CustomResource 
      * Resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -208,7 +208,7 @@ public class NetworkVirtualAppliance extends io.pulumi.resources.CustomResource 
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -222,7 +222,7 @@ public class NetworkVirtualAppliance extends io.pulumi.resources.CustomResource 
      * VirtualAppliance ASN.
      * 
      */
-    @OutputExport(name="virtualApplianceAsn", type=Double.class, parameters={})
+    @Export(name="virtualApplianceAsn", type=Double.class, parameters={})
     private Output</* @Nullable */ Double> virtualApplianceAsn;
 
     /**
@@ -236,7 +236,7 @@ public class NetworkVirtualAppliance extends io.pulumi.resources.CustomResource 
      * List of Virtual Appliance Network Interfaces.
      * 
      */
-    @OutputExport(name="virtualApplianceNics", type=List.class, parameters={VirtualApplianceNicPropertiesResponse.class})
+    @Export(name="virtualApplianceNics", type=List.class, parameters={VirtualApplianceNicPropertiesResponse.class})
     private Output<List<VirtualApplianceNicPropertiesResponse>> virtualApplianceNics;
 
     /**
@@ -250,7 +250,7 @@ public class NetworkVirtualAppliance extends io.pulumi.resources.CustomResource 
      * List of references to VirtualApplianceSite.
      * 
      */
-    @OutputExport(name="virtualApplianceSites", type=List.class, parameters={SubResourceResponse.class})
+    @Export(name="virtualApplianceSites", type=List.class, parameters={SubResourceResponse.class})
     private Output<List<SubResourceResponse>> virtualApplianceSites;
 
     /**
@@ -264,7 +264,7 @@ public class NetworkVirtualAppliance extends io.pulumi.resources.CustomResource 
      * The Virtual Hub where Network Virtual Appliance is being deployed.
      * 
      */
-    @OutputExport(name="virtualHub", type=SubResourceResponse.class, parameters={})
+    @Export(name="virtualHub", type=SubResourceResponse.class, parameters={})
     private Output</* @Nullable */ SubResourceResponse> virtualHub;
 
     /**

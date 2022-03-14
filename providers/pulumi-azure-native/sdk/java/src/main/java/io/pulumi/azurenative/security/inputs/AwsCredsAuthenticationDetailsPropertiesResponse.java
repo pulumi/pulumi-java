@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.security.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class AwsCredsAuthenticationDetailsPropertiesResponse extends io.pu
      * The ID of the cloud account
      * 
      */
-    @InputImport(name="accountId", required=true)
+    @Import(name="accountId", required=true)
       private final String accountId;
 
     public String getAccountId() {
@@ -32,7 +32,7 @@ public final class AwsCredsAuthenticationDetailsPropertiesResponse extends io.pu
      * State of the multi-cloud connector
      * 
      */
-    @InputImport(name="authenticationProvisioningState", required=true)
+    @Import(name="authenticationProvisioningState", required=true)
       private final String authenticationProvisioningState;
 
     public String getAuthenticationProvisioningState() {
@@ -44,7 +44,7 @@ public final class AwsCredsAuthenticationDetailsPropertiesResponse extends io.pu
      * Expected value is 'awsCreds'.
      * 
      */
-    @InputImport(name="authenticationType", required=true)
+    @Import(name="authenticationType", required=true)
       private final String authenticationType;
 
     public String getAuthenticationType() {
@@ -55,7 +55,7 @@ public final class AwsCredsAuthenticationDetailsPropertiesResponse extends io.pu
      * Public key element of the AWS credential object (write only)
      * 
      */
-    @InputImport(name="awsAccessKeyId", required=true)
+    @Import(name="awsAccessKeyId", required=true)
       private final String awsAccessKeyId;
 
     public String getAwsAccessKeyId() {
@@ -66,7 +66,7 @@ public final class AwsCredsAuthenticationDetailsPropertiesResponse extends io.pu
      * Secret key element of the AWS credential object (write only)
      * 
      */
-    @InputImport(name="awsSecretAccessKey", required=true)
+    @Import(name="awsSecretAccessKey", required=true)
       private final String awsSecretAccessKey;
 
     public String getAwsSecretAccessKey() {
@@ -77,7 +77,7 @@ public final class AwsCredsAuthenticationDetailsPropertiesResponse extends io.pu
      * The permissions detected in the cloud account.
      * 
      */
-    @InputImport(name="grantedPermissions", required=true)
+    @Import(name="grantedPermissions", required=true)
       private final List<String> grantedPermissions;
 
     public List<String> getGrantedPermissions() {

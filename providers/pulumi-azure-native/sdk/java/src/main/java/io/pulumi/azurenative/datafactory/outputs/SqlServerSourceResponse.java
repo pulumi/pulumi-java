@@ -5,7 +5,7 @@ package io.pulumi.azurenative.datafactory.outputs;
 
 import io.pulumi.azurenative.datafactory.outputs.SqlPartitionSettingsResponse;
 import io.pulumi.azurenative.datafactory.outputs.StoredProcedureParameterResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SqlServerSourceResponse {
     /**
      * Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
@@ -82,21 +82,21 @@ public final class SqlServerSourceResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SqlServerSourceResponse(
-        @OutputCustomType.Parameter("additionalColumns") @Nullable Object additionalColumns,
-        @OutputCustomType.Parameter("disableMetricsCollection") @Nullable Object disableMetricsCollection,
-        @OutputCustomType.Parameter("maxConcurrentConnections") @Nullable Object maxConcurrentConnections,
-        @OutputCustomType.Parameter("partitionOption") @Nullable Object partitionOption,
-        @OutputCustomType.Parameter("partitionSettings") @Nullable SqlPartitionSettingsResponse partitionSettings,
-        @OutputCustomType.Parameter("produceAdditionalTypes") @Nullable Object produceAdditionalTypes,
-        @OutputCustomType.Parameter("queryTimeout") @Nullable Object queryTimeout,
-        @OutputCustomType.Parameter("sourceRetryCount") @Nullable Object sourceRetryCount,
-        @OutputCustomType.Parameter("sourceRetryWait") @Nullable Object sourceRetryWait,
-        @OutputCustomType.Parameter("sqlReaderQuery") @Nullable Object sqlReaderQuery,
-        @OutputCustomType.Parameter("sqlReaderStoredProcedureName") @Nullable Object sqlReaderStoredProcedureName,
-        @OutputCustomType.Parameter("storedProcedureParameters") @Nullable Map<String,StoredProcedureParameterResponse> storedProcedureParameters,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("additionalColumns") @Nullable Object additionalColumns,
+        @CustomType.Parameter("disableMetricsCollection") @Nullable Object disableMetricsCollection,
+        @CustomType.Parameter("maxConcurrentConnections") @Nullable Object maxConcurrentConnections,
+        @CustomType.Parameter("partitionOption") @Nullable Object partitionOption,
+        @CustomType.Parameter("partitionSettings") @Nullable SqlPartitionSettingsResponse partitionSettings,
+        @CustomType.Parameter("produceAdditionalTypes") @Nullable Object produceAdditionalTypes,
+        @CustomType.Parameter("queryTimeout") @Nullable Object queryTimeout,
+        @CustomType.Parameter("sourceRetryCount") @Nullable Object sourceRetryCount,
+        @CustomType.Parameter("sourceRetryWait") @Nullable Object sourceRetryWait,
+        @CustomType.Parameter("sqlReaderQuery") @Nullable Object sqlReaderQuery,
+        @CustomType.Parameter("sqlReaderStoredProcedureName") @Nullable Object sqlReaderStoredProcedureName,
+        @CustomType.Parameter("storedProcedureParameters") @Nullable Map<String,StoredProcedureParameterResponse> storedProcedureParameters,
+        @CustomType.Parameter("type") String type) {
         this.additionalColumns = additionalColumns;
         this.disableMetricsCollection = disableMetricsCollection;
         this.maxConcurrentConnections = maxConcurrentConnections;

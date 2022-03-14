@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.attestation.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class JSONWebKeyArgs extends io.pulumi.resources.ResourceArgs {
      * Resistant Name.
      * 
      */
-    @InputImport(name="alg")
+    @Import(name="alg")
       private final @Nullable Output<String> alg;
 
     public Output<String> getAlg() {
@@ -34,7 +34,7 @@ public final class JSONWebKeyArgs extends io.pulumi.resources.ResourceArgs {
      * The "crv" (curve) parameter identifies the curve type
      * 
      */
-    @InputImport(name="crv")
+    @Import(name="crv")
       private final @Nullable Output<String> crv;
 
     public Output<String> getCrv() {
@@ -45,7 +45,7 @@ public final class JSONWebKeyArgs extends io.pulumi.resources.ResourceArgs {
      * RSA private exponent or ECC private key
      * 
      */
-    @InputImport(name="d")
+    @Import(name="d")
       private final @Nullable Output<String> d;
 
     public Output<String> getD() {
@@ -56,7 +56,7 @@ public final class JSONWebKeyArgs extends io.pulumi.resources.ResourceArgs {
      * RSA Private Key Parameter
      * 
      */
-    @InputImport(name="dp")
+    @Import(name="dp")
       private final @Nullable Output<String> dp;
 
     public Output<String> getDp() {
@@ -67,7 +67,7 @@ public final class JSONWebKeyArgs extends io.pulumi.resources.ResourceArgs {
      * RSA Private Key Parameter
      * 
      */
-    @InputImport(name="dq")
+    @Import(name="dq")
       private final @Nullable Output<String> dq;
 
     public Output<String> getDq() {
@@ -78,7 +78,7 @@ public final class JSONWebKeyArgs extends io.pulumi.resources.ResourceArgs {
      * RSA public exponent, in Base64
      * 
      */
-    @InputImport(name="e")
+    @Import(name="e")
       private final @Nullable Output<String> e;
 
     public Output<String> getE() {
@@ -89,7 +89,7 @@ public final class JSONWebKeyArgs extends io.pulumi.resources.ResourceArgs {
      * Symmetric key
      * 
      */
-    @InputImport(name="k")
+    @Import(name="k")
       private final @Nullable Output<String> k;
 
     public Output<String> getK() {
@@ -108,7 +108,7 @@ public final class JSONWebKeyArgs extends io.pulumi.resources.ResourceArgs {
      * value is a case-sensitive string.
      * 
      */
-    @InputImport(name="kid")
+    @Import(name="kid")
       private final @Nullable Output<String> kid;
 
     public Output<String> getKid() {
@@ -123,7 +123,7 @@ public final class JSONWebKeyArgs extends io.pulumi.resources.ResourceArgs {
      * Resistant Name.  The "kty" value is a case-sensitive string.
      * 
      */
-    @InputImport(name="kty", required=true)
+    @Import(name="kty", required=true)
       private final Output<String> kty;
 
     public Output<String> getKty() {
@@ -134,7 +134,7 @@ public final class JSONWebKeyArgs extends io.pulumi.resources.ResourceArgs {
      * RSA modulus, in Base64
      * 
      */
-    @InputImport(name="n")
+    @Import(name="n")
       private final @Nullable Output<String> n;
 
     public Output<String> getN() {
@@ -145,7 +145,7 @@ public final class JSONWebKeyArgs extends io.pulumi.resources.ResourceArgs {
      * RSA secret prime
      * 
      */
-    @InputImport(name="p")
+    @Import(name="p")
       private final @Nullable Output<String> p;
 
     public Output<String> getP() {
@@ -156,7 +156,7 @@ public final class JSONWebKeyArgs extends io.pulumi.resources.ResourceArgs {
      * RSA secret prime, with p < q
      * 
      */
-    @InputImport(name="q")
+    @Import(name="q")
       private final @Nullable Output<String> q;
 
     public Output<String> getQ() {
@@ -167,7 +167,7 @@ public final class JSONWebKeyArgs extends io.pulumi.resources.ResourceArgs {
      * RSA Private Key Parameter
      * 
      */
-    @InputImport(name="qi")
+    @Import(name="qi")
       private final @Nullable Output<String> qi;
 
     public Output<String> getQi() {
@@ -181,7 +181,7 @@ public final class JSONWebKeyArgs extends io.pulumi.resources.ResourceArgs {
      * on data. Values are commonly "sig" (signature) or "enc" (encryption).
      * 
      */
-    @InputImport(name="use")
+    @Import(name="use")
       private final @Nullable Output<String> use;
 
     public Output<String> getUse() {
@@ -192,7 +192,7 @@ public final class JSONWebKeyArgs extends io.pulumi.resources.ResourceArgs {
      * X coordinate for the Elliptic Curve point
      * 
      */
-    @InputImport(name="x")
+    @Import(name="x")
       private final @Nullable Output<String> x;
 
     public Output<String> getX() {
@@ -209,7 +209,7 @@ public final class JSONWebKeyArgs extends io.pulumi.resources.ResourceArgs {
      * certificate.
      * 
      */
-    @InputImport(name="x5c")
+    @Import(name="x5c")
       private final @Nullable Output<List<String>> x5c;
 
     public Output<List<String>> getX5c() {
@@ -220,7 +220,7 @@ public final class JSONWebKeyArgs extends io.pulumi.resources.ResourceArgs {
      * Y coordinate for the Elliptic Curve point
      * 
      */
-    @InputImport(name="y")
+    @Import(name="y")
       private final @Nullable Output<String> y;
 
     public Output<String> getY() {

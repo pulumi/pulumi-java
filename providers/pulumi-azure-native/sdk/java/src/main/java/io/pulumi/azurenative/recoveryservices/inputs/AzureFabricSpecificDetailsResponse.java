@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class AzureFabricSpecificDetailsResponse extends io.pulumi.resource
      * The container Ids for the Azure fabric.
      * 
      */
-    @InputImport(name="containerIds")
+    @Import(name="containerIds")
       private final @Nullable List<String> containerIds;
 
     public List<String> getContainerIds() {
@@ -35,7 +35,7 @@ public final class AzureFabricSpecificDetailsResponse extends io.pulumi.resource
      * Expected value is 'Azure'.
      * 
      */
-    @InputImport(name="instanceType", required=true)
+    @Import(name="instanceType", required=true)
       private final String instanceType;
 
     public String getInstanceType() {
@@ -46,7 +46,7 @@ public final class AzureFabricSpecificDetailsResponse extends io.pulumi.resource
      * The Location for the Azure fabric.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable String location;
 
     public Optional<String> getLocation() {

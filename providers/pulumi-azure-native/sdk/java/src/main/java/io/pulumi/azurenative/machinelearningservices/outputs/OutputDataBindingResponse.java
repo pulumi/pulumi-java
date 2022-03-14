@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class OutputDataBindingResponse {
     /**
      * ARM resource ID of the datastore where the data output will be stored.
@@ -32,12 +32,12 @@ public final class OutputDataBindingResponse {
      */
     private final @Nullable String pathOnDatastore;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private OutputDataBindingResponse(
-        @OutputCustomType.Parameter("datastoreId") @Nullable String datastoreId,
-        @OutputCustomType.Parameter("mode") @Nullable String mode,
-        @OutputCustomType.Parameter("pathOnCompute") @Nullable String pathOnCompute,
-        @OutputCustomType.Parameter("pathOnDatastore") @Nullable String pathOnDatastore) {
+        @CustomType.Parameter("datastoreId") @Nullable String datastoreId,
+        @CustomType.Parameter("mode") @Nullable String mode,
+        @CustomType.Parameter("pathOnCompute") @Nullable String pathOnCompute,
+        @CustomType.Parameter("pathOnDatastore") @Nullable String pathOnDatastore) {
         this.datastoreId = datastoreId;
         this.mode = mode;
         this.pathOnCompute = pathOnCompute;

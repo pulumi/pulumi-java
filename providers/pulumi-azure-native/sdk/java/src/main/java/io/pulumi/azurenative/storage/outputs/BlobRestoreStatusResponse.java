@@ -4,11 +4,11 @@
 package io.pulumi.azurenative.storage.outputs;
 
 import io.pulumi.azurenative.storage.outputs.BlobRestoreParametersResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BlobRestoreStatusResponse {
     /**
      * Failure reason when blob restore is failed.
@@ -31,12 +31,12 @@ public final class BlobRestoreStatusResponse {
      */
     private final String status;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BlobRestoreStatusResponse(
-        @OutputCustomType.Parameter("failureReason") String failureReason,
-        @OutputCustomType.Parameter("parameters") BlobRestoreParametersResponse parameters,
-        @OutputCustomType.Parameter("restoreId") String restoreId,
-        @OutputCustomType.Parameter("status") String status) {
+        @CustomType.Parameter("failureReason") String failureReason,
+        @CustomType.Parameter("parameters") BlobRestoreParametersResponse parameters,
+        @CustomType.Parameter("restoreId") String restoreId,
+        @CustomType.Parameter("status") String status) {
         this.failureReason = failureReason;
         this.parameters = parameters;
         this.restoreId = restoreId;

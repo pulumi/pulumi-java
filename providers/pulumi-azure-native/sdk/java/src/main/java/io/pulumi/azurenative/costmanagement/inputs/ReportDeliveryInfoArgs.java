@@ -5,7 +5,7 @@ package io.pulumi.azurenative.costmanagement.inputs;
 
 import io.pulumi.azurenative.costmanagement.inputs.ReportDeliveryDestinationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 
 
@@ -21,7 +21,7 @@ public final class ReportDeliveryInfoArgs extends io.pulumi.resources.ResourceAr
      * Has destination for the report being delivered.
      * 
      */
-    @InputImport(name="destination", required=true)
+    @Import(name="destination", required=true)
       private final Output<ReportDeliveryDestinationArgs> destination;
 
     public Output<ReportDeliveryDestinationArgs> getDestination() {

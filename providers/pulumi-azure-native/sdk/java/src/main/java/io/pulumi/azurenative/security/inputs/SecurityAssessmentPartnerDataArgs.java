@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.security.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class SecurityAssessmentPartnerDataArgs extends io.pulumi.resources
      * Name of the company of the partner
      * 
      */
-    @InputImport(name="partnerName", required=true)
+    @Import(name="partnerName", required=true)
       private final Output<String> partnerName;
 
     public Output<String> getPartnerName() {
@@ -32,7 +32,7 @@ public final class SecurityAssessmentPartnerDataArgs extends io.pulumi.resources
      * secret to authenticate the partner - write only
      * 
      */
-    @InputImport(name="secret", required=true)
+    @Import(name="secret", required=true)
       private final Output<String> secret;
 
     public Output<String> getSecret() {

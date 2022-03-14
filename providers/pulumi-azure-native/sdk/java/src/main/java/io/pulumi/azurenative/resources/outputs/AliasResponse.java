@@ -6,14 +6,14 @@ package io.pulumi.azurenative.resources.outputs;
 import io.pulumi.azurenative.resources.outputs.AliasPathMetadataResponse;
 import io.pulumi.azurenative.resources.outputs.AliasPathResponse;
 import io.pulumi.azurenative.resources.outputs.AliasPatternResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AliasResponse {
     /**
      * The default alias path metadata. Applies to the default path and to any alias path that doesn't have metadata
@@ -46,14 +46,14 @@ public final class AliasResponse {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AliasResponse(
-        @OutputCustomType.Parameter("defaultMetadata") AliasPathMetadataResponse defaultMetadata,
-        @OutputCustomType.Parameter("defaultPath") @Nullable String defaultPath,
-        @OutputCustomType.Parameter("defaultPattern") @Nullable AliasPatternResponse defaultPattern,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("paths") @Nullable List<AliasPathResponse> paths,
-        @OutputCustomType.Parameter("type") @Nullable String type) {
+        @CustomType.Parameter("defaultMetadata") AliasPathMetadataResponse defaultMetadata,
+        @CustomType.Parameter("defaultPath") @Nullable String defaultPath,
+        @CustomType.Parameter("defaultPattern") @Nullable AliasPatternResponse defaultPattern,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("paths") @Nullable List<AliasPathResponse> paths,
+        @CustomType.Parameter("type") @Nullable String type) {
         this.defaultMetadata = defaultMetadata;
         this.defaultPath = defaultPath;
         this.defaultPattern = defaultPattern;

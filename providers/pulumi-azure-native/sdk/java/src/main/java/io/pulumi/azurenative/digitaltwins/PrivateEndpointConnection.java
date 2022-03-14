@@ -8,7 +8,7 @@ import io.pulumi.azurenative.digitaltwins.PrivateEndpointConnectionArgs;
 import io.pulumi.azurenative.digitaltwins.outputs.PrivateEndpointConnectionResponseProperties;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +35,7 @@ public class PrivateEndpointConnection extends io.pulumi.resources.CustomResourc
      * The resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -45,7 +45,7 @@ public class PrivateEndpointConnection extends io.pulumi.resources.CustomResourc
     public Output<String> getName() {
         return this.name;
     }
-    @OutputExport(name="properties", type=PrivateEndpointConnectionResponseProperties.class, parameters={})
+    @Export(name="properties", type=PrivateEndpointConnectionResponseProperties.class, parameters={})
     private Output<PrivateEndpointConnectionResponseProperties> properties;
 
     public Output<PrivateEndpointConnectionResponseProperties> getProperties() {
@@ -55,7 +55,7 @@ public class PrivateEndpointConnection extends io.pulumi.resources.CustomResourc
      * The resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

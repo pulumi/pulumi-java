@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.sql.DistributedAvailabilityGroupArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -34,7 +34,7 @@ public class DistributedAvailabilityGroup extends io.pulumi.resources.CustomReso
      * The distributed availability group id
      * 
      */
-    @OutputExport(name="distributedAvailabilityGroupId", type=String.class, parameters={})
+    @Export(name="distributedAvailabilityGroupId", type=String.class, parameters={})
     private Output<String> distributedAvailabilityGroupId;
 
     /**
@@ -48,7 +48,7 @@ public class DistributedAvailabilityGroup extends io.pulumi.resources.CustomReso
      * The last hardened lsn
      * 
      */
-    @OutputExport(name="lastHardenedLsn", type=String.class, parameters={})
+    @Export(name="lastHardenedLsn", type=String.class, parameters={})
     private Output<String> lastHardenedLsn;
 
     /**
@@ -62,7 +62,7 @@ public class DistributedAvailabilityGroup extends io.pulumi.resources.CustomReso
      * The link state
      * 
      */
-    @OutputExport(name="linkState", type=String.class, parameters={})
+    @Export(name="linkState", type=String.class, parameters={})
     private Output<String> linkState;
 
     /**
@@ -76,7 +76,7 @@ public class DistributedAvailabilityGroup extends io.pulumi.resources.CustomReso
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -90,7 +90,7 @@ public class DistributedAvailabilityGroup extends io.pulumi.resources.CustomReso
      * The primary availability group name
      * 
      */
-    @OutputExport(name="primaryAvailabilityGroupName", type=String.class, parameters={})
+    @Export(name="primaryAvailabilityGroupName", type=String.class, parameters={})
     private Output</* @Nullable */ String> primaryAvailabilityGroupName;
 
     /**
@@ -104,7 +104,7 @@ public class DistributedAvailabilityGroup extends io.pulumi.resources.CustomReso
      * The replication mode of a distributed availability group. Parameter will be ignored during link creation.
      * 
      */
-    @OutputExport(name="replicationMode", type=String.class, parameters={})
+    @Export(name="replicationMode", type=String.class, parameters={})
     private Output</* @Nullable */ String> replicationMode;
 
     /**
@@ -118,7 +118,7 @@ public class DistributedAvailabilityGroup extends io.pulumi.resources.CustomReso
      * The secondary availability group name
      * 
      */
-    @OutputExport(name="secondaryAvailabilityGroupName", type=String.class, parameters={})
+    @Export(name="secondaryAvailabilityGroupName", type=String.class, parameters={})
     private Output</* @Nullable */ String> secondaryAvailabilityGroupName;
 
     /**
@@ -132,7 +132,7 @@ public class DistributedAvailabilityGroup extends io.pulumi.resources.CustomReso
      * The source endpoint
      * 
      */
-    @OutputExport(name="sourceEndpoint", type=String.class, parameters={})
+    @Export(name="sourceEndpoint", type=String.class, parameters={})
     private Output</* @Nullable */ String> sourceEndpoint;
 
     /**
@@ -146,7 +146,7 @@ public class DistributedAvailabilityGroup extends io.pulumi.resources.CustomReso
      * The source replica id
      * 
      */
-    @OutputExport(name="sourceReplicaId", type=String.class, parameters={})
+    @Export(name="sourceReplicaId", type=String.class, parameters={})
     private Output<String> sourceReplicaId;
 
     /**
@@ -160,7 +160,7 @@ public class DistributedAvailabilityGroup extends io.pulumi.resources.CustomReso
      * The name of the target database
      * 
      */
-    @OutputExport(name="targetDatabase", type=String.class, parameters={})
+    @Export(name="targetDatabase", type=String.class, parameters={})
     private Output</* @Nullable */ String> targetDatabase;
 
     /**
@@ -174,7 +174,7 @@ public class DistributedAvailabilityGroup extends io.pulumi.resources.CustomReso
      * The target replica id
      * 
      */
-    @OutputExport(name="targetReplicaId", type=String.class, parameters={})
+    @Export(name="targetReplicaId", type=String.class, parameters={})
     private Output<String> targetReplicaId;
 
     /**
@@ -188,7 +188,7 @@ public class DistributedAvailabilityGroup extends io.pulumi.resources.CustomReso
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

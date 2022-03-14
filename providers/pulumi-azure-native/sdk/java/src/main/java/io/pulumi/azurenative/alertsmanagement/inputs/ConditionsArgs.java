@@ -5,7 +5,7 @@ package io.pulumi.azurenative.alertsmanagement.inputs;
 
 import io.pulumi.azurenative.alertsmanagement.inputs.ConditionArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -22,7 +22,7 @@ public final class ConditionsArgs extends io.pulumi.resources.ResourceArgs {
      * filter alerts by alert context (payload)
      * 
      */
-    @InputImport(name="alertContext")
+    @Import(name="alertContext")
       private final @Nullable Output<ConditionArgs> alertContext;
 
     public Output<ConditionArgs> getAlertContext() {
@@ -33,7 +33,7 @@ public final class ConditionsArgs extends io.pulumi.resources.ResourceArgs {
      * filter alerts by alert rule id
      * 
      */
-    @InputImport(name="alertRuleId")
+    @Import(name="alertRuleId")
       private final @Nullable Output<ConditionArgs> alertRuleId;
 
     public Output<ConditionArgs> getAlertRuleId() {
@@ -44,7 +44,7 @@ public final class ConditionsArgs extends io.pulumi.resources.ResourceArgs {
      * filter alerts by alert rule description
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<ConditionArgs> description;
 
     public Output<ConditionArgs> getDescription() {
@@ -55,7 +55,7 @@ public final class ConditionsArgs extends io.pulumi.resources.ResourceArgs {
      * filter alerts by monitor condition
      * 
      */
-    @InputImport(name="monitorCondition")
+    @Import(name="monitorCondition")
       private final @Nullable Output<ConditionArgs> monitorCondition;
 
     public Output<ConditionArgs> getMonitorCondition() {
@@ -66,7 +66,7 @@ public final class ConditionsArgs extends io.pulumi.resources.ResourceArgs {
      * filter alerts by monitor service
      * 
      */
-    @InputImport(name="monitorService")
+    @Import(name="monitorService")
       private final @Nullable Output<ConditionArgs> monitorService;
 
     public Output<ConditionArgs> getMonitorService() {
@@ -77,7 +77,7 @@ public final class ConditionsArgs extends io.pulumi.resources.ResourceArgs {
      * filter alerts by severity
      * 
      */
-    @InputImport(name="severity")
+    @Import(name="severity")
       private final @Nullable Output<ConditionArgs> severity;
 
     public Output<ConditionArgs> getSeverity() {
@@ -88,7 +88,7 @@ public final class ConditionsArgs extends io.pulumi.resources.ResourceArgs {
      * filter alerts by target resource type
      * 
      */
-    @InputImport(name="targetResourceType")
+    @Import(name="targetResourceType")
       private final @Nullable Output<ConditionArgs> targetResourceType;
 
     public Output<ConditionArgs> getTargetResourceType() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.appplatform.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class GatewayResourceRequestsResponse extends io.pulumi.resources.I
      * Cpu allocated to each Spring Cloud Gateway instance.
      * 
      */
-    @InputImport(name="cpu")
+    @Import(name="cpu")
       private final @Nullable String cpu;
 
     public Optional<String> getCpu() {
@@ -33,7 +33,7 @@ public final class GatewayResourceRequestsResponse extends io.pulumi.resources.I
      * Memory allocated to each Spring Cloud Gateway instance.
      * 
      */
-    @InputImport(name="memory")
+    @Import(name="memory")
       private final @Nullable String memory;
 
     public Optional<String> getMemory() {

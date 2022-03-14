@@ -7,7 +7,7 @@ import io.pulumi.azurenative.providerhub.enums.SubscriptionNotificationOperation
 import io.pulumi.azurenative.providerhub.enums.SubscriptionTransitioningState;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,14 +16,14 @@ public final class SubscriptionStateOverrideActionArgs extends io.pulumi.resourc
 
     public static final SubscriptionStateOverrideActionArgs Empty = new SubscriptionStateOverrideActionArgs();
 
-    @InputImport(name="action", required=true)
+    @Import(name="action", required=true)
       private final Output<Either<String,SubscriptionNotificationOperation>> action;
 
     public Output<Either<String,SubscriptionNotificationOperation>> getAction() {
         return this.action;
     }
 
-    @InputImport(name="state", required=true)
+    @Import(name="state", required=true)
       private final Output<Either<String,SubscriptionTransitioningState>> state;
 
     public Output<Either<String,SubscriptionTransitioningState>> getState() {

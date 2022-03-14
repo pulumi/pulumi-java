@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.azurestack.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class CompatibilityResponse extends io.pulumi.resources.InvokeArgs 
      * Full error message if any compatibility issues are found
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable String description;
 
     public Optional<String> getDescription() {
@@ -35,7 +35,7 @@ public final class CompatibilityResponse extends io.pulumi.resources.InvokeArgs 
      * Tells if product is compatible with current device
      * 
      */
-    @InputImport(name="isCompatible")
+    @Import(name="isCompatible")
       private final @Nullable Boolean isCompatible;
 
     public Optional<Boolean> getIsCompatible() {
@@ -46,7 +46,7 @@ public final class CompatibilityResponse extends io.pulumi.resources.InvokeArgs 
      * List of all issues found
      * 
      */
-    @InputImport(name="issues")
+    @Import(name="issues")
       private final @Nullable List<String> issues;
 
     public List<String> getIssues() {
@@ -57,7 +57,7 @@ public final class CompatibilityResponse extends io.pulumi.resources.InvokeArgs 
      * Short error message if any compatibility issues are found
      * 
      */
-    @InputImport(name="message")
+    @Import(name="message")
       private final @Nullable String message;
 
     public Optional<String> getMessage() {

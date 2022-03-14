@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.containerservice.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class ContainerServiceSshPublicKeyArgs extends io.pulumi.resources.
      * Certificate public key used to authenticate with VMs through SSH. The certificate must be in PEM format with or without headers.
      * 
      */
-    @InputImport(name="keyData", required=true)
+    @Import(name="keyData", required=true)
       private final Output<String> keyData;
 
     public Output<String> getKeyData() {

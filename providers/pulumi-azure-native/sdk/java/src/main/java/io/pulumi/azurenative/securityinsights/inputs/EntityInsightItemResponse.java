@@ -5,7 +5,7 @@ package io.pulumi.azurenative.securityinsights.inputs;
 
 import io.pulumi.azurenative.securityinsights.inputs.EntityInsightItemResponseQueryTimeInterval;
 import io.pulumi.azurenative.securityinsights.inputs.InsightsTableResultResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class EntityInsightItemResponse extends io.pulumi.resources.InvokeA
      * Query results for table insights query.
      * 
      */
-    @InputImport(name="chartQueryResults")
+    @Import(name="chartQueryResults")
       private final @Nullable List<InsightsTableResultResponse> chartQueryResults;
 
     public List<InsightsTableResultResponse> getChartQueryResults() {
@@ -36,7 +36,7 @@ public final class EntityInsightItemResponse extends io.pulumi.resources.InvokeA
      * The query id of the insight
      * 
      */
-    @InputImport(name="queryId")
+    @Import(name="queryId")
       private final @Nullable String queryId;
 
     public Optional<String> getQueryId() {
@@ -47,7 +47,7 @@ public final class EntityInsightItemResponse extends io.pulumi.resources.InvokeA
      * The Time interval that the query actually executed on.
      * 
      */
-    @InputImport(name="queryTimeInterval")
+    @Import(name="queryTimeInterval")
       private final @Nullable EntityInsightItemResponseQueryTimeInterval queryTimeInterval;
 
     public Optional<EntityInsightItemResponseQueryTimeInterval> getQueryTimeInterval() {
@@ -58,7 +58,7 @@ public final class EntityInsightItemResponse extends io.pulumi.resources.InvokeA
      * Query results for table insights query.
      * 
      */
-    @InputImport(name="tableQueryResults")
+    @Import(name="tableQueryResults")
       private final @Nullable InsightsTableResultResponse tableQueryResults;
 
     public Optional<InsightsTableResultResponse> getTableQueryResults() {

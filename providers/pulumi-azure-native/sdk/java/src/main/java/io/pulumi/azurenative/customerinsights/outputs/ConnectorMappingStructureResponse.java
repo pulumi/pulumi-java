@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.customerinsights.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ConnectorMappingStructureResponse {
     /**
      * The column name of the import file.
@@ -33,12 +33,12 @@ public final class ConnectorMappingStructureResponse {
      */
     private final String propertyName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ConnectorMappingStructureResponse(
-        @OutputCustomType.Parameter("columnName") String columnName,
-        @OutputCustomType.Parameter("customFormatSpecifier") @Nullable String customFormatSpecifier,
-        @OutputCustomType.Parameter("isEncrypted") @Nullable Boolean isEncrypted,
-        @OutputCustomType.Parameter("propertyName") String propertyName) {
+        @CustomType.Parameter("columnName") String columnName,
+        @CustomType.Parameter("customFormatSpecifier") @Nullable String customFormatSpecifier,
+        @CustomType.Parameter("isEncrypted") @Nullable Boolean isEncrypted,
+        @CustomType.Parameter("propertyName") String propertyName) {
         this.columnName = columnName;
         this.customFormatSpecifier = customFormatSpecifier;
         this.isEncrypted = isEncrypted;

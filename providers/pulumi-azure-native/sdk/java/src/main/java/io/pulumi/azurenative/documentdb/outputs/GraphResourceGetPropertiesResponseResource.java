@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.documentdb.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GraphResourceGetPropertiesResponseResource {
     /**
      * Name of the Cosmos DB Graph
@@ -15,8 +15,8 @@ public final class GraphResourceGetPropertiesResponseResource {
      */
     private final String id;
 
-    @OutputCustomType.Constructor
-    private GraphResourceGetPropertiesResponseResource(@OutputCustomType.Parameter("id") String id) {
+    @CustomType.Constructor
+    private GraphResourceGetPropertiesResponseResource(@CustomType.Parameter("id") String id) {
         this.id = id;
     }
 

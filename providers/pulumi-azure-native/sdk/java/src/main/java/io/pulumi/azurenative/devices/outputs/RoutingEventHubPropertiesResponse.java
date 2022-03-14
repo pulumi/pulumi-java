@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.devices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RoutingEventHubPropertiesResponse {
     /**
      * Method used to authenticate against the event hub endpoint
@@ -52,16 +52,16 @@ public final class RoutingEventHubPropertiesResponse {
      */
     private final @Nullable String subscriptionId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RoutingEventHubPropertiesResponse(
-        @OutputCustomType.Parameter("authenticationType") @Nullable String authenticationType,
-        @OutputCustomType.Parameter("connectionString") @Nullable String connectionString,
-        @OutputCustomType.Parameter("endpointUri") @Nullable String endpointUri,
-        @OutputCustomType.Parameter("entityPath") @Nullable String entityPath,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("resourceGroup") @Nullable String resourceGroup,
-        @OutputCustomType.Parameter("subscriptionId") @Nullable String subscriptionId) {
+        @CustomType.Parameter("authenticationType") @Nullable String authenticationType,
+        @CustomType.Parameter("connectionString") @Nullable String connectionString,
+        @CustomType.Parameter("endpointUri") @Nullable String endpointUri,
+        @CustomType.Parameter("entityPath") @Nullable String entityPath,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("resourceGroup") @Nullable String resourceGroup,
+        @CustomType.Parameter("subscriptionId") @Nullable String subscriptionId) {
         this.authenticationType = authenticationType;
         this.connectionString = connectionString;
         this.endpointUri = endpointUri;

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.security.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetAdaptiveApplicationControlArgs extends io.pulumi.resources
      * The location where ASC stores the data of the subscription. can be retrieved from Get locations
      * 
      */
-    @InputImport(name="ascLocation", required=true)
+    @Import(name="ascLocation", required=true)
       private final String ascLocation;
 
     public String getAscLocation() {
@@ -27,7 +27,7 @@ public final class GetAdaptiveApplicationControlArgs extends io.pulumi.resources
      * Name of an application control machine group
      * 
      */
-    @InputImport(name="groupName", required=true)
+    @Import(name="groupName", required=true)
       private final String groupName;
 
     public String getGroupName() {

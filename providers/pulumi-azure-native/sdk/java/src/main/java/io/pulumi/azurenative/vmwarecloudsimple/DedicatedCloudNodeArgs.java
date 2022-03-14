@@ -5,7 +5,7 @@ package io.pulumi.azurenative.vmwarecloudsimple;
 
 import io.pulumi.azurenative.vmwarecloudsimple.inputs.SkuArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class DedicatedCloudNodeArgs extends io.pulumi.resources.ResourceAr
      * Availability Zone id, e.g. "az1"
      * 
      */
-    @InputImport(name="availabilityZoneId", required=true)
+    @Import(name="availabilityZoneId", required=true)
       private final Output<String> availabilityZoneId;
 
     public Output<String> getAvailabilityZoneId() {
@@ -32,7 +32,7 @@ public final class DedicatedCloudNodeArgs extends io.pulumi.resources.ResourceAr
      * dedicated cloud node name
      * 
      */
-    @InputImport(name="dedicatedCloudNodeName")
+    @Import(name="dedicatedCloudNodeName")
       private final @Nullable Output<String> dedicatedCloudNodeName;
 
     public Output<String> getDedicatedCloudNodeName() {
@@ -43,7 +43,7 @@ public final class DedicatedCloudNodeArgs extends io.pulumi.resources.ResourceAr
      * SKU's id
      * 
      */
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final Output<String> id;
 
     public Output<String> getId() {
@@ -54,7 +54,7 @@ public final class DedicatedCloudNodeArgs extends io.pulumi.resources.ResourceAr
      * Azure region
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -65,7 +65,7 @@ public final class DedicatedCloudNodeArgs extends io.pulumi.resources.ResourceAr
      * SKU's name
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -76,7 +76,7 @@ public final class DedicatedCloudNodeArgs extends io.pulumi.resources.ResourceAr
      * count of nodes to create
      * 
      */
-    @InputImport(name="nodesCount", required=true)
+    @Import(name="nodesCount", required=true)
       private final Output<Integer> nodesCount;
 
     public Output<Integer> getNodesCount() {
@@ -87,7 +87,7 @@ public final class DedicatedCloudNodeArgs extends io.pulumi.resources.ResourceAr
      * Placement Group id, e.g. "n1"
      * 
      */
-    @InputImport(name="placementGroupId", required=true)
+    @Import(name="placementGroupId", required=true)
       private final Output<String> placementGroupId;
 
     public Output<String> getPlacementGroupId() {
@@ -98,7 +98,7 @@ public final class DedicatedCloudNodeArgs extends io.pulumi.resources.ResourceAr
      * purchase id
      * 
      */
-    @InputImport(name="purchaseId", required=true)
+    @Import(name="purchaseId", required=true)
       private final Output<String> purchaseId;
 
     public Output<String> getPurchaseId() {
@@ -109,7 +109,7 @@ public final class DedicatedCloudNodeArgs extends io.pulumi.resources.ResourceAr
      * The name of the resource group
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -120,7 +120,7 @@ public final class DedicatedCloudNodeArgs extends io.pulumi.resources.ResourceAr
      * Dedicated Cloud Nodes SKU
      * 
      */
-    @InputImport(name="sku")
+    @Import(name="sku")
       private final @Nullable Output<SkuArgs> sku;
 
     public Output<SkuArgs> getSku() {
@@ -131,7 +131,7 @@ public final class DedicatedCloudNodeArgs extends io.pulumi.resources.ResourceAr
      * Dedicated Cloud Nodes tags
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

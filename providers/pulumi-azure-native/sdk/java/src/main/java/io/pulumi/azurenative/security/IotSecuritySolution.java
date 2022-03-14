@@ -11,7 +11,7 @@ import io.pulumi.azurenative.security.outputs.SystemDataResponse;
 import io.pulumi.azurenative.security.outputs.UserDefinedResourcesPropertiesResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -39,7 +39,7 @@ public class IotSecuritySolution extends io.pulumi.resources.CustomResource {
      * List of additional workspaces
      * 
      */
-    @OutputExport(name="additionalWorkspaces", type=List.class, parameters={AdditionalWorkspacesPropertiesResponse.class})
+    @Export(name="additionalWorkspaces", type=List.class, parameters={AdditionalWorkspacesPropertiesResponse.class})
     private Output</* @Nullable */ List<AdditionalWorkspacesPropertiesResponse>> additionalWorkspaces;
 
     /**
@@ -53,7 +53,7 @@ public class IotSecuritySolution extends io.pulumi.resources.CustomResource {
      * List of resources that were automatically discovered as relevant to the security solution.
      * 
      */
-    @OutputExport(name="autoDiscoveredResources", type=List.class, parameters={String.class})
+    @Export(name="autoDiscoveredResources", type=List.class, parameters={String.class})
     private Output<List<String>> autoDiscoveredResources;
 
     /**
@@ -67,7 +67,7 @@ public class IotSecuritySolution extends io.pulumi.resources.CustomResource {
      * Disabled data sources. Disabling these data sources compromises the system.
      * 
      */
-    @OutputExport(name="disabledDataSources", type=List.class, parameters={String.class})
+    @Export(name="disabledDataSources", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> disabledDataSources;
 
     /**
@@ -81,7 +81,7 @@ public class IotSecuritySolution extends io.pulumi.resources.CustomResource {
      * Resource display name.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
@@ -95,7 +95,7 @@ public class IotSecuritySolution extends io.pulumi.resources.CustomResource {
      * List of additional options for exporting to workspace data.
      * 
      */
-    @OutputExport(name="export", type=List.class, parameters={String.class})
+    @Export(name="export", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> export;
 
     /**
@@ -109,7 +109,7 @@ public class IotSecuritySolution extends io.pulumi.resources.CustomResource {
      * IoT Hub resource IDs
      * 
      */
-    @OutputExport(name="iotHubs", type=List.class, parameters={String.class})
+    @Export(name="iotHubs", type=List.class, parameters={String.class})
     private Output<List<String>> iotHubs;
 
     /**
@@ -123,7 +123,7 @@ public class IotSecuritySolution extends io.pulumi.resources.CustomResource {
      * The resource location.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -137,7 +137,7 @@ public class IotSecuritySolution extends io.pulumi.resources.CustomResource {
      * Resource name
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -151,7 +151,7 @@ public class IotSecuritySolution extends io.pulumi.resources.CustomResource {
      * List of the configuration status for each recommendation type.
      * 
      */
-    @OutputExport(name="recommendationsConfiguration", type=List.class, parameters={RecommendationConfigurationPropertiesResponse.class})
+    @Export(name="recommendationsConfiguration", type=List.class, parameters={RecommendationConfigurationPropertiesResponse.class})
     private Output</* @Nullable */ List<RecommendationConfigurationPropertiesResponse>> recommendationsConfiguration;
 
     /**
@@ -165,7 +165,7 @@ public class IotSecuritySolution extends io.pulumi.resources.CustomResource {
      * Status of the IoT Security solution.
      * 
      */
-    @OutputExport(name="status", type=String.class, parameters={})
+    @Export(name="status", type=String.class, parameters={})
     private Output</* @Nullable */ String> status;
 
     /**
@@ -179,7 +179,7 @@ public class IotSecuritySolution extends io.pulumi.resources.CustomResource {
      * Azure Resource Manager metadata containing createdBy and modifiedBy information.
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -193,7 +193,7 @@ public class IotSecuritySolution extends io.pulumi.resources.CustomResource {
      * Resource tags
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -207,7 +207,7 @@ public class IotSecuritySolution extends io.pulumi.resources.CustomResource {
      * Resource type
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -221,7 +221,7 @@ public class IotSecuritySolution extends io.pulumi.resources.CustomResource {
      * Unmasked IP address logging status
      * 
      */
-    @OutputExport(name="unmaskedIpLoggingStatus", type=String.class, parameters={})
+    @Export(name="unmaskedIpLoggingStatus", type=String.class, parameters={})
     private Output</* @Nullable */ String> unmaskedIpLoggingStatus;
 
     /**
@@ -235,7 +235,7 @@ public class IotSecuritySolution extends io.pulumi.resources.CustomResource {
      * Properties of the IoT Security solution's user defined resources.
      * 
      */
-    @OutputExport(name="userDefinedResources", type=UserDefinedResourcesPropertiesResponse.class, parameters={})
+    @Export(name="userDefinedResources", type=UserDefinedResourcesPropertiesResponse.class, parameters={})
     private Output</* @Nullable */ UserDefinedResourcesPropertiesResponse> userDefinedResources;
 
     /**
@@ -249,7 +249,7 @@ public class IotSecuritySolution extends io.pulumi.resources.CustomResource {
      * Workspace resource ID
      * 
      */
-    @OutputExport(name="workspace", type=String.class, parameters={})
+    @Export(name="workspace", type=String.class, parameters={})
     private Output</* @Nullable */ String> workspace;
 
     /**

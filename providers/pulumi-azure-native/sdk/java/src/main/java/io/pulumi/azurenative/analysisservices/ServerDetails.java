@@ -11,7 +11,7 @@ import io.pulumi.azurenative.analysisservices.outputs.ResourceSkuResponse;
 import io.pulumi.azurenative.analysisservices.outputs.ServerAdministratorsResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -40,7 +40,7 @@ public class ServerDetails extends io.pulumi.resources.CustomResource {
      * A collection of AS server administrators
      * 
      */
-    @OutputExport(name="asAdministrators", type=ServerAdministratorsResponse.class, parameters={})
+    @Export(name="asAdministrators", type=ServerAdministratorsResponse.class, parameters={})
     private Output</* @Nullable */ ServerAdministratorsResponse> asAdministrators;
 
     /**
@@ -54,7 +54,7 @@ public class ServerDetails extends io.pulumi.resources.CustomResource {
      * The SAS container URI to the backup container.
      * 
      */
-    @OutputExport(name="backupBlobContainerUri", type=String.class, parameters={})
+    @Export(name="backupBlobContainerUri", type=String.class, parameters={})
     private Output</* @Nullable */ String> backupBlobContainerUri;
 
     /**
@@ -68,7 +68,7 @@ public class ServerDetails extends io.pulumi.resources.CustomResource {
      * The gateway details configured for the AS server.
      * 
      */
-    @OutputExport(name="gatewayDetails", type=GatewayDetailsResponse.class, parameters={})
+    @Export(name="gatewayDetails", type=GatewayDetailsResponse.class, parameters={})
     private Output</* @Nullable */ GatewayDetailsResponse> gatewayDetails;
 
     /**
@@ -82,7 +82,7 @@ public class ServerDetails extends io.pulumi.resources.CustomResource {
      * The firewall settings for the AS server.
      * 
      */
-    @OutputExport(name="ipV4FirewallSettings", type=IPv4FirewallSettingsResponse.class, parameters={})
+    @Export(name="ipV4FirewallSettings", type=IPv4FirewallSettingsResponse.class, parameters={})
     private Output</* @Nullable */ IPv4FirewallSettingsResponse> ipV4FirewallSettings;
 
     /**
@@ -96,7 +96,7 @@ public class ServerDetails extends io.pulumi.resources.CustomResource {
      * Location of the Analysis Services resource.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -110,7 +110,7 @@ public class ServerDetails extends io.pulumi.resources.CustomResource {
      * The managed mode of the server (0 = not managed, 1 = managed).
      * 
      */
-    @OutputExport(name="managedMode", type=Integer.class, parameters={})
+    @Export(name="managedMode", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> managedMode;
 
     /**
@@ -124,7 +124,7 @@ public class ServerDetails extends io.pulumi.resources.CustomResource {
      * The name of the Analysis Services resource.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -138,7 +138,7 @@ public class ServerDetails extends io.pulumi.resources.CustomResource {
      * The current deployment state of Analysis Services resource. The provisioningState is to indicate states for resource provisioning.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -152,7 +152,7 @@ public class ServerDetails extends io.pulumi.resources.CustomResource {
      * How the read-write server's participation in the query pool is controlled.<br/>It can have the following values: <ul><li>readOnly - indicates that the read-write server is intended not to participate in query operations</li><li>all - indicates that the read-write server can participate in query operations</li></ul>Specifying readOnly when capacity is 1 results in error.
      * 
      */
-    @OutputExport(name="querypoolConnectionMode", type=String.class, parameters={})
+    @Export(name="querypoolConnectionMode", type=String.class, parameters={})
     private Output</* @Nullable */ String> querypoolConnectionMode;
 
     /**
@@ -166,7 +166,7 @@ public class ServerDetails extends io.pulumi.resources.CustomResource {
      * The full name of the Analysis Services resource.
      * 
      */
-    @OutputExport(name="serverFullName", type=String.class, parameters={})
+    @Export(name="serverFullName", type=String.class, parameters={})
     private Output<String> serverFullName;
 
     /**
@@ -180,7 +180,7 @@ public class ServerDetails extends io.pulumi.resources.CustomResource {
      * The server monitor mode for AS server
      * 
      */
-    @OutputExport(name="serverMonitorMode", type=Integer.class, parameters={})
+    @Export(name="serverMonitorMode", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> serverMonitorMode;
 
     /**
@@ -194,7 +194,7 @@ public class ServerDetails extends io.pulumi.resources.CustomResource {
      * The SKU of the Analysis Services resource.
      * 
      */
-    @OutputExport(name="sku", type=ResourceSkuResponse.class, parameters={})
+    @Export(name="sku", type=ResourceSkuResponse.class, parameters={})
     private Output<ResourceSkuResponse> sku;
 
     /**
@@ -208,7 +208,7 @@ public class ServerDetails extends io.pulumi.resources.CustomResource {
      * The current state of Analysis Services resource. The state is to indicate more states outside of resource provisioning.
      * 
      */
-    @OutputExport(name="state", type=String.class, parameters={})
+    @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
@@ -222,7 +222,7 @@ public class ServerDetails extends io.pulumi.resources.CustomResource {
      * Key-value pairs of additional resource provisioning properties.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -236,7 +236,7 @@ public class ServerDetails extends io.pulumi.resources.CustomResource {
      * The type of the Analysis Services resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

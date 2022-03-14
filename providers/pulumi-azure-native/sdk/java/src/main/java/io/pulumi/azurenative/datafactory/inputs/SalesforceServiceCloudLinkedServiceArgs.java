@@ -9,7 +9,7 @@ import io.pulumi.azurenative.datafactory.inputs.ParameterSpecificationArgs;
 import io.pulumi.azurenative.datafactory.inputs.SecureStringArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -30,7 +30,7 @@ public final class SalesforceServiceCloudLinkedServiceArgs extends io.pulumi.res
      * List of tags that can be used for describing the linked service.
      * 
      */
-    @InputImport(name="annotations")
+    @Import(name="annotations")
       private final @Nullable Output<List<Object>> annotations;
 
     public Output<List<Object>> getAnnotations() {
@@ -41,7 +41,7 @@ public final class SalesforceServiceCloudLinkedServiceArgs extends io.pulumi.res
      * The Salesforce API version used in ADF. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="apiVersion")
+    @Import(name="apiVersion")
       private final @Nullable Output<Object> apiVersion;
 
     public Output<Object> getApiVersion() {
@@ -52,7 +52,7 @@ public final class SalesforceServiceCloudLinkedServiceArgs extends io.pulumi.res
      * The integration runtime reference.
      * 
      */
-    @InputImport(name="connectVia")
+    @Import(name="connectVia")
       private final @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
 
     public Output<IntegrationRuntimeReferenceArgs> getConnectVia() {
@@ -63,7 +63,7 @@ public final class SalesforceServiceCloudLinkedServiceArgs extends io.pulumi.res
      * Linked service description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -74,7 +74,7 @@ public final class SalesforceServiceCloudLinkedServiceArgs extends io.pulumi.res
      * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="encryptedCredential")
+    @Import(name="encryptedCredential")
       private final @Nullable Output<Object> encryptedCredential;
 
     public Output<Object> getEncryptedCredential() {
@@ -85,7 +85,7 @@ public final class SalesforceServiceCloudLinkedServiceArgs extends io.pulumi.res
      * The URL of Salesforce Service Cloud instance. Default is 'https://login.salesforce.com'. To copy data from sandbox, specify 'https://test.salesforce.com'. To copy data from custom domain, specify, for example, 'https://[domain].my.salesforce.com'. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="environmentUrl")
+    @Import(name="environmentUrl")
       private final @Nullable Output<Object> environmentUrl;
 
     public Output<Object> getEnvironmentUrl() {
@@ -96,7 +96,7 @@ public final class SalesforceServiceCloudLinkedServiceArgs extends io.pulumi.res
      * Extended properties appended to the connection string. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="extendedProperties")
+    @Import(name="extendedProperties")
       private final @Nullable Output<Object> extendedProperties;
 
     public Output<Object> getExtendedProperties() {
@@ -107,7 +107,7 @@ public final class SalesforceServiceCloudLinkedServiceArgs extends io.pulumi.res
      * Parameters for linked service.
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
     public Output<Map<String,ParameterSpecificationArgs>> getParameters() {
@@ -118,7 +118,7 @@ public final class SalesforceServiceCloudLinkedServiceArgs extends io.pulumi.res
      * The password for Basic authentication of the Salesforce instance.
      * 
      */
-    @InputImport(name="password")
+    @Import(name="password")
       private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
 
     public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getPassword() {
@@ -129,7 +129,7 @@ public final class SalesforceServiceCloudLinkedServiceArgs extends io.pulumi.res
      * The security token is optional to remotely access Salesforce instance.
      * 
      */
-    @InputImport(name="securityToken")
+    @Import(name="securityToken")
       private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> securityToken;
 
     public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getSecurityToken() {
@@ -141,7 +141,7 @@ public final class SalesforceServiceCloudLinkedServiceArgs extends io.pulumi.res
      * Expected value is 'SalesforceServiceCloud'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {
@@ -152,7 +152,7 @@ public final class SalesforceServiceCloudLinkedServiceArgs extends io.pulumi.res
      * The username for Basic authentication of the Salesforce instance. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="username")
+    @Import(name="username")
       private final @Nullable Output<Object> username;
 
     public Output<Object> getUsername() {

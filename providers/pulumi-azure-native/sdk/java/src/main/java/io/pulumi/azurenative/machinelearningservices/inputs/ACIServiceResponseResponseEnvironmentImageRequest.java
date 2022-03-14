@@ -7,7 +7,7 @@ import io.pulumi.azurenative.machinelearningservices.inputs.EnvironmentImageResp
 import io.pulumi.azurenative.machinelearningservices.inputs.EnvironmentImageResponseResponseEnvironmentReference;
 import io.pulumi.azurenative.machinelearningservices.inputs.ImageAssetResponse;
 import io.pulumi.azurenative.machinelearningservices.inputs.ModelResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +27,7 @@ public final class ACIServiceResponseResponseEnvironmentImageRequest extends io.
      * The list of assets.
      * 
      */
-    @InputImport(name="assets")
+    @Import(name="assets")
       private final @Nullable List<ImageAssetResponse> assets;
 
     public List<ImageAssetResponse> getAssets() {
@@ -38,7 +38,7 @@ public final class ACIServiceResponseResponseEnvironmentImageRequest extends io.
      * The name of the driver file.
      * 
      */
-    @InputImport(name="driverProgram")
+    @Import(name="driverProgram")
       private final @Nullable String driverProgram;
 
     public Optional<String> getDriverProgram() {
@@ -49,7 +49,7 @@ public final class ACIServiceResponseResponseEnvironmentImageRequest extends io.
      * The details of the AZURE ML environment.
      * 
      */
-    @InputImport(name="environment")
+    @Import(name="environment")
       private final @Nullable EnvironmentImageResponseResponseEnvironment environment;
 
     public Optional<EnvironmentImageResponseResponseEnvironment> getEnvironment() {
@@ -60,7 +60,7 @@ public final class ACIServiceResponseResponseEnvironmentImageRequest extends io.
      * The unique identifying details of the AZURE ML environment.
      * 
      */
-    @InputImport(name="environmentReference")
+    @Import(name="environmentReference")
       private final @Nullable EnvironmentImageResponseResponseEnvironmentReference environmentReference;
 
     public Optional<EnvironmentImageResponseResponseEnvironmentReference> getEnvironmentReference() {
@@ -71,7 +71,7 @@ public final class ACIServiceResponseResponseEnvironmentImageRequest extends io.
      * The list of model Ids.
      * 
      */
-    @InputImport(name="modelIds")
+    @Import(name="modelIds")
       private final @Nullable List<String> modelIds;
 
     public List<String> getModelIds() {
@@ -82,7 +82,7 @@ public final class ACIServiceResponseResponseEnvironmentImageRequest extends io.
      * The list of models.
      * 
      */
-    @InputImport(name="models")
+    @Import(name="models")
       private final @Nullable List<ModelResponse> models;
 
     public List<ModelResponse> getModels() {

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.devices.IotHubResourceEventHubConsumerGroupArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +35,7 @@ public class IotHubResourceEventHubConsumerGroup extends io.pulumi.resources.Cus
      * The etag.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -49,7 +49,7 @@ public class IotHubResourceEventHubConsumerGroup extends io.pulumi.resources.Cus
      * The Event Hub-compatible consumer group name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -63,7 +63,7 @@ public class IotHubResourceEventHubConsumerGroup extends io.pulumi.resources.Cus
      * The tags.
      * 
      */
-    @OutputExport(name="properties", type=Map.class, parameters={String.class, String.class})
+    @Export(name="properties", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> properties;
 
     /**
@@ -77,7 +77,7 @@ public class IotHubResourceEventHubConsumerGroup extends io.pulumi.resources.Cus
      * the resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

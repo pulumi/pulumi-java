@@ -5,7 +5,7 @@ package io.pulumi.azurenative.devtestlab.inputs;
 
 import io.pulumi.azurenative.devtestlab.inputs.InboundNatRuleArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class SharedPublicIpAddressConfigurationArgs extends io.pulumi.reso
      * The incoming NAT rules
      * 
      */
-    @InputImport(name="inboundNatRules")
+    @Import(name="inboundNatRules")
       private final @Nullable Output<List<InboundNatRuleArgs>> inboundNatRules;
 
     public Output<List<InboundNatRuleArgs>> getInboundNatRules() {

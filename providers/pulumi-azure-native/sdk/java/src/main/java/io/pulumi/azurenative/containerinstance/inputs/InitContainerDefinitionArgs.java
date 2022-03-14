@@ -6,7 +6,7 @@ package io.pulumi.azurenative.containerinstance.inputs;
 import io.pulumi.azurenative.containerinstance.inputs.EnvironmentVariableArgs;
 import io.pulumi.azurenative.containerinstance.inputs.VolumeMountArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class InitContainerDefinitionArgs extends io.pulumi.resources.Resou
      * The command to execute within the init container in exec form.
      * 
      */
-    @InputImport(name="command")
+    @Import(name="command")
       private final @Nullable Output<List<String>> command;
 
     public Output<List<String>> getCommand() {
@@ -36,7 +36,7 @@ public final class InitContainerDefinitionArgs extends io.pulumi.resources.Resou
      * The environment variables to set in the init container.
      * 
      */
-    @InputImport(name="environmentVariables")
+    @Import(name="environmentVariables")
       private final @Nullable Output<List<EnvironmentVariableArgs>> environmentVariables;
 
     public Output<List<EnvironmentVariableArgs>> getEnvironmentVariables() {
@@ -47,7 +47,7 @@ public final class InitContainerDefinitionArgs extends io.pulumi.resources.Resou
      * The image of the init container.
      * 
      */
-    @InputImport(name="image")
+    @Import(name="image")
       private final @Nullable Output<String> image;
 
     public Output<String> getImage() {
@@ -58,7 +58,7 @@ public final class InitContainerDefinitionArgs extends io.pulumi.resources.Resou
      * The name for the init container.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -69,7 +69,7 @@ public final class InitContainerDefinitionArgs extends io.pulumi.resources.Resou
      * The volume mounts available to the init container.
      * 
      */
-    @InputImport(name="volumeMounts")
+    @Import(name="volumeMounts")
       private final @Nullable Output<List<VolumeMountArgs>> volumeMounts;
 
     public Output<List<VolumeMountArgs>> getVolumeMounts() {

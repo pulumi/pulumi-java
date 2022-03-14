@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.deploymentmanager.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class ResourceOperationResponse extends io.pulumi.resources.InvokeA
      * Unique identifier of the operation. For ARM resources, this is the operationId obtained from ARM service.
      * 
      */
-    @InputImport(name="operationId", required=true)
+    @Import(name="operationId", required=true)
       private final String operationId;
 
     public String getOperationId() {
@@ -33,7 +33,7 @@ public final class ResourceOperationResponse extends io.pulumi.resources.InvokeA
      * State of the resource deployment. For ARM resources, this is the current provisioning state of the resource.
      * 
      */
-    @InputImport(name="provisioningState", required=true)
+    @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
     public String getProvisioningState() {
@@ -44,7 +44,7 @@ public final class ResourceOperationResponse extends io.pulumi.resources.InvokeA
      * Name of the resource as specified in the artifacts. For ARM resources, this is the name of the resource specified in the template.
      * 
      */
-    @InputImport(name="resourceName")
+    @Import(name="resourceName")
       private final @Nullable String resourceName;
 
     public Optional<String> getPropResourceName() {
@@ -55,7 +55,7 @@ public final class ResourceOperationResponse extends io.pulumi.resources.InvokeA
      * Type of the resource as specified in the artifacts. For ARM resources, this is the type of the resource specified in the template.
      * 
      */
-    @InputImport(name="resourceType")
+    @Import(name="resourceType")
       private final @Nullable String resourceType;
 
     public Optional<String> getPropResourceType() {
@@ -66,7 +66,7 @@ public final class ResourceOperationResponse extends io.pulumi.resources.InvokeA
      * Http status code of the operation.
      * 
      */
-    @InputImport(name="statusCode", required=true)
+    @Import(name="statusCode", required=true)
       private final String statusCode;
 
     public String getStatusCode() {
@@ -77,7 +77,7 @@ public final class ResourceOperationResponse extends io.pulumi.resources.InvokeA
      * Descriptive information of the resource operation.
      * 
      */
-    @InputImport(name="statusMessage", required=true)
+    @Import(name="statusMessage", required=true)
       private final String statusMessage;
 
     public String getStatusMessage() {

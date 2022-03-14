@@ -7,7 +7,7 @@ import io.pulumi.azurenative.network.outputs.FlowLogResponse;
 import io.pulumi.azurenative.network.outputs.NetworkInterfaceResponse;
 import io.pulumi.azurenative.network.outputs.SecurityRuleResponse;
 import io.pulumi.azurenative.network.outputs.SubnetResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -15,7 +15,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class NetworkSecurityGroupResponse {
     /**
      * The default security rules of network security group.
@@ -83,21 +83,21 @@ public final class NetworkSecurityGroupResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NetworkSecurityGroupResponse(
-        @OutputCustomType.Parameter("defaultSecurityRules") List<SecurityRuleResponse> defaultSecurityRules,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("flowLogs") List<FlowLogResponse> flowLogs,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("networkInterfaces") List<NetworkInterfaceResponse> networkInterfaces,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("resourceGuid") String resourceGuid,
-        @OutputCustomType.Parameter("securityRules") @Nullable List<SecurityRuleResponse> securityRules,
-        @OutputCustomType.Parameter("subnets") List<SubnetResponse> subnets,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("defaultSecurityRules") List<SecurityRuleResponse> defaultSecurityRules,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("flowLogs") List<FlowLogResponse> flowLogs,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("networkInterfaces") List<NetworkInterfaceResponse> networkInterfaces,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("resourceGuid") String resourceGuid,
+        @CustomType.Parameter("securityRules") @Nullable List<SecurityRuleResponse> securityRules,
+        @CustomType.Parameter("subnets") List<SubnetResponse> subnets,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type) {
         this.defaultSecurityRules = defaultSecurityRules;
         this.etag = etag;
         this.flowLogs = flowLogs;

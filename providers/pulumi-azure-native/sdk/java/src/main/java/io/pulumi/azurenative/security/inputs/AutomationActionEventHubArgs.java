@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.security.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class AutomationActionEventHubArgs extends io.pulumi.resources.Reso
      * Expected value is 'EventHub'.
      * 
      */
-    @InputImport(name="actionType", required=true)
+    @Import(name="actionType", required=true)
       private final Output<String> actionType;
 
     public Output<String> getActionType() {
@@ -34,7 +34,7 @@ public final class AutomationActionEventHubArgs extends io.pulumi.resources.Reso
      * The target Event Hub connection string (it will not be included in any response).
      * 
      */
-    @InputImport(name="connectionString")
+    @Import(name="connectionString")
       private final @Nullable Output<String> connectionString;
 
     public Output<String> getConnectionString() {
@@ -45,7 +45,7 @@ public final class AutomationActionEventHubArgs extends io.pulumi.resources.Reso
      * The target Event Hub Azure Resource ID.
      * 
      */
-    @InputImport(name="eventHubResourceId")
+    @Import(name="eventHubResourceId")
       private final @Nullable Output<String> eventHubResourceId;
 
     public Output<String> getEventHubResourceId() {

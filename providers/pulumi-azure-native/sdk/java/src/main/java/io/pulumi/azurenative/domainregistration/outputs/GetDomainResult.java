@@ -5,7 +5,7 @@ package io.pulumi.azurenative.domainregistration.outputs;
 
 import io.pulumi.azurenative.domainregistration.outputs.HostNameResponse;
 import io.pulumi.azurenative.domainregistration.outputs.SystemDataResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -14,7 +14,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetDomainResult {
     private final @Nullable String authCode;
     /**
@@ -124,30 +124,30 @@ public final class GetDomainResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDomainResult(
-        @OutputCustomType.Parameter("authCode") @Nullable String authCode,
-        @OutputCustomType.Parameter("autoRenew") @Nullable Boolean autoRenew,
-        @OutputCustomType.Parameter("createdTime") String createdTime,
-        @OutputCustomType.Parameter("dnsType") @Nullable String dnsType,
-        @OutputCustomType.Parameter("dnsZoneId") @Nullable String dnsZoneId,
-        @OutputCustomType.Parameter("domainNotRenewableReasons") List<String> domainNotRenewableReasons,
-        @OutputCustomType.Parameter("expirationTime") String expirationTime,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("kind") @Nullable String kind,
-        @OutputCustomType.Parameter("lastRenewedTime") String lastRenewedTime,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("managedHostNames") List<HostNameResponse> managedHostNames,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("nameServers") List<String> nameServers,
-        @OutputCustomType.Parameter("privacy") @Nullable Boolean privacy,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("readyForDnsRecordManagement") Boolean readyForDnsRecordManagement,
-        @OutputCustomType.Parameter("registrationStatus") String registrationStatus,
-        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("targetDnsType") @Nullable String targetDnsType,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("authCode") @Nullable String authCode,
+        @CustomType.Parameter("autoRenew") @Nullable Boolean autoRenew,
+        @CustomType.Parameter("createdTime") String createdTime,
+        @CustomType.Parameter("dnsType") @Nullable String dnsType,
+        @CustomType.Parameter("dnsZoneId") @Nullable String dnsZoneId,
+        @CustomType.Parameter("domainNotRenewableReasons") List<String> domainNotRenewableReasons,
+        @CustomType.Parameter("expirationTime") String expirationTime,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("kind") @Nullable String kind,
+        @CustomType.Parameter("lastRenewedTime") String lastRenewedTime,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("managedHostNames") List<HostNameResponse> managedHostNames,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("nameServers") List<String> nameServers,
+        @CustomType.Parameter("privacy") @Nullable Boolean privacy,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("readyForDnsRecordManagement") Boolean readyForDnsRecordManagement,
+        @CustomType.Parameter("registrationStatus") String registrationStatus,
+        @CustomType.Parameter("systemData") SystemDataResponse systemData,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("targetDnsType") @Nullable String targetDnsType,
+        @CustomType.Parameter("type") String type) {
         this.authCode = authCode;
         this.autoRenew = autoRenew;
         this.createdTime = createdTime;

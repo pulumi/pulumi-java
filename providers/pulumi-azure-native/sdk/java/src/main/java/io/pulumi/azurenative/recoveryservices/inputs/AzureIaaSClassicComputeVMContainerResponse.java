@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class AzureIaaSClassicComputeVMContainerResponse extends io.pulumi.
      * Type of backup management for the container.
      * 
      */
-    @InputImport(name="backupManagementType")
+    @Import(name="backupManagementType")
       private final @Nullable String backupManagementType;
 
     public Optional<String> getBackupManagementType() {
@@ -37,7 +37,7 @@ public final class AzureIaaSClassicComputeVMContainerResponse extends io.pulumi.
      * Expected value is 'Microsoft.ClassicCompute/virtualMachines'.
      * 
      */
-    @InputImport(name="containerType", required=true)
+    @Import(name="containerType", required=true)
       private final String containerType;
 
     public String getContainerType() {
@@ -48,7 +48,7 @@ public final class AzureIaaSClassicComputeVMContainerResponse extends io.pulumi.
      * Friendly name of the container.
      * 
      */
-    @InputImport(name="friendlyName")
+    @Import(name="friendlyName")
       private final @Nullable String friendlyName;
 
     public Optional<String> getFriendlyName() {
@@ -59,7 +59,7 @@ public final class AzureIaaSClassicComputeVMContainerResponse extends io.pulumi.
      * Status of health of the container.
      * 
      */
-    @InputImport(name="healthStatus")
+    @Import(name="healthStatus")
       private final @Nullable String healthStatus;
 
     public Optional<String> getHealthStatus() {
@@ -70,7 +70,7 @@ public final class AzureIaaSClassicComputeVMContainerResponse extends io.pulumi.
      * Status of registration of the container with the Recovery Services Vault.
      * 
      */
-    @InputImport(name="registrationStatus")
+    @Import(name="registrationStatus")
       private final @Nullable String registrationStatus;
 
     public Optional<String> getRegistrationStatus() {
@@ -81,7 +81,7 @@ public final class AzureIaaSClassicComputeVMContainerResponse extends io.pulumi.
      * Resource group name of Recovery Services Vault.
      * 
      */
-    @InputImport(name="resourceGroup")
+    @Import(name="resourceGroup")
       private final @Nullable String resourceGroup;
 
     public Optional<String> getResourceGroup() {
@@ -92,7 +92,7 @@ public final class AzureIaaSClassicComputeVMContainerResponse extends io.pulumi.
      * Fully qualified ARM url of the virtual machine represented by this Azure IaaS VM container.
      * 
      */
-    @InputImport(name="virtualMachineId")
+    @Import(name="virtualMachineId")
       private final @Nullable String virtualMachineId;
 
     public Optional<String> getVirtualMachineId() {
@@ -103,7 +103,7 @@ public final class AzureIaaSClassicComputeVMContainerResponse extends io.pulumi.
      * Specifies whether the container represents a Classic or an Azure Resource Manager VM.
      * 
      */
-    @InputImport(name="virtualMachineVersion")
+    @Import(name="virtualMachineVersion")
       private final @Nullable String virtualMachineVersion;
 
     public Optional<String> getVirtualMachineVersion() {

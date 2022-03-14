@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.containerinstance.inputs;
 
 import io.pulumi.azurenative.containerinstance.inputs.LogAnalyticsResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class ContainerGroupDiagnosticsResponse extends io.pulumi.resources
      * Container group log analytics information.
      * 
      */
-    @InputImport(name="logAnalytics")
+    @Import(name="logAnalytics")
       private final @Nullable LogAnalyticsResponse logAnalytics;
 
     public Optional<LogAnalyticsResponse> getLogAnalytics() {

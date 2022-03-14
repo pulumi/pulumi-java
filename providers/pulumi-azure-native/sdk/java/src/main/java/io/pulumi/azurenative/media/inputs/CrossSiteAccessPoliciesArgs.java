@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.media.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class CrossSiteAccessPoliciesArgs extends io.pulumi.resources.Resou
      * The content of clientaccesspolicy.xml used by Silverlight.
      * 
      */
-    @InputImport(name="clientAccessPolicy")
+    @Import(name="clientAccessPolicy")
       private final @Nullable Output<String> clientAccessPolicy;
 
     public Output<String> getClientAccessPolicy() {
@@ -33,7 +33,7 @@ public final class CrossSiteAccessPoliciesArgs extends io.pulumi.resources.Resou
      * The content of crossdomain.xml used by Silverlight.
      * 
      */
-    @InputImport(name="crossDomainPolicy")
+    @Import(name="crossDomainPolicy")
       private final @Nullable Output<String> crossDomainPolicy;
 
     public Output<String> getCrossDomainPolicy() {

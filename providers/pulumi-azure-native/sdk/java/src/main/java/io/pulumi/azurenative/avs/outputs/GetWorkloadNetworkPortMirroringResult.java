@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.avs.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetWorkloadNetworkPortMirroringResult {
     /**
      * Destination VM Group.
@@ -63,18 +63,18 @@ public final class GetWorkloadNetworkPortMirroringResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetWorkloadNetworkPortMirroringResult(
-        @OutputCustomType.Parameter("destination") @Nullable String destination,
-        @OutputCustomType.Parameter("direction") @Nullable String direction,
-        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("revision") @Nullable Double revision,
-        @OutputCustomType.Parameter("source") @Nullable String source,
-        @OutputCustomType.Parameter("status") String status,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("destination") @Nullable String destination,
+        @CustomType.Parameter("direction") @Nullable String direction,
+        @CustomType.Parameter("displayName") @Nullable String displayName,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("revision") @Nullable Double revision,
+        @CustomType.Parameter("source") @Nullable String source,
+        @CustomType.Parameter("status") String status,
+        @CustomType.Parameter("type") String type) {
         this.destination = destination;
         this.direction = direction;
         this.displayName = displayName;

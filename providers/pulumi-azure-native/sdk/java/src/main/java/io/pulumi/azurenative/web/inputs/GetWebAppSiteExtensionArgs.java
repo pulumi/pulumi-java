@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetWebAppSiteExtensionArgs extends io.pulumi.resources.Invoke
      * Site name.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -27,7 +27,7 @@ public final class GetWebAppSiteExtensionArgs extends io.pulumi.resources.Invoke
      * Name of the resource group to which the resource belongs.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {
@@ -38,7 +38,7 @@ public final class GetWebAppSiteExtensionArgs extends io.pulumi.resources.Invoke
      * Site extension name.
      * 
      */
-    @InputImport(name="siteExtensionId", required=true)
+    @Import(name="siteExtensionId", required=true)
       private final String siteExtensionId;
 
     public String getSiteExtensionId() {

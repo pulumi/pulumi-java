@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.portal.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TerminalSettingsResponse {
     /**
      * Size of terminal font.
@@ -22,10 +22,10 @@ public final class TerminalSettingsResponse {
      */
     private final @Nullable String fontStyle;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TerminalSettingsResponse(
-        @OutputCustomType.Parameter("fontSize") @Nullable String fontSize,
-        @OutputCustomType.Parameter("fontStyle") @Nullable String fontStyle) {
+        @CustomType.Parameter("fontSize") @Nullable String fontSize,
+        @CustomType.Parameter("fontStyle") @Nullable String fontStyle) {
         this.fontSize = fontSize;
         this.fontStyle = fontStyle;
     }

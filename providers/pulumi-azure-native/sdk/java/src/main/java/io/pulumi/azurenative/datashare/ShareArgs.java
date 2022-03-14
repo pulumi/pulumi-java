@@ -6,7 +6,7 @@ package io.pulumi.azurenative.datashare;
 import io.pulumi.azurenative.datashare.enums.ShareKind;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the share account.
      * 
      */
-    @InputImport(name="accountName", required=true)
+    @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
     public Output<String> getAccountName() {
@@ -31,7 +31,7 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
      * Share description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -42,7 +42,7 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
      * The resource group name.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -53,7 +53,7 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
      * Share kind.
      * 
      */
-    @InputImport(name="shareKind")
+    @Import(name="shareKind")
       private final @Nullable Output<Either<String,ShareKind>> shareKind;
 
     public Output<Either<String,ShareKind>> getShareKind() {
@@ -64,7 +64,7 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the share.
      * 
      */
-    @InputImport(name="shareName")
+    @Import(name="shareName")
       private final @Nullable Output<String> shareName;
 
     public Output<String> getShareName() {
@@ -75,7 +75,7 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
      * Share terms.
      * 
      */
-    @InputImport(name="terms")
+    @Import(name="terms")
       private final @Nullable Output<String> terms;
 
     public Output<String> getTerms() {

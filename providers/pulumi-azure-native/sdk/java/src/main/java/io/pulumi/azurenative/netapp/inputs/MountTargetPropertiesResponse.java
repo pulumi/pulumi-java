@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.netapp.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class MountTargetPropertiesResponse extends io.pulumi.resources.Inv
      * UUID v4 used to identify the MountTarget
      * 
      */
-    @InputImport(name="fileSystemId", required=true)
+    @Import(name="fileSystemId", required=true)
       private final String fileSystemId;
 
     public String getFileSystemId() {
@@ -33,7 +33,7 @@ public final class MountTargetPropertiesResponse extends io.pulumi.resources.Inv
      * The mount target's IPv4 address
      * 
      */
-    @InputImport(name="ipAddress", required=true)
+    @Import(name="ipAddress", required=true)
       private final String ipAddress;
 
     public String getIpAddress() {
@@ -44,7 +44,7 @@ public final class MountTargetPropertiesResponse extends io.pulumi.resources.Inv
      * UUID v4 used to identify the MountTarget
      * 
      */
-    @InputImport(name="mountTargetId", required=true)
+    @Import(name="mountTargetId", required=true)
       private final String mountTargetId;
 
     public String getMountTargetId() {
@@ -55,7 +55,7 @@ public final class MountTargetPropertiesResponse extends io.pulumi.resources.Inv
      * The SMB server's Fully Qualified Domain Name, FQDN
      * 
      */
-    @InputImport(name="smbServerFqdn")
+    @Import(name="smbServerFqdn")
       private final @Nullable String smbServerFqdn;
 
     public Optional<String> getSmbServerFqdn() {

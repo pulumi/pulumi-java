@@ -8,7 +8,7 @@ import io.pulumi.azurenative.sql.outputs.RecommendedActionImpactRecordResponse;
 import io.pulumi.azurenative.sql.outputs.RecommendedActionImplementationInfoResponse;
 import io.pulumi.azurenative.sql.outputs.RecommendedActionMetricInfoResponse;
 import io.pulumi.azurenative.sql.outputs.RecommendedActionStateInfoResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.Object;
@@ -17,7 +17,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RecommendedActionResponse {
     /**
      * Gets additional details specific to this recommended action.
@@ -160,36 +160,36 @@ public final class RecommendedActionResponse {
      */
     private final String validSince;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RecommendedActionResponse(
-        @OutputCustomType.Parameter("details") Map<String,Object> details,
-        @OutputCustomType.Parameter("errorDetails") RecommendedActionErrorInfoResponse errorDetails,
-        @OutputCustomType.Parameter("estimatedImpact") List<RecommendedActionImpactRecordResponse> estimatedImpact,
-        @OutputCustomType.Parameter("executeActionDuration") String executeActionDuration,
-        @OutputCustomType.Parameter("executeActionInitiatedBy") String executeActionInitiatedBy,
-        @OutputCustomType.Parameter("executeActionInitiatedTime") String executeActionInitiatedTime,
-        @OutputCustomType.Parameter("executeActionStartTime") String executeActionStartTime,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("implementationDetails") RecommendedActionImplementationInfoResponse implementationDetails,
-        @OutputCustomType.Parameter("isArchivedAction") Boolean isArchivedAction,
-        @OutputCustomType.Parameter("isExecutableAction") Boolean isExecutableAction,
-        @OutputCustomType.Parameter("isRevertableAction") Boolean isRevertableAction,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("lastRefresh") String lastRefresh,
-        @OutputCustomType.Parameter("linkedObjects") List<String> linkedObjects,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("observedImpact") List<RecommendedActionImpactRecordResponse> observedImpact,
-        @OutputCustomType.Parameter("recommendationReason") String recommendationReason,
-        @OutputCustomType.Parameter("revertActionDuration") String revertActionDuration,
-        @OutputCustomType.Parameter("revertActionInitiatedBy") String revertActionInitiatedBy,
-        @OutputCustomType.Parameter("revertActionInitiatedTime") String revertActionInitiatedTime,
-        @OutputCustomType.Parameter("revertActionStartTime") String revertActionStartTime,
-        @OutputCustomType.Parameter("score") Integer score,
-        @OutputCustomType.Parameter("state") RecommendedActionStateInfoResponse state,
-        @OutputCustomType.Parameter("timeSeries") List<RecommendedActionMetricInfoResponse> timeSeries,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("validSince") String validSince) {
+        @CustomType.Parameter("details") Map<String,Object> details,
+        @CustomType.Parameter("errorDetails") RecommendedActionErrorInfoResponse errorDetails,
+        @CustomType.Parameter("estimatedImpact") List<RecommendedActionImpactRecordResponse> estimatedImpact,
+        @CustomType.Parameter("executeActionDuration") String executeActionDuration,
+        @CustomType.Parameter("executeActionInitiatedBy") String executeActionInitiatedBy,
+        @CustomType.Parameter("executeActionInitiatedTime") String executeActionInitiatedTime,
+        @CustomType.Parameter("executeActionStartTime") String executeActionStartTime,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("implementationDetails") RecommendedActionImplementationInfoResponse implementationDetails,
+        @CustomType.Parameter("isArchivedAction") Boolean isArchivedAction,
+        @CustomType.Parameter("isExecutableAction") Boolean isExecutableAction,
+        @CustomType.Parameter("isRevertableAction") Boolean isRevertableAction,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("lastRefresh") String lastRefresh,
+        @CustomType.Parameter("linkedObjects") List<String> linkedObjects,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("observedImpact") List<RecommendedActionImpactRecordResponse> observedImpact,
+        @CustomType.Parameter("recommendationReason") String recommendationReason,
+        @CustomType.Parameter("revertActionDuration") String revertActionDuration,
+        @CustomType.Parameter("revertActionInitiatedBy") String revertActionInitiatedBy,
+        @CustomType.Parameter("revertActionInitiatedTime") String revertActionInitiatedTime,
+        @CustomType.Parameter("revertActionStartTime") String revertActionStartTime,
+        @CustomType.Parameter("score") Integer score,
+        @CustomType.Parameter("state") RecommendedActionStateInfoResponse state,
+        @CustomType.Parameter("timeSeries") List<RecommendedActionMetricInfoResponse> timeSeries,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("validSince") String validSince) {
         this.details = details;
         this.errorDetails = errorDetails;
         this.estimatedImpact = estimatedImpact;

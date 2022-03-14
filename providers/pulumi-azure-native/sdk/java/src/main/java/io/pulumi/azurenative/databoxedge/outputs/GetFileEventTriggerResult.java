@@ -6,13 +6,13 @@ package io.pulumi.azurenative.databoxedge.outputs;
 import io.pulumi.azurenative.databoxedge.outputs.FileSourceInfoResponse;
 import io.pulumi.azurenative.databoxedge.outputs.RoleSinkInfoResponse;
 import io.pulumi.azurenative.databoxedge.outputs.SystemDataResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetFileEventTriggerResult {
     /**
      * A custom context tag typically used to correlate the trigger against its usage. For example, if a periodic timer trigger is intended for certain specific IoT modules in the device, the tag can be the name or the image URL of the module.
@@ -56,16 +56,16 @@ public final class GetFileEventTriggerResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetFileEventTriggerResult(
-        @OutputCustomType.Parameter("customContextTag") @Nullable String customContextTag,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("sinkInfo") RoleSinkInfoResponse sinkInfo,
-        @OutputCustomType.Parameter("sourceInfo") FileSourceInfoResponse sourceInfo,
-        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("customContextTag") @Nullable String customContextTag,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("sinkInfo") RoleSinkInfoResponse sinkInfo,
+        @CustomType.Parameter("sourceInfo") FileSourceInfoResponse sourceInfo,
+        @CustomType.Parameter("systemData") SystemDataResponse systemData,
+        @CustomType.Parameter("type") String type) {
         this.customContextTag = customContextTag;
         this.id = id;
         this.kind = kind;

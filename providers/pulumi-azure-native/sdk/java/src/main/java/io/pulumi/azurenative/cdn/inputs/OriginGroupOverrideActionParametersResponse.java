@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.cdn.inputs;
 
 import io.pulumi.azurenative.cdn.inputs.ResourceReferenceResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class OriginGroupOverrideActionParametersResponse extends io.pulumi
 
     public static final OriginGroupOverrideActionParametersResponse Empty = new OriginGroupOverrideActionParametersResponse();
 
-    @InputImport(name="odataType", required=true)
+    @Import(name="odataType", required=true)
       private final String odataType;
 
     public String getOdataType() {
@@ -28,7 +28,7 @@ public final class OriginGroupOverrideActionParametersResponse extends io.pulumi
      * defines the OriginGroup that would override the DefaultOriginGroup.
      * 
      */
-    @InputImport(name="originGroup", required=true)
+    @Import(name="originGroup", required=true)
       private final ResourceReferenceResponse originGroup;
 
     public ResourceReferenceResponse getOriginGroup() {

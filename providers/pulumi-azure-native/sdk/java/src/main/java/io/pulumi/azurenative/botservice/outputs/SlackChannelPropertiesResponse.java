@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.botservice.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SlackChannelPropertiesResponse {
     /**
      * The Slack client id
@@ -63,18 +63,18 @@ public final class SlackChannelPropertiesResponse {
      */
     private final @Nullable String verificationToken;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SlackChannelPropertiesResponse(
-        @OutputCustomType.Parameter("clientId") @Nullable String clientId,
-        @OutputCustomType.Parameter("clientSecret") @Nullable String clientSecret,
-        @OutputCustomType.Parameter("isEnabled") Boolean isEnabled,
-        @OutputCustomType.Parameter("isValidated") Boolean isValidated,
-        @OutputCustomType.Parameter("landingPageUrl") @Nullable String landingPageUrl,
-        @OutputCustomType.Parameter("lastSubmissionId") String lastSubmissionId,
-        @OutputCustomType.Parameter("redirectAction") String redirectAction,
-        @OutputCustomType.Parameter("registerBeforeOAuthFlow") Boolean registerBeforeOAuthFlow,
-        @OutputCustomType.Parameter("signingSecret") @Nullable String signingSecret,
-        @OutputCustomType.Parameter("verificationToken") @Nullable String verificationToken) {
+        @CustomType.Parameter("clientId") @Nullable String clientId,
+        @CustomType.Parameter("clientSecret") @Nullable String clientSecret,
+        @CustomType.Parameter("isEnabled") Boolean isEnabled,
+        @CustomType.Parameter("isValidated") Boolean isValidated,
+        @CustomType.Parameter("landingPageUrl") @Nullable String landingPageUrl,
+        @CustomType.Parameter("lastSubmissionId") String lastSubmissionId,
+        @CustomType.Parameter("redirectAction") String redirectAction,
+        @CustomType.Parameter("registerBeforeOAuthFlow") Boolean registerBeforeOAuthFlow,
+        @CustomType.Parameter("signingSecret") @Nullable String signingSecret,
+        @CustomType.Parameter("verificationToken") @Nullable String verificationToken) {
         this.clientId = clientId;
         this.clientSecret = clientSecret;
         this.isEnabled = isEnabled;

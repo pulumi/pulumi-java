@@ -5,7 +5,7 @@ package io.pulumi.azurenative.hardwaresecuritymodules.outputs;
 
 import io.pulumi.azurenative.hardwaresecuritymodules.outputs.NetworkProfileResponse;
 import io.pulumi.azurenative.hardwaresecuritymodules.outputs.SkuResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetDedicatedHsmResult {
     /**
      * The Azure Resource Manager resource ID for the dedicated HSM.
@@ -71,19 +71,19 @@ public final class GetDedicatedHsmResult {
      */
     private final @Nullable List<String> zones;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDedicatedHsmResult(
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("networkProfile") @Nullable NetworkProfileResponse networkProfile,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("sku") SkuResponse sku,
-        @OutputCustomType.Parameter("stampId") @Nullable String stampId,
-        @OutputCustomType.Parameter("statusMessage") String statusMessage,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("zones") @Nullable List<String> zones) {
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("networkProfile") @Nullable NetworkProfileResponse networkProfile,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("sku") SkuResponse sku,
+        @CustomType.Parameter("stampId") @Nullable String stampId,
+        @CustomType.Parameter("statusMessage") String statusMessage,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("zones") @Nullable List<String> zones) {
         this.id = id;
         this.location = location;
         this.name = name;

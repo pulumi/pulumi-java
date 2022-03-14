@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.devices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class IotDpsSkuInfoResponse extends io.pulumi.resources.InvokeArgs 
      * The number of units to provision
      * 
      */
-    @InputImport(name="capacity")
+    @Import(name="capacity")
       private final @Nullable Double capacity;
 
     public Optional<Double> getCapacity() {
@@ -34,7 +34,7 @@ public final class IotDpsSkuInfoResponse extends io.pulumi.resources.InvokeArgs 
      * Sku name.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -45,7 +45,7 @@ public final class IotDpsSkuInfoResponse extends io.pulumi.resources.InvokeArgs 
      * Pricing tier name of the provisioning service.
      * 
      */
-    @InputImport(name="tier", required=true)
+    @Import(name="tier", required=true)
       private final String tier;
 
     public String getTier() {

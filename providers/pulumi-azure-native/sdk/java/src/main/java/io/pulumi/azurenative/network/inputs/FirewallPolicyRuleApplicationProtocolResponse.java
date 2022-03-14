@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class FirewallPolicyRuleApplicationProtocolResponse extends io.pulu
      * Port number for the protocol, cannot be greater than 64000.
      * 
      */
-    @InputImport(name="port")
+    @Import(name="port")
       private final @Nullable Integer port;
 
     public Optional<Integer> getPort() {
@@ -34,7 +34,7 @@ public final class FirewallPolicyRuleApplicationProtocolResponse extends io.pulu
      * Protocol type.
      * 
      */
-    @InputImport(name="protocolType")
+    @Import(name="protocolType")
       private final @Nullable String protocolType;
 
     public Optional<String> getProtocolType() {

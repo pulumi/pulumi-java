@@ -6,7 +6,7 @@ package io.pulumi.azurenative.network.inputs;
 import io.pulumi.azurenative.network.enums.RouteNextHopType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * The destination CIDR to which the route applies.
      * 
      */
-    @InputImport(name="addressPrefix")
+    @Import(name="addressPrefix")
       private final @Nullable Output<String> addressPrefix;
 
     public Output<String> getAddressPrefix() {
@@ -36,7 +36,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * A value indicating whether this route overrides overlapping BGP routes regardless of LPM.
      * 
      */
-    @InputImport(name="hasBgpOverride")
+    @Import(name="hasBgpOverride")
       private final @Nullable Output<Boolean> hasBgpOverride;
 
     public Output<Boolean> getHasBgpOverride() {
@@ -47,7 +47,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * Resource ID.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
@@ -58,7 +58,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -69,7 +69,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * The IP address packets should be forwarded to. Next hop values are only allowed in routes where the next hop type is VirtualAppliance.
      * 
      */
-    @InputImport(name="nextHopIpAddress")
+    @Import(name="nextHopIpAddress")
       private final @Nullable Output<String> nextHopIpAddress;
 
     public Output<String> getNextHopIpAddress() {
@@ -80,7 +80,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * The type of Azure hop the packet should be sent to.
      * 
      */
-    @InputImport(name="nextHopType", required=true)
+    @Import(name="nextHopType", required=true)
       private final Output<Either<String,RouteNextHopType>> nextHopType;
 
     public Output<Either<String,RouteNextHopType>> getNextHopType() {
@@ -91,7 +91,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * The type of the resource.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {

@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.logic.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class X12SecuritySettingsResponse {
     /**
      * The authorization qualifier.
@@ -32,12 +32,12 @@ public final class X12SecuritySettingsResponse {
      */
     private final String securityQualifier;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private X12SecuritySettingsResponse(
-        @OutputCustomType.Parameter("authorizationQualifier") String authorizationQualifier,
-        @OutputCustomType.Parameter("authorizationValue") @Nullable String authorizationValue,
-        @OutputCustomType.Parameter("passwordValue") @Nullable String passwordValue,
-        @OutputCustomType.Parameter("securityQualifier") String securityQualifier) {
+        @CustomType.Parameter("authorizationQualifier") String authorizationQualifier,
+        @CustomType.Parameter("authorizationValue") @Nullable String authorizationValue,
+        @CustomType.Parameter("passwordValue") @Nullable String passwordValue,
+        @CustomType.Parameter("securityQualifier") String securityQualifier) {
         this.authorizationQualifier = authorizationQualifier;
         this.authorizationValue = authorizationValue;
         this.passwordValue = passwordValue;

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.databricks.inputs.AddressSpaceArgs;
 import io.pulumi.azurenative.databricks.inputs.VirtualNetworkPeeringPropertiesFormatDatabricksVirtualNetworkArgs;
 import io.pulumi.azurenative.databricks.inputs.VirtualNetworkPeeringPropertiesFormatRemoteVirtualNetworkArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class VNetPeeringArgs extends io.pulumi.resources.ResourceArgs {
      * Whether the forwarded traffic from the VMs in the local virtual network will be allowed/disallowed in remote virtual network.
      * 
      */
-    @InputImport(name="allowForwardedTraffic")
+    @Import(name="allowForwardedTraffic")
       private final @Nullable Output<Boolean> allowForwardedTraffic;
 
     public Output<Boolean> getAllowForwardedTraffic() {
@@ -33,7 +33,7 @@ public final class VNetPeeringArgs extends io.pulumi.resources.ResourceArgs {
      * If gateway links can be used in remote virtual networking to link to this virtual network.
      * 
      */
-    @InputImport(name="allowGatewayTransit")
+    @Import(name="allowGatewayTransit")
       private final @Nullable Output<Boolean> allowGatewayTransit;
 
     public Output<Boolean> getAllowGatewayTransit() {
@@ -44,7 +44,7 @@ public final class VNetPeeringArgs extends io.pulumi.resources.ResourceArgs {
      * Whether the VMs in the local virtual network space would be able to access the VMs in remote virtual network space.
      * 
      */
-    @InputImport(name="allowVirtualNetworkAccess")
+    @Import(name="allowVirtualNetworkAccess")
       private final @Nullable Output<Boolean> allowVirtualNetworkAccess;
 
     public Output<Boolean> getAllowVirtualNetworkAccess() {
@@ -55,7 +55,7 @@ public final class VNetPeeringArgs extends io.pulumi.resources.ResourceArgs {
      * The reference to the databricks virtual network address space.
      * 
      */
-    @InputImport(name="databricksAddressSpace")
+    @Import(name="databricksAddressSpace")
       private final @Nullable Output<AddressSpaceArgs> databricksAddressSpace;
 
     public Output<AddressSpaceArgs> getDatabricksAddressSpace() {
@@ -66,7 +66,7 @@ public final class VNetPeeringArgs extends io.pulumi.resources.ResourceArgs {
      *  The remote virtual network should be in the same region. See here to learn more (https://docs.microsoft.com/en-us/azure/databricks/administration-guide/cloud-configurations/azure/vnet-peering).
      * 
      */
-    @InputImport(name="databricksVirtualNetwork")
+    @Import(name="databricksVirtualNetwork")
       private final @Nullable Output<VirtualNetworkPeeringPropertiesFormatDatabricksVirtualNetworkArgs> databricksVirtualNetwork;
 
     public Output<VirtualNetworkPeeringPropertiesFormatDatabricksVirtualNetworkArgs> getDatabricksVirtualNetwork() {
@@ -77,7 +77,7 @@ public final class VNetPeeringArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the workspace vNet peering.
      * 
      */
-    @InputImport(name="peeringName")
+    @Import(name="peeringName")
       private final @Nullable Output<String> peeringName;
 
     public Output<String> getPeeringName() {
@@ -88,7 +88,7 @@ public final class VNetPeeringArgs extends io.pulumi.resources.ResourceArgs {
      * The reference to the remote virtual network address space.
      * 
      */
-    @InputImport(name="remoteAddressSpace")
+    @Import(name="remoteAddressSpace")
       private final @Nullable Output<AddressSpaceArgs> remoteAddressSpace;
 
     public Output<AddressSpaceArgs> getRemoteAddressSpace() {
@@ -99,7 +99,7 @@ public final class VNetPeeringArgs extends io.pulumi.resources.ResourceArgs {
      *  The remote virtual network should be in the same region. See here to learn more (https://docs.microsoft.com/en-us/azure/databricks/administration-guide/cloud-configurations/azure/vnet-peering).
      * 
      */
-    @InputImport(name="remoteVirtualNetwork", required=true)
+    @Import(name="remoteVirtualNetwork", required=true)
       private final Output<VirtualNetworkPeeringPropertiesFormatRemoteVirtualNetworkArgs> remoteVirtualNetwork;
 
     public Output<VirtualNetworkPeeringPropertiesFormatRemoteVirtualNetworkArgs> getRemoteVirtualNetwork() {
@@ -110,7 +110,7 @@ public final class VNetPeeringArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -121,7 +121,7 @@ public final class VNetPeeringArgs extends io.pulumi.resources.ResourceArgs {
      * If remote gateways can be used on this virtual network. If the flag is set to true, and allowGatewayTransit on remote peering is also true, virtual network will use gateways of remote virtual network for transit. Only one peering can have this flag set to true. This flag cannot be set if virtual network already has a gateway.
      * 
      */
-    @InputImport(name="useRemoteGateways")
+    @Import(name="useRemoteGateways")
       private final @Nullable Output<Boolean> useRemoteGateways;
 
     public Output<Boolean> getUseRemoteGateways() {
@@ -132,7 +132,7 @@ public final class VNetPeeringArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the workspace.
      * 
      */
-    @InputImport(name="workspaceName", required=true)
+    @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;
 
     public Output<String> getWorkspaceName() {

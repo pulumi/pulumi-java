@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.botservice.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class KikChannelPropertiesResponse {
     /**
      * Kik API key. Value only returned through POST to the action Channel List API, otherwise empty.
@@ -33,12 +33,12 @@ public final class KikChannelPropertiesResponse {
      */
     private final String userName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private KikChannelPropertiesResponse(
-        @OutputCustomType.Parameter("apiKey") @Nullable String apiKey,
-        @OutputCustomType.Parameter("isEnabled") Boolean isEnabled,
-        @OutputCustomType.Parameter("isValidated") @Nullable Boolean isValidated,
-        @OutputCustomType.Parameter("userName") String userName) {
+        @CustomType.Parameter("apiKey") @Nullable String apiKey,
+        @CustomType.Parameter("isEnabled") Boolean isEnabled,
+        @CustomType.Parameter("isValidated") @Nullable Boolean isValidated,
+        @CustomType.Parameter("userName") String userName) {
         this.apiKey = apiKey;
         this.isEnabled = isEnabled;
         this.isValidated = isValidated;

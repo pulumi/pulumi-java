@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.hardwaresecuritymodules.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
      * The ARM resource id in the form of /subscriptions/{SubscriptionId}/resourceGroups/{ResourceGroupName}/...
      * 
      */
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final String id;
 
     public String getId() {
@@ -33,7 +33,7 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
      * Private Ip address of the interface
      * 
      */
-    @InputImport(name="privateIpAddress")
+    @Import(name="privateIpAddress")
       private final @Nullable String privateIpAddress;
 
     public Optional<String> getPrivateIpAddress() {

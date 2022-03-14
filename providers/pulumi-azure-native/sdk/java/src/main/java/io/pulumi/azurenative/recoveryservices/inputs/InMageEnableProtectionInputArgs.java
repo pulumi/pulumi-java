@@ -5,7 +5,7 @@ package io.pulumi.azurenative.recoveryservices.inputs;
 
 import io.pulumi.azurenative.recoveryservices.inputs.InMageDiskExclusionInputArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class InMageEnableProtectionInputArgs extends io.pulumi.resources.R
      * The target data store name.
      * 
      */
-    @InputImport(name="datastoreName")
+    @Import(name="datastoreName")
       private final @Nullable Output<String> datastoreName;
 
     public Output<String> getDatastoreName() {
@@ -35,7 +35,7 @@ public final class InMageEnableProtectionInputArgs extends io.pulumi.resources.R
      * The enable disk exclusion input.
      * 
      */
-    @InputImport(name="diskExclusionInput")
+    @Import(name="diskExclusionInput")
       private final @Nullable Output<InMageDiskExclusionInputArgs> diskExclusionInput;
 
     public Output<InMageDiskExclusionInputArgs> getDiskExclusionInput() {
@@ -46,7 +46,7 @@ public final class InMageEnableProtectionInputArgs extends io.pulumi.resources.R
      * The disks to include list.
      * 
      */
-    @InputImport(name="disksToInclude")
+    @Import(name="disksToInclude")
       private final @Nullable Output<List<String>> disksToInclude;
 
     public Output<List<String>> getDisksToInclude() {
@@ -58,7 +58,7 @@ public final class InMageEnableProtectionInputArgs extends io.pulumi.resources.R
      * Expected value is 'InMage'.
      * 
      */
-    @InputImport(name="instanceType")
+    @Import(name="instanceType")
       private final @Nullable Output<String> instanceType;
 
     public Output<String> getInstanceType() {
@@ -69,7 +69,7 @@ public final class InMageEnableProtectionInputArgs extends io.pulumi.resources.R
      * The Master Target Id.
      * 
      */
-    @InputImport(name="masterTargetId", required=true)
+    @Import(name="masterTargetId", required=true)
       private final Output<String> masterTargetId;
 
     public Output<String> getMasterTargetId() {
@@ -80,7 +80,7 @@ public final class InMageEnableProtectionInputArgs extends io.pulumi.resources.R
      * The multi vm group Id.
      * 
      */
-    @InputImport(name="multiVmGroupId", required=true)
+    @Import(name="multiVmGroupId", required=true)
       private final Output<String> multiVmGroupId;
 
     public Output<String> getMultiVmGroupId() {
@@ -91,7 +91,7 @@ public final class InMageEnableProtectionInputArgs extends io.pulumi.resources.R
      * The multi vm group name.
      * 
      */
-    @InputImport(name="multiVmGroupName", required=true)
+    @Import(name="multiVmGroupName", required=true)
       private final Output<String> multiVmGroupName;
 
     public Output<String> getMultiVmGroupName() {
@@ -102,7 +102,7 @@ public final class InMageEnableProtectionInputArgs extends io.pulumi.resources.R
      * The Process Server Id.
      * 
      */
-    @InputImport(name="processServerId", required=true)
+    @Import(name="processServerId", required=true)
       private final Output<String> processServerId;
 
     public Output<String> getProcessServerId() {
@@ -113,7 +113,7 @@ public final class InMageEnableProtectionInputArgs extends io.pulumi.resources.R
      * The retention drive to use on the MT.
      * 
      */
-    @InputImport(name="retentionDrive", required=true)
+    @Import(name="retentionDrive", required=true)
       private final Output<String> retentionDrive;
 
     public Output<String> getRetentionDrive() {
@@ -124,7 +124,7 @@ public final class InMageEnableProtectionInputArgs extends io.pulumi.resources.R
      * The CS account Id.
      * 
      */
-    @InputImport(name="runAsAccountId")
+    @Import(name="runAsAccountId")
       private final @Nullable Output<String> runAsAccountId;
 
     public Output<String> getRunAsAccountId() {
@@ -135,7 +135,7 @@ public final class InMageEnableProtectionInputArgs extends io.pulumi.resources.R
      * The Vm Name.
      * 
      */
-    @InputImport(name="vmFriendlyName")
+    @Import(name="vmFriendlyName")
       private final @Nullable Output<String> vmFriendlyName;
 
     public Output<String> getVmFriendlyName() {

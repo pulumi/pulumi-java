@@ -6,7 +6,7 @@ package io.pulumi.azurenative.devtestlab;
 import io.pulumi.azurenative.devtestlab.enums.StorageType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -22,7 +22,7 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * When backed by a blob, the name of the VHD blob without extension.
      * 
      */
-    @InputImport(name="diskBlobName")
+    @Import(name="diskBlobName")
       private final @Nullable Output<String> diskBlobName;
 
     public Output<String> getDiskBlobName() {
@@ -33,7 +33,7 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * The size of the disk in Gibibytes.
      * 
      */
-    @InputImport(name="diskSizeGiB")
+    @Import(name="diskSizeGiB")
       private final @Nullable Output<Integer> diskSizeGiB;
 
     public Output<Integer> getDiskSizeGiB() {
@@ -44,7 +44,7 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * The storage type for the disk (i.e. Standard, Premium).
      * 
      */
-    @InputImport(name="diskType")
+    @Import(name="diskType")
       private final @Nullable Output<Either<String,StorageType>> diskType;
 
     public Output<Either<String,StorageType>> getDiskType() {
@@ -55,7 +55,7 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * When backed by a blob, the URI of underlying blob.
      * 
      */
-    @InputImport(name="diskUri")
+    @Import(name="diskUri")
       private final @Nullable Output<String> diskUri;
 
     public Output<String> getDiskUri() {
@@ -66,7 +66,7 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * The host caching policy of the disk (i.e. None, ReadOnly, ReadWrite).
      * 
      */
-    @InputImport(name="hostCaching")
+    @Import(name="hostCaching")
       private final @Nullable Output<String> hostCaching;
 
     public Output<String> getHostCaching() {
@@ -77,7 +77,7 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the lab.
      * 
      */
-    @InputImport(name="labName", required=true)
+    @Import(name="labName", required=true)
       private final Output<String> labName;
 
     public Output<String> getLabName() {
@@ -88,7 +88,7 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * The resource ID of the VM to which this disk is leased.
      * 
      */
-    @InputImport(name="leasedByLabVmId")
+    @Import(name="leasedByLabVmId")
       private final @Nullable Output<String> leasedByLabVmId;
 
     public Output<String> getLeasedByLabVmId() {
@@ -99,7 +99,7 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * The location of the resource.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -110,7 +110,7 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * When backed by managed disk, this is the ID of the compute disk resource.
      * 
      */
-    @InputImport(name="managedDiskId")
+    @Import(name="managedDiskId")
       private final @Nullable Output<String> managedDiskId;
 
     public Output<String> getManagedDiskId() {
@@ -121,7 +121,7 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the disk.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -132,7 +132,7 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -143,7 +143,7 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * When backed by a blob, the storage account where the blob is.
      * 
      */
-    @InputImport(name="storageAccountId")
+    @Import(name="storageAccountId")
       private final @Nullable Output<String> storageAccountId;
 
     public Output<String> getStorageAccountId() {
@@ -154,7 +154,7 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * The tags of the resource.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -165,7 +165,7 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the user profile.
      * 
      */
-    @InputImport(name="userName", required=true)
+    @Import(name="userName", required=true)
       private final Output<String> userName;
 
     public Output<String> getUserName() {

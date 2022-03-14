@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.solutions.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class ApplicationPolicyResponse extends io.pulumi.resources.InvokeA
      * The policy name
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -33,7 +33,7 @@ public final class ApplicationPolicyResponse extends io.pulumi.resources.InvokeA
      * The policy parameters.
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable String parameters;
 
     public Optional<String> getParameters() {
@@ -44,7 +44,7 @@ public final class ApplicationPolicyResponse extends io.pulumi.resources.InvokeA
      * The policy definition Id.
      * 
      */
-    @InputImport(name="policyDefinitionId")
+    @Import(name="policyDefinitionId")
       private final @Nullable String policyDefinitionId;
 
     public Optional<String> getPolicyDefinitionId() {

@@ -5,11 +5,11 @@ package io.pulumi.azurenative.servicefabricmesh.outputs;
 
 import io.pulumi.azurenative.servicefabricmesh.outputs.GatewayDestinationResponse;
 import io.pulumi.azurenative.servicefabricmesh.outputs.HttpRouteMatchRuleResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class HttpRouteConfigResponse {
     /**
      * Describes destination endpoint for routing traffic.
@@ -27,11 +27,11 @@ public final class HttpRouteConfigResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private HttpRouteConfigResponse(
-        @OutputCustomType.Parameter("destination") GatewayDestinationResponse destination,
-        @OutputCustomType.Parameter("match") HttpRouteMatchRuleResponse match,
-        @OutputCustomType.Parameter("name") String name) {
+        @CustomType.Parameter("destination") GatewayDestinationResponse destination,
+        @CustomType.Parameter("match") HttpRouteMatchRuleResponse match,
+        @CustomType.Parameter("name") String name) {
         this.destination = destination;
         this.match = match;
         this.name = name;

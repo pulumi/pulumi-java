@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.hanaonazure.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class HardwareProfileResponse {
     /**
      * Specifies the HANA instance SKU.
@@ -20,10 +20,10 @@ public final class HardwareProfileResponse {
      */
     private final String hardwareType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private HardwareProfileResponse(
-        @OutputCustomType.Parameter("hanaInstanceSize") String hanaInstanceSize,
-        @OutputCustomType.Parameter("hardwareType") String hardwareType) {
+        @CustomType.Parameter("hanaInstanceSize") String hanaInstanceSize,
+        @CustomType.Parameter("hardwareType") String hardwareType) {
         this.hanaInstanceSize = hanaInstanceSize;
         this.hardwareType = hardwareType;
     }

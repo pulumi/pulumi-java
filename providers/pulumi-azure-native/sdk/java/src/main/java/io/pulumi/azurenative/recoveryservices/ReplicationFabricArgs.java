@@ -5,7 +5,7 @@ package io.pulumi.azurenative.recoveryservices;
 
 import io.pulumi.azurenative.recoveryservices.inputs.FabricCreationInputPropertiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class ReplicationFabricArgs extends io.pulumi.resources.ResourceArg
      * Name of the ASR fabric.
      * 
      */
-    @InputImport(name="fabricName")
+    @Import(name="fabricName")
       private final @Nullable Output<String> fabricName;
 
     public Output<String> getFabricName() {
@@ -30,7 +30,7 @@ public final class ReplicationFabricArgs extends io.pulumi.resources.ResourceArg
      * Fabric creation input.
      * 
      */
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable Output<FabricCreationInputPropertiesArgs> properties;
 
     public Output<FabricCreationInputPropertiesArgs> getProperties() {
@@ -41,7 +41,7 @@ public final class ReplicationFabricArgs extends io.pulumi.resources.ResourceArg
      * The name of the resource group where the recovery services vault is present.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -52,7 +52,7 @@ public final class ReplicationFabricArgs extends io.pulumi.resources.ResourceArg
      * The name of the recovery services vault.
      * 
      */
-    @InputImport(name="resourceName", required=true)
+    @Import(name="resourceName", required=true)
       private final Output<String> resourceName;
 
     public Output<String> getPropResourceName() {

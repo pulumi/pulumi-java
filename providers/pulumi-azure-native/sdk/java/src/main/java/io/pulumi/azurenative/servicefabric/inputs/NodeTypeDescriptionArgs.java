@@ -5,7 +5,7 @@ package io.pulumi.azurenative.servicefabric.inputs;
 
 import io.pulumi.azurenative.servicefabric.inputs.EndpointRangeDescriptionArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -26,7 +26,7 @@ public final class NodeTypeDescriptionArgs extends io.pulumi.resources.ResourceA
      * The range of ports from which cluster assigned port to Service Fabric applications.
      * 
      */
-    @InputImport(name="applicationPorts")
+    @Import(name="applicationPorts")
       private final @Nullable Output<EndpointRangeDescriptionArgs> applicationPorts;
 
     public Output<EndpointRangeDescriptionArgs> getApplicationPorts() {
@@ -37,7 +37,7 @@ public final class NodeTypeDescriptionArgs extends io.pulumi.resources.ResourceA
      * The capacity tags applied to the nodes in the node type, the cluster resource manager uses these tags to understand how much resource a node has.
      * 
      */
-    @InputImport(name="capacities")
+    @Import(name="capacities")
       private final @Nullable Output<Map<String,String>> capacities;
 
     public Output<Map<String,String>> getCapacities() {
@@ -48,7 +48,7 @@ public final class NodeTypeDescriptionArgs extends io.pulumi.resources.ResourceA
      * The TCP cluster management endpoint port.
      * 
      */
-    @InputImport(name="clientConnectionEndpointPort", required=true)
+    @Import(name="clientConnectionEndpointPort", required=true)
       private final Output<Integer> clientConnectionEndpointPort;
 
     public Output<Integer> getClientConnectionEndpointPort() {
@@ -63,7 +63,7 @@ public final class NodeTypeDescriptionArgs extends io.pulumi.resources.ResourceA
      *   - Gold - The infrastructure jobs can be paused for a duration of 2 hours per UD. Gold durability can be enabled only on full node VM skus like D15_V2, G5 etc.
      * 
      */
-    @InputImport(name="durabilityLevel")
+    @Import(name="durabilityLevel")
       private final @Nullable Output<String> durabilityLevel;
 
     public Output<String> getDurabilityLevel() {
@@ -74,7 +74,7 @@ public final class NodeTypeDescriptionArgs extends io.pulumi.resources.ResourceA
      * The range of ephemeral ports that nodes in this node type should be configured with.
      * 
      */
-    @InputImport(name="ephemeralPorts")
+    @Import(name="ephemeralPorts")
       private final @Nullable Output<EndpointRangeDescriptionArgs> ephemeralPorts;
 
     public Output<EndpointRangeDescriptionArgs> getEphemeralPorts() {
@@ -85,7 +85,7 @@ public final class NodeTypeDescriptionArgs extends io.pulumi.resources.ResourceA
      * The HTTP cluster management endpoint port.
      * 
      */
-    @InputImport(name="httpGatewayEndpointPort", required=true)
+    @Import(name="httpGatewayEndpointPort", required=true)
       private final Output<Integer> httpGatewayEndpointPort;
 
     public Output<Integer> getHttpGatewayEndpointPort() {
@@ -96,7 +96,7 @@ public final class NodeTypeDescriptionArgs extends io.pulumi.resources.ResourceA
      * The node type on which system services will run. Only one node type should be marked as primary. Primary node type cannot be deleted or changed for existing clusters.
      * 
      */
-    @InputImport(name="isPrimary", required=true)
+    @Import(name="isPrimary", required=true)
       private final Output<Boolean> isPrimary;
 
     public Output<Boolean> getIsPrimary() {
@@ -107,7 +107,7 @@ public final class NodeTypeDescriptionArgs extends io.pulumi.resources.ResourceA
      * The name of the node type.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -118,7 +118,7 @@ public final class NodeTypeDescriptionArgs extends io.pulumi.resources.ResourceA
      * The placement tags applied to nodes in the node type, which can be used to indicate where certain services (workload) should run.
      * 
      */
-    @InputImport(name="placementProperties")
+    @Import(name="placementProperties")
       private final @Nullable Output<Map<String,String>> placementProperties;
 
     public Output<Map<String,String>> getPlacementProperties() {
@@ -129,7 +129,7 @@ public final class NodeTypeDescriptionArgs extends io.pulumi.resources.ResourceA
      * The endpoint used by reverse proxy.
      * 
      */
-    @InputImport(name="reverseProxyEndpointPort")
+    @Import(name="reverseProxyEndpointPort")
       private final @Nullable Output<Integer> reverseProxyEndpointPort;
 
     public Output<Integer> getReverseProxyEndpointPort() {
@@ -140,7 +140,7 @@ public final class NodeTypeDescriptionArgs extends io.pulumi.resources.ResourceA
      * The number of nodes in the node type. This count should match the capacity property in the corresponding VirtualMachineScaleSet resource.
      * 
      */
-    @InputImport(name="vmInstanceCount", required=true)
+    @Import(name="vmInstanceCount", required=true)
       private final Output<Integer> vmInstanceCount;
 
     public Output<Integer> getVmInstanceCount() {

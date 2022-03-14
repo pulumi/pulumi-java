@@ -9,7 +9,7 @@ import io.pulumi.azurenative.network.outputs.PublicIPAddressResponse;
 import io.pulumi.azurenative.network.outputs.SubnetResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -36,7 +36,7 @@ public class VirtualHubIpConfiguration extends io.pulumi.resources.CustomResourc
      * A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -50,7 +50,7 @@ public class VirtualHubIpConfiguration extends io.pulumi.resources.CustomResourc
      * Name of the Ip Configuration.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
@@ -64,7 +64,7 @@ public class VirtualHubIpConfiguration extends io.pulumi.resources.CustomResourc
      * The private IP address of the IP configuration.
      * 
      */
-    @OutputExport(name="privateIPAddress", type=String.class, parameters={})
+    @Export(name="privateIPAddress", type=String.class, parameters={})
     private Output</* @Nullable */ String> privateIPAddress;
 
     /**
@@ -78,7 +78,7 @@ public class VirtualHubIpConfiguration extends io.pulumi.resources.CustomResourc
      * The private IP address allocation method.
      * 
      */
-    @OutputExport(name="privateIPAllocationMethod", type=String.class, parameters={})
+    @Export(name="privateIPAllocationMethod", type=String.class, parameters={})
     private Output</* @Nullable */ String> privateIPAllocationMethod;
 
     /**
@@ -92,7 +92,7 @@ public class VirtualHubIpConfiguration extends io.pulumi.resources.CustomResourc
      * The provisioning state of the IP configuration resource.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -106,7 +106,7 @@ public class VirtualHubIpConfiguration extends io.pulumi.resources.CustomResourc
      * The reference to the public IP resource.
      * 
      */
-    @OutputExport(name="publicIPAddress", type=PublicIPAddressResponse.class, parameters={})
+    @Export(name="publicIPAddress", type=PublicIPAddressResponse.class, parameters={})
     private Output</* @Nullable */ PublicIPAddressResponse> publicIPAddress;
 
     /**
@@ -120,7 +120,7 @@ public class VirtualHubIpConfiguration extends io.pulumi.resources.CustomResourc
      * The reference to the subnet resource.
      * 
      */
-    @OutputExport(name="subnet", type=SubnetResponse.class, parameters={})
+    @Export(name="subnet", type=SubnetResponse.class, parameters={})
     private Output</* @Nullable */ SubnetResponse> subnet;
 
     /**
@@ -134,7 +134,7 @@ public class VirtualHubIpConfiguration extends io.pulumi.resources.CustomResourc
      * Ipconfiguration type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.datafactory.inputs.ManagedIntegrationRuntimeArgs;
 import io.pulumi.azurenative.datafactory.inputs.SelfHostedIntegrationRuntimeArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public final class IntegrationRuntimeArgs extends io.pulumi.resources.ResourceAr
      * The factory name.
      * 
      */
-    @InputImport(name="factoryName", required=true)
+    @Import(name="factoryName", required=true)
       private final Output<String> factoryName;
 
     public Output<String> getFactoryName() {
@@ -32,7 +32,7 @@ public final class IntegrationRuntimeArgs extends io.pulumi.resources.ResourceAr
      * The integration runtime name.
      * 
      */
-    @InputImport(name="integrationRuntimeName")
+    @Import(name="integrationRuntimeName")
       private final @Nullable Output<String> integrationRuntimeName;
 
     public Output<String> getIntegrationRuntimeName() {
@@ -43,7 +43,7 @@ public final class IntegrationRuntimeArgs extends io.pulumi.resources.ResourceAr
      * Integration runtime properties.
      * 
      */
-    @InputImport(name="properties", required=true)
+    @Import(name="properties", required=true)
       private final Output<Either<ManagedIntegrationRuntimeArgs,SelfHostedIntegrationRuntimeArgs>> properties;
 
     public Output<Either<ManagedIntegrationRuntimeArgs,SelfHostedIntegrationRuntimeArgs>> getProperties() {
@@ -54,7 +54,7 @@ public final class IntegrationRuntimeArgs extends io.pulumi.resources.ResourceAr
      * The resource group name.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {

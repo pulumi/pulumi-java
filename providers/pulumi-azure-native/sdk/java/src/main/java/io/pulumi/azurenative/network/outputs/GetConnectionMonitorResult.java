@@ -9,7 +9,7 @@ import io.pulumi.azurenative.network.outputs.ConnectionMonitorOutputResponse;
 import io.pulumi.azurenative.network.outputs.ConnectionMonitorSourceResponse;
 import io.pulumi.azurenative.network.outputs.ConnectionMonitorTestConfigurationResponse;
 import io.pulumi.azurenative.network.outputs.ConnectionMonitorTestGroupResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -19,7 +19,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetConnectionMonitorResult {
     /**
      * Determines if the connection monitor will start automatically once created.
@@ -117,27 +117,27 @@ public final class GetConnectionMonitorResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetConnectionMonitorResult(
-        @OutputCustomType.Parameter("autoStart") @Nullable Boolean autoStart,
-        @OutputCustomType.Parameter("connectionMonitorType") String connectionMonitorType,
-        @OutputCustomType.Parameter("destination") @Nullable ConnectionMonitorDestinationResponse destination,
-        @OutputCustomType.Parameter("endpoints") @Nullable List<ConnectionMonitorEndpointResponse> endpoints,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("monitoringIntervalInSeconds") @Nullable Integer monitoringIntervalInSeconds,
-        @OutputCustomType.Parameter("monitoringStatus") String monitoringStatus,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("notes") @Nullable String notes,
-        @OutputCustomType.Parameter("outputs") @Nullable List<ConnectionMonitorOutputResponse> outputs,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("source") @Nullable ConnectionMonitorSourceResponse source,
-        @OutputCustomType.Parameter("startTime") String startTime,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("testConfigurations") @Nullable List<ConnectionMonitorTestConfigurationResponse> testConfigurations,
-        @OutputCustomType.Parameter("testGroups") @Nullable List<ConnectionMonitorTestGroupResponse> testGroups,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("autoStart") @Nullable Boolean autoStart,
+        @CustomType.Parameter("connectionMonitorType") String connectionMonitorType,
+        @CustomType.Parameter("destination") @Nullable ConnectionMonitorDestinationResponse destination,
+        @CustomType.Parameter("endpoints") @Nullable List<ConnectionMonitorEndpointResponse> endpoints,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("monitoringIntervalInSeconds") @Nullable Integer monitoringIntervalInSeconds,
+        @CustomType.Parameter("monitoringStatus") String monitoringStatus,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("notes") @Nullable String notes,
+        @CustomType.Parameter("outputs") @Nullable List<ConnectionMonitorOutputResponse> outputs,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("source") @Nullable ConnectionMonitorSourceResponse source,
+        @CustomType.Parameter("startTime") String startTime,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("testConfigurations") @Nullable List<ConnectionMonitorTestConfigurationResponse> testConfigurations,
+        @CustomType.Parameter("testGroups") @Nullable List<ConnectionMonitorTestGroupResponse> testGroups,
+        @CustomType.Parameter("type") String type) {
         this.autoStart = autoStart;
         this.connectionMonitorType = connectionMonitorType;
         this.destination = destination;

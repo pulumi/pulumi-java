@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.avs.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetCloudLinkResult {
     /**
      * Resource ID.
@@ -37,13 +37,13 @@ public final class GetCloudLinkResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetCloudLinkResult(
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("linkedCloud") @Nullable String linkedCloud,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("status") String status,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("linkedCloud") @Nullable String linkedCloud,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("status") String status,
+        @CustomType.Parameter("type") String type) {
         this.id = id;
         this.linkedCloud = linkedCloud;
         this.name = name;

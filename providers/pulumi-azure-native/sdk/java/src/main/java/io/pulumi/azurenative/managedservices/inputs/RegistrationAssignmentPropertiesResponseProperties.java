@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.managedservices.inputs;
 
 import io.pulumi.azurenative.managedservices.inputs.AuthorizationResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class RegistrationAssignmentPropertiesResponseProperties extends io
      * Authorization tuple containing principal id of the user/security group or service principal and id of the build-in role.
      * 
      */
-    @InputImport(name="authorizations")
+    @Import(name="authorizations")
       private final @Nullable List<AuthorizationResponse> authorizations;
 
     public List<AuthorizationResponse> getAuthorizations() {
@@ -35,7 +35,7 @@ public final class RegistrationAssignmentPropertiesResponseProperties extends io
      * Description of the registration definition.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable String description;
 
     public Optional<String> getDescription() {
@@ -46,7 +46,7 @@ public final class RegistrationAssignmentPropertiesResponseProperties extends io
      * Id of the managedBy tenant.
      * 
      */
-    @InputImport(name="managedByTenantId")
+    @Import(name="managedByTenantId")
       private final @Nullable String managedByTenantId;
 
     public Optional<String> getManagedByTenantId() {
@@ -57,7 +57,7 @@ public final class RegistrationAssignmentPropertiesResponseProperties extends io
      * Name of the managedBy tenant.
      * 
      */
-    @InputImport(name="managedByTenantName")
+    @Import(name="managedByTenantName")
       private final @Nullable String managedByTenantName;
 
     public Optional<String> getManagedByTenantName() {
@@ -68,7 +68,7 @@ public final class RegistrationAssignmentPropertiesResponseProperties extends io
      * Id of the home tenant.
      * 
      */
-    @InputImport(name="manageeTenantId")
+    @Import(name="manageeTenantId")
       private final @Nullable String manageeTenantId;
 
     public Optional<String> getManageeTenantId() {
@@ -79,7 +79,7 @@ public final class RegistrationAssignmentPropertiesResponseProperties extends io
      * Name of the home tenant.
      * 
      */
-    @InputImport(name="manageeTenantName")
+    @Import(name="manageeTenantName")
       private final @Nullable String manageeTenantName;
 
     public Optional<String> getManageeTenantName() {
@@ -90,7 +90,7 @@ public final class RegistrationAssignmentPropertiesResponseProperties extends io
      * Current state of the registration definition.
      * 
      */
-    @InputImport(name="provisioningState")
+    @Import(name="provisioningState")
       private final @Nullable String provisioningState;
 
     public Optional<String> getProvisioningState() {
@@ -101,7 +101,7 @@ public final class RegistrationAssignmentPropertiesResponseProperties extends io
      * Name of the registration definition.
      * 
      */
-    @InputImport(name="registrationDefinitionName")
+    @Import(name="registrationDefinitionName")
       private final @Nullable String registrationDefinitionName;
 
     public Optional<String> getRegistrationDefinitionName() {

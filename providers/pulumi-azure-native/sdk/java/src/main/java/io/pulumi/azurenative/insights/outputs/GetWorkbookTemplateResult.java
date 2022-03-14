@@ -5,7 +5,7 @@ package io.pulumi.azurenative.insights.outputs;
 
 import io.pulumi.azurenative.insights.outputs.WorkbookTemplateGalleryResponse;
 import io.pulumi.azurenative.insights.outputs.WorkbookTemplateLocalizedGalleryResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -15,7 +15,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetWorkbookTemplateResult {
     /**
      * Information about the author of the workbook template.
@@ -68,18 +68,18 @@ public final class GetWorkbookTemplateResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetWorkbookTemplateResult(
-        @OutputCustomType.Parameter("author") @Nullable String author,
-        @OutputCustomType.Parameter("galleries") List<WorkbookTemplateGalleryResponse> galleries,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("localized") @Nullable Map<String,List<WorkbookTemplateLocalizedGalleryResponse>> localized,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("priority") @Nullable Integer priority,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("templateData") Object templateData,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("author") @Nullable String author,
+        @CustomType.Parameter("galleries") List<WorkbookTemplateGalleryResponse> galleries,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("localized") @Nullable Map<String,List<WorkbookTemplateLocalizedGalleryResponse>> localized,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("priority") @Nullable Integer priority,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("templateData") Object templateData,
+        @CustomType.Parameter("type") String type) {
         this.author = author;
         this.galleries = galleries;
         this.id = id;

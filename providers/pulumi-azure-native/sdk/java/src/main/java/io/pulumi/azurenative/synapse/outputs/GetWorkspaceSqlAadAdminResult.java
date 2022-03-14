@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.synapse.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetWorkspaceSqlAadAdminResult {
     /**
      * Workspace active directory administrator type
@@ -47,15 +47,15 @@ public final class GetWorkspaceSqlAadAdminResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetWorkspaceSqlAadAdminResult(
-        @OutputCustomType.Parameter("administratorType") @Nullable String administratorType,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("login") @Nullable String login,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("sid") @Nullable String sid,
-        @OutputCustomType.Parameter("tenantId") @Nullable String tenantId,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("administratorType") @Nullable String administratorType,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("login") @Nullable String login,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("sid") @Nullable String sid,
+        @CustomType.Parameter("tenantId") @Nullable String tenantId,
+        @CustomType.Parameter("type") String type) {
         this.administratorType = administratorType;
         this.id = id;
         this.login = login;

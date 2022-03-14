@@ -3,12 +3,12 @@
 
 package io.pulumi.azurenative.security.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class UserDefinedResourcesPropertiesResponse {
     /**
      * Azure Resource Graph query which represents the security solution's user defined resources. Required to start with "where type != "Microsoft.Devices/IotHubs""
@@ -21,10 +21,10 @@ public final class UserDefinedResourcesPropertiesResponse {
      */
     private final List<String> querySubscriptions;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private UserDefinedResourcesPropertiesResponse(
-        @OutputCustomType.Parameter("query") String query,
-        @OutputCustomType.Parameter("querySubscriptions") List<String> querySubscriptions) {
+        @CustomType.Parameter("query") String query,
+        @CustomType.Parameter("querySubscriptions") List<String> querySubscriptions) {
         this.query = query;
         this.querySubscriptions = querySubscriptions;
     }

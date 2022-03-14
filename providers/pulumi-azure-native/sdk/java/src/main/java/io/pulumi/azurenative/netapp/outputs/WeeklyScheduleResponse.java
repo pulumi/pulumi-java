@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.netapp.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class WeeklyScheduleResponse {
     /**
      * Indicates which weekdays snapshot should be taken, accepts a comma separated list of week day names in english
@@ -39,13 +39,13 @@ public final class WeeklyScheduleResponse {
      */
     private final @Nullable Double usedBytes;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WeeklyScheduleResponse(
-        @OutputCustomType.Parameter("day") @Nullable String day,
-        @OutputCustomType.Parameter("hour") @Nullable Integer hour,
-        @OutputCustomType.Parameter("minute") @Nullable Integer minute,
-        @OutputCustomType.Parameter("snapshotsToKeep") @Nullable Integer snapshotsToKeep,
-        @OutputCustomType.Parameter("usedBytes") @Nullable Double usedBytes) {
+        @CustomType.Parameter("day") @Nullable String day,
+        @CustomType.Parameter("hour") @Nullable Integer hour,
+        @CustomType.Parameter("minute") @Nullable Integer minute,
+        @CustomType.Parameter("snapshotsToKeep") @Nullable Integer snapshotsToKeep,
+        @CustomType.Parameter("usedBytes") @Nullable Double usedBytes) {
         this.day = day;
         this.hour = hour;
         this.minute = minute;

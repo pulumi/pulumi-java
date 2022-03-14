@@ -5,7 +5,7 @@ package io.pulumi.azurenative.devtestlab.outputs;
 
 import io.pulumi.azurenative.devtestlab.outputs.LabAnnouncementPropertiesResponse;
 import io.pulumi.azurenative.devtestlab.outputs.LabSupportPropertiesResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetLabResult {
     /**
      * The properties of any lab announcement associated with this lab
@@ -143,33 +143,33 @@ public final class GetLabResult {
      */
     private final String vmCreationResourceGroup;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetLabResult(
-        @OutputCustomType.Parameter("announcement") @Nullable LabAnnouncementPropertiesResponse announcement,
-        @OutputCustomType.Parameter("artifactsStorageAccount") String artifactsStorageAccount,
-        @OutputCustomType.Parameter("createdDate") String createdDate,
-        @OutputCustomType.Parameter("defaultPremiumStorageAccount") String defaultPremiumStorageAccount,
-        @OutputCustomType.Parameter("defaultStorageAccount") String defaultStorageAccount,
-        @OutputCustomType.Parameter("environmentPermission") @Nullable String environmentPermission,
-        @OutputCustomType.Parameter("extendedProperties") @Nullable Map<String,String> extendedProperties,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("labStorageType") @Nullable String labStorageType,
-        @OutputCustomType.Parameter("loadBalancerId") String loadBalancerId,
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("mandatoryArtifactsResourceIdsLinux") @Nullable List<String> mandatoryArtifactsResourceIdsLinux,
-        @OutputCustomType.Parameter("mandatoryArtifactsResourceIdsWindows") @Nullable List<String> mandatoryArtifactsResourceIdsWindows,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("networkSecurityGroupId") String networkSecurityGroupId,
-        @OutputCustomType.Parameter("premiumDataDiskStorageAccount") String premiumDataDiskStorageAccount,
-        @OutputCustomType.Parameter("premiumDataDisks") @Nullable String premiumDataDisks,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("publicIpId") String publicIpId,
-        @OutputCustomType.Parameter("support") @Nullable LabSupportPropertiesResponse support,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("uniqueIdentifier") String uniqueIdentifier,
-        @OutputCustomType.Parameter("vaultName") String vaultName,
-        @OutputCustomType.Parameter("vmCreationResourceGroup") String vmCreationResourceGroup) {
+        @CustomType.Parameter("announcement") @Nullable LabAnnouncementPropertiesResponse announcement,
+        @CustomType.Parameter("artifactsStorageAccount") String artifactsStorageAccount,
+        @CustomType.Parameter("createdDate") String createdDate,
+        @CustomType.Parameter("defaultPremiumStorageAccount") String defaultPremiumStorageAccount,
+        @CustomType.Parameter("defaultStorageAccount") String defaultStorageAccount,
+        @CustomType.Parameter("environmentPermission") @Nullable String environmentPermission,
+        @CustomType.Parameter("extendedProperties") @Nullable Map<String,String> extendedProperties,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("labStorageType") @Nullable String labStorageType,
+        @CustomType.Parameter("loadBalancerId") String loadBalancerId,
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("mandatoryArtifactsResourceIdsLinux") @Nullable List<String> mandatoryArtifactsResourceIdsLinux,
+        @CustomType.Parameter("mandatoryArtifactsResourceIdsWindows") @Nullable List<String> mandatoryArtifactsResourceIdsWindows,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("networkSecurityGroupId") String networkSecurityGroupId,
+        @CustomType.Parameter("premiumDataDiskStorageAccount") String premiumDataDiskStorageAccount,
+        @CustomType.Parameter("premiumDataDisks") @Nullable String premiumDataDisks,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("publicIpId") String publicIpId,
+        @CustomType.Parameter("support") @Nullable LabSupportPropertiesResponse support,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("uniqueIdentifier") String uniqueIdentifier,
+        @CustomType.Parameter("vaultName") String vaultName,
+        @CustomType.Parameter("vmCreationResourceGroup") String vmCreationResourceGroup) {
         this.announcement = announcement;
         this.artifactsStorageAccount = artifactsStorageAccount;
         this.createdDate = createdDate;

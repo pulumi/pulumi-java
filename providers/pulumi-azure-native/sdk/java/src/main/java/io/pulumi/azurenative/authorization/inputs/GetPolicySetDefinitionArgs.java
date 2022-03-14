@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.authorization.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetPolicySetDefinitionArgs extends io.pulumi.resources.Invoke
      * The name of the policy set definition to get.
      * 
      */
-    @InputImport(name="policySetDefinitionName", required=true)
+    @Import(name="policySetDefinitionName", required=true)
       private final String policySetDefinitionName;
 
     public String getPolicySetDefinitionName() {

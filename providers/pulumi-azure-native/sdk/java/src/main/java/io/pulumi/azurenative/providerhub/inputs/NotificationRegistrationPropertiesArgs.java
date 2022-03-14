@@ -9,7 +9,7 @@ import io.pulumi.azurenative.providerhub.enums.ProvisioningState;
 import io.pulumi.azurenative.providerhub.inputs.NotificationEndpointArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,35 +20,35 @@ public final class NotificationRegistrationPropertiesArgs extends io.pulumi.reso
 
     public static final NotificationRegistrationPropertiesArgs Empty = new NotificationRegistrationPropertiesArgs();
 
-    @InputImport(name="includedEvents")
+    @Import(name="includedEvents")
       private final @Nullable Output<List<String>> includedEvents;
 
     public Output<List<String>> getIncludedEvents() {
         return this.includedEvents == null ? Output.empty() : this.includedEvents;
     }
 
-    @InputImport(name="messageScope")
+    @Import(name="messageScope")
       private final @Nullable Output<Either<String,MessageScope>> messageScope;
 
     public Output<Either<String,MessageScope>> getMessageScope() {
         return this.messageScope == null ? Output.empty() : this.messageScope;
     }
 
-    @InputImport(name="notificationEndpoints")
+    @Import(name="notificationEndpoints")
       private final @Nullable Output<List<NotificationEndpointArgs>> notificationEndpoints;
 
     public Output<List<NotificationEndpointArgs>> getNotificationEndpoints() {
         return this.notificationEndpoints == null ? Output.empty() : this.notificationEndpoints;
     }
 
-    @InputImport(name="notificationMode")
+    @Import(name="notificationMode")
       private final @Nullable Output<Either<String,NotificationMode>> notificationMode;
 
     public Output<Either<String,NotificationMode>> getNotificationMode() {
         return this.notificationMode == null ? Output.empty() : this.notificationMode;
     }
 
-    @InputImport(name="provisioningState")
+    @Import(name="provisioningState")
       private final @Nullable Output<Either<String,ProvisioningState>> provisioningState;
 
     public Output<Either<String,ProvisioningState>> getProvisioningState() {

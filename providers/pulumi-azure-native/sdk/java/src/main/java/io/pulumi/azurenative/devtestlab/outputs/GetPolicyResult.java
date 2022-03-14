@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.devtestlab.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetPolicyResult {
     /**
      * The creation date of the policy.
@@ -83,22 +83,22 @@ public final class GetPolicyResult {
      */
     private final String uniqueIdentifier;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetPolicyResult(
-        @OutputCustomType.Parameter("createdDate") String createdDate,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("evaluatorType") @Nullable String evaluatorType,
-        @OutputCustomType.Parameter("factData") @Nullable String factData,
-        @OutputCustomType.Parameter("factName") @Nullable String factName,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("status") @Nullable String status,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("threshold") @Nullable String threshold,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("uniqueIdentifier") String uniqueIdentifier) {
+        @CustomType.Parameter("createdDate") String createdDate,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("evaluatorType") @Nullable String evaluatorType,
+        @CustomType.Parameter("factData") @Nullable String factData,
+        @CustomType.Parameter("factName") @Nullable String factName,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("status") @Nullable String status,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("threshold") @Nullable String threshold,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("uniqueIdentifier") String uniqueIdentifier) {
         this.createdDate = createdDate;
         this.description = description;
         this.evaluatorType = evaluatorType;

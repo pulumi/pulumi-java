@@ -6,7 +6,7 @@ package io.pulumi.azurenative.hybridnetwork;
 import io.pulumi.azurenative.hybridnetwork.inputs.NetworkFunctionUserConfigurationArgs;
 import io.pulumi.azurenative.hybridnetwork.inputs.SubResourceArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class NetworkFunctionArgs extends io.pulumi.resources.ResourceArgs 
      * The reference to the device resource.
      * 
      */
-    @InputImport(name="device")
+    @Import(name="device")
       private final @Nullable Output<SubResourceArgs> device;
 
     public Output<SubResourceArgs> getDevice() {
@@ -34,7 +34,7 @@ public final class NetworkFunctionArgs extends io.pulumi.resources.ResourceArgs 
      * The geo-location where the resource lives
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -45,7 +45,7 @@ public final class NetworkFunctionArgs extends io.pulumi.resources.ResourceArgs 
      * The parameters for the managed application.
      * 
      */
-    @InputImport(name="managedApplicationParameters")
+    @Import(name="managedApplicationParameters")
       private final @Nullable Output<Object> managedApplicationParameters;
 
     public Output<Object> getManagedApplicationParameters() {
@@ -56,7 +56,7 @@ public final class NetworkFunctionArgs extends io.pulumi.resources.ResourceArgs 
      * Resource name for the network function resource.
      * 
      */
-    @InputImport(name="networkFunctionName")
+    @Import(name="networkFunctionName")
       private final @Nullable Output<String> networkFunctionName;
 
     public Output<String> getNetworkFunctionName() {
@@ -67,7 +67,7 @@ public final class NetworkFunctionArgs extends io.pulumi.resources.ResourceArgs 
      * The network function configurations from the user.
      * 
      */
-    @InputImport(name="networkFunctionUserConfigurations")
+    @Import(name="networkFunctionUserConfigurations")
       private final @Nullable Output<List<NetworkFunctionUserConfigurationArgs>> networkFunctionUserConfigurations;
 
     public Output<List<NetworkFunctionUserConfigurationArgs>> getNetworkFunctionUserConfigurations() {
@@ -78,7 +78,7 @@ public final class NetworkFunctionArgs extends io.pulumi.resources.ResourceArgs 
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -89,7 +89,7 @@ public final class NetworkFunctionArgs extends io.pulumi.resources.ResourceArgs 
      * The sku name for the network function.
      * 
      */
-    @InputImport(name="skuName")
+    @Import(name="skuName")
       private final @Nullable Output<String> skuName;
 
     public Output<String> getSkuName() {
@@ -100,7 +100,7 @@ public final class NetworkFunctionArgs extends io.pulumi.resources.ResourceArgs 
      * Resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -111,7 +111,7 @@ public final class NetworkFunctionArgs extends io.pulumi.resources.ResourceArgs 
      * The vendor name for the network function.
      * 
      */
-    @InputImport(name="vendorName")
+    @Import(name="vendorName")
       private final @Nullable Output<String> vendorName;
 
     public Output<String> getVendorName() {

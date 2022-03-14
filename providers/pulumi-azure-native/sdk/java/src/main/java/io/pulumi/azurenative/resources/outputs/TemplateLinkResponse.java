@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.resources.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TemplateLinkResponse {
     /**
      * If included, must match the ContentVersion in the template.
@@ -37,13 +37,13 @@ public final class TemplateLinkResponse {
      */
     private final @Nullable String uri;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TemplateLinkResponse(
-        @OutputCustomType.Parameter("contentVersion") @Nullable String contentVersion,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("queryString") @Nullable String queryString,
-        @OutputCustomType.Parameter("relativePath") @Nullable String relativePath,
-        @OutputCustomType.Parameter("uri") @Nullable String uri) {
+        @CustomType.Parameter("contentVersion") @Nullable String contentVersion,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("queryString") @Nullable String queryString,
+        @CustomType.Parameter("relativePath") @Nullable String relativePath,
+        @CustomType.Parameter("uri") @Nullable String uri) {
         this.contentVersion = contentVersion;
         this.id = id;
         this.queryString = queryString;

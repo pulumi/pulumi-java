@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -25,7 +25,7 @@ public final class CloningInfoArgs extends io.pulumi.resources.ResourceArgs {
      * from source app. Otherwise, application settings from source app are retained.
      * 
      */
-    @InputImport(name="appSettingsOverrides")
+    @Import(name="appSettingsOverrides")
       private final @Nullable Output<Map<String,String>> appSettingsOverrides;
 
     public Output<Map<String,String>> getAppSettingsOverrides() {
@@ -36,7 +36,7 @@ public final class CloningInfoArgs extends io.pulumi.resources.ResourceArgs {
      * <code>true</code> to clone custom hostnames from source app; otherwise, <code>false</code>.
      * 
      */
-    @InputImport(name="cloneCustomHostNames")
+    @Import(name="cloneCustomHostNames")
       private final @Nullable Output<Boolean> cloneCustomHostNames;
 
     public Output<Boolean> getCloneCustomHostNames() {
@@ -47,7 +47,7 @@ public final class CloningInfoArgs extends io.pulumi.resources.ResourceArgs {
      * <code>true</code> to clone source control from source app; otherwise, <code>false</code>.
      * 
      */
-    @InputImport(name="cloneSourceControl")
+    @Import(name="cloneSourceControl")
       private final @Nullable Output<Boolean> cloneSourceControl;
 
     public Output<Boolean> getCloneSourceControl() {
@@ -58,7 +58,7 @@ public final class CloningInfoArgs extends io.pulumi.resources.ResourceArgs {
      * <code>true</code> to configure load balancing for source and destination app.
      * 
      */
-    @InputImport(name="configureLoadBalancing")
+    @Import(name="configureLoadBalancing")
       private final @Nullable Output<Boolean> configureLoadBalancing;
 
     public Output<Boolean> getConfigureLoadBalancing() {
@@ -70,7 +70,7 @@ public final class CloningInfoArgs extends io.pulumi.resources.ResourceArgs {
      * together to use the same snapshot.
      * 
      */
-    @InputImport(name="correlationId")
+    @Import(name="correlationId")
       private final @Nullable Output<String> correlationId;
 
     public Output<String> getCorrelationId() {
@@ -81,7 +81,7 @@ public final class CloningInfoArgs extends io.pulumi.resources.ResourceArgs {
      * App Service Environment.
      * 
      */
-    @InputImport(name="hostingEnvironment")
+    @Import(name="hostingEnvironment")
       private final @Nullable Output<String> hostingEnvironment;
 
     public Output<String> getHostingEnvironment() {
@@ -92,7 +92,7 @@ public final class CloningInfoArgs extends io.pulumi.resources.ResourceArgs {
      * <code>true</code> to overwrite destination app; otherwise, <code>false</code>.
      * 
      */
-    @InputImport(name="overwrite")
+    @Import(name="overwrite")
       private final @Nullable Output<Boolean> overwrite;
 
     public Output<Boolean> getOverwrite() {
@@ -105,7 +105,7 @@ public final class CloningInfoArgs extends io.pulumi.resources.ResourceArgs {
      * /subscriptions/{subId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{siteName}/slots/{slotName} for other slots.
      * 
      */
-    @InputImport(name="sourceWebAppId", required=true)
+    @Import(name="sourceWebAppId", required=true)
       private final Output<String> sourceWebAppId;
 
     public Output<String> getSourceWebAppId() {
@@ -116,7 +116,7 @@ public final class CloningInfoArgs extends io.pulumi.resources.ResourceArgs {
      * Location of source app ex: West US or North Europe
      * 
      */
-    @InputImport(name="sourceWebAppLocation")
+    @Import(name="sourceWebAppLocation")
       private final @Nullable Output<String> sourceWebAppLocation;
 
     public Output<String> getSourceWebAppLocation() {
@@ -128,7 +128,7 @@ public final class CloningInfoArgs extends io.pulumi.resources.ResourceArgs {
      * /subscriptions/{subId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/trafficManagerProfiles/{profileName}.
      * 
      */
-    @InputImport(name="trafficManagerProfileId")
+    @Import(name="trafficManagerProfileId")
       private final @Nullable Output<String> trafficManagerProfileId;
 
     public Output<String> getTrafficManagerProfileId() {
@@ -139,7 +139,7 @@ public final class CloningInfoArgs extends io.pulumi.resources.ResourceArgs {
      * Name of Traffic Manager profile to create. This is only needed if Traffic Manager profile does not already exist.
      * 
      */
-    @InputImport(name="trafficManagerProfileName")
+    @Import(name="trafficManagerProfileName")
       private final @Nullable Output<String> trafficManagerProfileName;
 
     public Output<String> getTrafficManagerProfileName() {

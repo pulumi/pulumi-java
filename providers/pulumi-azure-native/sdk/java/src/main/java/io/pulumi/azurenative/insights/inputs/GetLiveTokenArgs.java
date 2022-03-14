@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.insights.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetLiveTokenArgs extends io.pulumi.resources.InvokeArgs {
      * The identifier of the resource.
      * 
      */
-    @InputImport(name="resourceUri", required=true)
+    @Import(name="resourceUri", required=true)
       private final String resourceUri;
 
     public String getResourceUri() {

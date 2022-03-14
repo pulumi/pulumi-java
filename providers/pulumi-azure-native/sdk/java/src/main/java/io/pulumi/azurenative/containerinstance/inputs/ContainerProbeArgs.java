@@ -6,7 +6,7 @@ package io.pulumi.azurenative.containerinstance.inputs;
 import io.pulumi.azurenative.containerinstance.inputs.ContainerExecArgs;
 import io.pulumi.azurenative.containerinstance.inputs.ContainerHttpGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class ContainerProbeArgs extends io.pulumi.resources.ResourceArgs {
      * The execution command to probe
      * 
      */
-    @InputImport(name="exec")
+    @Import(name="exec")
       private final @Nullable Output<ContainerExecArgs> exec;
 
     public Output<ContainerExecArgs> getExec() {
@@ -35,7 +35,7 @@ public final class ContainerProbeArgs extends io.pulumi.resources.ResourceArgs {
      * The failure threshold.
      * 
      */
-    @InputImport(name="failureThreshold")
+    @Import(name="failureThreshold")
       private final @Nullable Output<Integer> failureThreshold;
 
     public Output<Integer> getFailureThreshold() {
@@ -46,7 +46,7 @@ public final class ContainerProbeArgs extends io.pulumi.resources.ResourceArgs {
      * The Http Get settings to probe
      * 
      */
-    @InputImport(name="httpGet")
+    @Import(name="httpGet")
       private final @Nullable Output<ContainerHttpGetArgs> httpGet;
 
     public Output<ContainerHttpGetArgs> getHttpGet() {
@@ -57,7 +57,7 @@ public final class ContainerProbeArgs extends io.pulumi.resources.ResourceArgs {
      * The initial delay seconds.
      * 
      */
-    @InputImport(name="initialDelaySeconds")
+    @Import(name="initialDelaySeconds")
       private final @Nullable Output<Integer> initialDelaySeconds;
 
     public Output<Integer> getInitialDelaySeconds() {
@@ -68,7 +68,7 @@ public final class ContainerProbeArgs extends io.pulumi.resources.ResourceArgs {
      * The period seconds.
      * 
      */
-    @InputImport(name="periodSeconds")
+    @Import(name="periodSeconds")
       private final @Nullable Output<Integer> periodSeconds;
 
     public Output<Integer> getPeriodSeconds() {
@@ -79,7 +79,7 @@ public final class ContainerProbeArgs extends io.pulumi.resources.ResourceArgs {
      * The success threshold.
      * 
      */
-    @InputImport(name="successThreshold")
+    @Import(name="successThreshold")
       private final @Nullable Output<Integer> successThreshold;
 
     public Output<Integer> getSuccessThreshold() {
@@ -90,7 +90,7 @@ public final class ContainerProbeArgs extends io.pulumi.resources.ResourceArgs {
      * The timeout seconds.
      * 
      */
-    @InputImport(name="timeoutSeconds")
+    @Import(name="timeoutSeconds")
       private final @Nullable Output<Integer> timeoutSeconds;
 
     public Output<Integer> getTimeoutSeconds() {

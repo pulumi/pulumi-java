@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datashare.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetBlobContainerDataSetArgs extends io.pulumi.resources.Invok
      * The name of the share account.
      * 
      */
-    @InputImport(name="accountName", required=true)
+    @Import(name="accountName", required=true)
       private final String accountName;
 
     public String getAccountName() {
@@ -27,7 +27,7 @@ public final class GetBlobContainerDataSetArgs extends io.pulumi.resources.Invok
      * The name of the dataSet.
      * 
      */
-    @InputImport(name="dataSetName", required=true)
+    @Import(name="dataSetName", required=true)
       private final String dataSetName;
 
     public String getDataSetName() {
@@ -38,7 +38,7 @@ public final class GetBlobContainerDataSetArgs extends io.pulumi.resources.Invok
      * The resource group name.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {
@@ -49,7 +49,7 @@ public final class GetBlobContainerDataSetArgs extends io.pulumi.resources.Invok
      * The name of the share.
      * 
      */
-    @InputImport(name="shareName", required=true)
+    @Import(name="shareName", required=true)
       private final String shareName;
 
     public String getShareName() {

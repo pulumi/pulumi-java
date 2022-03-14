@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class AmlTokenResponse extends io.pulumi.resources.InvokeArgs {
      * Expected value is 'AMLToken'.
      * 
      */
-    @InputImport(name="identityType", required=true)
+    @Import(name="identityType", required=true)
       private final String identityType;
 
     public String getIdentityType() {

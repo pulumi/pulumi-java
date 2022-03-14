@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.sql.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetServerTrustCertificateResult {
     /**
      * The certificate name
@@ -42,14 +42,14 @@ public final class GetServerTrustCertificateResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetServerTrustCertificateResult(
-        @OutputCustomType.Parameter("certificateName") String certificateName,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("publicBlob") @Nullable String publicBlob,
-        @OutputCustomType.Parameter("thumbprint") String thumbprint,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("certificateName") String certificateName,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("publicBlob") @Nullable String publicBlob,
+        @CustomType.Parameter("thumbprint") String thumbprint,
+        @CustomType.Parameter("type") String type) {
         this.certificateName = certificateName;
         this.id = id;
         this.name = name;

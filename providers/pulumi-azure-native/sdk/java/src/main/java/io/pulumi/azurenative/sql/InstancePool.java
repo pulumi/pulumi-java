@@ -8,7 +8,7 @@ import io.pulumi.azurenative.sql.InstancePoolArgs;
 import io.pulumi.azurenative.sql.outputs.SkuResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -37,7 +37,7 @@ public class InstancePool extends io.pulumi.resources.CustomResource {
      * The license type. Possible values are 'LicenseIncluded' (price for SQL license is included) and 'BasePrice' (without SQL license price).
      * 
      */
-    @OutputExport(name="licenseType", type=String.class, parameters={})
+    @Export(name="licenseType", type=String.class, parameters={})
     private Output<String> licenseType;
 
     /**
@@ -51,7 +51,7 @@ public class InstancePool extends io.pulumi.resources.CustomResource {
      * Resource location.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -65,7 +65,7 @@ public class InstancePool extends io.pulumi.resources.CustomResource {
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -79,7 +79,7 @@ public class InstancePool extends io.pulumi.resources.CustomResource {
      * The name and tier of the SKU.
      * 
      */
-    @OutputExport(name="sku", type=SkuResponse.class, parameters={})
+    @Export(name="sku", type=SkuResponse.class, parameters={})
     private Output</* @Nullable */ SkuResponse> sku;
 
     /**
@@ -93,7 +93,7 @@ public class InstancePool extends io.pulumi.resources.CustomResource {
      * Resource ID of the subnet to place this instance pool in.
      * 
      */
-    @OutputExport(name="subnetId", type=String.class, parameters={})
+    @Export(name="subnetId", type=String.class, parameters={})
     private Output<String> subnetId;
 
     /**
@@ -107,7 +107,7 @@ public class InstancePool extends io.pulumi.resources.CustomResource {
      * Resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -121,7 +121,7 @@ public class InstancePool extends io.pulumi.resources.CustomResource {
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -135,7 +135,7 @@ public class InstancePool extends io.pulumi.resources.CustomResource {
      * Count of vCores belonging to this instance pool.
      * 
      */
-    @OutputExport(name="vCores", type=Integer.class, parameters={})
+    @Export(name="vCores", type=Integer.class, parameters={})
     private Output<Integer> vCores;
 
     /**

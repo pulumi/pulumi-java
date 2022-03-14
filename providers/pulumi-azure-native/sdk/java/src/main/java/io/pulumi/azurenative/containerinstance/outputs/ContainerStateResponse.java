@@ -3,12 +3,12 @@
 
 package io.pulumi.azurenative.containerinstance.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ContainerStateResponse {
     /**
      * The human-readable status of the container instance state.
@@ -36,13 +36,13 @@ public final class ContainerStateResponse {
      */
     private final String state;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ContainerStateResponse(
-        @OutputCustomType.Parameter("detailStatus") String detailStatus,
-        @OutputCustomType.Parameter("exitCode") Integer exitCode,
-        @OutputCustomType.Parameter("finishTime") String finishTime,
-        @OutputCustomType.Parameter("startTime") String startTime,
-        @OutputCustomType.Parameter("state") String state) {
+        @CustomType.Parameter("detailStatus") String detailStatus,
+        @CustomType.Parameter("exitCode") Integer exitCode,
+        @CustomType.Parameter("finishTime") String finishTime,
+        @CustomType.Parameter("startTime") String startTime,
+        @CustomType.Parameter("state") String state) {
         this.detailStatus = detailStatus;
         this.exitCode = exitCode;
         this.finishTime = finishTime;

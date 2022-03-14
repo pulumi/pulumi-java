@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.media.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class PngLayerResponse extends io.pulumi.resources.InvokeArgs {
      * The height of the output video for this layer. The value can be absolute (in pixels) or relative (in percentage). For example 50% means the output video has half as many pixels in height as the input.
      * 
      */
-    @InputImport(name="height")
+    @Import(name="height")
       private final @Nullable String height;
 
     public Optional<String> getHeight() {
@@ -33,7 +33,7 @@ public final class PngLayerResponse extends io.pulumi.resources.InvokeArgs {
      * The alphanumeric label for this layer, which can be used in multiplexing different video and audio layers, or in naming the output file.
      * 
      */
-    @InputImport(name="label")
+    @Import(name="label")
       private final @Nullable String label;
 
     public Optional<String> getLabel() {
@@ -45,7 +45,7 @@ public final class PngLayerResponse extends io.pulumi.resources.InvokeArgs {
      * Expected value is '#Microsoft.Media.PngLayer'.
      * 
      */
-    @InputImport(name="odataType", required=true)
+    @Import(name="odataType", required=true)
       private final String odataType;
 
     public String getOdataType() {
@@ -56,7 +56,7 @@ public final class PngLayerResponse extends io.pulumi.resources.InvokeArgs {
      * The width of the output video for this layer. The value can be absolute (in pixels) or relative (in percentage). For example 50% means the output video has half as many pixels in width as the input.
      * 
      */
-    @InputImport(name="width")
+    @Import(name="width")
       private final @Nullable String width;
 
     public Optional<String> getWidth() {

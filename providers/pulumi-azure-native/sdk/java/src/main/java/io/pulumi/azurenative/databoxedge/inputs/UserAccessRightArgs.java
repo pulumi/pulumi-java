@@ -6,7 +6,7 @@ package io.pulumi.azurenative.databoxedge.inputs;
 import io.pulumi.azurenative.databoxedge.enums.ShareAccessType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class UserAccessRightArgs extends io.pulumi.resources.ResourceArgs 
      * Type of access to be allowed for the user.
      * 
      */
-    @InputImport(name="accessType", required=true)
+    @Import(name="accessType", required=true)
       private final Output<Either<String,ShareAccessType>> accessType;
 
     public Output<Either<String,ShareAccessType>> getAccessType() {
@@ -34,7 +34,7 @@ public final class UserAccessRightArgs extends io.pulumi.resources.ResourceArgs 
      * User ID (already existing in the device).
      * 
      */
-    @InputImport(name="userId", required=true)
+    @Import(name="userId", required=true)
       private final Output<String> userId;
 
     public Output<String> getUserId() {

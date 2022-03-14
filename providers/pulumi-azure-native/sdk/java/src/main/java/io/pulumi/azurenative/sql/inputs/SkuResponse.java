@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.sql.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
      * Capacity of the particular SKU.
      * 
      */
-    @InputImport(name="capacity")
+    @Import(name="capacity")
       private final @Nullable Integer capacity;
 
     public Optional<Integer> getCapacity() {
@@ -34,7 +34,7 @@ public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
      * If the service has different generations of hardware, for the same SKU, then that can be captured here.
      * 
      */
-    @InputImport(name="family")
+    @Import(name="family")
       private final @Nullable String family;
 
     public Optional<String> getFamily() {
@@ -45,7 +45,7 @@ public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
      * The name of the SKU, typically, a letter + Number code, e.g. P3.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -56,7 +56,7 @@ public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
      * Size of the particular SKU
      * 
      */
-    @InputImport(name="size")
+    @Import(name="size")
       private final @Nullable String size;
 
     public Optional<String> getSize() {
@@ -67,7 +67,7 @@ public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
      * The tier or edition of the particular SKU, e.g. Basic, Premium.
      * 
      */
-    @InputImport(name="tier")
+    @Import(name="tier")
       private final @Nullable String tier;
 
     public Optional<String> getTier() {

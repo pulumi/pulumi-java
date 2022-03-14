@@ -6,7 +6,7 @@ package io.pulumi.azurenative.elastic.inputs;
 import io.pulumi.azurenative.elastic.enums.ManagedIdentityTypes;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class IdentityPropertiesArgs extends io.pulumi.resources.ResourceAr
      * Managed identity type.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<Either<String,ManagedIdentityTypes>> type;
 
     public Output<Either<String,ManagedIdentityTypes>> getType() {

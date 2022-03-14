@@ -7,7 +7,7 @@ import io.pulumi.azurenative.recoveryservices.inputs.MasterTargetServerResponse;
 import io.pulumi.azurenative.recoveryservices.inputs.ProcessServerResponse;
 import io.pulumi.azurenative.recoveryservices.inputs.RunAsAccountResponse;
 import io.pulumi.azurenative.recoveryservices.inputs.VersionDetailsResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -29,7 +29,7 @@ public final class VMwareDetailsResponse extends io.pulumi.resources.InvokeArgs 
      * The number of source and target servers configured to talk to this CS.
      * 
      */
-    @InputImport(name="agentCount")
+    @Import(name="agentCount")
       private final @Nullable String agentCount;
 
     public Optional<String> getAgentCount() {
@@ -40,7 +40,7 @@ public final class VMwareDetailsResponse extends io.pulumi.resources.InvokeArgs 
      * Agent expiry date.
      * 
      */
-    @InputImport(name="agentExpiryDate")
+    @Import(name="agentExpiryDate")
       private final @Nullable String agentExpiryDate;
 
     public Optional<String> getAgentExpiryDate() {
@@ -51,7 +51,7 @@ public final class VMwareDetailsResponse extends io.pulumi.resources.InvokeArgs 
      * The agent Version.
      * 
      */
-    @InputImport(name="agentVersion")
+    @Import(name="agentVersion")
       private final @Nullable String agentVersion;
 
     public Optional<String> getAgentVersion() {
@@ -62,7 +62,7 @@ public final class VMwareDetailsResponse extends io.pulumi.resources.InvokeArgs 
      * The agent version details.
      * 
      */
-    @InputImport(name="agentVersionDetails")
+    @Import(name="agentVersionDetails")
       private final @Nullable VersionDetailsResponse agentVersionDetails;
 
     public Optional<VersionDetailsResponse> getAgentVersionDetails() {
@@ -73,7 +73,7 @@ public final class VMwareDetailsResponse extends io.pulumi.resources.InvokeArgs 
      * The available memory.
      * 
      */
-    @InputImport(name="availableMemoryInBytes")
+    @Import(name="availableMemoryInBytes")
       private final @Nullable Double availableMemoryInBytes;
 
     public Optional<Double> getAvailableMemoryInBytes() {
@@ -84,7 +84,7 @@ public final class VMwareDetailsResponse extends io.pulumi.resources.InvokeArgs 
      * The available space.
      * 
      */
-    @InputImport(name="availableSpaceInBytes")
+    @Import(name="availableSpaceInBytes")
       private final @Nullable Double availableSpaceInBytes;
 
     public Optional<Double> getAvailableSpaceInBytes() {
@@ -95,7 +95,7 @@ public final class VMwareDetailsResponse extends io.pulumi.resources.InvokeArgs 
      * The percentage of the CPU load.
      * 
      */
-    @InputImport(name="cpuLoad")
+    @Import(name="cpuLoad")
       private final @Nullable String cpuLoad;
 
     public Optional<String> getCpuLoad() {
@@ -106,7 +106,7 @@ public final class VMwareDetailsResponse extends io.pulumi.resources.InvokeArgs 
      * The CPU load status.
      * 
      */
-    @InputImport(name="cpuLoadStatus")
+    @Import(name="cpuLoadStatus")
       private final @Nullable String cpuLoadStatus;
 
     public Optional<String> getCpuLoadStatus() {
@@ -117,7 +117,7 @@ public final class VMwareDetailsResponse extends io.pulumi.resources.InvokeArgs 
      * The CS service status.
      * 
      */
-    @InputImport(name="csServiceStatus")
+    @Import(name="csServiceStatus")
       private final @Nullable String csServiceStatus;
 
     public Optional<String> getCsServiceStatus() {
@@ -128,7 +128,7 @@ public final class VMwareDetailsResponse extends io.pulumi.resources.InvokeArgs 
      * The database server load.
      * 
      */
-    @InputImport(name="databaseServerLoad")
+    @Import(name="databaseServerLoad")
       private final @Nullable String databaseServerLoad;
 
     public Optional<String> getDatabaseServerLoad() {
@@ -139,7 +139,7 @@ public final class VMwareDetailsResponse extends io.pulumi.resources.InvokeArgs 
      * The database server load status.
      * 
      */
-    @InputImport(name="databaseServerLoadStatus")
+    @Import(name="databaseServerLoadStatus")
       private final @Nullable String databaseServerLoadStatus;
 
     public Optional<String> getDatabaseServerLoadStatus() {
@@ -150,7 +150,7 @@ public final class VMwareDetailsResponse extends io.pulumi.resources.InvokeArgs 
      * The host name.
      * 
      */
-    @InputImport(name="hostName")
+    @Import(name="hostName")
       private final @Nullable String hostName;
 
     public Optional<String> getHostName() {
@@ -162,7 +162,7 @@ public final class VMwareDetailsResponse extends io.pulumi.resources.InvokeArgs 
      * Expected value is 'VMware'.
      * 
      */
-    @InputImport(name="instanceType", required=true)
+    @Import(name="instanceType", required=true)
       private final String instanceType;
 
     public String getInstanceType() {
@@ -173,7 +173,7 @@ public final class VMwareDetailsResponse extends io.pulumi.resources.InvokeArgs 
      * The IP address.
      * 
      */
-    @InputImport(name="ipAddress")
+    @Import(name="ipAddress")
       private final @Nullable String ipAddress;
 
     public Optional<String> getIpAddress() {
@@ -184,7 +184,7 @@ public final class VMwareDetailsResponse extends io.pulumi.resources.InvokeArgs 
      * The last heartbeat received from CS server.
      * 
      */
-    @InputImport(name="lastHeartbeat")
+    @Import(name="lastHeartbeat")
       private final @Nullable String lastHeartbeat;
 
     public Optional<String> getLastHeartbeat() {
@@ -195,7 +195,7 @@ public final class VMwareDetailsResponse extends io.pulumi.resources.InvokeArgs 
      * The list of Master Target servers associated with the fabric.
      * 
      */
-    @InputImport(name="masterTargetServers")
+    @Import(name="masterTargetServers")
       private final @Nullable List<MasterTargetServerResponse> masterTargetServers;
 
     public List<MasterTargetServerResponse> getMasterTargetServers() {
@@ -206,7 +206,7 @@ public final class VMwareDetailsResponse extends io.pulumi.resources.InvokeArgs 
      * The memory usage status.
      * 
      */
-    @InputImport(name="memoryUsageStatus")
+    @Import(name="memoryUsageStatus")
       private final @Nullable String memoryUsageStatus;
 
     public Optional<String> getMemoryUsageStatus() {
@@ -217,7 +217,7 @@ public final class VMwareDetailsResponse extends io.pulumi.resources.InvokeArgs 
      * The number of process servers.
      * 
      */
-    @InputImport(name="processServerCount")
+    @Import(name="processServerCount")
       private final @Nullable String processServerCount;
 
     public Optional<String> getProcessServerCount() {
@@ -228,7 +228,7 @@ public final class VMwareDetailsResponse extends io.pulumi.resources.InvokeArgs 
      * The list of Process Servers associated with the fabric.
      * 
      */
-    @InputImport(name="processServers")
+    @Import(name="processServers")
       private final @Nullable List<ProcessServerResponse> processServers;
 
     public List<ProcessServerResponse> getProcessServers() {
@@ -239,7 +239,7 @@ public final class VMwareDetailsResponse extends io.pulumi.resources.InvokeArgs 
      * The number of protected servers.
      * 
      */
-    @InputImport(name="protectedServers")
+    @Import(name="protectedServers")
       private final @Nullable String protectedServers;
 
     public Optional<String> getProtectedServers() {
@@ -250,7 +250,7 @@ public final class VMwareDetailsResponse extends io.pulumi.resources.InvokeArgs 
      * PS template version.
      * 
      */
-    @InputImport(name="psTemplateVersion")
+    @Import(name="psTemplateVersion")
       private final @Nullable String psTemplateVersion;
 
     public Optional<String> getPsTemplateVersion() {
@@ -261,7 +261,7 @@ public final class VMwareDetailsResponse extends io.pulumi.resources.InvokeArgs 
      * The number of replication pairs configured in this CS.
      * 
      */
-    @InputImport(name="replicationPairCount")
+    @Import(name="replicationPairCount")
       private final @Nullable String replicationPairCount;
 
     public Optional<String> getReplicationPairCount() {
@@ -272,7 +272,7 @@ public final class VMwareDetailsResponse extends io.pulumi.resources.InvokeArgs 
      * The list of run as accounts created on the server.
      * 
      */
-    @InputImport(name="runAsAccounts")
+    @Import(name="runAsAccounts")
       private final @Nullable List<RunAsAccountResponse> runAsAccounts;
 
     public List<RunAsAccountResponse> getRunAsAccounts() {
@@ -283,7 +283,7 @@ public final class VMwareDetailsResponse extends io.pulumi.resources.InvokeArgs 
      * The space usage status.
      * 
      */
-    @InputImport(name="spaceUsageStatus")
+    @Import(name="spaceUsageStatus")
       private final @Nullable String spaceUsageStatus;
 
     public Optional<String> getSpaceUsageStatus() {
@@ -294,7 +294,7 @@ public final class VMwareDetailsResponse extends io.pulumi.resources.InvokeArgs 
      * CS SSL cert expiry date.
      * 
      */
-    @InputImport(name="sslCertExpiryDate")
+    @Import(name="sslCertExpiryDate")
       private final @Nullable String sslCertExpiryDate;
 
     public Optional<String> getSslCertExpiryDate() {
@@ -305,7 +305,7 @@ public final class VMwareDetailsResponse extends io.pulumi.resources.InvokeArgs 
      * CS SSL cert expiry date.
      * 
      */
-    @InputImport(name="sslCertExpiryRemainingDays")
+    @Import(name="sslCertExpiryRemainingDays")
       private final @Nullable Integer sslCertExpiryRemainingDays;
 
     public Optional<Integer> getSslCertExpiryRemainingDays() {
@@ -316,7 +316,7 @@ public final class VMwareDetailsResponse extends io.pulumi.resources.InvokeArgs 
      * The percentage of the system load.
      * 
      */
-    @InputImport(name="systemLoad")
+    @Import(name="systemLoad")
       private final @Nullable String systemLoad;
 
     public Optional<String> getSystemLoad() {
@@ -327,7 +327,7 @@ public final class VMwareDetailsResponse extends io.pulumi.resources.InvokeArgs 
      * The system load status.
      * 
      */
-    @InputImport(name="systemLoadStatus")
+    @Import(name="systemLoadStatus")
       private final @Nullable String systemLoadStatus;
 
     public Optional<String> getSystemLoadStatus() {
@@ -338,7 +338,7 @@ public final class VMwareDetailsResponse extends io.pulumi.resources.InvokeArgs 
      * The total memory.
      * 
      */
-    @InputImport(name="totalMemoryInBytes")
+    @Import(name="totalMemoryInBytes")
       private final @Nullable Double totalMemoryInBytes;
 
     public Optional<Double> getTotalMemoryInBytes() {
@@ -349,7 +349,7 @@ public final class VMwareDetailsResponse extends io.pulumi.resources.InvokeArgs 
      * The total space.
      * 
      */
-    @InputImport(name="totalSpaceInBytes")
+    @Import(name="totalSpaceInBytes")
       private final @Nullable Double totalSpaceInBytes;
 
     public Optional<Double> getTotalSpaceInBytes() {
@@ -360,7 +360,7 @@ public final class VMwareDetailsResponse extends io.pulumi.resources.InvokeArgs 
      * Version status
      * 
      */
-    @InputImport(name="versionStatus")
+    @Import(name="versionStatus")
       private final @Nullable String versionStatus;
 
     public Optional<String> getVersionStatus() {
@@ -371,7 +371,7 @@ public final class VMwareDetailsResponse extends io.pulumi.resources.InvokeArgs 
      * The web load.
      * 
      */
-    @InputImport(name="webLoad")
+    @Import(name="webLoad")
       private final @Nullable String webLoad;
 
     public Optional<String> getWebLoad() {
@@ -382,7 +382,7 @@ public final class VMwareDetailsResponse extends io.pulumi.resources.InvokeArgs 
      * The web load status.
      * 
      */
-    @InputImport(name="webLoadStatus")
+    @Import(name="webLoadStatus")
       private final @Nullable String webLoadStatus;
 
     public Optional<String> getWebLoadStatus() {

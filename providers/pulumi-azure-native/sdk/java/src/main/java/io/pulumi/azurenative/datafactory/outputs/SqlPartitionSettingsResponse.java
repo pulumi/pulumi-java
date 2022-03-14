@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.datafactory.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SqlPartitionSettingsResponse {
     /**
      * The name of the column in integer or datetime type that will be used for proceeding partitioning. If not specified, the primary key of the table is auto-detected and used as the partition column. Type: string (or Expression with resultType string).
@@ -27,11 +27,11 @@ public final class SqlPartitionSettingsResponse {
      */
     private final @Nullable Object partitionUpperBound;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SqlPartitionSettingsResponse(
-        @OutputCustomType.Parameter("partitionColumnName") @Nullable Object partitionColumnName,
-        @OutputCustomType.Parameter("partitionLowerBound") @Nullable Object partitionLowerBound,
-        @OutputCustomType.Parameter("partitionUpperBound") @Nullable Object partitionUpperBound) {
+        @CustomType.Parameter("partitionColumnName") @Nullable Object partitionColumnName,
+        @CustomType.Parameter("partitionLowerBound") @Nullable Object partitionLowerBound,
+        @CustomType.Parameter("partitionUpperBound") @Nullable Object partitionUpperBound) {
         this.partitionColumnName = partitionColumnName;
         this.partitionLowerBound = partitionLowerBound;
         this.partitionUpperBound = partitionUpperBound;

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.storage.inputs;
 
 import io.pulumi.azurenative.storage.inputs.EncryptionServiceResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class EncryptionServicesResponse extends io.pulumi.resources.Invoke
      * The encryption function of the blob storage service.
      * 
      */
-    @InputImport(name="blob")
+    @Import(name="blob")
       private final @Nullable EncryptionServiceResponse blob;
 
     public Optional<EncryptionServiceResponse> getBlob() {
@@ -33,7 +33,7 @@ public final class EncryptionServicesResponse extends io.pulumi.resources.Invoke
      * The encryption function of the file storage service.
      * 
      */
-    @InputImport(name="file")
+    @Import(name="file")
       private final @Nullable EncryptionServiceResponse file;
 
     public Optional<EncryptionServiceResponse> getFile() {
@@ -44,7 +44,7 @@ public final class EncryptionServicesResponse extends io.pulumi.resources.Invoke
      * The encryption function of the queue storage service.
      * 
      */
-    @InputImport(name="queue")
+    @Import(name="queue")
       private final @Nullable EncryptionServiceResponse queue;
 
     public Optional<EncryptionServiceResponse> getQueue() {
@@ -55,7 +55,7 @@ public final class EncryptionServicesResponse extends io.pulumi.resources.Invoke
      * The encryption function of the table storage service.
      * 
      */
-    @InputImport(name="table")
+    @Import(name="table")
       private final @Nullable EncryptionServiceResponse table;
 
     public Optional<EncryptionServiceResponse> getTable() {

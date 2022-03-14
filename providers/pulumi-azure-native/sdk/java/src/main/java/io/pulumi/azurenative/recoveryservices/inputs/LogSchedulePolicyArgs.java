@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.recoveryservices.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class LogSchedulePolicyArgs extends io.pulumi.resources.ResourceArg
      * Frequency of the log schedule operation of this policy in minutes.
      * 
      */
-    @InputImport(name="scheduleFrequencyInMins")
+    @Import(name="scheduleFrequencyInMins")
       private final @Nullable Output<Integer> scheduleFrequencyInMins;
 
     public Output<Integer> getScheduleFrequencyInMins() {
@@ -35,7 +35,7 @@ public final class LogSchedulePolicyArgs extends io.pulumi.resources.ResourceArg
      * Expected value is 'LogSchedulePolicy'.
      * 
      */
-    @InputImport(name="schedulePolicyType", required=true)
+    @Import(name="schedulePolicyType", required=true)
       private final Output<String> schedulePolicyType;
 
     public Output<String> getSchedulePolicyType() {

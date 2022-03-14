@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -20,7 +20,7 @@ public final class ModelEnvironmentDefinitionPythonArgs extends io.pulumi.resour
 
     public static final ModelEnvironmentDefinitionPythonArgs Empty = new ModelEnvironmentDefinitionPythonArgs();
 
-    @InputImport(name="baseCondaEnvironment")
+    @Import(name="baseCondaEnvironment")
       private final @Nullable Output<String> baseCondaEnvironment;
 
     public Output<String> getBaseCondaEnvironment() {
@@ -31,7 +31,7 @@ public final class ModelEnvironmentDefinitionPythonArgs extends io.pulumi.resour
      * A JObject containing Conda dependencies.
      * 
      */
-    @InputImport(name="condaDependencies")
+    @Import(name="condaDependencies")
       private final @Nullable Output<Object> condaDependencies;
 
     public Output<Object> getCondaDependencies() {
@@ -42,7 +42,7 @@ public final class ModelEnvironmentDefinitionPythonArgs extends io.pulumi.resour
      * The python interpreter path to use if an environment build is not required. The path specified gets used to call the user script.
      * 
      */
-    @InputImport(name="interpreterPath")
+    @Import(name="interpreterPath")
       private final @Nullable Output<String> interpreterPath;
 
     public Output<String> getInterpreterPath() {
@@ -53,7 +53,7 @@ public final class ModelEnvironmentDefinitionPythonArgs extends io.pulumi.resour
      * True means that AzureML reuses an existing python environment; False means that AzureML will create a python environment based on the Conda dependencies specification.
      * 
      */
-    @InputImport(name="userManagedDependencies")
+    @Import(name="userManagedDependencies")
       private final @Nullable Output<Boolean> userManagedDependencies;
 
     public Output<Boolean> getUserManagedDependencies() {

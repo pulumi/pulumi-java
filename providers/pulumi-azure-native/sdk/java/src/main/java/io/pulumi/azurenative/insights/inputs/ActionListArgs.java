@@ -5,7 +5,7 @@ package io.pulumi.azurenative.insights.inputs;
 
 import io.pulumi.azurenative.insights.inputs.ActionGroupArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class ActionListArgs extends io.pulumi.resources.ResourceArgs {
      * The list of the Action Groups.
      * 
      */
-    @InputImport(name="actionGroups")
+    @Import(name="actionGroups")
       private final @Nullable Output<List<ActionGroupArgs>> actionGroups;
 
     public Output<List<ActionGroupArgs>> getActionGroups() {

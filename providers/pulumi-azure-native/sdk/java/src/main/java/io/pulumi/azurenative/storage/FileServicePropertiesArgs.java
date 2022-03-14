@@ -7,7 +7,7 @@ import io.pulumi.azurenative.storage.inputs.CorsRulesArgs;
 import io.pulumi.azurenative.storage.inputs.DeleteRetentionPolicyArgs;
 import io.pulumi.azurenative.storage.inputs.ProtocolSettingsArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public final class FileServicePropertiesArgs extends io.pulumi.resources.Resourc
      * The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.
      * 
      */
-    @InputImport(name="accountName", required=true)
+    @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
     public Output<String> getAccountName() {
@@ -32,7 +32,7 @@ public final class FileServicePropertiesArgs extends io.pulumi.resources.Resourc
      * Specifies CORS rules for the File service. You can include up to five CorsRule elements in the request. If no CorsRule elements are included in the request body, all CORS rules will be deleted, and CORS will be disabled for the File service.
      * 
      */
-    @InputImport(name="cors")
+    @Import(name="cors")
       private final @Nullable Output<CorsRulesArgs> cors;
 
     public Output<CorsRulesArgs> getCors() {
@@ -43,7 +43,7 @@ public final class FileServicePropertiesArgs extends io.pulumi.resources.Resourc
      * The name of the file Service within the specified storage account. File Service Name must be "default"
      * 
      */
-    @InputImport(name="fileServicesName")
+    @Import(name="fileServicesName")
       private final @Nullable Output<String> fileServicesName;
 
     public Output<String> getFileServicesName() {
@@ -54,7 +54,7 @@ public final class FileServicePropertiesArgs extends io.pulumi.resources.Resourc
      * Protocol settings for file service
      * 
      */
-    @InputImport(name="protocolSettings")
+    @Import(name="protocolSettings")
       private final @Nullable Output<ProtocolSettingsArgs> protocolSettings;
 
     public Output<ProtocolSettingsArgs> getProtocolSettings() {
@@ -65,7 +65,7 @@ public final class FileServicePropertiesArgs extends io.pulumi.resources.Resourc
      * The name of the resource group within the user's subscription. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -76,7 +76,7 @@ public final class FileServicePropertiesArgs extends io.pulumi.resources.Resourc
      * The file service properties for share soft delete.
      * 
      */
-    @InputImport(name="shareDeleteRetentionPolicy")
+    @Import(name="shareDeleteRetentionPolicy")
       private final @Nullable Output<DeleteRetentionPolicyArgs> shareDeleteRetentionPolicy;
 
     public Output<DeleteRetentionPolicyArgs> getShareDeleteRetentionPolicy() {

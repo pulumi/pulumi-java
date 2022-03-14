@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.logic;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class WorkflowAccessKeyArgs extends io.pulumi.resources.ResourceArg
      * The workflow access key name.
      * 
      */
-    @InputImport(name="accessKeyName")
+    @Import(name="accessKeyName")
       private final @Nullable Output<String> accessKeyName;
 
     public Output<String> getAccessKeyName() {
@@ -29,7 +29,7 @@ public final class WorkflowAccessKeyArgs extends io.pulumi.resources.ResourceArg
      * Gets or sets the resource id.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
@@ -40,7 +40,7 @@ public final class WorkflowAccessKeyArgs extends io.pulumi.resources.ResourceArg
      * Gets or sets the not-after time.
      * 
      */
-    @InputImport(name="notAfter")
+    @Import(name="notAfter")
       private final @Nullable Output<String> notAfter;
 
     public Output<String> getNotAfter() {
@@ -51,7 +51,7 @@ public final class WorkflowAccessKeyArgs extends io.pulumi.resources.ResourceArg
      * Gets or sets the not-before time.
      * 
      */
-    @InputImport(name="notBefore")
+    @Import(name="notBefore")
       private final @Nullable Output<String> notBefore;
 
     public Output<String> getNotBefore() {
@@ -62,7 +62,7 @@ public final class WorkflowAccessKeyArgs extends io.pulumi.resources.ResourceArg
      * The resource group name.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -73,7 +73,7 @@ public final class WorkflowAccessKeyArgs extends io.pulumi.resources.ResourceArg
      * The workflow name.
      * 
      */
-    @InputImport(name="workflowName", required=true)
+    @Import(name="workflowName", required=true)
       private final Output<String> workflowName;
 
     public Output<String> getWorkflowName() {

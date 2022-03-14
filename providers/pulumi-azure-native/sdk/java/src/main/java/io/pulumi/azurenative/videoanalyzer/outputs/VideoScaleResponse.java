@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.videoanalyzer.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VideoScaleResponse {
     /**
      * The desired output video height.
@@ -27,11 +27,11 @@ public final class VideoScaleResponse {
      */
     private final @Nullable String width;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VideoScaleResponse(
-        @OutputCustomType.Parameter("height") @Nullable String height,
-        @OutputCustomType.Parameter("mode") @Nullable String mode,
-        @OutputCustomType.Parameter("width") @Nullable String width) {
+        @CustomType.Parameter("height") @Nullable String height,
+        @CustomType.Parameter("mode") @Nullable String mode,
+        @CustomType.Parameter("width") @Nullable String width) {
         this.height = height;
         this.mode = mode;
         this.width = width;

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.machinelearningcompute.inputs;
 import io.pulumi.azurenative.machinelearningcompute.enums.SystemServiceType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class SystemServiceArgs extends io.pulumi.resources.ResourceArgs {
      * The system service type
      * 
      */
-    @InputImport(name="systemServiceType", required=true)
+    @Import(name="systemServiceType", required=true)
       private final Output<Either<String,SystemServiceType>> systemServiceType;
 
     public Output<Either<String,SystemServiceType>> getSystemServiceType() {

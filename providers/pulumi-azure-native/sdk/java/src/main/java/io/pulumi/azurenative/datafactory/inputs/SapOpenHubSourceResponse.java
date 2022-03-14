@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class SapOpenHubSourceResponse extends io.pulumi.resources.InvokeAr
      * Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
      * 
      */
-    @InputImport(name="additionalColumns")
+    @Import(name="additionalColumns")
       private final @Nullable Object additionalColumns;
 
     public Optional<Object> getAdditionalColumns() {
@@ -34,7 +34,7 @@ public final class SapOpenHubSourceResponse extends io.pulumi.resources.InvokeAr
      * The ID of request for delta loading. Once it is set, only data with requestId larger than the value of this property will be retrieved. The default value is 0. Type: integer (or Expression with resultType integer ).
      * 
      */
-    @InputImport(name="baseRequestId")
+    @Import(name="baseRequestId")
       private final @Nullable Object baseRequestId;
 
     public Optional<Object> getBaseRequestId() {
@@ -45,7 +45,7 @@ public final class SapOpenHubSourceResponse extends io.pulumi.resources.InvokeAr
      * Specifies the custom RFC function module that will be used to read data from SAP Table. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="customRfcReadTableFunctionModule")
+    @Import(name="customRfcReadTableFunctionModule")
       private final @Nullable Object customRfcReadTableFunctionModule;
 
     public Optional<Object> getCustomRfcReadTableFunctionModule() {
@@ -56,7 +56,7 @@ public final class SapOpenHubSourceResponse extends io.pulumi.resources.InvokeAr
      * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
      * 
      */
-    @InputImport(name="disableMetricsCollection")
+    @Import(name="disableMetricsCollection")
       private final @Nullable Object disableMetricsCollection;
 
     public Optional<Object> getDisableMetricsCollection() {
@@ -67,7 +67,7 @@ public final class SapOpenHubSourceResponse extends io.pulumi.resources.InvokeAr
      * Whether to exclude the records of the last request. The default value is true. Type: boolean (or Expression with resultType boolean).
      * 
      */
-    @InputImport(name="excludeLastRequest")
+    @Import(name="excludeLastRequest")
       private final @Nullable Object excludeLastRequest;
 
     public Optional<Object> getExcludeLastRequest() {
@@ -78,7 +78,7 @@ public final class SapOpenHubSourceResponse extends io.pulumi.resources.InvokeAr
      * The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
      * 
      */
-    @InputImport(name="maxConcurrentConnections")
+    @Import(name="maxConcurrentConnections")
       private final @Nullable Object maxConcurrentConnections;
 
     public Optional<Object> getMaxConcurrentConnections() {
@@ -89,7 +89,7 @@ public final class SapOpenHubSourceResponse extends io.pulumi.resources.InvokeAr
      * Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
      * 
      */
-    @InputImport(name="queryTimeout")
+    @Import(name="queryTimeout")
       private final @Nullable Object queryTimeout;
 
     public Optional<Object> getQueryTimeout() {
@@ -100,7 +100,7 @@ public final class SapOpenHubSourceResponse extends io.pulumi.resources.InvokeAr
      * The single character that will be used as delimiter passed to SAP RFC as well as splitting the output data retrieved. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="sapDataColumnDelimiter")
+    @Import(name="sapDataColumnDelimiter")
       private final @Nullable Object sapDataColumnDelimiter;
 
     public Optional<Object> getSapDataColumnDelimiter() {
@@ -111,7 +111,7 @@ public final class SapOpenHubSourceResponse extends io.pulumi.resources.InvokeAr
      * Source retry count. Type: integer (or Expression with resultType integer).
      * 
      */
-    @InputImport(name="sourceRetryCount")
+    @Import(name="sourceRetryCount")
       private final @Nullable Object sourceRetryCount;
 
     public Optional<Object> getSourceRetryCount() {
@@ -122,7 +122,7 @@ public final class SapOpenHubSourceResponse extends io.pulumi.resources.InvokeAr
      * Source retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
      * 
      */
-    @InputImport(name="sourceRetryWait")
+    @Import(name="sourceRetryWait")
       private final @Nullable Object sourceRetryWait;
 
     public Optional<Object> getSourceRetryWait() {
@@ -134,7 +134,7 @@ public final class SapOpenHubSourceResponse extends io.pulumi.resources.InvokeAr
      * Expected value is 'SapOpenHubSource'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

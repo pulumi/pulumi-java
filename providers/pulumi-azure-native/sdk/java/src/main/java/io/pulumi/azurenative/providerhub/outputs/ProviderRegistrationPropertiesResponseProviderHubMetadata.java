@@ -6,23 +6,23 @@ package io.pulumi.azurenative.providerhub.outputs;
 import io.pulumi.azurenative.providerhub.outputs.ProviderHubMetadataResponseProviderAuthentication;
 import io.pulumi.azurenative.providerhub.outputs.ProviderHubMetadataResponseThirdPartyProviderAuthorization;
 import io.pulumi.azurenative.providerhub.outputs.ResourceProviderAuthorizationResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ProviderRegistrationPropertiesResponseProviderHubMetadata {
     private final @Nullable ProviderHubMetadataResponseProviderAuthentication providerAuthentication;
     private final @Nullable List<ResourceProviderAuthorizationResponse> providerAuthorizations;
     private final @Nullable ProviderHubMetadataResponseThirdPartyProviderAuthorization thirdPartyProviderAuthorization;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ProviderRegistrationPropertiesResponseProviderHubMetadata(
-        @OutputCustomType.Parameter("providerAuthentication") @Nullable ProviderHubMetadataResponseProviderAuthentication providerAuthentication,
-        @OutputCustomType.Parameter("providerAuthorizations") @Nullable List<ResourceProviderAuthorizationResponse> providerAuthorizations,
-        @OutputCustomType.Parameter("thirdPartyProviderAuthorization") @Nullable ProviderHubMetadataResponseThirdPartyProviderAuthorization thirdPartyProviderAuthorization) {
+        @CustomType.Parameter("providerAuthentication") @Nullable ProviderHubMetadataResponseProviderAuthentication providerAuthentication,
+        @CustomType.Parameter("providerAuthorizations") @Nullable List<ResourceProviderAuthorizationResponse> providerAuthorizations,
+        @CustomType.Parameter("thirdPartyProviderAuthorization") @Nullable ProviderHubMetadataResponseThirdPartyProviderAuthorization thirdPartyProviderAuthorization) {
         this.providerAuthentication = providerAuthentication;
         this.providerAuthorizations = providerAuthorizations;
         this.thirdPartyProviderAuthorization = thirdPartyProviderAuthorization;

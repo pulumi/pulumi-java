@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetP2sVpnGatewayArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the gateway.
      * 
      */
-    @InputImport(name="gatewayName", required=true)
+    @Import(name="gatewayName", required=true)
       private final String gatewayName;
 
     public String getGatewayName() {
@@ -27,7 +27,7 @@ public final class GetP2sVpnGatewayArgs extends io.pulumi.resources.InvokeArgs {
      * The resource group name of the P2SVpnGateway.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {

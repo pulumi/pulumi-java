@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.databox.outputs;
 
 import io.pulumi.azurenative.databox.outputs.ShareCredentialDetailsResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AccountCredentialDetailsResponse {
     /**
      * Connection string of the account endpoint to use the account as a storage endpoint on the device.
@@ -32,12 +32,12 @@ public final class AccountCredentialDetailsResponse {
      */
     private final List<ShareCredentialDetailsResponse> shareCredentialDetails;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AccountCredentialDetailsResponse(
-        @OutputCustomType.Parameter("accountConnectionString") String accountConnectionString,
-        @OutputCustomType.Parameter("accountName") String accountName,
-        @OutputCustomType.Parameter("dataAccountType") String dataAccountType,
-        @OutputCustomType.Parameter("shareCredentialDetails") List<ShareCredentialDetailsResponse> shareCredentialDetails) {
+        @CustomType.Parameter("accountConnectionString") String accountConnectionString,
+        @CustomType.Parameter("accountName") String accountName,
+        @CustomType.Parameter("dataAccountType") String dataAccountType,
+        @CustomType.Parameter("shareCredentialDetails") List<ShareCredentialDetailsResponse> shareCredentialDetails) {
         this.accountConnectionString = accountConnectionString;
         this.accountName = accountName;
         this.dataAccountType = dataAccountType;

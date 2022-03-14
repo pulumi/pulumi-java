@@ -5,13 +5,13 @@ package io.pulumi.azurenative.compute.outputs;
 
 import io.pulumi.azurenative.compute.outputs.LinuxPatchSettingsResponse;
 import io.pulumi.azurenative.compute.outputs.SshConfigurationResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class LinuxConfigurationResponse {
     /**
      * Specifies whether password authentication should be disabled.
@@ -34,12 +34,12 @@ public final class LinuxConfigurationResponse {
      */
     private final @Nullable SshConfigurationResponse ssh;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LinuxConfigurationResponse(
-        @OutputCustomType.Parameter("disablePasswordAuthentication") @Nullable Boolean disablePasswordAuthentication,
-        @OutputCustomType.Parameter("patchSettings") @Nullable LinuxPatchSettingsResponse patchSettings,
-        @OutputCustomType.Parameter("provisionVMAgent") @Nullable Boolean provisionVMAgent,
-        @OutputCustomType.Parameter("ssh") @Nullable SshConfigurationResponse ssh) {
+        @CustomType.Parameter("disablePasswordAuthentication") @Nullable Boolean disablePasswordAuthentication,
+        @CustomType.Parameter("patchSettings") @Nullable LinuxPatchSettingsResponse patchSettings,
+        @CustomType.Parameter("provisionVMAgent") @Nullable Boolean provisionVMAgent,
+        @CustomType.Parameter("ssh") @Nullable SshConfigurationResponse ssh) {
         this.disablePasswordAuthentication = disablePasswordAuthentication;
         this.patchSettings = patchSettings;
         this.provisionVMAgent = provisionVMAgent;

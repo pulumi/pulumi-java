@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.botservice.inputs;
 
 import io.pulumi.azurenative.botservice.inputs.ConnectionSettingParameterResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ConnectionSettingPropertiesResponse extends io.pulumi.resourc
      * Client Id associated with the Connection Setting.
      * 
      */
-    @InputImport(name="clientId")
+    @Import(name="clientId")
       private final @Nullable String clientId;
 
     public Optional<String> getClientId() {
@@ -35,7 +35,7 @@ public final class ConnectionSettingPropertiesResponse extends io.pulumi.resourc
      * Client Secret associated with the Connection Setting
      * 
      */
-    @InputImport(name="clientSecret")
+    @Import(name="clientSecret")
       private final @Nullable String clientSecret;
 
     public Optional<String> getClientSecret() {
@@ -46,7 +46,7 @@ public final class ConnectionSettingPropertiesResponse extends io.pulumi.resourc
      * Id associated with the Connection Setting.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable String id;
 
     public Optional<String> getId() {
@@ -57,7 +57,7 @@ public final class ConnectionSettingPropertiesResponse extends io.pulumi.resourc
      * Name associated with the Connection Setting.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -68,7 +68,7 @@ public final class ConnectionSettingPropertiesResponse extends io.pulumi.resourc
      * Service Provider Parameters associated with the Connection Setting
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable List<ConnectionSettingParameterResponse> parameters;
 
     public List<ConnectionSettingParameterResponse> getParameters() {
@@ -79,7 +79,7 @@ public final class ConnectionSettingPropertiesResponse extends io.pulumi.resourc
      * Provisioning state of the resource
      * 
      */
-    @InputImport(name="provisioningState")
+    @Import(name="provisioningState")
       private final @Nullable String provisioningState;
 
     public Optional<String> getProvisioningState() {
@@ -90,7 +90,7 @@ public final class ConnectionSettingPropertiesResponse extends io.pulumi.resourc
      * Scopes associated with the Connection Setting
      * 
      */
-    @InputImport(name="scopes")
+    @Import(name="scopes")
       private final @Nullable String scopes;
 
     public Optional<String> getScopes() {
@@ -101,7 +101,7 @@ public final class ConnectionSettingPropertiesResponse extends io.pulumi.resourc
      * Service Provider Display Name associated with the Connection Setting
      * 
      */
-    @InputImport(name="serviceProviderDisplayName")
+    @Import(name="serviceProviderDisplayName")
       private final @Nullable String serviceProviderDisplayName;
 
     public Optional<String> getServiceProviderDisplayName() {
@@ -112,7 +112,7 @@ public final class ConnectionSettingPropertiesResponse extends io.pulumi.resourc
      * Service Provider Id associated with the Connection Setting
      * 
      */
-    @InputImport(name="serviceProviderId")
+    @Import(name="serviceProviderId")
       private final @Nullable String serviceProviderId;
 
     public Optional<String> getServiceProviderId() {
@@ -123,7 +123,7 @@ public final class ConnectionSettingPropertiesResponse extends io.pulumi.resourc
      * Setting Id set by the service for the Connection Setting.
      * 
      */
-    @InputImport(name="settingId", required=true)
+    @Import(name="settingId", required=true)
       private final String settingId;
 
     public String getSettingId() {

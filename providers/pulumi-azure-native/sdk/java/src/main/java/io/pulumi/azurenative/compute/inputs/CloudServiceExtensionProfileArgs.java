@@ -5,7 +5,7 @@ package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.azurenative.compute.inputs.ExtensionArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class CloudServiceExtensionProfileArgs extends io.pulumi.resources.
      * List of extensions for the cloud service.
      * 
      */
-    @InputImport(name="extensions")
+    @Import(name="extensions")
       private final @Nullable Output<List<ExtensionArgs>> extensions;
 
     public Output<List<ExtensionArgs>> getExtensions() {

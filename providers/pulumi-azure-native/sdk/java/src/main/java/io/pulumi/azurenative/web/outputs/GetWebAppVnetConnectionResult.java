@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web.outputs;
 
 import io.pulumi.azurenative.web.outputs.VnetRouteResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetWebAppVnetConnectionResult {
     /**
      * A certificate file (.cer) blob containing the public key of the private key used to authenticate a
@@ -71,19 +71,19 @@ public final class GetWebAppVnetConnectionResult {
      */
     private final @Nullable String vnetResourceId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetWebAppVnetConnectionResult(
-        @OutputCustomType.Parameter("certBlob") @Nullable String certBlob,
-        @OutputCustomType.Parameter("certThumbprint") String certThumbprint,
-        @OutputCustomType.Parameter("dnsServers") @Nullable String dnsServers,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("isSwift") @Nullable Boolean isSwift,
-        @OutputCustomType.Parameter("kind") @Nullable String kind,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("resyncRequired") Boolean resyncRequired,
-        @OutputCustomType.Parameter("routes") List<VnetRouteResponse> routes,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("vnetResourceId") @Nullable String vnetResourceId) {
+        @CustomType.Parameter("certBlob") @Nullable String certBlob,
+        @CustomType.Parameter("certThumbprint") String certThumbprint,
+        @CustomType.Parameter("dnsServers") @Nullable String dnsServers,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("isSwift") @Nullable Boolean isSwift,
+        @CustomType.Parameter("kind") @Nullable String kind,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("resyncRequired") Boolean resyncRequired,
+        @CustomType.Parameter("routes") List<VnetRouteResponse> routes,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("vnetResourceId") @Nullable String vnetResourceId) {
         this.certBlob = certBlob;
         this.certThumbprint = certThumbprint;
         this.dnsServers = dnsServers;

@@ -6,12 +6,12 @@ package io.pulumi.azurenative.storage.outputs;
 import io.pulumi.azurenative.storage.outputs.ManagementPolicyBaseBlobResponse;
 import io.pulumi.azurenative.storage.outputs.ManagementPolicySnapShotResponse;
 import io.pulumi.azurenative.storage.outputs.ManagementPolicyVersionResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ManagementPolicyActionResponse {
     /**
      * The management policy action for base blob
@@ -29,11 +29,11 @@ public final class ManagementPolicyActionResponse {
      */
     private final @Nullable ManagementPolicyVersionResponse version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ManagementPolicyActionResponse(
-        @OutputCustomType.Parameter("baseBlob") @Nullable ManagementPolicyBaseBlobResponse baseBlob,
-        @OutputCustomType.Parameter("snapshot") @Nullable ManagementPolicySnapShotResponse snapshot,
-        @OutputCustomType.Parameter("version") @Nullable ManagementPolicyVersionResponse version) {
+        @CustomType.Parameter("baseBlob") @Nullable ManagementPolicyBaseBlobResponse baseBlob,
+        @CustomType.Parameter("snapshot") @Nullable ManagementPolicySnapShotResponse snapshot,
+        @CustomType.Parameter("version") @Nullable ManagementPolicyVersionResponse version) {
         this.baseBlob = baseBlob;
         this.snapshot = snapshot;
         this.version = version;

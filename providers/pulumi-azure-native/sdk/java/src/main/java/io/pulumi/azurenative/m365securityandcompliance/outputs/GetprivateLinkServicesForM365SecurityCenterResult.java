@@ -6,14 +6,14 @@ package io.pulumi.azurenative.m365securityandcompliance.outputs;
 import io.pulumi.azurenative.m365securityandcompliance.outputs.ServicesPropertiesResponse;
 import io.pulumi.azurenative.m365securityandcompliance.outputs.ServicesResourceResponseIdentity;
 import io.pulumi.azurenative.m365securityandcompliance.outputs.SystemDataResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetprivateLinkServicesForM365SecurityCenterResult {
     /**
      * An etag associated with the resource, used for optimistic concurrency when editing it.
@@ -66,18 +66,18 @@ public final class GetprivateLinkServicesForM365SecurityCenterResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetprivateLinkServicesForM365SecurityCenterResult(
-        @OutputCustomType.Parameter("etag") @Nullable String etag,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("identity") @Nullable ServicesResourceResponseIdentity identity,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("properties") ServicesPropertiesResponse properties,
-        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("etag") @Nullable String etag,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("identity") @Nullable ServicesResourceResponseIdentity identity,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("properties") ServicesPropertiesResponse properties,
+        @CustomType.Parameter("systemData") SystemDataResponse systemData,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type) {
         this.etag = etag;
         this.id = id;
         this.identity = identity;

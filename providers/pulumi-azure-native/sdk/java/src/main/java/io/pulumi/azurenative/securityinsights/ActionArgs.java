@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.securityinsights;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class ActionArgs extends io.pulumi.resources.ResourceArgs {
      * Action ID
      * 
      */
-    @InputImport(name="actionId")
+    @Import(name="actionId")
       private final @Nullable Output<String> actionId;
 
     public Output<String> getActionId() {
@@ -29,7 +29,7 @@ public final class ActionArgs extends io.pulumi.resources.ResourceArgs {
      * Logic App Resource Id, /subscriptions/{my-subscription}/resourceGroups/{my-resource-group}/providers/Microsoft.Logic/workflows/{my-workflow-id}.
      * 
      */
-    @InputImport(name="logicAppResourceId", required=true)
+    @Import(name="logicAppResourceId", required=true)
       private final Output<String> logicAppResourceId;
 
     public Output<String> getLogicAppResourceId() {
@@ -40,7 +40,7 @@ public final class ActionArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group within the user's subscription. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -51,7 +51,7 @@ public final class ActionArgs extends io.pulumi.resources.ResourceArgs {
      * Alert rule ID
      * 
      */
-    @InputImport(name="ruleId", required=true)
+    @Import(name="ruleId", required=true)
       private final Output<String> ruleId;
 
     public Output<String> getRuleId() {
@@ -62,7 +62,7 @@ public final class ActionArgs extends io.pulumi.resources.ResourceArgs {
      * Logic App Callback URL for this specific workflow.
      * 
      */
-    @InputImport(name="triggerUri", required=true)
+    @Import(name="triggerUri", required=true)
       private final Output<String> triggerUri;
 
     public Output<String> getTriggerUri() {
@@ -73,7 +73,7 @@ public final class ActionArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the workspace.
      * 
      */
-    @InputImport(name="workspaceName", required=true)
+    @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;
 
     public Output<String> getWorkspaceName() {

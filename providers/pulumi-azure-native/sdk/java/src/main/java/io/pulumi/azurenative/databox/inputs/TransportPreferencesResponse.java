@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.databox.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class TransportPreferencesResponse extends io.pulumi.resources.Invo
      * Indicates Shipment Logistics type that the customer preferred.
      * 
      */
-    @InputImport(name="preferredShipmentType", required=true)
+    @Import(name="preferredShipmentType", required=true)
       private final String preferredShipmentType;
 
     public String getPreferredShipmentType() {

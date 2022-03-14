@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.containerregistry.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetWebhookCallbackConfigResult {
     /**
      * Custom headers that will be added to the webhook notifications.
@@ -22,10 +22,10 @@ public final class GetWebhookCallbackConfigResult {
      */
     private final String serviceUri;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetWebhookCallbackConfigResult(
-        @OutputCustomType.Parameter("customHeaders") @Nullable Map<String,String> customHeaders,
-        @OutputCustomType.Parameter("serviceUri") String serviceUri) {
+        @CustomType.Parameter("customHeaders") @Nullable Map<String,String> customHeaders,
+        @CustomType.Parameter("serviceUri") String serviceUri) {
         this.customHeaders = customHeaders;
         this.serviceUri = serviceUri;
     }

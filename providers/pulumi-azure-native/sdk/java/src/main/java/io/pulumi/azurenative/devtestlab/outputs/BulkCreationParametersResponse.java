@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.devtestlab.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BulkCreationParametersResponse {
     /**
      * The number of virtual machine instances to create.
@@ -17,8 +17,8 @@ public final class BulkCreationParametersResponse {
      */
     private final @Nullable Integer instanceCount;
 
-    @OutputCustomType.Constructor
-    private BulkCreationParametersResponse(@OutputCustomType.Parameter("instanceCount") @Nullable Integer instanceCount) {
+    @CustomType.Constructor
+    private BulkCreationParametersResponse(@CustomType.Parameter("instanceCount") @Nullable Integer instanceCount) {
         this.instanceCount = instanceCount;
     }
 

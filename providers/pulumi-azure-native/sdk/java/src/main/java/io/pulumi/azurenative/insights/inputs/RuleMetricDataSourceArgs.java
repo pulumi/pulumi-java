@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.insights.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class RuleMetricDataSourceArgs extends io.pulumi.resources.Resource
      * the legacy resource identifier of the resource the rule monitors. **NOTE**: this property cannot be updated for an existing rule.
      * 
      */
-    @InputImport(name="legacyResourceId")
+    @Import(name="legacyResourceId")
       private final @Nullable Output<String> legacyResourceId;
 
     public Output<String> getLegacyResourceId() {
@@ -33,7 +33,7 @@ public final class RuleMetricDataSourceArgs extends io.pulumi.resources.Resource
      * the name of the metric that defines what the rule monitors.
      * 
      */
-    @InputImport(name="metricName")
+    @Import(name="metricName")
       private final @Nullable Output<String> metricName;
 
     public Output<String> getMetricName() {
@@ -44,7 +44,7 @@ public final class RuleMetricDataSourceArgs extends io.pulumi.resources.Resource
      * the namespace of the metric.
      * 
      */
-    @InputImport(name="metricNamespace")
+    @Import(name="metricNamespace")
       private final @Nullable Output<String> metricNamespace;
 
     public Output<String> getMetricNamespace() {
@@ -56,7 +56,7 @@ public final class RuleMetricDataSourceArgs extends io.pulumi.resources.Resource
      * Expected value is 'Microsoft.Azure.Management.Insights.Models.RuleMetricDataSource'.
      * 
      */
-    @InputImport(name="odataType", required=true)
+    @Import(name="odataType", required=true)
       private final Output<String> odataType;
 
     public Output<String> getOdataType() {
@@ -67,7 +67,7 @@ public final class RuleMetricDataSourceArgs extends io.pulumi.resources.Resource
      * the location of the resource.
      * 
      */
-    @InputImport(name="resourceLocation")
+    @Import(name="resourceLocation")
       private final @Nullable Output<String> resourceLocation;
 
     public Output<String> getResourceLocation() {
@@ -78,7 +78,7 @@ public final class RuleMetricDataSourceArgs extends io.pulumi.resources.Resource
      * the resource identifier of the resource the rule monitors. **NOTE**: this property cannot be updated for an existing rule.
      * 
      */
-    @InputImport(name="resourceUri")
+    @Import(name="resourceUri")
       private final @Nullable Output<String> resourceUri;
 
     public Output<String> getResourceUri() {

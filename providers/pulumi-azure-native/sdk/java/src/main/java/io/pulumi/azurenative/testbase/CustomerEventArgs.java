@@ -5,7 +5,7 @@ package io.pulumi.azurenative.testbase;
 
 import io.pulumi.azurenative.testbase.inputs.NotificationEventReceiverArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class CustomerEventArgs extends io.pulumi.resources.ResourceArgs {
      * The resource name of the Test Base Customer event.
      * 
      */
-    @InputImport(name="customerEventName")
+    @Import(name="customerEventName")
       private final @Nullable Output<String> customerEventName;
 
     public Output<String> getCustomerEventName() {
@@ -31,7 +31,7 @@ public final class CustomerEventArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the event subscribed to.
      * 
      */
-    @InputImport(name="eventName", required=true)
+    @Import(name="eventName", required=true)
       private final Output<String> eventName;
 
     public Output<String> getEventName() {
@@ -42,7 +42,7 @@ public final class CustomerEventArgs extends io.pulumi.resources.ResourceArgs {
      * The notification event receivers.
      * 
      */
-    @InputImport(name="receivers", required=true)
+    @Import(name="receivers", required=true)
       private final Output<List<NotificationEventReceiverArgs>> receivers;
 
     public Output<List<NotificationEventReceiverArgs>> getReceivers() {
@@ -53,7 +53,7 @@ public final class CustomerEventArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group that contains the resource.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -64,7 +64,7 @@ public final class CustomerEventArgs extends io.pulumi.resources.ResourceArgs {
      * The resource name of the Test Base Account.
      * 
      */
-    @InputImport(name="testBaseAccountName", required=true)
+    @Import(name="testBaseAccountName", required=true)
       private final Output<String> testBaseAccountName;
 
     public Output<String> getTestBaseAccountName() {

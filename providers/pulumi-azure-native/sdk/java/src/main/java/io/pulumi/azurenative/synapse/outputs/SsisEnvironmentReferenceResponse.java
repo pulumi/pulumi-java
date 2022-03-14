@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.synapse.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SsisEnvironmentReferenceResponse {
     /**
      * Environment folder name.
@@ -33,12 +33,12 @@ public final class SsisEnvironmentReferenceResponse {
      */
     private final @Nullable String referenceType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SsisEnvironmentReferenceResponse(
-        @OutputCustomType.Parameter("environmentFolderName") @Nullable String environmentFolderName,
-        @OutputCustomType.Parameter("environmentName") @Nullable String environmentName,
-        @OutputCustomType.Parameter("id") @Nullable Double id,
-        @OutputCustomType.Parameter("referenceType") @Nullable String referenceType) {
+        @CustomType.Parameter("environmentFolderName") @Nullable String environmentFolderName,
+        @CustomType.Parameter("environmentName") @Nullable String environmentName,
+        @CustomType.Parameter("id") @Nullable Double id,
+        @CustomType.Parameter("referenceType") @Nullable String referenceType) {
         this.environmentFolderName = environmentFolderName;
         this.environmentName = environmentName;
         this.id = id;

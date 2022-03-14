@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datamigration.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class MigrationEligibilityInfoResponse extends io.pulumi.resources.
      * Whether object is eligible for migration or not.
      * 
      */
-    @InputImport(name="isEligibleForMigration", required=true)
+    @Import(name="isEligibleForMigration", required=true)
       private final Boolean isEligibleForMigration;
 
     public Boolean getIsEligibleForMigration() {
@@ -33,7 +33,7 @@ public final class MigrationEligibilityInfoResponse extends io.pulumi.resources.
      * Information about eligibility failure for the server object.
      * 
      */
-    @InputImport(name="validationMessages", required=true)
+    @Import(name="validationMessages", required=true)
       private final List<String> validationMessages;
 
     public List<String> getValidationMessages() {

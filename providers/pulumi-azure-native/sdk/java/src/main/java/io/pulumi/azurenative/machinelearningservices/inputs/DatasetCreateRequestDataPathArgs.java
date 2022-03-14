@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class DatasetCreateRequestDataPathArgs extends io.pulumi.resources.
      * The datastore name.
      * 
      */
-    @InputImport(name="datastoreName")
+    @Import(name="datastoreName")
       private final @Nullable Output<String> datastoreName;
 
     public Output<String> getDatastoreName() {
@@ -29,7 +29,7 @@ public final class DatasetCreateRequestDataPathArgs extends io.pulumi.resources.
      * Path within the datastore.
      * 
      */
-    @InputImport(name="relativePath")
+    @Import(name="relativePath")
       private final @Nullable Output<String> relativePath;
 
     public Output<String> getRelativePath() {

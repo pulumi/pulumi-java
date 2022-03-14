@@ -11,7 +11,7 @@ import io.pulumi.azurenative.appconfiguration.outputs.ResourceIdentityResponse;
 import io.pulumi.azurenative.appconfiguration.outputs.SkuResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -39,7 +39,7 @@ public class ConfigurationStore extends io.pulumi.resources.CustomResource {
      * The creation date of configuration store.
      * 
      */
-    @OutputExport(name="creationDate", type=String.class, parameters={})
+    @Export(name="creationDate", type=String.class, parameters={})
     private Output<String> creationDate;
 
     /**
@@ -53,7 +53,7 @@ public class ConfigurationStore extends io.pulumi.resources.CustomResource {
      * The encryption settings of the configuration store.
      * 
      */
-    @OutputExport(name="encryption", type=EncryptionPropertiesResponse.class, parameters={})
+    @Export(name="encryption", type=EncryptionPropertiesResponse.class, parameters={})
     private Output</* @Nullable */ EncryptionPropertiesResponse> encryption;
 
     /**
@@ -67,7 +67,7 @@ public class ConfigurationStore extends io.pulumi.resources.CustomResource {
      * The DNS endpoint where the configuration store API will be available.
      * 
      */
-    @OutputExport(name="endpoint", type=String.class, parameters={})
+    @Export(name="endpoint", type=String.class, parameters={})
     private Output<String> endpoint;
 
     /**
@@ -81,7 +81,7 @@ public class ConfigurationStore extends io.pulumi.resources.CustomResource {
      * The managed identity information, if configured.
      * 
      */
-    @OutputExport(name="identity", type=ResourceIdentityResponse.class, parameters={})
+    @Export(name="identity", type=ResourceIdentityResponse.class, parameters={})
     private Output</* @Nullable */ ResourceIdentityResponse> identity;
 
     /**
@@ -95,7 +95,7 @@ public class ConfigurationStore extends io.pulumi.resources.CustomResource {
      * The location of the resource. This cannot be changed after the resource is created.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -109,7 +109,7 @@ public class ConfigurationStore extends io.pulumi.resources.CustomResource {
      * The name of the resource.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -123,7 +123,7 @@ public class ConfigurationStore extends io.pulumi.resources.CustomResource {
      * The list of private endpoint connections that are set up for this resource.
      * 
      */
-    @OutputExport(name="privateEndpointConnections", type=List.class, parameters={PrivateEndpointConnectionReferenceResponse.class})
+    @Export(name="privateEndpointConnections", type=List.class, parameters={PrivateEndpointConnectionReferenceResponse.class})
     private Output<List<PrivateEndpointConnectionReferenceResponse>> privateEndpointConnections;
 
     /**
@@ -137,7 +137,7 @@ public class ConfigurationStore extends io.pulumi.resources.CustomResource {
      * The provisioning state of the configuration store.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -151,7 +151,7 @@ public class ConfigurationStore extends io.pulumi.resources.CustomResource {
      * Control permission for data plane traffic coming from public networks while private endpoint is enabled.
      * 
      */
-    @OutputExport(name="publicNetworkAccess", type=String.class, parameters={})
+    @Export(name="publicNetworkAccess", type=String.class, parameters={})
     private Output</* @Nullable */ String> publicNetworkAccess;
 
     /**
@@ -165,7 +165,7 @@ public class ConfigurationStore extends io.pulumi.resources.CustomResource {
      * The sku of the configuration store.
      * 
      */
-    @OutputExport(name="sku", type=SkuResponse.class, parameters={})
+    @Export(name="sku", type=SkuResponse.class, parameters={})
     private Output<SkuResponse> sku;
 
     /**
@@ -179,7 +179,7 @@ public class ConfigurationStore extends io.pulumi.resources.CustomResource {
      * The tags of the resource.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -193,7 +193,7 @@ public class ConfigurationStore extends io.pulumi.resources.CustomResource {
      * The type of the resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

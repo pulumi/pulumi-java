@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.guestconfiguration.inputs;
 
 import io.pulumi.azurenative.guestconfiguration.inputs.AssignmentReportResourceComplianceReasonResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class AssignmentReportResourceResponse extends io.pulumi.resources.
      * A value indicating compliance status of the machine for the assigned guest configuration.
      * 
      */
-    @InputImport(name="complianceStatus", required=true)
+    @Import(name="complianceStatus", required=true)
       private final String complianceStatus;
 
     public String getComplianceStatus() {
@@ -36,7 +36,7 @@ public final class AssignmentReportResourceResponse extends io.pulumi.resources.
      * Properties of a guest configuration assignment resource.
      * 
      */
-    @InputImport(name="properties", required=true)
+    @Import(name="properties", required=true)
       private final Object properties;
 
     public Object getProperties() {
@@ -47,7 +47,7 @@ public final class AssignmentReportResourceResponse extends io.pulumi.resources.
      * Compliance reason and reason code for a resource.
      * 
      */
-    @InputImport(name="reasons")
+    @Import(name="reasons")
       private final @Nullable List<AssignmentReportResourceComplianceReasonResponse> reasons;
 
     public List<AssignmentReportResourceComplianceReasonResponse> getReasons() {
@@ -58,7 +58,7 @@ public final class AssignmentReportResourceResponse extends io.pulumi.resources.
      * Name of the guest configuration assignment resource setting.
      * 
      */
-    @InputImport(name="resourceId", required=true)
+    @Import(name="resourceId", required=true)
       private final String resourceId;
 
     public String getResourceId() {

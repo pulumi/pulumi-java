@@ -4,11 +4,11 @@
 package io.pulumi.azurenative.datafactory.outputs;
 
 import io.pulumi.azurenative.datafactory.outputs.EntityReferenceResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class PackageStoreResponse {
     /**
      * The name of the package store
@@ -21,10 +21,10 @@ public final class PackageStoreResponse {
      */
     private final EntityReferenceResponse packageStoreLinkedService;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PackageStoreResponse(
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("packageStoreLinkedService") EntityReferenceResponse packageStoreLinkedService) {
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("packageStoreLinkedService") EntityReferenceResponse packageStoreLinkedService) {
         this.name = name;
         this.packageStoreLinkedService = packageStoreLinkedService;
     }

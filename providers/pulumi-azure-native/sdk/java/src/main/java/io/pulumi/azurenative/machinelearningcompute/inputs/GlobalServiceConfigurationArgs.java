@@ -7,7 +7,7 @@ import io.pulumi.azurenative.machinelearningcompute.inputs.AutoScaleConfiguratio
 import io.pulumi.azurenative.machinelearningcompute.inputs.ServiceAuthConfigurationArgs;
 import io.pulumi.azurenative.machinelearningcompute.inputs.SslConfigurationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class GlobalServiceConfigurationArgs extends io.pulumi.resources.Re
      * The auto-scale configuration
      * 
      */
-    @InputImport(name="autoScale")
+    @Import(name="autoScale")
       private final @Nullable Output<AutoScaleConfigurationArgs> autoScale;
 
     public Output<AutoScaleConfigurationArgs> getAutoScale() {
@@ -36,7 +36,7 @@ public final class GlobalServiceConfigurationArgs extends io.pulumi.resources.Re
      * The configuration ETag for updates.
      * 
      */
-    @InputImport(name="etag")
+    @Import(name="etag")
       private final @Nullable Output<String> etag;
 
     public Output<String> getEtag() {
@@ -47,7 +47,7 @@ public final class GlobalServiceConfigurationArgs extends io.pulumi.resources.Re
      * Optional global authorization keys for all user services deployed in cluster. These are used if the service does not have auth keys.
      * 
      */
-    @InputImport(name="serviceAuth")
+    @Import(name="serviceAuth")
       private final @Nullable Output<ServiceAuthConfigurationArgs> serviceAuth;
 
     public Output<ServiceAuthConfigurationArgs> getServiceAuth() {
@@ -58,7 +58,7 @@ public final class GlobalServiceConfigurationArgs extends io.pulumi.resources.Re
      * The SSL configuration properties
      * 
      */
-    @InputImport(name="ssl")
+    @Import(name="ssl")
       private final @Nullable Output<SslConfigurationArgs> ssl;
 
     public Output<SslConfigurationArgs> getSsl() {

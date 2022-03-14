@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.purview.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ListAccountKeysResult {
     /**
      * Gets or sets the primary connection string.
@@ -22,10 +22,10 @@ public final class ListAccountKeysResult {
      */
     private final @Nullable String atlasKafkaSecondaryEndpoint;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ListAccountKeysResult(
-        @OutputCustomType.Parameter("atlasKafkaPrimaryEndpoint") @Nullable String atlasKafkaPrimaryEndpoint,
-        @OutputCustomType.Parameter("atlasKafkaSecondaryEndpoint") @Nullable String atlasKafkaSecondaryEndpoint) {
+        @CustomType.Parameter("atlasKafkaPrimaryEndpoint") @Nullable String atlasKafkaPrimaryEndpoint,
+        @CustomType.Parameter("atlasKafkaSecondaryEndpoint") @Nullable String atlasKafkaSecondaryEndpoint) {
         this.atlasKafkaPrimaryEndpoint = atlasKafkaPrimaryEndpoint;
         this.atlasKafkaSecondaryEndpoint = atlasKafkaSecondaryEndpoint;
     }

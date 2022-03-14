@@ -12,7 +12,7 @@ import io.pulumi.azurenative.security.enums.UserImpact;
 import io.pulumi.azurenative.security.inputs.SecurityAssessmentMetadataPartnerDataArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -32,14 +32,14 @@ public final class SecurityAssessmentMetadataPropertiesArgs extends io.pulumi.re
      * BuiltIn if the assessment based on built-in Azure Policy definition, Custom if the assessment based on custom Azure Policy definition
      * 
      */
-    @InputImport(name="assessmentType", required=true)
+    @Import(name="assessmentType", required=true)
       private final Output<Either<String,AssessmentType>> assessmentType;
 
     public Output<Either<String,AssessmentType>> getAssessmentType() {
         return this.assessmentType;
     }
 
-    @InputImport(name="categories")
+    @Import(name="categories")
       private final @Nullable Output<List<Either<String,Categories>>> categories;
 
     public Output<List<Either<String,Categories>>> getCategories() {
@@ -50,7 +50,7 @@ public final class SecurityAssessmentMetadataPropertiesArgs extends io.pulumi.re
      * Human readable description of the assessment
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -61,7 +61,7 @@ public final class SecurityAssessmentMetadataPropertiesArgs extends io.pulumi.re
      * User friendly display name of the assessment
      * 
      */
-    @InputImport(name="displayName", required=true)
+    @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -72,7 +72,7 @@ public final class SecurityAssessmentMetadataPropertiesArgs extends io.pulumi.re
      * The implementation effort required to remediate this assessment
      * 
      */
-    @InputImport(name="implementationEffort")
+    @Import(name="implementationEffort")
       private final @Nullable Output<Either<String,ImplementationEffort>> implementationEffort;
 
     public Output<Either<String,ImplementationEffort>> getImplementationEffort() {
@@ -83,7 +83,7 @@ public final class SecurityAssessmentMetadataPropertiesArgs extends io.pulumi.re
      * Describes the partner that created the assessment
      * 
      */
-    @InputImport(name="partnerData")
+    @Import(name="partnerData")
       private final @Nullable Output<SecurityAssessmentMetadataPartnerDataArgs> partnerData;
 
     public Output<SecurityAssessmentMetadataPartnerDataArgs> getPartnerData() {
@@ -94,7 +94,7 @@ public final class SecurityAssessmentMetadataPropertiesArgs extends io.pulumi.re
      * True if this assessment is in preview release status
      * 
      */
-    @InputImport(name="preview")
+    @Import(name="preview")
       private final @Nullable Output<Boolean> preview;
 
     public Output<Boolean> getPreview() {
@@ -105,7 +105,7 @@ public final class SecurityAssessmentMetadataPropertiesArgs extends io.pulumi.re
      * Human readable description of what you should do to mitigate this security issue
      * 
      */
-    @InputImport(name="remediationDescription")
+    @Import(name="remediationDescription")
       private final @Nullable Output<String> remediationDescription;
 
     public Output<String> getRemediationDescription() {
@@ -116,14 +116,14 @@ public final class SecurityAssessmentMetadataPropertiesArgs extends io.pulumi.re
      * The severity level of the assessment
      * 
      */
-    @InputImport(name="severity", required=true)
+    @Import(name="severity", required=true)
       private final Output<Either<String,Severity>> severity;
 
     public Output<Either<String,Severity>> getSeverity() {
         return this.severity;
     }
 
-    @InputImport(name="threats")
+    @Import(name="threats")
       private final @Nullable Output<List<Either<String,Threats>>> threats;
 
     public Output<List<Either<String,Threats>>> getThreats() {
@@ -134,7 +134,7 @@ public final class SecurityAssessmentMetadataPropertiesArgs extends io.pulumi.re
      * The user impact of the assessment
      * 
      */
-    @InputImport(name="userImpact")
+    @Import(name="userImpact")
       private final @Nullable Output<Either<String,UserImpact>> userImpact;
 
     public Output<Either<String,UserImpact>> getUserImpact() {

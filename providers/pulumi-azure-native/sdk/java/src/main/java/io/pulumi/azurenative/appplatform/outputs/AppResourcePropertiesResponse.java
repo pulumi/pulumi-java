@@ -5,14 +5,14 @@ package io.pulumi.azurenative.appplatform.outputs;
 
 import io.pulumi.azurenative.appplatform.outputs.PersistentDiskResponse;
 import io.pulumi.azurenative.appplatform.outputs.TemporaryDiskResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AppResourcePropertiesResponse {
     /**
      * Name of the active deployment of the App
@@ -60,17 +60,17 @@ public final class AppResourcePropertiesResponse {
      */
     private final String url;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AppResourcePropertiesResponse(
-        @OutputCustomType.Parameter("activeDeploymentName") @Nullable String activeDeploymentName,
-        @OutputCustomType.Parameter("createdTime") String createdTime,
-        @OutputCustomType.Parameter("fqdn") @Nullable String fqdn,
-        @OutputCustomType.Parameter("httpsOnly") @Nullable Boolean httpsOnly,
-        @OutputCustomType.Parameter("persistentDisk") @Nullable PersistentDiskResponse persistentDisk,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("public") @Nullable Boolean $public,
-        @OutputCustomType.Parameter("temporaryDisk") @Nullable TemporaryDiskResponse temporaryDisk,
-        @OutputCustomType.Parameter("url") String url) {
+        @CustomType.Parameter("activeDeploymentName") @Nullable String activeDeploymentName,
+        @CustomType.Parameter("createdTime") String createdTime,
+        @CustomType.Parameter("fqdn") @Nullable String fqdn,
+        @CustomType.Parameter("httpsOnly") @Nullable Boolean httpsOnly,
+        @CustomType.Parameter("persistentDisk") @Nullable PersistentDiskResponse persistentDisk,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("public") @Nullable Boolean $public,
+        @CustomType.Parameter("temporaryDisk") @Nullable TemporaryDiskResponse temporaryDisk,
+        @CustomType.Parameter("url") String url) {
         this.activeDeploymentName = activeDeploymentName;
         this.createdTime = createdTime;
         this.fqdn = fqdn;

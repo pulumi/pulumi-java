@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.containerregistry.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TimerTriggerResponse {
     /**
      * The name of the trigger.
@@ -27,11 +27,11 @@ public final class TimerTriggerResponse {
      */
     private final @Nullable String status;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TimerTriggerResponse(
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("schedule") String schedule,
-        @OutputCustomType.Parameter("status") @Nullable String status) {
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("schedule") String schedule,
+        @CustomType.Parameter("status") @Nullable String status) {
         this.name = name;
         this.schedule = schedule;
         this.status = status;

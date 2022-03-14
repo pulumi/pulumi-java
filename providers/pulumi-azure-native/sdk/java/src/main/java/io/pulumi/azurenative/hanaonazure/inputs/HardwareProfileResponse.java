@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.hanaonazure.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class HardwareProfileResponse extends io.pulumi.resources.InvokeArg
      * Specifies the HANA instance SKU.
      * 
      */
-    @InputImport(name="hanaInstanceSize", required=true)
+    @Import(name="hanaInstanceSize", required=true)
       private final String hanaInstanceSize;
 
     public String getHanaInstanceSize() {
@@ -31,7 +31,7 @@ public final class HardwareProfileResponse extends io.pulumi.resources.InvokeArg
      * Name of the hardware type (vendor and/or their product name)
      * 
      */
-    @InputImport(name="hardwareType", required=true)
+    @Import(name="hardwareType", required=true)
       private final String hardwareType;
 
     public String getHardwareType() {

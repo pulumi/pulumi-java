@@ -9,7 +9,7 @@ import io.pulumi.azurenative.network.outputs.AddressSpaceResponse;
 import io.pulumi.azurenative.network.outputs.BgpSettingsResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -37,7 +37,7 @@ public class LocalNetworkGateway extends io.pulumi.resources.CustomResource {
      * Local network gateway's BGP speaker settings.
      * 
      */
-    @OutputExport(name="bgpSettings", type=BgpSettingsResponse.class, parameters={})
+    @Export(name="bgpSettings", type=BgpSettingsResponse.class, parameters={})
     private Output</* @Nullable */ BgpSettingsResponse> bgpSettings;
 
     /**
@@ -51,7 +51,7 @@ public class LocalNetworkGateway extends io.pulumi.resources.CustomResource {
      * A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -65,7 +65,7 @@ public class LocalNetworkGateway extends io.pulumi.resources.CustomResource {
      * FQDN of local network gateway.
      * 
      */
-    @OutputExport(name="fqdn", type=String.class, parameters={})
+    @Export(name="fqdn", type=String.class, parameters={})
     private Output</* @Nullable */ String> fqdn;
 
     /**
@@ -79,7 +79,7 @@ public class LocalNetworkGateway extends io.pulumi.resources.CustomResource {
      * IP address of local network gateway.
      * 
      */
-    @OutputExport(name="gatewayIpAddress", type=String.class, parameters={})
+    @Export(name="gatewayIpAddress", type=String.class, parameters={})
     private Output</* @Nullable */ String> gatewayIpAddress;
 
     /**
@@ -93,7 +93,7 @@ public class LocalNetworkGateway extends io.pulumi.resources.CustomResource {
      * Local network site address space.
      * 
      */
-    @OutputExport(name="localNetworkAddressSpace", type=AddressSpaceResponse.class, parameters={})
+    @Export(name="localNetworkAddressSpace", type=AddressSpaceResponse.class, parameters={})
     private Output</* @Nullable */ AddressSpaceResponse> localNetworkAddressSpace;
 
     /**
@@ -107,7 +107,7 @@ public class LocalNetworkGateway extends io.pulumi.resources.CustomResource {
      * Resource location.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -121,7 +121,7 @@ public class LocalNetworkGateway extends io.pulumi.resources.CustomResource {
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -135,7 +135,7 @@ public class LocalNetworkGateway extends io.pulumi.resources.CustomResource {
      * The provisioning state of the local network gateway resource.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -149,7 +149,7 @@ public class LocalNetworkGateway extends io.pulumi.resources.CustomResource {
      * The resource GUID property of the local network gateway resource.
      * 
      */
-    @OutputExport(name="resourceGuid", type=String.class, parameters={})
+    @Export(name="resourceGuid", type=String.class, parameters={})
     private Output<String> resourceGuid;
 
     /**
@@ -163,7 +163,7 @@ public class LocalNetworkGateway extends io.pulumi.resources.CustomResource {
      * Resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -177,7 +177,7 @@ public class LocalNetworkGateway extends io.pulumi.resources.CustomResource {
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

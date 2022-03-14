@@ -5,7 +5,7 @@ package io.pulumi.azurenative.logic.inputs;
 
 import io.pulumi.azurenative.logic.inputs.B2BPartnerContentArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -22,7 +22,7 @@ public final class PartnerContentArgs extends io.pulumi.resources.ResourceArgs {
      * The B2B partner content.
      * 
      */
-    @InputImport(name="b2b")
+    @Import(name="b2b")
       private final @Nullable Output<B2BPartnerContentArgs> b2b;
 
     public Output<B2BPartnerContentArgs> getB2b() {

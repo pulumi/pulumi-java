@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.labservices.outputs;
 
 import io.pulumi.azurenative.labservices.outputs.LatestOperationResultResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetUserResult {
     /**
      * The user email address, as it was specified during registration.
@@ -79,21 +79,21 @@ public final class GetUserResult {
      */
     private final @Nullable String uniqueIdentifier;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetUserResult(
-        @OutputCustomType.Parameter("email") String email,
-        @OutputCustomType.Parameter("familyName") String familyName,
-        @OutputCustomType.Parameter("givenName") String givenName,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("latestOperationResult") LatestOperationResultResponse latestOperationResult,
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("provisioningState") @Nullable String provisioningState,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("tenantId") String tenantId,
-        @OutputCustomType.Parameter("totalUsage") String totalUsage,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("uniqueIdentifier") @Nullable String uniqueIdentifier) {
+        @CustomType.Parameter("email") String email,
+        @CustomType.Parameter("familyName") String familyName,
+        @CustomType.Parameter("givenName") String givenName,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("latestOperationResult") LatestOperationResultResponse latestOperationResult,
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("provisioningState") @Nullable String provisioningState,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("tenantId") String tenantId,
+        @CustomType.Parameter("totalUsage") String totalUsage,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("uniqueIdentifier") @Nullable String uniqueIdentifier) {
         this.email = email;
         this.familyName = familyName;
         this.givenName = givenName;

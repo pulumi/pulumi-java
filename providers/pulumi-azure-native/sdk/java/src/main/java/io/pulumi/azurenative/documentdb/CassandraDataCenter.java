@@ -8,7 +8,7 @@ import io.pulumi.azurenative.documentdb.CassandraDataCenterArgs;
 import io.pulumi.azurenative.documentdb.outputs.DataCenterResourceResponseProperties;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +35,7 @@ public class CassandraDataCenter extends io.pulumi.resources.CustomResource {
      * The name of the database account.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -49,7 +49,7 @@ public class CassandraDataCenter extends io.pulumi.resources.CustomResource {
      * Properties of a managed Cassandra data center.
      * 
      */
-    @OutputExport(name="properties", type=DataCenterResourceResponseProperties.class, parameters={})
+    @Export(name="properties", type=DataCenterResourceResponseProperties.class, parameters={})
     private Output<DataCenterResourceResponseProperties> properties;
 
     /**
@@ -63,7 +63,7 @@ public class CassandraDataCenter extends io.pulumi.resources.CustomResource {
      * The type of Azure resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.servicefabricmesh.inputs;
 
 import io.pulumi.azurenative.servicefabricmesh.inputs.AutoScalingResourceMetricArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class AverageLoadScalingTriggerArgs extends io.pulumi.resources.Res
      * Expected value is 'AverageLoad'.
      * 
      */
-    @InputImport(name="kind", required=true)
+    @Import(name="kind", required=true)
       private final Output<String> kind;
 
     public Output<String> getKind() {
@@ -36,7 +36,7 @@ public final class AverageLoadScalingTriggerArgs extends io.pulumi.resources.Res
      * Lower load threshold (if average load is below this threshold, service will scale down).
      * 
      */
-    @InputImport(name="lowerLoadThreshold", required=true)
+    @Import(name="lowerLoadThreshold", required=true)
       private final Output<Double> lowerLoadThreshold;
 
     public Output<Double> getLowerLoadThreshold() {
@@ -47,7 +47,7 @@ public final class AverageLoadScalingTriggerArgs extends io.pulumi.resources.Res
      * Description of the metric that is used for scaling.
      * 
      */
-    @InputImport(name="metric", required=true)
+    @Import(name="metric", required=true)
       private final Output<AutoScalingResourceMetricArgs> metric;
 
     public Output<AutoScalingResourceMetricArgs> getMetric() {
@@ -58,7 +58,7 @@ public final class AverageLoadScalingTriggerArgs extends io.pulumi.resources.Res
      * Scale interval that indicates how often will this trigger be checked.
      * 
      */
-    @InputImport(name="scaleIntervalInSeconds", required=true)
+    @Import(name="scaleIntervalInSeconds", required=true)
       private final Output<Integer> scaleIntervalInSeconds;
 
     public Output<Integer> getScaleIntervalInSeconds() {
@@ -69,7 +69,7 @@ public final class AverageLoadScalingTriggerArgs extends io.pulumi.resources.Res
      * Upper load threshold (if average load is above this threshold, service will scale up).
      * 
      */
-    @InputImport(name="upperLoadThreshold", required=true)
+    @Import(name="upperLoadThreshold", required=true)
       private final Output<Double> upperLoadThreshold;
 
     public Output<Double> getUpperLoadThreshold() {

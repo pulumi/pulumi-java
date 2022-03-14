@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetProtectionContainerArgs extends io.pulumi.resources.Invoke
      * Name of the container whose details need to be fetched.
      * 
      */
-    @InputImport(name="containerName", required=true)
+    @Import(name="containerName", required=true)
       private final String containerName;
 
     public String getContainerName() {
@@ -27,7 +27,7 @@ public final class GetProtectionContainerArgs extends io.pulumi.resources.Invoke
      * Name of the fabric where the container belongs.
      * 
      */
-    @InputImport(name="fabricName", required=true)
+    @Import(name="fabricName", required=true)
       private final String fabricName;
 
     public String getFabricName() {
@@ -38,7 +38,7 @@ public final class GetProtectionContainerArgs extends io.pulumi.resources.Invoke
      * The name of the resource group where the recovery services vault is present.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {
@@ -49,7 +49,7 @@ public final class GetProtectionContainerArgs extends io.pulumi.resources.Invoke
      * The name of the recovery services vault.
      * 
      */
-    @InputImport(name="vaultName", required=true)
+    @Import(name="vaultName", required=true)
       private final String vaultName;
 
     public String getVaultName() {

@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.engagementfabric.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class KeyDescriptionResponse {
     /**
      * The name of the key
@@ -25,11 +25,11 @@ public final class KeyDescriptionResponse {
      */
     private final String value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private KeyDescriptionResponse(
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("rank") String rank,
-        @OutputCustomType.Parameter("value") String value) {
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("rank") String rank,
+        @CustomType.Parameter("value") String value) {
         this.name = name;
         this.rank = rank;
         this.value = value;

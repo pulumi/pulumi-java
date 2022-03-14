@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.migrate.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class ManualResolutionPropertiesResponse extends io.pulumi.resource
      * Gets or sets the target resource ARM ID of the dependent resource if the resource type is Manual.
      * 
      */
-    @InputImport(name="targetId")
+    @Import(name="targetId")
       private final @Nullable String targetId;
 
     public Optional<String> getTargetId() {

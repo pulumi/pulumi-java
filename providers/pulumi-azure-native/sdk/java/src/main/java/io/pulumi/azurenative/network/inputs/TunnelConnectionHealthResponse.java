@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class TunnelConnectionHealthResponse extends io.pulumi.resources.In
      * Virtual Network Gateway connection status.
      * 
      */
-    @InputImport(name="connectionStatus", required=true)
+    @Import(name="connectionStatus", required=true)
       private final String connectionStatus;
 
     public String getConnectionStatus() {
@@ -32,7 +32,7 @@ public final class TunnelConnectionHealthResponse extends io.pulumi.resources.In
      * The Egress Bytes Transferred in this connection.
      * 
      */
-    @InputImport(name="egressBytesTransferred", required=true)
+    @Import(name="egressBytesTransferred", required=true)
       private final Double egressBytesTransferred;
 
     public Double getEgressBytesTransferred() {
@@ -43,7 +43,7 @@ public final class TunnelConnectionHealthResponse extends io.pulumi.resources.In
      * The Ingress Bytes Transferred in this connection.
      * 
      */
-    @InputImport(name="ingressBytesTransferred", required=true)
+    @Import(name="ingressBytesTransferred", required=true)
       private final Double ingressBytesTransferred;
 
     public Double getIngressBytesTransferred() {
@@ -54,7 +54,7 @@ public final class TunnelConnectionHealthResponse extends io.pulumi.resources.In
      * The time at which connection was established in Utc format.
      * 
      */
-    @InputImport(name="lastConnectionEstablishedUtcTime", required=true)
+    @Import(name="lastConnectionEstablishedUtcTime", required=true)
       private final String lastConnectionEstablishedUtcTime;
 
     public String getLastConnectionEstablishedUtcTime() {
@@ -65,7 +65,7 @@ public final class TunnelConnectionHealthResponse extends io.pulumi.resources.In
      * Tunnel name.
      * 
      */
-    @InputImport(name="tunnel", required=true)
+    @Import(name="tunnel", required=true)
       private final String tunnel;
 
     public String getTunnel() {

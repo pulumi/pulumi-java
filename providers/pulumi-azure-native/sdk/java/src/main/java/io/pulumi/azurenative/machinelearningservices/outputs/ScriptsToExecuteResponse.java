@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
 import io.pulumi.azurenative.machinelearningservices.outputs.ScriptReferenceResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ScriptsToExecuteResponse {
     /**
      * Script that's run only once during provision of the compute.
@@ -22,10 +22,10 @@ public final class ScriptsToExecuteResponse {
      */
     private final @Nullable ScriptReferenceResponse startupScript;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ScriptsToExecuteResponse(
-        @OutputCustomType.Parameter("creationScript") @Nullable ScriptReferenceResponse creationScript,
-        @OutputCustomType.Parameter("startupScript") @Nullable ScriptReferenceResponse startupScript) {
+        @CustomType.Parameter("creationScript") @Nullable ScriptReferenceResponse creationScript,
+        @CustomType.Parameter("startupScript") @Nullable ScriptReferenceResponse startupScript) {
         this.creationScript = creationScript;
         this.startupScript = startupScript;
     }

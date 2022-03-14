@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.importexport.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DriveStatusResponse {
     /**
      * The BitLocker key used to encrypt the drive.
@@ -74,20 +74,20 @@ public final class DriveStatusResponse {
      */
     private final @Nullable String verboseLogUri;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DriveStatusResponse(
-        @OutputCustomType.Parameter("bitLockerKey") @Nullable String bitLockerKey,
-        @OutputCustomType.Parameter("bytesSucceeded") @Nullable Double bytesSucceeded,
-        @OutputCustomType.Parameter("copyStatus") @Nullable String copyStatus,
-        @OutputCustomType.Parameter("driveHeaderHash") @Nullable String driveHeaderHash,
-        @OutputCustomType.Parameter("driveId") @Nullable String driveId,
-        @OutputCustomType.Parameter("errorLogUri") @Nullable String errorLogUri,
-        @OutputCustomType.Parameter("manifestFile") @Nullable String manifestFile,
-        @OutputCustomType.Parameter("manifestHash") @Nullable String manifestHash,
-        @OutputCustomType.Parameter("manifestUri") @Nullable String manifestUri,
-        @OutputCustomType.Parameter("percentComplete") @Nullable Integer percentComplete,
-        @OutputCustomType.Parameter("state") @Nullable String state,
-        @OutputCustomType.Parameter("verboseLogUri") @Nullable String verboseLogUri) {
+        @CustomType.Parameter("bitLockerKey") @Nullable String bitLockerKey,
+        @CustomType.Parameter("bytesSucceeded") @Nullable Double bytesSucceeded,
+        @CustomType.Parameter("copyStatus") @Nullable String copyStatus,
+        @CustomType.Parameter("driveHeaderHash") @Nullable String driveHeaderHash,
+        @CustomType.Parameter("driveId") @Nullable String driveId,
+        @CustomType.Parameter("errorLogUri") @Nullable String errorLogUri,
+        @CustomType.Parameter("manifestFile") @Nullable String manifestFile,
+        @CustomType.Parameter("manifestHash") @Nullable String manifestHash,
+        @CustomType.Parameter("manifestUri") @Nullable String manifestUri,
+        @CustomType.Parameter("percentComplete") @Nullable Integer percentComplete,
+        @CustomType.Parameter("state") @Nullable String state,
+        @CustomType.Parameter("verboseLogUri") @Nullable String verboseLogUri) {
         this.bitLockerKey = bitLockerKey;
         this.bytesSucceeded = bytesSucceeded;
         this.copyStatus = copyStatus;

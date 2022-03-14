@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.security.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RecommendationConfigurationPropertiesResponse {
     private final String name;
     /**
@@ -21,11 +21,11 @@ public final class RecommendationConfigurationPropertiesResponse {
      */
     private final String status;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RecommendationConfigurationPropertiesResponse(
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("recommendationType") String recommendationType,
-        @OutputCustomType.Parameter("status") String status) {
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("recommendationType") String recommendationType,
+        @CustomType.Parameter("status") String status) {
         this.name = name;
         this.recommendationType = recommendationType;
         this.status = status;

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.insights.inputs;
 
 import io.pulumi.azurenative.insights.inputs.MetricCriteriaResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class MetricAlertSingleResourceMultipleMetricCriteriaResponse exten
      * The list of metric criteria for this 'all of' operation.
      * 
      */
-    @InputImport(name="allOf")
+    @Import(name="allOf")
       private final @Nullable List<MetricCriteriaResponse> allOf;
 
     public List<MetricCriteriaResponse> getAllOf() {
@@ -36,7 +36,7 @@ public final class MetricAlertSingleResourceMultipleMetricCriteriaResponse exten
      * Expected value is 'Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria'.
      * 
      */
-    @InputImport(name="odataType", required=true)
+    @Import(name="odataType", required=true)
       private final String odataType;
 
     public String getOdataType() {

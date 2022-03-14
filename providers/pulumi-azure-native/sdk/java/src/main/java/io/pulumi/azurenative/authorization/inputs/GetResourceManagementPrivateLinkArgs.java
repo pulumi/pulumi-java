@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.authorization.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetResourceManagementPrivateLinkArgs extends io.pulumi.resour
      * The name of the resource group the template will be deployed to. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {
@@ -27,7 +27,7 @@ public final class GetResourceManagementPrivateLinkArgs extends io.pulumi.resour
      * The name of the resource management private link.
      * 
      */
-    @InputImport(name="rmplName", required=true)
+    @Import(name="rmplName", required=true)
       private final String rmplName;
 
     public String getRmplName() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerregistry.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class ListRunLogSasUrlArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the container registry.
      * 
      */
-    @InputImport(name="registryName", required=true)
+    @Import(name="registryName", required=true)
       private final String registryName;
 
     public String getRegistryName() {
@@ -27,7 +27,7 @@ public final class ListRunLogSasUrlArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the resource group to which the container registry belongs.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {
@@ -38,7 +38,7 @@ public final class ListRunLogSasUrlArgs extends io.pulumi.resources.InvokeArgs {
      * The run ID.
      * 
      */
-    @InputImport(name="runId", required=true)
+    @Import(name="runId", required=true)
       private final String runId;
 
     public String getRunId() {

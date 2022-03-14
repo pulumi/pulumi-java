@@ -6,7 +6,7 @@ package io.pulumi.azurenative.network.inputs;
 import io.pulumi.azurenative.network.enums.EnforceCertificateNameCheckEnabledState;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class BackendPoolsSettingsArgs extends io.pulumi.resources.Resource
      * Whether to enforce certificate name check on HTTPS requests to all backend pools. No effect on non-HTTPS requests.
      * 
      */
-    @InputImport(name="enforceCertificateNameCheck")
+    @Import(name="enforceCertificateNameCheck")
       private final @Nullable Output<Either<String,EnforceCertificateNameCheckEnabledState>> enforceCertificateNameCheck;
 
     public Output<Either<String,EnforceCertificateNameCheckEnabledState>> getEnforceCertificateNameCheck() {
@@ -36,7 +36,7 @@ public final class BackendPoolsSettingsArgs extends io.pulumi.resources.Resource
      * Send and receive timeout on forwarding request to the backend. When timeout is reached, the request fails and returns.
      * 
      */
-    @InputImport(name="sendRecvTimeoutSeconds")
+    @Import(name="sendRecvTimeoutSeconds")
       private final @Nullable Output<Integer> sendRecvTimeoutSeconds;
 
     public Output<Integer> getSendRecvTimeoutSeconds() {

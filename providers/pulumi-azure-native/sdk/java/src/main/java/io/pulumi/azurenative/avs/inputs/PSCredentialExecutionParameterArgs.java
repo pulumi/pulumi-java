@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.avs.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class PSCredentialExecutionParameterArgs extends io.pulumi.resource
      * The parameter name
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -33,7 +33,7 @@ public final class PSCredentialExecutionParameterArgs extends io.pulumi.resource
      * password for login
      * 
      */
-    @InputImport(name="password")
+    @Import(name="password")
       private final @Nullable Output<String> password;
 
     public Output<String> getPassword() {
@@ -45,7 +45,7 @@ public final class PSCredentialExecutionParameterArgs extends io.pulumi.resource
      * Expected value is 'Credential'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {
@@ -56,7 +56,7 @@ public final class PSCredentialExecutionParameterArgs extends io.pulumi.resource
      * username for login
      * 
      */
-    @InputImport(name="username")
+    @Import(name="username")
       private final @Nullable Output<String> username;
 
     public Output<String> getUsername() {

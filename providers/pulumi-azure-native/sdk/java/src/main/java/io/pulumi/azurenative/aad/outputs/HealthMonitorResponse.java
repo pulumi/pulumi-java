@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.aad.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class HealthMonitorResponse {
     /**
      * Health Monitor Details
@@ -25,11 +25,11 @@ public final class HealthMonitorResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private HealthMonitorResponse(
-        @OutputCustomType.Parameter("details") String details,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name) {
+        @CustomType.Parameter("details") String details,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name) {
         this.details = details;
         this.id = id;
         this.name = name;

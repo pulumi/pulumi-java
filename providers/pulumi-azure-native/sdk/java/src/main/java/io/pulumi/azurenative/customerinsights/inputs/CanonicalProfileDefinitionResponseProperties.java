@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.customerinsights.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class CanonicalProfileDefinitionResponseProperties extends io.pulum
      * Profile name.
      * 
      */
-    @InputImport(name="profileName")
+    @Import(name="profileName")
       private final @Nullable String profileName;
 
     public Optional<String> getProfileName() {
@@ -34,7 +34,7 @@ public final class CanonicalProfileDefinitionResponseProperties extends io.pulum
      * Property name of profile.
      * 
      */
-    @InputImport(name="profilePropertyName")
+    @Import(name="profilePropertyName")
       private final @Nullable String profilePropertyName;
 
     public Optional<String> getProfilePropertyName() {
@@ -45,7 +45,7 @@ public final class CanonicalProfileDefinitionResponseProperties extends io.pulum
      * The rank.
      * 
      */
-    @InputImport(name="rank")
+    @Import(name="rank")
       private final @Nullable Integer rank;
 
     public Optional<Integer> getRank() {
@@ -56,7 +56,7 @@ public final class CanonicalProfileDefinitionResponseProperties extends io.pulum
      * Type of canonical property value.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable String type;
 
     public Optional<String> getType() {
@@ -67,7 +67,7 @@ public final class CanonicalProfileDefinitionResponseProperties extends io.pulum
      * Value of the canonical property.
      * 
      */
-    @InputImport(name="value")
+    @Import(name="value")
       private final @Nullable String value;
 
     public Optional<String> getValue() {

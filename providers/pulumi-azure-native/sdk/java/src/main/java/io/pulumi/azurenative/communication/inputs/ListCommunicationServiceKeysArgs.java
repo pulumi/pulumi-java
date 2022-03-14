@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.communication.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class ListCommunicationServiceKeysArgs extends io.pulumi.resources.
      * The name of the CommunicationService resource.
      * 
      */
-    @InputImport(name="communicationServiceName", required=true)
+    @Import(name="communicationServiceName", required=true)
       private final String communicationServiceName;
 
     public String getCommunicationServiceName() {
@@ -27,7 +27,7 @@ public final class ListCommunicationServiceKeysArgs extends io.pulumi.resources.
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {

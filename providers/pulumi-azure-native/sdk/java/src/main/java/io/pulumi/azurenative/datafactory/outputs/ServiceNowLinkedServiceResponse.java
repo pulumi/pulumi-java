@@ -8,7 +8,7 @@ import io.pulumi.azurenative.datafactory.outputs.IntegrationRuntimeReferenceResp
 import io.pulumi.azurenative.datafactory.outputs.ParameterSpecificationResponse;
 import io.pulumi.azurenative.datafactory.outputs.SecureStringResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -17,7 +17,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ServiceNowLinkedServiceResponse {
     /**
      * List of tags that can be used for describing the linked service.
@@ -96,23 +96,23 @@ public final class ServiceNowLinkedServiceResponse {
      */
     private final @Nullable Object username;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServiceNowLinkedServiceResponse(
-        @OutputCustomType.Parameter("annotations") @Nullable List<Object> annotations,
-        @OutputCustomType.Parameter("authenticationType") String authenticationType,
-        @OutputCustomType.Parameter("clientId") @Nullable Object clientId,
-        @OutputCustomType.Parameter("clientSecret") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> clientSecret,
-        @OutputCustomType.Parameter("connectVia") @Nullable IntegrationRuntimeReferenceResponse connectVia,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("encryptedCredential") @Nullable Object encryptedCredential,
-        @OutputCustomType.Parameter("endpoint") Object endpoint,
-        @OutputCustomType.Parameter("parameters") @Nullable Map<String,ParameterSpecificationResponse> parameters,
-        @OutputCustomType.Parameter("password") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("useEncryptedEndpoints") @Nullable Object useEncryptedEndpoints,
-        @OutputCustomType.Parameter("useHostVerification") @Nullable Object useHostVerification,
-        @OutputCustomType.Parameter("usePeerVerification") @Nullable Object usePeerVerification,
-        @OutputCustomType.Parameter("username") @Nullable Object username) {
+        @CustomType.Parameter("annotations") @Nullable List<Object> annotations,
+        @CustomType.Parameter("authenticationType") String authenticationType,
+        @CustomType.Parameter("clientId") @Nullable Object clientId,
+        @CustomType.Parameter("clientSecret") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> clientSecret,
+        @CustomType.Parameter("connectVia") @Nullable IntegrationRuntimeReferenceResponse connectVia,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("encryptedCredential") @Nullable Object encryptedCredential,
+        @CustomType.Parameter("endpoint") Object endpoint,
+        @CustomType.Parameter("parameters") @Nullable Map<String,ParameterSpecificationResponse> parameters,
+        @CustomType.Parameter("password") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("useEncryptedEndpoints") @Nullable Object useEncryptedEndpoints,
+        @CustomType.Parameter("useHostVerification") @Nullable Object useHostVerification,
+        @CustomType.Parameter("usePeerVerification") @Nullable Object usePeerVerification,
+        @CustomType.Parameter("username") @Nullable Object username) {
         this.annotations = annotations;
         this.authenticationType = authenticationType;
         this.clientId = clientId;

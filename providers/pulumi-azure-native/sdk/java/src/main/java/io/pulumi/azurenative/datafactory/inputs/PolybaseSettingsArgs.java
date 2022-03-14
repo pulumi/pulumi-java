@@ -6,7 +6,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 import io.pulumi.azurenative.datafactory.enums.PolybaseSettingsRejectType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class PolybaseSettingsArgs extends io.pulumi.resources.ResourceArgs
      * Determines the number of rows to attempt to retrieve before the PolyBase recalculates the percentage of rejected rows. Type: integer (or Expression with resultType integer), minimum: 0.
      * 
      */
-    @InputImport(name="rejectSampleValue")
+    @Import(name="rejectSampleValue")
       private final @Nullable Output<Object> rejectSampleValue;
 
     public Output<Object> getRejectSampleValue() {
@@ -36,7 +36,7 @@ public final class PolybaseSettingsArgs extends io.pulumi.resources.ResourceArgs
      * Reject type.
      * 
      */
-    @InputImport(name="rejectType")
+    @Import(name="rejectType")
       private final @Nullable Output<Either<String,PolybaseSettingsRejectType>> rejectType;
 
     public Output<Either<String,PolybaseSettingsRejectType>> getRejectType() {
@@ -47,7 +47,7 @@ public final class PolybaseSettingsArgs extends io.pulumi.resources.ResourceArgs
      * Specifies the value or the percentage of rows that can be rejected before the query fails. Type: number (or Expression with resultType number), minimum: 0.
      * 
      */
-    @InputImport(name="rejectValue")
+    @Import(name="rejectValue")
       private final @Nullable Output<Object> rejectValue;
 
     public Output<Object> getRejectValue() {
@@ -58,7 +58,7 @@ public final class PolybaseSettingsArgs extends io.pulumi.resources.ResourceArgs
      * Specifies how to handle missing values in delimited text files when PolyBase retrieves data from the text file. Type: boolean (or Expression with resultType boolean).
      * 
      */
-    @InputImport(name="useTypeDefault")
+    @Import(name="useTypeDefault")
       private final @Nullable Output<Object> useTypeDefault;
 
     public Output<Object> getUseTypeDefault() {

@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.authorization.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetRoleAssignmentResult {
     /**
      * The conditions on the role assignment. This limits the resources it can be assigned to. e.g.: @Resource[Microsoft.Storage/storageAccounts/blobServices/containers:ContainerName] StringEqualsIgnoreCase 'foo_storage_container'
@@ -87,23 +87,23 @@ public final class GetRoleAssignmentResult {
      */
     private final String updatedOn;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetRoleAssignmentResult(
-        @OutputCustomType.Parameter("condition") @Nullable String condition,
-        @OutputCustomType.Parameter("conditionVersion") @Nullable String conditionVersion,
-        @OutputCustomType.Parameter("createdBy") String createdBy,
-        @OutputCustomType.Parameter("createdOn") String createdOn,
-        @OutputCustomType.Parameter("delegatedManagedIdentityResourceId") @Nullable String delegatedManagedIdentityResourceId,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("principalId") String principalId,
-        @OutputCustomType.Parameter("principalType") @Nullable String principalType,
-        @OutputCustomType.Parameter("roleDefinitionId") String roleDefinitionId,
-        @OutputCustomType.Parameter("scope") String scope,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("updatedBy") String updatedBy,
-        @OutputCustomType.Parameter("updatedOn") String updatedOn) {
+        @CustomType.Parameter("condition") @Nullable String condition,
+        @CustomType.Parameter("conditionVersion") @Nullable String conditionVersion,
+        @CustomType.Parameter("createdBy") String createdBy,
+        @CustomType.Parameter("createdOn") String createdOn,
+        @CustomType.Parameter("delegatedManagedIdentityResourceId") @Nullable String delegatedManagedIdentityResourceId,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("principalId") String principalId,
+        @CustomType.Parameter("principalType") @Nullable String principalType,
+        @CustomType.Parameter("roleDefinitionId") String roleDefinitionId,
+        @CustomType.Parameter("scope") String scope,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("updatedBy") String updatedBy,
+        @CustomType.Parameter("updatedOn") String updatedOn) {
         this.condition = condition;
         this.conditionVersion = conditionVersion;
         this.createdBy = createdBy;

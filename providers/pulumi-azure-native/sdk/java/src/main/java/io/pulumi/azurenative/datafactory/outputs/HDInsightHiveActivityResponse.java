@@ -7,7 +7,7 @@ import io.pulumi.azurenative.datafactory.outputs.ActivityDependencyResponse;
 import io.pulumi.azurenative.datafactory.outputs.ActivityPolicyResponse;
 import io.pulumi.azurenative.datafactory.outputs.LinkedServiceReferenceResponse;
 import io.pulumi.azurenative.datafactory.outputs.UserPropertyResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -17,7 +17,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class HDInsightHiveActivityResponse {
     /**
      * User specified arguments to HDInsightActivity.
@@ -96,23 +96,23 @@ public final class HDInsightHiveActivityResponse {
      */
     private final @Nullable List<Object> variables;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private HDInsightHiveActivityResponse(
-        @OutputCustomType.Parameter("arguments") @Nullable List<Object> arguments,
-        @OutputCustomType.Parameter("defines") @Nullable Map<String,Object> defines,
-        @OutputCustomType.Parameter("dependsOn") @Nullable List<ActivityDependencyResponse> dependsOn,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("getDebugInfo") @Nullable String getDebugInfo,
-        @OutputCustomType.Parameter("linkedServiceName") @Nullable LinkedServiceReferenceResponse linkedServiceName,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("policy") @Nullable ActivityPolicyResponse policy,
-        @OutputCustomType.Parameter("queryTimeout") @Nullable Integer queryTimeout,
-        @OutputCustomType.Parameter("scriptLinkedService") @Nullable LinkedServiceReferenceResponse scriptLinkedService,
-        @OutputCustomType.Parameter("scriptPath") @Nullable Object scriptPath,
-        @OutputCustomType.Parameter("storageLinkedServices") @Nullable List<LinkedServiceReferenceResponse> storageLinkedServices,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("userProperties") @Nullable List<UserPropertyResponse> userProperties,
-        @OutputCustomType.Parameter("variables") @Nullable List<Object> variables) {
+        @CustomType.Parameter("arguments") @Nullable List<Object> arguments,
+        @CustomType.Parameter("defines") @Nullable Map<String,Object> defines,
+        @CustomType.Parameter("dependsOn") @Nullable List<ActivityDependencyResponse> dependsOn,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("getDebugInfo") @Nullable String getDebugInfo,
+        @CustomType.Parameter("linkedServiceName") @Nullable LinkedServiceReferenceResponse linkedServiceName,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("policy") @Nullable ActivityPolicyResponse policy,
+        @CustomType.Parameter("queryTimeout") @Nullable Integer queryTimeout,
+        @CustomType.Parameter("scriptLinkedService") @Nullable LinkedServiceReferenceResponse scriptLinkedService,
+        @CustomType.Parameter("scriptPath") @Nullable Object scriptPath,
+        @CustomType.Parameter("storageLinkedServices") @Nullable List<LinkedServiceReferenceResponse> storageLinkedServices,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("userProperties") @Nullable List<UserPropertyResponse> userProperties,
+        @CustomType.Parameter("variables") @Nullable List<Object> variables) {
         this.arguments = arguments;
         this.defines = defines;
         this.dependsOn = dependsOn;

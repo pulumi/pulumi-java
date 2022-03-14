@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.devices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class IotHubDefinitionDescriptionResponse extends io.pulumi.resourc
      * weight to apply for a given iot h.
      * 
      */
-    @InputImport(name="allocationWeight")
+    @Import(name="allocationWeight")
       private final @Nullable Integer allocationWeight;
 
     public Optional<Integer> getAllocationWeight() {
@@ -35,7 +35,7 @@ public final class IotHubDefinitionDescriptionResponse extends io.pulumi.resourc
      * flag for applying allocationPolicy or not for a given iot hub.
      * 
      */
-    @InputImport(name="applyAllocationPolicy")
+    @Import(name="applyAllocationPolicy")
       private final @Nullable Boolean applyAllocationPolicy;
 
     public Optional<Boolean> getApplyAllocationPolicy() {
@@ -46,7 +46,7 @@ public final class IotHubDefinitionDescriptionResponse extends io.pulumi.resourc
      * Connection string of the IoT hub.
      * 
      */
-    @InputImport(name="connectionString", required=true)
+    @Import(name="connectionString", required=true)
       private final String connectionString;
 
     public String getConnectionString() {
@@ -57,7 +57,7 @@ public final class IotHubDefinitionDescriptionResponse extends io.pulumi.resourc
      * ARM region of the IoT hub.
      * 
      */
-    @InputImport(name="location", required=true)
+    @Import(name="location", required=true)
       private final String location;
 
     public String getLocation() {
@@ -68,7 +68,7 @@ public final class IotHubDefinitionDescriptionResponse extends io.pulumi.resourc
      * Host name of the IoT hub.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {

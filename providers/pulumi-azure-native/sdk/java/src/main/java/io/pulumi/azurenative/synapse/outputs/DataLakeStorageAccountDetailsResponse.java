@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.synapse.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DataLakeStorageAccountDetailsResponse {
     /**
      * Account URL
@@ -22,10 +22,10 @@ public final class DataLakeStorageAccountDetailsResponse {
      */
     private final @Nullable String filesystem;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DataLakeStorageAccountDetailsResponse(
-        @OutputCustomType.Parameter("accountUrl") @Nullable String accountUrl,
-        @OutputCustomType.Parameter("filesystem") @Nullable String filesystem) {
+        @CustomType.Parameter("accountUrl") @Nullable String accountUrl,
+        @CustomType.Parameter("filesystem") @Nullable String filesystem) {
         this.accountUrl = accountUrl;
         this.filesystem = filesystem;
     }

@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.HubRouteResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetHubRouteTableResult {
     /**
      * List of all connections associated with this route table.
@@ -59,17 +59,17 @@ public final class GetHubRouteTableResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetHubRouteTableResult(
-        @OutputCustomType.Parameter("associatedConnections") List<String> associatedConnections,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("labels") @Nullable List<String> labels,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("propagatingConnections") List<String> propagatingConnections,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("routes") @Nullable List<HubRouteResponse> routes,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("associatedConnections") List<String> associatedConnections,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("labels") @Nullable List<String> labels,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("propagatingConnections") List<String> propagatingConnections,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("routes") @Nullable List<HubRouteResponse> routes,
+        @CustomType.Parameter("type") String type) {
         this.associatedConnections = associatedConnections;
         this.etag = etag;
         this.id = id;

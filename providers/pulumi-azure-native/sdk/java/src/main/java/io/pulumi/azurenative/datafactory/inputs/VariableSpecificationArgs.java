@@ -6,7 +6,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 import io.pulumi.azurenative.datafactory.enums.VariableType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class VariableSpecificationArgs extends io.pulumi.resources.Resourc
      * Default value of variable.
      * 
      */
-    @InputImport(name="defaultValue")
+    @Import(name="defaultValue")
       private final @Nullable Output<Object> defaultValue;
 
     public Output<Object> getDefaultValue() {
@@ -36,7 +36,7 @@ public final class VariableSpecificationArgs extends io.pulumi.resources.Resourc
      * Variable type.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<Either<String,VariableType>> type;
 
     public Output<Either<String,VariableType>> getType() {

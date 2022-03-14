@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.sql.outputs;
 
 import io.pulumi.azurenative.sql.outputs.SyncGroupSchemaTableResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SyncGroupSchemaResponse {
     /**
      * Name of master sync member where the schema is from.
@@ -24,10 +24,10 @@ public final class SyncGroupSchemaResponse {
      */
     private final @Nullable List<SyncGroupSchemaTableResponse> tables;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SyncGroupSchemaResponse(
-        @OutputCustomType.Parameter("masterSyncMemberName") @Nullable String masterSyncMemberName,
-        @OutputCustomType.Parameter("tables") @Nullable List<SyncGroupSchemaTableResponse> tables) {
+        @CustomType.Parameter("masterSyncMemberName") @Nullable String masterSyncMemberName,
+        @CustomType.Parameter("tables") @Nullable List<SyncGroupSchemaTableResponse> tables) {
         this.masterSyncMemberName = masterSyncMemberName;
         this.tables = tables;
     }

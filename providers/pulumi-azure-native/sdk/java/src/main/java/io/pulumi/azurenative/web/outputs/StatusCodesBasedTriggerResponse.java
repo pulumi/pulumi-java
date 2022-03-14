@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class StatusCodesBasedTriggerResponse {
     /**
      * Request Count.
@@ -43,14 +43,14 @@ public final class StatusCodesBasedTriggerResponse {
      */
     private final @Nullable Integer win32Status;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private StatusCodesBasedTriggerResponse(
-        @OutputCustomType.Parameter("count") @Nullable Integer count,
-        @OutputCustomType.Parameter("path") @Nullable String path,
-        @OutputCustomType.Parameter("status") @Nullable Integer status,
-        @OutputCustomType.Parameter("subStatus") @Nullable Integer subStatus,
-        @OutputCustomType.Parameter("timeInterval") @Nullable String timeInterval,
-        @OutputCustomType.Parameter("win32Status") @Nullable Integer win32Status) {
+        @CustomType.Parameter("count") @Nullable Integer count,
+        @CustomType.Parameter("path") @Nullable String path,
+        @CustomType.Parameter("status") @Nullable Integer status,
+        @CustomType.Parameter("subStatus") @Nullable Integer subStatus,
+        @CustomType.Parameter("timeInterval") @Nullable String timeInterval,
+        @CustomType.Parameter("win32Status") @Nullable Integer win32Status) {
         this.count = count;
         this.path = path;
         this.status = status;

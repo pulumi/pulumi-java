@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.deviceupdate.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class GroupConnectivityInformationArgs extends io.pulumi.resources.
      * List of customer visible FQDNs.
      * 
      */
-    @InputImport(name="customerVisibleFqdns")
+    @Import(name="customerVisibleFqdns")
       private final @Nullable Output<List<String>> customerVisibleFqdns;
 
     public Output<List<String>> getCustomerVisibleFqdns() {
@@ -34,7 +34,7 @@ public final class GroupConnectivityInformationArgs extends io.pulumi.resources.
      * PrivateLinkService ARM region.
      * 
      */
-    @InputImport(name="privateLinkServiceArmRegion")
+    @Import(name="privateLinkServiceArmRegion")
       private final @Nullable Output<String> privateLinkServiceArmRegion;
 
     public Output<String> getPrivateLinkServiceArmRegion() {
@@ -45,7 +45,7 @@ public final class GroupConnectivityInformationArgs extends io.pulumi.resources.
      * Redirect map ID.
      * 
      */
-    @InputImport(name="redirectMapId")
+    @Import(name="redirectMapId")
       private final @Nullable Output<String> redirectMapId;
 
     public Output<String> getRedirectMapId() {

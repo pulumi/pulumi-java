@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.securityinsights.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ContentPathMapResponse {
     /**
      * Content type.
@@ -22,10 +22,10 @@ public final class ContentPathMapResponse {
      */
     private final @Nullable String path;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ContentPathMapResponse(
-        @OutputCustomType.Parameter("contentType") @Nullable String contentType,
-        @OutputCustomType.Parameter("path") @Nullable String path) {
+        @CustomType.Parameter("contentType") @Nullable String contentType,
+        @CustomType.Parameter("path") @Nullable String path) {
         this.contentType = contentType;
         this.path = path;
     }

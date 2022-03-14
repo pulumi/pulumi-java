@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +18,7 @@ public final class GetExposureControlFeatureValueArgs extends io.pulumi.resource
      * The feature name.
      * 
      */
-    @InputImport(name="featureName")
+    @Import(name="featureName")
       private final @Nullable String featureName;
 
     public Optional<String> getFeatureName() {
@@ -29,7 +29,7 @@ public final class GetExposureControlFeatureValueArgs extends io.pulumi.resource
      * The feature type.
      * 
      */
-    @InputImport(name="featureType")
+    @Import(name="featureType")
       private final @Nullable String featureType;
 
     public Optional<String> getFeatureType() {
@@ -40,7 +40,7 @@ public final class GetExposureControlFeatureValueArgs extends io.pulumi.resource
      * The location identifier.
      * 
      */
-    @InputImport(name="locationId", required=true)
+    @Import(name="locationId", required=true)
       private final String locationId;
 
     public String getLocationId() {

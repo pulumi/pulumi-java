@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.ApplicationGatewayRewriteRuleActionSetResponse;
 import io.pulumi.azurenative.network.inputs.ApplicationGatewayRewriteRuleConditionResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +26,7 @@ public final class ApplicationGatewayRewriteRuleResponse extends io.pulumi.resou
      * Set of actions to be done as part of the rewrite Rule.
      * 
      */
-    @InputImport(name="actionSet")
+    @Import(name="actionSet")
       private final @Nullable ApplicationGatewayRewriteRuleActionSetResponse actionSet;
 
     public Optional<ApplicationGatewayRewriteRuleActionSetResponse> getActionSet() {
@@ -37,7 +37,7 @@ public final class ApplicationGatewayRewriteRuleResponse extends io.pulumi.resou
      * Conditions based on which the action set execution will be evaluated.
      * 
      */
-    @InputImport(name="conditions")
+    @Import(name="conditions")
       private final @Nullable List<ApplicationGatewayRewriteRuleConditionResponse> conditions;
 
     public List<ApplicationGatewayRewriteRuleConditionResponse> getConditions() {
@@ -48,7 +48,7 @@ public final class ApplicationGatewayRewriteRuleResponse extends io.pulumi.resou
      * Name of the rewrite rule that is unique within an Application Gateway.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -59,7 +59,7 @@ public final class ApplicationGatewayRewriteRuleResponse extends io.pulumi.resou
      * Rule Sequence of the rewrite rule that determines the order of execution of a particular rule in a RewriteRuleSet.
      * 
      */
-    @InputImport(name="ruleSequence")
+    @Import(name="ruleSequence")
       private final @Nullable Integer ruleSequence;
 
     public Optional<Integer> getRuleSequence() {

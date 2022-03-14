@@ -5,7 +5,7 @@ package io.pulumi.azurenative.testbase.inputs;
 
 import io.pulumi.azurenative.testbase.inputs.NotificationReceiverValueArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class NotificationEventReceiverArgs extends io.pulumi.resources.Res
      * The type of the notification event receiver.
      * 
      */
-    @InputImport(name="receiverType")
+    @Import(name="receiverType")
       private final @Nullable Output<String> receiverType;
 
     public Output<String> getReceiverType() {
@@ -34,7 +34,7 @@ public final class NotificationEventReceiverArgs extends io.pulumi.resources.Res
      * The notification event receiver value.
      * 
      */
-    @InputImport(name="receiverValue")
+    @Import(name="receiverValue")
       private final @Nullable Output<NotificationReceiverValueArgs> receiverValue;
 
     public Output<NotificationReceiverValueArgs> getReceiverValue() {

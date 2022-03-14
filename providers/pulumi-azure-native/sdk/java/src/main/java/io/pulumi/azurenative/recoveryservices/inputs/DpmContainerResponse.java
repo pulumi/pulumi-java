@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.recoveryservices.inputs;
 
 import io.pulumi.azurenative.recoveryservices.inputs.DPMContainerExtendedInfoResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -26,7 +26,7 @@ public final class DpmContainerResponse extends io.pulumi.resources.InvokeArgs {
      * Type of backup management for the container.
      * 
      */
-    @InputImport(name="backupManagementType")
+    @Import(name="backupManagementType")
       private final @Nullable String backupManagementType;
 
     public Optional<String> getBackupManagementType() {
@@ -37,7 +37,7 @@ public final class DpmContainerResponse extends io.pulumi.resources.InvokeArgs {
      * Specifies whether the container is re-registrable.
      * 
      */
-    @InputImport(name="canReRegister")
+    @Import(name="canReRegister")
       private final @Nullable Boolean canReRegister;
 
     public Optional<Boolean> getCanReRegister() {
@@ -48,7 +48,7 @@ public final class DpmContainerResponse extends io.pulumi.resources.InvokeArgs {
      * ID of container.
      * 
      */
-    @InputImport(name="containerId")
+    @Import(name="containerId")
       private final @Nullable String containerId;
 
     public Optional<String> getContainerId() {
@@ -63,7 +63,7 @@ public final class DpmContainerResponse extends io.pulumi.resources.InvokeArgs {
      * Expected value is 'DPMContainer'.
      * 
      */
-    @InputImport(name="containerType", required=true)
+    @Import(name="containerType", required=true)
       private final String containerType;
 
     public String getContainerType() {
@@ -74,7 +74,7 @@ public final class DpmContainerResponse extends io.pulumi.resources.InvokeArgs {
      * Backup engine Agent version
      * 
      */
-    @InputImport(name="dpmAgentVersion")
+    @Import(name="dpmAgentVersion")
       private final @Nullable String dpmAgentVersion;
 
     public Optional<String> getDpmAgentVersion() {
@@ -85,7 +85,7 @@ public final class DpmContainerResponse extends io.pulumi.resources.InvokeArgs {
      * List of BackupEngines protecting the container
      * 
      */
-    @InputImport(name="dpmServers")
+    @Import(name="dpmServers")
       private final @Nullable List<String> dpmServers;
 
     public List<String> getDpmServers() {
@@ -96,7 +96,7 @@ public final class DpmContainerResponse extends io.pulumi.resources.InvokeArgs {
      * Extended Info of the container.
      * 
      */
-    @InputImport(name="extendedInfo")
+    @Import(name="extendedInfo")
       private final @Nullable DPMContainerExtendedInfoResponse extendedInfo;
 
     public Optional<DPMContainerExtendedInfoResponse> getExtendedInfo() {
@@ -107,7 +107,7 @@ public final class DpmContainerResponse extends io.pulumi.resources.InvokeArgs {
      * Friendly name of the container.
      * 
      */
-    @InputImport(name="friendlyName")
+    @Import(name="friendlyName")
       private final @Nullable String friendlyName;
 
     public Optional<String> getFriendlyName() {
@@ -118,7 +118,7 @@ public final class DpmContainerResponse extends io.pulumi.resources.InvokeArgs {
      * Status of health of the container.
      * 
      */
-    @InputImport(name="healthStatus")
+    @Import(name="healthStatus")
       private final @Nullable String healthStatus;
 
     public Optional<String> getHealthStatus() {
@@ -129,7 +129,7 @@ public final class DpmContainerResponse extends io.pulumi.resources.InvokeArgs {
      * Number of protected items in the BackupEngine
      * 
      */
-    @InputImport(name="protectedItemCount")
+    @Import(name="protectedItemCount")
       private final @Nullable Double protectedItemCount;
 
     public Optional<Double> getProtectedItemCount() {
@@ -140,7 +140,7 @@ public final class DpmContainerResponse extends io.pulumi.resources.InvokeArgs {
      * Protection status of the container.
      * 
      */
-    @InputImport(name="protectionStatus")
+    @Import(name="protectionStatus")
       private final @Nullable String protectionStatus;
 
     public Optional<String> getProtectionStatus() {
@@ -151,7 +151,7 @@ public final class DpmContainerResponse extends io.pulumi.resources.InvokeArgs {
      * Status of registration of the container with the Recovery Services Vault.
      * 
      */
-    @InputImport(name="registrationStatus")
+    @Import(name="registrationStatus")
       private final @Nullable String registrationStatus;
 
     public Optional<String> getRegistrationStatus() {
@@ -162,7 +162,7 @@ public final class DpmContainerResponse extends io.pulumi.resources.InvokeArgs {
      * To check if upgrade available
      * 
      */
-    @InputImport(name="upgradeAvailable")
+    @Import(name="upgradeAvailable")
       private final @Nullable Boolean upgradeAvailable;
 
     public Optional<Boolean> getUpgradeAvailable() {

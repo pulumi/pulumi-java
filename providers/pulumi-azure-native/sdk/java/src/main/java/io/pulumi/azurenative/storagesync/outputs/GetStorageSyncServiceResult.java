@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.storagesync.outputs;
 
 import io.pulumi.azurenative.storagesync.outputs.PrivateEndpointConnectionResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetStorageSyncServiceResult {
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
@@ -76,20 +76,20 @@ public final class GetStorageSyncServiceResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetStorageSyncServiceResult(
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("incomingTrafficPolicy") @Nullable String incomingTrafficPolicy,
-        @OutputCustomType.Parameter("lastOperationName") String lastOperationName,
-        @OutputCustomType.Parameter("lastWorkflowId") String lastWorkflowId,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("privateEndpointConnections") List<PrivateEndpointConnectionResponse> privateEndpointConnections,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("storageSyncServiceStatus") Integer storageSyncServiceStatus,
-        @OutputCustomType.Parameter("storageSyncServiceUid") String storageSyncServiceUid,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("incomingTrafficPolicy") @Nullable String incomingTrafficPolicy,
+        @CustomType.Parameter("lastOperationName") String lastOperationName,
+        @CustomType.Parameter("lastWorkflowId") String lastWorkflowId,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("privateEndpointConnections") List<PrivateEndpointConnectionResponse> privateEndpointConnections,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("storageSyncServiceStatus") Integer storageSyncServiceStatus,
+        @CustomType.Parameter("storageSyncServiceUid") String storageSyncServiceUid,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type) {
         this.id = id;
         this.incomingTrafficPolicy = incomingTrafficPolicy;
         this.lastOperationName = lastOperationName;

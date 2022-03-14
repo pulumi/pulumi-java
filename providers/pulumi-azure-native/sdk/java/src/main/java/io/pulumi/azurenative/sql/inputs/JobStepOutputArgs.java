@@ -6,7 +6,7 @@ package io.pulumi.azurenative.sql.inputs;
 import io.pulumi.azurenative.sql.enums.JobStepOutputType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class JobStepOutputArgs extends io.pulumi.resources.ResourceArgs {
      * The resource ID of the credential to use to connect to the output destination.
      * 
      */
-    @InputImport(name="credential", required=true)
+    @Import(name="credential", required=true)
       private final Output<String> credential;
 
     public Output<String> getCredential() {
@@ -35,7 +35,7 @@ public final class JobStepOutputArgs extends io.pulumi.resources.ResourceArgs {
      * The output destination database.
      * 
      */
-    @InputImport(name="databaseName", required=true)
+    @Import(name="databaseName", required=true)
       private final Output<String> databaseName;
 
     public Output<String> getDatabaseName() {
@@ -46,7 +46,7 @@ public final class JobStepOutputArgs extends io.pulumi.resources.ResourceArgs {
      * The output destination resource group.
      * 
      */
-    @InputImport(name="resourceGroupName")
+    @Import(name="resourceGroupName")
       private final @Nullable Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -57,7 +57,7 @@ public final class JobStepOutputArgs extends io.pulumi.resources.ResourceArgs {
      * The output destination schema.
      * 
      */
-    @InputImport(name="schemaName")
+    @Import(name="schemaName")
       private final @Nullable Output<String> schemaName;
 
     public Output<String> getSchemaName() {
@@ -68,7 +68,7 @@ public final class JobStepOutputArgs extends io.pulumi.resources.ResourceArgs {
      * The output destination server name.
      * 
      */
-    @InputImport(name="serverName", required=true)
+    @Import(name="serverName", required=true)
       private final Output<String> serverName;
 
     public Output<String> getServerName() {
@@ -79,7 +79,7 @@ public final class JobStepOutputArgs extends io.pulumi.resources.ResourceArgs {
      * The output destination subscription id.
      * 
      */
-    @InputImport(name="subscriptionId")
+    @Import(name="subscriptionId")
       private final @Nullable Output<String> subscriptionId;
 
     public Output<String> getSubscriptionId() {
@@ -90,7 +90,7 @@ public final class JobStepOutputArgs extends io.pulumi.resources.ResourceArgs {
      * The output destination table.
      * 
      */
-    @InputImport(name="tableName", required=true)
+    @Import(name="tableName", required=true)
       private final Output<String> tableName;
 
     public Output<String> getTableName() {
@@ -101,7 +101,7 @@ public final class JobStepOutputArgs extends io.pulumi.resources.ResourceArgs {
      * The output destination type.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<Either<String,JobStepOutputType>> type;
 
     public Output<Either<String,JobStepOutputType>> getType() {

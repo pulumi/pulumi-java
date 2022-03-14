@@ -11,7 +11,7 @@ import io.pulumi.azurenative.datamigration.inputs.MigrateSqlServerSqlMISyncTaskO
 import io.pulumi.azurenative.datamigration.inputs.MigrateSyncCompleteCommandPropertiesResponse;
 import io.pulumi.azurenative.datamigration.inputs.ODataErrorResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -32,7 +32,7 @@ public final class MigrateSqlServerSqlMISyncTaskPropertiesResponse extends io.pu
      * Array of command properties.
      * 
      */
-    @InputImport(name="commands", required=true)
+    @Import(name="commands", required=true)
       private final List<Either<MigrateMISyncCompleteCommandPropertiesResponse,MigrateSyncCompleteCommandPropertiesResponse>> commands;
 
     public List<Either<MigrateMISyncCompleteCommandPropertiesResponse,MigrateSyncCompleteCommandPropertiesResponse>> getCommands() {
@@ -43,7 +43,7 @@ public final class MigrateSqlServerSqlMISyncTaskPropertiesResponse extends io.pu
      * Array of errors. This is ignored if submitted.
      * 
      */
-    @InputImport(name="errors", required=true)
+    @Import(name="errors", required=true)
       private final List<ODataErrorResponse> errors;
 
     public List<ODataErrorResponse> getErrors() {
@@ -54,7 +54,7 @@ public final class MigrateSqlServerSqlMISyncTaskPropertiesResponse extends io.pu
      * Task input
      * 
      */
-    @InputImport(name="input")
+    @Import(name="input")
       private final @Nullable MigrateSqlServerSqlMISyncTaskInputResponse input;
 
     public Optional<MigrateSqlServerSqlMISyncTaskInputResponse> getInput() {
@@ -65,7 +65,7 @@ public final class MigrateSqlServerSqlMISyncTaskPropertiesResponse extends io.pu
      * Task output. This is ignored if submitted.
      * 
      */
-    @InputImport(name="output", required=true)
+    @Import(name="output", required=true)
       private final List<Object> output;
 
     public List<Object> getOutput() {
@@ -76,7 +76,7 @@ public final class MigrateSqlServerSqlMISyncTaskPropertiesResponse extends io.pu
      * The state of the task. This is ignored if submitted.
      * 
      */
-    @InputImport(name="state", required=true)
+    @Import(name="state", required=true)
       private final String state;
 
     public String getState() {
@@ -88,7 +88,7 @@ public final class MigrateSqlServerSqlMISyncTaskPropertiesResponse extends io.pu
      * Expected value is 'Migrate.SqlServer.AzureSqlDbMI.Sync.LRS'.
      * 
      */
-    @InputImport(name="taskType", required=true)
+    @Import(name="taskType", required=true)
       private final String taskType;
 
     public String getTaskType() {

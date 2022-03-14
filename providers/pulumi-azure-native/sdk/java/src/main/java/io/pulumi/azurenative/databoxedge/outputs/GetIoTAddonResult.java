@@ -5,11 +5,11 @@ package io.pulumi.azurenative.databoxedge.outputs;
 
 import io.pulumi.azurenative.databoxedge.outputs.IoTDeviceInfoResponse;
 import io.pulumi.azurenative.databoxedge.outputs.SystemDataResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetIoTAddonResult {
     /**
      * Host OS supported by the IoT addon.
@@ -68,19 +68,19 @@ public final class GetIoTAddonResult {
      */
     private final String version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetIoTAddonResult(
-        @OutputCustomType.Parameter("hostPlatform") String hostPlatform,
-        @OutputCustomType.Parameter("hostPlatformType") String hostPlatformType,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("ioTDeviceDetails") IoTDeviceInfoResponse ioTDeviceDetails,
-        @OutputCustomType.Parameter("ioTEdgeDeviceDetails") IoTDeviceInfoResponse ioTEdgeDeviceDetails,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("version") String version) {
+        @CustomType.Parameter("hostPlatform") String hostPlatform,
+        @CustomType.Parameter("hostPlatformType") String hostPlatformType,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("ioTDeviceDetails") IoTDeviceInfoResponse ioTDeviceDetails,
+        @CustomType.Parameter("ioTEdgeDeviceDetails") IoTDeviceInfoResponse ioTEdgeDeviceDetails,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("systemData") SystemDataResponse systemData,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("version") String version) {
         this.hostPlatform = hostPlatform;
         this.hostPlatformType = hostPlatformType;
         this.id = id;

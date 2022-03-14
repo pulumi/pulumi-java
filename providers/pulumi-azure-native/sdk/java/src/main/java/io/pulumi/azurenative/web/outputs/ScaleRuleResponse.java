@@ -6,13 +6,13 @@ package io.pulumi.azurenative.web.outputs;
 import io.pulumi.azurenative.web.outputs.CustomScaleRuleResponse;
 import io.pulumi.azurenative.web.outputs.HttpScaleRuleResponse;
 import io.pulumi.azurenative.web.outputs.QueueScaleRuleResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ScaleRuleResponse {
     /**
      * Azure Queue based scaling.
@@ -35,12 +35,12 @@ public final class ScaleRuleResponse {
      */
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ScaleRuleResponse(
-        @OutputCustomType.Parameter("azureQueue") @Nullable QueueScaleRuleResponse azureQueue,
-        @OutputCustomType.Parameter("custom") @Nullable CustomScaleRuleResponse custom,
-        @OutputCustomType.Parameter("http") @Nullable HttpScaleRuleResponse http,
-        @OutputCustomType.Parameter("name") @Nullable String name) {
+        @CustomType.Parameter("azureQueue") @Nullable QueueScaleRuleResponse azureQueue,
+        @CustomType.Parameter("custom") @Nullable CustomScaleRuleResponse custom,
+        @CustomType.Parameter("http") @Nullable HttpScaleRuleResponse http,
+        @CustomType.Parameter("name") @Nullable String name) {
         this.azureQueue = azureQueue;
         this.custom = custom;
         this.http = http;

@@ -9,7 +9,7 @@ import io.pulumi.azurenative.network.outputs.AddressPrefixItemResponse;
 import io.pulumi.azurenative.network.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -37,7 +37,7 @@ public class DefaultAdminRule extends io.pulumi.resources.CustomResource {
      * Indicates the access allowed for this particular rule
      * 
      */
-    @OutputExport(name="access", type=String.class, parameters={})
+    @Export(name="access", type=String.class, parameters={})
     private Output<String> access;
 
     /**
@@ -51,7 +51,7 @@ public class DefaultAdminRule extends io.pulumi.resources.CustomResource {
      * A description for this rule. Restricted to 140 chars.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
@@ -65,7 +65,7 @@ public class DefaultAdminRule extends io.pulumi.resources.CustomResource {
      * The destination port ranges.
      * 
      */
-    @OutputExport(name="destinationPortRanges", type=List.class, parameters={String.class})
+    @Export(name="destinationPortRanges", type=List.class, parameters={String.class})
     private Output<List<String>> destinationPortRanges;
 
     /**
@@ -79,7 +79,7 @@ public class DefaultAdminRule extends io.pulumi.resources.CustomResource {
      * The destination address prefixes. CIDR or destination IP ranges.
      * 
      */
-    @OutputExport(name="destinations", type=List.class, parameters={AddressPrefixItemResponse.class})
+    @Export(name="destinations", type=List.class, parameters={AddressPrefixItemResponse.class})
     private Output<List<AddressPrefixItemResponse>> destinations;
 
     /**
@@ -93,7 +93,7 @@ public class DefaultAdminRule extends io.pulumi.resources.CustomResource {
      * Indicates if the traffic matched against the rule in inbound or outbound.
      * 
      */
-    @OutputExport(name="direction", type=String.class, parameters={})
+    @Export(name="direction", type=String.class, parameters={})
     private Output<String> direction;
 
     /**
@@ -107,7 +107,7 @@ public class DefaultAdminRule extends io.pulumi.resources.CustomResource {
      * A friendly name for the rule.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
@@ -121,7 +121,7 @@ public class DefaultAdminRule extends io.pulumi.resources.CustomResource {
      * A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -135,7 +135,7 @@ public class DefaultAdminRule extends io.pulumi.resources.CustomResource {
      * Default rule flag.
      * 
      */
-    @OutputExport(name="flag", type=String.class, parameters={})
+    @Export(name="flag", type=String.class, parameters={})
     private Output</* @Nullable */ String> flag;
 
     /**
@@ -150,7 +150,7 @@ public class DefaultAdminRule extends io.pulumi.resources.CustomResource {
      * Expected value is 'Default'.
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
     /**
@@ -165,7 +165,7 @@ public class DefaultAdminRule extends io.pulumi.resources.CustomResource {
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -179,7 +179,7 @@ public class DefaultAdminRule extends io.pulumi.resources.CustomResource {
      * The priority of the rule. The value can be between 1 and 4096. The priority number must be unique for each rule in the collection. The lower the priority number, the higher the priority of the rule.
      * 
      */
-    @OutputExport(name="priority", type=Integer.class, parameters={})
+    @Export(name="priority", type=Integer.class, parameters={})
     private Output<Integer> priority;
 
     /**
@@ -193,7 +193,7 @@ public class DefaultAdminRule extends io.pulumi.resources.CustomResource {
      * Network protocol this rule applies to.
      * 
      */
-    @OutputExport(name="protocol", type=String.class, parameters={})
+    @Export(name="protocol", type=String.class, parameters={})
     private Output<String> protocol;
 
     /**
@@ -207,7 +207,7 @@ public class DefaultAdminRule extends io.pulumi.resources.CustomResource {
      * The provisioning state of the resource.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -221,7 +221,7 @@ public class DefaultAdminRule extends io.pulumi.resources.CustomResource {
      * The source port ranges.
      * 
      */
-    @OutputExport(name="sourcePortRanges", type=List.class, parameters={String.class})
+    @Export(name="sourcePortRanges", type=List.class, parameters={String.class})
     private Output<List<String>> sourcePortRanges;
 
     /**
@@ -235,7 +235,7 @@ public class DefaultAdminRule extends io.pulumi.resources.CustomResource {
      * The CIDR or source IP ranges.
      * 
      */
-    @OutputExport(name="sources", type=List.class, parameters={AddressPrefixItemResponse.class})
+    @Export(name="sources", type=List.class, parameters={AddressPrefixItemResponse.class})
     private Output<List<AddressPrefixItemResponse>> sources;
 
     /**
@@ -249,7 +249,7 @@ public class DefaultAdminRule extends io.pulumi.resources.CustomResource {
      * The system metadata related to this resource.
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -263,7 +263,7 @@ public class DefaultAdminRule extends io.pulumi.resources.CustomResource {
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

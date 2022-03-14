@@ -16,7 +16,7 @@ import io.pulumi.azurenative.network.outputs.OutboundRuleResponse;
 import io.pulumi.azurenative.network.outputs.ProbeResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -44,7 +44,7 @@ public class LoadBalancer extends io.pulumi.resources.CustomResource {
      * Collection of backend address pools used by a load balancer.
      * 
      */
-    @OutputExport(name="backendAddressPools", type=List.class, parameters={BackendAddressPoolResponse.class})
+    @Export(name="backendAddressPools", type=List.class, parameters={BackendAddressPoolResponse.class})
     private Output</* @Nullable */ List<BackendAddressPoolResponse>> backendAddressPools;
 
     /**
@@ -58,7 +58,7 @@ public class LoadBalancer extends io.pulumi.resources.CustomResource {
      * A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -72,7 +72,7 @@ public class LoadBalancer extends io.pulumi.resources.CustomResource {
      * The extended location of the load balancer.
      * 
      */
-    @OutputExport(name="extendedLocation", type=ExtendedLocationResponse.class, parameters={})
+    @Export(name="extendedLocation", type=ExtendedLocationResponse.class, parameters={})
     private Output</* @Nullable */ ExtendedLocationResponse> extendedLocation;
 
     /**
@@ -86,7 +86,7 @@ public class LoadBalancer extends io.pulumi.resources.CustomResource {
      * Object representing the frontend IPs to be used for the load balancer.
      * 
      */
-    @OutputExport(name="frontendIPConfigurations", type=List.class, parameters={FrontendIPConfigurationResponse.class})
+    @Export(name="frontendIPConfigurations", type=List.class, parameters={FrontendIPConfigurationResponse.class})
     private Output</* @Nullable */ List<FrontendIPConfigurationResponse>> frontendIPConfigurations;
 
     /**
@@ -100,7 +100,7 @@ public class LoadBalancer extends io.pulumi.resources.CustomResource {
      * Defines an external port range for inbound NAT to a single backend port on NICs associated with a load balancer. Inbound NAT rules are created automatically for each NIC associated with the Load Balancer using an external port from this range. Defining an Inbound NAT pool on your Load Balancer is mutually exclusive with defining inbound Nat rules. Inbound NAT pools are referenced from virtual machine scale sets. NICs that are associated with individual virtual machines cannot reference an inbound NAT pool. They have to reference individual inbound NAT rules.
      * 
      */
-    @OutputExport(name="inboundNatPools", type=List.class, parameters={InboundNatPoolResponse.class})
+    @Export(name="inboundNatPools", type=List.class, parameters={InboundNatPoolResponse.class})
     private Output</* @Nullable */ List<InboundNatPoolResponse>> inboundNatPools;
 
     /**
@@ -114,7 +114,7 @@ public class LoadBalancer extends io.pulumi.resources.CustomResource {
      * Collection of inbound NAT Rules used by a load balancer. Defining inbound NAT rules on your load balancer is mutually exclusive with defining an inbound NAT pool. Inbound NAT pools are referenced from virtual machine scale sets. NICs that are associated with individual virtual machines cannot reference an Inbound NAT pool. They have to reference individual inbound NAT rules.
      * 
      */
-    @OutputExport(name="inboundNatRules", type=List.class, parameters={InboundNatRuleResponse.class})
+    @Export(name="inboundNatRules", type=List.class, parameters={InboundNatRuleResponse.class})
     private Output</* @Nullable */ List<InboundNatRuleResponse>> inboundNatRules;
 
     /**
@@ -128,7 +128,7 @@ public class LoadBalancer extends io.pulumi.resources.CustomResource {
      * Object collection representing the load balancing rules Gets the provisioning.
      * 
      */
-    @OutputExport(name="loadBalancingRules", type=List.class, parameters={LoadBalancingRuleResponse.class})
+    @Export(name="loadBalancingRules", type=List.class, parameters={LoadBalancingRuleResponse.class})
     private Output</* @Nullable */ List<LoadBalancingRuleResponse>> loadBalancingRules;
 
     /**
@@ -142,7 +142,7 @@ public class LoadBalancer extends io.pulumi.resources.CustomResource {
      * Resource location.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -156,7 +156,7 @@ public class LoadBalancer extends io.pulumi.resources.CustomResource {
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -170,7 +170,7 @@ public class LoadBalancer extends io.pulumi.resources.CustomResource {
      * The outbound rules.
      * 
      */
-    @OutputExport(name="outboundRules", type=List.class, parameters={OutboundRuleResponse.class})
+    @Export(name="outboundRules", type=List.class, parameters={OutboundRuleResponse.class})
     private Output</* @Nullable */ List<OutboundRuleResponse>> outboundRules;
 
     /**
@@ -184,7 +184,7 @@ public class LoadBalancer extends io.pulumi.resources.CustomResource {
      * Collection of probe objects used in the load balancer.
      * 
      */
-    @OutputExport(name="probes", type=List.class, parameters={ProbeResponse.class})
+    @Export(name="probes", type=List.class, parameters={ProbeResponse.class})
     private Output</* @Nullable */ List<ProbeResponse>> probes;
 
     /**
@@ -198,7 +198,7 @@ public class LoadBalancer extends io.pulumi.resources.CustomResource {
      * The provisioning state of the load balancer resource.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -212,7 +212,7 @@ public class LoadBalancer extends io.pulumi.resources.CustomResource {
      * The resource GUID property of the load balancer resource.
      * 
      */
-    @OutputExport(name="resourceGuid", type=String.class, parameters={})
+    @Export(name="resourceGuid", type=String.class, parameters={})
     private Output<String> resourceGuid;
 
     /**
@@ -226,7 +226,7 @@ public class LoadBalancer extends io.pulumi.resources.CustomResource {
      * The load balancer SKU.
      * 
      */
-    @OutputExport(name="sku", type=LoadBalancerSkuResponse.class, parameters={})
+    @Export(name="sku", type=LoadBalancerSkuResponse.class, parameters={})
     private Output</* @Nullable */ LoadBalancerSkuResponse> sku;
 
     /**
@@ -240,7 +240,7 @@ public class LoadBalancer extends io.pulumi.resources.CustomResource {
      * Resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -254,7 +254,7 @@ public class LoadBalancer extends io.pulumi.resources.CustomResource {
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

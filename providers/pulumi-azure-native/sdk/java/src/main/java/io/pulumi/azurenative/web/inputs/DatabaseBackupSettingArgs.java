@@ -6,7 +6,7 @@ package io.pulumi.azurenative.web.inputs;
 import io.pulumi.azurenative.web.enums.DatabaseType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class DatabaseBackupSettingArgs extends io.pulumi.resources.Resourc
      * Contains a connection string to a database which is being backed up or restored. If the restore should happen to a new database, the database name inside is the new one.
      * 
      */
-    @InputImport(name="connectionString")
+    @Import(name="connectionString")
       private final @Nullable Output<String> connectionString;
 
     public Output<String> getConnectionString() {
@@ -36,7 +36,7 @@ public final class DatabaseBackupSettingArgs extends io.pulumi.resources.Resourc
      * This is used during restore with overwrite connection strings options.
      * 
      */
-    @InputImport(name="connectionStringName")
+    @Import(name="connectionStringName")
       private final @Nullable Output<String> connectionStringName;
 
     public Output<String> getConnectionStringName() {
@@ -47,14 +47,14 @@ public final class DatabaseBackupSettingArgs extends io.pulumi.resources.Resourc
      * Database type (e.g. SqlAzure / MySql).
      * 
      */
-    @InputImport(name="databaseType", required=true)
+    @Import(name="databaseType", required=true)
       private final Output<Either<String,DatabaseType>> databaseType;
 
     public Output<Either<String,DatabaseType>> getDatabaseType() {
         return this.databaseType;
     }
 
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {

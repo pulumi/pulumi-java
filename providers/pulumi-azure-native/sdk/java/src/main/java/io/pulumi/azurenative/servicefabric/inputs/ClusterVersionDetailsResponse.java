@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.servicefabric.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class ClusterVersionDetailsResponse extends io.pulumi.resources.Inv
      * The Service Fabric runtime version of the cluster.
      * 
      */
-    @InputImport(name="codeVersion")
+    @Import(name="codeVersion")
       private final @Nullable String codeVersion;
 
     public Optional<String> getCodeVersion() {
@@ -33,7 +33,7 @@ public final class ClusterVersionDetailsResponse extends io.pulumi.resources.Inv
      * Indicates if this version is for Windows or Linux operating system.
      * 
      */
-    @InputImport(name="environment")
+    @Import(name="environment")
       private final @Nullable String environment;
 
     public Optional<String> getEnvironment() {
@@ -44,7 +44,7 @@ public final class ClusterVersionDetailsResponse extends io.pulumi.resources.Inv
      * The date of expiry of support of the version.
      * 
      */
-    @InputImport(name="supportExpiryUtc")
+    @Import(name="supportExpiryUtc")
       private final @Nullable String supportExpiryUtc;
 
     public Optional<String> getSupportExpiryUtc() {

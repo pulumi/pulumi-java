@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.devtestlab.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DataDiskStorageTypeInfoResponse {
     /**
      * Disk Lun
@@ -22,10 +22,10 @@ public final class DataDiskStorageTypeInfoResponse {
      */
     private final @Nullable String storageType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DataDiskStorageTypeInfoResponse(
-        @OutputCustomType.Parameter("lun") @Nullable String lun,
-        @OutputCustomType.Parameter("storageType") @Nullable String storageType) {
+        @CustomType.Parameter("lun") @Nullable String lun,
+        @CustomType.Parameter("storageType") @Nullable String storageType) {
         this.lun = lun;
         this.storageType = storageType;
     }

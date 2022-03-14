@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.servicefabricmesh.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class DiagnosticsRefArgs extends io.pulumi.resources.ResourceArgs {
      * Status of whether or not sinks are enabled.
      * 
      */
-    @InputImport(name="enabled")
+    @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
@@ -35,7 +35,7 @@ public final class DiagnosticsRefArgs extends io.pulumi.resources.ResourceArgs {
      * List of sinks to be used if enabled. References the list of sinks in DiagnosticsDescription.
      * 
      */
-    @InputImport(name="sinkRefs")
+    @Import(name="sinkRefs")
       private final @Nullable Output<List<String>> sinkRefs;
 
     public Output<List<String>> getSinkRefs() {

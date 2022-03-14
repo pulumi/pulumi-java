@@ -11,7 +11,7 @@ import io.pulumi.azurenative.securityinsights.inputs.MetadataSourceArgs;
 import io.pulumi.azurenative.securityinsights.inputs.MetadataSupportArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class MetadataArgs extends io.pulumi.resources.ResourceArgs {
      * The creator of the content item.
      * 
      */
-    @InputImport(name="author")
+    @Import(name="author")
       private final @Nullable Output<MetadataAuthorArgs> author;
 
     public Output<MetadataAuthorArgs> getAuthor() {
@@ -37,7 +37,7 @@ public final class MetadataArgs extends io.pulumi.resources.ResourceArgs {
      * Categories for the solution content item
      * 
      */
-    @InputImport(name="categories")
+    @Import(name="categories")
       private final @Nullable Output<MetadataCategoriesArgs> categories;
 
     public Output<MetadataCategoriesArgs> getCategories() {
@@ -48,7 +48,7 @@ public final class MetadataArgs extends io.pulumi.resources.ResourceArgs {
      * Static ID for the content.  Used to identify dependencies and content from solutions or community.  Hard-coded/static for out of the box content and solutions. Dynamic for user-created.  This is the resource name
      * 
      */
-    @InputImport(name="contentId")
+    @Import(name="contentId")
       private final @Nullable Output<String> contentId;
 
     public Output<String> getContentId() {
@@ -59,7 +59,7 @@ public final class MetadataArgs extends io.pulumi.resources.ResourceArgs {
      * Dependencies for the content item, what other content items it requires to work.  Can describe more complex dependencies using a recursive/nested structure. For a single dependency an id/kind/version can be supplied or operator/criteria for complex formats.
      * 
      */
-    @InputImport(name="dependencies")
+    @Import(name="dependencies")
       private final @Nullable Output<MetadataDependenciesArgs> dependencies;
 
     public Output<MetadataDependenciesArgs> getDependencies() {
@@ -70,7 +70,7 @@ public final class MetadataArgs extends io.pulumi.resources.ResourceArgs {
      * first publish date solution content item
      * 
      */
-    @InputImport(name="firstPublishDate")
+    @Import(name="firstPublishDate")
       private final @Nullable Output<String> firstPublishDate;
 
     public Output<String> getFirstPublishDate() {
@@ -81,7 +81,7 @@ public final class MetadataArgs extends io.pulumi.resources.ResourceArgs {
      * The kind of content the metadata is for.
      * 
      */
-    @InputImport(name="kind", required=true)
+    @Import(name="kind", required=true)
       private final Output<Either<String,Kind>> kind;
 
     public Output<Either<String,Kind>> getKind() {
@@ -92,7 +92,7 @@ public final class MetadataArgs extends io.pulumi.resources.ResourceArgs {
      * last publish date for the solution content item
      * 
      */
-    @InputImport(name="lastPublishDate")
+    @Import(name="lastPublishDate")
       private final @Nullable Output<String> lastPublishDate;
 
     public Output<String> getLastPublishDate() {
@@ -103,7 +103,7 @@ public final class MetadataArgs extends io.pulumi.resources.ResourceArgs {
      * The Metadata name.
      * 
      */
-    @InputImport(name="metadataName")
+    @Import(name="metadataName")
       private final @Nullable Output<String> metadataName;
 
     public Output<String> getMetadataName() {
@@ -114,7 +114,7 @@ public final class MetadataArgs extends io.pulumi.resources.ResourceArgs {
      * The namespace of workspaces resource provider- Microsoft.OperationalInsights.
      * 
      */
-    @InputImport(name="operationalInsightsResourceProvider", required=true)
+    @Import(name="operationalInsightsResourceProvider", required=true)
       private final Output<String> operationalInsightsResourceProvider;
 
     public Output<String> getOperationalInsightsResourceProvider() {
@@ -125,7 +125,7 @@ public final class MetadataArgs extends io.pulumi.resources.ResourceArgs {
      * Full parent resource ID of the content item the metadata is for.  This is the full resource ID including the scope (subscription and resource group)
      * 
      */
-    @InputImport(name="parentId", required=true)
+    @Import(name="parentId", required=true)
       private final Output<String> parentId;
 
     public Output<String> getParentId() {
@@ -136,7 +136,7 @@ public final class MetadataArgs extends io.pulumi.resources.ResourceArgs {
      * Providers for the solution content item
      * 
      */
-    @InputImport(name="providers")
+    @Import(name="providers")
       private final @Nullable Output<List<String>> providers;
 
     public Output<List<String>> getProviders() {
@@ -147,7 +147,7 @@ public final class MetadataArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -158,7 +158,7 @@ public final class MetadataArgs extends io.pulumi.resources.ResourceArgs {
      * Source of the content.  This is where/how it was created.
      * 
      */
-    @InputImport(name="source")
+    @Import(name="source")
       private final @Nullable Output<MetadataSourceArgs> source;
 
     public Output<MetadataSourceArgs> getSource() {
@@ -169,7 +169,7 @@ public final class MetadataArgs extends io.pulumi.resources.ResourceArgs {
      * Support information for the metadata - type, name, contact information
      * 
      */
-    @InputImport(name="support")
+    @Import(name="support")
       private final @Nullable Output<MetadataSupportArgs> support;
 
     public Output<MetadataSupportArgs> getSupport() {
@@ -180,7 +180,7 @@ public final class MetadataArgs extends io.pulumi.resources.ResourceArgs {
      * Version of the content.  Default and recommended format is numeric (e.g. 1, 1.0, 1.0.0, 1.0.0.0), following ARM template best practices.  Can also be any string, but then we cannot guarantee any version checks
      * 
      */
-    @InputImport(name="version")
+    @Import(name="version")
       private final @Nullable Output<String> version;
 
     public Output<String> getVersion() {
@@ -191,7 +191,7 @@ public final class MetadataArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the workspace.
      * 
      */
-    @InputImport(name="workspaceName", required=true)
+    @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;
 
     public Output<String> getWorkspaceName() {

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.media.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class RectangleArgs extends io.pulumi.resources.ResourceArgs {
      * The height of the rectangular region in pixels. This can be absolute pixel value (e.g 100), or relative to the size of the video (For example, 50%).
      * 
      */
-    @InputImport(name="height")
+    @Import(name="height")
       private final @Nullable Output<String> height;
 
     public Output<String> getHeight() {
@@ -33,7 +33,7 @@ public final class RectangleArgs extends io.pulumi.resources.ResourceArgs {
      * The number of pixels from the left-margin. This can be absolute pixel value (e.g 100), or relative to the size of the video (For example, 50%).
      * 
      */
-    @InputImport(name="left")
+    @Import(name="left")
       private final @Nullable Output<String> left;
 
     public Output<String> getLeft() {
@@ -44,7 +44,7 @@ public final class RectangleArgs extends io.pulumi.resources.ResourceArgs {
      * The number of pixels from the top-margin. This can be absolute pixel value (e.g 100), or relative to the size of the video (For example, 50%).
      * 
      */
-    @InputImport(name="top")
+    @Import(name="top")
       private final @Nullable Output<String> top;
 
     public Output<String> getTop() {
@@ -55,7 +55,7 @@ public final class RectangleArgs extends io.pulumi.resources.ResourceArgs {
      * The width of the rectangular region in pixels. This can be absolute pixel value (e.g 100), or relative to the size of the video (For example, 50%).
      * 
      */
-    @InputImport(name="width")
+    @Import(name="width")
       private final @Nullable Output<String> width;
 
     public Output<String> getWidth() {

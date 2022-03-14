@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class IpSecurityRestrictionResponse {
     /**
      * Allow or Deny access for this IP range.
@@ -88,19 +88,19 @@ public final class IpSecurityRestrictionResponse {
      */
     private final @Nullable Integer vnetTrafficTag;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private IpSecurityRestrictionResponse(
-        @OutputCustomType.Parameter("action") @Nullable String action,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("headers") @Nullable Map<String,List<String>> headers,
-        @OutputCustomType.Parameter("ipAddress") @Nullable String ipAddress,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("priority") @Nullable Integer priority,
-        @OutputCustomType.Parameter("subnetMask") @Nullable String subnetMask,
-        @OutputCustomType.Parameter("subnetTrafficTag") @Nullable Integer subnetTrafficTag,
-        @OutputCustomType.Parameter("tag") @Nullable String tag,
-        @OutputCustomType.Parameter("vnetSubnetResourceId") @Nullable String vnetSubnetResourceId,
-        @OutputCustomType.Parameter("vnetTrafficTag") @Nullable Integer vnetTrafficTag) {
+        @CustomType.Parameter("action") @Nullable String action,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("headers") @Nullable Map<String,List<String>> headers,
+        @CustomType.Parameter("ipAddress") @Nullable String ipAddress,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("priority") @Nullable Integer priority,
+        @CustomType.Parameter("subnetMask") @Nullable String subnetMask,
+        @CustomType.Parameter("subnetTrafficTag") @Nullable Integer subnetTrafficTag,
+        @CustomType.Parameter("tag") @Nullable String tag,
+        @CustomType.Parameter("vnetSubnetResourceId") @Nullable String vnetSubnetResourceId,
+        @CustomType.Parameter("vnetTrafficTag") @Nullable Integer vnetTrafficTag) {
         this.action = action;
         this.description = description;
         this.headers = headers;

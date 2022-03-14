@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.servicebus.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetRuleArgs extends io.pulumi.resources.InvokeArgs {
      * The namespace name
      * 
      */
-    @InputImport(name="namespaceName", required=true)
+    @Import(name="namespaceName", required=true)
       private final String namespaceName;
 
     public String getNamespaceName() {
@@ -27,7 +27,7 @@ public final class GetRuleArgs extends io.pulumi.resources.InvokeArgs {
      * Name of the Resource group within the Azure subscription.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {
@@ -38,7 +38,7 @@ public final class GetRuleArgs extends io.pulumi.resources.InvokeArgs {
      * The rule name.
      * 
      */
-    @InputImport(name="ruleName", required=true)
+    @Import(name="ruleName", required=true)
       private final String ruleName;
 
     public String getRuleName() {
@@ -49,7 +49,7 @@ public final class GetRuleArgs extends io.pulumi.resources.InvokeArgs {
      * The subscription name.
      * 
      */
-    @InputImport(name="subscriptionName", required=true)
+    @Import(name="subscriptionName", required=true)
       private final String subscriptionName;
 
     public String getSubscriptionName() {
@@ -60,7 +60,7 @@ public final class GetRuleArgs extends io.pulumi.resources.InvokeArgs {
      * The topic name.
      * 
      */
-    @InputImport(name="topicName", required=true)
+    @Import(name="topicName", required=true)
       private final String topicName;
 
     public String getTopicName() {

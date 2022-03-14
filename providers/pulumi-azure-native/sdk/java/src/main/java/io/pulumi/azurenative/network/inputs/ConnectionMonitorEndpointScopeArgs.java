@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.ConnectionMonitorEndpointScopeItemArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class ConnectionMonitorEndpointScopeArgs extends io.pulumi.resource
      * List of items which needs to be excluded from the endpoint scope.
      * 
      */
-    @InputImport(name="exclude")
+    @Import(name="exclude")
       private final @Nullable Output<List<ConnectionMonitorEndpointScopeItemArgs>> exclude;
 
     public Output<List<ConnectionMonitorEndpointScopeItemArgs>> getExclude() {
@@ -34,7 +34,7 @@ public final class ConnectionMonitorEndpointScopeArgs extends io.pulumi.resource
      * List of items which needs to be included to the endpoint scope.
      * 
      */
-    @InputImport(name="include")
+    @Import(name="include")
       private final @Nullable Output<List<ConnectionMonitorEndpointScopeItemArgs>> include;
 
     public Output<List<ConnectionMonitorEndpointScopeItemArgs>> getInclude() {

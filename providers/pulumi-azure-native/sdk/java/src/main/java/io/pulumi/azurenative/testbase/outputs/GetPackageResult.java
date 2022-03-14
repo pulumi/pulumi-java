@@ -7,7 +7,7 @@ import io.pulumi.azurenative.testbase.outputs.PackageValidationResultResponse;
 import io.pulumi.azurenative.testbase.outputs.SystemDataResponse;
 import io.pulumi.azurenative.testbase.outputs.TargetOSInfoResponse;
 import io.pulumi.azurenative.testbase.outputs.TestResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -15,7 +15,7 @@ import java.util.Map;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetPackageResult {
     /**
      * Application name
@@ -113,27 +113,27 @@ public final class GetPackageResult {
      */
     private final String version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetPackageResult(
-        @OutputCustomType.Parameter("applicationName") String applicationName,
-        @OutputCustomType.Parameter("blobPath") String blobPath,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("flightingRing") String flightingRing,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("isEnabled") Boolean isEnabled,
-        @OutputCustomType.Parameter("lastModifiedTime") String lastModifiedTime,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("packageStatus") String packageStatus,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("targetOSList") List<TargetOSInfoResponse> targetOSList,
-        @OutputCustomType.Parameter("testTypes") List<String> testTypes,
-        @OutputCustomType.Parameter("tests") List<TestResponse> tests,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("validationResults") List<PackageValidationResultResponse> validationResults,
-        @OutputCustomType.Parameter("version") String version) {
+        @CustomType.Parameter("applicationName") String applicationName,
+        @CustomType.Parameter("blobPath") String blobPath,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("flightingRing") String flightingRing,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("isEnabled") Boolean isEnabled,
+        @CustomType.Parameter("lastModifiedTime") String lastModifiedTime,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("packageStatus") String packageStatus,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("systemData") SystemDataResponse systemData,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("targetOSList") List<TargetOSInfoResponse> targetOSList,
+        @CustomType.Parameter("testTypes") List<String> testTypes,
+        @CustomType.Parameter("tests") List<TestResponse> tests,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("validationResults") List<PackageValidationResultResponse> validationResults,
+        @CustomType.Parameter("version") String version) {
         this.applicationName = applicationName;
         this.blobPath = blobPath;
         this.etag = etag;

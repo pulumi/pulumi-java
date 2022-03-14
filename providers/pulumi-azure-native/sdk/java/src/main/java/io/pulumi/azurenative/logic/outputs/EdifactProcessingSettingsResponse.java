@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.logic.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class EdifactProcessingSettingsResponse {
     /**
      * The value indicating whether to create empty xml tags for trailing separators.
@@ -35,13 +35,13 @@ public final class EdifactProcessingSettingsResponse {
      */
     private final Boolean useDotAsDecimalSeparator;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EdifactProcessingSettingsResponse(
-        @OutputCustomType.Parameter("createEmptyXmlTagsForTrailingSeparators") Boolean createEmptyXmlTagsForTrailingSeparators,
-        @OutputCustomType.Parameter("maskSecurityInfo") Boolean maskSecurityInfo,
-        @OutputCustomType.Parameter("preserveInterchange") Boolean preserveInterchange,
-        @OutputCustomType.Parameter("suspendInterchangeOnError") Boolean suspendInterchangeOnError,
-        @OutputCustomType.Parameter("useDotAsDecimalSeparator") Boolean useDotAsDecimalSeparator) {
+        @CustomType.Parameter("createEmptyXmlTagsForTrailingSeparators") Boolean createEmptyXmlTagsForTrailingSeparators,
+        @CustomType.Parameter("maskSecurityInfo") Boolean maskSecurityInfo,
+        @CustomType.Parameter("preserveInterchange") Boolean preserveInterchange,
+        @CustomType.Parameter("suspendInterchangeOnError") Boolean suspendInterchangeOnError,
+        @CustomType.Parameter("useDotAsDecimalSeparator") Boolean useDotAsDecimalSeparator) {
         this.createEmptyXmlTagsForTrailingSeparators = createEmptyXmlTagsForTrailingSeparators;
         this.maskSecurityInfo = maskSecurityInfo;
         this.preserveInterchange = preserveInterchange;

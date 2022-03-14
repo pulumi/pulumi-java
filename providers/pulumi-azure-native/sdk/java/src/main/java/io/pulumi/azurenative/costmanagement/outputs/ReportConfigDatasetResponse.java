@@ -8,7 +8,7 @@ import io.pulumi.azurenative.costmanagement.outputs.ReportConfigDatasetConfigura
 import io.pulumi.azurenative.costmanagement.outputs.ReportConfigFilterResponse;
 import io.pulumi.azurenative.costmanagement.outputs.ReportConfigGroupingResponse;
 import io.pulumi.azurenative.costmanagement.outputs.ReportConfigSortingResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -16,7 +16,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ReportConfigDatasetResponse {
     /**
      * Dictionary of aggregation expression to use in the report. The key of each item in the dictionary is the alias for the aggregated column. Report can have up to 2 aggregation clauses.
@@ -49,14 +49,14 @@ public final class ReportConfigDatasetResponse {
      */
     private final @Nullable List<ReportConfigSortingResponse> sorting;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ReportConfigDatasetResponse(
-        @OutputCustomType.Parameter("aggregation") @Nullable Map<String,ReportConfigAggregationResponse> aggregation,
-        @OutputCustomType.Parameter("configuration") @Nullable ReportConfigDatasetConfigurationResponse configuration,
-        @OutputCustomType.Parameter("filter") @Nullable ReportConfigFilterResponse filter,
-        @OutputCustomType.Parameter("granularity") @Nullable String granularity,
-        @OutputCustomType.Parameter("grouping") @Nullable List<ReportConfigGroupingResponse> grouping,
-        @OutputCustomType.Parameter("sorting") @Nullable List<ReportConfigSortingResponse> sorting) {
+        @CustomType.Parameter("aggregation") @Nullable Map<String,ReportConfigAggregationResponse> aggregation,
+        @CustomType.Parameter("configuration") @Nullable ReportConfigDatasetConfigurationResponse configuration,
+        @CustomType.Parameter("filter") @Nullable ReportConfigFilterResponse filter,
+        @CustomType.Parameter("granularity") @Nullable String granularity,
+        @CustomType.Parameter("grouping") @Nullable List<ReportConfigGroupingResponse> grouping,
+        @CustomType.Parameter("sorting") @Nullable List<ReportConfigSortingResponse> sorting) {
         this.aggregation = aggregation;
         this.configuration = configuration;
         this.filter = filter;

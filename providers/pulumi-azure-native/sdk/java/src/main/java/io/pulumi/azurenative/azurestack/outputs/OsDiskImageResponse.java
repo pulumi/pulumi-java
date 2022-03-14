@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.azurestack.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class OsDiskImageResponse {
     /**
      * OS operating system type.
@@ -20,10 +20,10 @@ public final class OsDiskImageResponse {
      */
     private final String sourceBlobSasUri;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private OsDiskImageResponse(
-        @OutputCustomType.Parameter("operatingSystem") String operatingSystem,
-        @OutputCustomType.Parameter("sourceBlobSasUri") String sourceBlobSasUri) {
+        @CustomType.Parameter("operatingSystem") String operatingSystem,
+        @CustomType.Parameter("sourceBlobSasUri") String sourceBlobSasUri) {
         this.operatingSystem = operatingSystem;
         this.sourceBlobSasUri = sourceBlobSasUri;
     }

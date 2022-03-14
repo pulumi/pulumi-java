@@ -43,7 +43,7 @@ import io.pulumi.azurenative.datafactory.inputs.ValidationActivityResponse;
 import io.pulumi.azurenative.datafactory.inputs.WaitActivityResponse;
 import io.pulumi.azurenative.datafactory.inputs.WebActivityResponse;
 import io.pulumi.azurenative.datafactory.inputs.WebHookActivityResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.Object;
@@ -66,7 +66,7 @@ public final class ForEachActivityResponse extends io.pulumi.resources.InvokeArg
      * List of activities to execute .
      * 
      */
-    @InputImport(name="activities", required=true)
+    @Import(name="activities", required=true)
       private final List<Object> activities;
 
     public List<Object> getActivities() {
@@ -77,7 +77,7 @@ public final class ForEachActivityResponse extends io.pulumi.resources.InvokeArg
      * Batch count to be used for controlling the number of parallel execution (when isSequential is set to false).
      * 
      */
-    @InputImport(name="batchCount")
+    @Import(name="batchCount")
       private final @Nullable Integer batchCount;
 
     public Optional<Integer> getBatchCount() {
@@ -88,7 +88,7 @@ public final class ForEachActivityResponse extends io.pulumi.resources.InvokeArg
      * Activity depends on condition.
      * 
      */
-    @InputImport(name="dependsOn")
+    @Import(name="dependsOn")
       private final @Nullable List<ActivityDependencyResponse> dependsOn;
 
     public List<ActivityDependencyResponse> getDependsOn() {
@@ -99,7 +99,7 @@ public final class ForEachActivityResponse extends io.pulumi.resources.InvokeArg
      * Activity description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable String description;
 
     public Optional<String> getDescription() {
@@ -110,7 +110,7 @@ public final class ForEachActivityResponse extends io.pulumi.resources.InvokeArg
      * Should the loop be executed in sequence or in parallel (max 50)
      * 
      */
-    @InputImport(name="isSequential")
+    @Import(name="isSequential")
       private final @Nullable Boolean isSequential;
 
     public Optional<Boolean> getIsSequential() {
@@ -121,7 +121,7 @@ public final class ForEachActivityResponse extends io.pulumi.resources.InvokeArg
      * Collection to iterate.
      * 
      */
-    @InputImport(name="items", required=true)
+    @Import(name="items", required=true)
       private final ExpressionResponse items;
 
     public ExpressionResponse getItems() {
@@ -132,7 +132,7 @@ public final class ForEachActivityResponse extends io.pulumi.resources.InvokeArg
      * Activity name.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -144,7 +144,7 @@ public final class ForEachActivityResponse extends io.pulumi.resources.InvokeArg
      * Expected value is 'ForEach'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {
@@ -155,7 +155,7 @@ public final class ForEachActivityResponse extends io.pulumi.resources.InvokeArg
      * Activity user properties.
      * 
      */
-    @InputImport(name="userProperties")
+    @Import(name="userProperties")
       private final @Nullable List<UserPropertyResponse> userProperties;
 
     public List<UserPropertyResponse> getUserProperties() {

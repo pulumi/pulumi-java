@@ -8,13 +8,13 @@ import io.pulumi.azurenative.compute.outputs.HardwareProfileResponse;
 import io.pulumi.azurenative.compute.outputs.OSProfileResponse;
 import io.pulumi.azurenative.compute.outputs.RestorePointSourceVMStorageProfileResponse;
 import io.pulumi.azurenative.compute.outputs.SecurityProfileResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RestorePointSourceMetadataResponse {
     /**
      * Gets the diagnostics profile.
@@ -57,16 +57,16 @@ public final class RestorePointSourceMetadataResponse {
      */
     private final @Nullable String vmId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RestorePointSourceMetadataResponse(
-        @OutputCustomType.Parameter("diagnosticsProfile") @Nullable DiagnosticsProfileResponse diagnosticsProfile,
-        @OutputCustomType.Parameter("hardwareProfile") @Nullable HardwareProfileResponse hardwareProfile,
-        @OutputCustomType.Parameter("licenseType") @Nullable String licenseType,
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("osProfile") @Nullable OSProfileResponse osProfile,
-        @OutputCustomType.Parameter("securityProfile") @Nullable SecurityProfileResponse securityProfile,
-        @OutputCustomType.Parameter("storageProfile") @Nullable RestorePointSourceVMStorageProfileResponse storageProfile,
-        @OutputCustomType.Parameter("vmId") @Nullable String vmId) {
+        @CustomType.Parameter("diagnosticsProfile") @Nullable DiagnosticsProfileResponse diagnosticsProfile,
+        @CustomType.Parameter("hardwareProfile") @Nullable HardwareProfileResponse hardwareProfile,
+        @CustomType.Parameter("licenseType") @Nullable String licenseType,
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("osProfile") @Nullable OSProfileResponse osProfile,
+        @CustomType.Parameter("securityProfile") @Nullable SecurityProfileResponse securityProfile,
+        @CustomType.Parameter("storageProfile") @Nullable RestorePointSourceVMStorageProfileResponse storageProfile,
+        @CustomType.Parameter("vmId") @Nullable String vmId) {
         this.diagnosticsProfile = diagnosticsProfile;
         this.hardwareProfile = hardwareProfile;
         this.licenseType = licenseType;

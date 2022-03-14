@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.deploymentmanager.outputs;
 
 import io.pulumi.azurenative.deploymentmanager.outputs.CloudErrorBodyResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class StepOperationInfoResponse {
     /**
      * Unique identifier to track the request for ARM-based resources.
@@ -43,14 +43,14 @@ public final class StepOperationInfoResponse {
      */
     private final String startTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private StepOperationInfoResponse(
-        @OutputCustomType.Parameter("correlationId") String correlationId,
-        @OutputCustomType.Parameter("deploymentName") String deploymentName,
-        @OutputCustomType.Parameter("endTime") String endTime,
-        @OutputCustomType.Parameter("error") @Nullable CloudErrorBodyResponse error,
-        @OutputCustomType.Parameter("lastUpdatedTime") String lastUpdatedTime,
-        @OutputCustomType.Parameter("startTime") String startTime) {
+        @CustomType.Parameter("correlationId") String correlationId,
+        @CustomType.Parameter("deploymentName") String deploymentName,
+        @CustomType.Parameter("endTime") String endTime,
+        @CustomType.Parameter("error") @Nullable CloudErrorBodyResponse error,
+        @CustomType.Parameter("lastUpdatedTime") String lastUpdatedTime,
+        @CustomType.Parameter("startTime") String startTime) {
         this.correlationId = correlationId;
         this.deploymentName = deploymentName;
         this.endTime = endTime;

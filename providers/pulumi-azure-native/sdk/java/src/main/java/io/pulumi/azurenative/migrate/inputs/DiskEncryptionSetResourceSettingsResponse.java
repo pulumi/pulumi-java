@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.migrate.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class DiskEncryptionSetResourceSettingsResponse extends io.pulumi.r
      * Expected value is 'Microsoft.Compute/diskEncryptionSets'.
      * 
      */
-    @InputImport(name="resourceType", required=true)
+    @Import(name="resourceType", required=true)
       private final String resourceType;
 
     public String getPropResourceType() {
@@ -32,7 +32,7 @@ public final class DiskEncryptionSetResourceSettingsResponse extends io.pulumi.r
      * Gets or sets the target Resource name.
      * 
      */
-    @InputImport(name="targetResourceName", required=true)
+    @Import(name="targetResourceName", required=true)
       private final String targetResourceName;
 
     public String getTargetResourceName() {

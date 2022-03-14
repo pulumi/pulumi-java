@@ -8,7 +8,7 @@ import io.pulumi.azurenative.recoveryservices.inputs.InMageRcmLastAgentUpgradeEr
 import io.pulumi.azurenative.recoveryservices.inputs.InMageRcmMobilityAgentDetailsResponse;
 import io.pulumi.azurenative.recoveryservices.inputs.InMageRcmNicDetailsResponse;
 import io.pulumi.azurenative.recoveryservices.inputs.InMageRcmProtectedDiskDetailsResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -28,7 +28,7 @@ public final class InMageRcmReplicationDetailsResponse extends io.pulumi.resourc
      * The agent upgrade blocking error information.
      * 
      */
-    @InputImport(name="agentUpgradeBlockingErrorDetails", required=true)
+    @Import(name="agentUpgradeBlockingErrorDetails", required=true)
       private final List<InMageRcmAgentUpgradeBlockingErrorDetailsResponse> agentUpgradeBlockingErrorDetails;
 
     public List<InMageRcmAgentUpgradeBlockingErrorDetailsResponse> getAgentUpgradeBlockingErrorDetails() {
@@ -39,7 +39,7 @@ public final class InMageRcmReplicationDetailsResponse extends io.pulumi.resourc
      * The agent auto upgrade state.
      * 
      */
-    @InputImport(name="agentUpgradeState", required=true)
+    @Import(name="agentUpgradeState", required=true)
       private final String agentUpgradeState;
 
     public String getAgentUpgradeState() {
@@ -50,7 +50,7 @@ public final class InMageRcmReplicationDetailsResponse extends io.pulumi.resourc
      * The allocated memory in MB.
      * 
      */
-    @InputImport(name="allocatedMemoryInMB", required=true)
+    @Import(name="allocatedMemoryInMB", required=true)
       private final Double allocatedMemoryInMB;
 
     public Double getAllocatedMemoryInMB() {
@@ -61,7 +61,7 @@ public final class InMageRcmReplicationDetailsResponse extends io.pulumi.resourc
      * The type of the discovered VM.
      * 
      */
-    @InputImport(name="discoveryType", required=true)
+    @Import(name="discoveryType", required=true)
       private final String discoveryType;
 
     public String getDiscoveryType() {
@@ -72,7 +72,7 @@ public final class InMageRcmReplicationDetailsResponse extends io.pulumi.resourc
      * The ARM Id of the discovered VM.
      * 
      */
-    @InputImport(name="fabricDiscoveryMachineId", required=true)
+    @Import(name="fabricDiscoveryMachineId", required=true)
       private final String fabricDiscoveryMachineId;
 
     public String getFabricDiscoveryMachineId() {
@@ -83,7 +83,7 @@ public final class InMageRcmReplicationDetailsResponse extends io.pulumi.resourc
      * The recovery point Id to which the VM was failed over.
      * 
      */
-    @InputImport(name="failoverRecoveryPointId", required=true)
+    @Import(name="failoverRecoveryPointId", required=true)
       private final String failoverRecoveryPointId;
 
     public String getFailoverRecoveryPointId() {
@@ -94,7 +94,7 @@ public final class InMageRcmReplicationDetailsResponse extends io.pulumi.resourc
      * The firmware type.
      * 
      */
-    @InputImport(name="firmwareType", required=true)
+    @Import(name="firmwareType", required=true)
       private final String firmwareType;
 
     public String getFirmwareType() {
@@ -105,7 +105,7 @@ public final class InMageRcmReplicationDetailsResponse extends io.pulumi.resourc
      * The initial replication processed bytes. This includes sum of total bytes transferred and matched bytes on all selected disks in source VM.
      * 
      */
-    @InputImport(name="initialReplicationProcessedBytes", required=true)
+    @Import(name="initialReplicationProcessedBytes", required=true)
       private final Double initialReplicationProcessedBytes;
 
     public Double getInitialReplicationProcessedBytes() {
@@ -116,7 +116,7 @@ public final class InMageRcmReplicationDetailsResponse extends io.pulumi.resourc
      * The initial replication progress percentage. This is calculated based on total bytes processed for all disks in the source VM.
      * 
      */
-    @InputImport(name="initialReplicationProgressPercentage", required=true)
+    @Import(name="initialReplicationProgressPercentage", required=true)
       private final Integer initialReplicationProgressPercentage;
 
     public Integer getInitialReplicationProgressPercentage() {
@@ -127,7 +127,7 @@ public final class InMageRcmReplicationDetailsResponse extends io.pulumi.resourc
      * The initial replication transferred bytes from source VM to azure for all selected disks on source VM.
      * 
      */
-    @InputImport(name="initialReplicationTransferredBytes", required=true)
+    @Import(name="initialReplicationTransferredBytes", required=true)
       private final Double initialReplicationTransferredBytes;
 
     public Double getInitialReplicationTransferredBytes() {
@@ -139,7 +139,7 @@ public final class InMageRcmReplicationDetailsResponse extends io.pulumi.resourc
      * Expected value is 'InMageRcm'.
      * 
      */
-    @InputImport(name="instanceType", required=true)
+    @Import(name="instanceType", required=true)
       private final String instanceType;
 
     public String getInstanceType() {
@@ -150,7 +150,7 @@ public final class InMageRcmReplicationDetailsResponse extends io.pulumi.resourc
      * The virtual machine internal identifier.
      * 
      */
-    @InputImport(name="internalIdentifier", required=true)
+    @Import(name="internalIdentifier", required=true)
       private final String internalIdentifier;
 
     public String getInternalIdentifier() {
@@ -161,7 +161,7 @@ public final class InMageRcmReplicationDetailsResponse extends io.pulumi.resourc
      * A value indicating whether last agent upgrade was successful or not.
      * 
      */
-    @InputImport(name="isLastUpgradeSuccessful", required=true)
+    @Import(name="isLastUpgradeSuccessful", required=true)
       private final String isLastUpgradeSuccessful;
 
     public String getIsLastUpgradeSuccessful() {
@@ -172,7 +172,7 @@ public final class InMageRcmReplicationDetailsResponse extends io.pulumi.resourc
      * The last agent upgrade error information.
      * 
      */
-    @InputImport(name="lastAgentUpgradeErrorDetails", required=true)
+    @Import(name="lastAgentUpgradeErrorDetails", required=true)
       private final List<InMageRcmLastAgentUpgradeErrorDetailsResponse> lastAgentUpgradeErrorDetails;
 
     public List<InMageRcmLastAgentUpgradeErrorDetailsResponse> getLastAgentUpgradeErrorDetails() {
@@ -183,7 +183,7 @@ public final class InMageRcmReplicationDetailsResponse extends io.pulumi.resourc
      * The last agent upgrade failed or cancelled job Id.
      * 
      */
-    @InputImport(name="lastAgentUpgradeFailedJobId", required=true)
+    @Import(name="lastAgentUpgradeFailedJobId", required=true)
       private final String lastAgentUpgradeFailedJobId;
 
     public String getLastAgentUpgradeFailedJobId() {
@@ -194,7 +194,7 @@ public final class InMageRcmReplicationDetailsResponse extends io.pulumi.resourc
      * The last agent upgrade type.
      * 
      */
-    @InputImport(name="lastAgentUpgradeType", required=true)
+    @Import(name="lastAgentUpgradeType", required=true)
       private final String lastAgentUpgradeType;
 
     public String getLastAgentUpgradeType() {
@@ -205,7 +205,7 @@ public final class InMageRcmReplicationDetailsResponse extends io.pulumi.resourc
      * The last recovery point Id.
      * 
      */
-    @InputImport(name="lastRecoveryPointId", required=true)
+    @Import(name="lastRecoveryPointId", required=true)
       private final String lastRecoveryPointId;
 
     public String getLastRecoveryPointId() {
@@ -216,7 +216,7 @@ public final class InMageRcmReplicationDetailsResponse extends io.pulumi.resourc
      * The last recovery point received time.
      * 
      */
-    @InputImport(name="lastRecoveryPointReceived", required=true)
+    @Import(name="lastRecoveryPointReceived", required=true)
       private final String lastRecoveryPointReceived;
 
     public String getLastRecoveryPointReceived() {
@@ -227,7 +227,7 @@ public final class InMageRcmReplicationDetailsResponse extends io.pulumi.resourc
      * The last recovery point objective calculated time.
      * 
      */
-    @InputImport(name="lastRpoCalculatedTime", required=true)
+    @Import(name="lastRpoCalculatedTime", required=true)
       private final String lastRpoCalculatedTime;
 
     public String getLastRpoCalculatedTime() {
@@ -238,7 +238,7 @@ public final class InMageRcmReplicationDetailsResponse extends io.pulumi.resourc
      * The last recovery point objective value.
      * 
      */
-    @InputImport(name="lastRpoInSeconds", required=true)
+    @Import(name="lastRpoInSeconds", required=true)
       private final Double lastRpoInSeconds;
 
     public Double getLastRpoInSeconds() {
@@ -249,7 +249,7 @@ public final class InMageRcmReplicationDetailsResponse extends io.pulumi.resourc
      * License Type of the VM to be used.
      * 
      */
-    @InputImport(name="licenseType", required=true)
+    @Import(name="licenseType", required=true)
       private final String licenseType;
 
     public String getLicenseType() {
@@ -260,7 +260,7 @@ public final class InMageRcmReplicationDetailsResponse extends io.pulumi.resourc
      * The mobility agent information.
      * 
      */
-    @InputImport(name="mobilityAgentDetails", required=true)
+    @Import(name="mobilityAgentDetails", required=true)
       private final InMageRcmMobilityAgentDetailsResponse mobilityAgentDetails;
 
     public InMageRcmMobilityAgentDetailsResponse getMobilityAgentDetails() {
@@ -271,7 +271,7 @@ public final class InMageRcmReplicationDetailsResponse extends io.pulumi.resourc
      * The multi VM group name.
      * 
      */
-    @InputImport(name="multiVmGroupName", required=true)
+    @Import(name="multiVmGroupName", required=true)
       private final String multiVmGroupName;
 
     public String getMultiVmGroupName() {
@@ -282,7 +282,7 @@ public final class InMageRcmReplicationDetailsResponse extends io.pulumi.resourc
      * The type of the OS on the VM.
      * 
      */
-    @InputImport(name="osType", required=true)
+    @Import(name="osType", required=true)
       private final String osType;
 
     public String getOsType() {
@@ -293,7 +293,7 @@ public final class InMageRcmReplicationDetailsResponse extends io.pulumi.resourc
      * The process server Id.
      * 
      */
-    @InputImport(name="processServerId", required=true)
+    @Import(name="processServerId", required=true)
       private final String processServerId;
 
     public String getProcessServerId() {
@@ -304,7 +304,7 @@ public final class InMageRcmReplicationDetailsResponse extends io.pulumi.resourc
      * The process server name.
      * 
      */
-    @InputImport(name="processServerName", required=true)
+    @Import(name="processServerName", required=true)
       private final String processServerName;
 
     public String getProcessServerName() {
@@ -315,7 +315,7 @@ public final class InMageRcmReplicationDetailsResponse extends io.pulumi.resourc
      * The processor core count.
      * 
      */
-    @InputImport(name="processorCoreCount", required=true)
+    @Import(name="processorCoreCount", required=true)
       private final Integer processorCoreCount;
 
     public Integer getProcessorCoreCount() {
@@ -326,7 +326,7 @@ public final class InMageRcmReplicationDetailsResponse extends io.pulumi.resourc
      * The list of protected disks.
      * 
      */
-    @InputImport(name="protectedDisks", required=true)
+    @Import(name="protectedDisks", required=true)
       private final List<InMageRcmProtectedDiskDetailsResponse> protectedDisks;
 
     public List<InMageRcmProtectedDiskDetailsResponse> getProtectedDisks() {
@@ -337,7 +337,7 @@ public final class InMageRcmReplicationDetailsResponse extends io.pulumi.resourc
      * The resync processed bytes. This includes sum of total bytes transferred and matched bytes on all selected disks in source VM.
      * 
      */
-    @InputImport(name="resyncProcessedBytes", required=true)
+    @Import(name="resyncProcessedBytes", required=true)
       private final Double resyncProcessedBytes;
 
     public Double getResyncProcessedBytes() {
@@ -348,7 +348,7 @@ public final class InMageRcmReplicationDetailsResponse extends io.pulumi.resourc
      * The resync progress percentage. This is calculated based on total bytes processed for all disks in the source VM.
      * 
      */
-    @InputImport(name="resyncProgressPercentage", required=true)
+    @Import(name="resyncProgressPercentage", required=true)
       private final Integer resyncProgressPercentage;
 
     public Integer getResyncProgressPercentage() {
@@ -359,7 +359,7 @@ public final class InMageRcmReplicationDetailsResponse extends io.pulumi.resourc
      * A value indicating whether resync is required.
      * 
      */
-    @InputImport(name="resyncRequired", required=true)
+    @Import(name="resyncRequired", required=true)
       private final String resyncRequired;
 
     public String getResyncRequired() {
@@ -370,7 +370,7 @@ public final class InMageRcmReplicationDetailsResponse extends io.pulumi.resourc
      * The resync state.
      * 
      */
-    @InputImport(name="resyncState", required=true)
+    @Import(name="resyncState", required=true)
       private final String resyncState;
 
     public String getResyncState() {
@@ -381,7 +381,7 @@ public final class InMageRcmReplicationDetailsResponse extends io.pulumi.resourc
      * The resync transferred bytes from source VM to azure for all selected disks on source VM.
      * 
      */
-    @InputImport(name="resyncTransferredBytes", required=true)
+    @Import(name="resyncTransferredBytes", required=true)
       private final Double resyncTransferredBytes;
 
     public Double getResyncTransferredBytes() {
@@ -392,7 +392,7 @@ public final class InMageRcmReplicationDetailsResponse extends io.pulumi.resourc
      * The run-as account Id.
      * 
      */
-    @InputImport(name="runAsAccountId", required=true)
+    @Import(name="runAsAccountId", required=true)
       private final String runAsAccountId;
 
     public String getRunAsAccountId() {
@@ -403,7 +403,7 @@ public final class InMageRcmReplicationDetailsResponse extends io.pulumi.resourc
      * The target availability set Id.
      * 
      */
-    @InputImport(name="targetAvailabilitySetId", required=true)
+    @Import(name="targetAvailabilitySetId", required=true)
       private final String targetAvailabilitySetId;
 
     public String getTargetAvailabilitySetId() {
@@ -414,7 +414,7 @@ public final class InMageRcmReplicationDetailsResponse extends io.pulumi.resourc
      * The target availability zone.
      * 
      */
-    @InputImport(name="targetAvailabilityZone", required=true)
+    @Import(name="targetAvailabilityZone", required=true)
       private final String targetAvailabilityZone;
 
     public String getTargetAvailabilityZone() {
@@ -425,7 +425,7 @@ public final class InMageRcmReplicationDetailsResponse extends io.pulumi.resourc
      * The target boot diagnostics storage account ARM Id.
      * 
      */
-    @InputImport(name="targetBootDiagnosticsStorageAccountId", required=true)
+    @Import(name="targetBootDiagnosticsStorageAccountId", required=true)
       private final String targetBootDiagnosticsStorageAccountId;
 
     public String getTargetBootDiagnosticsStorageAccountId() {
@@ -436,7 +436,7 @@ public final class InMageRcmReplicationDetailsResponse extends io.pulumi.resourc
      * The target generation.
      * 
      */
-    @InputImport(name="targetGeneration", required=true)
+    @Import(name="targetGeneration", required=true)
       private final String targetGeneration;
 
     public String getTargetGeneration() {
@@ -447,7 +447,7 @@ public final class InMageRcmReplicationDetailsResponse extends io.pulumi.resourc
      * The target network Id.
      * 
      */
-    @InputImport(name="targetNetworkId", required=true)
+    @Import(name="targetNetworkId", required=true)
       private final String targetNetworkId;
 
     public String getTargetNetworkId() {
@@ -458,7 +458,7 @@ public final class InMageRcmReplicationDetailsResponse extends io.pulumi.resourc
      * The target proximity placement group Id.
      * 
      */
-    @InputImport(name="targetProximityPlacementGroupId", required=true)
+    @Import(name="targetProximityPlacementGroupId", required=true)
       private final String targetProximityPlacementGroupId;
 
     public String getTargetProximityPlacementGroupId() {
@@ -469,7 +469,7 @@ public final class InMageRcmReplicationDetailsResponse extends io.pulumi.resourc
      * The target resource group Id.
      * 
      */
-    @InputImport(name="targetResourceGroupId", required=true)
+    @Import(name="targetResourceGroupId", required=true)
       private final String targetResourceGroupId;
 
     public String getTargetResourceGroupId() {
@@ -480,7 +480,7 @@ public final class InMageRcmReplicationDetailsResponse extends io.pulumi.resourc
      * Target VM name.
      * 
      */
-    @InputImport(name="targetVmName", required=true)
+    @Import(name="targetVmName", required=true)
       private final String targetVmName;
 
     public String getTargetVmName() {
@@ -491,7 +491,7 @@ public final class InMageRcmReplicationDetailsResponse extends io.pulumi.resourc
      * The target VM size.
      * 
      */
-    @InputImport(name="targetVmSize", required=true)
+    @Import(name="targetVmSize", required=true)
       private final String targetVmSize;
 
     public String getTargetVmSize() {
@@ -502,7 +502,7 @@ public final class InMageRcmReplicationDetailsResponse extends io.pulumi.resourc
      * The test network Id.
      * 
      */
-    @InputImport(name="testNetworkId", required=true)
+    @Import(name="testNetworkId", required=true)
       private final String testNetworkId;
 
     public String getTestNetworkId() {
@@ -513,7 +513,7 @@ public final class InMageRcmReplicationDetailsResponse extends io.pulumi.resourc
      * The network details.
      * 
      */
-    @InputImport(name="vmNics", required=true)
+    @Import(name="vmNics", required=true)
       private final List<InMageRcmNicDetailsResponse> vmNics;
 
     public List<InMageRcmNicDetailsResponse> getVmNics() {

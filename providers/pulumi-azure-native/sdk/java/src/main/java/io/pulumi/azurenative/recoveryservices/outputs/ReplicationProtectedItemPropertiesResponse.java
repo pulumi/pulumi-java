@@ -13,7 +13,7 @@ import io.pulumi.azurenative.recoveryservices.outputs.HyperVReplicaReplicationDe
 import io.pulumi.azurenative.recoveryservices.outputs.InMageAzureV2ReplicationDetailsResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.InMageRcmReplicationDetailsResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.InMageReplicationDetailsResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ReplicationProtectedItemPropertiesResponse {
     /**
      * The Current active location of the PE.
@@ -159,35 +159,35 @@ public final class ReplicationProtectedItemPropertiesResponse {
      */
     private final @Nullable String testFailoverStateDescription;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ReplicationProtectedItemPropertiesResponse(
-        @OutputCustomType.Parameter("activeLocation") @Nullable String activeLocation,
-        @OutputCustomType.Parameter("allowedOperations") @Nullable List<String> allowedOperations,
-        @OutputCustomType.Parameter("currentScenario") @Nullable CurrentScenarioDetailsResponse currentScenario,
-        @OutputCustomType.Parameter("failoverHealth") @Nullable String failoverHealth,
-        @OutputCustomType.Parameter("failoverRecoveryPointId") @Nullable String failoverRecoveryPointId,
-        @OutputCustomType.Parameter("friendlyName") @Nullable String friendlyName,
-        @OutputCustomType.Parameter("healthErrors") @Nullable List<HealthErrorResponse> healthErrors,
-        @OutputCustomType.Parameter("lastSuccessfulFailoverTime") @Nullable String lastSuccessfulFailoverTime,
-        @OutputCustomType.Parameter("lastSuccessfulTestFailoverTime") @Nullable String lastSuccessfulTestFailoverTime,
-        @OutputCustomType.Parameter("policyFriendlyName") @Nullable String policyFriendlyName,
-        @OutputCustomType.Parameter("policyId") @Nullable String policyId,
-        @OutputCustomType.Parameter("primaryFabricFriendlyName") @Nullable String primaryFabricFriendlyName,
-        @OutputCustomType.Parameter("primaryFabricProvider") @Nullable String primaryFabricProvider,
-        @OutputCustomType.Parameter("primaryProtectionContainerFriendlyName") @Nullable String primaryProtectionContainerFriendlyName,
-        @OutputCustomType.Parameter("protectableItemId") @Nullable String protectableItemId,
-        @OutputCustomType.Parameter("protectedItemType") @Nullable String protectedItemType,
-        @OutputCustomType.Parameter("protectionState") @Nullable String protectionState,
-        @OutputCustomType.Parameter("protectionStateDescription") @Nullable String protectionStateDescription,
-        @OutputCustomType.Parameter("providerSpecificDetails") @Nullable Object providerSpecificDetails,
-        @OutputCustomType.Parameter("recoveryContainerId") @Nullable String recoveryContainerId,
-        @OutputCustomType.Parameter("recoveryFabricFriendlyName") @Nullable String recoveryFabricFriendlyName,
-        @OutputCustomType.Parameter("recoveryFabricId") @Nullable String recoveryFabricId,
-        @OutputCustomType.Parameter("recoveryProtectionContainerFriendlyName") @Nullable String recoveryProtectionContainerFriendlyName,
-        @OutputCustomType.Parameter("recoveryServicesProviderId") @Nullable String recoveryServicesProviderId,
-        @OutputCustomType.Parameter("replicationHealth") @Nullable String replicationHealth,
-        @OutputCustomType.Parameter("testFailoverState") @Nullable String testFailoverState,
-        @OutputCustomType.Parameter("testFailoverStateDescription") @Nullable String testFailoverStateDescription) {
+        @CustomType.Parameter("activeLocation") @Nullable String activeLocation,
+        @CustomType.Parameter("allowedOperations") @Nullable List<String> allowedOperations,
+        @CustomType.Parameter("currentScenario") @Nullable CurrentScenarioDetailsResponse currentScenario,
+        @CustomType.Parameter("failoverHealth") @Nullable String failoverHealth,
+        @CustomType.Parameter("failoverRecoveryPointId") @Nullable String failoverRecoveryPointId,
+        @CustomType.Parameter("friendlyName") @Nullable String friendlyName,
+        @CustomType.Parameter("healthErrors") @Nullable List<HealthErrorResponse> healthErrors,
+        @CustomType.Parameter("lastSuccessfulFailoverTime") @Nullable String lastSuccessfulFailoverTime,
+        @CustomType.Parameter("lastSuccessfulTestFailoverTime") @Nullable String lastSuccessfulTestFailoverTime,
+        @CustomType.Parameter("policyFriendlyName") @Nullable String policyFriendlyName,
+        @CustomType.Parameter("policyId") @Nullable String policyId,
+        @CustomType.Parameter("primaryFabricFriendlyName") @Nullable String primaryFabricFriendlyName,
+        @CustomType.Parameter("primaryFabricProvider") @Nullable String primaryFabricProvider,
+        @CustomType.Parameter("primaryProtectionContainerFriendlyName") @Nullable String primaryProtectionContainerFriendlyName,
+        @CustomType.Parameter("protectableItemId") @Nullable String protectableItemId,
+        @CustomType.Parameter("protectedItemType") @Nullable String protectedItemType,
+        @CustomType.Parameter("protectionState") @Nullable String protectionState,
+        @CustomType.Parameter("protectionStateDescription") @Nullable String protectionStateDescription,
+        @CustomType.Parameter("providerSpecificDetails") @Nullable Object providerSpecificDetails,
+        @CustomType.Parameter("recoveryContainerId") @Nullable String recoveryContainerId,
+        @CustomType.Parameter("recoveryFabricFriendlyName") @Nullable String recoveryFabricFriendlyName,
+        @CustomType.Parameter("recoveryFabricId") @Nullable String recoveryFabricId,
+        @CustomType.Parameter("recoveryProtectionContainerFriendlyName") @Nullable String recoveryProtectionContainerFriendlyName,
+        @CustomType.Parameter("recoveryServicesProviderId") @Nullable String recoveryServicesProviderId,
+        @CustomType.Parameter("replicationHealth") @Nullable String replicationHealth,
+        @CustomType.Parameter("testFailoverState") @Nullable String testFailoverState,
+        @CustomType.Parameter("testFailoverStateDescription") @Nullable String testFailoverStateDescription) {
         this.activeLocation = activeLocation;
         this.allowedOperations = allowedOperations;
         this.currentScenario = currentScenario;

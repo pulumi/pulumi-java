@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.blockchain.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ConsortiumResponse {
     /**
      * Gets or sets the blockchain member name.
@@ -22,10 +22,10 @@ public final class ConsortiumResponse {
      */
     private final @Nullable String protocol;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ConsortiumResponse(
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("protocol") @Nullable String protocol) {
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("protocol") @Nullable String protocol) {
         this.name = name;
         this.protocol = protocol;
     }

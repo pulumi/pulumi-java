@@ -5,7 +5,7 @@ package io.pulumi.azurenative.insights.inputs;
 
 import io.pulumi.azurenative.insights.inputs.DestinationsSpecResponseAzureMonitorMetrics;
 import io.pulumi.azurenative.insights.inputs.LogAnalyticsDestinationResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class DataCollectionRuleResponseDestinations extends io.pulumi.reso
      * Azure Monitor Metrics destination.
      * 
      */
-    @InputImport(name="azureMonitorMetrics")
+    @Import(name="azureMonitorMetrics")
       private final @Nullable DestinationsSpecResponseAzureMonitorMetrics azureMonitorMetrics;
 
     public Optional<DestinationsSpecResponseAzureMonitorMetrics> getAzureMonitorMetrics() {
@@ -35,7 +35,7 @@ public final class DataCollectionRuleResponseDestinations extends io.pulumi.reso
      * List of Log Analytics destinations.
      * 
      */
-    @InputImport(name="logAnalytics")
+    @Import(name="logAnalytics")
       private final @Nullable List<LogAnalyticsDestinationResponse> logAnalytics;
 
     public List<LogAnalyticsDestinationResponse> getLogAnalytics() {

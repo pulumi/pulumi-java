@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.deploymentmanager.outputs;
 
 import io.pulumi.azurenative.deploymentmanager.outputs.CloudErrorBodyResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RolloutOperationInfoResponse {
     /**
      * The start time of the rollout in UTC. This property will not be set if the rollout has not completed yet.
@@ -38,13 +38,13 @@ public final class RolloutOperationInfoResponse {
      */
     private final String startTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RolloutOperationInfoResponse(
-        @OutputCustomType.Parameter("endTime") String endTime,
-        @OutputCustomType.Parameter("error") CloudErrorBodyResponse error,
-        @OutputCustomType.Parameter("retryAttempt") Integer retryAttempt,
-        @OutputCustomType.Parameter("skipSucceededOnRetry") Boolean skipSucceededOnRetry,
-        @OutputCustomType.Parameter("startTime") String startTime) {
+        @CustomType.Parameter("endTime") String endTime,
+        @CustomType.Parameter("error") CloudErrorBodyResponse error,
+        @CustomType.Parameter("retryAttempt") Integer retryAttempt,
+        @CustomType.Parameter("skipSucceededOnRetry") Boolean skipSucceededOnRetry,
+        @CustomType.Parameter("startTime") String startTime) {
         this.endTime = endTime;
         this.error = error;
         this.retryAttempt = retryAttempt;

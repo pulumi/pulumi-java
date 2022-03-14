@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.digitaltwins.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ServiceBusResponse {
     /**
      * Specifies the authentication type being used for connecting to the endpoint.
@@ -63,18 +63,18 @@ public final class ServiceBusResponse {
      */
     private final @Nullable String secondaryConnectionString;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServiceBusResponse(
-        @OutputCustomType.Parameter("authenticationType") @Nullable String authenticationType,
-        @OutputCustomType.Parameter("createdTime") String createdTime,
-        @OutputCustomType.Parameter("deadLetterSecret") @Nullable String deadLetterSecret,
-        @OutputCustomType.Parameter("deadLetterUri") @Nullable String deadLetterUri,
-        @OutputCustomType.Parameter("endpointType") String endpointType,
-        @OutputCustomType.Parameter("endpointUri") @Nullable String endpointUri,
-        @OutputCustomType.Parameter("entityPath") @Nullable String entityPath,
-        @OutputCustomType.Parameter("primaryConnectionString") @Nullable String primaryConnectionString,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("secondaryConnectionString") @Nullable String secondaryConnectionString) {
+        @CustomType.Parameter("authenticationType") @Nullable String authenticationType,
+        @CustomType.Parameter("createdTime") String createdTime,
+        @CustomType.Parameter("deadLetterSecret") @Nullable String deadLetterSecret,
+        @CustomType.Parameter("deadLetterUri") @Nullable String deadLetterUri,
+        @CustomType.Parameter("endpointType") String endpointType,
+        @CustomType.Parameter("endpointUri") @Nullable String endpointUri,
+        @CustomType.Parameter("entityPath") @Nullable String entityPath,
+        @CustomType.Parameter("primaryConnectionString") @Nullable String primaryConnectionString,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("secondaryConnectionString") @Nullable String secondaryConnectionString) {
         this.authenticationType = authenticationType;
         this.createdTime = createdTime;
         this.deadLetterSecret = deadLetterSecret;

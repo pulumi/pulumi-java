@@ -8,7 +8,7 @@ import io.pulumi.azurenative.dataprotection.inputs.AzureBackupParamsResponse;
 import io.pulumi.azurenative.dataprotection.inputs.DataStoreInfoBaseResponse;
 import io.pulumi.azurenative.dataprotection.inputs.ScheduleBasedTriggerContextResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -27,7 +27,7 @@ public final class AzureBackupRuleResponse extends io.pulumi.resources.InvokeArg
      * BackupParameters base
      * 
      */
-    @InputImport(name="backupParameters")
+    @Import(name="backupParameters")
       private final @Nullable AzureBackupParamsResponse backupParameters;
 
     public Optional<AzureBackupParamsResponse> getBackupParameters() {
@@ -38,14 +38,14 @@ public final class AzureBackupRuleResponse extends io.pulumi.resources.InvokeArg
      * DataStoreInfo base
      * 
      */
-    @InputImport(name="dataStore", required=true)
+    @Import(name="dataStore", required=true)
       private final DataStoreInfoBaseResponse dataStore;
 
     public DataStoreInfoBaseResponse getDataStore() {
         return this.dataStore;
     }
 
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -56,7 +56,7 @@ public final class AzureBackupRuleResponse extends io.pulumi.resources.InvokeArg
      * Expected value is 'AzureBackupRule'.
      * 
      */
-    @InputImport(name="objectType", required=true)
+    @Import(name="objectType", required=true)
       private final String objectType;
 
     public String getObjectType() {
@@ -67,7 +67,7 @@ public final class AzureBackupRuleResponse extends io.pulumi.resources.InvokeArg
      * Trigger context
      * 
      */
-    @InputImport(name="trigger", required=true)
+    @Import(name="trigger", required=true)
       private final Either<AdhocBasedTriggerContextResponse,ScheduleBasedTriggerContextResponse> trigger;
 
     public Either<AdhocBasedTriggerContextResponse,ScheduleBasedTriggerContextResponse> getTrigger() {

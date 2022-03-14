@@ -9,7 +9,7 @@ import io.pulumi.azurenative.datalakeanalytics.outputs.FirewallRuleResponse;
 import io.pulumi.azurenative.datalakeanalytics.outputs.HiveMetastoreResponse;
 import io.pulumi.azurenative.datalakeanalytics.outputs.StorageAccountInformationResponse;
 import io.pulumi.azurenative.datalakeanalytics.outputs.VirtualNetworkRuleResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -18,7 +18,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetAccountResult {
     /**
      * The unique identifier associated with this Data Lake Analytics account.
@@ -191,42 +191,42 @@ public final class GetAccountResult {
      */
     private final List<VirtualNetworkRuleResponse> virtualNetworkRules;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetAccountResult(
-        @OutputCustomType.Parameter("accountId") String accountId,
-        @OutputCustomType.Parameter("computePolicies") List<ComputePolicyResponse> computePolicies,
-        @OutputCustomType.Parameter("creationTime") String creationTime,
-        @OutputCustomType.Parameter("currentTier") String currentTier,
-        @OutputCustomType.Parameter("dataLakeStoreAccounts") List<DataLakeStoreAccountInformationResponse> dataLakeStoreAccounts,
-        @OutputCustomType.Parameter("debugDataAccessLevel") String debugDataAccessLevel,
-        @OutputCustomType.Parameter("defaultDataLakeStoreAccount") String defaultDataLakeStoreAccount,
-        @OutputCustomType.Parameter("endpoint") String endpoint,
-        @OutputCustomType.Parameter("firewallAllowAzureIps") @Nullable String firewallAllowAzureIps,
-        @OutputCustomType.Parameter("firewallRules") List<FirewallRuleResponse> firewallRules,
-        @OutputCustomType.Parameter("firewallState") @Nullable String firewallState,
-        @OutputCustomType.Parameter("hiveMetastores") List<HiveMetastoreResponse> hiveMetastores,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("lastModifiedTime") String lastModifiedTime,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("maxActiveJobCountPerUser") Integer maxActiveJobCountPerUser,
-        @OutputCustomType.Parameter("maxDegreeOfParallelism") @Nullable Integer maxDegreeOfParallelism,
-        @OutputCustomType.Parameter("maxDegreeOfParallelismPerJob") @Nullable Integer maxDegreeOfParallelismPerJob,
-        @OutputCustomType.Parameter("maxJobCount") @Nullable Integer maxJobCount,
-        @OutputCustomType.Parameter("maxJobRunningTimeInMin") Integer maxJobRunningTimeInMin,
-        @OutputCustomType.Parameter("maxQueuedJobCountPerUser") Integer maxQueuedJobCountPerUser,
-        @OutputCustomType.Parameter("minPriorityPerJob") Integer minPriorityPerJob,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("newTier") @Nullable String newTier,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("publicDataLakeStoreAccounts") @Nullable List<DataLakeStoreAccountInformationResponse> publicDataLakeStoreAccounts,
-        @OutputCustomType.Parameter("queryStoreRetention") @Nullable Integer queryStoreRetention,
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("storageAccounts") List<StorageAccountInformationResponse> storageAccounts,
-        @OutputCustomType.Parameter("systemMaxDegreeOfParallelism") Integer systemMaxDegreeOfParallelism,
-        @OutputCustomType.Parameter("systemMaxJobCount") Integer systemMaxJobCount,
-        @OutputCustomType.Parameter("tags") Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("virtualNetworkRules") List<VirtualNetworkRuleResponse> virtualNetworkRules) {
+        @CustomType.Parameter("accountId") String accountId,
+        @CustomType.Parameter("computePolicies") List<ComputePolicyResponse> computePolicies,
+        @CustomType.Parameter("creationTime") String creationTime,
+        @CustomType.Parameter("currentTier") String currentTier,
+        @CustomType.Parameter("dataLakeStoreAccounts") List<DataLakeStoreAccountInformationResponse> dataLakeStoreAccounts,
+        @CustomType.Parameter("debugDataAccessLevel") String debugDataAccessLevel,
+        @CustomType.Parameter("defaultDataLakeStoreAccount") String defaultDataLakeStoreAccount,
+        @CustomType.Parameter("endpoint") String endpoint,
+        @CustomType.Parameter("firewallAllowAzureIps") @Nullable String firewallAllowAzureIps,
+        @CustomType.Parameter("firewallRules") List<FirewallRuleResponse> firewallRules,
+        @CustomType.Parameter("firewallState") @Nullable String firewallState,
+        @CustomType.Parameter("hiveMetastores") List<HiveMetastoreResponse> hiveMetastores,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("lastModifiedTime") String lastModifiedTime,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("maxActiveJobCountPerUser") Integer maxActiveJobCountPerUser,
+        @CustomType.Parameter("maxDegreeOfParallelism") @Nullable Integer maxDegreeOfParallelism,
+        @CustomType.Parameter("maxDegreeOfParallelismPerJob") @Nullable Integer maxDegreeOfParallelismPerJob,
+        @CustomType.Parameter("maxJobCount") @Nullable Integer maxJobCount,
+        @CustomType.Parameter("maxJobRunningTimeInMin") Integer maxJobRunningTimeInMin,
+        @CustomType.Parameter("maxQueuedJobCountPerUser") Integer maxQueuedJobCountPerUser,
+        @CustomType.Parameter("minPriorityPerJob") Integer minPriorityPerJob,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("newTier") @Nullable String newTier,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("publicDataLakeStoreAccounts") @Nullable List<DataLakeStoreAccountInformationResponse> publicDataLakeStoreAccounts,
+        @CustomType.Parameter("queryStoreRetention") @Nullable Integer queryStoreRetention,
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("storageAccounts") List<StorageAccountInformationResponse> storageAccounts,
+        @CustomType.Parameter("systemMaxDegreeOfParallelism") Integer systemMaxDegreeOfParallelism,
+        @CustomType.Parameter("systemMaxJobCount") Integer systemMaxJobCount,
+        @CustomType.Parameter("tags") Map<String,String> tags,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("virtualNetworkRules") List<VirtualNetworkRuleResponse> virtualNetworkRules) {
         this.accountId = accountId;
         this.computePolicies = computePolicies;
         this.creationTime = creationTime;

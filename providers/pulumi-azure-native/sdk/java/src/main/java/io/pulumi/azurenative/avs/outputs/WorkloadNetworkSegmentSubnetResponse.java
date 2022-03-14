@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.avs.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class WorkloadNetworkSegmentSubnetResponse {
     /**
      * DHCP Range assigned for subnet.
@@ -23,10 +23,10 @@ public final class WorkloadNetworkSegmentSubnetResponse {
      */
     private final @Nullable String gatewayAddress;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WorkloadNetworkSegmentSubnetResponse(
-        @OutputCustomType.Parameter("dhcpRanges") @Nullable List<String> dhcpRanges,
-        @OutputCustomType.Parameter("gatewayAddress") @Nullable String gatewayAddress) {
+        @CustomType.Parameter("dhcpRanges") @Nullable List<String> dhcpRanges,
+        @CustomType.Parameter("gatewayAddress") @Nullable String gatewayAddress) {
         this.dhcpRanges = dhcpRanges;
         this.gatewayAddress = gatewayAddress;
     }

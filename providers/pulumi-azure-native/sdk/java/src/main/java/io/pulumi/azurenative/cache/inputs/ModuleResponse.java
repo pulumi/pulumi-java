@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.cache.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class ModuleResponse extends io.pulumi.resources.InvokeArgs {
      * Configuration options for the module, e.g. 'ERROR_RATE 0.00 INITIAL_SIZE 400'.
      * 
      */
-    @InputImport(name="args")
+    @Import(name="args")
       private final @Nullable String args;
 
     public Optional<String> getArgs() {
@@ -33,7 +33,7 @@ public final class ModuleResponse extends io.pulumi.resources.InvokeArgs {
      * The name of the module, e.g. 'RedisBloom', 'RediSearch', 'RedisTimeSeries'
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -44,7 +44,7 @@ public final class ModuleResponse extends io.pulumi.resources.InvokeArgs {
      * The version of the module, e.g. '1.0'.
      * 
      */
-    @InputImport(name="version", required=true)
+    @Import(name="version", required=true)
       private final String version;
 
     public String getVersion() {

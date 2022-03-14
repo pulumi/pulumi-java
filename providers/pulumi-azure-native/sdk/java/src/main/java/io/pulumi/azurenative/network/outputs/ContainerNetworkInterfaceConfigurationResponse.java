@@ -5,14 +5,14 @@ package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.IPConfigurationProfileResponse;
 import io.pulumi.azurenative.network.outputs.SubResourceResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ContainerNetworkInterfaceConfigurationResponse {
     /**
      * A list of container network interfaces created from this container network interface configuration.
@@ -50,15 +50,15 @@ public final class ContainerNetworkInterfaceConfigurationResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ContainerNetworkInterfaceConfigurationResponse(
-        @OutputCustomType.Parameter("containerNetworkInterfaces") @Nullable List<SubResourceResponse> containerNetworkInterfaces,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("ipConfigurations") @Nullable List<IPConfigurationProfileResponse> ipConfigurations,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("containerNetworkInterfaces") @Nullable List<SubResourceResponse> containerNetworkInterfaces,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("ipConfigurations") @Nullable List<IPConfigurationProfileResponse> ipConfigurations,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("type") String type) {
         this.containerNetworkInterfaces = containerNetworkInterfaces;
         this.etag = etag;
         this.id = id;

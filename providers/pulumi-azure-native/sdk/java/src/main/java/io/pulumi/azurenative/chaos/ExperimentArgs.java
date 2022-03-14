@@ -6,7 +6,7 @@ package io.pulumi.azurenative.chaos;
 import io.pulumi.azurenative.chaos.inputs.ExperimentPropertiesArgs;
 import io.pulumi.azurenative.chaos.inputs.ResourceIdentityArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
      * String that represents a Experiment resource name.
      * 
      */
-    @InputImport(name="experimentName")
+    @Import(name="experimentName")
       private final @Nullable Output<String> experimentName;
 
     public Output<String> getExperimentName() {
@@ -32,7 +32,7 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
      * The identity of the experiment resource.
      * 
      */
-    @InputImport(name="identity")
+    @Import(name="identity")
       private final @Nullable Output<ResourceIdentityArgs> identity;
 
     public Output<ResourceIdentityArgs> getIdentity() {
@@ -43,7 +43,7 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
      * The geo-location where the resource lives
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -54,7 +54,7 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
      * The properties of the experiment resource.
      * 
      */
-    @InputImport(name="properties", required=true)
+    @Import(name="properties", required=true)
       private final Output<ExperimentPropertiesArgs> properties;
 
     public Output<ExperimentPropertiesArgs> getProperties() {
@@ -65,7 +65,7 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
      * String that represents an Azure resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -76,7 +76,7 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
      * Resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

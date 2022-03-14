@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.logic.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class ApiResourceDefinitionsResponse extends io.pulumi.resources.In
      * The modified swagger url.
      * 
      */
-    @InputImport(name="modifiedSwaggerUrl")
+    @Import(name="modifiedSwaggerUrl")
       private final @Nullable String modifiedSwaggerUrl;
 
     public Optional<String> getModifiedSwaggerUrl() {
@@ -33,7 +33,7 @@ public final class ApiResourceDefinitionsResponse extends io.pulumi.resources.In
      * The original swagger url.
      * 
      */
-    @InputImport(name="originalSwaggerUrl")
+    @Import(name="originalSwaggerUrl")
       private final @Nullable String originalSwaggerUrl;
 
     public Optional<String> getOriginalSwaggerUrl() {

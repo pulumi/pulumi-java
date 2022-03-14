@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.compute.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class NetworkInterfaceReferenceResponse extends io.pulumi.resources
      * Specify what happens to the network interface when the VM is deleted
      * 
      */
-    @InputImport(name="deleteOption")
+    @Import(name="deleteOption")
       private final @Nullable String deleteOption;
 
     public Optional<String> getDeleteOption() {
@@ -34,7 +34,7 @@ public final class NetworkInterfaceReferenceResponse extends io.pulumi.resources
      * Resource Id
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable String id;
 
     public Optional<String> getId() {
@@ -45,7 +45,7 @@ public final class NetworkInterfaceReferenceResponse extends io.pulumi.resources
      * Specifies the primary network interface in case the virtual machine has more than 1 network interface.
      * 
      */
-    @InputImport(name="primary")
+    @Import(name="primary")
       private final @Nullable Boolean primary;
 
     public Optional<Boolean> getPrimary() {

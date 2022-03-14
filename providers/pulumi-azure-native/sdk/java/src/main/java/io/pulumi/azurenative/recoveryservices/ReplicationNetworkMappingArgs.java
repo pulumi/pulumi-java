@@ -5,7 +5,7 @@ package io.pulumi.azurenative.recoveryservices;
 
 import io.pulumi.azurenative.recoveryservices.inputs.CreateNetworkMappingInputPropertiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class ReplicationNetworkMappingArgs extends io.pulumi.resources.Res
      * Primary fabric name.
      * 
      */
-    @InputImport(name="fabricName", required=true)
+    @Import(name="fabricName", required=true)
       private final Output<String> fabricName;
 
     public Output<String> getFabricName() {
@@ -30,7 +30,7 @@ public final class ReplicationNetworkMappingArgs extends io.pulumi.resources.Res
      * Network mapping name.
      * 
      */
-    @InputImport(name="networkMappingName")
+    @Import(name="networkMappingName")
       private final @Nullable Output<String> networkMappingName;
 
     public Output<String> getNetworkMappingName() {
@@ -41,7 +41,7 @@ public final class ReplicationNetworkMappingArgs extends io.pulumi.resources.Res
      * Primary network name.
      * 
      */
-    @InputImport(name="networkName", required=true)
+    @Import(name="networkName", required=true)
       private final Output<String> networkName;
 
     public Output<String> getNetworkName() {
@@ -52,7 +52,7 @@ public final class ReplicationNetworkMappingArgs extends io.pulumi.resources.Res
      * Input properties for creating network mapping.
      * 
      */
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable Output<CreateNetworkMappingInputPropertiesArgs> properties;
 
     public Output<CreateNetworkMappingInputPropertiesArgs> getProperties() {
@@ -63,7 +63,7 @@ public final class ReplicationNetworkMappingArgs extends io.pulumi.resources.Res
      * The name of the resource group where the recovery services vault is present.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -74,7 +74,7 @@ public final class ReplicationNetworkMappingArgs extends io.pulumi.resources.Res
      * The name of the recovery services vault.
      * 
      */
-    @InputImport(name="resourceName", required=true)
+    @Import(name="resourceName", required=true)
       private final Output<String> resourceName;
 
     public Output<String> getPropResourceName() {

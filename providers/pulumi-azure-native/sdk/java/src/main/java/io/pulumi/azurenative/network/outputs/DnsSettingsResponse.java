@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DnsSettingsResponse {
     /**
      * Enable DNS Proxy on Firewalls attached to the Firewall Policy.
@@ -29,11 +29,11 @@ public final class DnsSettingsResponse {
      */
     private final @Nullable List<String> servers;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DnsSettingsResponse(
-        @OutputCustomType.Parameter("enableProxy") @Nullable Boolean enableProxy,
-        @OutputCustomType.Parameter("requireProxyForNetworkRules") @Nullable Boolean requireProxyForNetworkRules,
-        @OutputCustomType.Parameter("servers") @Nullable List<String> servers) {
+        @CustomType.Parameter("enableProxy") @Nullable Boolean enableProxy,
+        @CustomType.Parameter("requireProxyForNetworkRules") @Nullable Boolean requireProxyForNetworkRules,
+        @CustomType.Parameter("servers") @Nullable List<String> servers) {
         this.enableProxy = enableProxy;
         this.requireProxyForNetworkRules = requireProxyForNetworkRules;
         this.servers = servers;

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.storage.inputs;
 import io.pulumi.azurenative.storage.enums.Name;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -27,7 +27,7 @@ public final class LastAccessTimeTrackingPolicyArgs extends io.pulumi.resources.
      * An array of predefined supported blob types. Only blockBlob is the supported value. This field is currently read only
      * 
      */
-    @InputImport(name="blobType")
+    @Import(name="blobType")
       private final @Nullable Output<List<String>> blobType;
 
     public Output<List<String>> getBlobType() {
@@ -38,7 +38,7 @@ public final class LastAccessTimeTrackingPolicyArgs extends io.pulumi.resources.
      * When set to true last access time based tracking is enabled.
      * 
      */
-    @InputImport(name="enable", required=true)
+    @Import(name="enable", required=true)
       private final Output<Boolean> enable;
 
     public Output<Boolean> getEnable() {
@@ -49,7 +49,7 @@ public final class LastAccessTimeTrackingPolicyArgs extends io.pulumi.resources.
      * Name of the policy. The valid value is AccessTimeTracking. This field is currently read only
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<Either<String,Name>> name;
 
     public Output<Either<String,Name>> getName() {
@@ -60,7 +60,7 @@ public final class LastAccessTimeTrackingPolicyArgs extends io.pulumi.resources.
      * The field specifies blob object tracking granularity in days, typically how often the blob object should be tracked.This field is currently read only with value as 1
      * 
      */
-    @InputImport(name="trackingGranularityInDays")
+    @Import(name="trackingGranularityInDays")
       private final @Nullable Output<Integer> trackingGranularityInDays;
 
     public Output<Integer> getTrackingGranularityInDays() {

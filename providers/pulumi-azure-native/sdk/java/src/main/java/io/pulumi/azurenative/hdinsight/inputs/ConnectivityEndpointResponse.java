@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.hdinsight.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ConnectivityEndpointResponse extends io.pulumi.resources.Invo
      * The location of the endpoint.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable String location;
 
     public Optional<String> getLocation() {
@@ -34,7 +34,7 @@ public final class ConnectivityEndpointResponse extends io.pulumi.resources.Invo
      * The name of the endpoint.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -45,7 +45,7 @@ public final class ConnectivityEndpointResponse extends io.pulumi.resources.Invo
      * The port to connect to.
      * 
      */
-    @InputImport(name="port")
+    @Import(name="port")
       private final @Nullable Integer port;
 
     public Optional<Integer> getPort() {
@@ -56,7 +56,7 @@ public final class ConnectivityEndpointResponse extends io.pulumi.resources.Invo
      * The private ip address of the endpoint.
      * 
      */
-    @InputImport(name="privateIPAddress")
+    @Import(name="privateIPAddress")
       private final @Nullable String privateIPAddress;
 
     public Optional<String> getPrivateIPAddress() {
@@ -67,7 +67,7 @@ public final class ConnectivityEndpointResponse extends io.pulumi.resources.Invo
      * The protocol of the endpoint.
      * 
      */
-    @InputImport(name="protocol")
+    @Import(name="protocol")
       private final @Nullable String protocol;
 
     public Optional<String> getProtocol() {

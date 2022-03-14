@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class VersionDetailsResponse extends io.pulumi.resources.InvokeArgs
      * Version expiry date.
      * 
      */
-    @InputImport(name="expiryDate")
+    @Import(name="expiryDate")
       private final @Nullable String expiryDate;
 
     public Optional<String> getExpiryDate() {
@@ -33,7 +33,7 @@ public final class VersionDetailsResponse extends io.pulumi.resources.InvokeArgs
      * A value indicating whether security update required.
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable String status;
 
     public Optional<String> getStatus() {
@@ -44,7 +44,7 @@ public final class VersionDetailsResponse extends io.pulumi.resources.InvokeArgs
      * The agent version.
      * 
      */
-    @InputImport(name="version")
+    @Import(name="version")
       private final @Nullable String version;
 
     public Optional<String> getVersion() {

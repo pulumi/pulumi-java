@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.chaos.inputs;
 
 import io.pulumi.azurenative.chaos.inputs.TargetReferenceResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class SelectorResponse extends io.pulumi.resources.InvokeArgs {
      * String of the selector ID.
      * 
      */
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final String id;
 
     public String getId() {
@@ -33,7 +33,7 @@ public final class SelectorResponse extends io.pulumi.resources.InvokeArgs {
      * List of Target references.
      * 
      */
-    @InputImport(name="targets", required=true)
+    @Import(name="targets", required=true)
       private final List<TargetReferenceResponse> targets;
 
     public List<TargetReferenceResponse> getTargets() {
@@ -44,7 +44,7 @@ public final class SelectorResponse extends io.pulumi.resources.InvokeArgs {
      * Enum of the selector type.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

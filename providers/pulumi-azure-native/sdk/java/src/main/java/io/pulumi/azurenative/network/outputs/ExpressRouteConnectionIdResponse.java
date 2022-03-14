@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ExpressRouteConnectionIdResponse {
     /**
      * The ID of the ExpressRouteConnection.
@@ -15,8 +15,8 @@ public final class ExpressRouteConnectionIdResponse {
      */
     private final String id;
 
-    @OutputCustomType.Constructor
-    private ExpressRouteConnectionIdResponse(@OutputCustomType.Parameter("id") String id) {
+    @CustomType.Constructor
+    private ExpressRouteConnectionIdResponse(@CustomType.Parameter("id") String id) {
         this.id = id;
     }
 

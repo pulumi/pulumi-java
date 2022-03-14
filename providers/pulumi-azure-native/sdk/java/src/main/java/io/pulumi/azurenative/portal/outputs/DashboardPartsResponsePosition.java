@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.portal.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -11,7 +11,7 @@ import java.util.Map;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DashboardPartsResponsePosition {
     /**
      * The dashboard's part column span.
@@ -39,13 +39,13 @@ public final class DashboardPartsResponsePosition {
      */
     private final Integer y;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DashboardPartsResponsePosition(
-        @OutputCustomType.Parameter("colSpan") Integer colSpan,
-        @OutputCustomType.Parameter("metadata") @Nullable Map<String,Object> metadata,
-        @OutputCustomType.Parameter("rowSpan") Integer rowSpan,
-        @OutputCustomType.Parameter("x") Integer x,
-        @OutputCustomType.Parameter("y") Integer y) {
+        @CustomType.Parameter("colSpan") Integer colSpan,
+        @CustomType.Parameter("metadata") @Nullable Map<String,Object> metadata,
+        @CustomType.Parameter("rowSpan") Integer rowSpan,
+        @CustomType.Parameter("x") Integer x,
+        @CustomType.Parameter("y") Integer y) {
         this.colSpan = colSpan;
         this.metadata = metadata;
         this.rowSpan = rowSpan;

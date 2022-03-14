@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.synapse.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class AutoPausePropertiesArgs extends io.pulumi.resources.ResourceA
      * Number of minutes of idle time before the Big Data pool is automatically paused.
      * 
      */
-    @InputImport(name="delayInMinutes")
+    @Import(name="delayInMinutes")
       private final @Nullable Output<Integer> delayInMinutes;
 
     public Output<Integer> getDelayInMinutes() {
@@ -34,7 +34,7 @@ public final class AutoPausePropertiesArgs extends io.pulumi.resources.ResourceA
      * Whether auto-pausing is enabled for the Big Data pool.
      * 
      */
-    @InputImport(name="enabled")
+    @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {

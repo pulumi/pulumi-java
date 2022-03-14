@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.compute.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +18,7 @@ public final class GetRestorePointCollectionArgs extends io.pulumi.resources.Inv
      * The expand expression to apply on the operation. If expand=restorePoints, server will return all contained restore points in the restorePointCollection.
      * 
      */
-    @InputImport(name="expand")
+    @Import(name="expand")
       private final @Nullable String expand;
 
     public Optional<String> getExpand() {
@@ -29,7 +29,7 @@ public final class GetRestorePointCollectionArgs extends io.pulumi.resources.Inv
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {
@@ -40,7 +40,7 @@ public final class GetRestorePointCollectionArgs extends io.pulumi.resources.Inv
      * The name of the restore point collection.
      * 
      */
-    @InputImport(name="restorePointCollectionName", required=true)
+    @Import(name="restorePointCollectionName", required=true)
       private final String restorePointCollectionName;
 
     public String getRestorePointCollectionName() {

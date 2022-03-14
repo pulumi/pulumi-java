@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.batch.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,14 +18,14 @@ public final class AzureBlobFileSystemConfigurationArgs extends io.pulumi.resour
      * This property is mutually exclusive with sasKey and one must be specified.
      * 
      */
-    @InputImport(name="accountKey")
+    @Import(name="accountKey")
       private final @Nullable Output<String> accountKey;
 
     public Output<String> getAccountKey() {
         return this.accountKey == null ? Output.empty() : this.accountKey;
     }
 
-    @InputImport(name="accountName", required=true)
+    @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
     public Output<String> getAccountName() {
@@ -36,14 +36,14 @@ public final class AzureBlobFileSystemConfigurationArgs extends io.pulumi.resour
      * These are 'net use' options in Windows and 'mount' options in Linux.
      * 
      */
-    @InputImport(name="blobfuseOptions")
+    @Import(name="blobfuseOptions")
       private final @Nullable Output<String> blobfuseOptions;
 
     public Output<String> getBlobfuseOptions() {
         return this.blobfuseOptions == null ? Output.empty() : this.blobfuseOptions;
     }
 
-    @InputImport(name="containerName", required=true)
+    @Import(name="containerName", required=true)
       private final Output<String> containerName;
 
     public Output<String> getContainerName() {
@@ -54,7 +54,7 @@ public final class AzureBlobFileSystemConfigurationArgs extends io.pulumi.resour
      * All file systems are mounted relative to the Batch mounts directory, accessible via the AZ_BATCH_NODE_MOUNTS_DIR environment variable.
      * 
      */
-    @InputImport(name="relativeMountPath", required=true)
+    @Import(name="relativeMountPath", required=true)
       private final Output<String> relativeMountPath;
 
     public Output<String> getRelativeMountPath() {
@@ -65,7 +65,7 @@ public final class AzureBlobFileSystemConfigurationArgs extends io.pulumi.resour
      * This property is mutually exclusive with accountKey and one must be specified.
      * 
      */
-    @InputImport(name="sasKey")
+    @Import(name="sasKey")
       private final @Nullable Output<String> sasKey;
 
     public Output<String> getSasKey() {

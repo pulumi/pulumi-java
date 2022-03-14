@@ -5,7 +5,7 @@ package io.pulumi.azurenative.web;
 
 import io.pulumi.azurenative.web.inputs.ConnStringValueTypePairArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class WebAppConnectionStringsArgs extends io.pulumi.resources.Resou
      * Kind of resource.
      * 
      */
-    @InputImport(name="kind")
+    @Import(name="kind")
       private final @Nullable Output<String> kind;
 
     public Output<String> getKind() {
@@ -31,7 +31,7 @@ public final class WebAppConnectionStringsArgs extends io.pulumi.resources.Resou
      * Name of the app.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -42,7 +42,7 @@ public final class WebAppConnectionStringsArgs extends io.pulumi.resources.Resou
      * Connection strings.
      * 
      */
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable Output<Map<String,ConnStringValueTypePairArgs>> properties;
 
     public Output<Map<String,ConnStringValueTypePairArgs>> getProperties() {
@@ -53,7 +53,7 @@ public final class WebAppConnectionStringsArgs extends io.pulumi.resources.Resou
      * Name of the resource group to which the resource belongs.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {

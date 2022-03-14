@@ -15,7 +15,7 @@ import io.pulumi.azurenative.network.outputs.HubIPAddressesResponse;
 import io.pulumi.azurenative.network.outputs.SubResourceResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -43,7 +43,7 @@ public class AzureFirewall extends io.pulumi.resources.CustomResource {
      * The additional properties used to further config this azure firewall.
      * 
      */
-    @OutputExport(name="additionalProperties", type=Map.class, parameters={String.class, String.class})
+    @Export(name="additionalProperties", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> additionalProperties;
 
     /**
@@ -57,7 +57,7 @@ public class AzureFirewall extends io.pulumi.resources.CustomResource {
      * Collection of application rule collections used by Azure Firewall.
      * 
      */
-    @OutputExport(name="applicationRuleCollections", type=List.class, parameters={AzureFirewallApplicationRuleCollectionResponse.class})
+    @Export(name="applicationRuleCollections", type=List.class, parameters={AzureFirewallApplicationRuleCollectionResponse.class})
     private Output</* @Nullable */ List<AzureFirewallApplicationRuleCollectionResponse>> applicationRuleCollections;
 
     /**
@@ -71,7 +71,7 @@ public class AzureFirewall extends io.pulumi.resources.CustomResource {
      * A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -85,7 +85,7 @@ public class AzureFirewall extends io.pulumi.resources.CustomResource {
      * The firewallPolicy associated with this azure firewall.
      * 
      */
-    @OutputExport(name="firewallPolicy", type=SubResourceResponse.class, parameters={})
+    @Export(name="firewallPolicy", type=SubResourceResponse.class, parameters={})
     private Output</* @Nullable */ SubResourceResponse> firewallPolicy;
 
     /**
@@ -99,7 +99,7 @@ public class AzureFirewall extends io.pulumi.resources.CustomResource {
      * IP addresses associated with AzureFirewall.
      * 
      */
-    @OutputExport(name="hubIPAddresses", type=HubIPAddressesResponse.class, parameters={})
+    @Export(name="hubIPAddresses", type=HubIPAddressesResponse.class, parameters={})
     private Output</* @Nullable */ HubIPAddressesResponse> hubIPAddresses;
 
     /**
@@ -113,7 +113,7 @@ public class AzureFirewall extends io.pulumi.resources.CustomResource {
      * IP configuration of the Azure Firewall resource.
      * 
      */
-    @OutputExport(name="ipConfigurations", type=List.class, parameters={AzureFirewallIPConfigurationResponse.class})
+    @Export(name="ipConfigurations", type=List.class, parameters={AzureFirewallIPConfigurationResponse.class})
     private Output</* @Nullable */ List<AzureFirewallIPConfigurationResponse>> ipConfigurations;
 
     /**
@@ -127,7 +127,7 @@ public class AzureFirewall extends io.pulumi.resources.CustomResource {
      * IpGroups associated with AzureFirewall.
      * 
      */
-    @OutputExport(name="ipGroups", type=List.class, parameters={AzureFirewallIpGroupsResponse.class})
+    @Export(name="ipGroups", type=List.class, parameters={AzureFirewallIpGroupsResponse.class})
     private Output<List<AzureFirewallIpGroupsResponse>> ipGroups;
 
     /**
@@ -141,7 +141,7 @@ public class AzureFirewall extends io.pulumi.resources.CustomResource {
      * Resource location.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -155,7 +155,7 @@ public class AzureFirewall extends io.pulumi.resources.CustomResource {
      * IP configuration of the Azure Firewall used for management traffic.
      * 
      */
-    @OutputExport(name="managementIpConfiguration", type=AzureFirewallIPConfigurationResponse.class, parameters={})
+    @Export(name="managementIpConfiguration", type=AzureFirewallIPConfigurationResponse.class, parameters={})
     private Output</* @Nullable */ AzureFirewallIPConfigurationResponse> managementIpConfiguration;
 
     /**
@@ -169,7 +169,7 @@ public class AzureFirewall extends io.pulumi.resources.CustomResource {
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -183,7 +183,7 @@ public class AzureFirewall extends io.pulumi.resources.CustomResource {
      * Collection of NAT rule collections used by Azure Firewall.
      * 
      */
-    @OutputExport(name="natRuleCollections", type=List.class, parameters={AzureFirewallNatRuleCollectionResponse.class})
+    @Export(name="natRuleCollections", type=List.class, parameters={AzureFirewallNatRuleCollectionResponse.class})
     private Output</* @Nullable */ List<AzureFirewallNatRuleCollectionResponse>> natRuleCollections;
 
     /**
@@ -197,7 +197,7 @@ public class AzureFirewall extends io.pulumi.resources.CustomResource {
      * Collection of network rule collections used by Azure Firewall.
      * 
      */
-    @OutputExport(name="networkRuleCollections", type=List.class, parameters={AzureFirewallNetworkRuleCollectionResponse.class})
+    @Export(name="networkRuleCollections", type=List.class, parameters={AzureFirewallNetworkRuleCollectionResponse.class})
     private Output</* @Nullable */ List<AzureFirewallNetworkRuleCollectionResponse>> networkRuleCollections;
 
     /**
@@ -211,7 +211,7 @@ public class AzureFirewall extends io.pulumi.resources.CustomResource {
      * The provisioning state of the Azure firewall resource.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -225,7 +225,7 @@ public class AzureFirewall extends io.pulumi.resources.CustomResource {
      * The Azure Firewall Resource SKU.
      * 
      */
-    @OutputExport(name="sku", type=AzureFirewallSkuResponse.class, parameters={})
+    @Export(name="sku", type=AzureFirewallSkuResponse.class, parameters={})
     private Output</* @Nullable */ AzureFirewallSkuResponse> sku;
 
     /**
@@ -239,7 +239,7 @@ public class AzureFirewall extends io.pulumi.resources.CustomResource {
      * Resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -253,7 +253,7 @@ public class AzureFirewall extends io.pulumi.resources.CustomResource {
      * The operation mode for Threat Intelligence.
      * 
      */
-    @OutputExport(name="threatIntelMode", type=String.class, parameters={})
+    @Export(name="threatIntelMode", type=String.class, parameters={})
     private Output</* @Nullable */ String> threatIntelMode;
 
     /**
@@ -267,7 +267,7 @@ public class AzureFirewall extends io.pulumi.resources.CustomResource {
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -281,7 +281,7 @@ public class AzureFirewall extends io.pulumi.resources.CustomResource {
      * The virtualHub to which the firewall belongs.
      * 
      */
-    @OutputExport(name="virtualHub", type=SubResourceResponse.class, parameters={})
+    @Export(name="virtualHub", type=SubResourceResponse.class, parameters={})
     private Output</* @Nullable */ SubResourceResponse> virtualHub;
 
     /**
@@ -295,7 +295,7 @@ public class AzureFirewall extends io.pulumi.resources.CustomResource {
      * A list of availability zones denoting where the resource needs to come from.
      * 
      */
-    @OutputExport(name="zones", type=List.class, parameters={String.class})
+    @Export(name="zones", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> zones;
 
     /**

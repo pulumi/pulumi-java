@@ -10,7 +10,7 @@ import io.pulumi.azurenative.security.inputs.OnPremiseSqlResourceDetailsArgs;
 import io.pulumi.azurenative.security.inputs.SecurityAssessmentMetadataPropertiesArgs;
 import io.pulumi.azurenative.security.inputs.SecurityAssessmentPartnerDataArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -26,7 +26,7 @@ public final class AssessmentArgs extends io.pulumi.resources.ResourceArgs {
      * Additional data regarding the assessment
      * 
      */
-    @InputImport(name="additionalData")
+    @Import(name="additionalData")
       private final @Nullable Output<Map<String,String>> additionalData;
 
     public Output<Map<String,String>> getAdditionalData() {
@@ -37,7 +37,7 @@ public final class AssessmentArgs extends io.pulumi.resources.ResourceArgs {
      * The Assessment Key - Unique key for the assessment type
      * 
      */
-    @InputImport(name="assessmentName")
+    @Import(name="assessmentName")
       private final @Nullable Output<String> assessmentName;
 
     public Output<String> getAssessmentName() {
@@ -48,7 +48,7 @@ public final class AssessmentArgs extends io.pulumi.resources.ResourceArgs {
      * Describes properties of an assessment metadata.
      * 
      */
-    @InputImport(name="metadata")
+    @Import(name="metadata")
       private final @Nullable Output<SecurityAssessmentMetadataPropertiesArgs> metadata;
 
     public Output<SecurityAssessmentMetadataPropertiesArgs> getMetadata() {
@@ -59,7 +59,7 @@ public final class AssessmentArgs extends io.pulumi.resources.ResourceArgs {
      * Data regarding 3rd party partner integration
      * 
      */
-    @InputImport(name="partnersData")
+    @Import(name="partnersData")
       private final @Nullable Output<SecurityAssessmentPartnerDataArgs> partnersData;
 
     public Output<SecurityAssessmentPartnerDataArgs> getPartnersData() {
@@ -70,7 +70,7 @@ public final class AssessmentArgs extends io.pulumi.resources.ResourceArgs {
      * Details of the resource that was assessed
      * 
      */
-    @InputImport(name="resourceDetails", required=true)
+    @Import(name="resourceDetails", required=true)
       private final Output<Object> resourceDetails;
 
     public Output<Object> getResourceDetails() {
@@ -81,7 +81,7 @@ public final class AssessmentArgs extends io.pulumi.resources.ResourceArgs {
      * The identifier of the resource.
      * 
      */
-    @InputImport(name="resourceId", required=true)
+    @Import(name="resourceId", required=true)
       private final Output<String> resourceId;
 
     public Output<String> getResourceId() {
@@ -92,7 +92,7 @@ public final class AssessmentArgs extends io.pulumi.resources.ResourceArgs {
      * The result of the assessment
      * 
      */
-    @InputImport(name="status", required=true)
+    @Import(name="status", required=true)
       private final Output<AssessmentStatusArgs> status;
 
     public Output<AssessmentStatusArgs> getStatus() {

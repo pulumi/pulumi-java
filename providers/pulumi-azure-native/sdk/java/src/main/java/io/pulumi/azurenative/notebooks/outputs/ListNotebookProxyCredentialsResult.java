@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.notebooks.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ListNotebookProxyCredentialsResult {
     /**
      * Hostname for the Notebook Proxy resource
@@ -32,12 +32,12 @@ public final class ListNotebookProxyCredentialsResult {
      */
     private final @Nullable String secondaryAccessKey;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ListNotebookProxyCredentialsResult(
-        @OutputCustomType.Parameter("hostname") @Nullable String hostname,
-        @OutputCustomType.Parameter("primaryAccessKey") @Nullable String primaryAccessKey,
-        @OutputCustomType.Parameter("resourceId") @Nullable String resourceId,
-        @OutputCustomType.Parameter("secondaryAccessKey") @Nullable String secondaryAccessKey) {
+        @CustomType.Parameter("hostname") @Nullable String hostname,
+        @CustomType.Parameter("primaryAccessKey") @Nullable String primaryAccessKey,
+        @CustomType.Parameter("resourceId") @Nullable String resourceId,
+        @CustomType.Parameter("secondaryAccessKey") @Nullable String secondaryAccessKey) {
         this.hostname = hostname;
         this.primaryAccessKey = primaryAccessKey;
         this.resourceId = resourceId;

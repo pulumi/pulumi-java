@@ -5,7 +5,7 @@ package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.azurenative.web.inputs.ScaleRuleAuthArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -25,7 +25,7 @@ public final class HttpScaleRuleArgs extends io.pulumi.resources.ResourceArgs {
      * Authentication secrets for the custom scale rule.
      * 
      */
-    @InputImport(name="auth")
+    @Import(name="auth")
       private final @Nullable Output<List<ScaleRuleAuthArgs>> auth;
 
     public Output<List<ScaleRuleAuthArgs>> getAuth() {
@@ -36,7 +36,7 @@ public final class HttpScaleRuleArgs extends io.pulumi.resources.ResourceArgs {
      * Metadata properties to describe http scale rule.
      * 
      */
-    @InputImport(name="metadata")
+    @Import(name="metadata")
       private final @Nullable Output<Map<String,String>> metadata;
 
     public Output<Map<String,String>> getMetadata() {

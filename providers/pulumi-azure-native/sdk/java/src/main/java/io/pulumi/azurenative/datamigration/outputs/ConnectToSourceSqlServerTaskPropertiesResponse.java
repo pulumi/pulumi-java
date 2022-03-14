@@ -12,7 +12,7 @@ import io.pulumi.azurenative.datamigration.outputs.MigrateMISyncCompleteCommandP
 import io.pulumi.azurenative.datamigration.outputs.MigrateSyncCompleteCommandPropertiesResponse;
 import io.pulumi.azurenative.datamigration.outputs.ODataErrorResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +20,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ConnectToSourceSqlServerTaskPropertiesResponse {
     /**
      * Array of command properties.
@@ -54,14 +54,14 @@ public final class ConnectToSourceSqlServerTaskPropertiesResponse {
      */
     private final String taskType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ConnectToSourceSqlServerTaskPropertiesResponse(
-        @OutputCustomType.Parameter("commands") List<Either<MigrateMISyncCompleteCommandPropertiesResponse,MigrateSyncCompleteCommandPropertiesResponse>> commands,
-        @OutputCustomType.Parameter("errors") List<ODataErrorResponse> errors,
-        @OutputCustomType.Parameter("input") @Nullable ConnectToSourceSqlServerTaskInputResponse input,
-        @OutputCustomType.Parameter("output") List<Object> output,
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("taskType") String taskType) {
+        @CustomType.Parameter("commands") List<Either<MigrateMISyncCompleteCommandPropertiesResponse,MigrateSyncCompleteCommandPropertiesResponse>> commands,
+        @CustomType.Parameter("errors") List<ODataErrorResponse> errors,
+        @CustomType.Parameter("input") @Nullable ConnectToSourceSqlServerTaskInputResponse input,
+        @CustomType.Parameter("output") List<Object> output,
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("taskType") String taskType) {
         this.commands = commands;
         this.errors = errors;
         this.input = input;

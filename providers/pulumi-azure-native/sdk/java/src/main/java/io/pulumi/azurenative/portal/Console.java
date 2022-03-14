@@ -8,7 +8,7 @@ import io.pulumi.azurenative.portal.ConsoleArgs;
 import io.pulumi.azurenative.portal.outputs.ConsolePropertiesResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -34,7 +34,7 @@ public class Console extends io.pulumi.resources.CustomResource {
      * Cloud shell console properties.
      * 
      */
-    @OutputExport(name="properties", type=ConsolePropertiesResponse.class, parameters={})
+    @Export(name="properties", type=ConsolePropertiesResponse.class, parameters={})
     private Output<ConsolePropertiesResponse> properties;
 
     /**

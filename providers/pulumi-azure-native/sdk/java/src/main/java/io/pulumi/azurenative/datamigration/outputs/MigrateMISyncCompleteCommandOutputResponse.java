@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.datamigration.outputs;
 
 import io.pulumi.azurenative.datamigration.outputs.ReportableExceptionResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class MigrateMISyncCompleteCommandOutputResponse {
     /**
      * List of errors that happened during the command execution
@@ -17,8 +17,8 @@ public final class MigrateMISyncCompleteCommandOutputResponse {
      */
     private final @Nullable List<ReportableExceptionResponse> errors;
 
-    @OutputCustomType.Constructor
-    private MigrateMISyncCompleteCommandOutputResponse(@OutputCustomType.Parameter("errors") @Nullable List<ReportableExceptionResponse> errors) {
+    @CustomType.Constructor
+    private MigrateMISyncCompleteCommandOutputResponse(@CustomType.Parameter("errors") @Nullable List<ReportableExceptionResponse> errors) {
         this.errors = errors;
     }
 

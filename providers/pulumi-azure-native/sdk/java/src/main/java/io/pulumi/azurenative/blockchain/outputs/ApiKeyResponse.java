@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.blockchain.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ApiKeyResponse {
     /**
      * Gets or sets the API key name.
@@ -22,10 +22,10 @@ public final class ApiKeyResponse {
      */
     private final @Nullable String value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ApiKeyResponse(
-        @OutputCustomType.Parameter("keyName") @Nullable String keyName,
-        @OutputCustomType.Parameter("value") @Nullable String value) {
+        @CustomType.Parameter("keyName") @Nullable String keyName,
+        @CustomType.Parameter("value") @Nullable String value) {
         this.keyName = keyName;
         this.value = value;
     }

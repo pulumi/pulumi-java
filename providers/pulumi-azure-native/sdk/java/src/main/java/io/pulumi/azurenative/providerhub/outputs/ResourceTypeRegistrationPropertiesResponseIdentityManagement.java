@@ -3,21 +3,21 @@
 
 package io.pulumi.azurenative.providerhub.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ResourceTypeRegistrationPropertiesResponseIdentityManagement {
     private final @Nullable String applicationId;
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ResourceTypeRegistrationPropertiesResponseIdentityManagement(
-        @OutputCustomType.Parameter("applicationId") @Nullable String applicationId,
-        @OutputCustomType.Parameter("type") @Nullable String type) {
+        @CustomType.Parameter("applicationId") @Nullable String applicationId,
+        @CustomType.Parameter("type") @Nullable String type) {
         this.applicationId = applicationId;
         this.type = type;
     }

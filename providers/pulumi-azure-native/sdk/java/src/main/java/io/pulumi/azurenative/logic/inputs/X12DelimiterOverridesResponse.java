@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.logic.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class X12DelimiterOverridesResponse extends io.pulumi.resources.Inv
      * The component separator.
      * 
      */
-    @InputImport(name="componentSeparator", required=true)
+    @Import(name="componentSeparator", required=true)
       private final Integer componentSeparator;
 
     public Integer getComponentSeparator() {
@@ -35,7 +35,7 @@ public final class X12DelimiterOverridesResponse extends io.pulumi.resources.Inv
      * The data element separator.
      * 
      */
-    @InputImport(name="dataElementSeparator", required=true)
+    @Import(name="dataElementSeparator", required=true)
       private final Integer dataElementSeparator;
 
     public Integer getDataElementSeparator() {
@@ -46,7 +46,7 @@ public final class X12DelimiterOverridesResponse extends io.pulumi.resources.Inv
      * The message id.
      * 
      */
-    @InputImport(name="messageId")
+    @Import(name="messageId")
       private final @Nullable String messageId;
 
     public Optional<String> getMessageId() {
@@ -57,7 +57,7 @@ public final class X12DelimiterOverridesResponse extends io.pulumi.resources.Inv
      * The protocol version.
      * 
      */
-    @InputImport(name="protocolVersion")
+    @Import(name="protocolVersion")
       private final @Nullable String protocolVersion;
 
     public Optional<String> getProtocolVersion() {
@@ -68,7 +68,7 @@ public final class X12DelimiterOverridesResponse extends io.pulumi.resources.Inv
      * The replacement character.
      * 
      */
-    @InputImport(name="replaceCharacter", required=true)
+    @Import(name="replaceCharacter", required=true)
       private final Integer replaceCharacter;
 
     public Integer getReplaceCharacter() {
@@ -79,7 +79,7 @@ public final class X12DelimiterOverridesResponse extends io.pulumi.resources.Inv
      * The value indicating whether to replace separators in payload.
      * 
      */
-    @InputImport(name="replaceSeparatorsInPayload", required=true)
+    @Import(name="replaceSeparatorsInPayload", required=true)
       private final Boolean replaceSeparatorsInPayload;
 
     public Boolean getReplaceSeparatorsInPayload() {
@@ -90,7 +90,7 @@ public final class X12DelimiterOverridesResponse extends io.pulumi.resources.Inv
      * The segment terminator.
      * 
      */
-    @InputImport(name="segmentTerminator", required=true)
+    @Import(name="segmentTerminator", required=true)
       private final Integer segmentTerminator;
 
     public Integer getSegmentTerminator() {
@@ -101,7 +101,7 @@ public final class X12DelimiterOverridesResponse extends io.pulumi.resources.Inv
      * The segment terminator suffix.
      * 
      */
-    @InputImport(name="segmentTerminatorSuffix", required=true)
+    @Import(name="segmentTerminatorSuffix", required=true)
       private final String segmentTerminatorSuffix;
 
     public String getSegmentTerminatorSuffix() {
@@ -112,7 +112,7 @@ public final class X12DelimiterOverridesResponse extends io.pulumi.resources.Inv
      * The target namespace on which this delimiter settings has to be applied.
      * 
      */
-    @InputImport(name="targetNamespace")
+    @Import(name="targetNamespace")
       private final @Nullable String targetNamespace;
 
     public Optional<String> getTargetNamespace() {

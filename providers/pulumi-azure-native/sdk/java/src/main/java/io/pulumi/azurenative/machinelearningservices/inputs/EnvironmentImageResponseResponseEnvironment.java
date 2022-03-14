@@ -7,7 +7,7 @@ import io.pulumi.azurenative.machinelearningservices.inputs.ModelEnvironmentDefi
 import io.pulumi.azurenative.machinelearningservices.inputs.ModelEnvironmentDefinitionResponseResponsePython;
 import io.pulumi.azurenative.machinelearningservices.inputs.ModelEnvironmentDefinitionResponseResponseR;
 import io.pulumi.azurenative.machinelearningservices.inputs.ModelEnvironmentDefinitionResponseResponseSpark;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -27,7 +27,7 @@ public final class EnvironmentImageResponseResponseEnvironment extends io.pulumi
      * The definition of a Docker container.
      * 
      */
-    @InputImport(name="docker")
+    @Import(name="docker")
       private final @Nullable ModelEnvironmentDefinitionResponseResponseDocker docker;
 
     public Optional<ModelEnvironmentDefinitionResponseResponseDocker> getDocker() {
@@ -38,7 +38,7 @@ public final class EnvironmentImageResponseResponseEnvironment extends io.pulumi
      * Definition of environment variables to be defined in the environment.
      * 
      */
-    @InputImport(name="environmentVariables")
+    @Import(name="environmentVariables")
       private final @Nullable Map<String,String> environmentVariables;
 
     public Map<String,String> getEnvironmentVariables() {
@@ -49,7 +49,7 @@ public final class EnvironmentImageResponseResponseEnvironment extends io.pulumi
      * The inferencing stack version added to the image. To avoid adding an inferencing stack, do not set this value. Valid values: "latest".
      * 
      */
-    @InputImport(name="inferencingStackVersion")
+    @Import(name="inferencingStackVersion")
       private final @Nullable String inferencingStackVersion;
 
     public Optional<String> getInferencingStackVersion() {
@@ -60,7 +60,7 @@ public final class EnvironmentImageResponseResponseEnvironment extends io.pulumi
      * The name of the environment.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -71,7 +71,7 @@ public final class EnvironmentImageResponseResponseEnvironment extends io.pulumi
      * Settings for a Python environment.
      * 
      */
-    @InputImport(name="python")
+    @Import(name="python")
       private final @Nullable ModelEnvironmentDefinitionResponseResponsePython python;
 
     public Optional<ModelEnvironmentDefinitionResponseResponsePython> getPython() {
@@ -82,7 +82,7 @@ public final class EnvironmentImageResponseResponseEnvironment extends io.pulumi
      * Settings for a R environment.
      * 
      */
-    @InputImport(name="r")
+    @Import(name="r")
       private final @Nullable ModelEnvironmentDefinitionResponseResponseR r;
 
     public Optional<ModelEnvironmentDefinitionResponseResponseR> getR() {
@@ -93,7 +93,7 @@ public final class EnvironmentImageResponseResponseEnvironment extends io.pulumi
      * The configuration for a Spark environment.
      * 
      */
-    @InputImport(name="spark")
+    @Import(name="spark")
       private final @Nullable ModelEnvironmentDefinitionResponseResponseSpark spark;
 
     public Optional<ModelEnvironmentDefinitionResponseResponseSpark> getSpark() {
@@ -104,7 +104,7 @@ public final class EnvironmentImageResponseResponseEnvironment extends io.pulumi
      * The environment version.
      * 
      */
-    @InputImport(name="version")
+    @Import(name="version")
       private final @Nullable String version;
 
     public Optional<String> getVersion() {

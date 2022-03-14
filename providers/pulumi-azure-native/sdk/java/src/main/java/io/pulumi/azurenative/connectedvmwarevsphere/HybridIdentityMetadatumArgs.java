@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.connectedvmwarevsphere;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class HybridIdentityMetadatumArgs extends io.pulumi.resources.Resou
      * Name of the hybridIdentityMetadata.
      * 
      */
-    @InputImport(name="metadataName")
+    @Import(name="metadataName")
       private final @Nullable Output<String> metadataName;
 
     public Output<String> getMetadataName() {
@@ -29,7 +29,7 @@ public final class HybridIdentityMetadatumArgs extends io.pulumi.resources.Resou
      * Gets or sets the Public Key.
      * 
      */
-    @InputImport(name="publicKey")
+    @Import(name="publicKey")
       private final @Nullable Output<String> publicKey;
 
     public Output<String> getPublicKey() {
@@ -40,7 +40,7 @@ public final class HybridIdentityMetadatumArgs extends io.pulumi.resources.Resou
      * The Resource Group Name.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -51,7 +51,7 @@ public final class HybridIdentityMetadatumArgs extends io.pulumi.resources.Resou
      * Name of the vm.
      * 
      */
-    @InputImport(name="virtualMachineName", required=true)
+    @Import(name="virtualMachineName", required=true)
       private final Output<String> virtualMachineName;
 
     public Output<String> getVirtualMachineName() {
@@ -62,7 +62,7 @@ public final class HybridIdentityMetadatumArgs extends io.pulumi.resources.Resou
      * Gets or sets the Vm Id.
      * 
      */
-    @InputImport(name="vmId")
+    @Import(name="vmId")
       private final @Nullable Output<String> vmId;
 
     public Output<String> getVmId() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.insights.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class RuleWebhookActionResponse extends io.pulumi.resources.InvokeA
      * Expected value is 'Microsoft.Azure.Management.Insights.Models.RuleWebhookAction'.
      * 
      */
-    @InputImport(name="odataType", required=true)
+    @Import(name="odataType", required=true)
       private final String odataType;
 
     public String getOdataType() {
@@ -35,7 +35,7 @@ public final class RuleWebhookActionResponse extends io.pulumi.resources.InvokeA
      * the dictionary of custom properties to include with the post operation. These data are appended to the webhook payload.
      * 
      */
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable Map<String,String> properties;
 
     public Map<String,String> getProperties() {
@@ -46,7 +46,7 @@ public final class RuleWebhookActionResponse extends io.pulumi.resources.InvokeA
      * the service uri to Post the notification when the alert activates or resolves.
      * 
      */
-    @InputImport(name="serviceUri")
+    @Import(name="serviceUri")
       private final @Nullable String serviceUri;
 
     public Optional<String> getServiceUri() {

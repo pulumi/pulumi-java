@@ -3,12 +3,12 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class TunnelConnectionHealthResponse {
     /**
      * Virtual Network Gateway connection status.
@@ -36,13 +36,13 @@ public final class TunnelConnectionHealthResponse {
      */
     private final String tunnel;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TunnelConnectionHealthResponse(
-        @OutputCustomType.Parameter("connectionStatus") String connectionStatus,
-        @OutputCustomType.Parameter("egressBytesTransferred") Double egressBytesTransferred,
-        @OutputCustomType.Parameter("ingressBytesTransferred") Double ingressBytesTransferred,
-        @OutputCustomType.Parameter("lastConnectionEstablishedUtcTime") String lastConnectionEstablishedUtcTime,
-        @OutputCustomType.Parameter("tunnel") String tunnel) {
+        @CustomType.Parameter("connectionStatus") String connectionStatus,
+        @CustomType.Parameter("egressBytesTransferred") Double egressBytesTransferred,
+        @CustomType.Parameter("ingressBytesTransferred") Double ingressBytesTransferred,
+        @CustomType.Parameter("lastConnectionEstablishedUtcTime") String lastConnectionEstablishedUtcTime,
+        @CustomType.Parameter("tunnel") String tunnel) {
         this.connectionStatus = connectionStatus;
         this.egressBytesTransferred = egressBytesTransferred;
         this.ingressBytesTransferred = ingressBytesTransferred;

@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.logic.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class IntegrationServiceEnvironmentAccessEndpointResponse {
     /**
      * The access endpoint type.
@@ -17,8 +17,8 @@ public final class IntegrationServiceEnvironmentAccessEndpointResponse {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor
-    private IntegrationServiceEnvironmentAccessEndpointResponse(@OutputCustomType.Parameter("type") @Nullable String type) {
+    @CustomType.Constructor
+    private IntegrationServiceEnvironmentAccessEndpointResponse(@CustomType.Parameter("type") @Nullable String type) {
         this.type = type;
     }
 

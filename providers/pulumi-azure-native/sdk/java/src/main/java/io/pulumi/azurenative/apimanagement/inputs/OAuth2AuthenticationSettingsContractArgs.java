@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.apimanagement.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class OAuth2AuthenticationSettingsContractArgs extends io.pulumi.re
      * OAuth authorization server identifier.
      * 
      */
-    @InputImport(name="authorizationServerId")
+    @Import(name="authorizationServerId")
       private final @Nullable Output<String> authorizationServerId;
 
     public Output<String> getAuthorizationServerId() {
@@ -33,7 +33,7 @@ public final class OAuth2AuthenticationSettingsContractArgs extends io.pulumi.re
      * operations scope.
      * 
      */
-    @InputImport(name="scope")
+    @Import(name="scope")
       private final @Nullable Output<String> scope;
 
     public Output<String> getScope() {

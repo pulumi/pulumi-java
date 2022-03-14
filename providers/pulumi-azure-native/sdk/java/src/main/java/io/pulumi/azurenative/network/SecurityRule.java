@@ -8,7 +8,7 @@ import io.pulumi.azurenative.network.SecurityRuleArgs;
 import io.pulumi.azurenative.network.outputs.ApplicationSecurityGroupResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -36,7 +36,7 @@ public class SecurityRule extends io.pulumi.resources.CustomResource {
      * The network traffic is allowed or denied.
      * 
      */
-    @OutputExport(name="access", type=String.class, parameters={})
+    @Export(name="access", type=String.class, parameters={})
     private Output<String> access;
 
     /**
@@ -50,7 +50,7 @@ public class SecurityRule extends io.pulumi.resources.CustomResource {
      * A description for this rule. Restricted to 140 chars.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -64,7 +64,7 @@ public class SecurityRule extends io.pulumi.resources.CustomResource {
      * The destination address prefix. CIDR or destination IP range. Asterisk '*' can also be used to match all source IPs. Default tags such as 'VirtualNetwork', 'AzureLoadBalancer' and 'Internet' can also be used.
      * 
      */
-    @OutputExport(name="destinationAddressPrefix", type=String.class, parameters={})
+    @Export(name="destinationAddressPrefix", type=String.class, parameters={})
     private Output</* @Nullable */ String> destinationAddressPrefix;
 
     /**
@@ -78,7 +78,7 @@ public class SecurityRule extends io.pulumi.resources.CustomResource {
      * The destination address prefixes. CIDR or destination IP ranges.
      * 
      */
-    @OutputExport(name="destinationAddressPrefixes", type=List.class, parameters={String.class})
+    @Export(name="destinationAddressPrefixes", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> destinationAddressPrefixes;
 
     /**
@@ -92,7 +92,7 @@ public class SecurityRule extends io.pulumi.resources.CustomResource {
      * The application security group specified as destination.
      * 
      */
-    @OutputExport(name="destinationApplicationSecurityGroups", type=List.class, parameters={ApplicationSecurityGroupResponse.class})
+    @Export(name="destinationApplicationSecurityGroups", type=List.class, parameters={ApplicationSecurityGroupResponse.class})
     private Output</* @Nullable */ List<ApplicationSecurityGroupResponse>> destinationApplicationSecurityGroups;
 
     /**
@@ -106,7 +106,7 @@ public class SecurityRule extends io.pulumi.resources.CustomResource {
      * The destination port or range. Integer or range between 0 and 65535. Asterisk '*' can also be used to match all ports.
      * 
      */
-    @OutputExport(name="destinationPortRange", type=String.class, parameters={})
+    @Export(name="destinationPortRange", type=String.class, parameters={})
     private Output</* @Nullable */ String> destinationPortRange;
 
     /**
@@ -120,7 +120,7 @@ public class SecurityRule extends io.pulumi.resources.CustomResource {
      * The destination port ranges.
      * 
      */
-    @OutputExport(name="destinationPortRanges", type=List.class, parameters={String.class})
+    @Export(name="destinationPortRanges", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> destinationPortRanges;
 
     /**
@@ -134,7 +134,7 @@ public class SecurityRule extends io.pulumi.resources.CustomResource {
      * The direction of the rule. The direction specifies if rule will be evaluated on incoming or outgoing traffic.
      * 
      */
-    @OutputExport(name="direction", type=String.class, parameters={})
+    @Export(name="direction", type=String.class, parameters={})
     private Output<String> direction;
 
     /**
@@ -148,7 +148,7 @@ public class SecurityRule extends io.pulumi.resources.CustomResource {
      * A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -162,7 +162,7 @@ public class SecurityRule extends io.pulumi.resources.CustomResource {
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
@@ -176,7 +176,7 @@ public class SecurityRule extends io.pulumi.resources.CustomResource {
      * The priority of the rule. The value can be between 100 and 4096. The priority number must be unique for each rule in the collection. The lower the priority number, the higher the priority of the rule.
      * 
      */
-    @OutputExport(name="priority", type=Integer.class, parameters={})
+    @Export(name="priority", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> priority;
 
     /**
@@ -190,7 +190,7 @@ public class SecurityRule extends io.pulumi.resources.CustomResource {
      * Network protocol this rule applies to.
      * 
      */
-    @OutputExport(name="protocol", type=String.class, parameters={})
+    @Export(name="protocol", type=String.class, parameters={})
     private Output<String> protocol;
 
     /**
@@ -204,7 +204,7 @@ public class SecurityRule extends io.pulumi.resources.CustomResource {
      * The provisioning state of the security rule resource.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -218,7 +218,7 @@ public class SecurityRule extends io.pulumi.resources.CustomResource {
      * The CIDR or source IP range. Asterisk '*' can also be used to match all source IPs. Default tags such as 'VirtualNetwork', 'AzureLoadBalancer' and 'Internet' can also be used. If this is an ingress rule, specifies where network traffic originates from.
      * 
      */
-    @OutputExport(name="sourceAddressPrefix", type=String.class, parameters={})
+    @Export(name="sourceAddressPrefix", type=String.class, parameters={})
     private Output</* @Nullable */ String> sourceAddressPrefix;
 
     /**
@@ -232,7 +232,7 @@ public class SecurityRule extends io.pulumi.resources.CustomResource {
      * The CIDR or source IP ranges.
      * 
      */
-    @OutputExport(name="sourceAddressPrefixes", type=List.class, parameters={String.class})
+    @Export(name="sourceAddressPrefixes", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> sourceAddressPrefixes;
 
     /**
@@ -246,7 +246,7 @@ public class SecurityRule extends io.pulumi.resources.CustomResource {
      * The application security group specified as source.
      * 
      */
-    @OutputExport(name="sourceApplicationSecurityGroups", type=List.class, parameters={ApplicationSecurityGroupResponse.class})
+    @Export(name="sourceApplicationSecurityGroups", type=List.class, parameters={ApplicationSecurityGroupResponse.class})
     private Output</* @Nullable */ List<ApplicationSecurityGroupResponse>> sourceApplicationSecurityGroups;
 
     /**
@@ -260,7 +260,7 @@ public class SecurityRule extends io.pulumi.resources.CustomResource {
      * The source port or range. Integer or range between 0 and 65535. Asterisk '*' can also be used to match all ports.
      * 
      */
-    @OutputExport(name="sourcePortRange", type=String.class, parameters={})
+    @Export(name="sourcePortRange", type=String.class, parameters={})
     private Output</* @Nullable */ String> sourcePortRange;
 
     /**
@@ -274,7 +274,7 @@ public class SecurityRule extends io.pulumi.resources.CustomResource {
      * The source port ranges.
      * 
      */
-    @OutputExport(name="sourcePortRanges", type=List.class, parameters={String.class})
+    @Export(name="sourcePortRanges", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> sourcePortRanges;
 
     /**
@@ -288,7 +288,7 @@ public class SecurityRule extends io.pulumi.resources.CustomResource {
      * The type of the resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output</* @Nullable */ String> type;
 
     /**

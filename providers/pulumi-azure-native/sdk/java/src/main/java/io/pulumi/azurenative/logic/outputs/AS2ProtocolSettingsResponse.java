@@ -10,10 +10,10 @@ import io.pulumi.azurenative.logic.outputs.AS2MdnSettingsResponse;
 import io.pulumi.azurenative.logic.outputs.AS2MessageConnectionSettingsResponse;
 import io.pulumi.azurenative.logic.outputs.AS2SecuritySettingsResponse;
 import io.pulumi.azurenative.logic.outputs.AS2ValidationSettingsResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AS2ProtocolSettingsResponse {
     /**
      * The acknowledgement connection settings.
@@ -51,15 +51,15 @@ public final class AS2ProtocolSettingsResponse {
      */
     private final AS2ValidationSettingsResponse validationSettings;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AS2ProtocolSettingsResponse(
-        @OutputCustomType.Parameter("acknowledgementConnectionSettings") AS2AcknowledgementConnectionSettingsResponse acknowledgementConnectionSettings,
-        @OutputCustomType.Parameter("envelopeSettings") AS2EnvelopeSettingsResponse envelopeSettings,
-        @OutputCustomType.Parameter("errorSettings") AS2ErrorSettingsResponse errorSettings,
-        @OutputCustomType.Parameter("mdnSettings") AS2MdnSettingsResponse mdnSettings,
-        @OutputCustomType.Parameter("messageConnectionSettings") AS2MessageConnectionSettingsResponse messageConnectionSettings,
-        @OutputCustomType.Parameter("securitySettings") AS2SecuritySettingsResponse securitySettings,
-        @OutputCustomType.Parameter("validationSettings") AS2ValidationSettingsResponse validationSettings) {
+        @CustomType.Parameter("acknowledgementConnectionSettings") AS2AcknowledgementConnectionSettingsResponse acknowledgementConnectionSettings,
+        @CustomType.Parameter("envelopeSettings") AS2EnvelopeSettingsResponse envelopeSettings,
+        @CustomType.Parameter("errorSettings") AS2ErrorSettingsResponse errorSettings,
+        @CustomType.Parameter("mdnSettings") AS2MdnSettingsResponse mdnSettings,
+        @CustomType.Parameter("messageConnectionSettings") AS2MessageConnectionSettingsResponse messageConnectionSettings,
+        @CustomType.Parameter("securitySettings") AS2SecuritySettingsResponse securitySettings,
+        @CustomType.Parameter("validationSettings") AS2ValidationSettingsResponse validationSettings) {
         this.acknowledgementConnectionSettings = acknowledgementConnectionSettings;
         this.envelopeSettings = envelopeSettings;
         this.errorSettings = errorSettings;

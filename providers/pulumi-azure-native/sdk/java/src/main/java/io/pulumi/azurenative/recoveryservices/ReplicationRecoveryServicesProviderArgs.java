@@ -5,7 +5,7 @@ package io.pulumi.azurenative.recoveryservices;
 
 import io.pulumi.azurenative.recoveryservices.inputs.AddRecoveryServicesProviderInputPropertiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class ReplicationRecoveryServicesProviderArgs extends io.pulumi.res
      * Fabric name.
      * 
      */
-    @InputImport(name="fabricName", required=true)
+    @Import(name="fabricName", required=true)
       private final Output<String> fabricName;
 
     public Output<String> getFabricName() {
@@ -30,7 +30,7 @@ public final class ReplicationRecoveryServicesProviderArgs extends io.pulumi.res
      * The properties of an add provider request.
      * 
      */
-    @InputImport(name="properties", required=true)
+    @Import(name="properties", required=true)
       private final Output<AddRecoveryServicesProviderInputPropertiesArgs> properties;
 
     public Output<AddRecoveryServicesProviderInputPropertiesArgs> getProperties() {
@@ -41,7 +41,7 @@ public final class ReplicationRecoveryServicesProviderArgs extends io.pulumi.res
      * Recovery services provider name.
      * 
      */
-    @InputImport(name="providerName")
+    @Import(name="providerName")
       private final @Nullable Output<String> providerName;
 
     public Output<String> getProviderName() {
@@ -52,7 +52,7 @@ public final class ReplicationRecoveryServicesProviderArgs extends io.pulumi.res
      * The name of the resource group where the recovery services vault is present.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -63,7 +63,7 @@ public final class ReplicationRecoveryServicesProviderArgs extends io.pulumi.res
      * The name of the recovery services vault.
      * 
      */
-    @InputImport(name="resourceName", required=true)
+    @Import(name="resourceName", required=true)
       private final Output<String> resourceName;
 
     public Output<String> getPropResourceName() {

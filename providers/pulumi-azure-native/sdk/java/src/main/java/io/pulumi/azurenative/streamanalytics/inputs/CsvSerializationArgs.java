@@ -6,7 +6,7 @@ package io.pulumi.azurenative.streamanalytics.inputs;
 import io.pulumi.azurenative.streamanalytics.enums.Encoding;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class CsvSerializationArgs extends io.pulumi.resources.ResourceArgs
      * Specifies the encoding of the incoming data in the case of input and the encoding of outgoing data in the case of output. Required on PUT (CreateOrReplace) requests.
      * 
      */
-    @InputImport(name="encoding")
+    @Import(name="encoding")
       private final @Nullable Output<Either<String,Encoding>> encoding;
 
     public Output<Either<String,Encoding>> getEncoding() {
@@ -35,7 +35,7 @@ public final class CsvSerializationArgs extends io.pulumi.resources.ResourceArgs
      * Specifies the delimiter that will be used to separate comma-separated value (CSV) records. See https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-input or https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-output for a list of supported values. Required on PUT (CreateOrReplace) requests.
      * 
      */
-    @InputImport(name="fieldDelimiter")
+    @Import(name="fieldDelimiter")
       private final @Nullable Output<String> fieldDelimiter;
 
     public Output<String> getFieldDelimiter() {
@@ -47,7 +47,7 @@ public final class CsvSerializationArgs extends io.pulumi.resources.ResourceArgs
      * Expected value is 'Csv'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {

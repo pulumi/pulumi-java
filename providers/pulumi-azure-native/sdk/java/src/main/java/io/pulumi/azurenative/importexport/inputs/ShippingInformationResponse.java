@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.importexport.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class ShippingInformationResponse extends io.pulumi.resources.Invok
      * Additional shipping information for customer, specific to datacenter to which customer should send their disks.
      * 
      */
-    @InputImport(name="additionalInformation", required=true)
+    @Import(name="additionalInformation", required=true)
       private final String additionalInformation;
 
     public String getAdditionalInformation() {
@@ -33,7 +33,7 @@ public final class ShippingInformationResponse extends io.pulumi.resources.Invok
      * The city name to use when returning the drives.
      * 
      */
-    @InputImport(name="city")
+    @Import(name="city")
       private final @Nullable String city;
 
     public Optional<String> getCity() {
@@ -44,7 +44,7 @@ public final class ShippingInformationResponse extends io.pulumi.resources.Invok
      * The country or region to use when returning the drives.
      * 
      */
-    @InputImport(name="countryOrRegion")
+    @Import(name="countryOrRegion")
       private final @Nullable String countryOrRegion;
 
     public Optional<String> getCountryOrRegion() {
@@ -55,7 +55,7 @@ public final class ShippingInformationResponse extends io.pulumi.resources.Invok
      * Phone number of the recipient of the returned drives.
      * 
      */
-    @InputImport(name="phone")
+    @Import(name="phone")
       private final @Nullable String phone;
 
     public Optional<String> getPhone() {
@@ -66,7 +66,7 @@ public final class ShippingInformationResponse extends io.pulumi.resources.Invok
      * The postal code to use when returning the drives.
      * 
      */
-    @InputImport(name="postalCode")
+    @Import(name="postalCode")
       private final @Nullable String postalCode;
 
     public Optional<String> getPostalCode() {
@@ -77,7 +77,7 @@ public final class ShippingInformationResponse extends io.pulumi.resources.Invok
      * The name of the recipient who will receive the hard drives when they are returned.
      * 
      */
-    @InputImport(name="recipientName")
+    @Import(name="recipientName")
       private final @Nullable String recipientName;
 
     public Optional<String> getRecipientName() {
@@ -88,7 +88,7 @@ public final class ShippingInformationResponse extends io.pulumi.resources.Invok
      * The state or province to use when returning the drives.
      * 
      */
-    @InputImport(name="stateOrProvince")
+    @Import(name="stateOrProvince")
       private final @Nullable String stateOrProvince;
 
     public Optional<String> getStateOrProvince() {
@@ -99,7 +99,7 @@ public final class ShippingInformationResponse extends io.pulumi.resources.Invok
      * The first line of the street address to use when returning the drives.
      * 
      */
-    @InputImport(name="streetAddress1")
+    @Import(name="streetAddress1")
       private final @Nullable String streetAddress1;
 
     public Optional<String> getStreetAddress1() {
@@ -110,7 +110,7 @@ public final class ShippingInformationResponse extends io.pulumi.resources.Invok
      * The second line of the street address to use when returning the drives.
      * 
      */
-    @InputImport(name="streetAddress2")
+    @Import(name="streetAddress2")
       private final @Nullable String streetAddress2;
 
     public Optional<String> getStreetAddress2() {

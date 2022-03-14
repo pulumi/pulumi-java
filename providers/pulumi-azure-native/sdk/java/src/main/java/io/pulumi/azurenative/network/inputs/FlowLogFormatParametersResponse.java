@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class FlowLogFormatParametersResponse extends io.pulumi.resources.I
      * The file type of flow log.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable String type;
 
     public Optional<String> getType() {
@@ -34,7 +34,7 @@ public final class FlowLogFormatParametersResponse extends io.pulumi.resources.I
      * The version (revision) of the flow log.
      * 
      */
-    @InputImport(name="version")
+    @Import(name="version")
       private final @Nullable Integer version;
 
     public Optional<Integer> getVersion() {

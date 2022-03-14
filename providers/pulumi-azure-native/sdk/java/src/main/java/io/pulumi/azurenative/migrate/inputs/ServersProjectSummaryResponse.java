@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.migrate.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -24,7 +24,7 @@ public final class ServersProjectSummaryResponse extends io.pulumi.resources.Inv
      * Gets or sets the count of entities assessed.
      * 
      */
-    @InputImport(name="assessedCount")
+    @Import(name="assessedCount")
       private final @Nullable Integer assessedCount;
 
     public Optional<Integer> getAssessedCount() {
@@ -35,7 +35,7 @@ public final class ServersProjectSummaryResponse extends io.pulumi.resources.Inv
      * Gets or sets the count of entities discovered.
      * 
      */
-    @InputImport(name="discoveredCount")
+    @Import(name="discoveredCount")
       private final @Nullable Integer discoveredCount;
 
     public Optional<Integer> getDiscoveredCount() {
@@ -46,7 +46,7 @@ public final class ServersProjectSummaryResponse extends io.pulumi.resources.Inv
      * Gets or sets the extended summary.
      * 
      */
-    @InputImport(name="extendedSummary")
+    @Import(name="extendedSummary")
       private final @Nullable Map<String,String> extendedSummary;
 
     public Map<String,String> getExtendedSummary() {
@@ -58,7 +58,7 @@ public final class ServersProjectSummaryResponse extends io.pulumi.resources.Inv
      * Expected value is 'Servers'.
      * 
      */
-    @InputImport(name="instanceType", required=true)
+    @Import(name="instanceType", required=true)
       private final String instanceType;
 
     public String getInstanceType() {
@@ -69,7 +69,7 @@ public final class ServersProjectSummaryResponse extends io.pulumi.resources.Inv
      * Gets or sets the time when summary was last refreshed.
      * 
      */
-    @InputImport(name="lastSummaryRefreshedTime")
+    @Import(name="lastSummaryRefreshedTime")
       private final @Nullable String lastSummaryRefreshedTime;
 
     public Optional<String> getLastSummaryRefreshedTime() {
@@ -80,7 +80,7 @@ public final class ServersProjectSummaryResponse extends io.pulumi.resources.Inv
      * Gets or sets the count of entities migrated.
      * 
      */
-    @InputImport(name="migratedCount")
+    @Import(name="migratedCount")
       private final @Nullable Integer migratedCount;
 
     public Optional<Integer> getMigratedCount() {
@@ -91,7 +91,7 @@ public final class ServersProjectSummaryResponse extends io.pulumi.resources.Inv
      * Gets or sets the state of refresh summary.
      * 
      */
-    @InputImport(name="refreshSummaryState")
+    @Import(name="refreshSummaryState")
       private final @Nullable String refreshSummaryState;
 
     public Optional<String> getRefreshSummaryState() {
@@ -102,7 +102,7 @@ public final class ServersProjectSummaryResponse extends io.pulumi.resources.Inv
      * Gets or sets the count of entities being replicated.
      * 
      */
-    @InputImport(name="replicatingCount")
+    @Import(name="replicatingCount")
       private final @Nullable Integer replicatingCount;
 
     public Optional<Integer> getReplicatingCount() {
@@ -113,7 +113,7 @@ public final class ServersProjectSummaryResponse extends io.pulumi.resources.Inv
      * Gets or sets the count of entities test migrated.
      * 
      */
-    @InputImport(name="testMigratedCount")
+    @Import(name="testMigratedCount")
       private final @Nullable Integer testMigratedCount;
 
     public Optional<Integer> getTestMigratedCount() {

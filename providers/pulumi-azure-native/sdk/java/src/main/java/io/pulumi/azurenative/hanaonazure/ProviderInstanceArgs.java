@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.hanaonazure;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class ProviderInstanceArgs extends io.pulumi.resources.ResourceArgs
      * A JSON string containing metadata of the provider instance.
      * 
      */
-    @InputImport(name="metadata")
+    @Import(name="metadata")
       private final @Nullable Output<String> metadata;
 
     public Output<String> getMetadata() {
@@ -29,7 +29,7 @@ public final class ProviderInstanceArgs extends io.pulumi.resources.ResourceArgs
      * A JSON string containing the properties of the provider instance.
      * 
      */
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable Output<String> properties;
 
     public Output<String> getProperties() {
@@ -40,7 +40,7 @@ public final class ProviderInstanceArgs extends io.pulumi.resources.ResourceArgs
      * Name of the provider instance.
      * 
      */
-    @InputImport(name="providerInstanceName")
+    @Import(name="providerInstanceName")
       private final @Nullable Output<String> providerInstanceName;
 
     public Output<String> getProviderInstanceName() {
@@ -51,7 +51,7 @@ public final class ProviderInstanceArgs extends io.pulumi.resources.ResourceArgs
      * Name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -62,7 +62,7 @@ public final class ProviderInstanceArgs extends io.pulumi.resources.ResourceArgs
      * Name of the SAP monitor resource.
      * 
      */
-    @InputImport(name="sapMonitorName", required=true)
+    @Import(name="sapMonitorName", required=true)
       private final Output<String> sapMonitorName;
 
     public Output<String> getSapMonitorName() {
@@ -73,7 +73,7 @@ public final class ProviderInstanceArgs extends io.pulumi.resources.ResourceArgs
      * The type of provider instance.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {

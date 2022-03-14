@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.cdn.inputs;
 
 import io.pulumi.azurenative.cdn.inputs.KeyVaultCertificateSourceParametersResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class UserManagedHttpsParametersResponse extends io.pulumi.resource
      * Expected value is 'AzureKeyVault'.
      * 
      */
-    @InputImport(name="certificateSource", required=true)
+    @Import(name="certificateSource", required=true)
       private final String certificateSource;
 
     public String getCertificateSource() {
@@ -35,7 +35,7 @@ public final class UserManagedHttpsParametersResponse extends io.pulumi.resource
      * Defines the certificate source parameters using user's keyvault certificate for enabling SSL.
      * 
      */
-    @InputImport(name="certificateSourceParameters", required=true)
+    @Import(name="certificateSourceParameters", required=true)
       private final KeyVaultCertificateSourceParametersResponse certificateSourceParameters;
 
     public KeyVaultCertificateSourceParametersResponse getCertificateSourceParameters() {
@@ -46,7 +46,7 @@ public final class UserManagedHttpsParametersResponse extends io.pulumi.resource
      * TLS protocol version that will be used for Https
      * 
      */
-    @InputImport(name="minimumTlsVersion")
+    @Import(name="minimumTlsVersion")
       private final @Nullable String minimumTlsVersion;
 
     public Optional<String> getMinimumTlsVersion() {
@@ -57,7 +57,7 @@ public final class UserManagedHttpsParametersResponse extends io.pulumi.resource
      * Defines the TLS extension protocol that is used for secure delivery.
      * 
      */
-    @InputImport(name="protocolType", required=true)
+    @Import(name="protocolType", required=true)
       private final String protocolType;
 
     public String getProtocolType() {

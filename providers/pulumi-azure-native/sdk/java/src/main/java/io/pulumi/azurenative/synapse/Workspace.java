@@ -15,7 +15,7 @@ import io.pulumi.azurenative.synapse.outputs.VirtualNetworkProfileResponse;
 import io.pulumi.azurenative.synapse.outputs.WorkspaceRepositoryConfigurationResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Object;
 import java.lang.String;
@@ -44,7 +44,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * The ADLA resource ID.
      * 
      */
-    @OutputExport(name="adlaResourceId", type=String.class, parameters={})
+    @Export(name="adlaResourceId", type=String.class, parameters={})
     private Output<String> adlaResourceId;
 
     /**
@@ -58,7 +58,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * Connectivity endpoints
      * 
      */
-    @OutputExport(name="connectivityEndpoints", type=Map.class, parameters={String.class, String.class})
+    @Export(name="connectivityEndpoints", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> connectivityEndpoints;
 
     /**
@@ -72,7 +72,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * Workspace default data lake storage account details
      * 
      */
-    @OutputExport(name="defaultDataLakeStorage", type=DataLakeStorageAccountDetailsResponse.class, parameters={})
+    @Export(name="defaultDataLakeStorage", type=DataLakeStorageAccountDetailsResponse.class, parameters={})
     private Output</* @Nullable */ DataLakeStorageAccountDetailsResponse> defaultDataLakeStorage;
 
     /**
@@ -86,7 +86,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * The encryption details of the workspace
      * 
      */
-    @OutputExport(name="encryption", type=EncryptionDetailsResponse.class, parameters={})
+    @Export(name="encryption", type=EncryptionDetailsResponse.class, parameters={})
     private Output</* @Nullable */ EncryptionDetailsResponse> encryption;
 
     /**
@@ -100,7 +100,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * Workspace level configs and feature flags
      * 
      */
-    @OutputExport(name="extraProperties", type=Map.class, parameters={String.class, Object.class})
+    @Export(name="extraProperties", type=Map.class, parameters={String.class, Object.class})
     private Output<Map<String,Object>> extraProperties;
 
     /**
@@ -114,7 +114,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * Identity of the workspace
      * 
      */
-    @OutputExport(name="identity", type=ManagedIdentityResponse.class, parameters={})
+    @Export(name="identity", type=ManagedIdentityResponse.class, parameters={})
     private Output</* @Nullable */ ManagedIdentityResponse> identity;
 
     /**
@@ -128,7 +128,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * The geo-location where the resource lives
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -142,7 +142,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * Workspace managed resource group. The resource group name uniquely identifies the resource group within the user subscriptionId. The resource group name must be no longer than 90 characters long, and must be alphanumeric characters (Char.IsLetterOrDigit()) and '-', '_', '(', ')' and'.'. Note that the name cannot end with '.'
      * 
      */
-    @OutputExport(name="managedResourceGroupName", type=String.class, parameters={})
+    @Export(name="managedResourceGroupName", type=String.class, parameters={})
     private Output</* @Nullable */ String> managedResourceGroupName;
 
     /**
@@ -156,7 +156,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * Setting this to 'default' will ensure that all compute for this workspace is in a virtual network managed on behalf of the user.
      * 
      */
-    @OutputExport(name="managedVirtualNetwork", type=String.class, parameters={})
+    @Export(name="managedVirtualNetwork", type=String.class, parameters={})
     private Output</* @Nullable */ String> managedVirtualNetwork;
 
     /**
@@ -170,7 +170,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * Managed Virtual Network Settings
      * 
      */
-    @OutputExport(name="managedVirtualNetworkSettings", type=ManagedVirtualNetworkSettingsResponse.class, parameters={})
+    @Export(name="managedVirtualNetworkSettings", type=ManagedVirtualNetworkSettingsResponse.class, parameters={})
     private Output</* @Nullable */ ManagedVirtualNetworkSettingsResponse> managedVirtualNetworkSettings;
 
     /**
@@ -184,7 +184,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -198,7 +198,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * Private endpoint connections to the workspace
      * 
      */
-    @OutputExport(name="privateEndpointConnections", type=List.class, parameters={PrivateEndpointConnectionResponse.class})
+    @Export(name="privateEndpointConnections", type=List.class, parameters={PrivateEndpointConnectionResponse.class})
     private Output</* @Nullable */ List<PrivateEndpointConnectionResponse>> privateEndpointConnections;
 
     /**
@@ -212,7 +212,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * Resource provisioning state
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -226,7 +226,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * Enable or Disable public network access to workspace
      * 
      */
-    @OutputExport(name="publicNetworkAccess", type=String.class, parameters={})
+    @Export(name="publicNetworkAccess", type=String.class, parameters={})
     private Output</* @Nullable */ String> publicNetworkAccess;
 
     /**
@@ -240,7 +240,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * Purview Configuration
      * 
      */
-    @OutputExport(name="purviewConfiguration", type=PurviewConfigurationResponse.class, parameters={})
+    @Export(name="purviewConfiguration", type=PurviewConfigurationResponse.class, parameters={})
     private Output</* @Nullable */ PurviewConfigurationResponse> purviewConfiguration;
 
     /**
@@ -254,7 +254,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * Login for workspace SQL active directory administrator
      * 
      */
-    @OutputExport(name="sqlAdministratorLogin", type=String.class, parameters={})
+    @Export(name="sqlAdministratorLogin", type=String.class, parameters={})
     private Output</* @Nullable */ String> sqlAdministratorLogin;
 
     /**
@@ -268,7 +268,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * SQL administrator login password
      * 
      */
-    @OutputExport(name="sqlAdministratorLoginPassword", type=String.class, parameters={})
+    @Export(name="sqlAdministratorLoginPassword", type=String.class, parameters={})
     private Output</* @Nullable */ String> sqlAdministratorLoginPassword;
 
     /**
@@ -282,7 +282,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * Resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -296,7 +296,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -310,7 +310,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * Virtual Network profile
      * 
      */
-    @OutputExport(name="virtualNetworkProfile", type=VirtualNetworkProfileResponse.class, parameters={})
+    @Export(name="virtualNetworkProfile", type=VirtualNetworkProfileResponse.class, parameters={})
     private Output</* @Nullable */ VirtualNetworkProfileResponse> virtualNetworkProfile;
 
     /**
@@ -324,7 +324,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * Git integration settings
      * 
      */
-    @OutputExport(name="workspaceRepositoryConfiguration", type=WorkspaceRepositoryConfigurationResponse.class, parameters={})
+    @Export(name="workspaceRepositoryConfiguration", type=WorkspaceRepositoryConfigurationResponse.class, parameters={})
     private Output</* @Nullable */ WorkspaceRepositoryConfigurationResponse> workspaceRepositoryConfiguration;
 
     /**
@@ -338,7 +338,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * The workspace unique identifier
      * 
      */
-    @OutputExport(name="workspaceUID", type=String.class, parameters={})
+    @Export(name="workspaceUID", type=String.class, parameters={})
     private Output<String> workspaceUID;
 
     /**

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +18,7 @@ public final class DataLakeAnalyticsResponseProperties extends io.pulumi.resourc
      * DataLake Store Account Name
      * 
      */
-    @InputImport(name="dataLakeStoreAccountName")
+    @Import(name="dataLakeStoreAccountName")
       private final @Nullable String dataLakeStoreAccountName;
 
     public Optional<String> getDataLakeStoreAccountName() {

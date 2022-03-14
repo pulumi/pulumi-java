@@ -8,7 +8,7 @@ import io.pulumi.azurenative.datafactory.outputs.IntegrationRuntimeReferenceResp
 import io.pulumi.azurenative.datafactory.outputs.ParameterSpecificationResponse;
 import io.pulumi.azurenative.datafactory.outputs.SecureStringResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -17,7 +17,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AzureMLServiceLinkedServiceResponse {
     /**
      * List of tags that can be used for describing the linked service.
@@ -81,20 +81,20 @@ public final class AzureMLServiceLinkedServiceResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AzureMLServiceLinkedServiceResponse(
-        @OutputCustomType.Parameter("annotations") @Nullable List<Object> annotations,
-        @OutputCustomType.Parameter("connectVia") @Nullable IntegrationRuntimeReferenceResponse connectVia,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("encryptedCredential") @Nullable Object encryptedCredential,
-        @OutputCustomType.Parameter("mlWorkspaceName") Object mlWorkspaceName,
-        @OutputCustomType.Parameter("parameters") @Nullable Map<String,ParameterSpecificationResponse> parameters,
-        @OutputCustomType.Parameter("resourceGroupName") Object resourceGroupName,
-        @OutputCustomType.Parameter("servicePrincipalId") @Nullable Object servicePrincipalId,
-        @OutputCustomType.Parameter("servicePrincipalKey") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey,
-        @OutputCustomType.Parameter("subscriptionId") Object subscriptionId,
-        @OutputCustomType.Parameter("tenant") @Nullable Object tenant,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("annotations") @Nullable List<Object> annotations,
+        @CustomType.Parameter("connectVia") @Nullable IntegrationRuntimeReferenceResponse connectVia,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("encryptedCredential") @Nullable Object encryptedCredential,
+        @CustomType.Parameter("mlWorkspaceName") Object mlWorkspaceName,
+        @CustomType.Parameter("parameters") @Nullable Map<String,ParameterSpecificationResponse> parameters,
+        @CustomType.Parameter("resourceGroupName") Object resourceGroupName,
+        @CustomType.Parameter("servicePrincipalId") @Nullable Object servicePrincipalId,
+        @CustomType.Parameter("servicePrincipalKey") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey,
+        @CustomType.Parameter("subscriptionId") Object subscriptionId,
+        @CustomType.Parameter("tenant") @Nullable Object tenant,
+        @CustomType.Parameter("type") String type) {
         this.annotations = annotations;
         this.connectVia = connectVia;
         this.description = description;

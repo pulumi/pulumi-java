@@ -6,7 +6,7 @@ package io.pulumi.azurenative.deploymentmanager;
 import io.pulumi.azurenative.deploymentmanager.enums.DeploymentMode;
 import io.pulumi.azurenative.deploymentmanager.inputs.ServiceUnitArtifactsArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class ServiceUnitArgs extends io.pulumi.resources.ResourceArgs {
      * The artifacts for the service unit.
      * 
      */
-    @InputImport(name="artifacts")
+    @Import(name="artifacts")
       private final @Nullable Output<ServiceUnitArtifactsArgs> artifacts;
 
     public Output<ServiceUnitArtifactsArgs> getArtifacts() {
@@ -32,7 +32,7 @@ public final class ServiceUnitArgs extends io.pulumi.resources.ResourceArgs {
      * Describes the type of ARM deployment to be performed on the resource.
      * 
      */
-    @InputImport(name="deploymentMode", required=true)
+    @Import(name="deploymentMode", required=true)
       private final Output<DeploymentMode> deploymentMode;
 
     public Output<DeploymentMode> getDeploymentMode() {
@@ -43,7 +43,7 @@ public final class ServiceUnitArgs extends io.pulumi.resources.ResourceArgs {
      * The geo-location where the resource lives
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -54,7 +54,7 @@ public final class ServiceUnitArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -65,7 +65,7 @@ public final class ServiceUnitArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the service resource.
      * 
      */
-    @InputImport(name="serviceName", required=true)
+    @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
 
     public Output<String> getServiceName() {
@@ -76,7 +76,7 @@ public final class ServiceUnitArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the service topology .
      * 
      */
-    @InputImport(name="serviceTopologyName", required=true)
+    @Import(name="serviceTopologyName", required=true)
       private final Output<String> serviceTopologyName;
 
     public Output<String> getServiceTopologyName() {
@@ -87,7 +87,7 @@ public final class ServiceUnitArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the service unit resource.
      * 
      */
-    @InputImport(name="serviceUnitName")
+    @Import(name="serviceUnitName")
       private final @Nullable Output<String> serviceUnitName;
 
     public Output<String> getServiceUnitName() {
@@ -98,7 +98,7 @@ public final class ServiceUnitArgs extends io.pulumi.resources.ResourceArgs {
      * Resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -109,7 +109,7 @@ public final class ServiceUnitArgs extends io.pulumi.resources.ResourceArgs {
      * The Azure Resource Group to which the resources in the service unit belong to or should be deployed to.
      * 
      */
-    @InputImport(name="targetResourceGroup", required=true)
+    @Import(name="targetResourceGroup", required=true)
       private final Output<String> targetResourceGroup;
 
     public Output<String> getTargetResourceGroup() {

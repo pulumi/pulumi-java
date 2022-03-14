@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.storage.inputs;
 
 import io.pulumi.azurenative.storage.inputs.ManagementPolicyDefinitionResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ManagementPolicyRuleResponse extends io.pulumi.resources.Invo
      * An object that defines the Lifecycle rule.
      * 
      */
-    @InputImport(name="definition", required=true)
+    @Import(name="definition", required=true)
       private final ManagementPolicyDefinitionResponse definition;
 
     public ManagementPolicyDefinitionResponse getDefinition() {
@@ -35,7 +35,7 @@ public final class ManagementPolicyRuleResponse extends io.pulumi.resources.Invo
      * Rule is enabled if set to true.
      * 
      */
-    @InputImport(name="enabled")
+    @Import(name="enabled")
       private final @Nullable Boolean enabled;
 
     public Optional<Boolean> getEnabled() {
@@ -46,7 +46,7 @@ public final class ManagementPolicyRuleResponse extends io.pulumi.resources.Invo
      * A rule name can contain any combination of alpha numeric characters. Rule name is case-sensitive. It must be unique within a policy.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -57,7 +57,7 @@ public final class ManagementPolicyRuleResponse extends io.pulumi.resources.Invo
      * The valid value is Lifecycle
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

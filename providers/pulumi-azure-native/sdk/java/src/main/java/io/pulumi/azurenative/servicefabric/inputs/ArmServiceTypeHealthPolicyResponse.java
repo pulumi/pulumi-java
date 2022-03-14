@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.servicefabric.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class ArmServiceTypeHealthPolicyResponse extends io.pulumi.resource
      * The maximum percentage of partitions per service allowed to be unhealthy before your application is considered in error.
      * 
      */
-    @InputImport(name="maxPercentUnhealthyPartitionsPerService")
+    @Import(name="maxPercentUnhealthyPartitionsPerService")
       private final @Nullable Integer maxPercentUnhealthyPartitionsPerService;
 
     public Optional<Integer> getMaxPercentUnhealthyPartitionsPerService() {
@@ -33,7 +33,7 @@ public final class ArmServiceTypeHealthPolicyResponse extends io.pulumi.resource
      * The maximum percentage of replicas per partition allowed to be unhealthy before your application is considered in error.
      * 
      */
-    @InputImport(name="maxPercentUnhealthyReplicasPerPartition")
+    @Import(name="maxPercentUnhealthyReplicasPerPartition")
       private final @Nullable Integer maxPercentUnhealthyReplicasPerPartition;
 
     public Optional<Integer> getMaxPercentUnhealthyReplicasPerPartition() {
@@ -44,7 +44,7 @@ public final class ArmServiceTypeHealthPolicyResponse extends io.pulumi.resource
      * The maximum percentage of services allowed to be unhealthy before your application is considered in error.
      * 
      */
-    @InputImport(name="maxPercentUnhealthyServices")
+    @Import(name="maxPercentUnhealthyServices")
       private final @Nullable Integer maxPercentUnhealthyServices;
 
     public Optional<Integer> getMaxPercentUnhealthyServices() {

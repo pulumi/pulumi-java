@@ -5,7 +5,7 @@ package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.azurenative.compute.inputs.KeyVaultKeyReferenceResponse;
 import io.pulumi.azurenative.compute.inputs.KeyVaultSecretReferenceResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class DiskEncryptionSettingsResponse extends io.pulumi.resources.In
      * Specifies the location of the disk encryption key, which is a Key Vault Secret.
      * 
      */
-    @InputImport(name="diskEncryptionKey")
+    @Import(name="diskEncryptionKey")
       private final @Nullable KeyVaultSecretReferenceResponse diskEncryptionKey;
 
     public Optional<KeyVaultSecretReferenceResponse> getDiskEncryptionKey() {
@@ -35,7 +35,7 @@ public final class DiskEncryptionSettingsResponse extends io.pulumi.resources.In
      * Specifies whether disk encryption should be enabled on the virtual machine.
      * 
      */
-    @InputImport(name="enabled")
+    @Import(name="enabled")
       private final @Nullable Boolean enabled;
 
     public Optional<Boolean> getEnabled() {
@@ -46,7 +46,7 @@ public final class DiskEncryptionSettingsResponse extends io.pulumi.resources.In
      * Specifies the location of the key encryption key in Key Vault.
      * 
      */
-    @InputImport(name="keyEncryptionKey")
+    @Import(name="keyEncryptionKey")
       private final @Nullable KeyVaultKeyReferenceResponse keyEncryptionKey;
 
     public Optional<KeyVaultKeyReferenceResponse> getKeyEncryptionKey() {

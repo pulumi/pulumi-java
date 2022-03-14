@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.authorization.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class AccessReviewReviewerResponse extends io.pulumi.resources.Invo
      * The id of the reviewer(user/servicePrincipal)
      * 
      */
-    @InputImport(name="principalId")
+    @Import(name="principalId")
       private final @Nullable String principalId;
 
     public Optional<String> getPrincipalId() {
@@ -33,7 +33,7 @@ public final class AccessReviewReviewerResponse extends io.pulumi.resources.Invo
      * The identity type : user/servicePrincipal
      * 
      */
-    @InputImport(name="principalType", required=true)
+    @Import(name="principalType", required=true)
       private final String principalType;
 
     public String getPrincipalType() {

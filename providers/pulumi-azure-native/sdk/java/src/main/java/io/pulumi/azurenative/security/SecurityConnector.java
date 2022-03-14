@@ -12,7 +12,7 @@ import io.pulumi.azurenative.security.outputs.SecurityConnectorPropertiesRespons
 import io.pulumi.azurenative.security.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Object;
 import java.lang.String;
@@ -41,7 +41,7 @@ public class SecurityConnector extends io.pulumi.resources.CustomResource {
      * The multi cloud resource's cloud name.
      * 
      */
-    @OutputExport(name="cloudName", type=String.class, parameters={})
+    @Export(name="cloudName", type=String.class, parameters={})
     private Output</* @Nullable */ String> cloudName;
 
     /**
@@ -55,7 +55,7 @@ public class SecurityConnector extends io.pulumi.resources.CustomResource {
      * Entity tag is used for comparing two or more entities from the same requested resource.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output</* @Nullable */ String> etag;
 
     /**
@@ -69,7 +69,7 @@ public class SecurityConnector extends io.pulumi.resources.CustomResource {
      * The multi cloud resource identifier (account id in case of AWS connector).
      * 
      */
-    @OutputExport(name="hierarchyIdentifier", type=String.class, parameters={})
+    @Export(name="hierarchyIdentifier", type=String.class, parameters={})
     private Output</* @Nullable */ String> hierarchyIdentifier;
 
     /**
@@ -83,7 +83,7 @@ public class SecurityConnector extends io.pulumi.resources.CustomResource {
      * Kind of the resource
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
     /**
@@ -97,7 +97,7 @@ public class SecurityConnector extends io.pulumi.resources.CustomResource {
      * Location where the resource is stored
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -111,7 +111,7 @@ public class SecurityConnector extends io.pulumi.resources.CustomResource {
      * Resource name
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -125,7 +125,7 @@ public class SecurityConnector extends io.pulumi.resources.CustomResource {
      * A collection of offerings for the security connector.
      * 
      */
-    @OutputExport(name="offerings", type=List.class, parameters={Object.class})
+    @Export(name="offerings", type=List.class, parameters={Object.class})
     private Output</* @Nullable */ List<Object>> offerings;
 
     /**
@@ -139,7 +139,7 @@ public class SecurityConnector extends io.pulumi.resources.CustomResource {
      * The multi cloud account's organizational data
      * 
      */
-    @OutputExport(name="organizationalData", type=SecurityConnectorPropertiesResponseOrganizationalData.class, parameters={})
+    @Export(name="organizationalData", type=SecurityConnectorPropertiesResponseOrganizationalData.class, parameters={})
     private Output</* @Nullable */ SecurityConnectorPropertiesResponseOrganizationalData> organizationalData;
 
     /**
@@ -153,7 +153,7 @@ public class SecurityConnector extends io.pulumi.resources.CustomResource {
      * Azure Resource Manager metadata containing createdBy and modifiedBy information.
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -167,7 +167,7 @@ public class SecurityConnector extends io.pulumi.resources.CustomResource {
      * A list of key value pairs that describe the resource.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -181,7 +181,7 @@ public class SecurityConnector extends io.pulumi.resources.CustomResource {
      * Resource type
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.maps.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
      * The name of the SKU, in standard format (such as S0).
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -31,7 +31,7 @@ public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
      * Gets the sku tier. This is based on the SKU name.
      * 
      */
-    @InputImport(name="tier", required=true)
+    @Import(name="tier", required=true)
       private final String tier;
 
     public String getTier() {

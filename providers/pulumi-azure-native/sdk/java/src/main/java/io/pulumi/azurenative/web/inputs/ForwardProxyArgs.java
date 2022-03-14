@@ -5,7 +5,7 @@ package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.azurenative.web.enums.ForwardProxyConvention;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class ForwardProxyArgs extends io.pulumi.resources.ResourceArgs {
      * The convention used to determine the url of the request made.
      * 
      */
-    @InputImport(name="convention")
+    @Import(name="convention")
       private final @Nullable Output<ForwardProxyConvention> convention;
 
     public Output<ForwardProxyConvention> getConvention() {
@@ -34,7 +34,7 @@ public final class ForwardProxyArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the header containing the host of the request.
      * 
      */
-    @InputImport(name="customHostHeaderName")
+    @Import(name="customHostHeaderName")
       private final @Nullable Output<String> customHostHeaderName;
 
     public Output<String> getCustomHostHeaderName() {
@@ -45,7 +45,7 @@ public final class ForwardProxyArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the header containing the scheme of the request.
      * 
      */
-    @InputImport(name="customProtoHeaderName")
+    @Import(name="customProtoHeaderName")
       private final @Nullable Output<String> customProtoHeaderName;
 
     public Output<String> getCustomProtoHeaderName() {

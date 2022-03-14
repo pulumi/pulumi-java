@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.sqlvirtualmachine.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SqlWorkloadTypeUpdateSettingsResponse {
     /**
      * SQL Server workload type.
@@ -17,8 +17,8 @@ public final class SqlWorkloadTypeUpdateSettingsResponse {
      */
     private final @Nullable String sqlWorkloadType;
 
-    @OutputCustomType.Constructor
-    private SqlWorkloadTypeUpdateSettingsResponse(@OutputCustomType.Parameter("sqlWorkloadType") @Nullable String sqlWorkloadType) {
+    @CustomType.Constructor
+    private SqlWorkloadTypeUpdateSettingsResponse(@CustomType.Parameter("sqlWorkloadType") @Nullable String sqlWorkloadType) {
         this.sqlWorkloadType = sqlWorkloadType;
     }
 

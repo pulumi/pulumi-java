@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerservice.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class PrivateLinkResourceResponse extends io.pulumi.resources.Invok
      * The group ID of the resource.
      * 
      */
-    @InputImport(name="groupId")
+    @Import(name="groupId")
       private final @Nullable String groupId;
 
     public Optional<String> getGroupId() {
@@ -34,7 +34,7 @@ public final class PrivateLinkResourceResponse extends io.pulumi.resources.Invok
      * The ID of the private link resource.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable String id;
 
     public Optional<String> getId() {
@@ -45,7 +45,7 @@ public final class PrivateLinkResourceResponse extends io.pulumi.resources.Invok
      * The name of the private link resource.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -56,7 +56,7 @@ public final class PrivateLinkResourceResponse extends io.pulumi.resources.Invok
      * The private link service ID of the resource, this field is exposed only to NRP internally.
      * 
      */
-    @InputImport(name="privateLinkServiceID", required=true)
+    @Import(name="privateLinkServiceID", required=true)
       private final String privateLinkServiceID;
 
     public String getPrivateLinkServiceID() {
@@ -67,7 +67,7 @@ public final class PrivateLinkResourceResponse extends io.pulumi.resources.Invok
      * RequiredMembers of the resource
      * 
      */
-    @InputImport(name="requiredMembers")
+    @Import(name="requiredMembers")
       private final @Nullable List<String> requiredMembers;
 
     public List<String> getRequiredMembers() {
@@ -78,7 +78,7 @@ public final class PrivateLinkResourceResponse extends io.pulumi.resources.Invok
      * The resource type.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable String type;
 
     public Optional<String> getType() {

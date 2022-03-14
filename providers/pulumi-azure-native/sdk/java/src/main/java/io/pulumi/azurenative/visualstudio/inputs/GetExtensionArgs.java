@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.visualstudio.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetExtensionArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the Visual Studio Team Services account resource.
      * 
      */
-    @InputImport(name="accountResourceName", required=true)
+    @Import(name="accountResourceName", required=true)
       private final String accountResourceName;
 
     public String getAccountResourceName() {
@@ -27,7 +27,7 @@ public final class GetExtensionArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the extension.
      * 
      */
-    @InputImport(name="extensionResourceName", required=true)
+    @Import(name="extensionResourceName", required=true)
       private final String extensionResourceName;
 
     public String getExtensionResourceName() {
@@ -38,7 +38,7 @@ public final class GetExtensionArgs extends io.pulumi.resources.InvokeArgs {
      * Name of the resource group within the Azure subscription.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.StaticRouteArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class VnetRouteArgs extends io.pulumi.resources.ResourceArgs {
      * List of all Static Routes.
      * 
      */
-    @InputImport(name="staticRoutes")
+    @Import(name="staticRoutes")
       private final @Nullable Output<List<StaticRouteArgs>> staticRoutes;
 
     public Output<List<StaticRouteArgs>> getStaticRoutes() {

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.costmanagement;
 
 import io.pulumi.azurenative.costmanagement.inputs.CostAllocationRulePropertiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class CostAllocationRuleArgs extends io.pulumi.resources.ResourceAr
      * BillingAccount ID
      * 
      */
-    @InputImport(name="billingAccountId", required=true)
+    @Import(name="billingAccountId", required=true)
       private final Output<String> billingAccountId;
 
     public Output<String> getBillingAccountId() {
@@ -30,7 +30,7 @@ public final class CostAllocationRuleArgs extends io.pulumi.resources.ResourceAr
      * Cost allocation rule properties
      * 
      */
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable Output<CostAllocationRulePropertiesArgs> properties;
 
     public Output<CostAllocationRulePropertiesArgs> getProperties() {
@@ -41,7 +41,7 @@ public final class CostAllocationRuleArgs extends io.pulumi.resources.ResourceAr
      * Cost allocation rule name. The name cannot include spaces or any non alphanumeric characters other than '_' and '-'. The max length is 260 characters.
      * 
      */
-    @InputImport(name="ruleName")
+    @Import(name="ruleName")
       private final @Nullable Output<String> ruleName;
 
     public Output<String> getRuleName() {

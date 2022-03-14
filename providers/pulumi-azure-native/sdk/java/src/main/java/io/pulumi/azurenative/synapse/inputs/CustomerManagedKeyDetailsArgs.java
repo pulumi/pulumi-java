@@ -5,7 +5,7 @@ package io.pulumi.azurenative.synapse.inputs;
 
 import io.pulumi.azurenative.synapse.inputs.WorkspaceKeyDetailsArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -22,7 +22,7 @@ public final class CustomerManagedKeyDetailsArgs extends io.pulumi.resources.Res
      * The key object of the workspace
      * 
      */
-    @InputImport(name="key")
+    @Import(name="key")
       private final @Nullable Output<WorkspaceKeyDetailsArgs> key;
 
     public Output<WorkspaceKeyDetailsArgs> getKey() {

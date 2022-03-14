@@ -9,7 +9,7 @@ import io.pulumi.azurenative.testbase.outputs.NotificationEventReceiverResponse;
 import io.pulumi.azurenative.testbase.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -36,7 +36,7 @@ public class CustomerEvent extends io.pulumi.resources.CustomResource {
      * The name of the event subscribed to.
      * 
      */
-    @OutputExport(name="eventName", type=String.class, parameters={})
+    @Export(name="eventName", type=String.class, parameters={})
     private Output<String> eventName;
 
     /**
@@ -50,7 +50,7 @@ public class CustomerEvent extends io.pulumi.resources.CustomResource {
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -64,7 +64,7 @@ public class CustomerEvent extends io.pulumi.resources.CustomResource {
      * The notification event receivers.
      * 
      */
-    @OutputExport(name="receivers", type=List.class, parameters={NotificationEventReceiverResponse.class})
+    @Export(name="receivers", type=List.class, parameters={NotificationEventReceiverResponse.class})
     private Output<List<NotificationEventReceiverResponse>> receivers;
 
     /**
@@ -78,7 +78,7 @@ public class CustomerEvent extends io.pulumi.resources.CustomResource {
      * The system metadata relating to this resource
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -92,7 +92,7 @@ public class CustomerEvent extends io.pulumi.resources.CustomResource {
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

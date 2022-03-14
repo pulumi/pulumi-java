@@ -16,7 +16,7 @@ import io.pulumi.azurenative.compute.outputs.PurchasePlanResponse;
 import io.pulumi.azurenative.compute.outputs.ShareInfoElementResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Double;
@@ -47,7 +47,7 @@ public class Disk extends io.pulumi.resources.CustomResource {
      * Set to true to enable bursting beyond the provisioned performance target of the disk. Bursting is disabled by default. Does not apply to Ultra disks.
      * 
      */
-    @OutputExport(name="burstingEnabled", type=Boolean.class, parameters={})
+    @Export(name="burstingEnabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> burstingEnabled;
 
     /**
@@ -61,7 +61,7 @@ public class Disk extends io.pulumi.resources.CustomResource {
      * Disk source information. CreationData information cannot be changed after the disk has been created.
      * 
      */
-    @OutputExport(name="creationData", type=CreationDataResponse.class, parameters={})
+    @Export(name="creationData", type=CreationDataResponse.class, parameters={})
     private Output<CreationDataResponse> creationData;
 
     /**
@@ -75,7 +75,7 @@ public class Disk extends io.pulumi.resources.CustomResource {
      * ARM id of the DiskAccess resource for using private endpoints on disks.
      * 
      */
-    @OutputExport(name="diskAccessId", type=String.class, parameters={})
+    @Export(name="diskAccessId", type=String.class, parameters={})
     private Output</* @Nullable */ String> diskAccessId;
 
     /**
@@ -89,7 +89,7 @@ public class Disk extends io.pulumi.resources.CustomResource {
      * The total number of IOPS that will be allowed across all VMs mounting the shared disk as ReadOnly. One operation can transfer between 4k and 256k bytes.
      * 
      */
-    @OutputExport(name="diskIOPSReadOnly", type=Double.class, parameters={})
+    @Export(name="diskIOPSReadOnly", type=Double.class, parameters={})
     private Output</* @Nullable */ Double> diskIOPSReadOnly;
 
     /**
@@ -103,7 +103,7 @@ public class Disk extends io.pulumi.resources.CustomResource {
      * The number of IOPS allowed for this disk; only settable for UltraSSD disks. One operation can transfer between 4k and 256k bytes.
      * 
      */
-    @OutputExport(name="diskIOPSReadWrite", type=Double.class, parameters={})
+    @Export(name="diskIOPSReadWrite", type=Double.class, parameters={})
     private Output</* @Nullable */ Double> diskIOPSReadWrite;
 
     /**
@@ -117,7 +117,7 @@ public class Disk extends io.pulumi.resources.CustomResource {
      * The total throughput (MBps) that will be allowed across all VMs mounting the shared disk as ReadOnly. MBps means millions of bytes per second - MB here uses the ISO notation, of powers of 10.
      * 
      */
-    @OutputExport(name="diskMBpsReadOnly", type=Double.class, parameters={})
+    @Export(name="diskMBpsReadOnly", type=Double.class, parameters={})
     private Output</* @Nullable */ Double> diskMBpsReadOnly;
 
     /**
@@ -131,7 +131,7 @@ public class Disk extends io.pulumi.resources.CustomResource {
      * The bandwidth allowed for this disk; only settable for UltraSSD disks. MBps means millions of bytes per second - MB here uses the ISO notation, of powers of 10.
      * 
      */
-    @OutputExport(name="diskMBpsReadWrite", type=Double.class, parameters={})
+    @Export(name="diskMBpsReadWrite", type=Double.class, parameters={})
     private Output</* @Nullable */ Double> diskMBpsReadWrite;
 
     /**
@@ -145,7 +145,7 @@ public class Disk extends io.pulumi.resources.CustomResource {
      * The size of the disk in bytes. This field is read only.
      * 
      */
-    @OutputExport(name="diskSizeBytes", type=Double.class, parameters={})
+    @Export(name="diskSizeBytes", type=Double.class, parameters={})
     private Output<Double> diskSizeBytes;
 
     /**
@@ -159,7 +159,7 @@ public class Disk extends io.pulumi.resources.CustomResource {
      * If creationData.createOption is Empty, this field is mandatory and it indicates the size of the disk to create. If this field is present for updates or creation with other options, it indicates a resize. Resizes are only allowed if the disk is not attached to a running VM, and can only increase the disk's size.
      * 
      */
-    @OutputExport(name="diskSizeGB", type=Integer.class, parameters={})
+    @Export(name="diskSizeGB", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> diskSizeGB;
 
     /**
@@ -173,7 +173,7 @@ public class Disk extends io.pulumi.resources.CustomResource {
      * The state of the disk.
      * 
      */
-    @OutputExport(name="diskState", type=String.class, parameters={})
+    @Export(name="diskState", type=String.class, parameters={})
     private Output<String> diskState;
 
     /**
@@ -187,7 +187,7 @@ public class Disk extends io.pulumi.resources.CustomResource {
      * Encryption property can be used to encrypt data at rest with customer managed keys or platform managed keys.
      * 
      */
-    @OutputExport(name="encryption", type=EncryptionResponse.class, parameters={})
+    @Export(name="encryption", type=EncryptionResponse.class, parameters={})
     private Output</* @Nullable */ EncryptionResponse> encryption;
 
     /**
@@ -201,7 +201,7 @@ public class Disk extends io.pulumi.resources.CustomResource {
      * Encryption settings collection used for Azure Disk Encryption, can contain multiple encryption settings per disk or snapshot.
      * 
      */
-    @OutputExport(name="encryptionSettingsCollection", type=EncryptionSettingsCollectionResponse.class, parameters={})
+    @Export(name="encryptionSettingsCollection", type=EncryptionSettingsCollectionResponse.class, parameters={})
     private Output</* @Nullable */ EncryptionSettingsCollectionResponse> encryptionSettingsCollection;
 
     /**
@@ -215,7 +215,7 @@ public class Disk extends io.pulumi.resources.CustomResource {
      * The extended location where the disk will be created. Extended location cannot be changed.
      * 
      */
-    @OutputExport(name="extendedLocation", type=ExtendedLocationResponse.class, parameters={})
+    @Export(name="extendedLocation", type=ExtendedLocationResponse.class, parameters={})
     private Output</* @Nullable */ ExtendedLocationResponse> extendedLocation;
 
     /**
@@ -229,7 +229,7 @@ public class Disk extends io.pulumi.resources.CustomResource {
      * The hypervisor generation of the Virtual Machine. Applicable to OS disks only.
      * 
      */
-    @OutputExport(name="hyperVGeneration", type=String.class, parameters={})
+    @Export(name="hyperVGeneration", type=String.class, parameters={})
     private Output</* @Nullable */ String> hyperVGeneration;
 
     /**
@@ -243,7 +243,7 @@ public class Disk extends io.pulumi.resources.CustomResource {
      * Resource location
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -257,7 +257,7 @@ public class Disk extends io.pulumi.resources.CustomResource {
      * A relative URI containing the ID of the VM that has the disk attached.
      * 
      */
-    @OutputExport(name="managedBy", type=String.class, parameters={})
+    @Export(name="managedBy", type=String.class, parameters={})
     private Output<String> managedBy;
 
     /**
@@ -271,7 +271,7 @@ public class Disk extends io.pulumi.resources.CustomResource {
      * List of relative URIs containing the IDs of the VMs that have the disk attached. maxShares should be set to a value greater than one for disks to allow attaching them to multiple VMs.
      * 
      */
-    @OutputExport(name="managedByExtended", type=List.class, parameters={String.class})
+    @Export(name="managedByExtended", type=List.class, parameters={String.class})
     private Output<List<String>> managedByExtended;
 
     /**
@@ -285,7 +285,7 @@ public class Disk extends io.pulumi.resources.CustomResource {
      * The maximum number of VMs that can attach to the disk at the same time. Value greater than one indicates a disk that can be mounted on multiple VMs at the same time.
      * 
      */
-    @OutputExport(name="maxShares", type=Integer.class, parameters={})
+    @Export(name="maxShares", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> maxShares;
 
     /**
@@ -299,7 +299,7 @@ public class Disk extends io.pulumi.resources.CustomResource {
      * Resource name
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -313,7 +313,7 @@ public class Disk extends io.pulumi.resources.CustomResource {
      * Policy for accessing the disk via network.
      * 
      */
-    @OutputExport(name="networkAccessPolicy", type=String.class, parameters={})
+    @Export(name="networkAccessPolicy", type=String.class, parameters={})
     private Output</* @Nullable */ String> networkAccessPolicy;
 
     /**
@@ -327,7 +327,7 @@ public class Disk extends io.pulumi.resources.CustomResource {
      * The Operating System type.
      * 
      */
-    @OutputExport(name="osType", type=String.class, parameters={})
+    @Export(name="osType", type=String.class, parameters={})
     private Output</* @Nullable */ String> osType;
 
     /**
@@ -341,7 +341,7 @@ public class Disk extends io.pulumi.resources.CustomResource {
      * Properties of the disk for which update is pending.
      * 
      */
-    @OutputExport(name="propertyUpdatesInProgress", type=PropertyUpdatesInProgressResponse.class, parameters={})
+    @Export(name="propertyUpdatesInProgress", type=PropertyUpdatesInProgressResponse.class, parameters={})
     private Output<PropertyUpdatesInProgressResponse> propertyUpdatesInProgress;
 
     /**
@@ -355,7 +355,7 @@ public class Disk extends io.pulumi.resources.CustomResource {
      * The disk provisioning state.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -369,7 +369,7 @@ public class Disk extends io.pulumi.resources.CustomResource {
      * Purchase plan information for the the image from which the OS disk was created. E.g. - {name: 2019-Datacenter, publisher: MicrosoftWindowsServer, product: WindowsServer}
      * 
      */
-    @OutputExport(name="purchasePlan", type=PurchasePlanResponse.class, parameters={})
+    @Export(name="purchasePlan", type=PurchasePlanResponse.class, parameters={})
     private Output</* @Nullable */ PurchasePlanResponse> purchasePlan;
 
     /**
@@ -383,7 +383,7 @@ public class Disk extends io.pulumi.resources.CustomResource {
      * Contains the security related information for the resource.
      * 
      */
-    @OutputExport(name="securityProfile", type=DiskSecurityProfileResponse.class, parameters={})
+    @Export(name="securityProfile", type=DiskSecurityProfileResponse.class, parameters={})
     private Output</* @Nullable */ DiskSecurityProfileResponse> securityProfile;
 
     /**
@@ -397,7 +397,7 @@ public class Disk extends io.pulumi.resources.CustomResource {
      * Details of the list of all VMs that have the disk attached. maxShares should be set to a value greater than one for disks to allow attaching them to multiple VMs.
      * 
      */
-    @OutputExport(name="shareInfo", type=List.class, parameters={ShareInfoElementResponse.class})
+    @Export(name="shareInfo", type=List.class, parameters={ShareInfoElementResponse.class})
     private Output<List<ShareInfoElementResponse>> shareInfo;
 
     /**
@@ -411,7 +411,7 @@ public class Disk extends io.pulumi.resources.CustomResource {
      * The disks sku name. Can be Standard_LRS, Premium_LRS, StandardSSD_LRS, UltraSSD_LRS, Premium_ZRS, or StandardSSD_ZRS.
      * 
      */
-    @OutputExport(name="sku", type=DiskSkuResponse.class, parameters={})
+    @Export(name="sku", type=DiskSkuResponse.class, parameters={})
     private Output</* @Nullable */ DiskSkuResponse> sku;
 
     /**
@@ -425,7 +425,7 @@ public class Disk extends io.pulumi.resources.CustomResource {
      * Indicates the OS on a disk supports hibernation.
      * 
      */
-    @OutputExport(name="supportsHibernation", type=Boolean.class, parameters={})
+    @Export(name="supportsHibernation", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> supportsHibernation;
 
     /**
@@ -439,7 +439,7 @@ public class Disk extends io.pulumi.resources.CustomResource {
      * Resource tags
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -453,7 +453,7 @@ public class Disk extends io.pulumi.resources.CustomResource {
      * Performance tier of the disk (e.g, P4, S10) as described here: https://azure.microsoft.com/en-us/pricing/details/managed-disks/. Does not apply to Ultra disks.
      * 
      */
-    @OutputExport(name="tier", type=String.class, parameters={})
+    @Export(name="tier", type=String.class, parameters={})
     private Output</* @Nullable */ String> tier;
 
     /**
@@ -467,7 +467,7 @@ public class Disk extends io.pulumi.resources.CustomResource {
      * The time when the disk was created.
      * 
      */
-    @OutputExport(name="timeCreated", type=String.class, parameters={})
+    @Export(name="timeCreated", type=String.class, parameters={})
     private Output<String> timeCreated;
 
     /**
@@ -481,7 +481,7 @@ public class Disk extends io.pulumi.resources.CustomResource {
      * Resource type
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -495,7 +495,7 @@ public class Disk extends io.pulumi.resources.CustomResource {
      * Unique Guid identifying the resource.
      * 
      */
-    @OutputExport(name="uniqueId", type=String.class, parameters={})
+    @Export(name="uniqueId", type=String.class, parameters={})
     private Output<String> uniqueId;
 
     /**
@@ -509,7 +509,7 @@ public class Disk extends io.pulumi.resources.CustomResource {
      * The Logical zone list for Disk.
      * 
      */
-    @OutputExport(name="zones", type=List.class, parameters={String.class})
+    @Export(name="zones", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> zones;
 
     /**

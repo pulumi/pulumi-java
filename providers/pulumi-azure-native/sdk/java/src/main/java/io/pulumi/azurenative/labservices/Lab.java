@@ -8,7 +8,7 @@ import io.pulumi.azurenative.labservices.LabArgs;
 import io.pulumi.azurenative.labservices.outputs.LatestOperationResultResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -34,7 +34,7 @@ public class Lab extends io.pulumi.resources.CustomResource {
      * Object id of the user that created the lab.
      * 
      */
-    @OutputExport(name="createdByObjectId", type=String.class, parameters={})
+    @Export(name="createdByObjectId", type=String.class, parameters={})
     private Output<String> createdByObjectId;
 
     /**
@@ -48,7 +48,7 @@ public class Lab extends io.pulumi.resources.CustomResource {
      * Lab creator name
      * 
      */
-    @OutputExport(name="createdByUserPrincipalName", type=String.class, parameters={})
+    @Export(name="createdByUserPrincipalName", type=String.class, parameters={})
     private Output<String> createdByUserPrincipalName;
 
     /**
@@ -62,7 +62,7 @@ public class Lab extends io.pulumi.resources.CustomResource {
      * Creation date for the lab
      * 
      */
-    @OutputExport(name="createdDate", type=String.class, parameters={})
+    @Export(name="createdDate", type=String.class, parameters={})
     private Output<String> createdDate;
 
     /**
@@ -76,7 +76,7 @@ public class Lab extends io.pulumi.resources.CustomResource {
      * Invitation code that users can use to join a lab.
      * 
      */
-    @OutputExport(name="invitationCode", type=String.class, parameters={})
+    @Export(name="invitationCode", type=String.class, parameters={})
     private Output<String> invitationCode;
 
     /**
@@ -90,7 +90,7 @@ public class Lab extends io.pulumi.resources.CustomResource {
      * The details of the latest operation. ex: status, error
      * 
      */
-    @OutputExport(name="latestOperationResult", type=LatestOperationResultResponse.class, parameters={})
+    @Export(name="latestOperationResult", type=LatestOperationResultResponse.class, parameters={})
     private Output<LatestOperationResultResponse> latestOperationResult;
 
     /**
@@ -104,7 +104,7 @@ public class Lab extends io.pulumi.resources.CustomResource {
      * The location of the resource.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -118,7 +118,7 @@ public class Lab extends io.pulumi.resources.CustomResource {
      * Maximum number of users allowed in the lab.
      * 
      */
-    @OutputExport(name="maxUsersInLab", type=Integer.class, parameters={})
+    @Export(name="maxUsersInLab", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> maxUsersInLab;
 
     /**
@@ -132,7 +132,7 @@ public class Lab extends io.pulumi.resources.CustomResource {
      * The name of the resource.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -146,7 +146,7 @@ public class Lab extends io.pulumi.resources.CustomResource {
      * The provisioning status of the resource.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output</* @Nullable */ String> provisioningState;
 
     /**
@@ -160,7 +160,7 @@ public class Lab extends io.pulumi.resources.CustomResource {
      * The tags of the resource.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -174,7 +174,7 @@ public class Lab extends io.pulumi.resources.CustomResource {
      * The type of the resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -188,7 +188,7 @@ public class Lab extends io.pulumi.resources.CustomResource {
      * The unique immutable identifier of a resource (Guid).
      * 
      */
-    @OutputExport(name="uniqueIdentifier", type=String.class, parameters={})
+    @Export(name="uniqueIdentifier", type=String.class, parameters={})
     private Output</* @Nullable */ String> uniqueIdentifier;
 
     /**
@@ -202,7 +202,7 @@ public class Lab extends io.pulumi.resources.CustomResource {
      * Maximum duration a user can use an environment for in the lab.
      * 
      */
-    @OutputExport(name="usageQuota", type=String.class, parameters={})
+    @Export(name="usageQuota", type=String.class, parameters={})
     private Output</* @Nullable */ String> usageQuota;
 
     /**
@@ -216,7 +216,7 @@ public class Lab extends io.pulumi.resources.CustomResource {
      * Lab user access mode (open to all vs. restricted to those listed on the lab).
      * 
      */
-    @OutputExport(name="userAccessMode", type=String.class, parameters={})
+    @Export(name="userAccessMode", type=String.class, parameters={})
     private Output</* @Nullable */ String> userAccessMode;
 
     /**
@@ -230,7 +230,7 @@ public class Lab extends io.pulumi.resources.CustomResource {
      * Maximum value MaxUsersInLab can be set to, as specified by the service
      * 
      */
-    @OutputExport(name="userQuota", type=Integer.class, parameters={})
+    @Export(name="userQuota", type=Integer.class, parameters={})
     private Output<Integer> userQuota;
 
     /**

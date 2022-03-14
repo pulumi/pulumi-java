@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.avs.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class IdentitySourceResponse {
     /**
      * The domain's NetBIOS name
@@ -62,18 +62,18 @@ public final class IdentitySourceResponse {
      */
     private final @Nullable String username;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private IdentitySourceResponse(
-        @OutputCustomType.Parameter("alias") @Nullable String alias,
-        @OutputCustomType.Parameter("baseGroupDN") @Nullable String baseGroupDN,
-        @OutputCustomType.Parameter("baseUserDN") @Nullable String baseUserDN,
-        @OutputCustomType.Parameter("domain") @Nullable String domain,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("password") @Nullable String password,
-        @OutputCustomType.Parameter("primaryServer") @Nullable String primaryServer,
-        @OutputCustomType.Parameter("secondaryServer") @Nullable String secondaryServer,
-        @OutputCustomType.Parameter("ssl") @Nullable String ssl,
-        @OutputCustomType.Parameter("username") @Nullable String username) {
+        @CustomType.Parameter("alias") @Nullable String alias,
+        @CustomType.Parameter("baseGroupDN") @Nullable String baseGroupDN,
+        @CustomType.Parameter("baseUserDN") @Nullable String baseUserDN,
+        @CustomType.Parameter("domain") @Nullable String domain,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("password") @Nullable String password,
+        @CustomType.Parameter("primaryServer") @Nullable String primaryServer,
+        @CustomType.Parameter("secondaryServer") @Nullable String secondaryServer,
+        @CustomType.Parameter("ssl") @Nullable String ssl,
+        @CustomType.Parameter("username") @Nullable String username) {
         this.alias = alias;
         this.baseGroupDN = baseGroupDN;
         this.baseUserDN = baseUserDN;

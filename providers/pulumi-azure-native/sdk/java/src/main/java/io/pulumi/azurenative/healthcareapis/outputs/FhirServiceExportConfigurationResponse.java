@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.healthcareapis.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FhirServiceExportConfigurationResponse {
     /**
      * The name of the default export storage account.
@@ -17,8 +17,8 @@ public final class FhirServiceExportConfigurationResponse {
      */
     private final @Nullable String storageAccountName;
 
-    @OutputCustomType.Constructor
-    private FhirServiceExportConfigurationResponse(@OutputCustomType.Parameter("storageAccountName") @Nullable String storageAccountName) {
+    @CustomType.Constructor
+    private FhirServiceExportConfigurationResponse(@CustomType.Parameter("storageAccountName") @Nullable String storageAccountName) {
         this.storageAccountName = storageAccountName;
     }
 

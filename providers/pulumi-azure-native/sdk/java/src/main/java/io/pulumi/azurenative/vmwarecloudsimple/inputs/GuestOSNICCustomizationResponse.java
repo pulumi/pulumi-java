@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.vmwarecloudsimple.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class GuestOSNICCustomizationResponse extends io.pulumi.resources.I
      * IP address allocation method
      * 
      */
-    @InputImport(name="allocation")
+    @Import(name="allocation")
       private final @Nullable String allocation;
 
     public Optional<String> getAllocation() {
@@ -34,7 +34,7 @@ public final class GuestOSNICCustomizationResponse extends io.pulumi.resources.I
      * List of dns servers to use
      * 
      */
-    @InputImport(name="dnsServers")
+    @Import(name="dnsServers")
       private final @Nullable List<String> dnsServers;
 
     public List<String> getDnsServers() {
@@ -45,7 +45,7 @@ public final class GuestOSNICCustomizationResponse extends io.pulumi.resources.I
      * Gateway addresses assigned to nic
      * 
      */
-    @InputImport(name="gateway")
+    @Import(name="gateway")
       private final @Nullable List<String> gateway;
 
     public List<String> getGateway() {
@@ -56,7 +56,7 @@ public final class GuestOSNICCustomizationResponse extends io.pulumi.resources.I
      * Static ip address for nic
      * 
      */
-    @InputImport(name="ipAddress")
+    @Import(name="ipAddress")
       private final @Nullable String ipAddress;
 
     public Optional<String> getIpAddress() {
@@ -67,7 +67,7 @@ public final class GuestOSNICCustomizationResponse extends io.pulumi.resources.I
      * Network mask for nic
      * 
      */
-    @InputImport(name="mask")
+    @Import(name="mask")
       private final @Nullable String mask;
 
     public Optional<String> getMask() {
@@ -78,7 +78,7 @@ public final class GuestOSNICCustomizationResponse extends io.pulumi.resources.I
      * primary WINS server for Windows
      * 
      */
-    @InputImport(name="primaryWinsServer")
+    @Import(name="primaryWinsServer")
       private final @Nullable String primaryWinsServer;
 
     public Optional<String> getPrimaryWinsServer() {
@@ -89,7 +89,7 @@ public final class GuestOSNICCustomizationResponse extends io.pulumi.resources.I
      * secondary WINS server for Windows
      * 
      */
-    @InputImport(name="secondaryWinsServer")
+    @Import(name="secondaryWinsServer")
       private final @Nullable String secondaryWinsServer;
 
     public Optional<String> getSecondaryWinsServer() {

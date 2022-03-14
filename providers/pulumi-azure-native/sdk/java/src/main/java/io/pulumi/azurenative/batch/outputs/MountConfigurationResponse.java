@@ -7,12 +7,12 @@ import io.pulumi.azurenative.batch.outputs.AzureBlobFileSystemConfigurationRespo
 import io.pulumi.azurenative.batch.outputs.AzureFileShareConfigurationResponse;
 import io.pulumi.azurenative.batch.outputs.CIFSMountConfigurationResponse;
 import io.pulumi.azurenative.batch.outputs.NFSMountConfigurationResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class MountConfigurationResponse {
     /**
      * This property is mutually exclusive with all other properties.
@@ -35,12 +35,12 @@ public final class MountConfigurationResponse {
      */
     private final @Nullable NFSMountConfigurationResponse nfsMountConfiguration;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MountConfigurationResponse(
-        @OutputCustomType.Parameter("azureBlobFileSystemConfiguration") @Nullable AzureBlobFileSystemConfigurationResponse azureBlobFileSystemConfiguration,
-        @OutputCustomType.Parameter("azureFileShareConfiguration") @Nullable AzureFileShareConfigurationResponse azureFileShareConfiguration,
-        @OutputCustomType.Parameter("cifsMountConfiguration") @Nullable CIFSMountConfigurationResponse cifsMountConfiguration,
-        @OutputCustomType.Parameter("nfsMountConfiguration") @Nullable NFSMountConfigurationResponse nfsMountConfiguration) {
+        @CustomType.Parameter("azureBlobFileSystemConfiguration") @Nullable AzureBlobFileSystemConfigurationResponse azureBlobFileSystemConfiguration,
+        @CustomType.Parameter("azureFileShareConfiguration") @Nullable AzureFileShareConfigurationResponse azureFileShareConfiguration,
+        @CustomType.Parameter("cifsMountConfiguration") @Nullable CIFSMountConfigurationResponse cifsMountConfiguration,
+        @CustomType.Parameter("nfsMountConfiguration") @Nullable NFSMountConfigurationResponse nfsMountConfiguration) {
         this.azureBlobFileSystemConfiguration = azureBlobFileSystemConfiguration;
         this.azureFileShareConfiguration = azureFileShareConfiguration;
         this.cifsMountConfiguration = cifsMountConfiguration;

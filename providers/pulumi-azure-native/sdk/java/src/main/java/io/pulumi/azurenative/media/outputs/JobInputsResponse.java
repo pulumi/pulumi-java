@@ -7,14 +7,14 @@ import io.pulumi.azurenative.media.outputs.JobInputAssetResponse;
 import io.pulumi.azurenative.media.outputs.JobInputClipResponse;
 import io.pulumi.azurenative.media.outputs.JobInputHttpResponse;
 import io.pulumi.azurenative.media.outputs.JobInputSequenceResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class JobInputsResponse {
     /**
      * List of inputs to a Job.
@@ -28,10 +28,10 @@ public final class JobInputsResponse {
      */
     private final String odataType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private JobInputsResponse(
-        @OutputCustomType.Parameter("inputs") @Nullable List<Object> inputs,
-        @OutputCustomType.Parameter("odataType") String odataType) {
+        @CustomType.Parameter("inputs") @Nullable List<Object> inputs,
+        @CustomType.Parameter("odataType") String odataType) {
         this.inputs = inputs;
         this.odataType = odataType;
     }

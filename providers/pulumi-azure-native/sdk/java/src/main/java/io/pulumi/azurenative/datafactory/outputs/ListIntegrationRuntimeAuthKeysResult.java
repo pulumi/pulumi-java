@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.datafactory.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ListIntegrationRuntimeAuthKeysResult {
     /**
      * The primary integration runtime authentication key.
@@ -22,10 +22,10 @@ public final class ListIntegrationRuntimeAuthKeysResult {
      */
     private final @Nullable String authKey2;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ListIntegrationRuntimeAuthKeysResult(
-        @OutputCustomType.Parameter("authKey1") @Nullable String authKey1,
-        @OutputCustomType.Parameter("authKey2") @Nullable String authKey2) {
+        @CustomType.Parameter("authKey1") @Nullable String authKey1,
+        @CustomType.Parameter("authKey2") @Nullable String authKey2) {
         this.authKey1 = authKey1;
         this.authKey2 = authKey2;
     }

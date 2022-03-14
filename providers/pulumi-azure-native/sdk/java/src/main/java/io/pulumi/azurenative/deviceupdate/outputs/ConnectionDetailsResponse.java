@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.deviceupdate.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ConnectionDetailsResponse {
     /**
      * Group ID.
@@ -35,13 +35,13 @@ public final class ConnectionDetailsResponse {
      */
     private final String privateIpAddress;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ConnectionDetailsResponse(
-        @OutputCustomType.Parameter("groupId") String groupId,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("linkIdentifier") String linkIdentifier,
-        @OutputCustomType.Parameter("memberName") String memberName,
-        @OutputCustomType.Parameter("privateIpAddress") String privateIpAddress) {
+        @CustomType.Parameter("groupId") String groupId,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("linkIdentifier") String linkIdentifier,
+        @CustomType.Parameter("memberName") String memberName,
+        @CustomType.Parameter("privateIpAddress") String privateIpAddress) {
         this.groupId = groupId;
         this.id = id;
         this.linkIdentifier = linkIdentifier;

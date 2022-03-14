@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.azurenative.machinelearningservices.inputs.DatasetStateResponseDeprecatedBy;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class DatasetStateResponse extends io.pulumi.resources.InvokeArgs {
      * Reference to better Dataset or a Definition
      * 
      */
-    @InputImport(name="deprecatedBy")
+    @Import(name="deprecatedBy")
       private final @Nullable DatasetStateResponseDeprecatedBy deprecatedBy;
 
     public Optional<DatasetStateResponseDeprecatedBy> getDeprecatedBy() {
@@ -34,7 +34,7 @@ public final class DatasetStateResponse extends io.pulumi.resources.InvokeArgs {
      * eTag description
      * 
      */
-    @InputImport(name="etag", required=true)
+    @Import(name="etag", required=true)
       private final String etag;
 
     public String getEtag() {
@@ -45,7 +45,7 @@ public final class DatasetStateResponse extends io.pulumi.resources.InvokeArgs {
      * Dataset state
      * 
      */
-    @InputImport(name="state")
+    @Import(name="state")
       private final @Nullable String state;
 
     public Optional<String> getState() {

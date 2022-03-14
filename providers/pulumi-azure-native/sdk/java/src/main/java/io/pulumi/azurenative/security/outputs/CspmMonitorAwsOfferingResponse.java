@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.security.outputs;
 
 import io.pulumi.azurenative.security.outputs.CspmMonitorAwsOfferingResponseNativeCloudConnection;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CspmMonitorAwsOfferingResponse {
     /**
      * The offering description.
@@ -29,11 +29,11 @@ public final class CspmMonitorAwsOfferingResponse {
      */
     private final String offeringType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CspmMonitorAwsOfferingResponse(
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("nativeCloudConnection") @Nullable CspmMonitorAwsOfferingResponseNativeCloudConnection nativeCloudConnection,
-        @OutputCustomType.Parameter("offeringType") String offeringType) {
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("nativeCloudConnection") @Nullable CspmMonitorAwsOfferingResponseNativeCloudConnection nativeCloudConnection,
+        @CustomType.Parameter("offeringType") String offeringType) {
         this.description = description;
         this.nativeCloudConnection = nativeCloudConnection;
         this.offeringType = offeringType;

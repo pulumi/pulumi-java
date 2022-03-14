@@ -9,7 +9,7 @@ import io.pulumi.azurenative.datafactory.outputs.IntegrationRuntimeReferenceResp
 import io.pulumi.azurenative.datafactory.outputs.ParameterSpecificationResponse;
 import io.pulumi.azurenative.datafactory.outputs.SecureStringResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -18,7 +18,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AzureDatabricksLinkedServiceResponse {
     /**
      * Access token for databricks REST API. Refer to https://docs.azuredatabricks.net/api/latest/authentication.html. Type: string (or Expression with resultType string).
@@ -142,32 +142,32 @@ public final class AzureDatabricksLinkedServiceResponse {
      */
     private final @Nullable Object workspaceResourceId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AzureDatabricksLinkedServiceResponse(
-        @OutputCustomType.Parameter("accessToken") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> accessToken,
-        @OutputCustomType.Parameter("annotations") @Nullable List<Object> annotations,
-        @OutputCustomType.Parameter("authentication") @Nullable Object authentication,
-        @OutputCustomType.Parameter("connectVia") @Nullable IntegrationRuntimeReferenceResponse connectVia,
-        @OutputCustomType.Parameter("credential") @Nullable CredentialReferenceResponse credential,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("domain") Object domain,
-        @OutputCustomType.Parameter("encryptedCredential") @Nullable Object encryptedCredential,
-        @OutputCustomType.Parameter("existingClusterId") @Nullable Object existingClusterId,
-        @OutputCustomType.Parameter("instancePoolId") @Nullable Object instancePoolId,
-        @OutputCustomType.Parameter("newClusterCustomTags") @Nullable Map<String,Object> newClusterCustomTags,
-        @OutputCustomType.Parameter("newClusterDriverNodeType") @Nullable Object newClusterDriverNodeType,
-        @OutputCustomType.Parameter("newClusterEnableElasticDisk") @Nullable Object newClusterEnableElasticDisk,
-        @OutputCustomType.Parameter("newClusterInitScripts") @Nullable Object newClusterInitScripts,
-        @OutputCustomType.Parameter("newClusterLogDestination") @Nullable Object newClusterLogDestination,
-        @OutputCustomType.Parameter("newClusterNodeType") @Nullable Object newClusterNodeType,
-        @OutputCustomType.Parameter("newClusterNumOfWorker") @Nullable Object newClusterNumOfWorker,
-        @OutputCustomType.Parameter("newClusterSparkConf") @Nullable Map<String,Object> newClusterSparkConf,
-        @OutputCustomType.Parameter("newClusterSparkEnvVars") @Nullable Map<String,Object> newClusterSparkEnvVars,
-        @OutputCustomType.Parameter("newClusterVersion") @Nullable Object newClusterVersion,
-        @OutputCustomType.Parameter("parameters") @Nullable Map<String,ParameterSpecificationResponse> parameters,
-        @OutputCustomType.Parameter("policyId") @Nullable Object policyId,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("workspaceResourceId") @Nullable Object workspaceResourceId) {
+        @CustomType.Parameter("accessToken") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> accessToken,
+        @CustomType.Parameter("annotations") @Nullable List<Object> annotations,
+        @CustomType.Parameter("authentication") @Nullable Object authentication,
+        @CustomType.Parameter("connectVia") @Nullable IntegrationRuntimeReferenceResponse connectVia,
+        @CustomType.Parameter("credential") @Nullable CredentialReferenceResponse credential,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("domain") Object domain,
+        @CustomType.Parameter("encryptedCredential") @Nullable Object encryptedCredential,
+        @CustomType.Parameter("existingClusterId") @Nullable Object existingClusterId,
+        @CustomType.Parameter("instancePoolId") @Nullable Object instancePoolId,
+        @CustomType.Parameter("newClusterCustomTags") @Nullable Map<String,Object> newClusterCustomTags,
+        @CustomType.Parameter("newClusterDriverNodeType") @Nullable Object newClusterDriverNodeType,
+        @CustomType.Parameter("newClusterEnableElasticDisk") @Nullable Object newClusterEnableElasticDisk,
+        @CustomType.Parameter("newClusterInitScripts") @Nullable Object newClusterInitScripts,
+        @CustomType.Parameter("newClusterLogDestination") @Nullable Object newClusterLogDestination,
+        @CustomType.Parameter("newClusterNodeType") @Nullable Object newClusterNodeType,
+        @CustomType.Parameter("newClusterNumOfWorker") @Nullable Object newClusterNumOfWorker,
+        @CustomType.Parameter("newClusterSparkConf") @Nullable Map<String,Object> newClusterSparkConf,
+        @CustomType.Parameter("newClusterSparkEnvVars") @Nullable Map<String,Object> newClusterSparkEnvVars,
+        @CustomType.Parameter("newClusterVersion") @Nullable Object newClusterVersion,
+        @CustomType.Parameter("parameters") @Nullable Map<String,ParameterSpecificationResponse> parameters,
+        @CustomType.Parameter("policyId") @Nullable Object policyId,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("workspaceResourceId") @Nullable Object workspaceResourceId) {
         this.accessToken = accessToken;
         this.annotations = annotations;
         this.authentication = authentication;

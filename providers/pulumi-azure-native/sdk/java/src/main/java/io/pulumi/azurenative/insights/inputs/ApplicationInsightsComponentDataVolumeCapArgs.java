@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.insights.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -24,7 +24,7 @@ public final class ApplicationInsightsComponentDataVolumeCapArgs extends io.pulu
      * Daily data volume cap in GB.
      * 
      */
-    @InputImport(name="cap")
+    @Import(name="cap")
       private final @Nullable Output<Double> cap;
 
     public Output<Double> getCap() {
@@ -35,7 +35,7 @@ public final class ApplicationInsightsComponentDataVolumeCapArgs extends io.pulu
      * Do not send a notification email when the daily data volume cap is met.
      * 
      */
-    @InputImport(name="stopSendNotificationWhenHitCap")
+    @Import(name="stopSendNotificationWhenHitCap")
       private final @Nullable Output<Boolean> stopSendNotificationWhenHitCap;
 
     public Output<Boolean> getStopSendNotificationWhenHitCap() {
@@ -46,7 +46,7 @@ public final class ApplicationInsightsComponentDataVolumeCapArgs extends io.pulu
      * Reserved, not used for now.
      * 
      */
-    @InputImport(name="stopSendNotificationWhenHitThreshold")
+    @Import(name="stopSendNotificationWhenHitThreshold")
       private final @Nullable Output<Boolean> stopSendNotificationWhenHitThreshold;
 
     public Output<Boolean> getStopSendNotificationWhenHitThreshold() {
@@ -57,7 +57,7 @@ public final class ApplicationInsightsComponentDataVolumeCapArgs extends io.pulu
      * Reserved, not used for now.
      * 
      */
-    @InputImport(name="warningThreshold")
+    @Import(name="warningThreshold")
       private final @Nullable Output<Integer> warningThreshold;
 
     public Output<Integer> getWarningThreshold() {

@@ -5,14 +5,14 @@ package io.pulumi.azurenative.devtestlab.outputs;
 
 import io.pulumi.azurenative.devtestlab.outputs.FormulaPropertiesFromVmResponse;
 import io.pulumi.azurenative.devtestlab.outputs.LabVirtualMachineCreationParameterResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetFormulaResult {
     /**
      * The author of the formula.
@@ -80,21 +80,21 @@ public final class GetFormulaResult {
      */
     private final @Nullable FormulaPropertiesFromVmResponse vm;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetFormulaResult(
-        @OutputCustomType.Parameter("author") String author,
-        @OutputCustomType.Parameter("creationDate") String creationDate,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("formulaContent") @Nullable LabVirtualMachineCreationParameterResponse formulaContent,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("osType") @Nullable String osType,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("uniqueIdentifier") String uniqueIdentifier,
-        @OutputCustomType.Parameter("vm") @Nullable FormulaPropertiesFromVmResponse vm) {
+        @CustomType.Parameter("author") String author,
+        @CustomType.Parameter("creationDate") String creationDate,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("formulaContent") @Nullable LabVirtualMachineCreationParameterResponse formulaContent,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("osType") @Nullable String osType,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("uniqueIdentifier") String uniqueIdentifier,
+        @CustomType.Parameter("vm") @Nullable FormulaPropertiesFromVmResponse vm) {
         this.author = author;
         this.creationDate = creationDate;
         this.description = description;

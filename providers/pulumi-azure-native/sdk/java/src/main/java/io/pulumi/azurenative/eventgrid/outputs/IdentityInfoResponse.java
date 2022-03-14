@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.eventgrid.outputs;
 
 import io.pulumi.azurenative.eventgrid.outputs.UserIdentityPropertiesResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class IdentityInfoResponse {
     /**
      * The principal ID of resource identity.
@@ -36,12 +36,12 @@ public final class IdentityInfoResponse {
      */
     private final @Nullable Map<String,UserIdentityPropertiesResponse> userAssignedIdentities;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private IdentityInfoResponse(
-        @OutputCustomType.Parameter("principalId") @Nullable String principalId,
-        @OutputCustomType.Parameter("tenantId") @Nullable String tenantId,
-        @OutputCustomType.Parameter("type") @Nullable String type,
-        @OutputCustomType.Parameter("userAssignedIdentities") @Nullable Map<String,UserIdentityPropertiesResponse> userAssignedIdentities) {
+        @CustomType.Parameter("principalId") @Nullable String principalId,
+        @CustomType.Parameter("tenantId") @Nullable String tenantId,
+        @CustomType.Parameter("type") @Nullable String type,
+        @CustomType.Parameter("userAssignedIdentities") @Nullable Map<String,UserIdentityPropertiesResponse> userAssignedIdentities) {
         this.principalId = principalId;
         this.tenantId = tenantId;
         this.type = type;

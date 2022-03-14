@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class BanditPolicyResponse extends io.pulumi.resources.InvokeArgs {
      * Number of intervals by which to delay the first evaluation.
      * 
      */
-    @InputImport(name="delayEvaluation")
+    @Import(name="delayEvaluation")
       private final @Nullable Integer delayEvaluation;
 
     public Optional<Integer> getDelayEvaluation() {
@@ -35,7 +35,7 @@ public final class BanditPolicyResponse extends io.pulumi.resources.InvokeArgs {
      * Interval (number of runs) between policy evaluations.
      * 
      */
-    @InputImport(name="evaluationInterval")
+    @Import(name="evaluationInterval")
       private final @Nullable Integer evaluationInterval;
 
     public Optional<Integer> getEvaluationInterval() {
@@ -46,7 +46,7 @@ public final class BanditPolicyResponse extends io.pulumi.resources.InvokeArgs {
      * Expected value is 'Bandit'.
      * 
      */
-    @InputImport(name="policyType", required=true)
+    @Import(name="policyType", required=true)
       private final String policyType;
 
     public String getPolicyType() {
@@ -57,7 +57,7 @@ public final class BanditPolicyResponse extends io.pulumi.resources.InvokeArgs {
      * Absolute distance allowed from the best performing run.
      * 
      */
-    @InputImport(name="slackAmount")
+    @Import(name="slackAmount")
       private final @Nullable Double slackAmount;
 
     public Optional<Double> getSlackAmount() {
@@ -68,7 +68,7 @@ public final class BanditPolicyResponse extends io.pulumi.resources.InvokeArgs {
      * Ratio of the allowed distance from the best performing run.
      * 
      */
-    @InputImport(name="slackFactor")
+    @Import(name="slackFactor")
       private final @Nullable Double slackFactor;
 
     public Optional<Double> getSlackFactor() {

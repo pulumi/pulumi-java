@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.solutions.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ApplicationPackageContactResponse {
     /**
      * The contact name.
@@ -27,11 +27,11 @@ public final class ApplicationPackageContactResponse {
      */
     private final String phone;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ApplicationPackageContactResponse(
-        @OutputCustomType.Parameter("contactName") @Nullable String contactName,
-        @OutputCustomType.Parameter("email") String email,
-        @OutputCustomType.Parameter("phone") String phone) {
+        @CustomType.Parameter("contactName") @Nullable String contactName,
+        @CustomType.Parameter("email") String email,
+        @CustomType.Parameter("phone") String phone) {
         this.contactName = contactName;
         this.email = email;
         this.phone = phone;

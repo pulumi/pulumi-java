@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.storage.outputs;
 
 import io.pulumi.azurenative.storage.outputs.EncryptionServiceResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EncryptionServicesResponse {
     /**
      * The encryption function of the blob storage service.
@@ -32,12 +32,12 @@ public final class EncryptionServicesResponse {
      */
     private final @Nullable EncryptionServiceResponse table;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EncryptionServicesResponse(
-        @OutputCustomType.Parameter("blob") @Nullable EncryptionServiceResponse blob,
-        @OutputCustomType.Parameter("file") @Nullable EncryptionServiceResponse file,
-        @OutputCustomType.Parameter("queue") @Nullable EncryptionServiceResponse queue,
-        @OutputCustomType.Parameter("table") @Nullable EncryptionServiceResponse table) {
+        @CustomType.Parameter("blob") @Nullable EncryptionServiceResponse blob,
+        @CustomType.Parameter("file") @Nullable EncryptionServiceResponse file,
+        @CustomType.Parameter("queue") @Nullable EncryptionServiceResponse queue,
+        @CustomType.Parameter("table") @Nullable EncryptionServiceResponse table) {
         this.blob = blob;
         this.file = file;
         this.queue = queue;

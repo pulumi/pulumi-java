@@ -3,12 +3,12 @@
 
 package io.pulumi.azurenative.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RegionalReplicationStatusResponse {
     /**
      * The details of the replication status.
@@ -31,12 +31,12 @@ public final class RegionalReplicationStatusResponse {
      */
     private final String state;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RegionalReplicationStatusResponse(
-        @OutputCustomType.Parameter("details") String details,
-        @OutputCustomType.Parameter("progress") Integer progress,
-        @OutputCustomType.Parameter("region") String region,
-        @OutputCustomType.Parameter("state") String state) {
+        @CustomType.Parameter("details") String details,
+        @CustomType.Parameter("progress") Integer progress,
+        @CustomType.Parameter("region") String region,
+        @CustomType.Parameter("state") String state) {
         this.details = details;
         this.progress = progress;
         this.region = region;

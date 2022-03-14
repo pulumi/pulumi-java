@@ -6,7 +6,7 @@ package io.pulumi.azurenative.databox.inputs;
 import io.pulumi.azurenative.databox.inputs.CloudErrorResponse;
 import io.pulumi.azurenative.databox.inputs.DataBoxHeavySecretResponse;
 import io.pulumi.azurenative.databox.inputs.DcAccessSecurityCodeResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class DataBoxHeavyJobSecretsResponse extends io.pulumi.resources.In
      * Contains the list of secret objects for a databox heavy job.
      * 
      */
-    @InputImport(name="cabinetPodSecrets", required=true)
+    @Import(name="cabinetPodSecrets", required=true)
       private final List<DataBoxHeavySecretResponse> cabinetPodSecrets;
 
     public List<DataBoxHeavySecretResponse> getCabinetPodSecrets() {
@@ -35,7 +35,7 @@ public final class DataBoxHeavyJobSecretsResponse extends io.pulumi.resources.In
      * Dc Access Security Code for Customer Managed Shipping
      * 
      */
-    @InputImport(name="dcAccessSecurityCode", required=true)
+    @Import(name="dcAccessSecurityCode", required=true)
       private final DcAccessSecurityCodeResponse dcAccessSecurityCode;
 
     public DcAccessSecurityCodeResponse getDcAccessSecurityCode() {
@@ -46,7 +46,7 @@ public final class DataBoxHeavyJobSecretsResponse extends io.pulumi.resources.In
      * Error while fetching the secrets.
      * 
      */
-    @InputImport(name="error", required=true)
+    @Import(name="error", required=true)
       private final CloudErrorResponse error;
 
     public CloudErrorResponse getError() {
@@ -58,7 +58,7 @@ public final class DataBoxHeavyJobSecretsResponse extends io.pulumi.resources.In
      * Expected value is 'DataBoxHeavy'.
      * 
      */
-    @InputImport(name="jobSecretsType", required=true)
+    @Import(name="jobSecretsType", required=true)
       private final String jobSecretsType;
 
     public String getJobSecretsType() {

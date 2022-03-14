@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class HandlerMappingResponse extends io.pulumi.resources.InvokeArgs
      * Command-line arguments to be passed to the script processor.
      * 
      */
-    @InputImport(name="arguments")
+    @Import(name="arguments")
       private final @Nullable String arguments;
 
     public Optional<String> getArguments() {
@@ -34,7 +34,7 @@ public final class HandlerMappingResponse extends io.pulumi.resources.InvokeArgs
      * Requests with this extension will be handled using the specified FastCGI application.
      * 
      */
-    @InputImport(name="extension")
+    @Import(name="extension")
       private final @Nullable String extension;
 
     public Optional<String> getExtension() {
@@ -45,7 +45,7 @@ public final class HandlerMappingResponse extends io.pulumi.resources.InvokeArgs
      * The absolute path to the FastCGI application.
      * 
      */
-    @InputImport(name="scriptProcessor")
+    @Import(name="scriptProcessor")
       private final @Nullable String scriptProcessor;
 
     public Optional<String> getScriptProcessor() {

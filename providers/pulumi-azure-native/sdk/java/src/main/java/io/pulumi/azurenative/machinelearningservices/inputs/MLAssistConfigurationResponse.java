@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.azurenative.machinelearningservices.inputs.ComputeBindingResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class MLAssistConfigurationResponse extends io.pulumi.resources.Inv
      * The compute designated for inferencing.
      * 
      */
-    @InputImport(name="inferencingComputeBinding", required=true)
+    @Import(name="inferencingComputeBinding", required=true)
       private final ComputeBindingResponse inferencingComputeBinding;
 
     public ComputeBindingResponse getInferencingComputeBinding() {
@@ -36,7 +36,7 @@ public final class MLAssistConfigurationResponse extends io.pulumi.resources.Inv
      * Indicates whether MLAssist feature is enabled.
      * 
      */
-    @InputImport(name="mlAssistEnabled")
+    @Import(name="mlAssistEnabled")
       private final @Nullable Boolean mlAssistEnabled;
 
     public Optional<Boolean> getMlAssistEnabled() {
@@ -47,7 +47,7 @@ public final class MLAssistConfigurationResponse extends io.pulumi.resources.Inv
      * Name prefix to use for machine learning model. For each iteration modelName will be appended with iteration e.g.{modelName}_{i}.
      * 
      */
-    @InputImport(name="modelNamePrefix", required=true)
+    @Import(name="modelNamePrefix", required=true)
       private final String modelNamePrefix;
 
     public String getModelNamePrefix() {
@@ -58,7 +58,7 @@ public final class MLAssistConfigurationResponse extends io.pulumi.resources.Inv
      * Prelabel accuracy threshold used in MLAssist feature.
      * 
      */
-    @InputImport(name="prelabelAccuracyThreshold")
+    @Import(name="prelabelAccuracyThreshold")
       private final @Nullable Double prelabelAccuracyThreshold;
 
     public Optional<Double> getPrelabelAccuracyThreshold() {
@@ -69,7 +69,7 @@ public final class MLAssistConfigurationResponse extends io.pulumi.resources.Inv
      * The compute designated for training.
      * 
      */
-    @InputImport(name="trainingComputeBinding", required=true)
+    @Import(name="trainingComputeBinding", required=true)
       private final ComputeBindingResponse trainingComputeBinding;
 
     public ComputeBindingResponse getTrainingComputeBinding() {

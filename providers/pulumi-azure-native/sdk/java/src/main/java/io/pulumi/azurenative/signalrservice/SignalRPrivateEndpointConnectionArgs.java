@@ -6,7 +6,7 @@ package io.pulumi.azurenative.signalrservice;
 import io.pulumi.azurenative.signalrservice.inputs.PrivateEndpointArgs;
 import io.pulumi.azurenative.signalrservice.inputs.PrivateLinkServiceConnectionStateArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class SignalRPrivateEndpointConnectionArgs extends io.pulumi.resour
      * Private endpoint associated with the private endpoint connection
      * 
      */
-    @InputImport(name="privateEndpoint")
+    @Import(name="privateEndpoint")
       private final @Nullable Output<PrivateEndpointArgs> privateEndpoint;
 
     public Output<PrivateEndpointArgs> getPrivateEndpoint() {
@@ -31,7 +31,7 @@ public final class SignalRPrivateEndpointConnectionArgs extends io.pulumi.resour
      * The name of the private endpoint connection associated with the SignalR resource.
      * 
      */
-    @InputImport(name="privateEndpointConnectionName")
+    @Import(name="privateEndpointConnectionName")
       private final @Nullable Output<String> privateEndpointConnectionName;
 
     public Output<String> getPrivateEndpointConnectionName() {
@@ -42,7 +42,7 @@ public final class SignalRPrivateEndpointConnectionArgs extends io.pulumi.resour
      * Connection state
      * 
      */
-    @InputImport(name="privateLinkServiceConnectionState")
+    @Import(name="privateLinkServiceConnectionState")
       private final @Nullable Output<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState;
 
     public Output<PrivateLinkServiceConnectionStateArgs> getPrivateLinkServiceConnectionState() {
@@ -53,7 +53,7 @@ public final class SignalRPrivateEndpointConnectionArgs extends io.pulumi.resour
      * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -64,7 +64,7 @@ public final class SignalRPrivateEndpointConnectionArgs extends io.pulumi.resour
      * The name of the SignalR resource.
      * 
      */
-    @InputImport(name="resourceName", required=true)
+    @Import(name="resourceName", required=true)
       private final Output<String> resourceName;
 
     public Output<String> getPropResourceName() {

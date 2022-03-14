@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.hdinsight.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class ExcludedServicesConfigResponse extends io.pulumi.resources.In
      * The config id of excluded services.
      * 
      */
-    @InputImport(name="excludedServicesConfigId")
+    @Import(name="excludedServicesConfigId")
       private final @Nullable String excludedServicesConfigId;
 
     public Optional<String> getExcludedServicesConfigId() {
@@ -33,7 +33,7 @@ public final class ExcludedServicesConfigResponse extends io.pulumi.resources.In
      * The list of excluded services.
      * 
      */
-    @InputImport(name="excludedServicesList")
+    @Import(name="excludedServicesList")
       private final @Nullable String excludedServicesList;
 
     public Optional<String> getExcludedServicesList() {

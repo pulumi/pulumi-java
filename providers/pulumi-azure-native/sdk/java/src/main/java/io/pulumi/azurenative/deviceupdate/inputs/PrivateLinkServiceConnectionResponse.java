@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.deviceupdate.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class PrivateLinkServiceConnectionResponse extends io.pulumi.resour
      * List of group IDs.
      * 
      */
-    @InputImport(name="groupIds")
+    @Import(name="groupIds")
       private final @Nullable List<String> groupIds;
 
     public List<String> getGroupIds() {
@@ -34,7 +34,7 @@ public final class PrivateLinkServiceConnectionResponse extends io.pulumi.resour
      * Private link service connection name.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -45,7 +45,7 @@ public final class PrivateLinkServiceConnectionResponse extends io.pulumi.resour
      * Request message.
      * 
      */
-    @InputImport(name="requestMessage")
+    @Import(name="requestMessage")
       private final @Nullable String requestMessage;
 
     public Optional<String> getRequestMessage() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storage.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetFileShareResult {
     /**
      * Access tier for specific share. GpV2 account can choose between TransactionOptimized (default), Hot, and Cool. FileStorage account can choose Premium.
@@ -106,26 +106,26 @@ public final class GetFileShareResult {
      */
     private final String version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetFileShareResult(
-        @OutputCustomType.Parameter("accessTier") @Nullable String accessTier,
-        @OutputCustomType.Parameter("accessTierChangeTime") String accessTierChangeTime,
-        @OutputCustomType.Parameter("accessTierStatus") String accessTierStatus,
-        @OutputCustomType.Parameter("deleted") Boolean deleted,
-        @OutputCustomType.Parameter("deletedTime") String deletedTime,
-        @OutputCustomType.Parameter("enabledProtocols") @Nullable String enabledProtocols,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("lastModifiedTime") String lastModifiedTime,
-        @OutputCustomType.Parameter("metadata") @Nullable Map<String,String> metadata,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("remainingRetentionDays") Integer remainingRetentionDays,
-        @OutputCustomType.Parameter("rootSquash") @Nullable String rootSquash,
-        @OutputCustomType.Parameter("shareQuota") @Nullable Integer shareQuota,
-        @OutputCustomType.Parameter("shareUsageBytes") Double shareUsageBytes,
-        @OutputCustomType.Parameter("snapshotTime") String snapshotTime,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("version") String version) {
+        @CustomType.Parameter("accessTier") @Nullable String accessTier,
+        @CustomType.Parameter("accessTierChangeTime") String accessTierChangeTime,
+        @CustomType.Parameter("accessTierStatus") String accessTierStatus,
+        @CustomType.Parameter("deleted") Boolean deleted,
+        @CustomType.Parameter("deletedTime") String deletedTime,
+        @CustomType.Parameter("enabledProtocols") @Nullable String enabledProtocols,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("lastModifiedTime") String lastModifiedTime,
+        @CustomType.Parameter("metadata") @Nullable Map<String,String> metadata,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("remainingRetentionDays") Integer remainingRetentionDays,
+        @CustomType.Parameter("rootSquash") @Nullable String rootSquash,
+        @CustomType.Parameter("shareQuota") @Nullable Integer shareQuota,
+        @CustomType.Parameter("shareUsageBytes") Double shareUsageBytes,
+        @CustomType.Parameter("snapshotTime") String snapshotTime,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("version") String version) {
         this.accessTier = accessTier;
         this.accessTierChangeTime = accessTierChangeTime;
         this.accessTierStatus = accessTierStatus;

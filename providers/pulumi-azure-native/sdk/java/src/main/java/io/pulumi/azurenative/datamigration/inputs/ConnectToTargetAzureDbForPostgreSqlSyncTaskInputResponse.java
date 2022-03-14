@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datamigration.inputs;
 
 import io.pulumi.azurenative.datamigration.inputs.PostgreSqlConnectionInfoResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 
 
@@ -20,7 +20,7 @@ public final class ConnectToTargetAzureDbForPostgreSqlSyncTaskInputResponse exte
      * Connection information for source PostgreSQL server
      * 
      */
-    @InputImport(name="sourceConnectionInfo", required=true)
+    @Import(name="sourceConnectionInfo", required=true)
       private final PostgreSqlConnectionInfoResponse sourceConnectionInfo;
 
     public PostgreSqlConnectionInfoResponse getSourceConnectionInfo() {
@@ -31,7 +31,7 @@ public final class ConnectToTargetAzureDbForPostgreSqlSyncTaskInputResponse exte
      * Connection information for target Azure Database for PostgreSQL server
      * 
      */
-    @InputImport(name="targetConnectionInfo", required=true)
+    @Import(name="targetConnectionInfo", required=true)
       private final PostgreSqlConnectionInfoResponse targetConnectionInfo;
 
     public PostgreSqlConnectionInfoResponse getTargetConnectionInfo() {

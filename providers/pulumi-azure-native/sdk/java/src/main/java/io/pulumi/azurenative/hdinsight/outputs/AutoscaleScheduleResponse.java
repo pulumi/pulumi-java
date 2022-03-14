@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.hdinsight.outputs;
 
 import io.pulumi.azurenative.hdinsight.outputs.AutoscaleTimeAndCapacityResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AutoscaleScheduleResponse {
     /**
      * Days of the week for a schedule-based autoscale rule
@@ -24,10 +24,10 @@ public final class AutoscaleScheduleResponse {
      */
     private final @Nullable AutoscaleTimeAndCapacityResponse timeAndCapacity;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AutoscaleScheduleResponse(
-        @OutputCustomType.Parameter("days") @Nullable List<String> days,
-        @OutputCustomType.Parameter("timeAndCapacity") @Nullable AutoscaleTimeAndCapacityResponse timeAndCapacity) {
+        @CustomType.Parameter("days") @Nullable List<String> days,
+        @CustomType.Parameter("timeAndCapacity") @Nullable AutoscaleTimeAndCapacityResponse timeAndCapacity) {
         this.days = days;
         this.timeAndCapacity = timeAndCapacity;
     }

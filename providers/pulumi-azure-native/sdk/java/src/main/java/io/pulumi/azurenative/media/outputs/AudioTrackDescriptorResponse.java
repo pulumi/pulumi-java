@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.media.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AudioTrackDescriptorResponse {
     /**
      * Optional designation for single channel audio tracks.  Can be used to combine the tracks into stereo or multi-channel audio tracks.
@@ -23,10 +23,10 @@ public final class AudioTrackDescriptorResponse {
      */
     private final String odataType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AudioTrackDescriptorResponse(
-        @OutputCustomType.Parameter("channelMapping") @Nullable String channelMapping,
-        @OutputCustomType.Parameter("odataType") String odataType) {
+        @CustomType.Parameter("channelMapping") @Nullable String channelMapping,
+        @CustomType.Parameter("odataType") String odataType) {
         this.channelMapping = channelMapping;
         this.odataType = odataType;
     }

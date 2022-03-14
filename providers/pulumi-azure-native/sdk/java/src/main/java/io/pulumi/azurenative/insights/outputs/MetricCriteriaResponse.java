@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.insights.outputs;
 
 import io.pulumi.azurenative.insights.outputs.MetricDimensionResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class MetricCriteriaResponse {
     /**
      * Specifies the type of threshold criteria
@@ -62,17 +62,17 @@ public final class MetricCriteriaResponse {
      */
     private final String timeAggregation;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MetricCriteriaResponse(
-        @OutputCustomType.Parameter("criterionType") String criterionType,
-        @OutputCustomType.Parameter("dimensions") @Nullable List<MetricDimensionResponse> dimensions,
-        @OutputCustomType.Parameter("metricName") String metricName,
-        @OutputCustomType.Parameter("metricNamespace") @Nullable String metricNamespace,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("operator") String operator,
-        @OutputCustomType.Parameter("skipMetricValidation") @Nullable Boolean skipMetricValidation,
-        @OutputCustomType.Parameter("threshold") Double threshold,
-        @OutputCustomType.Parameter("timeAggregation") String timeAggregation) {
+        @CustomType.Parameter("criterionType") String criterionType,
+        @CustomType.Parameter("dimensions") @Nullable List<MetricDimensionResponse> dimensions,
+        @CustomType.Parameter("metricName") String metricName,
+        @CustomType.Parameter("metricNamespace") @Nullable String metricNamespace,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("operator") String operator,
+        @CustomType.Parameter("skipMetricValidation") @Nullable Boolean skipMetricValidation,
+        @CustomType.Parameter("threshold") Double threshold,
+        @CustomType.Parameter("timeAggregation") String timeAggregation) {
         this.criterionType = criterionType;
         this.dimensions = dimensions;
         this.metricName = metricName;

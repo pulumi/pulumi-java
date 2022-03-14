@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.authorization.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetClientConfigResult {
     /**
      * Azure Client ID (Application Object ID).
@@ -30,12 +30,12 @@ public final class GetClientConfigResult {
      */
     private final String tenantId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetClientConfigResult(
-        @OutputCustomType.Parameter("clientId") String clientId,
-        @OutputCustomType.Parameter("objectId") String objectId,
-        @OutputCustomType.Parameter("subscriptionId") String subscriptionId,
-        @OutputCustomType.Parameter("tenantId") String tenantId) {
+        @CustomType.Parameter("clientId") String clientId,
+        @CustomType.Parameter("objectId") String objectId,
+        @CustomType.Parameter("subscriptionId") String subscriptionId,
+        @CustomType.Parameter("tenantId") String tenantId) {
         this.clientId = clientId;
         this.objectId = objectId;
         this.subscriptionId = subscriptionId;

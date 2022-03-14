@@ -7,7 +7,7 @@ import io.pulumi.azurenative.cdn.inputs.CustomerCertificateParametersArgs;
 import io.pulumi.azurenative.cdn.inputs.ManagedCertificateParametersArgs;
 import io.pulumi.azurenative.cdn.inputs.UrlSigningKeyParametersArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
      * object which contains secret parameters
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable Output<Object> parameters;
 
     public Output<Object> getParameters() {
@@ -33,7 +33,7 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the CDN profile which is unique within the resource group.
      * 
      */
-    @InputImport(name="profileName", required=true)
+    @Import(name="profileName", required=true)
       private final Output<String> profileName;
 
     public Output<String> getProfileName() {
@@ -44,7 +44,7 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the Resource group within the Azure subscription.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -55,7 +55,7 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the Secret under the profile.
      * 
      */
-    @InputImport(name="secretName")
+    @Import(name="secretName")
       private final @Nullable Output<String> secretName;
 
     public Output<String> getSecretName() {

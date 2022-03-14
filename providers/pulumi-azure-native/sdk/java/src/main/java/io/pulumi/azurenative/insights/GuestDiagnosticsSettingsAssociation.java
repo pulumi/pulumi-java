@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.insights.GuestDiagnosticsSettingsAssociationArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +35,7 @@ public class GuestDiagnosticsSettingsAssociation extends io.pulumi.resources.Cus
      * The guest diagnostic settings name.
      * 
      */
-    @OutputExport(name="guestDiagnosticSettingsName", type=String.class, parameters={})
+    @Export(name="guestDiagnosticSettingsName", type=String.class, parameters={})
     private Output<String> guestDiagnosticSettingsName;
 
     /**
@@ -49,7 +49,7 @@ public class GuestDiagnosticsSettingsAssociation extends io.pulumi.resources.Cus
      * Resource location
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -63,7 +63,7 @@ public class GuestDiagnosticsSettingsAssociation extends io.pulumi.resources.Cus
      * Azure resource name
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -77,7 +77,7 @@ public class GuestDiagnosticsSettingsAssociation extends io.pulumi.resources.Cus
      * Resource tags
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -91,7 +91,7 @@ public class GuestDiagnosticsSettingsAssociation extends io.pulumi.resources.Cus
      * Azure resource type
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

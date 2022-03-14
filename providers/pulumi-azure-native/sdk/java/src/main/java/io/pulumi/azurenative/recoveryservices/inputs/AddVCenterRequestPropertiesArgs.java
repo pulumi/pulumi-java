@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.recoveryservices.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class AddVCenterRequestPropertiesArgs extends io.pulumi.resources.R
      * The friendly name of the vCenter.
      * 
      */
-    @InputImport(name="friendlyName")
+    @Import(name="friendlyName")
       private final @Nullable Output<String> friendlyName;
 
     public Output<String> getFriendlyName() {
@@ -33,7 +33,7 @@ public final class AddVCenterRequestPropertiesArgs extends io.pulumi.resources.R
      * The IP address of the vCenter to be discovered.
      * 
      */
-    @InputImport(name="ipAddress")
+    @Import(name="ipAddress")
       private final @Nullable Output<String> ipAddress;
 
     public Output<String> getIpAddress() {
@@ -44,7 +44,7 @@ public final class AddVCenterRequestPropertiesArgs extends io.pulumi.resources.R
      * The port number for discovery.
      * 
      */
-    @InputImport(name="port")
+    @Import(name="port")
       private final @Nullable Output<String> port;
 
     public Output<String> getPort() {
@@ -55,7 +55,7 @@ public final class AddVCenterRequestPropertiesArgs extends io.pulumi.resources.R
      * The process server Id from where the discovery is orchestrated.
      * 
      */
-    @InputImport(name="processServerId")
+    @Import(name="processServerId")
       private final @Nullable Output<String> processServerId;
 
     public Output<String> getProcessServerId() {
@@ -66,7 +66,7 @@ public final class AddVCenterRequestPropertiesArgs extends io.pulumi.resources.R
      * The account Id which has privileges to discover the vCenter.
      * 
      */
-    @InputImport(name="runAsAccountId")
+    @Import(name="runAsAccountId")
       private final @Nullable Output<String> runAsAccountId;
 
     public Output<String> getRunAsAccountId() {

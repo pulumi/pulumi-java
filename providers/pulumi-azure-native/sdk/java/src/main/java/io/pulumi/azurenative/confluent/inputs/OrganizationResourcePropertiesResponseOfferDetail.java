@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.confluent.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class OrganizationResourcePropertiesResponseOfferDetail extends io.
      * Offer Id
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable String id;
 
     public Optional<String> getId() {
@@ -33,7 +33,7 @@ public final class OrganizationResourcePropertiesResponseOfferDetail extends io.
      * Offer Plan Id
      * 
      */
-    @InputImport(name="planId")
+    @Import(name="planId")
       private final @Nullable String planId;
 
     public Optional<String> getPlanId() {
@@ -44,7 +44,7 @@ public final class OrganizationResourcePropertiesResponseOfferDetail extends io.
      * Offer Plan Name
      * 
      */
-    @InputImport(name="planName")
+    @Import(name="planName")
       private final @Nullable String planName;
 
     public Optional<String> getPlanName() {
@@ -55,7 +55,7 @@ public final class OrganizationResourcePropertiesResponseOfferDetail extends io.
      * Publisher Id
      * 
      */
-    @InputImport(name="publisherId")
+    @Import(name="publisherId")
       private final @Nullable String publisherId;
 
     public Optional<String> getPublisherId() {
@@ -66,7 +66,7 @@ public final class OrganizationResourcePropertiesResponseOfferDetail extends io.
      * SaaS Offer Status
      * 
      */
-    @InputImport(name="status", required=true)
+    @Import(name="status", required=true)
       private final String status;
 
     public String getStatus() {
@@ -77,7 +77,7 @@ public final class OrganizationResourcePropertiesResponseOfferDetail extends io.
      * Offer Plan Term unit
      * 
      */
-    @InputImport(name="termUnit")
+    @Import(name="termUnit")
       private final @Nullable String termUnit;
 
     public Optional<String> getTermUnit() {

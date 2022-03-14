@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.security.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetDeviceSecurityGroupArgs extends io.pulumi.resources.Invoke
      * The name of the device security group. Note that the name of the device security group is case insensitive.
      * 
      */
-    @InputImport(name="deviceSecurityGroupName", required=true)
+    @Import(name="deviceSecurityGroupName", required=true)
       private final String deviceSecurityGroupName;
 
     public String getDeviceSecurityGroupName() {
@@ -27,7 +27,7 @@ public final class GetDeviceSecurityGroupArgs extends io.pulumi.resources.Invoke
      * The identifier of the resource.
      * 
      */
-    @InputImport(name="resourceId", required=true)
+    @Import(name="resourceId", required=true)
       private final String resourceId;
 
     public String getResourceId() {

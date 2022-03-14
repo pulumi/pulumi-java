@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.automanage.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ConfigurationProfileAssignmentComplianceResponse {
     /**
      * The state of compliance, which only appears in the response.
@@ -15,8 +15,8 @@ public final class ConfigurationProfileAssignmentComplianceResponse {
      */
     private final String updateStatus;
 
-    @OutputCustomType.Constructor
-    private ConfigurationProfileAssignmentComplianceResponse(@OutputCustomType.Parameter("updateStatus") String updateStatus) {
+    @CustomType.Constructor
+    private ConfigurationProfileAssignmentComplianceResponse(@CustomType.Parameter("updateStatus") String updateStatus) {
         this.updateStatus = updateStatus;
     }
 

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.compute.outputs;
 
 import io.pulumi.azurenative.compute.outputs.TargetRegionResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GalleryImageVersionPublishingProfileResponse {
     /**
      * The end of life date of the gallery image version. This property can be used for decommissioning purposes. This property is updatable.
@@ -46,14 +46,14 @@ public final class GalleryImageVersionPublishingProfileResponse {
      */
     private final @Nullable List<TargetRegionResponse> targetRegions;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GalleryImageVersionPublishingProfileResponse(
-        @OutputCustomType.Parameter("endOfLifeDate") @Nullable String endOfLifeDate,
-        @OutputCustomType.Parameter("excludeFromLatest") @Nullable Boolean excludeFromLatest,
-        @OutputCustomType.Parameter("publishedDate") String publishedDate,
-        @OutputCustomType.Parameter("replicaCount") @Nullable Integer replicaCount,
-        @OutputCustomType.Parameter("storageAccountType") @Nullable String storageAccountType,
-        @OutputCustomType.Parameter("targetRegions") @Nullable List<TargetRegionResponse> targetRegions) {
+        @CustomType.Parameter("endOfLifeDate") @Nullable String endOfLifeDate,
+        @CustomType.Parameter("excludeFromLatest") @Nullable Boolean excludeFromLatest,
+        @CustomType.Parameter("publishedDate") String publishedDate,
+        @CustomType.Parameter("replicaCount") @Nullable Integer replicaCount,
+        @CustomType.Parameter("storageAccountType") @Nullable String storageAccountType,
+        @CustomType.Parameter("targetRegions") @Nullable List<TargetRegionResponse> targetRegions) {
         this.endOfLifeDate = endOfLifeDate;
         this.excludeFromLatest = excludeFromLatest;
         this.publishedDate = publishedDate;

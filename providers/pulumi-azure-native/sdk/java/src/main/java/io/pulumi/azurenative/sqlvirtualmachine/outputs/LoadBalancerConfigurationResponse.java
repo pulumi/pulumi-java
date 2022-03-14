@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.sqlvirtualmachine.outputs;
 
 import io.pulumi.azurenative.sqlvirtualmachine.outputs.PrivateIPAddressResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class LoadBalancerConfigurationResponse {
     /**
      * Resource id of the load balancer.
@@ -40,13 +40,13 @@ public final class LoadBalancerConfigurationResponse {
      */
     private final @Nullable List<String> sqlVirtualMachineInstances;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LoadBalancerConfigurationResponse(
-        @OutputCustomType.Parameter("loadBalancerResourceId") @Nullable String loadBalancerResourceId,
-        @OutputCustomType.Parameter("privateIpAddress") @Nullable PrivateIPAddressResponse privateIpAddress,
-        @OutputCustomType.Parameter("probePort") @Nullable Integer probePort,
-        @OutputCustomType.Parameter("publicIpAddressResourceId") @Nullable String publicIpAddressResourceId,
-        @OutputCustomType.Parameter("sqlVirtualMachineInstances") @Nullable List<String> sqlVirtualMachineInstances) {
+        @CustomType.Parameter("loadBalancerResourceId") @Nullable String loadBalancerResourceId,
+        @CustomType.Parameter("privateIpAddress") @Nullable PrivateIPAddressResponse privateIpAddress,
+        @CustomType.Parameter("probePort") @Nullable Integer probePort,
+        @CustomType.Parameter("publicIpAddressResourceId") @Nullable String publicIpAddressResourceId,
+        @CustomType.Parameter("sqlVirtualMachineInstances") @Nullable List<String> sqlVirtualMachineInstances) {
         this.loadBalancerResourceId = loadBalancerResourceId;
         this.privateIpAddress = privateIpAddress;
         this.probePort = probePort;

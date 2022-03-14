@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.recoveryservices;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,14 +18,14 @@ public final class ResourceGuardProxyArgs extends io.pulumi.resources.ResourceAr
      * The name of the resource group where the recovery services vault is present.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
-    @InputImport(name="resourceGuardProxyName")
+    @Import(name="resourceGuardProxyName")
       private final @Nullable Output<String> resourceGuardProxyName;
 
     public Output<String> getResourceGuardProxyName() {
@@ -36,7 +36,7 @@ public final class ResourceGuardProxyArgs extends io.pulumi.resources.ResourceAr
      * The name of the recovery services vault.
      * 
      */
-    @InputImport(name="vaultName", required=true)
+    @Import(name="vaultName", required=true)
       private final Output<String> vaultName;
 
     public Output<String> getVaultName() {

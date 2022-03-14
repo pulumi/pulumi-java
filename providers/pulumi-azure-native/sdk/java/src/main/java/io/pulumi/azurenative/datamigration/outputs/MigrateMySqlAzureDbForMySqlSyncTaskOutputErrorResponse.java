@@ -4,11 +4,11 @@
 package io.pulumi.azurenative.datamigration.outputs;
 
 import io.pulumi.azurenative.datamigration.outputs.ReportableExceptionResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class MigrateMySqlAzureDbForMySqlSyncTaskOutputErrorResponse {
     /**
      * Migration error
@@ -27,11 +27,11 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskOutputErrorResponse {
      */
     private final String resultType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MigrateMySqlAzureDbForMySqlSyncTaskOutputErrorResponse(
-        @OutputCustomType.Parameter("error") ReportableExceptionResponse error,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("resultType") String resultType) {
+        @CustomType.Parameter("error") ReportableExceptionResponse error,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("resultType") String resultType) {
         this.error = error;
         this.id = id;
         this.resultType = resultType;

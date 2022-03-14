@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.videoanalyzer.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class NodeInputResponse {
     /**
      * The name of the upstream node in the pipeline which output is used as input of the current node.
@@ -15,8 +15,8 @@ public final class NodeInputResponse {
      */
     private final String nodeName;
 
-    @OutputCustomType.Constructor
-    private NodeInputResponse(@OutputCustomType.Parameter("nodeName") String nodeName) {
+    @CustomType.Constructor
+    private NodeInputResponse(@CustomType.Parameter("nodeName") String nodeName) {
         this.nodeName = nodeName;
     }
 

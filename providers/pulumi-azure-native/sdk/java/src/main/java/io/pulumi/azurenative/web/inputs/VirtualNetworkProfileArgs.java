@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class VirtualNetworkProfileArgs extends io.pulumi.resources.Resourc
      * Resource id of the Virtual Network.
      * 
      */
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final Output<String> id;
 
     public Output<String> getId() {
@@ -33,7 +33,7 @@ public final class VirtualNetworkProfileArgs extends io.pulumi.resources.Resourc
      * Subnet within the Virtual Network.
      * 
      */
-    @InputImport(name="subnet")
+    @Import(name="subnet")
       private final @Nullable Output<String> subnet;
 
     public Output<String> getSubnet() {

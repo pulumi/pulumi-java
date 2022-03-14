@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.securityinsights.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AutomationRuleRunPlaybookActionResponseActionConfiguration {
     /**
      * The resource id of the playbook resource
@@ -22,10 +22,10 @@ public final class AutomationRuleRunPlaybookActionResponseActionConfiguration {
      */
     private final @Nullable String tenantId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AutomationRuleRunPlaybookActionResponseActionConfiguration(
-        @OutputCustomType.Parameter("logicAppResourceId") @Nullable String logicAppResourceId,
-        @OutputCustomType.Parameter("tenantId") @Nullable String tenantId) {
+        @CustomType.Parameter("logicAppResourceId") @Nullable String logicAppResourceId,
+        @CustomType.Parameter("tenantId") @Nullable String tenantId) {
         this.logicAppResourceId = logicAppResourceId;
         this.tenantId = tenantId;
     }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.connectedvmwarevsphere.inputs;
 
 import io.pulumi.azurenative.connectedvmwarevsphere.inputs.NicIPAddressSettingsResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class NicIPSettingsResponse extends io.pulumi.resources.InvokeArgs 
      * Gets or sets the nic allocation method.
      * 
      */
-    @InputImport(name="allocationMethod")
+    @Import(name="allocationMethod")
       private final @Nullable String allocationMethod;
 
     public Optional<String> getAllocationMethod() {
@@ -35,7 +35,7 @@ public final class NicIPSettingsResponse extends io.pulumi.resources.InvokeArgs 
      * Gets or sets the dns servers.
      * 
      */
-    @InputImport(name="dnsServers")
+    @Import(name="dnsServers")
       private final @Nullable List<String> dnsServers;
 
     public List<String> getDnsServers() {
@@ -46,7 +46,7 @@ public final class NicIPSettingsResponse extends io.pulumi.resources.InvokeArgs 
      * Gets or sets the gateway.
      * 
      */
-    @InputImport(name="gateway")
+    @Import(name="gateway")
       private final @Nullable List<String> gateway;
 
     public List<String> getGateway() {
@@ -57,7 +57,7 @@ public final class NicIPSettingsResponse extends io.pulumi.resources.InvokeArgs 
      * Gets or sets the ip address for the nic.
      * 
      */
-    @InputImport(name="ipAddress")
+    @Import(name="ipAddress")
       private final @Nullable String ipAddress;
 
     public Optional<String> getIpAddress() {
@@ -68,7 +68,7 @@ public final class NicIPSettingsResponse extends io.pulumi.resources.InvokeArgs 
      * Gets or sets the IP address information being reported for this NIC. This contains the same IPv4 information above plus IPV6 information.
      * 
      */
-    @InputImport(name="ipAddressInfo", required=true)
+    @Import(name="ipAddressInfo", required=true)
       private final List<NicIPAddressSettingsResponse> ipAddressInfo;
 
     public List<NicIPAddressSettingsResponse> getIpAddressInfo() {
@@ -79,7 +79,7 @@ public final class NicIPSettingsResponse extends io.pulumi.resources.InvokeArgs 
      * Gets or sets the primary server.
      * 
      */
-    @InputImport(name="primaryWinsServer", required=true)
+    @Import(name="primaryWinsServer", required=true)
       private final String primaryWinsServer;
 
     public String getPrimaryWinsServer() {
@@ -90,7 +90,7 @@ public final class NicIPSettingsResponse extends io.pulumi.resources.InvokeArgs 
      * Gets or sets the secondary server.
      * 
      */
-    @InputImport(name="secondaryWinsServer", required=true)
+    @Import(name="secondaryWinsServer", required=true)
       private final String secondaryWinsServer;
 
     public String getSecondaryWinsServer() {
@@ -101,7 +101,7 @@ public final class NicIPSettingsResponse extends io.pulumi.resources.InvokeArgs 
      * Gets or sets the mask.
      * 
      */
-    @InputImport(name="subnetMask")
+    @Import(name="subnetMask")
       private final @Nullable String subnetMask;
 
     public Optional<String> getSubnetMask() {

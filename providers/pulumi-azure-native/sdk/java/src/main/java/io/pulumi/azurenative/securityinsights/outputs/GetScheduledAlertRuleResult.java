@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.securityinsights.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetScheduledAlertRuleResult {
     /**
      * The Name of the alert rule template used to create this rule.
@@ -111,27 +111,27 @@ public final class GetScheduledAlertRuleResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetScheduledAlertRuleResult(
-        @OutputCustomType.Parameter("alertRuleTemplateName") @Nullable String alertRuleTemplateName,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("enabled") Boolean enabled,
-        @OutputCustomType.Parameter("etag") @Nullable String etag,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("lastModifiedUtc") String lastModifiedUtc,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("query") String query,
-        @OutputCustomType.Parameter("queryFrequency") String queryFrequency,
-        @OutputCustomType.Parameter("queryPeriod") String queryPeriod,
-        @OutputCustomType.Parameter("severity") String severity,
-        @OutputCustomType.Parameter("suppressionDuration") String suppressionDuration,
-        @OutputCustomType.Parameter("suppressionEnabled") Boolean suppressionEnabled,
-        @OutputCustomType.Parameter("tactics") @Nullable List<String> tactics,
-        @OutputCustomType.Parameter("triggerOperator") String triggerOperator,
-        @OutputCustomType.Parameter("triggerThreshold") Integer triggerThreshold,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("alertRuleTemplateName") @Nullable String alertRuleTemplateName,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("enabled") Boolean enabled,
+        @CustomType.Parameter("etag") @Nullable String etag,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("lastModifiedUtc") String lastModifiedUtc,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("query") String query,
+        @CustomType.Parameter("queryFrequency") String queryFrequency,
+        @CustomType.Parameter("queryPeriod") String queryPeriod,
+        @CustomType.Parameter("severity") String severity,
+        @CustomType.Parameter("suppressionDuration") String suppressionDuration,
+        @CustomType.Parameter("suppressionEnabled") Boolean suppressionEnabled,
+        @CustomType.Parameter("tactics") @Nullable List<String> tactics,
+        @CustomType.Parameter("triggerOperator") String triggerOperator,
+        @CustomType.Parameter("triggerThreshold") Integer triggerThreshold,
+        @CustomType.Parameter("type") String type) {
         this.alertRuleTemplateName = alertRuleTemplateName;
         this.description = description;
         this.displayName = displayName;

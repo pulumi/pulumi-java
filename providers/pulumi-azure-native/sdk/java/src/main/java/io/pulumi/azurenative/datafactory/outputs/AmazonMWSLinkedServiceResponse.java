@@ -8,7 +8,7 @@ import io.pulumi.azurenative.datafactory.outputs.IntegrationRuntimeReferenceResp
 import io.pulumi.azurenative.datafactory.outputs.ParameterSpecificationResponse;
 import io.pulumi.azurenative.datafactory.outputs.SecureStringResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -17,7 +17,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AmazonMWSLinkedServiceResponse {
     /**
      * The access key id used to access data.
@@ -96,23 +96,23 @@ public final class AmazonMWSLinkedServiceResponse {
      */
     private final @Nullable Object usePeerVerification;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AmazonMWSLinkedServiceResponse(
-        @OutputCustomType.Parameter("accessKeyId") Object accessKeyId,
-        @OutputCustomType.Parameter("annotations") @Nullable List<Object> annotations,
-        @OutputCustomType.Parameter("connectVia") @Nullable IntegrationRuntimeReferenceResponse connectVia,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("encryptedCredential") @Nullable Object encryptedCredential,
-        @OutputCustomType.Parameter("endpoint") Object endpoint,
-        @OutputCustomType.Parameter("marketplaceID") Object marketplaceID,
-        @OutputCustomType.Parameter("mwsAuthToken") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> mwsAuthToken,
-        @OutputCustomType.Parameter("parameters") @Nullable Map<String,ParameterSpecificationResponse> parameters,
-        @OutputCustomType.Parameter("secretKey") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> secretKey,
-        @OutputCustomType.Parameter("sellerID") Object sellerID,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("useEncryptedEndpoints") @Nullable Object useEncryptedEndpoints,
-        @OutputCustomType.Parameter("useHostVerification") @Nullable Object useHostVerification,
-        @OutputCustomType.Parameter("usePeerVerification") @Nullable Object usePeerVerification) {
+        @CustomType.Parameter("accessKeyId") Object accessKeyId,
+        @CustomType.Parameter("annotations") @Nullable List<Object> annotations,
+        @CustomType.Parameter("connectVia") @Nullable IntegrationRuntimeReferenceResponse connectVia,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("encryptedCredential") @Nullable Object encryptedCredential,
+        @CustomType.Parameter("endpoint") Object endpoint,
+        @CustomType.Parameter("marketplaceID") Object marketplaceID,
+        @CustomType.Parameter("mwsAuthToken") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> mwsAuthToken,
+        @CustomType.Parameter("parameters") @Nullable Map<String,ParameterSpecificationResponse> parameters,
+        @CustomType.Parameter("secretKey") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> secretKey,
+        @CustomType.Parameter("sellerID") Object sellerID,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("useEncryptedEndpoints") @Nullable Object useEncryptedEndpoints,
+        @CustomType.Parameter("useHostVerification") @Nullable Object useHostVerification,
+        @CustomType.Parameter("usePeerVerification") @Nullable Object usePeerVerification) {
         this.accessKeyId = accessKeyId;
         this.annotations = annotations;
         this.connectVia = connectVia;

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.botservice.inputs;
 
 import io.pulumi.azurenative.botservice.inputs.SiteResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class ChannelSettingsResponse extends io.pulumi.resources.InvokeArg
      * The bot icon url
      * 
      */
-    @InputImport(name="botIconUrl")
+    @Import(name="botIconUrl")
       private final @Nullable String botIconUrl;
 
     public Optional<String> getBotIconUrl() {
@@ -36,7 +36,7 @@ public final class ChannelSettingsResponse extends io.pulumi.resources.InvokeArg
      * The bot id
      * 
      */
-    @InputImport(name="botId")
+    @Import(name="botId")
       private final @Nullable String botId;
 
     public Optional<String> getBotId() {
@@ -47,7 +47,7 @@ public final class ChannelSettingsResponse extends io.pulumi.resources.InvokeArg
      * The channel display name
      * 
      */
-    @InputImport(name="channelDisplayName")
+    @Import(name="channelDisplayName")
       private final @Nullable String channelDisplayName;
 
     public Optional<String> getChannelDisplayName() {
@@ -58,7 +58,7 @@ public final class ChannelSettingsResponse extends io.pulumi.resources.InvokeArg
      * The channel id
      * 
      */
-    @InputImport(name="channelId")
+    @Import(name="channelId")
       private final @Nullable String channelId;
 
     public Optional<String> getChannelId() {
@@ -69,7 +69,7 @@ public final class ChannelSettingsResponse extends io.pulumi.resources.InvokeArg
      * Opt-out of local authentication and ensure only MSI and AAD can be used exclusively for authentication.
      * 
      */
-    @InputImport(name="disableLocalAuth")
+    @Import(name="disableLocalAuth")
       private final @Nullable Boolean disableLocalAuth;
 
     public Optional<Boolean> getDisableLocalAuth() {
@@ -80,7 +80,7 @@ public final class ChannelSettingsResponse extends io.pulumi.resources.InvokeArg
      * The extensionKey1
      * 
      */
-    @InputImport(name="extensionKey1")
+    @Import(name="extensionKey1")
       private final @Nullable String extensionKey1;
 
     public Optional<String> getExtensionKey1() {
@@ -91,7 +91,7 @@ public final class ChannelSettingsResponse extends io.pulumi.resources.InvokeArg
      * The extensionKey2
      * 
      */
-    @InputImport(name="extensionKey2")
+    @Import(name="extensionKey2")
       private final @Nullable String extensionKey2;
 
     public Optional<String> getExtensionKey2() {
@@ -102,7 +102,7 @@ public final class ChannelSettingsResponse extends io.pulumi.resources.InvokeArg
      * Whether this channel is enabled for the bot
      * 
      */
-    @InputImport(name="isEnabled")
+    @Import(name="isEnabled")
       private final @Nullable Boolean isEnabled;
 
     public Optional<Boolean> getIsEnabled() {
@@ -113,7 +113,7 @@ public final class ChannelSettingsResponse extends io.pulumi.resources.InvokeArg
      * The list of sites
      * 
      */
-    @InputImport(name="sites")
+    @Import(name="sites")
       private final @Nullable List<SiteResponse> sites;
 
     public List<SiteResponse> getSites() {

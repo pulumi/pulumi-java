@@ -8,7 +8,7 @@ import io.pulumi.azurenative.dataprotection.inputs.DatasourceSetResponse;
 import io.pulumi.azurenative.dataprotection.inputs.PolicyInfoResponse;
 import io.pulumi.azurenative.dataprotection.inputs.ProtectionStatusDetailsResponse;
 import io.pulumi.azurenative.dataprotection.inputs.UserFacingErrorResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -27,7 +27,7 @@ public final class BackupInstanceResponse extends io.pulumi.resources.InvokeArgs
      * Specifies the current protection state of the resource
      * 
      */
-    @InputImport(name="currentProtectionState", required=true)
+    @Import(name="currentProtectionState", required=true)
       private final String currentProtectionState;
 
     public String getCurrentProtectionState() {
@@ -38,7 +38,7 @@ public final class BackupInstanceResponse extends io.pulumi.resources.InvokeArgs
      * Gets or sets the data source information.
      * 
      */
-    @InputImport(name="dataSourceInfo", required=true)
+    @Import(name="dataSourceInfo", required=true)
       private final DatasourceResponse dataSourceInfo;
 
     public DatasourceResponse getDataSourceInfo() {
@@ -49,7 +49,7 @@ public final class BackupInstanceResponse extends io.pulumi.resources.InvokeArgs
      * Gets or sets the data source set information.
      * 
      */
-    @InputImport(name="dataSourceSetInfo")
+    @Import(name="dataSourceSetInfo")
       private final @Nullable DatasourceSetResponse dataSourceSetInfo;
 
     public Optional<DatasourceSetResponse> getDataSourceSetInfo() {
@@ -60,14 +60,14 @@ public final class BackupInstanceResponse extends io.pulumi.resources.InvokeArgs
      * Gets or sets the Backup Instance friendly name.
      * 
      */
-    @InputImport(name="friendlyName")
+    @Import(name="friendlyName")
       private final @Nullable String friendlyName;
 
     public Optional<String> getFriendlyName() {
         return this.friendlyName == null ? Optional.empty() : Optional.ofNullable(this.friendlyName);
     }
 
-    @InputImport(name="objectType", required=true)
+    @Import(name="objectType", required=true)
       private final String objectType;
 
     public String getObjectType() {
@@ -78,7 +78,7 @@ public final class BackupInstanceResponse extends io.pulumi.resources.InvokeArgs
      * Gets or sets the policy information.
      * 
      */
-    @InputImport(name="policyInfo", required=true)
+    @Import(name="policyInfo", required=true)
       private final PolicyInfoResponse policyInfo;
 
     public PolicyInfoResponse getPolicyInfo() {
@@ -89,7 +89,7 @@ public final class BackupInstanceResponse extends io.pulumi.resources.InvokeArgs
      * Specifies the protection error of the resource
      * 
      */
-    @InputImport(name="protectionErrorDetails", required=true)
+    @Import(name="protectionErrorDetails", required=true)
       private final UserFacingErrorResponse protectionErrorDetails;
 
     public UserFacingErrorResponse getProtectionErrorDetails() {
@@ -100,7 +100,7 @@ public final class BackupInstanceResponse extends io.pulumi.resources.InvokeArgs
      * Specifies the protection status of the resource
      * 
      */
-    @InputImport(name="protectionStatus", required=true)
+    @Import(name="protectionStatus", required=true)
       private final ProtectionStatusDetailsResponse protectionStatus;
 
     public ProtectionStatusDetailsResponse getProtectionStatus() {
@@ -111,7 +111,7 @@ public final class BackupInstanceResponse extends io.pulumi.resources.InvokeArgs
      * Specifies the provisioning state of the resource i.e. provisioning/updating/Succeeded/Failed
      * 
      */
-    @InputImport(name="provisioningState", required=true)
+    @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
     public String getProvisioningState() {

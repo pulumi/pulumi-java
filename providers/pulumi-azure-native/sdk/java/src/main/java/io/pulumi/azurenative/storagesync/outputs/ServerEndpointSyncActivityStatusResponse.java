@@ -3,12 +3,12 @@
 
 package io.pulumi.azurenative.storagesync.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ServerEndpointSyncActivityStatusResponse {
     /**
      * Applied bytes
@@ -46,15 +46,15 @@ public final class ServerEndpointSyncActivityStatusResponse {
      */
     private final Double totalItemCount;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServerEndpointSyncActivityStatusResponse(
-        @OutputCustomType.Parameter("appliedBytes") Double appliedBytes,
-        @OutputCustomType.Parameter("appliedItemCount") Double appliedItemCount,
-        @OutputCustomType.Parameter("perItemErrorCount") Double perItemErrorCount,
-        @OutputCustomType.Parameter("syncMode") String syncMode,
-        @OutputCustomType.Parameter("timestamp") String timestamp,
-        @OutputCustomType.Parameter("totalBytes") Double totalBytes,
-        @OutputCustomType.Parameter("totalItemCount") Double totalItemCount) {
+        @CustomType.Parameter("appliedBytes") Double appliedBytes,
+        @CustomType.Parameter("appliedItemCount") Double appliedItemCount,
+        @CustomType.Parameter("perItemErrorCount") Double perItemErrorCount,
+        @CustomType.Parameter("syncMode") String syncMode,
+        @CustomType.Parameter("timestamp") String timestamp,
+        @CustomType.Parameter("totalBytes") Double totalBytes,
+        @CustomType.Parameter("totalItemCount") Double totalItemCount) {
         this.appliedBytes = appliedBytes;
         this.appliedItemCount = appliedItemCount;
         this.perItemErrorCount = perItemErrorCount;

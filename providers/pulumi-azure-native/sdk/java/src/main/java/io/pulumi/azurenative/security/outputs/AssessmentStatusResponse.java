@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.security.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AssessmentStatusResponse {
     /**
      * Programmatic code for the cause of the assessment status
@@ -27,11 +27,11 @@ public final class AssessmentStatusResponse {
      */
     private final @Nullable String description;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AssessmentStatusResponse(
-        @OutputCustomType.Parameter("cause") @Nullable String cause,
-        @OutputCustomType.Parameter("code") String code,
-        @OutputCustomType.Parameter("description") @Nullable String description) {
+        @CustomType.Parameter("cause") @Nullable String cause,
+        @CustomType.Parameter("code") String code,
+        @CustomType.Parameter("description") @Nullable String description) {
         this.cause = cause;
         this.code = code;
         this.description = description;

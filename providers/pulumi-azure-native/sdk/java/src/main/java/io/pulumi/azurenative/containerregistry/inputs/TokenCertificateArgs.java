@@ -6,7 +6,7 @@ package io.pulumi.azurenative.containerregistry.inputs;
 import io.pulumi.azurenative.containerregistry.enums.TokenCertificateName;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class TokenCertificateArgs extends io.pulumi.resources.ResourceArgs
      * Base 64 encoded string of the public certificate1 in PEM format that will be used for authenticating the token.
      * 
      */
-    @InputImport(name="encodedPemCertificate")
+    @Import(name="encodedPemCertificate")
       private final @Nullable Output<String> encodedPemCertificate;
 
     public Output<String> getEncodedPemCertificate() {
@@ -35,14 +35,14 @@ public final class TokenCertificateArgs extends io.pulumi.resources.ResourceArgs
      * The expiry datetime of the certificate.
      * 
      */
-    @InputImport(name="expiry")
+    @Import(name="expiry")
       private final @Nullable Output<String> expiry;
 
     public Output<String> getExpiry() {
         return this.expiry == null ? Output.empty() : this.expiry;
     }
 
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<Either<String,TokenCertificateName>> name;
 
     public Output<Either<String,TokenCertificateName>> getName() {
@@ -53,7 +53,7 @@ public final class TokenCertificateArgs extends io.pulumi.resources.ResourceArgs
      * The thumbprint of the certificate.
      * 
      */
-    @InputImport(name="thumbprint")
+    @Import(name="thumbprint")
       private final @Nullable Output<String> thumbprint;
 
     public Output<String> getThumbprint() {

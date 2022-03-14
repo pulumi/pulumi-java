@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.databricks.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class CreatedByResponse {
     /**
      * The application ID of the application that initiated the creation of the workspace. For example, Azure Portal.
@@ -25,11 +25,11 @@ public final class CreatedByResponse {
      */
     private final String puid;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CreatedByResponse(
-        @OutputCustomType.Parameter("applicationId") String applicationId,
-        @OutputCustomType.Parameter("oid") String oid,
-        @OutputCustomType.Parameter("puid") String puid) {
+        @CustomType.Parameter("applicationId") String applicationId,
+        @CustomType.Parameter("oid") String oid,
+        @CustomType.Parameter("puid") String puid) {
         this.applicationId = applicationId;
         this.oid = oid;
         this.puid = puid;

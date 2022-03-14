@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.containerservice.inputs;
 
 import io.pulumi.azurenative.containerservice.inputs.CloudErrorBodyResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class CloudErrorResponse extends io.pulumi.resources.InvokeArgs {
      * Details about the error.
      * 
      */
-    @InputImport(name="error")
+    @Import(name="error")
       private final @Nullable CloudErrorBodyResponse error;
 
     public Optional<CloudErrorBodyResponse> getError() {

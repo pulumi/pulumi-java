@@ -12,7 +12,7 @@ import io.pulumi.azurenative.providerhub.inputs.ResourceProviderManifestProperti
 import io.pulumi.azurenative.providerhub.inputs.ResourceProviderManifestPropertiesResponseProviderAuthentication;
 import io.pulumi.azurenative.providerhub.inputs.ResourceProviderManifestPropertiesResponseRequestHeaderOptions;
 import io.pulumi.azurenative.providerhub.inputs.ResourceProviderManifestPropertiesResponseTemplateDeploymentOptions;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -25,105 +25,105 @@ public final class ProviderRegistrationResponseProperties extends io.pulumi.reso
 
     public static final ProviderRegistrationResponseProperties Empty = new ProviderRegistrationResponseProperties();
 
-    @InputImport(name="capabilities")
+    @Import(name="capabilities")
       private final @Nullable List<ResourceProviderCapabilitiesResponse> capabilities;
 
     public List<ResourceProviderCapabilitiesResponse> getCapabilities() {
         return this.capabilities == null ? List.of() : this.capabilities;
     }
 
-    @InputImport(name="featuresRule")
+    @Import(name="featuresRule")
       private final @Nullable ResourceProviderManifestPropertiesResponseFeaturesRule featuresRule;
 
     public Optional<ResourceProviderManifestPropertiesResponseFeaturesRule> getFeaturesRule() {
         return this.featuresRule == null ? Optional.empty() : Optional.ofNullable(this.featuresRule);
     }
 
-    @InputImport(name="management")
+    @Import(name="management")
       private final @Nullable ResourceProviderManifestPropertiesResponseManagement management;
 
     public Optional<ResourceProviderManifestPropertiesResponseManagement> getManagement() {
         return this.management == null ? Optional.empty() : Optional.ofNullable(this.management);
     }
 
-    @InputImport(name="metadata")
+    @Import(name="metadata")
       private final @Nullable Object metadata;
 
     public Optional<Object> getMetadata() {
         return this.metadata == null ? Optional.empty() : Optional.ofNullable(this.metadata);
     }
 
-    @InputImport(name="namespace")
+    @Import(name="namespace")
       private final @Nullable String namespace;
 
     public Optional<String> getNamespace() {
         return this.namespace == null ? Optional.empty() : Optional.ofNullable(this.namespace);
     }
 
-    @InputImport(name="providerAuthentication")
+    @Import(name="providerAuthentication")
       private final @Nullable ResourceProviderManifestPropertiesResponseProviderAuthentication providerAuthentication;
 
     public Optional<ResourceProviderManifestPropertiesResponseProviderAuthentication> getProviderAuthentication() {
         return this.providerAuthentication == null ? Optional.empty() : Optional.ofNullable(this.providerAuthentication);
     }
 
-    @InputImport(name="providerAuthorizations")
+    @Import(name="providerAuthorizations")
       private final @Nullable List<ResourceProviderAuthorizationResponse> providerAuthorizations;
 
     public List<ResourceProviderAuthorizationResponse> getProviderAuthorizations() {
         return this.providerAuthorizations == null ? List.of() : this.providerAuthorizations;
     }
 
-    @InputImport(name="providerHubMetadata")
+    @Import(name="providerHubMetadata")
       private final @Nullable ProviderRegistrationPropertiesResponseProviderHubMetadata providerHubMetadata;
 
     public Optional<ProviderRegistrationPropertiesResponseProviderHubMetadata> getProviderHubMetadata() {
         return this.providerHubMetadata == null ? Optional.empty() : Optional.ofNullable(this.providerHubMetadata);
     }
 
-    @InputImport(name="providerType")
+    @Import(name="providerType")
       private final @Nullable String providerType;
 
     public Optional<String> getProviderType() {
         return this.providerType == null ? Optional.empty() : Optional.ofNullable(this.providerType);
     }
 
-    @InputImport(name="providerVersion")
+    @Import(name="providerVersion")
       private final @Nullable String providerVersion;
 
     public Optional<String> getProviderVersion() {
         return this.providerVersion == null ? Optional.empty() : Optional.ofNullable(this.providerVersion);
     }
 
-    @InputImport(name="provisioningState")
+    @Import(name="provisioningState")
       private final @Nullable String provisioningState;
 
     public Optional<String> getProvisioningState() {
         return this.provisioningState == null ? Optional.empty() : Optional.ofNullable(this.provisioningState);
     }
 
-    @InputImport(name="requestHeaderOptions")
+    @Import(name="requestHeaderOptions")
       private final @Nullable ResourceProviderManifestPropertiesResponseRequestHeaderOptions requestHeaderOptions;
 
     public Optional<ResourceProviderManifestPropertiesResponseRequestHeaderOptions> getRequestHeaderOptions() {
         return this.requestHeaderOptions == null ? Optional.empty() : Optional.ofNullable(this.requestHeaderOptions);
     }
 
-    @InputImport(name="requiredFeatures")
+    @Import(name="requiredFeatures")
       private final @Nullable List<String> requiredFeatures;
 
     public List<String> getRequiredFeatures() {
         return this.requiredFeatures == null ? List.of() : this.requiredFeatures;
     }
 
-    @InputImport(name="subscriptionLifecycleNotificationSpecifications")
+    @Import(name="subscriptionLifecycleNotificationSpecifications")
       private final @Nullable ProviderRegistrationPropertiesResponseSubscriptionLifecycleNotificationSpecifications subscriptionLifecycleNotificationSpecifications;
 
     public Optional<ProviderRegistrationPropertiesResponseSubscriptionLifecycleNotificationSpecifications> getSubscriptionLifecycleNotificationSpecifications() {
         return this.subscriptionLifecycleNotificationSpecifications == null ? Optional.empty() : Optional.ofNullable(this.subscriptionLifecycleNotificationSpecifications);
     }
 
-    @InputImport(name="templateDeploymentOptions")
+    @Import(name="templateDeploymentOptions")
       private final @Nullable ResourceProviderManifestPropertiesResponseTemplateDeploymentOptions templateDeploymentOptions;
 
     public Optional<ResourceProviderManifestPropertiesResponseTemplateDeploymentOptions> getTemplateDeploymentOptions() {

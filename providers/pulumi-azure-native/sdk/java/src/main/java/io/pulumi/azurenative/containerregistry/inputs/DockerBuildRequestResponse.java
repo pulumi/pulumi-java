@@ -7,7 +7,7 @@ import io.pulumi.azurenative.containerregistry.inputs.AgentPropertiesResponse;
 import io.pulumi.azurenative.containerregistry.inputs.ArgumentResponse;
 import io.pulumi.azurenative.containerregistry.inputs.CredentialsResponse;
 import io.pulumi.azurenative.containerregistry.inputs.PlatformPropertiesResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -29,7 +29,7 @@ public final class DockerBuildRequestResponse extends io.pulumi.resources.Invoke
      * The machine configuration of the run agent.
      * 
      */
-    @InputImport(name="agentConfiguration")
+    @Import(name="agentConfiguration")
       private final @Nullable AgentPropertiesResponse agentConfiguration;
 
     public Optional<AgentPropertiesResponse> getAgentConfiguration() {
@@ -40,7 +40,7 @@ public final class DockerBuildRequestResponse extends io.pulumi.resources.Invoke
      * The dedicated agent pool for the run.
      * 
      */
-    @InputImport(name="agentPoolName")
+    @Import(name="agentPoolName")
       private final @Nullable String agentPoolName;
 
     public Optional<String> getAgentPoolName() {
@@ -51,7 +51,7 @@ public final class DockerBuildRequestResponse extends io.pulumi.resources.Invoke
      * The collection of override arguments to be used when executing the run.
      * 
      */
-    @InputImport(name="arguments")
+    @Import(name="arguments")
       private final @Nullable List<ArgumentResponse> arguments;
 
     public List<ArgumentResponse> getArguments() {
@@ -62,7 +62,7 @@ public final class DockerBuildRequestResponse extends io.pulumi.resources.Invoke
      * The properties that describes a set of credentials that will be used when this run is invoked.
      * 
      */
-    @InputImport(name="credentials")
+    @Import(name="credentials")
       private final @Nullable CredentialsResponse credentials;
 
     public Optional<CredentialsResponse> getCredentials() {
@@ -73,7 +73,7 @@ public final class DockerBuildRequestResponse extends io.pulumi.resources.Invoke
      * The Docker file path relative to the source location.
      * 
      */
-    @InputImport(name="dockerFilePath", required=true)
+    @Import(name="dockerFilePath", required=true)
       private final String dockerFilePath;
 
     public String getDockerFilePath() {
@@ -84,7 +84,7 @@ public final class DockerBuildRequestResponse extends io.pulumi.resources.Invoke
      * The fully qualified image names including the repository and tag.
      * 
      */
-    @InputImport(name="imageNames")
+    @Import(name="imageNames")
       private final @Nullable List<String> imageNames;
 
     public List<String> getImageNames() {
@@ -95,7 +95,7 @@ public final class DockerBuildRequestResponse extends io.pulumi.resources.Invoke
      * The value that indicates whether archiving is enabled for the run or not.
      * 
      */
-    @InputImport(name="isArchiveEnabled")
+    @Import(name="isArchiveEnabled")
       private final @Nullable Boolean isArchiveEnabled;
 
     public Optional<Boolean> getIsArchiveEnabled() {
@@ -106,7 +106,7 @@ public final class DockerBuildRequestResponse extends io.pulumi.resources.Invoke
      * The value of this property indicates whether the image built should be pushed to the registry or not.
      * 
      */
-    @InputImport(name="isPushEnabled")
+    @Import(name="isPushEnabled")
       private final @Nullable Boolean isPushEnabled;
 
     public Optional<Boolean> getIsPushEnabled() {
@@ -117,7 +117,7 @@ public final class DockerBuildRequestResponse extends io.pulumi.resources.Invoke
      * The template that describes the repository and tag information for run log artifact.
      * 
      */
-    @InputImport(name="logTemplate")
+    @Import(name="logTemplate")
       private final @Nullable String logTemplate;
 
     public Optional<String> getLogTemplate() {
@@ -128,7 +128,7 @@ public final class DockerBuildRequestResponse extends io.pulumi.resources.Invoke
      * The value of this property indicates whether the image cache is enabled or not.
      * 
      */
-    @InputImport(name="noCache")
+    @Import(name="noCache")
       private final @Nullable Boolean noCache;
 
     public Optional<Boolean> getNoCache() {
@@ -139,7 +139,7 @@ public final class DockerBuildRequestResponse extends io.pulumi.resources.Invoke
      * The platform properties against which the run has to happen.
      * 
      */
-    @InputImport(name="platform", required=true)
+    @Import(name="platform", required=true)
       private final PlatformPropertiesResponse platform;
 
     public PlatformPropertiesResponse getPlatform() {
@@ -151,7 +151,7 @@ public final class DockerBuildRequestResponse extends io.pulumi.resources.Invoke
      * If it is relative URL, the relative path should be obtained from calling listBuildSourceUploadUrl API.
      * 
      */
-    @InputImport(name="sourceLocation")
+    @Import(name="sourceLocation")
       private final @Nullable String sourceLocation;
 
     public Optional<String> getSourceLocation() {
@@ -162,7 +162,7 @@ public final class DockerBuildRequestResponse extends io.pulumi.resources.Invoke
      * The name of the target build stage for the docker build.
      * 
      */
-    @InputImport(name="target")
+    @Import(name="target")
       private final @Nullable String target;
 
     public Optional<String> getTarget() {
@@ -173,7 +173,7 @@ public final class DockerBuildRequestResponse extends io.pulumi.resources.Invoke
      * Run timeout in seconds.
      * 
      */
-    @InputImport(name="timeout")
+    @Import(name="timeout")
       private final @Nullable Integer timeout;
 
     public Optional<Integer> getTimeout() {
@@ -185,7 +185,7 @@ public final class DockerBuildRequestResponse extends io.pulumi.resources.Invoke
      * Expected value is 'DockerBuildRequest'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

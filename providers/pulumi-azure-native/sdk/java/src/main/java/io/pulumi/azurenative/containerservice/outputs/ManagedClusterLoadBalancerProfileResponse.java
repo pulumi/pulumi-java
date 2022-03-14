@@ -7,14 +7,14 @@ import io.pulumi.azurenative.containerservice.outputs.ManagedClusterLoadBalancer
 import io.pulumi.azurenative.containerservice.outputs.ManagedClusterLoadBalancerProfileResponseOutboundIPPrefixes;
 import io.pulumi.azurenative.containerservice.outputs.ManagedClusterLoadBalancerProfileResponseOutboundIPs;
 import io.pulumi.azurenative.containerservice.outputs.ResourceReferenceResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ManagedClusterLoadBalancerProfileResponse {
     /**
      * Desired number of allocated SNAT ports per VM. Allowed values must be in the range of 0 to 64000 (inclusive). The default value is 0 which results in Azure dynamically allocating ports.
@@ -47,14 +47,14 @@ public final class ManagedClusterLoadBalancerProfileResponse {
      */
     private final @Nullable ManagedClusterLoadBalancerProfileResponseOutboundIPs outboundIPs;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ManagedClusterLoadBalancerProfileResponse(
-        @OutputCustomType.Parameter("allocatedOutboundPorts") @Nullable Integer allocatedOutboundPorts,
-        @OutputCustomType.Parameter("effectiveOutboundIPs") @Nullable List<ResourceReferenceResponse> effectiveOutboundIPs,
-        @OutputCustomType.Parameter("idleTimeoutInMinutes") @Nullable Integer idleTimeoutInMinutes,
-        @OutputCustomType.Parameter("managedOutboundIPs") @Nullable ManagedClusterLoadBalancerProfileResponseManagedOutboundIPs managedOutboundIPs,
-        @OutputCustomType.Parameter("outboundIPPrefixes") @Nullable ManagedClusterLoadBalancerProfileResponseOutboundIPPrefixes outboundIPPrefixes,
-        @OutputCustomType.Parameter("outboundIPs") @Nullable ManagedClusterLoadBalancerProfileResponseOutboundIPs outboundIPs) {
+        @CustomType.Parameter("allocatedOutboundPorts") @Nullable Integer allocatedOutboundPorts,
+        @CustomType.Parameter("effectiveOutboundIPs") @Nullable List<ResourceReferenceResponse> effectiveOutboundIPs,
+        @CustomType.Parameter("idleTimeoutInMinutes") @Nullable Integer idleTimeoutInMinutes,
+        @CustomType.Parameter("managedOutboundIPs") @Nullable ManagedClusterLoadBalancerProfileResponseManagedOutboundIPs managedOutboundIPs,
+        @CustomType.Parameter("outboundIPPrefixes") @Nullable ManagedClusterLoadBalancerProfileResponseOutboundIPPrefixes outboundIPPrefixes,
+        @CustomType.Parameter("outboundIPs") @Nullable ManagedClusterLoadBalancerProfileResponseOutboundIPs outboundIPs) {
         this.allocatedOutboundPorts = allocatedOutboundPorts;
         this.effectiveOutboundIPs = effectiveOutboundIPs;
         this.idleTimeoutInMinutes = idleTimeoutInMinutes;

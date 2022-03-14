@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.costmanagement.inputs;
 
 import io.pulumi.azurenative.costmanagement.inputs.ExportExecutionResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class ExportExecutionListResultResponse extends io.pulumi.resources
      * A list of export executions.
      * 
      */
-    @InputImport(name="value", required=true)
+    @Import(name="value", required=true)
       private final List<ExportExecutionResponse> value;
 
     public List<ExportExecutionResponse> getValue() {

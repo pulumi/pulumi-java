@@ -9,7 +9,7 @@ import io.pulumi.azurenative.network.outputs.ProtocolCustomSettingsFormatRespons
 import io.pulumi.azurenative.network.outputs.SubResourceResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -37,7 +37,7 @@ public class DdosCustomPolicy extends io.pulumi.resources.CustomResource {
      * A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -51,7 +51,7 @@ public class DdosCustomPolicy extends io.pulumi.resources.CustomResource {
      * Resource location.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -65,7 +65,7 @@ public class DdosCustomPolicy extends io.pulumi.resources.CustomResource {
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -79,7 +79,7 @@ public class DdosCustomPolicy extends io.pulumi.resources.CustomResource {
      * The protocol-specific DDoS policy customization parameters.
      * 
      */
-    @OutputExport(name="protocolCustomSettings", type=List.class, parameters={ProtocolCustomSettingsFormatResponse.class})
+    @Export(name="protocolCustomSettings", type=List.class, parameters={ProtocolCustomSettingsFormatResponse.class})
     private Output</* @Nullable */ List<ProtocolCustomSettingsFormatResponse>> protocolCustomSettings;
 
     /**
@@ -93,7 +93,7 @@ public class DdosCustomPolicy extends io.pulumi.resources.CustomResource {
      * The provisioning state of the DDoS custom policy resource.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -107,7 +107,7 @@ public class DdosCustomPolicy extends io.pulumi.resources.CustomResource {
      * The list of public IPs associated with the DDoS custom policy resource. This list is read-only.
      * 
      */
-    @OutputExport(name="publicIPAddresses", type=List.class, parameters={SubResourceResponse.class})
+    @Export(name="publicIPAddresses", type=List.class, parameters={SubResourceResponse.class})
     private Output<List<SubResourceResponse>> publicIPAddresses;
 
     /**
@@ -121,7 +121,7 @@ public class DdosCustomPolicy extends io.pulumi.resources.CustomResource {
      * The resource GUID property of the DDoS custom policy resource. It uniquely identifies the resource, even if the user changes its name or migrate the resource across subscriptions or resource groups.
      * 
      */
-    @OutputExport(name="resourceGuid", type=String.class, parameters={})
+    @Export(name="resourceGuid", type=String.class, parameters={})
     private Output<String> resourceGuid;
 
     /**
@@ -135,7 +135,7 @@ public class DdosCustomPolicy extends io.pulumi.resources.CustomResource {
      * Resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -149,7 +149,7 @@ public class DdosCustomPolicy extends io.pulumi.resources.CustomResource {
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

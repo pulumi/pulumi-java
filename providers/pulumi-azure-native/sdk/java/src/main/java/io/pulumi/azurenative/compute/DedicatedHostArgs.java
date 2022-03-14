@@ -6,7 +6,7 @@ package io.pulumi.azurenative.compute;
 import io.pulumi.azurenative.compute.enums.DedicatedHostLicenseTypes;
 import io.pulumi.azurenative.compute.inputs.SkuArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class DedicatedHostArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies whether the dedicated host should be replaced automatically in case of a failure. The value is defaulted to 'true' when not provided.
      * 
      */
-    @InputImport(name="autoReplaceOnFailure")
+    @Import(name="autoReplaceOnFailure")
       private final @Nullable Output<Boolean> autoReplaceOnFailure;
 
     public Output<Boolean> getAutoReplaceOnFailure() {
@@ -34,7 +34,7 @@ public final class DedicatedHostArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the dedicated host group.
      * 
      */
-    @InputImport(name="hostGroupName", required=true)
+    @Import(name="hostGroupName", required=true)
       private final Output<String> hostGroupName;
 
     public Output<String> getHostGroupName() {
@@ -45,7 +45,7 @@ public final class DedicatedHostArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the dedicated host .
      * 
      */
-    @InputImport(name="hostName")
+    @Import(name="hostName")
       private final @Nullable Output<String> hostName;
 
     public Output<String> getHostName() {
@@ -56,7 +56,7 @@ public final class DedicatedHostArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the software license type that will be applied to the VMs deployed on the dedicated host. <br><br> Possible values are: <br><br> **None** <br><br> **Windows_Server_Hybrid** <br><br> **Windows_Server_Perpetual** <br><br> Default: **None**
      * 
      */
-    @InputImport(name="licenseType")
+    @Import(name="licenseType")
       private final @Nullable Output<DedicatedHostLicenseTypes> licenseType;
 
     public Output<DedicatedHostLicenseTypes> getLicenseType() {
@@ -67,7 +67,7 @@ public final class DedicatedHostArgs extends io.pulumi.resources.ResourceArgs {
      * Resource location
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -78,7 +78,7 @@ public final class DedicatedHostArgs extends io.pulumi.resources.ResourceArgs {
      * Fault domain of the dedicated host within a dedicated host group.
      * 
      */
-    @InputImport(name="platformFaultDomain")
+    @Import(name="platformFaultDomain")
       private final @Nullable Output<Integer> platformFaultDomain;
 
     public Output<Integer> getPlatformFaultDomain() {
@@ -89,7 +89,7 @@ public final class DedicatedHostArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -100,7 +100,7 @@ public final class DedicatedHostArgs extends io.pulumi.resources.ResourceArgs {
      * SKU of the dedicated host for Hardware Generation and VM family. Only name is required to be set. List Microsoft.Compute SKUs for a list of possible values.
      * 
      */
-    @InputImport(name="sku", required=true)
+    @Import(name="sku", required=true)
       private final Output<SkuArgs> sku;
 
     public Output<SkuArgs> getSku() {
@@ -111,7 +111,7 @@ public final class DedicatedHostArgs extends io.pulumi.resources.ResourceArgs {
      * Resource tags
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

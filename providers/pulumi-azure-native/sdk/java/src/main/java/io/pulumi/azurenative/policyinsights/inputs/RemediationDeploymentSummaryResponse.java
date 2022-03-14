@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.policyinsights.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class RemediationDeploymentSummaryResponse extends io.pulumi.resour
      * The number of deployments required by the remediation that have failed.
      * 
      */
-    @InputImport(name="failedDeployments", required=true)
+    @Import(name="failedDeployments", required=true)
       private final Integer failedDeployments;
 
     public Integer getFailedDeployments() {
@@ -31,7 +31,7 @@ public final class RemediationDeploymentSummaryResponse extends io.pulumi.resour
      * The number of deployments required by the remediation that have succeeded.
      * 
      */
-    @InputImport(name="successfulDeployments", required=true)
+    @Import(name="successfulDeployments", required=true)
       private final Integer successfulDeployments;
 
     public Integer getSuccessfulDeployments() {
@@ -42,7 +42,7 @@ public final class RemediationDeploymentSummaryResponse extends io.pulumi.resour
      * The number of deployments required by the remediation.
      * 
      */
-    @InputImport(name="totalDeployments", required=true)
+    @Import(name="totalDeployments", required=true)
       private final Integer totalDeployments;
 
     public Integer getTotalDeployments() {

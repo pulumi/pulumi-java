@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.Object;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ActivityPolicyResponse {
     /**
      * Maximum ordinary retry attempts. Default is 0. Type: integer (or Expression with resultType integer), minimum: 0.
@@ -39,13 +39,13 @@ public final class ActivityPolicyResponse {
      */
     private final @Nullable Object timeout;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ActivityPolicyResponse(
-        @OutputCustomType.Parameter("retry") @Nullable Object retry,
-        @OutputCustomType.Parameter("retryIntervalInSeconds") @Nullable Integer retryIntervalInSeconds,
-        @OutputCustomType.Parameter("secureInput") @Nullable Boolean secureInput,
-        @OutputCustomType.Parameter("secureOutput") @Nullable Boolean secureOutput,
-        @OutputCustomType.Parameter("timeout") @Nullable Object timeout) {
+        @CustomType.Parameter("retry") @Nullable Object retry,
+        @CustomType.Parameter("retryIntervalInSeconds") @Nullable Integer retryIntervalInSeconds,
+        @CustomType.Parameter("secureInput") @Nullable Boolean secureInput,
+        @CustomType.Parameter("secureOutput") @Nullable Boolean secureOutput,
+        @CustomType.Parameter("timeout") @Nullable Object timeout) {
         this.retry = retry;
         this.retryIntervalInSeconds = retryIntervalInSeconds;
         this.secureInput = secureInput;

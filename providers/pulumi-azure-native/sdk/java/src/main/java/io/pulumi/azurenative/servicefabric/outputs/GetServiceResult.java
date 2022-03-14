@@ -9,7 +9,7 @@ import io.pulumi.azurenative.servicefabric.outputs.ServiceLoadMetricDescriptionR
 import io.pulumi.azurenative.servicefabric.outputs.ServicePlacementPolicyDescriptionResponse;
 import io.pulumi.azurenative.servicefabric.outputs.SingletonPartitionSchemeDescriptionResponse;
 import io.pulumi.azurenative.servicefabric.outputs.UniformInt64RangePartitionSchemeDescriptionResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -18,7 +18,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetServiceResult {
     /**
      * A list that describes the correlation of the service with other services.
@@ -106,25 +106,25 @@ public final class GetServiceResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetServiceResult(
-        @OutputCustomType.Parameter("correlationScheme") @Nullable List<ServiceCorrelationDescriptionResponse> correlationScheme,
-        @OutputCustomType.Parameter("defaultMoveCost") @Nullable String defaultMoveCost,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("partitionDescription") @Nullable Object partitionDescription,
-        @OutputCustomType.Parameter("placementConstraints") @Nullable String placementConstraints,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("serviceDnsName") @Nullable String serviceDnsName,
-        @OutputCustomType.Parameter("serviceKind") String serviceKind,
-        @OutputCustomType.Parameter("serviceLoadMetrics") @Nullable List<ServiceLoadMetricDescriptionResponse> serviceLoadMetrics,
-        @OutputCustomType.Parameter("servicePackageActivationMode") @Nullable String servicePackageActivationMode,
-        @OutputCustomType.Parameter("servicePlacementPolicies") @Nullable List<ServicePlacementPolicyDescriptionResponse> servicePlacementPolicies,
-        @OutputCustomType.Parameter("serviceTypeName") @Nullable String serviceTypeName,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("correlationScheme") @Nullable List<ServiceCorrelationDescriptionResponse> correlationScheme,
+        @CustomType.Parameter("defaultMoveCost") @Nullable String defaultMoveCost,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("partitionDescription") @Nullable Object partitionDescription,
+        @CustomType.Parameter("placementConstraints") @Nullable String placementConstraints,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("serviceDnsName") @Nullable String serviceDnsName,
+        @CustomType.Parameter("serviceKind") String serviceKind,
+        @CustomType.Parameter("serviceLoadMetrics") @Nullable List<ServiceLoadMetricDescriptionResponse> serviceLoadMetrics,
+        @CustomType.Parameter("servicePackageActivationMode") @Nullable String servicePackageActivationMode,
+        @CustomType.Parameter("servicePlacementPolicies") @Nullable List<ServicePlacementPolicyDescriptionResponse> servicePlacementPolicies,
+        @CustomType.Parameter("serviceTypeName") @Nullable String serviceTypeName,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type) {
         this.correlationScheme = correlationScheme;
         this.defaultMoveCost = defaultMoveCost;
         this.etag = etag;

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.avs.inputs.PSCredentialExecutionParameterArgs;
 import io.pulumi.azurenative.avs.inputs.ScriptSecureStringExecutionParameterArgs;
 import io.pulumi.azurenative.avs.inputs.ScriptStringExecutionParameterArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class ScriptExecutionArgs extends io.pulumi.resources.ResourceArgs 
      * Error message if the script was able to run, but if the script itself had errors or powershell threw an exception
      * 
      */
-    @InputImport(name="failureReason")
+    @Import(name="failureReason")
       private final @Nullable Output<String> failureReason;
 
     public Output<String> getFailureReason() {
@@ -35,7 +35,7 @@ public final class ScriptExecutionArgs extends io.pulumi.resources.ResourceArgs 
      * Parameters that will be hidden/not visible to ARM, such as passwords and credentials
      * 
      */
-    @InputImport(name="hiddenParameters")
+    @Import(name="hiddenParameters")
       private final @Nullable Output<List<Object>> hiddenParameters;
 
     public Output<List<Object>> getHiddenParameters() {
@@ -46,7 +46,7 @@ public final class ScriptExecutionArgs extends io.pulumi.resources.ResourceArgs 
      * User-defined dictionary.
      * 
      */
-    @InputImport(name="namedOutputs")
+    @Import(name="namedOutputs")
       private final @Nullable Output<Map<String,Object>> namedOutputs;
 
     public Output<Map<String,Object>> getNamedOutputs() {
@@ -57,7 +57,7 @@ public final class ScriptExecutionArgs extends io.pulumi.resources.ResourceArgs 
      * Standard output stream from the powershell execution
      * 
      */
-    @InputImport(name="output")
+    @Import(name="output")
       private final @Nullable Output<List<String>> output;
 
     public Output<List<String>> getOutput() {
@@ -68,7 +68,7 @@ public final class ScriptExecutionArgs extends io.pulumi.resources.ResourceArgs 
      * Parameters the script will accept
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable Output<List<Object>> parameters;
 
     public Output<List<Object>> getParameters() {
@@ -79,7 +79,7 @@ public final class ScriptExecutionArgs extends io.pulumi.resources.ResourceArgs 
      * The name of the private cloud.
      * 
      */
-    @InputImport(name="privateCloudName", required=true)
+    @Import(name="privateCloudName", required=true)
       private final Output<String> privateCloudName;
 
     public Output<String> getPrivateCloudName() {
@@ -90,7 +90,7 @@ public final class ScriptExecutionArgs extends io.pulumi.resources.ResourceArgs 
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -101,7 +101,7 @@ public final class ScriptExecutionArgs extends io.pulumi.resources.ResourceArgs 
      * Time to live for the resource. If not provided, will be available for 60 days
      * 
      */
-    @InputImport(name="retention")
+    @Import(name="retention")
       private final @Nullable Output<String> retention;
 
     public Output<String> getRetention() {
@@ -112,7 +112,7 @@ public final class ScriptExecutionArgs extends io.pulumi.resources.ResourceArgs 
      * A reference to the script cmdlet resource if user is running a AVS script
      * 
      */
-    @InputImport(name="scriptCmdletId")
+    @Import(name="scriptCmdletId")
       private final @Nullable Output<String> scriptCmdletId;
 
     public Output<String> getScriptCmdletId() {
@@ -123,7 +123,7 @@ public final class ScriptExecutionArgs extends io.pulumi.resources.ResourceArgs 
      * Name of the user-invoked script execution resource
      * 
      */
-    @InputImport(name="scriptExecutionName")
+    @Import(name="scriptExecutionName")
       private final @Nullable Output<String> scriptExecutionName;
 
     public Output<String> getScriptExecutionName() {
@@ -134,7 +134,7 @@ public final class ScriptExecutionArgs extends io.pulumi.resources.ResourceArgs 
      * Time limit for execution
      * 
      */
-    @InputImport(name="timeout", required=true)
+    @Import(name="timeout", required=true)
       private final Output<String> timeout;
 
     public Output<String> getTimeout() {

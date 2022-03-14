@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.orbital.outputs;
 
 import io.pulumi.azurenative.orbital.outputs.AvailableContactsResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ListSpacecraftAvailableContactsResult {
     /**
      * The URL to get the next set of results.
@@ -23,10 +23,10 @@ public final class ListSpacecraftAvailableContactsResult {
      */
     private final @Nullable List<AvailableContactsResponse> value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ListSpacecraftAvailableContactsResult(
-        @OutputCustomType.Parameter("nextLink") String nextLink,
-        @OutputCustomType.Parameter("value") @Nullable List<AvailableContactsResponse> value) {
+        @CustomType.Parameter("nextLink") String nextLink,
+        @CustomType.Parameter("value") @Nullable List<AvailableContactsResponse> value) {
         this.nextLink = nextLink;
         this.value = value;
     }

@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.netapp.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AccountEncryptionResponse {
     /**
      * Encryption Key Source. Possible values are: 'Microsoft.NetApp'.
@@ -17,8 +17,8 @@ public final class AccountEncryptionResponse {
      */
     private final @Nullable String keySource;
 
-    @OutputCustomType.Constructor
-    private AccountEncryptionResponse(@OutputCustomType.Parameter("keySource") @Nullable String keySource) {
+    @CustomType.Constructor
+    private AccountEncryptionResponse(@CustomType.Parameter("keySource") @Nullable String keySource) {
         this.keySource = keySource;
     }
 

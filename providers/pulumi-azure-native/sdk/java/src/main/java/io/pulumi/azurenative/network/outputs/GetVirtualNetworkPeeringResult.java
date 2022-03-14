@@ -6,14 +6,14 @@ package io.pulumi.azurenative.network.outputs;
 import io.pulumi.azurenative.network.outputs.AddressSpaceResponse;
 import io.pulumi.azurenative.network.outputs.SubResourceResponse;
 import io.pulumi.azurenative.network.outputs.VirtualNetworkBgpCommunitiesResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetVirtualNetworkPeeringResult {
     /**
      * Whether the forwarded traffic from the VMs in the local virtual network will be allowed/disallowed in remote virtual network.
@@ -91,23 +91,23 @@ public final class GetVirtualNetworkPeeringResult {
      */
     private final @Nullable Boolean useRemoteGateways;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetVirtualNetworkPeeringResult(
-        @OutputCustomType.Parameter("allowForwardedTraffic") @Nullable Boolean allowForwardedTraffic,
-        @OutputCustomType.Parameter("allowGatewayTransit") @Nullable Boolean allowGatewayTransit,
-        @OutputCustomType.Parameter("allowVirtualNetworkAccess") @Nullable Boolean allowVirtualNetworkAccess,
-        @OutputCustomType.Parameter("doNotVerifyRemoteGateways") @Nullable Boolean doNotVerifyRemoteGateways,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("peeringState") @Nullable String peeringState,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("remoteAddressSpace") @Nullable AddressSpaceResponse remoteAddressSpace,
-        @OutputCustomType.Parameter("remoteBgpCommunities") @Nullable VirtualNetworkBgpCommunitiesResponse remoteBgpCommunities,
-        @OutputCustomType.Parameter("remoteVirtualNetwork") @Nullable SubResourceResponse remoteVirtualNetwork,
-        @OutputCustomType.Parameter("resourceGuid") String resourceGuid,
-        @OutputCustomType.Parameter("type") @Nullable String type,
-        @OutputCustomType.Parameter("useRemoteGateways") @Nullable Boolean useRemoteGateways) {
+        @CustomType.Parameter("allowForwardedTraffic") @Nullable Boolean allowForwardedTraffic,
+        @CustomType.Parameter("allowGatewayTransit") @Nullable Boolean allowGatewayTransit,
+        @CustomType.Parameter("allowVirtualNetworkAccess") @Nullable Boolean allowVirtualNetworkAccess,
+        @CustomType.Parameter("doNotVerifyRemoteGateways") @Nullable Boolean doNotVerifyRemoteGateways,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("peeringState") @Nullable String peeringState,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("remoteAddressSpace") @Nullable AddressSpaceResponse remoteAddressSpace,
+        @CustomType.Parameter("remoteBgpCommunities") @Nullable VirtualNetworkBgpCommunitiesResponse remoteBgpCommunities,
+        @CustomType.Parameter("remoteVirtualNetwork") @Nullable SubResourceResponse remoteVirtualNetwork,
+        @CustomType.Parameter("resourceGuid") String resourceGuid,
+        @CustomType.Parameter("type") @Nullable String type,
+        @CustomType.Parameter("useRemoteGateways") @Nullable Boolean useRemoteGateways) {
         this.allowForwardedTraffic = allowForwardedTraffic;
         this.allowGatewayTransit = allowGatewayTransit;
         this.allowVirtualNetworkAccess = allowVirtualNetworkAccess;

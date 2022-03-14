@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.datadog.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class UserInfoResponse {
     /**
      * Email of the user used by Datadog for contacting them if needed
@@ -27,11 +27,11 @@ public final class UserInfoResponse {
      */
     private final @Nullable String phoneNumber;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private UserInfoResponse(
-        @OutputCustomType.Parameter("emailAddress") @Nullable String emailAddress,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("phoneNumber") @Nullable String phoneNumber) {
+        @CustomType.Parameter("emailAddress") @Nullable String emailAddress,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("phoneNumber") @Nullable String phoneNumber) {
         this.emailAddress = emailAddress;
         this.name = name;
         this.phoneNumber = phoneNumber;

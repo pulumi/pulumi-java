@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.SubResourceResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetIpAllocationResult {
     /**
      * IpAllocation tags.
@@ -80,21 +80,21 @@ public final class GetIpAllocationResult {
      */
     private final SubResourceResponse virtualNetwork;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetIpAllocationResult(
-        @OutputCustomType.Parameter("allocationTags") @Nullable Map<String,String> allocationTags,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("ipamAllocationId") @Nullable String ipamAllocationId,
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("prefix") @Nullable String prefix,
-        @OutputCustomType.Parameter("prefixLength") @Nullable Integer prefixLength,
-        @OutputCustomType.Parameter("prefixType") @Nullable String prefixType,
-        @OutputCustomType.Parameter("subnet") SubResourceResponse subnet,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("virtualNetwork") SubResourceResponse virtualNetwork) {
+        @CustomType.Parameter("allocationTags") @Nullable Map<String,String> allocationTags,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("ipamAllocationId") @Nullable String ipamAllocationId,
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("prefix") @Nullable String prefix,
+        @CustomType.Parameter("prefixLength") @Nullable Integer prefixLength,
+        @CustomType.Parameter("prefixType") @Nullable String prefixType,
+        @CustomType.Parameter("subnet") SubResourceResponse subnet,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("virtualNetwork") SubResourceResponse virtualNetwork) {
         this.allocationTags = allocationTags;
         this.etag = etag;
         this.id = id;

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.deploymentmanager.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class IdentityArgs extends io.pulumi.resources.ResourceArgs {
      * The list of identities.
      * 
      */
-    @InputImport(name="identityIds", required=true)
+    @Import(name="identityIds", required=true)
       private final Output<List<String>> identityIds;
 
     public Output<List<String>> getIdentityIds() {
@@ -33,7 +33,7 @@ public final class IdentityArgs extends io.pulumi.resources.ResourceArgs {
      * The identity type.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.connectedvmwarevsphere.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class ErrorDetailResponse extends io.pulumi.resources.InvokeArgs {
      * The error's code.
      * 
      */
-    @InputImport(name="code", required=true)
+    @Import(name="code", required=true)
       private final String code;
 
     public String getCode() {
@@ -30,7 +30,7 @@ public final class ErrorDetailResponse extends io.pulumi.resources.InvokeArgs {
      * Additional error details.
      * 
      */
-    @InputImport(name="details")
+    @Import(name="details")
       private final @Nullable List<ErrorDetailResponse> details;
 
     public List<ErrorDetailResponse> getDetails() {
@@ -41,7 +41,7 @@ public final class ErrorDetailResponse extends io.pulumi.resources.InvokeArgs {
      * A human readable error message.
      * 
      */
-    @InputImport(name="message", required=true)
+    @Import(name="message", required=true)
       private final String message;
 
     public String getMessage() {
@@ -52,7 +52,7 @@ public final class ErrorDetailResponse extends io.pulumi.resources.InvokeArgs {
      * Indicates which property in the request is responsible for the error.
      * 
      */
-    @InputImport(name="target")
+    @Import(name="target")
       private final @Nullable String target;
 
     public Optional<String> getTarget() {

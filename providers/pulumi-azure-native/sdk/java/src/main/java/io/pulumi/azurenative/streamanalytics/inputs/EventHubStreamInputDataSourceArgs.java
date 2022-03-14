@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.streamanalytics.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class EventHubStreamInputDataSourceArgs extends io.pulumi.resources
      * The name of an Event Hub Consumer Group that should be used to read events from the Event Hub. Specifying distinct consumer group names for multiple inputs allows each of those inputs to receive the same events from the Event Hub. If not specified, the input uses the Event Hub’s default consumer group.
      * 
      */
-    @InputImport(name="consumerGroupName")
+    @Import(name="consumerGroupName")
       private final @Nullable Output<String> consumerGroupName;
 
     public Output<String> getConsumerGroupName() {
@@ -33,7 +33,7 @@ public final class EventHubStreamInputDataSourceArgs extends io.pulumi.resources
      * The name of the Event Hub. Required on PUT (CreateOrReplace) requests.
      * 
      */
-    @InputImport(name="eventHubName")
+    @Import(name="eventHubName")
       private final @Nullable Output<String> eventHubName;
 
     public Output<String> getEventHubName() {
@@ -44,7 +44,7 @@ public final class EventHubStreamInputDataSourceArgs extends io.pulumi.resources
      * The namespace that is associated with the desired Event Hub, Service Bus Queue, Service Bus Topic, etc. Required on PUT (CreateOrReplace) requests.
      * 
      */
-    @InputImport(name="serviceBusNamespace")
+    @Import(name="serviceBusNamespace")
       private final @Nullable Output<String> serviceBusNamespace;
 
     public Output<String> getServiceBusNamespace() {
@@ -55,7 +55,7 @@ public final class EventHubStreamInputDataSourceArgs extends io.pulumi.resources
      * The shared access policy key for the specified shared access policy. Required on PUT (CreateOrReplace) requests.
      * 
      */
-    @InputImport(name="sharedAccessPolicyKey")
+    @Import(name="sharedAccessPolicyKey")
       private final @Nullable Output<String> sharedAccessPolicyKey;
 
     public Output<String> getSharedAccessPolicyKey() {
@@ -66,7 +66,7 @@ public final class EventHubStreamInputDataSourceArgs extends io.pulumi.resources
      * The shared access policy name for the Event Hub, Service Bus Queue, Service Bus Topic, etc. Required on PUT (CreateOrReplace) requests.
      * 
      */
-    @InputImport(name="sharedAccessPolicyName")
+    @Import(name="sharedAccessPolicyName")
       private final @Nullable Output<String> sharedAccessPolicyName;
 
     public Output<String> getSharedAccessPolicyName() {
@@ -78,7 +78,7 @@ public final class EventHubStreamInputDataSourceArgs extends io.pulumi.resources
      * Expected value is 'Microsoft.ServiceBus/EventHub'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {

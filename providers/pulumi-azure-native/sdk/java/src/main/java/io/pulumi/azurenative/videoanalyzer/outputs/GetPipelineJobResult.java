@@ -6,14 +6,14 @@ package io.pulumi.azurenative.videoanalyzer.outputs;
 import io.pulumi.azurenative.videoanalyzer.outputs.ParameterDefinitionResponse;
 import io.pulumi.azurenative.videoanalyzer.outputs.PipelineJobErrorResponse;
 import io.pulumi.azurenative.videoanalyzer.outputs.SystemDataResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetPipelineJobResult {
     /**
      * An optional description for the pipeline.
@@ -66,18 +66,18 @@ public final class GetPipelineJobResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetPipelineJobResult(
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("error") PipelineJobErrorResponse error,
-        @OutputCustomType.Parameter("expiration") String expiration,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("parameters") @Nullable List<ParameterDefinitionResponse> parameters,
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
-        @OutputCustomType.Parameter("topologyName") String topologyName,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("error") PipelineJobErrorResponse error,
+        @CustomType.Parameter("expiration") String expiration,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("parameters") @Nullable List<ParameterDefinitionResponse> parameters,
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("systemData") SystemDataResponse systemData,
+        @CustomType.Parameter("topologyName") String topologyName,
+        @CustomType.Parameter("type") String type) {
         this.description = description;
         this.error = error;
         this.expiration = expiration;

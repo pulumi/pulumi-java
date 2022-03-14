@@ -7,7 +7,7 @@ import io.pulumi.azurenative.cdn.enums.RequestHeaderOperator;
 import io.pulumi.azurenative.cdn.enums.Transform;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -27,7 +27,7 @@ public final class RequestHeaderMatchConditionParametersArgs extends io.pulumi.r
      * The match value for the condition of the delivery rule
      * 
      */
-    @InputImport(name="matchValues")
+    @Import(name="matchValues")
       private final @Nullable Output<List<String>> matchValues;
 
     public Output<List<String>> getMatchValues() {
@@ -38,14 +38,14 @@ public final class RequestHeaderMatchConditionParametersArgs extends io.pulumi.r
      * Describes if this is negate condition or not
      * 
      */
-    @InputImport(name="negateCondition")
+    @Import(name="negateCondition")
       private final @Nullable Output<Boolean> negateCondition;
 
     public Output<Boolean> getNegateCondition() {
         return this.negateCondition == null ? Output.empty() : this.negateCondition;
     }
 
-    @InputImport(name="odataType", required=true)
+    @Import(name="odataType", required=true)
       private final Output<String> odataType;
 
     public Output<String> getOdataType() {
@@ -56,7 +56,7 @@ public final class RequestHeaderMatchConditionParametersArgs extends io.pulumi.r
      * Describes operator to be matched
      * 
      */
-    @InputImport(name="operator", required=true)
+    @Import(name="operator", required=true)
       private final Output<Either<String,RequestHeaderOperator>> operator;
 
     public Output<Either<String,RequestHeaderOperator>> getOperator() {
@@ -67,7 +67,7 @@ public final class RequestHeaderMatchConditionParametersArgs extends io.pulumi.r
      * Name of Header to be matched
      * 
      */
-    @InputImport(name="selector")
+    @Import(name="selector")
       private final @Nullable Output<String> selector;
 
     public Output<String> getSelector() {
@@ -78,7 +78,7 @@ public final class RequestHeaderMatchConditionParametersArgs extends io.pulumi.r
      * List of transforms
      * 
      */
-    @InputImport(name="transforms")
+    @Import(name="transforms")
       private final @Nullable Output<List<Either<String,Transform>>> transforms;
 
     public Output<List<Either<String,Transform>>> getTransforms() {

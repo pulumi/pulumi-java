@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearningexperimentation;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the machine learning team account.
      * 
      */
-    @InputImport(name="accountName", required=true)
+    @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
     public Output<String> getAccountName() {
@@ -30,7 +30,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
      * The description of this project.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -41,7 +41,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
      * The friendly name for this project.
      * 
      */
-    @InputImport(name="friendlyName", required=true)
+    @Import(name="friendlyName", required=true)
       private final Output<String> friendlyName;
 
     public Output<String> getFriendlyName() {
@@ -52,7 +52,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
      * The reference to git repo for this project.
      * 
      */
-    @InputImport(name="gitrepo")
+    @Import(name="gitrepo")
       private final @Nullable Output<String> gitrepo;
 
     public Output<String> getGitrepo() {
@@ -63,7 +63,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
      * The location of the resource. This cannot be changed after the resource is created.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -74,7 +74,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the machine learning project under a team account workspace.
      * 
      */
-    @InputImport(name="projectName")
+    @Import(name="projectName")
       private final @Nullable Output<String> projectName;
 
     public Output<String> getProjectName() {
@@ -85,7 +85,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group to which the machine learning team account belongs.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -96,7 +96,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
      * The tags of the resource.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -107,7 +107,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the machine learning team account workspace.
      * 
      */
-    @InputImport(name="workspaceName", required=true)
+    @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;
 
     public Output<String> getWorkspaceName() {

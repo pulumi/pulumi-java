@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.importexport.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class IdentityDetailsResponse extends io.pulumi.resources.InvokeArg
      * Specifies the principal id for the identity for the job.
      * 
      */
-    @InputImport(name="principalId", required=true)
+    @Import(name="principalId", required=true)
       private final String principalId;
 
     public String getPrincipalId() {
@@ -33,7 +33,7 @@ public final class IdentityDetailsResponse extends io.pulumi.resources.InvokeArg
      * Specifies the tenant id for the identity for the job.
      * 
      */
-    @InputImport(name="tenantId", required=true)
+    @Import(name="tenantId", required=true)
       private final String tenantId;
 
     public String getTenantId() {
@@ -44,7 +44,7 @@ public final class IdentityDetailsResponse extends io.pulumi.resources.InvokeArg
      * The type of identity
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable String type;
 
     public Optional<String> getType() {

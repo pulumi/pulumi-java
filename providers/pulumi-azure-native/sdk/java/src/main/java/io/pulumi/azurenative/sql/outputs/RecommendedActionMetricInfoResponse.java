@@ -3,12 +3,12 @@
 
 package io.pulumi.azurenative.sql.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RecommendedActionMetricInfoResponse {
     /**
      * Gets the name of the metric. e.g., CPU, Number of Queries.
@@ -36,13 +36,13 @@ public final class RecommendedActionMetricInfoResponse {
      */
     private final Double value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RecommendedActionMetricInfoResponse(
-        @OutputCustomType.Parameter("metricName") String metricName,
-        @OutputCustomType.Parameter("startTime") String startTime,
-        @OutputCustomType.Parameter("timeGrain") String timeGrain,
-        @OutputCustomType.Parameter("unit") String unit,
-        @OutputCustomType.Parameter("value") Double value) {
+        @CustomType.Parameter("metricName") String metricName,
+        @CustomType.Parameter("startTime") String startTime,
+        @CustomType.Parameter("timeGrain") String timeGrain,
+        @CustomType.Parameter("unit") String unit,
+        @CustomType.Parameter("value") Double value) {
         this.metricName = metricName;
         this.startTime = startTime;
         this.timeGrain = timeGrain;

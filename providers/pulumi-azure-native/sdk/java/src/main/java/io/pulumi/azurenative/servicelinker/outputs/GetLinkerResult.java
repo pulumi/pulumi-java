@@ -9,14 +9,14 @@ import io.pulumi.azurenative.servicelinker.outputs.ServicePrincipalSecretAuthInf
 import io.pulumi.azurenative.servicelinker.outputs.SystemAssignedIdentityAuthInfoResponse;
 import io.pulumi.azurenative.servicelinker.outputs.SystemDataResponse;
 import io.pulumi.azurenative.servicelinker.outputs.UserAssignedIdentityAuthInfoResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetLinkerResult {
     /**
      * The authentication type.
@@ -59,16 +59,16 @@ public final class GetLinkerResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetLinkerResult(
-        @OutputCustomType.Parameter("authInfo") @Nullable Object authInfo,
-        @OutputCustomType.Parameter("clientType") @Nullable String clientType,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
-        @OutputCustomType.Parameter("targetId") @Nullable String targetId,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("authInfo") @Nullable Object authInfo,
+        @CustomType.Parameter("clientType") @Nullable String clientType,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("systemData") SystemDataResponse systemData,
+        @CustomType.Parameter("targetId") @Nullable String targetId,
+        @CustomType.Parameter("type") String type) {
         this.authInfo = authInfo;
         this.clientType = clientType;
         this.id = id;

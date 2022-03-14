@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.insights.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class DataCollectionEndpointResponseNetworkAcls extends io.pulumi.r
      * The configuration to set whether network access from public internet to the endpoints are allowed.
      * 
      */
-    @InputImport(name="publicNetworkAccess")
+    @Import(name="publicNetworkAccess")
       private final @Nullable String publicNetworkAccess;
 
     public Optional<String> getPublicNetworkAccess() {

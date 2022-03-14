@@ -4,11 +4,11 @@
 package io.pulumi.azurenative.compute.outputs;
 
 import io.pulumi.azurenative.compute.outputs.LoadBalancerFrontendIPConfigurationPropertiesResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class LoadBalancerFrontendIPConfigurationResponse {
     /**
      * The name of the resource that is unique within the set of frontend IP configurations used by the load balancer. This name can be used to access the resource.
@@ -21,10 +21,10 @@ public final class LoadBalancerFrontendIPConfigurationResponse {
      */
     private final LoadBalancerFrontendIPConfigurationPropertiesResponse properties;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LoadBalancerFrontendIPConfigurationResponse(
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("properties") LoadBalancerFrontendIPConfigurationPropertiesResponse properties) {
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("properties") LoadBalancerFrontendIPConfigurationPropertiesResponse properties) {
         this.name = name;
         this.properties = properties;
     }

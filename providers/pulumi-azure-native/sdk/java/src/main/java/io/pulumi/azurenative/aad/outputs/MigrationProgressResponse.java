@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.aad.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class MigrationProgressResponse {
     /**
      * Completion Percentage
@@ -23,10 +23,10 @@ public final class MigrationProgressResponse {
      */
     private final @Nullable String progressMessage;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MigrationProgressResponse(
-        @OutputCustomType.Parameter("completionPercentage") @Nullable Double completionPercentage,
-        @OutputCustomType.Parameter("progressMessage") @Nullable String progressMessage) {
+        @CustomType.Parameter("completionPercentage") @Nullable Double completionPercentage,
+        @CustomType.Parameter("progressMessage") @Nullable String progressMessage) {
         this.completionPercentage = completionPercentage;
         this.progressMessage = progressMessage;
     }

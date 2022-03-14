@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network;
 
 import io.pulumi.azurenative.network.inputs.RouteArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class RouteTableArgs extends io.pulumi.resources.ResourceArgs {
      * Whether to disable the routes learned by BGP on that route table. True means disable.
      * 
      */
-    @InputImport(name="disableBgpRoutePropagation")
+    @Import(name="disableBgpRoutePropagation")
       private final @Nullable Output<Boolean> disableBgpRoutePropagation;
 
     public Output<Boolean> getDisableBgpRoutePropagation() {
@@ -33,7 +33,7 @@ public final class RouteTableArgs extends io.pulumi.resources.ResourceArgs {
      * Resource ID.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
@@ -44,7 +44,7 @@ public final class RouteTableArgs extends io.pulumi.resources.ResourceArgs {
      * Resource location.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -55,7 +55,7 @@ public final class RouteTableArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -66,7 +66,7 @@ public final class RouteTableArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the route table.
      * 
      */
-    @InputImport(name="routeTableName")
+    @Import(name="routeTableName")
       private final @Nullable Output<String> routeTableName;
 
     public Output<String> getRouteTableName() {
@@ -77,7 +77,7 @@ public final class RouteTableArgs extends io.pulumi.resources.ResourceArgs {
      * Collection of routes contained within a route table.
      * 
      */
-    @InputImport(name="routes")
+    @Import(name="routes")
       private final @Nullable Output<List<RouteArgs>> routes;
 
     public Output<List<RouteArgs>> getRoutes() {
@@ -88,7 +88,7 @@ public final class RouteTableArgs extends io.pulumi.resources.ResourceArgs {
      * Resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

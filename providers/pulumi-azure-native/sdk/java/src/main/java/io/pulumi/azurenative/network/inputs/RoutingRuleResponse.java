@@ -8,7 +8,7 @@ import io.pulumi.azurenative.network.inputs.RedirectConfigurationResponse;
 import io.pulumi.azurenative.network.inputs.RoutingRuleUpdateParametersResponseWebApplicationFirewallPolicyLink;
 import io.pulumi.azurenative.network.inputs.SubResourceResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -28,7 +28,7 @@ public final class RoutingRuleResponse extends io.pulumi.resources.InvokeArgs {
      * Protocol schemes to match for this rule
      * 
      */
-    @InputImport(name="acceptedProtocols")
+    @Import(name="acceptedProtocols")
       private final @Nullable List<String> acceptedProtocols;
 
     public List<String> getAcceptedProtocols() {
@@ -39,7 +39,7 @@ public final class RoutingRuleResponse extends io.pulumi.resources.InvokeArgs {
      * Whether to enable use of this rule. Permitted values are 'Enabled' or 'Disabled'
      * 
      */
-    @InputImport(name="enabledState")
+    @Import(name="enabledState")
       private final @Nullable String enabledState;
 
     public Optional<String> getEnabledState() {
@@ -50,7 +50,7 @@ public final class RoutingRuleResponse extends io.pulumi.resources.InvokeArgs {
      * Frontend endpoints associated with this rule
      * 
      */
-    @InputImport(name="frontendEndpoints")
+    @Import(name="frontendEndpoints")
       private final @Nullable List<SubResourceResponse> frontendEndpoints;
 
     public List<SubResourceResponse> getFrontendEndpoints() {
@@ -61,7 +61,7 @@ public final class RoutingRuleResponse extends io.pulumi.resources.InvokeArgs {
      * Resource ID.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable String id;
 
     public Optional<String> getId() {
@@ -72,7 +72,7 @@ public final class RoutingRuleResponse extends io.pulumi.resources.InvokeArgs {
      * Resource name.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -83,7 +83,7 @@ public final class RoutingRuleResponse extends io.pulumi.resources.InvokeArgs {
      * The route patterns of the rule.
      * 
      */
-    @InputImport(name="patternsToMatch")
+    @Import(name="patternsToMatch")
       private final @Nullable List<String> patternsToMatch;
 
     public List<String> getPatternsToMatch() {
@@ -94,7 +94,7 @@ public final class RoutingRuleResponse extends io.pulumi.resources.InvokeArgs {
      * Resource status.
      * 
      */
-    @InputImport(name="resourceState", required=true)
+    @Import(name="resourceState", required=true)
       private final String resourceState;
 
     public String getResourceState() {
@@ -105,7 +105,7 @@ public final class RoutingRuleResponse extends io.pulumi.resources.InvokeArgs {
      * A reference to the routing configuration.
      * 
      */
-    @InputImport(name="routeConfiguration")
+    @Import(name="routeConfiguration")
       private final @Nullable Either<ForwardingConfigurationResponse,RedirectConfigurationResponse> routeConfiguration;
 
     public Either<ForwardingConfigurationResponse,RedirectConfigurationResponse> getRouteConfiguration() {
@@ -116,7 +116,7 @@ public final class RoutingRuleResponse extends io.pulumi.resources.InvokeArgs {
      * A reference to a specific Rules Engine Configuration to apply to this route.
      * 
      */
-    @InputImport(name="rulesEngine")
+    @Import(name="rulesEngine")
       private final @Nullable SubResourceResponse rulesEngine;
 
     public Optional<SubResourceResponse> getRulesEngine() {
@@ -127,7 +127,7 @@ public final class RoutingRuleResponse extends io.pulumi.resources.InvokeArgs {
      * Resource type.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {
@@ -138,7 +138,7 @@ public final class RoutingRuleResponse extends io.pulumi.resources.InvokeArgs {
      * Defines the Web Application Firewall policy for each routing rule (if applicable)
      * 
      */
-    @InputImport(name="webApplicationFirewallPolicyLink")
+    @Import(name="webApplicationFirewallPolicyLink")
       private final @Nullable RoutingRuleUpdateParametersResponseWebApplicationFirewallPolicyLink webApplicationFirewallPolicyLink;
 
     public Optional<RoutingRuleUpdateParametersResponseWebApplicationFirewallPolicyLink> getWebApplicationFirewallPolicyLink() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.certificateregistration.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class AppServiceCertificateResponse extends io.pulumi.resources.Inv
      * Key Vault resource Id.
      * 
      */
-    @InputImport(name="keyVaultId")
+    @Import(name="keyVaultId")
       private final @Nullable String keyVaultId;
 
     public Optional<String> getKeyVaultId() {
@@ -33,7 +33,7 @@ public final class AppServiceCertificateResponse extends io.pulumi.resources.Inv
      * Key Vault secret name.
      * 
      */
-    @InputImport(name="keyVaultSecretName")
+    @Import(name="keyVaultSecretName")
       private final @Nullable String keyVaultSecretName;
 
     public Optional<String> getKeyVaultSecretName() {
@@ -44,7 +44,7 @@ public final class AppServiceCertificateResponse extends io.pulumi.resources.Inv
      * Status of the Key Vault secret.
      * 
      */
-    @InputImport(name="provisioningState", required=true)
+    @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
     public String getProvisioningState() {

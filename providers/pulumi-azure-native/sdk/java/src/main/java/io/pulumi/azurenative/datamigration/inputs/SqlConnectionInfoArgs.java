@@ -7,7 +7,7 @@ import io.pulumi.azurenative.datamigration.enums.AuthenticationType;
 import io.pulumi.azurenative.datamigration.enums.SqlSourcePlatform;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class SqlConnectionInfoArgs extends io.pulumi.resources.ResourceArg
      * Additional connection settings
      * 
      */
-    @InputImport(name="additionalSettings")
+    @Import(name="additionalSettings")
       private final @Nullable Output<String> additionalSettings;
 
     public Output<String> getAdditionalSettings() {
@@ -37,7 +37,7 @@ public final class SqlConnectionInfoArgs extends io.pulumi.resources.ResourceArg
      * Authentication type to use for connection
      * 
      */
-    @InputImport(name="authentication")
+    @Import(name="authentication")
       private final @Nullable Output<Either<String,AuthenticationType>> authentication;
 
     public Output<Either<String,AuthenticationType>> getAuthentication() {
@@ -48,7 +48,7 @@ public final class SqlConnectionInfoArgs extends io.pulumi.resources.ResourceArg
      * Data source in the format Protocol:MachineName\SQLServerInstanceName,PortNumber
      * 
      */
-    @InputImport(name="dataSource", required=true)
+    @Import(name="dataSource", required=true)
       private final Output<String> dataSource;
 
     public Output<String> getDataSource() {
@@ -59,7 +59,7 @@ public final class SqlConnectionInfoArgs extends io.pulumi.resources.ResourceArg
      * Whether to encrypt the connection
      * 
      */
-    @InputImport(name="encryptConnection")
+    @Import(name="encryptConnection")
       private final @Nullable Output<Boolean> encryptConnection;
 
     public Output<Boolean> getEncryptConnection() {
@@ -70,7 +70,7 @@ public final class SqlConnectionInfoArgs extends io.pulumi.resources.ResourceArg
      * Password credential.
      * 
      */
-    @InputImport(name="password")
+    @Import(name="password")
       private final @Nullable Output<String> password;
 
     public Output<String> getPassword() {
@@ -81,7 +81,7 @@ public final class SqlConnectionInfoArgs extends io.pulumi.resources.ResourceArg
      * Server platform type for connection
      * 
      */
-    @InputImport(name="platform")
+    @Import(name="platform")
       private final @Nullable Output<Either<String,SqlSourcePlatform>> platform;
 
     public Output<Either<String,SqlSourcePlatform>> getPlatform() {
@@ -92,7 +92,7 @@ public final class SqlConnectionInfoArgs extends io.pulumi.resources.ResourceArg
      * Whether to trust the server certificate
      * 
      */
-    @InputImport(name="trustServerCertificate")
+    @Import(name="trustServerCertificate")
       private final @Nullable Output<Boolean> trustServerCertificate;
 
     public Output<Boolean> getTrustServerCertificate() {
@@ -104,7 +104,7 @@ public final class SqlConnectionInfoArgs extends io.pulumi.resources.ResourceArg
      * Expected value is 'SqlConnectionInfo'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {
@@ -115,7 +115,7 @@ public final class SqlConnectionInfoArgs extends io.pulumi.resources.ResourceArg
      * User name
      * 
      */
-    @InputImport(name="userName")
+    @Import(name="userName")
       private final @Nullable Output<String> userName;
 
     public Output<String> getUserName() {

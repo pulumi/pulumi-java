@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerregistry.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class PrivateLinkServiceConnectionStateResponse extends io.pulumi.r
      * A message indicating if changes on the service provider require any updates on the consumer.
      * 
      */
-    @InputImport(name="actionsRequired")
+    @Import(name="actionsRequired")
       private final @Nullable String actionsRequired;
 
     public Optional<String> getActionsRequired() {
@@ -33,7 +33,7 @@ public final class PrivateLinkServiceConnectionStateResponse extends io.pulumi.r
      * The description for connection status. For example if connection is rejected it can indicate reason for rejection.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable String description;
 
     public Optional<String> getDescription() {
@@ -44,7 +44,7 @@ public final class PrivateLinkServiceConnectionStateResponse extends io.pulumi.r
      * The private link service connection status.
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable String status;
 
     public Optional<String> getStatus() {

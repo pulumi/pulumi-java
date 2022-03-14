@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.deploymentmanager.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class MessageResponse {
     /**
      * The actual message text.
@@ -20,10 +20,10 @@ public final class MessageResponse {
      */
     private final String timeStamp;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MessageResponse(
-        @OutputCustomType.Parameter("message") String message,
-        @OutputCustomType.Parameter("timeStamp") String timeStamp) {
+        @CustomType.Parameter("message") String message,
+        @CustomType.Parameter("timeStamp") String timeStamp) {
         this.message = message;
         this.timeStamp = timeStamp;
     }

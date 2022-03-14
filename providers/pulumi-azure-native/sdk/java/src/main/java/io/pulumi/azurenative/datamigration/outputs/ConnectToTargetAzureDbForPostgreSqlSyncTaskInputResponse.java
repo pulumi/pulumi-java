@@ -4,10 +4,10 @@
 package io.pulumi.azurenative.datamigration.outputs;
 
 import io.pulumi.azurenative.datamigration.outputs.PostgreSqlConnectionInfoResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ConnectToTargetAzureDbForPostgreSqlSyncTaskInputResponse {
     /**
      * Connection information for source PostgreSQL server
@@ -20,10 +20,10 @@ public final class ConnectToTargetAzureDbForPostgreSqlSyncTaskInputResponse {
      */
     private final PostgreSqlConnectionInfoResponse targetConnectionInfo;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ConnectToTargetAzureDbForPostgreSqlSyncTaskInputResponse(
-        @OutputCustomType.Parameter("sourceConnectionInfo") PostgreSqlConnectionInfoResponse sourceConnectionInfo,
-        @OutputCustomType.Parameter("targetConnectionInfo") PostgreSqlConnectionInfoResponse targetConnectionInfo) {
+        @CustomType.Parameter("sourceConnectionInfo") PostgreSqlConnectionInfoResponse sourceConnectionInfo,
+        @CustomType.Parameter("targetConnectionInfo") PostgreSqlConnectionInfoResponse targetConnectionInfo) {
         this.sourceConnectionInfo = sourceConnectionInfo;
         this.targetConnectionInfo = targetConnectionInfo;
     }

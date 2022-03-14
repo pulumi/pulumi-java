@@ -6,7 +6,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 import io.pulumi.azurenative.datafactory.enums.DynamicsSinkWriteBehavior;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class DynamicsCrmSinkArgs extends io.pulumi.resources.ResourceArgs 
      * The logical name of the alternate key which will be used when upserting records. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="alternateKeyName")
+    @Import(name="alternateKeyName")
       private final @Nullable Output<Object> alternateKeyName;
 
     public Output<Object> getAlternateKeyName() {
@@ -36,7 +36,7 @@ public final class DynamicsCrmSinkArgs extends io.pulumi.resources.ResourceArgs 
      * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
      * 
      */
-    @InputImport(name="disableMetricsCollection")
+    @Import(name="disableMetricsCollection")
       private final @Nullable Output<Object> disableMetricsCollection;
 
     public Output<Object> getDisableMetricsCollection() {
@@ -47,7 +47,7 @@ public final class DynamicsCrmSinkArgs extends io.pulumi.resources.ResourceArgs 
      * The flag indicating whether to ignore null values from input dataset (except key fields) during write operation. Default is false. Type: boolean (or Expression with resultType boolean).
      * 
      */
-    @InputImport(name="ignoreNullValues")
+    @Import(name="ignoreNullValues")
       private final @Nullable Output<Object> ignoreNullValues;
 
     public Output<Object> getIgnoreNullValues() {
@@ -58,7 +58,7 @@ public final class DynamicsCrmSinkArgs extends io.pulumi.resources.ResourceArgs 
      * The maximum concurrent connection count for the sink data store. Type: integer (or Expression with resultType integer).
      * 
      */
-    @InputImport(name="maxConcurrentConnections")
+    @Import(name="maxConcurrentConnections")
       private final @Nullable Output<Object> maxConcurrentConnections;
 
     public Output<Object> getMaxConcurrentConnections() {
@@ -69,7 +69,7 @@ public final class DynamicsCrmSinkArgs extends io.pulumi.resources.ResourceArgs 
      * Sink retry count. Type: integer (or Expression with resultType integer).
      * 
      */
-    @InputImport(name="sinkRetryCount")
+    @Import(name="sinkRetryCount")
       private final @Nullable Output<Object> sinkRetryCount;
 
     public Output<Object> getSinkRetryCount() {
@@ -80,7 +80,7 @@ public final class DynamicsCrmSinkArgs extends io.pulumi.resources.ResourceArgs 
      * Sink retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
      * 
      */
-    @InputImport(name="sinkRetryWait")
+    @Import(name="sinkRetryWait")
       private final @Nullable Output<Object> sinkRetryWait;
 
     public Output<Object> getSinkRetryWait() {
@@ -92,7 +92,7 @@ public final class DynamicsCrmSinkArgs extends io.pulumi.resources.ResourceArgs 
      * Expected value is 'DynamicsCrmSink'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {
@@ -103,7 +103,7 @@ public final class DynamicsCrmSinkArgs extends io.pulumi.resources.ResourceArgs 
      * Write batch size. Type: integer (or Expression with resultType integer), minimum: 0.
      * 
      */
-    @InputImport(name="writeBatchSize")
+    @Import(name="writeBatchSize")
       private final @Nullable Output<Object> writeBatchSize;
 
     public Output<Object> getWriteBatchSize() {
@@ -114,7 +114,7 @@ public final class DynamicsCrmSinkArgs extends io.pulumi.resources.ResourceArgs 
      * Write batch timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
      * 
      */
-    @InputImport(name="writeBatchTimeout")
+    @Import(name="writeBatchTimeout")
       private final @Nullable Output<Object> writeBatchTimeout;
 
     public Output<Object> getWriteBatchTimeout() {
@@ -125,7 +125,7 @@ public final class DynamicsCrmSinkArgs extends io.pulumi.resources.ResourceArgs 
      * The write behavior for the operation.
      * 
      */
-    @InputImport(name="writeBehavior", required=true)
+    @Import(name="writeBehavior", required=true)
       private final Output<Either<String,DynamicsSinkWriteBehavior>> writeBehavior;
 
     public Output<Either<String,DynamicsSinkWriteBehavior>> getWriteBehavior() {

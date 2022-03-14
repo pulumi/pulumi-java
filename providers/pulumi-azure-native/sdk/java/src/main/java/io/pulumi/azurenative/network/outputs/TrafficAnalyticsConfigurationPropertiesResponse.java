@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TrafficAnalyticsConfigurationPropertiesResponse {
     /**
      * Flag to enable/disable traffic analytics.
@@ -39,13 +39,13 @@ public final class TrafficAnalyticsConfigurationPropertiesResponse {
      */
     private final @Nullable String workspaceResourceId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TrafficAnalyticsConfigurationPropertiesResponse(
-        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
-        @OutputCustomType.Parameter("trafficAnalyticsInterval") @Nullable Integer trafficAnalyticsInterval,
-        @OutputCustomType.Parameter("workspaceId") @Nullable String workspaceId,
-        @OutputCustomType.Parameter("workspaceRegion") @Nullable String workspaceRegion,
-        @OutputCustomType.Parameter("workspaceResourceId") @Nullable String workspaceResourceId) {
+        @CustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @CustomType.Parameter("trafficAnalyticsInterval") @Nullable Integer trafficAnalyticsInterval,
+        @CustomType.Parameter("workspaceId") @Nullable String workspaceId,
+        @CustomType.Parameter("workspaceRegion") @Nullable String workspaceRegion,
+        @CustomType.Parameter("workspaceResourceId") @Nullable String workspaceResourceId) {
         this.enabled = enabled;
         this.trafficAnalyticsInterval = trafficAnalyticsInterval;
         this.workspaceId = workspaceId;

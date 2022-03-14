@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.datalakeanalytics.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class HiveMetastoreResponse {
     /**
      * The databaseName for the Hive MetaStore
@@ -55,17 +55,17 @@ public final class HiveMetastoreResponse {
      */
     private final String userName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private HiveMetastoreResponse(
-        @OutputCustomType.Parameter("databaseName") String databaseName,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("nestedResourceProvisioningState") String nestedResourceProvisioningState,
-        @OutputCustomType.Parameter("password") String password,
-        @OutputCustomType.Parameter("runtimeVersion") String runtimeVersion,
-        @OutputCustomType.Parameter("serverUri") String serverUri,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("userName") String userName) {
+        @CustomType.Parameter("databaseName") String databaseName,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("nestedResourceProvisioningState") String nestedResourceProvisioningState,
+        @CustomType.Parameter("password") String password,
+        @CustomType.Parameter("runtimeVersion") String runtimeVersion,
+        @CustomType.Parameter("serverUri") String serverUri,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("userName") String userName) {
         this.databaseName = databaseName;
         this.id = id;
         this.name = name;

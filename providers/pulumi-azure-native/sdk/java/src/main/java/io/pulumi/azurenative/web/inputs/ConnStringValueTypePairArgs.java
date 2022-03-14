@@ -5,7 +5,7 @@ package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.azurenative.web.enums.ConnectionStringType;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class ConnStringValueTypePairArgs extends io.pulumi.resources.Resou
      * Type of database.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<ConnectionStringType> type;
 
     public Output<ConnectionStringType> getType() {
@@ -33,7 +33,7 @@ public final class ConnStringValueTypePairArgs extends io.pulumi.resources.Resou
      * Value of pair.
      * 
      */
-    @InputImport(name="value", required=true)
+    @Import(name="value", required=true)
       private final Output<String> value;
 
     public Output<String> getValue() {

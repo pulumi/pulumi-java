@@ -11,7 +11,7 @@ import io.pulumi.azurenative.compute.inputs.VirtualMachineScaleSetIpTagArgs;
 import io.pulumi.azurenative.compute.inputs.VirtualMachineScaleSetPublicIPAddressConfigurationDnsSettingsArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -31,7 +31,7 @@ public final class VirtualMachineScaleSetPublicIPAddressConfigurationArgs extend
      * Specify what happens to the public IP when the VM is deleted
      * 
      */
-    @InputImport(name="deleteOption")
+    @Import(name="deleteOption")
       private final @Nullable Output<Either<String,DeleteOptions>> deleteOption;
 
     public Output<Either<String,DeleteOptions>> getDeleteOption() {
@@ -42,7 +42,7 @@ public final class VirtualMachineScaleSetPublicIPAddressConfigurationArgs extend
      * The dns settings to be applied on the publicIP addresses .
      * 
      */
-    @InputImport(name="dnsSettings")
+    @Import(name="dnsSettings")
       private final @Nullable Output<VirtualMachineScaleSetPublicIPAddressConfigurationDnsSettingsArgs> dnsSettings;
 
     public Output<VirtualMachineScaleSetPublicIPAddressConfigurationDnsSettingsArgs> getDnsSettings() {
@@ -53,7 +53,7 @@ public final class VirtualMachineScaleSetPublicIPAddressConfigurationArgs extend
      * The idle timeout of the public IP address.
      * 
      */
-    @InputImport(name="idleTimeoutInMinutes")
+    @Import(name="idleTimeoutInMinutes")
       private final @Nullable Output<Integer> idleTimeoutInMinutes;
 
     public Output<Integer> getIdleTimeoutInMinutes() {
@@ -64,7 +64,7 @@ public final class VirtualMachineScaleSetPublicIPAddressConfigurationArgs extend
      * The list of IP tags associated with the public IP address.
      * 
      */
-    @InputImport(name="ipTags")
+    @Import(name="ipTags")
       private final @Nullable Output<List<VirtualMachineScaleSetIpTagArgs>> ipTags;
 
     public Output<List<VirtualMachineScaleSetIpTagArgs>> getIpTags() {
@@ -75,7 +75,7 @@ public final class VirtualMachineScaleSetPublicIPAddressConfigurationArgs extend
      * The publicIP address configuration name.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -86,7 +86,7 @@ public final class VirtualMachineScaleSetPublicIPAddressConfigurationArgs extend
      * Available from Api-Version 2019-07-01 onwards, it represents whether the specific ipconfiguration is IPv4 or IPv6. Default is taken as IPv4. Possible values are: 'IPv4' and 'IPv6'.
      * 
      */
-    @InputImport(name="publicIPAddressVersion")
+    @Import(name="publicIPAddressVersion")
       private final @Nullable Output<Either<String,IPVersion>> publicIPAddressVersion;
 
     public Output<Either<String,IPVersion>> getPublicIPAddressVersion() {
@@ -97,7 +97,7 @@ public final class VirtualMachineScaleSetPublicIPAddressConfigurationArgs extend
      * The PublicIPPrefix from which to allocate publicIP addresses.
      * 
      */
-    @InputImport(name="publicIPPrefix")
+    @Import(name="publicIPPrefix")
       private final @Nullable Output<SubResourceArgs> publicIPPrefix;
 
     public Output<SubResourceArgs> getPublicIPPrefix() {
@@ -108,7 +108,7 @@ public final class VirtualMachineScaleSetPublicIPAddressConfigurationArgs extend
      * Describes the public IP Sku
      * 
      */
-    @InputImport(name="sku")
+    @Import(name="sku")
       private final @Nullable Output<PublicIPAddressSkuArgs> sku;
 
     public Output<PublicIPAddressSkuArgs> getSku() {

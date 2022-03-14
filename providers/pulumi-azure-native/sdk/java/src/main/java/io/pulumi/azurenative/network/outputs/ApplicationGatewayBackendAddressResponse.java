@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ApplicationGatewayBackendAddressResponse {
     /**
      * Fully qualified domain name (FQDN).
@@ -22,10 +22,10 @@ public final class ApplicationGatewayBackendAddressResponse {
      */
     private final @Nullable String ipAddress;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ApplicationGatewayBackendAddressResponse(
-        @OutputCustomType.Parameter("fqdn") @Nullable String fqdn,
-        @OutputCustomType.Parameter("ipAddress") @Nullable String ipAddress) {
+        @CustomType.Parameter("fqdn") @Nullable String fqdn,
+        @CustomType.Parameter("ipAddress") @Nullable String ipAddress) {
         this.fqdn = fqdn;
         this.ipAddress = ipAddress;
     }

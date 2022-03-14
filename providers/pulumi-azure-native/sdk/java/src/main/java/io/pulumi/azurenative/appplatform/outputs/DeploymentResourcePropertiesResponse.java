@@ -6,7 +6,7 @@ package io.pulumi.azurenative.appplatform.outputs;
 import io.pulumi.azurenative.appplatform.outputs.DeploymentInstanceResponse;
 import io.pulumi.azurenative.appplatform.outputs.DeploymentSettingsResponse;
 import io.pulumi.azurenative.appplatform.outputs.UserSourceInfoResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -14,7 +14,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DeploymentResourcePropertiesResponse {
     /**
      * Indicates whether the Deployment is active
@@ -57,16 +57,16 @@ public final class DeploymentResourcePropertiesResponse {
      */
     private final String status;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DeploymentResourcePropertiesResponse(
-        @OutputCustomType.Parameter("active") Boolean active,
-        @OutputCustomType.Parameter("appName") String appName,
-        @OutputCustomType.Parameter("createdTime") String createdTime,
-        @OutputCustomType.Parameter("deploymentSettings") @Nullable DeploymentSettingsResponse deploymentSettings,
-        @OutputCustomType.Parameter("instances") List<DeploymentInstanceResponse> instances,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("source") @Nullable UserSourceInfoResponse source,
-        @OutputCustomType.Parameter("status") String status) {
+        @CustomType.Parameter("active") Boolean active,
+        @CustomType.Parameter("appName") String appName,
+        @CustomType.Parameter("createdTime") String createdTime,
+        @CustomType.Parameter("deploymentSettings") @Nullable DeploymentSettingsResponse deploymentSettings,
+        @CustomType.Parameter("instances") List<DeploymentInstanceResponse> instances,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("source") @Nullable UserSourceInfoResponse source,
+        @CustomType.Parameter("status") String status) {
         this.active = active;
         this.appName = appName;
         this.createdTime = createdTime;

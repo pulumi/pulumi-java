@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.peering.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PeeringSkuResponse {
     /**
      * The family of the peering SKU.
@@ -32,12 +32,12 @@ public final class PeeringSkuResponse {
      */
     private final @Nullable String tier;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PeeringSkuResponse(
-        @OutputCustomType.Parameter("family") @Nullable String family,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("size") @Nullable String size,
-        @OutputCustomType.Parameter("tier") @Nullable String tier) {
+        @CustomType.Parameter("family") @Nullable String family,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("size") @Nullable String size,
+        @CustomType.Parameter("tier") @Nullable String tier) {
         this.family = family;
         this.name = name;
         this.size = size;

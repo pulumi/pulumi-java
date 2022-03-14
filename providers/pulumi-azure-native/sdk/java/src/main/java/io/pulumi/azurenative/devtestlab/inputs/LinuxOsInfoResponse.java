@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.devtestlab.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class LinuxOsInfoResponse extends io.pulumi.resources.InvokeArgs {
      * The state of the Linux OS (i.e. NonDeprovisioned, DeprovisionRequested, DeprovisionApplied).
      * 
      */
-    @InputImport(name="linuxOsState")
+    @Import(name="linuxOsState")
       private final @Nullable String linuxOsState;
 
     public Optional<String> getLinuxOsState() {

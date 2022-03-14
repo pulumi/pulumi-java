@@ -9,7 +9,7 @@ import io.pulumi.azurenative.costmanagement.inputs.ExportDatasetArgs;
 import io.pulumi.azurenative.costmanagement.inputs.ExportTimePeriodArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,7 +27,7 @@ public final class ExportDefinitionArgs extends io.pulumi.resources.ResourceArgs
      * The definition for data in the export.
      * 
      */
-    @InputImport(name="dataSet")
+    @Import(name="dataSet")
       private final @Nullable Output<ExportDatasetArgs> dataSet;
 
     public Output<ExportDatasetArgs> getDataSet() {
@@ -38,7 +38,7 @@ public final class ExportDefinitionArgs extends io.pulumi.resources.ResourceArgs
      * Has time period for pulling data for the export.
      * 
      */
-    @InputImport(name="timePeriod")
+    @Import(name="timePeriod")
       private final @Nullable Output<ExportTimePeriodArgs> timePeriod;
 
     public Output<ExportTimePeriodArgs> getTimePeriod() {
@@ -49,7 +49,7 @@ public final class ExportDefinitionArgs extends io.pulumi.resources.ResourceArgs
      * The time frame for pulling data for the export. If custom, then a specific time period must be provided.
      * 
      */
-    @InputImport(name="timeframe", required=true)
+    @Import(name="timeframe", required=true)
       private final Output<Either<String,TimeframeType>> timeframe;
 
     public Output<Either<String,TimeframeType>> getTimeframe() {
@@ -60,7 +60,7 @@ public final class ExportDefinitionArgs extends io.pulumi.resources.ResourceArgs
      * The type of the export. Note that 'Usage' is equivalent to 'ActualCost' and is applicable to exports that do not yet provide data for charges or amortization for service reservations.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<Either<String,ExportType>> type;
 
     public Output<Either<String,ExportType>> getType() {

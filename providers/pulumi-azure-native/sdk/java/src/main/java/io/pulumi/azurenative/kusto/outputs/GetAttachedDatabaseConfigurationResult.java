@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.kusto.outputs;
 
 import io.pulumi.azurenative.kusto.outputs.TableLevelSharingPropertiesResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetAttachedDatabaseConfigurationResult {
     /**
      * The list of databases from the clusterResourceId which are currently attached to the cluster.
@@ -64,18 +64,18 @@ public final class GetAttachedDatabaseConfigurationResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetAttachedDatabaseConfigurationResult(
-        @OutputCustomType.Parameter("attachedDatabaseNames") List<String> attachedDatabaseNames,
-        @OutputCustomType.Parameter("clusterResourceId") String clusterResourceId,
-        @OutputCustomType.Parameter("databaseName") String databaseName,
-        @OutputCustomType.Parameter("defaultPrincipalsModificationKind") String defaultPrincipalsModificationKind,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("tableLevelSharingProperties") @Nullable TableLevelSharingPropertiesResponse tableLevelSharingProperties,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("attachedDatabaseNames") List<String> attachedDatabaseNames,
+        @CustomType.Parameter("clusterResourceId") String clusterResourceId,
+        @CustomType.Parameter("databaseName") String databaseName,
+        @CustomType.Parameter("defaultPrincipalsModificationKind") String defaultPrincipalsModificationKind,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("tableLevelSharingProperties") @Nullable TableLevelSharingPropertiesResponse tableLevelSharingProperties,
+        @CustomType.Parameter("type") String type) {
         this.attachedDatabaseNames = attachedDatabaseNames;
         this.clusterResourceId = clusterResourceId;
         this.databaseName = databaseName;

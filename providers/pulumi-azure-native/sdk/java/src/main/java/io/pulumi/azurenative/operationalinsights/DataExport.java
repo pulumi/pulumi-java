@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.operationalinsights.DataExportArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -35,7 +35,7 @@ public class DataExport extends io.pulumi.resources.CustomResource {
      * The latest data export rule modification time.
      * 
      */
-    @OutputExport(name="createdDate", type=String.class, parameters={})
+    @Export(name="createdDate", type=String.class, parameters={})
     private Output</* @Nullable */ String> createdDate;
 
     /**
@@ -49,7 +49,7 @@ public class DataExport extends io.pulumi.resources.CustomResource {
      * The data export rule ID.
      * 
      */
-    @OutputExport(name="dataExportId", type=String.class, parameters={})
+    @Export(name="dataExportId", type=String.class, parameters={})
     private Output</* @Nullable */ String> dataExportId;
 
     /**
@@ -63,7 +63,7 @@ public class DataExport extends io.pulumi.resources.CustomResource {
      * Active when enabled.
      * 
      */
-    @OutputExport(name="enable", type=Boolean.class, parameters={})
+    @Export(name="enable", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enable;
 
     /**
@@ -77,7 +77,7 @@ public class DataExport extends io.pulumi.resources.CustomResource {
      * Optional. Allows to define an Event Hub name. Not applicable when destination is Storage Account.
      * 
      */
-    @OutputExport(name="eventHubName", type=String.class, parameters={})
+    @Export(name="eventHubName", type=String.class, parameters={})
     private Output</* @Nullable */ String> eventHubName;
 
     /**
@@ -91,7 +91,7 @@ public class DataExport extends io.pulumi.resources.CustomResource {
      * Date and time when the export was last modified.
      * 
      */
-    @OutputExport(name="lastModifiedDate", type=String.class, parameters={})
+    @Export(name="lastModifiedDate", type=String.class, parameters={})
     private Output</* @Nullable */ String> lastModifiedDate;
 
     /**
@@ -105,7 +105,7 @@ public class DataExport extends io.pulumi.resources.CustomResource {
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -119,7 +119,7 @@ public class DataExport extends io.pulumi.resources.CustomResource {
      * The destination resource ID. This can be copied from the Properties entry of the destination resource in Azure.
      * 
      */
-    @OutputExport(name="resourceId", type=String.class, parameters={})
+    @Export(name="resourceId", type=String.class, parameters={})
     private Output<String> resourceId;
 
     /**
@@ -133,7 +133,7 @@ public class DataExport extends io.pulumi.resources.CustomResource {
      * An array of tables to export, for example: [“Heartbeat, SecurityEvent”].
      * 
      */
-    @OutputExport(name="tableNames", type=List.class, parameters={String.class})
+    @Export(name="tableNames", type=List.class, parameters={String.class})
     private Output<List<String>> tableNames;
 
     /**
@@ -147,7 +147,7 @@ public class DataExport extends io.pulumi.resources.CustomResource {
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

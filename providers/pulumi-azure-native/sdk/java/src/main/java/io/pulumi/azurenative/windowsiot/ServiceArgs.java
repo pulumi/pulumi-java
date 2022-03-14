@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.windowsiot;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Map;
@@ -20,7 +20,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * Windows IoT Device Service OEM AAD domain
      * 
      */
-    @InputImport(name="adminDomainName")
+    @Import(name="adminDomainName")
       private final @Nullable Output<String> adminDomainName;
 
     public Output<String> getAdminDomainName() {
@@ -31,7 +31,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * Windows IoT Device Service ODM AAD domain
      * 
      */
-    @InputImport(name="billingDomainName")
+    @Import(name="billingDomainName")
       private final @Nullable Output<String> billingDomainName;
 
     public Output<String> getBillingDomainName() {
@@ -42,7 +42,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the Windows IoT Device Service.
      * 
      */
-    @InputImport(name="deviceName")
+    @Import(name="deviceName")
       private final @Nullable Output<String> deviceName;
 
     public Output<String> getDeviceName() {
@@ -53,7 +53,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * The Azure Region where the resource lives
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -64,7 +64,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * Windows IoT Device Service notes.
      * 
      */
-    @InputImport(name="notes")
+    @Import(name="notes")
       private final @Nullable Output<String> notes;
 
     public Output<String> getNotes() {
@@ -75,7 +75,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * Windows IoT Device Service device allocation,
      * 
      */
-    @InputImport(name="quantity")
+    @Import(name="quantity")
       private final @Nullable Output<Double> quantity;
 
     public Output<Double> getQuantity() {
@@ -86,7 +86,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group that contains the Windows IoT Device Service.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -97,7 +97,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * Resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

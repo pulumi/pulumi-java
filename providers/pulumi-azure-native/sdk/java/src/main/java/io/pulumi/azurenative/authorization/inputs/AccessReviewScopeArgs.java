@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.authorization.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class AccessReviewScopeArgs extends io.pulumi.resources.ResourceArg
      * Flag to indicate whether to expand nested memberships or not.
      * 
      */
-    @InputImport(name="expandNestedMemberships")
+    @Import(name="expandNestedMemberships")
       private final @Nullable Output<Boolean> expandNestedMemberships;
 
     public Output<Boolean> getExpandNestedMemberships() {
@@ -34,7 +34,7 @@ public final class AccessReviewScopeArgs extends io.pulumi.resources.ResourceArg
      * Duration users are inactive for. The value should be in ISO  8601 format (http://en.wikipedia.org/wiki/ISO_8601#Durations).This code can be used to convert TimeSpan to a valid interval string: XmlConvert.ToString(new TimeSpan(hours, minutes, seconds))
      * 
      */
-    @InputImport(name="inactiveDuration")
+    @Import(name="inactiveDuration")
       private final @Nullable Output<String> inactiveDuration;
 
     public Output<String> getInactiveDuration() {

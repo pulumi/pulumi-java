@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.testbase.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DistributionGroupListReceiverValueResponse {
     /**
      * The list of distribution groups.
@@ -17,8 +17,8 @@ public final class DistributionGroupListReceiverValueResponse {
      */
     private final @Nullable List<String> distributionGroups;
 
-    @OutputCustomType.Constructor
-    private DistributionGroupListReceiverValueResponse(@OutputCustomType.Parameter("distributionGroups") @Nullable List<String> distributionGroups) {
+    @CustomType.Constructor
+    private DistributionGroupListReceiverValueResponse(@CustomType.Parameter("distributionGroups") @Nullable List<String> distributionGroups) {
         this.distributionGroups = distributionGroups;
     }
 

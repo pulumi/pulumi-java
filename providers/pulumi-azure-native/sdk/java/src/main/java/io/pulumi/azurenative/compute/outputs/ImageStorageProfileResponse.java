@@ -5,14 +5,14 @@ package io.pulumi.azurenative.compute.outputs;
 
 import io.pulumi.azurenative.compute.outputs.ImageDataDiskResponse;
 import io.pulumi.azurenative.compute.outputs.ImageOSDiskResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ImageStorageProfileResponse {
     /**
      * Specifies the parameters that are used to add a data disk to a virtual machine. <br><br> For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-about-disks-vhds?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json).
@@ -30,11 +30,11 @@ public final class ImageStorageProfileResponse {
      */
     private final @Nullable Boolean zoneResilient;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ImageStorageProfileResponse(
-        @OutputCustomType.Parameter("dataDisks") @Nullable List<ImageDataDiskResponse> dataDisks,
-        @OutputCustomType.Parameter("osDisk") @Nullable ImageOSDiskResponse osDisk,
-        @OutputCustomType.Parameter("zoneResilient") @Nullable Boolean zoneResilient) {
+        @CustomType.Parameter("dataDisks") @Nullable List<ImageDataDiskResponse> dataDisks,
+        @CustomType.Parameter("osDisk") @Nullable ImageOSDiskResponse osDisk,
+        @CustomType.Parameter("zoneResilient") @Nullable Boolean zoneResilient) {
         this.dataDisks = dataDisks;
         this.osDisk = osDisk;
         this.zoneResilient = zoneResilient;

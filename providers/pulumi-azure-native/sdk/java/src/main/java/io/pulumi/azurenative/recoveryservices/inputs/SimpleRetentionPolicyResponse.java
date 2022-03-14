@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.recoveryservices.inputs;
 
 import io.pulumi.azurenative.recoveryservices.inputs.RetentionDurationResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class SimpleRetentionPolicyResponse extends io.pulumi.resources.Inv
      * Retention duration of the protection policy.
      * 
      */
-    @InputImport(name="retentionDuration")
+    @Import(name="retentionDuration")
       private final @Nullable RetentionDurationResponse retentionDuration;
 
     public Optional<RetentionDurationResponse> getRetentionDuration() {
@@ -35,7 +35,7 @@ public final class SimpleRetentionPolicyResponse extends io.pulumi.resources.Inv
      * Expected value is 'SimpleRetentionPolicy'.
      * 
      */
-    @InputImport(name="retentionPolicyType", required=true)
+    @Import(name="retentionPolicyType", required=true)
       private final String retentionPolicyType;
 
     public String getRetentionPolicyType() {

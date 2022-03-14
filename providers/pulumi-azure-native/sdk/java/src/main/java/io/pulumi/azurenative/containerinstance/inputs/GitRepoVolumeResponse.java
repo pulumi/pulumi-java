@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerinstance.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class GitRepoVolumeResponse extends io.pulumi.resources.InvokeArgs 
      * Target directory name. Must not contain or start with '..'.  If '.' is supplied, the volume directory will be the git repository.  Otherwise, if specified, the volume will contain the git repository in the subdirectory with the given name.
      * 
      */
-    @InputImport(name="directory")
+    @Import(name="directory")
       private final @Nullable String directory;
 
     public Optional<String> getDirectory() {
@@ -33,7 +33,7 @@ public final class GitRepoVolumeResponse extends io.pulumi.resources.InvokeArgs 
      * Repository URL
      * 
      */
-    @InputImport(name="repository", required=true)
+    @Import(name="repository", required=true)
       private final String repository;
 
     public String getRepository() {
@@ -44,7 +44,7 @@ public final class GitRepoVolumeResponse extends io.pulumi.resources.InvokeArgs 
      * Commit hash for the specified revision.
      * 
      */
-    @InputImport(name="revision")
+    @Import(name="revision")
       private final @Nullable String revision;
 
     public Optional<String> getRevision() {

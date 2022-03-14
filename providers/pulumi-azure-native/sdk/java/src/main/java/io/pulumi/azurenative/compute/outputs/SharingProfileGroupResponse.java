@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SharingProfileGroupResponse {
     /**
      * A list of subscription/tenant ids the gallery is aimed to be shared to.
@@ -23,10 +23,10 @@ public final class SharingProfileGroupResponse {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SharingProfileGroupResponse(
-        @OutputCustomType.Parameter("ids") @Nullable List<String> ids,
-        @OutputCustomType.Parameter("type") @Nullable String type) {
+        @CustomType.Parameter("ids") @Nullable List<String> ids,
+        @CustomType.Parameter("type") @Nullable String type) {
         this.ids = ids;
         this.type = type;
     }

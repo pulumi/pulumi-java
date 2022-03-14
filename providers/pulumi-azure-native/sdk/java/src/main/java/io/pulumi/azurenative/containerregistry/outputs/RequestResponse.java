@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.containerregistry.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RequestResponse {
     /**
      * The IP or hostname and possibly port of the client connection that initiated the event. This is the RemoteAddr from the standard http request.
@@ -37,13 +37,13 @@ public final class RequestResponse {
      */
     private final @Nullable String useragent;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RequestResponse(
-        @OutputCustomType.Parameter("addr") @Nullable String addr,
-        @OutputCustomType.Parameter("host") @Nullable String host,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("method") @Nullable String method,
-        @OutputCustomType.Parameter("useragent") @Nullable String useragent) {
+        @CustomType.Parameter("addr") @Nullable String addr,
+        @CustomType.Parameter("host") @Nullable String host,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("method") @Nullable String method,
+        @CustomType.Parameter("useragent") @Nullable String useragent) {
         this.addr = addr;
         this.host = host;
         this.id = id;

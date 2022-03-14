@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.media.outputs;
 
 import io.pulumi.azurenative.media.outputs.JobErrorResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class JobOutputAssetResponse {
     /**
      * The name of the output Asset.
@@ -55,16 +55,16 @@ public final class JobOutputAssetResponse {
      */
     private final String state;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private JobOutputAssetResponse(
-        @OutputCustomType.Parameter("assetName") String assetName,
-        @OutputCustomType.Parameter("endTime") String endTime,
-        @OutputCustomType.Parameter("error") JobErrorResponse error,
-        @OutputCustomType.Parameter("label") @Nullable String label,
-        @OutputCustomType.Parameter("odataType") String odataType,
-        @OutputCustomType.Parameter("progress") Integer progress,
-        @OutputCustomType.Parameter("startTime") String startTime,
-        @OutputCustomType.Parameter("state") String state) {
+        @CustomType.Parameter("assetName") String assetName,
+        @CustomType.Parameter("endTime") String endTime,
+        @CustomType.Parameter("error") JobErrorResponse error,
+        @CustomType.Parameter("label") @Nullable String label,
+        @CustomType.Parameter("odataType") String odataType,
+        @CustomType.Parameter("progress") Integer progress,
+        @CustomType.Parameter("startTime") String startTime,
+        @CustomType.Parameter("state") String state) {
         this.assetName = assetName;
         this.endTime = endTime;
         this.error = error;

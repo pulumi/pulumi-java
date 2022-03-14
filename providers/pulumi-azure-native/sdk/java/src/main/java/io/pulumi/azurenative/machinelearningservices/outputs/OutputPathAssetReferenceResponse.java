@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class OutputPathAssetReferenceResponse {
     /**
      * ARM resource ID of the job.
@@ -28,11 +28,11 @@ public final class OutputPathAssetReferenceResponse {
      */
     private final String referenceType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private OutputPathAssetReferenceResponse(
-        @OutputCustomType.Parameter("jobId") @Nullable String jobId,
-        @OutputCustomType.Parameter("path") @Nullable String path,
-        @OutputCustomType.Parameter("referenceType") String referenceType) {
+        @CustomType.Parameter("jobId") @Nullable String jobId,
+        @CustomType.Parameter("path") @Nullable String path,
+        @CustomType.Parameter("referenceType") String referenceType) {
         this.jobId = jobId;
         this.path = path;
         this.referenceType = referenceType;

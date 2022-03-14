@@ -6,7 +6,7 @@ package io.pulumi.azurenative.timeseriesinsights.inputs;
 import io.pulumi.azurenative.timeseriesinsights.enums.ReferenceDataKeyPropertyType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class ReferenceDataSetKeyPropertyArgs extends io.pulumi.resources.R
      * The name of the key property.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -35,7 +35,7 @@ public final class ReferenceDataSetKeyPropertyArgs extends io.pulumi.resources.R
      * The type of the key property.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<Either<String,ReferenceDataKeyPropertyType>> type;
 
     public Output<Either<String,ReferenceDataKeyPropertyType>> getType() {

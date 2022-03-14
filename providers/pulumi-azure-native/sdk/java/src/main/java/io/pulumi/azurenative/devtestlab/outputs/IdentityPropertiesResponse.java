@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.devtestlab.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class IdentityPropertiesResponse {
     /**
      * The client secret URL of the identity.
@@ -32,12 +32,12 @@ public final class IdentityPropertiesResponse {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private IdentityPropertiesResponse(
-        @OutputCustomType.Parameter("clientSecretUrl") @Nullable String clientSecretUrl,
-        @OutputCustomType.Parameter("principalId") @Nullable String principalId,
-        @OutputCustomType.Parameter("tenantId") @Nullable String tenantId,
-        @OutputCustomType.Parameter("type") @Nullable String type) {
+        @CustomType.Parameter("clientSecretUrl") @Nullable String clientSecretUrl,
+        @CustomType.Parameter("principalId") @Nullable String principalId,
+        @CustomType.Parameter("tenantId") @Nullable String tenantId,
+        @CustomType.Parameter("type") @Nullable String type) {
         this.clientSecretUrl = clientSecretUrl;
         this.principalId = principalId;
         this.tenantId = tenantId;

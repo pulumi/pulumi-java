@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.media.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PngLayerResponse {
     /**
      * The height of the output video for this layer. The value can be absolute (in pixels) or relative (in percentage). For example 50% means the output video has half as many pixels in height as the input.
@@ -33,12 +33,12 @@ public final class PngLayerResponse {
      */
     private final @Nullable String width;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PngLayerResponse(
-        @OutputCustomType.Parameter("height") @Nullable String height,
-        @OutputCustomType.Parameter("label") @Nullable String label,
-        @OutputCustomType.Parameter("odataType") String odataType,
-        @OutputCustomType.Parameter("width") @Nullable String width) {
+        @CustomType.Parameter("height") @Nullable String height,
+        @CustomType.Parameter("label") @Nullable String label,
+        @CustomType.Parameter("odataType") String odataType,
+        @CustomType.Parameter("width") @Nullable String width) {
         this.height = height;
         this.label = label;
         this.odataType = odataType;

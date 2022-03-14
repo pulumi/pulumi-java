@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.securityinsights.outputs;
 
 import io.pulumi.azurenative.securityinsights.outputs.SystemDataResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetIncidentRelationResult {
     /**
      * Etag of the azure resource
@@ -58,17 +58,17 @@ public final class GetIncidentRelationResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetIncidentRelationResult(
-        @OutputCustomType.Parameter("etag") @Nullable String etag,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("relatedResourceId") String relatedResourceId,
-        @OutputCustomType.Parameter("relatedResourceKind") String relatedResourceKind,
-        @OutputCustomType.Parameter("relatedResourceName") String relatedResourceName,
-        @OutputCustomType.Parameter("relatedResourceType") String relatedResourceType,
-        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("etag") @Nullable String etag,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("relatedResourceId") String relatedResourceId,
+        @CustomType.Parameter("relatedResourceKind") String relatedResourceKind,
+        @CustomType.Parameter("relatedResourceName") String relatedResourceName,
+        @CustomType.Parameter("relatedResourceType") String relatedResourceType,
+        @CustomType.Parameter("systemData") SystemDataResponse systemData,
+        @CustomType.Parameter("type") String type) {
         this.etag = etag;
         this.id = id;
         this.name = name;

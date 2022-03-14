@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.batch.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ResourceFileResponse {
     /**
      * The autoStorageContainerName, storageContainerUrl and httpUrl properties are mutually exclusive and one of them must be specified.
@@ -42,14 +42,14 @@ public final class ResourceFileResponse {
      */
     private final @Nullable String storageContainerUrl;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ResourceFileResponse(
-        @OutputCustomType.Parameter("autoStorageContainerName") @Nullable String autoStorageContainerName,
-        @OutputCustomType.Parameter("blobPrefix") @Nullable String blobPrefix,
-        @OutputCustomType.Parameter("fileMode") @Nullable String fileMode,
-        @OutputCustomType.Parameter("filePath") @Nullable String filePath,
-        @OutputCustomType.Parameter("httpUrl") @Nullable String httpUrl,
-        @OutputCustomType.Parameter("storageContainerUrl") @Nullable String storageContainerUrl) {
+        @CustomType.Parameter("autoStorageContainerName") @Nullable String autoStorageContainerName,
+        @CustomType.Parameter("blobPrefix") @Nullable String blobPrefix,
+        @CustomType.Parameter("fileMode") @Nullable String fileMode,
+        @CustomType.Parameter("filePath") @Nullable String filePath,
+        @CustomType.Parameter("httpUrl") @Nullable String httpUrl,
+        @CustomType.Parameter("storageContainerUrl") @Nullable String storageContainerUrl) {
         this.autoStorageContainerName = autoStorageContainerName;
         this.blobPrefix = blobPrefix;
         this.fileMode = fileMode;

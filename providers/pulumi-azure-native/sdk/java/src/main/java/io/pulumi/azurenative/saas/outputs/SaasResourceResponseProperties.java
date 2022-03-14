@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.saas.outputs;
 
 import io.pulumi.azurenative.saas.outputs.SaasPropertiesResponseTerm;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SaasResourceResponseProperties {
     /**
      * Whether the SaaS subscription will auto renew upon term end.
@@ -101,25 +101,25 @@ public final class SaasResourceResponseProperties {
      */
     private final @Nullable String termId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SaasResourceResponseProperties(
-        @OutputCustomType.Parameter("autoRenew") @Nullable Boolean autoRenew,
-        @OutputCustomType.Parameter("created") String created,
-        @OutputCustomType.Parameter("isFreeTrial") @Nullable Boolean isFreeTrial,
-        @OutputCustomType.Parameter("lastModified") @Nullable String lastModified,
-        @OutputCustomType.Parameter("offerId") @Nullable String offerId,
-        @OutputCustomType.Parameter("paymentChannelMetadata") @Nullable Map<String,String> paymentChannelMetadata,
-        @OutputCustomType.Parameter("paymentChannelType") @Nullable String paymentChannelType,
-        @OutputCustomType.Parameter("publisherId") @Nullable String publisherId,
-        @OutputCustomType.Parameter("publisherTestEnvironment") @Nullable String publisherTestEnvironment,
-        @OutputCustomType.Parameter("quantity") @Nullable Double quantity,
-        @OutputCustomType.Parameter("saasResourceName") @Nullable String saasResourceName,
-        @OutputCustomType.Parameter("saasSessionId") @Nullable String saasSessionId,
-        @OutputCustomType.Parameter("saasSubscriptionId") @Nullable String saasSubscriptionId,
-        @OutputCustomType.Parameter("skuId") @Nullable String skuId,
-        @OutputCustomType.Parameter("status") @Nullable String status,
-        @OutputCustomType.Parameter("term") @Nullable SaasPropertiesResponseTerm term,
-        @OutputCustomType.Parameter("termId") @Nullable String termId) {
+        @CustomType.Parameter("autoRenew") @Nullable Boolean autoRenew,
+        @CustomType.Parameter("created") String created,
+        @CustomType.Parameter("isFreeTrial") @Nullable Boolean isFreeTrial,
+        @CustomType.Parameter("lastModified") @Nullable String lastModified,
+        @CustomType.Parameter("offerId") @Nullable String offerId,
+        @CustomType.Parameter("paymentChannelMetadata") @Nullable Map<String,String> paymentChannelMetadata,
+        @CustomType.Parameter("paymentChannelType") @Nullable String paymentChannelType,
+        @CustomType.Parameter("publisherId") @Nullable String publisherId,
+        @CustomType.Parameter("publisherTestEnvironment") @Nullable String publisherTestEnvironment,
+        @CustomType.Parameter("quantity") @Nullable Double quantity,
+        @CustomType.Parameter("saasResourceName") @Nullable String saasResourceName,
+        @CustomType.Parameter("saasSessionId") @Nullable String saasSessionId,
+        @CustomType.Parameter("saasSubscriptionId") @Nullable String saasSubscriptionId,
+        @CustomType.Parameter("skuId") @Nullable String skuId,
+        @CustomType.Parameter("status") @Nullable String status,
+        @CustomType.Parameter("term") @Nullable SaasPropertiesResponseTerm term,
+        @CustomType.Parameter("termId") @Nullable String termId) {
         this.autoRenew = autoRenew;
         this.created = created;
         this.isFreeTrial = isFreeTrial;

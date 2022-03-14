@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.batch.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CertificateReferenceResponse {
     private final String id;
     /**
@@ -25,12 +25,12 @@ public final class CertificateReferenceResponse {
     private final @Nullable String storeName;
     private final @Nullable List<String> visibility;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CertificateReferenceResponse(
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("storeLocation") @Nullable String storeLocation,
-        @OutputCustomType.Parameter("storeName") @Nullable String storeName,
-        @OutputCustomType.Parameter("visibility") @Nullable List<String> visibility) {
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("storeLocation") @Nullable String storeLocation,
+        @CustomType.Parameter("storeName") @Nullable String storeName,
+        @CustomType.Parameter("visibility") @Nullable List<String> visibility) {
         this.id = id;
         this.storeLocation = storeLocation;
         this.storeName = storeName;

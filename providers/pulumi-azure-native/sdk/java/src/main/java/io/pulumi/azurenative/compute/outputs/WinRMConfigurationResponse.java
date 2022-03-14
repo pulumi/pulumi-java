@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.compute.outputs;
 
 import io.pulumi.azurenative.compute.outputs.WinRMListenerResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class WinRMConfigurationResponse {
     /**
      * The list of Windows Remote Management listeners
@@ -17,8 +17,8 @@ public final class WinRMConfigurationResponse {
      */
     private final @Nullable List<WinRMListenerResponse> listeners;
 
-    @OutputCustomType.Constructor
-    private WinRMConfigurationResponse(@OutputCustomType.Parameter("listeners") @Nullable List<WinRMListenerResponse> listeners) {
+    @CustomType.Constructor
+    private WinRMConfigurationResponse(@CustomType.Parameter("listeners") @Nullable List<WinRMListenerResponse> listeners) {
         this.listeners = listeners;
     }
 

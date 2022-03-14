@@ -7,7 +7,7 @@ import io.pulumi.azurenative.synapse.enums.DefaultPrincipalsModificationKind;
 import io.pulumi.azurenative.synapse.inputs.TableLevelSharingPropertiesArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public final class KustoPoolAttachedDatabaseConfigurationArgs extends io.pulumi.
      * The name of the attached database configuration.
      * 
      */
-    @InputImport(name="attachedDatabaseConfigurationName")
+    @Import(name="attachedDatabaseConfigurationName")
       private final @Nullable Output<String> attachedDatabaseConfigurationName;
 
     public Output<String> getAttachedDatabaseConfigurationName() {
@@ -32,7 +32,7 @@ public final class KustoPoolAttachedDatabaseConfigurationArgs extends io.pulumi.
      * The name of the database which you would like to attach, use * if you want to follow all current and future databases.
      * 
      */
-    @InputImport(name="databaseName", required=true)
+    @Import(name="databaseName", required=true)
       private final Output<String> databaseName;
 
     public Output<String> getDatabaseName() {
@@ -43,7 +43,7 @@ public final class KustoPoolAttachedDatabaseConfigurationArgs extends io.pulumi.
      * The default principals modification kind
      * 
      */
-    @InputImport(name="defaultPrincipalsModificationKind", required=true)
+    @Import(name="defaultPrincipalsModificationKind", required=true)
       private final Output<Either<String,DefaultPrincipalsModificationKind>> defaultPrincipalsModificationKind;
 
     public Output<Either<String,DefaultPrincipalsModificationKind>> getDefaultPrincipalsModificationKind() {
@@ -54,7 +54,7 @@ public final class KustoPoolAttachedDatabaseConfigurationArgs extends io.pulumi.
      * The name of the Kusto pool.
      * 
      */
-    @InputImport(name="kustoPoolName", required=true)
+    @Import(name="kustoPoolName", required=true)
       private final Output<String> kustoPoolName;
 
     public Output<String> getKustoPoolName() {
@@ -65,7 +65,7 @@ public final class KustoPoolAttachedDatabaseConfigurationArgs extends io.pulumi.
      * The resource id of the kusto pool where the databases you would like to attach reside.
      * 
      */
-    @InputImport(name="kustoPoolResourceId", required=true)
+    @Import(name="kustoPoolResourceId", required=true)
       private final Output<String> kustoPoolResourceId;
 
     public Output<String> getKustoPoolResourceId() {
@@ -76,7 +76,7 @@ public final class KustoPoolAttachedDatabaseConfigurationArgs extends io.pulumi.
      * Resource location.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -87,7 +87,7 @@ public final class KustoPoolAttachedDatabaseConfigurationArgs extends io.pulumi.
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -98,7 +98,7 @@ public final class KustoPoolAttachedDatabaseConfigurationArgs extends io.pulumi.
      * Table level sharing specifications
      * 
      */
-    @InputImport(name="tableLevelSharingProperties")
+    @Import(name="tableLevelSharingProperties")
       private final @Nullable Output<TableLevelSharingPropertiesArgs> tableLevelSharingProperties;
 
     public Output<TableLevelSharingPropertiesArgs> getTableLevelSharingProperties() {
@@ -109,7 +109,7 @@ public final class KustoPoolAttachedDatabaseConfigurationArgs extends io.pulumi.
      * The name of the workspace.
      * 
      */
-    @InputImport(name="workspaceName", required=true)
+    @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;
 
     public Output<String> getWorkspaceName() {

@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.migrate.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class JobStatusResponse {
     /**
      * Defines the job name.
@@ -20,10 +20,10 @@ public final class JobStatusResponse {
      */
     private final String jobProgress;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private JobStatusResponse(
-        @OutputCustomType.Parameter("jobName") String jobName,
-        @OutputCustomType.Parameter("jobProgress") String jobProgress) {
+        @CustomType.Parameter("jobName") String jobName,
+        @CustomType.Parameter("jobProgress") String jobProgress) {
         this.jobName = jobName;
         this.jobProgress = jobProgress;
     }

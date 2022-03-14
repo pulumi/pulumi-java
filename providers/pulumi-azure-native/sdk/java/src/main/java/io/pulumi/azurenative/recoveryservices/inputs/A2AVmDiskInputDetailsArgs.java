@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.recoveryservices.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class A2AVmDiskInputDetailsArgs extends io.pulumi.resources.Resourc
      * The disk Uri.
      * 
      */
-    @InputImport(name="diskUri")
+    @Import(name="diskUri")
       private final @Nullable Output<String> diskUri;
 
     public Output<String> getDiskUri() {
@@ -33,7 +33,7 @@ public final class A2AVmDiskInputDetailsArgs extends io.pulumi.resources.Resourc
      * The primary staging storage account Id.
      * 
      */
-    @InputImport(name="primaryStagingAzureStorageAccountId")
+    @Import(name="primaryStagingAzureStorageAccountId")
       private final @Nullable Output<String> primaryStagingAzureStorageAccountId;
 
     public Output<String> getPrimaryStagingAzureStorageAccountId() {
@@ -44,7 +44,7 @@ public final class A2AVmDiskInputDetailsArgs extends io.pulumi.resources.Resourc
      * The recovery VHD storage account Id.
      * 
      */
-    @InputImport(name="recoveryAzureStorageAccountId")
+    @Import(name="recoveryAzureStorageAccountId")
       private final @Nullable Output<String> recoveryAzureStorageAccountId;
 
     public Output<String> getRecoveryAzureStorageAccountId() {

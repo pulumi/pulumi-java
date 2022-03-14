@@ -8,7 +8,7 @@ import io.pulumi.azurenative.network.NetworkInterfaceTapConfigurationArgs;
 import io.pulumi.azurenative.network.outputs.VirtualNetworkTapResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +35,7 @@ public class NetworkInterfaceTapConfiguration extends io.pulumi.resources.Custom
      * A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -49,7 +49,7 @@ public class NetworkInterfaceTapConfiguration extends io.pulumi.resources.Custom
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
@@ -63,7 +63,7 @@ public class NetworkInterfaceTapConfiguration extends io.pulumi.resources.Custom
      * The provisioning state of the network interface tap configuration resource.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -77,7 +77,7 @@ public class NetworkInterfaceTapConfiguration extends io.pulumi.resources.Custom
      * Sub Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -91,7 +91,7 @@ public class NetworkInterfaceTapConfiguration extends io.pulumi.resources.Custom
      * The reference to the Virtual Network Tap resource.
      * 
      */
-    @OutputExport(name="virtualNetworkTap", type=VirtualNetworkTapResponse.class, parameters={})
+    @Export(name="virtualNetworkTap", type=VirtualNetworkTapResponse.class, parameters={})
     private Output</* @Nullable */ VirtualNetworkTapResponse> virtualNetworkTap;
 
     /**

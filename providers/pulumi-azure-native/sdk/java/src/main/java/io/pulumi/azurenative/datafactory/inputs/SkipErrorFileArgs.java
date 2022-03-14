@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class SkipErrorFileArgs extends io.pulumi.resources.ResourceArgs {
      * Skip if source/sink file changed by other concurrent write. Default is false. Type: boolean (or Expression with resultType boolean).
      * 
      */
-    @InputImport(name="dataInconsistency")
+    @Import(name="dataInconsistency")
       private final @Nullable Output<Object> dataInconsistency;
 
     public Output<Object> getDataInconsistency() {
@@ -33,7 +33,7 @@ public final class SkipErrorFileArgs extends io.pulumi.resources.ResourceArgs {
      * Skip if file is deleted by other client during copy. Default is true. Type: boolean (or Expression with resultType boolean).
      * 
      */
-    @InputImport(name="fileMissing")
+    @Import(name="fileMissing")
       private final @Nullable Output<Object> fileMissing;
 
     public Output<Object> getFileMissing() {

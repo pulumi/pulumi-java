@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.databoxedge.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class LoadBalancerConfigResponse {
     /**
      * Load balancer type
@@ -20,10 +20,10 @@ public final class LoadBalancerConfigResponse {
      */
     private final String version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LoadBalancerConfigResponse(
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("version") String version) {
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("version") String version) {
         this.type = type;
         this.version = version;
     }

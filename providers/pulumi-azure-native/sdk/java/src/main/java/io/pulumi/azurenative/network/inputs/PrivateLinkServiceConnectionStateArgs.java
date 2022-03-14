@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class PrivateLinkServiceConnectionStateArgs extends io.pulumi.resou
      * A message indicating if changes on the service provider require any updates on the consumer.
      * 
      */
-    @InputImport(name="actionsRequired")
+    @Import(name="actionsRequired")
       private final @Nullable Output<String> actionsRequired;
 
     public Output<String> getActionsRequired() {
@@ -33,7 +33,7 @@ public final class PrivateLinkServiceConnectionStateArgs extends io.pulumi.resou
      * The reason for approval/rejection of the connection.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -44,7 +44,7 @@ public final class PrivateLinkServiceConnectionStateArgs extends io.pulumi.resou
      * Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable Output<String> status;
 
     public Output<String> getStatus() {

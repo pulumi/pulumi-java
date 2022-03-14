@@ -3,12 +3,12 @@
 
 package io.pulumi.azurenative.appplatform.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class NetworkProfileResponseOutboundIPs {
     /**
      * A list of public IP addresses.
@@ -16,8 +16,8 @@ public final class NetworkProfileResponseOutboundIPs {
      */
     private final List<String> publicIPs;
 
-    @OutputCustomType.Constructor
-    private NetworkProfileResponseOutboundIPs(@OutputCustomType.Parameter("publicIPs") List<String> publicIPs) {
+    @CustomType.Constructor
+    private NetworkProfileResponseOutboundIPs(@CustomType.Parameter("publicIPs") List<String> publicIPs) {
         this.publicIPs = publicIPs;
     }
 

@@ -8,7 +8,7 @@ import io.pulumi.azurenative.machinelearningservices.inputs.PrivateEndpointRespo
 import io.pulumi.azurenative.machinelearningservices.inputs.PrivateLinkServiceConnectionStateResponse;
 import io.pulumi.azurenative.machinelearningservices.inputs.SkuResponse;
 import io.pulumi.azurenative.machinelearningservices.inputs.SystemDataResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -28,7 +28,7 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
      * Specifies the resource ID.
      * 
      */
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final String id;
 
     public String getId() {
@@ -39,7 +39,7 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
      * The identity of the resource.
      * 
      */
-    @InputImport(name="identity")
+    @Import(name="identity")
       private final @Nullable IdentityResponse identity;
 
     public Optional<IdentityResponse> getIdentity() {
@@ -50,7 +50,7 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
      * Specifies the location of the resource.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable String location;
 
     public Optional<String> getLocation() {
@@ -61,7 +61,7 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
      * Specifies the name of the resource.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -72,7 +72,7 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
      * The resource of private end point.
      * 
      */
-    @InputImport(name="privateEndpoint")
+    @Import(name="privateEndpoint")
       private final @Nullable PrivateEndpointResponse privateEndpoint;
 
     public Optional<PrivateEndpointResponse> getPrivateEndpoint() {
@@ -83,7 +83,7 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
      * A collection of information about the state of the connection between service consumer and provider.
      * 
      */
-    @InputImport(name="privateLinkServiceConnectionState", required=true)
+    @Import(name="privateLinkServiceConnectionState", required=true)
       private final PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState;
 
     public PrivateLinkServiceConnectionStateResponse getPrivateLinkServiceConnectionState() {
@@ -94,7 +94,7 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
      * The provisioning state of the private endpoint connection resource.
      * 
      */
-    @InputImport(name="provisioningState", required=true)
+    @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
     public String getProvisioningState() {
@@ -105,7 +105,7 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
      * The sku of the workspace.
      * 
      */
-    @InputImport(name="sku")
+    @Import(name="sku")
       private final @Nullable SkuResponse sku;
 
     public Optional<SkuResponse> getSku() {
@@ -116,7 +116,7 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
      * Read only system data
      * 
      */
-    @InputImport(name="systemData", required=true)
+    @Import(name="systemData", required=true)
       private final SystemDataResponse systemData;
 
     public SystemDataResponse getSystemData() {
@@ -127,7 +127,7 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
      * Contains resource tags defined as key/value pairs.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {
@@ -138,7 +138,7 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
      * Specifies the type of the resource.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

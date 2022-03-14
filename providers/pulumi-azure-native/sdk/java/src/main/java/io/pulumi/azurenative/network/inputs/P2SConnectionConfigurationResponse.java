@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.AddressSpaceResponse;
 import io.pulumi.azurenative.network.inputs.RoutingConfigurationResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class P2SConnectionConfigurationResponse extends io.pulumi.resource
      * Flag indicating whether the enable internet security flag is turned on for the P2S Connections or not.
      * 
      */
-    @InputImport(name="enableInternetSecurity")
+    @Import(name="enableInternetSecurity")
       private final @Nullable Boolean enableInternetSecurity;
 
     public Optional<Boolean> getEnableInternetSecurity() {
@@ -36,7 +36,7 @@ public final class P2SConnectionConfigurationResponse extends io.pulumi.resource
      * A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    @InputImport(name="etag", required=true)
+    @Import(name="etag", required=true)
       private final String etag;
 
     public String getEtag() {
@@ -47,7 +47,7 @@ public final class P2SConnectionConfigurationResponse extends io.pulumi.resource
      * Resource ID.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable String id;
 
     public Optional<String> getId() {
@@ -58,7 +58,7 @@ public final class P2SConnectionConfigurationResponse extends io.pulumi.resource
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -69,7 +69,7 @@ public final class P2SConnectionConfigurationResponse extends io.pulumi.resource
      * The provisioning state of the P2SConnectionConfiguration resource.
      * 
      */
-    @InputImport(name="provisioningState", required=true)
+    @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
     public String getProvisioningState() {
@@ -80,7 +80,7 @@ public final class P2SConnectionConfigurationResponse extends io.pulumi.resource
      * The Routing Configuration indicating the associated and propagated route tables on this connection.
      * 
      */
-    @InputImport(name="routingConfiguration")
+    @Import(name="routingConfiguration")
       private final @Nullable RoutingConfigurationResponse routingConfiguration;
 
     public Optional<RoutingConfigurationResponse> getRoutingConfiguration() {
@@ -91,7 +91,7 @@ public final class P2SConnectionConfigurationResponse extends io.pulumi.resource
      * The reference to the address space resource which represents Address space for P2S VpnClient.
      * 
      */
-    @InputImport(name="vpnClientAddressPool")
+    @Import(name="vpnClientAddressPool")
       private final @Nullable AddressSpaceResponse vpnClientAddressPool;
 
     public Optional<AddressSpaceResponse> getVpnClientAddressPool() {

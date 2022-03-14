@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetVirtualApplianceSiteArgs extends io.pulumi.resources.Invok
      * The name of the Network Virtual Appliance.
      * 
      */
-    @InputImport(name="networkVirtualApplianceName", required=true)
+    @Import(name="networkVirtualApplianceName", required=true)
       private final String networkVirtualApplianceName;
 
     public String getNetworkVirtualApplianceName() {
@@ -27,7 +27,7 @@ public final class GetVirtualApplianceSiteArgs extends io.pulumi.resources.Invok
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {
@@ -38,7 +38,7 @@ public final class GetVirtualApplianceSiteArgs extends io.pulumi.resources.Invok
      * The name of the site.
      * 
      */
-    @InputImport(name="siteName", required=true)
+    @Import(name="siteName", required=true)
       private final String siteName;
 
     public String getSiteName() {

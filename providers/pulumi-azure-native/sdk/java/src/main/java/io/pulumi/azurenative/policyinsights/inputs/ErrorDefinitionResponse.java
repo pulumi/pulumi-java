@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.policyinsights.inputs;
 
 import io.pulumi.azurenative.policyinsights.inputs.TypedErrorInfoResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class ErrorDefinitionResponse extends io.pulumi.resources.InvokeArg
      * Additional scenario specific error details.
      * 
      */
-    @InputImport(name="additionalInfo", required=true)
+    @Import(name="additionalInfo", required=true)
       private final List<TypedErrorInfoResponse> additionalInfo;
 
     public List<TypedErrorInfoResponse> getAdditionalInfo() {
@@ -33,7 +33,7 @@ public final class ErrorDefinitionResponse extends io.pulumi.resources.InvokeArg
      * Service specific error code which serves as the substatus for the HTTP error code.
      * 
      */
-    @InputImport(name="code", required=true)
+    @Import(name="code", required=true)
       private final String code;
 
     public String getCode() {
@@ -44,7 +44,7 @@ public final class ErrorDefinitionResponse extends io.pulumi.resources.InvokeArg
      * Internal error details.
      * 
      */
-    @InputImport(name="details", required=true)
+    @Import(name="details", required=true)
       private final List<ErrorDefinitionResponse> details;
 
     public List<ErrorDefinitionResponse> getDetails() {
@@ -55,7 +55,7 @@ public final class ErrorDefinitionResponse extends io.pulumi.resources.InvokeArg
      * Description of the error.
      * 
      */
-    @InputImport(name="message", required=true)
+    @Import(name="message", required=true)
       private final String message;
 
     public String getMessage() {
@@ -66,7 +66,7 @@ public final class ErrorDefinitionResponse extends io.pulumi.resources.InvokeArg
      * The target of the error.
      * 
      */
-    @InputImport(name="target", required=true)
+    @Import(name="target", required=true)
       private final String target;
 
     public String getTarget() {

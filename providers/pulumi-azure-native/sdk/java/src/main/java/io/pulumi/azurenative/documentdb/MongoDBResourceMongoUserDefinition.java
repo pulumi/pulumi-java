@@ -8,7 +8,7 @@ import io.pulumi.azurenative.documentdb.MongoDBResourceMongoUserDefinitionArgs;
 import io.pulumi.azurenative.documentdb.outputs.RoleResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +35,7 @@ public class MongoDBResourceMongoUserDefinition extends io.pulumi.resources.Cust
      * A custom definition for the USer Definition.
      * 
      */
-    @OutputExport(name="customData", type=String.class, parameters={})
+    @Export(name="customData", type=String.class, parameters={})
     private Output</* @Nullable */ String> customData;
 
     /**
@@ -49,7 +49,7 @@ public class MongoDBResourceMongoUserDefinition extends io.pulumi.resources.Cust
      * The database name for which access is being granted for this User Definition.
      * 
      */
-    @OutputExport(name="databaseName", type=String.class, parameters={})
+    @Export(name="databaseName", type=String.class, parameters={})
     private Output</* @Nullable */ String> databaseName;
 
     /**
@@ -63,7 +63,7 @@ public class MongoDBResourceMongoUserDefinition extends io.pulumi.resources.Cust
      * The Mongo Auth mechanism. For now, we only support auth mechanism SCRAM-SHA-256.
      * 
      */
-    @OutputExport(name="mechanisms", type=String.class, parameters={})
+    @Export(name="mechanisms", type=String.class, parameters={})
     private Output</* @Nullable */ String> mechanisms;
 
     /**
@@ -77,7 +77,7 @@ public class MongoDBResourceMongoUserDefinition extends io.pulumi.resources.Cust
      * The name of the database account.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -91,7 +91,7 @@ public class MongoDBResourceMongoUserDefinition extends io.pulumi.resources.Cust
      * The password for User Definition. Response does not contain user password.
      * 
      */
-    @OutputExport(name="password", type=String.class, parameters={})
+    @Export(name="password", type=String.class, parameters={})
     private Output</* @Nullable */ String> password;
 
     /**
@@ -105,7 +105,7 @@ public class MongoDBResourceMongoUserDefinition extends io.pulumi.resources.Cust
      * The set of roles inherited by the User Definition.
      * 
      */
-    @OutputExport(name="roles", type=List.class, parameters={RoleResponse.class})
+    @Export(name="roles", type=List.class, parameters={RoleResponse.class})
     private Output</* @Nullable */ List<RoleResponse>> roles;
 
     /**
@@ -119,7 +119,7 @@ public class MongoDBResourceMongoUserDefinition extends io.pulumi.resources.Cust
      * The type of Azure resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -133,7 +133,7 @@ public class MongoDBResourceMongoUserDefinition extends io.pulumi.resources.Cust
      * The user name for User Definition.
      * 
      */
-    @OutputExport(name="userName", type=String.class, parameters={})
+    @Export(name="userName", type=String.class, parameters={})
     private Output</* @Nullable */ String> userName;
 
     /**

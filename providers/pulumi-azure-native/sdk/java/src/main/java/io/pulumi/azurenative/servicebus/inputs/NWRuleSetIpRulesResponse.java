@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.servicebus.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class NWRuleSetIpRulesResponse extends io.pulumi.resources.InvokeAr
      * The IP Filter Action
      * 
      */
-    @InputImport(name="action")
+    @Import(name="action")
       private final @Nullable String action;
 
     public Optional<String> getAction() {
@@ -33,7 +33,7 @@ public final class NWRuleSetIpRulesResponse extends io.pulumi.resources.InvokeAr
      * IP Mask
      * 
      */
-    @InputImport(name="ipMask")
+    @Import(name="ipMask")
       private final @Nullable String ipMask;
 
     public Optional<String> getIpMask() {

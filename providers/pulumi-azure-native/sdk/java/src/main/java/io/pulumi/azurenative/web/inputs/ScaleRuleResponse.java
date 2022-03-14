@@ -6,7 +6,7 @@ package io.pulumi.azurenative.web.inputs;
 import io.pulumi.azurenative.web.inputs.CustomScaleRuleResponse;
 import io.pulumi.azurenative.web.inputs.HttpScaleRuleResponse;
 import io.pulumi.azurenative.web.inputs.QueueScaleRuleResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class ScaleRuleResponse extends io.pulumi.resources.InvokeArgs {
      * Azure Queue based scaling.
      * 
      */
-    @InputImport(name="azureQueue")
+    @Import(name="azureQueue")
       private final @Nullable QueueScaleRuleResponse azureQueue;
 
     public Optional<QueueScaleRuleResponse> getAzureQueue() {
@@ -36,7 +36,7 @@ public final class ScaleRuleResponse extends io.pulumi.resources.InvokeArgs {
      * Custom scale rule.
      * 
      */
-    @InputImport(name="custom")
+    @Import(name="custom")
       private final @Nullable CustomScaleRuleResponse custom;
 
     public Optional<CustomScaleRuleResponse> getCustom() {
@@ -47,7 +47,7 @@ public final class ScaleRuleResponse extends io.pulumi.resources.InvokeArgs {
      * HTTP requests based scaling.
      * 
      */
-    @InputImport(name="http")
+    @Import(name="http")
       private final @Nullable HttpScaleRuleResponse http;
 
     public Optional<HttpScaleRuleResponse> getHttp() {
@@ -58,7 +58,7 @@ public final class ScaleRuleResponse extends io.pulumi.resources.InvokeArgs {
      * Scale Rule Name
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {

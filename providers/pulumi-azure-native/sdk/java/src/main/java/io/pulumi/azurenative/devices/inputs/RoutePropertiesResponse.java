@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.devices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class RoutePropertiesResponse extends io.pulumi.resources.InvokeArg
      * The condition that is evaluated to apply the routing rule. If no condition is provided, it evaluates to true by default. For grammar, see: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-query-language
      * 
      */
-    @InputImport(name="condition")
+    @Import(name="condition")
       private final @Nullable String condition;
 
     public Optional<String> getCondition() {
@@ -35,7 +35,7 @@ public final class RoutePropertiesResponse extends io.pulumi.resources.InvokeArg
      * The list of endpoints to which messages that satisfy the condition are routed. Currently only one endpoint is allowed.
      * 
      */
-    @InputImport(name="endpointNames", required=true)
+    @Import(name="endpointNames", required=true)
       private final List<String> endpointNames;
 
     public List<String> getEndpointNames() {
@@ -46,7 +46,7 @@ public final class RoutePropertiesResponse extends io.pulumi.resources.InvokeArg
      * Used to specify whether a route is enabled.
      * 
      */
-    @InputImport(name="isEnabled", required=true)
+    @Import(name="isEnabled", required=true)
       private final Boolean isEnabled;
 
     public Boolean getIsEnabled() {
@@ -57,7 +57,7 @@ public final class RoutePropertiesResponse extends io.pulumi.resources.InvokeArg
      * The name of the route. The name can only include alphanumeric characters, periods, underscores, hyphens, has a maximum length of 64 characters, and must be unique.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -68,7 +68,7 @@ public final class RoutePropertiesResponse extends io.pulumi.resources.InvokeArg
      * The source that the routing rule is to be applied to, such as DeviceMessages.
      * 
      */
-    @InputImport(name="source", required=true)
+    @Import(name="source", required=true)
       private final String source;
 
     public String getSource() {

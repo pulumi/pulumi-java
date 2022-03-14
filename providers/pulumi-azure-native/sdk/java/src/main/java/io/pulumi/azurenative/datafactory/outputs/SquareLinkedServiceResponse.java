@@ -8,7 +8,7 @@ import io.pulumi.azurenative.datafactory.outputs.IntegrationRuntimeReferenceResp
 import io.pulumi.azurenative.datafactory.outputs.ParameterSpecificationResponse;
 import io.pulumi.azurenative.datafactory.outputs.SecureStringResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -17,7 +17,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SquareLinkedServiceResponse {
     /**
      * List of tags that can be used for describing the linked service.
@@ -91,22 +91,22 @@ public final class SquareLinkedServiceResponse {
      */
     private final @Nullable Object usePeerVerification;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SquareLinkedServiceResponse(
-        @OutputCustomType.Parameter("annotations") @Nullable List<Object> annotations,
-        @OutputCustomType.Parameter("clientId") @Nullable Object clientId,
-        @OutputCustomType.Parameter("clientSecret") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> clientSecret,
-        @OutputCustomType.Parameter("connectVia") @Nullable IntegrationRuntimeReferenceResponse connectVia,
-        @OutputCustomType.Parameter("connectionProperties") @Nullable Object connectionProperties,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("encryptedCredential") @Nullable Object encryptedCredential,
-        @OutputCustomType.Parameter("host") @Nullable Object host,
-        @OutputCustomType.Parameter("parameters") @Nullable Map<String,ParameterSpecificationResponse> parameters,
-        @OutputCustomType.Parameter("redirectUri") @Nullable Object redirectUri,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("useEncryptedEndpoints") @Nullable Object useEncryptedEndpoints,
-        @OutputCustomType.Parameter("useHostVerification") @Nullable Object useHostVerification,
-        @OutputCustomType.Parameter("usePeerVerification") @Nullable Object usePeerVerification) {
+        @CustomType.Parameter("annotations") @Nullable List<Object> annotations,
+        @CustomType.Parameter("clientId") @Nullable Object clientId,
+        @CustomType.Parameter("clientSecret") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> clientSecret,
+        @CustomType.Parameter("connectVia") @Nullable IntegrationRuntimeReferenceResponse connectVia,
+        @CustomType.Parameter("connectionProperties") @Nullable Object connectionProperties,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("encryptedCredential") @Nullable Object encryptedCredential,
+        @CustomType.Parameter("host") @Nullable Object host,
+        @CustomType.Parameter("parameters") @Nullable Map<String,ParameterSpecificationResponse> parameters,
+        @CustomType.Parameter("redirectUri") @Nullable Object redirectUri,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("useEncryptedEndpoints") @Nullable Object useEncryptedEndpoints,
+        @CustomType.Parameter("useHostVerification") @Nullable Object useHostVerification,
+        @CustomType.Parameter("usePeerVerification") @Nullable Object usePeerVerification) {
         this.annotations = annotations;
         this.clientId = clientId;
         this.clientSecret = clientSecret;

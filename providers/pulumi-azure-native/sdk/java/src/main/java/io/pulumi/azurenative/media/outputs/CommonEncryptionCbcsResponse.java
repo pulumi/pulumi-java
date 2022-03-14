@@ -7,13 +7,13 @@ import io.pulumi.azurenative.media.outputs.CbcsDrmConfigurationResponse;
 import io.pulumi.azurenative.media.outputs.EnabledProtocolsResponse;
 import io.pulumi.azurenative.media.outputs.StreamingPolicyContentKeysResponse;
 import io.pulumi.azurenative.media.outputs.TrackSelectionResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CommonEncryptionCbcsResponse {
     /**
      * Representing which tracks should not be encrypted
@@ -36,12 +36,12 @@ public final class CommonEncryptionCbcsResponse {
      */
     private final @Nullable EnabledProtocolsResponse enabledProtocols;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CommonEncryptionCbcsResponse(
-        @OutputCustomType.Parameter("clearTracks") @Nullable List<TrackSelectionResponse> clearTracks,
-        @OutputCustomType.Parameter("contentKeys") @Nullable StreamingPolicyContentKeysResponse contentKeys,
-        @OutputCustomType.Parameter("drm") @Nullable CbcsDrmConfigurationResponse drm,
-        @OutputCustomType.Parameter("enabledProtocols") @Nullable EnabledProtocolsResponse enabledProtocols) {
+        @CustomType.Parameter("clearTracks") @Nullable List<TrackSelectionResponse> clearTracks,
+        @CustomType.Parameter("contentKeys") @Nullable StreamingPolicyContentKeysResponse contentKeys,
+        @CustomType.Parameter("drm") @Nullable CbcsDrmConfigurationResponse drm,
+        @CustomType.Parameter("enabledProtocols") @Nullable EnabledProtocolsResponse enabledProtocols) {
         this.clearTracks = clearTracks;
         this.contentKeys = contentKeys;
         this.drm = drm;

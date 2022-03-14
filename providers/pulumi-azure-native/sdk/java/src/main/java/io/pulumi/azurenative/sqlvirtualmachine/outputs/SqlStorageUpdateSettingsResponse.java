@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.sqlvirtualmachine.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SqlStorageUpdateSettingsResponse {
     /**
      * Disk configuration to apply to SQL Server.
@@ -28,11 +28,11 @@ public final class SqlStorageUpdateSettingsResponse {
      */
     private final @Nullable Integer startingDeviceId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SqlStorageUpdateSettingsResponse(
-        @OutputCustomType.Parameter("diskConfigurationType") @Nullable String diskConfigurationType,
-        @OutputCustomType.Parameter("diskCount") @Nullable Integer diskCount,
-        @OutputCustomType.Parameter("startingDeviceId") @Nullable Integer startingDeviceId) {
+        @CustomType.Parameter("diskConfigurationType") @Nullable String diskConfigurationType,
+        @CustomType.Parameter("diskCount") @Nullable Integer diskCount,
+        @CustomType.Parameter("startingDeviceId") @Nullable Integer startingDeviceId) {
         this.diskConfigurationType = diskConfigurationType;
         this.diskCount = diskCount;
         this.startingDeviceId = startingDeviceId;

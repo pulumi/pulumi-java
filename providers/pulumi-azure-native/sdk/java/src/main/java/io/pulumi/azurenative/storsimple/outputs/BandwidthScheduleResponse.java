@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.storsimple.outputs;
 
 import io.pulumi.azurenative.storsimple.outputs.TimeResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BandwidthScheduleResponse {
     /**
      * The days of the week when this schedule is applicable.
@@ -33,12 +33,12 @@ public final class BandwidthScheduleResponse {
      */
     private final TimeResponse stop;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BandwidthScheduleResponse(
-        @OutputCustomType.Parameter("days") List<String> days,
-        @OutputCustomType.Parameter("rateInMbps") Integer rateInMbps,
-        @OutputCustomType.Parameter("start") TimeResponse start,
-        @OutputCustomType.Parameter("stop") TimeResponse stop) {
+        @CustomType.Parameter("days") List<String> days,
+        @CustomType.Parameter("rateInMbps") Integer rateInMbps,
+        @CustomType.Parameter("start") TimeResponse start,
+        @CustomType.Parameter("stop") TimeResponse stop) {
         this.days = days;
         this.rateInMbps = rateInMbps;
         this.start = start;

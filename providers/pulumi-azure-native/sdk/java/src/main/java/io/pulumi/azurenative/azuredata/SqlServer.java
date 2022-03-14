@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.azuredata.SqlServerArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -35,7 +35,7 @@ public class SqlServer extends io.pulumi.resources.CustomResource {
      * Cores of the Sql Server.
      * 
      */
-    @OutputExport(name="cores", type=Integer.class, parameters={})
+    @Export(name="cores", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> cores;
 
     /**
@@ -49,7 +49,7 @@ public class SqlServer extends io.pulumi.resources.CustomResource {
      * Sql Server Edition.
      * 
      */
-    @OutputExport(name="edition", type=String.class, parameters={})
+    @Export(name="edition", type=String.class, parameters={})
     private Output</* @Nullable */ String> edition;
 
     /**
@@ -63,7 +63,7 @@ public class SqlServer extends io.pulumi.resources.CustomResource {
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -77,7 +77,7 @@ public class SqlServer extends io.pulumi.resources.CustomResource {
      * Sql Server Json Property Bag.
      * 
      */
-    @OutputExport(name="propertyBag", type=String.class, parameters={})
+    @Export(name="propertyBag", type=String.class, parameters={})
     private Output</* @Nullable */ String> propertyBag;
 
     /**
@@ -91,7 +91,7 @@ public class SqlServer extends io.pulumi.resources.CustomResource {
      * ID for Parent Sql Server Registration.
      * 
      */
-    @OutputExport(name="registrationID", type=String.class, parameters={})
+    @Export(name="registrationID", type=String.class, parameters={})
     private Output</* @Nullable */ String> registrationID;
 
     /**
@@ -105,7 +105,7 @@ public class SqlServer extends io.pulumi.resources.CustomResource {
      * The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -119,7 +119,7 @@ public class SqlServer extends io.pulumi.resources.CustomResource {
      * Version of the Sql Server.
      * 
      */
-    @OutputExport(name="version", type=String.class, parameters={})
+    @Export(name="version", type=String.class, parameters={})
     private Output</* @Nullable */ String> version;
 
     /**

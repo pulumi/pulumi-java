@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.AddressPrefixItemResponse;
 import io.pulumi.azurenative.network.outputs.SystemDataResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetDefaultAdminRuleResult {
     /**
      * Indicates the access allowed for this particular rule
@@ -107,26 +107,26 @@ public final class GetDefaultAdminRuleResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDefaultAdminRuleResult(
-        @OutputCustomType.Parameter("access") String access,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("destinationPortRanges") List<String> destinationPortRanges,
-        @OutputCustomType.Parameter("destinations") List<AddressPrefixItemResponse> destinations,
-        @OutputCustomType.Parameter("direction") String direction,
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("flag") @Nullable String flag,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("priority") Integer priority,
-        @OutputCustomType.Parameter("protocol") String protocol,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("sourcePortRanges") List<String> sourcePortRanges,
-        @OutputCustomType.Parameter("sources") List<AddressPrefixItemResponse> sources,
-        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("access") String access,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("destinationPortRanges") List<String> destinationPortRanges,
+        @CustomType.Parameter("destinations") List<AddressPrefixItemResponse> destinations,
+        @CustomType.Parameter("direction") String direction,
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("flag") @Nullable String flag,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("priority") Integer priority,
+        @CustomType.Parameter("protocol") String protocol,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("sourcePortRanges") List<String> sourcePortRanges,
+        @CustomType.Parameter("sources") List<AddressPrefixItemResponse> sources,
+        @CustomType.Parameter("systemData") SystemDataResponse systemData,
+        @CustomType.Parameter("type") String type) {
         this.access = access;
         this.description = description;
         this.destinationPortRanges = destinationPortRanges;

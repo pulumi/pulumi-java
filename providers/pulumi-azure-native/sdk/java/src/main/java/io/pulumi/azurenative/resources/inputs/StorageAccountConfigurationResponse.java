@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.resources.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class StorageAccountConfigurationResponse extends io.pulumi.resourc
      * The storage account access key.
      * 
      */
-    @InputImport(name="storageAccountKey")
+    @Import(name="storageAccountKey")
       private final @Nullable String storageAccountKey;
 
     public Optional<String> getStorageAccountKey() {
@@ -33,7 +33,7 @@ public final class StorageAccountConfigurationResponse extends io.pulumi.resourc
      * The storage account name.
      * 
      */
-    @InputImport(name="storageAccountName")
+    @Import(name="storageAccountName")
       private final @Nullable String storageAccountName;
 
     public Optional<String> getStorageAccountName() {

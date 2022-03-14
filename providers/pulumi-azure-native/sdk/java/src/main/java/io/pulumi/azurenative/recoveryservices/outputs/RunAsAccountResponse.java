@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.recoveryservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RunAsAccountResponse {
     /**
      * The CS RunAs account Id.
@@ -22,10 +22,10 @@ public final class RunAsAccountResponse {
      */
     private final @Nullable String accountName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RunAsAccountResponse(
-        @OutputCustomType.Parameter("accountId") @Nullable String accountId,
-        @OutputCustomType.Parameter("accountName") @Nullable String accountName) {
+        @CustomType.Parameter("accountId") @Nullable String accountId,
+        @CustomType.Parameter("accountName") @Nullable String accountName) {
         this.accountId = accountId;
         this.accountName = accountName;
     }

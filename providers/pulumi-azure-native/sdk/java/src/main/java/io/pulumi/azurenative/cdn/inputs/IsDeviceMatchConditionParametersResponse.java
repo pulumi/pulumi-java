@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.cdn.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class IsDeviceMatchConditionParametersResponse extends io.pulumi.re
      * The match value for the condition of the delivery rule
      * 
      */
-    @InputImport(name="matchValues")
+    @Import(name="matchValues")
       private final @Nullable List<String> matchValues;
 
     public List<String> getMatchValues() {
@@ -35,14 +35,14 @@ public final class IsDeviceMatchConditionParametersResponse extends io.pulumi.re
      * Describes if this is negate condition or not
      * 
      */
-    @InputImport(name="negateCondition")
+    @Import(name="negateCondition")
       private final @Nullable Boolean negateCondition;
 
     public Optional<Boolean> getNegateCondition() {
         return this.negateCondition == null ? Optional.empty() : Optional.ofNullable(this.negateCondition);
     }
 
-    @InputImport(name="odataType", required=true)
+    @Import(name="odataType", required=true)
       private final String odataType;
 
     public String getOdataType() {
@@ -53,7 +53,7 @@ public final class IsDeviceMatchConditionParametersResponse extends io.pulumi.re
      * Describes operator to be matched
      * 
      */
-    @InputImport(name="operator", required=true)
+    @Import(name="operator", required=true)
       private final String operator;
 
     public String getOperator() {
@@ -64,7 +64,7 @@ public final class IsDeviceMatchConditionParametersResponse extends io.pulumi.re
      * List of transforms
      * 
      */
-    @InputImport(name="transforms")
+    @Import(name="transforms")
       private final @Nullable List<String> transforms;
 
     public List<String> getTransforms() {

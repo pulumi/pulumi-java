@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.sqlvirtualmachine.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AutoPatchingSettingsResponse {
     /**
      * Day of week to apply the patch on.
@@ -34,12 +34,12 @@ public final class AutoPatchingSettingsResponse {
      */
     private final @Nullable Integer maintenanceWindowStartingHour;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AutoPatchingSettingsResponse(
-        @OutputCustomType.Parameter("dayOfWeek") @Nullable String dayOfWeek,
-        @OutputCustomType.Parameter("enable") @Nullable Boolean enable,
-        @OutputCustomType.Parameter("maintenanceWindowDuration") @Nullable Integer maintenanceWindowDuration,
-        @OutputCustomType.Parameter("maintenanceWindowStartingHour") @Nullable Integer maintenanceWindowStartingHour) {
+        @CustomType.Parameter("dayOfWeek") @Nullable String dayOfWeek,
+        @CustomType.Parameter("enable") @Nullable Boolean enable,
+        @CustomType.Parameter("maintenanceWindowDuration") @Nullable Integer maintenanceWindowDuration,
+        @CustomType.Parameter("maintenanceWindowStartingHour") @Nullable Integer maintenanceWindowStartingHour) {
         this.dayOfWeek = dayOfWeek;
         this.enable = enable;
         this.maintenanceWindowDuration = maintenanceWindowDuration;

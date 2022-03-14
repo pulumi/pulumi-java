@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.datafactory.outputs;
 
 import io.pulumi.azurenative.datafactory.outputs.SecureStringResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class IntegrationRuntimeCustomSetupScriptPropertiesResponse {
     /**
      * The URI of the Azure blob container that contains the custom setup script.
@@ -23,10 +23,10 @@ public final class IntegrationRuntimeCustomSetupScriptPropertiesResponse {
      */
     private final @Nullable SecureStringResponse sasToken;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private IntegrationRuntimeCustomSetupScriptPropertiesResponse(
-        @OutputCustomType.Parameter("blobContainerUri") @Nullable String blobContainerUri,
-        @OutputCustomType.Parameter("sasToken") @Nullable SecureStringResponse sasToken) {
+        @CustomType.Parameter("blobContainerUri") @Nullable String blobContainerUri,
+        @CustomType.Parameter("sasToken") @Nullable SecureStringResponse sasToken) {
         this.blobContainerUri = blobContainerUri;
         this.sasToken = sasToken;
     }

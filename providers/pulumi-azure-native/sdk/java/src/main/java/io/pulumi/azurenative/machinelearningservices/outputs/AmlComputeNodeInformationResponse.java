@@ -3,12 +3,12 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AmlComputeNodeInformationResponse {
     /**
      * ID of the compute node.
@@ -41,14 +41,14 @@ public final class AmlComputeNodeInformationResponse {
      */
     private final String runId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AmlComputeNodeInformationResponse(
-        @OutputCustomType.Parameter("nodeId") String nodeId,
-        @OutputCustomType.Parameter("nodeState") String nodeState,
-        @OutputCustomType.Parameter("port") Double port,
-        @OutputCustomType.Parameter("privateIpAddress") String privateIpAddress,
-        @OutputCustomType.Parameter("publicIpAddress") String publicIpAddress,
-        @OutputCustomType.Parameter("runId") String runId) {
+        @CustomType.Parameter("nodeId") String nodeId,
+        @CustomType.Parameter("nodeState") String nodeState,
+        @CustomType.Parameter("port") Double port,
+        @CustomType.Parameter("privateIpAddress") String privateIpAddress,
+        @CustomType.Parameter("publicIpAddress") String publicIpAddress,
+        @CustomType.Parameter("runId") String runId) {
         this.nodeId = nodeId;
         this.nodeState = nodeState;
         this.port = port;

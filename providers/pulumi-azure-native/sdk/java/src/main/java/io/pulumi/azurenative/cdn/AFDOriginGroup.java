@@ -11,7 +11,7 @@ import io.pulumi.azurenative.cdn.outputs.ResponseBasedOriginErrorDetectionParame
 import io.pulumi.azurenative.cdn.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -35,7 +35,7 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="azure-native:cdn:AFDOriginGroup")
 public class AFDOriginGroup extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="deploymentStatus", type=String.class, parameters={})
+    @Export(name="deploymentStatus", type=String.class, parameters={})
     private Output<String> deploymentStatus;
 
     public Output<String> getDeploymentStatus() {
@@ -45,7 +45,7 @@ public class AFDOriginGroup extends io.pulumi.resources.CustomResource {
      * Health probe settings to the origin that is used to determine the health of the origin.
      * 
      */
-    @OutputExport(name="healthProbeSettings", type=HealthProbeParametersResponse.class, parameters={})
+    @Export(name="healthProbeSettings", type=HealthProbeParametersResponse.class, parameters={})
     private Output</* @Nullable */ HealthProbeParametersResponse> healthProbeSettings;
 
     /**
@@ -59,7 +59,7 @@ public class AFDOriginGroup extends io.pulumi.resources.CustomResource {
      * Load balancing settings for a backend pool
      * 
      */
-    @OutputExport(name="loadBalancingSettings", type=LoadBalancingSettingsParametersResponse.class, parameters={})
+    @Export(name="loadBalancingSettings", type=LoadBalancingSettingsParametersResponse.class, parameters={})
     private Output</* @Nullable */ LoadBalancingSettingsParametersResponse> loadBalancingSettings;
 
     /**
@@ -73,7 +73,7 @@ public class AFDOriginGroup extends io.pulumi.resources.CustomResource {
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -87,7 +87,7 @@ public class AFDOriginGroup extends io.pulumi.resources.CustomResource {
      * Provisioning status
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -101,7 +101,7 @@ public class AFDOriginGroup extends io.pulumi.resources.CustomResource {
      * The JSON object that contains the properties to determine origin health using real requests/responses. This property is currently not supported.
      * 
      */
-    @OutputExport(name="responseBasedAfdOriginErrorDetectionSettings", type=ResponseBasedOriginErrorDetectionParametersResponse.class, parameters={})
+    @Export(name="responseBasedAfdOriginErrorDetectionSettings", type=ResponseBasedOriginErrorDetectionParametersResponse.class, parameters={})
     private Output</* @Nullable */ ResponseBasedOriginErrorDetectionParametersResponse> responseBasedAfdOriginErrorDetectionSettings;
 
     /**
@@ -115,7 +115,7 @@ public class AFDOriginGroup extends io.pulumi.resources.CustomResource {
      * Whether to allow session affinity on this host. Valid options are 'Enabled' or 'Disabled'
      * 
      */
-    @OutputExport(name="sessionAffinityState", type=String.class, parameters={})
+    @Export(name="sessionAffinityState", type=String.class, parameters={})
     private Output</* @Nullable */ String> sessionAffinityState;
 
     /**
@@ -129,7 +129,7 @@ public class AFDOriginGroup extends io.pulumi.resources.CustomResource {
      * Read only system data
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -143,7 +143,7 @@ public class AFDOriginGroup extends io.pulumi.resources.CustomResource {
      * Time in minutes to shift the traffic to the endpoint gradually when an unhealthy endpoint comes healthy or a new endpoint is added. Default is 10 mins. This property is currently not supported.
      * 
      */
-    @OutputExport(name="trafficRestorationTimeToHealedOrNewEndpointsInMinutes", type=Integer.class, parameters={})
+    @Export(name="trafficRestorationTimeToHealedOrNewEndpointsInMinutes", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> trafficRestorationTimeToHealedOrNewEndpointsInMinutes;
 
     /**
@@ -157,7 +157,7 @@ public class AFDOriginGroup extends io.pulumi.resources.CustomResource {
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

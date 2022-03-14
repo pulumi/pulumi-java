@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.batch.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ApplicationPackageReferenceResponse {
     private final String id;
     /**
@@ -18,10 +18,10 @@ public final class ApplicationPackageReferenceResponse {
      */
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ApplicationPackageReferenceResponse(
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("version") @Nullable String version) {
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("version") @Nullable String version) {
         this.id = id;
         this.version = version;
     }

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.web.WebAppDeploymentArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -33,7 +33,7 @@ public class WebAppDeployment extends io.pulumi.resources.CustomResource {
      * True if deployment is currently active, false if completed and null if not started.
      * 
      */
-    @OutputExport(name="active", type=Boolean.class, parameters={})
+    @Export(name="active", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> active;
 
     /**
@@ -47,7 +47,7 @@ public class WebAppDeployment extends io.pulumi.resources.CustomResource {
      * Who authored the deployment.
      * 
      */
-    @OutputExport(name="author", type=String.class, parameters={})
+    @Export(name="author", type=String.class, parameters={})
     private Output</* @Nullable */ String> author;
 
     /**
@@ -61,7 +61,7 @@ public class WebAppDeployment extends io.pulumi.resources.CustomResource {
      * Author email.
      * 
      */
-    @OutputExport(name="authorEmail", type=String.class, parameters={})
+    @Export(name="authorEmail", type=String.class, parameters={})
     private Output</* @Nullable */ String> authorEmail;
 
     /**
@@ -75,7 +75,7 @@ public class WebAppDeployment extends io.pulumi.resources.CustomResource {
      * Who performed the deployment.
      * 
      */
-    @OutputExport(name="deployer", type=String.class, parameters={})
+    @Export(name="deployer", type=String.class, parameters={})
     private Output</* @Nullable */ String> deployer;
 
     /**
@@ -89,7 +89,7 @@ public class WebAppDeployment extends io.pulumi.resources.CustomResource {
      * Details on deployment.
      * 
      */
-    @OutputExport(name="details", type=String.class, parameters={})
+    @Export(name="details", type=String.class, parameters={})
     private Output</* @Nullable */ String> details;
 
     /**
@@ -103,7 +103,7 @@ public class WebAppDeployment extends io.pulumi.resources.CustomResource {
      * End time.
      * 
      */
-    @OutputExport(name="endTime", type=String.class, parameters={})
+    @Export(name="endTime", type=String.class, parameters={})
     private Output</* @Nullable */ String> endTime;
 
     /**
@@ -117,7 +117,7 @@ public class WebAppDeployment extends io.pulumi.resources.CustomResource {
      * Kind of resource.
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
     /**
@@ -131,7 +131,7 @@ public class WebAppDeployment extends io.pulumi.resources.CustomResource {
      * Details about deployment status.
      * 
      */
-    @OutputExport(name="message", type=String.class, parameters={})
+    @Export(name="message", type=String.class, parameters={})
     private Output</* @Nullable */ String> message;
 
     /**
@@ -145,7 +145,7 @@ public class WebAppDeployment extends io.pulumi.resources.CustomResource {
      * Resource Name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -159,7 +159,7 @@ public class WebAppDeployment extends io.pulumi.resources.CustomResource {
      * Start time.
      * 
      */
-    @OutputExport(name="startTime", type=String.class, parameters={})
+    @Export(name="startTime", type=String.class, parameters={})
     private Output</* @Nullable */ String> startTime;
 
     /**
@@ -173,7 +173,7 @@ public class WebAppDeployment extends io.pulumi.resources.CustomResource {
      * Deployment status.
      * 
      */
-    @OutputExport(name="status", type=Integer.class, parameters={})
+    @Export(name="status", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> status;
 
     /**
@@ -187,7 +187,7 @@ public class WebAppDeployment extends io.pulumi.resources.CustomResource {
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

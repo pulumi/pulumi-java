@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.hdinsight.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ComputeIsolationPropertiesResponse {
     /**
      * The flag indicates whether enable compute isolation or not.
@@ -23,10 +23,10 @@ public final class ComputeIsolationPropertiesResponse {
      */
     private final @Nullable String hostSku;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ComputeIsolationPropertiesResponse(
-        @OutputCustomType.Parameter("enableComputeIsolation") @Nullable Boolean enableComputeIsolation,
-        @OutputCustomType.Parameter("hostSku") @Nullable String hostSku) {
+        @CustomType.Parameter("enableComputeIsolation") @Nullable Boolean enableComputeIsolation,
+        @CustomType.Parameter("hostSku") @Nullable String hostSku) {
         this.enableComputeIsolation = enableComputeIsolation;
         this.hostSku = hostSku;
     }

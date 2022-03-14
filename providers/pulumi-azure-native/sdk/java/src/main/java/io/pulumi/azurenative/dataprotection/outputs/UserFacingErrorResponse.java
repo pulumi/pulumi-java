@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.dataprotection.outputs;
 
 import io.pulumi.azurenative.dataprotection.outputs.InnerErrorResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class UserFacingErrorResponse {
     /**
      * Unique code for this error
@@ -57,17 +57,17 @@ public final class UserFacingErrorResponse {
      */
     private final @Nullable String target;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private UserFacingErrorResponse(
-        @OutputCustomType.Parameter("code") @Nullable String code,
-        @OutputCustomType.Parameter("details") @Nullable List<UserFacingErrorResponse> details,
-        @OutputCustomType.Parameter("innerError") @Nullable InnerErrorResponse innerError,
-        @OutputCustomType.Parameter("isRetryable") @Nullable Boolean isRetryable,
-        @OutputCustomType.Parameter("isUserError") @Nullable Boolean isUserError,
-        @OutputCustomType.Parameter("message") @Nullable String message,
-        @OutputCustomType.Parameter("properties") @Nullable Map<String,String> properties,
-        @OutputCustomType.Parameter("recommendedAction") @Nullable List<String> recommendedAction,
-        @OutputCustomType.Parameter("target") @Nullable String target) {
+        @CustomType.Parameter("code") @Nullable String code,
+        @CustomType.Parameter("details") @Nullable List<UserFacingErrorResponse> details,
+        @CustomType.Parameter("innerError") @Nullable InnerErrorResponse innerError,
+        @CustomType.Parameter("isRetryable") @Nullable Boolean isRetryable,
+        @CustomType.Parameter("isUserError") @Nullable Boolean isUserError,
+        @CustomType.Parameter("message") @Nullable String message,
+        @CustomType.Parameter("properties") @Nullable Map<String,String> properties,
+        @CustomType.Parameter("recommendedAction") @Nullable List<String> recommendedAction,
+        @CustomType.Parameter("target") @Nullable String target) {
         this.code = code;
         this.details = details;
         this.innerError = innerError;

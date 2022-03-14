@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class EndpointPropertiesResponseSubnets extends io.pulumi.resources
      * First address in the subnet.
      * 
      */
-    @InputImport(name="first")
+    @Import(name="first")
       private final @Nullable String first;
 
     public Optional<String> getFirst() {
@@ -34,7 +34,7 @@ public final class EndpointPropertiesResponseSubnets extends io.pulumi.resources
      * Last address in the subnet.
      * 
      */
-    @InputImport(name="last")
+    @Import(name="last")
       private final @Nullable String last;
 
     public Optional<String> getLast() {
@@ -45,7 +45,7 @@ public final class EndpointPropertiesResponseSubnets extends io.pulumi.resources
      * Block size (number of leading bits in the subnet mask).
      * 
      */
-    @InputImport(name="scope")
+    @Import(name="scope")
       private final @Nullable Integer scope;
 
     public Optional<Integer> getScope() {

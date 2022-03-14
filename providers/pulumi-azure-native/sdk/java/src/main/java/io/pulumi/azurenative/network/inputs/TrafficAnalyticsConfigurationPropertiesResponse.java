@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class TrafficAnalyticsConfigurationPropertiesResponse extends io.pu
      * Flag to enable/disable traffic analytics.
      * 
      */
-    @InputImport(name="enabled")
+    @Import(name="enabled")
       private final @Nullable Boolean enabled;
 
     public Optional<Boolean> getEnabled() {
@@ -35,7 +35,7 @@ public final class TrafficAnalyticsConfigurationPropertiesResponse extends io.pu
      * The interval in minutes which would decide how frequently TA service should do flow analytics.
      * 
      */
-    @InputImport(name="trafficAnalyticsInterval")
+    @Import(name="trafficAnalyticsInterval")
       private final @Nullable Integer trafficAnalyticsInterval;
 
     public Optional<Integer> getTrafficAnalyticsInterval() {
@@ -46,7 +46,7 @@ public final class TrafficAnalyticsConfigurationPropertiesResponse extends io.pu
      * The resource guid of the attached workspace.
      * 
      */
-    @InputImport(name="workspaceId")
+    @Import(name="workspaceId")
       private final @Nullable String workspaceId;
 
     public Optional<String> getWorkspaceId() {
@@ -57,7 +57,7 @@ public final class TrafficAnalyticsConfigurationPropertiesResponse extends io.pu
      * The location of the attached workspace.
      * 
      */
-    @InputImport(name="workspaceRegion")
+    @Import(name="workspaceRegion")
       private final @Nullable String workspaceRegion;
 
     public Optional<String> getWorkspaceRegion() {
@@ -68,7 +68,7 @@ public final class TrafficAnalyticsConfigurationPropertiesResponse extends io.pu
      * Resource Id of the attached workspace.
      * 
      */
-    @InputImport(name="workspaceResourceId")
+    @Import(name="workspaceResourceId")
       private final @Nullable String workspaceResourceId;
 
     public Optional<String> getWorkspaceResourceId() {

@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class StaticSiteUserARMResourceResponse {
     /**
      * The display name for the static site user.
@@ -52,16 +52,16 @@ public final class StaticSiteUserARMResourceResponse {
      */
     private final String userId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private StaticSiteUserARMResourceResponse(
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("kind") @Nullable String kind,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("provider") String provider,
-        @OutputCustomType.Parameter("roles") @Nullable String roles,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("userId") String userId) {
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("kind") @Nullable String kind,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("provider") String provider,
+        @CustomType.Parameter("roles") @Nullable String roles,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("userId") String userId) {
         this.displayName = displayName;
         this.id = id;
         this.kind = kind;

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.appplatform.inputs;
 import io.pulumi.azurenative.appplatform.inputs.PersistentDiskArgs;
 import io.pulumi.azurenative.appplatform.inputs.TemporaryDiskArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class AppResourcePropertiesArgs extends io.pulumi.resources.Resourc
      * Name of the active deployment of the App
      * 
      */
-    @InputImport(name="activeDeploymentName")
+    @Import(name="activeDeploymentName")
       private final @Nullable Output<String> activeDeploymentName;
 
     public Output<String> getActiveDeploymentName() {
@@ -36,7 +36,7 @@ public final class AppResourcePropertiesArgs extends io.pulumi.resources.Resourc
      * Fully qualified dns Name.
      * 
      */
-    @InputImport(name="fqdn")
+    @Import(name="fqdn")
       private final @Nullable Output<String> fqdn;
 
     public Output<String> getFqdn() {
@@ -47,7 +47,7 @@ public final class AppResourcePropertiesArgs extends io.pulumi.resources.Resourc
      * Indicate if only https is allowed.
      * 
      */
-    @InputImport(name="httpsOnly")
+    @Import(name="httpsOnly")
       private final @Nullable Output<Boolean> httpsOnly;
 
     public Output<Boolean> getHttpsOnly() {
@@ -58,7 +58,7 @@ public final class AppResourcePropertiesArgs extends io.pulumi.resources.Resourc
      * Persistent disk settings
      * 
      */
-    @InputImport(name="persistentDisk")
+    @Import(name="persistentDisk")
       private final @Nullable Output<PersistentDiskArgs> persistentDisk;
 
     public Output<PersistentDiskArgs> getPersistentDisk() {
@@ -69,7 +69,7 @@ public final class AppResourcePropertiesArgs extends io.pulumi.resources.Resourc
      * Indicates whether the App exposes public endpoint
      * 
      */
-    @InputImport(name="public")
+    @Import(name="public")
       private final @Nullable Output<Boolean> $public;
 
     public Output<Boolean> get$public() {
@@ -80,7 +80,7 @@ public final class AppResourcePropertiesArgs extends io.pulumi.resources.Resourc
      * Temporary disk settings
      * 
      */
-    @InputImport(name="temporaryDisk")
+    @Import(name="temporaryDisk")
       private final @Nullable Output<TemporaryDiskArgs> temporaryDisk;
 
     public Output<TemporaryDiskArgs> getTemporaryDisk() {

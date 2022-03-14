@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.dataprotection.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class ResourceGuardOperationResponse extends io.pulumi.resources.In
      * Type of resource request.
      * 
      */
-    @InputImport(name="requestResourceType", required=true)
+    @Import(name="requestResourceType", required=true)
       private final String requestResourceType;
 
     public String getRequestResourceType() {
@@ -31,7 +31,7 @@ public final class ResourceGuardOperationResponse extends io.pulumi.resources.In
      * Name of the critical operation.
      * 
      */
-    @InputImport(name="vaultCriticalOperation", required=true)
+    @Import(name="vaultCriticalOperation", required=true)
       private final String vaultCriticalOperation;
 
     public String getVaultCriticalOperation() {

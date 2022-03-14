@@ -6,7 +6,7 @@ package io.pulumi.azurenative.recoveryservices.inputs;
 import io.pulumi.azurenative.recoveryservices.inputs.PrivateEndpointConnectionVaultPropertiesResponse;
 import io.pulumi.azurenative.recoveryservices.inputs.UpgradeDetailsResponse;
 import io.pulumi.azurenative.recoveryservices.inputs.VaultPropertiesResponseEncryption;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class VaultPropertiesResponse extends io.pulumi.resources.InvokeArg
      * Customer Managed Key details of the resource.
      * 
      */
-    @InputImport(name="encryption")
+    @Import(name="encryption")
       private final @Nullable VaultPropertiesResponseEncryption encryption;
 
     public Optional<VaultPropertiesResponseEncryption> getEncryption() {
@@ -37,7 +37,7 @@ public final class VaultPropertiesResponse extends io.pulumi.resources.InvokeArg
      * List of private endpoint connection.
      * 
      */
-    @InputImport(name="privateEndpointConnections", required=true)
+    @Import(name="privateEndpointConnections", required=true)
       private final List<PrivateEndpointConnectionVaultPropertiesResponse> privateEndpointConnections;
 
     public List<PrivateEndpointConnectionVaultPropertiesResponse> getPrivateEndpointConnections() {
@@ -48,7 +48,7 @@ public final class VaultPropertiesResponse extends io.pulumi.resources.InvokeArg
      * Private endpoint state for backup.
      * 
      */
-    @InputImport(name="privateEndpointStateForBackup", required=true)
+    @Import(name="privateEndpointStateForBackup", required=true)
       private final String privateEndpointStateForBackup;
 
     public String getPrivateEndpointStateForBackup() {
@@ -59,7 +59,7 @@ public final class VaultPropertiesResponse extends io.pulumi.resources.InvokeArg
      * Private endpoint state for site recovery.
      * 
      */
-    @InputImport(name="privateEndpointStateForSiteRecovery", required=true)
+    @Import(name="privateEndpointStateForSiteRecovery", required=true)
       private final String privateEndpointStateForSiteRecovery;
 
     public String getPrivateEndpointStateForSiteRecovery() {
@@ -70,7 +70,7 @@ public final class VaultPropertiesResponse extends io.pulumi.resources.InvokeArg
      * Provisioning State.
      * 
      */
-    @InputImport(name="provisioningState", required=true)
+    @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
     public String getProvisioningState() {
@@ -81,7 +81,7 @@ public final class VaultPropertiesResponse extends io.pulumi.resources.InvokeArg
      * Details for upgrading vault.
      * 
      */
-    @InputImport(name="upgradeDetails")
+    @Import(name="upgradeDetails")
       private final @Nullable UpgradeDetailsResponse upgradeDetails;
 
     public Optional<UpgradeDetailsResponse> getUpgradeDetails() {

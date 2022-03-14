@@ -5,7 +5,7 @@ package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.azurenative.compute.inputs.ApiEntityReferenceResponse;
 import io.pulumi.azurenative.compute.inputs.VirtualMachineScaleSetNetworkConfigurationResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class VirtualMachineScaleSetNetworkProfileResponse extends io.pulum
      * A reference to a load balancer probe used to determine the health of an instance in the virtual machine scale set. The reference will be in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/loadBalancers/{loadBalancerName}/probes/{probeName}'.
      * 
      */
-    @InputImport(name="healthProbe")
+    @Import(name="healthProbe")
       private final @Nullable ApiEntityReferenceResponse healthProbe;
 
     public Optional<ApiEntityReferenceResponse> getHealthProbe() {
@@ -36,7 +36,7 @@ public final class VirtualMachineScaleSetNetworkProfileResponse extends io.pulum
      * specifies the Microsoft.Network API version used when creating networking resources in the Network Interface Configurations for Virtual Machine Scale Set with orchestration mode 'Flexible'
      * 
      */
-    @InputImport(name="networkApiVersion")
+    @Import(name="networkApiVersion")
       private final @Nullable String networkApiVersion;
 
     public Optional<String> getNetworkApiVersion() {
@@ -47,7 +47,7 @@ public final class VirtualMachineScaleSetNetworkProfileResponse extends io.pulum
      * The list of network configurations.
      * 
      */
-    @InputImport(name="networkInterfaceConfigurations")
+    @Import(name="networkInterfaceConfigurations")
       private final @Nullable List<VirtualMachineScaleSetNetworkConfigurationResponse> networkInterfaceConfigurations;
 
     public List<VirtualMachineScaleSetNetworkConfigurationResponse> getNetworkInterfaceConfigurations() {

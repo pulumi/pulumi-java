@@ -11,7 +11,7 @@ import io.pulumi.azurenative.redhatopenshift.outputs.MasterProfileResponse;
 import io.pulumi.azurenative.redhatopenshift.outputs.NetworkProfileResponse;
 import io.pulumi.azurenative.redhatopenshift.outputs.ServicePrincipalProfileResponse;
 import io.pulumi.azurenative.redhatopenshift.outputs.WorkerProfileResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -19,7 +19,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetOpenShiftClusterResult {
     /**
      * The cluster API server profile.
@@ -92,22 +92,22 @@ public final class GetOpenShiftClusterResult {
      */
     private final @Nullable List<WorkerProfileResponse> workerProfiles;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetOpenShiftClusterResult(
-        @OutputCustomType.Parameter("apiserverProfile") @Nullable APIServerProfileResponse apiserverProfile,
-        @OutputCustomType.Parameter("clusterProfile") @Nullable ClusterProfileResponse clusterProfile,
-        @OutputCustomType.Parameter("consoleProfile") @Nullable ConsoleProfileResponse consoleProfile,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("ingressProfiles") @Nullable List<IngressProfileResponse> ingressProfiles,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("masterProfile") @Nullable MasterProfileResponse masterProfile,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("networkProfile") @Nullable NetworkProfileResponse networkProfile,
-        @OutputCustomType.Parameter("provisioningState") @Nullable String provisioningState,
-        @OutputCustomType.Parameter("servicePrincipalProfile") @Nullable ServicePrincipalProfileResponse servicePrincipalProfile,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("workerProfiles") @Nullable List<WorkerProfileResponse> workerProfiles) {
+        @CustomType.Parameter("apiserverProfile") @Nullable APIServerProfileResponse apiserverProfile,
+        @CustomType.Parameter("clusterProfile") @Nullable ClusterProfileResponse clusterProfile,
+        @CustomType.Parameter("consoleProfile") @Nullable ConsoleProfileResponse consoleProfile,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("ingressProfiles") @Nullable List<IngressProfileResponse> ingressProfiles,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("masterProfile") @Nullable MasterProfileResponse masterProfile,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("networkProfile") @Nullable NetworkProfileResponse networkProfile,
+        @CustomType.Parameter("provisioningState") @Nullable String provisioningState,
+        @CustomType.Parameter("servicePrincipalProfile") @Nullable ServicePrincipalProfileResponse servicePrincipalProfile,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("workerProfiles") @Nullable List<WorkerProfileResponse> workerProfiles) {
         this.apiserverProfile = apiserverProfile;
         this.clusterProfile = clusterProfile;
         this.consoleProfile = consoleProfile;

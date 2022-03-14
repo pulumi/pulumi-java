@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.dbforpostgresql.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetServerAdministratorResult {
     /**
      * The type of administrator.
@@ -45,15 +45,15 @@ public final class GetServerAdministratorResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetServerAdministratorResult(
-        @OutputCustomType.Parameter("administratorType") String administratorType,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("login") String login,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("sid") String sid,
-        @OutputCustomType.Parameter("tenantId") String tenantId,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("administratorType") String administratorType,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("login") String login,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("sid") String sid,
+        @CustomType.Parameter("tenantId") String tenantId,
+        @CustomType.Parameter("type") String type) {
         this.administratorType = administratorType;
         this.id = id;
         this.login = login;

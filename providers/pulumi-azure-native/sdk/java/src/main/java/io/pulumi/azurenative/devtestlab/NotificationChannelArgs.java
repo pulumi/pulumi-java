@@ -5,7 +5,7 @@ package io.pulumi.azurenative.devtestlab;
 
 import io.pulumi.azurenative.devtestlab.inputs.EventArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class NotificationChannelArgs extends io.pulumi.resources.ResourceA
      * Description of notification.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -32,7 +32,7 @@ public final class NotificationChannelArgs extends io.pulumi.resources.ResourceA
      * The email recipient to send notifications to (can be a list of semi-colon separated email addresses).
      * 
      */
-    @InputImport(name="emailRecipient")
+    @Import(name="emailRecipient")
       private final @Nullable Output<String> emailRecipient;
 
     public Output<String> getEmailRecipient() {
@@ -43,7 +43,7 @@ public final class NotificationChannelArgs extends io.pulumi.resources.ResourceA
      * The list of event for which this notification is enabled.
      * 
      */
-    @InputImport(name="events")
+    @Import(name="events")
       private final @Nullable Output<List<EventArgs>> events;
 
     public Output<List<EventArgs>> getEvents() {
@@ -54,7 +54,7 @@ public final class NotificationChannelArgs extends io.pulumi.resources.ResourceA
      * The name of the lab.
      * 
      */
-    @InputImport(name="labName", required=true)
+    @Import(name="labName", required=true)
       private final Output<String> labName;
 
     public Output<String> getLabName() {
@@ -65,7 +65,7 @@ public final class NotificationChannelArgs extends io.pulumi.resources.ResourceA
      * The location of the resource.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -76,7 +76,7 @@ public final class NotificationChannelArgs extends io.pulumi.resources.ResourceA
      * The name of the notification channel.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -87,7 +87,7 @@ public final class NotificationChannelArgs extends io.pulumi.resources.ResourceA
      * The locale to use when sending a notification (fallback for unsupported languages is EN).
      * 
      */
-    @InputImport(name="notificationLocale")
+    @Import(name="notificationLocale")
       private final @Nullable Output<String> notificationLocale;
 
     public Output<String> getNotificationLocale() {
@@ -98,7 +98,7 @@ public final class NotificationChannelArgs extends io.pulumi.resources.ResourceA
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -109,7 +109,7 @@ public final class NotificationChannelArgs extends io.pulumi.resources.ResourceA
      * The tags of the resource.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -120,7 +120,7 @@ public final class NotificationChannelArgs extends io.pulumi.resources.ResourceA
      * The webhook URL to send notifications to.
      * 
      */
-    @InputImport(name="webHookUrl")
+    @Import(name="webHookUrl")
       private final @Nullable Output<String> webHookUrl;
 
     public Output<String> getWebHookUrl() {

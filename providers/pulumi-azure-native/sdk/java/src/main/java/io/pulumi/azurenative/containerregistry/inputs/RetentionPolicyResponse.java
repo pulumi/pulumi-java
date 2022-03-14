@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerregistry.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class RetentionPolicyResponse extends io.pulumi.resources.InvokeArg
      * The number of days to retain an untagged manifest after which it gets purged.
      * 
      */
-    @InputImport(name="days")
+    @Import(name="days")
       private final @Nullable Integer days;
 
     public Optional<Integer> getDays() {
@@ -34,7 +34,7 @@ public final class RetentionPolicyResponse extends io.pulumi.resources.InvokeArg
      * The timestamp when the policy was last updated.
      * 
      */
-    @InputImport(name="lastUpdatedTime", required=true)
+    @Import(name="lastUpdatedTime", required=true)
       private final String lastUpdatedTime;
 
     public String getLastUpdatedTime() {
@@ -45,7 +45,7 @@ public final class RetentionPolicyResponse extends io.pulumi.resources.InvokeArg
      * The value that indicates whether the policy is enabled or not.
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable String status;
 
     public Optional<String> getStatus() {

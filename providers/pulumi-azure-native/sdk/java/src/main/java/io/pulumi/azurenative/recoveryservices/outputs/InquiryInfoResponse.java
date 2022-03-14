@@ -5,14 +5,14 @@ package io.pulumi.azurenative.recoveryservices.outputs;
 
 import io.pulumi.azurenative.recoveryservices.outputs.ErrorDetailResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.WorkloadInquiryDetailsResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class InquiryInfoResponse {
     /**
      * Error Details if the Status is non-success.
@@ -32,11 +32,11 @@ public final class InquiryInfoResponse {
      */
     private final @Nullable String status;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private InquiryInfoResponse(
-        @OutputCustomType.Parameter("errorDetail") @Nullable ErrorDetailResponse errorDetail,
-        @OutputCustomType.Parameter("inquiryDetails") @Nullable List<WorkloadInquiryDetailsResponse> inquiryDetails,
-        @OutputCustomType.Parameter("status") @Nullable String status) {
+        @CustomType.Parameter("errorDetail") @Nullable ErrorDetailResponse errorDetail,
+        @CustomType.Parameter("inquiryDetails") @Nullable List<WorkloadInquiryDetailsResponse> inquiryDetails,
+        @CustomType.Parameter("status") @Nullable String status) {
         this.errorDetail = errorDetail;
         this.inquiryDetails = inquiryDetails;
         this.status = status;

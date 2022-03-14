@@ -10,7 +10,7 @@ import io.pulumi.azurenative.datafactory.inputs.ParameterSpecificationArgs;
 import io.pulumi.azurenative.datafactory.inputs.SecureStringArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -31,7 +31,7 @@ public final class MongoDbLinkedServiceArgs extends io.pulumi.resources.Resource
      * Specifies whether to allow self-signed certificates from the server. The default value is false. Type: boolean (or Expression with resultType boolean).
      * 
      */
-    @InputImport(name="allowSelfSignedServerCert")
+    @Import(name="allowSelfSignedServerCert")
       private final @Nullable Output<Object> allowSelfSignedServerCert;
 
     public Output<Object> getAllowSelfSignedServerCert() {
@@ -42,7 +42,7 @@ public final class MongoDbLinkedServiceArgs extends io.pulumi.resources.Resource
      * List of tags that can be used for describing the linked service.
      * 
      */
-    @InputImport(name="annotations")
+    @Import(name="annotations")
       private final @Nullable Output<List<Object>> annotations;
 
     public Output<List<Object>> getAnnotations() {
@@ -53,7 +53,7 @@ public final class MongoDbLinkedServiceArgs extends io.pulumi.resources.Resource
      * Database to verify the username and password. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="authSource")
+    @Import(name="authSource")
       private final @Nullable Output<Object> authSource;
 
     public Output<Object> getAuthSource() {
@@ -64,7 +64,7 @@ public final class MongoDbLinkedServiceArgs extends io.pulumi.resources.Resource
      * The authentication type to be used to connect to the MongoDB database.
      * 
      */
-    @InputImport(name="authenticationType")
+    @Import(name="authenticationType")
       private final @Nullable Output<Either<String,MongoDbAuthenticationType>> authenticationType;
 
     public Output<Either<String,MongoDbAuthenticationType>> getAuthenticationType() {
@@ -75,7 +75,7 @@ public final class MongoDbLinkedServiceArgs extends io.pulumi.resources.Resource
      * The integration runtime reference.
      * 
      */
-    @InputImport(name="connectVia")
+    @Import(name="connectVia")
       private final @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
 
     public Output<IntegrationRuntimeReferenceArgs> getConnectVia() {
@@ -86,7 +86,7 @@ public final class MongoDbLinkedServiceArgs extends io.pulumi.resources.Resource
      * The name of the MongoDB database that you want to access. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="databaseName", required=true)
+    @Import(name="databaseName", required=true)
       private final Output<Object> databaseName;
 
     public Output<Object> getDatabaseName() {
@@ -97,7 +97,7 @@ public final class MongoDbLinkedServiceArgs extends io.pulumi.resources.Resource
      * Linked service description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -108,7 +108,7 @@ public final class MongoDbLinkedServiceArgs extends io.pulumi.resources.Resource
      * Specifies whether the connections to the server are encrypted using SSL. The default value is false. Type: boolean (or Expression with resultType boolean).
      * 
      */
-    @InputImport(name="enableSsl")
+    @Import(name="enableSsl")
       private final @Nullable Output<Object> enableSsl;
 
     public Output<Object> getEnableSsl() {
@@ -119,7 +119,7 @@ public final class MongoDbLinkedServiceArgs extends io.pulumi.resources.Resource
      * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="encryptedCredential")
+    @Import(name="encryptedCredential")
       private final @Nullable Output<Object> encryptedCredential;
 
     public Output<Object> getEncryptedCredential() {
@@ -130,7 +130,7 @@ public final class MongoDbLinkedServiceArgs extends io.pulumi.resources.Resource
      * Parameters for linked service.
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
     public Output<Map<String,ParameterSpecificationArgs>> getParameters() {
@@ -141,7 +141,7 @@ public final class MongoDbLinkedServiceArgs extends io.pulumi.resources.Resource
      * Password for authentication.
      * 
      */
-    @InputImport(name="password")
+    @Import(name="password")
       private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
 
     public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getPassword() {
@@ -152,7 +152,7 @@ public final class MongoDbLinkedServiceArgs extends io.pulumi.resources.Resource
      * The TCP port number that the MongoDB server uses to listen for client connections. The default value is 27017. Type: integer (or Expression with resultType integer), minimum: 0.
      * 
      */
-    @InputImport(name="port")
+    @Import(name="port")
       private final @Nullable Output<Object> port;
 
     public Output<Object> getPort() {
@@ -163,7 +163,7 @@ public final class MongoDbLinkedServiceArgs extends io.pulumi.resources.Resource
      * The IP address or server name of the MongoDB server. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="server", required=true)
+    @Import(name="server", required=true)
       private final Output<Object> server;
 
     public Output<Object> getServer() {
@@ -175,7 +175,7 @@ public final class MongoDbLinkedServiceArgs extends io.pulumi.resources.Resource
      * Expected value is 'MongoDb'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {
@@ -186,7 +186,7 @@ public final class MongoDbLinkedServiceArgs extends io.pulumi.resources.Resource
      * Username for authentication. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="username")
+    @Import(name="username")
       private final @Nullable Output<Object> username;
 
     public Output<Object> getUsername() {

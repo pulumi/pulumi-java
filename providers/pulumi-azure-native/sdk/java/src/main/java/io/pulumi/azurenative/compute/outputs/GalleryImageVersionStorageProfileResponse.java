@@ -6,13 +6,13 @@ package io.pulumi.azurenative.compute.outputs;
 import io.pulumi.azurenative.compute.outputs.GalleryArtifactVersionSourceResponse;
 import io.pulumi.azurenative.compute.outputs.GalleryDataDiskImageResponse;
 import io.pulumi.azurenative.compute.outputs.GalleryOSDiskImageResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GalleryImageVersionStorageProfileResponse {
     /**
      * A list of data disk images.
@@ -30,11 +30,11 @@ public final class GalleryImageVersionStorageProfileResponse {
      */
     private final @Nullable GalleryArtifactVersionSourceResponse source;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GalleryImageVersionStorageProfileResponse(
-        @OutputCustomType.Parameter("dataDiskImages") @Nullable List<GalleryDataDiskImageResponse> dataDiskImages,
-        @OutputCustomType.Parameter("osDiskImage") @Nullable GalleryOSDiskImageResponse osDiskImage,
-        @OutputCustomType.Parameter("source") @Nullable GalleryArtifactVersionSourceResponse source) {
+        @CustomType.Parameter("dataDiskImages") @Nullable List<GalleryDataDiskImageResponse> dataDiskImages,
+        @CustomType.Parameter("osDiskImage") @Nullable GalleryOSDiskImageResponse osDiskImage,
+        @CustomType.Parameter("source") @Nullable GalleryArtifactVersionSourceResponse source) {
         this.dataDiskImages = dataDiskImages;
         this.osDiskImage = osDiskImage;
         this.source = source;

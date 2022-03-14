@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class AaaaRecordResponse extends io.pulumi.resources.InvokeArgs {
      * The IPv6 address of this AAAA record.
      * 
      */
-    @InputImport(name="ipv6Address")
+    @Import(name="ipv6Address")
       private final @Nullable String ipv6Address;
 
     public Optional<String> getIpv6Address() {

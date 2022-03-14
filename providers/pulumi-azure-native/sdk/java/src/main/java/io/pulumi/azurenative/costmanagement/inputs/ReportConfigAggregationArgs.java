@@ -6,7 +6,7 @@ package io.pulumi.azurenative.costmanagement.inputs;
 import io.pulumi.azurenative.costmanagement.enums.FunctionType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class ReportConfigAggregationArgs extends io.pulumi.resources.Resou
      * The name of the aggregation function to use.
      * 
      */
-    @InputImport(name="function", required=true)
+    @Import(name="function", required=true)
       private final Output<Either<String,FunctionType>> function;
 
     public Output<Either<String,FunctionType>> getFunction() {
@@ -34,7 +34,7 @@ public final class ReportConfigAggregationArgs extends io.pulumi.resources.Resou
      * The name of the column to aggregate.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {

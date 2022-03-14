@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.apimanagement.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class BackendAuthorizationHeaderCredentialsResponse extends io.pulu
      * Authentication Parameter value.
      * 
      */
-    @InputImport(name="parameter", required=true)
+    @Import(name="parameter", required=true)
       private final String parameter;
 
     public String getParameter() {
@@ -31,7 +31,7 @@ public final class BackendAuthorizationHeaderCredentialsResponse extends io.pulu
      * Authentication Scheme name.
      * 
      */
-    @InputImport(name="scheme", required=true)
+    @Import(name="scheme", required=true)
       private final String scheme;
 
     public String getScheme() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.devops.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetPipelineArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the Pipeline resource in ARM.
      * 
      */
-    @InputImport(name="pipelineName", required=true)
+    @Import(name="pipelineName", required=true)
       private final String pipelineName;
 
     public String getPipelineName() {
@@ -27,7 +27,7 @@ public final class GetPipelineArgs extends io.pulumi.resources.InvokeArgs {
      * Name of the resource group within the Azure subscription.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {

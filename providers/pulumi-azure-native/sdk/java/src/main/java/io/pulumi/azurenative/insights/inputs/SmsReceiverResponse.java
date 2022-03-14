@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.insights.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class SmsReceiverResponse extends io.pulumi.resources.InvokeArgs {
      * The country code of the SMS receiver.
      * 
      */
-    @InputImport(name="countryCode", required=true)
+    @Import(name="countryCode", required=true)
       private final String countryCode;
 
     public String getCountryCode() {
@@ -31,7 +31,7 @@ public final class SmsReceiverResponse extends io.pulumi.resources.InvokeArgs {
      * The name of the SMS receiver. Names must be unique across all receivers within an action group.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -42,7 +42,7 @@ public final class SmsReceiverResponse extends io.pulumi.resources.InvokeArgs {
      * The phone number of the SMS receiver.
      * 
      */
-    @InputImport(name="phoneNumber", required=true)
+    @Import(name="phoneNumber", required=true)
       private final String phoneNumber;
 
     public String getPhoneNumber() {
@@ -53,7 +53,7 @@ public final class SmsReceiverResponse extends io.pulumi.resources.InvokeArgs {
      * The status of the receiver.
      * 
      */
-    @InputImport(name="status", required=true)
+    @Import(name="status", required=true)
       private final String status;
 
     public String getStatus() {

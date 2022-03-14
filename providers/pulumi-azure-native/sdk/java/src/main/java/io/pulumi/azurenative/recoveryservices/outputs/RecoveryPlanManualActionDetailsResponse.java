@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.recoveryservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RecoveryPlanManualActionDetailsResponse {
     /**
      * The manual action description.
@@ -23,10 +23,10 @@ public final class RecoveryPlanManualActionDetailsResponse {
      */
     private final String instanceType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RecoveryPlanManualActionDetailsResponse(
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("instanceType") String instanceType) {
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("instanceType") String instanceType) {
         this.description = description;
         this.instanceType = instanceType;
     }

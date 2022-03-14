@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class VirtualNetworkBgpCommunitiesResponse extends io.pulumi.resour
      * The BGP community associated with the region of the virtual network.
      * 
      */
-    @InputImport(name="regionalCommunity", required=true)
+    @Import(name="regionalCommunity", required=true)
       private final String regionalCommunity;
 
     public String getRegionalCommunity() {
@@ -31,7 +31,7 @@ public final class VirtualNetworkBgpCommunitiesResponse extends io.pulumi.resour
      * The BGP community associated with the virtual network.
      * 
      */
-    @InputImport(name="virtualNetworkCommunity", required=true)
+    @Import(name="virtualNetworkCommunity", required=true)
       private final String virtualNetworkCommunity;
 
     public String getVirtualNetworkCommunity() {

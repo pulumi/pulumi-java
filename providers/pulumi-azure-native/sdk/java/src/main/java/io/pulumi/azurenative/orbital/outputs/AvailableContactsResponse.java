@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.orbital.outputs;
 
 import io.pulumi.azurenative.orbital.outputs.ResourceReferenceResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AvailableContactsResponse {
     /**
      * Azimuth of the antenna at the end of the contact in decimal degrees.
@@ -69,19 +69,19 @@ public final class AvailableContactsResponse {
      */
     private final String txStartTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AvailableContactsResponse(
-        @OutputCustomType.Parameter("endAzimuthDegrees") Double endAzimuthDegrees,
-        @OutputCustomType.Parameter("endElevationDegrees") Double endElevationDegrees,
-        @OutputCustomType.Parameter("groundStationName") String groundStationName,
-        @OutputCustomType.Parameter("maximumElevationDegrees") Double maximumElevationDegrees,
-        @OutputCustomType.Parameter("rxEndTime") String rxEndTime,
-        @OutputCustomType.Parameter("rxStartTime") String rxStartTime,
-        @OutputCustomType.Parameter("spacecraft") @Nullable ResourceReferenceResponse spacecraft,
-        @OutputCustomType.Parameter("startAzimuthDegrees") Double startAzimuthDegrees,
-        @OutputCustomType.Parameter("startElevationDegrees") Double startElevationDegrees,
-        @OutputCustomType.Parameter("txEndTime") String txEndTime,
-        @OutputCustomType.Parameter("txStartTime") String txStartTime) {
+        @CustomType.Parameter("endAzimuthDegrees") Double endAzimuthDegrees,
+        @CustomType.Parameter("endElevationDegrees") Double endElevationDegrees,
+        @CustomType.Parameter("groundStationName") String groundStationName,
+        @CustomType.Parameter("maximumElevationDegrees") Double maximumElevationDegrees,
+        @CustomType.Parameter("rxEndTime") String rxEndTime,
+        @CustomType.Parameter("rxStartTime") String rxStartTime,
+        @CustomType.Parameter("spacecraft") @Nullable ResourceReferenceResponse spacecraft,
+        @CustomType.Parameter("startAzimuthDegrees") Double startAzimuthDegrees,
+        @CustomType.Parameter("startElevationDegrees") Double startElevationDegrees,
+        @CustomType.Parameter("txEndTime") String txEndTime,
+        @CustomType.Parameter("txStartTime") String txStartTime) {
         this.endAzimuthDegrees = endAzimuthDegrees;
         this.endElevationDegrees = endElevationDegrees;
         this.groundStationName = groundStationName;

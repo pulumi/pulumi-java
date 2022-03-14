@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.synapse.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetIpFirewallRuleResult {
     /**
      * The end IP address of the firewall rule. Must be IPv4 format. Must be greater than or equal to startIpAddress
@@ -42,14 +42,14 @@ public final class GetIpFirewallRuleResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetIpFirewallRuleResult(
-        @OutputCustomType.Parameter("endIpAddress") @Nullable String endIpAddress,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("startIpAddress") @Nullable String startIpAddress,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("endIpAddress") @Nullable String endIpAddress,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("startIpAddress") @Nullable String startIpAddress,
+        @CustomType.Parameter("type") String type) {
         this.endIpAddress = endIpAddress;
         this.id = id;
         this.name = name;

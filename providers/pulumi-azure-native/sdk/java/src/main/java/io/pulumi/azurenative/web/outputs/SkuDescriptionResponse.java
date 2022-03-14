@@ -5,7 +5,7 @@ package io.pulumi.azurenative.web.outputs;
 
 import io.pulumi.azurenative.web.outputs.CapabilityResponse;
 import io.pulumi.azurenative.web.outputs.SkuCapacityResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SkuDescriptionResponse {
     /**
      * Capabilities of the SKU, e.g., is traffic manager enabled?
@@ -56,16 +56,16 @@ public final class SkuDescriptionResponse {
      */
     private final @Nullable String tier;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SkuDescriptionResponse(
-        @OutputCustomType.Parameter("capabilities") @Nullable List<CapabilityResponse> capabilities,
-        @OutputCustomType.Parameter("capacity") @Nullable Integer capacity,
-        @OutputCustomType.Parameter("family") @Nullable String family,
-        @OutputCustomType.Parameter("locations") @Nullable List<String> locations,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("size") @Nullable String size,
-        @OutputCustomType.Parameter("skuCapacity") @Nullable SkuCapacityResponse skuCapacity,
-        @OutputCustomType.Parameter("tier") @Nullable String tier) {
+        @CustomType.Parameter("capabilities") @Nullable List<CapabilityResponse> capabilities,
+        @CustomType.Parameter("capacity") @Nullable Integer capacity,
+        @CustomType.Parameter("family") @Nullable String family,
+        @CustomType.Parameter("locations") @Nullable List<String> locations,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("size") @Nullable String size,
+        @CustomType.Parameter("skuCapacity") @Nullable SkuCapacityResponse skuCapacity,
+        @CustomType.Parameter("tier") @Nullable String tier) {
         this.capabilities = capabilities;
         this.capacity = capacity;
         this.family = family;

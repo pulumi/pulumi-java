@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.security.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +20,7 @@ public final class JitNetworkAccessPortRuleResponse extends io.pulumi.resources.
      * Mutually exclusive with the "allowedSourceAddressPrefixes" parameter. Should be an IP address or CIDR, for example "192.168.0.3" or "192.168.0.0/16".
      * 
      */
-    @InputImport(name="allowedSourceAddressPrefix")
+    @Import(name="allowedSourceAddressPrefix")
       private final @Nullable String allowedSourceAddressPrefix;
 
     public Optional<String> getAllowedSourceAddressPrefix() {
@@ -31,7 +31,7 @@ public final class JitNetworkAccessPortRuleResponse extends io.pulumi.resources.
      * Mutually exclusive with the "allowedSourceAddressPrefix" parameter.
      * 
      */
-    @InputImport(name="allowedSourceAddressPrefixes")
+    @Import(name="allowedSourceAddressPrefixes")
       private final @Nullable List<String> allowedSourceAddressPrefixes;
 
     public List<String> getAllowedSourceAddressPrefixes() {
@@ -42,21 +42,21 @@ public final class JitNetworkAccessPortRuleResponse extends io.pulumi.resources.
      * Maximum duration requests can be made for. In ISO 8601 duration format. Minimum 5 minutes, maximum 1 day
      * 
      */
-    @InputImport(name="maxRequestAccessDuration", required=true)
+    @Import(name="maxRequestAccessDuration", required=true)
       private final String maxRequestAccessDuration;
 
     public String getMaxRequestAccessDuration() {
         return this.maxRequestAccessDuration;
     }
 
-    @InputImport(name="number", required=true)
+    @Import(name="number", required=true)
       private final Integer number;
 
     public Integer getNumber() {
         return this.number;
     }
 
-    @InputImport(name="protocol", required=true)
+    @Import(name="protocol", required=true)
       private final String protocol;
 
     public String getProtocol() {

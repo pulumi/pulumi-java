@@ -5,13 +5,13 @@ package io.pulumi.azurenative.videoanalyzer.outputs;
 
 import io.pulumi.azurenative.videoanalyzer.outputs.AudioEncoderAacResponse;
 import io.pulumi.azurenative.videoanalyzer.outputs.VideoEncoderH264Response;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EncoderCustomPresetResponse {
     /**
      * Describes a custom preset for encoding audio.
@@ -30,11 +30,11 @@ public final class EncoderCustomPresetResponse {
      */
     private final @Nullable VideoEncoderH264Response videoEncoder;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EncoderCustomPresetResponse(
-        @OutputCustomType.Parameter("audioEncoder") @Nullable AudioEncoderAacResponse audioEncoder,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("videoEncoder") @Nullable VideoEncoderH264Response videoEncoder) {
+        @CustomType.Parameter("audioEncoder") @Nullable AudioEncoderAacResponse audioEncoder,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("videoEncoder") @Nullable VideoEncoderH264Response videoEncoder) {
         this.audioEncoder = audioEncoder;
         this.type = type;
         this.videoEncoder = videoEncoder;

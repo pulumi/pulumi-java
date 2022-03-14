@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.servicefabric.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ClientCertificateResponse {
     /**
      * Certificate Common name.
@@ -33,12 +33,12 @@ public final class ClientCertificateResponse {
      */
     private final @Nullable String thumbprint;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ClientCertificateResponse(
-        @OutputCustomType.Parameter("commonName") @Nullable String commonName,
-        @OutputCustomType.Parameter("isAdmin") Boolean isAdmin,
-        @OutputCustomType.Parameter("issuerThumbprint") @Nullable String issuerThumbprint,
-        @OutputCustomType.Parameter("thumbprint") @Nullable String thumbprint) {
+        @CustomType.Parameter("commonName") @Nullable String commonName,
+        @CustomType.Parameter("isAdmin") Boolean isAdmin,
+        @CustomType.Parameter("issuerThumbprint") @Nullable String issuerThumbprint,
+        @CustomType.Parameter("thumbprint") @Nullable String thumbprint) {
         this.commonName = commonName;
         this.isAdmin = isAdmin;
         this.issuerThumbprint = issuerThumbprint;

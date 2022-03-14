@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.logz.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class LogzOrganizationPropertiesArgs extends io.pulumi.resources.Re
      * Name of the Logz organization.
      * 
      */
-    @InputImport(name="companyName")
+    @Import(name="companyName")
       private final @Nullable Output<String> companyName;
 
     public Output<String> getCompanyName() {
@@ -29,7 +29,7 @@ public final class LogzOrganizationPropertiesArgs extends io.pulumi.resources.Re
      * The Id of the Enterprise App used for Single sign on.
      * 
      */
-    @InputImport(name="enterpriseAppId")
+    @Import(name="enterpriseAppId")
       private final @Nullable Output<String> enterpriseAppId;
 
     public Output<String> getEnterpriseAppId() {
@@ -40,7 +40,7 @@ public final class LogzOrganizationPropertiesArgs extends io.pulumi.resources.Re
      * The login URL specific to this Logz Organization.
      * 
      */
-    @InputImport(name="singleSignOnUrl")
+    @Import(name="singleSignOnUrl")
       private final @Nullable Output<String> singleSignOnUrl;
 
     public Output<String> getSingleSignOnUrl() {

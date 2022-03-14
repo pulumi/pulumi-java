@@ -6,7 +6,7 @@ package io.pulumi.azurenative.timeseriesinsights.outputs;
 import io.pulumi.azurenative.timeseriesinsights.outputs.EnvironmentStatusResponse;
 import io.pulumi.azurenative.timeseriesinsights.outputs.SkuResponse;
 import io.pulumi.azurenative.timeseriesinsights.outputs.TimeSeriesIdPropertyResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -14,7 +14,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetGen1EnvironmentResult {
     /**
      * The time the resource was created.
@@ -93,23 +93,23 @@ public final class GetGen1EnvironmentResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetGen1EnvironmentResult(
-        @OutputCustomType.Parameter("creationTime") String creationTime,
-        @OutputCustomType.Parameter("dataAccessFqdn") String dataAccessFqdn,
-        @OutputCustomType.Parameter("dataAccessId") String dataAccessId,
-        @OutputCustomType.Parameter("dataRetentionTime") String dataRetentionTime,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("partitionKeyProperties") @Nullable List<TimeSeriesIdPropertyResponse> partitionKeyProperties,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("sku") SkuResponse sku,
-        @OutputCustomType.Parameter("status") EnvironmentStatusResponse status,
-        @OutputCustomType.Parameter("storageLimitExceededBehavior") @Nullable String storageLimitExceededBehavior,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("creationTime") String creationTime,
+        @CustomType.Parameter("dataAccessFqdn") String dataAccessFqdn,
+        @CustomType.Parameter("dataAccessId") String dataAccessId,
+        @CustomType.Parameter("dataRetentionTime") String dataRetentionTime,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("partitionKeyProperties") @Nullable List<TimeSeriesIdPropertyResponse> partitionKeyProperties,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("sku") SkuResponse sku,
+        @CustomType.Parameter("status") EnvironmentStatusResponse status,
+        @CustomType.Parameter("storageLimitExceededBehavior") @Nullable String storageLimitExceededBehavior,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type) {
         this.creationTime = creationTime;
         this.dataAccessFqdn = dataAccessFqdn;
         this.dataAccessId = dataAccessId;

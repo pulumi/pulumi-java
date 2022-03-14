@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.virtualmachineimages.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ImageTemplateShellCustomizerResponse extends io.pulumi.resour
      * Array of shell commands to execute
      * 
      */
-    @InputImport(name="inline")
+    @Import(name="inline")
       private final @Nullable List<String> inline;
 
     public List<String> getInline() {
@@ -34,7 +34,7 @@ public final class ImageTemplateShellCustomizerResponse extends io.pulumi.resour
      * Friendly Name to provide context on what this customization step does
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -45,7 +45,7 @@ public final class ImageTemplateShellCustomizerResponse extends io.pulumi.resour
      * URI of the shell script to be run for customizing. It can be a github link, SAS URI for Azure Storage, etc
      * 
      */
-    @InputImport(name="scriptUri")
+    @Import(name="scriptUri")
       private final @Nullable String scriptUri;
 
     public Optional<String> getScriptUri() {
@@ -56,7 +56,7 @@ public final class ImageTemplateShellCustomizerResponse extends io.pulumi.resour
      * SHA256 checksum of the shell script provided in the scriptUri field
      * 
      */
-    @InputImport(name="sha256Checksum")
+    @Import(name="sha256Checksum")
       private final @Nullable String sha256Checksum;
 
     public Optional<String> getSha256Checksum() {
@@ -68,7 +68,7 @@ public final class ImageTemplateShellCustomizerResponse extends io.pulumi.resour
      * Expected value is 'Shell'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

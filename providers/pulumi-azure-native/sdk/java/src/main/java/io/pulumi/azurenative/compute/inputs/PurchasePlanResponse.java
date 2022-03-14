@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.compute.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class PurchasePlanResponse extends io.pulumi.resources.InvokeArgs {
      * The plan ID.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -33,7 +33,7 @@ public final class PurchasePlanResponse extends io.pulumi.resources.InvokeArgs {
      * Specifies the product of the image from the marketplace. This is the same value as Offer under the imageReference element.
      * 
      */
-    @InputImport(name="product", required=true)
+    @Import(name="product", required=true)
       private final String product;
 
     public String getProduct() {
@@ -44,7 +44,7 @@ public final class PurchasePlanResponse extends io.pulumi.resources.InvokeArgs {
      * The Offer Promotion Code.
      * 
      */
-    @InputImport(name="promotionCode")
+    @Import(name="promotionCode")
       private final @Nullable String promotionCode;
 
     public Optional<String> getPromotionCode() {
@@ -55,7 +55,7 @@ public final class PurchasePlanResponse extends io.pulumi.resources.InvokeArgs {
      * The publisher ID.
      * 
      */
-    @InputImport(name="publisher", required=true)
+    @Import(name="publisher", required=true)
       private final String publisher;
 
     public String getPublisher() {

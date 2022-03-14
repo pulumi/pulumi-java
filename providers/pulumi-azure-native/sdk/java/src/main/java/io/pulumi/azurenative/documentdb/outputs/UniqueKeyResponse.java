@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.documentdb.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class UniqueKeyResponse {
     /**
      * List of paths must be unique for each document in the Azure Cosmos DB service
@@ -17,8 +17,8 @@ public final class UniqueKeyResponse {
      */
     private final @Nullable List<String> paths;
 
-    @OutputCustomType.Constructor
-    private UniqueKeyResponse(@OutputCustomType.Parameter("paths") @Nullable List<String> paths) {
+    @CustomType.Constructor
+    private UniqueKeyResponse(@CustomType.Parameter("paths") @Nullable List<String> paths) {
         this.paths = paths;
     }
 

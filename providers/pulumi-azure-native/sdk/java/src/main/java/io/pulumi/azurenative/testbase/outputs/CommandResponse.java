@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.testbase.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CommandResponse {
     /**
      * The action of the command.
@@ -64,18 +64,18 @@ public final class CommandResponse {
      */
     private final @Nullable Boolean runElevated;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CommandResponse(
-        @OutputCustomType.Parameter("action") String action,
-        @OutputCustomType.Parameter("alwaysRun") @Nullable Boolean alwaysRun,
-        @OutputCustomType.Parameter("applyUpdateBefore") @Nullable Boolean applyUpdateBefore,
-        @OutputCustomType.Parameter("content") String content,
-        @OutputCustomType.Parameter("contentType") String contentType,
-        @OutputCustomType.Parameter("maxRunTime") @Nullable Integer maxRunTime,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("restartAfter") @Nullable Boolean restartAfter,
-        @OutputCustomType.Parameter("runAsInteractive") @Nullable Boolean runAsInteractive,
-        @OutputCustomType.Parameter("runElevated") @Nullable Boolean runElevated) {
+        @CustomType.Parameter("action") String action,
+        @CustomType.Parameter("alwaysRun") @Nullable Boolean alwaysRun,
+        @CustomType.Parameter("applyUpdateBefore") @Nullable Boolean applyUpdateBefore,
+        @CustomType.Parameter("content") String content,
+        @CustomType.Parameter("contentType") String contentType,
+        @CustomType.Parameter("maxRunTime") @Nullable Integer maxRunTime,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("restartAfter") @Nullable Boolean restartAfter,
+        @CustomType.Parameter("runAsInteractive") @Nullable Boolean runAsInteractive,
+        @CustomType.Parameter("runElevated") @Nullable Boolean runElevated) {
         this.action = action;
         this.alwaysRun = alwaysRun;
         this.applyUpdateBefore = applyUpdateBefore;

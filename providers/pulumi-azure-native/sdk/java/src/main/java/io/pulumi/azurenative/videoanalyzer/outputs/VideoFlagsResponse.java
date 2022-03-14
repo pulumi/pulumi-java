@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.videoanalyzer.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class VideoFlagsResponse {
     /**
      * Value indicating whether or not the video can be streamed. Only "archive" type videos can be streamed.
@@ -25,11 +25,11 @@ public final class VideoFlagsResponse {
      */
     private final Boolean isRecording;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VideoFlagsResponse(
-        @OutputCustomType.Parameter("canStream") Boolean canStream,
-        @OutputCustomType.Parameter("hasData") Boolean hasData,
-        @OutputCustomType.Parameter("isRecording") Boolean isRecording) {
+        @CustomType.Parameter("canStream") Boolean canStream,
+        @CustomType.Parameter("hasData") Boolean hasData,
+        @CustomType.Parameter("isRecording") Boolean isRecording) {
         this.canStream = canStream;
         this.hasData = hasData;
         this.isRecording = isRecording;

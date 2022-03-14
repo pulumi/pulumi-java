@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.media.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class ListMediaServiceKeysArgs extends io.pulumi.resources.InvokeAr
      * Name of the Media Service.
      * 
      */
-    @InputImport(name="mediaServiceName", required=true)
+    @Import(name="mediaServiceName", required=true)
       private final String mediaServiceName;
 
     public String getMediaServiceName() {
@@ -27,7 +27,7 @@ public final class ListMediaServiceKeysArgs extends io.pulumi.resources.InvokeAr
      * Name of the resource group within the Azure subscription.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {

@@ -9,7 +9,7 @@ import io.pulumi.azurenative.keyvault.enums.JsonWebKeyType;
 import io.pulumi.azurenative.keyvault.inputs.KeyAttributesArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -29,7 +29,7 @@ public final class KeyPropertiesArgs extends io.pulumi.resources.ResourceArgs {
      * The attributes of the key.
      * 
      */
-    @InputImport(name="attributes")
+    @Import(name="attributes")
       private final @Nullable Output<KeyAttributesArgs> attributes;
 
     public Output<KeyAttributesArgs> getAttributes() {
@@ -40,14 +40,14 @@ public final class KeyPropertiesArgs extends io.pulumi.resources.ResourceArgs {
      * The elliptic curve name. For valid values, see JsonWebKeyCurveName.
      * 
      */
-    @InputImport(name="curveName")
+    @Import(name="curveName")
       private final @Nullable Output<Either<String,JsonWebKeyCurveName>> curveName;
 
     public Output<Either<String,JsonWebKeyCurveName>> getCurveName() {
         return this.curveName == null ? Output.empty() : this.curveName;
     }
 
-    @InputImport(name="keyOps")
+    @Import(name="keyOps")
       private final @Nullable Output<List<Either<String,JsonWebKeyOperation>>> keyOps;
 
     public Output<List<Either<String,JsonWebKeyOperation>>> getKeyOps() {
@@ -58,7 +58,7 @@ public final class KeyPropertiesArgs extends io.pulumi.resources.ResourceArgs {
      * The key size in bits. For example: 2048, 3072, or 4096 for RSA.
      * 
      */
-    @InputImport(name="keySize")
+    @Import(name="keySize")
       private final @Nullable Output<Integer> keySize;
 
     public Output<Integer> getKeySize() {
@@ -69,7 +69,7 @@ public final class KeyPropertiesArgs extends io.pulumi.resources.ResourceArgs {
      * The type of the key. For valid values, see JsonWebKeyType.
      * 
      */
-    @InputImport(name="kty")
+    @Import(name="kty")
       private final @Nullable Output<Either<String,JsonWebKeyType>> kty;
 
     public Output<Either<String,JsonWebKeyType>> getKty() {

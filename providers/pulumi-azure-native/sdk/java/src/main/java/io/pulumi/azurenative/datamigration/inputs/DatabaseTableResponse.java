@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datamigration.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class DatabaseTableResponse extends io.pulumi.resources.InvokeArgs 
      * Indicates whether table is empty or not
      * 
      */
-    @InputImport(name="hasRows", required=true)
+    @Import(name="hasRows", required=true)
       private final Boolean hasRows;
 
     public Boolean getHasRows() {
@@ -32,7 +32,7 @@ public final class DatabaseTableResponse extends io.pulumi.resources.InvokeArgs 
      * Schema-qualified name of the table
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {

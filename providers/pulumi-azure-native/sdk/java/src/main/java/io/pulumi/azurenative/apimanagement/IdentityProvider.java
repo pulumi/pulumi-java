@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.apimanagement.IdentityProviderArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -34,7 +34,7 @@ public class IdentityProvider extends io.pulumi.resources.CustomResource {
      * List of Allowed Tenants when configuring Azure Active Directory login.
      * 
      */
-    @OutputExport(name="allowedTenants", type=List.class, parameters={String.class})
+    @Export(name="allowedTenants", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> allowedTenants;
 
     /**
@@ -48,7 +48,7 @@ public class IdentityProvider extends io.pulumi.resources.CustomResource {
      * OpenID Connect discovery endpoint hostname for AAD or AAD B2C.
      * 
      */
-    @OutputExport(name="authority", type=String.class, parameters={})
+    @Export(name="authority", type=String.class, parameters={})
     private Output</* @Nullable */ String> authority;
 
     /**
@@ -62,7 +62,7 @@ public class IdentityProvider extends io.pulumi.resources.CustomResource {
      * Client Id of the Application in the external Identity Provider. It is App ID for Facebook login, Client ID for Google login, App ID for Microsoft.
      * 
      */
-    @OutputExport(name="clientId", type=String.class, parameters={})
+    @Export(name="clientId", type=String.class, parameters={})
     private Output<String> clientId;
 
     /**
@@ -76,7 +76,7 @@ public class IdentityProvider extends io.pulumi.resources.CustomResource {
      * Client secret of the Application in external Identity Provider, used to authenticate login request. For example, it is App Secret for Facebook login, API Key for Google login, Public Key for Microsoft. This property will not be filled on 'GET' operations! Use '/listSecrets' POST request to get the value.
      * 
      */
-    @OutputExport(name="clientSecret", type=String.class, parameters={})
+    @Export(name="clientSecret", type=String.class, parameters={})
     private Output</* @Nullable */ String> clientSecret;
 
     /**
@@ -90,7 +90,7 @@ public class IdentityProvider extends io.pulumi.resources.CustomResource {
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -104,7 +104,7 @@ public class IdentityProvider extends io.pulumi.resources.CustomResource {
      * Password Reset Policy Name. Only applies to AAD B2C Identity Provider.
      * 
      */
-    @OutputExport(name="passwordResetPolicyName", type=String.class, parameters={})
+    @Export(name="passwordResetPolicyName", type=String.class, parameters={})
     private Output</* @Nullable */ String> passwordResetPolicyName;
 
     /**
@@ -118,7 +118,7 @@ public class IdentityProvider extends io.pulumi.resources.CustomResource {
      * Profile Editing Policy Name. Only applies to AAD B2C Identity Provider.
      * 
      */
-    @OutputExport(name="profileEditingPolicyName", type=String.class, parameters={})
+    @Export(name="profileEditingPolicyName", type=String.class, parameters={})
     private Output</* @Nullable */ String> profileEditingPolicyName;
 
     /**
@@ -132,7 +132,7 @@ public class IdentityProvider extends io.pulumi.resources.CustomResource {
      * Signin Policy Name. Only applies to AAD B2C Identity Provider.
      * 
      */
-    @OutputExport(name="signinPolicyName", type=String.class, parameters={})
+    @Export(name="signinPolicyName", type=String.class, parameters={})
     private Output</* @Nullable */ String> signinPolicyName;
 
     /**
@@ -146,7 +146,7 @@ public class IdentityProvider extends io.pulumi.resources.CustomResource {
      * The TenantId to use instead of Common when logging into Active Directory
      * 
      */
-    @OutputExport(name="signinTenant", type=String.class, parameters={})
+    @Export(name="signinTenant", type=String.class, parameters={})
     private Output</* @Nullable */ String> signinTenant;
 
     /**
@@ -160,7 +160,7 @@ public class IdentityProvider extends io.pulumi.resources.CustomResource {
      * Signup Policy Name. Only applies to AAD B2C Identity Provider.
      * 
      */
-    @OutputExport(name="signupPolicyName", type=String.class, parameters={})
+    @Export(name="signupPolicyName", type=String.class, parameters={})
     private Output</* @Nullable */ String> signupPolicyName;
 
     /**
@@ -174,7 +174,7 @@ public class IdentityProvider extends io.pulumi.resources.CustomResource {
      * Resource type for API Management resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

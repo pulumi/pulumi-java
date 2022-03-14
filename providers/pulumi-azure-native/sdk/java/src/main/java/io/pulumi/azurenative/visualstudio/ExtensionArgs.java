@@ -5,7 +5,7 @@ package io.pulumi.azurenative.visualstudio;
 
 import io.pulumi.azurenative.visualstudio.inputs.ExtensionResourcePlanArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the Visual Studio Team Services account resource.
      * 
      */
-    @InputImport(name="accountResourceName", required=true)
+    @Import(name="accountResourceName", required=true)
       private final Output<String> accountResourceName;
 
     public Output<String> getAccountResourceName() {
@@ -31,7 +31,7 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the extension.
      * 
      */
-    @InputImport(name="extensionResourceName")
+    @Import(name="extensionResourceName")
       private final @Nullable Output<String> extensionResourceName;
 
     public Output<String> getExtensionResourceName() {
@@ -42,7 +42,7 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
      * The Azure region of the Visual Studio account associated with this request (i.e 'southcentralus'.)
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -53,7 +53,7 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
      * Extended information about the plan being purchased for this extension resource.
      * 
      */
-    @InputImport(name="plan")
+    @Import(name="plan")
       private final @Nullable Output<ExtensionResourcePlanArgs> plan;
 
     public Output<ExtensionResourcePlanArgs> getPlan() {
@@ -64,7 +64,7 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
      * A dictionary of extended properties. This property is currently unused.
      * 
      */
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable Output<Map<String,String>> properties;
 
     public Output<Map<String,String>> getProperties() {
@@ -75,7 +75,7 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the resource group within the Azure subscription.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -86,7 +86,7 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
      * A dictionary of user-defined tags to be stored with the extension resource.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

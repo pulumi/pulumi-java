@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class AutoHealCustomActionArgs extends io.pulumi.resources.Resource
      * Executable to be run.
      * 
      */
-    @InputImport(name="exe")
+    @Import(name="exe")
       private final @Nullable Output<String> exe;
 
     public Output<String> getExe() {
@@ -34,7 +34,7 @@ public final class AutoHealCustomActionArgs extends io.pulumi.resources.Resource
      * Parameters for the executable.
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable Output<String> parameters;
 
     public Output<String> getParameters() {

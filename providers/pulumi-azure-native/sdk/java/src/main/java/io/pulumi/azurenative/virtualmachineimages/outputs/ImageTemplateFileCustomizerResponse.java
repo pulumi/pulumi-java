@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.virtualmachineimages.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ImageTemplateFileCustomizerResponse {
     /**
      * The absolute path to a file (with nested directory structures already created) where the file (from sourceUri) will be uploaded to in the VM
@@ -38,13 +38,13 @@ public final class ImageTemplateFileCustomizerResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ImageTemplateFileCustomizerResponse(
-        @OutputCustomType.Parameter("destination") @Nullable String destination,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("sha256Checksum") @Nullable String sha256Checksum,
-        @OutputCustomType.Parameter("sourceUri") @Nullable String sourceUri,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("destination") @Nullable String destination,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("sha256Checksum") @Nullable String sha256Checksum,
+        @CustomType.Parameter("sourceUri") @Nullable String sourceUri,
+        @CustomType.Parameter("type") String type) {
         this.destination = destination;
         this.name = name;
         this.sha256Checksum = sha256Checksum;

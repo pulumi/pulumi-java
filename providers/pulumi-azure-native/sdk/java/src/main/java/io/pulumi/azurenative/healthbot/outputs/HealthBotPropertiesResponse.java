@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.healthbot.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class HealthBotPropertiesResponse {
     /**
      * The link.
@@ -20,10 +20,10 @@ public final class HealthBotPropertiesResponse {
      */
     private final String provisioningState;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private HealthBotPropertiesResponse(
-        @OutputCustomType.Parameter("botManagementPortalLink") String botManagementPortalLink,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState) {
+        @CustomType.Parameter("botManagementPortalLink") String botManagementPortalLink,
+        @CustomType.Parameter("provisioningState") String provisioningState) {
         this.botManagementPortalLink = botManagementPortalLink;
         this.provisioningState = provisioningState;
     }

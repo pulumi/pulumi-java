@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerservice.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ManagedClusterAADProfileResponse {
     /**
      * AAD group object IDs that will have admin role of the cluster.
@@ -49,15 +49,15 @@ public final class ManagedClusterAADProfileResponse {
      */
     private final @Nullable String tenantID;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ManagedClusterAADProfileResponse(
-        @OutputCustomType.Parameter("adminGroupObjectIDs") @Nullable List<String> adminGroupObjectIDs,
-        @OutputCustomType.Parameter("clientAppID") @Nullable String clientAppID,
-        @OutputCustomType.Parameter("enableAzureRBAC") @Nullable Boolean enableAzureRBAC,
-        @OutputCustomType.Parameter("managed") @Nullable Boolean managed,
-        @OutputCustomType.Parameter("serverAppID") @Nullable String serverAppID,
-        @OutputCustomType.Parameter("serverAppSecret") @Nullable String serverAppSecret,
-        @OutputCustomType.Parameter("tenantID") @Nullable String tenantID) {
+        @CustomType.Parameter("adminGroupObjectIDs") @Nullable List<String> adminGroupObjectIDs,
+        @CustomType.Parameter("clientAppID") @Nullable String clientAppID,
+        @CustomType.Parameter("enableAzureRBAC") @Nullable Boolean enableAzureRBAC,
+        @CustomType.Parameter("managed") @Nullable Boolean managed,
+        @CustomType.Parameter("serverAppID") @Nullable String serverAppID,
+        @CustomType.Parameter("serverAppSecret") @Nullable String serverAppSecret,
+        @CustomType.Parameter("tenantID") @Nullable String tenantID) {
         this.adminGroupObjectIDs = adminGroupObjectIDs;
         this.clientAppID = clientAppID;
         this.enableAzureRBAC = enableAzureRBAC;

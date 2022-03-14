@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.containerinstance.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ContainerExecResponse {
     /**
      * The commands to execute within the container.
@@ -17,8 +17,8 @@ public final class ContainerExecResponse {
      */
     private final @Nullable List<String> command;
 
-    @OutputCustomType.Constructor
-    private ContainerExecResponse(@OutputCustomType.Parameter("command") @Nullable List<String> command) {
+    @CustomType.Constructor
+    private ContainerExecResponse(@CustomType.Parameter("command") @Nullable List<String> command) {
         this.command = command;
     }
 

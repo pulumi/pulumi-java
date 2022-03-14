@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BanditPolicyResponse {
     /**
      * Number of intervals by which to delay the first evaluation.
@@ -39,13 +39,13 @@ public final class BanditPolicyResponse {
      */
     private final @Nullable Double slackFactor;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BanditPolicyResponse(
-        @OutputCustomType.Parameter("delayEvaluation") @Nullable Integer delayEvaluation,
-        @OutputCustomType.Parameter("evaluationInterval") @Nullable Integer evaluationInterval,
-        @OutputCustomType.Parameter("policyType") String policyType,
-        @OutputCustomType.Parameter("slackAmount") @Nullable Double slackAmount,
-        @OutputCustomType.Parameter("slackFactor") @Nullable Double slackFactor) {
+        @CustomType.Parameter("delayEvaluation") @Nullable Integer delayEvaluation,
+        @CustomType.Parameter("evaluationInterval") @Nullable Integer evaluationInterval,
+        @CustomType.Parameter("policyType") String policyType,
+        @CustomType.Parameter("slackAmount") @Nullable Double slackAmount,
+        @CustomType.Parameter("slackFactor") @Nullable Double slackFactor) {
         this.delayEvaluation = delayEvaluation;
         this.evaluationInterval = evaluationInterval;
         this.policyType = policyType;

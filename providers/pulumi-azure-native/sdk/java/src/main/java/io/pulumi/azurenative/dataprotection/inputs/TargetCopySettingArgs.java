@@ -8,7 +8,7 @@ import io.pulumi.azurenative.dataprotection.inputs.CustomCopyOptionArgs;
 import io.pulumi.azurenative.dataprotection.inputs.DataStoreInfoBaseArgs;
 import io.pulumi.azurenative.dataprotection.inputs.ImmediateCopyOptionArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.util.Objects;
 
@@ -25,7 +25,7 @@ public final class TargetCopySettingArgs extends io.pulumi.resources.ResourceArg
      * It can be CustomCopyOption or ImmediateCopyOption.
      * 
      */
-    @InputImport(name="copyAfter", required=true)
+    @Import(name="copyAfter", required=true)
       private final Output<Object> copyAfter;
 
     public Output<Object> getCopyAfter() {
@@ -36,7 +36,7 @@ public final class TargetCopySettingArgs extends io.pulumi.resources.ResourceArg
      * Info of target datastore
      * 
      */
-    @InputImport(name="dataStore", required=true)
+    @Import(name="dataStore", required=true)
       private final Output<DataStoreInfoBaseArgs> dataStore;
 
     public Output<DataStoreInfoBaseArgs> getDataStore() {

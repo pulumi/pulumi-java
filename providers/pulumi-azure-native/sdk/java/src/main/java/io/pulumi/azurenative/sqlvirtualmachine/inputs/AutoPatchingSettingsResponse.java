@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.sqlvirtualmachine.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class AutoPatchingSettingsResponse extends io.pulumi.resources.Invo
      * Day of week to apply the patch on.
      * 
      */
-    @InputImport(name="dayOfWeek")
+    @Import(name="dayOfWeek")
       private final @Nullable String dayOfWeek;
 
     public Optional<String> getDayOfWeek() {
@@ -35,7 +35,7 @@ public final class AutoPatchingSettingsResponse extends io.pulumi.resources.Invo
      * Enable or disable autopatching on SQL virtual machine.
      * 
      */
-    @InputImport(name="enable")
+    @Import(name="enable")
       private final @Nullable Boolean enable;
 
     public Optional<Boolean> getEnable() {
@@ -46,7 +46,7 @@ public final class AutoPatchingSettingsResponse extends io.pulumi.resources.Invo
      * Duration of patching.
      * 
      */
-    @InputImport(name="maintenanceWindowDuration")
+    @Import(name="maintenanceWindowDuration")
       private final @Nullable Integer maintenanceWindowDuration;
 
     public Optional<Integer> getMaintenanceWindowDuration() {
@@ -57,7 +57,7 @@ public final class AutoPatchingSettingsResponse extends io.pulumi.resources.Invo
      * Hour of the day when patching is initiated. Local VM time.
      * 
      */
-    @InputImport(name="maintenanceWindowStartingHour")
+    @Import(name="maintenanceWindowStartingHour")
       private final @Nullable Integer maintenanceWindowStartingHour;
 
     public Optional<Integer> getMaintenanceWindowStartingHour() {

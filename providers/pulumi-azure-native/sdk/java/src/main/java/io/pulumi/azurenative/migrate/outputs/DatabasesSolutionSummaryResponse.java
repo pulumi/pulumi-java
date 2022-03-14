@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.migrate.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DatabasesSolutionSummaryResponse {
     /**
      * Gets or sets the count of database instances assessed.
@@ -34,12 +34,12 @@ public final class DatabasesSolutionSummaryResponse {
      */
     private final @Nullable Integer migrationReadyCount;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DatabasesSolutionSummaryResponse(
-        @OutputCustomType.Parameter("databaseInstancesAssessedCount") @Nullable Integer databaseInstancesAssessedCount,
-        @OutputCustomType.Parameter("databasesAssessedCount") @Nullable Integer databasesAssessedCount,
-        @OutputCustomType.Parameter("instanceType") String instanceType,
-        @OutputCustomType.Parameter("migrationReadyCount") @Nullable Integer migrationReadyCount) {
+        @CustomType.Parameter("databaseInstancesAssessedCount") @Nullable Integer databaseInstancesAssessedCount,
+        @CustomType.Parameter("databasesAssessedCount") @Nullable Integer databasesAssessedCount,
+        @CustomType.Parameter("instanceType") String instanceType,
+        @CustomType.Parameter("migrationReadyCount") @Nullable Integer migrationReadyCount) {
         this.databaseInstancesAssessedCount = databaseInstancesAssessedCount;
         this.databasesAssessedCount = databasesAssessedCount;
         this.instanceType = instanceType;

@@ -9,7 +9,7 @@ import io.pulumi.azurenative.databoxedge.outputs.IoTDeviceInfoResponse;
 import io.pulumi.azurenative.databoxedge.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -36,7 +36,7 @@ public class IoTAddon extends io.pulumi.resources.CustomResource {
      * Host OS supported by the IoT addon.
      * 
      */
-    @OutputExport(name="hostPlatform", type=String.class, parameters={})
+    @Export(name="hostPlatform", type=String.class, parameters={})
     private Output<String> hostPlatform;
 
     /**
@@ -50,7 +50,7 @@ public class IoTAddon extends io.pulumi.resources.CustomResource {
      * Platform where the runtime is hosted.
      * 
      */
-    @OutputExport(name="hostPlatformType", type=String.class, parameters={})
+    @Export(name="hostPlatformType", type=String.class, parameters={})
     private Output<String> hostPlatformType;
 
     /**
@@ -64,7 +64,7 @@ public class IoTAddon extends io.pulumi.resources.CustomResource {
      * IoT device metadata to which appliance needs to be connected.
      * 
      */
-    @OutputExport(name="ioTDeviceDetails", type=IoTDeviceInfoResponse.class, parameters={})
+    @Export(name="ioTDeviceDetails", type=IoTDeviceInfoResponse.class, parameters={})
     private Output<IoTDeviceInfoResponse> ioTDeviceDetails;
 
     /**
@@ -78,7 +78,7 @@ public class IoTAddon extends io.pulumi.resources.CustomResource {
      * IoT edge device to which the IoT Addon needs to be configured.
      * 
      */
-    @OutputExport(name="ioTEdgeDeviceDetails", type=IoTDeviceInfoResponse.class, parameters={})
+    @Export(name="ioTEdgeDeviceDetails", type=IoTDeviceInfoResponse.class, parameters={})
     private Output<IoTDeviceInfoResponse> ioTEdgeDeviceDetails;
 
     /**
@@ -93,7 +93,7 @@ public class IoTAddon extends io.pulumi.resources.CustomResource {
      * Expected value is 'IotEdge'.
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
     /**
@@ -108,7 +108,7 @@ public class IoTAddon extends io.pulumi.resources.CustomResource {
      * The object name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -122,7 +122,7 @@ public class IoTAddon extends io.pulumi.resources.CustomResource {
      * Addon Provisioning State
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -136,7 +136,7 @@ public class IoTAddon extends io.pulumi.resources.CustomResource {
      * Addon type
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -150,7 +150,7 @@ public class IoTAddon extends io.pulumi.resources.CustomResource {
      * The hierarchical type of the object.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -164,7 +164,7 @@ public class IoTAddon extends io.pulumi.resources.CustomResource {
      * Version of IoT running on the appliance.
      * 
      */
-    @OutputExport(name="version", type=String.class, parameters={})
+    @Export(name="version", type=String.class, parameters={})
     private Output<String> version;
 
     /**

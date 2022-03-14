@@ -5,7 +5,7 @@ package io.pulumi.azurenative.storage.inputs;
 
 import io.pulumi.azurenative.storage.inputs.DateAfterCreationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -22,7 +22,7 @@ public final class ManagementPolicyVersionArgs extends io.pulumi.resources.Resou
      * The function to delete the blob version
      * 
      */
-    @InputImport(name="delete")
+    @Import(name="delete")
       private final @Nullable Output<DateAfterCreationArgs> delete;
 
     public Output<DateAfterCreationArgs> getDelete() {
@@ -33,7 +33,7 @@ public final class ManagementPolicyVersionArgs extends io.pulumi.resources.Resou
      * The function to tier blob version to archive storage. Support blob version currently at Hot or Cool tier
      * 
      */
-    @InputImport(name="tierToArchive")
+    @Import(name="tierToArchive")
       private final @Nullable Output<DateAfterCreationArgs> tierToArchive;
 
     public Output<DateAfterCreationArgs> getTierToArchive() {
@@ -44,7 +44,7 @@ public final class ManagementPolicyVersionArgs extends io.pulumi.resources.Resou
      * The function to tier blob version to cool storage. Support blob version currently at Hot tier
      * 
      */
-    @InputImport(name="tierToCool")
+    @Import(name="tierToCool")
       private final @Nullable Output<DateAfterCreationArgs> tierToCool;
 
     public Output<DateAfterCreationArgs> getTierToCool() {

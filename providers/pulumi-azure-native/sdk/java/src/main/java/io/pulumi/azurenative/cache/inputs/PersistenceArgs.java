@@ -7,7 +7,7 @@ import io.pulumi.azurenative.cache.enums.AofFrequency;
 import io.pulumi.azurenative.cache.enums.RdbFrequency;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class PersistenceArgs extends io.pulumi.resources.ResourceArgs {
      * Sets whether AOF is enabled.
      * 
      */
-    @InputImport(name="aofEnabled")
+    @Import(name="aofEnabled")
       private final @Nullable Output<Boolean> aofEnabled;
 
     public Output<Boolean> getAofEnabled() {
@@ -37,7 +37,7 @@ public final class PersistenceArgs extends io.pulumi.resources.ResourceArgs {
      * Sets the frequency at which data is written to disk.
      * 
      */
-    @InputImport(name="aofFrequency")
+    @Import(name="aofFrequency")
       private final @Nullable Output<Either<String,AofFrequency>> aofFrequency;
 
     public Output<Either<String,AofFrequency>> getAofFrequency() {
@@ -48,7 +48,7 @@ public final class PersistenceArgs extends io.pulumi.resources.ResourceArgs {
      * Sets whether RDB is enabled.
      * 
      */
-    @InputImport(name="rdbEnabled")
+    @Import(name="rdbEnabled")
       private final @Nullable Output<Boolean> rdbEnabled;
 
     public Output<Boolean> getRdbEnabled() {
@@ -59,7 +59,7 @@ public final class PersistenceArgs extends io.pulumi.resources.ResourceArgs {
      * Sets the frequency at which a snapshot of the database is created.
      * 
      */
-    @InputImport(name="rdbFrequency")
+    @Import(name="rdbFrequency")
       private final @Nullable Output<Either<String,RdbFrequency>> rdbFrequency;
 
     public Output<Either<String,RdbFrequency>> getRdbFrequency() {

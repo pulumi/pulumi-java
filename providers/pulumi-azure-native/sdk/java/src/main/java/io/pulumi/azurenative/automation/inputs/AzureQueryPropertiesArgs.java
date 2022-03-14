@@ -5,7 +5,7 @@ package io.pulumi.azurenative.automation.inputs;
 
 import io.pulumi.azurenative.automation.inputs.TagSettingsPropertiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class AzureQueryPropertiesArgs extends io.pulumi.resources.Resource
      * List of locations to scope the query to.
      * 
      */
-    @InputImport(name="locations")
+    @Import(name="locations")
       private final @Nullable Output<List<String>> locations;
 
     public Output<List<String>> getLocations() {
@@ -35,7 +35,7 @@ public final class AzureQueryPropertiesArgs extends io.pulumi.resources.Resource
      * List of Subscription or Resource Group ARM Ids.
      * 
      */
-    @InputImport(name="scope")
+    @Import(name="scope")
       private final @Nullable Output<List<String>> scope;
 
     public Output<List<String>> getScope() {
@@ -46,7 +46,7 @@ public final class AzureQueryPropertiesArgs extends io.pulumi.resources.Resource
      * Tag settings for the VM.
      * 
      */
-    @InputImport(name="tagSettings")
+    @Import(name="tagSettings")
       private final @Nullable Output<TagSettingsPropertiesArgs> tagSettings;
 
     public Output<TagSettingsPropertiesArgs> getTagSettings() {

@@ -5,14 +5,14 @@ package io.pulumi.azurenative.media.outputs;
 
 import io.pulumi.azurenative.media.outputs.LiveEventEndpointResponse;
 import io.pulumi.azurenative.media.outputs.LiveEventPreviewAccessControlResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class LiveEventPreviewResponse {
     /**
      * The access control for live event preview.
@@ -40,13 +40,13 @@ public final class LiveEventPreviewResponse {
      */
     private final @Nullable String streamingPolicyName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LiveEventPreviewResponse(
-        @OutputCustomType.Parameter("accessControl") @Nullable LiveEventPreviewAccessControlResponse accessControl,
-        @OutputCustomType.Parameter("alternativeMediaId") @Nullable String alternativeMediaId,
-        @OutputCustomType.Parameter("endpoints") @Nullable List<LiveEventEndpointResponse> endpoints,
-        @OutputCustomType.Parameter("previewLocator") @Nullable String previewLocator,
-        @OutputCustomType.Parameter("streamingPolicyName") @Nullable String streamingPolicyName) {
+        @CustomType.Parameter("accessControl") @Nullable LiveEventPreviewAccessControlResponse accessControl,
+        @CustomType.Parameter("alternativeMediaId") @Nullable String alternativeMediaId,
+        @CustomType.Parameter("endpoints") @Nullable List<LiveEventEndpointResponse> endpoints,
+        @CustomType.Parameter("previewLocator") @Nullable String previewLocator,
+        @CustomType.Parameter("streamingPolicyName") @Nullable String streamingPolicyName) {
         this.accessControl = accessControl;
         this.alternativeMediaId = alternativeMediaId;
         this.endpoints = endpoints;

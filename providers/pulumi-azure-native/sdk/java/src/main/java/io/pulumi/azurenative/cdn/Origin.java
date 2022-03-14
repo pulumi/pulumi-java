@@ -8,7 +8,7 @@ import io.pulumi.azurenative.cdn.OriginArgs;
 import io.pulumi.azurenative.cdn.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -37,7 +37,7 @@ public class Origin extends io.pulumi.resources.CustomResource {
      * Origin is enabled for load balancing or not
      * 
      */
-    @OutputExport(name="enabled", type=Boolean.class, parameters={})
+    @Export(name="enabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enabled;
 
     /**
@@ -51,7 +51,7 @@ public class Origin extends io.pulumi.resources.CustomResource {
      * The address of the origin. Domain names, IPv4 addresses, and IPv6 addresses are supported.This should be unique across all origins in an endpoint.
      * 
      */
-    @OutputExport(name="hostName", type=String.class, parameters={})
+    @Export(name="hostName", type=String.class, parameters={})
     private Output<String> hostName;
 
     /**
@@ -65,7 +65,7 @@ public class Origin extends io.pulumi.resources.CustomResource {
      * The value of the HTTP port. Must be between 1 and 65535.
      * 
      */
-    @OutputExport(name="httpPort", type=Integer.class, parameters={})
+    @Export(name="httpPort", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> httpPort;
 
     /**
@@ -79,7 +79,7 @@ public class Origin extends io.pulumi.resources.CustomResource {
      * The value of the HTTPS port. Must be between 1 and 65535.
      * 
      */
-    @OutputExport(name="httpsPort", type=Integer.class, parameters={})
+    @Export(name="httpsPort", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> httpsPort;
 
     /**
@@ -93,7 +93,7 @@ public class Origin extends io.pulumi.resources.CustomResource {
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -107,7 +107,7 @@ public class Origin extends io.pulumi.resources.CustomResource {
      * The host header value sent to the origin with each request. If you leave this blank, the request hostname determines this value. Azure CDN origins, such as Web Apps, Blob Storage, and Cloud Services require this host header value to match the origin hostname by default. This overrides the host header defined at Endpoint
      * 
      */
-    @OutputExport(name="originHostHeader", type=String.class, parameters={})
+    @Export(name="originHostHeader", type=String.class, parameters={})
     private Output</* @Nullable */ String> originHostHeader;
 
     /**
@@ -121,7 +121,7 @@ public class Origin extends io.pulumi.resources.CustomResource {
      * Priority of origin in given origin group for load balancing. Higher priorities will not be used for load balancing if any lower priority origin is healthy.Must be between 1 and 5
      * 
      */
-    @OutputExport(name="priority", type=Integer.class, parameters={})
+    @Export(name="priority", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> priority;
 
     /**
@@ -135,7 +135,7 @@ public class Origin extends io.pulumi.resources.CustomResource {
      * The approval status for the connection to the Private Link
      * 
      */
-    @OutputExport(name="privateEndpointStatus", type=String.class, parameters={})
+    @Export(name="privateEndpointStatus", type=String.class, parameters={})
     private Output<String> privateEndpointStatus;
 
     /**
@@ -149,7 +149,7 @@ public class Origin extends io.pulumi.resources.CustomResource {
      * The Alias of the Private Link resource. Populating this optional field indicates that this origin is 'Private'
      * 
      */
-    @OutputExport(name="privateLinkAlias", type=String.class, parameters={})
+    @Export(name="privateLinkAlias", type=String.class, parameters={})
     private Output</* @Nullable */ String> privateLinkAlias;
 
     /**
@@ -163,7 +163,7 @@ public class Origin extends io.pulumi.resources.CustomResource {
      * A custom message to be included in the approval request to connect to the Private Link.
      * 
      */
-    @OutputExport(name="privateLinkApprovalMessage", type=String.class, parameters={})
+    @Export(name="privateLinkApprovalMessage", type=String.class, parameters={})
     private Output</* @Nullable */ String> privateLinkApprovalMessage;
 
     /**
@@ -177,7 +177,7 @@ public class Origin extends io.pulumi.resources.CustomResource {
      * The location of the Private Link resource. Required only if 'privateLinkResourceId' is populated
      * 
      */
-    @OutputExport(name="privateLinkLocation", type=String.class, parameters={})
+    @Export(name="privateLinkLocation", type=String.class, parameters={})
     private Output</* @Nullable */ String> privateLinkLocation;
 
     /**
@@ -191,7 +191,7 @@ public class Origin extends io.pulumi.resources.CustomResource {
      * The Resource Id of the Private Link resource. Populating this optional field indicates that this backend is 'Private'
      * 
      */
-    @OutputExport(name="privateLinkResourceId", type=String.class, parameters={})
+    @Export(name="privateLinkResourceId", type=String.class, parameters={})
     private Output</* @Nullable */ String> privateLinkResourceId;
 
     /**
@@ -205,7 +205,7 @@ public class Origin extends io.pulumi.resources.CustomResource {
      * Provisioning status of the origin.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -219,7 +219,7 @@ public class Origin extends io.pulumi.resources.CustomResource {
      * Resource status of the origin.
      * 
      */
-    @OutputExport(name="resourceState", type=String.class, parameters={})
+    @Export(name="resourceState", type=String.class, parameters={})
     private Output<String> resourceState;
 
     /**
@@ -233,7 +233,7 @@ public class Origin extends io.pulumi.resources.CustomResource {
      * Read only system data
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -247,7 +247,7 @@ public class Origin extends io.pulumi.resources.CustomResource {
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -261,7 +261,7 @@ public class Origin extends io.pulumi.resources.CustomResource {
      * Weight of the origin in given origin group for load balancing. Must be between 1 and 1000
      * 
      */
-    @OutputExport(name="weight", type=Integer.class, parameters={})
+    @Export(name="weight", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> weight;
 
     /**

@@ -5,13 +5,13 @@ package io.pulumi.azurenative.recoveryservices.outputs;
 
 import io.pulumi.azurenative.recoveryservices.outputs.CmkKekIdentityResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.CmkKeyVaultPropertiesResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VaultPropertiesResponseEncryption {
     /**
      * Enabling/Disabling the Double Encryption state
@@ -29,11 +29,11 @@ public final class VaultPropertiesResponseEncryption {
      */
     private final @Nullable CmkKeyVaultPropertiesResponse keyVaultProperties;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VaultPropertiesResponseEncryption(
-        @OutputCustomType.Parameter("infrastructureEncryption") @Nullable String infrastructureEncryption,
-        @OutputCustomType.Parameter("kekIdentity") @Nullable CmkKekIdentityResponse kekIdentity,
-        @OutputCustomType.Parameter("keyVaultProperties") @Nullable CmkKeyVaultPropertiesResponse keyVaultProperties) {
+        @CustomType.Parameter("infrastructureEncryption") @Nullable String infrastructureEncryption,
+        @CustomType.Parameter("kekIdentity") @Nullable CmkKekIdentityResponse kekIdentity,
+        @CustomType.Parameter("keyVaultProperties") @Nullable CmkKeyVaultPropertiesResponse keyVaultProperties) {
         this.infrastructureEncryption = infrastructureEncryption;
         this.kekIdentity = kekIdentity;
         this.keyVaultProperties = keyVaultProperties;

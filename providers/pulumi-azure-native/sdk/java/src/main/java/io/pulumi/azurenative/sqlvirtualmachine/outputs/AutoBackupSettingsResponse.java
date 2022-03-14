@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.sqlvirtualmachine.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AutoBackupSettingsResponse {
     /**
      * Backup schedule type.
@@ -64,18 +64,18 @@ public final class AutoBackupSettingsResponse {
      */
     private final @Nullable String storageAccountUrl;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AutoBackupSettingsResponse(
-        @OutputCustomType.Parameter("backupScheduleType") @Nullable String backupScheduleType,
-        @OutputCustomType.Parameter("backupSystemDbs") @Nullable Boolean backupSystemDbs,
-        @OutputCustomType.Parameter("enable") @Nullable Boolean enable,
-        @OutputCustomType.Parameter("enableEncryption") @Nullable Boolean enableEncryption,
-        @OutputCustomType.Parameter("fullBackupFrequency") @Nullable String fullBackupFrequency,
-        @OutputCustomType.Parameter("fullBackupStartTime") @Nullable Integer fullBackupStartTime,
-        @OutputCustomType.Parameter("fullBackupWindowHours") @Nullable Integer fullBackupWindowHours,
-        @OutputCustomType.Parameter("logBackupFrequency") @Nullable Integer logBackupFrequency,
-        @OutputCustomType.Parameter("retentionPeriod") @Nullable Integer retentionPeriod,
-        @OutputCustomType.Parameter("storageAccountUrl") @Nullable String storageAccountUrl) {
+        @CustomType.Parameter("backupScheduleType") @Nullable String backupScheduleType,
+        @CustomType.Parameter("backupSystemDbs") @Nullable Boolean backupSystemDbs,
+        @CustomType.Parameter("enable") @Nullable Boolean enable,
+        @CustomType.Parameter("enableEncryption") @Nullable Boolean enableEncryption,
+        @CustomType.Parameter("fullBackupFrequency") @Nullable String fullBackupFrequency,
+        @CustomType.Parameter("fullBackupStartTime") @Nullable Integer fullBackupStartTime,
+        @CustomType.Parameter("fullBackupWindowHours") @Nullable Integer fullBackupWindowHours,
+        @CustomType.Parameter("logBackupFrequency") @Nullable Integer logBackupFrequency,
+        @CustomType.Parameter("retentionPeriod") @Nullable Integer retentionPeriod,
+        @CustomType.Parameter("storageAccountUrl") @Nullable String storageAccountUrl) {
         this.backupScheduleType = backupScheduleType;
         this.backupSystemDbs = backupSystemDbs;
         this.enable = enable;

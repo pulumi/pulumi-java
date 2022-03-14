@@ -8,7 +8,7 @@ import io.pulumi.azurenative.securityinsights.UebaArgs;
 import io.pulumi.azurenative.securityinsights.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +35,7 @@ public class Ueba extends io.pulumi.resources.CustomResource {
      * The relevant data sources that enriched by ueba
      * 
      */
-    @OutputExport(name="dataSources", type=List.class, parameters={String.class})
+    @Export(name="dataSources", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> dataSources;
 
     /**
@@ -49,7 +49,7 @@ public class Ueba extends io.pulumi.resources.CustomResource {
      * Etag of the azure resource
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output</* @Nullable */ String> etag;
 
     /**
@@ -64,7 +64,7 @@ public class Ueba extends io.pulumi.resources.CustomResource {
      * Expected value is 'Ueba'.
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
     /**
@@ -79,7 +79,7 @@ public class Ueba extends io.pulumi.resources.CustomResource {
      * Azure resource name
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -93,7 +93,7 @@ public class Ueba extends io.pulumi.resources.CustomResource {
      * Azure Resource Manager metadata containing createdBy and modifiedBy information.
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -107,7 +107,7 @@ public class Ueba extends io.pulumi.resources.CustomResource {
      * Azure resource type
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.hybridcompute.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class MachinePropertiesResponseOsProfile extends io.pulumi.resource
      * Specifies the host OS name of the hybrid machine.
      * 
      */
-    @InputImport(name="computerName", required=true)
+    @Import(name="computerName", required=true)
       private final String computerName;
 
     public String getComputerName() {

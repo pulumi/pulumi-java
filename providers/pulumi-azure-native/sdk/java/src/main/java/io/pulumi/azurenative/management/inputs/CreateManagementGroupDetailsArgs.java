@@ -5,7 +5,7 @@ package io.pulumi.azurenative.management.inputs;
 
 import io.pulumi.azurenative.management.inputs.CreateParentGroupInfoArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -22,7 +22,7 @@ public final class CreateManagementGroupDetailsArgs extends io.pulumi.resources.
      * (Optional) The ID of the parent management group used during creation.
      * 
      */
-    @InputImport(name="parent")
+    @Import(name="parent")
       private final @Nullable Output<CreateParentGroupInfoArgs> parent;
 
     public Output<CreateParentGroupInfoArgs> getParent() {

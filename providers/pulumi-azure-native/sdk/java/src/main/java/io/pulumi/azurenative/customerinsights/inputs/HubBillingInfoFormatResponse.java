@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.customerinsights.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class HubBillingInfoFormatResponse extends io.pulumi.resources.Invo
      * The maximum number of units can be used.  One unit is 10,000 Profiles and 100,000 Interactions.
      * 
      */
-    @InputImport(name="maxUnits")
+    @Import(name="maxUnits")
       private final @Nullable Integer maxUnits;
 
     public Optional<Integer> getMaxUnits() {
@@ -34,7 +34,7 @@ public final class HubBillingInfoFormatResponse extends io.pulumi.resources.Invo
      * The minimum number of units will be billed. One unit is 10,000 Profiles and 100,000 Interactions.
      * 
      */
-    @InputImport(name="minUnits")
+    @Import(name="minUnits")
       private final @Nullable Integer minUnits;
 
     public Optional<Integer> getMinUnits() {
@@ -45,7 +45,7 @@ public final class HubBillingInfoFormatResponse extends io.pulumi.resources.Invo
      * The sku name.
      * 
      */
-    @InputImport(name="skuName")
+    @Import(name="skuName")
       private final @Nullable String skuName;
 
     public Optional<String> getSkuName() {

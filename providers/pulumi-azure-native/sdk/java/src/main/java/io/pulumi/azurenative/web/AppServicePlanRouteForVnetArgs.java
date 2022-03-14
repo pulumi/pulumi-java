@@ -6,7 +6,7 @@ package io.pulumi.azurenative.web;
 import io.pulumi.azurenative.web.enums.RouteType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class AppServicePlanRouteForVnetArgs extends io.pulumi.resources.Re
      * The ending address for this route. If the start address is specified in CIDR notation, this must be omitted.
      * 
      */
-    @InputImport(name="endAddress")
+    @Import(name="endAddress")
       private final @Nullable Output<String> endAddress;
 
     public Output<String> getEndAddress() {
@@ -31,7 +31,7 @@ public final class AppServicePlanRouteForVnetArgs extends io.pulumi.resources.Re
      * Kind of resource.
      * 
      */
-    @InputImport(name="kind")
+    @Import(name="kind")
       private final @Nullable Output<String> kind;
 
     public Output<String> getKind() {
@@ -42,7 +42,7 @@ public final class AppServicePlanRouteForVnetArgs extends io.pulumi.resources.Re
      * Name of the App Service plan.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -53,7 +53,7 @@ public final class AppServicePlanRouteForVnetArgs extends io.pulumi.resources.Re
      * Name of the resource group to which the resource belongs.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -64,7 +64,7 @@ public final class AppServicePlanRouteForVnetArgs extends io.pulumi.resources.Re
      * Name of the Virtual Network route.
      * 
      */
-    @InputImport(name="routeName")
+    @Import(name="routeName")
       private final @Nullable Output<String> routeName;
 
     public Output<String> getRouteName() {
@@ -80,7 +80,7 @@ public final class AppServicePlanRouteForVnetArgs extends io.pulumi.resources.Re
      * These values will be used for syncing an app's routes with those from a Virtual Network.
      * 
      */
-    @InputImport(name="routeType")
+    @Import(name="routeType")
       private final @Nullable Output<Either<String,RouteType>> routeType;
 
     public Output<Either<String,RouteType>> getRouteType() {
@@ -91,7 +91,7 @@ public final class AppServicePlanRouteForVnetArgs extends io.pulumi.resources.Re
      * The starting address for this route. This may also include a CIDR notation, in which case the end address must not be specified.
      * 
      */
-    @InputImport(name="startAddress")
+    @Import(name="startAddress")
       private final @Nullable Output<String> startAddress;
 
     public Output<String> getStartAddress() {
@@ -102,7 +102,7 @@ public final class AppServicePlanRouteForVnetArgs extends io.pulumi.resources.Re
      * Name of the Virtual Network.
      * 
      */
-    @InputImport(name="vnetName", required=true)
+    @Import(name="vnetName", required=true)
       private final Output<String> vnetName;
 
     public Output<String> getVnetName() {

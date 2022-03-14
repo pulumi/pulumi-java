@@ -12,7 +12,7 @@ import io.pulumi.azurenative.machinelearningservices.outputs.SkuResponse;
 import io.pulumi.azurenative.machinelearningservices.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -40,7 +40,7 @@ public class PrivateEndpointConnection extends io.pulumi.resources.CustomResourc
      * The identity of the resource.
      * 
      */
-    @OutputExport(name="identity", type=IdentityResponse.class, parameters={})
+    @Export(name="identity", type=IdentityResponse.class, parameters={})
     private Output</* @Nullable */ IdentityResponse> identity;
 
     /**
@@ -54,7 +54,7 @@ public class PrivateEndpointConnection extends io.pulumi.resources.CustomResourc
      * Specifies the location of the resource.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -68,7 +68,7 @@ public class PrivateEndpointConnection extends io.pulumi.resources.CustomResourc
      * Specifies the name of the resource.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -82,7 +82,7 @@ public class PrivateEndpointConnection extends io.pulumi.resources.CustomResourc
      * The resource of private end point.
      * 
      */
-    @OutputExport(name="privateEndpoint", type=PrivateEndpointResponse.class, parameters={})
+    @Export(name="privateEndpoint", type=PrivateEndpointResponse.class, parameters={})
     private Output</* @Nullable */ PrivateEndpointResponse> privateEndpoint;
 
     /**
@@ -96,7 +96,7 @@ public class PrivateEndpointConnection extends io.pulumi.resources.CustomResourc
      * A collection of information about the state of the connection between service consumer and provider.
      * 
      */
-    @OutputExport(name="privateLinkServiceConnectionState", type=PrivateLinkServiceConnectionStateResponse.class, parameters={})
+    @Export(name="privateLinkServiceConnectionState", type=PrivateLinkServiceConnectionStateResponse.class, parameters={})
     private Output<PrivateLinkServiceConnectionStateResponse> privateLinkServiceConnectionState;
 
     /**
@@ -110,7 +110,7 @@ public class PrivateEndpointConnection extends io.pulumi.resources.CustomResourc
      * The provisioning state of the private endpoint connection resource.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -124,7 +124,7 @@ public class PrivateEndpointConnection extends io.pulumi.resources.CustomResourc
      * The sku of the workspace.
      * 
      */
-    @OutputExport(name="sku", type=SkuResponse.class, parameters={})
+    @Export(name="sku", type=SkuResponse.class, parameters={})
     private Output</* @Nullable */ SkuResponse> sku;
 
     /**
@@ -138,7 +138,7 @@ public class PrivateEndpointConnection extends io.pulumi.resources.CustomResourc
      * Read only system data
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -152,7 +152,7 @@ public class PrivateEndpointConnection extends io.pulumi.resources.CustomResourc
      * Contains resource tags defined as key/value pairs.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -166,7 +166,7 @@ public class PrivateEndpointConnection extends io.pulumi.resources.CustomResourc
      * Specifies the type of the resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

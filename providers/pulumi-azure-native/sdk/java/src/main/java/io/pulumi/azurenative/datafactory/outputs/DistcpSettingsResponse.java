@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.datafactory.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DistcpSettingsResponse {
     /**
      * Specifies the Distcp options. Type: string (or Expression with resultType string).
@@ -27,11 +27,11 @@ public final class DistcpSettingsResponse {
      */
     private final Object tempScriptPath;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DistcpSettingsResponse(
-        @OutputCustomType.Parameter("distcpOptions") @Nullable Object distcpOptions,
-        @OutputCustomType.Parameter("resourceManagerEndpoint") Object resourceManagerEndpoint,
-        @OutputCustomType.Parameter("tempScriptPath") Object tempScriptPath) {
+        @CustomType.Parameter("distcpOptions") @Nullable Object distcpOptions,
+        @CustomType.Parameter("resourceManagerEndpoint") Object resourceManagerEndpoint,
+        @CustomType.Parameter("tempScriptPath") Object tempScriptPath) {
         this.distcpOptions = distcpOptions;
         this.resourceManagerEndpoint = resourceManagerEndpoint;
         this.tempScriptPath = tempScriptPath;

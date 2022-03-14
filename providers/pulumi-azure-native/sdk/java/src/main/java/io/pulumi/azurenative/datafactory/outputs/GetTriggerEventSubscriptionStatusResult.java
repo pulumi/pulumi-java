@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.datafactory.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetTriggerEventSubscriptionStatusResult {
     /**
      * Event Subscription Status.
@@ -20,10 +20,10 @@ public final class GetTriggerEventSubscriptionStatusResult {
      */
     private final String triggerName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetTriggerEventSubscriptionStatusResult(
-        @OutputCustomType.Parameter("status") String status,
-        @OutputCustomType.Parameter("triggerName") String triggerName) {
+        @CustomType.Parameter("status") String status,
+        @CustomType.Parameter("triggerName") String triggerName) {
         this.status = status;
         this.triggerName = triggerName;
     }

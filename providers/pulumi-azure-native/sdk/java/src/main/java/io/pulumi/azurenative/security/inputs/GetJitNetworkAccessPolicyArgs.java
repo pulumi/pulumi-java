@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.security.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetJitNetworkAccessPolicyArgs extends io.pulumi.resources.Inv
      * The location where ASC stores the data of the subscription. can be retrieved from Get locations
      * 
      */
-    @InputImport(name="ascLocation", required=true)
+    @Import(name="ascLocation", required=true)
       private final String ascLocation;
 
     public String getAscLocation() {
@@ -27,7 +27,7 @@ public final class GetJitNetworkAccessPolicyArgs extends io.pulumi.resources.Inv
      * Name of a Just-in-Time access configuration policy.
      * 
      */
-    @InputImport(name="jitNetworkAccessPolicyName", required=true)
+    @Import(name="jitNetworkAccessPolicyName", required=true)
       private final String jitNetworkAccessPolicyName;
 
     public String getJitNetworkAccessPolicyName() {
@@ -38,7 +38,7 @@ public final class GetJitNetworkAccessPolicyArgs extends io.pulumi.resources.Inv
      * The name of the resource group within the user's subscription. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.appplatform.inputs;
 
 import io.pulumi.azurenative.appplatform.inputs.BuildpackBindingLaunchPropertiesResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class BuildpackBindingPropertiesResponse extends io.pulumi.resource
      * Buildpack Binding Type
      * 
      */
-    @InputImport(name="bindingType")
+    @Import(name="bindingType")
       private final @Nullable String bindingType;
 
     public Optional<String> getBindingType() {
@@ -34,7 +34,7 @@ public final class BuildpackBindingPropertiesResponse extends io.pulumi.resource
      * The object describes the buildpack binding launch properties
      * 
      */
-    @InputImport(name="launchProperties")
+    @Import(name="launchProperties")
       private final @Nullable BuildpackBindingLaunchPropertiesResponse launchProperties;
 
     public Optional<BuildpackBindingLaunchPropertiesResponse> getLaunchProperties() {
@@ -45,7 +45,7 @@ public final class BuildpackBindingPropertiesResponse extends io.pulumi.resource
      * State of the Buildpack Binding.
      * 
      */
-    @InputImport(name="provisioningState", required=true)
+    @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
     public String getProvisioningState() {

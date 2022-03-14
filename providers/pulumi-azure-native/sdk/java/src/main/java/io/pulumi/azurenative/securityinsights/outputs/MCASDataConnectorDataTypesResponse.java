@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.securityinsights.outputs;
 
 import io.pulumi.azurenative.securityinsights.outputs.DataConnectorDataTypeCommonResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class MCASDataConnectorDataTypesResponse {
     /**
      * Alerts data type connection.
@@ -22,10 +22,10 @@ public final class MCASDataConnectorDataTypesResponse {
      */
     private final @Nullable DataConnectorDataTypeCommonResponse discoveryLogs;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MCASDataConnectorDataTypesResponse(
-        @OutputCustomType.Parameter("alerts") @Nullable DataConnectorDataTypeCommonResponse alerts,
-        @OutputCustomType.Parameter("discoveryLogs") @Nullable DataConnectorDataTypeCommonResponse discoveryLogs) {
+        @CustomType.Parameter("alerts") @Nullable DataConnectorDataTypeCommonResponse alerts,
+        @CustomType.Parameter("discoveryLogs") @Nullable DataConnectorDataTypeCommonResponse discoveryLogs) {
         this.alerts = alerts;
         this.discoveryLogs = discoveryLogs;
     }

@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.customerinsights.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ResourceSetDescriptionResponse {
     /**
      * The elements included in the set.
@@ -22,10 +22,10 @@ public final class ResourceSetDescriptionResponse {
      */
     private final @Nullable List<String> exceptions;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ResourceSetDescriptionResponse(
-        @OutputCustomType.Parameter("elements") @Nullable List<String> elements,
-        @OutputCustomType.Parameter("exceptions") @Nullable List<String> exceptions) {
+        @CustomType.Parameter("elements") @Nullable List<String> elements,
+        @CustomType.Parameter("exceptions") @Nullable List<String> exceptions) {
         this.elements = elements;
         this.exceptions = exceptions;
     }

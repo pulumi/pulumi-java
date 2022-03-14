@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.autonomousdevelopmentplatform.outputs;
 
 import io.pulumi.azurenative.autonomousdevelopmentplatform.outputs.DataPoolEncryptionResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DataPoolLocationResponse {
     /**
      * Encryption properties of a Data Pool location
@@ -23,10 +23,10 @@ public final class DataPoolLocationResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DataPoolLocationResponse(
-        @OutputCustomType.Parameter("encryption") @Nullable DataPoolEncryptionResponse encryption,
-        @OutputCustomType.Parameter("name") String name) {
+        @CustomType.Parameter("encryption") @Nullable DataPoolEncryptionResponse encryption,
+        @CustomType.Parameter("name") String name) {
         this.encryption = encryption;
         this.name = name;
     }

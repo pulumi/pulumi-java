@@ -5,14 +5,14 @@ package io.pulumi.azurenative.confluent.outputs;
 
 import io.pulumi.azurenative.confluent.outputs.OrganizationResourcePropertiesResponseOfferDetail;
 import io.pulumi.azurenative.confluent.outputs.OrganizationResourcePropertiesResponseUserDetail;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetOrganizationResult {
     /**
      * The creation time of the resource.
@@ -70,19 +70,19 @@ public final class GetOrganizationResult {
      */
     private final @Nullable OrganizationResourcePropertiesResponseUserDetail userDetail;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetOrganizationResult(
-        @OutputCustomType.Parameter("createdTime") String createdTime,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("offerDetail") @Nullable OrganizationResourcePropertiesResponseOfferDetail offerDetail,
-        @OutputCustomType.Parameter("organizationId") String organizationId,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("ssoUrl") String ssoUrl,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("userDetail") @Nullable OrganizationResourcePropertiesResponseUserDetail userDetail) {
+        @CustomType.Parameter("createdTime") String createdTime,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("offerDetail") @Nullable OrganizationResourcePropertiesResponseOfferDetail offerDetail,
+        @CustomType.Parameter("organizationId") String organizationId,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("ssoUrl") String ssoUrl,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("userDetail") @Nullable OrganizationResourcePropertiesResponseUserDetail userDetail) {
         this.createdTime = createdTime;
         this.id = id;
         this.location = location;

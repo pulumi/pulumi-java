@@ -9,7 +9,7 @@ import io.pulumi.azurenative.authorization.outputs.AccessReviewHistoryInstanceRe
 import io.pulumi.azurenative.authorization.outputs.AccessReviewScopeResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -37,7 +37,7 @@ public class AccessReviewHistoryDefinitionById extends io.pulumi.resources.Custo
      * Date time when history definition was created
      * 
      */
-    @OutputExport(name="createdDateTime", type=String.class, parameters={})
+    @Export(name="createdDateTime", type=String.class, parameters={})
     private Output<String> createdDateTime;
 
     /**
@@ -51,7 +51,7 @@ public class AccessReviewHistoryDefinitionById extends io.pulumi.resources.Custo
      * Collection of review decisions which the history data should be filtered on. For example if Approve and Deny are supplied the data will only contain review results in which the decision maker approved or denied a review request.
      * 
      */
-    @OutputExport(name="decisions", type=List.class, parameters={String.class})
+    @Export(name="decisions", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> decisions;
 
     /**
@@ -65,7 +65,7 @@ public class AccessReviewHistoryDefinitionById extends io.pulumi.resources.Custo
      * The display name for the history definition.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output</* @Nullable */ String> displayName;
 
     /**
@@ -79,7 +79,7 @@ public class AccessReviewHistoryDefinitionById extends io.pulumi.resources.Custo
      * The DateTime when the review is scheduled to end. Required if type is endDate
      * 
      */
-    @OutputExport(name="endDate", type=String.class, parameters={})
+    @Export(name="endDate", type=String.class, parameters={})
     private Output</* @Nullable */ String> endDate;
 
     /**
@@ -93,7 +93,7 @@ public class AccessReviewHistoryDefinitionById extends io.pulumi.resources.Custo
      * Set of access review history instances for this history definition.
      * 
      */
-    @OutputExport(name="instances", type=List.class, parameters={AccessReviewHistoryInstanceResponse.class})
+    @Export(name="instances", type=List.class, parameters={AccessReviewHistoryInstanceResponse.class})
     private Output</* @Nullable */ List<AccessReviewHistoryInstanceResponse>> instances;
 
     /**
@@ -107,7 +107,7 @@ public class AccessReviewHistoryDefinitionById extends io.pulumi.resources.Custo
      * The interval for recurrence. For a quarterly review, the interval is 3 for type : absoluteMonthly.
      * 
      */
-    @OutputExport(name="interval", type=Integer.class, parameters={})
+    @Export(name="interval", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> interval;
 
     /**
@@ -121,7 +121,7 @@ public class AccessReviewHistoryDefinitionById extends io.pulumi.resources.Custo
      * The access review history definition unique id.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -135,7 +135,7 @@ public class AccessReviewHistoryDefinitionById extends io.pulumi.resources.Custo
      * The number of times to repeat the access review. Required and must be positive if type is numbered.
      * 
      */
-    @OutputExport(name="numberOfOccurrences", type=Integer.class, parameters={})
+    @Export(name="numberOfOccurrences", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> numberOfOccurrences;
 
     /**
@@ -149,7 +149,7 @@ public class AccessReviewHistoryDefinitionById extends io.pulumi.resources.Custo
      * The identity id
      * 
      */
-    @OutputExport(name="principalId", type=String.class, parameters={})
+    @Export(name="principalId", type=String.class, parameters={})
     private Output<String> principalId;
 
     /**
@@ -163,7 +163,7 @@ public class AccessReviewHistoryDefinitionById extends io.pulumi.resources.Custo
      * The identity display name
      * 
      */
-    @OutputExport(name="principalName", type=String.class, parameters={})
+    @Export(name="principalName", type=String.class, parameters={})
     private Output<String> principalName;
 
     /**
@@ -177,7 +177,7 @@ public class AccessReviewHistoryDefinitionById extends io.pulumi.resources.Custo
      * The identity type : user/servicePrincipal
      * 
      */
-    @OutputExport(name="principalType", type=String.class, parameters={})
+    @Export(name="principalType", type=String.class, parameters={})
     private Output<String> principalType;
 
     /**
@@ -191,7 +191,7 @@ public class AccessReviewHistoryDefinitionById extends io.pulumi.resources.Custo
      * Date time used when selecting review data, all reviews included in data end on or before this date. For use only with one-time/non-recurring reports.
      * 
      */
-    @OutputExport(name="reviewHistoryPeriodEndDateTime", type=String.class, parameters={})
+    @Export(name="reviewHistoryPeriodEndDateTime", type=String.class, parameters={})
     private Output<String> reviewHistoryPeriodEndDateTime;
 
     /**
@@ -205,7 +205,7 @@ public class AccessReviewHistoryDefinitionById extends io.pulumi.resources.Custo
      * Date time used when selecting review data, all reviews included in data start on or after this date. For use only with one-time/non-recurring reports.
      * 
      */
-    @OutputExport(name="reviewHistoryPeriodStartDateTime", type=String.class, parameters={})
+    @Export(name="reviewHistoryPeriodStartDateTime", type=String.class, parameters={})
     private Output<String> reviewHistoryPeriodStartDateTime;
 
     /**
@@ -219,7 +219,7 @@ public class AccessReviewHistoryDefinitionById extends io.pulumi.resources.Custo
      * A collection of scopes used when selecting review history data
      * 
      */
-    @OutputExport(name="scopes", type=List.class, parameters={AccessReviewScopeResponse.class})
+    @Export(name="scopes", type=List.class, parameters={AccessReviewScopeResponse.class})
     private Output</* @Nullable */ List<AccessReviewScopeResponse>> scopes;
 
     /**
@@ -233,7 +233,7 @@ public class AccessReviewHistoryDefinitionById extends io.pulumi.resources.Custo
      * The DateTime when the review is scheduled to be start. This could be a date in the future. Required on create.
      * 
      */
-    @OutputExport(name="startDate", type=String.class, parameters={})
+    @Export(name="startDate", type=String.class, parameters={})
     private Output</* @Nullable */ String> startDate;
 
     /**
@@ -247,7 +247,7 @@ public class AccessReviewHistoryDefinitionById extends io.pulumi.resources.Custo
      * This read-only field specifies the of the requested review history data. This is either requested, in-progress, done or error.
      * 
      */
-    @OutputExport(name="status", type=String.class, parameters={})
+    @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
     /**
@@ -261,7 +261,7 @@ public class AccessReviewHistoryDefinitionById extends io.pulumi.resources.Custo
      * The resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -275,7 +275,7 @@ public class AccessReviewHistoryDefinitionById extends io.pulumi.resources.Custo
      * The user principal name(if valid)
      * 
      */
-    @OutputExport(name="userPrincipalName", type=String.class, parameters={})
+    @Export(name="userPrincipalName", type=String.class, parameters={})
     private Output<String> userPrincipalName;
 
     /**

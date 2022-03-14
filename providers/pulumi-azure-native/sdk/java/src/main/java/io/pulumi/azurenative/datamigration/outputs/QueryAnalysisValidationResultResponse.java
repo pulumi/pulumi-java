@@ -5,10 +5,10 @@ package io.pulumi.azurenative.datamigration.outputs;
 
 import io.pulumi.azurenative.datamigration.outputs.QueryExecutionResultResponse;
 import io.pulumi.azurenative.datamigration.outputs.ValidationErrorResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class QueryAnalysisValidationResultResponse {
     /**
      * List of queries executed and it's execution results in source and target
@@ -21,10 +21,10 @@ public final class QueryAnalysisValidationResultResponse {
      */
     private final ValidationErrorResponse validationErrors;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private QueryAnalysisValidationResultResponse(
-        @OutputCustomType.Parameter("queryResults") QueryExecutionResultResponse queryResults,
-        @OutputCustomType.Parameter("validationErrors") ValidationErrorResponse validationErrors) {
+        @CustomType.Parameter("queryResults") QueryExecutionResultResponse queryResults,
+        @CustomType.Parameter("validationErrors") ValidationErrorResponse validationErrors) {
         this.queryResults = queryResults;
         this.validationErrors = validationErrors;
     }

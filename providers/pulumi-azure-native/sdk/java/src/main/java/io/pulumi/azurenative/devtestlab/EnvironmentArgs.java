@@ -5,7 +5,7 @@ package io.pulumi.azurenative.devtestlab;
 
 import io.pulumi.azurenative.devtestlab.inputs.EnvironmentDeploymentPropertiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * The display name of the Azure Resource Manager template that produced the environment.
      * 
      */
-    @InputImport(name="armTemplateDisplayName")
+    @Import(name="armTemplateDisplayName")
       private final @Nullable Output<String> armTemplateDisplayName;
 
     public Output<String> getArmTemplateDisplayName() {
@@ -31,7 +31,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * The deployment properties of the environment.
      * 
      */
-    @InputImport(name="deploymentProperties")
+    @Import(name="deploymentProperties")
       private final @Nullable Output<EnvironmentDeploymentPropertiesArgs> deploymentProperties;
 
     public Output<EnvironmentDeploymentPropertiesArgs> getDeploymentProperties() {
@@ -42,7 +42,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the lab.
      * 
      */
-    @InputImport(name="labName", required=true)
+    @Import(name="labName", required=true)
       private final Output<String> labName;
 
     public Output<String> getLabName() {
@@ -53,7 +53,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * The location of the resource.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -64,7 +64,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the environment.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -75,7 +75,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -86,7 +86,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * The tags of the resource.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -97,7 +97,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the user profile.
      * 
      */
-    @InputImport(name="userName", required=true)
+    @Import(name="userName", required=true)
       private final Output<String> userName;
 
     public Output<String> getUserName() {

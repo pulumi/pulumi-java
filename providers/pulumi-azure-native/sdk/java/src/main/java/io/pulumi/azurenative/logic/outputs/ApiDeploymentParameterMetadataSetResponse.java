@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.logic.outputs;
 
 import io.pulumi.azurenative.logic.outputs.ApiDeploymentParameterMetadataResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ApiDeploymentParameterMetadataSetResponse {
     /**
      * The package content link parameter.
@@ -22,10 +22,10 @@ public final class ApiDeploymentParameterMetadataSetResponse {
      */
     private final @Nullable ApiDeploymentParameterMetadataResponse redisCacheConnectionString;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ApiDeploymentParameterMetadataSetResponse(
-        @OutputCustomType.Parameter("packageContentLink") @Nullable ApiDeploymentParameterMetadataResponse packageContentLink,
-        @OutputCustomType.Parameter("redisCacheConnectionString") @Nullable ApiDeploymentParameterMetadataResponse redisCacheConnectionString) {
+        @CustomType.Parameter("packageContentLink") @Nullable ApiDeploymentParameterMetadataResponse packageContentLink,
+        @CustomType.Parameter("redisCacheConnectionString") @Nullable ApiDeploymentParameterMetadataResponse redisCacheConnectionString) {
         this.packageContentLink = packageContentLink;
         this.redisCacheConnectionString = redisCacheConnectionString;
     }

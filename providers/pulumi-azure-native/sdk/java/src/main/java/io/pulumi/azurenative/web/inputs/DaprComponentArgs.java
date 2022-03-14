@@ -5,7 +5,7 @@ package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.azurenative.web.inputs.DaprMetadataArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class DaprComponentArgs extends io.pulumi.resources.ResourceArgs {
      * Component metadata
      * 
      */
-    @InputImport(name="metadata")
+    @Import(name="metadata")
       private final @Nullable Output<List<DaprMetadataArgs>> metadata;
 
     public Output<List<DaprMetadataArgs>> getMetadata() {
@@ -35,7 +35,7 @@ public final class DaprComponentArgs extends io.pulumi.resources.ResourceArgs {
      * Component name
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -46,7 +46,7 @@ public final class DaprComponentArgs extends io.pulumi.resources.ResourceArgs {
      * Component type
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {
@@ -57,7 +57,7 @@ public final class DaprComponentArgs extends io.pulumi.resources.ResourceArgs {
      * Component version
      * 
      */
-    @InputImport(name="version")
+    @Import(name="version")
       private final @Nullable Output<String> version;
 
     public Output<String> getVersion() {

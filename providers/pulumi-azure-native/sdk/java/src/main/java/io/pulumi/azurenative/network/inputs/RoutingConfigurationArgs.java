@@ -7,7 +7,7 @@ import io.pulumi.azurenative.network.inputs.PropagatedRouteTableArgs;
 import io.pulumi.azurenative.network.inputs.SubResourceArgs;
 import io.pulumi.azurenative.network.inputs.VnetRouteArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -24,7 +24,7 @@ public final class RoutingConfigurationArgs extends io.pulumi.resources.Resource
      * The resource id RouteTable associated with this RoutingConfiguration.
      * 
      */
-    @InputImport(name="associatedRouteTable")
+    @Import(name="associatedRouteTable")
       private final @Nullable Output<SubResourceArgs> associatedRouteTable;
 
     public Output<SubResourceArgs> getAssociatedRouteTable() {
@@ -35,7 +35,7 @@ public final class RoutingConfigurationArgs extends io.pulumi.resources.Resource
      * The list of RouteTables to advertise the routes to.
      * 
      */
-    @InputImport(name="propagatedRouteTables")
+    @Import(name="propagatedRouteTables")
       private final @Nullable Output<PropagatedRouteTableArgs> propagatedRouteTables;
 
     public Output<PropagatedRouteTableArgs> getPropagatedRouteTables() {
@@ -46,7 +46,7 @@ public final class RoutingConfigurationArgs extends io.pulumi.resources.Resource
      * List of routes that control routing from VirtualHub into a virtual network connection.
      * 
      */
-    @InputImport(name="vnetRoutes")
+    @Import(name="vnetRoutes")
       private final @Nullable Output<VnetRouteArgs> vnetRoutes;
 
     public Output<VnetRouteArgs> getVnetRoutes() {

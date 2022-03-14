@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.batch.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetApplicationResult {
     /**
      * A value indicating whether packages within the application may be overwritten using the same version string.
@@ -48,15 +48,15 @@ public final class GetApplicationResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetApplicationResult(
-        @OutputCustomType.Parameter("allowUpdates") @Nullable Boolean allowUpdates,
-        @OutputCustomType.Parameter("defaultVersion") @Nullable String defaultVersion,
-        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("allowUpdates") @Nullable Boolean allowUpdates,
+        @CustomType.Parameter("defaultVersion") @Nullable String defaultVersion,
+        @CustomType.Parameter("displayName") @Nullable String displayName,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("type") String type) {
         this.allowUpdates = allowUpdates;
         this.defaultVersion = defaultVersion;
         this.displayName = displayName;

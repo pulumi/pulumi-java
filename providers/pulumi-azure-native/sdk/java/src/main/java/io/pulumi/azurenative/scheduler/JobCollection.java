@@ -8,7 +8,7 @@ import io.pulumi.azurenative.scheduler.JobCollectionArgs;
 import io.pulumi.azurenative.scheduler.outputs.JobCollectionPropertiesResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -32,7 +32,7 @@ public class JobCollection extends io.pulumi.resources.CustomResource {
      * Gets or sets the storage account location.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -46,7 +46,7 @@ public class JobCollection extends io.pulumi.resources.CustomResource {
      * Gets or sets the job collection resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
@@ -60,7 +60,7 @@ public class JobCollection extends io.pulumi.resources.CustomResource {
      * Gets or sets the job collection properties.
      * 
      */
-    @OutputExport(name="properties", type=JobCollectionPropertiesResponse.class, parameters={})
+    @Export(name="properties", type=JobCollectionPropertiesResponse.class, parameters={})
     private Output<JobCollectionPropertiesResponse> properties;
 
     /**
@@ -74,7 +74,7 @@ public class JobCollection extends io.pulumi.resources.CustomResource {
      * Gets or sets the tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -88,7 +88,7 @@ public class JobCollection extends io.pulumi.resources.CustomResource {
      * Gets the job collection resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

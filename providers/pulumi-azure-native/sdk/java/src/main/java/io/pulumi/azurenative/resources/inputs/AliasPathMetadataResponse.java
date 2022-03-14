@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.resources.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class AliasPathMetadataResponse extends io.pulumi.resources.InvokeA
      * The attributes of the token that the alias path is referring to.
      * 
      */
-    @InputImport(name="attributes", required=true)
+    @Import(name="attributes", required=true)
       private final String attributes;
 
     public String getAttributes() {
@@ -27,7 +27,7 @@ public final class AliasPathMetadataResponse extends io.pulumi.resources.InvokeA
      * The type of the token that the alias path is referring to.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

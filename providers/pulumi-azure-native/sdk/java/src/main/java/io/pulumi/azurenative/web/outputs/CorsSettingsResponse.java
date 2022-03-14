@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CorsSettingsResponse {
     /**
      * Gets or sets the list of origins that should be allowed to make cross-origin
@@ -27,10 +27,10 @@ public final class CorsSettingsResponse {
      */
     private final @Nullable Boolean supportCredentials;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CorsSettingsResponse(
-        @OutputCustomType.Parameter("allowedOrigins") @Nullable List<String> allowedOrigins,
-        @OutputCustomType.Parameter("supportCredentials") @Nullable Boolean supportCredentials) {
+        @CustomType.Parameter("allowedOrigins") @Nullable List<String> allowedOrigins,
+        @CustomType.Parameter("supportCredentials") @Nullable Boolean supportCredentials) {
         this.allowedOrigins = allowedOrigins;
         this.supportCredentials = supportCredentials;
     }

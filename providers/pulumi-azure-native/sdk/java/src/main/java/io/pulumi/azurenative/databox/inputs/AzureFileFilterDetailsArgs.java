@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.databox.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class AzureFileFilterDetailsArgs extends io.pulumi.resources.Resour
      * List of full path of the files to be transferred.
      * 
      */
-    @InputImport(name="filePathList")
+    @Import(name="filePathList")
       private final @Nullable Output<List<String>> filePathList;
 
     public Output<List<String>> getFilePathList() {
@@ -34,7 +34,7 @@ public final class AzureFileFilterDetailsArgs extends io.pulumi.resources.Resour
      * Prefix list of the Azure files to be transferred.
      * 
      */
-    @InputImport(name="filePrefixList")
+    @Import(name="filePrefixList")
       private final @Nullable Output<List<String>> filePrefixList;
 
     public Output<List<String>> getFilePrefixList() {
@@ -45,7 +45,7 @@ public final class AzureFileFilterDetailsArgs extends io.pulumi.resources.Resour
      * List of file shares to be transferred.
      * 
      */
-    @InputImport(name="fileShareList")
+    @Import(name="fileShareList")
       private final @Nullable Output<List<String>> fileShareList;
 
     public Output<List<String>> getFileShareList() {

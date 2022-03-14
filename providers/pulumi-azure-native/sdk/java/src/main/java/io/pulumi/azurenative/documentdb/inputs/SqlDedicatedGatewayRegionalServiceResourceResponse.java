@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.documentdb.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class SqlDedicatedGatewayRegionalServiceResourceResponse extends io
      * The location name.
      * 
      */
-    @InputImport(name="location", required=true)
+    @Import(name="location", required=true)
       private final String location;
 
     public String getLocation() {
@@ -31,7 +31,7 @@ public final class SqlDedicatedGatewayRegionalServiceResourceResponse extends io
      * The regional service name.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -42,7 +42,7 @@ public final class SqlDedicatedGatewayRegionalServiceResourceResponse extends io
      * The regional endpoint for SqlDedicatedGateway.
      * 
      */
-    @InputImport(name="sqlDedicatedGatewayEndpoint", required=true)
+    @Import(name="sqlDedicatedGatewayEndpoint", required=true)
       private final String sqlDedicatedGatewayEndpoint;
 
     public String getSqlDedicatedGatewayEndpoint() {
@@ -53,7 +53,7 @@ public final class SqlDedicatedGatewayRegionalServiceResourceResponse extends io
      * Describes the status of a service.
      * 
      */
-    @InputImport(name="status", required=true)
+    @Import(name="status", required=true)
       private final String status;
 
     public String getStatus() {

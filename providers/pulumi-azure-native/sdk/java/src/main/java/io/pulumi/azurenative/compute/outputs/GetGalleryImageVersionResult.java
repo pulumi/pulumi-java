@@ -6,14 +6,14 @@ package io.pulumi.azurenative.compute.outputs;
 import io.pulumi.azurenative.compute.outputs.GalleryImageVersionPublishingProfileResponse;
 import io.pulumi.azurenative.compute.outputs.GalleryImageVersionStorageProfileResponse;
 import io.pulumi.azurenative.compute.outputs.ReplicationStatusResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetGalleryImageVersionResult {
     /**
      * Resource Id
@@ -61,17 +61,17 @@ public final class GetGalleryImageVersionResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetGalleryImageVersionResult(
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("publishingProfile") @Nullable GalleryImageVersionPublishingProfileResponse publishingProfile,
-        @OutputCustomType.Parameter("replicationStatus") ReplicationStatusResponse replicationStatus,
-        @OutputCustomType.Parameter("storageProfile") GalleryImageVersionStorageProfileResponse storageProfile,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("publishingProfile") @Nullable GalleryImageVersionPublishingProfileResponse publishingProfile,
+        @CustomType.Parameter("replicationStatus") ReplicationStatusResponse replicationStatus,
+        @CustomType.Parameter("storageProfile") GalleryImageVersionStorageProfileResponse storageProfile,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type) {
         this.id = id;
         this.location = location;
         this.name = name;

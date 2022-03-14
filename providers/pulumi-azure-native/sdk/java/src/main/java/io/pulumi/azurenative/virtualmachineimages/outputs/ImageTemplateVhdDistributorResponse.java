@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.virtualmachineimages.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ImageTemplateVhdDistributorResponse {
     /**
      * Tags that will be applied to the artifact once it has been created/updated by the distributor.
@@ -28,11 +28,11 @@ public final class ImageTemplateVhdDistributorResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ImageTemplateVhdDistributorResponse(
-        @OutputCustomType.Parameter("artifactTags") @Nullable Map<String,String> artifactTags,
-        @OutputCustomType.Parameter("runOutputName") String runOutputName,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("artifactTags") @Nullable Map<String,String> artifactTags,
+        @CustomType.Parameter("runOutputName") String runOutputName,
+        @CustomType.Parameter("type") String type) {
         this.artifactTags = artifactTags;
         this.runOutputName = runOutputName;
         this.type = type;

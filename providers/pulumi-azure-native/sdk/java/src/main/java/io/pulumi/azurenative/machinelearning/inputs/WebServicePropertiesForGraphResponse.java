@@ -15,7 +15,7 @@ import io.pulumi.azurenative.machinelearning.inputs.ServiceInputOutputSpecificat
 import io.pulumi.azurenative.machinelearning.inputs.StorageAccountResponse;
 import io.pulumi.azurenative.machinelearning.inputs.WebServiceKeysResponse;
 import io.pulumi.azurenative.machinelearning.inputs.WebServiceParameterResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -36,7 +36,7 @@ public final class WebServicePropertiesForGraphResponse extends io.pulumi.resour
      * Contains user defined properties describing web service assets. Properties are expressed as Key/Value pairs.
      * 
      */
-    @InputImport(name="assets")
+    @Import(name="assets")
       private final @Nullable Map<String,AssetItemResponse> assets;
 
     public Map<String,AssetItemResponse> getAssets() {
@@ -47,7 +47,7 @@ public final class WebServicePropertiesForGraphResponse extends io.pulumi.resour
      * Contains the commitment plan associated with this web service. Set at creation time. Once set, this value cannot be changed. Note: The commitment plan is not returned from calls to GET operations.
      * 
      */
-    @InputImport(name="commitmentPlan")
+    @Import(name="commitmentPlan")
       private final @Nullable CommitmentPlanResponse commitmentPlan;
 
     public Optional<CommitmentPlanResponse> getCommitmentPlan() {
@@ -58,7 +58,7 @@ public final class WebServicePropertiesForGraphResponse extends io.pulumi.resour
      * Read Only: The date and time when the web service was created.
      * 
      */
-    @InputImport(name="createdOn", required=true)
+    @Import(name="createdOn", required=true)
       private final String createdOn;
 
     public String getCreatedOn() {
@@ -69,7 +69,7 @@ public final class WebServicePropertiesForGraphResponse extends io.pulumi.resour
      * The description of the web service.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable String description;
 
     public Optional<String> getDescription() {
@@ -80,7 +80,7 @@ public final class WebServicePropertiesForGraphResponse extends io.pulumi.resour
      * Settings controlling the diagnostics traces collection for the web service.
      * 
      */
-    @InputImport(name="diagnostics")
+    @Import(name="diagnostics")
       private final @Nullable DiagnosticsConfigurationResponse diagnostics;
 
     public Optional<DiagnosticsConfigurationResponse> getDiagnostics() {
@@ -91,7 +91,7 @@ public final class WebServicePropertiesForGraphResponse extends io.pulumi.resour
      * Defines sample input data for one or more of the service's inputs.
      * 
      */
-    @InputImport(name="exampleRequest")
+    @Import(name="exampleRequest")
       private final @Nullable ExampleRequestResponse exampleRequest;
 
     public Optional<ExampleRequestResponse> getExampleRequest() {
@@ -102,7 +102,7 @@ public final class WebServicePropertiesForGraphResponse extends io.pulumi.resour
      * When set to true, sample data is included in the web service's swagger definition. The default value is true.
      * 
      */
-    @InputImport(name="exposeSampleData")
+    @Import(name="exposeSampleData")
       private final @Nullable Boolean exposeSampleData;
 
     public Optional<Boolean> getExposeSampleData() {
@@ -113,7 +113,7 @@ public final class WebServicePropertiesForGraphResponse extends io.pulumi.resour
      * Contains the Swagger 2.0 schema describing one or more of the web service's inputs. For more information, see the Swagger specification.
      * 
      */
-    @InputImport(name="input")
+    @Import(name="input")
       private final @Nullable ServiceInputOutputSpecificationResponse input;
 
     public Optional<ServiceInputOutputSpecificationResponse> getInput() {
@@ -124,7 +124,7 @@ public final class WebServicePropertiesForGraphResponse extends io.pulumi.resour
      * Contains the web service provisioning keys. If you do not specify provisioning keys, the Azure Machine Learning system generates them for you. Note: The keys are not returned from calls to GET operations.
      * 
      */
-    @InputImport(name="keys")
+    @Import(name="keys")
       private final @Nullable WebServiceKeysResponse keys;
 
     public Optional<WebServiceKeysResponse> getKeys() {
@@ -135,7 +135,7 @@ public final class WebServicePropertiesForGraphResponse extends io.pulumi.resour
      * Specifies the Machine Learning workspace containing the experiment that is source for the web service.
      * 
      */
-    @InputImport(name="machineLearningWorkspace")
+    @Import(name="machineLearningWorkspace")
       private final @Nullable MachineLearningWorkspaceResponse machineLearningWorkspace;
 
     public Optional<MachineLearningWorkspaceResponse> getMachineLearningWorkspace() {
@@ -146,7 +146,7 @@ public final class WebServicePropertiesForGraphResponse extends io.pulumi.resour
      * Read Only: The date and time when the web service was last modified.
      * 
      */
-    @InputImport(name="modifiedOn", required=true)
+    @Import(name="modifiedOn", required=true)
       private final String modifiedOn;
 
     public String getModifiedOn() {
@@ -157,7 +157,7 @@ public final class WebServicePropertiesForGraphResponse extends io.pulumi.resour
      * Contains the Swagger 2.0 schema describing one or more of the web service's outputs. For more information, see the Swagger specification.
      * 
      */
-    @InputImport(name="output")
+    @Import(name="output")
       private final @Nullable ServiceInputOutputSpecificationResponse output;
 
     public Optional<ServiceInputOutputSpecificationResponse> getOutput() {
@@ -168,7 +168,7 @@ public final class WebServicePropertiesForGraphResponse extends io.pulumi.resour
      * The definition of the graph package making up this web service.
      * 
      */
-    @InputImport(name="package")
+    @Import(name="package")
       private final @Nullable GraphPackageResponse $package;
 
     public Optional<GraphPackageResponse> get$package() {
@@ -180,7 +180,7 @@ public final class WebServicePropertiesForGraphResponse extends io.pulumi.resour
      * Expected value is 'Graph'.
      * 
      */
-    @InputImport(name="packageType", required=true)
+    @Import(name="packageType", required=true)
       private final String packageType;
 
     public String getPackageType() {
@@ -191,7 +191,7 @@ public final class WebServicePropertiesForGraphResponse extends io.pulumi.resour
      * The set of global parameters values defined for the web service, given as a global parameter name to default value map. If no default value is specified, the parameter is considered to be required.
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable Map<String,WebServiceParameterResponse> parameters;
 
     public Map<String,WebServiceParameterResponse> getParameters() {
@@ -202,7 +202,7 @@ public final class WebServicePropertiesForGraphResponse extends io.pulumi.resour
      * When set to true, indicates that the payload size is larger than 3 MB. Otherwise false. If the payload size exceed 3 MB, the payload is stored in a blob and the PayloadsLocation parameter contains the URI of the blob. Otherwise, this will be set to false and Assets, Input, Output, Package, Parameters, ExampleRequest are inline. The Payload sizes is determined by adding the size of the Assets, Input, Output, Package, Parameters, and the ExampleRequest.
      * 
      */
-    @InputImport(name="payloadsInBlobStorage")
+    @Import(name="payloadsInBlobStorage")
       private final @Nullable Boolean payloadsInBlobStorage;
 
     public Optional<Boolean> getPayloadsInBlobStorage() {
@@ -213,7 +213,7 @@ public final class WebServicePropertiesForGraphResponse extends io.pulumi.resour
      * The URI of the payload blob. This parameter contains a value only if the payloadsInBlobStorage parameter is set to true. Otherwise is set to null.
      * 
      */
-    @InputImport(name="payloadsLocation")
+    @Import(name="payloadsLocation")
       private final @Nullable BlobLocationResponse payloadsLocation;
 
     public Optional<BlobLocationResponse> getPayloadsLocation() {
@@ -224,7 +224,7 @@ public final class WebServicePropertiesForGraphResponse extends io.pulumi.resour
      * Read Only: The provision state of the web service. Valid values are Unknown, Provisioning, Succeeded, and Failed.
      * 
      */
-    @InputImport(name="provisioningState", required=true)
+    @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
     public String getProvisioningState() {
@@ -235,7 +235,7 @@ public final class WebServicePropertiesForGraphResponse extends io.pulumi.resour
      * When set to true, indicates that the web service is read-only and can no longer be updated or patched, only removed. Default, is false. Note: Once set to true, you cannot change its value.
      * 
      */
-    @InputImport(name="readOnly")
+    @Import(name="readOnly")
       private final @Nullable Boolean readOnly;
 
     public Optional<Boolean> getReadOnly() {
@@ -246,7 +246,7 @@ public final class WebServicePropertiesForGraphResponse extends io.pulumi.resour
      * Contains the configuration settings for the web service endpoint.
      * 
      */
-    @InputImport(name="realtimeConfiguration")
+    @Import(name="realtimeConfiguration")
       private final @Nullable RealtimeConfigurationResponse realtimeConfiguration;
 
     public Optional<RealtimeConfigurationResponse> getRealtimeConfiguration() {
@@ -257,7 +257,7 @@ public final class WebServicePropertiesForGraphResponse extends io.pulumi.resour
      * Specifies the storage account that Azure Machine Learning uses to store information about the web service. Only the name of the storage account is returned from calls to GET operations. When updating the storage account information, you must ensure that all necessary assets are available in the new storage account or calls to your web service will fail.
      * 
      */
-    @InputImport(name="storageAccount")
+    @Import(name="storageAccount")
       private final @Nullable StorageAccountResponse storageAccount;
 
     public Optional<StorageAccountResponse> getStorageAccount() {
@@ -268,7 +268,7 @@ public final class WebServicePropertiesForGraphResponse extends io.pulumi.resour
      * Read Only: Contains the URI of the swagger spec associated with this web service.
      * 
      */
-    @InputImport(name="swaggerLocation", required=true)
+    @Import(name="swaggerLocation", required=true)
       private final String swaggerLocation;
 
     public String getSwaggerLocation() {
@@ -279,7 +279,7 @@ public final class WebServicePropertiesForGraphResponse extends io.pulumi.resour
      * The title of the web service.
      * 
      */
-    @InputImport(name="title")
+    @Import(name="title")
       private final @Nullable String title;
 
     public Optional<String> getTitle() {

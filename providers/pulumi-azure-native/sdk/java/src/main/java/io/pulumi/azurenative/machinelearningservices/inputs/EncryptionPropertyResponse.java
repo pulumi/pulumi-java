@@ -5,7 +5,7 @@ package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.azurenative.machinelearningservices.inputs.IdentityForCmkResponse;
 import io.pulumi.azurenative.machinelearningservices.inputs.KeyVaultPropertiesResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -20,7 +20,7 @@ public final class EncryptionPropertyResponse extends io.pulumi.resources.Invoke
      * The identity that will be used to access the key vault for encryption at rest.
      * 
      */
-    @InputImport(name="identity")
+    @Import(name="identity")
       private final @Nullable IdentityForCmkResponse identity;
 
     public Optional<IdentityForCmkResponse> getIdentity() {
@@ -31,7 +31,7 @@ public final class EncryptionPropertyResponse extends io.pulumi.resources.Invoke
      * Customer Key vault properties.
      * 
      */
-    @InputImport(name="keyVaultProperties", required=true)
+    @Import(name="keyVaultProperties", required=true)
       private final KeyVaultPropertiesResponse keyVaultProperties;
 
     public KeyVaultPropertiesResponse getKeyVaultProperties() {
@@ -42,7 +42,7 @@ public final class EncryptionPropertyResponse extends io.pulumi.resources.Invoke
      * Indicates whether or not the encryption is enabled for the workspace.
      * 
      */
-    @InputImport(name="status", required=true)
+    @Import(name="status", required=true)
       private final String status;
 
     public String getStatus() {

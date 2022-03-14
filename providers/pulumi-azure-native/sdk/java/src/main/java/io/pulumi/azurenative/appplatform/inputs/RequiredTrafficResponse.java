@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.appplatform.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class RequiredTrafficResponse extends io.pulumi.resources.InvokeArg
      * The direction of required traffic
      * 
      */
-    @InputImport(name="direction", required=true)
+    @Import(name="direction", required=true)
       private final String direction;
 
     public String getDirection() {
@@ -33,7 +33,7 @@ public final class RequiredTrafficResponse extends io.pulumi.resources.InvokeArg
      * The FQDN list of required traffic
      * 
      */
-    @InputImport(name="fqdns", required=true)
+    @Import(name="fqdns", required=true)
       private final List<String> fqdns;
 
     public List<String> getFqdns() {
@@ -44,7 +44,7 @@ public final class RequiredTrafficResponse extends io.pulumi.resources.InvokeArg
      * The ip list of required traffic
      * 
      */
-    @InputImport(name="ips", required=true)
+    @Import(name="ips", required=true)
       private final List<String> ips;
 
     public List<String> getIps() {
@@ -55,7 +55,7 @@ public final class RequiredTrafficResponse extends io.pulumi.resources.InvokeArg
      * The port of required traffic
      * 
      */
-    @InputImport(name="port", required=true)
+    @Import(name="port", required=true)
       private final Integer port;
 
     public Integer getPort() {
@@ -66,7 +66,7 @@ public final class RequiredTrafficResponse extends io.pulumi.resources.InvokeArg
      * The protocol of required traffic
      * 
      */
-    @InputImport(name="protocol", required=true)
+    @Import(name="protocol", required=true)
       private final String protocol;
 
     public String getProtocol() {

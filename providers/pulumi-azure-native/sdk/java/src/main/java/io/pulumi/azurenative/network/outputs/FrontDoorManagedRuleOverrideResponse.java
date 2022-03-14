@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.ManagedRuleExclusionResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FrontDoorManagedRuleOverrideResponse {
     /**
      * Describes the override action to be applied when rule matches.
@@ -34,12 +34,12 @@ public final class FrontDoorManagedRuleOverrideResponse {
      */
     private final String ruleId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FrontDoorManagedRuleOverrideResponse(
-        @OutputCustomType.Parameter("action") @Nullable String action,
-        @OutputCustomType.Parameter("enabledState") @Nullable String enabledState,
-        @OutputCustomType.Parameter("exclusions") @Nullable List<ManagedRuleExclusionResponse> exclusions,
-        @OutputCustomType.Parameter("ruleId") String ruleId) {
+        @CustomType.Parameter("action") @Nullable String action,
+        @CustomType.Parameter("enabledState") @Nullable String enabledState,
+        @CustomType.Parameter("exclusions") @Nullable List<ManagedRuleExclusionResponse> exclusions,
+        @CustomType.Parameter("ruleId") String ruleId) {
         this.action = action;
         this.enabledState = enabledState;
         this.exclusions = exclusions;

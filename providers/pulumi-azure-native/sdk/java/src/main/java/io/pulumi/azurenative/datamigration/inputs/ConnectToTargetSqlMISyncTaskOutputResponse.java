@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datamigration.inputs;
 
 import io.pulumi.azurenative.datamigration.inputs.ReportableExceptionResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class ConnectToTargetSqlMISyncTaskOutputResponse extends io.pulumi.
      * Target server brand version
      * 
      */
-    @InputImport(name="targetServerBrandVersion", required=true)
+    @Import(name="targetServerBrandVersion", required=true)
       private final String targetServerBrandVersion;
 
     public String getTargetServerBrandVersion() {
@@ -33,7 +33,7 @@ public final class ConnectToTargetSqlMISyncTaskOutputResponse extends io.pulumi.
      * Target server version
      * 
      */
-    @InputImport(name="targetServerVersion", required=true)
+    @Import(name="targetServerVersion", required=true)
       private final String targetServerVersion;
 
     public String getTargetServerVersion() {
@@ -44,7 +44,7 @@ public final class ConnectToTargetSqlMISyncTaskOutputResponse extends io.pulumi.
      * Validation errors
      * 
      */
-    @InputImport(name="validationErrors", required=true)
+    @Import(name="validationErrors", required=true)
       private final List<ReportableExceptionResponse> validationErrors;
 
     public List<ReportableExceptionResponse> getValidationErrors() {

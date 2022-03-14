@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.containerregistry.inputs;
 
 import io.pulumi.azurenative.containerregistry.inputs.TlsCertificatePropertiesResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class TlsPropertiesResponse extends io.pulumi.resources.InvokeArgs 
      * The certificate used to configure HTTPS for the login server.
      * 
      */
-    @InputImport(name="certificate", required=true)
+    @Import(name="certificate", required=true)
       private final TlsCertificatePropertiesResponse certificate;
 
     public TlsCertificatePropertiesResponse getCertificate() {
@@ -32,7 +32,7 @@ public final class TlsPropertiesResponse extends io.pulumi.resources.InvokeArgs 
      * Indicates whether HTTPS is enabled for the login server.
      * 
      */
-    @InputImport(name="status", required=true)
+    @Import(name="status", required=true)
       private final String status;
 
     public String getStatus() {

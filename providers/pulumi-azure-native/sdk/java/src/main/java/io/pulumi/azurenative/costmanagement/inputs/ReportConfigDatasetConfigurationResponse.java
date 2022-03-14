@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.costmanagement.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ReportConfigDatasetConfigurationResponse extends io.pulumi.re
      * Array of column names to be included in the report. Any valid report column name is allowed. If not provided, then report includes all columns.
      * 
      */
-    @InputImport(name="columns")
+    @Import(name="columns")
       private final @Nullable List<String> columns;
 
     public List<String> getColumns() {

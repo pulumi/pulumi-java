@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.insights.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetLogProfileArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the log profile.
      * 
      */
-    @InputImport(name="logProfileName", required=true)
+    @Import(name="logProfileName", required=true)
       private final String logProfileName;
 
     public String getLogProfileName() {

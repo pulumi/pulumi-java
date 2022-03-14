@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.automation.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetCredentialArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the automation account.
      * 
      */
-    @InputImport(name="automationAccountName", required=true)
+    @Import(name="automationAccountName", required=true)
       private final String automationAccountName;
 
     public String getAutomationAccountName() {
@@ -27,7 +27,7 @@ public final class GetCredentialArgs extends io.pulumi.resources.InvokeArgs {
      * The name of credential.
      * 
      */
-    @InputImport(name="credentialName", required=true)
+    @Import(name="credentialName", required=true)
       private final String credentialName;
 
     public String getCredentialName() {
@@ -38,7 +38,7 @@ public final class GetCredentialArgs extends io.pulumi.resources.InvokeArgs {
      * Name of an Azure Resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {

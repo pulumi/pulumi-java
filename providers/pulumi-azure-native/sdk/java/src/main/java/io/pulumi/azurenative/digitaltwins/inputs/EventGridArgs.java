@@ -6,7 +6,7 @@ package io.pulumi.azurenative.digitaltwins.inputs;
 import io.pulumi.azurenative.digitaltwins.enums.AuthenticationType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class EventGridArgs extends io.pulumi.resources.ResourceArgs {
      * EventGrid secondary accesskey. Will be obfuscated during read.
      * 
      */
-    @InputImport(name="accessKey1", required=true)
+    @Import(name="accessKey1", required=true)
       private final Output<String> accessKey1;
 
     public Output<String> getAccessKey1() {
@@ -35,7 +35,7 @@ public final class EventGridArgs extends io.pulumi.resources.ResourceArgs {
      * EventGrid secondary accesskey. Will be obfuscated during read.
      * 
      */
-    @InputImport(name="accessKey2")
+    @Import(name="accessKey2")
       private final @Nullable Output<String> accessKey2;
 
     public Output<String> getAccessKey2() {
@@ -46,7 +46,7 @@ public final class EventGridArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the authentication type being used for connecting to the endpoint.
      * 
      */
-    @InputImport(name="authenticationType")
+    @Import(name="authenticationType")
       private final @Nullable Output<Either<String,AuthenticationType>> authenticationType;
 
     public Output<Either<String,AuthenticationType>> getAuthenticationType() {
@@ -57,7 +57,7 @@ public final class EventGridArgs extends io.pulumi.resources.ResourceArgs {
      * Dead letter storage secret for key-based authentication. Will be obfuscated during read.
      * 
      */
-    @InputImport(name="deadLetterSecret")
+    @Import(name="deadLetterSecret")
       private final @Nullable Output<String> deadLetterSecret;
 
     public Output<String> getDeadLetterSecret() {
@@ -68,7 +68,7 @@ public final class EventGridArgs extends io.pulumi.resources.ResourceArgs {
      * Dead letter storage URL for identity-based authentication.
      * 
      */
-    @InputImport(name="deadLetterUri")
+    @Import(name="deadLetterUri")
       private final @Nullable Output<String> deadLetterUri;
 
     public Output<String> getDeadLetterUri() {
@@ -80,7 +80,7 @@ public final class EventGridArgs extends io.pulumi.resources.ResourceArgs {
      * Expected value is 'EventGrid'.
      * 
      */
-    @InputImport(name="endpointType", required=true)
+    @Import(name="endpointType", required=true)
       private final Output<String> endpointType;
 
     public Output<String> getEndpointType() {
@@ -91,7 +91,7 @@ public final class EventGridArgs extends io.pulumi.resources.ResourceArgs {
      * EventGrid Topic Endpoint
      * 
      */
-    @InputImport(name="topicEndpoint", required=true)
+    @Import(name="topicEndpoint", required=true)
       private final Output<String> topicEndpoint;
 
     public Output<String> getTopicEndpoint() {

@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.compute.outputs;
 
 import io.pulumi.azurenative.compute.outputs.VirtualMachineScaleSetExtensionResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VirtualMachineScaleSetExtensionProfileResponse {
     /**
      * The virtual machine scale set child extension resources.
@@ -24,10 +24,10 @@ public final class VirtualMachineScaleSetExtensionProfileResponse {
      */
     private final @Nullable String extensionsTimeBudget;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VirtualMachineScaleSetExtensionProfileResponse(
-        @OutputCustomType.Parameter("extensions") @Nullable List<VirtualMachineScaleSetExtensionResponse> extensions,
-        @OutputCustomType.Parameter("extensionsTimeBudget") @Nullable String extensionsTimeBudget) {
+        @CustomType.Parameter("extensions") @Nullable List<VirtualMachineScaleSetExtensionResponse> extensions,
+        @CustomType.Parameter("extensionsTimeBudget") @Nullable String extensionsTimeBudget) {
         this.extensions = extensions;
         this.extensionsTimeBudget = extensionsTimeBudget;
     }

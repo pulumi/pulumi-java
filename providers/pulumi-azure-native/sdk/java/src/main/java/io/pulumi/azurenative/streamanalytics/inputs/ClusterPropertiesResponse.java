@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.streamanalytics.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class ClusterPropertiesResponse extends io.pulumi.resources.InvokeA
      * Represents the number of streaming units currently being used on the cluster.
      * 
      */
-    @InputImport(name="capacityAllocated", required=true)
+    @Import(name="capacityAllocated", required=true)
       private final Integer capacityAllocated;
 
     public Integer getCapacityAllocated() {
@@ -32,7 +32,7 @@ public final class ClusterPropertiesResponse extends io.pulumi.resources.InvokeA
      * Represents the sum of the SUs of all streaming jobs associated with the cluster. If all of the jobs were running, this would be the capacity allocated.
      * 
      */
-    @InputImport(name="capacityAssigned", required=true)
+    @Import(name="capacityAssigned", required=true)
       private final Integer capacityAssigned;
 
     public Integer getCapacityAssigned() {
@@ -43,7 +43,7 @@ public final class ClusterPropertiesResponse extends io.pulumi.resources.InvokeA
      * Unique identifier for the cluster.
      * 
      */
-    @InputImport(name="clusterId", required=true)
+    @Import(name="clusterId", required=true)
       private final String clusterId;
 
     public String getClusterId() {
@@ -54,7 +54,7 @@ public final class ClusterPropertiesResponse extends io.pulumi.resources.InvokeA
      * The date this cluster was created.
      * 
      */
-    @InputImport(name="createdDate", required=true)
+    @Import(name="createdDate", required=true)
       private final String createdDate;
 
     public String getCreatedDate() {
@@ -65,7 +65,7 @@ public final class ClusterPropertiesResponse extends io.pulumi.resources.InvokeA
      * The status of the cluster provisioning. The three terminal states are: Succeeded, Failed and Canceled
      * 
      */
-    @InputImport(name="provisioningState", required=true)
+    @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
     public String getProvisioningState() {

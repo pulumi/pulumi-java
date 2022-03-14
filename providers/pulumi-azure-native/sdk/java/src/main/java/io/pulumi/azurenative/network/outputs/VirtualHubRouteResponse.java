@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VirtualHubRouteResponse {
     /**
      * List of all addressPrefixes.
@@ -23,10 +23,10 @@ public final class VirtualHubRouteResponse {
      */
     private final @Nullable String nextHopIpAddress;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VirtualHubRouteResponse(
-        @OutputCustomType.Parameter("addressPrefixes") @Nullable List<String> addressPrefixes,
-        @OutputCustomType.Parameter("nextHopIpAddress") @Nullable String nextHopIpAddress) {
+        @CustomType.Parameter("addressPrefixes") @Nullable List<String> addressPrefixes,
+        @CustomType.Parameter("nextHopIpAddress") @Nullable String nextHopIpAddress) {
         this.addressPrefixes = addressPrefixes;
         this.nextHopIpAddress = nextHopIpAddress;
     }

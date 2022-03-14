@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.azurenative.compute.inputs.SshPublicKeyResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class SshConfigurationResponse extends io.pulumi.resources.InvokeAr
      * The list of SSH public keys used to authenticate with linux based VMs.
      * 
      */
-    @InputImport(name="publicKeys")
+    @Import(name="publicKeys")
       private final @Nullable List<SshPublicKeyResponse> publicKeys;
 
     public List<SshPublicKeyResponse> getPublicKeys() {

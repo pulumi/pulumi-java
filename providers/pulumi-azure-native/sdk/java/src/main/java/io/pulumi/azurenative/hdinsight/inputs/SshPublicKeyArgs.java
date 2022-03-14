@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.hdinsight.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class SshPublicKeyArgs extends io.pulumi.resources.ResourceArgs {
      * The certificate for SSH.
      * 
      */
-    @InputImport(name="certificateData")
+    @Import(name="certificateData")
       private final @Nullable Output<String> certificateData;
 
     public Output<String> getCertificateData() {

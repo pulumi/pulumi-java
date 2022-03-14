@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class OnlineEndpointResponse {
     /**
      * Inference endpoint authentication mode type
@@ -55,16 +55,16 @@ public final class OnlineEndpointResponse {
      */
     private final @Nullable Map<String,Integer> traffic;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private OnlineEndpointResponse(
-        @OutputCustomType.Parameter("authMode") String authMode,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("properties") @Nullable Map<String,String> properties,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("scoringUri") String scoringUri,
-        @OutputCustomType.Parameter("swaggerUri") String swaggerUri,
-        @OutputCustomType.Parameter("target") @Nullable String target,
-        @OutputCustomType.Parameter("traffic") @Nullable Map<String,Integer> traffic) {
+        @CustomType.Parameter("authMode") String authMode,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("properties") @Nullable Map<String,String> properties,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("scoringUri") String scoringUri,
+        @CustomType.Parameter("swaggerUri") String swaggerUri,
+        @CustomType.Parameter("target") @Nullable String target,
+        @CustomType.Parameter("traffic") @Nullable Map<String,Integer> traffic) {
         this.authMode = authMode;
         this.description = description;
         this.properties = properties;

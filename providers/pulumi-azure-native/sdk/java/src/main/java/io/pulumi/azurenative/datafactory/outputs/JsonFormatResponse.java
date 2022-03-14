@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.datafactory.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class JsonFormatResponse {
     /**
      * Deserializer. Type: string (or Expression with resultType string).
@@ -54,16 +54,16 @@ public final class JsonFormatResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private JsonFormatResponse(
-        @OutputCustomType.Parameter("deserializer") @Nullable Object deserializer,
-        @OutputCustomType.Parameter("encodingName") @Nullable Object encodingName,
-        @OutputCustomType.Parameter("filePattern") @Nullable Object filePattern,
-        @OutputCustomType.Parameter("jsonNodeReference") @Nullable Object jsonNodeReference,
-        @OutputCustomType.Parameter("jsonPathDefinition") @Nullable Object jsonPathDefinition,
-        @OutputCustomType.Parameter("nestingSeparator") @Nullable Object nestingSeparator,
-        @OutputCustomType.Parameter("serializer") @Nullable Object serializer,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("deserializer") @Nullable Object deserializer,
+        @CustomType.Parameter("encodingName") @Nullable Object encodingName,
+        @CustomType.Parameter("filePattern") @Nullable Object filePattern,
+        @CustomType.Parameter("jsonNodeReference") @Nullable Object jsonNodeReference,
+        @CustomType.Parameter("jsonPathDefinition") @Nullable Object jsonPathDefinition,
+        @CustomType.Parameter("nestingSeparator") @Nullable Object nestingSeparator,
+        @CustomType.Parameter("serializer") @Nullable Object serializer,
+        @CustomType.Parameter("type") String type) {
         this.deserializer = deserializer;
         this.encodingName = encodingName;
         this.filePattern = filePattern;

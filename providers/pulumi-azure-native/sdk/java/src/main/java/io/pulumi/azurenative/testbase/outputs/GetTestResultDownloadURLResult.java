@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.testbase.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetTestResultDownloadURLResult {
     /**
      * The download URL.
@@ -20,10 +20,10 @@ public final class GetTestResultDownloadURLResult {
      */
     private final String expirationTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetTestResultDownloadURLResult(
-        @OutputCustomType.Parameter("downloadUrl") String downloadUrl,
-        @OutputCustomType.Parameter("expirationTime") String expirationTime) {
+        @CustomType.Parameter("downloadUrl") String downloadUrl,
+        @CustomType.Parameter("expirationTime") String expirationTime) {
         this.downloadUrl = downloadUrl;
         this.expirationTime = expirationTime;
     }

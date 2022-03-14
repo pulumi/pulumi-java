@@ -3,12 +3,12 @@
 
 package io.pulumi.azurenative.synapse.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetIntegrationRuntimeConnectionInfoResult {
     /**
      * The on-premises integration runtime host URL.
@@ -41,14 +41,14 @@ public final class GetIntegrationRuntimeConnectionInfoResult {
      */
     private final String version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetIntegrationRuntimeConnectionInfoResult(
-        @OutputCustomType.Parameter("hostServiceUri") String hostServiceUri,
-        @OutputCustomType.Parameter("identityCertThumbprint") String identityCertThumbprint,
-        @OutputCustomType.Parameter("isIdentityCertExprired") Boolean isIdentityCertExprired,
-        @OutputCustomType.Parameter("publicKey") String publicKey,
-        @OutputCustomType.Parameter("serviceToken") String serviceToken,
-        @OutputCustomType.Parameter("version") String version) {
+        @CustomType.Parameter("hostServiceUri") String hostServiceUri,
+        @CustomType.Parameter("identityCertThumbprint") String identityCertThumbprint,
+        @CustomType.Parameter("isIdentityCertExprired") Boolean isIdentityCertExprired,
+        @CustomType.Parameter("publicKey") String publicKey,
+        @CustomType.Parameter("serviceToken") String serviceToken,
+        @CustomType.Parameter("version") String version) {
         this.hostServiceUri = hostServiceUri;
         this.identityCertThumbprint = identityCertThumbprint;
         this.isIdentityCertExprired = isIdentityCertExprired;

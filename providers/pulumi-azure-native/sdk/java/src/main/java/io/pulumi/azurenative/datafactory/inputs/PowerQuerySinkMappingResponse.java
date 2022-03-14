@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.azurenative.datafactory.inputs.PowerQuerySinkResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class PowerQuerySinkMappingResponse extends io.pulumi.resources.Inv
      * List of sinks mapped to Power Query mashup query.
      * 
      */
-    @InputImport(name="dataflowSinks")
+    @Import(name="dataflowSinks")
       private final @Nullable List<PowerQuerySinkResponse> dataflowSinks;
 
     public List<PowerQuerySinkResponse> getDataflowSinks() {
@@ -35,7 +35,7 @@ public final class PowerQuerySinkMappingResponse extends io.pulumi.resources.Inv
      * Name of the query in Power Query mashup document.
      * 
      */
-    @InputImport(name="queryName")
+    @Import(name="queryName")
       private final @Nullable String queryName;
 
     public Optional<String> getQueryName() {

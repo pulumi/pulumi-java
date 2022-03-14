@@ -44,7 +44,7 @@ import io.pulumi.azurenative.datafactory.inputs.WaitActivityArgs;
 import io.pulumi.azurenative.datafactory.inputs.WebActivityArgs;
 import io.pulumi.azurenative.datafactory.inputs.WebHookActivityArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.Object;
@@ -66,7 +66,7 @@ public final class ForEachActivityArgs extends io.pulumi.resources.ResourceArgs 
      * List of activities to execute .
      * 
      */
-    @InputImport(name="activities", required=true)
+    @Import(name="activities", required=true)
       private final Output<List<Object>> activities;
 
     public Output<List<Object>> getActivities() {
@@ -77,7 +77,7 @@ public final class ForEachActivityArgs extends io.pulumi.resources.ResourceArgs 
      * Batch count to be used for controlling the number of parallel execution (when isSequential is set to false).
      * 
      */
-    @InputImport(name="batchCount")
+    @Import(name="batchCount")
       private final @Nullable Output<Integer> batchCount;
 
     public Output<Integer> getBatchCount() {
@@ -88,7 +88,7 @@ public final class ForEachActivityArgs extends io.pulumi.resources.ResourceArgs 
      * Activity depends on condition.
      * 
      */
-    @InputImport(name="dependsOn")
+    @Import(name="dependsOn")
       private final @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
 
     public Output<List<ActivityDependencyArgs>> getDependsOn() {
@@ -99,7 +99,7 @@ public final class ForEachActivityArgs extends io.pulumi.resources.ResourceArgs 
      * Activity description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -110,7 +110,7 @@ public final class ForEachActivityArgs extends io.pulumi.resources.ResourceArgs 
      * Should the loop be executed in sequence or in parallel (max 50)
      * 
      */
-    @InputImport(name="isSequential")
+    @Import(name="isSequential")
       private final @Nullable Output<Boolean> isSequential;
 
     public Output<Boolean> getIsSequential() {
@@ -121,7 +121,7 @@ public final class ForEachActivityArgs extends io.pulumi.resources.ResourceArgs 
      * Collection to iterate.
      * 
      */
-    @InputImport(name="items", required=true)
+    @Import(name="items", required=true)
       private final Output<ExpressionArgs> items;
 
     public Output<ExpressionArgs> getItems() {
@@ -132,7 +132,7 @@ public final class ForEachActivityArgs extends io.pulumi.resources.ResourceArgs 
      * Activity name.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -144,7 +144,7 @@ public final class ForEachActivityArgs extends io.pulumi.resources.ResourceArgs 
      * Expected value is 'ForEach'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {
@@ -155,7 +155,7 @@ public final class ForEachActivityArgs extends io.pulumi.resources.ResourceArgs 
      * Activity user properties.
      * 
      */
-    @InputImport(name="userProperties")
+    @Import(name="userProperties")
       private final @Nullable Output<List<UserPropertyArgs>> userProperties;
 
     public Output<List<UserPropertyArgs>> getUserProperties() {

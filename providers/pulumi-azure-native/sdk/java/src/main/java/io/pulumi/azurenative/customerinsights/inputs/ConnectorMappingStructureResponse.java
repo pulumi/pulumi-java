@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.customerinsights.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ConnectorMappingStructureResponse extends io.pulumi.resources
      * The column name of the import file.
      * 
      */
-    @InputImport(name="columnName", required=true)
+    @Import(name="columnName", required=true)
       private final String columnName;
 
     public String getColumnName() {
@@ -34,7 +34,7 @@ public final class ConnectorMappingStructureResponse extends io.pulumi.resources
      * Custom format specifier for input parsing.
      * 
      */
-    @InputImport(name="customFormatSpecifier")
+    @Import(name="customFormatSpecifier")
       private final @Nullable String customFormatSpecifier;
 
     public Optional<String> getCustomFormatSpecifier() {
@@ -45,7 +45,7 @@ public final class ConnectorMappingStructureResponse extends io.pulumi.resources
      * Indicates if the column is encrypted.
      * 
      */
-    @InputImport(name="isEncrypted")
+    @Import(name="isEncrypted")
       private final @Nullable Boolean isEncrypted;
 
     public Optional<Boolean> getIsEncrypted() {
@@ -56,7 +56,7 @@ public final class ConnectorMappingStructureResponse extends io.pulumi.resources
      * The property name of the mapping entity.
      * 
      */
-    @InputImport(name="propertyName", required=true)
+    @Import(name="propertyName", required=true)
       private final String propertyName;
 
     public String getPropertyName() {

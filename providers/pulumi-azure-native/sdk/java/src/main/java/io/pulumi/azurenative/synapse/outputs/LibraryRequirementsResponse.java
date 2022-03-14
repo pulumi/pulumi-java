@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.synapse.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class LibraryRequirementsResponse {
     /**
      * The library requirements.
@@ -27,11 +27,11 @@ public final class LibraryRequirementsResponse {
      */
     private final String time;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LibraryRequirementsResponse(
-        @OutputCustomType.Parameter("content") @Nullable String content,
-        @OutputCustomType.Parameter("filename") @Nullable String filename,
-        @OutputCustomType.Parameter("time") String time) {
+        @CustomType.Parameter("content") @Nullable String content,
+        @CustomType.Parameter("filename") @Nullable String filename,
+        @CustomType.Parameter("time") String time) {
         this.content = content;
         this.filename = filename;
         this.time = time;

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.providerhub.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -15,14 +15,14 @@ public final class SwaggerSpecificationArgs extends io.pulumi.resources.Resource
 
     public static final SwaggerSpecificationArgs Empty = new SwaggerSpecificationArgs();
 
-    @InputImport(name="apiVersions")
+    @Import(name="apiVersions")
       private final @Nullable Output<List<String>> apiVersions;
 
     public Output<List<String>> getApiVersions() {
         return this.apiVersions == null ? Output.empty() : this.apiVersions;
     }
 
-    @InputImport(name="swaggerSpecFolderUri")
+    @Import(name="swaggerSpecFolderUri")
       private final @Nullable Output<String> swaggerSpecFolderUri;
 
     public Output<String> getSwaggerSpecFolderUri() {

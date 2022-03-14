@@ -7,7 +7,7 @@ import io.pulumi.azurenative.containerregistry.inputs.ExportPipelineTargetProper
 import io.pulumi.azurenative.containerregistry.inputs.ImportPipelineSourcePropertiesResponse;
 import io.pulumi.azurenative.containerregistry.inputs.PipelineTriggerDescriptorResponse;
 import io.pulumi.azurenative.containerregistry.inputs.ProgressPropertiesResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +27,7 @@ public final class PipelineRunResponseResponse extends io.pulumi.resources.Invok
      * The digest of the tar used to transfer the artifacts.
      * 
      */
-    @InputImport(name="catalogDigest")
+    @Import(name="catalogDigest")
       private final @Nullable String catalogDigest;
 
     public Optional<String> getCatalogDigest() {
@@ -38,7 +38,7 @@ public final class PipelineRunResponseResponse extends io.pulumi.resources.Invok
      * The time the pipeline run finished.
      * 
      */
-    @InputImport(name="finishTime")
+    @Import(name="finishTime")
       private final @Nullable String finishTime;
 
     public Optional<String> getFinishTime() {
@@ -49,7 +49,7 @@ public final class PipelineRunResponseResponse extends io.pulumi.resources.Invok
      * The artifacts imported in the pipeline run.
      * 
      */
-    @InputImport(name="importedArtifacts")
+    @Import(name="importedArtifacts")
       private final @Nullable List<String> importedArtifacts;
 
     public List<String> getImportedArtifacts() {
@@ -60,7 +60,7 @@ public final class PipelineRunResponseResponse extends io.pulumi.resources.Invok
      * The detailed error message for the pipeline run in the case of failure.
      * 
      */
-    @InputImport(name="pipelineRunErrorMessage")
+    @Import(name="pipelineRunErrorMessage")
       private final @Nullable String pipelineRunErrorMessage;
 
     public Optional<String> getPipelineRunErrorMessage() {
@@ -71,7 +71,7 @@ public final class PipelineRunResponseResponse extends io.pulumi.resources.Invok
      * The current progress of the copy operation.
      * 
      */
-    @InputImport(name="progress")
+    @Import(name="progress")
       private final @Nullable ProgressPropertiesResponse progress;
 
     public Optional<ProgressPropertiesResponse> getProgress() {
@@ -82,7 +82,7 @@ public final class PipelineRunResponseResponse extends io.pulumi.resources.Invok
      * The source of the pipeline run.
      * 
      */
-    @InputImport(name="source")
+    @Import(name="source")
       private final @Nullable ImportPipelineSourcePropertiesResponse source;
 
     public Optional<ImportPipelineSourcePropertiesResponse> getSource() {
@@ -93,7 +93,7 @@ public final class PipelineRunResponseResponse extends io.pulumi.resources.Invok
      * The time the pipeline run started.
      * 
      */
-    @InputImport(name="startTime")
+    @Import(name="startTime")
       private final @Nullable String startTime;
 
     public Optional<String> getStartTime() {
@@ -104,7 +104,7 @@ public final class PipelineRunResponseResponse extends io.pulumi.resources.Invok
      * The current status of the pipeline run.
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable String status;
 
     public Optional<String> getStatus() {
@@ -115,7 +115,7 @@ public final class PipelineRunResponseResponse extends io.pulumi.resources.Invok
      * The target of the pipeline run.
      * 
      */
-    @InputImport(name="target")
+    @Import(name="target")
       private final @Nullable ExportPipelineTargetPropertiesResponse target;
 
     public Optional<ExportPipelineTargetPropertiesResponse> getTarget() {
@@ -126,7 +126,7 @@ public final class PipelineRunResponseResponse extends io.pulumi.resources.Invok
      * The trigger that caused the pipeline run.
      * 
      */
-    @InputImport(name="trigger")
+    @Import(name="trigger")
       private final @Nullable PipelineTriggerDescriptorResponse trigger;
 
     public Optional<PipelineTriggerDescriptorResponse> getTrigger() {

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.connectedvmwarevsphere.inputs;
 import io.pulumi.azurenative.connectedvmwarevsphere.enums.IdentityType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class IdentityArgs extends io.pulumi.resources.ResourceArgs {
      * The type of managed service identity.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<Either<String,IdentityType>> type;
 
     public Output<Either<String,IdentityType>> getType() {

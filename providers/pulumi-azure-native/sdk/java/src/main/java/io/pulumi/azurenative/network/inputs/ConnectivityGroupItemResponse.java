@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +18,7 @@ public final class ConnectivityGroupItemResponse extends io.pulumi.resources.Inv
      * Group connectivity type.
      * 
      */
-    @InputImport(name="groupConnectivity")
+    @Import(name="groupConnectivity")
       private final @Nullable String groupConnectivity;
 
     public Optional<String> getGroupConnectivity() {
@@ -29,7 +29,7 @@ public final class ConnectivityGroupItemResponse extends io.pulumi.resources.Inv
      * Flag if global is supported.
      * 
      */
-    @InputImport(name="isGlobal")
+    @Import(name="isGlobal")
       private final @Nullable String isGlobal;
 
     public Optional<String> getIsGlobal() {
@@ -40,7 +40,7 @@ public final class ConnectivityGroupItemResponse extends io.pulumi.resources.Inv
      * Network group Id.
      * 
      */
-    @InputImport(name="networkGroupId")
+    @Import(name="networkGroupId")
       private final @Nullable String networkGroupId;
 
     public Optional<String> getNetworkGroupId() {
@@ -51,7 +51,7 @@ public final class ConnectivityGroupItemResponse extends io.pulumi.resources.Inv
      * Flag if need to use hub gateway.
      * 
      */
-    @InputImport(name="useHubGateway")
+    @Import(name="useHubGateway")
       private final @Nullable String useHubGateway;
 
     public Optional<String> getUseHubGateway() {

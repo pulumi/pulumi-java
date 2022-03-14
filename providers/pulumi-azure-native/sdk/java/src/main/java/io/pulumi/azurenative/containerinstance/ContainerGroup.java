@@ -18,7 +18,7 @@ import io.pulumi.azurenative.containerinstance.outputs.IpAddressResponse;
 import io.pulumi.azurenative.containerinstance.outputs.VolumeResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -46,7 +46,7 @@ public class ContainerGroup extends io.pulumi.resources.CustomResource {
      * The containers within the container group.
      * 
      */
-    @OutputExport(name="containers", type=List.class, parameters={ContainerResponse.class})
+    @Export(name="containers", type=List.class, parameters={ContainerResponse.class})
     private Output<List<ContainerResponse>> containers;
 
     /**
@@ -60,7 +60,7 @@ public class ContainerGroup extends io.pulumi.resources.CustomResource {
      * The diagnostic information for a container group.
      * 
      */
-    @OutputExport(name="diagnostics", type=ContainerGroupDiagnosticsResponse.class, parameters={})
+    @Export(name="diagnostics", type=ContainerGroupDiagnosticsResponse.class, parameters={})
     private Output</* @Nullable */ ContainerGroupDiagnosticsResponse> diagnostics;
 
     /**
@@ -74,7 +74,7 @@ public class ContainerGroup extends io.pulumi.resources.CustomResource {
      * The DNS config information for a container group.
      * 
      */
-    @OutputExport(name="dnsConfig", type=DnsConfigurationResponse.class, parameters={})
+    @Export(name="dnsConfig", type=DnsConfigurationResponse.class, parameters={})
     private Output</* @Nullable */ DnsConfigurationResponse> dnsConfig;
 
     /**
@@ -88,7 +88,7 @@ public class ContainerGroup extends io.pulumi.resources.CustomResource {
      * The encryption properties for a container group.
      * 
      */
-    @OutputExport(name="encryptionProperties", type=EncryptionPropertiesResponse.class, parameters={})
+    @Export(name="encryptionProperties", type=EncryptionPropertiesResponse.class, parameters={})
     private Output</* @Nullable */ EncryptionPropertiesResponse> encryptionProperties;
 
     /**
@@ -102,7 +102,7 @@ public class ContainerGroup extends io.pulumi.resources.CustomResource {
      * The identity of the container group, if configured.
      * 
      */
-    @OutputExport(name="identity", type=ContainerGroupIdentityResponse.class, parameters={})
+    @Export(name="identity", type=ContainerGroupIdentityResponse.class, parameters={})
     private Output</* @Nullable */ ContainerGroupIdentityResponse> identity;
 
     /**
@@ -116,7 +116,7 @@ public class ContainerGroup extends io.pulumi.resources.CustomResource {
      * The image registry credentials by which the container group is created from.
      * 
      */
-    @OutputExport(name="imageRegistryCredentials", type=List.class, parameters={ImageRegistryCredentialResponse.class})
+    @Export(name="imageRegistryCredentials", type=List.class, parameters={ImageRegistryCredentialResponse.class})
     private Output</* @Nullable */ List<ImageRegistryCredentialResponse>> imageRegistryCredentials;
 
     /**
@@ -130,7 +130,7 @@ public class ContainerGroup extends io.pulumi.resources.CustomResource {
      * The init containers for a container group.
      * 
      */
-    @OutputExport(name="initContainers", type=List.class, parameters={InitContainerDefinitionResponse.class})
+    @Export(name="initContainers", type=List.class, parameters={InitContainerDefinitionResponse.class})
     private Output</* @Nullable */ List<InitContainerDefinitionResponse>> initContainers;
 
     /**
@@ -144,7 +144,7 @@ public class ContainerGroup extends io.pulumi.resources.CustomResource {
      * The instance view of the container group. Only valid in response.
      * 
      */
-    @OutputExport(name="instanceView", type=ContainerGroupResponseInstanceView.class, parameters={})
+    @Export(name="instanceView", type=ContainerGroupResponseInstanceView.class, parameters={})
     private Output<ContainerGroupResponseInstanceView> instanceView;
 
     /**
@@ -158,7 +158,7 @@ public class ContainerGroup extends io.pulumi.resources.CustomResource {
      * The IP address type of the container group.
      * 
      */
-    @OutputExport(name="ipAddress", type=IpAddressResponse.class, parameters={})
+    @Export(name="ipAddress", type=IpAddressResponse.class, parameters={})
     private Output</* @Nullable */ IpAddressResponse> ipAddress;
 
     /**
@@ -172,7 +172,7 @@ public class ContainerGroup extends io.pulumi.resources.CustomResource {
      * The resource location.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -186,7 +186,7 @@ public class ContainerGroup extends io.pulumi.resources.CustomResource {
      * The resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -200,7 +200,7 @@ public class ContainerGroup extends io.pulumi.resources.CustomResource {
      * The network profile information for a container group.
      * 
      */
-    @OutputExport(name="networkProfile", type=ContainerGroupNetworkProfileResponse.class, parameters={})
+    @Export(name="networkProfile", type=ContainerGroupNetworkProfileResponse.class, parameters={})
     private Output</* @Nullable */ ContainerGroupNetworkProfileResponse> networkProfile;
 
     /**
@@ -214,7 +214,7 @@ public class ContainerGroup extends io.pulumi.resources.CustomResource {
      * The operating system type required by the containers in the container group.
      * 
      */
-    @OutputExport(name="osType", type=String.class, parameters={})
+    @Export(name="osType", type=String.class, parameters={})
     private Output<String> osType;
 
     /**
@@ -228,7 +228,7 @@ public class ContainerGroup extends io.pulumi.resources.CustomResource {
      * The provisioning state of the container group. This only appears in the response.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -245,7 +245,7 @@ public class ContainerGroup extends io.pulumi.resources.CustomResource {
      * - `Never` Never restart
      * 
      */
-    @OutputExport(name="restartPolicy", type=String.class, parameters={})
+    @Export(name="restartPolicy", type=String.class, parameters={})
     private Output</* @Nullable */ String> restartPolicy;
 
     /**
@@ -262,7 +262,7 @@ public class ContainerGroup extends io.pulumi.resources.CustomResource {
      * The SKU for a container group.
      * 
      */
-    @OutputExport(name="sku", type=String.class, parameters={})
+    @Export(name="sku", type=String.class, parameters={})
     private Output</* @Nullable */ String> sku;
 
     /**
@@ -276,7 +276,7 @@ public class ContainerGroup extends io.pulumi.resources.CustomResource {
      * The resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -290,7 +290,7 @@ public class ContainerGroup extends io.pulumi.resources.CustomResource {
      * The resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -304,7 +304,7 @@ public class ContainerGroup extends io.pulumi.resources.CustomResource {
      * The list of volumes that can be mounted by containers in this container group.
      * 
      */
-    @OutputExport(name="volumes", type=List.class, parameters={VolumeResponse.class})
+    @Export(name="volumes", type=List.class, parameters={VolumeResponse.class})
     private Output</* @Nullable */ List<VolumeResponse>> volumes;
 
     /**

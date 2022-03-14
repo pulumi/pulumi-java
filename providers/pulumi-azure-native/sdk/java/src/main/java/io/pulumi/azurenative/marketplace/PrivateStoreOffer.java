@@ -8,7 +8,7 @@ import io.pulumi.azurenative.marketplace.PrivateStoreOfferArgs;
 import io.pulumi.azurenative.marketplace.outputs.PlanResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -37,7 +37,7 @@ public class PrivateStoreOffer extends io.pulumi.resources.CustomResource {
      * Private store offer creation date
      * 
      */
-    @OutputExport(name="createdAt", type=String.class, parameters={})
+    @Export(name="createdAt", type=String.class, parameters={})
     private Output<String> createdAt;
 
     /**
@@ -51,7 +51,7 @@ public class PrivateStoreOffer extends io.pulumi.resources.CustomResource {
      * Identifier for purposes of race condition
      * 
      */
-    @OutputExport(name="eTag", type=String.class, parameters={})
+    @Export(name="eTag", type=String.class, parameters={})
     private Output</* @Nullable */ String> eTag;
 
     /**
@@ -65,7 +65,7 @@ public class PrivateStoreOffer extends io.pulumi.resources.CustomResource {
      * Icon File Uris
      * 
      */
-    @OutputExport(name="iconFileUris", type=Map.class, parameters={String.class, String.class})
+    @Export(name="iconFileUris", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> iconFileUris;
 
     /**
@@ -79,7 +79,7 @@ public class PrivateStoreOffer extends io.pulumi.resources.CustomResource {
      * Private store offer modification date
      * 
      */
-    @OutputExport(name="modifiedAt", type=String.class, parameters={})
+    @Export(name="modifiedAt", type=String.class, parameters={})
     private Output<String> modifiedAt;
 
     /**
@@ -93,7 +93,7 @@ public class PrivateStoreOffer extends io.pulumi.resources.CustomResource {
      * The name of the resource.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -107,7 +107,7 @@ public class PrivateStoreOffer extends io.pulumi.resources.CustomResource {
      * It will be displayed prominently in the marketplace
      * 
      */
-    @OutputExport(name="offerDisplayName", type=String.class, parameters={})
+    @Export(name="offerDisplayName", type=String.class, parameters={})
     private Output<String> offerDisplayName;
 
     /**
@@ -121,7 +121,7 @@ public class PrivateStoreOffer extends io.pulumi.resources.CustomResource {
      * Offer plans
      * 
      */
-    @OutputExport(name="plans", type=List.class, parameters={PlanResponse.class})
+    @Export(name="plans", type=List.class, parameters={PlanResponse.class})
     private Output</* @Nullable */ List<PlanResponse>> plans;
 
     /**
@@ -135,7 +135,7 @@ public class PrivateStoreOffer extends io.pulumi.resources.CustomResource {
      * Private store unique id
      * 
      */
-    @OutputExport(name="privateStoreId", type=String.class, parameters={})
+    @Export(name="privateStoreId", type=String.class, parameters={})
     private Output<String> privateStoreId;
 
     /**
@@ -149,7 +149,7 @@ public class PrivateStoreOffer extends io.pulumi.resources.CustomResource {
      * Publisher name that will be displayed prominently in the marketplace
      * 
      */
-    @OutputExport(name="publisherDisplayName", type=String.class, parameters={})
+    @Export(name="publisherDisplayName", type=String.class, parameters={})
     private Output<String> publisherDisplayName;
 
     /**
@@ -163,7 +163,7 @@ public class PrivateStoreOffer extends io.pulumi.resources.CustomResource {
      * Plan ids limitation for this offer
      * 
      */
-    @OutputExport(name="specificPlanIdsLimitation", type=List.class, parameters={String.class})
+    @Export(name="specificPlanIdsLimitation", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> specificPlanIdsLimitation;
 
     /**
@@ -177,7 +177,7 @@ public class PrivateStoreOffer extends io.pulumi.resources.CustomResource {
      * The type of the resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -191,7 +191,7 @@ public class PrivateStoreOffer extends io.pulumi.resources.CustomResource {
      * Offers unique id
      * 
      */
-    @OutputExport(name="uniqueOfferId", type=String.class, parameters={})
+    @Export(name="uniqueOfferId", type=String.class, parameters={})
     private Output<String> uniqueOfferId;
 
     /**
@@ -205,7 +205,7 @@ public class PrivateStoreOffer extends io.pulumi.resources.CustomResource {
      * Indicating whether the offer was not updated to db (true = not updated). If the allow list is identical to the existed one in db, the offer would not be updated.
      * 
      */
-    @OutputExport(name="updateSuppressedDueIdempotence", type=Boolean.class, parameters={})
+    @Export(name="updateSuppressedDueIdempotence", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> updateSuppressedDueIdempotence;
 
     /**

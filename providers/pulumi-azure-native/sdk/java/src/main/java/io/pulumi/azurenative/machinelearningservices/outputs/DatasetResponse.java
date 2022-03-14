@@ -5,7 +5,7 @@ package io.pulumi.azurenative.machinelearningservices.outputs;
 
 import io.pulumi.azurenative.machinelearningservices.outputs.DatasetResponseLatest;
 import io.pulumi.azurenative.machinelearningservices.outputs.DatasetStateResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DatasetResponse {
     /**
      * The dataset creation time (UTC).
@@ -76,20 +76,20 @@ public final class DatasetResponse {
      */
     private final Map<String,String> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DatasetResponse(
-        @OutputCustomType.Parameter("createdTime") String createdTime,
-        @OutputCustomType.Parameter("datasetId") String datasetId,
-        @OutputCustomType.Parameter("datasetState") @Nullable DatasetStateResponse datasetState,
-        @OutputCustomType.Parameter("datasetType") String datasetType,
-        @OutputCustomType.Parameter("defaultCompute") String defaultCompute,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("isVisible") Boolean isVisible,
-        @OutputCustomType.Parameter("latest") @Nullable DatasetResponseLatest latest,
-        @OutputCustomType.Parameter("modifiedTime") String modifiedTime,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("tags") Map<String,String> tags) {
+        @CustomType.Parameter("createdTime") String createdTime,
+        @CustomType.Parameter("datasetId") String datasetId,
+        @CustomType.Parameter("datasetState") @Nullable DatasetStateResponse datasetState,
+        @CustomType.Parameter("datasetType") String datasetType,
+        @CustomType.Parameter("defaultCompute") String defaultCompute,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("isVisible") Boolean isVisible,
+        @CustomType.Parameter("latest") @Nullable DatasetResponseLatest latest,
+        @CustomType.Parameter("modifiedTime") String modifiedTime,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("tags") Map<String,String> tags) {
         this.createdTime = createdTime;
         this.datasetId = datasetId;
         this.datasetState = datasetState;

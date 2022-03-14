@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.containerregistry.inputs;
 
 import io.pulumi.azurenative.containerregistry.inputs.ImageDescriptorResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ImageUpdateTriggerResponse extends io.pulumi.resources.Invoke
      * The unique ID of the trigger.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable String id;
 
     public Optional<String> getId() {
@@ -35,7 +35,7 @@ public final class ImageUpdateTriggerResponse extends io.pulumi.resources.Invoke
      * The list of image updates that caused the build.
      * 
      */
-    @InputImport(name="images")
+    @Import(name="images")
       private final @Nullable List<ImageDescriptorResponse> images;
 
     public List<ImageDescriptorResponse> getImages() {
@@ -46,7 +46,7 @@ public final class ImageUpdateTriggerResponse extends io.pulumi.resources.Invoke
      * The timestamp when the image update happened.
      * 
      */
-    @InputImport(name="timestamp")
+    @Import(name="timestamp")
       private final @Nullable String timestamp;
 
     public Optional<String> getTimestamp() {

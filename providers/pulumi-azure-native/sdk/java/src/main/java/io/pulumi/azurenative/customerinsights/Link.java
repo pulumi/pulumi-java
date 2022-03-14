@@ -9,7 +9,7 @@ import io.pulumi.azurenative.customerinsights.outputs.ParticipantPropertyReferen
 import io.pulumi.azurenative.customerinsights.outputs.TypePropertiesMappingResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -38,7 +38,7 @@ public class Link extends io.pulumi.resources.CustomResource {
      * Localized descriptions for the Link.
      * 
      */
-    @OutputExport(name="description", type=Map.class, parameters={String.class, String.class})
+    @Export(name="description", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> description;
 
     /**
@@ -52,7 +52,7 @@ public class Link extends io.pulumi.resources.CustomResource {
      * Localized display name for the Link.
      * 
      */
-    @OutputExport(name="displayName", type=Map.class, parameters={String.class, String.class})
+    @Export(name="displayName", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> displayName;
 
     /**
@@ -66,7 +66,7 @@ public class Link extends io.pulumi.resources.CustomResource {
      * The link name.
      * 
      */
-    @OutputExport(name="linkName", type=String.class, parameters={})
+    @Export(name="linkName", type=String.class, parameters={})
     private Output<String> linkName;
 
     /**
@@ -80,7 +80,7 @@ public class Link extends io.pulumi.resources.CustomResource {
      * The set of properties mappings between the source and target Types.
      * 
      */
-    @OutputExport(name="mappings", type=List.class, parameters={TypePropertiesMappingResponse.class})
+    @Export(name="mappings", type=List.class, parameters={TypePropertiesMappingResponse.class})
     private Output</* @Nullable */ List<TypePropertiesMappingResponse>> mappings;
 
     /**
@@ -94,7 +94,7 @@ public class Link extends io.pulumi.resources.CustomResource {
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -108,7 +108,7 @@ public class Link extends io.pulumi.resources.CustomResource {
      * Determines whether this link is supposed to create or delete instances if Link is NOT Reference Only.
      * 
      */
-    @OutputExport(name="operationType", type=String.class, parameters={})
+    @Export(name="operationType", type=String.class, parameters={})
     private Output</* @Nullable */ String> operationType;
 
     /**
@@ -122,7 +122,7 @@ public class Link extends io.pulumi.resources.CustomResource {
      * The properties that represent the participating profile.
      * 
      */
-    @OutputExport(name="participantPropertyReferences", type=List.class, parameters={ParticipantPropertyReferenceResponse.class})
+    @Export(name="participantPropertyReferences", type=List.class, parameters={ParticipantPropertyReferenceResponse.class})
     private Output<List<ParticipantPropertyReferenceResponse>> participantPropertyReferences;
 
     /**
@@ -136,7 +136,7 @@ public class Link extends io.pulumi.resources.CustomResource {
      * Provisioning state.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -150,7 +150,7 @@ public class Link extends io.pulumi.resources.CustomResource {
      * Indicating whether the link is reference only link. This flag is ignored if the Mappings are defined. If the mappings are not defined and it is set to true, links processing will not create or update profiles.
      * 
      */
-    @OutputExport(name="referenceOnly", type=Boolean.class, parameters={})
+    @Export(name="referenceOnly", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> referenceOnly;
 
     /**
@@ -164,7 +164,7 @@ public class Link extends io.pulumi.resources.CustomResource {
      * Type of source entity.
      * 
      */
-    @OutputExport(name="sourceEntityType", type=String.class, parameters={})
+    @Export(name="sourceEntityType", type=String.class, parameters={})
     private Output<String> sourceEntityType;
 
     /**
@@ -178,7 +178,7 @@ public class Link extends io.pulumi.resources.CustomResource {
      * Name of the source Entity Type.
      * 
      */
-    @OutputExport(name="sourceEntityTypeName", type=String.class, parameters={})
+    @Export(name="sourceEntityTypeName", type=String.class, parameters={})
     private Output<String> sourceEntityTypeName;
 
     /**
@@ -192,7 +192,7 @@ public class Link extends io.pulumi.resources.CustomResource {
      * Type of target entity.
      * 
      */
-    @OutputExport(name="targetEntityType", type=String.class, parameters={})
+    @Export(name="targetEntityType", type=String.class, parameters={})
     private Output<String> targetEntityType;
 
     /**
@@ -206,7 +206,7 @@ public class Link extends io.pulumi.resources.CustomResource {
      * Name of the target Entity Type.
      * 
      */
-    @OutputExport(name="targetEntityTypeName", type=String.class, parameters={})
+    @Export(name="targetEntityTypeName", type=String.class, parameters={})
     private Output<String> targetEntityTypeName;
 
     /**
@@ -220,7 +220,7 @@ public class Link extends io.pulumi.resources.CustomResource {
      * The hub name.
      * 
      */
-    @OutputExport(name="tenantId", type=String.class, parameters={})
+    @Export(name="tenantId", type=String.class, parameters={})
     private Output<String> tenantId;
 
     /**
@@ -234,7 +234,7 @@ public class Link extends io.pulumi.resources.CustomResource {
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

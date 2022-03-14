@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.storagecache.inputs;
 
 import io.pulumi.azurenative.storagecache.inputs.ConditionResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class CacheHealthResponse extends io.pulumi.resources.InvokeArgs {
      * Outstanding conditions that need to be investigated and resolved.
      * 
      */
-    @InputImport(name="conditions", required=true)
+    @Import(name="conditions", required=true)
       private final List<ConditionResponse> conditions;
 
     public List<ConditionResponse> getConditions() {
@@ -35,7 +35,7 @@ public final class CacheHealthResponse extends io.pulumi.resources.InvokeArgs {
      * List of Cache health states.
      * 
      */
-    @InputImport(name="state")
+    @Import(name="state")
       private final @Nullable String state;
 
     public Optional<String> getState() {
@@ -46,7 +46,7 @@ public final class CacheHealthResponse extends io.pulumi.resources.InvokeArgs {
      * Describes explanation of state.
      * 
      */
-    @InputImport(name="statusDescription")
+    @Import(name="statusDescription")
       private final @Nullable String statusDescription;
 
     public Optional<String> getStatusDescription() {

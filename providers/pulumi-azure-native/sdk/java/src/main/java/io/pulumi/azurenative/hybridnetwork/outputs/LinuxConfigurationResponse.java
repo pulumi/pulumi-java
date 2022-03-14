@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.hybridnetwork.outputs;
 
 import io.pulumi.azurenative.hybridnetwork.outputs.SshConfigurationResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class LinuxConfigurationResponse {
     /**
      * Specifies the ssh key configuration for a Linux OS.
@@ -17,8 +17,8 @@ public final class LinuxConfigurationResponse {
      */
     private final @Nullable SshConfigurationResponse ssh;
 
-    @OutputCustomType.Constructor
-    private LinuxConfigurationResponse(@OutputCustomType.Parameter("ssh") @Nullable SshConfigurationResponse ssh) {
+    @CustomType.Constructor
+    private LinuxConfigurationResponse(@CustomType.Parameter("ssh") @Nullable SshConfigurationResponse ssh) {
         this.ssh = ssh;
     }
 

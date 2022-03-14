@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storagesync.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class CloudTieringVolumeFreeSpacePolicyStatusResponse extends io.pu
      * Current volume free space percentage.
      * 
      */
-    @InputImport(name="currentVolumeFreeSpacePercent", required=true)
+    @Import(name="currentVolumeFreeSpacePercent", required=true)
       private final Integer currentVolumeFreeSpacePercent;
 
     public Integer getCurrentVolumeFreeSpacePercent() {
@@ -32,7 +32,7 @@ public final class CloudTieringVolumeFreeSpacePolicyStatusResponse extends io.pu
      * In the case where multiple server endpoints are present in a volume, an effective free space policy is applied.
      * 
      */
-    @InputImport(name="effectiveVolumeFreeSpacePolicy", required=true)
+    @Import(name="effectiveVolumeFreeSpacePolicy", required=true)
       private final Integer effectiveVolumeFreeSpacePolicy;
 
     public Integer getEffectiveVolumeFreeSpacePolicy() {
@@ -43,7 +43,7 @@ public final class CloudTieringVolumeFreeSpacePolicyStatusResponse extends io.pu
      * Last updated timestamp
      * 
      */
-    @InputImport(name="lastUpdatedTimestamp", required=true)
+    @Import(name="lastUpdatedTimestamp", required=true)
       private final String lastUpdatedTimestamp;
 
     public String getLastUpdatedTimestamp() {

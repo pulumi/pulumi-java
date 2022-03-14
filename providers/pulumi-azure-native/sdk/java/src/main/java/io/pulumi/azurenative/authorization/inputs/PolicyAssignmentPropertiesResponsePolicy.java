@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.authorization.inputs;
 
 import io.pulumi.azurenative.authorization.inputs.PrincipalResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class PolicyAssignmentPropertiesResponsePolicy extends io.pulumi.re
      * Id of the policy
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable String id;
 
     public Optional<String> getId() {
@@ -34,7 +34,7 @@ public final class PolicyAssignmentPropertiesResponsePolicy extends io.pulumi.re
      * The name of the entity last modified it
      * 
      */
-    @InputImport(name="lastModifiedBy", required=true)
+    @Import(name="lastModifiedBy", required=true)
       private final PrincipalResponse lastModifiedBy;
 
     public PrincipalResponse getLastModifiedBy() {
@@ -45,7 +45,7 @@ public final class PolicyAssignmentPropertiesResponsePolicy extends io.pulumi.re
      * The last modified date time.
      * 
      */
-    @InputImport(name="lastModifiedDateTime")
+    @Import(name="lastModifiedDateTime")
       private final @Nullable String lastModifiedDateTime;
 
     public Optional<String> getLastModifiedDateTime() {

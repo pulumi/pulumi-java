@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.datafactory.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AzureDatabricksDeltaLakeImportCommandResponse {
     /**
      * Specify the date format for csv in Azure Databricks Delta Lake Copy. Type: string (or Expression with resultType string).
@@ -29,11 +29,11 @@ public final class AzureDatabricksDeltaLakeImportCommandResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AzureDatabricksDeltaLakeImportCommandResponse(
-        @OutputCustomType.Parameter("dateFormat") @Nullable Object dateFormat,
-        @OutputCustomType.Parameter("timestampFormat") @Nullable Object timestampFormat,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("dateFormat") @Nullable Object dateFormat,
+        @CustomType.Parameter("timestampFormat") @Nullable Object timestampFormat,
+        @CustomType.Parameter("type") String type) {
         this.dateFormat = dateFormat;
         this.timestampFormat = timestampFormat;
         this.type = type;

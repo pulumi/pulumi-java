@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.hanaonazure.ProviderInstanceArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -34,7 +34,7 @@ public class ProviderInstance extends io.pulumi.resources.CustomResource {
      * A JSON string containing metadata of the provider instance.
      * 
      */
-    @OutputExport(name="metadata", type=String.class, parameters={})
+    @Export(name="metadata", type=String.class, parameters={})
     private Output</* @Nullable */ String> metadata;
 
     /**
@@ -48,7 +48,7 @@ public class ProviderInstance extends io.pulumi.resources.CustomResource {
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -62,7 +62,7 @@ public class ProviderInstance extends io.pulumi.resources.CustomResource {
      * A JSON string containing the properties of the provider instance.
      * 
      */
-    @OutputExport(name="properties", type=String.class, parameters={})
+    @Export(name="properties", type=String.class, parameters={})
     private Output<String> properties;
 
     /**
@@ -76,7 +76,7 @@ public class ProviderInstance extends io.pulumi.resources.CustomResource {
      * State of provisioning of the provider instance
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -90,7 +90,7 @@ public class ProviderInstance extends io.pulumi.resources.CustomResource {
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

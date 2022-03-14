@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.insights.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DataCollectionEndpointResponseLogsIngestion {
     /**
      * The endpoint. This property is READ-ONLY.
@@ -15,8 +15,8 @@ public final class DataCollectionEndpointResponseLogsIngestion {
      */
     private final String endpoint;
 
-    @OutputCustomType.Constructor
-    private DataCollectionEndpointResponseLogsIngestion(@OutputCustomType.Parameter("endpoint") String endpoint) {
+    @CustomType.Constructor
+    private DataCollectionEndpointResponseLogsIngestion(@CustomType.Parameter("endpoint") String endpoint) {
         this.endpoint = endpoint;
     }
 

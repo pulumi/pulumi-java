@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.powerplatform.outputs;
 
 import io.pulumi.azurenative.powerplatform.outputs.VirtualNetworkPropertiesListResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PropertiesResponseNetworkInjection {
     /**
      * Network injection configuration
@@ -17,8 +17,8 @@ public final class PropertiesResponseNetworkInjection {
      */
     private final @Nullable VirtualNetworkPropertiesListResponse virtualNetworks;
 
-    @OutputCustomType.Constructor
-    private PropertiesResponseNetworkInjection(@OutputCustomType.Parameter("virtualNetworks") @Nullable VirtualNetworkPropertiesListResponse virtualNetworks) {
+    @CustomType.Constructor
+    private PropertiesResponseNetworkInjection(@CustomType.Parameter("virtualNetworks") @Nullable VirtualNetworkPropertiesListResponse virtualNetworks) {
         this.virtualNetworks = virtualNetworks;
     }
 

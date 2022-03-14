@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ConnStringValueTypePairResponse {
     /**
      * Type of database.
@@ -20,10 +20,10 @@ public final class ConnStringValueTypePairResponse {
      */
     private final String value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ConnStringValueTypePairResponse(
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("value") String value) {
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("value") String value) {
         this.type = type;
         this.value = value;
     }

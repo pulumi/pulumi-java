@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.dataprotection.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AbsoluteDeleteOptionResponse {
     /**
      * Duration of deletion after given timespan
@@ -21,10 +21,10 @@ public final class AbsoluteDeleteOptionResponse {
      */
     private final String objectType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AbsoluteDeleteOptionResponse(
-        @OutputCustomType.Parameter("duration") String duration,
-        @OutputCustomType.Parameter("objectType") String objectType) {
+        @CustomType.Parameter("duration") String duration,
+        @CustomType.Parameter("objectType") String objectType) {
         this.duration = duration;
         this.objectType = objectType;
     }

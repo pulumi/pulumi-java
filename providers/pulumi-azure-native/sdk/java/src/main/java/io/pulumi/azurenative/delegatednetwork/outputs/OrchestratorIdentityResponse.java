@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.delegatednetwork.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class OrchestratorIdentityResponse {
     /**
      * The principal id of the system assigned identity which is used by orchestrator.
@@ -27,11 +27,11 @@ public final class OrchestratorIdentityResponse {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private OrchestratorIdentityResponse(
-        @OutputCustomType.Parameter("principalId") String principalId,
-        @OutputCustomType.Parameter("tenantId") String tenantId,
-        @OutputCustomType.Parameter("type") @Nullable String type) {
+        @CustomType.Parameter("principalId") String principalId,
+        @CustomType.Parameter("tenantId") String tenantId,
+        @CustomType.Parameter("type") @Nullable String type) {
         this.principalId = principalId;
         this.tenantId = tenantId;
         this.type = type;

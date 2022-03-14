@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class NonceResponse {
     /**
      * The time after the request is made when the nonce should expire.
@@ -23,10 +23,10 @@ public final class NonceResponse {
      */
     private final @Nullable Boolean validateNonce;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NonceResponse(
-        @OutputCustomType.Parameter("nonceExpirationInterval") @Nullable String nonceExpirationInterval,
-        @OutputCustomType.Parameter("validateNonce") @Nullable Boolean validateNonce) {
+        @CustomType.Parameter("nonceExpirationInterval") @Nullable String nonceExpirationInterval,
+        @CustomType.Parameter("validateNonce") @Nullable Boolean validateNonce) {
         this.nonceExpirationInterval = nonceExpirationInterval;
         this.validateNonce = validateNonce;
     }

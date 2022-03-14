@@ -25,7 +25,7 @@ import io.pulumi.azurenative.cdn.outputs.OriginGroupOverrideActionResponse;
 import io.pulumi.azurenative.cdn.outputs.UrlRedirectActionResponse;
 import io.pulumi.azurenative.cdn.outputs.UrlRewriteActionResponse;
 import io.pulumi.azurenative.cdn.outputs.UrlSigningActionResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -34,7 +34,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DeliveryRuleResponse {
     /**
      * A list of actions that are executed when all the conditions of a rule are satisfied.
@@ -57,12 +57,12 @@ public final class DeliveryRuleResponse {
      */
     private final Integer order;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DeliveryRuleResponse(
-        @OutputCustomType.Parameter("actions") List<Object> actions,
-        @OutputCustomType.Parameter("conditions") @Nullable List<Object> conditions,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("order") Integer order) {
+        @CustomType.Parameter("actions") List<Object> actions,
+        @CustomType.Parameter("conditions") @Nullable List<Object> conditions,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("order") Integer order) {
         this.actions = actions;
         this.conditions = conditions;
         this.name = name;

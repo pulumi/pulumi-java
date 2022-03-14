@@ -4,10 +4,10 @@
 package io.pulumi.azurenative.portal.outputs;
 
 import io.pulumi.azurenative.portal.outputs.UserPropertiesResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetUserSettingsResult {
     /**
      * The cloud shell user settings properties.
@@ -15,8 +15,8 @@ public final class GetUserSettingsResult {
      */
     private final UserPropertiesResponse properties;
 
-    @OutputCustomType.Constructor
-    private GetUserSettingsResult(@OutputCustomType.Parameter("properties") UserPropertiesResponse properties) {
+    @CustomType.Constructor
+    private GetUserSettingsResult(@CustomType.Parameter("properties") UserPropertiesResponse properties) {
         this.properties = properties;
     }
 

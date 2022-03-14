@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.azurearcdata.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class LogAnalyticsWorkspaceConfigArgs extends io.pulumi.resources.R
      * Primary key of the workspace
      * 
      */
-    @InputImport(name="primaryKey")
+    @Import(name="primaryKey")
       private final @Nullable Output<String> primaryKey;
 
     public Output<String> getPrimaryKey() {
@@ -33,7 +33,7 @@ public final class LogAnalyticsWorkspaceConfigArgs extends io.pulumi.resources.R
      * Azure Log Analytics workspace ID
      * 
      */
-    @InputImport(name="workspaceId")
+    @Import(name="workspaceId")
       private final @Nullable Output<String> workspaceId;
 
     public Output<String> getWorkspaceId() {

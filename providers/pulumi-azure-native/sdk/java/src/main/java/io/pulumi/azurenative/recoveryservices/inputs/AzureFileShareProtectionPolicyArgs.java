@@ -11,7 +11,7 @@ import io.pulumi.azurenative.recoveryservices.inputs.SimpleRetentionPolicyArgs;
 import io.pulumi.azurenative.recoveryservices.inputs.SimpleSchedulePolicyArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -32,7 +32,7 @@ public final class AzureFileShareProtectionPolicyArgs extends io.pulumi.resource
      * Expected value is 'AzureStorage'.
      * 
      */
-    @InputImport(name="backupManagementType", required=true)
+    @Import(name="backupManagementType", required=true)
       private final Output<String> backupManagementType;
 
     public Output<String> getBackupManagementType() {
@@ -43,7 +43,7 @@ public final class AzureFileShareProtectionPolicyArgs extends io.pulumi.resource
      * Number of items associated with this policy.
      * 
      */
-    @InputImport(name="protectedItemsCount")
+    @Import(name="protectedItemsCount")
       private final @Nullable Output<Integer> protectedItemsCount;
 
     public Output<Integer> getProtectedItemsCount() {
@@ -54,7 +54,7 @@ public final class AzureFileShareProtectionPolicyArgs extends io.pulumi.resource
      * Retention policy with the details on backup copy retention ranges.
      * 
      */
-    @InputImport(name="retentionPolicy")
+    @Import(name="retentionPolicy")
       private final @Nullable Output<Either<LongTermRetentionPolicyArgs,SimpleRetentionPolicyArgs>> retentionPolicy;
 
     public Output<Either<LongTermRetentionPolicyArgs,SimpleRetentionPolicyArgs>> getRetentionPolicy() {
@@ -65,7 +65,7 @@ public final class AzureFileShareProtectionPolicyArgs extends io.pulumi.resource
      * Backup schedule specified as part of backup policy.
      * 
      */
-    @InputImport(name="schedulePolicy")
+    @Import(name="schedulePolicy")
       private final @Nullable Output<Object> schedulePolicy;
 
     public Output<Object> getSchedulePolicy() {
@@ -76,7 +76,7 @@ public final class AzureFileShareProtectionPolicyArgs extends io.pulumi.resource
      * TimeZone optional input as string. For example: TimeZone = "Pacific Standard Time".
      * 
      */
-    @InputImport(name="timeZone")
+    @Import(name="timeZone")
       private final @Nullable Output<String> timeZone;
 
     public Output<String> getTimeZone() {
@@ -87,7 +87,7 @@ public final class AzureFileShareProtectionPolicyArgs extends io.pulumi.resource
      * Type of workload for the backup management
      * 
      */
-    @InputImport(name="workLoadType")
+    @Import(name="workLoadType")
       private final @Nullable Output<Either<String,WorkloadType>> workLoadType;
 
     public Output<Either<String,WorkloadType>> getWorkLoadType() {

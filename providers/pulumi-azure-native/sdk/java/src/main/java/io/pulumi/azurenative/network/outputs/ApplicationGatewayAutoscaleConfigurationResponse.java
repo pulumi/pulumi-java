@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ApplicationGatewayAutoscaleConfigurationResponse {
     /**
      * Upper bound on number of Application Gateway capacity.
@@ -22,10 +22,10 @@ public final class ApplicationGatewayAutoscaleConfigurationResponse {
      */
     private final Integer minCapacity;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ApplicationGatewayAutoscaleConfigurationResponse(
-        @OutputCustomType.Parameter("maxCapacity") @Nullable Integer maxCapacity,
-        @OutputCustomType.Parameter("minCapacity") Integer minCapacity) {
+        @CustomType.Parameter("maxCapacity") @Nullable Integer maxCapacity,
+        @CustomType.Parameter("minCapacity") Integer minCapacity) {
         this.maxCapacity = maxCapacity;
         this.minCapacity = minCapacity;
     }

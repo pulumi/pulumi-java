@@ -9,7 +9,7 @@ import io.pulumi.azurenative.datafactory.outputs.LinkedServiceReferenceResponse;
 import io.pulumi.azurenative.datafactory.outputs.ParameterSpecificationResponse;
 import io.pulumi.azurenative.datafactory.outputs.SecureStringResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -18,7 +18,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class HDInsightLinkedServiceResponse {
     /**
      * List of tags that can be used for describing the linked service.
@@ -87,21 +87,21 @@ public final class HDInsightLinkedServiceResponse {
      */
     private final @Nullable Object userName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private HDInsightLinkedServiceResponse(
-        @OutputCustomType.Parameter("annotations") @Nullable List<Object> annotations,
-        @OutputCustomType.Parameter("clusterUri") Object clusterUri,
-        @OutputCustomType.Parameter("connectVia") @Nullable IntegrationRuntimeReferenceResponse connectVia,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("encryptedCredential") @Nullable Object encryptedCredential,
-        @OutputCustomType.Parameter("fileSystem") @Nullable Object fileSystem,
-        @OutputCustomType.Parameter("hcatalogLinkedServiceName") @Nullable LinkedServiceReferenceResponse hcatalogLinkedServiceName,
-        @OutputCustomType.Parameter("isEspEnabled") @Nullable Object isEspEnabled,
-        @OutputCustomType.Parameter("linkedServiceName") @Nullable LinkedServiceReferenceResponse linkedServiceName,
-        @OutputCustomType.Parameter("parameters") @Nullable Map<String,ParameterSpecificationResponse> parameters,
-        @OutputCustomType.Parameter("password") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("userName") @Nullable Object userName) {
+        @CustomType.Parameter("annotations") @Nullable List<Object> annotations,
+        @CustomType.Parameter("clusterUri") Object clusterUri,
+        @CustomType.Parameter("connectVia") @Nullable IntegrationRuntimeReferenceResponse connectVia,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("encryptedCredential") @Nullable Object encryptedCredential,
+        @CustomType.Parameter("fileSystem") @Nullable Object fileSystem,
+        @CustomType.Parameter("hcatalogLinkedServiceName") @Nullable LinkedServiceReferenceResponse hcatalogLinkedServiceName,
+        @CustomType.Parameter("isEspEnabled") @Nullable Object isEspEnabled,
+        @CustomType.Parameter("linkedServiceName") @Nullable LinkedServiceReferenceResponse linkedServiceName,
+        @CustomType.Parameter("parameters") @Nullable Map<String,ParameterSpecificationResponse> parameters,
+        @CustomType.Parameter("password") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("userName") @Nullable Object userName) {
         this.annotations = annotations;
         this.clusterUri = clusterUri;
         this.connectVia = connectVia;

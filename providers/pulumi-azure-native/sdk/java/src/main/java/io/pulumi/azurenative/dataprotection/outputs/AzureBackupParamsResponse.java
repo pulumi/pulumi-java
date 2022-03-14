@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.dataprotection.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AzureBackupParamsResponse {
     /**
      * BackupType ; Full/Incremental etc
@@ -21,10 +21,10 @@ public final class AzureBackupParamsResponse {
      */
     private final String objectType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AzureBackupParamsResponse(
-        @OutputCustomType.Parameter("backupType") String backupType,
-        @OutputCustomType.Parameter("objectType") String objectType) {
+        @CustomType.Parameter("backupType") String backupType,
+        @CustomType.Parameter("objectType") String objectType) {
         this.backupType = backupType;
         this.objectType = objectType;
     }

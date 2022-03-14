@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.appplatform.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class BuildpackBindingLaunchPropertiesResponse extends io.pulumi.re
      * Non-sensitive properties for launchProperties
      * 
      */
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable Map<String,String> properties;
 
     public Map<String,String> getProperties() {
@@ -34,7 +34,7 @@ public final class BuildpackBindingLaunchPropertiesResponse extends io.pulumi.re
      * Sensitive properties for launchProperties
      * 
      */
-    @InputImport(name="secrets")
+    @Import(name="secrets")
       private final @Nullable Map<String,String> secrets;
 
     public Map<String,String> getSecrets() {

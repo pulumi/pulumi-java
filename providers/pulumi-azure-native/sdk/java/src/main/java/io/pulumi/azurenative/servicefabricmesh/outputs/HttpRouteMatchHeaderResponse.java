@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.servicefabricmesh.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class HttpRouteMatchHeaderResponse {
     /**
      * Name of header to match in request.
@@ -27,11 +27,11 @@ public final class HttpRouteMatchHeaderResponse {
      */
     private final @Nullable String value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private HttpRouteMatchHeaderResponse(
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("type") @Nullable String type,
-        @OutputCustomType.Parameter("value") @Nullable String value) {
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("type") @Nullable String type,
+        @CustomType.Parameter("value") @Nullable String value) {
         this.name = name;
         this.type = type;
         this.value = value;

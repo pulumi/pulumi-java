@@ -9,7 +9,7 @@ import io.pulumi.azurenative.datafactory.outputs.IntegrationRuntimeReferenceResp
 import io.pulumi.azurenative.datafactory.outputs.ParameterSpecificationResponse;
 import io.pulumi.azurenative.datafactory.outputs.SecureStringResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -18,7 +18,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AzureBlobStorageLinkedServiceResponse {
     /**
      * The Azure key vault secret reference of accountKey in connection string.
@@ -107,25 +107,25 @@ public final class AzureBlobStorageLinkedServiceResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AzureBlobStorageLinkedServiceResponse(
-        @OutputCustomType.Parameter("accountKey") @Nullable AzureKeyVaultSecretReferenceResponse accountKey,
-        @OutputCustomType.Parameter("accountKind") @Nullable String accountKind,
-        @OutputCustomType.Parameter("annotations") @Nullable List<Object> annotations,
-        @OutputCustomType.Parameter("azureCloudType") @Nullable Object azureCloudType,
-        @OutputCustomType.Parameter("connectVia") @Nullable IntegrationRuntimeReferenceResponse connectVia,
-        @OutputCustomType.Parameter("connectionString") @Nullable Object connectionString,
-        @OutputCustomType.Parameter("credential") @Nullable CredentialReferenceResponse credential,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("encryptedCredential") @Nullable String encryptedCredential,
-        @OutputCustomType.Parameter("parameters") @Nullable Map<String,ParameterSpecificationResponse> parameters,
-        @OutputCustomType.Parameter("sasToken") @Nullable AzureKeyVaultSecretReferenceResponse sasToken,
-        @OutputCustomType.Parameter("sasUri") @Nullable Object sasUri,
-        @OutputCustomType.Parameter("serviceEndpoint") @Nullable String serviceEndpoint,
-        @OutputCustomType.Parameter("servicePrincipalId") @Nullable Object servicePrincipalId,
-        @OutputCustomType.Parameter("servicePrincipalKey") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey,
-        @OutputCustomType.Parameter("tenant") @Nullable Object tenant,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("accountKey") @Nullable AzureKeyVaultSecretReferenceResponse accountKey,
+        @CustomType.Parameter("accountKind") @Nullable String accountKind,
+        @CustomType.Parameter("annotations") @Nullable List<Object> annotations,
+        @CustomType.Parameter("azureCloudType") @Nullable Object azureCloudType,
+        @CustomType.Parameter("connectVia") @Nullable IntegrationRuntimeReferenceResponse connectVia,
+        @CustomType.Parameter("connectionString") @Nullable Object connectionString,
+        @CustomType.Parameter("credential") @Nullable CredentialReferenceResponse credential,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("encryptedCredential") @Nullable String encryptedCredential,
+        @CustomType.Parameter("parameters") @Nullable Map<String,ParameterSpecificationResponse> parameters,
+        @CustomType.Parameter("sasToken") @Nullable AzureKeyVaultSecretReferenceResponse sasToken,
+        @CustomType.Parameter("sasUri") @Nullable Object sasUri,
+        @CustomType.Parameter("serviceEndpoint") @Nullable String serviceEndpoint,
+        @CustomType.Parameter("servicePrincipalId") @Nullable Object servicePrincipalId,
+        @CustomType.Parameter("servicePrincipalKey") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey,
+        @CustomType.Parameter("tenant") @Nullable Object tenant,
+        @CustomType.Parameter("type") String type) {
         this.accountKey = accountKey;
         this.accountKind = accountKind;
         this.annotations = annotations;

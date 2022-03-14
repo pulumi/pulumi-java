@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.logic.outputs;
 
 import io.pulumi.azurenative.logic.outputs.ContentLinkResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AssemblyPropertiesResponse {
     /**
      * The assembly culture.
@@ -56,18 +56,18 @@ public final class AssemblyPropertiesResponse {
     private final @Nullable String createdTime;
     private final @Nullable Object metadata;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AssemblyPropertiesResponse(
-        @OutputCustomType.Parameter("assemblyCulture") @Nullable String assemblyCulture,
-        @OutputCustomType.Parameter("assemblyName") String assemblyName,
-        @OutputCustomType.Parameter("assemblyPublicKeyToken") @Nullable String assemblyPublicKeyToken,
-        @OutputCustomType.Parameter("assemblyVersion") @Nullable String assemblyVersion,
-        @OutputCustomType.Parameter("changedTime") @Nullable String changedTime,
-        @OutputCustomType.Parameter("content") @Nullable Object content,
-        @OutputCustomType.Parameter("contentLink") @Nullable ContentLinkResponse contentLink,
-        @OutputCustomType.Parameter("contentType") @Nullable String contentType,
-        @OutputCustomType.Parameter("createdTime") @Nullable String createdTime,
-        @OutputCustomType.Parameter("metadata") @Nullable Object metadata) {
+        @CustomType.Parameter("assemblyCulture") @Nullable String assemblyCulture,
+        @CustomType.Parameter("assemblyName") String assemblyName,
+        @CustomType.Parameter("assemblyPublicKeyToken") @Nullable String assemblyPublicKeyToken,
+        @CustomType.Parameter("assemblyVersion") @Nullable String assemblyVersion,
+        @CustomType.Parameter("changedTime") @Nullable String changedTime,
+        @CustomType.Parameter("content") @Nullable Object content,
+        @CustomType.Parameter("contentLink") @Nullable ContentLinkResponse contentLink,
+        @CustomType.Parameter("contentType") @Nullable String contentType,
+        @CustomType.Parameter("createdTime") @Nullable String createdTime,
+        @CustomType.Parameter("metadata") @Nullable Object metadata) {
         this.assemblyCulture = assemblyCulture;
         this.assemblyName = assemblyName;
         this.assemblyPublicKeyToken = assemblyPublicKeyToken;

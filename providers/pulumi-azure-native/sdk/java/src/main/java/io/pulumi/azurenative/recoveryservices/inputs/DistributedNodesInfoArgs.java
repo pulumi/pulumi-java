@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.recoveryservices.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class DistributedNodesInfoArgs extends io.pulumi.resources.Resource
      * Name of the node under a distributed container.
      * 
      */
-    @InputImport(name="nodeName")
+    @Import(name="nodeName")
       private final @Nullable Output<String> nodeName;
 
     public Output<String> getNodeName() {
@@ -34,7 +34,7 @@ public final class DistributedNodesInfoArgs extends io.pulumi.resources.Resource
      * Failed | Succeeded
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable Output<String> status;
 
     public Output<String> getStatus() {

@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.containerregistry.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RetentionPolicyResponse {
     /**
      * The number of days to retain an untagged manifest after which it gets purged.
@@ -28,11 +28,11 @@ public final class RetentionPolicyResponse {
      */
     private final @Nullable String status;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RetentionPolicyResponse(
-        @OutputCustomType.Parameter("days") @Nullable Integer days,
-        @OutputCustomType.Parameter("lastUpdatedTime") String lastUpdatedTime,
-        @OutputCustomType.Parameter("status") @Nullable String status) {
+        @CustomType.Parameter("days") @Nullable Integer days,
+        @CustomType.Parameter("lastUpdatedTime") String lastUpdatedTime,
+        @CustomType.Parameter("status") @Nullable String status) {
         this.days = days;
         this.lastUpdatedTime = lastUpdatedTime;
         this.status = status;

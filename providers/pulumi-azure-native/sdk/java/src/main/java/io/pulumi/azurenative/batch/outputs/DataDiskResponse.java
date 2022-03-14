@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.batch.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DataDiskResponse {
     /**
      * Values are:
@@ -38,12 +38,12 @@ public final class DataDiskResponse {
      */
     private final @Nullable String storageAccountType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DataDiskResponse(
-        @OutputCustomType.Parameter("caching") @Nullable String caching,
-        @OutputCustomType.Parameter("diskSizeGB") Integer diskSizeGB,
-        @OutputCustomType.Parameter("lun") Integer lun,
-        @OutputCustomType.Parameter("storageAccountType") @Nullable String storageAccountType) {
+        @CustomType.Parameter("caching") @Nullable String caching,
+        @CustomType.Parameter("diskSizeGB") Integer diskSizeGB,
+        @CustomType.Parameter("lun") Integer lun,
+        @CustomType.Parameter("storageAccountType") @Nullable String storageAccountType) {
         this.caching = caching;
         this.diskSizeGB = diskSizeGB;
         this.lun = lun;

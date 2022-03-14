@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.servicebus.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -24,7 +24,7 @@ public final class CorrelationFilterResponse extends io.pulumi.resources.InvokeA
      * Content type of the message.
      * 
      */
-    @InputImport(name="contentType")
+    @Import(name="contentType")
       private final @Nullable String contentType;
 
     public Optional<String> getContentType() {
@@ -35,7 +35,7 @@ public final class CorrelationFilterResponse extends io.pulumi.resources.InvokeA
      * Identifier of the correlation.
      * 
      */
-    @InputImport(name="correlationId")
+    @Import(name="correlationId")
       private final @Nullable String correlationId;
 
     public Optional<String> getCorrelationId() {
@@ -46,7 +46,7 @@ public final class CorrelationFilterResponse extends io.pulumi.resources.InvokeA
      * Application specific label.
      * 
      */
-    @InputImport(name="label")
+    @Import(name="label")
       private final @Nullable String label;
 
     public Optional<String> getLabel() {
@@ -57,7 +57,7 @@ public final class CorrelationFilterResponse extends io.pulumi.resources.InvokeA
      * Identifier of the message.
      * 
      */
-    @InputImport(name="messageId")
+    @Import(name="messageId")
       private final @Nullable String messageId;
 
     public Optional<String> getMessageId() {
@@ -68,7 +68,7 @@ public final class CorrelationFilterResponse extends io.pulumi.resources.InvokeA
      * dictionary object for custom filters
      * 
      */
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable Map<String,String> properties;
 
     public Map<String,String> getProperties() {
@@ -79,7 +79,7 @@ public final class CorrelationFilterResponse extends io.pulumi.resources.InvokeA
      * Address of the queue to reply to.
      * 
      */
-    @InputImport(name="replyTo")
+    @Import(name="replyTo")
       private final @Nullable String replyTo;
 
     public Optional<String> getReplyTo() {
@@ -90,7 +90,7 @@ public final class CorrelationFilterResponse extends io.pulumi.resources.InvokeA
      * Session identifier to reply to.
      * 
      */
-    @InputImport(name="replyToSessionId")
+    @Import(name="replyToSessionId")
       private final @Nullable String replyToSessionId;
 
     public Optional<String> getReplyToSessionId() {
@@ -101,7 +101,7 @@ public final class CorrelationFilterResponse extends io.pulumi.resources.InvokeA
      * Value that indicates whether the rule action requires preprocessing.
      * 
      */
-    @InputImport(name="requiresPreprocessing")
+    @Import(name="requiresPreprocessing")
       private final @Nullable Boolean requiresPreprocessing;
 
     public Optional<Boolean> getRequiresPreprocessing() {
@@ -112,7 +112,7 @@ public final class CorrelationFilterResponse extends io.pulumi.resources.InvokeA
      * Session identifier.
      * 
      */
-    @InputImport(name="sessionId")
+    @Import(name="sessionId")
       private final @Nullable String sessionId;
 
     public Optional<String> getSessionId() {
@@ -123,7 +123,7 @@ public final class CorrelationFilterResponse extends io.pulumi.resources.InvokeA
      * Address to send to.
      * 
      */
-    @InputImport(name="to")
+    @Import(name="to")
       private final @Nullable String to;
 
     public Optional<String> getTo() {

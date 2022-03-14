@@ -7,7 +7,7 @@ import io.pulumi.azurenative.storage.enums.DirectoryServiceOptions;
 import io.pulumi.azurenative.storage.inputs.ActiveDirectoryPropertiesArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class AzureFilesIdentityBasedAuthenticationArgs extends io.pulumi.r
      * Required if choose AD.
      * 
      */
-    @InputImport(name="activeDirectoryProperties")
+    @Import(name="activeDirectoryProperties")
       private final @Nullable Output<ActiveDirectoryPropertiesArgs> activeDirectoryProperties;
 
     public Output<ActiveDirectoryPropertiesArgs> getActiveDirectoryProperties() {
@@ -36,7 +36,7 @@ public final class AzureFilesIdentityBasedAuthenticationArgs extends io.pulumi.r
      * Indicates the directory service used.
      * 
      */
-    @InputImport(name="directoryServiceOptions", required=true)
+    @Import(name="directoryServiceOptions", required=true)
       private final Output<Either<String,DirectoryServiceOptions>> directoryServiceOptions;
 
     public Output<Either<String,DirectoryServiceOptions>> getDirectoryServiceOptions() {

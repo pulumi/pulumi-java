@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.databoxedge.outputs;
 
 import io.pulumi.azurenative.databoxedge.outputs.MetricCounterSetResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class MetricConfigurationResponse {
     /**
      * Host name for the IoT hub associated to the device.
@@ -34,12 +34,12 @@ public final class MetricConfigurationResponse {
      */
     private final String resourceId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MetricConfigurationResponse(
-        @OutputCustomType.Parameter("counterSets") List<MetricCounterSetResponse> counterSets,
-        @OutputCustomType.Parameter("mdmAccount") @Nullable String mdmAccount,
-        @OutputCustomType.Parameter("metricNameSpace") @Nullable String metricNameSpace,
-        @OutputCustomType.Parameter("resourceId") String resourceId) {
+        @CustomType.Parameter("counterSets") List<MetricCounterSetResponse> counterSets,
+        @CustomType.Parameter("mdmAccount") @Nullable String mdmAccount,
+        @CustomType.Parameter("metricNameSpace") @Nullable String metricNameSpace,
+        @CustomType.Parameter("resourceId") String resourceId) {
         this.counterSets = counterSets;
         this.mdmAccount = mdmAccount;
         this.metricNameSpace = metricNameSpace;

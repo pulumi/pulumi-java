@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.securityinsights.inputs;
 
 import io.pulumi.azurenative.securityinsights.inputs.ContentPathMapResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class RepositoryResponse extends io.pulumi.resources.InvokeArgs {
      * Branch name of repository.
      * 
      */
-    @InputImport(name="branch")
+    @Import(name="branch")
       private final @Nullable String branch;
 
     public Optional<String> getBranch() {
@@ -35,7 +35,7 @@ public final class RepositoryResponse extends io.pulumi.resources.InvokeArgs {
      * Url to access repository action logs.
      * 
      */
-    @InputImport(name="deploymentLogsUrl")
+    @Import(name="deploymentLogsUrl")
       private final @Nullable String deploymentLogsUrl;
 
     public Optional<String> getDeploymentLogsUrl() {
@@ -46,7 +46,7 @@ public final class RepositoryResponse extends io.pulumi.resources.InvokeArgs {
      * Display url of repository.
      * 
      */
-    @InputImport(name="displayUrl")
+    @Import(name="displayUrl")
       private final @Nullable String displayUrl;
 
     public Optional<String> getDisplayUrl() {
@@ -57,7 +57,7 @@ public final class RepositoryResponse extends io.pulumi.resources.InvokeArgs {
      * Dictionary of source control content type and path mapping.
      * 
      */
-    @InputImport(name="pathMapping")
+    @Import(name="pathMapping")
       private final @Nullable List<ContentPathMapResponse> pathMapping;
 
     public List<ContentPathMapResponse> getPathMapping() {
@@ -68,7 +68,7 @@ public final class RepositoryResponse extends io.pulumi.resources.InvokeArgs {
      * Url of repository.
      * 
      */
-    @InputImport(name="url")
+    @Import(name="url")
       private final @Nullable String url;
 
     public Optional<String> getUrl() {

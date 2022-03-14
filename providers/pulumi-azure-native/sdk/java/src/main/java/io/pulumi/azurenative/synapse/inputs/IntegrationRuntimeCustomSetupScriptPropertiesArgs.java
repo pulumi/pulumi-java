@@ -5,7 +5,7 @@ package io.pulumi.azurenative.synapse.inputs;
 
 import io.pulumi.azurenative.synapse.inputs.SecureStringArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class IntegrationRuntimeCustomSetupScriptPropertiesArgs extends io.
      * The URI of the Azure blob container that contains the custom setup script.
      * 
      */
-    @InputImport(name="blobContainerUri")
+    @Import(name="blobContainerUri")
       private final @Nullable Output<String> blobContainerUri;
 
     public Output<String> getBlobContainerUri() {
@@ -34,7 +34,7 @@ public final class IntegrationRuntimeCustomSetupScriptPropertiesArgs extends io.
      * The SAS token of the Azure blob container.
      * 
      */
-    @InputImport(name="sasToken")
+    @Import(name="sasToken")
       private final @Nullable Output<SecureStringArgs> sasToken;
 
     public Output<SecureStringArgs> getSasToken() {

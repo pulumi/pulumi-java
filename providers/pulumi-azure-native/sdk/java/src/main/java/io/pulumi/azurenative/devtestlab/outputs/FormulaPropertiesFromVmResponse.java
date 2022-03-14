@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.devtestlab.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FormulaPropertiesFromVmResponse {
     /**
      * The identifier of the VM from which a formula is to be created.
@@ -17,8 +17,8 @@ public final class FormulaPropertiesFromVmResponse {
      */
     private final @Nullable String labVmId;
 
-    @OutputCustomType.Constructor
-    private FormulaPropertiesFromVmResponse(@OutputCustomType.Parameter("labVmId") @Nullable String labVmId) {
+    @CustomType.Constructor
+    private FormulaPropertiesFromVmResponse(@CustomType.Parameter("labVmId") @Nullable String labVmId) {
         this.labVmId = labVmId;
     }
 

@@ -5,12 +5,12 @@ package io.pulumi.azurenative.insights.outputs;
 
 import io.pulumi.azurenative.insights.outputs.DataSourceConfigurationResponse;
 import io.pulumi.azurenative.insights.outputs.SinkConfigurationResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DataSourceResponse {
     private final DataSourceConfigurationResponse configuration;
     /**
@@ -20,11 +20,11 @@ public final class DataSourceResponse {
     private final String kind;
     private final List<SinkConfigurationResponse> sinks;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DataSourceResponse(
-        @OutputCustomType.Parameter("configuration") DataSourceConfigurationResponse configuration,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("sinks") List<SinkConfigurationResponse> sinks) {
+        @CustomType.Parameter("configuration") DataSourceConfigurationResponse configuration,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("sinks") List<SinkConfigurationResponse> sinks) {
         this.configuration = configuration;
         this.kind = kind;
         this.sinks = sinks;

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.authorization.enums.PolicyType;
 import io.pulumi.azurenative.authorization.inputs.ParameterDefinitionsValueArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -23,7 +23,7 @@ public final class PolicyDefinitionArgs extends io.pulumi.resources.ResourceArgs
      * The policy definition description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -34,7 +34,7 @@ public final class PolicyDefinitionArgs extends io.pulumi.resources.ResourceArgs
      * The display name of the policy definition.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -45,7 +45,7 @@ public final class PolicyDefinitionArgs extends io.pulumi.resources.ResourceArgs
      * The policy definition metadata.  Metadata is an open ended object and is typically a collection of key value pairs.
      * 
      */
-    @InputImport(name="metadata")
+    @Import(name="metadata")
       private final @Nullable Output<Object> metadata;
 
     public Output<Object> getMetadata() {
@@ -56,7 +56,7 @@ public final class PolicyDefinitionArgs extends io.pulumi.resources.ResourceArgs
      * The policy definition mode. Some examples are All, Indexed, Microsoft.KeyVault.Data.
      * 
      */
-    @InputImport(name="mode")
+    @Import(name="mode")
       private final @Nullable Output<String> mode;
 
     public Output<String> getMode() {
@@ -67,7 +67,7 @@ public final class PolicyDefinitionArgs extends io.pulumi.resources.ResourceArgs
      * The parameter definitions for parameters used in the policy rule. The keys are the parameter names.
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable Output<Map<String,ParameterDefinitionsValueArgs>> parameters;
 
     public Output<Map<String,ParameterDefinitionsValueArgs>> getParameters() {
@@ -78,7 +78,7 @@ public final class PolicyDefinitionArgs extends io.pulumi.resources.ResourceArgs
      * The name of the policy definition to create.
      * 
      */
-    @InputImport(name="policyDefinitionName")
+    @Import(name="policyDefinitionName")
       private final @Nullable Output<String> policyDefinitionName;
 
     public Output<String> getPolicyDefinitionName() {
@@ -89,7 +89,7 @@ public final class PolicyDefinitionArgs extends io.pulumi.resources.ResourceArgs
      * The policy rule.
      * 
      */
-    @InputImport(name="policyRule")
+    @Import(name="policyRule")
       private final @Nullable Output<Object> policyRule;
 
     public Output<Object> getPolicyRule() {
@@ -100,7 +100,7 @@ public final class PolicyDefinitionArgs extends io.pulumi.resources.ResourceArgs
      * The type of policy definition. Possible values are NotSpecified, BuiltIn, Custom, and Static.
      * 
      */
-    @InputImport(name="policyType")
+    @Import(name="policyType")
       private final @Nullable Output<Either<String,PolicyType>> policyType;
 
     public Output<Either<String,PolicyType>> getPolicyType() {

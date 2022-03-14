@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.SubResourceResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ProbeResponse {
     /**
      * A unique read-only string that changes whenever the resource is updated.
@@ -70,19 +70,19 @@ public final class ProbeResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ProbeResponse(
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("intervalInSeconds") @Nullable Integer intervalInSeconds,
-        @OutputCustomType.Parameter("loadBalancingRules") List<SubResourceResponse> loadBalancingRules,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("numberOfProbes") @Nullable Integer numberOfProbes,
-        @OutputCustomType.Parameter("port") Integer port,
-        @OutputCustomType.Parameter("protocol") String protocol,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("requestPath") @Nullable String requestPath,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("intervalInSeconds") @Nullable Integer intervalInSeconds,
+        @CustomType.Parameter("loadBalancingRules") List<SubResourceResponse> loadBalancingRules,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("numberOfProbes") @Nullable Integer numberOfProbes,
+        @CustomType.Parameter("port") Integer port,
+        @CustomType.Parameter("protocol") String protocol,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("requestPath") @Nullable String requestPath,
+        @CustomType.Parameter("type") String type) {
         this.etag = etag;
         this.id = id;
         this.intervalInSeconds = intervalInSeconds;

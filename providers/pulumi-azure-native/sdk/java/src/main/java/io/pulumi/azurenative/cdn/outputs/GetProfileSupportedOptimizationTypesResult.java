@@ -3,12 +3,12 @@
 
 package io.pulumi.azurenative.cdn.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetProfileSupportedOptimizationTypesResult {
     /**
      * Supported optimization types for a profile.
@@ -16,8 +16,8 @@ public final class GetProfileSupportedOptimizationTypesResult {
      */
     private final List<String> supportedOptimizationTypes;
 
-    @OutputCustomType.Constructor
-    private GetProfileSupportedOptimizationTypesResult(@OutputCustomType.Parameter("supportedOptimizationTypes") List<String> supportedOptimizationTypes) {
+    @CustomType.Constructor
+    private GetProfileSupportedOptimizationTypesResult(@CustomType.Parameter("supportedOptimizationTypes") List<String> supportedOptimizationTypes) {
         this.supportedOptimizationTypes = supportedOptimizationTypes;
     }
 

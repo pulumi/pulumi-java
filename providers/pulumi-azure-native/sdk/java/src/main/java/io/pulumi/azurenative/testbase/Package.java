@@ -11,7 +11,7 @@ import io.pulumi.azurenative.testbase.outputs.TargetOSInfoResponse;
 import io.pulumi.azurenative.testbase.outputs.TestResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -40,7 +40,7 @@ public class Package extends io.pulumi.resources.CustomResource {
      * Application name
      * 
      */
-    @OutputExport(name="applicationName", type=String.class, parameters={})
+    @Export(name="applicationName", type=String.class, parameters={})
     private Output<String> applicationName;
 
     /**
@@ -54,7 +54,7 @@ public class Package extends io.pulumi.resources.CustomResource {
      * The file path of the package.
      * 
      */
-    @OutputExport(name="blobPath", type=String.class, parameters={})
+    @Export(name="blobPath", type=String.class, parameters={})
     private Output<String> blobPath;
 
     /**
@@ -68,7 +68,7 @@ public class Package extends io.pulumi.resources.CustomResource {
      * Resource Etag.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -82,7 +82,7 @@ public class Package extends io.pulumi.resources.CustomResource {
      * The flighting ring for feature update.
      * 
      */
-    @OutputExport(name="flightingRing", type=String.class, parameters={})
+    @Export(name="flightingRing", type=String.class, parameters={})
     private Output<String> flightingRing;
 
     /**
@@ -96,7 +96,7 @@ public class Package extends io.pulumi.resources.CustomResource {
      * Flag showing that whether the package is enabled. It doesn't schedule test for package which is not enabled.
      * 
      */
-    @OutputExport(name="isEnabled", type=Boolean.class, parameters={})
+    @Export(name="isEnabled", type=Boolean.class, parameters={})
     private Output<Boolean> isEnabled;
 
     /**
@@ -110,7 +110,7 @@ public class Package extends io.pulumi.resources.CustomResource {
      * The UTC timestamp when the package was last modified.
      * 
      */
-    @OutputExport(name="lastModifiedTime", type=String.class, parameters={})
+    @Export(name="lastModifiedTime", type=String.class, parameters={})
     private Output<String> lastModifiedTime;
 
     /**
@@ -124,7 +124,7 @@ public class Package extends io.pulumi.resources.CustomResource {
      * The geo-location where the resource lives
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -138,7 +138,7 @@ public class Package extends io.pulumi.resources.CustomResource {
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -152,7 +152,7 @@ public class Package extends io.pulumi.resources.CustomResource {
      * The status of the package.
      * 
      */
-    @OutputExport(name="packageStatus", type=String.class, parameters={})
+    @Export(name="packageStatus", type=String.class, parameters={})
     private Output<String> packageStatus;
 
     /**
@@ -166,7 +166,7 @@ public class Package extends io.pulumi.resources.CustomResource {
      * The provisioning state of the resource.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -180,7 +180,7 @@ public class Package extends io.pulumi.resources.CustomResource {
      * The system metadata relating to this resource
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -194,7 +194,7 @@ public class Package extends io.pulumi.resources.CustomResource {
      * The tags of the resource.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -208,7 +208,7 @@ public class Package extends io.pulumi.resources.CustomResource {
      * Specifies the target OSs of specific OS Update types.
      * 
      */
-    @OutputExport(name="targetOSList", type=List.class, parameters={TargetOSInfoResponse.class})
+    @Export(name="targetOSList", type=List.class, parameters={TargetOSInfoResponse.class})
     private Output<List<TargetOSInfoResponse>> targetOSList;
 
     /**
@@ -222,7 +222,7 @@ public class Package extends io.pulumi.resources.CustomResource {
      * OOB, functional or both. Mapped to the data in 'tests' property.
      * 
      */
-    @OutputExport(name="testTypes", type=List.class, parameters={String.class})
+    @Export(name="testTypes", type=List.class, parameters={String.class})
     private Output<List<String>> testTypes;
 
     /**
@@ -236,7 +236,7 @@ public class Package extends io.pulumi.resources.CustomResource {
      * The detailed test information.
      * 
      */
-    @OutputExport(name="tests", type=List.class, parameters={TestResponse.class})
+    @Export(name="tests", type=List.class, parameters={TestResponse.class})
     private Output<List<TestResponse>> tests;
 
     /**
@@ -250,7 +250,7 @@ public class Package extends io.pulumi.resources.CustomResource {
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -264,7 +264,7 @@ public class Package extends io.pulumi.resources.CustomResource {
      * The validation results. There's validation on package when it's created or updated.
      * 
      */
-    @OutputExport(name="validationResults", type=List.class, parameters={PackageValidationResultResponse.class})
+    @Export(name="validationResults", type=List.class, parameters={PackageValidationResultResponse.class})
     private Output<List<PackageValidationResultResponse>> validationResults;
 
     /**
@@ -278,7 +278,7 @@ public class Package extends io.pulumi.resources.CustomResource {
      * Application version
      * 
      */
-    @OutputExport(name="version", type=String.class, parameters={})
+    @Export(name="version", type=String.class, parameters={})
     private Output<String> version;
 
     /**

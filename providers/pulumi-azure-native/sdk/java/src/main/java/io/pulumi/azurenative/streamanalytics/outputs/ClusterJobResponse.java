@@ -3,12 +3,12 @@
 
 package io.pulumi.azurenative.streamanalytics.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ClusterJobResponse {
     /**
      * Resource ID of the streaming job.
@@ -26,11 +26,11 @@ public final class ClusterJobResponse {
      */
     private final Integer streamingUnits;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ClusterJobResponse(
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("jobState") String jobState,
-        @OutputCustomType.Parameter("streamingUnits") Integer streamingUnits) {
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("jobState") String jobState,
+        @CustomType.Parameter("streamingUnits") Integer streamingUnits) {
         this.id = id;
         this.jobState = jobState;
         this.streamingUnits = streamingUnits;

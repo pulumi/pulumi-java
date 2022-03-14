@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.devtestlab.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class NotificationSettingsResponse extends io.pulumi.resources.Invo
      * The email recipient to send notifications to (can be a list of semi-colon separated email addresses).
      * 
      */
-    @InputImport(name="emailRecipient")
+    @Import(name="emailRecipient")
       private final @Nullable String emailRecipient;
 
     public Optional<String> getEmailRecipient() {
@@ -34,7 +34,7 @@ public final class NotificationSettingsResponse extends io.pulumi.resources.Invo
      * The locale to use when sending a notification (fallback for unsupported languages is EN).
      * 
      */
-    @InputImport(name="notificationLocale")
+    @Import(name="notificationLocale")
       private final @Nullable String notificationLocale;
 
     public Optional<String> getNotificationLocale() {
@@ -45,7 +45,7 @@ public final class NotificationSettingsResponse extends io.pulumi.resources.Invo
      * If notifications are enabled for this schedule (i.e. Enabled, Disabled).
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable String status;
 
     public Optional<String> getStatus() {
@@ -56,7 +56,7 @@ public final class NotificationSettingsResponse extends io.pulumi.resources.Invo
      * Time in minutes before event at which notification will be sent.
      * 
      */
-    @InputImport(name="timeInMinutes")
+    @Import(name="timeInMinutes")
       private final @Nullable Integer timeInMinutes;
 
     public Optional<Integer> getTimeInMinutes() {
@@ -67,7 +67,7 @@ public final class NotificationSettingsResponse extends io.pulumi.resources.Invo
      * The webhook URL to which the notification will be sent.
      * 
      */
-    @InputImport(name="webhookUrl")
+    @Import(name="webhookUrl")
       private final @Nullable String webhookUrl;
 
     public Optional<String> getWebhookUrl() {

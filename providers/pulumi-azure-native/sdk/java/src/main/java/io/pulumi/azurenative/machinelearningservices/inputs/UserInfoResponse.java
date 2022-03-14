@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class UserInfoResponse extends io.pulumi.resources.InvokeArgs {
      * A user alternate sec id. This represents the user in a different identity provider system Eg.1:live.com:puid
      * 
      */
-    @InputImport(name="userAltSecId")
+    @Import(name="userAltSecId")
       private final @Nullable String userAltSecId;
 
     public Optional<String> getUserAltSecId() {
@@ -33,7 +33,7 @@ public final class UserInfoResponse extends io.pulumi.resources.InvokeArgs {
      * A user identity provider. Eg live.com
      * 
      */
-    @InputImport(name="userIdp")
+    @Import(name="userIdp")
       private final @Nullable String userIdp;
 
     public Optional<String> getUserIdp() {
@@ -44,7 +44,7 @@ public final class UserInfoResponse extends io.pulumi.resources.InvokeArgs {
      * The issuer which issued the token for this user.
      * 
      */
-    @InputImport(name="userIss")
+    @Import(name="userIss")
       private final @Nullable String userIss;
 
     public Optional<String> getUserIss() {
@@ -55,7 +55,7 @@ public final class UserInfoResponse extends io.pulumi.resources.InvokeArgs {
      *  A user's full name or a service principal's app ID.
      * 
      */
-    @InputImport(name="userName")
+    @Import(name="userName")
       private final @Nullable String userName;
 
     public Optional<String> getUserName() {
@@ -66,7 +66,7 @@ public final class UserInfoResponse extends io.pulumi.resources.InvokeArgs {
      * A user or service principal's object ID..
      * 
      */
-    @InputImport(name="userObjectId")
+    @Import(name="userObjectId")
       private final @Nullable String userObjectId;
 
     public Optional<String> getUserObjectId() {
@@ -77,7 +77,7 @@ public final class UserInfoResponse extends io.pulumi.resources.InvokeArgs {
      * A user or service principal's PuID.
      * 
      */
-    @InputImport(name="userPuId")
+    @Import(name="userPuId")
       private final @Nullable String userPuId;
 
     public Optional<String> getUserPuId() {
@@ -88,7 +88,7 @@ public final class UserInfoResponse extends io.pulumi.resources.InvokeArgs {
      * A user or service principal's tenant ID.
      * 
      */
-    @InputImport(name="userTenantId")
+    @Import(name="userTenantId")
       private final @Nullable String userTenantId;
 
     public Optional<String> getUserTenantId() {

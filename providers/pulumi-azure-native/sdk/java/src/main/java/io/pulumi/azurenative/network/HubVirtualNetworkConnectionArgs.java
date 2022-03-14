@@ -6,7 +6,7 @@ package io.pulumi.azurenative.network;
 import io.pulumi.azurenative.network.inputs.RoutingConfigurationArgs;
 import io.pulumi.azurenative.network.inputs.SubResourceArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class HubVirtualNetworkConnectionArgs extends io.pulumi.resources.R
      * Deprecated: VirtualHub to RemoteVnet transit to enabled or not.
      * 
      */
-    @InputImport(name="allowHubToRemoteVnetTransit")
+    @Import(name="allowHubToRemoteVnetTransit")
       private final @Nullable Output<Boolean> allowHubToRemoteVnetTransit;
 
     public Output<Boolean> getAllowHubToRemoteVnetTransit() {
@@ -32,7 +32,7 @@ public final class HubVirtualNetworkConnectionArgs extends io.pulumi.resources.R
      * Deprecated: Allow RemoteVnet to use Virtual Hub's gateways.
      * 
      */
-    @InputImport(name="allowRemoteVnetToUseHubVnetGateways")
+    @Import(name="allowRemoteVnetToUseHubVnetGateways")
       private final @Nullable Output<Boolean> allowRemoteVnetToUseHubVnetGateways;
 
     public Output<Boolean> getAllowRemoteVnetToUseHubVnetGateways() {
@@ -43,7 +43,7 @@ public final class HubVirtualNetworkConnectionArgs extends io.pulumi.resources.R
      * The name of the HubVirtualNetworkConnection.
      * 
      */
-    @InputImport(name="connectionName")
+    @Import(name="connectionName")
       private final @Nullable Output<String> connectionName;
 
     public Output<String> getConnectionName() {
@@ -54,7 +54,7 @@ public final class HubVirtualNetworkConnectionArgs extends io.pulumi.resources.R
      * Enable internet security.
      * 
      */
-    @InputImport(name="enableInternetSecurity")
+    @Import(name="enableInternetSecurity")
       private final @Nullable Output<Boolean> enableInternetSecurity;
 
     public Output<Boolean> getEnableInternetSecurity() {
@@ -65,7 +65,7 @@ public final class HubVirtualNetworkConnectionArgs extends io.pulumi.resources.R
      * Resource ID.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
@@ -76,7 +76,7 @@ public final class HubVirtualNetworkConnectionArgs extends io.pulumi.resources.R
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -87,7 +87,7 @@ public final class HubVirtualNetworkConnectionArgs extends io.pulumi.resources.R
      * Reference to the remote virtual network.
      * 
      */
-    @InputImport(name="remoteVirtualNetwork")
+    @Import(name="remoteVirtualNetwork")
       private final @Nullable Output<SubResourceArgs> remoteVirtualNetwork;
 
     public Output<SubResourceArgs> getRemoteVirtualNetwork() {
@@ -98,7 +98,7 @@ public final class HubVirtualNetworkConnectionArgs extends io.pulumi.resources.R
      * The resource group name of the HubVirtualNetworkConnection.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -109,7 +109,7 @@ public final class HubVirtualNetworkConnectionArgs extends io.pulumi.resources.R
      * The Routing Configuration indicating the associated and propagated route tables on this connection.
      * 
      */
-    @InputImport(name="routingConfiguration")
+    @Import(name="routingConfiguration")
       private final @Nullable Output<RoutingConfigurationArgs> routingConfiguration;
 
     public Output<RoutingConfigurationArgs> getRoutingConfiguration() {
@@ -120,7 +120,7 @@ public final class HubVirtualNetworkConnectionArgs extends io.pulumi.resources.R
      * The name of the VirtualHub.
      * 
      */
-    @InputImport(name="virtualHubName", required=true)
+    @Import(name="virtualHubName", required=true)
       private final Output<String> virtualHubName;
 
     public Output<String> getVirtualHubName() {

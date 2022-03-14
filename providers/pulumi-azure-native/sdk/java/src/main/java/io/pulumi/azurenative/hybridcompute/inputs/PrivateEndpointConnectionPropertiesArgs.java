@@ -6,7 +6,7 @@ package io.pulumi.azurenative.hybridcompute.inputs;
 import io.pulumi.azurenative.hybridcompute.inputs.PrivateEndpointPropertyArgs;
 import io.pulumi.azurenative.hybridcompute.inputs.PrivateLinkServiceConnectionStatePropertyArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -23,7 +23,7 @@ public final class PrivateEndpointConnectionPropertiesArgs extends io.pulumi.res
      * Private endpoint which the connection belongs to.
      * 
      */
-    @InputImport(name="privateEndpoint")
+    @Import(name="privateEndpoint")
       private final @Nullable Output<PrivateEndpointPropertyArgs> privateEndpoint;
 
     public Output<PrivateEndpointPropertyArgs> getPrivateEndpoint() {
@@ -34,7 +34,7 @@ public final class PrivateEndpointConnectionPropertiesArgs extends io.pulumi.res
      * Connection state of the private endpoint connection.
      * 
      */
-    @InputImport(name="privateLinkServiceConnectionState")
+    @Import(name="privateLinkServiceConnectionState")
       private final @Nullable Output<PrivateLinkServiceConnectionStatePropertyArgs> privateLinkServiceConnectionState;
 
     public Output<PrivateLinkServiceConnectionStatePropertyArgs> getPrivateLinkServiceConnectionState() {

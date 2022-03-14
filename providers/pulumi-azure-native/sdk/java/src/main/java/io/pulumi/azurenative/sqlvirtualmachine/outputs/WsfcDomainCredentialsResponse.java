@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.sqlvirtualmachine.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class WsfcDomainCredentialsResponse {
     /**
      * Cluster bootstrap account password.
@@ -27,11 +27,11 @@ public final class WsfcDomainCredentialsResponse {
      */
     private final @Nullable String sqlServiceAccountPassword;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WsfcDomainCredentialsResponse(
-        @OutputCustomType.Parameter("clusterBootstrapAccountPassword") @Nullable String clusterBootstrapAccountPassword,
-        @OutputCustomType.Parameter("clusterOperatorAccountPassword") @Nullable String clusterOperatorAccountPassword,
-        @OutputCustomType.Parameter("sqlServiceAccountPassword") @Nullable String sqlServiceAccountPassword) {
+        @CustomType.Parameter("clusterBootstrapAccountPassword") @Nullable String clusterBootstrapAccountPassword,
+        @CustomType.Parameter("clusterOperatorAccountPassword") @Nullable String clusterOperatorAccountPassword,
+        @CustomType.Parameter("sqlServiceAccountPassword") @Nullable String sqlServiceAccountPassword) {
         this.clusterBootstrapAccountPassword = clusterBootstrapAccountPassword;
         this.clusterOperatorAccountPassword = clusterOperatorAccountPassword;
         this.sqlServiceAccountPassword = sqlServiceAccountPassword;

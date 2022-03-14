@@ -6,7 +6,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 import io.pulumi.azurenative.datafactory.inputs.ActivityDependencyResponse;
 import io.pulumi.azurenative.datafactory.inputs.DatasetReferenceResponse;
 import io.pulumi.azurenative.datafactory.inputs.UserPropertyResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -27,7 +27,7 @@ public final class ValidationActivityResponse extends io.pulumi.resources.Invoke
      * Can be used if dataset points to a folder. If set to true, the folder must have at least one file. If set to false, the folder must be empty. Type: boolean (or Expression with resultType boolean).
      * 
      */
-    @InputImport(name="childItems")
+    @Import(name="childItems")
       private final @Nullable Object childItems;
 
     public Optional<Object> getChildItems() {
@@ -38,7 +38,7 @@ public final class ValidationActivityResponse extends io.pulumi.resources.Invoke
      * Validation activity dataset reference.
      * 
      */
-    @InputImport(name="dataset", required=true)
+    @Import(name="dataset", required=true)
       private final DatasetReferenceResponse dataset;
 
     public DatasetReferenceResponse getDataset() {
@@ -49,7 +49,7 @@ public final class ValidationActivityResponse extends io.pulumi.resources.Invoke
      * Activity depends on condition.
      * 
      */
-    @InputImport(name="dependsOn")
+    @Import(name="dependsOn")
       private final @Nullable List<ActivityDependencyResponse> dependsOn;
 
     public List<ActivityDependencyResponse> getDependsOn() {
@@ -60,7 +60,7 @@ public final class ValidationActivityResponse extends io.pulumi.resources.Invoke
      * Activity description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable String description;
 
     public Optional<String> getDescription() {
@@ -71,7 +71,7 @@ public final class ValidationActivityResponse extends io.pulumi.resources.Invoke
      * Can be used if dataset points to a file. The file must be greater than or equal in size to the value specified. Type: integer (or Expression with resultType integer).
      * 
      */
-    @InputImport(name="minimumSize")
+    @Import(name="minimumSize")
       private final @Nullable Object minimumSize;
 
     public Optional<Object> getMinimumSize() {
@@ -82,7 +82,7 @@ public final class ValidationActivityResponse extends io.pulumi.resources.Invoke
      * Activity name.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -93,7 +93,7 @@ public final class ValidationActivityResponse extends io.pulumi.resources.Invoke
      * A delay in seconds between validation attempts. If no value is specified, 10 seconds will be used as the default. Type: integer (or Expression with resultType integer).
      * 
      */
-    @InputImport(name="sleep")
+    @Import(name="sleep")
       private final @Nullable Object sleep;
 
     public Optional<Object> getSleep() {
@@ -104,7 +104,7 @@ public final class ValidationActivityResponse extends io.pulumi.resources.Invoke
      * Specifies the timeout for the activity to run. If there is no value specified, it takes the value of TimeSpan.FromDays(7) which is 1 week as default. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
      * 
      */
-    @InputImport(name="timeout")
+    @Import(name="timeout")
       private final @Nullable Object timeout;
 
     public Optional<Object> getTimeout() {
@@ -116,7 +116,7 @@ public final class ValidationActivityResponse extends io.pulumi.resources.Invoke
      * Expected value is 'Validation'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {
@@ -127,7 +127,7 @@ public final class ValidationActivityResponse extends io.pulumi.resources.Invoke
      * Activity user properties.
      * 
      */
-    @InputImport(name="userProperties")
+    @Import(name="userProperties")
       private final @Nullable List<UserPropertyResponse> userProperties;
 
     public List<UserPropertyResponse> getUserProperties() {

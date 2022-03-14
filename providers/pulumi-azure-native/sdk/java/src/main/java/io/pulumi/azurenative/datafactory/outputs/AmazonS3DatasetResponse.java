@@ -12,7 +12,7 @@ import io.pulumi.azurenative.datafactory.outputs.OrcFormatResponse;
 import io.pulumi.azurenative.datafactory.outputs.ParameterSpecificationResponse;
 import io.pulumi.azurenative.datafactory.outputs.ParquetFormatResponse;
 import io.pulumi.azurenative.datafactory.outputs.TextFormatResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AmazonS3DatasetResponse {
     /**
      * List of tags that can be used for describing the Dataset.
@@ -105,24 +105,24 @@ public final class AmazonS3DatasetResponse {
      */
     private final @Nullable Object version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AmazonS3DatasetResponse(
-        @OutputCustomType.Parameter("annotations") @Nullable List<Object> annotations,
-        @OutputCustomType.Parameter("bucketName") Object bucketName,
-        @OutputCustomType.Parameter("compression") @Nullable DatasetCompressionResponse compression,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("folder") @Nullable DatasetResponseFolder folder,
-        @OutputCustomType.Parameter("format") @Nullable Object format,
-        @OutputCustomType.Parameter("key") @Nullable Object key,
-        @OutputCustomType.Parameter("linkedServiceName") LinkedServiceReferenceResponse linkedServiceName,
-        @OutputCustomType.Parameter("modifiedDatetimeEnd") @Nullable Object modifiedDatetimeEnd,
-        @OutputCustomType.Parameter("modifiedDatetimeStart") @Nullable Object modifiedDatetimeStart,
-        @OutputCustomType.Parameter("parameters") @Nullable Map<String,ParameterSpecificationResponse> parameters,
-        @OutputCustomType.Parameter("prefix") @Nullable Object prefix,
-        @OutputCustomType.Parameter("schema") @Nullable Object schema,
-        @OutputCustomType.Parameter("structure") @Nullable Object structure,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("version") @Nullable Object version) {
+        @CustomType.Parameter("annotations") @Nullable List<Object> annotations,
+        @CustomType.Parameter("bucketName") Object bucketName,
+        @CustomType.Parameter("compression") @Nullable DatasetCompressionResponse compression,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("folder") @Nullable DatasetResponseFolder folder,
+        @CustomType.Parameter("format") @Nullable Object format,
+        @CustomType.Parameter("key") @Nullable Object key,
+        @CustomType.Parameter("linkedServiceName") LinkedServiceReferenceResponse linkedServiceName,
+        @CustomType.Parameter("modifiedDatetimeEnd") @Nullable Object modifiedDatetimeEnd,
+        @CustomType.Parameter("modifiedDatetimeStart") @Nullable Object modifiedDatetimeStart,
+        @CustomType.Parameter("parameters") @Nullable Map<String,ParameterSpecificationResponse> parameters,
+        @CustomType.Parameter("prefix") @Nullable Object prefix,
+        @CustomType.Parameter("schema") @Nullable Object schema,
+        @CustomType.Parameter("structure") @Nullable Object structure,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("version") @Nullable Object version) {
         this.annotations = annotations;
         this.bucketName = bucketName;
         this.compression = compression;

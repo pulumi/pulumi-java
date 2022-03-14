@@ -5,7 +5,7 @@ package io.pulumi.azurenative.apimanagement.inputs;
 
 import io.pulumi.azurenative.apimanagement.inputs.CertificateInformationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class CertificateConfigurationArgs extends io.pulumi.resources.Reso
      * Certificate information.
      * 
      */
-    @InputImport(name="certificate")
+    @Import(name="certificate")
       private final @Nullable Output<CertificateInformationArgs> certificate;
 
     public Output<CertificateInformationArgs> getCertificate() {
@@ -34,7 +34,7 @@ public final class CertificateConfigurationArgs extends io.pulumi.resources.Reso
      * Certificate Password.
      * 
      */
-    @InputImport(name="certificatePassword")
+    @Import(name="certificatePassword")
       private final @Nullable Output<String> certificatePassword;
 
     public Output<String> getCertificatePassword() {
@@ -45,7 +45,7 @@ public final class CertificateConfigurationArgs extends io.pulumi.resources.Reso
      * Base64 Encoded certificate.
      * 
      */
-    @InputImport(name="encodedCertificate")
+    @Import(name="encodedCertificate")
       private final @Nullable Output<String> encodedCertificate;
 
     public Output<String> getEncodedCertificate() {
@@ -56,7 +56,7 @@ public final class CertificateConfigurationArgs extends io.pulumi.resources.Reso
      * The System.Security.Cryptography.x509certificates.StoreName certificate store location. Only Root and CertificateAuthority are valid locations.
      * 
      */
-    @InputImport(name="storeName", required=true)
+    @Import(name="storeName", required=true)
       private final Output<String> storeName;
 
     public Output<String> getStoreName() {

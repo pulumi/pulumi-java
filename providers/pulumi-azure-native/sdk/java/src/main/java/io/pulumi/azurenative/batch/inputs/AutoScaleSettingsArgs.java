@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.batch.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,14 +18,14 @@ public final class AutoScaleSettingsArgs extends io.pulumi.resources.ResourceArg
      * If omitted, the default value is 15 minutes (PT15M).
      * 
      */
-    @InputImport(name="evaluationInterval")
+    @Import(name="evaluationInterval")
       private final @Nullable Output<String> evaluationInterval;
 
     public Output<String> getEvaluationInterval() {
         return this.evaluationInterval == null ? Output.empty() : this.evaluationInterval;
     }
 
-    @InputImport(name="formula", required=true)
+    @Import(name="formula", required=true)
       private final Output<String> formula;
 
     public Output<String> getFormula() {

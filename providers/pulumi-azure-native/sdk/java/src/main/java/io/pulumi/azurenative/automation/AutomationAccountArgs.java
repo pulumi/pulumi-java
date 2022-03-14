@@ -7,7 +7,7 @@ import io.pulumi.azurenative.automation.inputs.EncryptionPropertiesArgs;
 import io.pulumi.azurenative.automation.inputs.IdentityArgs;
 import io.pulumi.azurenative.automation.inputs.SkuArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -23,7 +23,7 @@ public final class AutomationAccountArgs extends io.pulumi.resources.ResourceArg
      * The name of the automation account.
      * 
      */
-    @InputImport(name="automationAccountName")
+    @Import(name="automationAccountName")
       private final @Nullable Output<String> automationAccountName;
 
     public Output<String> getAutomationAccountName() {
@@ -34,7 +34,7 @@ public final class AutomationAccountArgs extends io.pulumi.resources.ResourceArg
      * Indicates whether requests using non-AAD authentication are blocked
      * 
      */
-    @InputImport(name="disableLocalAuth")
+    @Import(name="disableLocalAuth")
       private final @Nullable Output<Boolean> disableLocalAuth;
 
     public Output<Boolean> getDisableLocalAuth() {
@@ -45,7 +45,7 @@ public final class AutomationAccountArgs extends io.pulumi.resources.ResourceArg
      * Set the encryption properties for the automation account
      * 
      */
-    @InputImport(name="encryption")
+    @Import(name="encryption")
       private final @Nullable Output<EncryptionPropertiesArgs> encryption;
 
     public Output<EncryptionPropertiesArgs> getEncryption() {
@@ -56,7 +56,7 @@ public final class AutomationAccountArgs extends io.pulumi.resources.ResourceArg
      * Sets the identity property for automation account
      * 
      */
-    @InputImport(name="identity")
+    @Import(name="identity")
       private final @Nullable Output<IdentityArgs> identity;
 
     public Output<IdentityArgs> getIdentity() {
@@ -67,7 +67,7 @@ public final class AutomationAccountArgs extends io.pulumi.resources.ResourceArg
      * Gets or sets the location of the resource.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -78,7 +78,7 @@ public final class AutomationAccountArgs extends io.pulumi.resources.ResourceArg
      * Gets or sets name of the resource.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -89,7 +89,7 @@ public final class AutomationAccountArgs extends io.pulumi.resources.ResourceArg
      * Indicates whether traffic on the non-ARM endpoint (Webhook/Agent) is allowed from the public internet
      * 
      */
-    @InputImport(name="publicNetworkAccess")
+    @Import(name="publicNetworkAccess")
       private final @Nullable Output<Boolean> publicNetworkAccess;
 
     public Output<Boolean> getPublicNetworkAccess() {
@@ -100,7 +100,7 @@ public final class AutomationAccountArgs extends io.pulumi.resources.ResourceArg
      * Name of an Azure Resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -111,7 +111,7 @@ public final class AutomationAccountArgs extends io.pulumi.resources.ResourceArg
      * Gets or sets account SKU.
      * 
      */
-    @InputImport(name="sku")
+    @Import(name="sku")
       private final @Nullable Output<SkuArgs> sku;
 
     public Output<SkuArgs> getSku() {
@@ -122,7 +122,7 @@ public final class AutomationAccountArgs extends io.pulumi.resources.ResourceArg
      * Gets or sets the tags attached to the resource.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

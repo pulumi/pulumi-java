@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.avs.GlobalReachConnectionArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -34,7 +34,7 @@ public class GlobalReachConnection extends io.pulumi.resources.CustomResource {
      * The network used for global reach carved out from the original network block provided for the private cloud
      * 
      */
-    @OutputExport(name="addressPrefix", type=String.class, parameters={})
+    @Export(name="addressPrefix", type=String.class, parameters={})
     private Output<String> addressPrefix;
 
     /**
@@ -48,7 +48,7 @@ public class GlobalReachConnection extends io.pulumi.resources.CustomResource {
      * Authorization key from the peer express route used for the global reach connection
      * 
      */
-    @OutputExport(name="authorizationKey", type=String.class, parameters={})
+    @Export(name="authorizationKey", type=String.class, parameters={})
     private Output</* @Nullable */ String> authorizationKey;
 
     /**
@@ -62,7 +62,7 @@ public class GlobalReachConnection extends io.pulumi.resources.CustomResource {
      * The connection status of the global reach connection
      * 
      */
-    @OutputExport(name="circuitConnectionStatus", type=String.class, parameters={})
+    @Export(name="circuitConnectionStatus", type=String.class, parameters={})
     private Output<String> circuitConnectionStatus;
 
     /**
@@ -76,7 +76,7 @@ public class GlobalReachConnection extends io.pulumi.resources.CustomResource {
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -90,7 +90,7 @@ public class GlobalReachConnection extends io.pulumi.resources.CustomResource {
      * Identifier of the ExpressRoute Circuit to peer with in the global reach connection
      * 
      */
-    @OutputExport(name="peerExpressRouteCircuit", type=String.class, parameters={})
+    @Export(name="peerExpressRouteCircuit", type=String.class, parameters={})
     private Output</* @Nullable */ String> peerExpressRouteCircuit;
 
     /**
@@ -104,7 +104,7 @@ public class GlobalReachConnection extends io.pulumi.resources.CustomResource {
      * The state of the  ExpressRoute Circuit Authorization provisioning
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -118,7 +118,7 @@ public class GlobalReachConnection extends io.pulumi.resources.CustomResource {
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

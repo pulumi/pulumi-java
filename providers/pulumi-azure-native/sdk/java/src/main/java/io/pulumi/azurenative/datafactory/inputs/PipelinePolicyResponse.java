@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.azurenative.datafactory.inputs.PipelineElapsedTimeMetricPolicyResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class PipelinePolicyResponse extends io.pulumi.resources.InvokeArgs
      * Pipeline ElapsedTime Metric Policy.
      * 
      */
-    @InputImport(name="elapsedTimeMetric")
+    @Import(name="elapsedTimeMetric")
       private final @Nullable PipelineElapsedTimeMetricPolicyResponse elapsedTimeMetric;
 
     public Optional<PipelineElapsedTimeMetricPolicyResponse> getElapsedTimeMetric() {

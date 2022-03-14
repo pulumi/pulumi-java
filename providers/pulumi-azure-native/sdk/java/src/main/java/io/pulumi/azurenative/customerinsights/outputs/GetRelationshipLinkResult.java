@@ -5,14 +5,14 @@ package io.pulumi.azurenative.customerinsights.outputs;
 
 import io.pulumi.azurenative.customerinsights.outputs.ParticipantProfilePropertyReferenceResponse;
 import io.pulumi.azurenative.customerinsights.outputs.RelationshipLinkFieldMappingResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetRelationshipLinkResult {
     /**
      * Localized descriptions for the Relationship Link.
@@ -85,22 +85,22 @@ public final class GetRelationshipLinkResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetRelationshipLinkResult(
-        @OutputCustomType.Parameter("description") @Nullable Map<String,String> description,
-        @OutputCustomType.Parameter("displayName") @Nullable Map<String,String> displayName,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("interactionType") String interactionType,
-        @OutputCustomType.Parameter("linkName") String linkName,
-        @OutputCustomType.Parameter("mappings") @Nullable List<RelationshipLinkFieldMappingResponse> mappings,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("profilePropertyReferences") List<ParticipantProfilePropertyReferenceResponse> profilePropertyReferences,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("relatedProfilePropertyReferences") List<ParticipantProfilePropertyReferenceResponse> relatedProfilePropertyReferences,
-        @OutputCustomType.Parameter("relationshipGuidId") String relationshipGuidId,
-        @OutputCustomType.Parameter("relationshipName") String relationshipName,
-        @OutputCustomType.Parameter("tenantId") String tenantId,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("description") @Nullable Map<String,String> description,
+        @CustomType.Parameter("displayName") @Nullable Map<String,String> displayName,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("interactionType") String interactionType,
+        @CustomType.Parameter("linkName") String linkName,
+        @CustomType.Parameter("mappings") @Nullable List<RelationshipLinkFieldMappingResponse> mappings,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("profilePropertyReferences") List<ParticipantProfilePropertyReferenceResponse> profilePropertyReferences,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("relatedProfilePropertyReferences") List<ParticipantProfilePropertyReferenceResponse> relatedProfilePropertyReferences,
+        @CustomType.Parameter("relationshipGuidId") String relationshipGuidId,
+        @CustomType.Parameter("relationshipName") String relationshipName,
+        @CustomType.Parameter("tenantId") String tenantId,
+        @CustomType.Parameter("type") String type) {
         this.description = description;
         this.displayName = displayName;
         this.id = id;

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.machinelearningcompute.outputs;
 
 import io.pulumi.azurenative.machinelearningcompute.outputs.KubernetesClusterPropertiesResponse;
 import io.pulumi.azurenative.machinelearningcompute.outputs.SystemServiceResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AcsClusterPropertiesResponse {
     /**
      * The number of agent nodes in the Container Service. This can be changed to scale the cluster.
@@ -51,15 +51,15 @@ public final class AcsClusterPropertiesResponse {
      */
     private final @Nullable List<SystemServiceResponse> systemServices;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AcsClusterPropertiesResponse(
-        @OutputCustomType.Parameter("agentCount") @Nullable Integer agentCount,
-        @OutputCustomType.Parameter("agentVmSize") @Nullable String agentVmSize,
-        @OutputCustomType.Parameter("clusterFqdn") String clusterFqdn,
-        @OutputCustomType.Parameter("masterCount") @Nullable Integer masterCount,
-        @OutputCustomType.Parameter("orchestratorProperties") @Nullable KubernetesClusterPropertiesResponse orchestratorProperties,
-        @OutputCustomType.Parameter("orchestratorType") String orchestratorType,
-        @OutputCustomType.Parameter("systemServices") @Nullable List<SystemServiceResponse> systemServices) {
+        @CustomType.Parameter("agentCount") @Nullable Integer agentCount,
+        @CustomType.Parameter("agentVmSize") @Nullable String agentVmSize,
+        @CustomType.Parameter("clusterFqdn") String clusterFqdn,
+        @CustomType.Parameter("masterCount") @Nullable Integer masterCount,
+        @CustomType.Parameter("orchestratorProperties") @Nullable KubernetesClusterPropertiesResponse orchestratorProperties,
+        @CustomType.Parameter("orchestratorType") String orchestratorType,
+        @CustomType.Parameter("systemServices") @Nullable List<SystemServiceResponse> systemServices) {
         this.agentCount = agentCount;
         this.agentVmSize = agentVmSize;
         this.clusterFqdn = clusterFqdn;

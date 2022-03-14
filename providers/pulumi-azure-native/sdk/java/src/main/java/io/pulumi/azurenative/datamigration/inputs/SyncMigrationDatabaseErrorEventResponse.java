@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datamigration.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class SyncMigrationDatabaseErrorEventResponse extends io.pulumi.res
      * Event text.
      * 
      */
-    @InputImport(name="eventText", required=true)
+    @Import(name="eventText", required=true)
       private final String eventText;
 
     public String getEventText() {
@@ -31,7 +31,7 @@ public final class SyncMigrationDatabaseErrorEventResponse extends io.pulumi.res
      * Event type.
      * 
      */
-    @InputImport(name="eventTypeString", required=true)
+    @Import(name="eventTypeString", required=true)
       private final String eventTypeString;
 
     public String getEventTypeString() {
@@ -42,7 +42,7 @@ public final class SyncMigrationDatabaseErrorEventResponse extends io.pulumi.res
      * String value of timestamp.
      * 
      */
-    @InputImport(name="timestampString", required=true)
+    @Import(name="timestampString", required=true)
       private final String timestampString;
 
     public String getTimestampString() {

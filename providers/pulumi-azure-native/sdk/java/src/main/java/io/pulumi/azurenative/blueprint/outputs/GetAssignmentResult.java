@@ -8,14 +8,14 @@ import io.pulumi.azurenative.blueprint.outputs.AssignmentStatusResponse;
 import io.pulumi.azurenative.blueprint.outputs.ManagedServiceIdentityResponse;
 import io.pulumi.azurenative.blueprint.outputs.ParameterValueResponse;
 import io.pulumi.azurenative.blueprint.outputs.ResourceGroupValueResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetAssignmentResult {
     /**
      * ID of the published version of a blueprint definition.
@@ -88,22 +88,22 @@ public final class GetAssignmentResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetAssignmentResult(
-        @OutputCustomType.Parameter("blueprintId") @Nullable String blueprintId,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("identity") ManagedServiceIdentityResponse identity,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("locks") @Nullable AssignmentLockSettingsResponse locks,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("parameters") Map<String,ParameterValueResponse> parameters,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("resourceGroups") Map<String,ResourceGroupValueResponse> resourceGroups,
-        @OutputCustomType.Parameter("scope") @Nullable String scope,
-        @OutputCustomType.Parameter("status") AssignmentStatusResponse status,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("blueprintId") @Nullable String blueprintId,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("displayName") @Nullable String displayName,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("identity") ManagedServiceIdentityResponse identity,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("locks") @Nullable AssignmentLockSettingsResponse locks,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("parameters") Map<String,ParameterValueResponse> parameters,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("resourceGroups") Map<String,ResourceGroupValueResponse> resourceGroups,
+        @CustomType.Parameter("scope") @Nullable String scope,
+        @CustomType.Parameter("status") AssignmentStatusResponse status,
+        @CustomType.Parameter("type") String type) {
         this.blueprintId = blueprintId;
         this.description = description;
         this.displayName = displayName;

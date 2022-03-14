@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.media.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VideoAnalyzerPresetResponse {
     /**
      * The language for the audio payload in the input using the BCP-47 format of 'language tag-region' (e.g: 'en-US').  If you know the language of your content, it is recommended that you specify it. The language must be specified explicitly for AudioAnalysisMode::Basic, since automatic language detection is not included in basic mode. If the language isn't specified or set to null, automatic language detection will choose the first language detected and process with the selected language for the duration of the file. It does not currently support dynamically switching between languages after the first language is detected. The automatic detection works best with audio recordings with clearly discernable speech. If automatic detection fails to find the language, transcription would fallback to 'en-US'." The list of supported languages is available here: https://go.microsoft.com/fwlink/?linkid=2109463
@@ -39,13 +39,13 @@ public final class VideoAnalyzerPresetResponse {
      */
     private final String odataType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VideoAnalyzerPresetResponse(
-        @OutputCustomType.Parameter("audioLanguage") @Nullable String audioLanguage,
-        @OutputCustomType.Parameter("experimentalOptions") @Nullable Map<String,String> experimentalOptions,
-        @OutputCustomType.Parameter("insightsToExtract") @Nullable String insightsToExtract,
-        @OutputCustomType.Parameter("mode") @Nullable String mode,
-        @OutputCustomType.Parameter("odataType") String odataType) {
+        @CustomType.Parameter("audioLanguage") @Nullable String audioLanguage,
+        @CustomType.Parameter("experimentalOptions") @Nullable Map<String,String> experimentalOptions,
+        @CustomType.Parameter("insightsToExtract") @Nullable String insightsToExtract,
+        @CustomType.Parameter("mode") @Nullable String mode,
+        @CustomType.Parameter("odataType") String odataType) {
         this.audioLanguage = audioLanguage;
         this.experimentalOptions = experimentalOptions;
         this.insightsToExtract = insightsToExtract;

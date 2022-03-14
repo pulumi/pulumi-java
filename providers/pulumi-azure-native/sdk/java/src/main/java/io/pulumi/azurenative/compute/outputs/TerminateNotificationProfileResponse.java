@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TerminateNotificationProfileResponse {
     /**
      * Specifies whether the Terminate Scheduled event is enabled or disabled.
@@ -23,10 +23,10 @@ public final class TerminateNotificationProfileResponse {
      */
     private final @Nullable String notBeforeTimeout;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TerminateNotificationProfileResponse(
-        @OutputCustomType.Parameter("enable") @Nullable Boolean enable,
-        @OutputCustomType.Parameter("notBeforeTimeout") @Nullable String notBeforeTimeout) {
+        @CustomType.Parameter("enable") @Nullable Boolean enable,
+        @CustomType.Parameter("notBeforeTimeout") @Nullable String notBeforeTimeout) {
         this.enable = enable;
         this.notBeforeTimeout = notBeforeTimeout;
     }

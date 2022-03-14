@@ -5,7 +5,7 @@ package io.pulumi.azurenative.sql;
 
 import io.pulumi.azurenative.sql.enums.BlobAuditingPolicyState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -78,7 +78,7 @@ public final class ExtendedServerBlobAuditingPolicyArgs extends io.pulumi.resour
      * For more information, see [Database-Level Audit Actions](https://docs.microsoft.com/en-us/sql/relational-databases/security/auditing/sql-server-audit-action-groups-and-actions#database-level-audit-actions)
      * 
      */
-    @InputImport(name="auditActionsAndGroups")
+    @Import(name="auditActionsAndGroups")
       private final @Nullable Output<List<String>> auditActionsAndGroups;
 
     public Output<List<String>> getAuditActionsAndGroups() {
@@ -89,7 +89,7 @@ public final class ExtendedServerBlobAuditingPolicyArgs extends io.pulumi.resour
      * The name of the blob auditing policy.
      * 
      */
-    @InputImport(name="blobAuditingPolicyName")
+    @Import(name="blobAuditingPolicyName")
       private final @Nullable Output<String> blobAuditingPolicyName;
 
     public Output<String> getBlobAuditingPolicyName() {
@@ -110,7 +110,7 @@ public final class ExtendedServerBlobAuditingPolicyArgs extends io.pulumi.resour
      * or [Diagnostic Settings PowerShell](https://go.microsoft.com/fwlink/?linkid=2033043)
      * 
      */
-    @InputImport(name="isAzureMonitorTargetEnabled")
+    @Import(name="isAzureMonitorTargetEnabled")
       private final @Nullable Output<Boolean> isAzureMonitorTargetEnabled;
 
     public Output<Boolean> getIsAzureMonitorTargetEnabled() {
@@ -130,7 +130,7 @@ public final class ExtendedServerBlobAuditingPolicyArgs extends io.pulumi.resour
      * or [Diagnostic Settings PowerShell](https://go.microsoft.com/fwlink/?linkid=2033043)
      * 
      */
-    @InputImport(name="isDevopsAuditEnabled")
+    @Import(name="isDevopsAuditEnabled")
       private final @Nullable Output<Boolean> isDevopsAuditEnabled;
 
     public Output<Boolean> getIsDevopsAuditEnabled() {
@@ -141,7 +141,7 @@ public final class ExtendedServerBlobAuditingPolicyArgs extends io.pulumi.resour
      * Specifies whether storageAccountAccessKey value is the storage's secondary key.
      * 
      */
-    @InputImport(name="isStorageSecondaryKeyInUse")
+    @Import(name="isStorageSecondaryKeyInUse")
       private final @Nullable Output<Boolean> isStorageSecondaryKeyInUse;
 
     public Output<Boolean> getIsStorageSecondaryKeyInUse() {
@@ -152,7 +152,7 @@ public final class ExtendedServerBlobAuditingPolicyArgs extends io.pulumi.resour
      * Specifies condition of where clause when creating an audit.
      * 
      */
-    @InputImport(name="predicateExpression")
+    @Import(name="predicateExpression")
       private final @Nullable Output<String> predicateExpression;
 
     public Output<String> getPredicateExpression() {
@@ -164,7 +164,7 @@ public final class ExtendedServerBlobAuditingPolicyArgs extends io.pulumi.resour
      * The default minimum value is 1000 (1 second). The maximum is 2,147,483,647.
      * 
      */
-    @InputImport(name="queueDelayMs")
+    @Import(name="queueDelayMs")
       private final @Nullable Output<Integer> queueDelayMs;
 
     public Output<Integer> getQueueDelayMs() {
@@ -175,7 +175,7 @@ public final class ExtendedServerBlobAuditingPolicyArgs extends io.pulumi.resour
      * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -186,7 +186,7 @@ public final class ExtendedServerBlobAuditingPolicyArgs extends io.pulumi.resour
      * Specifies the number of days to keep in the audit logs in the storage account.
      * 
      */
-    @InputImport(name="retentionDays")
+    @Import(name="retentionDays")
       private final @Nullable Output<Integer> retentionDays;
 
     public Output<Integer> getRetentionDays() {
@@ -197,7 +197,7 @@ public final class ExtendedServerBlobAuditingPolicyArgs extends io.pulumi.resour
      * The name of the server.
      * 
      */
-    @InputImport(name="serverName", required=true)
+    @Import(name="serverName", required=true)
       private final Output<String> serverName;
 
     public Output<String> getServerName() {
@@ -208,7 +208,7 @@ public final class ExtendedServerBlobAuditingPolicyArgs extends io.pulumi.resour
      * Specifies the state of the audit. If state is Enabled, storageEndpoint or isAzureMonitorTargetEnabled are required.
      * 
      */
-    @InputImport(name="state", required=true)
+    @Import(name="state", required=true)
       private final Output<BlobAuditingPolicyState> state;
 
     public Output<BlobAuditingPolicyState> getState() {
@@ -224,7 +224,7 @@ public final class ExtendedServerBlobAuditingPolicyArgs extends io.pulumi.resour
      *    For more information, see [Auditing to storage using Managed Identity authentication](https://go.microsoft.com/fwlink/?linkid=2114355)
      * 
      */
-    @InputImport(name="storageAccountAccessKey")
+    @Import(name="storageAccountAccessKey")
       private final @Nullable Output<String> storageAccountAccessKey;
 
     public Output<String> getStorageAccountAccessKey() {
@@ -235,7 +235,7 @@ public final class ExtendedServerBlobAuditingPolicyArgs extends io.pulumi.resour
      * Specifies the blob storage subscription Id.
      * 
      */
-    @InputImport(name="storageAccountSubscriptionId")
+    @Import(name="storageAccountSubscriptionId")
       private final @Nullable Output<String> storageAccountSubscriptionId;
 
     public Output<String> getStorageAccountSubscriptionId() {
@@ -246,7 +246,7 @@ public final class ExtendedServerBlobAuditingPolicyArgs extends io.pulumi.resour
      * Specifies the blob storage endpoint (e.g. https://MyAccount.blob.core.windows.net). If state is Enabled, storageEndpoint or isAzureMonitorTargetEnabled is required.
      * 
      */
-    @InputImport(name="storageEndpoint")
+    @Import(name="storageEndpoint")
       private final @Nullable Output<String> storageEndpoint;
 
     public Output<String> getStorageEndpoint() {

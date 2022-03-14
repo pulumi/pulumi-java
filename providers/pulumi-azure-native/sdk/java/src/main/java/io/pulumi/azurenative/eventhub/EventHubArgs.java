@@ -6,7 +6,7 @@ package io.pulumi.azurenative.eventhub;
 import io.pulumi.azurenative.eventhub.enums.EntityStatus;
 import io.pulumi.azurenative.eventhub.inputs.CaptureDescriptionArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class EventHubArgs extends io.pulumi.resources.ResourceArgs {
      * Properties of capture description
      * 
      */
-    @InputImport(name="captureDescription")
+    @Import(name="captureDescription")
       private final @Nullable Output<CaptureDescriptionArgs> captureDescription;
 
     public Output<CaptureDescriptionArgs> getCaptureDescription() {
@@ -32,7 +32,7 @@ public final class EventHubArgs extends io.pulumi.resources.ResourceArgs {
      * The Event Hub name
      * 
      */
-    @InputImport(name="eventHubName")
+    @Import(name="eventHubName")
       private final @Nullable Output<String> eventHubName;
 
     public Output<String> getEventHubName() {
@@ -43,7 +43,7 @@ public final class EventHubArgs extends io.pulumi.resources.ResourceArgs {
      * Number of days to retain the events for this Event Hub, value should be 1 to 7 days
      * 
      */
-    @InputImport(name="messageRetentionInDays")
+    @Import(name="messageRetentionInDays")
       private final @Nullable Output<Double> messageRetentionInDays;
 
     public Output<Double> getMessageRetentionInDays() {
@@ -54,7 +54,7 @@ public final class EventHubArgs extends io.pulumi.resources.ResourceArgs {
      * The Namespace name
      * 
      */
-    @InputImport(name="namespaceName", required=true)
+    @Import(name="namespaceName", required=true)
       private final Output<String> namespaceName;
 
     public Output<String> getNamespaceName() {
@@ -65,7 +65,7 @@ public final class EventHubArgs extends io.pulumi.resources.ResourceArgs {
      * Number of partitions created for the Event Hub, allowed values are from 1 to 32 partitions.
      * 
      */
-    @InputImport(name="partitionCount")
+    @Import(name="partitionCount")
       private final @Nullable Output<Double> partitionCount;
 
     public Output<Double> getPartitionCount() {
@@ -76,7 +76,7 @@ public final class EventHubArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the resource group within the azure subscription.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -87,7 +87,7 @@ public final class EventHubArgs extends io.pulumi.resources.ResourceArgs {
      * Enumerates the possible values for the status of the Event Hub.
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable Output<EntityStatus> status;
 
     public Output<EntityStatus> getStatus() {

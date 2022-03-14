@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.logic.outputs;
 
 import io.pulumi.azurenative.logic.outputs.OpenAuthenticationPolicyClaimResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class OpenAuthenticationAccessPolicyResponse {
     /**
      * The access policy claims.
@@ -24,10 +24,10 @@ public final class OpenAuthenticationAccessPolicyResponse {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private OpenAuthenticationAccessPolicyResponse(
-        @OutputCustomType.Parameter("claims") @Nullable List<OpenAuthenticationPolicyClaimResponse> claims,
-        @OutputCustomType.Parameter("type") @Nullable String type) {
+        @CustomType.Parameter("claims") @Nullable List<OpenAuthenticationPolicyClaimResponse> claims,
+        @CustomType.Parameter("type") @Nullable String type) {
         this.claims = claims;
         this.type = type;
     }

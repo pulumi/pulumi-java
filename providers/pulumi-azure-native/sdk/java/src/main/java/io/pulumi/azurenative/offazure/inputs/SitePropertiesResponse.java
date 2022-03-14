@@ -5,7 +5,7 @@ package io.pulumi.azurenative.offazure.inputs;
 
 import io.pulumi.azurenative.offazure.inputs.SiteAgentPropertiesResponse;
 import io.pulumi.azurenative.offazure.inputs.SiteSpnPropertiesResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class SitePropertiesResponse extends io.pulumi.resources.InvokeArgs
      * On-premises agent details.
      * 
      */
-    @InputImport(name="agentDetails")
+    @Import(name="agentDetails")
       private final @Nullable SiteAgentPropertiesResponse agentDetails;
 
     public Optional<SiteAgentPropertiesResponse> getAgentDetails() {
@@ -35,7 +35,7 @@ public final class SitePropertiesResponse extends io.pulumi.resources.InvokeArgs
      * Appliance Name.
      * 
      */
-    @InputImport(name="applianceName")
+    @Import(name="applianceName")
       private final @Nullable String applianceName;
 
     public Optional<String> getApplianceName() {
@@ -46,7 +46,7 @@ public final class SitePropertiesResponse extends io.pulumi.resources.InvokeArgs
      * ARM ID of migration hub solution for SDS.
      * 
      */
-    @InputImport(name="discoverySolutionId")
+    @Import(name="discoverySolutionId")
       private final @Nullable String discoverySolutionId;
 
     public Optional<String> getDiscoverySolutionId() {
@@ -57,7 +57,7 @@ public final class SitePropertiesResponse extends io.pulumi.resources.InvokeArgs
      * Service endpoint.
      * 
      */
-    @InputImport(name="serviceEndpoint", required=true)
+    @Import(name="serviceEndpoint", required=true)
       private final String serviceEndpoint;
 
     public String getServiceEndpoint() {
@@ -68,7 +68,7 @@ public final class SitePropertiesResponse extends io.pulumi.resources.InvokeArgs
      * Service principal identity details used by agent for communication to the service.
      * 
      */
-    @InputImport(name="servicePrincipalIdentityDetails")
+    @Import(name="servicePrincipalIdentityDetails")
       private final @Nullable SiteSpnPropertiesResponse servicePrincipalIdentityDetails;
 
     public Optional<SiteSpnPropertiesResponse> getServicePrincipalIdentityDetails() {

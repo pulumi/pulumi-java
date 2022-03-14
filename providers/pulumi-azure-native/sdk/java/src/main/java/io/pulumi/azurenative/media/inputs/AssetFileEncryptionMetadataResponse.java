@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.media.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class AssetFileEncryptionMetadataResponse extends io.pulumi.resourc
      * The Asset File Id.
      * 
      */
-    @InputImport(name="assetFileId", required=true)
+    @Import(name="assetFileId", required=true)
       private final String assetFileId;
 
     public String getAssetFileId() {
@@ -33,7 +33,7 @@ public final class AssetFileEncryptionMetadataResponse extends io.pulumi.resourc
      * The Asset File name.
      * 
      */
-    @InputImport(name="assetFileName")
+    @Import(name="assetFileName")
       private final @Nullable String assetFileName;
 
     public Optional<String> getAssetFileName() {
@@ -44,7 +44,7 @@ public final class AssetFileEncryptionMetadataResponse extends io.pulumi.resourc
      * The Asset File initialization vector.
      * 
      */
-    @InputImport(name="initializationVector")
+    @Import(name="initializationVector")
       private final @Nullable String initializationVector;
 
     public Optional<String> getInitializationVector() {

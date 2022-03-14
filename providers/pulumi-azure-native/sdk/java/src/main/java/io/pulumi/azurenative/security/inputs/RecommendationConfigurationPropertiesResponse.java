@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.security.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class RecommendationConfigurationPropertiesResponse extends io.pulu
 
     public static final RecommendationConfigurationPropertiesResponse Empty = new RecommendationConfigurationPropertiesResponse();
 
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -27,7 +27,7 @@ public final class RecommendationConfigurationPropertiesResponse extends io.pulu
      * The type of IoT Security recommendation.
      * 
      */
-    @InputImport(name="recommendationType", required=true)
+    @Import(name="recommendationType", required=true)
       private final String recommendationType;
 
     public String getRecommendationType() {
@@ -38,7 +38,7 @@ public final class RecommendationConfigurationPropertiesResponse extends io.pulu
      * Recommendation status. When the recommendation status is disabled recommendations are not generated.
      * 
      */
-    @InputImport(name="status", required=true)
+    @Import(name="status", required=true)
       private final String status;
 
     public String getStatus() {

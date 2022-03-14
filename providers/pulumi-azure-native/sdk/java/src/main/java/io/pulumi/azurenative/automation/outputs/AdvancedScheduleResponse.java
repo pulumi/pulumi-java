@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.automation.outputs;
 
 import io.pulumi.azurenative.automation.outputs.AdvancedScheduleMonthlyOccurrenceResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AdvancedScheduleResponse {
     /**
      * Days of the month that the job should execute on. Must be between 1 and 31.
@@ -29,11 +29,11 @@ public final class AdvancedScheduleResponse {
      */
     private final @Nullable List<String> weekDays;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AdvancedScheduleResponse(
-        @OutputCustomType.Parameter("monthDays") @Nullable List<Integer> monthDays,
-        @OutputCustomType.Parameter("monthlyOccurrences") @Nullable List<AdvancedScheduleMonthlyOccurrenceResponse> monthlyOccurrences,
-        @OutputCustomType.Parameter("weekDays") @Nullable List<String> weekDays) {
+        @CustomType.Parameter("monthDays") @Nullable List<Integer> monthDays,
+        @CustomType.Parameter("monthlyOccurrences") @Nullable List<AdvancedScheduleMonthlyOccurrenceResponse> monthlyOccurrences,
+        @CustomType.Parameter("weekDays") @Nullable List<String> weekDays) {
         this.monthDays = monthDays;
         this.monthlyOccurrences = monthlyOccurrences;
         this.weekDays = weekDays;

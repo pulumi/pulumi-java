@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class StatusCodesBasedTriggerResponse extends io.pulumi.resources.I
      * Request Count.
      * 
      */
-    @InputImport(name="count")
+    @Import(name="count")
       private final @Nullable Integer count;
 
     public Optional<Integer> getCount() {
@@ -34,7 +34,7 @@ public final class StatusCodesBasedTriggerResponse extends io.pulumi.resources.I
      * Request Path
      * 
      */
-    @InputImport(name="path")
+    @Import(name="path")
       private final @Nullable String path;
 
     public Optional<String> getPath() {
@@ -45,7 +45,7 @@ public final class StatusCodesBasedTriggerResponse extends io.pulumi.resources.I
      * HTTP status code.
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable Integer status;
 
     public Optional<Integer> getStatus() {
@@ -56,7 +56,7 @@ public final class StatusCodesBasedTriggerResponse extends io.pulumi.resources.I
      * Request Sub Status.
      * 
      */
-    @InputImport(name="subStatus")
+    @Import(name="subStatus")
       private final @Nullable Integer subStatus;
 
     public Optional<Integer> getSubStatus() {
@@ -67,7 +67,7 @@ public final class StatusCodesBasedTriggerResponse extends io.pulumi.resources.I
      * Time interval.
      * 
      */
-    @InputImport(name="timeInterval")
+    @Import(name="timeInterval")
       private final @Nullable String timeInterval;
 
     public Optional<String> getTimeInterval() {
@@ -78,7 +78,7 @@ public final class StatusCodesBasedTriggerResponse extends io.pulumi.resources.I
      * Win32 error code.
      * 
      */
-    @InputImport(name="win32Status")
+    @Import(name="win32Status")
       private final @Nullable Integer win32Status;
 
     public Optional<Integer> getWin32Status() {

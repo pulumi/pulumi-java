@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.servicefabric.ApplicationTypeVersionArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +35,7 @@ public class ApplicationTypeVersion extends io.pulumi.resources.CustomResource {
      * The URL to the application package
      * 
      */
-    @OutputExport(name="appPackageUrl", type=String.class, parameters={})
+    @Export(name="appPackageUrl", type=String.class, parameters={})
     private Output<String> appPackageUrl;
 
     /**
@@ -49,7 +49,7 @@ public class ApplicationTypeVersion extends io.pulumi.resources.CustomResource {
      * List of application type parameters that can be overridden when creating or updating the application.
      * 
      */
-    @OutputExport(name="defaultParameterList", type=Map.class, parameters={String.class, String.class})
+    @Export(name="defaultParameterList", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> defaultParameterList;
 
     /**
@@ -63,7 +63,7 @@ public class ApplicationTypeVersion extends io.pulumi.resources.CustomResource {
      * Azure resource etag.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -77,7 +77,7 @@ public class ApplicationTypeVersion extends io.pulumi.resources.CustomResource {
      * It will be deprecated in New API, resource location depends on the parent resource.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -91,7 +91,7 @@ public class ApplicationTypeVersion extends io.pulumi.resources.CustomResource {
      * Azure resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -105,7 +105,7 @@ public class ApplicationTypeVersion extends io.pulumi.resources.CustomResource {
      * The current deployment or provisioning state, which only appears in the response
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -119,7 +119,7 @@ public class ApplicationTypeVersion extends io.pulumi.resources.CustomResource {
      * Azure resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -133,7 +133,7 @@ public class ApplicationTypeVersion extends io.pulumi.resources.CustomResource {
      * Azure resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

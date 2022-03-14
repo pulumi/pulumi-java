@@ -6,7 +6,7 @@ package io.pulumi.azurenative.containerregistry.inputs;
 import io.pulumi.azurenative.containerregistry.inputs.QuarantinePolicyResponse;
 import io.pulumi.azurenative.containerregistry.inputs.RetentionPolicyResponse;
 import io.pulumi.azurenative.containerregistry.inputs.TrustPolicyResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class PoliciesResponse extends io.pulumi.resources.InvokeArgs {
      * The quarantine policy for a container registry.
      * 
      */
-    @InputImport(name="quarantinePolicy")
+    @Import(name="quarantinePolicy")
       private final @Nullable QuarantinePolicyResponse quarantinePolicy;
 
     public Optional<QuarantinePolicyResponse> getQuarantinePolicy() {
@@ -35,7 +35,7 @@ public final class PoliciesResponse extends io.pulumi.resources.InvokeArgs {
      * The retention policy for a container registry.
      * 
      */
-    @InputImport(name="retentionPolicy")
+    @Import(name="retentionPolicy")
       private final @Nullable RetentionPolicyResponse retentionPolicy;
 
     public Optional<RetentionPolicyResponse> getRetentionPolicy() {
@@ -46,7 +46,7 @@ public final class PoliciesResponse extends io.pulumi.resources.InvokeArgs {
      * The content trust policy for a container registry.
      * 
      */
-    @InputImport(name="trustPolicy")
+    @Import(name="trustPolicy")
       private final @Nullable TrustPolicyResponse trustPolicy;
 
     public Optional<TrustPolicyResponse> getTrustPolicy() {

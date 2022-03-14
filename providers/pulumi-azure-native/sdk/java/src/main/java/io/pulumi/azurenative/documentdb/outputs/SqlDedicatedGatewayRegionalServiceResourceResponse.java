@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.documentdb.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SqlDedicatedGatewayRegionalServiceResourceResponse {
     /**
      * The location name.
@@ -30,12 +30,12 @@ public final class SqlDedicatedGatewayRegionalServiceResourceResponse {
      */
     private final String status;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SqlDedicatedGatewayRegionalServiceResourceResponse(
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("sqlDedicatedGatewayEndpoint") String sqlDedicatedGatewayEndpoint,
-        @OutputCustomType.Parameter("status") String status) {
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("sqlDedicatedGatewayEndpoint") String sqlDedicatedGatewayEndpoint,
+        @CustomType.Parameter("status") String status) {
         this.location = location;
         this.name = name;
         this.sqlDedicatedGatewayEndpoint = sqlDedicatedGatewayEndpoint;

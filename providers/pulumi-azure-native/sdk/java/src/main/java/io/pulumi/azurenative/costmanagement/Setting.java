@@ -8,7 +8,7 @@ import io.pulumi.azurenative.costmanagement.SettingArgs;
 import io.pulumi.azurenative.costmanagement.outputs.SettingsPropertiesResponseCache;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +35,7 @@ public class Setting extends io.pulumi.resources.CustomResource {
      * Array of scopes with additional details used by Cost Management in the Azure portal.
      * 
      */
-    @OutputExport(name="cache", type=List.class, parameters={SettingsPropertiesResponseCache.class})
+    @Export(name="cache", type=List.class, parameters={SettingsPropertiesResponseCache.class})
     private Output</* @Nullable */ List<SettingsPropertiesResponseCache>> cache;
 
     /**
@@ -49,7 +49,7 @@ public class Setting extends io.pulumi.resources.CustomResource {
      * Resource kind.
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
     /**
@@ -63,7 +63,7 @@ public class Setting extends io.pulumi.resources.CustomResource {
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -77,7 +77,7 @@ public class Setting extends io.pulumi.resources.CustomResource {
      * Sets the default scope the current user will see when they sign into Azure Cost Management in the Azure portal.
      * 
      */
-    @OutputExport(name="scope", type=String.class, parameters={})
+    @Export(name="scope", type=String.class, parameters={})
     private Output<String> scope;
 
     /**
@@ -91,7 +91,7 @@ public class Setting extends io.pulumi.resources.CustomResource {
      * Indicates what scope Cost Management in the Azure portal should default to. Allowed values: LastUsed.
      * 
      */
-    @OutputExport(name="startOn", type=String.class, parameters={})
+    @Export(name="startOn", type=String.class, parameters={})
     private Output</* @Nullable */ String> startOn;
 
     /**
@@ -105,7 +105,7 @@ public class Setting extends io.pulumi.resources.CustomResource {
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

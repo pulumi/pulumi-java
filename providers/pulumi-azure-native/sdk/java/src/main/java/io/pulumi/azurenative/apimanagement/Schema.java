@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.apimanagement.SchemaArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -34,7 +34,7 @@ public class Schema extends io.pulumi.resources.CustomResource {
      * Free-form schema entity description.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -48,7 +48,7 @@ public class Schema extends io.pulumi.resources.CustomResource {
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -62,7 +62,7 @@ public class Schema extends io.pulumi.resources.CustomResource {
      * Schema Type. Immutable.
      * 
      */
-    @OutputExport(name="schemaType", type=String.class, parameters={})
+    @Export(name="schemaType", type=String.class, parameters={})
     private Output<String> schemaType;
 
     /**
@@ -76,7 +76,7 @@ public class Schema extends io.pulumi.resources.CustomResource {
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -90,7 +90,7 @@ public class Schema extends io.pulumi.resources.CustomResource {
      * Json-encoded string for non json-based schema.
      * 
      */
-    @OutputExport(name="value", type=String.class, parameters={})
+    @Export(name="value", type=String.class, parameters={})
     private Output</* @Nullable */ String> value;
 
     /**

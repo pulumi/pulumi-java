@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.azurenative.compute.inputs.CapacityReservationInstanceViewWithNameResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class CapacityReservationGroupInstanceViewResponse extends io.pulum
      * List of instance view of the capacity reservations under the capacity reservation group.
      * 
      */
-    @InputImport(name="capacityReservations", required=true)
+    @Import(name="capacityReservations", required=true)
       private final List<CapacityReservationInstanceViewWithNameResponse> capacityReservations;
 
     public List<CapacityReservationInstanceViewWithNameResponse> getCapacityReservations() {

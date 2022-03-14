@@ -8,7 +8,7 @@ import io.pulumi.azurenative.databoxedge.BandwidthScheduleArgs;
 import io.pulumi.azurenative.databoxedge.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -36,7 +36,7 @@ public class BandwidthSchedule extends io.pulumi.resources.CustomResource {
      * The days of the week when this schedule is applicable.
      * 
      */
-    @OutputExport(name="days", type=List.class, parameters={String.class})
+    @Export(name="days", type=List.class, parameters={String.class})
     private Output<List<String>> days;
 
     /**
@@ -50,7 +50,7 @@ public class BandwidthSchedule extends io.pulumi.resources.CustomResource {
      * The object name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -64,7 +64,7 @@ public class BandwidthSchedule extends io.pulumi.resources.CustomResource {
      * The bandwidth rate in Mbps.
      * 
      */
-    @OutputExport(name="rateInMbps", type=Integer.class, parameters={})
+    @Export(name="rateInMbps", type=Integer.class, parameters={})
     private Output<Integer> rateInMbps;
 
     /**
@@ -78,7 +78,7 @@ public class BandwidthSchedule extends io.pulumi.resources.CustomResource {
      * The start time of the schedule in UTC.
      * 
      */
-    @OutputExport(name="start", type=String.class, parameters={})
+    @Export(name="start", type=String.class, parameters={})
     private Output<String> start;
 
     /**
@@ -92,7 +92,7 @@ public class BandwidthSchedule extends io.pulumi.resources.CustomResource {
      * The stop time of the schedule in UTC.
      * 
      */
-    @OutputExport(name="stop", type=String.class, parameters={})
+    @Export(name="stop", type=String.class, parameters={})
     private Output<String> stop;
 
     /**
@@ -106,7 +106,7 @@ public class BandwidthSchedule extends io.pulumi.resources.CustomResource {
      * Bandwidth object related to ASE resource
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -120,7 +120,7 @@ public class BandwidthSchedule extends io.pulumi.resources.CustomResource {
      * The hierarchical type of the object.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

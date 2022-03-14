@@ -6,7 +6,7 @@ package io.pulumi.azurenative.devtestlab.inputs;
 import io.pulumi.azurenative.devtestlab.inputs.LinuxOsInfoArgs;
 import io.pulumi.azurenative.devtestlab.inputs.WindowsOsInfoArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class CustomImagePropertiesFromVmArgs extends io.pulumi.resources.R
      * The Linux OS information of the VM.
      * 
      */
-    @InputImport(name="linuxOsInfo")
+    @Import(name="linuxOsInfo")
       private final @Nullable Output<LinuxOsInfoArgs> linuxOsInfo;
 
     public Output<LinuxOsInfoArgs> getLinuxOsInfo() {
@@ -35,7 +35,7 @@ public final class CustomImagePropertiesFromVmArgs extends io.pulumi.resources.R
      * The source vm identifier.
      * 
      */
-    @InputImport(name="sourceVmId")
+    @Import(name="sourceVmId")
       private final @Nullable Output<String> sourceVmId;
 
     public Output<String> getSourceVmId() {
@@ -46,7 +46,7 @@ public final class CustomImagePropertiesFromVmArgs extends io.pulumi.resources.R
      * The Windows OS information of the VM.
      * 
      */
-    @InputImport(name="windowsOsInfo")
+    @Import(name="windowsOsInfo")
       private final @Nullable Output<WindowsOsInfoArgs> windowsOsInfo;
 
     public Output<WindowsOsInfoArgs> getWindowsOsInfo() {

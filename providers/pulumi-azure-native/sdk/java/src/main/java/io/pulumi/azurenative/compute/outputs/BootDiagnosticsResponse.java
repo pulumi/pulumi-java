@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BootDiagnosticsResponse {
     /**
      * Whether boot diagnostics should be enabled on the Virtual Machine.
@@ -23,10 +23,10 @@ public final class BootDiagnosticsResponse {
      */
     private final @Nullable String storageUri;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BootDiagnosticsResponse(
-        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
-        @OutputCustomType.Parameter("storageUri") @Nullable String storageUri) {
+        @CustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @CustomType.Parameter("storageUri") @Nullable String storageUri) {
         this.enabled = enabled;
         this.storageUri = storageUri;
     }

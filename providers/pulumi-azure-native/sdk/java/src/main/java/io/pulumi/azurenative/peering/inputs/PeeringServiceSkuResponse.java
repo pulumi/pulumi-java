@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.peering.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class PeeringServiceSkuResponse extends io.pulumi.resources.InvokeA
      * The name of the peering service SKU.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {

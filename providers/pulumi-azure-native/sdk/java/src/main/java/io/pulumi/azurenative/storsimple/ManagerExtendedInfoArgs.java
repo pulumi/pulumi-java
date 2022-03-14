@@ -5,7 +5,7 @@ package io.pulumi.azurenative.storsimple;
 
 import io.pulumi.azurenative.storsimple.enums.Kind;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class ManagerExtendedInfoArgs extends io.pulumi.resources.ResourceA
      * Represents the encryption algorithm used to encrypt the keys. None - if Key is saved in plain text format. Algorithm name - if key is encrypted
      * 
      */
-    @InputImport(name="algorithm", required=true)
+    @Import(name="algorithm", required=true)
       private final Output<String> algorithm;
 
     public Output<String> getAlgorithm() {
@@ -30,7 +30,7 @@ public final class ManagerExtendedInfoArgs extends io.pulumi.resources.ResourceA
      * Represents the CEK of the resource.
      * 
      */
-    @InputImport(name="encryptionKey")
+    @Import(name="encryptionKey")
       private final @Nullable Output<String> encryptionKey;
 
     public Output<String> getEncryptionKey() {
@@ -41,7 +41,7 @@ public final class ManagerExtendedInfoArgs extends io.pulumi.resources.ResourceA
      * Represents the Cert thumbprint that was used to encrypt the CEK.
      * 
      */
-    @InputImport(name="encryptionKeyThumbprint")
+    @Import(name="encryptionKeyThumbprint")
       private final @Nullable Output<String> encryptionKeyThumbprint;
 
     public Output<String> getEncryptionKeyThumbprint() {
@@ -52,7 +52,7 @@ public final class ManagerExtendedInfoArgs extends io.pulumi.resources.ResourceA
      * Represents the CIK of the resource.
      * 
      */
-    @InputImport(name="integrityKey", required=true)
+    @Import(name="integrityKey", required=true)
       private final Output<String> integrityKey;
 
     public Output<String> getIntegrityKey() {
@@ -63,7 +63,7 @@ public final class ManagerExtendedInfoArgs extends io.pulumi.resources.ResourceA
      * The Kind of the object. Currently only Series8000 is supported
      * 
      */
-    @InputImport(name="kind")
+    @Import(name="kind")
       private final @Nullable Output<Kind> kind;
 
     public Output<Kind> getKind() {
@@ -74,7 +74,7 @@ public final class ManagerExtendedInfoArgs extends io.pulumi.resources.ResourceA
      * The manager name
      * 
      */
-    @InputImport(name="managerName", required=true)
+    @Import(name="managerName", required=true)
       private final Output<String> managerName;
 
     public Output<String> getManagerName() {
@@ -85,7 +85,7 @@ public final class ManagerExtendedInfoArgs extends io.pulumi.resources.ResourceA
      * Represents the portal thumbprint which can be used optionally to encrypt the entire data before storing it.
      * 
      */
-    @InputImport(name="portalCertificateThumbprint")
+    @Import(name="portalCertificateThumbprint")
       private final @Nullable Output<String> portalCertificateThumbprint;
 
     public Output<String> getPortalCertificateThumbprint() {
@@ -96,7 +96,7 @@ public final class ManagerExtendedInfoArgs extends io.pulumi.resources.ResourceA
      * The resource group name
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -107,7 +107,7 @@ public final class ManagerExtendedInfoArgs extends io.pulumi.resources.ResourceA
      * The version of the extended info being persisted.
      * 
      */
-    @InputImport(name="version")
+    @Import(name="version")
       private final @Nullable Output<String> version;
 
     public Output<String> getVersion() {

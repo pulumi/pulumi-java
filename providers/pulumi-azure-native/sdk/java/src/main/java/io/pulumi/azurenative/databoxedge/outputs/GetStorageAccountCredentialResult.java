@@ -5,13 +5,13 @@ package io.pulumi.azurenative.databoxedge.outputs;
 
 import io.pulumi.azurenative.databoxedge.outputs.AsymmetricEncryptedSecretResponse;
 import io.pulumi.azurenative.databoxedge.outputs.SystemDataResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetStorageAccountCredentialResult {
     /**
      * Encrypted storage key.
@@ -74,20 +74,20 @@ public final class GetStorageAccountCredentialResult {
      */
     private final @Nullable String userName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetStorageAccountCredentialResult(
-        @OutputCustomType.Parameter("accountKey") @Nullable AsymmetricEncryptedSecretResponse accountKey,
-        @OutputCustomType.Parameter("accountType") String accountType,
-        @OutputCustomType.Parameter("alias") String alias,
-        @OutputCustomType.Parameter("blobDomainName") @Nullable String blobDomainName,
-        @OutputCustomType.Parameter("connectionString") @Nullable String connectionString,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("sslStatus") String sslStatus,
-        @OutputCustomType.Parameter("storageAccountId") @Nullable String storageAccountId,
-        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("userName") @Nullable String userName) {
+        @CustomType.Parameter("accountKey") @Nullable AsymmetricEncryptedSecretResponse accountKey,
+        @CustomType.Parameter("accountType") String accountType,
+        @CustomType.Parameter("alias") String alias,
+        @CustomType.Parameter("blobDomainName") @Nullable String blobDomainName,
+        @CustomType.Parameter("connectionString") @Nullable String connectionString,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("sslStatus") String sslStatus,
+        @CustomType.Parameter("storageAccountId") @Nullable String storageAccountId,
+        @CustomType.Parameter("systemData") SystemDataResponse systemData,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("userName") @Nullable String userName) {
         this.accountKey = accountKey;
         this.accountType = accountType;
         this.alias = alias;

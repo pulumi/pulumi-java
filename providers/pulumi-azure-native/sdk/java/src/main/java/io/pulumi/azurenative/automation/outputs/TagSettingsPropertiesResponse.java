@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.automation.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TagSettingsPropertiesResponse {
     /**
      * Filter VMs by Any or All specified tags.
@@ -24,10 +24,10 @@ public final class TagSettingsPropertiesResponse {
      */
     private final @Nullable Map<String,List<String>> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TagSettingsPropertiesResponse(
-        @OutputCustomType.Parameter("filterOperator") @Nullable String filterOperator,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,List<String>> tags) {
+        @CustomType.Parameter("filterOperator") @Nullable String filterOperator,
+        @CustomType.Parameter("tags") @Nullable Map<String,List<String>> tags) {
         this.filterOperator = filterOperator;
         this.tags = tags;
     }

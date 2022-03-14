@@ -8,7 +8,7 @@ import io.pulumi.azurenative.edgeorder.inputs.ManagementResourcePreferencesArgs;
 import io.pulumi.azurenative.edgeorder.inputs.NotificationPreferenceArgs;
 import io.pulumi.azurenative.edgeorder.inputs.TransportPreferencesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +26,7 @@ public final class PreferencesArgs extends io.pulumi.resources.ResourceArgs {
      * Preferences related to the Encryption.
      * 
      */
-    @InputImport(name="encryptionPreferences")
+    @Import(name="encryptionPreferences")
       private final @Nullable Output<EncryptionPreferencesArgs> encryptionPreferences;
 
     public Output<EncryptionPreferencesArgs> getEncryptionPreferences() {
@@ -37,7 +37,7 @@ public final class PreferencesArgs extends io.pulumi.resources.ResourceArgs {
      * Preferences related to the Management resource.
      * 
      */
-    @InputImport(name="managementResourcePreferences")
+    @Import(name="managementResourcePreferences")
       private final @Nullable Output<ManagementResourcePreferencesArgs> managementResourcePreferences;
 
     public Output<ManagementResourcePreferencesArgs> getManagementResourcePreferences() {
@@ -48,7 +48,7 @@ public final class PreferencesArgs extends io.pulumi.resources.ResourceArgs {
      * Notification preferences.
      * 
      */
-    @InputImport(name="notificationPreferences")
+    @Import(name="notificationPreferences")
       private final @Nullable Output<List<NotificationPreferenceArgs>> notificationPreferences;
 
     public Output<List<NotificationPreferenceArgs>> getNotificationPreferences() {
@@ -59,7 +59,7 @@ public final class PreferencesArgs extends io.pulumi.resources.ResourceArgs {
      * Preferences related to the shipment logistics of the order.
      * 
      */
-    @InputImport(name="transportPreferences")
+    @Import(name="transportPreferences")
       private final @Nullable Output<TransportPreferencesArgs> transportPreferences;
 
     public Output<TransportPreferencesArgs> getTransportPreferences() {

@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.notificationhubs.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BaiduCredentialResponse {
     /**
      * Baidu Api Key.
@@ -27,11 +27,11 @@ public final class BaiduCredentialResponse {
      */
     private final @Nullable String baiduSecretKey;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BaiduCredentialResponse(
-        @OutputCustomType.Parameter("baiduApiKey") @Nullable String baiduApiKey,
-        @OutputCustomType.Parameter("baiduEndPoint") @Nullable String baiduEndPoint,
-        @OutputCustomType.Parameter("baiduSecretKey") @Nullable String baiduSecretKey) {
+        @CustomType.Parameter("baiduApiKey") @Nullable String baiduApiKey,
+        @CustomType.Parameter("baiduEndPoint") @Nullable String baiduEndPoint,
+        @CustomType.Parameter("baiduSecretKey") @Nullable String baiduSecretKey) {
         this.baiduApiKey = baiduApiKey;
         this.baiduEndPoint = baiduEndPoint;
         this.baiduSecretKey = baiduSecretKey;

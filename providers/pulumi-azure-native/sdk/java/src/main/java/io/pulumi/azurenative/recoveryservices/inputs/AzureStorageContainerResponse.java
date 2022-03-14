@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class AzureStorageContainerResponse extends io.pulumi.resources.Inv
      * Type of backup management for the container.
      * 
      */
-    @InputImport(name="backupManagementType")
+    @Import(name="backupManagementType")
       private final @Nullable String backupManagementType;
 
     public Optional<String> getBackupManagementType() {
@@ -38,7 +38,7 @@ public final class AzureStorageContainerResponse extends io.pulumi.resources.Inv
      * Expected value is 'StorageContainer'.
      * 
      */
-    @InputImport(name="containerType", required=true)
+    @Import(name="containerType", required=true)
       private final String containerType;
 
     public String getContainerType() {
@@ -49,7 +49,7 @@ public final class AzureStorageContainerResponse extends io.pulumi.resources.Inv
      * Friendly name of the container.
      * 
      */
-    @InputImport(name="friendlyName")
+    @Import(name="friendlyName")
       private final @Nullable String friendlyName;
 
     public Optional<String> getFriendlyName() {
@@ -60,7 +60,7 @@ public final class AzureStorageContainerResponse extends io.pulumi.resources.Inv
      * Status of health of the container.
      * 
      */
-    @InputImport(name="healthStatus")
+    @Import(name="healthStatus")
       private final @Nullable String healthStatus;
 
     public Optional<String> getHealthStatus() {
@@ -71,7 +71,7 @@ public final class AzureStorageContainerResponse extends io.pulumi.resources.Inv
      * Number of items backed up in this container.
      * 
      */
-    @InputImport(name="protectedItemCount")
+    @Import(name="protectedItemCount")
       private final @Nullable Double protectedItemCount;
 
     public Optional<Double> getProtectedItemCount() {
@@ -82,7 +82,7 @@ public final class AzureStorageContainerResponse extends io.pulumi.resources.Inv
      * Status of registration of the container with the Recovery Services Vault.
      * 
      */
-    @InputImport(name="registrationStatus")
+    @Import(name="registrationStatus")
       private final @Nullable String registrationStatus;
 
     public Optional<String> getRegistrationStatus() {
@@ -93,7 +93,7 @@ public final class AzureStorageContainerResponse extends io.pulumi.resources.Inv
      * Resource group name of Recovery Services Vault.
      * 
      */
-    @InputImport(name="resourceGroup")
+    @Import(name="resourceGroup")
       private final @Nullable String resourceGroup;
 
     public Optional<String> getResourceGroup() {
@@ -104,7 +104,7 @@ public final class AzureStorageContainerResponse extends io.pulumi.resources.Inv
      * Fully qualified ARM url.
      * 
      */
-    @InputImport(name="sourceResourceId")
+    @Import(name="sourceResourceId")
       private final @Nullable String sourceResourceId;
 
     public Optional<String> getSourceResourceId() {
@@ -115,7 +115,7 @@ public final class AzureStorageContainerResponse extends io.pulumi.resources.Inv
      * Storage account version.
      * 
      */
-    @InputImport(name="storageAccountVersion")
+    @Import(name="storageAccountVersion")
       private final @Nullable String storageAccountVersion;
 
     public Optional<String> getStorageAccountVersion() {

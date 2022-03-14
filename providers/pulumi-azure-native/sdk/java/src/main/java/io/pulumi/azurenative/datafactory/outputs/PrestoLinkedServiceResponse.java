@@ -8,7 +8,7 @@ import io.pulumi.azurenative.datafactory.outputs.IntegrationRuntimeReferenceResp
 import io.pulumi.azurenative.datafactory.outputs.ParameterSpecificationResponse;
 import io.pulumi.azurenative.datafactory.outputs.SecureStringResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -17,7 +17,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PrestoLinkedServiceResponse {
     /**
      * Specifies whether to require a CA-issued SSL certificate name to match the host name of the server when connecting over SSL. The default value is false.
@@ -116,27 +116,27 @@ public final class PrestoLinkedServiceResponse {
      */
     private final @Nullable Object username;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PrestoLinkedServiceResponse(
-        @OutputCustomType.Parameter("allowHostNameCNMismatch") @Nullable Object allowHostNameCNMismatch,
-        @OutputCustomType.Parameter("allowSelfSignedServerCert") @Nullable Object allowSelfSignedServerCert,
-        @OutputCustomType.Parameter("annotations") @Nullable List<Object> annotations,
-        @OutputCustomType.Parameter("authenticationType") String authenticationType,
-        @OutputCustomType.Parameter("catalog") Object catalog,
-        @OutputCustomType.Parameter("connectVia") @Nullable IntegrationRuntimeReferenceResponse connectVia,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("enableSsl") @Nullable Object enableSsl,
-        @OutputCustomType.Parameter("encryptedCredential") @Nullable Object encryptedCredential,
-        @OutputCustomType.Parameter("host") Object host,
-        @OutputCustomType.Parameter("parameters") @Nullable Map<String,ParameterSpecificationResponse> parameters,
-        @OutputCustomType.Parameter("password") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password,
-        @OutputCustomType.Parameter("port") @Nullable Object port,
-        @OutputCustomType.Parameter("serverVersion") Object serverVersion,
-        @OutputCustomType.Parameter("timeZoneID") @Nullable Object timeZoneID,
-        @OutputCustomType.Parameter("trustedCertPath") @Nullable Object trustedCertPath,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("useSystemTrustStore") @Nullable Object useSystemTrustStore,
-        @OutputCustomType.Parameter("username") @Nullable Object username) {
+        @CustomType.Parameter("allowHostNameCNMismatch") @Nullable Object allowHostNameCNMismatch,
+        @CustomType.Parameter("allowSelfSignedServerCert") @Nullable Object allowSelfSignedServerCert,
+        @CustomType.Parameter("annotations") @Nullable List<Object> annotations,
+        @CustomType.Parameter("authenticationType") String authenticationType,
+        @CustomType.Parameter("catalog") Object catalog,
+        @CustomType.Parameter("connectVia") @Nullable IntegrationRuntimeReferenceResponse connectVia,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("enableSsl") @Nullable Object enableSsl,
+        @CustomType.Parameter("encryptedCredential") @Nullable Object encryptedCredential,
+        @CustomType.Parameter("host") Object host,
+        @CustomType.Parameter("parameters") @Nullable Map<String,ParameterSpecificationResponse> parameters,
+        @CustomType.Parameter("password") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password,
+        @CustomType.Parameter("port") @Nullable Object port,
+        @CustomType.Parameter("serverVersion") Object serverVersion,
+        @CustomType.Parameter("timeZoneID") @Nullable Object timeZoneID,
+        @CustomType.Parameter("trustedCertPath") @Nullable Object trustedCertPath,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("useSystemTrustStore") @Nullable Object useSystemTrustStore,
+        @CustomType.Parameter("username") @Nullable Object username) {
         this.allowHostNameCNMismatch = allowHostNameCNMismatch;
         this.allowSelfSignedServerCert = allowSelfSignedServerCert;
         this.annotations = annotations;

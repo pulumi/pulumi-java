@@ -6,7 +6,7 @@ package io.pulumi.azurenative.loadtestservice.inputs;
 import io.pulumi.azurenative.loadtestservice.enums.SystemAssignedServiceIdentityType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class SystemAssignedServiceIdentityArgs extends io.pulumi.resources
      * Type of managed service identity (either system assigned, or none).
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<Either<String,SystemAssignedServiceIdentityType>> type;
 
     public Output<Either<String,SystemAssignedServiceIdentityType>> getType() {

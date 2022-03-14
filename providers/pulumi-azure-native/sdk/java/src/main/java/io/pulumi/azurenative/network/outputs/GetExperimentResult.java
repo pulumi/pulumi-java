@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.ExperimentEndpointResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetExperimentResult {
     /**
      * The description of the details or intents of the Experiment
@@ -74,20 +74,20 @@ public final class GetExperimentResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetExperimentResult(
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("enabledState") @Nullable String enabledState,
-        @OutputCustomType.Parameter("endpointA") @Nullable ExperimentEndpointResponse endpointA,
-        @OutputCustomType.Parameter("endpointB") @Nullable ExperimentEndpointResponse endpointB,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("resourceState") String resourceState,
-        @OutputCustomType.Parameter("scriptFileUri") String scriptFileUri,
-        @OutputCustomType.Parameter("status") String status,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("enabledState") @Nullable String enabledState,
+        @CustomType.Parameter("endpointA") @Nullable ExperimentEndpointResponse endpointA,
+        @CustomType.Parameter("endpointB") @Nullable ExperimentEndpointResponse endpointB,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("resourceState") String resourceState,
+        @CustomType.Parameter("scriptFileUri") String scriptFileUri,
+        @CustomType.Parameter("status") String status,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type) {
         this.description = description;
         this.enabledState = enabledState;
         this.endpointA = endpointA;

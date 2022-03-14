@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class JwtClaimChecksArgs extends io.pulumi.resources.ResourceArgs {
      * The list of the allowed client applications.
      * 
      */
-    @InputImport(name="allowedClientApplications")
+    @Import(name="allowedClientApplications")
       private final @Nullable Output<List<String>> allowedClientApplications;
 
     public Output<List<String>> getAllowedClientApplications() {
@@ -34,7 +34,7 @@ public final class JwtClaimChecksArgs extends io.pulumi.resources.ResourceArgs {
      * The list of the allowed groups.
      * 
      */
-    @InputImport(name="allowedGroups")
+    @Import(name="allowedGroups")
       private final @Nullable Output<List<String>> allowedGroups;
 
     public Output<List<String>> getAllowedGroups() {

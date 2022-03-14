@@ -5,14 +5,14 @@ package io.pulumi.azurenative.securityinsights.outputs;
 
 import io.pulumi.azurenative.securityinsights.outputs.RepositoryResponse;
 import io.pulumi.azurenative.securityinsights.outputs.SystemDataResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetSourceControlResult {
     /**
      * Array of source control content types.
@@ -95,24 +95,24 @@ public final class GetSourceControlResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetSourceControlResult(
-        @OutputCustomType.Parameter("contentTypes") List<String> contentTypes,
-        @OutputCustomType.Parameter("createdAt") @Nullable String createdAt,
-        @OutputCustomType.Parameter("createdBy") @Nullable String createdBy,
-        @OutputCustomType.Parameter("createdByType") @Nullable String createdByType,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("etag") @Nullable String etag,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("lastModifiedAt") @Nullable String lastModifiedAt,
-        @OutputCustomType.Parameter("lastModifiedBy") @Nullable String lastModifiedBy,
-        @OutputCustomType.Parameter("lastModifiedByType") @Nullable String lastModifiedByType,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("repoType") String repoType,
-        @OutputCustomType.Parameter("repository") RepositoryResponse repository,
-        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("contentTypes") List<String> contentTypes,
+        @CustomType.Parameter("createdAt") @Nullable String createdAt,
+        @CustomType.Parameter("createdBy") @Nullable String createdBy,
+        @CustomType.Parameter("createdByType") @Nullable String createdByType,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("etag") @Nullable String etag,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("lastModifiedAt") @Nullable String lastModifiedAt,
+        @CustomType.Parameter("lastModifiedBy") @Nullable String lastModifiedBy,
+        @CustomType.Parameter("lastModifiedByType") @Nullable String lastModifiedByType,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("repoType") String repoType,
+        @CustomType.Parameter("repository") RepositoryResponse repository,
+        @CustomType.Parameter("systemData") SystemDataResponse systemData,
+        @CustomType.Parameter("type") String type) {
         this.contentTypes = contentTypes;
         this.createdAt = createdAt;
         this.createdBy = createdBy;

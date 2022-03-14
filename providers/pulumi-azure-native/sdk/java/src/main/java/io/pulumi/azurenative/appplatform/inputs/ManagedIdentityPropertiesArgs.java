@@ -6,7 +6,7 @@ package io.pulumi.azurenative.appplatform.inputs;
 import io.pulumi.azurenative.appplatform.enums.ManagedIdentityType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class ManagedIdentityPropertiesArgs extends io.pulumi.resources.Res
      * Principal Id
      * 
      */
-    @InputImport(name="principalId")
+    @Import(name="principalId")
       private final @Nullable Output<String> principalId;
 
     public Output<String> getPrincipalId() {
@@ -35,7 +35,7 @@ public final class ManagedIdentityPropertiesArgs extends io.pulumi.resources.Res
      * Tenant Id
      * 
      */
-    @InputImport(name="tenantId")
+    @Import(name="tenantId")
       private final @Nullable Output<String> tenantId;
 
     public Output<String> getTenantId() {
@@ -46,7 +46,7 @@ public final class ManagedIdentityPropertiesArgs extends io.pulumi.resources.Res
      * Type of the managed identity
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<Either<String,ManagedIdentityType>> type;
 
     public Output<Either<String,ManagedIdentityType>> getType() {

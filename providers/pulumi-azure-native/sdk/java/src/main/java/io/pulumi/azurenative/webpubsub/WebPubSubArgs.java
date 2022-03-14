@@ -10,7 +10,7 @@ import io.pulumi.azurenative.webpubsub.inputs.WebPubSubFeatureArgs;
 import io.pulumi.azurenative.webpubsub.inputs.WebPubSubNetworkACLsArgs;
 import io.pulumi.azurenative.webpubsub.inputs.WebPubSubTlsSettingsArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -26,7 +26,7 @@ public final class WebPubSubArgs extends io.pulumi.resources.ResourceArgs {
      * The settings for event handler in webpubsub service.
      * 
      */
-    @InputImport(name="eventHandler")
+    @Import(name="eventHandler")
       private final @Nullable Output<EventHandlerSettingsArgs> eventHandler;
 
     public Output<EventHandlerSettingsArgs> getEventHandler() {
@@ -42,7 +42,7 @@ public final class WebPubSubArgs extends io.pulumi.resources.ResourceArgs {
      * But keep in mind, the default value doesn't mean "false". It varies in terms of different FeatureFlags.
      * 
      */
-    @InputImport(name="features")
+    @Import(name="features")
       private final @Nullable Output<List<WebPubSubFeatureArgs>> features;
 
     public Output<List<WebPubSubFeatureArgs>> getFeatures() {
@@ -53,7 +53,7 @@ public final class WebPubSubArgs extends io.pulumi.resources.ResourceArgs {
      * The managed identity response
      * 
      */
-    @InputImport(name="identity")
+    @Import(name="identity")
       private final @Nullable Output<ManagedIdentityArgs> identity;
 
     public Output<ManagedIdentityArgs> getIdentity() {
@@ -64,7 +64,7 @@ public final class WebPubSubArgs extends io.pulumi.resources.ResourceArgs {
      * The GEO location of the resource. e.g. West US | East US | North Central US | South Central US.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -75,7 +75,7 @@ public final class WebPubSubArgs extends io.pulumi.resources.ResourceArgs {
      * Network ACLs
      * 
      */
-    @InputImport(name="networkACLs")
+    @Import(name="networkACLs")
       private final @Nullable Output<WebPubSubNetworkACLsArgs> networkACLs;
 
     public Output<WebPubSubNetworkACLsArgs> getNetworkACLs() {
@@ -88,7 +88,7 @@ public final class WebPubSubArgs extends io.pulumi.resources.ResourceArgs {
      * When it's Disabled, public network access is always disabled no matter what you set in network ACLs.
      * 
      */
-    @InputImport(name="publicNetworkAccess")
+    @Import(name="publicNetworkAccess")
       private final @Nullable Output<String> publicNetworkAccess;
 
     public Output<String> getPublicNetworkAccess() {
@@ -99,7 +99,7 @@ public final class WebPubSubArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -110,7 +110,7 @@ public final class WebPubSubArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource.
      * 
      */
-    @InputImport(name="resourceName")
+    @Import(name="resourceName")
       private final @Nullable Output<String> resourceName;
 
     public Output<String> getPropResourceName() {
@@ -121,7 +121,7 @@ public final class WebPubSubArgs extends io.pulumi.resources.ResourceArgs {
      * The billing information of the resource.(e.g. Free, Standard)
      * 
      */
-    @InputImport(name="sku")
+    @Import(name="sku")
       private final @Nullable Output<ResourceSkuArgs> sku;
 
     public Output<ResourceSkuArgs> getSku() {
@@ -132,7 +132,7 @@ public final class WebPubSubArgs extends io.pulumi.resources.ResourceArgs {
      * Tags of the service which is a list of key value pairs that describe the resource.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -143,7 +143,7 @@ public final class WebPubSubArgs extends io.pulumi.resources.ResourceArgs {
      * TLS settings.
      * 
      */
-    @InputImport(name="tls")
+    @Import(name="tls")
       private final @Nullable Output<WebPubSubTlsSettingsArgs> tls;
 
     public Output<WebPubSubTlsSettingsArgs> getTls() {

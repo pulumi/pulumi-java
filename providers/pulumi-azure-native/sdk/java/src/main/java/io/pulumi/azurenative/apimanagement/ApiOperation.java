@@ -10,7 +10,7 @@ import io.pulumi.azurenative.apimanagement.outputs.RequestContractResponse;
 import io.pulumi.azurenative.apimanagement.outputs.ResponseContractResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -37,7 +37,7 @@ public class ApiOperation extends io.pulumi.resources.CustomResource {
      * Description of the operation. May include HTML formatting tags.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -51,7 +51,7 @@ public class ApiOperation extends io.pulumi.resources.CustomResource {
      * Operation Name.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
@@ -65,7 +65,7 @@ public class ApiOperation extends io.pulumi.resources.CustomResource {
      * A Valid HTTP Operation Method. Typical Http Methods like GET, PUT, POST but not limited by only them.
      * 
      */
-    @OutputExport(name="method", type=String.class, parameters={})
+    @Export(name="method", type=String.class, parameters={})
     private Output<String> method;
 
     /**
@@ -79,7 +79,7 @@ public class ApiOperation extends io.pulumi.resources.CustomResource {
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -93,7 +93,7 @@ public class ApiOperation extends io.pulumi.resources.CustomResource {
      * Operation Policies
      * 
      */
-    @OutputExport(name="policies", type=String.class, parameters={})
+    @Export(name="policies", type=String.class, parameters={})
     private Output</* @Nullable */ String> policies;
 
     /**
@@ -107,7 +107,7 @@ public class ApiOperation extends io.pulumi.resources.CustomResource {
      * An entity containing request details.
      * 
      */
-    @OutputExport(name="request", type=RequestContractResponse.class, parameters={})
+    @Export(name="request", type=RequestContractResponse.class, parameters={})
     private Output</* @Nullable */ RequestContractResponse> request;
 
     /**
@@ -121,7 +121,7 @@ public class ApiOperation extends io.pulumi.resources.CustomResource {
      * Array of Operation responses.
      * 
      */
-    @OutputExport(name="responses", type=List.class, parameters={ResponseContractResponse.class})
+    @Export(name="responses", type=List.class, parameters={ResponseContractResponse.class})
     private Output</* @Nullable */ List<ResponseContractResponse>> responses;
 
     /**
@@ -135,7 +135,7 @@ public class ApiOperation extends io.pulumi.resources.CustomResource {
      * Collection of URL template parameters.
      * 
      */
-    @OutputExport(name="templateParameters", type=List.class, parameters={ParameterContractResponse.class})
+    @Export(name="templateParameters", type=List.class, parameters={ParameterContractResponse.class})
     private Output</* @Nullable */ List<ParameterContractResponse>> templateParameters;
 
     /**
@@ -149,7 +149,7 @@ public class ApiOperation extends io.pulumi.resources.CustomResource {
      * Resource type for API Management resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -163,7 +163,7 @@ public class ApiOperation extends io.pulumi.resources.CustomResource {
      * Relative URL template identifying the target resource for this operation. May include parameters. Example: /customers/{cid}/orders/{oid}/?date={date}
      * 
      */
-    @OutputExport(name="urlTemplate", type=String.class, parameters={})
+    @Export(name="urlTemplate", type=String.class, parameters={})
     private Output<String> urlTemplate;
 
     /**

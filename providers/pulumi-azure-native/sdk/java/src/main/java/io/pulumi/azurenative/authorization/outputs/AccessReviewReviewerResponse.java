@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.authorization.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AccessReviewReviewerResponse {
     /**
      * The id of the reviewer(user/servicePrincipal)
@@ -22,10 +22,10 @@ public final class AccessReviewReviewerResponse {
      */
     private final String principalType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AccessReviewReviewerResponse(
-        @OutputCustomType.Parameter("principalId") @Nullable String principalId,
-        @OutputCustomType.Parameter("principalType") String principalType) {
+        @CustomType.Parameter("principalId") @Nullable String principalId,
+        @CustomType.Parameter("principalType") String principalType) {
         this.principalId = principalId;
         this.principalType = principalType;
     }

@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.web.outputs;
 
 import io.pulumi.azurenative.web.outputs.ConsentLinkDefinitionResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ListConnectionConsentLinksResult {
     /**
      * Collection of resources
@@ -17,8 +17,8 @@ public final class ListConnectionConsentLinksResult {
      */
     private final @Nullable List<ConsentLinkDefinitionResponse> value;
 
-    @OutputCustomType.Constructor
-    private ListConnectionConsentLinksResult(@OutputCustomType.Parameter("value") @Nullable List<ConsentLinkDefinitionResponse> value) {
+    @CustomType.Constructor
+    private ListConnectionConsentLinksResult(@CustomType.Parameter("value") @Nullable List<ConsentLinkDefinitionResponse> value) {
         this.value = value;
     }
 

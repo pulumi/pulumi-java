@@ -8,7 +8,7 @@ import io.pulumi.azurenative.automanage.ConfigurationProfileAssignmentArgs;
 import io.pulumi.azurenative.automanage.outputs.ConfigurationProfileAssignmentPropertiesResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +35,7 @@ public class ConfigurationProfileAssignment extends io.pulumi.resources.CustomRe
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -49,7 +49,7 @@ public class ConfigurationProfileAssignment extends io.pulumi.resources.CustomRe
      * Properties of the configuration profile assignment.
      * 
      */
-    @OutputExport(name="properties", type=ConfigurationProfileAssignmentPropertiesResponse.class, parameters={})
+    @Export(name="properties", type=ConfigurationProfileAssignmentPropertiesResponse.class, parameters={})
     private Output<ConfigurationProfileAssignmentPropertiesResponse> properties;
 
     /**
@@ -63,7 +63,7 @@ public class ConfigurationProfileAssignment extends io.pulumi.resources.CustomRe
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

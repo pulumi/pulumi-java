@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.cdn.inputs;
 
 import io.pulumi.azurenative.cdn.inputs.UrlPathMatchConditionParametersResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class DeliveryRuleUrlPathConditionResponse extends io.pulumi.resour
      * Expected value is 'UrlPath'.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -33,7 +33,7 @@ public final class DeliveryRuleUrlPathConditionResponse extends io.pulumi.resour
      * Defines the parameters for the condition.
      * 
      */
-    @InputImport(name="parameters", required=true)
+    @Import(name="parameters", required=true)
       private final UrlPathMatchConditionParametersResponse parameters;
 
     public UrlPathMatchConditionParametersResponse getParameters() {

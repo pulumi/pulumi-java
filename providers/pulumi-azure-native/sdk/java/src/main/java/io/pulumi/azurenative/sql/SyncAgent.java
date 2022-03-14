@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.sql.SyncAgentArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -35,7 +35,7 @@ public class SyncAgent extends io.pulumi.resources.CustomResource {
      * Expiration time of the sync agent version.
      * 
      */
-    @OutputExport(name="expiryTime", type=String.class, parameters={})
+    @Export(name="expiryTime", type=String.class, parameters={})
     private Output<String> expiryTime;
 
     /**
@@ -49,7 +49,7 @@ public class SyncAgent extends io.pulumi.resources.CustomResource {
      * If the sync agent version is up to date.
      * 
      */
-    @OutputExport(name="isUpToDate", type=Boolean.class, parameters={})
+    @Export(name="isUpToDate", type=Boolean.class, parameters={})
     private Output<Boolean> isUpToDate;
 
     /**
@@ -63,7 +63,7 @@ public class SyncAgent extends io.pulumi.resources.CustomResource {
      * Last alive time of the sync agent.
      * 
      */
-    @OutputExport(name="lastAliveTime", type=String.class, parameters={})
+    @Export(name="lastAliveTime", type=String.class, parameters={})
     private Output<String> lastAliveTime;
 
     /**
@@ -77,7 +77,7 @@ public class SyncAgent extends io.pulumi.resources.CustomResource {
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -91,7 +91,7 @@ public class SyncAgent extends io.pulumi.resources.CustomResource {
      * State of the sync agent.
      * 
      */
-    @OutputExport(name="state", type=String.class, parameters={})
+    @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
@@ -105,7 +105,7 @@ public class SyncAgent extends io.pulumi.resources.CustomResource {
      * ARM resource id of the sync database in the sync agent.
      * 
      */
-    @OutputExport(name="syncDatabaseId", type=String.class, parameters={})
+    @Export(name="syncDatabaseId", type=String.class, parameters={})
     private Output</* @Nullable */ String> syncDatabaseId;
 
     /**
@@ -119,7 +119,7 @@ public class SyncAgent extends io.pulumi.resources.CustomResource {
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -133,7 +133,7 @@ public class SyncAgent extends io.pulumi.resources.CustomResource {
      * Version of the sync agent.
      * 
      */
-    @OutputExport(name="version", type=String.class, parameters={})
+    @Export(name="version", type=String.class, parameters={})
     private Output<String> version;
 
     /**

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.FrontDoorManagedRuleSetResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class ManagedRuleSetListResponse extends io.pulumi.resources.Invoke
      * List of rule sets.
      * 
      */
-    @InputImport(name="managedRuleSets")
+    @Import(name="managedRuleSets")
       private final @Nullable List<FrontDoorManagedRuleSetResponse> managedRuleSets;
 
     public List<FrontDoorManagedRuleSetResponse> getManagedRuleSets() {

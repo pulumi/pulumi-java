@@ -6,7 +6,7 @@ package io.pulumi.azurenative.confluent;
 import io.pulumi.azurenative.confluent.inputs.OrganizationResourcePropertiesOfferDetailArgs;
 import io.pulumi.azurenative.confluent.inputs.OrganizationResourcePropertiesUserDetailArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
      * Location of Organization resource
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -32,7 +32,7 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
      * Confluent offer detail
      * 
      */
-    @InputImport(name="offerDetail")
+    @Import(name="offerDetail")
       private final @Nullable Output<OrganizationResourcePropertiesOfferDetailArgs> offerDetail;
 
     public Output<OrganizationResourcePropertiesOfferDetailArgs> getOfferDetail() {
@@ -43,7 +43,7 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
      * Organization resource name
      * 
      */
-    @InputImport(name="organizationName")
+    @Import(name="organizationName")
       private final @Nullable Output<String> organizationName;
 
     public Output<String> getOrganizationName() {
@@ -54,7 +54,7 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
      * Resource group name
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -65,7 +65,7 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
      * Organization resource tags
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -76,7 +76,7 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
      * Subscriber detail
      * 
      */
-    @InputImport(name="userDetail")
+    @Import(name="userDetail")
       private final @Nullable Output<OrganizationResourcePropertiesUserDetailArgs> userDetail;
 
     public Output<OrganizationResourcePropertiesUserDetailArgs> getUserDetail() {

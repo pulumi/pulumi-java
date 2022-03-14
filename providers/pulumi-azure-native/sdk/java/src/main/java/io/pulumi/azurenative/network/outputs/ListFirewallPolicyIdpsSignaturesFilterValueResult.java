@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ListFirewallPolicyIdpsSignaturesFilterValueResult {
     /**
      * Describes the possible values
@@ -17,8 +17,8 @@ public final class ListFirewallPolicyIdpsSignaturesFilterValueResult {
      */
     private final @Nullable List<String> filterValues;
 
-    @OutputCustomType.Constructor
-    private ListFirewallPolicyIdpsSignaturesFilterValueResult(@OutputCustomType.Parameter("filterValues") @Nullable List<String> filterValues) {
+    @CustomType.Constructor
+    private ListFirewallPolicyIdpsSignaturesFilterValueResult(@CustomType.Parameter("filterValues") @Nullable List<String> filterValues) {
         this.filterValues = filterValues;
     }
 

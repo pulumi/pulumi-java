@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.offazure.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class SiteSpnPropertiesArgs extends io.pulumi.resources.ResourceArg
      * AAD Authority URL which was used to request the token for the service principal.
      * 
      */
-    @InputImport(name="aadAuthority")
+    @Import(name="aadAuthority")
       private final @Nullable Output<String> aadAuthority;
 
     public Output<String> getAadAuthority() {
@@ -33,7 +33,7 @@ public final class SiteSpnPropertiesArgs extends io.pulumi.resources.ResourceArg
      * Application/client Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.
      * 
      */
-    @InputImport(name="applicationId")
+    @Import(name="applicationId")
       private final @Nullable Output<String> applicationId;
 
     public Output<String> getApplicationId() {
@@ -44,7 +44,7 @@ public final class SiteSpnPropertiesArgs extends io.pulumi.resources.ResourceArg
      * Intended audience for the service principal.
      * 
      */
-    @InputImport(name="audience")
+    @Import(name="audience")
       private final @Nullable Output<String> audience;
 
     public Output<String> getAudience() {
@@ -55,7 +55,7 @@ public final class SiteSpnPropertiesArgs extends io.pulumi.resources.ResourceArg
      * Object Id of the service principal with which the on-premise management/data plane components would communicate with our Azure services.
      * 
      */
-    @InputImport(name="objectId")
+    @Import(name="objectId")
       private final @Nullable Output<String> objectId;
 
     public Output<String> getObjectId() {
@@ -66,7 +66,7 @@ public final class SiteSpnPropertiesArgs extends io.pulumi.resources.ResourceArg
      * Raw certificate data for building certificate expiry flows.
      * 
      */
-    @InputImport(name="rawCertData")
+    @Import(name="rawCertData")
       private final @Nullable Output<String> rawCertData;
 
     public Output<String> getRawCertData() {
@@ -77,7 +77,7 @@ public final class SiteSpnPropertiesArgs extends io.pulumi.resources.ResourceArg
      * Tenant Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.
      * 
      */
-    @InputImport(name="tenantId")
+    @Import(name="tenantId")
       private final @Nullable Output<String> tenantId;
 
     public Output<String> getTenantId() {

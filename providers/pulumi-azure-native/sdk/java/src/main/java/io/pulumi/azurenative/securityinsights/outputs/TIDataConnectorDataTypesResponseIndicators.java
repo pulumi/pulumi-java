@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.securityinsights.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TIDataConnectorDataTypesResponseIndicators {
     /**
      * Describe whether this data type connection is enabled or not.
@@ -17,8 +17,8 @@ public final class TIDataConnectorDataTypesResponseIndicators {
      */
     private final @Nullable String state;
 
-    @OutputCustomType.Constructor
-    private TIDataConnectorDataTypesResponseIndicators(@OutputCustomType.Parameter("state") @Nullable String state) {
+    @CustomType.Constructor
+    private TIDataConnectorDataTypesResponseIndicators(@CustomType.Parameter("state") @Nullable String state) {
         this.state = state;
     }
 

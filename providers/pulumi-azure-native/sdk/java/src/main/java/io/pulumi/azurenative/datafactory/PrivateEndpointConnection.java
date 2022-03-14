@@ -8,7 +8,7 @@ import io.pulumi.azurenative.datafactory.PrivateEndpointConnectionArgs;
 import io.pulumi.azurenative.datafactory.outputs.RemotePrivateEndpointConnectionResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +35,7 @@ public class PrivateEndpointConnection extends io.pulumi.resources.CustomResourc
      * Etag identifies change in the resource.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -49,7 +49,7 @@ public class PrivateEndpointConnection extends io.pulumi.resources.CustomResourc
      * The resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -63,7 +63,7 @@ public class PrivateEndpointConnection extends io.pulumi.resources.CustomResourc
      * Core resource properties
      * 
      */
-    @OutputExport(name="properties", type=RemotePrivateEndpointConnectionResponse.class, parameters={})
+    @Export(name="properties", type=RemotePrivateEndpointConnectionResponse.class, parameters={})
     private Output<RemotePrivateEndpointConnectionResponse> properties;
 
     /**
@@ -77,7 +77,7 @@ public class PrivateEndpointConnection extends io.pulumi.resources.CustomResourc
      * The resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

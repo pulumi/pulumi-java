@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.engagementfabric.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class ListAccountKeysArgs extends io.pulumi.resources.InvokeArgs {
      * Account Name
      * 
      */
-    @InputImport(name="accountName", required=true)
+    @Import(name="accountName", required=true)
       private final String accountName;
 
     public String getAccountName() {
@@ -27,7 +27,7 @@ public final class ListAccountKeysArgs extends io.pulumi.resources.InvokeArgs {
      * Resource Group Name
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {

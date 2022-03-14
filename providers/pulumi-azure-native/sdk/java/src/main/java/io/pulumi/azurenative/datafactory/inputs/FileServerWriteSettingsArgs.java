@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class FileServerWriteSettingsArgs extends io.pulumi.resources.Resou
      * The type of copy behavior for copy sink.
      * 
      */
-    @InputImport(name="copyBehavior")
+    @Import(name="copyBehavior")
       private final @Nullable Output<Object> copyBehavior;
 
     public Output<Object> getCopyBehavior() {
@@ -34,7 +34,7 @@ public final class FileServerWriteSettingsArgs extends io.pulumi.resources.Resou
      * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
      * 
      */
-    @InputImport(name="disableMetricsCollection")
+    @Import(name="disableMetricsCollection")
       private final @Nullable Output<Object> disableMetricsCollection;
 
     public Output<Object> getDisableMetricsCollection() {
@@ -45,7 +45,7 @@ public final class FileServerWriteSettingsArgs extends io.pulumi.resources.Resou
      * The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
      * 
      */
-    @InputImport(name="maxConcurrentConnections")
+    @Import(name="maxConcurrentConnections")
       private final @Nullable Output<Object> maxConcurrentConnections;
 
     public Output<Object> getMaxConcurrentConnections() {
@@ -57,7 +57,7 @@ public final class FileServerWriteSettingsArgs extends io.pulumi.resources.Resou
      * Expected value is 'FileServerWriteSettings'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {

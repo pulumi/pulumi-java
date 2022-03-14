@@ -9,7 +9,7 @@ import io.pulumi.azurenative.documentdb.outputs.MongoDBCollectionGetPropertiesRe
 import io.pulumi.azurenative.documentdb.outputs.MongoDBCollectionGetPropertiesResponseResource;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -37,7 +37,7 @@ public class MongoDBResourceMongoDBCollection extends io.pulumi.resources.Custom
      * The location of the resource group to which the resource belongs.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -51,7 +51,7 @@ public class MongoDBResourceMongoDBCollection extends io.pulumi.resources.Custom
      * The name of the ARM resource.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -61,13 +61,13 @@ public class MongoDBResourceMongoDBCollection extends io.pulumi.resources.Custom
     public Output<String> getName() {
         return this.name;
     }
-    @OutputExport(name="options", type=MongoDBCollectionGetPropertiesResponseOptions.class, parameters={})
+    @Export(name="options", type=MongoDBCollectionGetPropertiesResponseOptions.class, parameters={})
     private Output</* @Nullable */ MongoDBCollectionGetPropertiesResponseOptions> options;
 
     public Output</* @Nullable */ MongoDBCollectionGetPropertiesResponseOptions> getOptions() {
         return this.options;
     }
-    @OutputExport(name="resource", type=MongoDBCollectionGetPropertiesResponseResource.class, parameters={})
+    @Export(name="resource", type=MongoDBCollectionGetPropertiesResponseResource.class, parameters={})
     private Output</* @Nullable */ MongoDBCollectionGetPropertiesResponseResource> resource;
 
     public Output</* @Nullable */ MongoDBCollectionGetPropertiesResponseResource> getResource() {
@@ -77,7 +77,7 @@ public class MongoDBResourceMongoDBCollection extends io.pulumi.resources.Custom
      * Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -91,7 +91,7 @@ public class MongoDBResourceMongoDBCollection extends io.pulumi.resources.Custom
      * The type of Azure resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

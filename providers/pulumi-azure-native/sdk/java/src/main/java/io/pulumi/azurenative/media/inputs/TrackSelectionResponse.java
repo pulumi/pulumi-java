@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.media.inputs;
 
 import io.pulumi.azurenative.media.inputs.TrackPropertyConditionResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class TrackSelectionResponse extends io.pulumi.resources.InvokeArgs
      * TrackSelections is a track property condition list which can specify track(s)
      * 
      */
-    @InputImport(name="trackSelections")
+    @Import(name="trackSelections")
       private final @Nullable List<TrackPropertyConditionResponse> trackSelections;
 
     public List<TrackPropertyConditionResponse> getTrackSelections() {

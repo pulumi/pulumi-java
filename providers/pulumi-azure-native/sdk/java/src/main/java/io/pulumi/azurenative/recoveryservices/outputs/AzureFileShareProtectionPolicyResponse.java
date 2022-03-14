@@ -9,7 +9,7 @@ import io.pulumi.azurenative.recoveryservices.outputs.LongTermSchedulePolicyResp
 import io.pulumi.azurenative.recoveryservices.outputs.SimpleRetentionPolicyResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.SimpleSchedulePolicyResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -17,7 +17,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AzureFileShareProtectionPolicyResponse {
     /**
      * This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
@@ -51,14 +51,14 @@ public final class AzureFileShareProtectionPolicyResponse {
      */
     private final @Nullable String workLoadType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AzureFileShareProtectionPolicyResponse(
-        @OutputCustomType.Parameter("backupManagementType") String backupManagementType,
-        @OutputCustomType.Parameter("protectedItemsCount") @Nullable Integer protectedItemsCount,
-        @OutputCustomType.Parameter("retentionPolicy") @Nullable Either<LongTermRetentionPolicyResponse,SimpleRetentionPolicyResponse> retentionPolicy,
-        @OutputCustomType.Parameter("schedulePolicy") @Nullable Object schedulePolicy,
-        @OutputCustomType.Parameter("timeZone") @Nullable String timeZone,
-        @OutputCustomType.Parameter("workLoadType") @Nullable String workLoadType) {
+        @CustomType.Parameter("backupManagementType") String backupManagementType,
+        @CustomType.Parameter("protectedItemsCount") @Nullable Integer protectedItemsCount,
+        @CustomType.Parameter("retentionPolicy") @Nullable Either<LongTermRetentionPolicyResponse,SimpleRetentionPolicyResponse> retentionPolicy,
+        @CustomType.Parameter("schedulePolicy") @Nullable Object schedulePolicy,
+        @CustomType.Parameter("timeZone") @Nullable String timeZone,
+        @CustomType.Parameter("workLoadType") @Nullable String workLoadType) {
         this.backupManagementType = backupManagementType;
         this.protectedItemsCount = protectedItemsCount;
         this.retentionPolicy = retentionPolicy;

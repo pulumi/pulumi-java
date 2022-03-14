@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AzureFirewallRCActionResponse {
     /**
      * The type of action.
@@ -17,8 +17,8 @@ public final class AzureFirewallRCActionResponse {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor
-    private AzureFirewallRCActionResponse(@OutputCustomType.Parameter("type") @Nullable String type) {
+    @CustomType.Constructor
+    private AzureFirewallRCActionResponse(@CustomType.Parameter("type") @Nullable String type) {
         this.type = type;
     }
 

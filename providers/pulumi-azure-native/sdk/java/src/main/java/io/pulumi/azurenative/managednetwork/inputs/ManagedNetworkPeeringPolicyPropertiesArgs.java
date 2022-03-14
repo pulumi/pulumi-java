@@ -7,7 +7,7 @@ import io.pulumi.azurenative.managednetwork.enums.Type;
 import io.pulumi.azurenative.managednetwork.inputs.ResourceIdArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class ManagedNetworkPeeringPolicyPropertiesArgs extends io.pulumi.r
      * Gets or sets the hub virtual network ID
      * 
      */
-    @InputImport(name="hub")
+    @Import(name="hub")
       private final @Nullable Output<ResourceIdArgs> hub;
 
     public Output<ResourceIdArgs> getHub() {
@@ -37,7 +37,7 @@ public final class ManagedNetworkPeeringPolicyPropertiesArgs extends io.pulumi.r
      * Gets or sets the mesh group IDs
      * 
      */
-    @InputImport(name="mesh")
+    @Import(name="mesh")
       private final @Nullable Output<List<ResourceIdArgs>> mesh;
 
     public Output<List<ResourceIdArgs>> getMesh() {
@@ -48,7 +48,7 @@ public final class ManagedNetworkPeeringPolicyPropertiesArgs extends io.pulumi.r
      * Gets or sets the spokes group IDs
      * 
      */
-    @InputImport(name="spokes")
+    @Import(name="spokes")
       private final @Nullable Output<List<ResourceIdArgs>> spokes;
 
     public Output<List<ResourceIdArgs>> getSpokes() {
@@ -59,7 +59,7 @@ public final class ManagedNetworkPeeringPolicyPropertiesArgs extends io.pulumi.r
      * Gets or sets the connectivity type of a network structure policy
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<Either<String,Type>> type;
 
     public Output<Either<String,Type>> getType() {

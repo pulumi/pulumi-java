@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.hybridnetwork.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class DataDiskResponse extends io.pulumi.resources.InvokeArgs {
      * Specifies how the virtual machine should be created.
      * 
      */
-    @InputImport(name="createOption")
+    @Import(name="createOption")
       private final @Nullable String createOption;
 
     public Optional<String> getCreateOption() {
@@ -34,7 +34,7 @@ public final class DataDiskResponse extends io.pulumi.resources.InvokeArgs {
      * Specifies the size of an empty disk in gigabytes. This element can be used to overwrite the size of the disk in a virtual machine image.
      * 
      */
-    @InputImport(name="diskSizeGB")
+    @Import(name="diskSizeGB")
       private final @Nullable Integer diskSizeGB;
 
     public Optional<Integer> getDiskSizeGB() {
@@ -45,7 +45,7 @@ public final class DataDiskResponse extends io.pulumi.resources.InvokeArgs {
      * The name of data disk.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {

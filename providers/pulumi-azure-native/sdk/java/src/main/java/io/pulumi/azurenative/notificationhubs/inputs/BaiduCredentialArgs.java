@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.notificationhubs.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class BaiduCredentialArgs extends io.pulumi.resources.ResourceArgs 
      * Baidu Api Key.
      * 
      */
-    @InputImport(name="baiduApiKey")
+    @Import(name="baiduApiKey")
       private final @Nullable Output<String> baiduApiKey;
 
     public Output<String> getBaiduApiKey() {
@@ -33,7 +33,7 @@ public final class BaiduCredentialArgs extends io.pulumi.resources.ResourceArgs 
      * Baidu Endpoint.
      * 
      */
-    @InputImport(name="baiduEndPoint")
+    @Import(name="baiduEndPoint")
       private final @Nullable Output<String> baiduEndPoint;
 
     public Output<String> getBaiduEndPoint() {
@@ -44,7 +44,7 @@ public final class BaiduCredentialArgs extends io.pulumi.resources.ResourceArgs 
      * Baidu Secret Key
      * 
      */
-    @InputImport(name="baiduSecretKey")
+    @Import(name="baiduSecretKey")
       private final @Nullable Output<String> baiduSecretKey;
 
     public Output<String> getBaiduSecretKey() {

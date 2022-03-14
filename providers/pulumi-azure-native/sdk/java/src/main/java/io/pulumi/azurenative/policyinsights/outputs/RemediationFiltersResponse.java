@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.policyinsights.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RemediationFiltersResponse {
     /**
      * The resource locations that will be remediated.
@@ -17,8 +17,8 @@ public final class RemediationFiltersResponse {
      */
     private final @Nullable List<String> locations;
 
-    @OutputCustomType.Constructor
-    private RemediationFiltersResponse(@OutputCustomType.Parameter("locations") @Nullable List<String> locations) {
+    @CustomType.Constructor
+    private RemediationFiltersResponse(@CustomType.Parameter("locations") @Nullable List<String> locations) {
         this.locations = locations;
     }
 

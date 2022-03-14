@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.appplatform.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GatewayCorsPropertiesResponse {
     /**
      * Whether user credentials are supported on cross-site requests. Valid values: `true`, `false`.
@@ -45,14 +45,14 @@ public final class GatewayCorsPropertiesResponse {
      */
     private final @Nullable Integer maxAge;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GatewayCorsPropertiesResponse(
-        @OutputCustomType.Parameter("allowCredentials") @Nullable Boolean allowCredentials,
-        @OutputCustomType.Parameter("allowedHeaders") @Nullable List<String> allowedHeaders,
-        @OutputCustomType.Parameter("allowedMethods") @Nullable List<String> allowedMethods,
-        @OutputCustomType.Parameter("allowedOrigins") @Nullable List<String> allowedOrigins,
-        @OutputCustomType.Parameter("exposedHeaders") @Nullable List<String> exposedHeaders,
-        @OutputCustomType.Parameter("maxAge") @Nullable Integer maxAge) {
+        @CustomType.Parameter("allowCredentials") @Nullable Boolean allowCredentials,
+        @CustomType.Parameter("allowedHeaders") @Nullable List<String> allowedHeaders,
+        @CustomType.Parameter("allowedMethods") @Nullable List<String> allowedMethods,
+        @CustomType.Parameter("allowedOrigins") @Nullable List<String> allowedOrigins,
+        @CustomType.Parameter("exposedHeaders") @Nullable List<String> exposedHeaders,
+        @CustomType.Parameter("maxAge") @Nullable Integer maxAge) {
         this.allowCredentials = allowCredentials;
         this.allowedHeaders = allowedHeaders;
         this.allowedMethods = allowedMethods;

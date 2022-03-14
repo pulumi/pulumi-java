@@ -10,7 +10,7 @@ import io.pulumi.azurenative.m365securityandcompliance.outputs.ServicesResourceR
 import io.pulumi.azurenative.m365securityandcompliance.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -38,7 +38,7 @@ public class PrivateLinkServicesForEDMUpload extends io.pulumi.resources.CustomR
      * An etag associated with the resource, used for optimistic concurrency when editing it.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output</* @Nullable */ String> etag;
 
     /**
@@ -52,7 +52,7 @@ public class PrivateLinkServicesForEDMUpload extends io.pulumi.resources.CustomR
      * Setting indicating whether the service has a managed identity associated with it.
      * 
      */
-    @OutputExport(name="identity", type=ServicesResourceResponseIdentity.class, parameters={})
+    @Export(name="identity", type=ServicesResourceResponseIdentity.class, parameters={})
     private Output</* @Nullable */ ServicesResourceResponseIdentity> identity;
 
     /**
@@ -66,7 +66,7 @@ public class PrivateLinkServicesForEDMUpload extends io.pulumi.resources.CustomR
      * The kind of the service.
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
     /**
@@ -80,7 +80,7 @@ public class PrivateLinkServicesForEDMUpload extends io.pulumi.resources.CustomR
      * The resource location.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -94,7 +94,7 @@ public class PrivateLinkServicesForEDMUpload extends io.pulumi.resources.CustomR
      * The resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -108,7 +108,7 @@ public class PrivateLinkServicesForEDMUpload extends io.pulumi.resources.CustomR
      * The common properties of a service.
      * 
      */
-    @OutputExport(name="properties", type=ServicesPropertiesResponse.class, parameters={})
+    @Export(name="properties", type=ServicesPropertiesResponse.class, parameters={})
     private Output<ServicesPropertiesResponse> properties;
 
     /**
@@ -122,7 +122,7 @@ public class PrivateLinkServicesForEDMUpload extends io.pulumi.resources.CustomR
      * Required property for system data
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -136,7 +136,7 @@ public class PrivateLinkServicesForEDMUpload extends io.pulumi.resources.CustomR
      * The resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -150,7 +150,7 @@ public class PrivateLinkServicesForEDMUpload extends io.pulumi.resources.CustomR
      * The resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

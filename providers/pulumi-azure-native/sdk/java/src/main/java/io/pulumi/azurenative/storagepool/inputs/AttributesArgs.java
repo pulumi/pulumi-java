@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.storagepool.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class AttributesArgs extends io.pulumi.resources.ResourceArgs {
      * Indicates whether or not authentication is enabled on the ACL.
      * 
      */
-    @InputImport(name="authentication", required=true)
+    @Import(name="authentication", required=true)
       private final Output<Boolean> authentication;
 
     public Output<Boolean> getAuthentication() {
@@ -32,7 +32,7 @@ public final class AttributesArgs extends io.pulumi.resources.ResourceArgs {
      * Indicates whether or not write protect is enabled on the LUNs.
      * 
      */
-    @InputImport(name="prodModeWriteProtect", required=true)
+    @Import(name="prodModeWriteProtect", required=true)
       private final Output<Boolean> prodModeWriteProtect;
 
     public Output<Boolean> getProdModeWriteProtect() {

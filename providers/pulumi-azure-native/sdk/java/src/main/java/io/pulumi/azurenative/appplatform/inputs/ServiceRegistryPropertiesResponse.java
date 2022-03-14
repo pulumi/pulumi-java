@@ -5,7 +5,7 @@ package io.pulumi.azurenative.appplatform.inputs;
 
 import io.pulumi.azurenative.appplatform.inputs.ServiceRegistryInstanceResponse;
 import io.pulumi.azurenative.appplatform.inputs.ServiceRegistryResourceRequestsResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ServiceRegistryPropertiesResponse extends io.pulumi.resources
      * Collection of instances belong to Service Registry.
      * 
      */
-    @InputImport(name="instances", required=true)
+    @Import(name="instances", required=true)
       private final List<ServiceRegistryInstanceResponse> instances;
 
     public List<ServiceRegistryInstanceResponse> getInstances() {
@@ -34,7 +34,7 @@ public final class ServiceRegistryPropertiesResponse extends io.pulumi.resources
      * State of the Service Registry.
      * 
      */
-    @InputImport(name="provisioningState", required=true)
+    @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
     public String getProvisioningState() {
@@ -45,7 +45,7 @@ public final class ServiceRegistryPropertiesResponse extends io.pulumi.resources
      * The requested resource quantity for required CPU and Memory.
      * 
      */
-    @InputImport(name="resourceRequests", required=true)
+    @Import(name="resourceRequests", required=true)
       private final ServiceRegistryResourceRequestsResponse resourceRequests;
 
     public ServiceRegistryResourceRequestsResponse getResourceRequests() {

@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.chaos.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class TargetReferenceResponse {
     /**
      * String of the resource ID of a Target resource.
@@ -20,10 +20,10 @@ public final class TargetReferenceResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TargetReferenceResponse(
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("type") String type) {
         this.id = id;
         this.type = type;
     }

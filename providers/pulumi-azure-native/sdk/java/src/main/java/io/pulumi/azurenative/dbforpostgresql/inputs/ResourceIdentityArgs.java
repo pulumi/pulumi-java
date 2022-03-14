@@ -6,7 +6,7 @@ package io.pulumi.azurenative.dbforpostgresql.inputs;
 import io.pulumi.azurenative.dbforpostgresql.enums.IdentityType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class ResourceIdentityArgs extends io.pulumi.resources.ResourceArgs
      * The identity type. Set this to 'SystemAssigned' in order to automatically create and assign an Azure Active Directory principal for the resource.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<Either<String,IdentityType>> type;
 
     public Output<Either<String,IdentityType>> getType() {

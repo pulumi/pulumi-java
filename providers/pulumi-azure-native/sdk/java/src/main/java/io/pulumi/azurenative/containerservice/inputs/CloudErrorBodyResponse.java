@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerservice.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class CloudErrorBodyResponse extends io.pulumi.resources.InvokeArgs
      * An identifier for the error. Codes are invariant and are intended to be consumed programmatically.
      * 
      */
-    @InputImport(name="code")
+    @Import(name="code")
       private final @Nullable String code;
 
     public Optional<String> getCode() {
@@ -34,7 +34,7 @@ public final class CloudErrorBodyResponse extends io.pulumi.resources.InvokeArgs
      * A list of additional details about the error.
      * 
      */
-    @InputImport(name="details")
+    @Import(name="details")
       private final @Nullable List<CloudErrorBodyResponse> details;
 
     public List<CloudErrorBodyResponse> getDetails() {
@@ -45,7 +45,7 @@ public final class CloudErrorBodyResponse extends io.pulumi.resources.InvokeArgs
      * A message describing the error, intended to be suitable for display in a user interface.
      * 
      */
-    @InputImport(name="message")
+    @Import(name="message")
       private final @Nullable String message;
 
     public Optional<String> getMessage() {
@@ -56,7 +56,7 @@ public final class CloudErrorBodyResponse extends io.pulumi.resources.InvokeArgs
      * The target of the particular error. For example, the name of the property in error.
      * 
      */
-    @InputImport(name="target")
+    @Import(name="target")
       private final @Nullable String target;
 
     public Optional<String> getTarget() {

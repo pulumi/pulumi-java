@@ -5,7 +5,7 @@ package io.pulumi.azurenative.media.inputs;
 
 import io.pulumi.azurenative.media.inputs.IPRangeArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class IPAccessControlArgs extends io.pulumi.resources.ResourceArgs 
      * The IP allow list.
      * 
      */
-    @InputImport(name="allow")
+    @Import(name="allow")
       private final @Nullable Output<List<IPRangeArgs>> allow;
 
     public Output<List<IPRangeArgs>> getAllow() {

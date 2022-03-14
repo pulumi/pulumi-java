@@ -7,7 +7,7 @@ import io.pulumi.azurenative.network.enums.DynamicCompressionEnabled;
 import io.pulumi.azurenative.network.enums.FrontDoorQuery;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class CacheConfigurationArgs extends io.pulumi.resources.ResourceAr
      * The duration for which the content needs to be cached. Allowed format is in ISO 8601 format (http://en.wikipedia.org/wiki/ISO_8601#Durations). HTTP requires the value to be no more than a year
      * 
      */
-    @InputImport(name="cacheDuration")
+    @Import(name="cacheDuration")
       private final @Nullable Output<String> cacheDuration;
 
     public Output<String> getCacheDuration() {
@@ -36,7 +36,7 @@ public final class CacheConfigurationArgs extends io.pulumi.resources.ResourceAr
      * Whether to use dynamic compression for cached content
      * 
      */
-    @InputImport(name="dynamicCompression")
+    @Import(name="dynamicCompression")
       private final @Nullable Output<Either<String,DynamicCompressionEnabled>> dynamicCompression;
 
     public Output<Either<String,DynamicCompressionEnabled>> getDynamicCompression() {
@@ -47,7 +47,7 @@ public final class CacheConfigurationArgs extends io.pulumi.resources.ResourceAr
      * Treatment of URL query terms when forming the cache key.
      * 
      */
-    @InputImport(name="queryParameterStripDirective")
+    @Import(name="queryParameterStripDirective")
       private final @Nullable Output<Either<String,FrontDoorQuery>> queryParameterStripDirective;
 
     public Output<Either<String,FrontDoorQuery>> getQueryParameterStripDirective() {
@@ -58,7 +58,7 @@ public final class CacheConfigurationArgs extends io.pulumi.resources.ResourceAr
      * query parameters to include or exclude (comma separated).
      * 
      */
-    @InputImport(name="queryParameters")
+    @Import(name="queryParameters")
       private final @Nullable Output<String> queryParameters;
 
     public Output<String> getQueryParameters() {

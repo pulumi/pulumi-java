@@ -6,11 +6,11 @@ package io.pulumi.azurenative.synapse.outputs;
 import io.pulumi.azurenative.synapse.outputs.ManagedIntegrationRuntimeStatusResponse;
 import io.pulumi.azurenative.synapse.outputs.SelfHostedIntegrationRuntimeStatusResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetIntegrationRuntimeStatusResult {
     /**
      * The integration runtime name.
@@ -23,10 +23,10 @@ public final class GetIntegrationRuntimeStatusResult {
      */
     private final Either<ManagedIntegrationRuntimeStatusResponse,SelfHostedIntegrationRuntimeStatusResponse> properties;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetIntegrationRuntimeStatusResult(
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("properties") Either<ManagedIntegrationRuntimeStatusResponse,SelfHostedIntegrationRuntimeStatusResponse> properties) {
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("properties") Either<ManagedIntegrationRuntimeStatusResponse,SelfHostedIntegrationRuntimeStatusResponse> properties) {
         this.name = name;
         this.properties = properties;
     }

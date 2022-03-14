@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.hdinsight.outputs;
 
 import io.pulumi.azurenative.hdinsight.outputs.ClientGroupInfoResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class KafkaRestPropertiesResponse {
     /**
      * The information of AAD security group.
@@ -24,10 +24,10 @@ public final class KafkaRestPropertiesResponse {
      */
     private final @Nullable Map<String,String> configurationOverride;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private KafkaRestPropertiesResponse(
-        @OutputCustomType.Parameter("clientGroupInfo") @Nullable ClientGroupInfoResponse clientGroupInfo,
-        @OutputCustomType.Parameter("configurationOverride") @Nullable Map<String,String> configurationOverride) {
+        @CustomType.Parameter("clientGroupInfo") @Nullable ClientGroupInfoResponse clientGroupInfo,
+        @CustomType.Parameter("configurationOverride") @Nullable Map<String,String> configurationOverride) {
         this.clientGroupInfo = clientGroupInfo;
         this.configurationOverride = configurationOverride;
     }

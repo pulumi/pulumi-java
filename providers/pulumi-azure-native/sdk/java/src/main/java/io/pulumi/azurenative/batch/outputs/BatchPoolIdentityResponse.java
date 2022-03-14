@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.batch.outputs;
 
 import io.pulumi.azurenative.batch.outputs.BatchPoolIdentityResponseUserAssignedIdentities;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BatchPoolIdentityResponse {
     /**
      * The type of identity used for the Batch Pool.
@@ -23,10 +23,10 @@ public final class BatchPoolIdentityResponse {
      */
     private final @Nullable Map<String,BatchPoolIdentityResponseUserAssignedIdentities> userAssignedIdentities;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BatchPoolIdentityResponse(
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("userAssignedIdentities") @Nullable Map<String,BatchPoolIdentityResponseUserAssignedIdentities> userAssignedIdentities) {
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("userAssignedIdentities") @Nullable Map<String,BatchPoolIdentityResponseUserAssignedIdentities> userAssignedIdentities) {
         this.type = type;
         this.userAssignedIdentities = userAssignedIdentities;
     }

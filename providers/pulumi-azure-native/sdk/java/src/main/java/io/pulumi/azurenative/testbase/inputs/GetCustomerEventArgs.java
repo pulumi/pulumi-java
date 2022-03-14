@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.testbase.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetCustomerEventArgs extends io.pulumi.resources.InvokeArgs {
      * The resource name of the Test Base Customer event.
      * 
      */
-    @InputImport(name="customerEventName", required=true)
+    @Import(name="customerEventName", required=true)
       private final String customerEventName;
 
     public String getCustomerEventName() {
@@ -27,7 +27,7 @@ public final class GetCustomerEventArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the resource group that contains the resource.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {
@@ -38,7 +38,7 @@ public final class GetCustomerEventArgs extends io.pulumi.resources.InvokeArgs {
      * The resource name of the Test Base Account.
      * 
      */
-    @InputImport(name="testBaseAccountName", required=true)
+    @Import(name="testBaseAccountName", required=true)
       private final String testBaseAccountName;
 
     public String getTestBaseAccountName() {

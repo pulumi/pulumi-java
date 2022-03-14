@@ -12,7 +12,7 @@ import io.pulumi.azurenative.automation.outputs.SkuResponse;
 import io.pulumi.azurenative.automation.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -41,7 +41,7 @@ public class AutomationAccount extends io.pulumi.resources.CustomResource {
      * URL of automation hybrid service which is used for hybrid worker on-boarding.
      * 
      */
-    @OutputExport(name="automationHybridServiceUrl", type=String.class, parameters={})
+    @Export(name="automationHybridServiceUrl", type=String.class, parameters={})
     private Output</* @Nullable */ String> automationHybridServiceUrl;
 
     /**
@@ -55,7 +55,7 @@ public class AutomationAccount extends io.pulumi.resources.CustomResource {
      * Gets the creation time.
      * 
      */
-    @OutputExport(name="creationTime", type=String.class, parameters={})
+    @Export(name="creationTime", type=String.class, parameters={})
     private Output<String> creationTime;
 
     /**
@@ -69,7 +69,7 @@ public class AutomationAccount extends io.pulumi.resources.CustomResource {
      * Gets or sets the description.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -83,7 +83,7 @@ public class AutomationAccount extends io.pulumi.resources.CustomResource {
      * Indicates whether requests using non-AAD authentication are blocked
      * 
      */
-    @OutputExport(name="disableLocalAuth", type=Boolean.class, parameters={})
+    @Export(name="disableLocalAuth", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> disableLocalAuth;
 
     /**
@@ -97,7 +97,7 @@ public class AutomationAccount extends io.pulumi.resources.CustomResource {
      * Encryption properties for the automation account
      * 
      */
-    @OutputExport(name="encryption", type=EncryptionPropertiesResponse.class, parameters={})
+    @Export(name="encryption", type=EncryptionPropertiesResponse.class, parameters={})
     private Output</* @Nullable */ EncryptionPropertiesResponse> encryption;
 
     /**
@@ -111,7 +111,7 @@ public class AutomationAccount extends io.pulumi.resources.CustomResource {
      * Gets or sets the etag of the resource.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output</* @Nullable */ String> etag;
 
     /**
@@ -125,7 +125,7 @@ public class AutomationAccount extends io.pulumi.resources.CustomResource {
      * Identity for the resource.
      * 
      */
-    @OutputExport(name="identity", type=IdentityResponse.class, parameters={})
+    @Export(name="identity", type=IdentityResponse.class, parameters={})
     private Output</* @Nullable */ IdentityResponse> identity;
 
     /**
@@ -139,7 +139,7 @@ public class AutomationAccount extends io.pulumi.resources.CustomResource {
      * Gets or sets the last modified by.
      * 
      */
-    @OutputExport(name="lastModifiedBy", type=String.class, parameters={})
+    @Export(name="lastModifiedBy", type=String.class, parameters={})
     private Output</* @Nullable */ String> lastModifiedBy;
 
     /**
@@ -153,7 +153,7 @@ public class AutomationAccount extends io.pulumi.resources.CustomResource {
      * Gets the last modified time.
      * 
      */
-    @OutputExport(name="lastModifiedTime", type=String.class, parameters={})
+    @Export(name="lastModifiedTime", type=String.class, parameters={})
     private Output<String> lastModifiedTime;
 
     /**
@@ -167,7 +167,7 @@ public class AutomationAccount extends io.pulumi.resources.CustomResource {
      * The Azure Region where the resource lives
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -181,7 +181,7 @@ public class AutomationAccount extends io.pulumi.resources.CustomResource {
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -195,7 +195,7 @@ public class AutomationAccount extends io.pulumi.resources.CustomResource {
      * List of Automation operations supported by the Automation resource provider.
      * 
      */
-    @OutputExport(name="privateEndpointConnections", type=List.class, parameters={PrivateEndpointConnectionResponse.class})
+    @Export(name="privateEndpointConnections", type=List.class, parameters={PrivateEndpointConnectionResponse.class})
     private Output</* @Nullable */ List<PrivateEndpointConnectionResponse>> privateEndpointConnections;
 
     /**
@@ -209,7 +209,7 @@ public class AutomationAccount extends io.pulumi.resources.CustomResource {
      * Indicates whether traffic on the non-ARM endpoint (Webhook/Agent) is allowed from the public internet
      * 
      */
-    @OutputExport(name="publicNetworkAccess", type=Boolean.class, parameters={})
+    @Export(name="publicNetworkAccess", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> publicNetworkAccess;
 
     /**
@@ -223,7 +223,7 @@ public class AutomationAccount extends io.pulumi.resources.CustomResource {
      * Gets or sets the SKU of account.
      * 
      */
-    @OutputExport(name="sku", type=SkuResponse.class, parameters={})
+    @Export(name="sku", type=SkuResponse.class, parameters={})
     private Output</* @Nullable */ SkuResponse> sku;
 
     /**
@@ -237,7 +237,7 @@ public class AutomationAccount extends io.pulumi.resources.CustomResource {
      * Gets status of account.
      * 
      */
-    @OutputExport(name="state", type=String.class, parameters={})
+    @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
@@ -251,7 +251,7 @@ public class AutomationAccount extends io.pulumi.resources.CustomResource {
      * Resource system metadata.
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -265,7 +265,7 @@ public class AutomationAccount extends io.pulumi.resources.CustomResource {
      * Resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -279,7 +279,7 @@ public class AutomationAccount extends io.pulumi.resources.CustomResource {
      * The type of the resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

@@ -8,7 +8,7 @@ import io.pulumi.azurenative.insights.MyWorkbookArgs;
 import io.pulumi.azurenative.insights.outputs.MyWorkbookManagedIdentityResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -36,7 +36,7 @@ public class MyWorkbook extends io.pulumi.resources.CustomResource {
      * Workbook category, as defined by the user at creation time.
      * 
      */
-    @OutputExport(name="category", type=String.class, parameters={})
+    @Export(name="category", type=String.class, parameters={})
     private Output<String> category;
 
     /**
@@ -50,7 +50,7 @@ public class MyWorkbook extends io.pulumi.resources.CustomResource {
      * The user-defined name of the private workbook.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
@@ -64,7 +64,7 @@ public class MyWorkbook extends io.pulumi.resources.CustomResource {
      * Resource etag
      * 
      */
-    @OutputExport(name="etag", type=Map.class, parameters={String.class, String.class})
+    @Export(name="etag", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> etag;
 
     /**
@@ -78,7 +78,7 @@ public class MyWorkbook extends io.pulumi.resources.CustomResource {
      * Identity used for BYOS
      * 
      */
-    @OutputExport(name="identity", type=MyWorkbookManagedIdentityResponse.class, parameters={})
+    @Export(name="identity", type=MyWorkbookManagedIdentityResponse.class, parameters={})
     private Output</* @Nullable */ MyWorkbookManagedIdentityResponse> identity;
 
     /**
@@ -92,7 +92,7 @@ public class MyWorkbook extends io.pulumi.resources.CustomResource {
      * The kind of workbook. Choices are user and shared.
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
     /**
@@ -106,7 +106,7 @@ public class MyWorkbook extends io.pulumi.resources.CustomResource {
      * Resource location
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -120,7 +120,7 @@ public class MyWorkbook extends io.pulumi.resources.CustomResource {
      * Azure resource name
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
@@ -134,7 +134,7 @@ public class MyWorkbook extends io.pulumi.resources.CustomResource {
      * Configuration of this particular private workbook. Configuration data is a string containing valid JSON
      * 
      */
-    @OutputExport(name="serializedData", type=String.class, parameters={})
+    @Export(name="serializedData", type=String.class, parameters={})
     private Output<String> serializedData;
 
     /**
@@ -148,7 +148,7 @@ public class MyWorkbook extends io.pulumi.resources.CustomResource {
      * Optional resourceId for a source resource.
      * 
      */
-    @OutputExport(name="sourceId", type=String.class, parameters={})
+    @Export(name="sourceId", type=String.class, parameters={})
     private Output</* @Nullable */ String> sourceId;
 
     /**
@@ -162,7 +162,7 @@ public class MyWorkbook extends io.pulumi.resources.CustomResource {
      * BYOS Storage Account URI
      * 
      */
-    @OutputExport(name="storageUri", type=String.class, parameters={})
+    @Export(name="storageUri", type=String.class, parameters={})
     private Output</* @Nullable */ String> storageUri;
 
     /**
@@ -176,7 +176,7 @@ public class MyWorkbook extends io.pulumi.resources.CustomResource {
      * Resource tags
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -190,7 +190,7 @@ public class MyWorkbook extends io.pulumi.resources.CustomResource {
      * Date and time in UTC of the last modification that was made to this private workbook definition.
      * 
      */
-    @OutputExport(name="timeModified", type=String.class, parameters={})
+    @Export(name="timeModified", type=String.class, parameters={})
     private Output<String> timeModified;
 
     /**
@@ -204,7 +204,7 @@ public class MyWorkbook extends io.pulumi.resources.CustomResource {
      * Azure resource type
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output</* @Nullable */ String> type;
 
     /**
@@ -218,7 +218,7 @@ public class MyWorkbook extends io.pulumi.resources.CustomResource {
      * Unique user id of the specific user that owns this private workbook.
      * 
      */
-    @OutputExport(name="userId", type=String.class, parameters={})
+    @Export(name="userId", type=String.class, parameters={})
     private Output<String> userId;
 
     /**
@@ -232,7 +232,7 @@ public class MyWorkbook extends io.pulumi.resources.CustomResource {
      * This instance's version of the data model. This can change as new features are added that can be marked private workbook.
      * 
      */
-    @OutputExport(name="version", type=String.class, parameters={})
+    @Export(name="version", type=String.class, parameters={})
     private Output</* @Nullable */ String> version;
 
     /**

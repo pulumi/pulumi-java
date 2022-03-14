@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.vmwarecloudsimple.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ResourcePoolResponse {
     /**
      * Hierarchical resource pool name
@@ -40,14 +40,14 @@ public final class ResourcePoolResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ResourcePoolResponse(
-        @OutputCustomType.Parameter("fullName") String fullName,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("privateCloudId") String privateCloudId,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("fullName") String fullName,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("privateCloudId") String privateCloudId,
+        @CustomType.Parameter("type") String type) {
         this.fullName = fullName;
         this.id = id;
         this.location = location;

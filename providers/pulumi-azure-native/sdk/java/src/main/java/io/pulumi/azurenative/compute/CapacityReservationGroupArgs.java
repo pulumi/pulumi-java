@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.compute;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -20,7 +20,7 @@ public final class CapacityReservationGroupArgs extends io.pulumi.resources.Reso
      * The name of the capacity reservation group.
      * 
      */
-    @InputImport(name="capacityReservationGroupName")
+    @Import(name="capacityReservationGroupName")
       private final @Nullable Output<String> capacityReservationGroupName;
 
     public Output<String> getCapacityReservationGroupName() {
@@ -31,7 +31,7 @@ public final class CapacityReservationGroupArgs extends io.pulumi.resources.Reso
      * Resource location
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -42,7 +42,7 @@ public final class CapacityReservationGroupArgs extends io.pulumi.resources.Reso
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -53,7 +53,7 @@ public final class CapacityReservationGroupArgs extends io.pulumi.resources.Reso
      * Resource tags
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -64,7 +64,7 @@ public final class CapacityReservationGroupArgs extends io.pulumi.resources.Reso
      * Availability Zones to use for this capacity reservation group. The zones can be assigned only during creation. If not provided, the group supports only regional resources in the region. If provided, enforces each capacity reservation in the group to be in one of the zones.
      * 
      */
-    @InputImport(name="zones")
+    @Import(name="zones")
       private final @Nullable Output<List<String>> zones;
 
     public Output<List<String>> getZones() {

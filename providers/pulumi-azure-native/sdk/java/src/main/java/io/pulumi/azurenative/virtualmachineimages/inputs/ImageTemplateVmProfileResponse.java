@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.virtualmachineimages.inputs;
 
 import io.pulumi.azurenative.virtualmachineimages.inputs.VirtualNetworkConfigResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ImageTemplateVmProfileResponse extends io.pulumi.resources.In
      * Size of the OS disk in GB. Omit or specify 0 to use Azure's default OS disk size.
      * 
      */
-    @InputImport(name="osDiskSizeGB")
+    @Import(name="osDiskSizeGB")
       private final @Nullable Integer osDiskSizeGB;
 
     public Optional<Integer> getOsDiskSizeGB() {
@@ -35,7 +35,7 @@ public final class ImageTemplateVmProfileResponse extends io.pulumi.resources.In
      * Size of the virtual machine used to build, customize and capture images. Omit or specify empty string to use the default (Standard_D1_v2 for Gen1 images and Standard_D2ds_v4 for Gen2 images).
      * 
      */
-    @InputImport(name="vmSize")
+    @Import(name="vmSize")
       private final @Nullable String vmSize;
 
     public Optional<String> getVmSize() {
@@ -46,7 +46,7 @@ public final class ImageTemplateVmProfileResponse extends io.pulumi.resources.In
      * Optional configuration of the virtual network to use to deploy the build virtual machine in. Omit if no specific virtual network needs to be used.
      * 
      */
-    @InputImport(name="vnetConfig")
+    @Import(name="vnetConfig")
       private final @Nullable VirtualNetworkConfigResponse vnetConfig;
 
     public Optional<VirtualNetworkConfigResponse> getVnetConfig() {

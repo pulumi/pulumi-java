@@ -5,14 +5,14 @@ package io.pulumi.azurenative.chaos.outputs;
 
 import io.pulumi.azurenative.chaos.outputs.SelectorResponse;
 import io.pulumi.azurenative.chaos.outputs.StepResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ExperimentPropertiesResponse {
     /**
      * List of selectors.
@@ -30,11 +30,11 @@ public final class ExperimentPropertiesResponse {
      */
     private final List<StepResponse> steps;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ExperimentPropertiesResponse(
-        @OutputCustomType.Parameter("selectors") List<SelectorResponse> selectors,
-        @OutputCustomType.Parameter("startOnCreation") @Nullable Boolean startOnCreation,
-        @OutputCustomType.Parameter("steps") List<StepResponse> steps) {
+        @CustomType.Parameter("selectors") List<SelectorResponse> selectors,
+        @CustomType.Parameter("startOnCreation") @Nullable Boolean startOnCreation,
+        @CustomType.Parameter("steps") List<StepResponse> steps) {
         this.selectors = selectors;
         this.startOnCreation = startOnCreation;
         this.steps = steps;

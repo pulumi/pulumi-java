@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.web.outputs;
 
 import io.pulumi.azurenative.web.outputs.DaprMetadataResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DaprComponentResponse {
     /**
      * Component metadata
@@ -34,12 +34,12 @@ public final class DaprComponentResponse {
      */
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DaprComponentResponse(
-        @OutputCustomType.Parameter("metadata") @Nullable List<DaprMetadataResponse> metadata,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("type") @Nullable String type,
-        @OutputCustomType.Parameter("version") @Nullable String version) {
+        @CustomType.Parameter("metadata") @Nullable List<DaprMetadataResponse> metadata,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("type") @Nullable String type,
+        @CustomType.Parameter("version") @Nullable String version) {
         this.metadata = metadata;
         this.name = name;
         this.type = type;

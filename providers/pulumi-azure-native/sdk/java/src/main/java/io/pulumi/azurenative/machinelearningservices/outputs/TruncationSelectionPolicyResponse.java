@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TruncationSelectionPolicyResponse {
     /**
      * Number of intervals by which to delay the first evaluation.
@@ -33,12 +33,12 @@ public final class TruncationSelectionPolicyResponse {
      */
     private final @Nullable Integer truncationPercentage;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TruncationSelectionPolicyResponse(
-        @OutputCustomType.Parameter("delayEvaluation") @Nullable Integer delayEvaluation,
-        @OutputCustomType.Parameter("evaluationInterval") @Nullable Integer evaluationInterval,
-        @OutputCustomType.Parameter("policyType") String policyType,
-        @OutputCustomType.Parameter("truncationPercentage") @Nullable Integer truncationPercentage) {
+        @CustomType.Parameter("delayEvaluation") @Nullable Integer delayEvaluation,
+        @CustomType.Parameter("evaluationInterval") @Nullable Integer evaluationInterval,
+        @CustomType.Parameter("policyType") String policyType,
+        @CustomType.Parameter("truncationPercentage") @Nullable Integer truncationPercentage) {
         this.delayEvaluation = delayEvaluation;
         this.evaluationInterval = evaluationInterval;
         this.policyType = policyType;

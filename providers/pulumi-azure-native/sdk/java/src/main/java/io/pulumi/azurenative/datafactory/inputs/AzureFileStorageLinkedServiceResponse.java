@@ -8,7 +8,7 @@ import io.pulumi.azurenative.datafactory.inputs.IntegrationRuntimeReferenceRespo
 import io.pulumi.azurenative.datafactory.inputs.ParameterSpecificationResponse;
 import io.pulumi.azurenative.datafactory.inputs.SecureStringResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -30,7 +30,7 @@ public final class AzureFileStorageLinkedServiceResponse extends io.pulumi.resou
      * The Azure key vault secret reference of accountKey in connection string.
      * 
      */
-    @InputImport(name="accountKey")
+    @Import(name="accountKey")
       private final @Nullable AzureKeyVaultSecretReferenceResponse accountKey;
 
     public Optional<AzureKeyVaultSecretReferenceResponse> getAccountKey() {
@@ -41,7 +41,7 @@ public final class AzureFileStorageLinkedServiceResponse extends io.pulumi.resou
      * List of tags that can be used for describing the linked service.
      * 
      */
-    @InputImport(name="annotations")
+    @Import(name="annotations")
       private final @Nullable List<Object> annotations;
 
     public List<Object> getAnnotations() {
@@ -52,7 +52,7 @@ public final class AzureFileStorageLinkedServiceResponse extends io.pulumi.resou
      * The integration runtime reference.
      * 
      */
-    @InputImport(name="connectVia")
+    @Import(name="connectVia")
       private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
     public Optional<IntegrationRuntimeReferenceResponse> getConnectVia() {
@@ -63,7 +63,7 @@ public final class AzureFileStorageLinkedServiceResponse extends io.pulumi.resou
      * The connection string. It is mutually exclusive with sasUri property. Type: string, SecureString or AzureKeyVaultSecretReference.
      * 
      */
-    @InputImport(name="connectionString")
+    @Import(name="connectionString")
       private final @Nullable Object connectionString;
 
     public Optional<Object> getConnectionString() {
@@ -74,7 +74,7 @@ public final class AzureFileStorageLinkedServiceResponse extends io.pulumi.resou
      * Linked service description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable String description;
 
     public Optional<String> getDescription() {
@@ -85,7 +85,7 @@ public final class AzureFileStorageLinkedServiceResponse extends io.pulumi.resou
      * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="encryptedCredential")
+    @Import(name="encryptedCredential")
       private final @Nullable Object encryptedCredential;
 
     public Optional<Object> getEncryptedCredential() {
@@ -96,7 +96,7 @@ public final class AzureFileStorageLinkedServiceResponse extends io.pulumi.resou
      * The azure file share name. It is required when auth with accountKey/sasToken. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="fileShare")
+    @Import(name="fileShare")
       private final @Nullable Object fileShare;
 
     public Optional<Object> getFileShare() {
@@ -107,7 +107,7 @@ public final class AzureFileStorageLinkedServiceResponse extends io.pulumi.resou
      * Host name of the server. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="host")
+    @Import(name="host")
       private final @Nullable Object host;
 
     public Optional<Object> getHost() {
@@ -118,7 +118,7 @@ public final class AzureFileStorageLinkedServiceResponse extends io.pulumi.resou
      * Parameters for linked service.
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
     public Map<String,ParameterSpecificationResponse> getParameters() {
@@ -129,7 +129,7 @@ public final class AzureFileStorageLinkedServiceResponse extends io.pulumi.resou
      * Password to logon the server.
      * 
      */
-    @InputImport(name="password")
+    @Import(name="password")
       private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
 
     public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> getPassword() {
@@ -140,7 +140,7 @@ public final class AzureFileStorageLinkedServiceResponse extends io.pulumi.resou
      * The Azure key vault secret reference of sasToken in sas uri.
      * 
      */
-    @InputImport(name="sasToken")
+    @Import(name="sasToken")
       private final @Nullable AzureKeyVaultSecretReferenceResponse sasToken;
 
     public Optional<AzureKeyVaultSecretReferenceResponse> getSasToken() {
@@ -151,7 +151,7 @@ public final class AzureFileStorageLinkedServiceResponse extends io.pulumi.resou
      * SAS URI of the Azure File resource. It is mutually exclusive with connectionString property. Type: string, SecureString or AzureKeyVaultSecretReference.
      * 
      */
-    @InputImport(name="sasUri")
+    @Import(name="sasUri")
       private final @Nullable Object sasUri;
 
     public Optional<Object> getSasUri() {
@@ -162,7 +162,7 @@ public final class AzureFileStorageLinkedServiceResponse extends io.pulumi.resou
      * The azure file share snapshot version. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="snapshot")
+    @Import(name="snapshot")
       private final @Nullable Object snapshot;
 
     public Optional<Object> getSnapshot() {
@@ -174,7 +174,7 @@ public final class AzureFileStorageLinkedServiceResponse extends io.pulumi.resou
      * Expected value is 'AzureFileStorage'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {
@@ -185,7 +185,7 @@ public final class AzureFileStorageLinkedServiceResponse extends io.pulumi.resou
      * User ID to logon the server. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="userId")
+    @Import(name="userId")
       private final @Nullable Object userId;
 
     public Optional<Object> getUserId() {

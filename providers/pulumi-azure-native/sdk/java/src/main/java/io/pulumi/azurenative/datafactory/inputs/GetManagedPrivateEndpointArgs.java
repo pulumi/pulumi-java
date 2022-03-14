@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetManagedPrivateEndpointArgs extends io.pulumi.resources.Inv
      * The factory name.
      * 
      */
-    @InputImport(name="factoryName", required=true)
+    @Import(name="factoryName", required=true)
       private final String factoryName;
 
     public String getFactoryName() {
@@ -27,7 +27,7 @@ public final class GetManagedPrivateEndpointArgs extends io.pulumi.resources.Inv
      * Managed private endpoint name
      * 
      */
-    @InputImport(name="managedPrivateEndpointName", required=true)
+    @Import(name="managedPrivateEndpointName", required=true)
       private final String managedPrivateEndpointName;
 
     public String getManagedPrivateEndpointName() {
@@ -38,7 +38,7 @@ public final class GetManagedPrivateEndpointArgs extends io.pulumi.resources.Inv
      * Managed virtual network name
      * 
      */
-    @InputImport(name="managedVirtualNetworkName", required=true)
+    @Import(name="managedVirtualNetworkName", required=true)
       private final String managedVirtualNetworkName;
 
     public String getManagedVirtualNetworkName() {
@@ -49,7 +49,7 @@ public final class GetManagedPrivateEndpointArgs extends io.pulumi.resources.Inv
      * The resource group name.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {

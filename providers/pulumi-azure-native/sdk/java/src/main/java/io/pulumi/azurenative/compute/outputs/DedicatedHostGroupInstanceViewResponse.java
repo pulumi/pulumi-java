@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.compute.outputs;
 
 import io.pulumi.azurenative.compute.outputs.DedicatedHostInstanceViewWithNameResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DedicatedHostGroupInstanceViewResponse {
     /**
      * List of instance view of the dedicated hosts under the dedicated host group.
@@ -17,8 +17,8 @@ public final class DedicatedHostGroupInstanceViewResponse {
      */
     private final @Nullable List<DedicatedHostInstanceViewWithNameResponse> hosts;
 
-    @OutputCustomType.Constructor
-    private DedicatedHostGroupInstanceViewResponse(@OutputCustomType.Parameter("hosts") @Nullable List<DedicatedHostInstanceViewWithNameResponse> hosts) {
+    @CustomType.Constructor
+    private DedicatedHostGroupInstanceViewResponse(@CustomType.Parameter("hosts") @Nullable List<DedicatedHostInstanceViewWithNameResponse> hosts) {
         this.hosts = hosts;
     }
 

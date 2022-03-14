@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datafactory.outputs;
 
 import io.pulumi.azurenative.datafactory.outputs.MetadataItemResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BlobSinkResponse {
     /**
      * Blob writer add header. Type: boolean (or Expression with resultType boolean).
@@ -76,20 +76,20 @@ public final class BlobSinkResponse {
      */
     private final @Nullable Object writeBatchTimeout;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BlobSinkResponse(
-        @OutputCustomType.Parameter("blobWriterAddHeader") @Nullable Object blobWriterAddHeader,
-        @OutputCustomType.Parameter("blobWriterDateTimeFormat") @Nullable Object blobWriterDateTimeFormat,
-        @OutputCustomType.Parameter("blobWriterOverwriteFiles") @Nullable Object blobWriterOverwriteFiles,
-        @OutputCustomType.Parameter("copyBehavior") @Nullable Object copyBehavior,
-        @OutputCustomType.Parameter("disableMetricsCollection") @Nullable Object disableMetricsCollection,
-        @OutputCustomType.Parameter("maxConcurrentConnections") @Nullable Object maxConcurrentConnections,
-        @OutputCustomType.Parameter("metadata") @Nullable List<MetadataItemResponse> metadata,
-        @OutputCustomType.Parameter("sinkRetryCount") @Nullable Object sinkRetryCount,
-        @OutputCustomType.Parameter("sinkRetryWait") @Nullable Object sinkRetryWait,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("writeBatchSize") @Nullable Object writeBatchSize,
-        @OutputCustomType.Parameter("writeBatchTimeout") @Nullable Object writeBatchTimeout) {
+        @CustomType.Parameter("blobWriterAddHeader") @Nullable Object blobWriterAddHeader,
+        @CustomType.Parameter("blobWriterDateTimeFormat") @Nullable Object blobWriterDateTimeFormat,
+        @CustomType.Parameter("blobWriterOverwriteFiles") @Nullable Object blobWriterOverwriteFiles,
+        @CustomType.Parameter("copyBehavior") @Nullable Object copyBehavior,
+        @CustomType.Parameter("disableMetricsCollection") @Nullable Object disableMetricsCollection,
+        @CustomType.Parameter("maxConcurrentConnections") @Nullable Object maxConcurrentConnections,
+        @CustomType.Parameter("metadata") @Nullable List<MetadataItemResponse> metadata,
+        @CustomType.Parameter("sinkRetryCount") @Nullable Object sinkRetryCount,
+        @CustomType.Parameter("sinkRetryWait") @Nullable Object sinkRetryWait,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("writeBatchSize") @Nullable Object writeBatchSize,
+        @CustomType.Parameter("writeBatchTimeout") @Nullable Object writeBatchTimeout) {
         this.blobWriterAddHeader = blobWriterAddHeader;
         this.blobWriterDateTimeFormat = blobWriterDateTimeFormat;
         this.blobWriterOverwriteFiles = blobWriterOverwriteFiles;

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.dbforpostgresql.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
      * The scale up/out capacity, representing server's compute units.
      * 
      */
-    @InputImport(name="capacity")
+    @Import(name="capacity")
       private final @Nullable Integer capacity;
 
     public Optional<Integer> getCapacity() {
@@ -34,7 +34,7 @@ public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
      * The family of hardware.
      * 
      */
-    @InputImport(name="family")
+    @Import(name="family")
       private final @Nullable String family;
 
     public Optional<String> getFamily() {
@@ -45,7 +45,7 @@ public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
      * The name of the sku, typically, tier + family + cores, e.g. B_Gen4_1, GP_Gen5_8.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -56,7 +56,7 @@ public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
      * The size code, to be interpreted by resource as appropriate.
      * 
      */
-    @InputImport(name="size")
+    @Import(name="size")
       private final @Nullable String size;
 
     public Optional<String> getSize() {
@@ -67,7 +67,7 @@ public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
      * The tier of the particular SKU, e.g. Basic.
      * 
      */
-    @InputImport(name="tier")
+    @Import(name="tier")
       private final @Nullable String tier;
 
     public Optional<String> getTier() {

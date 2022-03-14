@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.alertsmanagement.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ThrottlingInformationResponse {
     /**
      * The required duration (in ISO8601 format) to wait before notifying on the alert rule again. The time granularity must be in minutes and minimum value is 0 minutes
@@ -17,8 +17,8 @@ public final class ThrottlingInformationResponse {
      */
     private final @Nullable String duration;
 
-    @OutputCustomType.Constructor
-    private ThrottlingInformationResponse(@OutputCustomType.Parameter("duration") @Nullable String duration) {
+    @CustomType.Constructor
+    private ThrottlingInformationResponse(@CustomType.Parameter("duration") @Nullable String duration) {
         this.duration = duration;
     }
 

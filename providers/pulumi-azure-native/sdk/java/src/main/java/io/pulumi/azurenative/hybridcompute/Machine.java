@@ -12,7 +12,7 @@ import io.pulumi.azurenative.hybridcompute.outputs.MachinePropertiesResponseOsPr
 import io.pulumi.azurenative.hybridcompute.outputs.MachineResponseIdentity;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -40,7 +40,7 @@ public class Machine extends io.pulumi.resources.CustomResource {
      * Specifies the AD fully qualified display name.
      * 
      */
-    @OutputExport(name="adFqdn", type=String.class, parameters={})
+    @Export(name="adFqdn", type=String.class, parameters={})
     private Output<String> adFqdn;
 
     /**
@@ -54,7 +54,7 @@ public class Machine extends io.pulumi.resources.CustomResource {
      * The hybrid machine agent full version.
      * 
      */
-    @OutputExport(name="agentVersion", type=String.class, parameters={})
+    @Export(name="agentVersion", type=String.class, parameters={})
     private Output<String> agentVersion;
 
     /**
@@ -68,7 +68,7 @@ public class Machine extends io.pulumi.resources.CustomResource {
      * Public Key that the client provides to be used during initial resource onboarding
      * 
      */
-    @OutputExport(name="clientPublicKey", type=String.class, parameters={})
+    @Export(name="clientPublicKey", type=String.class, parameters={})
     private Output</* @Nullable */ String> clientPublicKey;
 
     /**
@@ -82,7 +82,7 @@ public class Machine extends io.pulumi.resources.CustomResource {
      * Specifies the hybrid machine display name.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
@@ -96,7 +96,7 @@ public class Machine extends io.pulumi.resources.CustomResource {
      * Specifies the DNS fully qualified display name.
      * 
      */
-    @OutputExport(name="dnsFqdn", type=String.class, parameters={})
+    @Export(name="dnsFqdn", type=String.class, parameters={})
     private Output<String> dnsFqdn;
 
     /**
@@ -110,7 +110,7 @@ public class Machine extends io.pulumi.resources.CustomResource {
      * Specifies the Windows domain name.
      * 
      */
-    @OutputExport(name="domainName", type=String.class, parameters={})
+    @Export(name="domainName", type=String.class, parameters={})
     private Output<String> domainName;
 
     /**
@@ -124,7 +124,7 @@ public class Machine extends io.pulumi.resources.CustomResource {
      * Details about the error state.
      * 
      */
-    @OutputExport(name="errorDetails", type=List.class, parameters={ErrorDetailResponse.class})
+    @Export(name="errorDetails", type=List.class, parameters={ErrorDetailResponse.class})
     private Output<List<ErrorDetailResponse>> errorDetails;
 
     /**
@@ -138,7 +138,7 @@ public class Machine extends io.pulumi.resources.CustomResource {
      * Machine Extensions information
      * 
      */
-    @OutputExport(name="extensions", type=List.class, parameters={MachineExtensionInstanceViewResponse.class})
+    @Export(name="extensions", type=List.class, parameters={MachineExtensionInstanceViewResponse.class})
     private Output<List<MachineExtensionInstanceViewResponse>> extensions;
 
     /**
@@ -148,7 +148,7 @@ public class Machine extends io.pulumi.resources.CustomResource {
     public Output<List<MachineExtensionInstanceViewResponse>> getExtensions() {
         return this.extensions;
     }
-    @OutputExport(name="identity", type=MachineResponseIdentity.class, parameters={})
+    @Export(name="identity", type=MachineResponseIdentity.class, parameters={})
     private Output</* @Nullable */ MachineResponseIdentity> identity;
 
     public Output</* @Nullable */ MachineResponseIdentity> getIdentity() {
@@ -158,7 +158,7 @@ public class Machine extends io.pulumi.resources.CustomResource {
      * The time of the last status change.
      * 
      */
-    @OutputExport(name="lastStatusChange", type=String.class, parameters={})
+    @Export(name="lastStatusChange", type=String.class, parameters={})
     private Output<String> lastStatusChange;
 
     /**
@@ -172,7 +172,7 @@ public class Machine extends io.pulumi.resources.CustomResource {
      * The geo-location where the resource lives
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -186,7 +186,7 @@ public class Machine extends io.pulumi.resources.CustomResource {
      * Metadata pertaining to the geographic location of the resource.
      * 
      */
-    @OutputExport(name="locationData", type=LocationDataResponse.class, parameters={})
+    @Export(name="locationData", type=LocationDataResponse.class, parameters={})
     private Output</* @Nullable */ LocationDataResponse> locationData;
 
     /**
@@ -200,7 +200,7 @@ public class Machine extends io.pulumi.resources.CustomResource {
      * Specifies the hybrid machine FQDN.
      * 
      */
-    @OutputExport(name="machineFqdn", type=String.class, parameters={})
+    @Export(name="machineFqdn", type=String.class, parameters={})
     private Output<String> machineFqdn;
 
     /**
@@ -214,7 +214,7 @@ public class Machine extends io.pulumi.resources.CustomResource {
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -228,7 +228,7 @@ public class Machine extends io.pulumi.resources.CustomResource {
      * The Operating System running on the hybrid machine.
      * 
      */
-    @OutputExport(name="osName", type=String.class, parameters={})
+    @Export(name="osName", type=String.class, parameters={})
     private Output<String> osName;
 
     /**
@@ -242,7 +242,7 @@ public class Machine extends io.pulumi.resources.CustomResource {
      * Specifies the operating system settings for the hybrid machine.
      * 
      */
-    @OutputExport(name="osProfile", type=MachinePropertiesResponseOsProfile.class, parameters={})
+    @Export(name="osProfile", type=MachinePropertiesResponseOsProfile.class, parameters={})
     private Output</* @Nullable */ MachinePropertiesResponseOsProfile> osProfile;
 
     /**
@@ -256,7 +256,7 @@ public class Machine extends io.pulumi.resources.CustomResource {
      * Specifies the Operating System product SKU.
      * 
      */
-    @OutputExport(name="osSku", type=String.class, parameters={})
+    @Export(name="osSku", type=String.class, parameters={})
     private Output<String> osSku;
 
     /**
@@ -270,7 +270,7 @@ public class Machine extends io.pulumi.resources.CustomResource {
      * The version of Operating System running on the hybrid machine.
      * 
      */
-    @OutputExport(name="osVersion", type=String.class, parameters={})
+    @Export(name="osVersion", type=String.class, parameters={})
     private Output<String> osVersion;
 
     /**
@@ -284,7 +284,7 @@ public class Machine extends io.pulumi.resources.CustomResource {
      * The provisioning state, which only appears in the response.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -298,7 +298,7 @@ public class Machine extends io.pulumi.resources.CustomResource {
      * The status of the hybrid machine agent.
      * 
      */
-    @OutputExport(name="status", type=String.class, parameters={})
+    @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
     /**
@@ -312,7 +312,7 @@ public class Machine extends io.pulumi.resources.CustomResource {
      * Resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -326,7 +326,7 @@ public class Machine extends io.pulumi.resources.CustomResource {
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -340,7 +340,7 @@ public class Machine extends io.pulumi.resources.CustomResource {
      * Specifies the hybrid machine unique ID.
      * 
      */
-    @OutputExport(name="vmId", type=String.class, parameters={})
+    @Export(name="vmId", type=String.class, parameters={})
     private Output</* @Nullable */ String> vmId;
 
     /**
@@ -354,7 +354,7 @@ public class Machine extends io.pulumi.resources.CustomResource {
      * Specifies the Arc Machine's unique SMBIOS ID
      * 
      */
-    @OutputExport(name="vmUuid", type=String.class, parameters={})
+    @Export(name="vmUuid", type=String.class, parameters={})
     private Output<String> vmUuid;
 
     /**

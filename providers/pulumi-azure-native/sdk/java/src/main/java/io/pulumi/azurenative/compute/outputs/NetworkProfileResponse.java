@@ -5,14 +5,14 @@ package io.pulumi.azurenative.compute.outputs;
 
 import io.pulumi.azurenative.compute.outputs.NetworkInterfaceReferenceResponse;
 import io.pulumi.azurenative.compute.outputs.VirtualMachineNetworkInterfaceConfigurationResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class NetworkProfileResponse {
     /**
      * specifies the Microsoft.Network API version used when creating networking resources in the Network Interface Configurations
@@ -30,11 +30,11 @@ public final class NetworkProfileResponse {
      */
     private final @Nullable List<NetworkInterfaceReferenceResponse> networkInterfaces;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NetworkProfileResponse(
-        @OutputCustomType.Parameter("networkApiVersion") @Nullable String networkApiVersion,
-        @OutputCustomType.Parameter("networkInterfaceConfigurations") @Nullable List<VirtualMachineNetworkInterfaceConfigurationResponse> networkInterfaceConfigurations,
-        @OutputCustomType.Parameter("networkInterfaces") @Nullable List<NetworkInterfaceReferenceResponse> networkInterfaces) {
+        @CustomType.Parameter("networkApiVersion") @Nullable String networkApiVersion,
+        @CustomType.Parameter("networkInterfaceConfigurations") @Nullable List<VirtualMachineNetworkInterfaceConfigurationResponse> networkInterfaceConfigurations,
+        @CustomType.Parameter("networkInterfaces") @Nullable List<NetworkInterfaceReferenceResponse> networkInterfaces) {
         this.networkApiVersion = networkApiVersion;
         this.networkInterfaceConfigurations = networkInterfaceConfigurations;
         this.networkInterfaces = networkInterfaces;

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.azurenative.web.inputs.TrafficWeightResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -26,7 +26,7 @@ public final class IngressResponse extends io.pulumi.resources.InvokeArgs {
      * Bool indicating if HTTP connections to is allowed. If set to false HTTP connections are automatically redirected to HTTPS connections
      * 
      */
-    @InputImport(name="allowInsecure")
+    @Import(name="allowInsecure")
       private final @Nullable Boolean allowInsecure;
 
     public Optional<Boolean> getAllowInsecure() {
@@ -37,7 +37,7 @@ public final class IngressResponse extends io.pulumi.resources.InvokeArgs {
      * Bool indicating if app exposes an external http endpoint
      * 
      */
-    @InputImport(name="external")
+    @Import(name="external")
       private final @Nullable Boolean external;
 
     public Optional<Boolean> getExternal() {
@@ -48,7 +48,7 @@ public final class IngressResponse extends io.pulumi.resources.InvokeArgs {
      * Hostname.
      * 
      */
-    @InputImport(name="fqdn", required=true)
+    @Import(name="fqdn", required=true)
       private final String fqdn;
 
     public String getFqdn() {
@@ -59,14 +59,14 @@ public final class IngressResponse extends io.pulumi.resources.InvokeArgs {
      * Target Port in containers for traffic from ingress
      * 
      */
-    @InputImport(name="targetPort")
+    @Import(name="targetPort")
       private final @Nullable Integer targetPort;
 
     public Optional<Integer> getTargetPort() {
         return this.targetPort == null ? Optional.empty() : Optional.ofNullable(this.targetPort);
     }
 
-    @InputImport(name="traffic")
+    @Import(name="traffic")
       private final @Nullable List<TrafficWeightResponse> traffic;
 
     public List<TrafficWeightResponse> getTraffic() {
@@ -77,7 +77,7 @@ public final class IngressResponse extends io.pulumi.resources.InvokeArgs {
      * Ingress transport protocol
      * 
      */
-    @InputImport(name="transport")
+    @Import(name="transport")
       private final @Nullable String transport;
 
     public Optional<String> getTransport() {

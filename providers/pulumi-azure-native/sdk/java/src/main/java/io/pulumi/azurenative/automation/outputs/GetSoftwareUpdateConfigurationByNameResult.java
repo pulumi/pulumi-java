@@ -7,13 +7,13 @@ import io.pulumi.azurenative.automation.outputs.ErrorResponseResponse;
 import io.pulumi.azurenative.automation.outputs.SUCSchedulePropertiesResponse;
 import io.pulumi.azurenative.automation.outputs.SoftwareUpdateConfigurationTasksResponse;
 import io.pulumi.azurenative.automation.outputs.UpdateConfigurationResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetSoftwareUpdateConfigurationByNameResult {
     /**
      * CreatedBy property, which only appears in the response.
@@ -76,20 +76,20 @@ public final class GetSoftwareUpdateConfigurationByNameResult {
      */
     private final UpdateConfigurationResponse updateConfiguration;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetSoftwareUpdateConfigurationByNameResult(
-        @OutputCustomType.Parameter("createdBy") String createdBy,
-        @OutputCustomType.Parameter("creationTime") String creationTime,
-        @OutputCustomType.Parameter("error") @Nullable ErrorResponseResponse error,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("lastModifiedBy") String lastModifiedBy,
-        @OutputCustomType.Parameter("lastModifiedTime") String lastModifiedTime,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("scheduleInfo") SUCSchedulePropertiesResponse scheduleInfo,
-        @OutputCustomType.Parameter("tasks") @Nullable SoftwareUpdateConfigurationTasksResponse tasks,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("updateConfiguration") UpdateConfigurationResponse updateConfiguration) {
+        @CustomType.Parameter("createdBy") String createdBy,
+        @CustomType.Parameter("creationTime") String creationTime,
+        @CustomType.Parameter("error") @Nullable ErrorResponseResponse error,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("lastModifiedBy") String lastModifiedBy,
+        @CustomType.Parameter("lastModifiedTime") String lastModifiedTime,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("scheduleInfo") SUCSchedulePropertiesResponse scheduleInfo,
+        @CustomType.Parameter("tasks") @Nullable SoftwareUpdateConfigurationTasksResponse tasks,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("updateConfiguration") UpdateConfigurationResponse updateConfiguration) {
         this.createdBy = createdBy;
         this.creationTime = creationTime;
         this.error = error;

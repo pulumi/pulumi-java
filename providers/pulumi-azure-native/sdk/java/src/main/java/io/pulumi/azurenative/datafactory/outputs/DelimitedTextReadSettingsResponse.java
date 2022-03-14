@@ -6,14 +6,14 @@ package io.pulumi.azurenative.datafactory.outputs;
 import io.pulumi.azurenative.datafactory.outputs.TarGZipReadSettingsResponse;
 import io.pulumi.azurenative.datafactory.outputs.TarReadSettingsResponse;
 import io.pulumi.azurenative.datafactory.outputs.ZipDeflateReadSettingsResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DelimitedTextReadSettingsResponse {
     /**
      * Compression settings.
@@ -32,11 +32,11 @@ public final class DelimitedTextReadSettingsResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DelimitedTextReadSettingsResponse(
-        @OutputCustomType.Parameter("compressionProperties") @Nullable Object compressionProperties,
-        @OutputCustomType.Parameter("skipLineCount") @Nullable Object skipLineCount,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("compressionProperties") @Nullable Object compressionProperties,
+        @CustomType.Parameter("skipLineCount") @Nullable Object skipLineCount,
+        @CustomType.Parameter("type") String type) {
         this.compressionProperties = compressionProperties;
         this.skipLineCount = skipLineCount;
         this.type = type;

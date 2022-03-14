@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.storage.outputs;
 
 import io.pulumi.azurenative.storage.outputs.MultichannelResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SmbSettingResponse {
     /**
      * SMB authentication methods supported by server. Valid values are NTLMv2, Kerberos. Should be passed as a string with delimiter ';'.
@@ -38,13 +38,13 @@ public final class SmbSettingResponse {
      */
     private final @Nullable String versions;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SmbSettingResponse(
-        @OutputCustomType.Parameter("authenticationMethods") @Nullable String authenticationMethods,
-        @OutputCustomType.Parameter("channelEncryption") @Nullable String channelEncryption,
-        @OutputCustomType.Parameter("kerberosTicketEncryption") @Nullable String kerberosTicketEncryption,
-        @OutputCustomType.Parameter("multichannel") @Nullable MultichannelResponse multichannel,
-        @OutputCustomType.Parameter("versions") @Nullable String versions) {
+        @CustomType.Parameter("authenticationMethods") @Nullable String authenticationMethods,
+        @CustomType.Parameter("channelEncryption") @Nullable String channelEncryption,
+        @CustomType.Parameter("kerberosTicketEncryption") @Nullable String kerberosTicketEncryption,
+        @CustomType.Parameter("multichannel") @Nullable MultichannelResponse multichannel,
+        @CustomType.Parameter("versions") @Nullable String versions) {
         this.authenticationMethods = authenticationMethods;
         this.channelEncryption = channelEncryption;
         this.kerberosTicketEncryption = kerberosTicketEncryption;

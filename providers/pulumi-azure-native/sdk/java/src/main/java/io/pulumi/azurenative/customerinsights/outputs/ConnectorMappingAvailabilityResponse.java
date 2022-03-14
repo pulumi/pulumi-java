@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.customerinsights.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ConnectorMappingAvailabilityResponse {
     /**
      * The frequency to update.
@@ -23,10 +23,10 @@ public final class ConnectorMappingAvailabilityResponse {
      */
     private final Integer interval;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ConnectorMappingAvailabilityResponse(
-        @OutputCustomType.Parameter("frequency") @Nullable String frequency,
-        @OutputCustomType.Parameter("interval") Integer interval) {
+        @CustomType.Parameter("frequency") @Nullable String frequency,
+        @CustomType.Parameter("interval") Integer interval) {
         this.frequency = frequency;
         this.interval = interval;
     }

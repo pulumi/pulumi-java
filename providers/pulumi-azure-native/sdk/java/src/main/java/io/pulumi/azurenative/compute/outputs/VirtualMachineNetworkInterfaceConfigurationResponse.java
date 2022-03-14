@@ -6,7 +6,7 @@ package io.pulumi.azurenative.compute.outputs;
 import io.pulumi.azurenative.compute.outputs.SubResourceResponse;
 import io.pulumi.azurenative.compute.outputs.VirtualMachineNetworkInterfaceDnsSettingsConfigurationResponse;
 import io.pulumi.azurenative.compute.outputs.VirtualMachineNetworkInterfaceIPConfigurationResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -14,7 +14,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VirtualMachineNetworkInterfaceConfigurationResponse {
     /**
      * Specify what happens to the network interface when the VM is deleted
@@ -63,18 +63,18 @@ public final class VirtualMachineNetworkInterfaceConfigurationResponse {
      */
     private final @Nullable Boolean primary;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VirtualMachineNetworkInterfaceConfigurationResponse(
-        @OutputCustomType.Parameter("deleteOption") @Nullable String deleteOption,
-        @OutputCustomType.Parameter("dnsSettings") @Nullable VirtualMachineNetworkInterfaceDnsSettingsConfigurationResponse dnsSettings,
-        @OutputCustomType.Parameter("dscpConfiguration") @Nullable SubResourceResponse dscpConfiguration,
-        @OutputCustomType.Parameter("enableAcceleratedNetworking") @Nullable Boolean enableAcceleratedNetworking,
-        @OutputCustomType.Parameter("enableFpga") @Nullable Boolean enableFpga,
-        @OutputCustomType.Parameter("enableIPForwarding") @Nullable Boolean enableIPForwarding,
-        @OutputCustomType.Parameter("ipConfigurations") List<VirtualMachineNetworkInterfaceIPConfigurationResponse> ipConfigurations,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("networkSecurityGroup") @Nullable SubResourceResponse networkSecurityGroup,
-        @OutputCustomType.Parameter("primary") @Nullable Boolean primary) {
+        @CustomType.Parameter("deleteOption") @Nullable String deleteOption,
+        @CustomType.Parameter("dnsSettings") @Nullable VirtualMachineNetworkInterfaceDnsSettingsConfigurationResponse dnsSettings,
+        @CustomType.Parameter("dscpConfiguration") @Nullable SubResourceResponse dscpConfiguration,
+        @CustomType.Parameter("enableAcceleratedNetworking") @Nullable Boolean enableAcceleratedNetworking,
+        @CustomType.Parameter("enableFpga") @Nullable Boolean enableFpga,
+        @CustomType.Parameter("enableIPForwarding") @Nullable Boolean enableIPForwarding,
+        @CustomType.Parameter("ipConfigurations") List<VirtualMachineNetworkInterfaceIPConfigurationResponse> ipConfigurations,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("networkSecurityGroup") @Nullable SubResourceResponse networkSecurityGroup,
+        @CustomType.Parameter("primary") @Nullable Boolean primary) {
         this.deleteOption = deleteOption;
         this.dnsSettings = dnsSettings;
         this.dscpConfiguration = dscpConfiguration;

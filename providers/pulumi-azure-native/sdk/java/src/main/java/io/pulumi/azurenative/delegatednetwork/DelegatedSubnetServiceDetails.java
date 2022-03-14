@@ -9,7 +9,7 @@ import io.pulumi.azurenative.delegatednetwork.outputs.ControllerDetailsResponse;
 import io.pulumi.azurenative.delegatednetwork.outputs.SubnetDetailsResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -37,7 +37,7 @@ public class DelegatedSubnetServiceDetails extends io.pulumi.resources.CustomRes
      * Properties of the controller.
      * 
      */
-    @OutputExport(name="controllerDetails", type=ControllerDetailsResponse.class, parameters={})
+    @Export(name="controllerDetails", type=ControllerDetailsResponse.class, parameters={})
     private Output</* @Nullable */ ControllerDetailsResponse> controllerDetails;
 
     /**
@@ -51,7 +51,7 @@ public class DelegatedSubnetServiceDetails extends io.pulumi.resources.CustomRes
      * Location of the resource.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -65,7 +65,7 @@ public class DelegatedSubnetServiceDetails extends io.pulumi.resources.CustomRes
      * The name of the resource.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -79,7 +79,7 @@ public class DelegatedSubnetServiceDetails extends io.pulumi.resources.CustomRes
      * The current state of dnc delegated subnet resource.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -93,7 +93,7 @@ public class DelegatedSubnetServiceDetails extends io.pulumi.resources.CustomRes
      * Resource guid.
      * 
      */
-    @OutputExport(name="resourceGuid", type=String.class, parameters={})
+    @Export(name="resourceGuid", type=String.class, parameters={})
     private Output<String> resourceGuid;
 
     /**
@@ -107,7 +107,7 @@ public class DelegatedSubnetServiceDetails extends io.pulumi.resources.CustomRes
      * subnet details
      * 
      */
-    @OutputExport(name="subnetDetails", type=SubnetDetailsResponse.class, parameters={})
+    @Export(name="subnetDetails", type=SubnetDetailsResponse.class, parameters={})
     private Output</* @Nullable */ SubnetDetailsResponse> subnetDetails;
 
     /**
@@ -121,7 +121,7 @@ public class DelegatedSubnetServiceDetails extends io.pulumi.resources.CustomRes
      * The resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -135,7 +135,7 @@ public class DelegatedSubnetServiceDetails extends io.pulumi.resources.CustomRes
      * The type of resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

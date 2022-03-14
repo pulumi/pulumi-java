@@ -6,7 +6,7 @@ package io.pulumi.azurenative.insights.inputs;
 import io.pulumi.azurenative.insights.inputs.RuleManagementEventDataSourceResponse;
 import io.pulumi.azurenative.insights.inputs.RuleMetricDataSourceResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class LocationThresholdRuleConditionResponse extends io.pulumi.reso
      * the resource from which the rule collects its data. For this type dataSource will always be of type RuleMetricDataSource.
      * 
      */
-    @InputImport(name="dataSource")
+    @Import(name="dataSource")
       private final @Nullable Either<RuleManagementEventDataSourceResponse,RuleMetricDataSourceResponse> dataSource;
 
     public Either<RuleManagementEventDataSourceResponse,RuleMetricDataSourceResponse> getDataSource() {
@@ -37,7 +37,7 @@ public final class LocationThresholdRuleConditionResponse extends io.pulumi.reso
      * the number of locations that must fail to activate the alert.
      * 
      */
-    @InputImport(name="failedLocationCount", required=true)
+    @Import(name="failedLocationCount", required=true)
       private final Integer failedLocationCount;
 
     public Integer getFailedLocationCount() {
@@ -49,7 +49,7 @@ public final class LocationThresholdRuleConditionResponse extends io.pulumi.reso
      * Expected value is 'Microsoft.Azure.Management.Insights.Models.LocationThresholdRuleCondition'.
      * 
      */
-    @InputImport(name="odataType", required=true)
+    @Import(name="odataType", required=true)
       private final String odataType;
 
     public String getOdataType() {
@@ -60,7 +60,7 @@ public final class LocationThresholdRuleConditionResponse extends io.pulumi.reso
      * the period of time (in ISO 8601 duration format) that is used to monitor alert activity based on the threshold. If specified then it must be between 5 minutes and 1 day.
      * 
      */
-    @InputImport(name="windowSize")
+    @Import(name="windowSize")
       private final @Nullable String windowSize;
 
     public Optional<String> getWindowSize() {

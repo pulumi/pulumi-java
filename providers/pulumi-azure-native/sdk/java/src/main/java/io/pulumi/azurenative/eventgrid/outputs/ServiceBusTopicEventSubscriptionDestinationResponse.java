@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.eventgrid.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ServiceBusTopicEventSubscriptionDestinationResponse {
     /**
      * Type of the endpoint for the event subscription destination.
@@ -23,10 +23,10 @@ public final class ServiceBusTopicEventSubscriptionDestinationResponse {
      */
     private final @Nullable String resourceId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServiceBusTopicEventSubscriptionDestinationResponse(
-        @OutputCustomType.Parameter("endpointType") String endpointType,
-        @OutputCustomType.Parameter("resourceId") @Nullable String resourceId) {
+        @CustomType.Parameter("endpointType") String endpointType,
+        @CustomType.Parameter("resourceId") @Nullable String resourceId) {
         this.endpointType = endpointType;
         this.resourceId = resourceId;
     }

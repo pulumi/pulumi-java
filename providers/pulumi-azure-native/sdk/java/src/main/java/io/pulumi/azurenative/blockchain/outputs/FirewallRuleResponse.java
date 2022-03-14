@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.blockchain.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FirewallRuleResponse {
     /**
      * Gets or sets the end IP address of the firewall rule range.
@@ -27,11 +27,11 @@ public final class FirewallRuleResponse {
      */
     private final @Nullable String startIpAddress;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FirewallRuleResponse(
-        @OutputCustomType.Parameter("endIpAddress") @Nullable String endIpAddress,
-        @OutputCustomType.Parameter("ruleName") @Nullable String ruleName,
-        @OutputCustomType.Parameter("startIpAddress") @Nullable String startIpAddress) {
+        @CustomType.Parameter("endIpAddress") @Nullable String endIpAddress,
+        @CustomType.Parameter("ruleName") @Nullable String ruleName,
+        @CustomType.Parameter("startIpAddress") @Nullable String startIpAddress) {
         this.endIpAddress = endIpAddress;
         this.ruleName = ruleName;
         this.startIpAddress = startIpAddress;

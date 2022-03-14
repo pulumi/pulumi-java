@@ -5,7 +5,7 @@ package io.pulumi.azurenative.customerinsights.outputs;
 
 import io.pulumi.azurenative.customerinsights.outputs.AssignmentPrincipalResponse;
 import io.pulumi.azurenative.customerinsights.outputs.ResourceSetDescriptionResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetRoleAssignmentResult {
     /**
      * The name of the metadata object.
@@ -131,31 +131,31 @@ public final class GetRoleAssignmentResult {
      */
     private final @Nullable ResourceSetDescriptionResponse widgetTypes;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetRoleAssignmentResult(
-        @OutputCustomType.Parameter("assignmentName") String assignmentName,
-        @OutputCustomType.Parameter("conflationPolicies") @Nullable ResourceSetDescriptionResponse conflationPolicies,
-        @OutputCustomType.Parameter("connectors") @Nullable ResourceSetDescriptionResponse connectors,
-        @OutputCustomType.Parameter("description") @Nullable Map<String,String> description,
-        @OutputCustomType.Parameter("displayName") @Nullable Map<String,String> displayName,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("interactions") @Nullable ResourceSetDescriptionResponse interactions,
-        @OutputCustomType.Parameter("kpis") @Nullable ResourceSetDescriptionResponse kpis,
-        @OutputCustomType.Parameter("links") @Nullable ResourceSetDescriptionResponse links,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("principals") List<AssignmentPrincipalResponse> principals,
-        @OutputCustomType.Parameter("profiles") @Nullable ResourceSetDescriptionResponse profiles,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("relationshipLinks") @Nullable ResourceSetDescriptionResponse relationshipLinks,
-        @OutputCustomType.Parameter("relationships") @Nullable ResourceSetDescriptionResponse relationships,
-        @OutputCustomType.Parameter("role") String role,
-        @OutputCustomType.Parameter("roleAssignments") @Nullable ResourceSetDescriptionResponse roleAssignments,
-        @OutputCustomType.Parameter("sasPolicies") @Nullable ResourceSetDescriptionResponse sasPolicies,
-        @OutputCustomType.Parameter("segments") @Nullable ResourceSetDescriptionResponse segments,
-        @OutputCustomType.Parameter("tenantId") String tenantId,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("views") @Nullable ResourceSetDescriptionResponse views,
-        @OutputCustomType.Parameter("widgetTypes") @Nullable ResourceSetDescriptionResponse widgetTypes) {
+        @CustomType.Parameter("assignmentName") String assignmentName,
+        @CustomType.Parameter("conflationPolicies") @Nullable ResourceSetDescriptionResponse conflationPolicies,
+        @CustomType.Parameter("connectors") @Nullable ResourceSetDescriptionResponse connectors,
+        @CustomType.Parameter("description") @Nullable Map<String,String> description,
+        @CustomType.Parameter("displayName") @Nullable Map<String,String> displayName,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("interactions") @Nullable ResourceSetDescriptionResponse interactions,
+        @CustomType.Parameter("kpis") @Nullable ResourceSetDescriptionResponse kpis,
+        @CustomType.Parameter("links") @Nullable ResourceSetDescriptionResponse links,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("principals") List<AssignmentPrincipalResponse> principals,
+        @CustomType.Parameter("profiles") @Nullable ResourceSetDescriptionResponse profiles,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("relationshipLinks") @Nullable ResourceSetDescriptionResponse relationshipLinks,
+        @CustomType.Parameter("relationships") @Nullable ResourceSetDescriptionResponse relationships,
+        @CustomType.Parameter("role") String role,
+        @CustomType.Parameter("roleAssignments") @Nullable ResourceSetDescriptionResponse roleAssignments,
+        @CustomType.Parameter("sasPolicies") @Nullable ResourceSetDescriptionResponse sasPolicies,
+        @CustomType.Parameter("segments") @Nullable ResourceSetDescriptionResponse segments,
+        @CustomType.Parameter("tenantId") String tenantId,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("views") @Nullable ResourceSetDescriptionResponse views,
+        @CustomType.Parameter("widgetTypes") @Nullable ResourceSetDescriptionResponse widgetTypes) {
         this.assignmentName = assignmentName;
         this.conflationPolicies = conflationPolicies;
         this.connectors = connectors;

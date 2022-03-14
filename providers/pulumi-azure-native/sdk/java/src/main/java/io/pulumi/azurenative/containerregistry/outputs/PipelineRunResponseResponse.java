@@ -7,14 +7,14 @@ import io.pulumi.azurenative.containerregistry.outputs.ExportPipelineTargetPrope
 import io.pulumi.azurenative.containerregistry.outputs.ImportPipelineSourcePropertiesResponse;
 import io.pulumi.azurenative.containerregistry.outputs.PipelineTriggerDescriptorResponse;
 import io.pulumi.azurenative.containerregistry.outputs.ProgressPropertiesResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PipelineRunResponseResponse {
     /**
      * The digest of the tar used to transfer the artifacts.
@@ -67,18 +67,18 @@ public final class PipelineRunResponseResponse {
      */
     private final @Nullable PipelineTriggerDescriptorResponse trigger;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PipelineRunResponseResponse(
-        @OutputCustomType.Parameter("catalogDigest") @Nullable String catalogDigest,
-        @OutputCustomType.Parameter("finishTime") @Nullable String finishTime,
-        @OutputCustomType.Parameter("importedArtifacts") @Nullable List<String> importedArtifacts,
-        @OutputCustomType.Parameter("pipelineRunErrorMessage") @Nullable String pipelineRunErrorMessage,
-        @OutputCustomType.Parameter("progress") @Nullable ProgressPropertiesResponse progress,
-        @OutputCustomType.Parameter("source") @Nullable ImportPipelineSourcePropertiesResponse source,
-        @OutputCustomType.Parameter("startTime") @Nullable String startTime,
-        @OutputCustomType.Parameter("status") @Nullable String status,
-        @OutputCustomType.Parameter("target") @Nullable ExportPipelineTargetPropertiesResponse target,
-        @OutputCustomType.Parameter("trigger") @Nullable PipelineTriggerDescriptorResponse trigger) {
+        @CustomType.Parameter("catalogDigest") @Nullable String catalogDigest,
+        @CustomType.Parameter("finishTime") @Nullable String finishTime,
+        @CustomType.Parameter("importedArtifacts") @Nullable List<String> importedArtifacts,
+        @CustomType.Parameter("pipelineRunErrorMessage") @Nullable String pipelineRunErrorMessage,
+        @CustomType.Parameter("progress") @Nullable ProgressPropertiesResponse progress,
+        @CustomType.Parameter("source") @Nullable ImportPipelineSourcePropertiesResponse source,
+        @CustomType.Parameter("startTime") @Nullable String startTime,
+        @CustomType.Parameter("status") @Nullable String status,
+        @CustomType.Parameter("target") @Nullable ExportPipelineTargetPropertiesResponse target,
+        @CustomType.Parameter("trigger") @Nullable PipelineTriggerDescriptorResponse trigger) {
         this.catalogDigest = catalogDigest;
         this.finishTime = finishTime;
         this.importedArtifacts = importedArtifacts;

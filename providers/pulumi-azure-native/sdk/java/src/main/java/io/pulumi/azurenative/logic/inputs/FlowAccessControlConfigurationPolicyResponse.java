@@ -5,7 +5,7 @@ package io.pulumi.azurenative.logic.inputs;
 
 import io.pulumi.azurenative.logic.inputs.IpAddressRangeResponse;
 import io.pulumi.azurenative.logic.inputs.OpenAuthenticationAccessPoliciesResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class FlowAccessControlConfigurationPolicyResponse extends io.pulum
      * The allowed caller IP address ranges.
      * 
      */
-    @InputImport(name="allowedCallerIpAddresses")
+    @Import(name="allowedCallerIpAddresses")
       private final @Nullable List<IpAddressRangeResponse> allowedCallerIpAddresses;
 
     public List<IpAddressRangeResponse> getAllowedCallerIpAddresses() {
@@ -35,7 +35,7 @@ public final class FlowAccessControlConfigurationPolicyResponse extends io.pulum
      * The authentication policies for workflow.
      * 
      */
-    @InputImport(name="openAuthenticationPolicies")
+    @Import(name="openAuthenticationPolicies")
       private final @Nullable OpenAuthenticationAccessPoliciesResponse openAuthenticationPolicies;
 
     public Optional<OpenAuthenticationAccessPoliciesResponse> getOpenAuthenticationPolicies() {

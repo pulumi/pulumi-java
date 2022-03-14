@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.insights.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ActionGroupResponse {
     /**
      * The resource ID of the Action Group. This cannot be null or empty.
@@ -22,10 +22,10 @@ public final class ActionGroupResponse {
      */
     private final @Nullable Map<String,String> webhookProperties;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ActionGroupResponse(
-        @OutputCustomType.Parameter("actionGroupId") String actionGroupId,
-        @OutputCustomType.Parameter("webhookProperties") @Nullable Map<String,String> webhookProperties) {
+        @CustomType.Parameter("actionGroupId") String actionGroupId,
+        @CustomType.Parameter("webhookProperties") @Nullable Map<String,String> webhookProperties) {
         this.actionGroupId = actionGroupId;
         this.webhookProperties = webhookProperties;
     }

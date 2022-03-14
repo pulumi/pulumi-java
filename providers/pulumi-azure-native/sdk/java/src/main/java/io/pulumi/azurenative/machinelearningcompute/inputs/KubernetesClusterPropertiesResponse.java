@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearningcompute.inputs;
 
 import io.pulumi.azurenative.machinelearningcompute.inputs.ServicePrincipalPropertiesResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class KubernetesClusterPropertiesResponse extends io.pulumi.resourc
      * The Azure Service Principal used by Kubernetes
      * 
      */
-    @InputImport(name="servicePrincipal")
+    @Import(name="servicePrincipal")
       private final @Nullable ServicePrincipalPropertiesResponse servicePrincipal;
 
     public Optional<ServicePrincipalPropertiesResponse> getServicePrincipal() {

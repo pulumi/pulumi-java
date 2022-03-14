@@ -5,7 +5,7 @@ package io.pulumi.azurenative.resources.inputs;
 
 import io.pulumi.azurenative.resources.inputs.AliasPathMetadataResponse;
 import io.pulumi.azurenative.resources.inputs.AliasPatternResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class AliasPathResponse extends io.pulumi.resources.InvokeArgs {
      * The API versions.
      * 
      */
-    @InputImport(name="apiVersions")
+    @Import(name="apiVersions")
       private final @Nullable List<String> apiVersions;
 
     public List<String> getApiVersions() {
@@ -36,7 +36,7 @@ public final class AliasPathResponse extends io.pulumi.resources.InvokeArgs {
      * The metadata of the alias path. If missing, fall back to the default metadata of the alias.
      * 
      */
-    @InputImport(name="metadata", required=true)
+    @Import(name="metadata", required=true)
       private final AliasPathMetadataResponse metadata;
 
     public AliasPathMetadataResponse getMetadata() {
@@ -47,7 +47,7 @@ public final class AliasPathResponse extends io.pulumi.resources.InvokeArgs {
      * The path of an alias.
      * 
      */
-    @InputImport(name="path")
+    @Import(name="path")
       private final @Nullable String path;
 
     public Optional<String> getPath() {
@@ -58,7 +58,7 @@ public final class AliasPathResponse extends io.pulumi.resources.InvokeArgs {
      * The pattern for an alias path.
      * 
      */
-    @InputImport(name="pattern")
+    @Import(name="pattern")
       private final @Nullable AliasPatternResponse pattern;
 
     public Optional<AliasPatternResponse> getPattern() {

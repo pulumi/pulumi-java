@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.media.inputs;
 
 import io.pulumi.azurenative.media.inputs.ContentKeyPolicyPlayReadyLicenseResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ContentKeyPolicyPlayReadyConfigurationResponse extends io.pul
      * The PlayReady licenses.
      * 
      */
-    @InputImport(name="licenses", required=true)
+    @Import(name="licenses", required=true)
       private final List<ContentKeyPolicyPlayReadyLicenseResponse> licenses;
 
     public List<ContentKeyPolicyPlayReadyLicenseResponse> getLicenses() {
@@ -36,7 +36,7 @@ public final class ContentKeyPolicyPlayReadyConfigurationResponse extends io.pul
      * Expected value is '#Microsoft.Media.ContentKeyPolicyPlayReadyConfiguration'.
      * 
      */
-    @InputImport(name="odataType", required=true)
+    @Import(name="odataType", required=true)
       private final String odataType;
 
     public String getOdataType() {
@@ -47,7 +47,7 @@ public final class ContentKeyPolicyPlayReadyConfigurationResponse extends io.pul
      * The custom response data.
      * 
      */
-    @InputImport(name="responseCustomData")
+    @Import(name="responseCustomData")
       private final @Nullable String responseCustomData;
 
     public Optional<String> getResponseCustomData() {

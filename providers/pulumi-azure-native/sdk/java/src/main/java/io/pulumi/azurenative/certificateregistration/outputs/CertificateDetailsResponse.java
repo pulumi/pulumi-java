@@ -3,12 +3,12 @@
 
 package io.pulumi.azurenative.certificateregistration.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class CertificateDetailsResponse {
     /**
      * Certificate Issuer.
@@ -56,17 +56,17 @@ public final class CertificateDetailsResponse {
      */
     private final Integer version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CertificateDetailsResponse(
-        @OutputCustomType.Parameter("issuer") String issuer,
-        @OutputCustomType.Parameter("notAfter") String notAfter,
-        @OutputCustomType.Parameter("notBefore") String notBefore,
-        @OutputCustomType.Parameter("rawData") String rawData,
-        @OutputCustomType.Parameter("serialNumber") String serialNumber,
-        @OutputCustomType.Parameter("signatureAlgorithm") String signatureAlgorithm,
-        @OutputCustomType.Parameter("subject") String subject,
-        @OutputCustomType.Parameter("thumbprint") String thumbprint,
-        @OutputCustomType.Parameter("version") Integer version) {
+        @CustomType.Parameter("issuer") String issuer,
+        @CustomType.Parameter("notAfter") String notAfter,
+        @CustomType.Parameter("notBefore") String notBefore,
+        @CustomType.Parameter("rawData") String rawData,
+        @CustomType.Parameter("serialNumber") String serialNumber,
+        @CustomType.Parameter("signatureAlgorithm") String signatureAlgorithm,
+        @CustomType.Parameter("subject") String subject,
+        @CustomType.Parameter("thumbprint") String thumbprint,
+        @CustomType.Parameter("version") Integer version) {
         this.issuer = issuer;
         this.notAfter = notAfter;
         this.notBefore = notBefore;

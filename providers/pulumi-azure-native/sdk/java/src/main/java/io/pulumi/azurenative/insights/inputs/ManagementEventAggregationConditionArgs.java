@@ -5,7 +5,7 @@ package io.pulumi.azurenative.insights.inputs;
 
 import io.pulumi.azurenative.insights.enums.ConditionOperator;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ManagementEventAggregationConditionArgs extends io.pulumi.res
      * the condition operator.
      * 
      */
-    @InputImport(name="operator")
+    @Import(name="operator")
       private final @Nullable Output<ConditionOperator> operator;
 
     public Output<ConditionOperator> getOperator() {
@@ -35,7 +35,7 @@ public final class ManagementEventAggregationConditionArgs extends io.pulumi.res
      * The threshold value that activates the alert.
      * 
      */
-    @InputImport(name="threshold")
+    @Import(name="threshold")
       private final @Nullable Output<Double> threshold;
 
     public Output<Double> getThreshold() {
@@ -46,7 +46,7 @@ public final class ManagementEventAggregationConditionArgs extends io.pulumi.res
      * the period of time (in ISO 8601 duration format) that is used to monitor alert activity based on the threshold. If specified then it must be between 5 minutes and 1 day.
      * 
      */
-    @InputImport(name="windowSize")
+    @Import(name="windowSize")
       private final @Nullable Output<String> windowSize;
 
     public Output<String> getWindowSize() {

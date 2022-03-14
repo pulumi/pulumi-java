@@ -3,12 +3,12 @@
 
 package io.pulumi.azurenative.resourceconnector.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class HybridConnectionConfigResponse {
     /**
      * Timestamp when this token will be expired.
@@ -31,12 +31,12 @@ public final class HybridConnectionConfigResponse {
      */
     private final String token;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private HybridConnectionConfigResponse(
-        @OutputCustomType.Parameter("expirationTime") Double expirationTime,
-        @OutputCustomType.Parameter("hybridConnectionName") String hybridConnectionName,
-        @OutputCustomType.Parameter("relay") String relay,
-        @OutputCustomType.Parameter("token") String token) {
+        @CustomType.Parameter("expirationTime") Double expirationTime,
+        @CustomType.Parameter("hybridConnectionName") String hybridConnectionName,
+        @CustomType.Parameter("relay") String relay,
+        @CustomType.Parameter("token") String token) {
         this.expirationTime = expirationTime;
         this.hybridConnectionName = hybridConnectionName;
         this.relay = relay;

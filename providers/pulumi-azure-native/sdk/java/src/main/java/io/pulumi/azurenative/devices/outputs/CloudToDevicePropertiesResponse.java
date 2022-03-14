@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.devices.outputs;
 
 import io.pulumi.azurenative.devices.outputs.FeedbackPropertiesResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CloudToDevicePropertiesResponse {
     /**
      * The default time to live for cloud-to-device messages in the device queue. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.
@@ -29,11 +29,11 @@ public final class CloudToDevicePropertiesResponse {
      */
     private final @Nullable Integer maxDeliveryCount;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CloudToDevicePropertiesResponse(
-        @OutputCustomType.Parameter("defaultTtlAsIso8601") @Nullable String defaultTtlAsIso8601,
-        @OutputCustomType.Parameter("feedback") @Nullable FeedbackPropertiesResponse feedback,
-        @OutputCustomType.Parameter("maxDeliveryCount") @Nullable Integer maxDeliveryCount) {
+        @CustomType.Parameter("defaultTtlAsIso8601") @Nullable String defaultTtlAsIso8601,
+        @CustomType.Parameter("feedback") @Nullable FeedbackPropertiesResponse feedback,
+        @CustomType.Parameter("maxDeliveryCount") @Nullable Integer maxDeliveryCount) {
         this.defaultTtlAsIso8601 = defaultTtlAsIso8601;
         this.feedback = feedback;
         this.maxDeliveryCount = maxDeliveryCount;

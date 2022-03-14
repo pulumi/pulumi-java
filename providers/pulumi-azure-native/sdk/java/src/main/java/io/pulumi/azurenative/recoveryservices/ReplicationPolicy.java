@@ -8,7 +8,7 @@ import io.pulumi.azurenative.recoveryservices.ReplicationPolicyArgs;
 import io.pulumi.azurenative.recoveryservices.outputs.PolicyPropertiesResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +35,7 @@ public class ReplicationPolicy extends io.pulumi.resources.CustomResource {
      * Resource Location
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -49,7 +49,7 @@ public class ReplicationPolicy extends io.pulumi.resources.CustomResource {
      * Resource Name
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -63,7 +63,7 @@ public class ReplicationPolicy extends io.pulumi.resources.CustomResource {
      * The custom data.
      * 
      */
-    @OutputExport(name="properties", type=PolicyPropertiesResponse.class, parameters={})
+    @Export(name="properties", type=PolicyPropertiesResponse.class, parameters={})
     private Output<PolicyPropertiesResponse> properties;
 
     /**
@@ -77,7 +77,7 @@ public class ReplicationPolicy extends io.pulumi.resources.CustomResource {
      * Resource Type
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

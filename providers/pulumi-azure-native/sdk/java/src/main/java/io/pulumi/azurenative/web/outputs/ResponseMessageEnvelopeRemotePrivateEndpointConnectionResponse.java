@@ -8,7 +8,7 @@ import io.pulumi.azurenative.web.outputs.ErrorEntityResponse;
 import io.pulumi.azurenative.web.outputs.ManagedServiceIdentityResponse;
 import io.pulumi.azurenative.web.outputs.RemotePrivateEndpointConnectionResponse;
 import io.pulumi.azurenative.web.outputs.SkuDescriptionResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -16,7 +16,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ResponseMessageEnvelopeRemotePrivateEndpointConnectionResponse {
     /**
      * Azure-AsyncOperation Error info.
@@ -81,20 +81,20 @@ public final class ResponseMessageEnvelopeRemotePrivateEndpointConnectionRespons
      */
     private final @Nullable List<String> zones;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ResponseMessageEnvelopeRemotePrivateEndpointConnectionResponse(
-        @OutputCustomType.Parameter("error") @Nullable ErrorEntityResponse error,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("identity") @Nullable ManagedServiceIdentityResponse identity,
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("plan") @Nullable ArmPlanResponse plan,
-        @OutputCustomType.Parameter("properties") @Nullable RemotePrivateEndpointConnectionResponse properties,
-        @OutputCustomType.Parameter("sku") @Nullable SkuDescriptionResponse sku,
-        @OutputCustomType.Parameter("status") @Nullable String status,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") @Nullable String type,
-        @OutputCustomType.Parameter("zones") @Nullable List<String> zones) {
+        @CustomType.Parameter("error") @Nullable ErrorEntityResponse error,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("identity") @Nullable ManagedServiceIdentityResponse identity,
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("plan") @Nullable ArmPlanResponse plan,
+        @CustomType.Parameter("properties") @Nullable RemotePrivateEndpointConnectionResponse properties,
+        @CustomType.Parameter("sku") @Nullable SkuDescriptionResponse sku,
+        @CustomType.Parameter("status") @Nullable String status,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") @Nullable String type,
+        @CustomType.Parameter("zones") @Nullable List<String> zones) {
         this.error = error;
         this.id = id;
         this.identity = identity;

@@ -10,7 +10,7 @@ import io.pulumi.azurenative.machinelearningservices.inputs.ACIServiceResponseRe
 import io.pulumi.azurenative.machinelearningservices.inputs.ContainerResourceRequirementsResponse;
 import io.pulumi.azurenative.machinelearningservices.inputs.ModelResponse;
 import io.pulumi.azurenative.machinelearningservices.inputs.ServiceResponseBaseResponseError;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -33,7 +33,7 @@ public final class ACIServiceResponseResponse extends io.pulumi.resources.Invoke
      * Whether or not Application Insights is enabled.
      * 
      */
-    @InputImport(name="appInsightsEnabled")
+    @Import(name="appInsightsEnabled")
       private final @Nullable Boolean appInsightsEnabled;
 
     public Optional<Boolean> getAppInsightsEnabled() {
@@ -44,7 +44,7 @@ public final class ACIServiceResponseResponse extends io.pulumi.resources.Invoke
      * Whether or not authentication is enabled on the service.
      * 
      */
-    @InputImport(name="authEnabled")
+    @Import(name="authEnabled")
       private final @Nullable Boolean authEnabled;
 
     public Optional<Boolean> getAuthEnabled() {
@@ -55,7 +55,7 @@ public final class ACIServiceResponseResponse extends io.pulumi.resources.Invoke
      * The CName for the service.
      * 
      */
-    @InputImport(name="cname")
+    @Import(name="cname")
       private final @Nullable String cname;
 
     public Optional<String> getCname() {
@@ -67,7 +67,7 @@ public final class ACIServiceResponseResponse extends io.pulumi.resources.Invoke
      * Expected value is 'ACI'.
      * 
      */
-    @InputImport(name="computeType", required=true)
+    @Import(name="computeType", required=true)
       private final String computeType;
 
     public String getComputeType() {
@@ -78,7 +78,7 @@ public final class ACIServiceResponseResponse extends io.pulumi.resources.Invoke
      * The container resource requirements.
      * 
      */
-    @InputImport(name="containerResourceRequirements")
+    @Import(name="containerResourceRequirements")
       private final @Nullable ContainerResourceRequirementsResponse containerResourceRequirements;
 
     public Optional<ContainerResourceRequirementsResponse> getContainerResourceRequirements() {
@@ -89,7 +89,7 @@ public final class ACIServiceResponseResponse extends io.pulumi.resources.Invoke
      * Details of the data collection options specified.
      * 
      */
-    @InputImport(name="dataCollection")
+    @Import(name="dataCollection")
       private final @Nullable ACIServiceResponseResponseDataCollection dataCollection;
 
     public Optional<ACIServiceResponseResponseDataCollection> getDataCollection() {
@@ -100,7 +100,7 @@ public final class ACIServiceResponseResponse extends io.pulumi.resources.Invoke
      * The deployment type for the service.
      * 
      */
-    @InputImport(name="deploymentType")
+    @Import(name="deploymentType")
       private final @Nullable String deploymentType;
 
     public Optional<String> getDeploymentType() {
@@ -111,7 +111,7 @@ public final class ACIServiceResponseResponse extends io.pulumi.resources.Invoke
      * The service description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable String description;
 
     public Optional<String> getDescription() {
@@ -122,7 +122,7 @@ public final class ACIServiceResponseResponse extends io.pulumi.resources.Invoke
      * The encryption properties.
      * 
      */
-    @InputImport(name="encryptionProperties")
+    @Import(name="encryptionProperties")
       private final @Nullable ACIServiceResponseResponseEncryptionProperties encryptionProperties;
 
     public Optional<ACIServiceResponseResponseEncryptionProperties> getEncryptionProperties() {
@@ -133,7 +133,7 @@ public final class ACIServiceResponseResponse extends io.pulumi.resources.Invoke
      * The Environment, models and assets used for inferencing.
      * 
      */
-    @InputImport(name="environmentImageRequest")
+    @Import(name="environmentImageRequest")
       private final @Nullable ACIServiceResponseResponseEnvironmentImageRequest environmentImageRequest;
 
     public Optional<ACIServiceResponseResponseEnvironmentImageRequest> getEnvironmentImageRequest() {
@@ -144,7 +144,7 @@ public final class ACIServiceResponseResponse extends io.pulumi.resources.Invoke
      * The error details.
      * 
      */
-    @InputImport(name="error", required=true)
+    @Import(name="error", required=true)
       private final ServiceResponseBaseResponseError error;
 
     public ServiceResponseBaseResponseError getError() {
@@ -155,7 +155,7 @@ public final class ACIServiceResponseResponse extends io.pulumi.resources.Invoke
      * The service tag dictionary. Tags are mutable.
      * 
      */
-    @InputImport(name="kvTags")
+    @Import(name="kvTags")
       private final @Nullable Map<String,String> kvTags;
 
     public Map<String,String> getKvTags() {
@@ -166,7 +166,7 @@ public final class ACIServiceResponseResponse extends io.pulumi.resources.Invoke
      * The name of the Azure location/region.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable String location;
 
     public Optional<String> getLocation() {
@@ -177,7 +177,7 @@ public final class ACIServiceResponseResponse extends io.pulumi.resources.Invoke
      * Details on the models and configurations.
      * 
      */
-    @InputImport(name="modelConfigMap", required=true)
+    @Import(name="modelConfigMap", required=true)
       private final Map<String,Object> modelConfigMap;
 
     public Map<String,Object> getModelConfigMap() {
@@ -188,7 +188,7 @@ public final class ACIServiceResponseResponse extends io.pulumi.resources.Invoke
      * The list of models.
      * 
      */
-    @InputImport(name="models")
+    @Import(name="models")
       private final @Nullable List<ModelResponse> models;
 
     public List<ModelResponse> getModels() {
@@ -199,7 +199,7 @@ public final class ACIServiceResponseResponse extends io.pulumi.resources.Invoke
      * The service property dictionary. Properties are immutable.
      * 
      */
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable Map<String,String> properties;
 
     public Map<String,String> getProperties() {
@@ -210,7 +210,7 @@ public final class ACIServiceResponseResponse extends io.pulumi.resources.Invoke
      * The public Fqdn for the service.
      * 
      */
-    @InputImport(name="publicFqdn")
+    @Import(name="publicFqdn")
       private final @Nullable String publicFqdn;
 
     public Optional<String> getPublicFqdn() {
@@ -221,7 +221,7 @@ public final class ACIServiceResponseResponse extends io.pulumi.resources.Invoke
      * The public IP address for the service.
      * 
      */
-    @InputImport(name="publicIp")
+    @Import(name="publicIp")
       private final @Nullable String publicIp;
 
     public Optional<String> getPublicIp() {
@@ -232,7 +232,7 @@ public final class ACIServiceResponseResponse extends io.pulumi.resources.Invoke
      * The Uri for sending scoring requests.
      * 
      */
-    @InputImport(name="scoringUri", required=true)
+    @Import(name="scoringUri", required=true)
       private final String scoringUri;
 
     public String getScoringUri() {
@@ -243,7 +243,7 @@ public final class ACIServiceResponseResponse extends io.pulumi.resources.Invoke
      * The public SSL certificate in PEM format to use if SSL is enabled.
      * 
      */
-    @InputImport(name="sslCertificate")
+    @Import(name="sslCertificate")
       private final @Nullable String sslCertificate;
 
     public Optional<String> getSslCertificate() {
@@ -254,7 +254,7 @@ public final class ACIServiceResponseResponse extends io.pulumi.resources.Invoke
      * Whether or not SSL is enabled.
      * 
      */
-    @InputImport(name="sslEnabled")
+    @Import(name="sslEnabled")
       private final @Nullable Boolean sslEnabled;
 
     public Optional<Boolean> getSslEnabled() {
@@ -265,7 +265,7 @@ public final class ACIServiceResponseResponse extends io.pulumi.resources.Invoke
      * The public SSL key in PEM format for the certificate.
      * 
      */
-    @InputImport(name="sslKey")
+    @Import(name="sslKey")
       private final @Nullable String sslKey;
 
     public Optional<String> getSslKey() {
@@ -276,7 +276,7 @@ public final class ACIServiceResponseResponse extends io.pulumi.resources.Invoke
      * The current state of the service.
      * 
      */
-    @InputImport(name="state", required=true)
+    @Import(name="state", required=true)
       private final String state;
 
     public String getState() {
@@ -287,7 +287,7 @@ public final class ACIServiceResponseResponse extends io.pulumi.resources.Invoke
      * The Uri for sending swagger requests.
      * 
      */
-    @InputImport(name="swaggerUri", required=true)
+    @Import(name="swaggerUri", required=true)
       private final String swaggerUri;
 
     public String getSwaggerUri() {
@@ -298,7 +298,7 @@ public final class ACIServiceResponseResponse extends io.pulumi.resources.Invoke
      * The virtual network configuration.
      * 
      */
-    @InputImport(name="vnetConfiguration")
+    @Import(name="vnetConfiguration")
       private final @Nullable ACIServiceResponseResponseVnetConfiguration vnetConfiguration;
 
     public Optional<ACIServiceResponseResponseVnetConfiguration> getVnetConfiguration() {

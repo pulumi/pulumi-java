@@ -12,7 +12,7 @@ import io.pulumi.azurenative.videoanalyzer.outputs.SystemDataResponse;
 import io.pulumi.azurenative.videoanalyzer.outputs.VideoAnalyzerIdentityResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -40,7 +40,7 @@ public class VideoAnalyzer extends io.pulumi.resources.CustomResource {
      * The account encryption properties.
      * 
      */
-    @OutputExport(name="encryption", type=AccountEncryptionResponse.class, parameters={})
+    @Export(name="encryption", type=AccountEncryptionResponse.class, parameters={})
     private Output<AccountEncryptionResponse> encryption;
 
     /**
@@ -54,7 +54,7 @@ public class VideoAnalyzer extends io.pulumi.resources.CustomResource {
      * The list of endpoints associated with this resource.
      * 
      */
-    @OutputExport(name="endpoints", type=List.class, parameters={EndpointResponse.class})
+    @Export(name="endpoints", type=List.class, parameters={EndpointResponse.class})
     private Output<List<EndpointResponse>> endpoints;
 
     /**
@@ -68,7 +68,7 @@ public class VideoAnalyzer extends io.pulumi.resources.CustomResource {
      * The set of managed identities associated with the Video Analyzer resource.
      * 
      */
-    @OutputExport(name="identity", type=VideoAnalyzerIdentityResponse.class, parameters={})
+    @Export(name="identity", type=VideoAnalyzerIdentityResponse.class, parameters={})
     private Output</* @Nullable */ VideoAnalyzerIdentityResponse> identity;
 
     /**
@@ -82,7 +82,7 @@ public class VideoAnalyzer extends io.pulumi.resources.CustomResource {
      * The geo-location where the resource lives
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -96,7 +96,7 @@ public class VideoAnalyzer extends io.pulumi.resources.CustomResource {
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -110,7 +110,7 @@ public class VideoAnalyzer extends io.pulumi.resources.CustomResource {
      * The storage accounts for this resource.
      * 
      */
-    @OutputExport(name="storageAccounts", type=List.class, parameters={StorageAccountResponse.class})
+    @Export(name="storageAccounts", type=List.class, parameters={StorageAccountResponse.class})
     private Output<List<StorageAccountResponse>> storageAccounts;
 
     /**
@@ -124,7 +124,7 @@ public class VideoAnalyzer extends io.pulumi.resources.CustomResource {
      * The system data of the Video Analyzer account.
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -138,7 +138,7 @@ public class VideoAnalyzer extends io.pulumi.resources.CustomResource {
      * Resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -152,7 +152,7 @@ public class VideoAnalyzer extends io.pulumi.resources.CustomResource {
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

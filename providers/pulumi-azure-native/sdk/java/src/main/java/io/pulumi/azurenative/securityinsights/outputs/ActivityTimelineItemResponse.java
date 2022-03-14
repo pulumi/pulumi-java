@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.securityinsights.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ActivityTimelineItemResponse {
     /**
      * The grouping bucket end time.
@@ -51,16 +51,16 @@ public final class ActivityTimelineItemResponse {
      */
     private final String title;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ActivityTimelineItemResponse(
-        @OutputCustomType.Parameter("bucketEndTimeUTC") String bucketEndTimeUTC,
-        @OutputCustomType.Parameter("bucketStartTimeUTC") String bucketStartTimeUTC,
-        @OutputCustomType.Parameter("content") String content,
-        @OutputCustomType.Parameter("firstActivityTimeUTC") String firstActivityTimeUTC,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("lastActivityTimeUTC") String lastActivityTimeUTC,
-        @OutputCustomType.Parameter("queryId") String queryId,
-        @OutputCustomType.Parameter("title") String title) {
+        @CustomType.Parameter("bucketEndTimeUTC") String bucketEndTimeUTC,
+        @CustomType.Parameter("bucketStartTimeUTC") String bucketStartTimeUTC,
+        @CustomType.Parameter("content") String content,
+        @CustomType.Parameter("firstActivityTimeUTC") String firstActivityTimeUTC,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("lastActivityTimeUTC") String lastActivityTimeUTC,
+        @CustomType.Parameter("queryId") String queryId,
+        @CustomType.Parameter("title") String title) {
         this.bucketEndTimeUTC = bucketEndTimeUTC;
         this.bucketStartTimeUTC = bucketStartTimeUTC;
         this.content = content;

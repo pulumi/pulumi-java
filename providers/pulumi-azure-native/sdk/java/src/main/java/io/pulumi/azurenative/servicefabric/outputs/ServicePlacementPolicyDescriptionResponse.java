@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.servicefabric.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ServicePlacementPolicyDescriptionResponse {
     /**
      * The type of placement policy for a service fabric service. Following are the possible values.
@@ -15,8 +15,8 @@ public final class ServicePlacementPolicyDescriptionResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
-    private ServicePlacementPolicyDescriptionResponse(@OutputCustomType.Parameter("type") String type) {
+    @CustomType.Constructor
+    private ServicePlacementPolicyDescriptionResponse(@CustomType.Parameter("type") String type) {
         this.type = type;
     }
 

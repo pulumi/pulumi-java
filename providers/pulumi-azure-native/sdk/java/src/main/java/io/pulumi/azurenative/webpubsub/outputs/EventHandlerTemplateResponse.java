@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.webpubsub.outputs;
 
 import io.pulumi.azurenative.webpubsub.outputs.UpstreamAuthSettingsResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EventHandlerTemplateResponse {
     /**
      * Gets or sets the auth settings for an event handler. If not set, no auth is used.
@@ -41,12 +41,12 @@ public final class EventHandlerTemplateResponse {
      */
     private final @Nullable String userEventPattern;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EventHandlerTemplateResponse(
-        @OutputCustomType.Parameter("auth") @Nullable UpstreamAuthSettingsResponse auth,
-        @OutputCustomType.Parameter("systemEventPattern") @Nullable String systemEventPattern,
-        @OutputCustomType.Parameter("urlTemplate") String urlTemplate,
-        @OutputCustomType.Parameter("userEventPattern") @Nullable String userEventPattern) {
+        @CustomType.Parameter("auth") @Nullable UpstreamAuthSettingsResponse auth,
+        @CustomType.Parameter("systemEventPattern") @Nullable String systemEventPattern,
+        @CustomType.Parameter("urlTemplate") String urlTemplate,
+        @CustomType.Parameter("userEventPattern") @Nullable String userEventPattern) {
         this.auth = auth;
         this.systemEventPattern = systemEventPattern;
         this.urlTemplate = urlTemplate;

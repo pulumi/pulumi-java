@@ -6,7 +6,7 @@ package io.pulumi.azurenative.devtestlab.inputs;
 import io.pulumi.azurenative.devtestlab.enums.UsagePermissionType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class SubnetArgs extends io.pulumi.resources.ResourceArgs {
      * The permission policy of the subnet for allowing public IP addresses (i.e. Allow, Deny)).
      * 
      */
-    @InputImport(name="allowPublicIp")
+    @Import(name="allowPublicIp")
       private final @Nullable Output<Either<String,UsagePermissionType>> allowPublicIp;
 
     public Output<Either<String,UsagePermissionType>> getAllowPublicIp() {
@@ -35,7 +35,7 @@ public final class SubnetArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the subnet as seen in the lab.
      * 
      */
-    @InputImport(name="labSubnetName")
+    @Import(name="labSubnetName")
       private final @Nullable Output<String> labSubnetName;
 
     public Output<String> getLabSubnetName() {
@@ -46,7 +46,7 @@ public final class SubnetArgs extends io.pulumi.resources.ResourceArgs {
      * The resource ID of the subnet.
      * 
      */
-    @InputImport(name="resourceId")
+    @Import(name="resourceId")
       private final @Nullable Output<String> resourceId;
 
     public Output<String> getResourceId() {

@@ -8,7 +8,7 @@ import io.pulumi.azurenative.powerbi.WorkspaceCollectionArgs;
 import io.pulumi.azurenative.powerbi.outputs.AzureSkuResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Object;
 import java.lang.String;
@@ -33,7 +33,7 @@ public class WorkspaceCollection extends io.pulumi.resources.CustomResource {
      * Azure location
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -47,7 +47,7 @@ public class WorkspaceCollection extends io.pulumi.resources.CustomResource {
      * Workspace collection name
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
@@ -61,7 +61,7 @@ public class WorkspaceCollection extends io.pulumi.resources.CustomResource {
      * Properties
      * 
      */
-    @OutputExport(name="properties", type=Object.class, parameters={})
+    @Export(name="properties", type=Object.class, parameters={})
     private Output<Object> properties;
 
     /**
@@ -71,13 +71,13 @@ public class WorkspaceCollection extends io.pulumi.resources.CustomResource {
     public Output<Object> getProperties() {
         return this.properties;
     }
-    @OutputExport(name="sku", type=AzureSkuResponse.class, parameters={})
+    @Export(name="sku", type=AzureSkuResponse.class, parameters={})
     private Output</* @Nullable */ AzureSkuResponse> sku;
 
     public Output</* @Nullable */ AzureSkuResponse> getSku() {
         return this.sku;
     }
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     public Output</* @Nullable */ Map<String,String>> getTags() {
@@ -87,7 +87,7 @@ public class WorkspaceCollection extends io.pulumi.resources.CustomResource {
      * Resource type
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output</* @Nullable */ String> type;
 
     /**

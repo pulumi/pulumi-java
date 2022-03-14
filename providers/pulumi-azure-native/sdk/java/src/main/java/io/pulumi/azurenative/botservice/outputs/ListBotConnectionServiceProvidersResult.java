@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.botservice.outputs;
 
 import io.pulumi.azurenative.botservice.outputs.ServiceProviderResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ListBotConnectionServiceProvidersResult {
     /**
      * The link used to get the next page of bot service providers.
@@ -24,10 +24,10 @@ public final class ListBotConnectionServiceProvidersResult {
      */
     private final List<ServiceProviderResponse> value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ListBotConnectionServiceProvidersResult(
-        @OutputCustomType.Parameter("nextLink") @Nullable String nextLink,
-        @OutputCustomType.Parameter("value") List<ServiceProviderResponse> value) {
+        @CustomType.Parameter("nextLink") @Nullable String nextLink,
+        @CustomType.Parameter("value") List<ServiceProviderResponse> value) {
         this.nextLink = nextLink;
         this.value = value;
     }

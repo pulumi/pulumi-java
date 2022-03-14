@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.windowsesu.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetMultipleActivationKeyResult {
     /**
      * Agreement number under which the key is requested.
@@ -76,21 +76,21 @@ public final class GetMultipleActivationKeyResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetMultipleActivationKeyResult(
-        @OutputCustomType.Parameter("agreementNumber") @Nullable String agreementNumber,
-        @OutputCustomType.Parameter("expirationDate") String expirationDate,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("installedServerNumber") @Nullable Integer installedServerNumber,
-        @OutputCustomType.Parameter("isEligible") @Nullable Boolean isEligible,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("multipleActivationKey") String multipleActivationKey,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("osType") @Nullable String osType,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("supportType") @Nullable String supportType,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("agreementNumber") @Nullable String agreementNumber,
+        @CustomType.Parameter("expirationDate") String expirationDate,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("installedServerNumber") @Nullable Integer installedServerNumber,
+        @CustomType.Parameter("isEligible") @Nullable Boolean isEligible,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("multipleActivationKey") String multipleActivationKey,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("osType") @Nullable String osType,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("supportType") @Nullable String supportType,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type) {
         this.agreementNumber = agreementNumber;
         this.expirationDate = expirationDate;
         this.id = id;

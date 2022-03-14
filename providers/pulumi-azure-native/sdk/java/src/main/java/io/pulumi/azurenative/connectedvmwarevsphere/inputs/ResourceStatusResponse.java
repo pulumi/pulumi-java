@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.connectedvmwarevsphere.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class ResourceStatusResponse extends io.pulumi.resources.InvokeArgs
      * The last update time for this condition.
      * 
      */
-    @InputImport(name="lastUpdatedAt", required=true)
+    @Import(name="lastUpdatedAt", required=true)
       private final String lastUpdatedAt;
 
     public String getLastUpdatedAt() {
@@ -31,7 +31,7 @@ public final class ResourceStatusResponse extends io.pulumi.resources.InvokeArgs
      * A human readable message indicating details about the status.
      * 
      */
-    @InputImport(name="message", required=true)
+    @Import(name="message", required=true)
       private final String message;
 
     public String getMessage() {
@@ -42,7 +42,7 @@ public final class ResourceStatusResponse extends io.pulumi.resources.InvokeArgs
      * The reason for the condition's status.
      * 
      */
-    @InputImport(name="reason", required=true)
+    @Import(name="reason", required=true)
       private final String reason;
 
     public String getReason() {
@@ -53,7 +53,7 @@ public final class ResourceStatusResponse extends io.pulumi.resources.InvokeArgs
      * Severity with which to treat failures of this type of condition.
      * 
      */
-    @InputImport(name="severity", required=true)
+    @Import(name="severity", required=true)
       private final String severity;
 
     public String getSeverity() {
@@ -64,7 +64,7 @@ public final class ResourceStatusResponse extends io.pulumi.resources.InvokeArgs
      * Status of the condition.
      * 
      */
-    @InputImport(name="status", required=true)
+    @Import(name="status", required=true)
       private final String status;
 
     public String getStatus() {
@@ -75,7 +75,7 @@ public final class ResourceStatusResponse extends io.pulumi.resources.InvokeArgs
      * The type of the condition.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

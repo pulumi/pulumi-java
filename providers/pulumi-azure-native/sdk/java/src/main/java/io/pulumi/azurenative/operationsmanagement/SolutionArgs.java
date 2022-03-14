@@ -6,7 +6,7 @@ package io.pulumi.azurenative.operationsmanagement;
 import io.pulumi.azurenative.operationsmanagement.inputs.SolutionPlanArgs;
 import io.pulumi.azurenative.operationsmanagement.inputs.SolutionPropertiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class SolutionArgs extends io.pulumi.resources.ResourceArgs {
      * Resource location
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -32,7 +32,7 @@ public final class SolutionArgs extends io.pulumi.resources.ResourceArgs {
      * Plan for solution object supported by the OperationsManagement resource provider.
      * 
      */
-    @InputImport(name="plan")
+    @Import(name="plan")
       private final @Nullable Output<SolutionPlanArgs> plan;
 
     public Output<SolutionPlanArgs> getPlan() {
@@ -43,7 +43,7 @@ public final class SolutionArgs extends io.pulumi.resources.ResourceArgs {
      * Properties for solution object supported by the OperationsManagement resource provider.
      * 
      */
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable Output<SolutionPropertiesArgs> properties;
 
     public Output<SolutionPropertiesArgs> getProperties() {
@@ -54,7 +54,7 @@ public final class SolutionArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group to get. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -65,7 +65,7 @@ public final class SolutionArgs extends io.pulumi.resources.ResourceArgs {
      * User Solution Name.
      * 
      */
-    @InputImport(name="solutionName")
+    @Import(name="solutionName")
       private final @Nullable Output<String> solutionName;
 
     public Output<String> getSolutionName() {
@@ -76,7 +76,7 @@ public final class SolutionArgs extends io.pulumi.resources.ResourceArgs {
      * Resource tags
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

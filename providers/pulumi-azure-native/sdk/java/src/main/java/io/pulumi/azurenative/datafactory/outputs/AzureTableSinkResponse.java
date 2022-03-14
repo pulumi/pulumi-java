@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.datafactory.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AzureTableSinkResponse {
     /**
      * Azure Table default partition key value. Type: string (or Expression with resultType string).
@@ -69,19 +69,19 @@ public final class AzureTableSinkResponse {
      */
     private final @Nullable Object writeBatchTimeout;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AzureTableSinkResponse(
-        @OutputCustomType.Parameter("azureTableDefaultPartitionKeyValue") @Nullable Object azureTableDefaultPartitionKeyValue,
-        @OutputCustomType.Parameter("azureTableInsertType") @Nullable Object azureTableInsertType,
-        @OutputCustomType.Parameter("azureTablePartitionKeyName") @Nullable Object azureTablePartitionKeyName,
-        @OutputCustomType.Parameter("azureTableRowKeyName") @Nullable Object azureTableRowKeyName,
-        @OutputCustomType.Parameter("disableMetricsCollection") @Nullable Object disableMetricsCollection,
-        @OutputCustomType.Parameter("maxConcurrentConnections") @Nullable Object maxConcurrentConnections,
-        @OutputCustomType.Parameter("sinkRetryCount") @Nullable Object sinkRetryCount,
-        @OutputCustomType.Parameter("sinkRetryWait") @Nullable Object sinkRetryWait,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("writeBatchSize") @Nullable Object writeBatchSize,
-        @OutputCustomType.Parameter("writeBatchTimeout") @Nullable Object writeBatchTimeout) {
+        @CustomType.Parameter("azureTableDefaultPartitionKeyValue") @Nullable Object azureTableDefaultPartitionKeyValue,
+        @CustomType.Parameter("azureTableInsertType") @Nullable Object azureTableInsertType,
+        @CustomType.Parameter("azureTablePartitionKeyName") @Nullable Object azureTablePartitionKeyName,
+        @CustomType.Parameter("azureTableRowKeyName") @Nullable Object azureTableRowKeyName,
+        @CustomType.Parameter("disableMetricsCollection") @Nullable Object disableMetricsCollection,
+        @CustomType.Parameter("maxConcurrentConnections") @Nullable Object maxConcurrentConnections,
+        @CustomType.Parameter("sinkRetryCount") @Nullable Object sinkRetryCount,
+        @CustomType.Parameter("sinkRetryWait") @Nullable Object sinkRetryWait,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("writeBatchSize") @Nullable Object writeBatchSize,
+        @CustomType.Parameter("writeBatchTimeout") @Nullable Object writeBatchTimeout) {
         this.azureTableDefaultPartitionKeyValue = azureTableDefaultPartitionKeyValue;
         this.azureTableInsertType = azureTableInsertType;
         this.azureTablePartitionKeyName = azureTablePartitionKeyName;

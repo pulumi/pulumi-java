@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.authorization.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ParameterDefinitionsValueMetadataArgs extends io.pulumi.resou
      * Set to true to have Azure portal create role assignments on the resource ID or resource scope value of this parameter during policy assignment. This property is useful in case you wish to assign permissions outside the assignment scope.
      * 
      */
-    @InputImport(name="assignPermissions")
+    @Import(name="assignPermissions")
       private final @Nullable Output<Boolean> assignPermissions;
 
     public Output<Boolean> getAssignPermissions() {
@@ -34,7 +34,7 @@ public final class ParameterDefinitionsValueMetadataArgs extends io.pulumi.resou
      * The description of the parameter.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -45,7 +45,7 @@ public final class ParameterDefinitionsValueMetadataArgs extends io.pulumi.resou
      * The display name for the parameter.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -56,7 +56,7 @@ public final class ParameterDefinitionsValueMetadataArgs extends io.pulumi.resou
      * Used when assigning the policy definition through the portal. Provides a context aware list of values for the user to choose from.
      * 
      */
-    @InputImport(name="strongType")
+    @Import(name="strongType")
       private final @Nullable Output<String> strongType;
 
     public Output<String> getStrongType() {

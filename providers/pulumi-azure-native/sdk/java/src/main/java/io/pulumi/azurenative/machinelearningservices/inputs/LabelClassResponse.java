@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class LabelClassResponse extends io.pulumi.resources.InvokeArgs {
      * Display name of the label class.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable String displayName;
 
     public Optional<String> getDisplayName() {
@@ -34,7 +34,7 @@ public final class LabelClassResponse extends io.pulumi.resources.InvokeArgs {
      * Dictionary of subclasses of the label class.
      * 
      */
-    @InputImport(name="subclasses")
+    @Import(name="subclasses")
       private final @Nullable Map<String,LabelClassResponse> subclasses;
 
     public Map<String,LabelClassResponse> getSubclasses() {

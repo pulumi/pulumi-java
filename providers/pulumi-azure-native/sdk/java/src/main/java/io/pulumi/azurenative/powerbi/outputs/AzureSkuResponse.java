@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.powerbi.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AzureSkuResponse {
     /**
      * SKU name
@@ -20,10 +20,10 @@ public final class AzureSkuResponse {
      */
     private final String tier;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AzureSkuResponse(
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("tier") String tier) {
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("tier") String tier) {
         this.name = name;
         this.tier = tier;
     }

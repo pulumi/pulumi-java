@@ -5,7 +5,7 @@ package io.pulumi.azurenative.datamigration.inputs;
 
 import io.pulumi.azurenative.datamigration.inputs.GetUserTablesSqlSyncTaskInputArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class GetUserTablesSqlSyncTaskPropertiesArgs extends io.pulumi.reso
      * Task input
      * 
      */
-    @InputImport(name="input")
+    @Import(name="input")
       private final @Nullable Output<GetUserTablesSqlSyncTaskInputArgs> input;
 
     public Output<GetUserTablesSqlSyncTaskInputArgs> getInput() {
@@ -35,7 +35,7 @@ public final class GetUserTablesSqlSyncTaskPropertiesArgs extends io.pulumi.reso
      * Expected value is 'GetUserTables.AzureSqlDb.Sync'.
      * 
      */
-    @InputImport(name="taskType", required=true)
+    @Import(name="taskType", required=true)
       private final Output<String> taskType;
 
     public Output<String> getTaskType() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.customerinsights.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class RelationshipLinkFieldMappingResponse extends io.pulumi.resour
      * The field name on the Interaction Type.
      * 
      */
-    @InputImport(name="interactionFieldName", required=true)
+    @Import(name="interactionFieldName", required=true)
       private final String interactionFieldName;
 
     public String getInteractionFieldName() {
@@ -33,7 +33,7 @@ public final class RelationshipLinkFieldMappingResponse extends io.pulumi.resour
      * Link type.
      * 
      */
-    @InputImport(name="linkType")
+    @Import(name="linkType")
       private final @Nullable String linkType;
 
     public Optional<String> getLinkType() {
@@ -44,7 +44,7 @@ public final class RelationshipLinkFieldMappingResponse extends io.pulumi.resour
      * The field name on the Relationship metadata.
      * 
      */
-    @InputImport(name="relationshipFieldName", required=true)
+    @Import(name="relationshipFieldName", required=true)
       private final String relationshipFieldName;
 
     public String getRelationshipFieldName() {

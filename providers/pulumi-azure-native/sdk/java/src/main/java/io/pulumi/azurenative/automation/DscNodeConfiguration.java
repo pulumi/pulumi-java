@@ -8,7 +8,7 @@ import io.pulumi.azurenative.automation.DscNodeConfigurationArgs;
 import io.pulumi.azurenative.automation.outputs.DscConfigurationAssociationPropertyResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Double;
@@ -37,7 +37,7 @@ public class DscNodeConfiguration extends io.pulumi.resources.CustomResource {
      * Gets or sets the configuration of the node.
      * 
      */
-    @OutputExport(name="configuration", type=DscConfigurationAssociationPropertyResponse.class, parameters={})
+    @Export(name="configuration", type=DscConfigurationAssociationPropertyResponse.class, parameters={})
     private Output</* @Nullable */ DscConfigurationAssociationPropertyResponse> configuration;
 
     /**
@@ -51,7 +51,7 @@ public class DscNodeConfiguration extends io.pulumi.resources.CustomResource {
      * Gets or sets creation time.
      * 
      */
-    @OutputExport(name="creationTime", type=String.class, parameters={})
+    @Export(name="creationTime", type=String.class, parameters={})
     private Output</* @Nullable */ String> creationTime;
 
     /**
@@ -65,7 +65,7 @@ public class DscNodeConfiguration extends io.pulumi.resources.CustomResource {
      * If a new build version of NodeConfiguration is required.
      * 
      */
-    @OutputExport(name="incrementNodeConfigurationBuild", type=Boolean.class, parameters={})
+    @Export(name="incrementNodeConfigurationBuild", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> incrementNodeConfigurationBuild;
 
     /**
@@ -79,7 +79,7 @@ public class DscNodeConfiguration extends io.pulumi.resources.CustomResource {
      * Gets or sets the last modified time.
      * 
      */
-    @OutputExport(name="lastModifiedTime", type=String.class, parameters={})
+    @Export(name="lastModifiedTime", type=String.class, parameters={})
     private Output</* @Nullable */ String> lastModifiedTime;
 
     /**
@@ -93,7 +93,7 @@ public class DscNodeConfiguration extends io.pulumi.resources.CustomResource {
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -107,7 +107,7 @@ public class DscNodeConfiguration extends io.pulumi.resources.CustomResource {
      * Number of nodes with this node configuration assigned
      * 
      */
-    @OutputExport(name="nodeCount", type=Double.class, parameters={})
+    @Export(name="nodeCount", type=Double.class, parameters={})
     private Output</* @Nullable */ Double> nodeCount;
 
     /**
@@ -121,7 +121,7 @@ public class DscNodeConfiguration extends io.pulumi.resources.CustomResource {
      * Source of node configuration.
      * 
      */
-    @OutputExport(name="source", type=String.class, parameters={})
+    @Export(name="source", type=String.class, parameters={})
     private Output</* @Nullable */ String> source;
 
     /**
@@ -135,7 +135,7 @@ public class DscNodeConfiguration extends io.pulumi.resources.CustomResource {
      * The type of the resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

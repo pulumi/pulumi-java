@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.sql.ServerAzureADAdministratorArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -35,7 +35,7 @@ public class ServerAzureADAdministrator extends io.pulumi.resources.CustomResour
      * Type of the sever administrator.
      * 
      */
-    @OutputExport(name="administratorType", type=String.class, parameters={})
+    @Export(name="administratorType", type=String.class, parameters={})
     private Output<String> administratorType;
 
     /**
@@ -49,7 +49,7 @@ public class ServerAzureADAdministrator extends io.pulumi.resources.CustomResour
      * Azure Active Directory only Authentication enabled.
      * 
      */
-    @OutputExport(name="azureADOnlyAuthentication", type=Boolean.class, parameters={})
+    @Export(name="azureADOnlyAuthentication", type=Boolean.class, parameters={})
     private Output<Boolean> azureADOnlyAuthentication;
 
     /**
@@ -63,7 +63,7 @@ public class ServerAzureADAdministrator extends io.pulumi.resources.CustomResour
      * Login name of the server administrator.
      * 
      */
-    @OutputExport(name="login", type=String.class, parameters={})
+    @Export(name="login", type=String.class, parameters={})
     private Output<String> login;
 
     /**
@@ -77,7 +77,7 @@ public class ServerAzureADAdministrator extends io.pulumi.resources.CustomResour
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -91,7 +91,7 @@ public class ServerAzureADAdministrator extends io.pulumi.resources.CustomResour
      * SID (object ID) of the server administrator.
      * 
      */
-    @OutputExport(name="sid", type=String.class, parameters={})
+    @Export(name="sid", type=String.class, parameters={})
     private Output<String> sid;
 
     /**
@@ -105,7 +105,7 @@ public class ServerAzureADAdministrator extends io.pulumi.resources.CustomResour
      * Tenant ID of the administrator.
      * 
      */
-    @OutputExport(name="tenantId", type=String.class, parameters={})
+    @Export(name="tenantId", type=String.class, parameters={})
     private Output</* @Nullable */ String> tenantId;
 
     /**
@@ -119,7 +119,7 @@ public class ServerAzureADAdministrator extends io.pulumi.resources.CustomResour
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

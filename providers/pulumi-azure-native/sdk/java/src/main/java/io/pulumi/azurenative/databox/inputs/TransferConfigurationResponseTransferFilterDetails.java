@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.databox.inputs;
 
 import io.pulumi.azurenative.databox.inputs.TransferFilterDetailsResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class TransferConfigurationResponseTransferFilterDetails extends io
      * Details of the filtering the transfer of data.
      * 
      */
-    @InputImport(name="include")
+    @Import(name="include")
       private final @Nullable TransferFilterDetailsResponse include;
 
     public Optional<TransferFilterDetailsResponse> getInclude() {

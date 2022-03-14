@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SlowRequestsBasedTriggerResponse {
     /**
      * Request Count.
@@ -33,12 +33,12 @@ public final class SlowRequestsBasedTriggerResponse {
      */
     private final @Nullable String timeTaken;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SlowRequestsBasedTriggerResponse(
-        @OutputCustomType.Parameter("count") @Nullable Integer count,
-        @OutputCustomType.Parameter("path") @Nullable String path,
-        @OutputCustomType.Parameter("timeInterval") @Nullable String timeInterval,
-        @OutputCustomType.Parameter("timeTaken") @Nullable String timeTaken) {
+        @CustomType.Parameter("count") @Nullable Integer count,
+        @CustomType.Parameter("path") @Nullable String path,
+        @CustomType.Parameter("timeInterval") @Nullable String timeInterval,
+        @CustomType.Parameter("timeTaken") @Nullable String timeTaken) {
         this.count = count;
         this.path = path;
         this.timeInterval = timeInterval;

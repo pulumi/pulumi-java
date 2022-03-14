@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.insights.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class AzureAppPushReceiverResponse extends io.pulumi.resources.Invo
      * The email address registered for the Azure mobile app.
      * 
      */
-    @InputImport(name="emailAddress", required=true)
+    @Import(name="emailAddress", required=true)
       private final String emailAddress;
 
     public String getEmailAddress() {
@@ -31,7 +31,7 @@ public final class AzureAppPushReceiverResponse extends io.pulumi.resources.Invo
      * The name of the Azure mobile app push receiver. Names must be unique across all receivers within an action group.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {

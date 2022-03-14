@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SourceVaultResponse {
     /**
      * Resource Id
@@ -17,8 +17,8 @@ public final class SourceVaultResponse {
      */
     private final @Nullable String id;
 
-    @OutputCustomType.Constructor
-    private SourceVaultResponse(@OutputCustomType.Parameter("id") @Nullable String id) {
+    @CustomType.Constructor
+    private SourceVaultResponse(@CustomType.Parameter("id") @Nullable String id) {
         this.id = id;
     }
 

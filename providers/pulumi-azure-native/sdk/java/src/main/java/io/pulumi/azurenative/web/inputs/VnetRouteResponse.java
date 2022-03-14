@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class VnetRouteResponse extends io.pulumi.resources.InvokeArgs {
      * The ending address for this route. If the start address is specified in CIDR notation, this must be omitted.
      * 
      */
-    @InputImport(name="endAddress")
+    @Import(name="endAddress")
       private final @Nullable String endAddress;
 
     public Optional<String> getEndAddress() {
@@ -33,7 +33,7 @@ public final class VnetRouteResponse extends io.pulumi.resources.InvokeArgs {
      * Resource Id.
      * 
      */
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final String id;
 
     public String getId() {
@@ -44,7 +44,7 @@ public final class VnetRouteResponse extends io.pulumi.resources.InvokeArgs {
      * Kind of resource.
      * 
      */
-    @InputImport(name="kind")
+    @Import(name="kind")
       private final @Nullable String kind;
 
     public Optional<String> getKind() {
@@ -55,7 +55,7 @@ public final class VnetRouteResponse extends io.pulumi.resources.InvokeArgs {
      * Resource Name.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -71,7 +71,7 @@ public final class VnetRouteResponse extends io.pulumi.resources.InvokeArgs {
      * These values will be used for syncing an app's routes with those from a Virtual Network.
      * 
      */
-    @InputImport(name="routeType")
+    @Import(name="routeType")
       private final @Nullable String routeType;
 
     public Optional<String> getRouteType() {
@@ -82,7 +82,7 @@ public final class VnetRouteResponse extends io.pulumi.resources.InvokeArgs {
      * The starting address for this route. This may also include a CIDR notation, in which case the end address must not be specified.
      * 
      */
-    @InputImport(name="startAddress")
+    @Import(name="startAddress")
       private final @Nullable String startAddress;
 
     public Optional<String> getStartAddress() {
@@ -93,7 +93,7 @@ public final class VnetRouteResponse extends io.pulumi.resources.InvokeArgs {
      * Resource type.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

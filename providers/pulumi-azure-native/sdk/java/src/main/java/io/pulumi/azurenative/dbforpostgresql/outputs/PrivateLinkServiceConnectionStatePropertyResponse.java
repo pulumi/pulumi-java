@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.dbforpostgresql.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class PrivateLinkServiceConnectionStatePropertyResponse {
     /**
      * The actions required for private link service connection.
@@ -25,11 +25,11 @@ public final class PrivateLinkServiceConnectionStatePropertyResponse {
      */
     private final String status;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PrivateLinkServiceConnectionStatePropertyResponse(
-        @OutputCustomType.Parameter("actionsRequired") String actionsRequired,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("status") String status) {
+        @CustomType.Parameter("actionsRequired") String actionsRequired,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("status") String status) {
         this.actionsRequired = actionsRequired;
         this.description = description;
         this.status = status;

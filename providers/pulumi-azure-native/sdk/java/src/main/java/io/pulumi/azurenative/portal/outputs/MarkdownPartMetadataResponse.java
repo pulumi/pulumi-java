@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.portal.outputs;
 
 import io.pulumi.azurenative.portal.outputs.MarkdownPartMetadataResponseSettings;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class MarkdownPartMetadataResponse {
     /**
      * Input to dashboard part.
@@ -31,11 +31,11 @@ public final class MarkdownPartMetadataResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MarkdownPartMetadataResponse(
-        @OutputCustomType.Parameter("inputs") @Nullable List<Object> inputs,
-        @OutputCustomType.Parameter("settings") @Nullable MarkdownPartMetadataResponseSettings settings,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("inputs") @Nullable List<Object> inputs,
+        @CustomType.Parameter("settings") @Nullable MarkdownPartMetadataResponseSettings settings,
+        @CustomType.Parameter("type") String type) {
         this.inputs = inputs;
         this.settings = settings;
         this.type = type;

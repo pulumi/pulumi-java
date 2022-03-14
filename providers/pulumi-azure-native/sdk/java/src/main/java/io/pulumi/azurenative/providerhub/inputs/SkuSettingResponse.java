@@ -7,7 +7,7 @@ import io.pulumi.azurenative.providerhub.inputs.SkuCapabilityResponse;
 import io.pulumi.azurenative.providerhub.inputs.SkuCostResponse;
 import io.pulumi.azurenative.providerhub.inputs.SkuLocationInfoResponse;
 import io.pulumi.azurenative.providerhub.inputs.SkuSettingResponseCapacity;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,84 +19,84 @@ public final class SkuSettingResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SkuSettingResponse Empty = new SkuSettingResponse();
 
-    @InputImport(name="capabilities")
+    @Import(name="capabilities")
       private final @Nullable List<SkuCapabilityResponse> capabilities;
 
     public List<SkuCapabilityResponse> getCapabilities() {
         return this.capabilities == null ? List.of() : this.capabilities;
     }
 
-    @InputImport(name="capacity")
+    @Import(name="capacity")
       private final @Nullable SkuSettingResponseCapacity capacity;
 
     public Optional<SkuSettingResponseCapacity> getCapacity() {
         return this.capacity == null ? Optional.empty() : Optional.ofNullable(this.capacity);
     }
 
-    @InputImport(name="costs")
+    @Import(name="costs")
       private final @Nullable List<SkuCostResponse> costs;
 
     public List<SkuCostResponse> getCosts() {
         return this.costs == null ? List.of() : this.costs;
     }
 
-    @InputImport(name="family")
+    @Import(name="family")
       private final @Nullable String family;
 
     public Optional<String> getFamily() {
         return this.family == null ? Optional.empty() : Optional.ofNullable(this.family);
     }
 
-    @InputImport(name="kind")
+    @Import(name="kind")
       private final @Nullable String kind;
 
     public Optional<String> getKind() {
         return this.kind == null ? Optional.empty() : Optional.ofNullable(this.kind);
     }
 
-    @InputImport(name="locationInfo")
+    @Import(name="locationInfo")
       private final @Nullable List<SkuLocationInfoResponse> locationInfo;
 
     public List<SkuLocationInfoResponse> getLocationInfo() {
         return this.locationInfo == null ? List.of() : this.locationInfo;
     }
 
-    @InputImport(name="locations")
+    @Import(name="locations")
       private final @Nullable List<String> locations;
 
     public List<String> getLocations() {
         return this.locations == null ? List.of() : this.locations;
     }
 
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
         return this.name;
     }
 
-    @InputImport(name="requiredFeatures")
+    @Import(name="requiredFeatures")
       private final @Nullable List<String> requiredFeatures;
 
     public List<String> getRequiredFeatures() {
         return this.requiredFeatures == null ? List.of() : this.requiredFeatures;
     }
 
-    @InputImport(name="requiredQuotaIds")
+    @Import(name="requiredQuotaIds")
       private final @Nullable List<String> requiredQuotaIds;
 
     public List<String> getRequiredQuotaIds() {
         return this.requiredQuotaIds == null ? List.of() : this.requiredQuotaIds;
     }
 
-    @InputImport(name="size")
+    @Import(name="size")
       private final @Nullable String size;
 
     public Optional<String> getSize() {
         return this.size == null ? Optional.empty() : Optional.ofNullable(this.size);
     }
 
-    @InputImport(name="tier")
+    @Import(name="tier")
       private final @Nullable String tier;
 
     public Optional<String> getTier() {

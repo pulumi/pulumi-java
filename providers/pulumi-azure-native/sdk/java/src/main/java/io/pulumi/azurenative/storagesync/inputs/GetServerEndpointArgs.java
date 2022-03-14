@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storagesync.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetServerEndpointArgs extends io.pulumi.resources.InvokeArgs 
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {
@@ -27,7 +27,7 @@ public final class GetServerEndpointArgs extends io.pulumi.resources.InvokeArgs 
      * Name of Server Endpoint object.
      * 
      */
-    @InputImport(name="serverEndpointName", required=true)
+    @Import(name="serverEndpointName", required=true)
       private final String serverEndpointName;
 
     public String getServerEndpointName() {
@@ -38,7 +38,7 @@ public final class GetServerEndpointArgs extends io.pulumi.resources.InvokeArgs 
      * Name of Storage Sync Service resource.
      * 
      */
-    @InputImport(name="storageSyncServiceName", required=true)
+    @Import(name="storageSyncServiceName", required=true)
       private final String storageSyncServiceName;
 
     public String getStorageSyncServiceName() {
@@ -49,7 +49,7 @@ public final class GetServerEndpointArgs extends io.pulumi.resources.InvokeArgs 
      * Name of Sync Group resource.
      * 
      */
-    @InputImport(name="syncGroupName", required=true)
+    @Import(name="syncGroupName", required=true)
       private final String syncGroupName;
 
     public String getSyncGroupName() {

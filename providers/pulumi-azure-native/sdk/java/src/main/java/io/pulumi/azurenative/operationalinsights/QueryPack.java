@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.operationalinsights.QueryPackArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +35,7 @@ public class QueryPack extends io.pulumi.resources.CustomResource {
      * Resource location
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -49,7 +49,7 @@ public class QueryPack extends io.pulumi.resources.CustomResource {
      * Azure resource name
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -63,7 +63,7 @@ public class QueryPack extends io.pulumi.resources.CustomResource {
      * Current state of this QueryPack: whether or not is has been provisioned within the resource group it is defined. Users cannot change this value but are able to read from it. Values will include Succeeded, Deploying, Canceled, and Failed.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -77,7 +77,7 @@ public class QueryPack extends io.pulumi.resources.CustomResource {
      * The unique ID of your application. This field cannot be changed.
      * 
      */
-    @OutputExport(name="queryPackId", type=String.class, parameters={})
+    @Export(name="queryPackId", type=String.class, parameters={})
     private Output<String> queryPackId;
 
     /**
@@ -91,7 +91,7 @@ public class QueryPack extends io.pulumi.resources.CustomResource {
      * Resource tags
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -105,7 +105,7 @@ public class QueryPack extends io.pulumi.resources.CustomResource {
      * Creation Date for the Log Analytics QueryPack, in ISO 8601 format.
      * 
      */
-    @OutputExport(name="timeCreated", type=String.class, parameters={})
+    @Export(name="timeCreated", type=String.class, parameters={})
     private Output<String> timeCreated;
 
     /**
@@ -119,7 +119,7 @@ public class QueryPack extends io.pulumi.resources.CustomResource {
      * Last modified date of the Log Analytics QueryPack, in ISO 8601 format.
      * 
      */
-    @OutputExport(name="timeModified", type=String.class, parameters={})
+    @Export(name="timeModified", type=String.class, parameters={})
     private Output<String> timeModified;
 
     /**
@@ -133,7 +133,7 @@ public class QueryPack extends io.pulumi.resources.CustomResource {
      * Azure resource type
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

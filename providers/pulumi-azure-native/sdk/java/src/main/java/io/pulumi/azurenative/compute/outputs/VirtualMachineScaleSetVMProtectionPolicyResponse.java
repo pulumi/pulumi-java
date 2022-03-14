@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VirtualMachineScaleSetVMProtectionPolicyResponse {
     /**
      * Indicates that the virtual machine scale set VM shouldn't be considered for deletion during a scale-in operation.
@@ -22,10 +22,10 @@ public final class VirtualMachineScaleSetVMProtectionPolicyResponse {
      */
     private final @Nullable Boolean protectFromScaleSetActions;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VirtualMachineScaleSetVMProtectionPolicyResponse(
-        @OutputCustomType.Parameter("protectFromScaleIn") @Nullable Boolean protectFromScaleIn,
-        @OutputCustomType.Parameter("protectFromScaleSetActions") @Nullable Boolean protectFromScaleSetActions) {
+        @CustomType.Parameter("protectFromScaleIn") @Nullable Boolean protectFromScaleIn,
+        @CustomType.Parameter("protectFromScaleSetActions") @Nullable Boolean protectFromScaleSetActions) {
         this.protectFromScaleIn = protectFromScaleIn;
         this.protectFromScaleSetActions = protectFromScaleSetActions;
     }

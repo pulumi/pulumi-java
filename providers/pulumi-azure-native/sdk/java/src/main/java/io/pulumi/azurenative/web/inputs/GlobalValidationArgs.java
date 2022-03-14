@@ -5,7 +5,7 @@ package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.azurenative.web.enums.UnauthenticatedClientActionV2;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class GlobalValidationArgs extends io.pulumi.resources.ResourceArgs
      * The paths for which unauthenticated flow would not be redirected to the login page.
      * 
      */
-    @InputImport(name="excludedPaths")
+    @Import(name="excludedPaths")
       private final @Nullable Output<List<String>> excludedPaths;
 
     public Output<List<String>> getExcludedPaths() {
@@ -38,7 +38,7 @@ public final class GlobalValidationArgs extends io.pulumi.resources.ResourceArgs
      * action is set to "RedirectToLoginPage".
      * 
      */
-    @InputImport(name="redirectToProvider")
+    @Import(name="redirectToProvider")
       private final @Nullable Output<String> redirectToProvider;
 
     public Output<String> getRedirectToProvider() {
@@ -49,7 +49,7 @@ public final class GlobalValidationArgs extends io.pulumi.resources.ResourceArgs
      * <code>true</code> if the authentication flow is required any request is made; otherwise, <code>false</code>.
      * 
      */
-    @InputImport(name="requireAuthentication")
+    @Import(name="requireAuthentication")
       private final @Nullable Output<Boolean> requireAuthentication;
 
     public Output<Boolean> getRequireAuthentication() {
@@ -60,7 +60,7 @@ public final class GlobalValidationArgs extends io.pulumi.resources.ResourceArgs
      * The action to take when an unauthenticated client attempts to access the app.
      * 
      */
-    @InputImport(name="unauthenticatedClientAction")
+    @Import(name="unauthenticatedClientAction")
       private final @Nullable Output<UnauthenticatedClientActionV2> unauthenticatedClientAction;
 
     public Output<UnauthenticatedClientActionV2> getUnauthenticatedClientAction() {

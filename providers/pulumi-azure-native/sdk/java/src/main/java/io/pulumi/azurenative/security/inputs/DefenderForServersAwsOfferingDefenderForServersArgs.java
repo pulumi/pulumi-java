@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.security.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class DefenderForServersAwsOfferingDefenderForServersArgs extends i
      * The cloud role ARN in AWS for this feature
      * 
      */
-    @InputImport(name="cloudRoleArn")
+    @Import(name="cloudRoleArn")
       private final @Nullable Output<String> cloudRoleArn;
 
     public Output<String> getCloudRoleArn() {

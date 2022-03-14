@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class RetentionVolumeResponse extends io.pulumi.resources.InvokeArg
      * The volume capacity.
      * 
      */
-    @InputImport(name="capacityInBytes")
+    @Import(name="capacityInBytes")
       private final @Nullable Double capacityInBytes;
 
     public Optional<Double> getCapacityInBytes() {
@@ -35,7 +35,7 @@ public final class RetentionVolumeResponse extends io.pulumi.resources.InvokeArg
      * The free space available in this volume.
      * 
      */
-    @InputImport(name="freeSpaceInBytes")
+    @Import(name="freeSpaceInBytes")
       private final @Nullable Double freeSpaceInBytes;
 
     public Optional<Double> getFreeSpaceInBytes() {
@@ -46,7 +46,7 @@ public final class RetentionVolumeResponse extends io.pulumi.resources.InvokeArg
      * The threshold percentage.
      * 
      */
-    @InputImport(name="thresholdPercentage")
+    @Import(name="thresholdPercentage")
       private final @Nullable Integer thresholdPercentage;
 
     public Optional<Integer> getThresholdPercentage() {
@@ -57,7 +57,7 @@ public final class RetentionVolumeResponse extends io.pulumi.resources.InvokeArg
      * The volume name.
      * 
      */
-    @InputImport(name="volumeName")
+    @Import(name="volumeName")
       private final @Nullable String volumeName;
 
     public Optional<String> getVolumeName() {

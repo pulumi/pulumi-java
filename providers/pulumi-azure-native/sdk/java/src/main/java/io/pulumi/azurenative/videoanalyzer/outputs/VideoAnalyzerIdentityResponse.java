@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.videoanalyzer.outputs;
 
 import io.pulumi.azurenative.videoanalyzer.outputs.UserAssignedManagedIdentityResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VideoAnalyzerIdentityResponse {
     /**
      * The identity type.
@@ -23,10 +23,10 @@ public final class VideoAnalyzerIdentityResponse {
      */
     private final @Nullable Map<String,UserAssignedManagedIdentityResponse> userAssignedIdentities;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VideoAnalyzerIdentityResponse(
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("userAssignedIdentities") @Nullable Map<String,UserAssignedManagedIdentityResponse> userAssignedIdentities) {
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("userAssignedIdentities") @Nullable Map<String,UserAssignedManagedIdentityResponse> userAssignedIdentities) {
         this.type = type;
         this.userAssignedIdentities = userAssignedIdentities;
     }

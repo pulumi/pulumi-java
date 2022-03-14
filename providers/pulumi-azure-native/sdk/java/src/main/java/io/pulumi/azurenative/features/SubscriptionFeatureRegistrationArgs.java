@@ -5,7 +5,7 @@ package io.pulumi.azurenative.features;
 
 import io.pulumi.azurenative.features.inputs.SubscriptionFeatureRegistrationPropertiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,14 +19,14 @@ public final class SubscriptionFeatureRegistrationArgs extends io.pulumi.resourc
      * The feature name.
      * 
      */
-    @InputImport(name="featureName")
+    @Import(name="featureName")
       private final @Nullable Output<String> featureName;
 
     public Output<String> getFeatureName() {
         return this.featureName == null ? Output.empty() : this.featureName;
     }
 
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable Output<SubscriptionFeatureRegistrationPropertiesArgs> properties;
 
     public Output<SubscriptionFeatureRegistrationPropertiesArgs> getProperties() {
@@ -37,7 +37,7 @@ public final class SubscriptionFeatureRegistrationArgs extends io.pulumi.resourc
      * The provider namespace.
      * 
      */
-    @InputImport(name="providerNamespace", required=true)
+    @Import(name="providerNamespace", required=true)
       private final Output<String> providerNamespace;
 
     public Output<String> getProviderNamespace() {

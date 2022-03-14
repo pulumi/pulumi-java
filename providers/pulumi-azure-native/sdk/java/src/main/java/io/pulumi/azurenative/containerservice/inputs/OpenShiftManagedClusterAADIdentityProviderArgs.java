@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.containerservice.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class OpenShiftManagedClusterAADIdentityProviderArgs extends io.pul
      * The clientId password associated with the provider.
      * 
      */
-    @InputImport(name="clientId")
+    @Import(name="clientId")
       private final @Nullable Output<String> clientId;
 
     public Output<String> getClientId() {
@@ -33,7 +33,7 @@ public final class OpenShiftManagedClusterAADIdentityProviderArgs extends io.pul
      * The groupId to be granted cluster admin role.
      * 
      */
-    @InputImport(name="customerAdminGroupId")
+    @Import(name="customerAdminGroupId")
       private final @Nullable Output<String> customerAdminGroupId;
 
     public Output<String> getCustomerAdminGroupId() {
@@ -45,7 +45,7 @@ public final class OpenShiftManagedClusterAADIdentityProviderArgs extends io.pul
      * Expected value is 'AADIdentityProvider'.
      * 
      */
-    @InputImport(name="kind", required=true)
+    @Import(name="kind", required=true)
       private final Output<String> kind;
 
     public Output<String> getKind() {
@@ -56,7 +56,7 @@ public final class OpenShiftManagedClusterAADIdentityProviderArgs extends io.pul
      * The secret password associated with the provider.
      * 
      */
-    @InputImport(name="secret")
+    @Import(name="secret")
       private final @Nullable Output<String> secret;
 
     public Output<String> getSecret() {
@@ -67,7 +67,7 @@ public final class OpenShiftManagedClusterAADIdentityProviderArgs extends io.pul
      * The tenantId associated with the provider.
      * 
      */
-    @InputImport(name="tenantId")
+    @Import(name="tenantId")
       private final @Nullable Output<String> tenantId;
 
     public Output<String> getTenantId() {

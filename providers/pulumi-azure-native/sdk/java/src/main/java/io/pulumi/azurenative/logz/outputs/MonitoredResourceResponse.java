@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.logz.outputs;
 
 import io.pulumi.azurenative.logz.outputs.SystemDataResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class MonitoredResourceResponse {
     /**
      * The ARM id of the resource.
@@ -44,14 +44,14 @@ public final class MonitoredResourceResponse {
      */
     private final SystemDataResponse systemData;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MonitoredResourceResponse(
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("reasonForLogsStatus") @Nullable String reasonForLogsStatus,
-        @OutputCustomType.Parameter("reasonForMetricsStatus") @Nullable String reasonForMetricsStatus,
-        @OutputCustomType.Parameter("sendingLogs") @Nullable Boolean sendingLogs,
-        @OutputCustomType.Parameter("sendingMetrics") @Nullable Boolean sendingMetrics,
-        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData) {
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("reasonForLogsStatus") @Nullable String reasonForLogsStatus,
+        @CustomType.Parameter("reasonForMetricsStatus") @Nullable String reasonForMetricsStatus,
+        @CustomType.Parameter("sendingLogs") @Nullable Boolean sendingLogs,
+        @CustomType.Parameter("sendingMetrics") @Nullable Boolean sendingMetrics,
+        @CustomType.Parameter("systemData") SystemDataResponse systemData) {
         this.id = id;
         this.reasonForLogsStatus = reasonForLogsStatus;
         this.reasonForMetricsStatus = reasonForMetricsStatus;

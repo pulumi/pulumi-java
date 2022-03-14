@@ -6,14 +6,14 @@ package io.pulumi.azurenative.sql.outputs;
 import io.pulumi.azurenative.sql.outputs.JobStepActionResponse;
 import io.pulumi.azurenative.sql.outputs.JobStepExecutionOptionsResponse;
 import io.pulumi.azurenative.sql.outputs.JobStepOutputResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetJobStepResult {
     /**
      * The action payload of the job step.
@@ -61,17 +61,17 @@ public final class GetJobStepResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetJobStepResult(
-        @OutputCustomType.Parameter("action") JobStepActionResponse action,
-        @OutputCustomType.Parameter("credential") String credential,
-        @OutputCustomType.Parameter("executionOptions") @Nullable JobStepExecutionOptionsResponse executionOptions,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("output") @Nullable JobStepOutputResponse output,
-        @OutputCustomType.Parameter("stepId") @Nullable Integer stepId,
-        @OutputCustomType.Parameter("targetGroup") String targetGroup,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("action") JobStepActionResponse action,
+        @CustomType.Parameter("credential") String credential,
+        @CustomType.Parameter("executionOptions") @Nullable JobStepExecutionOptionsResponse executionOptions,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("output") @Nullable JobStepOutputResponse output,
+        @CustomType.Parameter("stepId") @Nullable Integer stepId,
+        @CustomType.Parameter("targetGroup") String targetGroup,
+        @CustomType.Parameter("type") String type) {
         this.action = action;
         this.credential = credential;
         this.executionOptions = executionOptions;

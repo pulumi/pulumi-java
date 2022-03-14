@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.streamanalytics.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class PrivateLinkServiceConnectionArgs extends io.pulumi.resources.
      * The ID(s) of the group(s) obtained from the remote resource that this private endpoint should connect to. Required on PUT (CreateOrUpdate) requests.
      * 
      */
-    @InputImport(name="groupIds")
+    @Import(name="groupIds")
       private final @Nullable Output<List<String>> groupIds;
 
     public Output<List<String>> getGroupIds() {
@@ -34,7 +34,7 @@ public final class PrivateLinkServiceConnectionArgs extends io.pulumi.resources.
      * The resource id of the private link service. Required on PUT (CreateOrUpdate) requests.
      * 
      */
-    @InputImport(name="privateLinkServiceId")
+    @Import(name="privateLinkServiceId")
       private final @Nullable Output<String> privateLinkServiceId;
 
     public Output<String> getPrivateLinkServiceId() {
@@ -45,7 +45,7 @@ public final class PrivateLinkServiceConnectionArgs extends io.pulumi.resources.
      * A message passed to the owner of the remote resource with this connection request. Restricted to 140 chars.
      * 
      */
-    @InputImport(name="requestMessage")
+    @Import(name="requestMessage")
       private final @Nullable Output<String> requestMessage;
 
     public Output<String> getRequestMessage() {

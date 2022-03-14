@@ -11,7 +11,7 @@ import io.pulumi.azurenative.eventgrid.inputs.ServiceBusQueueEventSubscriptionDe
 import io.pulumi.azurenative.eventgrid.inputs.ServiceBusTopicEventSubscriptionDestinationResponse;
 import io.pulumi.azurenative.eventgrid.inputs.StorageQueueEventSubscriptionDestinationResponse;
 import io.pulumi.azurenative.eventgrid.inputs.WebHookEventSubscriptionDestinationResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.util.Objects;
 import java.util.Optional;
@@ -31,7 +31,7 @@ public final class DeliveryWithResourceIdentityResponse extends io.pulumi.resour
      * Uses Azure Event Grid's identity to acquire the authentication tokens being used during delivery / dead-lettering.
      * 
      */
-    @InputImport(name="destination")
+    @Import(name="destination")
       private final @Nullable Object destination;
 
     public Object getDestination() {
@@ -42,7 +42,7 @@ public final class DeliveryWithResourceIdentityResponse extends io.pulumi.resour
      * The identity to use when delivering events.
      * 
      */
-    @InputImport(name="identity")
+    @Import(name="identity")
       private final @Nullable EventSubscriptionIdentityResponse identity;
 
     public Optional<EventSubscriptionIdentityResponse> getIdentity() {

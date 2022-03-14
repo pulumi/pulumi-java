@@ -8,7 +8,7 @@ import io.pulumi.azurenative.security.AssessmentMetadataInSubscriptionArgs;
 import io.pulumi.azurenative.security.outputs.SecurityAssessmentMetadataPartnerDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -36,7 +36,7 @@ public class AssessmentMetadataInSubscription extends io.pulumi.resources.Custom
      * BuiltIn if the assessment based on built-in Azure Policy definition, Custom if the assessment based on custom Azure Policy definition
      * 
      */
-    @OutputExport(name="assessmentType", type=String.class, parameters={})
+    @Export(name="assessmentType", type=String.class, parameters={})
     private Output<String> assessmentType;
 
     /**
@@ -46,7 +46,7 @@ public class AssessmentMetadataInSubscription extends io.pulumi.resources.Custom
     public Output<String> getAssessmentType() {
         return this.assessmentType;
     }
-    @OutputExport(name="categories", type=List.class, parameters={String.class})
+    @Export(name="categories", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> categories;
 
     public Output</* @Nullable */ List<String>> getCategories() {
@@ -56,7 +56,7 @@ public class AssessmentMetadataInSubscription extends io.pulumi.resources.Custom
      * Human readable description of the assessment
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -70,7 +70,7 @@ public class AssessmentMetadataInSubscription extends io.pulumi.resources.Custom
      * User friendly display name of the assessment
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
@@ -84,7 +84,7 @@ public class AssessmentMetadataInSubscription extends io.pulumi.resources.Custom
      * The implementation effort required to remediate this assessment
      * 
      */
-    @OutputExport(name="implementationEffort", type=String.class, parameters={})
+    @Export(name="implementationEffort", type=String.class, parameters={})
     private Output</* @Nullable */ String> implementationEffort;
 
     /**
@@ -98,7 +98,7 @@ public class AssessmentMetadataInSubscription extends io.pulumi.resources.Custom
      * Resource name
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -112,7 +112,7 @@ public class AssessmentMetadataInSubscription extends io.pulumi.resources.Custom
      * Describes the partner that created the assessment
      * 
      */
-    @OutputExport(name="partnerData", type=SecurityAssessmentMetadataPartnerDataResponse.class, parameters={})
+    @Export(name="partnerData", type=SecurityAssessmentMetadataPartnerDataResponse.class, parameters={})
     private Output</* @Nullable */ SecurityAssessmentMetadataPartnerDataResponse> partnerData;
 
     /**
@@ -126,7 +126,7 @@ public class AssessmentMetadataInSubscription extends io.pulumi.resources.Custom
      * Azure resource ID of the policy definition that turns this assessment calculation on
      * 
      */
-    @OutputExport(name="policyDefinitionId", type=String.class, parameters={})
+    @Export(name="policyDefinitionId", type=String.class, parameters={})
     private Output<String> policyDefinitionId;
 
     /**
@@ -140,7 +140,7 @@ public class AssessmentMetadataInSubscription extends io.pulumi.resources.Custom
      * True if this assessment is in preview release status
      * 
      */
-    @OutputExport(name="preview", type=Boolean.class, parameters={})
+    @Export(name="preview", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> preview;
 
     /**
@@ -154,7 +154,7 @@ public class AssessmentMetadataInSubscription extends io.pulumi.resources.Custom
      * Human readable description of what you should do to mitigate this security issue
      * 
      */
-    @OutputExport(name="remediationDescription", type=String.class, parameters={})
+    @Export(name="remediationDescription", type=String.class, parameters={})
     private Output</* @Nullable */ String> remediationDescription;
 
     /**
@@ -168,7 +168,7 @@ public class AssessmentMetadataInSubscription extends io.pulumi.resources.Custom
      * The severity level of the assessment
      * 
      */
-    @OutputExport(name="severity", type=String.class, parameters={})
+    @Export(name="severity", type=String.class, parameters={})
     private Output<String> severity;
 
     /**
@@ -178,7 +178,7 @@ public class AssessmentMetadataInSubscription extends io.pulumi.resources.Custom
     public Output<String> getSeverity() {
         return this.severity;
     }
-    @OutputExport(name="threats", type=List.class, parameters={String.class})
+    @Export(name="threats", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> threats;
 
     public Output</* @Nullable */ List<String>> getThreats() {
@@ -188,7 +188,7 @@ public class AssessmentMetadataInSubscription extends io.pulumi.resources.Custom
      * Resource type
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -202,7 +202,7 @@ public class AssessmentMetadataInSubscription extends io.pulumi.resources.Custom
      * The user impact of the assessment
      * 
      */
-    @OutputExport(name="userImpact", type=String.class, parameters={})
+    @Export(name="userImpact", type=String.class, parameters={})
     private Output</* @Nullable */ String> userImpact;
 
     /**

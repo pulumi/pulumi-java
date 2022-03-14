@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.securityinsights.outputs;
 
 import io.pulumi.azurenative.securityinsights.outputs.UserInfoResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BookmarkTimelineItemResponse {
     /**
      * The bookmark azure resource id.
@@ -60,17 +60,17 @@ public final class BookmarkTimelineItemResponse {
      */
     private final @Nullable String startTimeUtc;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BookmarkTimelineItemResponse(
-        @OutputCustomType.Parameter("azureResourceId") String azureResourceId,
-        @OutputCustomType.Parameter("createdBy") @Nullable UserInfoResponse createdBy,
-        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
-        @OutputCustomType.Parameter("endTimeUtc") @Nullable String endTimeUtc,
-        @OutputCustomType.Parameter("eventTime") @Nullable String eventTime,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("labels") @Nullable List<String> labels,
-        @OutputCustomType.Parameter("notes") @Nullable String notes,
-        @OutputCustomType.Parameter("startTimeUtc") @Nullable String startTimeUtc) {
+        @CustomType.Parameter("azureResourceId") String azureResourceId,
+        @CustomType.Parameter("createdBy") @Nullable UserInfoResponse createdBy,
+        @CustomType.Parameter("displayName") @Nullable String displayName,
+        @CustomType.Parameter("endTimeUtc") @Nullable String endTimeUtc,
+        @CustomType.Parameter("eventTime") @Nullable String eventTime,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("labels") @Nullable List<String> labels,
+        @CustomType.Parameter("notes") @Nullable String notes,
+        @CustomType.Parameter("startTimeUtc") @Nullable String startTimeUtc) {
         this.azureResourceId = azureResourceId;
         this.createdBy = createdBy;
         this.displayName = displayName;

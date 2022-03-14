@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.datamigration.outputs;
 
 import io.pulumi.azurenative.datamigration.outputs.ReportableExceptionResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ConnectToTargetAzureDbForMySqlTaskOutputResponse {
     /**
      * List of databases on target server
@@ -37,13 +37,13 @@ public final class ConnectToTargetAzureDbForMySqlTaskOutputResponse {
      */
     private final List<ReportableExceptionResponse> validationErrors;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ConnectToTargetAzureDbForMySqlTaskOutputResponse(
-        @OutputCustomType.Parameter("databases") List<String> databases,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("serverVersion") String serverVersion,
-        @OutputCustomType.Parameter("targetServerBrandVersion") String targetServerBrandVersion,
-        @OutputCustomType.Parameter("validationErrors") List<ReportableExceptionResponse> validationErrors) {
+        @CustomType.Parameter("databases") List<String> databases,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("serverVersion") String serverVersion,
+        @CustomType.Parameter("targetServerBrandVersion") String targetServerBrandVersion,
+        @CustomType.Parameter("validationErrors") List<ReportableExceptionResponse> validationErrors) {
         this.databases = databases;
         this.id = id;
         this.serverVersion = serverVersion;

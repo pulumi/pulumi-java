@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class LabelingJobInstructionsResponse extends io.pulumi.resources.I
      * The link to a page with detailed labeling instructions for labelers.
      * 
      */
-    @InputImport(name="uri")
+    @Import(name="uri")
       private final @Nullable String uri;
 
     public Optional<String> getUri() {

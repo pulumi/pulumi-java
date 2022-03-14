@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.sqlvirtualmachine.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class WsfcDomainProfileResponse extends io.pulumi.resources.InvokeA
      * Account name used for creating cluster (at minimum needs permissions to 'Create Computer Objects' in domain).
      * 
      */
-    @InputImport(name="clusterBootstrapAccount")
+    @Import(name="clusterBootstrapAccount")
       private final @Nullable String clusterBootstrapAccount;
 
     public Optional<String> getClusterBootstrapAccount() {
@@ -33,7 +33,7 @@ public final class WsfcDomainProfileResponse extends io.pulumi.resources.InvokeA
      * Account name used for operating cluster i.e. will be part of administrators group on all the participating virtual machines in the cluster.
      * 
      */
-    @InputImport(name="clusterOperatorAccount")
+    @Import(name="clusterOperatorAccount")
       private final @Nullable String clusterOperatorAccount;
 
     public Optional<String> getClusterOperatorAccount() {
@@ -44,7 +44,7 @@ public final class WsfcDomainProfileResponse extends io.pulumi.resources.InvokeA
      * Fully qualified name of the domain.
      * 
      */
-    @InputImport(name="domainFqdn")
+    @Import(name="domainFqdn")
       private final @Nullable String domainFqdn;
 
     public Optional<String> getDomainFqdn() {
@@ -55,7 +55,7 @@ public final class WsfcDomainProfileResponse extends io.pulumi.resources.InvokeA
      * Optional path for fileshare witness.
      * 
      */
-    @InputImport(name="fileShareWitnessPath")
+    @Import(name="fileShareWitnessPath")
       private final @Nullable String fileShareWitnessPath;
 
     public Optional<String> getFileShareWitnessPath() {
@@ -66,7 +66,7 @@ public final class WsfcDomainProfileResponse extends io.pulumi.resources.InvokeA
      * Organizational Unit path in which the nodes and cluster will be present.
      * 
      */
-    @InputImport(name="ouPath")
+    @Import(name="ouPath")
       private final @Nullable String ouPath;
 
     public Optional<String> getOuPath() {
@@ -77,7 +77,7 @@ public final class WsfcDomainProfileResponse extends io.pulumi.resources.InvokeA
      * Account name under which SQL service will run on all participating SQL virtual machines in the cluster.
      * 
      */
-    @InputImport(name="sqlServiceAccount")
+    @Import(name="sqlServiceAccount")
       private final @Nullable String sqlServiceAccount;
 
     public Optional<String> getSqlServiceAccount() {
@@ -88,7 +88,7 @@ public final class WsfcDomainProfileResponse extends io.pulumi.resources.InvokeA
      * Fully qualified ARM resource id of the witness storage account.
      * 
      */
-    @InputImport(name="storageAccountUrl")
+    @Import(name="storageAccountUrl")
       private final @Nullable String storageAccountUrl;
 
     public Optional<String> getStorageAccountUrl() {

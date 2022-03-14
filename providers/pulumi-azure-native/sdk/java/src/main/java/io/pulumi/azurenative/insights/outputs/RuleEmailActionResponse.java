@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.insights.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RuleEmailActionResponse {
     /**
      * the list of administrator's custom email addresses to notify of the activation of the alert.
@@ -30,11 +30,11 @@ public final class RuleEmailActionResponse {
      */
     private final @Nullable Boolean sendToServiceOwners;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RuleEmailActionResponse(
-        @OutputCustomType.Parameter("customEmails") @Nullable List<String> customEmails,
-        @OutputCustomType.Parameter("odataType") String odataType,
-        @OutputCustomType.Parameter("sendToServiceOwners") @Nullable Boolean sendToServiceOwners) {
+        @CustomType.Parameter("customEmails") @Nullable List<String> customEmails,
+        @CustomType.Parameter("odataType") String odataType,
+        @CustomType.Parameter("sendToServiceOwners") @Nullable Boolean sendToServiceOwners) {
         this.customEmails = customEmails;
         this.odataType = odataType;
         this.sendToServiceOwners = sendToServiceOwners;

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datamigration.inputs;
 
 import io.pulumi.azurenative.datamigration.inputs.ReportableExceptionResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -19,7 +19,7 @@ public final class MigrateSqlServerSqlMITaskOutputDatabaseLevelResponse extends 
      * Name of the database
      * 
      */
-    @InputImport(name="databaseName", required=true)
+    @Import(name="databaseName", required=true)
       private final String databaseName;
 
     public String getDatabaseName() {
@@ -30,7 +30,7 @@ public final class MigrateSqlServerSqlMITaskOutputDatabaseLevelResponse extends 
      * Migration end time
      * 
      */
-    @InputImport(name="endedOn", required=true)
+    @Import(name="endedOn", required=true)
       private final String endedOn;
 
     public String getEndedOn() {
@@ -41,7 +41,7 @@ public final class MigrateSqlServerSqlMITaskOutputDatabaseLevelResponse extends 
      * Migration exceptions and warnings
      * 
      */
-    @InputImport(name="exceptionsAndWarnings", required=true)
+    @Import(name="exceptionsAndWarnings", required=true)
       private final List<ReportableExceptionResponse> exceptionsAndWarnings;
 
     public List<ReportableExceptionResponse> getExceptionsAndWarnings() {
@@ -52,7 +52,7 @@ public final class MigrateSqlServerSqlMITaskOutputDatabaseLevelResponse extends 
      * Result identifier
      * 
      */
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final String id;
 
     public String getId() {
@@ -63,7 +63,7 @@ public final class MigrateSqlServerSqlMITaskOutputDatabaseLevelResponse extends 
      * Migration progress message
      * 
      */
-    @InputImport(name="message", required=true)
+    @Import(name="message", required=true)
       private final String message;
 
     public String getMessage() {
@@ -75,7 +75,7 @@ public final class MigrateSqlServerSqlMITaskOutputDatabaseLevelResponse extends 
      * Expected value is 'DatabaseLevelOutput'.
      * 
      */
-    @InputImport(name="resultType", required=true)
+    @Import(name="resultType", required=true)
       private final String resultType;
 
     public String getResultType() {
@@ -86,7 +86,7 @@ public final class MigrateSqlServerSqlMITaskOutputDatabaseLevelResponse extends 
      * Size of the database in megabytes
      * 
      */
-    @InputImport(name="sizeMB", required=true)
+    @Import(name="sizeMB", required=true)
       private final Double sizeMB;
 
     public Double getSizeMB() {
@@ -97,7 +97,7 @@ public final class MigrateSqlServerSqlMITaskOutputDatabaseLevelResponse extends 
      * Current stage of migration
      * 
      */
-    @InputImport(name="stage", required=true)
+    @Import(name="stage", required=true)
       private final String stage;
 
     public String getStage() {
@@ -108,7 +108,7 @@ public final class MigrateSqlServerSqlMITaskOutputDatabaseLevelResponse extends 
      * Migration start time
      * 
      */
-    @InputImport(name="startedOn", required=true)
+    @Import(name="startedOn", required=true)
       private final String startedOn;
 
     public String getStartedOn() {
@@ -119,7 +119,7 @@ public final class MigrateSqlServerSqlMITaskOutputDatabaseLevelResponse extends 
      * Current state of migration
      * 
      */
-    @InputImport(name="state", required=true)
+    @Import(name="state", required=true)
       private final String state;
 
     public String getState() {

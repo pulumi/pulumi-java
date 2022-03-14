@@ -6,7 +6,7 @@ package io.pulumi.azurenative.network.inputs;
 import io.pulumi.azurenative.network.enums.FirewallPolicyIntrusionDetectionStateType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class FirewallPolicyIntrusionDetectionSignatureSpecificationArgs ex
      * Signature id.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
@@ -35,7 +35,7 @@ public final class FirewallPolicyIntrusionDetectionSignatureSpecificationArgs ex
      * The signature state.
      * 
      */
-    @InputImport(name="mode")
+    @Import(name="mode")
       private final @Nullable Output<Either<String,FirewallPolicyIntrusionDetectionStateType>> mode;
 
     public Output<Either<String,FirewallPolicyIntrusionDetectionStateType>> getMode() {

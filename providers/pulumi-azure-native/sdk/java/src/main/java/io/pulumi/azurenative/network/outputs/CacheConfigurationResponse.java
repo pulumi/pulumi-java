@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CacheConfigurationResponse {
     /**
      * The duration for which the content needs to be cached. Allowed format is in ISO 8601 format (http://en.wikipedia.org/wiki/ISO_8601#Durations). HTTP requires the value to be no more than a year
@@ -32,12 +32,12 @@ public final class CacheConfigurationResponse {
      */
     private final @Nullable String queryParameters;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CacheConfigurationResponse(
-        @OutputCustomType.Parameter("cacheDuration") @Nullable String cacheDuration,
-        @OutputCustomType.Parameter("dynamicCompression") @Nullable String dynamicCompression,
-        @OutputCustomType.Parameter("queryParameterStripDirective") @Nullable String queryParameterStripDirective,
-        @OutputCustomType.Parameter("queryParameters") @Nullable String queryParameters) {
+        @CustomType.Parameter("cacheDuration") @Nullable String cacheDuration,
+        @CustomType.Parameter("dynamicCompression") @Nullable String dynamicCompression,
+        @CustomType.Parameter("queryParameterStripDirective") @Nullable String queryParameterStripDirective,
+        @CustomType.Parameter("queryParameters") @Nullable String queryParameters) {
         this.cacheDuration = cacheDuration;
         this.dynamicCompression = dynamicCompression;
         this.queryParameterStripDirective = queryParameterStripDirective;

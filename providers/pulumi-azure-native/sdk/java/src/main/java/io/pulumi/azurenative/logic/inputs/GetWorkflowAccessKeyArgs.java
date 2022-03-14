@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.logic.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetWorkflowAccessKeyArgs extends io.pulumi.resources.InvokeAr
      * The workflow access key name.
      * 
      */
-    @InputImport(name="accessKeyName", required=true)
+    @Import(name="accessKeyName", required=true)
       private final String accessKeyName;
 
     public String getAccessKeyName() {
@@ -27,7 +27,7 @@ public final class GetWorkflowAccessKeyArgs extends io.pulumi.resources.InvokeAr
      * The resource group name.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {
@@ -38,7 +38,7 @@ public final class GetWorkflowAccessKeyArgs extends io.pulumi.resources.InvokeAr
      * The workflow name.
      * 
      */
-    @InputImport(name="workflowName", required=true)
+    @Import(name="workflowName", required=true)
       private final String workflowName;
 
     public String getWorkflowName() {

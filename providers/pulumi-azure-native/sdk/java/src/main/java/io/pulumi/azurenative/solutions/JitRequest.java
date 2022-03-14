@@ -10,7 +10,7 @@ import io.pulumi.azurenative.solutions.outputs.JitAuthorizationPoliciesResponse;
 import io.pulumi.azurenative.solutions.outputs.JitSchedulingPolicyResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +35,7 @@ public class JitRequest extends io.pulumi.resources.CustomResource {
      * The parent application id.
      * 
      */
-    @OutputExport(name="applicationResourceId", type=String.class, parameters={})
+    @Export(name="applicationResourceId", type=String.class, parameters={})
     private Output<String> applicationResourceId;
 
     /**
@@ -49,7 +49,7 @@ public class JitRequest extends io.pulumi.resources.CustomResource {
      * The client entity that created the JIT request.
      * 
      */
-    @OutputExport(name="createdBy", type=ApplicationClientDetailsResponse.class, parameters={})
+    @Export(name="createdBy", type=ApplicationClientDetailsResponse.class, parameters={})
     private Output<ApplicationClientDetailsResponse> createdBy;
 
     /**
@@ -63,7 +63,7 @@ public class JitRequest extends io.pulumi.resources.CustomResource {
      * The JIT authorization policies.
      * 
      */
-    @OutputExport(name="jitAuthorizationPolicies", type=List.class, parameters={JitAuthorizationPoliciesResponse.class})
+    @Export(name="jitAuthorizationPolicies", type=List.class, parameters={JitAuthorizationPoliciesResponse.class})
     private Output<List<JitAuthorizationPoliciesResponse>> jitAuthorizationPolicies;
 
     /**
@@ -77,7 +77,7 @@ public class JitRequest extends io.pulumi.resources.CustomResource {
      * The JIT request state.
      * 
      */
-    @OutputExport(name="jitRequestState", type=String.class, parameters={})
+    @Export(name="jitRequestState", type=String.class, parameters={})
     private Output<String> jitRequestState;
 
     /**
@@ -91,7 +91,7 @@ public class JitRequest extends io.pulumi.resources.CustomResource {
      * The JIT request properties.
      * 
      */
-    @OutputExport(name="jitSchedulingPolicy", type=JitSchedulingPolicyResponse.class, parameters={})
+    @Export(name="jitSchedulingPolicy", type=JitSchedulingPolicyResponse.class, parameters={})
     private Output<JitSchedulingPolicyResponse> jitSchedulingPolicy;
 
     /**
@@ -105,7 +105,7 @@ public class JitRequest extends io.pulumi.resources.CustomResource {
      * Resource location
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -119,7 +119,7 @@ public class JitRequest extends io.pulumi.resources.CustomResource {
      * Resource name
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -133,7 +133,7 @@ public class JitRequest extends io.pulumi.resources.CustomResource {
      * The JIT request provisioning state.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -147,7 +147,7 @@ public class JitRequest extends io.pulumi.resources.CustomResource {
      * The publisher tenant id.
      * 
      */
-    @OutputExport(name="publisherTenantId", type=String.class, parameters={})
+    @Export(name="publisherTenantId", type=String.class, parameters={})
     private Output<String> publisherTenantId;
 
     /**
@@ -161,7 +161,7 @@ public class JitRequest extends io.pulumi.resources.CustomResource {
      * Resource tags
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -175,7 +175,7 @@ public class JitRequest extends io.pulumi.resources.CustomResource {
      * Resource type
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -189,7 +189,7 @@ public class JitRequest extends io.pulumi.resources.CustomResource {
      * The client entity that last updated the JIT request.
      * 
      */
-    @OutputExport(name="updatedBy", type=ApplicationClientDetailsResponse.class, parameters={})
+    @Export(name="updatedBy", type=ApplicationClientDetailsResponse.class, parameters={})
     private Output<ApplicationClientDetailsResponse> updatedBy;
 
     /**

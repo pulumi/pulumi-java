@@ -8,7 +8,7 @@ import io.pulumi.azurenative.synapse.enums.StorageAccountType;
 import io.pulumi.azurenative.synapse.inputs.SkuArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Map;
@@ -24,7 +24,7 @@ public final class SqlPoolArgs extends io.pulumi.resources.ResourceArgs {
      * Collation mode
      * 
      */
-    @InputImport(name="collation")
+    @Import(name="collation")
       private final @Nullable Output<String> collation;
 
     public Output<String> getCollation() {
@@ -43,7 +43,7 @@ public final class SqlPoolArgs extends io.pulumi.resources.ResourceArgs {
      * Restore: Creates a sql pool by restoring a backup of a deleted sql  pool. SourceDatabaseId should be the sql pool's original resource ID. SourceDatabaseId and sourceDatabaseDeletionDate must be specified.
      * 
      */
-    @InputImport(name="createMode")
+    @Import(name="createMode")
       private final @Nullable Output<Either<String,CreateMode>> createMode;
 
     public Output<Either<String,CreateMode>> getCreateMode() {
@@ -54,7 +54,7 @@ public final class SqlPoolArgs extends io.pulumi.resources.ResourceArgs {
      * Date the SQL pool was created
      * 
      */
-    @InputImport(name="creationDate")
+    @Import(name="creationDate")
       private final @Nullable Output<String> creationDate;
 
     public Output<String> getCreationDate() {
@@ -65,7 +65,7 @@ public final class SqlPoolArgs extends io.pulumi.resources.ResourceArgs {
      * The geo-location where the resource lives
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -76,7 +76,7 @@ public final class SqlPoolArgs extends io.pulumi.resources.ResourceArgs {
      * Maximum size in bytes
      * 
      */
-    @InputImport(name="maxSizeBytes")
+    @Import(name="maxSizeBytes")
       private final @Nullable Output<Double> maxSizeBytes;
 
     public Output<Double> getMaxSizeBytes() {
@@ -87,7 +87,7 @@ public final class SqlPoolArgs extends io.pulumi.resources.ResourceArgs {
      * Resource state
      * 
      */
-    @InputImport(name="provisioningState")
+    @Import(name="provisioningState")
       private final @Nullable Output<String> provisioningState;
 
     public Output<String> getProvisioningState() {
@@ -98,7 +98,7 @@ public final class SqlPoolArgs extends io.pulumi.resources.ResourceArgs {
      * Backup database to restore from
      * 
      */
-    @InputImport(name="recoverableDatabaseId")
+    @Import(name="recoverableDatabaseId")
       private final @Nullable Output<String> recoverableDatabaseId;
 
     public Output<String> getRecoverableDatabaseId() {
@@ -109,7 +109,7 @@ public final class SqlPoolArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -120,7 +120,7 @@ public final class SqlPoolArgs extends io.pulumi.resources.ResourceArgs {
      * Snapshot time to restore
      * 
      */
-    @InputImport(name="restorePointInTime")
+    @Import(name="restorePointInTime")
       private final @Nullable Output<String> restorePointInTime;
 
     public Output<String> getRestorePointInTime() {
@@ -131,7 +131,7 @@ public final class SqlPoolArgs extends io.pulumi.resources.ResourceArgs {
      * SQL pool SKU
      * 
      */
-    @InputImport(name="sku")
+    @Import(name="sku")
       private final @Nullable Output<SkuArgs> sku;
 
     public Output<SkuArgs> getSku() {
@@ -142,7 +142,7 @@ public final class SqlPoolArgs extends io.pulumi.resources.ResourceArgs {
      * Source database to create from
      * 
      */
-    @InputImport(name="sourceDatabaseId")
+    @Import(name="sourceDatabaseId")
       private final @Nullable Output<String> sourceDatabaseId;
 
     public Output<String> getSourceDatabaseId() {
@@ -153,7 +153,7 @@ public final class SqlPoolArgs extends io.pulumi.resources.ResourceArgs {
      * SQL pool name
      * 
      */
-    @InputImport(name="sqlPoolName")
+    @Import(name="sqlPoolName")
       private final @Nullable Output<String> sqlPoolName;
 
     public Output<String> getSqlPoolName() {
@@ -164,7 +164,7 @@ public final class SqlPoolArgs extends io.pulumi.resources.ResourceArgs {
      * Resource status
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable Output<String> status;
 
     public Output<String> getStatus() {
@@ -175,7 +175,7 @@ public final class SqlPoolArgs extends io.pulumi.resources.ResourceArgs {
      * The storage account type used to store backups for this sql pool.
      * 
      */
-    @InputImport(name="storageAccountType")
+    @Import(name="storageAccountType")
       private final @Nullable Output<Either<String,StorageAccountType>> storageAccountType;
 
     public Output<Either<String,StorageAccountType>> getStorageAccountType() {
@@ -186,7 +186,7 @@ public final class SqlPoolArgs extends io.pulumi.resources.ResourceArgs {
      * Resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -197,7 +197,7 @@ public final class SqlPoolArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the workspace
      * 
      */
-    @InputImport(name="workspaceName", required=true)
+    @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;
 
     public Output<String> getWorkspaceName() {

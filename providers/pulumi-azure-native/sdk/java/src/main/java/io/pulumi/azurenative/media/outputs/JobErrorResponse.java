@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.media.outputs;
 
 import io.pulumi.azurenative.media.outputs.JobErrorDetailResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class JobErrorResponse {
     /**
      * Helps with categorization of errors.
@@ -37,13 +37,13 @@ public final class JobErrorResponse {
      */
     private final String retry;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private JobErrorResponse(
-        @OutputCustomType.Parameter("category") String category,
-        @OutputCustomType.Parameter("code") String code,
-        @OutputCustomType.Parameter("details") List<JobErrorDetailResponse> details,
-        @OutputCustomType.Parameter("message") String message,
-        @OutputCustomType.Parameter("retry") String retry) {
+        @CustomType.Parameter("category") String category,
+        @CustomType.Parameter("code") String code,
+        @CustomType.Parameter("details") List<JobErrorDetailResponse> details,
+        @CustomType.Parameter("message") String message,
+        @CustomType.Parameter("retry") String retry) {
         this.category = category;
         this.code = code;
         this.details = details;

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.servicelinker.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class UserAssignedIdentityAuthInfoResponse extends io.pulumi.resour
      * Expected value is 'userAssignedIdentity'.
      * 
      */
-    @InputImport(name="authType", required=true)
+    @Import(name="authType", required=true)
       private final String authType;
 
     public String getAuthType() {
@@ -32,7 +32,7 @@ public final class UserAssignedIdentityAuthInfoResponse extends io.pulumi.resour
      * Client Id for userAssignedIdentity.
      * 
      */
-    @InputImport(name="clientId", required=true)
+    @Import(name="clientId", required=true)
       private final String clientId;
 
     public String getClientId() {
@@ -43,7 +43,7 @@ public final class UserAssignedIdentityAuthInfoResponse extends io.pulumi.resour
      * Subscription id for userAssignedIdentity.
      * 
      */
-    @InputImport(name="subscriptionId", required=true)
+    @Import(name="subscriptionId", required=true)
       private final String subscriptionId;
 
     public String getSubscriptionId() {

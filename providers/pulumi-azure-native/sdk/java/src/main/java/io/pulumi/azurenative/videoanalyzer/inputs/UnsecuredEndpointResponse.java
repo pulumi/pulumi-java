@@ -5,7 +5,7 @@ package io.pulumi.azurenative.videoanalyzer.inputs;
 
 import io.pulumi.azurenative.videoanalyzer.inputs.SecureIotDeviceRemoteTunnelResponse;
 import io.pulumi.azurenative.videoanalyzer.inputs.UsernamePasswordCredentialsResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class UnsecuredEndpointResponse extends io.pulumi.resources.InvokeA
      * Credentials to be presented to the endpoint.
      * 
      */
-    @InputImport(name="credentials", required=true)
+    @Import(name="credentials", required=true)
       private final UsernamePasswordCredentialsResponse credentials;
 
     public UsernamePasswordCredentialsResponse getCredentials() {
@@ -35,7 +35,7 @@ public final class UnsecuredEndpointResponse extends io.pulumi.resources.InvokeA
      * Describes the tunnel through which Video Analyzer can connect to the endpoint URL. This is an optional property, typically used when the endpoint is behind a firewall.
      * 
      */
-    @InputImport(name="tunnel")
+    @Import(name="tunnel")
       private final @Nullable SecureIotDeviceRemoteTunnelResponse tunnel;
 
     public Optional<SecureIotDeviceRemoteTunnelResponse> getTunnel() {
@@ -47,7 +47,7 @@ public final class UnsecuredEndpointResponse extends io.pulumi.resources.InvokeA
      * Expected value is '#Microsoft.VideoAnalyzer.UnsecuredEndpoint'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {
@@ -58,7 +58,7 @@ public final class UnsecuredEndpointResponse extends io.pulumi.resources.InvokeA
      * The endpoint URL for Video Analyzer to connect to.
      * 
      */
-    @InputImport(name="url", required=true)
+    @Import(name="url", required=true)
       private final String url;
 
     public String getUrl() {

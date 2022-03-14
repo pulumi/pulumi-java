@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class VirtualMachineRunCommandScriptSourceArgs extends io.pulumi.re
      * Specifies a commandId of predefined built-in script.
      * 
      */
-    @InputImport(name="commandId")
+    @Import(name="commandId")
       private final @Nullable Output<String> commandId;
 
     public Output<String> getCommandId() {
@@ -33,7 +33,7 @@ public final class VirtualMachineRunCommandScriptSourceArgs extends io.pulumi.re
      * Specifies the script content to be executed on the VM.
      * 
      */
-    @InputImport(name="script")
+    @Import(name="script")
       private final @Nullable Output<String> script;
 
     public Output<String> getScript() {
@@ -44,7 +44,7 @@ public final class VirtualMachineRunCommandScriptSourceArgs extends io.pulumi.re
      * Specifies the script download location.
      * 
      */
-    @InputImport(name="scriptUri")
+    @Import(name="scriptUri")
       private final @Nullable Output<String> scriptUri;
 
     public Output<String> getScriptUri() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerregistry.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class SourceTriggerDescriptorResponse extends io.pulumi.resources.I
      * The branch name in the repository.
      * 
      */
-    @InputImport(name="branchName")
+    @Import(name="branchName")
       private final @Nullable String branchName;
 
     public Optional<String> getBranchName() {
@@ -33,7 +33,7 @@ public final class SourceTriggerDescriptorResponse extends io.pulumi.resources.I
      * The unique ID that identifies a commit.
      * 
      */
-    @InputImport(name="commitId")
+    @Import(name="commitId")
       private final @Nullable String commitId;
 
     public Optional<String> getCommitId() {
@@ -44,7 +44,7 @@ public final class SourceTriggerDescriptorResponse extends io.pulumi.resources.I
      * The event type of the trigger.
      * 
      */
-    @InputImport(name="eventType")
+    @Import(name="eventType")
       private final @Nullable String eventType;
 
     public Optional<String> getEventType() {
@@ -55,7 +55,7 @@ public final class SourceTriggerDescriptorResponse extends io.pulumi.resources.I
      * The unique ID of the trigger.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable String id;
 
     public Optional<String> getId() {
@@ -66,7 +66,7 @@ public final class SourceTriggerDescriptorResponse extends io.pulumi.resources.I
      * The source control provider type.
      * 
      */
-    @InputImport(name="providerType")
+    @Import(name="providerType")
       private final @Nullable String providerType;
 
     public Optional<String> getProviderType() {
@@ -77,7 +77,7 @@ public final class SourceTriggerDescriptorResponse extends io.pulumi.resources.I
      * The unique ID that identifies pull request.
      * 
      */
-    @InputImport(name="pullRequestId")
+    @Import(name="pullRequestId")
       private final @Nullable String pullRequestId;
 
     public Optional<String> getPullRequestId() {
@@ -88,7 +88,7 @@ public final class SourceTriggerDescriptorResponse extends io.pulumi.resources.I
      * The repository URL.
      * 
      */
-    @InputImport(name="repositoryUrl")
+    @Import(name="repositoryUrl")
       private final @Nullable String repositoryUrl;
 
     public Optional<String> getRepositoryUrl() {

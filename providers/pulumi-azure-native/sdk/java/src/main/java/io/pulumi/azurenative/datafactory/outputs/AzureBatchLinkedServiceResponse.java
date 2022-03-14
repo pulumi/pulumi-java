@@ -10,7 +10,7 @@ import io.pulumi.azurenative.datafactory.outputs.LinkedServiceReferenceResponse;
 import io.pulumi.azurenative.datafactory.outputs.ParameterSpecificationResponse;
 import io.pulumi.azurenative.datafactory.outputs.SecureStringResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -19,7 +19,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AzureBatchLinkedServiceResponse {
     /**
      * The Azure Batch account access key.
@@ -83,20 +83,20 @@ public final class AzureBatchLinkedServiceResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AzureBatchLinkedServiceResponse(
-        @OutputCustomType.Parameter("accessKey") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> accessKey,
-        @OutputCustomType.Parameter("accountName") Object accountName,
-        @OutputCustomType.Parameter("annotations") @Nullable List<Object> annotations,
-        @OutputCustomType.Parameter("batchUri") Object batchUri,
-        @OutputCustomType.Parameter("connectVia") @Nullable IntegrationRuntimeReferenceResponse connectVia,
-        @OutputCustomType.Parameter("credential") @Nullable CredentialReferenceResponse credential,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("encryptedCredential") @Nullable Object encryptedCredential,
-        @OutputCustomType.Parameter("linkedServiceName") LinkedServiceReferenceResponse linkedServiceName,
-        @OutputCustomType.Parameter("parameters") @Nullable Map<String,ParameterSpecificationResponse> parameters,
-        @OutputCustomType.Parameter("poolName") Object poolName,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("accessKey") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> accessKey,
+        @CustomType.Parameter("accountName") Object accountName,
+        @CustomType.Parameter("annotations") @Nullable List<Object> annotations,
+        @CustomType.Parameter("batchUri") Object batchUri,
+        @CustomType.Parameter("connectVia") @Nullable IntegrationRuntimeReferenceResponse connectVia,
+        @CustomType.Parameter("credential") @Nullable CredentialReferenceResponse credential,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("encryptedCredential") @Nullable Object encryptedCredential,
+        @CustomType.Parameter("linkedServiceName") LinkedServiceReferenceResponse linkedServiceName,
+        @CustomType.Parameter("parameters") @Nullable Map<String,ParameterSpecificationResponse> parameters,
+        @CustomType.Parameter("poolName") Object poolName,
+        @CustomType.Parameter("type") String type) {
         this.accessKey = accessKey;
         this.accountName = accountName;
         this.annotations = annotations;

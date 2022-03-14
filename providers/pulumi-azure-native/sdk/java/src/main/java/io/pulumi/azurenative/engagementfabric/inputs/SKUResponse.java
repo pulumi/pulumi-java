@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.engagementfabric.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class SKUResponse extends io.pulumi.resources.InvokeArgs {
      * The name of the SKU
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -33,7 +33,7 @@ public final class SKUResponse extends io.pulumi.resources.InvokeArgs {
      * The price tier of the SKU
      * 
      */
-    @InputImport(name="tier")
+    @Import(name="tier")
       private final @Nullable String tier;
 
     public Optional<String> getTier() {

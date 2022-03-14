@@ -6,7 +6,7 @@ package io.pulumi.azurenative.automation.inputs;
 import io.pulumi.azurenative.automation.enums.SkuNameEnum;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
      * Gets or sets the SKU capacity.
      * 
      */
-    @InputImport(name="capacity")
+    @Import(name="capacity")
       private final @Nullable Output<Integer> capacity;
 
     public Output<Integer> getCapacity() {
@@ -36,7 +36,7 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
      * Gets or sets the SKU family.
      * 
      */
-    @InputImport(name="family")
+    @Import(name="family")
       private final @Nullable Output<String> family;
 
     public Output<String> getFamily() {
@@ -47,7 +47,7 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
      * Gets or sets the SKU name of the account.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<Either<String,SkuNameEnum>> name;
 
     public Output<Either<String,SkuNameEnum>> getName() {

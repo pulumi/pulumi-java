@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ApiReferenceResponse {
     /**
      * Brand color
@@ -53,16 +53,16 @@ public final class ApiReferenceResponse {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ApiReferenceResponse(
-        @OutputCustomType.Parameter("brandColor") @Nullable String brandColor,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
-        @OutputCustomType.Parameter("iconUri") @Nullable String iconUri,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("swagger") @Nullable Object swagger,
-        @OutputCustomType.Parameter("type") @Nullable String type) {
+        @CustomType.Parameter("brandColor") @Nullable String brandColor,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("displayName") @Nullable String displayName,
+        @CustomType.Parameter("iconUri") @Nullable String iconUri,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("swagger") @Nullable Object swagger,
+        @CustomType.Parameter("type") @Nullable String type) {
         this.brandColor = brandColor;
         this.description = description;
         this.displayName = displayName;

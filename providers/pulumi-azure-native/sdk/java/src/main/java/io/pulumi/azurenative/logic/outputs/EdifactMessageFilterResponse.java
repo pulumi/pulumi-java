@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.logic.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class EdifactMessageFilterResponse {
     /**
      * The message filter type.
@@ -15,8 +15,8 @@ public final class EdifactMessageFilterResponse {
      */
     private final String messageFilterType;
 
-    @OutputCustomType.Constructor
-    private EdifactMessageFilterResponse(@OutputCustomType.Parameter("messageFilterType") String messageFilterType) {
+    @CustomType.Constructor
+    private EdifactMessageFilterResponse(@CustomType.Parameter("messageFilterType") String messageFilterType) {
         this.messageFilterType = messageFilterType;
     }
 

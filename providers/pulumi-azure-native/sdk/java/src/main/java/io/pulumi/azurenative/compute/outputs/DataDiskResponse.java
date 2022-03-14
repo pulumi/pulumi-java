@@ -5,7 +5,7 @@ package io.pulumi.azurenative.compute.outputs;
 
 import io.pulumi.azurenative.compute.outputs.ManagedDiskParametersResponse;
 import io.pulumi.azurenative.compute.outputs.VirtualHardDiskResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -14,7 +14,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DataDiskResponse {
     /**
      * Specifies the caching requirements. <br><br> Possible values are: <br><br> **None** <br><br> **ReadOnly** <br><br> **ReadWrite** <br><br> Default: **None for Standard storage. ReadOnly for Premium storage**
@@ -87,22 +87,22 @@ public final class DataDiskResponse {
      */
     private final @Nullable Boolean writeAcceleratorEnabled;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DataDiskResponse(
-        @OutputCustomType.Parameter("caching") @Nullable String caching,
-        @OutputCustomType.Parameter("createOption") String createOption,
-        @OutputCustomType.Parameter("deleteOption") @Nullable String deleteOption,
-        @OutputCustomType.Parameter("detachOption") @Nullable String detachOption,
-        @OutputCustomType.Parameter("diskIOPSReadWrite") Double diskIOPSReadWrite,
-        @OutputCustomType.Parameter("diskMBpsReadWrite") Double diskMBpsReadWrite,
-        @OutputCustomType.Parameter("diskSizeGB") @Nullable Integer diskSizeGB,
-        @OutputCustomType.Parameter("image") @Nullable VirtualHardDiskResponse image,
-        @OutputCustomType.Parameter("lun") Integer lun,
-        @OutputCustomType.Parameter("managedDisk") @Nullable ManagedDiskParametersResponse managedDisk,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("toBeDetached") @Nullable Boolean toBeDetached,
-        @OutputCustomType.Parameter("vhd") @Nullable VirtualHardDiskResponse vhd,
-        @OutputCustomType.Parameter("writeAcceleratorEnabled") @Nullable Boolean writeAcceleratorEnabled) {
+        @CustomType.Parameter("caching") @Nullable String caching,
+        @CustomType.Parameter("createOption") String createOption,
+        @CustomType.Parameter("deleteOption") @Nullable String deleteOption,
+        @CustomType.Parameter("detachOption") @Nullable String detachOption,
+        @CustomType.Parameter("diskIOPSReadWrite") Double diskIOPSReadWrite,
+        @CustomType.Parameter("diskMBpsReadWrite") Double diskMBpsReadWrite,
+        @CustomType.Parameter("diskSizeGB") @Nullable Integer diskSizeGB,
+        @CustomType.Parameter("image") @Nullable VirtualHardDiskResponse image,
+        @CustomType.Parameter("lun") Integer lun,
+        @CustomType.Parameter("managedDisk") @Nullable ManagedDiskParametersResponse managedDisk,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("toBeDetached") @Nullable Boolean toBeDetached,
+        @CustomType.Parameter("vhd") @Nullable VirtualHardDiskResponse vhd,
+        @CustomType.Parameter("writeAcceleratorEnabled") @Nullable Boolean writeAcceleratorEnabled) {
         this.caching = caching;
         this.createOption = createOption;
         this.deleteOption = deleteOption;

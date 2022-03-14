@@ -5,7 +5,7 @@ package io.pulumi.azurenative.sql;
 
 import io.pulumi.azurenative.sql.inputs.ServerInfoArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ServerTrustGroupArgs extends io.pulumi.resources.ResourceArgs
      * Group members information for the server trust group.
      * 
      */
-    @InputImport(name="groupMembers", required=true)
+    @Import(name="groupMembers", required=true)
       private final Output<List<ServerInfoArgs>> groupMembers;
 
     public Output<List<ServerInfoArgs>> getGroupMembers() {
@@ -31,7 +31,7 @@ public final class ServerTrustGroupArgs extends io.pulumi.resources.ResourceArgs
      * The name of the region where the resource is located.
      * 
      */
-    @InputImport(name="locationName", required=true)
+    @Import(name="locationName", required=true)
       private final Output<String> locationName;
 
     public Output<String> getLocationName() {
@@ -42,7 +42,7 @@ public final class ServerTrustGroupArgs extends io.pulumi.resources.ResourceArgs
      * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -53,7 +53,7 @@ public final class ServerTrustGroupArgs extends io.pulumi.resources.ResourceArgs
      * The name of the server trust group.
      * 
      */
-    @InputImport(name="serverTrustGroupName")
+    @Import(name="serverTrustGroupName")
       private final @Nullable Output<String> serverTrustGroupName;
 
     public Output<String> getServerTrustGroupName() {
@@ -64,7 +64,7 @@ public final class ServerTrustGroupArgs extends io.pulumi.resources.ResourceArgs
      * Trust scope of the server trust group.
      * 
      */
-    @InputImport(name="trustScopes", required=true)
+    @Import(name="trustScopes", required=true)
       private final Output<List<String>> trustScopes;
 
     public Output<List<String>> getTrustScopes() {

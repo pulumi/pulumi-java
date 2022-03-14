@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.security.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ServicePrincipalPropertiesResponse {
     /**
      * Application ID of service principal.
@@ -22,10 +22,10 @@ public final class ServicePrincipalPropertiesResponse {
      */
     private final @Nullable String secret;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServicePrincipalPropertiesResponse(
-        @OutputCustomType.Parameter("applicationId") @Nullable String applicationId,
-        @OutputCustomType.Parameter("secret") @Nullable String secret) {
+        @CustomType.Parameter("applicationId") @Nullable String applicationId,
+        @CustomType.Parameter("secret") @Nullable String secret) {
         this.applicationId = applicationId;
         this.secret = secret;
     }

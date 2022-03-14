@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.dbformysql.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PrivateEndpointPropertyResponse {
     /**
      * Resource id of the private endpoint.
@@ -17,8 +17,8 @@ public final class PrivateEndpointPropertyResponse {
      */
     private final @Nullable String id;
 
-    @OutputCustomType.Constructor
-    private PrivateEndpointPropertyResponse(@OutputCustomType.Parameter("id") @Nullable String id) {
+    @CustomType.Constructor
+    private PrivateEndpointPropertyResponse(@CustomType.Parameter("id") @Nullable String id) {
         this.id = id;
     }
 

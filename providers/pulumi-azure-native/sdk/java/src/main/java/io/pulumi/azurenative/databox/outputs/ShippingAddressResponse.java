@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.databox.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ShippingAddressResponse {
     /**
      * Type of address.
@@ -62,18 +62,18 @@ public final class ShippingAddressResponse {
      */
     private final @Nullable String zipExtendedCode;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ShippingAddressResponse(
-        @OutputCustomType.Parameter("addressType") @Nullable String addressType,
-        @OutputCustomType.Parameter("city") @Nullable String city,
-        @OutputCustomType.Parameter("companyName") @Nullable String companyName,
-        @OutputCustomType.Parameter("country") String country,
-        @OutputCustomType.Parameter("postalCode") @Nullable String postalCode,
-        @OutputCustomType.Parameter("stateOrProvince") @Nullable String stateOrProvince,
-        @OutputCustomType.Parameter("streetAddress1") String streetAddress1,
-        @OutputCustomType.Parameter("streetAddress2") @Nullable String streetAddress2,
-        @OutputCustomType.Parameter("streetAddress3") @Nullable String streetAddress3,
-        @OutputCustomType.Parameter("zipExtendedCode") @Nullable String zipExtendedCode) {
+        @CustomType.Parameter("addressType") @Nullable String addressType,
+        @CustomType.Parameter("city") @Nullable String city,
+        @CustomType.Parameter("companyName") @Nullable String companyName,
+        @CustomType.Parameter("country") String country,
+        @CustomType.Parameter("postalCode") @Nullable String postalCode,
+        @CustomType.Parameter("stateOrProvince") @Nullable String stateOrProvince,
+        @CustomType.Parameter("streetAddress1") String streetAddress1,
+        @CustomType.Parameter("streetAddress2") @Nullable String streetAddress2,
+        @CustomType.Parameter("streetAddress3") @Nullable String streetAddress3,
+        @CustomType.Parameter("zipExtendedCode") @Nullable String zipExtendedCode) {
         this.addressType = addressType;
         this.city = city;
         this.companyName = companyName;

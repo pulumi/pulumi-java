@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.insights.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class LogicAppReceiverResponse extends io.pulumi.resources.InvokeAr
      * The callback url where http request sent to.
      * 
      */
-    @InputImport(name="callbackUrl", required=true)
+    @Import(name="callbackUrl", required=true)
       private final String callbackUrl;
 
     public String getCallbackUrl() {
@@ -34,7 +34,7 @@ public final class LogicAppReceiverResponse extends io.pulumi.resources.InvokeAr
      * The name of the logic app receiver. Names must be unique across all receivers within an action group.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -45,7 +45,7 @@ public final class LogicAppReceiverResponse extends io.pulumi.resources.InvokeAr
      * The azure resource id of the logic app receiver.
      * 
      */
-    @InputImport(name="resourceId", required=true)
+    @Import(name="resourceId", required=true)
       private final String resourceId;
 
     public String getResourceId() {
@@ -56,7 +56,7 @@ public final class LogicAppReceiverResponse extends io.pulumi.resources.InvokeAr
      * Indicates whether to use common alert schema.
      * 
      */
-    @InputImport(name="useCommonAlertSchema")
+    @Import(name="useCommonAlertSchema")
       private final @Nullable Boolean useCommonAlertSchema;
 
     public Optional<Boolean> getUseCommonAlertSchema() {

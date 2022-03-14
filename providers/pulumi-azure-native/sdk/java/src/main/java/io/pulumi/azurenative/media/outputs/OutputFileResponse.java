@@ -3,12 +3,12 @@
 
 package io.pulumi.azurenative.media.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class OutputFileResponse {
     /**
      * The list of labels that describe how the encoder should multiplex video and audio into an output file. For example, if the encoder is producing two video layers with labels v1 and v2, and one audio layer with label a1, then an array like '[v1, a1]' tells the encoder to produce an output file with the video track represented by v1 and the audio track represented by a1.
@@ -16,8 +16,8 @@ public final class OutputFileResponse {
      */
     private final List<String> labels;
 
-    @OutputCustomType.Constructor
-    private OutputFileResponse(@OutputCustomType.Parameter("labels") List<String> labels) {
+    @CustomType.Constructor
+    private OutputFileResponse(@CustomType.Parameter("labels") List<String> labels) {
         this.labels = labels;
     }
 

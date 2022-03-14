@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storage.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class EncryptionIdentityResponse extends io.pulumi.resources.Invoke
      * Resource identifier of the UserAssigned identity to be associated with server-side encryption on the storage account.
      * 
      */
-    @InputImport(name="encryptionUserAssignedIdentity")
+    @Import(name="encryptionUserAssignedIdentity")
       private final @Nullable String encryptionUserAssignedIdentity;
 
     public Optional<String> getEncryptionUserAssignedIdentity() {

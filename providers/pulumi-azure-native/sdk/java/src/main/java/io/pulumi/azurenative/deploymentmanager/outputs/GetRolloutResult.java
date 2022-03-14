@@ -7,7 +7,7 @@ import io.pulumi.azurenative.deploymentmanager.outputs.IdentityResponse;
 import io.pulumi.azurenative.deploymentmanager.outputs.RolloutOperationInfoResponse;
 import io.pulumi.azurenative.deploymentmanager.outputs.ServiceResponse;
 import io.pulumi.azurenative.deploymentmanager.outputs.StepGroupResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -16,7 +16,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetRolloutResult {
     /**
      * The reference to the artifact source resource Id where the payload is located.
@@ -89,22 +89,22 @@ public final class GetRolloutResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetRolloutResult(
-        @OutputCustomType.Parameter("artifactSourceId") @Nullable String artifactSourceId,
-        @OutputCustomType.Parameter("buildVersion") String buildVersion,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("identity") @Nullable IdentityResponse identity,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("operationInfo") RolloutOperationInfoResponse operationInfo,
-        @OutputCustomType.Parameter("services") List<ServiceResponse> services,
-        @OutputCustomType.Parameter("status") String status,
-        @OutputCustomType.Parameter("stepGroups") List<StepGroupResponse> stepGroups,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("targetServiceTopologyId") String targetServiceTopologyId,
-        @OutputCustomType.Parameter("totalRetryAttempts") Integer totalRetryAttempts,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("artifactSourceId") @Nullable String artifactSourceId,
+        @CustomType.Parameter("buildVersion") String buildVersion,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("identity") @Nullable IdentityResponse identity,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("operationInfo") RolloutOperationInfoResponse operationInfo,
+        @CustomType.Parameter("services") List<ServiceResponse> services,
+        @CustomType.Parameter("status") String status,
+        @CustomType.Parameter("stepGroups") List<StepGroupResponse> stepGroups,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("targetServiceTopologyId") String targetServiceTopologyId,
+        @CustomType.Parameter("totalRetryAttempts") Integer totalRetryAttempts,
+        @CustomType.Parameter("type") String type) {
         this.artifactSourceId = artifactSourceId;
         this.buildVersion = buildVersion;
         this.id = id;

@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.elastic.outputs;
 
 import io.pulumi.azurenative.elastic.outputs.VMResourcesResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ListVMHostResult {
     /**
      * Link to the next Vm resource Id, if any.
@@ -24,10 +24,10 @@ public final class ListVMHostResult {
      */
     private final @Nullable List<VMResourcesResponse> value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ListVMHostResult(
-        @OutputCustomType.Parameter("nextLink") @Nullable String nextLink,
-        @OutputCustomType.Parameter("value") @Nullable List<VMResourcesResponse> value) {
+        @CustomType.Parameter("nextLink") @Nullable String nextLink,
+        @CustomType.Parameter("value") @Nullable List<VMResourcesResponse> value) {
         this.nextLink = nextLink;
         this.value = value;
     }

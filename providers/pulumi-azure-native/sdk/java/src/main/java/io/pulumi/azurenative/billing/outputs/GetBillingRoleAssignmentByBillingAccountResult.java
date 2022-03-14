@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.billing.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetBillingRoleAssignmentByBillingAccountResult {
     /**
      * The principal Id of the user who created the role assignment.
@@ -77,21 +77,21 @@ public final class GetBillingRoleAssignmentByBillingAccountResult {
      */
     private final @Nullable String userEmailAddress;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetBillingRoleAssignmentByBillingAccountResult(
-        @OutputCustomType.Parameter("createdByPrincipalId") String createdByPrincipalId,
-        @OutputCustomType.Parameter("createdByPrincipalTenantId") String createdByPrincipalTenantId,
-        @OutputCustomType.Parameter("createdByUserEmailAddress") String createdByUserEmailAddress,
-        @OutputCustomType.Parameter("createdOn") String createdOn,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("principalId") @Nullable String principalId,
-        @OutputCustomType.Parameter("principalTenantId") @Nullable String principalTenantId,
-        @OutputCustomType.Parameter("roleDefinitionId") @Nullable String roleDefinitionId,
-        @OutputCustomType.Parameter("scope") String scope,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("userAuthenticationType") @Nullable String userAuthenticationType,
-        @OutputCustomType.Parameter("userEmailAddress") @Nullable String userEmailAddress) {
+        @CustomType.Parameter("createdByPrincipalId") String createdByPrincipalId,
+        @CustomType.Parameter("createdByPrincipalTenantId") String createdByPrincipalTenantId,
+        @CustomType.Parameter("createdByUserEmailAddress") String createdByUserEmailAddress,
+        @CustomType.Parameter("createdOn") String createdOn,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("principalId") @Nullable String principalId,
+        @CustomType.Parameter("principalTenantId") @Nullable String principalTenantId,
+        @CustomType.Parameter("roleDefinitionId") @Nullable String roleDefinitionId,
+        @CustomType.Parameter("scope") String scope,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("userAuthenticationType") @Nullable String userAuthenticationType,
+        @CustomType.Parameter("userEmailAddress") @Nullable String userEmailAddress) {
         this.createdByPrincipalId = createdByPrincipalId;
         this.createdByPrincipalTenantId = createdByPrincipalTenantId;
         this.createdByUserEmailAddress = createdByUserEmailAddress;

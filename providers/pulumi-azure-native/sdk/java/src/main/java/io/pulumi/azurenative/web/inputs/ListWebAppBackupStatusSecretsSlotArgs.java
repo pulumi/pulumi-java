@@ -5,7 +5,7 @@ package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.azurenative.web.inputs.BackupSchedule;
 import io.pulumi.azurenative.web.inputs.DatabaseBackupSetting;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class ListWebAppBackupStatusSecretsSlotArgs extends io.pulumi.resou
      * ID of backup.
      * 
      */
-    @InputImport(name="backupId", required=true)
+    @Import(name="backupId", required=true)
       private final String backupId;
 
     public String getBackupId() {
@@ -33,7 +33,7 @@ public final class ListWebAppBackupStatusSecretsSlotArgs extends io.pulumi.resou
      * Name of the backup.
      * 
      */
-    @InputImport(name="backupName")
+    @Import(name="backupName")
       private final @Nullable String backupName;
 
     public Optional<String> getBackupName() {
@@ -44,7 +44,7 @@ public final class ListWebAppBackupStatusSecretsSlotArgs extends io.pulumi.resou
      * Schedule for the backup if it is executed periodically.
      * 
      */
-    @InputImport(name="backupSchedule")
+    @Import(name="backupSchedule")
       private final @Nullable BackupSchedule backupSchedule;
 
     public Optional<BackupSchedule> getBackupSchedule() {
@@ -55,7 +55,7 @@ public final class ListWebAppBackupStatusSecretsSlotArgs extends io.pulumi.resou
      * Databases included in the backup.
      * 
      */
-    @InputImport(name="databases")
+    @Import(name="databases")
       private final @Nullable List<DatabaseBackupSetting> databases;
 
     public List<DatabaseBackupSetting> getDatabases() {
@@ -66,7 +66,7 @@ public final class ListWebAppBackupStatusSecretsSlotArgs extends io.pulumi.resou
      * True if the backup schedule is enabled (must be included in that case), false if the backup schedule should be disabled.
      * 
      */
-    @InputImport(name="enabled")
+    @Import(name="enabled")
       private final @Nullable Boolean enabled;
 
     public Optional<Boolean> getEnabled() {
@@ -77,7 +77,7 @@ public final class ListWebAppBackupStatusSecretsSlotArgs extends io.pulumi.resou
      * Kind of resource.
      * 
      */
-    @InputImport(name="kind")
+    @Import(name="kind")
       private final @Nullable String kind;
 
     public Optional<String> getKind() {
@@ -88,7 +88,7 @@ public final class ListWebAppBackupStatusSecretsSlotArgs extends io.pulumi.resou
      * Name of web app.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -99,7 +99,7 @@ public final class ListWebAppBackupStatusSecretsSlotArgs extends io.pulumi.resou
      * Name of the resource group to which the resource belongs.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {
@@ -110,7 +110,7 @@ public final class ListWebAppBackupStatusSecretsSlotArgs extends io.pulumi.resou
      * Name of web app slot. If not specified then will default to production slot.
      * 
      */
-    @InputImport(name="slot", required=true)
+    @Import(name="slot", required=true)
       private final String slot;
 
     public String getSlot() {
@@ -121,7 +121,7 @@ public final class ListWebAppBackupStatusSecretsSlotArgs extends io.pulumi.resou
      * SAS URL to the container.
      * 
      */
-    @InputImport(name="storageAccountUrl", required=true)
+    @Import(name="storageAccountUrl", required=true)
       private final String storageAccountUrl;
 
     public String getStorageAccountUrl() {

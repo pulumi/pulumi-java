@@ -5,14 +5,14 @@ package io.pulumi.azurenative.web.outputs;
 
 import io.pulumi.azurenative.web.outputs.ConfigurationResponse;
 import io.pulumi.azurenative.web.outputs.TemplateResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetContainerAppResult {
     /**
      * Non versioned Container App configuration properties.
@@ -75,20 +75,20 @@ public final class GetContainerAppResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetContainerAppResult(
-        @OutputCustomType.Parameter("configuration") @Nullable ConfigurationResponse configuration,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("kind") @Nullable String kind,
-        @OutputCustomType.Parameter("kubeEnvironmentId") @Nullable String kubeEnvironmentId,
-        @OutputCustomType.Parameter("latestRevisionFqdn") String latestRevisionFqdn,
-        @OutputCustomType.Parameter("latestRevisionName") String latestRevisionName,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("template") @Nullable TemplateResponse template,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("configuration") @Nullable ConfigurationResponse configuration,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("kind") @Nullable String kind,
+        @CustomType.Parameter("kubeEnvironmentId") @Nullable String kubeEnvironmentId,
+        @CustomType.Parameter("latestRevisionFqdn") String latestRevisionFqdn,
+        @CustomType.Parameter("latestRevisionName") String latestRevisionName,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("template") @Nullable TemplateResponse template,
+        @CustomType.Parameter("type") String type) {
         this.configuration = configuration;
         this.id = id;
         this.kind = kind;

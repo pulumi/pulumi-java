@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.databoxedge.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class KubernetesRoleComputeArgs extends io.pulumi.resources.Resourc
      * VM profile
      * 
      */
-    @InputImport(name="vmProfile", required=true)
+    @Import(name="vmProfile", required=true)
       private final Output<String> vmProfile;
 
     public Output<String> getVmProfile() {

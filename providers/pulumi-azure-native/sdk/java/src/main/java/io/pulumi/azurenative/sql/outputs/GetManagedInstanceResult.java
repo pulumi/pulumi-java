@@ -7,7 +7,7 @@ import io.pulumi.azurenative.sql.outputs.ManagedInstanceExternalAdministratorRes
 import io.pulumi.azurenative.sql.outputs.ManagedInstancePecPropertyResponse;
 import io.pulumi.azurenative.sql.outputs.ResourceIdentityResponse;
 import io.pulumi.azurenative.sql.outputs.SkuResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -17,7 +17,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetManagedInstanceResult {
     /**
      * Administrator username for the managed instance. Can only be specified when the managed instance is being created (and is required for creation).
@@ -166,37 +166,37 @@ public final class GetManagedInstanceResult {
      */
     private final @Nullable Boolean zoneRedundant;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetManagedInstanceResult(
-        @OutputCustomType.Parameter("administratorLogin") @Nullable String administratorLogin,
-        @OutputCustomType.Parameter("administrators") @Nullable ManagedInstanceExternalAdministratorResponse administrators,
-        @OutputCustomType.Parameter("collation") @Nullable String collation,
-        @OutputCustomType.Parameter("dnsZone") String dnsZone,
-        @OutputCustomType.Parameter("fullyQualifiedDomainName") String fullyQualifiedDomainName,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("identity") @Nullable ResourceIdentityResponse identity,
-        @OutputCustomType.Parameter("instancePoolId") @Nullable String instancePoolId,
-        @OutputCustomType.Parameter("keyId") @Nullable String keyId,
-        @OutputCustomType.Parameter("licenseType") @Nullable String licenseType,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("maintenanceConfigurationId") @Nullable String maintenanceConfigurationId,
-        @OutputCustomType.Parameter("minimalTlsVersion") @Nullable String minimalTlsVersion,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("primaryUserAssignedIdentityId") @Nullable String primaryUserAssignedIdentityId,
-        @OutputCustomType.Parameter("privateEndpointConnections") List<ManagedInstancePecPropertyResponse> privateEndpointConnections,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("proxyOverride") @Nullable String proxyOverride,
-        @OutputCustomType.Parameter("publicDataEndpointEnabled") @Nullable Boolean publicDataEndpointEnabled,
-        @OutputCustomType.Parameter("sku") @Nullable SkuResponse sku,
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("storageAccountType") @Nullable String storageAccountType,
-        @OutputCustomType.Parameter("storageSizeInGB") @Nullable Integer storageSizeInGB,
-        @OutputCustomType.Parameter("subnetId") @Nullable String subnetId,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("timezoneId") @Nullable String timezoneId,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("vCores") @Nullable Integer vCores,
-        @OutputCustomType.Parameter("zoneRedundant") @Nullable Boolean zoneRedundant) {
+        @CustomType.Parameter("administratorLogin") @Nullable String administratorLogin,
+        @CustomType.Parameter("administrators") @Nullable ManagedInstanceExternalAdministratorResponse administrators,
+        @CustomType.Parameter("collation") @Nullable String collation,
+        @CustomType.Parameter("dnsZone") String dnsZone,
+        @CustomType.Parameter("fullyQualifiedDomainName") String fullyQualifiedDomainName,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("identity") @Nullable ResourceIdentityResponse identity,
+        @CustomType.Parameter("instancePoolId") @Nullable String instancePoolId,
+        @CustomType.Parameter("keyId") @Nullable String keyId,
+        @CustomType.Parameter("licenseType") @Nullable String licenseType,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("maintenanceConfigurationId") @Nullable String maintenanceConfigurationId,
+        @CustomType.Parameter("minimalTlsVersion") @Nullable String minimalTlsVersion,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("primaryUserAssignedIdentityId") @Nullable String primaryUserAssignedIdentityId,
+        @CustomType.Parameter("privateEndpointConnections") List<ManagedInstancePecPropertyResponse> privateEndpointConnections,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("proxyOverride") @Nullable String proxyOverride,
+        @CustomType.Parameter("publicDataEndpointEnabled") @Nullable Boolean publicDataEndpointEnabled,
+        @CustomType.Parameter("sku") @Nullable SkuResponse sku,
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("storageAccountType") @Nullable String storageAccountType,
+        @CustomType.Parameter("storageSizeInGB") @Nullable Integer storageSizeInGB,
+        @CustomType.Parameter("subnetId") @Nullable String subnetId,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("timezoneId") @Nullable String timezoneId,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("vCores") @Nullable Integer vCores,
+        @CustomType.Parameter("zoneRedundant") @Nullable Boolean zoneRedundant) {
         this.administratorLogin = administratorLogin;
         this.administrators = administrators;
         this.collation = collation;

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class ServiceAssociationLinkResponse extends io.pulumi.resources.In
      * If true, the resource can be deleted.
      * 
      */
-    @InputImport(name="allowDelete")
+    @Import(name="allowDelete")
       private final @Nullable Boolean allowDelete;
 
     public Optional<Boolean> getAllowDelete() {
@@ -35,7 +35,7 @@ public final class ServiceAssociationLinkResponse extends io.pulumi.resources.In
      * A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    @InputImport(name="etag", required=true)
+    @Import(name="etag", required=true)
       private final String etag;
 
     public String getEtag() {
@@ -46,7 +46,7 @@ public final class ServiceAssociationLinkResponse extends io.pulumi.resources.In
      * Resource ID.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable String id;
 
     public Optional<String> getId() {
@@ -57,7 +57,7 @@ public final class ServiceAssociationLinkResponse extends io.pulumi.resources.In
      * Link to the external resource.
      * 
      */
-    @InputImport(name="link")
+    @Import(name="link")
       private final @Nullable String link;
 
     public Optional<String> getLink() {
@@ -68,7 +68,7 @@ public final class ServiceAssociationLinkResponse extends io.pulumi.resources.In
      * Resource type of the linked resource.
      * 
      */
-    @InputImport(name="linkedResourceType")
+    @Import(name="linkedResourceType")
       private final @Nullable String linkedResourceType;
 
     public Optional<String> getLinkedResourceType() {
@@ -79,7 +79,7 @@ public final class ServiceAssociationLinkResponse extends io.pulumi.resources.In
      * A list of locations.
      * 
      */
-    @InputImport(name="locations")
+    @Import(name="locations")
       private final @Nullable List<String> locations;
 
     public List<String> getLocations() {
@@ -90,7 +90,7 @@ public final class ServiceAssociationLinkResponse extends io.pulumi.resources.In
      * Name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -101,7 +101,7 @@ public final class ServiceAssociationLinkResponse extends io.pulumi.resources.In
      * The provisioning state of the service association link resource.
      * 
      */
-    @InputImport(name="provisioningState", required=true)
+    @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
     public String getProvisioningState() {
@@ -112,7 +112,7 @@ public final class ServiceAssociationLinkResponse extends io.pulumi.resources.In
      * Resource type.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

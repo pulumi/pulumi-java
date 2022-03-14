@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.deploymentmanager.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class SasAuthenticationArgs extends io.pulumi.resources.ResourceArg
      * The SAS URI to the Azure Storage blob container. Any offset from the root of the container to where the artifacts are located can be defined in the artifactRoot.
      * 
      */
-    @InputImport(name="sasUri", required=true)
+    @Import(name="sasUri", required=true)
       private final Output<String> sasUri;
 
     public Output<String> getSasUri() {
@@ -33,7 +33,7 @@ public final class SasAuthenticationArgs extends io.pulumi.resources.ResourceArg
      * Expected value is 'Sas'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {

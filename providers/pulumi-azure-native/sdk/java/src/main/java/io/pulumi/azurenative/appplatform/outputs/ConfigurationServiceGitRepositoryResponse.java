@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.appplatform.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ConfigurationServiceGitRepositoryResponse {
     /**
      * Public sshKey of git repository.
@@ -69,19 +69,19 @@ public final class ConfigurationServiceGitRepositoryResponse {
      */
     private final @Nullable String username;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ConfigurationServiceGitRepositoryResponse(
-        @OutputCustomType.Parameter("hostKey") @Nullable String hostKey,
-        @OutputCustomType.Parameter("hostKeyAlgorithm") @Nullable String hostKeyAlgorithm,
-        @OutputCustomType.Parameter("label") String label,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("password") @Nullable String password,
-        @OutputCustomType.Parameter("patterns") List<String> patterns,
-        @OutputCustomType.Parameter("privateKey") @Nullable String privateKey,
-        @OutputCustomType.Parameter("searchPaths") @Nullable List<String> searchPaths,
-        @OutputCustomType.Parameter("strictHostKeyChecking") @Nullable Boolean strictHostKeyChecking,
-        @OutputCustomType.Parameter("uri") String uri,
-        @OutputCustomType.Parameter("username") @Nullable String username) {
+        @CustomType.Parameter("hostKey") @Nullable String hostKey,
+        @CustomType.Parameter("hostKeyAlgorithm") @Nullable String hostKeyAlgorithm,
+        @CustomType.Parameter("label") String label,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("password") @Nullable String password,
+        @CustomType.Parameter("patterns") List<String> patterns,
+        @CustomType.Parameter("privateKey") @Nullable String privateKey,
+        @CustomType.Parameter("searchPaths") @Nullable List<String> searchPaths,
+        @CustomType.Parameter("strictHostKeyChecking") @Nullable Boolean strictHostKeyChecking,
+        @CustomType.Parameter("uri") String uri,
+        @CustomType.Parameter("username") @Nullable String username) {
         this.hostKey = hostKey;
         this.hostKeyAlgorithm = hostKeyAlgorithm;
         this.label = label;

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.solutions.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetJitRequestArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the JIT request.
      * 
      */
-    @InputImport(name="jitRequestName", required=true)
+    @Import(name="jitRequestName", required=true)
       private final String jitRequestName;
 
     public String getJitRequestName() {
@@ -27,7 +27,7 @@ public final class GetJitRequestArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {

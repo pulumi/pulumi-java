@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GenericProtectedItemResponse {
     /**
      * Type of backup management for the backed up item.
@@ -116,28 +116,28 @@ public final class GenericProtectedItemResponse {
      */
     private final @Nullable String workloadType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GenericProtectedItemResponse(
-        @OutputCustomType.Parameter("backupManagementType") @Nullable String backupManagementType,
-        @OutputCustomType.Parameter("backupSetName") @Nullable String backupSetName,
-        @OutputCustomType.Parameter("containerName") @Nullable String containerName,
-        @OutputCustomType.Parameter("createMode") @Nullable String createMode,
-        @OutputCustomType.Parameter("deferredDeleteTimeInUTC") @Nullable String deferredDeleteTimeInUTC,
-        @OutputCustomType.Parameter("deferredDeleteTimeRemaining") @Nullable String deferredDeleteTimeRemaining,
-        @OutputCustomType.Parameter("fabricName") @Nullable String fabricName,
-        @OutputCustomType.Parameter("friendlyName") @Nullable String friendlyName,
-        @OutputCustomType.Parameter("isDeferredDeleteScheduleUpcoming") @Nullable Boolean isDeferredDeleteScheduleUpcoming,
-        @OutputCustomType.Parameter("isRehydrate") @Nullable Boolean isRehydrate,
-        @OutputCustomType.Parameter("isScheduledForDeferredDelete") @Nullable Boolean isScheduledForDeferredDelete,
-        @OutputCustomType.Parameter("lastRecoveryPoint") @Nullable String lastRecoveryPoint,
-        @OutputCustomType.Parameter("policyId") @Nullable String policyId,
-        @OutputCustomType.Parameter("policyState") @Nullable String policyState,
-        @OutputCustomType.Parameter("protectedItemId") @Nullable Double protectedItemId,
-        @OutputCustomType.Parameter("protectedItemType") String protectedItemType,
-        @OutputCustomType.Parameter("protectionState") @Nullable String protectionState,
-        @OutputCustomType.Parameter("sourceAssociations") @Nullable Map<String,String> sourceAssociations,
-        @OutputCustomType.Parameter("sourceResourceId") @Nullable String sourceResourceId,
-        @OutputCustomType.Parameter("workloadType") @Nullable String workloadType) {
+        @CustomType.Parameter("backupManagementType") @Nullable String backupManagementType,
+        @CustomType.Parameter("backupSetName") @Nullable String backupSetName,
+        @CustomType.Parameter("containerName") @Nullable String containerName,
+        @CustomType.Parameter("createMode") @Nullable String createMode,
+        @CustomType.Parameter("deferredDeleteTimeInUTC") @Nullable String deferredDeleteTimeInUTC,
+        @CustomType.Parameter("deferredDeleteTimeRemaining") @Nullable String deferredDeleteTimeRemaining,
+        @CustomType.Parameter("fabricName") @Nullable String fabricName,
+        @CustomType.Parameter("friendlyName") @Nullable String friendlyName,
+        @CustomType.Parameter("isDeferredDeleteScheduleUpcoming") @Nullable Boolean isDeferredDeleteScheduleUpcoming,
+        @CustomType.Parameter("isRehydrate") @Nullable Boolean isRehydrate,
+        @CustomType.Parameter("isScheduledForDeferredDelete") @Nullable Boolean isScheduledForDeferredDelete,
+        @CustomType.Parameter("lastRecoveryPoint") @Nullable String lastRecoveryPoint,
+        @CustomType.Parameter("policyId") @Nullable String policyId,
+        @CustomType.Parameter("policyState") @Nullable String policyState,
+        @CustomType.Parameter("protectedItemId") @Nullable Double protectedItemId,
+        @CustomType.Parameter("protectedItemType") String protectedItemType,
+        @CustomType.Parameter("protectionState") @Nullable String protectionState,
+        @CustomType.Parameter("sourceAssociations") @Nullable Map<String,String> sourceAssociations,
+        @CustomType.Parameter("sourceResourceId") @Nullable String sourceResourceId,
+        @CustomType.Parameter("workloadType") @Nullable String workloadType) {
         this.backupManagementType = backupManagementType;
         this.backupSetName = backupSetName;
         this.containerName = containerName;

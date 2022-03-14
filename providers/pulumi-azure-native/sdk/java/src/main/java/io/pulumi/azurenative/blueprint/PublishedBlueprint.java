@@ -10,7 +10,7 @@ import io.pulumi.azurenative.blueprint.outputs.ParameterDefinitionResponse;
 import io.pulumi.azurenative.blueprint.outputs.ResourceGroupDefinitionResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -38,7 +38,7 @@ public class PublishedBlueprint extends io.pulumi.resources.CustomResource {
      * Name of the published blueprint definition.
      * 
      */
-    @OutputExport(name="blueprintName", type=String.class, parameters={})
+    @Export(name="blueprintName", type=String.class, parameters={})
     private Output</* @Nullable */ String> blueprintName;
 
     /**
@@ -52,7 +52,7 @@ public class PublishedBlueprint extends io.pulumi.resources.CustomResource {
      * Version-specific change notes.
      * 
      */
-    @OutputExport(name="changeNotes", type=String.class, parameters={})
+    @Export(name="changeNotes", type=String.class, parameters={})
     private Output</* @Nullable */ String> changeNotes;
 
     /**
@@ -66,7 +66,7 @@ public class PublishedBlueprint extends io.pulumi.resources.CustomResource {
      * Multi-line explain this resource.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -80,7 +80,7 @@ public class PublishedBlueprint extends io.pulumi.resources.CustomResource {
      * One-liner string explain this resource.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output</* @Nullable */ String> displayName;
 
     /**
@@ -94,7 +94,7 @@ public class PublishedBlueprint extends io.pulumi.resources.CustomResource {
      * Name of this resource.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -108,7 +108,7 @@ public class PublishedBlueprint extends io.pulumi.resources.CustomResource {
      * Parameters required by this blueprint definition.
      * 
      */
-    @OutputExport(name="parameters", type=Map.class, parameters={String.class, ParameterDefinitionResponse.class})
+    @Export(name="parameters", type=Map.class, parameters={String.class, ParameterDefinitionResponse.class})
     private Output</* @Nullable */ Map<String,ParameterDefinitionResponse>> parameters;
 
     /**
@@ -122,7 +122,7 @@ public class PublishedBlueprint extends io.pulumi.resources.CustomResource {
      * Resource group placeholders defined by this blueprint definition.
      * 
      */
-    @OutputExport(name="resourceGroups", type=Map.class, parameters={String.class, ResourceGroupDefinitionResponse.class})
+    @Export(name="resourceGroups", type=Map.class, parameters={String.class, ResourceGroupDefinitionResponse.class})
     private Output</* @Nullable */ Map<String,ResourceGroupDefinitionResponse>> resourceGroups;
 
     /**
@@ -136,7 +136,7 @@ public class PublishedBlueprint extends io.pulumi.resources.CustomResource {
      * Status of the blueprint. This field is readonly.
      * 
      */
-    @OutputExport(name="status", type=BlueprintStatusResponse.class, parameters={})
+    @Export(name="status", type=BlueprintStatusResponse.class, parameters={})
     private Output<BlueprintStatusResponse> status;
 
     /**
@@ -150,7 +150,7 @@ public class PublishedBlueprint extends io.pulumi.resources.CustomResource {
      * The scope where this blueprint definition can be assigned.
      * 
      */
-    @OutputExport(name="targetScope", type=String.class, parameters={})
+    @Export(name="targetScope", type=String.class, parameters={})
     private Output</* @Nullable */ String> targetScope;
 
     /**
@@ -164,7 +164,7 @@ public class PublishedBlueprint extends io.pulumi.resources.CustomResource {
      * Type of this resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

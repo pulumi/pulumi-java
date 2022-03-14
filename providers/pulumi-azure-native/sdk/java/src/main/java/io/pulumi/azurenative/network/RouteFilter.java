@@ -9,7 +9,7 @@ import io.pulumi.azurenative.network.outputs.ExpressRouteCircuitPeeringResponse;
 import io.pulumi.azurenative.network.outputs.RouteFilterRuleResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -37,7 +37,7 @@ public class RouteFilter extends io.pulumi.resources.CustomResource {
      * A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -51,7 +51,7 @@ public class RouteFilter extends io.pulumi.resources.CustomResource {
      * A collection of references to express route circuit ipv6 peerings.
      * 
      */
-    @OutputExport(name="ipv6Peerings", type=List.class, parameters={ExpressRouteCircuitPeeringResponse.class})
+    @Export(name="ipv6Peerings", type=List.class, parameters={ExpressRouteCircuitPeeringResponse.class})
     private Output<List<ExpressRouteCircuitPeeringResponse>> ipv6Peerings;
 
     /**
@@ -65,7 +65,7 @@ public class RouteFilter extends io.pulumi.resources.CustomResource {
      * Resource location.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -79,7 +79,7 @@ public class RouteFilter extends io.pulumi.resources.CustomResource {
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -93,7 +93,7 @@ public class RouteFilter extends io.pulumi.resources.CustomResource {
      * A collection of references to express route circuit peerings.
      * 
      */
-    @OutputExport(name="peerings", type=List.class, parameters={ExpressRouteCircuitPeeringResponse.class})
+    @Export(name="peerings", type=List.class, parameters={ExpressRouteCircuitPeeringResponse.class})
     private Output<List<ExpressRouteCircuitPeeringResponse>> peerings;
 
     /**
@@ -107,7 +107,7 @@ public class RouteFilter extends io.pulumi.resources.CustomResource {
      * The provisioning state of the route filter resource.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -121,7 +121,7 @@ public class RouteFilter extends io.pulumi.resources.CustomResource {
      * Collection of RouteFilterRules contained within a route filter.
      * 
      */
-    @OutputExport(name="rules", type=List.class, parameters={RouteFilterRuleResponse.class})
+    @Export(name="rules", type=List.class, parameters={RouteFilterRuleResponse.class})
     private Output</* @Nullable */ List<RouteFilterRuleResponse>> rules;
 
     /**
@@ -135,7 +135,7 @@ public class RouteFilter extends io.pulumi.resources.CustomResource {
      * Resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -149,7 +149,7 @@ public class RouteFilter extends io.pulumi.resources.CustomResource {
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

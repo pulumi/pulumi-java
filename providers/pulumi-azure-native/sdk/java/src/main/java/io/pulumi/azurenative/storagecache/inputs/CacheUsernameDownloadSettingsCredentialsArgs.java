@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.storagecache.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class CacheUsernameDownloadSettingsCredentialsArgs extends io.pulum
      * The Bind Distinguished Name identity to be used in the secure LDAP connection. This value is stored encrypted and not returned on response.
      * 
      */
-    @InputImport(name="bindDn")
+    @Import(name="bindDn")
       private final @Nullable Output<String> bindDn;
 
     public Output<String> getBindDn() {
@@ -33,7 +33,7 @@ public final class CacheUsernameDownloadSettingsCredentialsArgs extends io.pulum
      * The Bind password to be used in the secure LDAP connection. This value is stored encrypted and not returned on response.
      * 
      */
-    @InputImport(name="bindPassword")
+    @Import(name="bindPassword")
       private final @Nullable Output<String> bindPassword;
 
     public Output<String> getBindPassword() {

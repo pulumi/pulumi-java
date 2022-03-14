@@ -5,7 +5,7 @@ package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.azurenative.machinelearningservices.inputs.VirtualMachinePropertiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
      * Location for the underlying compute
      * 
      */
-    @InputImport(name="computeLocation")
+    @Import(name="computeLocation")
       private final @Nullable Output<String> computeLocation;
 
     public Output<String> getComputeLocation() {
@@ -35,7 +35,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
      * Expected value is 'VirtualMachine'.
      * 
      */
-    @InputImport(name="computeType", required=true)
+    @Import(name="computeType", required=true)
       private final Output<String> computeType;
 
     public Output<String> getComputeType() {
@@ -46,14 +46,14 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
      * The description of the Machine Learning compute.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
         return this.description == null ? Output.empty() : this.description;
     }
 
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable Output<VirtualMachinePropertiesArgs> properties;
 
     public Output<VirtualMachinePropertiesArgs> getProperties() {
@@ -64,7 +64,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
      * ARM resource id of the underlying compute
      * 
      */
-    @InputImport(name="resourceId")
+    @Import(name="resourceId")
       private final @Nullable Output<String> resourceId;
 
     public Output<String> getResourceId() {

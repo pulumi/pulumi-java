@@ -3,12 +3,12 @@
 
 package io.pulumi.azurenative.timeseriesinsights.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SkuResponse {
     /**
      * The capacity of the sku. For Gen1 environments, this value can be changed to support scale out of environments after they have been created.
@@ -21,10 +21,10 @@ public final class SkuResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SkuResponse(
-        @OutputCustomType.Parameter("capacity") Integer capacity,
-        @OutputCustomType.Parameter("name") String name) {
+        @CustomType.Parameter("capacity") Integer capacity,
+        @CustomType.Parameter("name") String name) {
         this.capacity = capacity;
         this.name = name;
     }

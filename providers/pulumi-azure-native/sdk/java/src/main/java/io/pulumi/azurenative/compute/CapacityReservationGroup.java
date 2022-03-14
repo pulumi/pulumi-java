@@ -9,7 +9,7 @@ import io.pulumi.azurenative.compute.outputs.CapacityReservationGroupInstanceVie
 import io.pulumi.azurenative.compute.outputs.SubResourceReadOnlyResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -37,7 +37,7 @@ public class CapacityReservationGroup extends io.pulumi.resources.CustomResource
      * A list of all capacity reservation resource ids that belong to capacity reservation group.
      * 
      */
-    @OutputExport(name="capacityReservations", type=List.class, parameters={SubResourceReadOnlyResponse.class})
+    @Export(name="capacityReservations", type=List.class, parameters={SubResourceReadOnlyResponse.class})
     private Output<List<SubResourceReadOnlyResponse>> capacityReservations;
 
     /**
@@ -51,7 +51,7 @@ public class CapacityReservationGroup extends io.pulumi.resources.CustomResource
      * The capacity reservation group instance view which has the list of instance views for all the capacity reservations that belong to the capacity reservation group.
      * 
      */
-    @OutputExport(name="instanceView", type=CapacityReservationGroupInstanceViewResponse.class, parameters={})
+    @Export(name="instanceView", type=CapacityReservationGroupInstanceViewResponse.class, parameters={})
     private Output<CapacityReservationGroupInstanceViewResponse> instanceView;
 
     /**
@@ -65,7 +65,7 @@ public class CapacityReservationGroup extends io.pulumi.resources.CustomResource
      * Resource location
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -79,7 +79,7 @@ public class CapacityReservationGroup extends io.pulumi.resources.CustomResource
      * Resource name
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -93,7 +93,7 @@ public class CapacityReservationGroup extends io.pulumi.resources.CustomResource
      * Resource tags
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -107,7 +107,7 @@ public class CapacityReservationGroup extends io.pulumi.resources.CustomResource
      * Resource type
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -121,7 +121,7 @@ public class CapacityReservationGroup extends io.pulumi.resources.CustomResource
      * A list of references to all virtual machines associated to the capacity reservation group.
      * 
      */
-    @OutputExport(name="virtualMachinesAssociated", type=List.class, parameters={SubResourceReadOnlyResponse.class})
+    @Export(name="virtualMachinesAssociated", type=List.class, parameters={SubResourceReadOnlyResponse.class})
     private Output<List<SubResourceReadOnlyResponse>> virtualMachinesAssociated;
 
     /**
@@ -135,7 +135,7 @@ public class CapacityReservationGroup extends io.pulumi.resources.CustomResource
      * Availability Zones to use for this capacity reservation group. The zones can be assigned only during creation. If not provided, the group supports only regional resources in the region. If provided, enforces each capacity reservation in the group to be in one of the zones.
      * 
      */
-    @OutputExport(name="zones", type=List.class, parameters={String.class})
+    @Export(name="zones", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> zones;
 
     /**

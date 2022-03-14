@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.azurearcdata.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -12,7 +12,7 @@ public final class GetDataControllerArgs extends io.pulumi.resources.InvokeArgs 
 
     public static final GetDataControllerArgs Empty = new GetDataControllerArgs();
 
-    @InputImport(name="dataControllerName", required=true)
+    @Import(name="dataControllerName", required=true)
       private final String dataControllerName;
 
     public String getDataControllerName() {
@@ -23,7 +23,7 @@ public final class GetDataControllerArgs extends io.pulumi.resources.InvokeArgs 
      * The name of the Azure resource group
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.machinelearningexperimentation.ProjectArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +35,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * The immutable id of the team account which contains this project.
      * 
      */
-    @OutputExport(name="accountId", type=String.class, parameters={})
+    @Export(name="accountId", type=String.class, parameters={})
     private Output<String> accountId;
 
     /**
@@ -49,7 +49,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * The creation date of the project in ISO8601 format.
      * 
      */
-    @OutputExport(name="creationDate", type=String.class, parameters={})
+    @Export(name="creationDate", type=String.class, parameters={})
     private Output<String> creationDate;
 
     /**
@@ -63,7 +63,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * The description of this project.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -77,7 +77,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * The friendly name for this project.
      * 
      */
-    @OutputExport(name="friendlyName", type=String.class, parameters={})
+    @Export(name="friendlyName", type=String.class, parameters={})
     private Output<String> friendlyName;
 
     /**
@@ -91,7 +91,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * The reference to git repo for this project.
      * 
      */
-    @OutputExport(name="gitrepo", type=String.class, parameters={})
+    @Export(name="gitrepo", type=String.class, parameters={})
     private Output</* @Nullable */ String> gitrepo;
 
     /**
@@ -105,7 +105,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * The location of the resource. This cannot be changed after the resource is created.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -119,7 +119,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * The name of the resource.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -133,7 +133,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * The immutable id of this project.
      * 
      */
-    @OutputExport(name="projectId", type=String.class, parameters={})
+    @Export(name="projectId", type=String.class, parameters={})
     private Output<String> projectId;
 
     /**
@@ -147,7 +147,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * The current deployment state of project resource. The provisioningState is to indicate states for resource provisioning.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -161,7 +161,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * The tags of the resource.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -175,7 +175,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * The type of the resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -189,7 +189,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * The immutable id of the workspace which contains this project.
      * 
      */
-    @OutputExport(name="workspaceId", type=String.class, parameters={})
+    @Export(name="workspaceId", type=String.class, parameters={})
     private Output<String> workspaceId;
 
     /**

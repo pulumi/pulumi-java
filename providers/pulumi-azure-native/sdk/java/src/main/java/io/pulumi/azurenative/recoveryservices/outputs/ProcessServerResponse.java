@@ -6,7 +6,7 @@ package io.pulumi.azurenative.recoveryservices.outputs;
 import io.pulumi.azurenative.recoveryservices.outputs.HealthErrorResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.MobilityServiceUpdateResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.VersionDetailsResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -15,7 +15,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ProcessServerResponse {
     /**
      * Agent expiry date.
@@ -198,44 +198,44 @@ public final class ProcessServerResponse {
      */
     private final @Nullable String versionStatus;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ProcessServerResponse(
-        @OutputCustomType.Parameter("agentExpiryDate") @Nullable String agentExpiryDate,
-        @OutputCustomType.Parameter("agentVersion") @Nullable String agentVersion,
-        @OutputCustomType.Parameter("agentVersionDetails") @Nullable VersionDetailsResponse agentVersionDetails,
-        @OutputCustomType.Parameter("availableMemoryInBytes") @Nullable Double availableMemoryInBytes,
-        @OutputCustomType.Parameter("availableSpaceInBytes") @Nullable Double availableSpaceInBytes,
-        @OutputCustomType.Parameter("cpuLoad") @Nullable String cpuLoad,
-        @OutputCustomType.Parameter("cpuLoadStatus") @Nullable String cpuLoadStatus,
-        @OutputCustomType.Parameter("friendlyName") @Nullable String friendlyName,
-        @OutputCustomType.Parameter("health") String health,
-        @OutputCustomType.Parameter("healthErrors") @Nullable List<HealthErrorResponse> healthErrors,
-        @OutputCustomType.Parameter("hostId") @Nullable String hostId,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("ipAddress") @Nullable String ipAddress,
-        @OutputCustomType.Parameter("lastHeartbeat") @Nullable String lastHeartbeat,
-        @OutputCustomType.Parameter("machineCount") @Nullable String machineCount,
-        @OutputCustomType.Parameter("marsCommunicationStatus") String marsCommunicationStatus,
-        @OutputCustomType.Parameter("marsRegistrationStatus") String marsRegistrationStatus,
-        @OutputCustomType.Parameter("memoryUsageStatus") @Nullable String memoryUsageStatus,
-        @OutputCustomType.Parameter("mobilityServiceUpdates") @Nullable List<MobilityServiceUpdateResponse> mobilityServiceUpdates,
-        @OutputCustomType.Parameter("osType") @Nullable String osType,
-        @OutputCustomType.Parameter("osVersion") @Nullable String osVersion,
-        @OutputCustomType.Parameter("psServiceStatus") @Nullable String psServiceStatus,
-        @OutputCustomType.Parameter("psStatsRefreshTime") String psStatsRefreshTime,
-        @OutputCustomType.Parameter("replicationPairCount") @Nullable String replicationPairCount,
-        @OutputCustomType.Parameter("spaceUsageStatus") @Nullable String spaceUsageStatus,
-        @OutputCustomType.Parameter("sslCertExpiryDate") @Nullable String sslCertExpiryDate,
-        @OutputCustomType.Parameter("sslCertExpiryRemainingDays") @Nullable Integer sslCertExpiryRemainingDays,
-        @OutputCustomType.Parameter("systemLoad") @Nullable String systemLoad,
-        @OutputCustomType.Parameter("systemLoadStatus") @Nullable String systemLoadStatus,
-        @OutputCustomType.Parameter("throughputInBytes") Double throughputInBytes,
-        @OutputCustomType.Parameter("throughputInMBps") Double throughputInMBps,
-        @OutputCustomType.Parameter("throughputStatus") String throughputStatus,
-        @OutputCustomType.Parameter("throughputUploadPendingDataInBytes") Double throughputUploadPendingDataInBytes,
-        @OutputCustomType.Parameter("totalMemoryInBytes") @Nullable Double totalMemoryInBytes,
-        @OutputCustomType.Parameter("totalSpaceInBytes") @Nullable Double totalSpaceInBytes,
-        @OutputCustomType.Parameter("versionStatus") @Nullable String versionStatus) {
+        @CustomType.Parameter("agentExpiryDate") @Nullable String agentExpiryDate,
+        @CustomType.Parameter("agentVersion") @Nullable String agentVersion,
+        @CustomType.Parameter("agentVersionDetails") @Nullable VersionDetailsResponse agentVersionDetails,
+        @CustomType.Parameter("availableMemoryInBytes") @Nullable Double availableMemoryInBytes,
+        @CustomType.Parameter("availableSpaceInBytes") @Nullable Double availableSpaceInBytes,
+        @CustomType.Parameter("cpuLoad") @Nullable String cpuLoad,
+        @CustomType.Parameter("cpuLoadStatus") @Nullable String cpuLoadStatus,
+        @CustomType.Parameter("friendlyName") @Nullable String friendlyName,
+        @CustomType.Parameter("health") String health,
+        @CustomType.Parameter("healthErrors") @Nullable List<HealthErrorResponse> healthErrors,
+        @CustomType.Parameter("hostId") @Nullable String hostId,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("ipAddress") @Nullable String ipAddress,
+        @CustomType.Parameter("lastHeartbeat") @Nullable String lastHeartbeat,
+        @CustomType.Parameter("machineCount") @Nullable String machineCount,
+        @CustomType.Parameter("marsCommunicationStatus") String marsCommunicationStatus,
+        @CustomType.Parameter("marsRegistrationStatus") String marsRegistrationStatus,
+        @CustomType.Parameter("memoryUsageStatus") @Nullable String memoryUsageStatus,
+        @CustomType.Parameter("mobilityServiceUpdates") @Nullable List<MobilityServiceUpdateResponse> mobilityServiceUpdates,
+        @CustomType.Parameter("osType") @Nullable String osType,
+        @CustomType.Parameter("osVersion") @Nullable String osVersion,
+        @CustomType.Parameter("psServiceStatus") @Nullable String psServiceStatus,
+        @CustomType.Parameter("psStatsRefreshTime") String psStatsRefreshTime,
+        @CustomType.Parameter("replicationPairCount") @Nullable String replicationPairCount,
+        @CustomType.Parameter("spaceUsageStatus") @Nullable String spaceUsageStatus,
+        @CustomType.Parameter("sslCertExpiryDate") @Nullable String sslCertExpiryDate,
+        @CustomType.Parameter("sslCertExpiryRemainingDays") @Nullable Integer sslCertExpiryRemainingDays,
+        @CustomType.Parameter("systemLoad") @Nullable String systemLoad,
+        @CustomType.Parameter("systemLoadStatus") @Nullable String systemLoadStatus,
+        @CustomType.Parameter("throughputInBytes") Double throughputInBytes,
+        @CustomType.Parameter("throughputInMBps") Double throughputInMBps,
+        @CustomType.Parameter("throughputStatus") String throughputStatus,
+        @CustomType.Parameter("throughputUploadPendingDataInBytes") Double throughputUploadPendingDataInBytes,
+        @CustomType.Parameter("totalMemoryInBytes") @Nullable Double totalMemoryInBytes,
+        @CustomType.Parameter("totalSpaceInBytes") @Nullable Double totalSpaceInBytes,
+        @CustomType.Parameter("versionStatus") @Nullable String versionStatus) {
         this.agentExpiryDate = agentExpiryDate;
         this.agentVersion = agentVersion;
         this.agentVersionDetails = agentVersionDetails;

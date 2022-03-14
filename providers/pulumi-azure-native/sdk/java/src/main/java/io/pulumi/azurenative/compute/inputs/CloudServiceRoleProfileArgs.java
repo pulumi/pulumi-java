@@ -5,7 +5,7 @@ package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.azurenative.compute.inputs.CloudServiceRoleProfilePropertiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class CloudServiceRoleProfileArgs extends io.pulumi.resources.Resou
      * List of roles for the cloud service.
      * 
      */
-    @InputImport(name="roles")
+    @Import(name="roles")
       private final @Nullable Output<List<CloudServiceRoleProfilePropertiesArgs>> roles;
 
     public Output<List<CloudServiceRoleProfilePropertiesArgs>> getRoles() {

@@ -3,12 +3,12 @@
 
 package io.pulumi.azurenative.security.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AwAssumeRoleAuthenticationDetailsPropertiesResponse {
     /**
      * The ID of the cloud account
@@ -42,14 +42,14 @@ public final class AwAssumeRoleAuthenticationDetailsPropertiesResponse {
      */
     private final List<String> grantedPermissions;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AwAssumeRoleAuthenticationDetailsPropertiesResponse(
-        @OutputCustomType.Parameter("accountId") String accountId,
-        @OutputCustomType.Parameter("authenticationProvisioningState") String authenticationProvisioningState,
-        @OutputCustomType.Parameter("authenticationType") String authenticationType,
-        @OutputCustomType.Parameter("awsAssumeRoleArn") String awsAssumeRoleArn,
-        @OutputCustomType.Parameter("awsExternalId") String awsExternalId,
-        @OutputCustomType.Parameter("grantedPermissions") List<String> grantedPermissions) {
+        @CustomType.Parameter("accountId") String accountId,
+        @CustomType.Parameter("authenticationProvisioningState") String authenticationProvisioningState,
+        @CustomType.Parameter("authenticationType") String authenticationType,
+        @CustomType.Parameter("awsAssumeRoleArn") String awsAssumeRoleArn,
+        @CustomType.Parameter("awsExternalId") String awsExternalId,
+        @CustomType.Parameter("grantedPermissions") List<String> grantedPermissions) {
         this.accountId = accountId;
         this.authenticationProvisioningState = authenticationProvisioningState;
         this.authenticationType = authenticationType;

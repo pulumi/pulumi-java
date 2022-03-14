@@ -6,7 +6,7 @@ package io.pulumi.azurenative.search.inputs;
 import io.pulumi.azurenative.search.enums.SharedPrivateLinkResourceProvisioningState;
 import io.pulumi.azurenative.search.enums.SharedPrivateLinkResourceStatus;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class SharedPrivateLinkResourcePropertiesArgs extends io.pulumi.res
      * The group id from the provider of resource the shared private link resource is for.
      * 
      */
-    @InputImport(name="groupId")
+    @Import(name="groupId")
       private final @Nullable Output<String> groupId;
 
     public Output<String> getGroupId() {
@@ -35,7 +35,7 @@ public final class SharedPrivateLinkResourcePropertiesArgs extends io.pulumi.res
      * The resource id of the resource the shared private link resource is for.
      * 
      */
-    @InputImport(name="privateLinkResourceId")
+    @Import(name="privateLinkResourceId")
       private final @Nullable Output<String> privateLinkResourceId;
 
     public Output<String> getPrivateLinkResourceId() {
@@ -46,7 +46,7 @@ public final class SharedPrivateLinkResourcePropertiesArgs extends io.pulumi.res
      * The provisioning state of the shared private link resource. Can be Updating, Deleting, Failed, Succeeded or Incomplete.
      * 
      */
-    @InputImport(name="provisioningState")
+    @Import(name="provisioningState")
       private final @Nullable Output<SharedPrivateLinkResourceProvisioningState> provisioningState;
 
     public Output<SharedPrivateLinkResourceProvisioningState> getProvisioningState() {
@@ -57,7 +57,7 @@ public final class SharedPrivateLinkResourcePropertiesArgs extends io.pulumi.res
      * The request message for requesting approval of the shared private link resource.
      * 
      */
-    @InputImport(name="requestMessage")
+    @Import(name="requestMessage")
       private final @Nullable Output<String> requestMessage;
 
     public Output<String> getRequestMessage() {
@@ -68,7 +68,7 @@ public final class SharedPrivateLinkResourcePropertiesArgs extends io.pulumi.res
      * Optional. Can be used to specify the Azure Resource Manager location of the resource to which a shared private link is to be created. This is only required for those resources whose DNS configuration are regional (such as Azure Kubernetes Service).
      * 
      */
-    @InputImport(name="resourceRegion")
+    @Import(name="resourceRegion")
       private final @Nullable Output<String> resourceRegion;
 
     public Output<String> getResourceRegion() {
@@ -79,7 +79,7 @@ public final class SharedPrivateLinkResourcePropertiesArgs extends io.pulumi.res
      * Status of the shared private link resource. Can be Pending, Approved, Rejected or Disconnected.
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable Output<SharedPrivateLinkResourceStatus> status;
 
     public Output<SharedPrivateLinkResourceStatus> getStatus() {

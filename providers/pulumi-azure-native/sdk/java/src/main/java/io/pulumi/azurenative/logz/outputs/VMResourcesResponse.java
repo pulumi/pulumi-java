@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.logz.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VMResourcesResponse {
     /**
      * Version of the Logz agent installed on the VM.
@@ -22,10 +22,10 @@ public final class VMResourcesResponse {
      */
     private final @Nullable String id;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VMResourcesResponse(
-        @OutputCustomType.Parameter("agentVersion") @Nullable String agentVersion,
-        @OutputCustomType.Parameter("id") @Nullable String id) {
+        @CustomType.Parameter("agentVersion") @Nullable String agentVersion,
+        @CustomType.Parameter("id") @Nullable String id) {
         this.agentVersion = agentVersion;
         this.id = id;
     }

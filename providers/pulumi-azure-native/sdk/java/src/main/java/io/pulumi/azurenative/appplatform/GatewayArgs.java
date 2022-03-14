@@ -6,7 +6,7 @@ package io.pulumi.azurenative.appplatform;
 import io.pulumi.azurenative.appplatform.inputs.GatewayPropertiesArgs;
 import io.pulumi.azurenative.appplatform.inputs.SkuArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
      * The name of Spring Cloud Gateway.
      * 
      */
-    @InputImport(name="gatewayName")
+    @Import(name="gatewayName")
       private final @Nullable Output<String> gatewayName;
 
     public Output<String> getGatewayName() {
@@ -31,7 +31,7 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
      * Spring Cloud Gateway properties payload
      * 
      */
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable Output<GatewayPropertiesArgs> properties;
 
     public Output<GatewayPropertiesArgs> getProperties() {
@@ -42,7 +42,7 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -53,7 +53,7 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the Service resource.
      * 
      */
-    @InputImport(name="serviceName", required=true)
+    @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
 
     public Output<String> getServiceName() {
@@ -64,7 +64,7 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
      * Sku of the Spring Cloud Gateway resource
      * 
      */
-    @InputImport(name="sku")
+    @Import(name="sku")
       private final @Nullable Output<SkuArgs> sku;
 
     public Output<SkuArgs> getSku() {

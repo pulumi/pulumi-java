@@ -12,7 +12,7 @@ import io.pulumi.azurenative.media.inputs.JobInputsArgs;
 import io.pulumi.azurenative.media.inputs.JobOutputAssetArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -29,7 +29,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * The Media Services account name.
      * 
      */
-    @InputImport(name="accountName", required=true)
+    @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
     public Output<String> getAccountName() {
@@ -40,7 +40,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * Customer provided key, value pairs that will be returned in Job and JobOutput state events.
      * 
      */
-    @InputImport(name="correlationData")
+    @Import(name="correlationData")
       private final @Nullable Output<Map<String,String>> correlationData;
 
     public Output<Map<String,String>> getCorrelationData() {
@@ -51,7 +51,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * Optional customer supplied description of the Job.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -62,7 +62,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * The inputs for the Job.
      * 
      */
-    @InputImport(name="input", required=true)
+    @Import(name="input", required=true)
       private final Output<Object> input;
 
     public Output<Object> getInput() {
@@ -73,7 +73,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * The Job name.
      * 
      */
-    @InputImport(name="jobName")
+    @Import(name="jobName")
       private final @Nullable Output<String> jobName;
 
     public Output<String> getJobName() {
@@ -84,7 +84,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * The outputs for the Job.
      * 
      */
-    @InputImport(name="outputs", required=true)
+    @Import(name="outputs", required=true)
       private final Output<List<JobOutputAssetArgs>> outputs;
 
     public Output<List<JobOutputAssetArgs>> getOutputs() {
@@ -95,7 +95,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * Priority with which the job should be processed. Higher priority jobs are processed before lower priority jobs. If not set, the default is normal.
      * 
      */
-    @InputImport(name="priority")
+    @Import(name="priority")
       private final @Nullable Output<Either<String,Priority>> priority;
 
     public Output<Either<String,Priority>> getPriority() {
@@ -106,7 +106,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group within the Azure subscription.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -117,7 +117,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * The Transform name.
      * 
      */
-    @InputImport(name="transformName", required=true)
+    @Import(name="transformName", required=true)
       private final Output<String> transformName;
 
     public Output<String> getTransformName() {

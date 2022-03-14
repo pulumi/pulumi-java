@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.datamigration.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ValidationErrorResponse {
     /**
      * Severity of the error
@@ -20,10 +20,10 @@ public final class ValidationErrorResponse {
      */
     private final String text;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ValidationErrorResponse(
-        @OutputCustomType.Parameter("severity") String severity,
-        @OutputCustomType.Parameter("text") String text) {
+        @CustomType.Parameter("severity") String severity,
+        @CustomType.Parameter("text") String text) {
         this.severity = severity;
         this.text = text;
     }

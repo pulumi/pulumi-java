@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.containerregistry.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EventResponseMessageResponse {
     /**
      * The content of the event response message.
@@ -38,13 +38,13 @@ public final class EventResponseMessageResponse {
      */
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EventResponseMessageResponse(
-        @OutputCustomType.Parameter("content") @Nullable String content,
-        @OutputCustomType.Parameter("headers") @Nullable Map<String,String> headers,
-        @OutputCustomType.Parameter("reasonPhrase") @Nullable String reasonPhrase,
-        @OutputCustomType.Parameter("statusCode") @Nullable String statusCode,
-        @OutputCustomType.Parameter("version") @Nullable String version) {
+        @CustomType.Parameter("content") @Nullable String content,
+        @CustomType.Parameter("headers") @Nullable Map<String,String> headers,
+        @CustomType.Parameter("reasonPhrase") @Nullable String reasonPhrase,
+        @CustomType.Parameter("statusCode") @Nullable String statusCode,
+        @CustomType.Parameter("version") @Nullable String version) {
         this.content = content;
         this.headers = headers;
         this.reasonPhrase = reasonPhrase;

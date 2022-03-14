@@ -3,12 +3,12 @@
 
 package io.pulumi.azurenative.streamanalytics.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ClusterPropertiesResponse {
     /**
      * Represents the number of streaming units currently being used on the cluster.
@@ -36,13 +36,13 @@ public final class ClusterPropertiesResponse {
      */
     private final String provisioningState;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ClusterPropertiesResponse(
-        @OutputCustomType.Parameter("capacityAllocated") Integer capacityAllocated,
-        @OutputCustomType.Parameter("capacityAssigned") Integer capacityAssigned,
-        @OutputCustomType.Parameter("clusterId") String clusterId,
-        @OutputCustomType.Parameter("createdDate") String createdDate,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState) {
+        @CustomType.Parameter("capacityAllocated") Integer capacityAllocated,
+        @CustomType.Parameter("capacityAssigned") Integer capacityAssigned,
+        @CustomType.Parameter("clusterId") String clusterId,
+        @CustomType.Parameter("createdDate") String createdDate,
+        @CustomType.Parameter("provisioningState") String provisioningState) {
         this.capacityAllocated = capacityAllocated;
         this.capacityAssigned = capacityAssigned;
         this.clusterId = clusterId;

@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.logic.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class X12ProcessingSettingsResponse {
     /**
      * The value indicating whether to convert numerical type to implied decimal.
@@ -40,14 +40,14 @@ public final class X12ProcessingSettingsResponse {
      */
     private final Boolean useDotAsDecimalSeparator;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private X12ProcessingSettingsResponse(
-        @OutputCustomType.Parameter("convertImpliedDecimal") Boolean convertImpliedDecimal,
-        @OutputCustomType.Parameter("createEmptyXmlTagsForTrailingSeparators") Boolean createEmptyXmlTagsForTrailingSeparators,
-        @OutputCustomType.Parameter("maskSecurityInfo") Boolean maskSecurityInfo,
-        @OutputCustomType.Parameter("preserveInterchange") Boolean preserveInterchange,
-        @OutputCustomType.Parameter("suspendInterchangeOnError") Boolean suspendInterchangeOnError,
-        @OutputCustomType.Parameter("useDotAsDecimalSeparator") Boolean useDotAsDecimalSeparator) {
+        @CustomType.Parameter("convertImpliedDecimal") Boolean convertImpliedDecimal,
+        @CustomType.Parameter("createEmptyXmlTagsForTrailingSeparators") Boolean createEmptyXmlTagsForTrailingSeparators,
+        @CustomType.Parameter("maskSecurityInfo") Boolean maskSecurityInfo,
+        @CustomType.Parameter("preserveInterchange") Boolean preserveInterchange,
+        @CustomType.Parameter("suspendInterchangeOnError") Boolean suspendInterchangeOnError,
+        @CustomType.Parameter("useDotAsDecimalSeparator") Boolean useDotAsDecimalSeparator) {
         this.convertImpliedDecimal = convertImpliedDecimal;
         this.createEmptyXmlTagsForTrailingSeparators = createEmptyXmlTagsForTrailingSeparators;
         this.maskSecurityInfo = maskSecurityInfo;

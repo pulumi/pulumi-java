@@ -8,7 +8,7 @@ import io.pulumi.azurenative.compute.inputs.EncryptionSetIdentityArgs;
 import io.pulumi.azurenative.compute.inputs.KeyForDiskEncryptionSetArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -24,7 +24,7 @@ public final class DiskEncryptionSetArgs extends io.pulumi.resources.ResourceArg
      * The key vault key which is currently used by this disk encryption set.
      * 
      */
-    @InputImport(name="activeKey")
+    @Import(name="activeKey")
       private final @Nullable Output<KeyForDiskEncryptionSetArgs> activeKey;
 
     public Output<KeyForDiskEncryptionSetArgs> getActiveKey() {
@@ -35,7 +35,7 @@ public final class DiskEncryptionSetArgs extends io.pulumi.resources.ResourceArg
      * The name of the disk encryption set that is being created. The name can't be changed after the disk encryption set is created. Supported characters for the name are a-z, A-Z, 0-9 and _. The maximum name length is 80 characters.
      * 
      */
-    @InputImport(name="diskEncryptionSetName")
+    @Import(name="diskEncryptionSetName")
       private final @Nullable Output<String> diskEncryptionSetName;
 
     public Output<String> getDiskEncryptionSetName() {
@@ -46,7 +46,7 @@ public final class DiskEncryptionSetArgs extends io.pulumi.resources.ResourceArg
      * The type of key used to encrypt the data of the disk.
      * 
      */
-    @InputImport(name="encryptionType")
+    @Import(name="encryptionType")
       private final @Nullable Output<Either<String,DiskEncryptionSetType>> encryptionType;
 
     public Output<Either<String,DiskEncryptionSetType>> getEncryptionType() {
@@ -57,7 +57,7 @@ public final class DiskEncryptionSetArgs extends io.pulumi.resources.ResourceArg
      * The managed identity for the disk encryption set. It should be given permission on the key vault before it can be used to encrypt disks.
      * 
      */
-    @InputImport(name="identity")
+    @Import(name="identity")
       private final @Nullable Output<EncryptionSetIdentityArgs> identity;
 
     public Output<EncryptionSetIdentityArgs> getIdentity() {
@@ -68,7 +68,7 @@ public final class DiskEncryptionSetArgs extends io.pulumi.resources.ResourceArg
      * Resource location
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -79,7 +79,7 @@ public final class DiskEncryptionSetArgs extends io.pulumi.resources.ResourceArg
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -90,7 +90,7 @@ public final class DiskEncryptionSetArgs extends io.pulumi.resources.ResourceArg
      * Set this flag to true to enable auto-updating of this disk encryption set to the latest key version.
      * 
      */
-    @InputImport(name="rotationToLatestKeyVersionEnabled")
+    @Import(name="rotationToLatestKeyVersionEnabled")
       private final @Nullable Output<Boolean> rotationToLatestKeyVersionEnabled;
 
     public Output<Boolean> getRotationToLatestKeyVersionEnabled() {
@@ -101,7 +101,7 @@ public final class DiskEncryptionSetArgs extends io.pulumi.resources.ResourceArg
      * Resource tags
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

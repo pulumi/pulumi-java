@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.eventgrid.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetPrivateEndpointConnectionArgs extends io.pulumi.resources.
      * The name of the parent resource (namely, either, the topic name or domain name).
      * 
      */
-    @InputImport(name="parentName", required=true)
+    @Import(name="parentName", required=true)
       private final String parentName;
 
     public String getParentName() {
@@ -27,7 +27,7 @@ public final class GetPrivateEndpointConnectionArgs extends io.pulumi.resources.
      * The type of the parent resource. This can be either \'topics\' or \'domains\'.
      * 
      */
-    @InputImport(name="parentType", required=true)
+    @Import(name="parentType", required=true)
       private final String parentType;
 
     public String getParentType() {
@@ -38,7 +38,7 @@ public final class GetPrivateEndpointConnectionArgs extends io.pulumi.resources.
      * The name of the private endpoint connection connection.
      * 
      */
-    @InputImport(name="privateEndpointConnectionName", required=true)
+    @Import(name="privateEndpointConnectionName", required=true)
       private final String privateEndpointConnectionName;
 
     public String getPrivateEndpointConnectionName() {
@@ -49,7 +49,7 @@ public final class GetPrivateEndpointConnectionArgs extends io.pulumi.resources.
      * The name of the resource group within the user's subscription.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {

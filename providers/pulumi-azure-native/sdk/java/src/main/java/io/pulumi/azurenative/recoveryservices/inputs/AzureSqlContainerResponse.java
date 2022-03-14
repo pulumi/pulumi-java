@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class AzureSqlContainerResponse extends io.pulumi.resources.InvokeA
      * Type of backup management for the container.
      * 
      */
-    @InputImport(name="backupManagementType")
+    @Import(name="backupManagementType")
       private final @Nullable String backupManagementType;
 
     public Optional<String> getBackupManagementType() {
@@ -37,7 +37,7 @@ public final class AzureSqlContainerResponse extends io.pulumi.resources.InvokeA
      * Expected value is 'AzureSqlContainer'.
      * 
      */
-    @InputImport(name="containerType", required=true)
+    @Import(name="containerType", required=true)
       private final String containerType;
 
     public String getContainerType() {
@@ -48,7 +48,7 @@ public final class AzureSqlContainerResponse extends io.pulumi.resources.InvokeA
      * Friendly name of the container.
      * 
      */
-    @InputImport(name="friendlyName")
+    @Import(name="friendlyName")
       private final @Nullable String friendlyName;
 
     public Optional<String> getFriendlyName() {
@@ -59,7 +59,7 @@ public final class AzureSqlContainerResponse extends io.pulumi.resources.InvokeA
      * Status of health of the container.
      * 
      */
-    @InputImport(name="healthStatus")
+    @Import(name="healthStatus")
       private final @Nullable String healthStatus;
 
     public Optional<String> getHealthStatus() {
@@ -70,7 +70,7 @@ public final class AzureSqlContainerResponse extends io.pulumi.resources.InvokeA
      * Status of registration of the container with the Recovery Services Vault.
      * 
      */
-    @InputImport(name="registrationStatus")
+    @Import(name="registrationStatus")
       private final @Nullable String registrationStatus;
 
     public Optional<String> getRegistrationStatus() {

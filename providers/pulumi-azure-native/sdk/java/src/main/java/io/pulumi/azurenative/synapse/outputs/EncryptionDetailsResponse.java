@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.synapse.outputs;
 
 import io.pulumi.azurenative.synapse.outputs.CustomerManagedKeyDetailsResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EncryptionDetailsResponse {
     /**
      * Customer Managed Key Details
@@ -23,10 +23,10 @@ public final class EncryptionDetailsResponse {
      */
     private final Boolean doubleEncryptionEnabled;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EncryptionDetailsResponse(
-        @OutputCustomType.Parameter("cmk") @Nullable CustomerManagedKeyDetailsResponse cmk,
-        @OutputCustomType.Parameter("doubleEncryptionEnabled") Boolean doubleEncryptionEnabled) {
+        @CustomType.Parameter("cmk") @Nullable CustomerManagedKeyDetailsResponse cmk,
+        @CustomType.Parameter("doubleEncryptionEnabled") Boolean doubleEncryptionEnabled) {
         this.cmk = cmk;
         this.doubleEncryptionEnabled = doubleEncryptionEnabled;
     }

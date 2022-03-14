@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.containerservice.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PrivateLinkResourceResponse {
     /**
      * The group ID of the resource.
@@ -43,14 +43,14 @@ public final class PrivateLinkResourceResponse {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PrivateLinkResourceResponse(
-        @OutputCustomType.Parameter("groupId") @Nullable String groupId,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("privateLinkServiceID") String privateLinkServiceID,
-        @OutputCustomType.Parameter("requiredMembers") @Nullable List<String> requiredMembers,
-        @OutputCustomType.Parameter("type") @Nullable String type) {
+        @CustomType.Parameter("groupId") @Nullable String groupId,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("privateLinkServiceID") String privateLinkServiceID,
+        @CustomType.Parameter("requiredMembers") @Nullable List<String> requiredMembers,
+        @CustomType.Parameter("type") @Nullable String type) {
         this.groupId = groupId;
         this.id = id;
         this.name = name;

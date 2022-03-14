@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.devspaces.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class KubernetesConnectionDetailsResponse extends io.pulumi.resourc
      * Expected value is 'Kubernetes'.
      * 
      */
-    @InputImport(name="instanceType", required=true)
+    @Import(name="instanceType", required=true)
       private final String instanceType;
 
     public String getInstanceType() {
@@ -34,7 +34,7 @@ public final class KubernetesConnectionDetailsResponse extends io.pulumi.resourc
      * Gets the kubeconfig for the cluster.
      * 
      */
-    @InputImport(name="kubeConfig")
+    @Import(name="kubeConfig")
       private final @Nullable String kubeConfig;
 
     public Optional<String> getKubeConfig() {

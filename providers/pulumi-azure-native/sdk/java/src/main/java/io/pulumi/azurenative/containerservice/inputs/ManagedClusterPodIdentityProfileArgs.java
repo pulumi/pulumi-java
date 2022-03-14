@@ -6,7 +6,7 @@ package io.pulumi.azurenative.containerservice.inputs;
 import io.pulumi.azurenative.containerservice.inputs.ManagedClusterPodIdentityArgs;
 import io.pulumi.azurenative.containerservice.inputs.ManagedClusterPodIdentityExceptionArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class ManagedClusterPodIdentityProfileArgs extends io.pulumi.resour
      * Customer consent for enabling AAD pod identity addon in cluster using Kubenet network plugin.
      * 
      */
-    @InputImport(name="allowNetworkPluginKubenet")
+    @Import(name="allowNetworkPluginKubenet")
       private final @Nullable Output<Boolean> allowNetworkPluginKubenet;
 
     public Output<Boolean> getAllowNetworkPluginKubenet() {
@@ -32,7 +32,7 @@ public final class ManagedClusterPodIdentityProfileArgs extends io.pulumi.resour
      * Whether the pod identity addon is enabled.
      * 
      */
-    @InputImport(name="enabled")
+    @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
@@ -43,7 +43,7 @@ public final class ManagedClusterPodIdentityProfileArgs extends io.pulumi.resour
      * User assigned pod identity settings.
      * 
      */
-    @InputImport(name="userAssignedIdentities")
+    @Import(name="userAssignedIdentities")
       private final @Nullable Output<List<ManagedClusterPodIdentityArgs>> userAssignedIdentities;
 
     public Output<List<ManagedClusterPodIdentityArgs>> getUserAssignedIdentities() {
@@ -54,7 +54,7 @@ public final class ManagedClusterPodIdentityProfileArgs extends io.pulumi.resour
      * User assigned pod identity exception settings.
      * 
      */
-    @InputImport(name="userAssignedIdentityExceptions")
+    @Import(name="userAssignedIdentityExceptions")
       private final @Nullable Output<List<ManagedClusterPodIdentityExceptionArgs>> userAssignedIdentityExceptions;
 
     public Output<List<ManagedClusterPodIdentityExceptionArgs>> getUserAssignedIdentityExceptions() {

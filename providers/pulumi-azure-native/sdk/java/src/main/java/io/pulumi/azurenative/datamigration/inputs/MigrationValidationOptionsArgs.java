@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datamigration.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class MigrationValidationOptionsArgs extends io.pulumi.resources.Re
      * Allows to perform a checksum based data integrity validation between source and target for the selected database / tables .
      * 
      */
-    @InputImport(name="enableDataIntegrityValidation")
+    @Import(name="enableDataIntegrityValidation")
       private final @Nullable Output<Boolean> enableDataIntegrityValidation;
 
     public Output<Boolean> getEnableDataIntegrityValidation() {
@@ -33,7 +33,7 @@ public final class MigrationValidationOptionsArgs extends io.pulumi.resources.Re
      * Allows to perform a quick and intelligent query analysis by retrieving queries from the source database and executes them in the target. The result will have execution statistics for executions in source and target databases for the extracted queries.
      * 
      */
-    @InputImport(name="enableQueryAnalysisValidation")
+    @Import(name="enableQueryAnalysisValidation")
       private final @Nullable Output<Boolean> enableQueryAnalysisValidation;
 
     public Output<Boolean> getEnableQueryAnalysisValidation() {
@@ -44,7 +44,7 @@ public final class MigrationValidationOptionsArgs extends io.pulumi.resources.Re
      * Allows to compare the schema information between source and target.
      * 
      */
-    @InputImport(name="enableSchemaValidation")
+    @Import(name="enableSchemaValidation")
       private final @Nullable Output<Boolean> enableSchemaValidation;
 
     public Output<Boolean> getEnableSchemaValidation() {

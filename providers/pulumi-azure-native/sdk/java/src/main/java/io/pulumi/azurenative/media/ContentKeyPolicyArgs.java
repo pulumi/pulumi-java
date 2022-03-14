@@ -5,7 +5,7 @@ package io.pulumi.azurenative.media;
 
 import io.pulumi.azurenative.media.inputs.ContentKeyPolicyOptionArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ContentKeyPolicyArgs extends io.pulumi.resources.ResourceArgs
      * The Media Services account name.
      * 
      */
-    @InputImport(name="accountName", required=true)
+    @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
     public Output<String> getAccountName() {
@@ -31,7 +31,7 @@ public final class ContentKeyPolicyArgs extends io.pulumi.resources.ResourceArgs
      * The Content Key Policy name.
      * 
      */
-    @InputImport(name="contentKeyPolicyName")
+    @Import(name="contentKeyPolicyName")
       private final @Nullable Output<String> contentKeyPolicyName;
 
     public Output<String> getContentKeyPolicyName() {
@@ -42,7 +42,7 @@ public final class ContentKeyPolicyArgs extends io.pulumi.resources.ResourceArgs
      * A description for the Policy.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -53,7 +53,7 @@ public final class ContentKeyPolicyArgs extends io.pulumi.resources.ResourceArgs
      * The Key Policy options.
      * 
      */
-    @InputImport(name="options", required=true)
+    @Import(name="options", required=true)
       private final Output<List<ContentKeyPolicyOptionArgs>> options;
 
     public Output<List<ContentKeyPolicyOptionArgs>> getOptions() {
@@ -64,7 +64,7 @@ public final class ContentKeyPolicyArgs extends io.pulumi.resources.ResourceArgs
      * The name of the resource group within the Azure subscription.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {

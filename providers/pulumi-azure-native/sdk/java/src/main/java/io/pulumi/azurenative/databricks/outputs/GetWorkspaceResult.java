@@ -8,7 +8,7 @@ import io.pulumi.azurenative.databricks.outputs.ManagedIdentityConfigurationResp
 import io.pulumi.azurenative.databricks.outputs.SkuResponse;
 import io.pulumi.azurenative.databricks.outputs.WorkspaceCustomParametersResponse;
 import io.pulumi.azurenative.databricks.outputs.WorkspaceProviderAuthorizationResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -16,7 +16,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetWorkspaceResult {
     /**
      * The workspace provider authorizations.
@@ -104,25 +104,25 @@ public final class GetWorkspaceResult {
      */
     private final String workspaceUrl;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetWorkspaceResult(
-        @OutputCustomType.Parameter("authorizations") @Nullable List<WorkspaceProviderAuthorizationResponse> authorizations,
-        @OutputCustomType.Parameter("createdBy") @Nullable CreatedByResponse createdBy,
-        @OutputCustomType.Parameter("createdDateTime") String createdDateTime,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("managedResourceGroupId") String managedResourceGroupId,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("parameters") @Nullable WorkspaceCustomParametersResponse parameters,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("sku") @Nullable SkuResponse sku,
-        @OutputCustomType.Parameter("storageAccountIdentity") @Nullable ManagedIdentityConfigurationResponse storageAccountIdentity,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("uiDefinitionUri") @Nullable String uiDefinitionUri,
-        @OutputCustomType.Parameter("updatedBy") @Nullable CreatedByResponse updatedBy,
-        @OutputCustomType.Parameter("workspaceId") String workspaceId,
-        @OutputCustomType.Parameter("workspaceUrl") String workspaceUrl) {
+        @CustomType.Parameter("authorizations") @Nullable List<WorkspaceProviderAuthorizationResponse> authorizations,
+        @CustomType.Parameter("createdBy") @Nullable CreatedByResponse createdBy,
+        @CustomType.Parameter("createdDateTime") String createdDateTime,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("managedResourceGroupId") String managedResourceGroupId,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("parameters") @Nullable WorkspaceCustomParametersResponse parameters,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("sku") @Nullable SkuResponse sku,
+        @CustomType.Parameter("storageAccountIdentity") @Nullable ManagedIdentityConfigurationResponse storageAccountIdentity,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("uiDefinitionUri") @Nullable String uiDefinitionUri,
+        @CustomType.Parameter("updatedBy") @Nullable CreatedByResponse updatedBy,
+        @CustomType.Parameter("workspaceId") String workspaceId,
+        @CustomType.Parameter("workspaceUrl") String workspaceUrl) {
         this.authorizations = authorizations;
         this.createdBy = createdBy;
         this.createdDateTime = createdDateTime;

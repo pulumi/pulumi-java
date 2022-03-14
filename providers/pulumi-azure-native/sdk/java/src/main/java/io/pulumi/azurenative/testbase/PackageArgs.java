@@ -6,7 +6,7 @@ package io.pulumi.azurenative.testbase;
 import io.pulumi.azurenative.testbase.inputs.TargetOSInfoArgs;
 import io.pulumi.azurenative.testbase.inputs.TestArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -22,7 +22,7 @@ public final class PackageArgs extends io.pulumi.resources.ResourceArgs {
      * Application name
      * 
      */
-    @InputImport(name="applicationName", required=true)
+    @Import(name="applicationName", required=true)
       private final Output<String> applicationName;
 
     public Output<String> getApplicationName() {
@@ -33,7 +33,7 @@ public final class PackageArgs extends io.pulumi.resources.ResourceArgs {
      * The file path of the package.
      * 
      */
-    @InputImport(name="blobPath", required=true)
+    @Import(name="blobPath", required=true)
       private final Output<String> blobPath;
 
     public Output<String> getBlobPath() {
@@ -44,7 +44,7 @@ public final class PackageArgs extends io.pulumi.resources.ResourceArgs {
      * The flighting ring for feature update.
      * 
      */
-    @InputImport(name="flightingRing", required=true)
+    @Import(name="flightingRing", required=true)
       private final Output<String> flightingRing;
 
     public Output<String> getFlightingRing() {
@@ -55,7 +55,7 @@ public final class PackageArgs extends io.pulumi.resources.ResourceArgs {
      * The geo-location where the resource lives
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -66,7 +66,7 @@ public final class PackageArgs extends io.pulumi.resources.ResourceArgs {
      * The resource name of the Test Base Package.
      * 
      */
-    @InputImport(name="packageName")
+    @Import(name="packageName")
       private final @Nullable Output<String> packageName;
 
     public Output<String> getPackageName() {
@@ -77,7 +77,7 @@ public final class PackageArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group that contains the resource.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -88,7 +88,7 @@ public final class PackageArgs extends io.pulumi.resources.ResourceArgs {
      * The tags of the resource.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -99,7 +99,7 @@ public final class PackageArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the target OSs of specific OS Update types.
      * 
      */
-    @InputImport(name="targetOSList", required=true)
+    @Import(name="targetOSList", required=true)
       private final Output<List<TargetOSInfoArgs>> targetOSList;
 
     public Output<List<TargetOSInfoArgs>> getTargetOSList() {
@@ -110,7 +110,7 @@ public final class PackageArgs extends io.pulumi.resources.ResourceArgs {
      * The resource name of the Test Base Account.
      * 
      */
-    @InputImport(name="testBaseAccountName", required=true)
+    @Import(name="testBaseAccountName", required=true)
       private final Output<String> testBaseAccountName;
 
     public Output<String> getTestBaseAccountName() {
@@ -121,7 +121,7 @@ public final class PackageArgs extends io.pulumi.resources.ResourceArgs {
      * The detailed test information.
      * 
      */
-    @InputImport(name="tests", required=true)
+    @Import(name="tests", required=true)
       private final Output<List<TestArgs>> tests;
 
     public Output<List<TestArgs>> getTests() {
@@ -132,7 +132,7 @@ public final class PackageArgs extends io.pulumi.resources.ResourceArgs {
      * Application version
      * 
      */
-    @InputImport(name="version", required=true)
+    @Import(name="version", required=true)
       private final Output<String> version;
 
     public Output<String> getVersion() {

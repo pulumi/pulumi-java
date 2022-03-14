@@ -9,14 +9,14 @@ import io.pulumi.azurenative.containerinstance.outputs.ContainerPropertiesRespon
 import io.pulumi.azurenative.containerinstance.outputs.EnvironmentVariableResponse;
 import io.pulumi.azurenative.containerinstance.outputs.ResourceRequirementsResponse;
 import io.pulumi.azurenative.containerinstance.outputs.VolumeMountResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ContainerResponse {
     /**
      * The commands to execute within the container instance in exec form.
@@ -69,18 +69,18 @@ public final class ContainerResponse {
      */
     private final @Nullable List<VolumeMountResponse> volumeMounts;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ContainerResponse(
-        @OutputCustomType.Parameter("command") @Nullable List<String> command,
-        @OutputCustomType.Parameter("environmentVariables") @Nullable List<EnvironmentVariableResponse> environmentVariables,
-        @OutputCustomType.Parameter("image") String image,
-        @OutputCustomType.Parameter("instanceView") ContainerPropertiesResponseInstanceView instanceView,
-        @OutputCustomType.Parameter("livenessProbe") @Nullable ContainerProbeResponse livenessProbe,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("ports") @Nullable List<ContainerPortResponse> ports,
-        @OutputCustomType.Parameter("readinessProbe") @Nullable ContainerProbeResponse readinessProbe,
-        @OutputCustomType.Parameter("resources") ResourceRequirementsResponse resources,
-        @OutputCustomType.Parameter("volumeMounts") @Nullable List<VolumeMountResponse> volumeMounts) {
+        @CustomType.Parameter("command") @Nullable List<String> command,
+        @CustomType.Parameter("environmentVariables") @Nullable List<EnvironmentVariableResponse> environmentVariables,
+        @CustomType.Parameter("image") String image,
+        @CustomType.Parameter("instanceView") ContainerPropertiesResponseInstanceView instanceView,
+        @CustomType.Parameter("livenessProbe") @Nullable ContainerProbeResponse livenessProbe,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("ports") @Nullable List<ContainerPortResponse> ports,
+        @CustomType.Parameter("readinessProbe") @Nullable ContainerProbeResponse readinessProbe,
+        @CustomType.Parameter("resources") ResourceRequirementsResponse resources,
+        @CustomType.Parameter("volumeMounts") @Nullable List<VolumeMountResponse> volumeMounts) {
         this.command = command;
         this.environmentVariables = environmentVariables;
         this.image = image;

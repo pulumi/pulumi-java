@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FirewallPolicyCertificateAuthorityResponse {
     /**
      * Secret Id of (base-64 encoded unencrypted pfx) 'Secret' or 'Certificate' object stored in KeyVault.
@@ -22,10 +22,10 @@ public final class FirewallPolicyCertificateAuthorityResponse {
      */
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FirewallPolicyCertificateAuthorityResponse(
-        @OutputCustomType.Parameter("keyVaultSecretId") @Nullable String keyVaultSecretId,
-        @OutputCustomType.Parameter("name") @Nullable String name) {
+        @CustomType.Parameter("keyVaultSecretId") @Nullable String keyVaultSecretId,
+        @CustomType.Parameter("name") @Nullable String name) {
         this.keyVaultSecretId = keyVaultSecretId;
         this.name = name;
     }

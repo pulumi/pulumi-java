@@ -6,7 +6,7 @@ package io.pulumi.azurenative.compute.outputs;
 import io.pulumi.azurenative.compute.outputs.ApiEntityReferenceResponse;
 import io.pulumi.azurenative.compute.outputs.SubResourceResponse;
 import io.pulumi.azurenative.compute.outputs.VirtualMachineScaleSetPublicIPAddressConfigurationResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -14,7 +14,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VirtualMachineScaleSetIPConfigurationResponse {
     /**
      * Specifies an array of references to backend address pools of application gateways. A scale set can reference backend address pools of multiple application gateways. Multiple scale sets cannot use the same application gateway.
@@ -67,18 +67,18 @@ public final class VirtualMachineScaleSetIPConfigurationResponse {
      */
     private final @Nullable ApiEntityReferenceResponse subnet;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VirtualMachineScaleSetIPConfigurationResponse(
-        @OutputCustomType.Parameter("applicationGatewayBackendAddressPools") @Nullable List<SubResourceResponse> applicationGatewayBackendAddressPools,
-        @OutputCustomType.Parameter("applicationSecurityGroups") @Nullable List<SubResourceResponse> applicationSecurityGroups,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("loadBalancerBackendAddressPools") @Nullable List<SubResourceResponse> loadBalancerBackendAddressPools,
-        @OutputCustomType.Parameter("loadBalancerInboundNatPools") @Nullable List<SubResourceResponse> loadBalancerInboundNatPools,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("primary") @Nullable Boolean primary,
-        @OutputCustomType.Parameter("privateIPAddressVersion") @Nullable String privateIPAddressVersion,
-        @OutputCustomType.Parameter("publicIPAddressConfiguration") @Nullable VirtualMachineScaleSetPublicIPAddressConfigurationResponse publicIPAddressConfiguration,
-        @OutputCustomType.Parameter("subnet") @Nullable ApiEntityReferenceResponse subnet) {
+        @CustomType.Parameter("applicationGatewayBackendAddressPools") @Nullable List<SubResourceResponse> applicationGatewayBackendAddressPools,
+        @CustomType.Parameter("applicationSecurityGroups") @Nullable List<SubResourceResponse> applicationSecurityGroups,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("loadBalancerBackendAddressPools") @Nullable List<SubResourceResponse> loadBalancerBackendAddressPools,
+        @CustomType.Parameter("loadBalancerInboundNatPools") @Nullable List<SubResourceResponse> loadBalancerInboundNatPools,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("primary") @Nullable Boolean primary,
+        @CustomType.Parameter("privateIPAddressVersion") @Nullable String privateIPAddressVersion,
+        @CustomType.Parameter("publicIPAddressConfiguration") @Nullable VirtualMachineScaleSetPublicIPAddressConfigurationResponse publicIPAddressConfiguration,
+        @CustomType.Parameter("subnet") @Nullable ApiEntityReferenceResponse subnet) {
         this.applicationGatewayBackendAddressPools = applicationGatewayBackendAddressPools;
         this.applicationSecurityGroups = applicationSecurityGroups;
         this.id = id;

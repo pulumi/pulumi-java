@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.appplatform.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RequiredTrafficResponse {
     /**
      * The direction of required traffic
@@ -37,13 +37,13 @@ public final class RequiredTrafficResponse {
      */
     private final String protocol;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RequiredTrafficResponse(
-        @OutputCustomType.Parameter("direction") String direction,
-        @OutputCustomType.Parameter("fqdns") List<String> fqdns,
-        @OutputCustomType.Parameter("ips") List<String> ips,
-        @OutputCustomType.Parameter("port") Integer port,
-        @OutputCustomType.Parameter("protocol") String protocol) {
+        @CustomType.Parameter("direction") String direction,
+        @CustomType.Parameter("fqdns") List<String> fqdns,
+        @CustomType.Parameter("ips") List<String> ips,
+        @CustomType.Parameter("port") Integer port,
+        @CustomType.Parameter("protocol") String protocol) {
         this.direction = direction;
         this.fqdns = fqdns;
         this.ips = ips;

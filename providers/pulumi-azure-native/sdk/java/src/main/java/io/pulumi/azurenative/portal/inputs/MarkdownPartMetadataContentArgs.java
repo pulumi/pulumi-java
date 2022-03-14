@@ -5,7 +5,7 @@ package io.pulumi.azurenative.portal.inputs;
 
 import io.pulumi.azurenative.portal.inputs.MarkdownPartMetadataSettingsSettingsArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -22,7 +22,7 @@ public final class MarkdownPartMetadataContentArgs extends io.pulumi.resources.R
      * The setting of the content of markdown part.
      * 
      */
-    @InputImport(name="settings")
+    @Import(name="settings")
       private final @Nullable Output<MarkdownPartMetadataSettingsSettingsArgs> settings;
 
     public Output<MarkdownPartMetadataSettingsSettingsArgs> getSettings() {

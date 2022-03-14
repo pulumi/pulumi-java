@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.insights;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class DataCollectionRuleAssociationArgs extends io.pulumi.resources
      * The name of the association. The name is case insensitive.
      * 
      */
-    @InputImport(name="associationName")
+    @Import(name="associationName")
       private final @Nullable Output<String> associationName;
 
     public Output<String> getAssociationName() {
@@ -29,7 +29,7 @@ public final class DataCollectionRuleAssociationArgs extends io.pulumi.resources
      * The resource ID of the data collection rule that is to be associated.
      * 
      */
-    @InputImport(name="dataCollectionRuleId")
+    @Import(name="dataCollectionRuleId")
       private final @Nullable Output<String> dataCollectionRuleId;
 
     public Output<String> getDataCollectionRuleId() {
@@ -40,7 +40,7 @@ public final class DataCollectionRuleAssociationArgs extends io.pulumi.resources
      * Description of the association.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -51,7 +51,7 @@ public final class DataCollectionRuleAssociationArgs extends io.pulumi.resources
      * The identifier of the resource.
      * 
      */
-    @InputImport(name="resourceUri", required=true)
+    @Import(name="resourceUri", required=true)
       private final Output<String> resourceUri;
 
     public Output<String> getResourceUri() {

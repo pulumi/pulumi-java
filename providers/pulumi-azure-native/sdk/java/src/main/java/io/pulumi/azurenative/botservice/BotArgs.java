@@ -8,7 +8,7 @@ import io.pulumi.azurenative.botservice.inputs.BotPropertiesArgs;
 import io.pulumi.azurenative.botservice.inputs.SkuArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class BotArgs extends io.pulumi.resources.ResourceArgs {
      * Required. Gets or sets the Kind of the resource.
      * 
      */
-    @InputImport(name="kind")
+    @Import(name="kind")
       private final @Nullable Output<Either<String,Kind>> kind;
 
     public Output<Either<String,Kind>> getKind() {
@@ -34,7 +34,7 @@ public final class BotArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the location of the resource.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -45,7 +45,7 @@ public final class BotArgs extends io.pulumi.resources.ResourceArgs {
      * The set of properties specific to bot resource
      * 
      */
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable Output<BotPropertiesArgs> properties;
 
     public Output<BotPropertiesArgs> getProperties() {
@@ -56,7 +56,7 @@ public final class BotArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the Bot resource group in the user subscription.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -67,7 +67,7 @@ public final class BotArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the Bot resource.
      * 
      */
-    @InputImport(name="resourceName")
+    @Import(name="resourceName")
       private final @Nullable Output<String> resourceName;
 
     public Output<String> getPropResourceName() {
@@ -78,7 +78,7 @@ public final class BotArgs extends io.pulumi.resources.ResourceArgs {
      * Gets or sets the SKU of the resource.
      * 
      */
-    @InputImport(name="sku")
+    @Import(name="sku")
       private final @Nullable Output<SkuArgs> sku;
 
     public Output<SkuArgs> getSku() {
@@ -89,7 +89,7 @@ public final class BotArgs extends io.pulumi.resources.ResourceArgs {
      * Contains resource tags defined as key/value pairs.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

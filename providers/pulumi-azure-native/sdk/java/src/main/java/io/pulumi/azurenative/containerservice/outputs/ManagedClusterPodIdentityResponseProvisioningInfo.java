@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.containerservice.outputs;
 
 import io.pulumi.azurenative.containerservice.outputs.CloudErrorResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ManagedClusterPodIdentityResponseProvisioningInfo {
     /**
      * Pod identity assignment error (if any).
@@ -17,8 +17,8 @@ public final class ManagedClusterPodIdentityResponseProvisioningInfo {
      */
     private final @Nullable CloudErrorResponse error;
 
-    @OutputCustomType.Constructor
-    private ManagedClusterPodIdentityResponseProvisioningInfo(@OutputCustomType.Parameter("error") @Nullable CloudErrorResponse error) {
+    @CustomType.Constructor
+    private ManagedClusterPodIdentityResponseProvisioningInfo(@CustomType.Parameter("error") @Nullable CloudErrorResponse error) {
         this.error = error;
     }
 

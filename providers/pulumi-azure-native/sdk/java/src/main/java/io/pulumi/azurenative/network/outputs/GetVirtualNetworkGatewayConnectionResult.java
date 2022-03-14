@@ -9,7 +9,7 @@ import io.pulumi.azurenative.network.outputs.SubResourceResponse;
 import io.pulumi.azurenative.network.outputs.TrafficSelectorPolicyResponse;
 import io.pulumi.azurenative.network.outputs.TunnelConnectionHealthResponse;
 import io.pulumi.azurenative.network.outputs.VirtualNetworkGatewayResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -20,7 +20,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetVirtualNetworkGatewayConnectionResult {
     /**
      * The authorizationKey.
@@ -168,37 +168,37 @@ public final class GetVirtualNetworkGatewayConnectionResult {
      */
     private final @Nullable VirtualNetworkGatewayResponse virtualNetworkGateway2;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetVirtualNetworkGatewayConnectionResult(
-        @OutputCustomType.Parameter("authorizationKey") @Nullable String authorizationKey,
-        @OutputCustomType.Parameter("connectionMode") @Nullable String connectionMode,
-        @OutputCustomType.Parameter("connectionProtocol") @Nullable String connectionProtocol,
-        @OutputCustomType.Parameter("connectionStatus") String connectionStatus,
-        @OutputCustomType.Parameter("connectionType") String connectionType,
-        @OutputCustomType.Parameter("dpdTimeoutSeconds") @Nullable Integer dpdTimeoutSeconds,
-        @OutputCustomType.Parameter("egressBytesTransferred") Double egressBytesTransferred,
-        @OutputCustomType.Parameter("enableBgp") @Nullable Boolean enableBgp,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("expressRouteGatewayBypass") @Nullable Boolean expressRouteGatewayBypass,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("ingressBytesTransferred") Double ingressBytesTransferred,
-        @OutputCustomType.Parameter("ipsecPolicies") @Nullable List<IpsecPolicyResponse> ipsecPolicies,
-        @OutputCustomType.Parameter("localNetworkGateway2") @Nullable LocalNetworkGatewayResponse localNetworkGateway2,
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("peer") @Nullable SubResourceResponse peer,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("resourceGuid") String resourceGuid,
-        @OutputCustomType.Parameter("routingWeight") @Nullable Integer routingWeight,
-        @OutputCustomType.Parameter("sharedKey") @Nullable String sharedKey,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("trafficSelectorPolicies") @Nullable List<TrafficSelectorPolicyResponse> trafficSelectorPolicies,
-        @OutputCustomType.Parameter("tunnelConnectionStatus") List<TunnelConnectionHealthResponse> tunnelConnectionStatus,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("useLocalAzureIpAddress") @Nullable Boolean useLocalAzureIpAddress,
-        @OutputCustomType.Parameter("usePolicyBasedTrafficSelectors") @Nullable Boolean usePolicyBasedTrafficSelectors,
-        @OutputCustomType.Parameter("virtualNetworkGateway1") VirtualNetworkGatewayResponse virtualNetworkGateway1,
-        @OutputCustomType.Parameter("virtualNetworkGateway2") @Nullable VirtualNetworkGatewayResponse virtualNetworkGateway2) {
+        @CustomType.Parameter("authorizationKey") @Nullable String authorizationKey,
+        @CustomType.Parameter("connectionMode") @Nullable String connectionMode,
+        @CustomType.Parameter("connectionProtocol") @Nullable String connectionProtocol,
+        @CustomType.Parameter("connectionStatus") String connectionStatus,
+        @CustomType.Parameter("connectionType") String connectionType,
+        @CustomType.Parameter("dpdTimeoutSeconds") @Nullable Integer dpdTimeoutSeconds,
+        @CustomType.Parameter("egressBytesTransferred") Double egressBytesTransferred,
+        @CustomType.Parameter("enableBgp") @Nullable Boolean enableBgp,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("expressRouteGatewayBypass") @Nullable Boolean expressRouteGatewayBypass,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("ingressBytesTransferred") Double ingressBytesTransferred,
+        @CustomType.Parameter("ipsecPolicies") @Nullable List<IpsecPolicyResponse> ipsecPolicies,
+        @CustomType.Parameter("localNetworkGateway2") @Nullable LocalNetworkGatewayResponse localNetworkGateway2,
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("peer") @Nullable SubResourceResponse peer,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("resourceGuid") String resourceGuid,
+        @CustomType.Parameter("routingWeight") @Nullable Integer routingWeight,
+        @CustomType.Parameter("sharedKey") @Nullable String sharedKey,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("trafficSelectorPolicies") @Nullable List<TrafficSelectorPolicyResponse> trafficSelectorPolicies,
+        @CustomType.Parameter("tunnelConnectionStatus") List<TunnelConnectionHealthResponse> tunnelConnectionStatus,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("useLocalAzureIpAddress") @Nullable Boolean useLocalAzureIpAddress,
+        @CustomType.Parameter("usePolicyBasedTrafficSelectors") @Nullable Boolean usePolicyBasedTrafficSelectors,
+        @CustomType.Parameter("virtualNetworkGateway1") VirtualNetworkGatewayResponse virtualNetworkGateway1,
+        @CustomType.Parameter("virtualNetworkGateway2") @Nullable VirtualNetworkGatewayResponse virtualNetworkGateway2) {
         this.authorizationKey = authorizationKey;
         this.connectionMode = connectionMode;
         this.connectionProtocol = connectionProtocol;

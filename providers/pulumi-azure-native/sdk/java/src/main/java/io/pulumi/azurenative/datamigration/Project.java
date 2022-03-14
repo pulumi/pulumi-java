@@ -12,7 +12,7 @@ import io.pulumi.azurenative.datamigration.outputs.PostgreSqlConnectionInfoRespo
 import io.pulumi.azurenative.datamigration.outputs.SqlConnectionInfoResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Object;
 import java.lang.String;
@@ -41,7 +41,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * UTC Date and time when project was created
      * 
      */
-    @OutputExport(name="creationTime", type=String.class, parameters={})
+    @Export(name="creationTime", type=String.class, parameters={})
     private Output<String> creationTime;
 
     /**
@@ -55,7 +55,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * List of DatabaseInfo
      * 
      */
-    @OutputExport(name="databasesInfo", type=List.class, parameters={DatabaseInfoResponse.class})
+    @Export(name="databasesInfo", type=List.class, parameters={DatabaseInfoResponse.class})
     private Output</* @Nullable */ List<DatabaseInfoResponse>> databasesInfo;
 
     /**
@@ -69,7 +69,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * Resource location.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -83,7 +83,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -97,7 +97,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * The project's provisioning state
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -111,7 +111,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * Information for connecting to source
      * 
      */
-    @OutputExport(name="sourceConnectionInfo", type=Object.class, parameters={})
+    @Export(name="sourceConnectionInfo", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> sourceConnectionInfo;
 
     /**
@@ -125,7 +125,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * Source platform for the project
      * 
      */
-    @OutputExport(name="sourcePlatform", type=String.class, parameters={})
+    @Export(name="sourcePlatform", type=String.class, parameters={})
     private Output<String> sourcePlatform;
 
     /**
@@ -139,7 +139,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * Resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -153,7 +153,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * Information for connecting to target
      * 
      */
-    @OutputExport(name="targetConnectionInfo", type=Object.class, parameters={})
+    @Export(name="targetConnectionInfo", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> targetConnectionInfo;
 
     /**
@@ -167,7 +167,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * Target platform for the project
      * 
      */
-    @OutputExport(name="targetPlatform", type=String.class, parameters={})
+    @Export(name="targetPlatform", type=String.class, parameters={})
     private Output<String> targetPlatform;
 
     /**
@@ -181,7 +181,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

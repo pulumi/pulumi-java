@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.recoveryservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class InitialReplicationDetailsResponse {
     /**
      * The initial replication progress percentage.
@@ -22,10 +22,10 @@ public final class InitialReplicationDetailsResponse {
      */
     private final @Nullable String initialReplicationType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private InitialReplicationDetailsResponse(
-        @OutputCustomType.Parameter("initialReplicationProgressPercentage") @Nullable String initialReplicationProgressPercentage,
-        @OutputCustomType.Parameter("initialReplicationType") @Nullable String initialReplicationType) {
+        @CustomType.Parameter("initialReplicationProgressPercentage") @Nullable String initialReplicationProgressPercentage,
+        @CustomType.Parameter("initialReplicationType") @Nullable String initialReplicationType) {
         this.initialReplicationProgressPercentage = initialReplicationProgressPercentage;
         this.initialReplicationType = initialReplicationType;
     }

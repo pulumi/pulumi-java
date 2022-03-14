@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.desktopvirtualization.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class ResourceModelWithAllowedPropertySetPlanArgs extends io.pulumi
      * A user defined name of the 3rd Party Artifact that is being procured.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -29,7 +29,7 @@ public final class ResourceModelWithAllowedPropertySetPlanArgs extends io.pulumi
      * The 3rd Party artifact that is being procured. E.g. NewRelic. Product maps to the OfferID specified for the artifact at the time of Data Market onboarding.
      * 
      */
-    @InputImport(name="product", required=true)
+    @Import(name="product", required=true)
       private final Output<String> product;
 
     public Output<String> getProduct() {
@@ -40,7 +40,7 @@ public final class ResourceModelWithAllowedPropertySetPlanArgs extends io.pulumi
      * A publisher provided promotion code as provisioned in Data Market for the said product/artifact.
      * 
      */
-    @InputImport(name="promotionCode")
+    @Import(name="promotionCode")
       private final @Nullable Output<String> promotionCode;
 
     public Output<String> getPromotionCode() {
@@ -51,7 +51,7 @@ public final class ResourceModelWithAllowedPropertySetPlanArgs extends io.pulumi
      * The publisher of the 3rd Party Artifact that is being bought. E.g. NewRelic
      * 
      */
-    @InputImport(name="publisher", required=true)
+    @Import(name="publisher", required=true)
       private final Output<String> publisher;
 
     public Output<String> getPublisher() {
@@ -62,7 +62,7 @@ public final class ResourceModelWithAllowedPropertySetPlanArgs extends io.pulumi
      * The version of the desired product/artifact.
      * 
      */
-    @InputImport(name="version")
+    @Import(name="version")
       private final @Nullable Output<String> version;
 
     public Output<String> getVersion() {

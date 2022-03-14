@@ -9,7 +9,7 @@ import io.pulumi.azurenative.media.enums.VideoSyncMode;
 import io.pulumi.azurenative.media.inputs.H265LayerArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -29,7 +29,7 @@ public final class H265VideoArgs extends io.pulumi.resources.ResourceArgs {
      * Tells the encoder how to choose its encoding settings.  Quality will provide for a higher compression ratio but at a higher cost and longer compute time.  Speed will produce a relatively larger file but is faster and more economical. The default value is Balanced.
      * 
      */
-    @InputImport(name="complexity")
+    @Import(name="complexity")
       private final @Nullable Output<Either<String,H265Complexity>> complexity;
 
     public Output<Either<String,H265Complexity>> getComplexity() {
@@ -40,7 +40,7 @@ public final class H265VideoArgs extends io.pulumi.resources.ResourceArgs {
      * The distance between two key frames. The value should be non-zero in the range [0.5, 20] seconds, specified in ISO 8601 format. The default is 2 seconds(PT2S). Note that this setting is ignored if VideoSyncMode.Passthrough is set, where the KeyFrameInterval value will follow the input source setting.
      * 
      */
-    @InputImport(name="keyFrameInterval")
+    @Import(name="keyFrameInterval")
       private final @Nullable Output<String> keyFrameInterval;
 
     public Output<String> getKeyFrameInterval() {
@@ -51,7 +51,7 @@ public final class H265VideoArgs extends io.pulumi.resources.ResourceArgs {
      * An optional label for the codec. The label can be used to control muxing behavior.
      * 
      */
-    @InputImport(name="label")
+    @Import(name="label")
       private final @Nullable Output<String> label;
 
     public Output<String> getLabel() {
@@ -62,7 +62,7 @@ public final class H265VideoArgs extends io.pulumi.resources.ResourceArgs {
      * The collection of output H.265 layers to be produced by the encoder.
      * 
      */
-    @InputImport(name="layers")
+    @Import(name="layers")
       private final @Nullable Output<List<H265LayerArgs>> layers;
 
     public Output<List<H265LayerArgs>> getLayers() {
@@ -74,7 +74,7 @@ public final class H265VideoArgs extends io.pulumi.resources.ResourceArgs {
      * Expected value is '#Microsoft.Media.H265Video'.
      * 
      */
-    @InputImport(name="odataType", required=true)
+    @Import(name="odataType", required=true)
       private final Output<String> odataType;
 
     public Output<String> getOdataType() {
@@ -85,7 +85,7 @@ public final class H265VideoArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies whether or not the encoder should insert key frames at scene changes. If not specified, the default is false. This flag should be set to true only when the encoder is being configured to produce a single output video.
      * 
      */
-    @InputImport(name="sceneChangeDetection")
+    @Import(name="sceneChangeDetection")
       private final @Nullable Output<Boolean> sceneChangeDetection;
 
     public Output<Boolean> getSceneChangeDetection() {
@@ -96,7 +96,7 @@ public final class H265VideoArgs extends io.pulumi.resources.ResourceArgs {
      * The resizing mode - how the input video will be resized to fit the desired output resolution(s). Default is AutoSize
      * 
      */
-    @InputImport(name="stretchMode")
+    @Import(name="stretchMode")
       private final @Nullable Output<Either<String,StretchMode>> stretchMode;
 
     public Output<Either<String,StretchMode>> getStretchMode() {
@@ -107,7 +107,7 @@ public final class H265VideoArgs extends io.pulumi.resources.ResourceArgs {
      * The Video Sync Mode
      * 
      */
-    @InputImport(name="syncMode")
+    @Import(name="syncMode")
       private final @Nullable Output<Either<String,VideoSyncMode>> syncMode;
 
     public Output<Either<String,VideoSyncMode>> getSyncMode() {

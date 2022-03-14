@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storage.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class LastAccessTimeTrackingPolicyResponse {
     /**
      * An array of predefined supported blob types. Only blockBlob is the supported value. This field is currently read only
@@ -35,12 +35,12 @@ public final class LastAccessTimeTrackingPolicyResponse {
      */
     private final @Nullable Integer trackingGranularityInDays;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LastAccessTimeTrackingPolicyResponse(
-        @OutputCustomType.Parameter("blobType") @Nullable List<String> blobType,
-        @OutputCustomType.Parameter("enable") Boolean enable,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("trackingGranularityInDays") @Nullable Integer trackingGranularityInDays) {
+        @CustomType.Parameter("blobType") @Nullable List<String> blobType,
+        @CustomType.Parameter("enable") Boolean enable,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("trackingGranularityInDays") @Nullable Integer trackingGranularityInDays) {
         this.blobType = blobType;
         this.enable = enable;
         this.name = name;

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ApiOAuthSettingsParameterResponse extends io.pulumi.resources
      * Options available to this parameter
      * 
      */
-    @InputImport(name="options")
+    @Import(name="options")
       private final @Nullable Object options;
 
     public Optional<Object> getOptions() {
@@ -34,7 +34,7 @@ public final class ApiOAuthSettingsParameterResponse extends io.pulumi.resources
      * UI definitions per culture as caller can specify the culture
      * 
      */
-    @InputImport(name="uiDefinition")
+    @Import(name="uiDefinition")
       private final @Nullable Object uiDefinition;
 
     public Optional<Object> getUiDefinition() {
@@ -45,7 +45,7 @@ public final class ApiOAuthSettingsParameterResponse extends io.pulumi.resources
      * Value of the setting
      * 
      */
-    @InputImport(name="value")
+    @Import(name="value")
       private final @Nullable String value;
 
     public Optional<String> getValue() {

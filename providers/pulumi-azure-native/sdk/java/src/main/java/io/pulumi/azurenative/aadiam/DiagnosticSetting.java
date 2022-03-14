@@ -8,7 +8,7 @@ import io.pulumi.azurenative.aadiam.DiagnosticSettingArgs;
 import io.pulumi.azurenative.aadiam.outputs.LogSettingsResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +35,7 @@ public class DiagnosticSetting extends io.pulumi.resources.CustomResource {
      * The resource Id for the event hub authorization rule.
      * 
      */
-    @OutputExport(name="eventHubAuthorizationRuleId", type=String.class, parameters={})
+    @Export(name="eventHubAuthorizationRuleId", type=String.class, parameters={})
     private Output</* @Nullable */ String> eventHubAuthorizationRuleId;
 
     /**
@@ -49,7 +49,7 @@ public class DiagnosticSetting extends io.pulumi.resources.CustomResource {
      * The name of the event hub. If none is specified, the default event hub will be selected.
      * 
      */
-    @OutputExport(name="eventHubName", type=String.class, parameters={})
+    @Export(name="eventHubName", type=String.class, parameters={})
     private Output</* @Nullable */ String> eventHubName;
 
     /**
@@ -63,7 +63,7 @@ public class DiagnosticSetting extends io.pulumi.resources.CustomResource {
      * The list of logs settings.
      * 
      */
-    @OutputExport(name="logs", type=List.class, parameters={LogSettingsResponse.class})
+    @Export(name="logs", type=List.class, parameters={LogSettingsResponse.class})
     private Output</* @Nullable */ List<LogSettingsResponse>> logs;
 
     /**
@@ -77,7 +77,7 @@ public class DiagnosticSetting extends io.pulumi.resources.CustomResource {
      * Azure resource name
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -91,7 +91,7 @@ public class DiagnosticSetting extends io.pulumi.resources.CustomResource {
      * The service bus rule Id of the diagnostic setting. This is here to maintain backwards compatibility.
      * 
      */
-    @OutputExport(name="serviceBusRuleId", type=String.class, parameters={})
+    @Export(name="serviceBusRuleId", type=String.class, parameters={})
     private Output</* @Nullable */ String> serviceBusRuleId;
 
     /**
@@ -105,7 +105,7 @@ public class DiagnosticSetting extends io.pulumi.resources.CustomResource {
      * The resource ID of the storage account to which you would like to send Diagnostic Logs.
      * 
      */
-    @OutputExport(name="storageAccountId", type=String.class, parameters={})
+    @Export(name="storageAccountId", type=String.class, parameters={})
     private Output</* @Nullable */ String> storageAccountId;
 
     /**
@@ -119,7 +119,7 @@ public class DiagnosticSetting extends io.pulumi.resources.CustomResource {
      * Azure resource type
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -133,7 +133,7 @@ public class DiagnosticSetting extends io.pulumi.resources.CustomResource {
      * The workspace ID (resource ID of a Log Analytics workspace) for a Log Analytics workspace to which you would like to send Diagnostic Logs. Example: /subscriptions/4b9e8510-67ab-4e9a-95a9-e2f1e570ea9c/resourceGroups/insights-integration/providers/Microsoft.OperationalInsights/workspaces/viruela2
      * 
      */
-    @OutputExport(name="workspaceId", type=String.class, parameters={})
+    @Export(name="workspaceId", type=String.class, parameters={})
     private Output</* @Nullable */ String> workspaceId;
 
     /**

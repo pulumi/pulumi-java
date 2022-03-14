@@ -4,11 +4,11 @@
 package io.pulumi.azurenative.streamanalytics.outputs;
 
 import io.pulumi.azurenative.streamanalytics.outputs.DiagnosticConditionResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DiagnosticsResponse {
     /**
      * A collection of zero or more conditions applicable to the resource, or to the job overall, that warrant customer attention.
@@ -16,8 +16,8 @@ public final class DiagnosticsResponse {
      */
     private final List<DiagnosticConditionResponse> conditions;
 
-    @OutputCustomType.Constructor
-    private DiagnosticsResponse(@OutputCustomType.Parameter("conditions") List<DiagnosticConditionResponse> conditions) {
+    @CustomType.Constructor
+    private DiagnosticsResponse(@CustomType.Parameter("conditions") List<DiagnosticConditionResponse> conditions) {
         this.conditions = conditions;
     }
 

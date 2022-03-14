@@ -5,14 +5,14 @@ package io.pulumi.azurenative.databox.outputs;
 
 import io.pulumi.azurenative.databox.outputs.EncryptionPreferencesResponse;
 import io.pulumi.azurenative.databox.outputs.TransportPreferencesResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PreferencesResponse {
     /**
      * Preferences related to the Encryption.
@@ -30,11 +30,11 @@ public final class PreferencesResponse {
      */
     private final @Nullable TransportPreferencesResponse transportPreferences;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PreferencesResponse(
-        @OutputCustomType.Parameter("encryptionPreferences") @Nullable EncryptionPreferencesResponse encryptionPreferences,
-        @OutputCustomType.Parameter("preferredDataCenterRegion") @Nullable List<String> preferredDataCenterRegion,
-        @OutputCustomType.Parameter("transportPreferences") @Nullable TransportPreferencesResponse transportPreferences) {
+        @CustomType.Parameter("encryptionPreferences") @Nullable EncryptionPreferencesResponse encryptionPreferences,
+        @CustomType.Parameter("preferredDataCenterRegion") @Nullable List<String> preferredDataCenterRegion,
+        @CustomType.Parameter("transportPreferences") @Nullable TransportPreferencesResponse transportPreferences) {
         this.encryptionPreferences = encryptionPreferences;
         this.preferredDataCenterRegion = preferredDataCenterRegion;
         this.transportPreferences = transportPreferences;

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.databoxedge.inputs;
 
 import io.pulumi.azurenative.databoxedge.inputs.SymmetricKeyArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -22,7 +22,7 @@ public final class AuthenticationArgs extends io.pulumi.resources.ResourceArgs {
      * Symmetric key for authentication.
      * 
      */
-    @InputImport(name="symmetricKey")
+    @Import(name="symmetricKey")
       private final @Nullable Output<SymmetricKeyArgs> symmetricKey;
 
     public Output<SymmetricKeyArgs> getSymmetricKey() {

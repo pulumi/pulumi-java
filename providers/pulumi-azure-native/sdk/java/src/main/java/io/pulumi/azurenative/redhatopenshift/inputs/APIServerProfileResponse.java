@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.redhatopenshift.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class APIServerProfileResponse extends io.pulumi.resources.InvokeAr
      * The IP of the cluster API server (immutable).
      * 
      */
-    @InputImport(name="ip")
+    @Import(name="ip")
       private final @Nullable String ip;
 
     public Optional<String> getIp() {
@@ -33,7 +33,7 @@ public final class APIServerProfileResponse extends io.pulumi.resources.InvokeAr
      * The URL to access the cluster API server (immutable).
      * 
      */
-    @InputImport(name="url")
+    @Import(name="url")
       private final @Nullable String url;
 
     public Optional<String> getUrl() {
@@ -44,7 +44,7 @@ public final class APIServerProfileResponse extends io.pulumi.resources.InvokeAr
      * API server visibility (immutable).
      * 
      */
-    @InputImport(name="visibility")
+    @Import(name="visibility")
       private final @Nullable String visibility;
 
     public Optional<String> getVisibility() {

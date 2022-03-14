@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class VMwareV2FabricSpecificDetailsResponse extends io.pulumi.resou
      * Expected value is 'VMwareV2'.
      * 
      */
-    @InputImport(name="instanceType", required=true)
+    @Import(name="instanceType", required=true)
       private final String instanceType;
 
     public String getInstanceType() {
@@ -32,7 +32,7 @@ public final class VMwareV2FabricSpecificDetailsResponse extends io.pulumi.resou
      * The Migration solution ARM Id.
      * 
      */
-    @InputImport(name="migrationSolutionId", required=true)
+    @Import(name="migrationSolutionId", required=true)
       private final String migrationSolutionId;
 
     public String getMigrationSolutionId() {
@@ -43,7 +43,7 @@ public final class VMwareV2FabricSpecificDetailsResponse extends io.pulumi.resou
      * The service endpoint.
      * 
      */
-    @InputImport(name="serviceEndpoint", required=true)
+    @Import(name="serviceEndpoint", required=true)
       private final String serviceEndpoint;
 
     public String getServiceEndpoint() {
@@ -54,7 +54,7 @@ public final class VMwareV2FabricSpecificDetailsResponse extends io.pulumi.resou
      * The service resource Id.
      * 
      */
-    @InputImport(name="serviceResourceId", required=true)
+    @Import(name="serviceResourceId", required=true)
       private final String serviceResourceId;
 
     public String getServiceResourceId() {
@@ -65,7 +65,7 @@ public final class VMwareV2FabricSpecificDetailsResponse extends io.pulumi.resou
      * The ARM Id of the VMware site.
      * 
      */
-    @InputImport(name="vmwareSiteId", required=true)
+    @Import(name="vmwareSiteId", required=true)
       private final String vmwareSiteId;
 
     public String getVmwareSiteId() {

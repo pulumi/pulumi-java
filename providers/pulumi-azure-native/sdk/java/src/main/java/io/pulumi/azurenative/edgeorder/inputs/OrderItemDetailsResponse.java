@@ -10,7 +10,7 @@ import io.pulumi.azurenative.edgeorder.inputs.ProductDetailsResponse;
 import io.pulumi.azurenative.edgeorder.inputs.ResourceProviderDetailsResponse;
 import io.pulumi.azurenative.edgeorder.inputs.ReverseShippingDetailsResponse;
 import io.pulumi.azurenative.edgeorder.inputs.StageDetailsResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -30,7 +30,7 @@ public final class OrderItemDetailsResponse extends io.pulumi.resources.InvokeAr
      * Cancellation reason.
      * 
      */
-    @InputImport(name="cancellationReason", required=true)
+    @Import(name="cancellationReason", required=true)
       private final String cancellationReason;
 
     public String getCancellationReason() {
@@ -41,7 +41,7 @@ public final class OrderItemDetailsResponse extends io.pulumi.resources.InvokeAr
      * Describes whether the order item is cancellable or not.
      * 
      */
-    @InputImport(name="cancellationStatus", required=true)
+    @Import(name="cancellationStatus", required=true)
       private final String cancellationStatus;
 
     public String getCancellationStatus() {
@@ -52,7 +52,7 @@ public final class OrderItemDetailsResponse extends io.pulumi.resources.InvokeAr
      * Current Order item Status
      * 
      */
-    @InputImport(name="currentStage", required=true)
+    @Import(name="currentStage", required=true)
       private final StageDetailsResponse currentStage;
 
     public StageDetailsResponse getCurrentStage() {
@@ -63,7 +63,7 @@ public final class OrderItemDetailsResponse extends io.pulumi.resources.InvokeAr
      * Describes whether the order item is deletable or not.
      * 
      */
-    @InputImport(name="deletionStatus", required=true)
+    @Import(name="deletionStatus", required=true)
       private final String deletionStatus;
 
     public String getDeletionStatus() {
@@ -74,7 +74,7 @@ public final class OrderItemDetailsResponse extends io.pulumi.resources.InvokeAr
      * Top level error for the job.
      * 
      */
-    @InputImport(name="error", required=true)
+    @Import(name="error", required=true)
       private final ErrorDetailResponse error;
 
     public ErrorDetailResponse getError() {
@@ -85,7 +85,7 @@ public final class OrderItemDetailsResponse extends io.pulumi.resources.InvokeAr
      * Forward Package Shipping details
      * 
      */
-    @InputImport(name="forwardShippingDetails", required=true)
+    @Import(name="forwardShippingDetails", required=true)
       private final ForwardShippingDetailsResponse forwardShippingDetails;
 
     public ForwardShippingDetailsResponse getForwardShippingDetails() {
@@ -96,7 +96,7 @@ public final class OrderItemDetailsResponse extends io.pulumi.resources.InvokeAr
      * Parent RP details - this returns only the first or default parent RP from the entire list
      * 
      */
-    @InputImport(name="managementRpDetails", required=true)
+    @Import(name="managementRpDetails", required=true)
       private final ResourceProviderDetailsResponse managementRpDetails;
 
     public ResourceProviderDetailsResponse getManagementRpDetails() {
@@ -107,7 +107,7 @@ public final class OrderItemDetailsResponse extends io.pulumi.resources.InvokeAr
      * List of parent RP details supported for configuration.
      * 
      */
-    @InputImport(name="managementRpDetailsList", required=true)
+    @Import(name="managementRpDetailsList", required=true)
       private final List<ResourceProviderDetailsResponse> managementRpDetailsList;
 
     public List<ResourceProviderDetailsResponse> getManagementRpDetailsList() {
@@ -118,7 +118,7 @@ public final class OrderItemDetailsResponse extends io.pulumi.resources.InvokeAr
      * Additional notification email list
      * 
      */
-    @InputImport(name="notificationEmailList")
+    @Import(name="notificationEmailList")
       private final @Nullable List<String> notificationEmailList;
 
     public List<String> getNotificationEmailList() {
@@ -129,7 +129,7 @@ public final class OrderItemDetailsResponse extends io.pulumi.resources.InvokeAr
      * Order item status history
      * 
      */
-    @InputImport(name="orderItemStageHistory", required=true)
+    @Import(name="orderItemStageHistory", required=true)
       private final List<StageDetailsResponse> orderItemStageHistory;
 
     public List<StageDetailsResponse> getOrderItemStageHistory() {
@@ -140,7 +140,7 @@ public final class OrderItemDetailsResponse extends io.pulumi.resources.InvokeAr
      * Order item type.
      * 
      */
-    @InputImport(name="orderItemType", required=true)
+    @Import(name="orderItemType", required=true)
       private final String orderItemType;
 
     public String getOrderItemType() {
@@ -151,7 +151,7 @@ public final class OrderItemDetailsResponse extends io.pulumi.resources.InvokeAr
      * Customer notification Preferences
      * 
      */
-    @InputImport(name="preferences")
+    @Import(name="preferences")
       private final @Nullable PreferencesResponse preferences;
 
     public Optional<PreferencesResponse> getPreferences() {
@@ -162,7 +162,7 @@ public final class OrderItemDetailsResponse extends io.pulumi.resources.InvokeAr
      * Unique identifier for configuration.
      * 
      */
-    @InputImport(name="productDetails", required=true)
+    @Import(name="productDetails", required=true)
       private final ProductDetailsResponse productDetails;
 
     public ProductDetailsResponse getProductDetails() {
@@ -173,7 +173,7 @@ public final class OrderItemDetailsResponse extends io.pulumi.resources.InvokeAr
      * Return reason.
      * 
      */
-    @InputImport(name="returnReason", required=true)
+    @Import(name="returnReason", required=true)
       private final String returnReason;
 
     public String getReturnReason() {
@@ -184,7 +184,7 @@ public final class OrderItemDetailsResponse extends io.pulumi.resources.InvokeAr
      * Describes whether the order item is returnable or not.
      * 
      */
-    @InputImport(name="returnStatus", required=true)
+    @Import(name="returnStatus", required=true)
       private final String returnStatus;
 
     public String getReturnStatus() {
@@ -195,7 +195,7 @@ public final class OrderItemDetailsResponse extends io.pulumi.resources.InvokeAr
      * Reverse Package Shipping details
      * 
      */
-    @InputImport(name="reverseShippingDetails", required=true)
+    @Import(name="reverseShippingDetails", required=true)
       private final ReverseShippingDetailsResponse reverseShippingDetails;
 
     public ReverseShippingDetailsResponse getReverseShippingDetails() {

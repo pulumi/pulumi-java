@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datamigration.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -17,7 +17,7 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputTableLevel
      * Number of applied deletes
      * 
      */
-    @InputImport(name="cdcDeleteCounter", required=true)
+    @Import(name="cdcDeleteCounter", required=true)
       private final Double cdcDeleteCounter;
 
     public Double getCdcDeleteCounter() {
@@ -28,7 +28,7 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputTableLevel
      * Number of applied inserts
      * 
      */
-    @InputImport(name="cdcInsertCounter", required=true)
+    @Import(name="cdcInsertCounter", required=true)
       private final Double cdcInsertCounter;
 
     public Double getCdcInsertCounter() {
@@ -39,7 +39,7 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputTableLevel
      * Number of applied updates
      * 
      */
-    @InputImport(name="cdcUpdateCounter", required=true)
+    @Import(name="cdcUpdateCounter", required=true)
       private final Double cdcUpdateCounter;
 
     public Double getCdcUpdateCounter() {
@@ -50,7 +50,7 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputTableLevel
      * Number of data errors occurred
      * 
      */
-    @InputImport(name="dataErrorsCounter", required=true)
+    @Import(name="dataErrorsCounter", required=true)
       private final Double dataErrorsCounter;
 
     public Double getDataErrorsCounter() {
@@ -61,7 +61,7 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputTableLevel
      * Name of the database
      * 
      */
-    @InputImport(name="databaseName", required=true)
+    @Import(name="databaseName", required=true)
       private final String databaseName;
 
     public String getDatabaseName() {
@@ -72,7 +72,7 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputTableLevel
      * Full load end time
      * 
      */
-    @InputImport(name="fullLoadEndedOn", required=true)
+    @Import(name="fullLoadEndedOn", required=true)
       private final String fullLoadEndedOn;
 
     public String getFullLoadEndedOn() {
@@ -83,7 +83,7 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputTableLevel
      * Estimate to finish full load
      * 
      */
-    @InputImport(name="fullLoadEstFinishTime", required=true)
+    @Import(name="fullLoadEstFinishTime", required=true)
       private final String fullLoadEstFinishTime;
 
     public String getFullLoadEstFinishTime() {
@@ -94,7 +94,7 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputTableLevel
      * Full load start time
      * 
      */
-    @InputImport(name="fullLoadStartedOn", required=true)
+    @Import(name="fullLoadStartedOn", required=true)
       private final String fullLoadStartedOn;
 
     public String getFullLoadStartedOn() {
@@ -105,7 +105,7 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputTableLevel
      * Number of rows applied in full load
      * 
      */
-    @InputImport(name="fullLoadTotalRows", required=true)
+    @Import(name="fullLoadTotalRows", required=true)
       private final Double fullLoadTotalRows;
 
     public Double getFullLoadTotalRows() {
@@ -116,7 +116,7 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputTableLevel
      * Result identifier
      * 
      */
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final String id;
 
     public String getId() {
@@ -127,7 +127,7 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputTableLevel
      * Last modified time on target
      * 
      */
-    @InputImport(name="lastModifiedTime", required=true)
+    @Import(name="lastModifiedTime", required=true)
       private final String lastModifiedTime;
 
     public String getLastModifiedTime() {
@@ -139,7 +139,7 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputTableLevel
      * Expected value is 'TableLevelOutput'.
      * 
      */
-    @InputImport(name="resultType", required=true)
+    @Import(name="resultType", required=true)
       private final String resultType;
 
     public String getResultType() {
@@ -150,7 +150,7 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputTableLevel
      * Current state of the table migration
      * 
      */
-    @InputImport(name="state", required=true)
+    @Import(name="state", required=true)
       private final String state;
 
     public String getState() {
@@ -161,7 +161,7 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputTableLevel
      * Name of the table
      * 
      */
-    @InputImport(name="tableName", required=true)
+    @Import(name="tableName", required=true)
       private final String tableName;
 
     public String getTableName() {
@@ -172,7 +172,7 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputTableLevel
      * Total number of applied changes
      * 
      */
-    @InputImport(name="totalChangesApplied", required=true)
+    @Import(name="totalChangesApplied", required=true)
       private final Double totalChangesApplied;
 
     public Double getTotalChangesApplied() {

@@ -5,14 +5,14 @@ package io.pulumi.azurenative.compute.outputs;
 
 import io.pulumi.azurenative.compute.outputs.ApiEntityReferenceResponse;
 import io.pulumi.azurenative.compute.outputs.RestorePointSourceMetadataResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RestorePointResponse {
     /**
      * Gets the consistency mode for the restore point. Please refer to https://aka.ms/RestorePoints for more details.
@@ -55,16 +55,16 @@ public final class RestorePointResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RestorePointResponse(
-        @OutputCustomType.Parameter("consistencyMode") String consistencyMode,
-        @OutputCustomType.Parameter("excludeDisks") @Nullable List<ApiEntityReferenceResponse> excludeDisks,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("sourceMetadata") RestorePointSourceMetadataResponse sourceMetadata,
-        @OutputCustomType.Parameter("timeCreated") @Nullable String timeCreated,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("consistencyMode") String consistencyMode,
+        @CustomType.Parameter("excludeDisks") @Nullable List<ApiEntityReferenceResponse> excludeDisks,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("sourceMetadata") RestorePointSourceMetadataResponse sourceMetadata,
+        @CustomType.Parameter("timeCreated") @Nullable String timeCreated,
+        @CustomType.Parameter("type") String type) {
         this.consistencyMode = consistencyMode;
         this.excludeDisks = excludeDisks;
         this.id = id;

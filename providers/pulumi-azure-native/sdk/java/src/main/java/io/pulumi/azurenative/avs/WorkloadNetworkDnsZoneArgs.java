@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.avs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +20,7 @@ public final class WorkloadNetworkDnsZoneArgs extends io.pulumi.resources.Resour
      * Display name of the DNS Zone.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -31,7 +31,7 @@ public final class WorkloadNetworkDnsZoneArgs extends io.pulumi.resources.Resour
      * DNS Server IP array of the DNS Zone.
      * 
      */
-    @InputImport(name="dnsServerIps")
+    @Import(name="dnsServerIps")
       private final @Nullable Output<List<String>> dnsServerIps;
 
     public Output<List<String>> getDnsServerIps() {
@@ -42,7 +42,7 @@ public final class WorkloadNetworkDnsZoneArgs extends io.pulumi.resources.Resour
      * Number of DNS Services using the DNS zone.
      * 
      */
-    @InputImport(name="dnsServices")
+    @Import(name="dnsServices")
       private final @Nullable Output<Double> dnsServices;
 
     public Output<Double> getDnsServices() {
@@ -53,7 +53,7 @@ public final class WorkloadNetworkDnsZoneArgs extends io.pulumi.resources.Resour
      * NSX DNS Zone identifier. Generally the same as the DNS Zone's display name
      * 
      */
-    @InputImport(name="dnsZoneId")
+    @Import(name="dnsZoneId")
       private final @Nullable Output<String> dnsZoneId;
 
     public Output<String> getDnsZoneId() {
@@ -64,7 +64,7 @@ public final class WorkloadNetworkDnsZoneArgs extends io.pulumi.resources.Resour
      * Domain names of the DNS Zone.
      * 
      */
-    @InputImport(name="domain")
+    @Import(name="domain")
       private final @Nullable Output<List<String>> domain;
 
     public Output<List<String>> getDomain() {
@@ -75,7 +75,7 @@ public final class WorkloadNetworkDnsZoneArgs extends io.pulumi.resources.Resour
      * Name of the private cloud
      * 
      */
-    @InputImport(name="privateCloudName", required=true)
+    @Import(name="privateCloudName", required=true)
       private final Output<String> privateCloudName;
 
     public Output<String> getPrivateCloudName() {
@@ -86,7 +86,7 @@ public final class WorkloadNetworkDnsZoneArgs extends io.pulumi.resources.Resour
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -97,7 +97,7 @@ public final class WorkloadNetworkDnsZoneArgs extends io.pulumi.resources.Resour
      * NSX revision number.
      * 
      */
-    @InputImport(name="revision")
+    @Import(name="revision")
       private final @Nullable Output<Double> revision;
 
     public Output<Double> getRevision() {
@@ -108,7 +108,7 @@ public final class WorkloadNetworkDnsZoneArgs extends io.pulumi.resources.Resour
      * Source IP of the DNS Zone.
      * 
      */
-    @InputImport(name="sourceIp")
+    @Import(name="sourceIp")
       private final @Nullable Output<String> sourceIp;
 
     public Output<String> getSourceIp() {

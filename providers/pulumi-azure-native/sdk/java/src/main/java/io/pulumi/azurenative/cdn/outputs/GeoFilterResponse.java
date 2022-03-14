@@ -3,12 +3,12 @@
 
 package io.pulumi.azurenative.cdn.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GeoFilterResponse {
     /**
      * Action of the geo filter, i.e. allow or block access.
@@ -26,11 +26,11 @@ public final class GeoFilterResponse {
      */
     private final String relativePath;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GeoFilterResponse(
-        @OutputCustomType.Parameter("action") String action,
-        @OutputCustomType.Parameter("countryCodes") List<String> countryCodes,
-        @OutputCustomType.Parameter("relativePath") String relativePath) {
+        @CustomType.Parameter("action") String action,
+        @CustomType.Parameter("countryCodes") List<String> countryCodes,
+        @CustomType.Parameter("relativePath") String relativePath) {
         this.action = action;
         this.countryCodes = countryCodes;
         this.relativePath = relativePath;

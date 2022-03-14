@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.security.outputs;
 
 import io.pulumi.azurenative.security.outputs.JitNetworkAccessRequestPortResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class JitNetworkAccessRequestVirtualMachineResponse {
     /**
      * Resource ID of the virtual machine that is linked to this policy
@@ -22,10 +22,10 @@ public final class JitNetworkAccessRequestVirtualMachineResponse {
      */
     private final List<JitNetworkAccessRequestPortResponse> ports;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private JitNetworkAccessRequestVirtualMachineResponse(
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("ports") List<JitNetworkAccessRequestPortResponse> ports) {
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("ports") List<JitNetworkAccessRequestPortResponse> ports) {
         this.id = id;
         this.ports = ports;
     }

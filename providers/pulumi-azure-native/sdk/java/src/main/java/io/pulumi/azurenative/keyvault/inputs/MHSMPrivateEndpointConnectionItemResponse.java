@@ -5,7 +5,7 @@ package io.pulumi.azurenative.keyvault.inputs;
 
 import io.pulumi.azurenative.keyvault.inputs.MHSMPrivateEndpointResponse;
 import io.pulumi.azurenative.keyvault.inputs.MHSMPrivateLinkServiceConnectionStateResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class MHSMPrivateEndpointConnectionItemResponse extends io.pulumi.r
      * Properties of the private endpoint object.
      * 
      */
-    @InputImport(name="privateEndpoint")
+    @Import(name="privateEndpoint")
       private final @Nullable MHSMPrivateEndpointResponse privateEndpoint;
 
     public Optional<MHSMPrivateEndpointResponse> getPrivateEndpoint() {
@@ -35,7 +35,7 @@ public final class MHSMPrivateEndpointConnectionItemResponse extends io.pulumi.r
      * Approval state of the private link connection.
      * 
      */
-    @InputImport(name="privateLinkServiceConnectionState")
+    @Import(name="privateLinkServiceConnectionState")
       private final @Nullable MHSMPrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState;
 
     public Optional<MHSMPrivateLinkServiceConnectionStateResponse> getPrivateLinkServiceConnectionState() {
@@ -46,7 +46,7 @@ public final class MHSMPrivateEndpointConnectionItemResponse extends io.pulumi.r
      * Provisioning state of the private endpoint connection.
      * 
      */
-    @InputImport(name="provisioningState", required=true)
+    @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
     public String getProvisioningState() {

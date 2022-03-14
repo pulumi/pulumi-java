@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.migrate.outputs;
 
 import io.pulumi.azurenative.migrate.outputs.NicIpConfigurationResourceSettingsResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class NetworkInterfaceResourceSettingsResponse {
     /**
      * Gets or sets a value indicating whether accelerated networking is enabled.
@@ -36,12 +36,12 @@ public final class NetworkInterfaceResourceSettingsResponse {
      */
     private final String targetResourceName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NetworkInterfaceResourceSettingsResponse(
-        @OutputCustomType.Parameter("enableAcceleratedNetworking") @Nullable Boolean enableAcceleratedNetworking,
-        @OutputCustomType.Parameter("ipConfigurations") @Nullable List<NicIpConfigurationResourceSettingsResponse> ipConfigurations,
-        @OutputCustomType.Parameter("resourceType") String resourceType,
-        @OutputCustomType.Parameter("targetResourceName") String targetResourceName) {
+        @CustomType.Parameter("enableAcceleratedNetworking") @Nullable Boolean enableAcceleratedNetworking,
+        @CustomType.Parameter("ipConfigurations") @Nullable List<NicIpConfigurationResourceSettingsResponse> ipConfigurations,
+        @CustomType.Parameter("resourceType") String resourceType,
+        @CustomType.Parameter("targetResourceName") String targetResourceName) {
         this.enableAcceleratedNetworking = enableAcceleratedNetworking;
         this.ipConfigurations = ipConfigurations;
         this.resourceType = resourceType;

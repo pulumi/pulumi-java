@@ -17,14 +17,14 @@ import io.pulumi.azurenative.datafactory.outputs.HdfsReadSettingsResponse;
 import io.pulumi.azurenative.datafactory.outputs.HttpReadSettingsResponse;
 import io.pulumi.azurenative.datafactory.outputs.OracleCloudStorageReadSettingsResponse;
 import io.pulumi.azurenative.datafactory.outputs.SftpReadSettingsResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BinarySourceResponse {
     /**
      * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
@@ -63,15 +63,15 @@ public final class BinarySourceResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BinarySourceResponse(
-        @OutputCustomType.Parameter("disableMetricsCollection") @Nullable Object disableMetricsCollection,
-        @OutputCustomType.Parameter("formatSettings") @Nullable BinaryReadSettingsResponse formatSettings,
-        @OutputCustomType.Parameter("maxConcurrentConnections") @Nullable Object maxConcurrentConnections,
-        @OutputCustomType.Parameter("sourceRetryCount") @Nullable Object sourceRetryCount,
-        @OutputCustomType.Parameter("sourceRetryWait") @Nullable Object sourceRetryWait,
-        @OutputCustomType.Parameter("storeSettings") @Nullable Object storeSettings,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("disableMetricsCollection") @Nullable Object disableMetricsCollection,
+        @CustomType.Parameter("formatSettings") @Nullable BinaryReadSettingsResponse formatSettings,
+        @CustomType.Parameter("maxConcurrentConnections") @Nullable Object maxConcurrentConnections,
+        @CustomType.Parameter("sourceRetryCount") @Nullable Object sourceRetryCount,
+        @CustomType.Parameter("sourceRetryWait") @Nullable Object sourceRetryWait,
+        @CustomType.Parameter("storeSettings") @Nullable Object storeSettings,
+        @CustomType.Parameter("type") String type) {
         this.disableMetricsCollection = disableMetricsCollection;
         this.formatSettings = formatSettings;
         this.maxConcurrentConnections = maxConcurrentConnections;

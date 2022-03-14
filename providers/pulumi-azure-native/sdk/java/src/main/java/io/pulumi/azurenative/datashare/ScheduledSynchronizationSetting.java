@@ -8,7 +8,7 @@ import io.pulumi.azurenative.datashare.ScheduledSynchronizationSettingArgs;
 import io.pulumi.azurenative.datashare.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +35,7 @@ public class ScheduledSynchronizationSetting extends io.pulumi.resources.CustomR
      * Time at which the synchronization setting was created.
      * 
      */
-    @OutputExport(name="createdAt", type=String.class, parameters={})
+    @Export(name="createdAt", type=String.class, parameters={})
     private Output<String> createdAt;
 
     /**
@@ -50,7 +50,7 @@ public class ScheduledSynchronizationSetting extends io.pulumi.resources.CustomR
      * Expected value is 'ScheduleBased'.
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
     /**
@@ -65,7 +65,7 @@ public class ScheduledSynchronizationSetting extends io.pulumi.resources.CustomR
      * Name of the azure resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -79,7 +79,7 @@ public class ScheduledSynchronizationSetting extends io.pulumi.resources.CustomR
      * Gets or sets the provisioning state
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -93,7 +93,7 @@ public class ScheduledSynchronizationSetting extends io.pulumi.resources.CustomR
      * Recurrence Interval
      * 
      */
-    @OutputExport(name="recurrenceInterval", type=String.class, parameters={})
+    @Export(name="recurrenceInterval", type=String.class, parameters={})
     private Output<String> recurrenceInterval;
 
     /**
@@ -107,7 +107,7 @@ public class ScheduledSynchronizationSetting extends io.pulumi.resources.CustomR
      * Synchronization time
      * 
      */
-    @OutputExport(name="synchronizationTime", type=String.class, parameters={})
+    @Export(name="synchronizationTime", type=String.class, parameters={})
     private Output<String> synchronizationTime;
 
     /**
@@ -121,7 +121,7 @@ public class ScheduledSynchronizationSetting extends io.pulumi.resources.CustomR
      * System Data of the Azure resource.
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -135,7 +135,7 @@ public class ScheduledSynchronizationSetting extends io.pulumi.resources.CustomR
      * Type of the azure resource
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -149,7 +149,7 @@ public class ScheduledSynchronizationSetting extends io.pulumi.resources.CustomR
      * Name of the user who created the synchronization setting.
      * 
      */
-    @OutputExport(name="userName", type=String.class, parameters={})
+    @Export(name="userName", type=String.class, parameters={})
     private Output<String> userName;
 
     /**

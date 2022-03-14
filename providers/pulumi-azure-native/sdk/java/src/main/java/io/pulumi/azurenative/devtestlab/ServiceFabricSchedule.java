@@ -11,7 +11,7 @@ import io.pulumi.azurenative.devtestlab.outputs.NotificationSettingsResponse;
 import io.pulumi.azurenative.devtestlab.outputs.WeekDetailsResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -39,7 +39,7 @@ public class ServiceFabricSchedule extends io.pulumi.resources.CustomResource {
      * The creation date of the schedule.
      * 
      */
-    @OutputExport(name="createdDate", type=String.class, parameters={})
+    @Export(name="createdDate", type=String.class, parameters={})
     private Output<String> createdDate;
 
     /**
@@ -53,7 +53,7 @@ public class ServiceFabricSchedule extends io.pulumi.resources.CustomResource {
      * If the schedule will occur once each day of the week, specify the daily recurrence.
      * 
      */
-    @OutputExport(name="dailyRecurrence", type=DayDetailsResponse.class, parameters={})
+    @Export(name="dailyRecurrence", type=DayDetailsResponse.class, parameters={})
     private Output</* @Nullable */ DayDetailsResponse> dailyRecurrence;
 
     /**
@@ -67,7 +67,7 @@ public class ServiceFabricSchedule extends io.pulumi.resources.CustomResource {
      * If the schedule will occur multiple times a day, specify the hourly recurrence.
      * 
      */
-    @OutputExport(name="hourlyRecurrence", type=HourDetailsResponse.class, parameters={})
+    @Export(name="hourlyRecurrence", type=HourDetailsResponse.class, parameters={})
     private Output</* @Nullable */ HourDetailsResponse> hourlyRecurrence;
 
     /**
@@ -81,7 +81,7 @@ public class ServiceFabricSchedule extends io.pulumi.resources.CustomResource {
      * The location of the resource.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -95,7 +95,7 @@ public class ServiceFabricSchedule extends io.pulumi.resources.CustomResource {
      * The name of the resource.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -109,7 +109,7 @@ public class ServiceFabricSchedule extends io.pulumi.resources.CustomResource {
      * Notification settings.
      * 
      */
-    @OutputExport(name="notificationSettings", type=NotificationSettingsResponse.class, parameters={})
+    @Export(name="notificationSettings", type=NotificationSettingsResponse.class, parameters={})
     private Output</* @Nullable */ NotificationSettingsResponse> notificationSettings;
 
     /**
@@ -123,7 +123,7 @@ public class ServiceFabricSchedule extends io.pulumi.resources.CustomResource {
      * The provisioning status of the resource.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -137,7 +137,7 @@ public class ServiceFabricSchedule extends io.pulumi.resources.CustomResource {
      * The status of the schedule (i.e. Enabled, Disabled)
      * 
      */
-    @OutputExport(name="status", type=String.class, parameters={})
+    @Export(name="status", type=String.class, parameters={})
     private Output</* @Nullable */ String> status;
 
     /**
@@ -151,7 +151,7 @@ public class ServiceFabricSchedule extends io.pulumi.resources.CustomResource {
      * The tags of the resource.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -165,7 +165,7 @@ public class ServiceFabricSchedule extends io.pulumi.resources.CustomResource {
      * The resource ID to which the schedule belongs
      * 
      */
-    @OutputExport(name="targetResourceId", type=String.class, parameters={})
+    @Export(name="targetResourceId", type=String.class, parameters={})
     private Output</* @Nullable */ String> targetResourceId;
 
     /**
@@ -179,7 +179,7 @@ public class ServiceFabricSchedule extends io.pulumi.resources.CustomResource {
      * The task type of the schedule (e.g. LabVmsShutdownTask, LabVmAutoStart).
      * 
      */
-    @OutputExport(name="taskType", type=String.class, parameters={})
+    @Export(name="taskType", type=String.class, parameters={})
     private Output</* @Nullable */ String> taskType;
 
     /**
@@ -193,7 +193,7 @@ public class ServiceFabricSchedule extends io.pulumi.resources.CustomResource {
      * The time zone ID (e.g. Pacific Standard time).
      * 
      */
-    @OutputExport(name="timeZoneId", type=String.class, parameters={})
+    @Export(name="timeZoneId", type=String.class, parameters={})
     private Output</* @Nullable */ String> timeZoneId;
 
     /**
@@ -207,7 +207,7 @@ public class ServiceFabricSchedule extends io.pulumi.resources.CustomResource {
      * The type of the resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -221,7 +221,7 @@ public class ServiceFabricSchedule extends io.pulumi.resources.CustomResource {
      * The unique immutable identifier of a resource (Guid).
      * 
      */
-    @OutputExport(name="uniqueIdentifier", type=String.class, parameters={})
+    @Export(name="uniqueIdentifier", type=String.class, parameters={})
     private Output<String> uniqueIdentifier;
 
     /**
@@ -235,7 +235,7 @@ public class ServiceFabricSchedule extends io.pulumi.resources.CustomResource {
      * If the schedule will occur only some days of the week, specify the weekly recurrence.
      * 
      */
-    @OutputExport(name="weeklyRecurrence", type=WeekDetailsResponse.class, parameters={})
+    @Export(name="weeklyRecurrence", type=WeekDetailsResponse.class, parameters={})
     private Output</* @Nullable */ WeekDetailsResponse> weeklyRecurrence;
 
     /**

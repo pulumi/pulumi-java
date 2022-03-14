@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.signalrservice.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -27,7 +27,7 @@ public final class UpstreamTemplateResponse extends io.pulumi.resources.InvokeAr
      *     3. The single category name, for example, "connections", it matches the category "connections"
      * 
      */
-    @InputImport(name="categoryPattern")
+    @Import(name="categoryPattern")
       private final @Nullable String categoryPattern;
 
     public Optional<String> getCategoryPattern() {
@@ -42,7 +42,7 @@ public final class UpstreamTemplateResponse extends io.pulumi.resources.InvokeAr
      *     3. The single event name, for example, "connect", it matches "connect"
      * 
      */
-    @InputImport(name="eventPattern")
+    @Import(name="eventPattern")
       private final @Nullable String eventPattern;
 
     public Optional<String> getEventPattern() {
@@ -57,7 +57,7 @@ public final class UpstreamTemplateResponse extends io.pulumi.resources.InvokeAr
      *     3. The single hub name, for example, "hub1", it matches "hub1"
      * 
      */
-    @InputImport(name="hubPattern")
+    @Import(name="hubPattern")
       private final @Nullable String hubPattern;
 
     public Optional<String> getHubPattern() {
@@ -69,7 +69,7 @@ public final class UpstreamTemplateResponse extends io.pulumi.resources.InvokeAr
      * For example, if the urlTemplate is `http://example.com/{hub}/api/{event}`, with a client request from hub `chat` connects, it will first POST to this URL: `http://example.com/chat/api/connect`.
      * 
      */
-    @InputImport(name="urlTemplate", required=true)
+    @Import(name="urlTemplate", required=true)
       private final String urlTemplate;
 
     public String getUrlTemplate() {

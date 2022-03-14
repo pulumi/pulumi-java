@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.datamigration.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class MigrateSyncCompleteCommandInputResponse {
     /**
      * Time stamp to complete
@@ -22,10 +22,10 @@ public final class MigrateSyncCompleteCommandInputResponse {
      */
     private final String databaseName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MigrateSyncCompleteCommandInputResponse(
-        @OutputCustomType.Parameter("commitTimeStamp") @Nullable String commitTimeStamp,
-        @OutputCustomType.Parameter("databaseName") String databaseName) {
+        @CustomType.Parameter("commitTimeStamp") @Nullable String commitTimeStamp,
+        @CustomType.Parameter("databaseName") String databaseName) {
         this.commitTimeStamp = commitTimeStamp;
         this.databaseName = databaseName;
     }

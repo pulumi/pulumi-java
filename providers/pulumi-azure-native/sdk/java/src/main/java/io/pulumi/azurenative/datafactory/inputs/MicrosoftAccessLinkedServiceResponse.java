@@ -8,7 +8,7 @@ import io.pulumi.azurenative.datafactory.inputs.IntegrationRuntimeReferenceRespo
 import io.pulumi.azurenative.datafactory.inputs.ParameterSpecificationResponse;
 import io.pulumi.azurenative.datafactory.inputs.SecureStringResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -30,7 +30,7 @@ public final class MicrosoftAccessLinkedServiceResponse extends io.pulumi.resour
      * List of tags that can be used for describing the linked service.
      * 
      */
-    @InputImport(name="annotations")
+    @Import(name="annotations")
       private final @Nullable List<Object> annotations;
 
     public List<Object> getAnnotations() {
@@ -41,7 +41,7 @@ public final class MicrosoftAccessLinkedServiceResponse extends io.pulumi.resour
      * Type of authentication used to connect to the Microsoft Access as ODBC data store. Possible values are: Anonymous and Basic. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="authenticationType")
+    @Import(name="authenticationType")
       private final @Nullable Object authenticationType;
 
     public Optional<Object> getAuthenticationType() {
@@ -52,7 +52,7 @@ public final class MicrosoftAccessLinkedServiceResponse extends io.pulumi.resour
      * The integration runtime reference.
      * 
      */
-    @InputImport(name="connectVia")
+    @Import(name="connectVia")
       private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
     public Optional<IntegrationRuntimeReferenceResponse> getConnectVia() {
@@ -63,7 +63,7 @@ public final class MicrosoftAccessLinkedServiceResponse extends io.pulumi.resour
      * The non-access credential portion of the connection string as well as an optional encrypted credential. Type: string, SecureString or AzureKeyVaultSecretReference.
      * 
      */
-    @InputImport(name="connectionString", required=true)
+    @Import(name="connectionString", required=true)
       private final Object connectionString;
 
     public Object getConnectionString() {
@@ -74,7 +74,7 @@ public final class MicrosoftAccessLinkedServiceResponse extends io.pulumi.resour
      * The access credential portion of the connection string specified in driver-specific property-value format.
      * 
      */
-    @InputImport(name="credential")
+    @Import(name="credential")
       private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> credential;
 
     public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> getCredential() {
@@ -85,7 +85,7 @@ public final class MicrosoftAccessLinkedServiceResponse extends io.pulumi.resour
      * Linked service description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable String description;
 
     public Optional<String> getDescription() {
@@ -96,7 +96,7 @@ public final class MicrosoftAccessLinkedServiceResponse extends io.pulumi.resour
      * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="encryptedCredential")
+    @Import(name="encryptedCredential")
       private final @Nullable Object encryptedCredential;
 
     public Optional<Object> getEncryptedCredential() {
@@ -107,7 +107,7 @@ public final class MicrosoftAccessLinkedServiceResponse extends io.pulumi.resour
      * Parameters for linked service.
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
     public Map<String,ParameterSpecificationResponse> getParameters() {
@@ -118,7 +118,7 @@ public final class MicrosoftAccessLinkedServiceResponse extends io.pulumi.resour
      * Password for Basic authentication.
      * 
      */
-    @InputImport(name="password")
+    @Import(name="password")
       private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
 
     public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> getPassword() {
@@ -130,7 +130,7 @@ public final class MicrosoftAccessLinkedServiceResponse extends io.pulumi.resour
      * Expected value is 'MicrosoftAccess'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {
@@ -141,7 +141,7 @@ public final class MicrosoftAccessLinkedServiceResponse extends io.pulumi.resour
      * User name for Basic authentication. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="userName")
+    @Import(name="userName")
       private final @Nullable Object userName;
 
     public Optional<Object> getUserName() {

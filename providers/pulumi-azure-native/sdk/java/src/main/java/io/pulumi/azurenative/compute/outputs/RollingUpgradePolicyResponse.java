@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RollingUpgradePolicyResponse {
     /**
      * Allow VMSS to ignore AZ boundaries when constructing upgrade batches. Take into consideration the Update Domain and maxBatchInstancePercent to determine the batch size.
@@ -44,14 +44,14 @@ public final class RollingUpgradePolicyResponse {
      */
     private final @Nullable Boolean prioritizeUnhealthyInstances;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RollingUpgradePolicyResponse(
-        @OutputCustomType.Parameter("enableCrossZoneUpgrade") @Nullable Boolean enableCrossZoneUpgrade,
-        @OutputCustomType.Parameter("maxBatchInstancePercent") @Nullable Integer maxBatchInstancePercent,
-        @OutputCustomType.Parameter("maxUnhealthyInstancePercent") @Nullable Integer maxUnhealthyInstancePercent,
-        @OutputCustomType.Parameter("maxUnhealthyUpgradedInstancePercent") @Nullable Integer maxUnhealthyUpgradedInstancePercent,
-        @OutputCustomType.Parameter("pauseTimeBetweenBatches") @Nullable String pauseTimeBetweenBatches,
-        @OutputCustomType.Parameter("prioritizeUnhealthyInstances") @Nullable Boolean prioritizeUnhealthyInstances) {
+        @CustomType.Parameter("enableCrossZoneUpgrade") @Nullable Boolean enableCrossZoneUpgrade,
+        @CustomType.Parameter("maxBatchInstancePercent") @Nullable Integer maxBatchInstancePercent,
+        @CustomType.Parameter("maxUnhealthyInstancePercent") @Nullable Integer maxUnhealthyInstancePercent,
+        @CustomType.Parameter("maxUnhealthyUpgradedInstancePercent") @Nullable Integer maxUnhealthyUpgradedInstancePercent,
+        @CustomType.Parameter("pauseTimeBetweenBatches") @Nullable String pauseTimeBetweenBatches,
+        @CustomType.Parameter("prioritizeUnhealthyInstances") @Nullable Boolean prioritizeUnhealthyInstances) {
         this.enableCrossZoneUpgrade = enableCrossZoneUpgrade;
         this.maxBatchInstancePercent = maxBatchInstancePercent;
         this.maxUnhealthyInstancePercent = maxUnhealthyInstancePercent;

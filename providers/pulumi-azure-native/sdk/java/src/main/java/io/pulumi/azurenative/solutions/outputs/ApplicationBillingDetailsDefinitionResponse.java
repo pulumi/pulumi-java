@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.solutions.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ApplicationBillingDetailsDefinitionResponse {
     /**
      * The managed application resource usage Id.
@@ -17,8 +17,8 @@ public final class ApplicationBillingDetailsDefinitionResponse {
      */
     private final @Nullable String resourceUsageId;
 
-    @OutputCustomType.Constructor
-    private ApplicationBillingDetailsDefinitionResponse(@OutputCustomType.Parameter("resourceUsageId") @Nullable String resourceUsageId) {
+    @CustomType.Constructor
+    private ApplicationBillingDetailsDefinitionResponse(@CustomType.Parameter("resourceUsageId") @Nullable String resourceUsageId) {
         this.resourceUsageId = resourceUsageId;
     }
 

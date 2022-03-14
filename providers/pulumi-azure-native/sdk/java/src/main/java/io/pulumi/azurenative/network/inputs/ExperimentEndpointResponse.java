@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class ExperimentEndpointResponse extends io.pulumi.resources.Invoke
      * The endpoint URL
      * 
      */
-    @InputImport(name="endpoint")
+    @Import(name="endpoint")
       private final @Nullable String endpoint;
 
     public Optional<String> getEndpoint() {
@@ -33,7 +33,7 @@ public final class ExperimentEndpointResponse extends io.pulumi.resources.Invoke
      * The name of the endpoint
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {

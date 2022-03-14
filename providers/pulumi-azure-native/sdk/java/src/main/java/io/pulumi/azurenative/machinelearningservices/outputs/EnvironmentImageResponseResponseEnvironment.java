@@ -7,14 +7,14 @@ import io.pulumi.azurenative.machinelearningservices.outputs.ModelEnvironmentDef
 import io.pulumi.azurenative.machinelearningservices.outputs.ModelEnvironmentDefinitionResponseResponsePython;
 import io.pulumi.azurenative.machinelearningservices.outputs.ModelEnvironmentDefinitionResponseResponseR;
 import io.pulumi.azurenative.machinelearningservices.outputs.ModelEnvironmentDefinitionResponseResponseSpark;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EnvironmentImageResponseResponseEnvironment {
     /**
      * The definition of a Docker container.
@@ -57,16 +57,16 @@ public final class EnvironmentImageResponseResponseEnvironment {
      */
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EnvironmentImageResponseResponseEnvironment(
-        @OutputCustomType.Parameter("docker") @Nullable ModelEnvironmentDefinitionResponseResponseDocker docker,
-        @OutputCustomType.Parameter("environmentVariables") @Nullable Map<String,String> environmentVariables,
-        @OutputCustomType.Parameter("inferencingStackVersion") @Nullable String inferencingStackVersion,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("python") @Nullable ModelEnvironmentDefinitionResponseResponsePython python,
-        @OutputCustomType.Parameter("r") @Nullable ModelEnvironmentDefinitionResponseResponseR r,
-        @OutputCustomType.Parameter("spark") @Nullable ModelEnvironmentDefinitionResponseResponseSpark spark,
-        @OutputCustomType.Parameter("version") @Nullable String version) {
+        @CustomType.Parameter("docker") @Nullable ModelEnvironmentDefinitionResponseResponseDocker docker,
+        @CustomType.Parameter("environmentVariables") @Nullable Map<String,String> environmentVariables,
+        @CustomType.Parameter("inferencingStackVersion") @Nullable String inferencingStackVersion,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("python") @Nullable ModelEnvironmentDefinitionResponseResponsePython python,
+        @CustomType.Parameter("r") @Nullable ModelEnvironmentDefinitionResponseResponseR r,
+        @CustomType.Parameter("spark") @Nullable ModelEnvironmentDefinitionResponseResponseSpark spark,
+        @CustomType.Parameter("version") @Nullable String version) {
         this.docker = docker;
         this.environmentVariables = environmentVariables;
         this.inferencingStackVersion = inferencingStackVersion;

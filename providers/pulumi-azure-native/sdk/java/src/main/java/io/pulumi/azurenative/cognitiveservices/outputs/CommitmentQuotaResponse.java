@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.cognitiveservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CommitmentQuotaResponse {
     /**
      * Commitment quota quantity.
@@ -23,10 +23,10 @@ public final class CommitmentQuotaResponse {
      */
     private final @Nullable String unit;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CommitmentQuotaResponse(
-        @OutputCustomType.Parameter("quantity") @Nullable Double quantity,
-        @OutputCustomType.Parameter("unit") @Nullable String unit) {
+        @CustomType.Parameter("quantity") @Nullable Double quantity,
+        @CustomType.Parameter("unit") @Nullable String unit) {
         this.quantity = quantity;
         this.unit = unit;
     }

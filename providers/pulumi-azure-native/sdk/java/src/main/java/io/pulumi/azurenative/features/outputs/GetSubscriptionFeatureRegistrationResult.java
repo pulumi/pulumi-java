@@ -4,11 +4,11 @@
 package io.pulumi.azurenative.features.outputs;
 
 import io.pulumi.azurenative.features.outputs.SubscriptionFeatureRegistrationResponseProperties;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetSubscriptionFeatureRegistrationResult {
     /**
      * Azure resource Id.
@@ -27,12 +27,12 @@ public final class GetSubscriptionFeatureRegistrationResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetSubscriptionFeatureRegistrationResult(
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("properties") SubscriptionFeatureRegistrationResponseProperties properties,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("properties") SubscriptionFeatureRegistrationResponseProperties properties,
+        @CustomType.Parameter("type") String type) {
         this.id = id;
         this.name = name;
         this.properties = properties;

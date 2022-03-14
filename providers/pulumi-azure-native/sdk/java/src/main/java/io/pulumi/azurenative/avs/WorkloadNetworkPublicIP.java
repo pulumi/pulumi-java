@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.avs.WorkloadNetworkPublicIPArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Double;
 import java.lang.String;
@@ -35,7 +35,7 @@ public class WorkloadNetworkPublicIP extends io.pulumi.resources.CustomResource 
      * Display name of the Public IP Block.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output</* @Nullable */ String> displayName;
 
     /**
@@ -49,7 +49,7 @@ public class WorkloadNetworkPublicIP extends io.pulumi.resources.CustomResource 
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -63,7 +63,7 @@ public class WorkloadNetworkPublicIP extends io.pulumi.resources.CustomResource 
      * Number of Public IPs requested.
      * 
      */
-    @OutputExport(name="numberOfPublicIPs", type=Double.class, parameters={})
+    @Export(name="numberOfPublicIPs", type=Double.class, parameters={})
     private Output</* @Nullable */ Double> numberOfPublicIPs;
 
     /**
@@ -77,7 +77,7 @@ public class WorkloadNetworkPublicIP extends io.pulumi.resources.CustomResource 
      * The provisioning state
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -91,7 +91,7 @@ public class WorkloadNetworkPublicIP extends io.pulumi.resources.CustomResource 
      * CIDR Block of the Public IP Block.
      * 
      */
-    @OutputExport(name="publicIPBlock", type=String.class, parameters={})
+    @Export(name="publicIPBlock", type=String.class, parameters={})
     private Output<String> publicIPBlock;
 
     /**
@@ -105,7 +105,7 @@ public class WorkloadNetworkPublicIP extends io.pulumi.resources.CustomResource 
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

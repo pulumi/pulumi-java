@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.devtestlab.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class UserIdentityResponse {
     /**
      * Set to the app Id of the client JWT making the request.
@@ -37,13 +37,13 @@ public final class UserIdentityResponse {
      */
     private final @Nullable String tenantId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private UserIdentityResponse(
-        @OutputCustomType.Parameter("appId") @Nullable String appId,
-        @OutputCustomType.Parameter("objectId") @Nullable String objectId,
-        @OutputCustomType.Parameter("principalId") @Nullable String principalId,
-        @OutputCustomType.Parameter("principalName") @Nullable String principalName,
-        @OutputCustomType.Parameter("tenantId") @Nullable String tenantId) {
+        @CustomType.Parameter("appId") @Nullable String appId,
+        @CustomType.Parameter("objectId") @Nullable String objectId,
+        @CustomType.Parameter("principalId") @Nullable String principalId,
+        @CustomType.Parameter("principalName") @Nullable String principalName,
+        @CustomType.Parameter("tenantId") @Nullable String tenantId) {
         this.appId = appId;
         this.objectId = objectId;
         this.principalId = principalId;

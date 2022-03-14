@@ -3,12 +3,12 @@
 
 package io.pulumi.azurenative.logic.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class X12ValidationOverrideResponse {
     /**
      * The value indicating whether to allow leading and trailing spaces and zeroes.
@@ -46,15 +46,15 @@ public final class X12ValidationOverrideResponse {
      */
     private final Boolean validateXSDTypes;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private X12ValidationOverrideResponse(
-        @OutputCustomType.Parameter("allowLeadingAndTrailingSpacesAndZeroes") Boolean allowLeadingAndTrailingSpacesAndZeroes,
-        @OutputCustomType.Parameter("messageId") String messageId,
-        @OutputCustomType.Parameter("trailingSeparatorPolicy") String trailingSeparatorPolicy,
-        @OutputCustomType.Parameter("trimLeadingAndTrailingSpacesAndZeroes") Boolean trimLeadingAndTrailingSpacesAndZeroes,
-        @OutputCustomType.Parameter("validateCharacterSet") Boolean validateCharacterSet,
-        @OutputCustomType.Parameter("validateEDITypes") Boolean validateEDITypes,
-        @OutputCustomType.Parameter("validateXSDTypes") Boolean validateXSDTypes) {
+        @CustomType.Parameter("allowLeadingAndTrailingSpacesAndZeroes") Boolean allowLeadingAndTrailingSpacesAndZeroes,
+        @CustomType.Parameter("messageId") String messageId,
+        @CustomType.Parameter("trailingSeparatorPolicy") String trailingSeparatorPolicy,
+        @CustomType.Parameter("trimLeadingAndTrailingSpacesAndZeroes") Boolean trimLeadingAndTrailingSpacesAndZeroes,
+        @CustomType.Parameter("validateCharacterSet") Boolean validateCharacterSet,
+        @CustomType.Parameter("validateEDITypes") Boolean validateEDITypes,
+        @CustomType.Parameter("validateXSDTypes") Boolean validateXSDTypes) {
         this.allowLeadingAndTrailingSpacesAndZeroes = allowLeadingAndTrailingSpacesAndZeroes;
         this.messageId = messageId;
         this.trailingSeparatorPolicy = trailingSeparatorPolicy;

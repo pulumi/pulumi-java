@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.insights.inputs;
 
 import io.pulumi.azurenative.insights.inputs.DimensionResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class CriteriaResponse extends io.pulumi.resources.InvokeArgs {
      * List of Dimensions for creating metric
      * 
      */
-    @InputImport(name="dimensions")
+    @Import(name="dimensions")
       private final @Nullable List<DimensionResponse> dimensions;
 
     public List<DimensionResponse> getDimensions() {
@@ -35,7 +35,7 @@ public final class CriteriaResponse extends io.pulumi.resources.InvokeArgs {
      * Name of the metric
      * 
      */
-    @InputImport(name="metricName", required=true)
+    @Import(name="metricName", required=true)
       private final String metricName;
 
     public String getMetricName() {

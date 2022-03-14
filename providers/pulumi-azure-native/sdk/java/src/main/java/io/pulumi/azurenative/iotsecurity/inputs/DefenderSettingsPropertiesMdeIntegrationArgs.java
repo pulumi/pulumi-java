@@ -6,7 +6,7 @@ package io.pulumi.azurenative.iotsecurity.inputs;
 import io.pulumi.azurenative.iotsecurity.enums.MdeIntegration;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class DefenderSettingsPropertiesMdeIntegrationArgs extends io.pulum
      * Integration status
      * 
      */
-    @InputImport(name="status", required=true)
+    @Import(name="status", required=true)
       private final Output<Either<String,MdeIntegration>> status;
 
     public Output<Either<String,MdeIntegration>> getStatus() {

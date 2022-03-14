@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.SubResourceResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ApplicationGatewayPathRuleResponse {
     /**
      * Backend address pool resource of URL path map path rule.
@@ -69,19 +69,19 @@ public final class ApplicationGatewayPathRuleResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ApplicationGatewayPathRuleResponse(
-        @OutputCustomType.Parameter("backendAddressPool") @Nullable SubResourceResponse backendAddressPool,
-        @OutputCustomType.Parameter("backendHttpSettings") @Nullable SubResourceResponse backendHttpSettings,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("firewallPolicy") @Nullable SubResourceResponse firewallPolicy,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("paths") @Nullable List<String> paths,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("redirectConfiguration") @Nullable SubResourceResponse redirectConfiguration,
-        @OutputCustomType.Parameter("rewriteRuleSet") @Nullable SubResourceResponse rewriteRuleSet,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("backendAddressPool") @Nullable SubResourceResponse backendAddressPool,
+        @CustomType.Parameter("backendHttpSettings") @Nullable SubResourceResponse backendHttpSettings,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("firewallPolicy") @Nullable SubResourceResponse firewallPolicy,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("paths") @Nullable List<String> paths,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("redirectConfiguration") @Nullable SubResourceResponse redirectConfiguration,
+        @CustomType.Parameter("rewriteRuleSet") @Nullable SubResourceResponse rewriteRuleSet,
+        @CustomType.Parameter("type") String type) {
         this.backendAddressPool = backendAddressPool;
         this.backendHttpSettings = backendHttpSettings;
         this.etag = etag;

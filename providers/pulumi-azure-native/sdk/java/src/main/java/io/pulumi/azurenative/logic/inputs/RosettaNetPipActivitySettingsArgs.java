@@ -7,7 +7,7 @@ import io.pulumi.azurenative.logic.enums.RosettaNetPipActivityType;
 import io.pulumi.azurenative.logic.inputs.RosettaNetPipAcknowledgmentOfReceiptSettingsArgs;
 import io.pulumi.azurenative.logic.inputs.RosettaNetPipActivityBehaviorArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 
 
@@ -23,7 +23,7 @@ public final class RosettaNetPipActivitySettingsArgs extends io.pulumi.resources
      * The RosettaNet ProcessConfiguration acknowledgement settings.
      * 
      */
-    @InputImport(name="acknowledgmentOfReceiptSettings", required=true)
+    @Import(name="acknowledgmentOfReceiptSettings", required=true)
       private final Output<RosettaNetPipAcknowledgmentOfReceiptSettingsArgs> acknowledgmentOfReceiptSettings;
 
     public Output<RosettaNetPipAcknowledgmentOfReceiptSettingsArgs> getAcknowledgmentOfReceiptSettings() {
@@ -34,7 +34,7 @@ public final class RosettaNetPipActivitySettingsArgs extends io.pulumi.resources
      * The RosettaNet ProcessConfiguration activity behavior.
      * 
      */
-    @InputImport(name="activityBehavior", required=true)
+    @Import(name="activityBehavior", required=true)
       private final Output<RosettaNetPipActivityBehaviorArgs> activityBehavior;
 
     public Output<RosettaNetPipActivityBehaviorArgs> getActivityBehavior() {
@@ -45,7 +45,7 @@ public final class RosettaNetPipActivitySettingsArgs extends io.pulumi.resources
      * The RosettaNet ProcessConfiguration activity type.
      * 
      */
-    @InputImport(name="activityType", required=true)
+    @Import(name="activityType", required=true)
       private final Output<RosettaNetPipActivityType> activityType;
 
     public Output<RosettaNetPipActivityType> getActivityType() {

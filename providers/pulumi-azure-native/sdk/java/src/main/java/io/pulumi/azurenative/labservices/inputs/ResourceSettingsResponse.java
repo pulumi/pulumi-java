@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.labservices.inputs;
 
 import io.pulumi.azurenative.labservices.inputs.ReferenceVmResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ResourceSettingsResponse extends io.pulumi.resources.InvokeAr
      * The translated compute cores of the virtual machine
      * 
      */
-    @InputImport(name="cores", required=true)
+    @Import(name="cores", required=true)
       private final Integer cores;
 
     public Integer getCores() {
@@ -35,7 +35,7 @@ public final class ResourceSettingsResponse extends io.pulumi.resources.InvokeAr
      * The resource id of the gallery image used for creating the virtual machine
      * 
      */
-    @InputImport(name="galleryImageResourceId")
+    @Import(name="galleryImageResourceId")
       private final @Nullable String galleryImageResourceId;
 
     public Optional<String> getGalleryImageResourceId() {
@@ -46,7 +46,7 @@ public final class ResourceSettingsResponse extends io.pulumi.resources.InvokeAr
      * The unique id of the resource setting
      * 
      */
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final String id;
 
     public String getId() {
@@ -57,7 +57,7 @@ public final class ResourceSettingsResponse extends io.pulumi.resources.InvokeAr
      * The name of the image used to created the environment setting
      * 
      */
-    @InputImport(name="imageName", required=true)
+    @Import(name="imageName", required=true)
       private final String imageName;
 
     public String getImageName() {
@@ -68,7 +68,7 @@ public final class ResourceSettingsResponse extends io.pulumi.resources.InvokeAr
      * Details specific to Reference Vm
      * 
      */
-    @InputImport(name="referenceVm", required=true)
+    @Import(name="referenceVm", required=true)
       private final ReferenceVmResponse referenceVm;
 
     public ReferenceVmResponse getReferenceVm() {
@@ -79,7 +79,7 @@ public final class ResourceSettingsResponse extends io.pulumi.resources.InvokeAr
      * The size of the virtual machine
      * 
      */
-    @InputImport(name="size")
+    @Import(name="size")
       private final @Nullable String size;
 
     public Optional<String> getSize() {

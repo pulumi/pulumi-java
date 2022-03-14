@@ -5,7 +5,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.azurenative.datafactory.inputs.LinkedServiceReferenceArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class LogLocationSettingsArgs extends io.pulumi.resources.ResourceA
      * Log storage linked service reference.
      * 
      */
-    @InputImport(name="linkedServiceName", required=true)
+    @Import(name="linkedServiceName", required=true)
       private final Output<LinkedServiceReferenceArgs> linkedServiceName;
 
     public Output<LinkedServiceReferenceArgs> getLinkedServiceName() {
@@ -34,7 +34,7 @@ public final class LogLocationSettingsArgs extends io.pulumi.resources.ResourceA
      * The path to storage for storing detailed logs of activity execution. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="path")
+    @Import(name="path")
       private final @Nullable Output<Object> path;
 
     public Output<Object> getPath() {

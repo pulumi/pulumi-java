@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.storagecache.inputs;
 
 import io.pulumi.azurenative.storagecache.inputs.CacheActiveDirectorySettingsResponseCredentials;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class CacheActiveDirectorySettingsResponse extends io.pulumi.resour
      * The NetBIOS name to assign to the HPC Cache when it joins the Active Directory domain as a server. Length must 1-15 characters from the class [-0-9a-zA-Z].
      * 
      */
-    @InputImport(name="cacheNetBiosName", required=true)
+    @Import(name="cacheNetBiosName", required=true)
       private final String cacheNetBiosName;
 
     public String getCacheNetBiosName() {
@@ -34,7 +34,7 @@ public final class CacheActiveDirectorySettingsResponse extends io.pulumi.resour
      * Active Directory admin credentials used to join the HPC Cache to a domain.
      * 
      */
-    @InputImport(name="credentials")
+    @Import(name="credentials")
       private final @Nullable CacheActiveDirectorySettingsResponseCredentials credentials;
 
     public Optional<CacheActiveDirectorySettingsResponseCredentials> getCredentials() {
@@ -45,7 +45,7 @@ public final class CacheActiveDirectorySettingsResponse extends io.pulumi.resour
      * True if the HPC Cache is joined to the Active Directory domain.
      * 
      */
-    @InputImport(name="domainJoined", required=true)
+    @Import(name="domainJoined", required=true)
       private final String domainJoined;
 
     public String getDomainJoined() {
@@ -56,7 +56,7 @@ public final class CacheActiveDirectorySettingsResponse extends io.pulumi.resour
      * The fully qualified domain name of the Active Directory domain controller.
      * 
      */
-    @InputImport(name="domainName", required=true)
+    @Import(name="domainName", required=true)
       private final String domainName;
 
     public String getDomainName() {
@@ -67,7 +67,7 @@ public final class CacheActiveDirectorySettingsResponse extends io.pulumi.resour
      * The Active Directory domain's NetBIOS name.
      * 
      */
-    @InputImport(name="domainNetBiosName", required=true)
+    @Import(name="domainNetBiosName", required=true)
       private final String domainNetBiosName;
 
     public String getDomainNetBiosName() {
@@ -78,7 +78,7 @@ public final class CacheActiveDirectorySettingsResponse extends io.pulumi.resour
      * Primary DNS IP address used to resolve the Active Directory domain controller's fully qualified domain name.
      * 
      */
-    @InputImport(name="primaryDnsIpAddress", required=true)
+    @Import(name="primaryDnsIpAddress", required=true)
       private final String primaryDnsIpAddress;
 
     public String getPrimaryDnsIpAddress() {
@@ -89,7 +89,7 @@ public final class CacheActiveDirectorySettingsResponse extends io.pulumi.resour
      * Secondary DNS IP address used to resolve the Active Directory domain controller's fully qualified domain name.
      * 
      */
-    @InputImport(name="secondaryDnsIpAddress")
+    @Import(name="secondaryDnsIpAddress")
       private final @Nullable String secondaryDnsIpAddress;
 
     public Optional<String> getSecondaryDnsIpAddress() {

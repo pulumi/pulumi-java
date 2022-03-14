@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.logic.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class IntegrationAccountMapPropertiesResponseParametersSchema {
     /**
      * The reference name.
@@ -17,8 +17,8 @@ public final class IntegrationAccountMapPropertiesResponseParametersSchema {
      */
     private final @Nullable String ref;
 
-    @OutputCustomType.Constructor
-    private IntegrationAccountMapPropertiesResponseParametersSchema(@OutputCustomType.Parameter("ref") @Nullable String ref) {
+    @CustomType.Constructor
+    private IntegrationAccountMapPropertiesResponseParametersSchema(@CustomType.Parameter("ref") @Nullable String ref) {
         this.ref = ref;
     }
 

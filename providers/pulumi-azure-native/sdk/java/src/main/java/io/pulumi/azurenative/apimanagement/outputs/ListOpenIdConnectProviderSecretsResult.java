@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.apimanagement.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ListOpenIdConnectProviderSecretsResult {
     /**
      * Client or app secret used in IdentityProviders, Aad, OpenID or OAuth.
@@ -17,8 +17,8 @@ public final class ListOpenIdConnectProviderSecretsResult {
      */
     private final @Nullable String clientSecret;
 
-    @OutputCustomType.Constructor
-    private ListOpenIdConnectProviderSecretsResult(@OutputCustomType.Parameter("clientSecret") @Nullable String clientSecret) {
+    @CustomType.Constructor
+    private ListOpenIdConnectProviderSecretsResult(@CustomType.Parameter("clientSecret") @Nullable String clientSecret) {
         this.clientSecret = clientSecret;
     }
 

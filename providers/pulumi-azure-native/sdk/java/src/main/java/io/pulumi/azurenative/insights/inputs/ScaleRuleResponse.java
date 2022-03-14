@@ -5,7 +5,7 @@ package io.pulumi.azurenative.insights.inputs;
 
 import io.pulumi.azurenative.insights.inputs.MetricTriggerResponse;
 import io.pulumi.azurenative.insights.inputs.ScaleActionResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 
 
@@ -21,7 +21,7 @@ public final class ScaleRuleResponse extends io.pulumi.resources.InvokeArgs {
      * the trigger that results in a scaling action.
      * 
      */
-    @InputImport(name="metricTrigger", required=true)
+    @Import(name="metricTrigger", required=true)
       private final MetricTriggerResponse metricTrigger;
 
     public MetricTriggerResponse getMetricTrigger() {
@@ -32,7 +32,7 @@ public final class ScaleRuleResponse extends io.pulumi.resources.InvokeArgs {
      * the parameters for the scaling action.
      * 
      */
-    @InputImport(name="scaleAction", required=true)
+    @Import(name="scaleAction", required=true)
       private final ScaleActionResponse scaleAction;
 
     public ScaleActionResponse getScaleAction() {

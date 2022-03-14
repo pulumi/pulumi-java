@@ -5,14 +5,14 @@ package io.pulumi.azurenative.synapse.outputs;
 
 import io.pulumi.azurenative.synapse.outputs.AzureSkuResponse;
 import io.pulumi.azurenative.synapse.outputs.SystemDataResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetkustoPoolResult {
     /**
      * The Kusto Pool data ingestion URI.
@@ -90,23 +90,23 @@ public final class GetkustoPoolResult {
      */
     private final @Nullable String workspaceUid;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetkustoPoolResult(
-        @OutputCustomType.Parameter("dataIngestionUri") String dataIngestionUri,
-        @OutputCustomType.Parameter("engineType") @Nullable String engineType,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("sku") AzureSkuResponse sku,
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("stateReason") String stateReason,
-        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("uri") String uri,
-        @OutputCustomType.Parameter("workspaceUid") @Nullable String workspaceUid) {
+        @CustomType.Parameter("dataIngestionUri") String dataIngestionUri,
+        @CustomType.Parameter("engineType") @Nullable String engineType,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("sku") AzureSkuResponse sku,
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("stateReason") String stateReason,
+        @CustomType.Parameter("systemData") SystemDataResponse systemData,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("uri") String uri,
+        @CustomType.Parameter("workspaceUid") @Nullable String workspaceUid) {
         this.dataIngestionUri = dataIngestionUri;
         this.engineType = engineType;
         this.etag = etag;

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.securityandcompliance.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ServiceCorsConfigurationInfoResponse {
     /**
      * If credentials are allowed via CORS.
@@ -40,13 +40,13 @@ public final class ServiceCorsConfigurationInfoResponse {
      */
     private final @Nullable List<String> origins;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServiceCorsConfigurationInfoResponse(
-        @OutputCustomType.Parameter("allowCredentials") @Nullable Boolean allowCredentials,
-        @OutputCustomType.Parameter("headers") @Nullable List<String> headers,
-        @OutputCustomType.Parameter("maxAge") @Nullable Double maxAge,
-        @OutputCustomType.Parameter("methods") @Nullable List<String> methods,
-        @OutputCustomType.Parameter("origins") @Nullable List<String> origins) {
+        @CustomType.Parameter("allowCredentials") @Nullable Boolean allowCredentials,
+        @CustomType.Parameter("headers") @Nullable List<String> headers,
+        @CustomType.Parameter("maxAge") @Nullable Double maxAge,
+        @CustomType.Parameter("methods") @Nullable List<String> methods,
+        @CustomType.Parameter("origins") @Nullable List<String> origins) {
         this.allowCredentials = allowCredentials;
         this.headers = headers;
         this.maxAge = maxAge;

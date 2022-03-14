@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.botservice.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class WebChatSiteArgs extends io.pulumi.resources.ResourceArgs {
      * Whether this site is enabled for DirectLine channel
      * 
      */
-    @InputImport(name="isEnabled", required=true)
+    @Import(name="isEnabled", required=true)
       private final Output<Boolean> isEnabled;
 
     public Output<Boolean> getIsEnabled() {
@@ -33,7 +33,7 @@ public final class WebChatSiteArgs extends io.pulumi.resources.ResourceArgs {
      * Whether this site is enabled for preview versions of Webchat
      * 
      */
-    @InputImport(name="isWebchatPreviewEnabled", required=true)
+    @Import(name="isWebchatPreviewEnabled", required=true)
       private final Output<Boolean> isWebchatPreviewEnabled;
 
     public Output<Boolean> getIsWebchatPreviewEnabled() {
@@ -44,7 +44,7 @@ public final class WebChatSiteArgs extends io.pulumi.resources.ResourceArgs {
      * Site name
      * 
      */
-    @InputImport(name="siteName", required=true)
+    @Import(name="siteName", required=true)
       private final Output<String> siteName;
 
     public Output<String> getSiteName() {

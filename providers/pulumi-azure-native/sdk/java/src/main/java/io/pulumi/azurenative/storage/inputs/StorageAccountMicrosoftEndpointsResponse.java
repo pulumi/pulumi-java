@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storage.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class StorageAccountMicrosoftEndpointsResponse extends io.pulumi.re
      * Gets the blob endpoint.
      * 
      */
-    @InputImport(name="blob", required=true)
+    @Import(name="blob", required=true)
       private final String blob;
 
     public String getBlob() {
@@ -31,7 +31,7 @@ public final class StorageAccountMicrosoftEndpointsResponse extends io.pulumi.re
      * Gets the dfs endpoint.
      * 
      */
-    @InputImport(name="dfs", required=true)
+    @Import(name="dfs", required=true)
       private final String dfs;
 
     public String getDfs() {
@@ -42,7 +42,7 @@ public final class StorageAccountMicrosoftEndpointsResponse extends io.pulumi.re
      * Gets the file endpoint.
      * 
      */
-    @InputImport(name="file", required=true)
+    @Import(name="file", required=true)
       private final String file;
 
     public String getFile() {
@@ -53,7 +53,7 @@ public final class StorageAccountMicrosoftEndpointsResponse extends io.pulumi.re
      * Gets the queue endpoint.
      * 
      */
-    @InputImport(name="queue", required=true)
+    @Import(name="queue", required=true)
       private final String queue;
 
     public String getQueue() {
@@ -64,7 +64,7 @@ public final class StorageAccountMicrosoftEndpointsResponse extends io.pulumi.re
      * Gets the table endpoint.
      * 
      */
-    @InputImport(name="table", required=true)
+    @Import(name="table", required=true)
       private final String table;
 
     public String getTable() {
@@ -75,7 +75,7 @@ public final class StorageAccountMicrosoftEndpointsResponse extends io.pulumi.re
      * Gets the web endpoint.
      * 
      */
-    @InputImport(name="web", required=true)
+    @Import(name="web", required=true)
       private final String web;
 
     public String getWeb() {

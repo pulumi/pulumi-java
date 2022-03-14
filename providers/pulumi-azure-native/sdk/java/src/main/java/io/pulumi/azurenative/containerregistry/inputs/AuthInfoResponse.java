@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerregistry.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class AuthInfoResponse extends io.pulumi.resources.InvokeArgs {
      * Time in seconds that the token remains valid
      * 
      */
-    @InputImport(name="expiresIn")
+    @Import(name="expiresIn")
       private final @Nullable Integer expiresIn;
 
     public Optional<Integer> getExpiresIn() {
@@ -34,7 +34,7 @@ public final class AuthInfoResponse extends io.pulumi.resources.InvokeArgs {
      * The refresh token used to refresh the access token.
      * 
      */
-    @InputImport(name="refreshToken")
+    @Import(name="refreshToken")
       private final @Nullable String refreshToken;
 
     public Optional<String> getRefreshToken() {
@@ -45,7 +45,7 @@ public final class AuthInfoResponse extends io.pulumi.resources.InvokeArgs {
      * The scope of the access token.
      * 
      */
-    @InputImport(name="scope")
+    @Import(name="scope")
       private final @Nullable String scope;
 
     public Optional<String> getScope() {
@@ -56,7 +56,7 @@ public final class AuthInfoResponse extends io.pulumi.resources.InvokeArgs {
      * The access token used to access the source control provider.
      * 
      */
-    @InputImport(name="token", required=true)
+    @Import(name="token", required=true)
       private final String token;
 
     public String getToken() {
@@ -67,7 +67,7 @@ public final class AuthInfoResponse extends io.pulumi.resources.InvokeArgs {
      * The type of Auth token.
      * 
      */
-    @InputImport(name="tokenType", required=true)
+    @Import(name="tokenType", required=true)
       private final String tokenType;
 
     public String getTokenType() {

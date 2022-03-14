@@ -5,7 +5,7 @@ package io.pulumi.azurenative.storage;
 
 import io.pulumi.azurenative.storage.enums.PublicAccess;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class BlobContainerArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.
      * 
      */
-    @InputImport(name="accountName", required=true)
+    @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
     public Output<String> getAccountName() {
@@ -32,7 +32,7 @@ public final class BlobContainerArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the blob container within the specified storage account. Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only. Every dash (-) character must be immediately preceded and followed by a letter or number.
      * 
      */
-    @InputImport(name="containerName")
+    @Import(name="containerName")
       private final @Nullable Output<String> containerName;
 
     public Output<String> getContainerName() {
@@ -43,7 +43,7 @@ public final class BlobContainerArgs extends io.pulumi.resources.ResourceArgs {
      * Default the container to use specified encryption scope for all writes.
      * 
      */
-    @InputImport(name="defaultEncryptionScope")
+    @Import(name="defaultEncryptionScope")
       private final @Nullable Output<String> defaultEncryptionScope;
 
     public Output<String> getDefaultEncryptionScope() {
@@ -54,7 +54,7 @@ public final class BlobContainerArgs extends io.pulumi.resources.ResourceArgs {
      * Block override of encryption scope from the container default.
      * 
      */
-    @InputImport(name="denyEncryptionScopeOverride")
+    @Import(name="denyEncryptionScopeOverride")
       private final @Nullable Output<Boolean> denyEncryptionScopeOverride;
 
     public Output<Boolean> getDenyEncryptionScopeOverride() {
@@ -65,7 +65,7 @@ public final class BlobContainerArgs extends io.pulumi.resources.ResourceArgs {
      * A name-value pair to associate with the container as metadata.
      * 
      */
-    @InputImport(name="metadata")
+    @Import(name="metadata")
       private final @Nullable Output<Map<String,String>> metadata;
 
     public Output<Map<String,String>> getMetadata() {
@@ -76,7 +76,7 @@ public final class BlobContainerArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies whether data in the container may be accessed publicly and the level of access.
      * 
      */
-    @InputImport(name="publicAccess")
+    @Import(name="publicAccess")
       private final @Nullable Output<PublicAccess> publicAccess;
 
     public Output<PublicAccess> getPublicAccess() {
@@ -87,7 +87,7 @@ public final class BlobContainerArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group within the user's subscription. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {

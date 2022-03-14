@@ -8,7 +8,7 @@ import io.pulumi.azurenative.network.inputs.SubResourceArgs;
 import io.pulumi.azurenative.network.inputs.VpnConnectionArgs;
 import io.pulumi.azurenative.network.inputs.VpnGatewayNatRuleArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -26,7 +26,7 @@ public final class VpnGatewayArgs extends io.pulumi.resources.ResourceArgs {
      * Local network gateway's BGP speaker settings.
      * 
      */
-    @InputImport(name="bgpSettings")
+    @Import(name="bgpSettings")
       private final @Nullable Output<BgpSettingsArgs> bgpSettings;
 
     public Output<BgpSettingsArgs> getBgpSettings() {
@@ -37,7 +37,7 @@ public final class VpnGatewayArgs extends io.pulumi.resources.ResourceArgs {
      * List of all vpn connections to the gateway.
      * 
      */
-    @InputImport(name="connections")
+    @Import(name="connections")
       private final @Nullable Output<List<VpnConnectionArgs>> connections;
 
     public Output<List<VpnConnectionArgs>> getConnections() {
@@ -48,7 +48,7 @@ public final class VpnGatewayArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the gateway.
      * 
      */
-    @InputImport(name="gatewayName")
+    @Import(name="gatewayName")
       private final @Nullable Output<String> gatewayName;
 
     public Output<String> getGatewayName() {
@@ -59,7 +59,7 @@ public final class VpnGatewayArgs extends io.pulumi.resources.ResourceArgs {
      * Resource ID.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
@@ -70,7 +70,7 @@ public final class VpnGatewayArgs extends io.pulumi.resources.ResourceArgs {
      * Enable Routing Preference property for the Public IP Interface of the VpnGateway.
      * 
      */
-    @InputImport(name="isRoutingPreferenceInternet")
+    @Import(name="isRoutingPreferenceInternet")
       private final @Nullable Output<Boolean> isRoutingPreferenceInternet;
 
     public Output<Boolean> getIsRoutingPreferenceInternet() {
@@ -81,7 +81,7 @@ public final class VpnGatewayArgs extends io.pulumi.resources.ResourceArgs {
      * Resource location.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -92,7 +92,7 @@ public final class VpnGatewayArgs extends io.pulumi.resources.ResourceArgs {
      * List of all the nat Rules associated with the gateway.
      * 
      */
-    @InputImport(name="natRules")
+    @Import(name="natRules")
       private final @Nullable Output<List<VpnGatewayNatRuleArgs>> natRules;
 
     public Output<List<VpnGatewayNatRuleArgs>> getNatRules() {
@@ -103,7 +103,7 @@ public final class VpnGatewayArgs extends io.pulumi.resources.ResourceArgs {
      * The resource group name of the VpnGateway.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -114,7 +114,7 @@ public final class VpnGatewayArgs extends io.pulumi.resources.ResourceArgs {
      * Resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -125,7 +125,7 @@ public final class VpnGatewayArgs extends io.pulumi.resources.ResourceArgs {
      * The VirtualHub to which the gateway belongs.
      * 
      */
-    @InputImport(name="virtualHub")
+    @Import(name="virtualHub")
       private final @Nullable Output<SubResourceArgs> virtualHub;
 
     public Output<SubResourceArgs> getVirtualHub() {
@@ -136,7 +136,7 @@ public final class VpnGatewayArgs extends io.pulumi.resources.ResourceArgs {
      * The scale unit for this vpn gateway.
      * 
      */
-    @InputImport(name="vpnGatewayScaleUnit")
+    @Import(name="vpnGatewayScaleUnit")
       private final @Nullable Output<Integer> vpnGatewayScaleUnit;
 
     public Output<Integer> getVpnGatewayScaleUnit() {

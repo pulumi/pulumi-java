@@ -5,14 +5,14 @@ package io.pulumi.azurenative.appplatform.outputs;
 
 import io.pulumi.azurenative.appplatform.outputs.NetworkProfileResponseOutboundIPs;
 import io.pulumi.azurenative.appplatform.outputs.RequiredTrafficResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class NetworkProfileResponse {
     /**
      * Name of the resource group containing network resources of Azure Spring Cloud Apps
@@ -50,15 +50,15 @@ public final class NetworkProfileResponse {
      */
     private final @Nullable String serviceRuntimeSubnetId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NetworkProfileResponse(
-        @OutputCustomType.Parameter("appNetworkResourceGroup") @Nullable String appNetworkResourceGroup,
-        @OutputCustomType.Parameter("appSubnetId") @Nullable String appSubnetId,
-        @OutputCustomType.Parameter("outboundIPs") NetworkProfileResponseOutboundIPs outboundIPs,
-        @OutputCustomType.Parameter("requiredTraffics") List<RequiredTrafficResponse> requiredTraffics,
-        @OutputCustomType.Parameter("serviceCidr") @Nullable String serviceCidr,
-        @OutputCustomType.Parameter("serviceRuntimeNetworkResourceGroup") @Nullable String serviceRuntimeNetworkResourceGroup,
-        @OutputCustomType.Parameter("serviceRuntimeSubnetId") @Nullable String serviceRuntimeSubnetId) {
+        @CustomType.Parameter("appNetworkResourceGroup") @Nullable String appNetworkResourceGroup,
+        @CustomType.Parameter("appSubnetId") @Nullable String appSubnetId,
+        @CustomType.Parameter("outboundIPs") NetworkProfileResponseOutboundIPs outboundIPs,
+        @CustomType.Parameter("requiredTraffics") List<RequiredTrafficResponse> requiredTraffics,
+        @CustomType.Parameter("serviceCidr") @Nullable String serviceCidr,
+        @CustomType.Parameter("serviceRuntimeNetworkResourceGroup") @Nullable String serviceRuntimeNetworkResourceGroup,
+        @CustomType.Parameter("serviceRuntimeSubnetId") @Nullable String serviceRuntimeSubnetId) {
         this.appNetworkResourceGroup = appNetworkResourceGroup;
         this.appSubnetId = appSubnetId;
         this.outboundIPs = outboundIPs;

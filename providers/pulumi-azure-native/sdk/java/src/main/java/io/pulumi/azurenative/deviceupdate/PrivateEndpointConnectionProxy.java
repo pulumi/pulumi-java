@@ -9,7 +9,7 @@ import io.pulumi.azurenative.deviceupdate.outputs.RemotePrivateEndpointResponse;
 import io.pulumi.azurenative.deviceupdate.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -36,7 +36,7 @@ public class PrivateEndpointConnectionProxy extends io.pulumi.resources.CustomRe
      * ETag from NRP.
      * 
      */
-    @OutputExport(name="eTag", type=String.class, parameters={})
+    @Export(name="eTag", type=String.class, parameters={})
     private Output<String> eTag;
 
     /**
@@ -50,7 +50,7 @@ public class PrivateEndpointConnectionProxy extends io.pulumi.resources.CustomRe
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -64,7 +64,7 @@ public class PrivateEndpointConnectionProxy extends io.pulumi.resources.CustomRe
      * The provisioning state of the private endpoint connection proxy resource.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -78,7 +78,7 @@ public class PrivateEndpointConnectionProxy extends io.pulumi.resources.CustomRe
      * Remote private endpoint details.
      * 
      */
-    @OutputExport(name="remotePrivateEndpoint", type=RemotePrivateEndpointResponse.class, parameters={})
+    @Export(name="remotePrivateEndpoint", type=RemotePrivateEndpointResponse.class, parameters={})
     private Output</* @Nullable */ RemotePrivateEndpointResponse> remotePrivateEndpoint;
 
     /**
@@ -92,7 +92,7 @@ public class PrivateEndpointConnectionProxy extends io.pulumi.resources.CustomRe
      * Operation status.
      * 
      */
-    @OutputExport(name="status", type=String.class, parameters={})
+    @Export(name="status", type=String.class, parameters={})
     private Output</* @Nullable */ String> status;
 
     /**
@@ -106,7 +106,7 @@ public class PrivateEndpointConnectionProxy extends io.pulumi.resources.CustomRe
      * Azure Resource Manager metadata containing createdBy and modifiedBy information.
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -120,7 +120,7 @@ public class PrivateEndpointConnectionProxy extends io.pulumi.resources.CustomRe
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

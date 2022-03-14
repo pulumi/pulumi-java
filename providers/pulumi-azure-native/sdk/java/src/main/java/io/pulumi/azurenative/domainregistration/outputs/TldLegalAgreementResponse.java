@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.domainregistration.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TldLegalAgreementResponse {
     /**
      * Unique identifier for the agreement.
@@ -32,12 +32,12 @@ public final class TldLegalAgreementResponse {
      */
     private final @Nullable String url;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TldLegalAgreementResponse(
-        @OutputCustomType.Parameter("agreementKey") String agreementKey,
-        @OutputCustomType.Parameter("content") String content,
-        @OutputCustomType.Parameter("title") String title,
-        @OutputCustomType.Parameter("url") @Nullable String url) {
+        @CustomType.Parameter("agreementKey") String agreementKey,
+        @CustomType.Parameter("content") String content,
+        @CustomType.Parameter("title") String title,
+        @CustomType.Parameter("url") @Nullable String url) {
         this.agreementKey = agreementKey;
         this.content = content;
         this.title = title;

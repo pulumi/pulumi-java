@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.providerhub.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -14,21 +14,21 @@ public final class ResourceTypeRegistrationPropertiesResourceMovePolicyArgs exte
 
     public static final ResourceTypeRegistrationPropertiesResourceMovePolicyArgs Empty = new ResourceTypeRegistrationPropertiesResourceMovePolicyArgs();
 
-    @InputImport(name="crossResourceGroupMoveEnabled")
+    @Import(name="crossResourceGroupMoveEnabled")
       private final @Nullable Output<Boolean> crossResourceGroupMoveEnabled;
 
     public Output<Boolean> getCrossResourceGroupMoveEnabled() {
         return this.crossResourceGroupMoveEnabled == null ? Output.empty() : this.crossResourceGroupMoveEnabled;
     }
 
-    @InputImport(name="crossSubscriptionMoveEnabled")
+    @Import(name="crossSubscriptionMoveEnabled")
       private final @Nullable Output<Boolean> crossSubscriptionMoveEnabled;
 
     public Output<Boolean> getCrossSubscriptionMoveEnabled() {
         return this.crossSubscriptionMoveEnabled == null ? Output.empty() : this.crossSubscriptionMoveEnabled;
     }
 
-    @InputImport(name="validationRequired")
+    @Import(name="validationRequired")
       private final @Nullable Output<Boolean> validationRequired;
 
     public Output<Boolean> getValidationRequired() {

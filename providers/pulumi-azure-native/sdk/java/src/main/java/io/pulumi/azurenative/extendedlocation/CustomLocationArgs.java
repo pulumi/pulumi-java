@@ -7,7 +7,7 @@ import io.pulumi.azurenative.extendedlocation.enums.HostType;
 import io.pulumi.azurenative.extendedlocation.inputs.CustomLocationPropertiesAuthenticationArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -23,7 +23,7 @@ public final class CustomLocationArgs extends io.pulumi.resources.ResourceArgs {
      * This is optional input that contains the authentication that should be used to generate the namespace.
      * 
      */
-    @InputImport(name="authentication")
+    @Import(name="authentication")
       private final @Nullable Output<CustomLocationPropertiesAuthenticationArgs> authentication;
 
     public Output<CustomLocationPropertiesAuthenticationArgs> getAuthentication() {
@@ -34,7 +34,7 @@ public final class CustomLocationArgs extends io.pulumi.resources.ResourceArgs {
      * Contains the reference to the add-on that contains charts to deploy CRDs and operators.
      * 
      */
-    @InputImport(name="clusterExtensionIds")
+    @Import(name="clusterExtensionIds")
       private final @Nullable Output<List<String>> clusterExtensionIds;
 
     public Output<List<String>> getClusterExtensionIds() {
@@ -45,7 +45,7 @@ public final class CustomLocationArgs extends io.pulumi.resources.ResourceArgs {
      * Display name for the Custom Locations location.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -56,7 +56,7 @@ public final class CustomLocationArgs extends io.pulumi.resources.ResourceArgs {
      * Connected Cluster or AKS Cluster. The Custom Locations RP will perform a checkAccess API for listAdminCredentials permissions.
      * 
      */
-    @InputImport(name="hostResourceId")
+    @Import(name="hostResourceId")
       private final @Nullable Output<String> hostResourceId;
 
     public Output<String> getHostResourceId() {
@@ -67,7 +67,7 @@ public final class CustomLocationArgs extends io.pulumi.resources.ResourceArgs {
      * Type of host the Custom Locations is referencing (Kubernetes, etc...).
      * 
      */
-    @InputImport(name="hostType")
+    @Import(name="hostType")
       private final @Nullable Output<Either<String,HostType>> hostType;
 
     public Output<Either<String,HostType>> getHostType() {
@@ -78,7 +78,7 @@ public final class CustomLocationArgs extends io.pulumi.resources.ResourceArgs {
      * The geo-location where the resource lives
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -89,7 +89,7 @@ public final class CustomLocationArgs extends io.pulumi.resources.ResourceArgs {
      * Kubernetes namespace that will be created on the specified cluster.
      * 
      */
-    @InputImport(name="namespace")
+    @Import(name="namespace")
       private final @Nullable Output<String> namespace;
 
     public Output<String> getNamespace() {
@@ -100,7 +100,7 @@ public final class CustomLocationArgs extends io.pulumi.resources.ResourceArgs {
      * Provisioning State for the Custom Location.
      * 
      */
-    @InputImport(name="provisioningState")
+    @Import(name="provisioningState")
       private final @Nullable Output<String> provisioningState;
 
     public Output<String> getProvisioningState() {
@@ -111,7 +111,7 @@ public final class CustomLocationArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -122,7 +122,7 @@ public final class CustomLocationArgs extends io.pulumi.resources.ResourceArgs {
      * Custom Locations name.
      * 
      */
-    @InputImport(name="resourceName")
+    @Import(name="resourceName")
       private final @Nullable Output<String> resourceName;
 
     public Output<String> getPropResourceName() {
@@ -133,7 +133,7 @@ public final class CustomLocationArgs extends io.pulumi.resources.ResourceArgs {
      * Resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

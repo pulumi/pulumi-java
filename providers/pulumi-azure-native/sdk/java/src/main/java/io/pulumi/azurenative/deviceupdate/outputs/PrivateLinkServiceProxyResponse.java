@@ -6,14 +6,14 @@ package io.pulumi.azurenative.deviceupdate.outputs;
 import io.pulumi.azurenative.deviceupdate.outputs.GroupConnectivityInformationResponse;
 import io.pulumi.azurenative.deviceupdate.outputs.PrivateLinkServiceConnectionStateResponse;
 import io.pulumi.azurenative.deviceupdate.outputs.PrivateLinkServiceProxyResponseRemotePrivateEndpointConnection;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PrivateLinkServiceProxyResponse {
     /**
      * Group connectivity information.
@@ -36,12 +36,12 @@ public final class PrivateLinkServiceProxyResponse {
      */
     private final @Nullable PrivateLinkServiceConnectionStateResponse remotePrivateLinkServiceConnectionState;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PrivateLinkServiceProxyResponse(
-        @OutputCustomType.Parameter("groupConnectivityInformation") @Nullable List<GroupConnectivityInformationResponse> groupConnectivityInformation,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("remotePrivateEndpointConnection") @Nullable PrivateLinkServiceProxyResponseRemotePrivateEndpointConnection remotePrivateEndpointConnection,
-        @OutputCustomType.Parameter("remotePrivateLinkServiceConnectionState") @Nullable PrivateLinkServiceConnectionStateResponse remotePrivateLinkServiceConnectionState) {
+        @CustomType.Parameter("groupConnectivityInformation") @Nullable List<GroupConnectivityInformationResponse> groupConnectivityInformation,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("remotePrivateEndpointConnection") @Nullable PrivateLinkServiceProxyResponseRemotePrivateEndpointConnection remotePrivateEndpointConnection,
+        @CustomType.Parameter("remotePrivateLinkServiceConnectionState") @Nullable PrivateLinkServiceConnectionStateResponse remotePrivateLinkServiceConnectionState) {
         this.groupConnectivityInformation = groupConnectivityInformation;
         this.id = id;
         this.remotePrivateEndpointConnection = remotePrivateEndpointConnection;

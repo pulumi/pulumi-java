@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.edgeorder.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class HierarchyInformationArgs extends io.pulumi.resources.Resource
      * Represents configuration name that uniquely identifies configuration
      * 
      */
-    @InputImport(name="configurationName")
+    @Import(name="configurationName")
       private final @Nullable Output<String> configurationName;
 
     public Output<String> getConfigurationName() {
@@ -33,7 +33,7 @@ public final class HierarchyInformationArgs extends io.pulumi.resources.Resource
      * Represents product family name that uniquely identifies product family
      * 
      */
-    @InputImport(name="productFamilyName")
+    @Import(name="productFamilyName")
       private final @Nullable Output<String> productFamilyName;
 
     public Output<String> getProductFamilyName() {
@@ -44,7 +44,7 @@ public final class HierarchyInformationArgs extends io.pulumi.resources.Resource
      * Represents product line name that uniquely identifies product line
      * 
      */
-    @InputImport(name="productLineName")
+    @Import(name="productLineName")
       private final @Nullable Output<String> productLineName;
 
     public Output<String> getProductLineName() {
@@ -55,7 +55,7 @@ public final class HierarchyInformationArgs extends io.pulumi.resources.Resource
      * Represents product name that uniquely identifies product
      * 
      */
-    @InputImport(name="productName")
+    @Import(name="productName")
       private final @Nullable Output<String> productName;
 
     public Output<String> getProductName() {

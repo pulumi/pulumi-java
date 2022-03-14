@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.azurearcdata.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetSqlManagedInstanceArgs extends io.pulumi.resources.InvokeA
      * The name of the Azure resource group
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {
@@ -27,7 +27,7 @@ public final class GetSqlManagedInstanceArgs extends io.pulumi.resources.InvokeA
      * Name of SQL Managed Instance
      * 
      */
-    @InputImport(name="sqlManagedInstanceName", required=true)
+    @Import(name="sqlManagedInstanceName", required=true)
       private final String sqlManagedInstanceName;
 
     public String getSqlManagedInstanceName() {

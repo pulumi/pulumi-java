@@ -6,7 +6,7 @@ package io.pulumi.azurenative.network.inputs;
 import io.pulumi.azurenative.network.inputs.AddressPrefixItemResponse;
 import io.pulumi.azurenative.network.inputs.ConfigurationGroupResponse;
 import io.pulumi.azurenative.network.inputs.NetworkManagerSecurityGroupItemResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -27,7 +27,7 @@ public final class EffectiveSecurityAdminRuleResponse extends io.pulumi.resource
      * Indicates the access allowed for this particular rule
      * 
      */
-    @InputImport(name="access", required=true)
+    @Import(name="access", required=true)
       private final String access;
 
     public String getAccess() {
@@ -38,7 +38,7 @@ public final class EffectiveSecurityAdminRuleResponse extends io.pulumi.resource
      * A description of the security admin configuration.
      * 
      */
-    @InputImport(name="configurationDescription")
+    @Import(name="configurationDescription")
       private final @Nullable String configurationDescription;
 
     public Optional<String> getConfigurationDescription() {
@@ -49,7 +49,7 @@ public final class EffectiveSecurityAdminRuleResponse extends io.pulumi.resource
      * A display name of the security admin configuration.
      * 
      */
-    @InputImport(name="configurationDisplayName")
+    @Import(name="configurationDisplayName")
       private final @Nullable String configurationDisplayName;
 
     public Optional<String> getConfigurationDisplayName() {
@@ -60,7 +60,7 @@ public final class EffectiveSecurityAdminRuleResponse extends io.pulumi.resource
      * A description for this rule. Restricted to 140 chars.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable String description;
 
     public Optional<String> getDescription() {
@@ -71,7 +71,7 @@ public final class EffectiveSecurityAdminRuleResponse extends io.pulumi.resource
      * The destination port ranges.
      * 
      */
-    @InputImport(name="destinationPortRanges")
+    @Import(name="destinationPortRanges")
       private final @Nullable List<String> destinationPortRanges;
 
     public List<String> getDestinationPortRanges() {
@@ -82,7 +82,7 @@ public final class EffectiveSecurityAdminRuleResponse extends io.pulumi.resource
      * The destination address prefixes. CIDR or destination IP ranges.
      * 
      */
-    @InputImport(name="destinations")
+    @Import(name="destinations")
       private final @Nullable List<AddressPrefixItemResponse> destinations;
 
     public List<AddressPrefixItemResponse> getDestinations() {
@@ -93,7 +93,7 @@ public final class EffectiveSecurityAdminRuleResponse extends io.pulumi.resource
      * Indicates if the traffic matched against the rule in inbound or outbound.
      * 
      */
-    @InputImport(name="direction", required=true)
+    @Import(name="direction", required=true)
       private final String direction;
 
     public String getDirection() {
@@ -104,7 +104,7 @@ public final class EffectiveSecurityAdminRuleResponse extends io.pulumi.resource
      * A friendly name for the rule.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable String displayName;
 
     public Optional<String> getDisplayName() {
@@ -115,7 +115,7 @@ public final class EffectiveSecurityAdminRuleResponse extends io.pulumi.resource
      * Resource ID.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable String id;
 
     public Optional<String> getId() {
@@ -127,7 +127,7 @@ public final class EffectiveSecurityAdminRuleResponse extends io.pulumi.resource
      * Expected value is 'Custom'.
      * 
      */
-    @InputImport(name="kind", required=true)
+    @Import(name="kind", required=true)
       private final String kind;
 
     public String getKind() {
@@ -138,7 +138,7 @@ public final class EffectiveSecurityAdminRuleResponse extends io.pulumi.resource
      * The priority of the rule. The value can be between 1 and 4096. The priority number must be unique for each rule in the collection. The lower the priority number, the higher the priority of the rule.
      * 
      */
-    @InputImport(name="priority")
+    @Import(name="priority")
       private final @Nullable Integer priority;
 
     public Optional<Integer> getPriority() {
@@ -149,7 +149,7 @@ public final class EffectiveSecurityAdminRuleResponse extends io.pulumi.resource
      * Network protocol this rule applies to.
      * 
      */
-    @InputImport(name="protocol", required=true)
+    @Import(name="protocol", required=true)
       private final String protocol;
 
     public String getProtocol() {
@@ -160,7 +160,7 @@ public final class EffectiveSecurityAdminRuleResponse extends io.pulumi.resource
      * The provisioning state of the resource.
      * 
      */
-    @InputImport(name="provisioningState", required=true)
+    @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
     public String getProvisioningState() {
@@ -171,7 +171,7 @@ public final class EffectiveSecurityAdminRuleResponse extends io.pulumi.resource
      * Groups for rule collection
      * 
      */
-    @InputImport(name="ruleCollectionAppliesToGroups")
+    @Import(name="ruleCollectionAppliesToGroups")
       private final @Nullable List<NetworkManagerSecurityGroupItemResponse> ruleCollectionAppliesToGroups;
 
     public List<NetworkManagerSecurityGroupItemResponse> getRuleCollectionAppliesToGroups() {
@@ -182,7 +182,7 @@ public final class EffectiveSecurityAdminRuleResponse extends io.pulumi.resource
      * A description of the rule collection.
      * 
      */
-    @InputImport(name="ruleCollectionDescription")
+    @Import(name="ruleCollectionDescription")
       private final @Nullable String ruleCollectionDescription;
 
     public Optional<String> getRuleCollectionDescription() {
@@ -193,7 +193,7 @@ public final class EffectiveSecurityAdminRuleResponse extends io.pulumi.resource
      * A display name of the rule collection.
      * 
      */
-    @InputImport(name="ruleCollectionDisplayName")
+    @Import(name="ruleCollectionDisplayName")
       private final @Nullable String ruleCollectionDisplayName;
 
     public Optional<String> getRuleCollectionDisplayName() {
@@ -204,7 +204,7 @@ public final class EffectiveSecurityAdminRuleResponse extends io.pulumi.resource
      * Effective configuration groups.
      * 
      */
-    @InputImport(name="ruleGroups")
+    @Import(name="ruleGroups")
       private final @Nullable List<ConfigurationGroupResponse> ruleGroups;
 
     public List<ConfigurationGroupResponse> getRuleGroups() {
@@ -215,7 +215,7 @@ public final class EffectiveSecurityAdminRuleResponse extends io.pulumi.resource
      * The source port ranges.
      * 
      */
-    @InputImport(name="sourcePortRanges")
+    @Import(name="sourcePortRanges")
       private final @Nullable List<String> sourcePortRanges;
 
     public List<String> getSourcePortRanges() {
@@ -226,7 +226,7 @@ public final class EffectiveSecurityAdminRuleResponse extends io.pulumi.resource
      * The CIDR or source IP ranges.
      * 
      */
-    @InputImport(name="sources")
+    @Import(name="sources")
       private final @Nullable List<AddressPrefixItemResponse> sources;
 
     public List<AddressPrefixItemResponse> getSources() {

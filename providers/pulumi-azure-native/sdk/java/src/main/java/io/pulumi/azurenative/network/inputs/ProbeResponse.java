@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.SubResourceResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class ProbeResponse extends io.pulumi.resources.InvokeArgs {
      * A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    @InputImport(name="etag", required=true)
+    @Import(name="etag", required=true)
       private final String etag;
 
     public String getEtag() {
@@ -36,7 +36,7 @@ public final class ProbeResponse extends io.pulumi.resources.InvokeArgs {
      * Resource ID.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable String id;
 
     public Optional<String> getId() {
@@ -47,7 +47,7 @@ public final class ProbeResponse extends io.pulumi.resources.InvokeArgs {
      * The interval, in seconds, for how frequently to probe the endpoint for health status. Typically, the interval is slightly less than half the allocated timeout period (in seconds) which allows two full probes before taking the instance out of rotation. The default value is 15, the minimum value is 5.
      * 
      */
-    @InputImport(name="intervalInSeconds")
+    @Import(name="intervalInSeconds")
       private final @Nullable Integer intervalInSeconds;
 
     public Optional<Integer> getIntervalInSeconds() {
@@ -58,7 +58,7 @@ public final class ProbeResponse extends io.pulumi.resources.InvokeArgs {
      * The load balancer rules that use this probe.
      * 
      */
-    @InputImport(name="loadBalancingRules", required=true)
+    @Import(name="loadBalancingRules", required=true)
       private final List<SubResourceResponse> loadBalancingRules;
 
     public List<SubResourceResponse> getLoadBalancingRules() {
@@ -69,7 +69,7 @@ public final class ProbeResponse extends io.pulumi.resources.InvokeArgs {
      * The name of the resource that is unique within the set of probes used by the load balancer. This name can be used to access the resource.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -80,7 +80,7 @@ public final class ProbeResponse extends io.pulumi.resources.InvokeArgs {
      * The number of probes where if no response, will result in stopping further traffic from being delivered to the endpoint. This values allows endpoints to be taken out of rotation faster or slower than the typical times used in Azure.
      * 
      */
-    @InputImport(name="numberOfProbes")
+    @Import(name="numberOfProbes")
       private final @Nullable Integer numberOfProbes;
 
     public Optional<Integer> getNumberOfProbes() {
@@ -91,7 +91,7 @@ public final class ProbeResponse extends io.pulumi.resources.InvokeArgs {
      * The port for communicating the probe. Possible values range from 1 to 65535, inclusive.
      * 
      */
-    @InputImport(name="port", required=true)
+    @Import(name="port", required=true)
       private final Integer port;
 
     public Integer getPort() {
@@ -102,7 +102,7 @@ public final class ProbeResponse extends io.pulumi.resources.InvokeArgs {
      * The protocol of the end point. If 'Tcp' is specified, a received ACK is required for the probe to be successful. If 'Http' or 'Https' is specified, a 200 OK response from the specifies URI is required for the probe to be successful.
      * 
      */
-    @InputImport(name="protocol", required=true)
+    @Import(name="protocol", required=true)
       private final String protocol;
 
     public String getProtocol() {
@@ -113,7 +113,7 @@ public final class ProbeResponse extends io.pulumi.resources.InvokeArgs {
      * The provisioning state of the probe resource.
      * 
      */
-    @InputImport(name="provisioningState", required=true)
+    @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
     public String getProvisioningState() {
@@ -124,7 +124,7 @@ public final class ProbeResponse extends io.pulumi.resources.InvokeArgs {
      * The URI used for requesting health status from the VM. Path is required if a protocol is set to http. Otherwise, it is not allowed. There is no default value.
      * 
      */
-    @InputImport(name="requestPath")
+    @Import(name="requestPath")
       private final @Nullable String requestPath;
 
     public Optional<String> getRequestPath() {
@@ -135,7 +135,7 @@ public final class ProbeResponse extends io.pulumi.resources.InvokeArgs {
      * Type of the resource.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

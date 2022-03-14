@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.insights.outputs;
 
 import io.pulumi.azurenative.insights.outputs.AlertRuleLeafConditionResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AlertRuleAnyOfOrLeafConditionResponse {
     /**
      * An Activity Log Alert rule condition that is met when at least one of its member leaf conditions are met.
@@ -35,12 +35,12 @@ public final class AlertRuleAnyOfOrLeafConditionResponse {
      */
     private final @Nullable String field;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AlertRuleAnyOfOrLeafConditionResponse(
-        @OutputCustomType.Parameter("anyOf") @Nullable List<AlertRuleLeafConditionResponse> anyOf,
-        @OutputCustomType.Parameter("containsAny") @Nullable List<String> containsAny,
-        @OutputCustomType.Parameter("equals") @Nullable String equals,
-        @OutputCustomType.Parameter("field") @Nullable String field) {
+        @CustomType.Parameter("anyOf") @Nullable List<AlertRuleLeafConditionResponse> anyOf,
+        @CustomType.Parameter("containsAny") @Nullable List<String> containsAny,
+        @CustomType.Parameter("equals") @Nullable String equals,
+        @CustomType.Parameter("field") @Nullable String field) {
         this.anyOf = anyOf;
         this.containsAny = containsAny;
         this.equals = equals;

@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.maps.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class MapsAccountPropertiesResponse {
     /**
      * A unique identifier for the maps account
@@ -17,8 +17,8 @@ public final class MapsAccountPropertiesResponse {
      */
     private final @Nullable String xMsClientId;
 
-    @OutputCustomType.Constructor
-    private MapsAccountPropertiesResponse(@OutputCustomType.Parameter("xMsClientId") @Nullable String xMsClientId) {
+    @CustomType.Constructor
+    private MapsAccountPropertiesResponse(@CustomType.Parameter("xMsClientId") @Nullable String xMsClientId) {
         this.xMsClientId = xMsClientId;
     }
 

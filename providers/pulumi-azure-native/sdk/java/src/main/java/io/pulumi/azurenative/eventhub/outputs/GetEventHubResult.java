@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.eventhub.outputs;
 
 import io.pulumi.azurenative.eventhub.outputs.CaptureDescriptionResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetEventHubResult {
     /**
      * Properties of capture description
@@ -65,18 +65,18 @@ public final class GetEventHubResult {
      */
     private final String updatedAt;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetEventHubResult(
-        @OutputCustomType.Parameter("captureDescription") @Nullable CaptureDescriptionResponse captureDescription,
-        @OutputCustomType.Parameter("createdAt") String createdAt,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("messageRetentionInDays") @Nullable Double messageRetentionInDays,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("partitionCount") @Nullable Double partitionCount,
-        @OutputCustomType.Parameter("partitionIds") List<String> partitionIds,
-        @OutputCustomType.Parameter("status") @Nullable String status,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("updatedAt") String updatedAt) {
+        @CustomType.Parameter("captureDescription") @Nullable CaptureDescriptionResponse captureDescription,
+        @CustomType.Parameter("createdAt") String createdAt,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("messageRetentionInDays") @Nullable Double messageRetentionInDays,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("partitionCount") @Nullable Double partitionCount,
+        @CustomType.Parameter("partitionIds") List<String> partitionIds,
+        @CustomType.Parameter("status") @Nullable String status,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("updatedAt") String updatedAt) {
         this.captureDescription = captureDescription;
         this.createdAt = createdAt;
         this.id = id;

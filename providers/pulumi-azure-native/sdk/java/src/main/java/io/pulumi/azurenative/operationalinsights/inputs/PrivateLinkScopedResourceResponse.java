@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.operationalinsights.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class PrivateLinkScopedResourceResponse extends io.pulumi.resources
      * The full resource Id of the private link scope resource.
      * 
      */
-    @InputImport(name="resourceId")
+    @Import(name="resourceId")
       private final @Nullable String resourceId;
 
     public Optional<String> getResourceId() {
@@ -33,7 +33,7 @@ public final class PrivateLinkScopedResourceResponse extends io.pulumi.resources
      * The private link scope unique Identifier.
      * 
      */
-    @InputImport(name="scopeId")
+    @Import(name="scopeId")
       private final @Nullable String scopeId;
 
     public Optional<String> getScopeId() {

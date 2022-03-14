@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class CorsSettingsResponse extends io.pulumi.resources.InvokeArgs {
      * calls (for example: http://example.com:12345). Use "*" to allow all.
      * 
      */
-    @InputImport(name="allowedOrigins")
+    @Import(name="allowedOrigins")
       private final @Nullable List<String> allowedOrigins;
 
     public List<String> getAllowedOrigins() {
@@ -38,7 +38,7 @@ public final class CorsSettingsResponse extends io.pulumi.resources.InvokeArgs {
      * for more details.
      * 
      */
-    @InputImport(name="supportCredentials")
+    @Import(name="supportCredentials")
       private final @Nullable Boolean supportCredentials;
 
     public Optional<Boolean> getSupportCredentials() {

@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.advisor.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetSuppressionResult {
     /**
      * Gets or sets the expiration time stamp.
@@ -42,14 +42,14 @@ public final class GetSuppressionResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetSuppressionResult(
-        @OutputCustomType.Parameter("expirationTimeStamp") String expirationTimeStamp,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("suppressionId") @Nullable String suppressionId,
-        @OutputCustomType.Parameter("ttl") @Nullable String ttl,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("expirationTimeStamp") String expirationTimeStamp,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("suppressionId") @Nullable String suppressionId,
+        @CustomType.Parameter("ttl") @Nullable String ttl,
+        @CustomType.Parameter("type") String type) {
         this.expirationTimeStamp = expirationTimeStamp;
         this.id = id;
         this.name = name;

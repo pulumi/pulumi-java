@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.datamigration.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class MigrationValidationOptionsResponse {
     /**
      * Allows to perform a checksum based data integrity validation between source and target for the selected database / tables .
@@ -27,11 +27,11 @@ public final class MigrationValidationOptionsResponse {
      */
     private final @Nullable Boolean enableSchemaValidation;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MigrationValidationOptionsResponse(
-        @OutputCustomType.Parameter("enableDataIntegrityValidation") @Nullable Boolean enableDataIntegrityValidation,
-        @OutputCustomType.Parameter("enableQueryAnalysisValidation") @Nullable Boolean enableQueryAnalysisValidation,
-        @OutputCustomType.Parameter("enableSchemaValidation") @Nullable Boolean enableSchemaValidation) {
+        @CustomType.Parameter("enableDataIntegrityValidation") @Nullable Boolean enableDataIntegrityValidation,
+        @CustomType.Parameter("enableQueryAnalysisValidation") @Nullable Boolean enableQueryAnalysisValidation,
+        @CustomType.Parameter("enableSchemaValidation") @Nullable Boolean enableSchemaValidation) {
         this.enableDataIntegrityValidation = enableDataIntegrityValidation;
         this.enableQueryAnalysisValidation = enableQueryAnalysisValidation;
         this.enableSchemaValidation = enableSchemaValidation;

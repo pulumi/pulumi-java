@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storage.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class BlobRestoreRangeResponse extends io.pulumi.resources.InvokeAr
      * Blob end range. This is exclusive. Empty means account end.
      * 
      */
-    @InputImport(name="endRange", required=true)
+    @Import(name="endRange", required=true)
       private final String endRange;
 
     public String getEndRange() {
@@ -31,7 +31,7 @@ public final class BlobRestoreRangeResponse extends io.pulumi.resources.InvokeAr
      * Blob start range. This is inclusive. Empty means account start.
      * 
      */
-    @InputImport(name="startRange", required=true)
+    @Import(name="startRange", required=true)
       private final String startRange;
 
     public String getStartRange() {

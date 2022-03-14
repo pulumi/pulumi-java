@@ -11,7 +11,7 @@ import io.pulumi.azurenative.security.outputs.ProtectionModeResponse;
 import io.pulumi.azurenative.security.outputs.VmRecommendationResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -37,7 +37,7 @@ public class AdaptiveApplicationControl extends io.pulumi.resources.CustomResour
      * The configuration status of the machines group or machine or rule
      * 
      */
-    @OutputExport(name="configurationStatus", type=String.class, parameters={})
+    @Export(name="configurationStatus", type=String.class, parameters={})
     private Output<String> configurationStatus;
 
     /**
@@ -51,7 +51,7 @@ public class AdaptiveApplicationControl extends io.pulumi.resources.CustomResour
      * The application control policy enforcement/protection mode of the machine group
      * 
      */
-    @OutputExport(name="enforcementMode", type=String.class, parameters={})
+    @Export(name="enforcementMode", type=String.class, parameters={})
     private Output</* @Nullable */ String> enforcementMode;
 
     /**
@@ -61,7 +61,7 @@ public class AdaptiveApplicationControl extends io.pulumi.resources.CustomResour
     public Output</* @Nullable */ String> getEnforcementMode() {
         return this.enforcementMode;
     }
-    @OutputExport(name="issues", type=List.class, parameters={AdaptiveApplicationControlIssueSummaryResponse.class})
+    @Export(name="issues", type=List.class, parameters={AdaptiveApplicationControlIssueSummaryResponse.class})
     private Output<List<AdaptiveApplicationControlIssueSummaryResponse>> issues;
 
     public Output<List<AdaptiveApplicationControlIssueSummaryResponse>> getIssues() {
@@ -71,7 +71,7 @@ public class AdaptiveApplicationControl extends io.pulumi.resources.CustomResour
      * Location where the resource is stored
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -85,7 +85,7 @@ public class AdaptiveApplicationControl extends io.pulumi.resources.CustomResour
      * Resource name
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -95,7 +95,7 @@ public class AdaptiveApplicationControl extends io.pulumi.resources.CustomResour
     public Output<String> getName() {
         return this.name;
     }
-    @OutputExport(name="pathRecommendations", type=List.class, parameters={PathRecommendationResponse.class})
+    @Export(name="pathRecommendations", type=List.class, parameters={PathRecommendationResponse.class})
     private Output</* @Nullable */ List<PathRecommendationResponse>> pathRecommendations;
 
     public Output</* @Nullable */ List<PathRecommendationResponse>> getPathRecommendations() {
@@ -105,7 +105,7 @@ public class AdaptiveApplicationControl extends io.pulumi.resources.CustomResour
      * The protection mode of the collection/file types. Exe/Msi/Script are used for Windows, Executable is used for Linux.
      * 
      */
-    @OutputExport(name="protectionMode", type=ProtectionModeResponse.class, parameters={})
+    @Export(name="protectionMode", type=ProtectionModeResponse.class, parameters={})
     private Output</* @Nullable */ ProtectionModeResponse> protectionMode;
 
     /**
@@ -119,7 +119,7 @@ public class AdaptiveApplicationControl extends io.pulumi.resources.CustomResour
      * The initial recommendation status of the machine group or machine
      * 
      */
-    @OutputExport(name="recommendationStatus", type=String.class, parameters={})
+    @Export(name="recommendationStatus", type=String.class, parameters={})
     private Output<String> recommendationStatus;
 
     /**
@@ -133,7 +133,7 @@ public class AdaptiveApplicationControl extends io.pulumi.resources.CustomResour
      * The source type of the machine group
      * 
      */
-    @OutputExport(name="sourceSystem", type=String.class, parameters={})
+    @Export(name="sourceSystem", type=String.class, parameters={})
     private Output<String> sourceSystem;
 
     /**
@@ -147,7 +147,7 @@ public class AdaptiveApplicationControl extends io.pulumi.resources.CustomResour
      * Resource type
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -157,7 +157,7 @@ public class AdaptiveApplicationControl extends io.pulumi.resources.CustomResour
     public Output<String> getType() {
         return this.type;
     }
-    @OutputExport(name="vmRecommendations", type=List.class, parameters={VmRecommendationResponse.class})
+    @Export(name="vmRecommendations", type=List.class, parameters={VmRecommendationResponse.class})
     private Output</* @Nullable */ List<VmRecommendationResponse>> vmRecommendations;
 
     public Output</* @Nullable */ List<VmRecommendationResponse>> getVmRecommendations() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.cognitiveservices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetDeploymentArgs extends io.pulumi.resources.InvokeArgs {
      * The name of Cognitive Services account.
      * 
      */
-    @InputImport(name="accountName", required=true)
+    @Import(name="accountName", required=true)
       private final String accountName;
 
     public String getAccountName() {
@@ -27,7 +27,7 @@ public final class GetDeploymentArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the deployment associated with the Cognitive Services Account
      * 
      */
-    @InputImport(name="deploymentName", required=true)
+    @Import(name="deploymentName", required=true)
       private final String deploymentName;
 
     public String getDeploymentName() {
@@ -38,7 +38,7 @@ public final class GetDeploymentArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {

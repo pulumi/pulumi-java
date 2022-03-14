@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.servicefabric.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VMSSExtensionResponse {
     /**
      * Indicates whether the extension should use a newer minor version if one is available at deployment time. Once deployed, however, the extension will not upgrade minor versions unless redeployed, even with this property set to true.
@@ -65,18 +65,18 @@ public final class VMSSExtensionResponse {
      */
     private final String typeHandlerVersion;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VMSSExtensionResponse(
-        @OutputCustomType.Parameter("autoUpgradeMinorVersion") @Nullable Boolean autoUpgradeMinorVersion,
-        @OutputCustomType.Parameter("forceUpdateTag") @Nullable String forceUpdateTag,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("protectedSettings") @Nullable Object protectedSettings,
-        @OutputCustomType.Parameter("provisionAfterExtensions") @Nullable List<String> provisionAfterExtensions,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("publisher") String publisher,
-        @OutputCustomType.Parameter("settings") @Nullable Object settings,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("typeHandlerVersion") String typeHandlerVersion) {
+        @CustomType.Parameter("autoUpgradeMinorVersion") @Nullable Boolean autoUpgradeMinorVersion,
+        @CustomType.Parameter("forceUpdateTag") @Nullable String forceUpdateTag,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("protectedSettings") @Nullable Object protectedSettings,
+        @CustomType.Parameter("provisionAfterExtensions") @Nullable List<String> provisionAfterExtensions,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("publisher") String publisher,
+        @CustomType.Parameter("settings") @Nullable Object settings,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("typeHandlerVersion") String typeHandlerVersion) {
         this.autoUpgradeMinorVersion = autoUpgradeMinorVersion;
         this.forceUpdateTag = forceUpdateTag;
         this.name = name;

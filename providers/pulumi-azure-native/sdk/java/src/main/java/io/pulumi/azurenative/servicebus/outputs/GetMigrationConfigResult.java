@@ -3,12 +3,12 @@
 
 package io.pulumi.azurenative.servicebus.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetMigrationConfigResult {
     /**
      * Resource Id
@@ -51,16 +51,16 @@ public final class GetMigrationConfigResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetMigrationConfigResult(
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("migrationState") String migrationState,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("pendingReplicationOperationsCount") Double pendingReplicationOperationsCount,
-        @OutputCustomType.Parameter("postMigrationName") String postMigrationName,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("targetNamespace") String targetNamespace,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("migrationState") String migrationState,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("pendingReplicationOperationsCount") Double pendingReplicationOperationsCount,
+        @CustomType.Parameter("postMigrationName") String postMigrationName,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("targetNamespace") String targetNamespace,
+        @CustomType.Parameter("type") String type) {
         this.id = id;
         this.migrationState = migrationState;
         this.name = name;

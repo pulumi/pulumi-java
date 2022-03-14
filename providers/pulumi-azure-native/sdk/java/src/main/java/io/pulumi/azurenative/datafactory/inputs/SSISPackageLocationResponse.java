@@ -8,7 +8,7 @@ import io.pulumi.azurenative.datafactory.inputs.SSISAccessCredentialResponse;
 import io.pulumi.azurenative.datafactory.inputs.SSISChildPackageResponse;
 import io.pulumi.azurenative.datafactory.inputs.SecureStringResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -29,7 +29,7 @@ public final class SSISPackageLocationResponse extends io.pulumi.resources.Invok
      * The package access credential.
      * 
      */
-    @InputImport(name="accessCredential")
+    @Import(name="accessCredential")
       private final @Nullable SSISAccessCredentialResponse accessCredential;
 
     public Optional<SSISAccessCredentialResponse> getAccessCredential() {
@@ -40,7 +40,7 @@ public final class SSISPackageLocationResponse extends io.pulumi.resources.Invok
      * The embedded child package list.
      * 
      */
-    @InputImport(name="childPackages")
+    @Import(name="childPackages")
       private final @Nullable List<SSISChildPackageResponse> childPackages;
 
     public List<SSISChildPackageResponse> getChildPackages() {
@@ -51,7 +51,7 @@ public final class SSISPackageLocationResponse extends io.pulumi.resources.Invok
      * The configuration file access credential.
      * 
      */
-    @InputImport(name="configurationAccessCredential")
+    @Import(name="configurationAccessCredential")
       private final @Nullable SSISAccessCredentialResponse configurationAccessCredential;
 
     public Optional<SSISAccessCredentialResponse> getConfigurationAccessCredential() {
@@ -62,7 +62,7 @@ public final class SSISPackageLocationResponse extends io.pulumi.resources.Invok
      * The configuration file of the package execution. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="configurationPath")
+    @Import(name="configurationPath")
       private final @Nullable Object configurationPath;
 
     public Optional<Object> getConfigurationPath() {
@@ -73,7 +73,7 @@ public final class SSISPackageLocationResponse extends io.pulumi.resources.Invok
      * The embedded package content. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="packageContent")
+    @Import(name="packageContent")
       private final @Nullable Object packageContent;
 
     public Optional<Object> getPackageContent() {
@@ -84,7 +84,7 @@ public final class SSISPackageLocationResponse extends io.pulumi.resources.Invok
      * The embedded package last modified date.
      * 
      */
-    @InputImport(name="packageLastModifiedDate")
+    @Import(name="packageLastModifiedDate")
       private final @Nullable String packageLastModifiedDate;
 
     public Optional<String> getPackageLastModifiedDate() {
@@ -95,7 +95,7 @@ public final class SSISPackageLocationResponse extends io.pulumi.resources.Invok
      * The package name.
      * 
      */
-    @InputImport(name="packageName")
+    @Import(name="packageName")
       private final @Nullable String packageName;
 
     public Optional<String> getPackageName() {
@@ -106,7 +106,7 @@ public final class SSISPackageLocationResponse extends io.pulumi.resources.Invok
      * Password of the package.
      * 
      */
-    @InputImport(name="packagePassword")
+    @Import(name="packagePassword")
       private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> packagePassword;
 
     public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> getPackagePassword() {
@@ -117,7 +117,7 @@ public final class SSISPackageLocationResponse extends io.pulumi.resources.Invok
      * The SSIS package path. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="packagePath")
+    @Import(name="packagePath")
       private final @Nullable Object packagePath;
 
     public Optional<Object> getPackagePath() {
@@ -128,7 +128,7 @@ public final class SSISPackageLocationResponse extends io.pulumi.resources.Invok
      * The type of SSIS package location.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable String type;
 
     public Optional<String> getType() {

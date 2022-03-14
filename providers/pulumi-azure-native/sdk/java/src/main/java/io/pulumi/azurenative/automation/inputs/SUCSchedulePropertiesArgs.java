@@ -7,7 +7,7 @@ import io.pulumi.azurenative.automation.enums.ScheduleFrequency;
 import io.pulumi.azurenative.automation.inputs.AdvancedScheduleArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -27,7 +27,7 @@ public final class SUCSchedulePropertiesArgs extends io.pulumi.resources.Resourc
      * Gets or sets the advanced schedule.
      * 
      */
-    @InputImport(name="advancedSchedule")
+    @Import(name="advancedSchedule")
       private final @Nullable Output<AdvancedScheduleArgs> advancedSchedule;
 
     public Output<AdvancedScheduleArgs> getAdvancedSchedule() {
@@ -38,7 +38,7 @@ public final class SUCSchedulePropertiesArgs extends io.pulumi.resources.Resourc
      * Gets or sets the creation time.
      * 
      */
-    @InputImport(name="creationTime")
+    @Import(name="creationTime")
       private final @Nullable Output<String> creationTime;
 
     public Output<String> getCreationTime() {
@@ -49,7 +49,7 @@ public final class SUCSchedulePropertiesArgs extends io.pulumi.resources.Resourc
      * Gets or sets the description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -60,7 +60,7 @@ public final class SUCSchedulePropertiesArgs extends io.pulumi.resources.Resourc
      * Gets or sets the end time of the schedule.
      * 
      */
-    @InputImport(name="expiryTime")
+    @Import(name="expiryTime")
       private final @Nullable Output<String> expiryTime;
 
     public Output<String> getExpiryTime() {
@@ -71,7 +71,7 @@ public final class SUCSchedulePropertiesArgs extends io.pulumi.resources.Resourc
      * Gets or sets the expiry time's offset in minutes.
      * 
      */
-    @InputImport(name="expiryTimeOffsetMinutes")
+    @Import(name="expiryTimeOffsetMinutes")
       private final @Nullable Output<Double> expiryTimeOffsetMinutes;
 
     public Output<Double> getExpiryTimeOffsetMinutes() {
@@ -82,7 +82,7 @@ public final class SUCSchedulePropertiesArgs extends io.pulumi.resources.Resourc
      * Gets or sets the frequency of the schedule.
      * 
      */
-    @InputImport(name="frequency")
+    @Import(name="frequency")
       private final @Nullable Output<Either<String,ScheduleFrequency>> frequency;
 
     public Output<Either<String,ScheduleFrequency>> getFrequency() {
@@ -93,7 +93,7 @@ public final class SUCSchedulePropertiesArgs extends io.pulumi.resources.Resourc
      * Gets or sets the interval of the schedule.
      * 
      */
-    @InputImport(name="interval")
+    @Import(name="interval")
       private final @Nullable Output<Double> interval;
 
     public Output<Double> getInterval() {
@@ -104,7 +104,7 @@ public final class SUCSchedulePropertiesArgs extends io.pulumi.resources.Resourc
      * Gets or sets a value indicating whether this schedule is enabled.
      * 
      */
-    @InputImport(name="isEnabled")
+    @Import(name="isEnabled")
       private final @Nullable Output<Boolean> isEnabled;
 
     public Output<Boolean> getIsEnabled() {
@@ -115,7 +115,7 @@ public final class SUCSchedulePropertiesArgs extends io.pulumi.resources.Resourc
      * Gets or sets the last modified time.
      * 
      */
-    @InputImport(name="lastModifiedTime")
+    @Import(name="lastModifiedTime")
       private final @Nullable Output<String> lastModifiedTime;
 
     public Output<String> getLastModifiedTime() {
@@ -126,7 +126,7 @@ public final class SUCSchedulePropertiesArgs extends io.pulumi.resources.Resourc
      * Gets or sets the next run time of the schedule.
      * 
      */
-    @InputImport(name="nextRun")
+    @Import(name="nextRun")
       private final @Nullable Output<String> nextRun;
 
     public Output<String> getNextRun() {
@@ -137,7 +137,7 @@ public final class SUCSchedulePropertiesArgs extends io.pulumi.resources.Resourc
      * Gets or sets the next run time's offset in minutes.
      * 
      */
-    @InputImport(name="nextRunOffsetMinutes")
+    @Import(name="nextRunOffsetMinutes")
       private final @Nullable Output<Double> nextRunOffsetMinutes;
 
     public Output<Double> getNextRunOffsetMinutes() {
@@ -148,7 +148,7 @@ public final class SUCSchedulePropertiesArgs extends io.pulumi.resources.Resourc
      * Gets or sets the start time of the schedule.
      * 
      */
-    @InputImport(name="startTime")
+    @Import(name="startTime")
       private final @Nullable Output<String> startTime;
 
     public Output<String> getStartTime() {
@@ -159,7 +159,7 @@ public final class SUCSchedulePropertiesArgs extends io.pulumi.resources.Resourc
      * Gets or sets the time zone of the schedule.
      * 
      */
-    @InputImport(name="timeZone")
+    @Import(name="timeZone")
       private final @Nullable Output<String> timeZone;
 
     public Output<String> getTimeZone() {

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearning.inputs;
 
 import io.pulumi.azurenative.machinelearning.inputs.ColumnSpecificationResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class TableSpecificationResponse extends io.pulumi.resources.Invoke
      * Swagger schema description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable String description;
 
     public Optional<String> getDescription() {
@@ -35,7 +35,7 @@ public final class TableSpecificationResponse extends io.pulumi.resources.Invoke
      * The format, if 'type' is not 'object'
      * 
      */
-    @InputImport(name="format")
+    @Import(name="format")
       private final @Nullable String format;
 
     public Optional<String> getFormat() {
@@ -46,7 +46,7 @@ public final class TableSpecificationResponse extends io.pulumi.resources.Invoke
      * The set of columns within the data table.
      * 
      */
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable Map<String,ColumnSpecificationResponse> properties;
 
     public Map<String,ColumnSpecificationResponse> getProperties() {
@@ -57,7 +57,7 @@ public final class TableSpecificationResponse extends io.pulumi.resources.Invoke
      * Swagger schema title.
      * 
      */
-    @InputImport(name="title")
+    @Import(name="title")
       private final @Nullable String title;
 
     public Optional<String> getTitle() {
@@ -68,7 +68,7 @@ public final class TableSpecificationResponse extends io.pulumi.resources.Invoke
      * The type of the entity described in swagger.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

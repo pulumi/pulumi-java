@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.recoveryservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class A2AProtectionContainerMappingDetailsResponse {
     /**
      * A value indicating whether the auto update is enabled.
@@ -38,13 +38,13 @@ public final class A2AProtectionContainerMappingDetailsResponse {
      */
     private final @Nullable String scheduleName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private A2AProtectionContainerMappingDetailsResponse(
-        @OutputCustomType.Parameter("agentAutoUpdateStatus") @Nullable String agentAutoUpdateStatus,
-        @OutputCustomType.Parameter("automationAccountArmId") @Nullable String automationAccountArmId,
-        @OutputCustomType.Parameter("instanceType") String instanceType,
-        @OutputCustomType.Parameter("jobScheduleName") @Nullable String jobScheduleName,
-        @OutputCustomType.Parameter("scheduleName") @Nullable String scheduleName) {
+        @CustomType.Parameter("agentAutoUpdateStatus") @Nullable String agentAutoUpdateStatus,
+        @CustomType.Parameter("automationAccountArmId") @Nullable String automationAccountArmId,
+        @CustomType.Parameter("instanceType") String instanceType,
+        @CustomType.Parameter("jobScheduleName") @Nullable String jobScheduleName,
+        @CustomType.Parameter("scheduleName") @Nullable String scheduleName) {
         this.agentAutoUpdateStatus = agentAutoUpdateStatus;
         this.automationAccountArmId = automationAccountArmId;
         this.instanceType = instanceType;

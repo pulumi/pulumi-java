@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.media.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class LiveEventInputTrackSelectionResponse {
     /**
      * Comparing operation. This property is reserved for future use, any value set on this property will be ignored.
@@ -27,11 +27,11 @@ public final class LiveEventInputTrackSelectionResponse {
      */
     private final @Nullable String value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LiveEventInputTrackSelectionResponse(
-        @OutputCustomType.Parameter("operation") @Nullable String operation,
-        @OutputCustomType.Parameter("property") @Nullable String property,
-        @OutputCustomType.Parameter("value") @Nullable String value) {
+        @CustomType.Parameter("operation") @Nullable String operation,
+        @CustomType.Parameter("property") @Nullable String property,
+        @CustomType.Parameter("value") @Nullable String value) {
         this.operation = operation;
         this.property = property;
         this.value = value;

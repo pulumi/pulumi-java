@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.migrate.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CollectorBodyAgentSpnPropertiesResponse {
     /**
      * Application/client Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.
@@ -37,13 +37,13 @@ public final class CollectorBodyAgentSpnPropertiesResponse {
      */
     private final @Nullable String tenantId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CollectorBodyAgentSpnPropertiesResponse(
-        @OutputCustomType.Parameter("applicationId") @Nullable String applicationId,
-        @OutputCustomType.Parameter("audience") @Nullable String audience,
-        @OutputCustomType.Parameter("authority") @Nullable String authority,
-        @OutputCustomType.Parameter("objectId") @Nullable String objectId,
-        @OutputCustomType.Parameter("tenantId") @Nullable String tenantId) {
+        @CustomType.Parameter("applicationId") @Nullable String applicationId,
+        @CustomType.Parameter("audience") @Nullable String audience,
+        @CustomType.Parameter("authority") @Nullable String authority,
+        @CustomType.Parameter("objectId") @Nullable String objectId,
+        @CustomType.Parameter("tenantId") @Nullable String tenantId) {
         this.applicationId = applicationId;
         this.audience = audience;
         this.authority = authority;

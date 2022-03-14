@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.solutions.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class ApplicationDeploymentPolicyResponse extends io.pulumi.resourc
      * The managed application deployment mode.
      * 
      */
-    @InputImport(name="deploymentMode", required=true)
+    @Import(name="deploymentMode", required=true)
       private final String deploymentMode;
 
     public String getDeploymentMode() {

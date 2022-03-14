@@ -5,7 +5,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.azurenative.datafactory.inputs.ActivityDependencyResponse;
 import io.pulumi.azurenative.datafactory.inputs.UserPropertyResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +26,7 @@ public final class AppendVariableActivityResponse extends io.pulumi.resources.In
      * Activity depends on condition.
      * 
      */
-    @InputImport(name="dependsOn")
+    @Import(name="dependsOn")
       private final @Nullable List<ActivityDependencyResponse> dependsOn;
 
     public List<ActivityDependencyResponse> getDependsOn() {
@@ -37,7 +37,7 @@ public final class AppendVariableActivityResponse extends io.pulumi.resources.In
      * Activity description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable String description;
 
     public Optional<String> getDescription() {
@@ -48,7 +48,7 @@ public final class AppendVariableActivityResponse extends io.pulumi.resources.In
      * Activity name.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -60,7 +60,7 @@ public final class AppendVariableActivityResponse extends io.pulumi.resources.In
      * Expected value is 'AppendVariable'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {
@@ -71,7 +71,7 @@ public final class AppendVariableActivityResponse extends io.pulumi.resources.In
      * Activity user properties.
      * 
      */
-    @InputImport(name="userProperties")
+    @Import(name="userProperties")
       private final @Nullable List<UserPropertyResponse> userProperties;
 
     public List<UserPropertyResponse> getUserProperties() {
@@ -82,7 +82,7 @@ public final class AppendVariableActivityResponse extends io.pulumi.resources.In
      * Value to be appended. Could be a static value or Expression
      * 
      */
-    @InputImport(name="value")
+    @Import(name="value")
       private final @Nullable Object value;
 
     public Optional<Object> getValue() {
@@ -93,7 +93,7 @@ public final class AppendVariableActivityResponse extends io.pulumi.resources.In
      * Name of the variable whose value needs to be appended to.
      * 
      */
-    @InputImport(name="variableName")
+    @Import(name="variableName")
       private final @Nullable String variableName;
 
     public Optional<String> getVariableName() {

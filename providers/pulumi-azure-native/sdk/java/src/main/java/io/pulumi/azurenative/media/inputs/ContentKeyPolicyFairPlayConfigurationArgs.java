@@ -7,7 +7,7 @@ import io.pulumi.azurenative.media.enums.ContentKeyPolicyFairPlayRentalAndLeaseK
 import io.pulumi.azurenative.media.inputs.ContentKeyPolicyFairPlayOfflineRentalConfigurationArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class ContentKeyPolicyFairPlayConfigurationArgs extends io.pulumi.r
      * The key that must be used as FairPlay Application Secret key.
      * 
      */
-    @InputImport(name="ask", required=true)
+    @Import(name="ask", required=true)
       private final Output<String> ask;
 
     public Output<String> getAsk() {
@@ -37,7 +37,7 @@ public final class ContentKeyPolicyFairPlayConfigurationArgs extends io.pulumi.r
      * The Base64 representation of FairPlay certificate in PKCS 12 (pfx) format (including private key).
      * 
      */
-    @InputImport(name="fairPlayPfx", required=true)
+    @Import(name="fairPlayPfx", required=true)
       private final Output<String> fairPlayPfx;
 
     public Output<String> getFairPlayPfx() {
@@ -48,7 +48,7 @@ public final class ContentKeyPolicyFairPlayConfigurationArgs extends io.pulumi.r
      * The password encrypting FairPlay certificate in PKCS 12 (pfx) format.
      * 
      */
-    @InputImport(name="fairPlayPfxPassword", required=true)
+    @Import(name="fairPlayPfxPassword", required=true)
       private final Output<String> fairPlayPfxPassword;
 
     public Output<String> getFairPlayPfxPassword() {
@@ -60,7 +60,7 @@ public final class ContentKeyPolicyFairPlayConfigurationArgs extends io.pulumi.r
      * Expected value is '#Microsoft.Media.ContentKeyPolicyFairPlayConfiguration'.
      * 
      */
-    @InputImport(name="odataType", required=true)
+    @Import(name="odataType", required=true)
       private final Output<String> odataType;
 
     public Output<String> getOdataType() {
@@ -71,7 +71,7 @@ public final class ContentKeyPolicyFairPlayConfigurationArgs extends io.pulumi.r
      * Offline rental policy
      * 
      */
-    @InputImport(name="offlineRentalConfiguration")
+    @Import(name="offlineRentalConfiguration")
       private final @Nullable Output<ContentKeyPolicyFairPlayOfflineRentalConfigurationArgs> offlineRentalConfiguration;
 
     public Output<ContentKeyPolicyFairPlayOfflineRentalConfigurationArgs> getOfflineRentalConfiguration() {
@@ -82,7 +82,7 @@ public final class ContentKeyPolicyFairPlayConfigurationArgs extends io.pulumi.r
      * The rental and lease key type.
      * 
      */
-    @InputImport(name="rentalAndLeaseKeyType", required=true)
+    @Import(name="rentalAndLeaseKeyType", required=true)
       private final Output<Either<String,ContentKeyPolicyFairPlayRentalAndLeaseKeyType>> rentalAndLeaseKeyType;
 
     public Output<Either<String,ContentKeyPolicyFairPlayRentalAndLeaseKeyType>> getRentalAndLeaseKeyType() {
@@ -93,7 +93,7 @@ public final class ContentKeyPolicyFairPlayConfigurationArgs extends io.pulumi.r
      * The rental duration. Must be greater than or equal to 0.
      * 
      */
-    @InputImport(name="rentalDuration", required=true)
+    @Import(name="rentalDuration", required=true)
       private final Output<Double> rentalDuration;
 
     public Output<Double> getRentalDuration() {

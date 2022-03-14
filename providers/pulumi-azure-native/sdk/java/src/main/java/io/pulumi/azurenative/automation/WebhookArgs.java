@@ -5,7 +5,7 @@ package io.pulumi.azurenative.automation;
 
 import io.pulumi.azurenative.automation.inputs.RunbookAssociationPropertyArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the automation account.
      * 
      */
-    @InputImport(name="automationAccountName", required=true)
+    @Import(name="automationAccountName", required=true)
       private final Output<String> automationAccountName;
 
     public Output<String> getAutomationAccountName() {
@@ -32,7 +32,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
      * Gets or sets the expiry time.
      * 
      */
-    @InputImport(name="expiryTime")
+    @Import(name="expiryTime")
       private final @Nullable Output<String> expiryTime;
 
     public Output<String> getExpiryTime() {
@@ -43,7 +43,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
      * Gets or sets the value of the enabled flag of webhook.
      * 
      */
-    @InputImport(name="isEnabled")
+    @Import(name="isEnabled")
       private final @Nullable Output<Boolean> isEnabled;
 
     public Output<Boolean> getIsEnabled() {
@@ -54,7 +54,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
      * Gets or sets the name of the webhook.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -65,7 +65,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
      * Gets or sets the parameters of the job.
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable Output<Map<String,String>> parameters;
 
     public Output<Map<String,String>> getParameters() {
@@ -76,7 +76,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
      * Name of an Azure Resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -87,7 +87,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
      * Gets or sets the name of the hybrid worker group the webhook job will run on.
      * 
      */
-    @InputImport(name="runOn")
+    @Import(name="runOn")
       private final @Nullable Output<String> runOn;
 
     public Output<String> getRunOn() {
@@ -98,7 +98,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
      * Gets or sets the runbook.
      * 
      */
-    @InputImport(name="runbook")
+    @Import(name="runbook")
       private final @Nullable Output<RunbookAssociationPropertyArgs> runbook;
 
     public Output<RunbookAssociationPropertyArgs> getRunbook() {
@@ -109,7 +109,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
      * Gets or sets the uri.
      * 
      */
-    @InputImport(name="uri")
+    @Import(name="uri")
       private final @Nullable Output<String> uri;
 
     public Output<String> getUri() {
@@ -120,7 +120,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
      * The webhook name.
      * 
      */
-    @InputImport(name="webhookName")
+    @Import(name="webhookName")
       private final @Nullable Output<String> webhookName;
 
     public Output<String> getWebhookName() {

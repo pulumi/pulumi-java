@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.machinelearningcompute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ContainerRegistryCredentialsResponse {
     /**
      * The ACR login server name. User name is the first part of the FQDN.
@@ -30,12 +30,12 @@ public final class ContainerRegistryCredentialsResponse {
      */
     private final String username;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ContainerRegistryCredentialsResponse(
-        @OutputCustomType.Parameter("loginServer") String loginServer,
-        @OutputCustomType.Parameter("password") String password,
-        @OutputCustomType.Parameter("password2") String password2,
-        @OutputCustomType.Parameter("username") String username) {
+        @CustomType.Parameter("loginServer") String loginServer,
+        @CustomType.Parameter("password") String password,
+        @CustomType.Parameter("password2") String password2,
+        @CustomType.Parameter("username") String username) {
         this.loginServer = loginServer;
         this.password = password;
         this.password2 = password2;

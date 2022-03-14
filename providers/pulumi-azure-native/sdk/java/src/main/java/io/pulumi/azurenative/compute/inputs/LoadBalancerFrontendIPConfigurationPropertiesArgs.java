@@ -5,7 +5,7 @@ package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.azurenative.compute.inputs.SubResourceArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class LoadBalancerFrontendIPConfigurationPropertiesArgs extends io.
      * The virtual network private IP address of the IP configuration.
      * 
      */
-    @InputImport(name="privateIPAddress")
+    @Import(name="privateIPAddress")
       private final @Nullable Output<String> privateIPAddress;
 
     public Output<String> getPrivateIPAddress() {
@@ -34,7 +34,7 @@ public final class LoadBalancerFrontendIPConfigurationPropertiesArgs extends io.
      * The reference to the public ip address resource.
      * 
      */
-    @InputImport(name="publicIPAddress")
+    @Import(name="publicIPAddress")
       private final @Nullable Output<SubResourceArgs> publicIPAddress;
 
     public Output<SubResourceArgs> getPublicIPAddress() {
@@ -45,7 +45,7 @@ public final class LoadBalancerFrontendIPConfigurationPropertiesArgs extends io.
      * The reference to the virtual network subnet resource.
      * 
      */
-    @InputImport(name="subnet")
+    @Import(name="subnet")
       private final @Nullable Output<SubResourceArgs> subnet;
 
     public Output<SubResourceArgs> getSubnet() {

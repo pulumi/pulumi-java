@@ -5,7 +5,7 @@ package io.pulumi.azurenative.compute;
 
 import io.pulumi.azurenative.compute.inputs.ApiEntityReferenceArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class RestorePointArgs extends io.pulumi.resources.ResourceArgs {
      * List of disk resource ids that the customer wishes to exclude from the restore point. If no disks are specified, all disks will be included.
      * 
      */
-    @InputImport(name="excludeDisks")
+    @Import(name="excludeDisks")
       private final @Nullable Output<List<ApiEntityReferenceArgs>> excludeDisks;
 
     public Output<List<ApiEntityReferenceArgs>> getExcludeDisks() {
@@ -31,7 +31,7 @@ public final class RestorePointArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -42,7 +42,7 @@ public final class RestorePointArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the restore point collection.
      * 
      */
-    @InputImport(name="restorePointCollectionName", required=true)
+    @Import(name="restorePointCollectionName", required=true)
       private final Output<String> restorePointCollectionName;
 
     public Output<String> getRestorePointCollectionName() {
@@ -53,7 +53,7 @@ public final class RestorePointArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the restore point.
      * 
      */
-    @InputImport(name="restorePointName")
+    @Import(name="restorePointName")
       private final @Nullable Output<String> restorePointName;
 
     public Output<String> getRestorePointName() {
@@ -64,7 +64,7 @@ public final class RestorePointArgs extends io.pulumi.resources.ResourceArgs {
      * Gets the creation time of the restore point.
      * 
      */
-    @InputImport(name="timeCreated")
+    @Import(name="timeCreated")
       private final @Nullable Output<String> timeCreated;
 
     public Output<String> getTimeCreated() {

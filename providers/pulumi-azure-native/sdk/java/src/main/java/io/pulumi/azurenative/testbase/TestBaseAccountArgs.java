@@ -5,7 +5,7 @@ package io.pulumi.azurenative.testbase;
 
 import io.pulumi.azurenative.testbase.inputs.TestBaseAccountSKUArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class TestBaseAccountArgs extends io.pulumi.resources.ResourceArgs 
      * The geo-location where the resource lives
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -32,7 +32,7 @@ public final class TestBaseAccountArgs extends io.pulumi.resources.ResourceArgs 
      * The name of the resource group that contains the resource.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -43,7 +43,7 @@ public final class TestBaseAccountArgs extends io.pulumi.resources.ResourceArgs 
      * The flag indicating if we would like to restore the Test Base Accounts which were soft deleted before.
      * 
      */
-    @InputImport(name="restore")
+    @Import(name="restore")
       private final @Nullable Output<Boolean> restore;
 
     public Output<Boolean> getRestore() {
@@ -54,7 +54,7 @@ public final class TestBaseAccountArgs extends io.pulumi.resources.ResourceArgs 
      * The SKU of the Test Base Account.
      * 
      */
-    @InputImport(name="sku", required=true)
+    @Import(name="sku", required=true)
       private final Output<TestBaseAccountSKUArgs> sku;
 
     public Output<TestBaseAccountSKUArgs> getSku() {
@@ -65,7 +65,7 @@ public final class TestBaseAccountArgs extends io.pulumi.resources.ResourceArgs 
      * The tags of the resource.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -76,7 +76,7 @@ public final class TestBaseAccountArgs extends io.pulumi.resources.ResourceArgs 
      * The resource name of the Test Base Account.
      * 
      */
-    @InputImport(name="testBaseAccountName")
+    @Import(name="testBaseAccountName")
       private final @Nullable Output<String> testBaseAccountName;
 
     public Output<String> getTestBaseAccountName() {

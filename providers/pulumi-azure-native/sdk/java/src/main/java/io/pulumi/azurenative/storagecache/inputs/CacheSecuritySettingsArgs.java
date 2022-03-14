@@ -5,7 +5,7 @@ package io.pulumi.azurenative.storagecache.inputs;
 
 import io.pulumi.azurenative.storagecache.inputs.NfsAccessPolicyArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class CacheSecuritySettingsArgs extends io.pulumi.resources.Resourc
      * NFS access policies defined for this cache.
      * 
      */
-    @InputImport(name="accessPolicies")
+    @Import(name="accessPolicies")
       private final @Nullable Output<List<NfsAccessPolicyArgs>> accessPolicies;
 
     public Output<List<NfsAccessPolicyArgs>> getAccessPolicies() {

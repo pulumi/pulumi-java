@@ -8,7 +8,7 @@ import io.pulumi.azurenative.storsimple.enums.MonitoringStatus;
 import io.pulumi.azurenative.storsimple.enums.VolumeStatus;
 import io.pulumi.azurenative.storsimple.enums.VolumeType;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
      * The IDs of the access control records, associated with the volume.
      * 
      */
-    @InputImport(name="accessControlRecordIds", required=true)
+    @Import(name="accessControlRecordIds", required=true)
       private final Output<List<String>> accessControlRecordIds;
 
     public Output<List<String>> getAccessControlRecordIds() {
@@ -35,7 +35,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
      * The device name
      * 
      */
-    @InputImport(name="deviceName", required=true)
+    @Import(name="deviceName", required=true)
       private final Output<String> deviceName;
 
     public Output<String> getDeviceName() {
@@ -46,7 +46,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
      * The Kind of the object. Currently only Series8000 is supported
      * 
      */
-    @InputImport(name="kind")
+    @Import(name="kind")
       private final @Nullable Output<Kind> kind;
 
     public Output<Kind> getKind() {
@@ -57,7 +57,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
      * The manager name
      * 
      */
-    @InputImport(name="managerName", required=true)
+    @Import(name="managerName", required=true)
       private final Output<String> managerName;
 
     public Output<String> getManagerName() {
@@ -68,7 +68,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
      * The monitoring status of the volume.
      * 
      */
-    @InputImport(name="monitoringStatus", required=true)
+    @Import(name="monitoringStatus", required=true)
       private final Output<MonitoringStatus> monitoringStatus;
 
     public Output<MonitoringStatus> getMonitoringStatus() {
@@ -79,7 +79,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
      * The resource group name
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -90,7 +90,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
      * The size of the volume in bytes.
      * 
      */
-    @InputImport(name="sizeInBytes", required=true)
+    @Import(name="sizeInBytes", required=true)
       private final Output<Double> sizeInBytes;
 
     public Output<Double> getSizeInBytes() {
@@ -101,7 +101,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
      * The volume container name.
      * 
      */
-    @InputImport(name="volumeContainerName", required=true)
+    @Import(name="volumeContainerName", required=true)
       private final Output<String> volumeContainerName;
 
     public Output<String> getVolumeContainerName() {
@@ -112,7 +112,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
      * The volume name.
      * 
      */
-    @InputImport(name="volumeName")
+    @Import(name="volumeName")
       private final @Nullable Output<String> volumeName;
 
     public Output<String> getVolumeName() {
@@ -123,7 +123,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
      * The volume status.
      * 
      */
-    @InputImport(name="volumeStatus", required=true)
+    @Import(name="volumeStatus", required=true)
       private final Output<VolumeStatus> volumeStatus;
 
     public Output<VolumeStatus> getVolumeStatus() {
@@ -134,7 +134,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
      * The type of the volume.
      * 
      */
-    @InputImport(name="volumeType", required=true)
+    @Import(name="volumeType", required=true)
       private final Output<VolumeType> volumeType;
 
     public Output<VolumeType> getVolumeType() {

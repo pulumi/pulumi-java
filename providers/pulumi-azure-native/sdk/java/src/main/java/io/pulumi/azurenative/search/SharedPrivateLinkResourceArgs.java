@@ -5,7 +5,7 @@ package io.pulumi.azurenative.search;
 
 import io.pulumi.azurenative.search.inputs.SharedPrivateLinkResourcePropertiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class SharedPrivateLinkResourceArgs extends io.pulumi.resources.Res
      * Describes the properties of a Shared Private Link Resource managed by the Azure Cognitive Search service.
      * 
      */
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable Output<SharedPrivateLinkResourcePropertiesArgs> properties;
 
     public Output<SharedPrivateLinkResourcePropertiesArgs> getProperties() {
@@ -30,7 +30,7 @@ public final class SharedPrivateLinkResourceArgs extends io.pulumi.resources.Res
      * The name of the resource group within the current subscription. You can obtain this value from the Azure Resource Manager API or the portal.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -41,7 +41,7 @@ public final class SharedPrivateLinkResourceArgs extends io.pulumi.resources.Res
      * The name of the Azure Cognitive Search service associated with the specified resource group.
      * 
      */
-    @InputImport(name="searchServiceName", required=true)
+    @Import(name="searchServiceName", required=true)
       private final Output<String> searchServiceName;
 
     public Output<String> getSearchServiceName() {
@@ -52,7 +52,7 @@ public final class SharedPrivateLinkResourceArgs extends io.pulumi.resources.Res
      * The name of the shared private link resource managed by the Azure Cognitive Search service within the specified resource group.
      * 
      */
-    @InputImport(name="sharedPrivateLinkResourceName")
+    @Import(name="sharedPrivateLinkResourceName")
       private final @Nullable Output<String> sharedPrivateLinkResourceName;
 
     public Output<String> getSharedPrivateLinkResourceName() {

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.maps.inputs;
 
 import io.pulumi.azurenative.maps.enums.SigningKey;
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class ListAccountSasArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the Maps Account.
      * 
      */
-    @InputImport(name="accountName", required=true)
+    @Import(name="accountName", required=true)
       private final String accountName;
 
     public String getAccountName() {
@@ -33,7 +33,7 @@ public final class ListAccountSasArgs extends io.pulumi.resources.InvokeArgs {
      * The date time offset of when the token validity expires. For example "2017-05-24T10:42:03.1567373Z"
      * 
      */
-    @InputImport(name="expiry", required=true)
+    @Import(name="expiry", required=true)
       private final String expiry;
 
     public String getExpiry() {
@@ -44,7 +44,7 @@ public final class ListAccountSasArgs extends io.pulumi.resources.InvokeArgs {
      * Required parameter which represents the desired maximum request per second to allowed for the given SAS token. This does not guarantee perfect accuracy in measurements but provides application safe guards of abuse with eventual enforcement.
      * 
      */
-    @InputImport(name="maxRatePerSecond", required=true)
+    @Import(name="maxRatePerSecond", required=true)
       private final Integer maxRatePerSecond;
 
     public Integer getMaxRatePerSecond() {
@@ -55,7 +55,7 @@ public final class ListAccountSasArgs extends io.pulumi.resources.InvokeArgs {
      * The principal Id also known as the object Id of a User Assigned Managed Identity currently assigned to the Map Account. To assign a Managed Identity of the account, use operation Create or Update an assign a User Assigned Identity resource Id.
      * 
      */
-    @InputImport(name="principalId", required=true)
+    @Import(name="principalId", required=true)
       private final String principalId;
 
     public String getPrincipalId() {
@@ -66,7 +66,7 @@ public final class ListAccountSasArgs extends io.pulumi.resources.InvokeArgs {
      * Optional, allows control of which region locations are permitted access to Azure Maps REST APIs with the SAS token. Example: "eastus", "westus2". Omitting this parameter will allow all region locations to be accessible.
      * 
      */
-    @InputImport(name="regions")
+    @Import(name="regions")
       private final @Nullable List<String> regions;
 
     public List<String> getRegions() {
@@ -77,7 +77,7 @@ public final class ListAccountSasArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {
@@ -88,7 +88,7 @@ public final class ListAccountSasArgs extends io.pulumi.resources.InvokeArgs {
      * The Map account key to use for signing.
      * 
      */
-    @InputImport(name="signingKey", required=true)
+    @Import(name="signingKey", required=true)
       private final Either<String,SigningKey> signingKey;
 
     public Either<String,SigningKey> getSigningKey() {
@@ -99,7 +99,7 @@ public final class ListAccountSasArgs extends io.pulumi.resources.InvokeArgs {
      * The date time offset of when the token validity begins. For example "2017-05-24T10:42:03.1567373Z".
      * 
      */
-    @InputImport(name="start", required=true)
+    @Import(name="start", required=true)
       private final String start;
 
     public String getStart() {

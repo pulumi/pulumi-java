@@ -3,12 +3,12 @@
 
 package io.pulumi.azurenative.operationalinsights.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ResultStatisticsResponse {
     /**
      * The number of rows that were returned by the search job.
@@ -21,10 +21,10 @@ public final class ResultStatisticsResponse {
      */
     private final Double progress;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ResultStatisticsResponse(
-        @OutputCustomType.Parameter("ingestedRecords") Integer ingestedRecords,
-        @OutputCustomType.Parameter("progress") Double progress) {
+        @CustomType.Parameter("ingestedRecords") Integer ingestedRecords,
+        @CustomType.Parameter("progress") Double progress) {
         this.ingestedRecords = ingestedRecords;
         this.progress = progress;
     }

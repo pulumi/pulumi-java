@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.providerhub.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -16,14 +16,14 @@ public final class ResourceProviderManifestPropertiesResponseTemplateDeploymentO
 
     public static final ResourceProviderManifestPropertiesResponseTemplateDeploymentOptions Empty = new ResourceProviderManifestPropertiesResponseTemplateDeploymentOptions();
 
-    @InputImport(name="preflightOptions")
+    @Import(name="preflightOptions")
       private final @Nullable List<String> preflightOptions;
 
     public List<String> getPreflightOptions() {
         return this.preflightOptions == null ? List.of() : this.preflightOptions;
     }
 
-    @InputImport(name="preflightSupported")
+    @Import(name="preflightSupported")
       private final @Nullable Boolean preflightSupported;
 
     public Optional<Boolean> getPreflightSupported() {

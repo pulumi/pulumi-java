@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class RoutingPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * List of all destinations which this routing policy is applicable to (for example: Internet, PrivateTraffic).
      * 
      */
-    @InputImport(name="destinations", required=true)
+    @Import(name="destinations", required=true)
       private final Output<List<String>> destinations;
 
     public Output<List<String>> getDestinations() {
@@ -33,7 +33,7 @@ public final class RoutingPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * The unique name for the routing policy.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -44,7 +44,7 @@ public final class RoutingPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * The next hop resource id on which this routing policy is applicable to.
      * 
      */
-    @InputImport(name="nextHop", required=true)
+    @Import(name="nextHop", required=true)
       private final Output<String> nextHop;
 
     public Output<String> getNextHop() {

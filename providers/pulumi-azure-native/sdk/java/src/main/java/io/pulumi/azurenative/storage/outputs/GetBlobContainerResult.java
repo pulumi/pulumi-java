@@ -5,7 +5,7 @@ package io.pulumi.azurenative.storage.outputs;
 
 import io.pulumi.azurenative.storage.outputs.ImmutabilityPolicyPropertiesResponse;
 import io.pulumi.azurenative.storage.outputs.LegalHoldPropertiesResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -14,7 +14,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetBlobContainerResult {
     /**
      * Default the container to use specified encryption scope for all writes.
@@ -117,28 +117,28 @@ public final class GetBlobContainerResult {
      */
     private final String version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetBlobContainerResult(
-        @OutputCustomType.Parameter("defaultEncryptionScope") @Nullable String defaultEncryptionScope,
-        @OutputCustomType.Parameter("deleted") Boolean deleted,
-        @OutputCustomType.Parameter("deletedTime") String deletedTime,
-        @OutputCustomType.Parameter("denyEncryptionScopeOverride") @Nullable Boolean denyEncryptionScopeOverride,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("hasImmutabilityPolicy") Boolean hasImmutabilityPolicy,
-        @OutputCustomType.Parameter("hasLegalHold") Boolean hasLegalHold,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("immutabilityPolicy") ImmutabilityPolicyPropertiesResponse immutabilityPolicy,
-        @OutputCustomType.Parameter("lastModifiedTime") String lastModifiedTime,
-        @OutputCustomType.Parameter("leaseDuration") String leaseDuration,
-        @OutputCustomType.Parameter("leaseState") String leaseState,
-        @OutputCustomType.Parameter("leaseStatus") String leaseStatus,
-        @OutputCustomType.Parameter("legalHold") LegalHoldPropertiesResponse legalHold,
-        @OutputCustomType.Parameter("metadata") @Nullable Map<String,String> metadata,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("publicAccess") @Nullable String publicAccess,
-        @OutputCustomType.Parameter("remainingRetentionDays") Integer remainingRetentionDays,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("version") String version) {
+        @CustomType.Parameter("defaultEncryptionScope") @Nullable String defaultEncryptionScope,
+        @CustomType.Parameter("deleted") Boolean deleted,
+        @CustomType.Parameter("deletedTime") String deletedTime,
+        @CustomType.Parameter("denyEncryptionScopeOverride") @Nullable Boolean denyEncryptionScopeOverride,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("hasImmutabilityPolicy") Boolean hasImmutabilityPolicy,
+        @CustomType.Parameter("hasLegalHold") Boolean hasLegalHold,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("immutabilityPolicy") ImmutabilityPolicyPropertiesResponse immutabilityPolicy,
+        @CustomType.Parameter("lastModifiedTime") String lastModifiedTime,
+        @CustomType.Parameter("leaseDuration") String leaseDuration,
+        @CustomType.Parameter("leaseState") String leaseState,
+        @CustomType.Parameter("leaseStatus") String leaseStatus,
+        @CustomType.Parameter("legalHold") LegalHoldPropertiesResponse legalHold,
+        @CustomType.Parameter("metadata") @Nullable Map<String,String> metadata,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("publicAccess") @Nullable String publicAccess,
+        @CustomType.Parameter("remainingRetentionDays") Integer remainingRetentionDays,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("version") String version) {
         this.defaultEncryptionScope = defaultEncryptionScope;
         this.deleted = deleted;
         this.deletedTime = deletedTime;

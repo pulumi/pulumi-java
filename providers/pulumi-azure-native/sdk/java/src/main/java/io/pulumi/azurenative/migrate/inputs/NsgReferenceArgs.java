@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.migrate.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class NsgReferenceArgs extends io.pulumi.resources.ResourceArgs {
      * Gets the ARM resource ID of the tracked resource being referenced.
      * 
      */
-    @InputImport(name="sourceArmResourceId", required=true)
+    @Import(name="sourceArmResourceId", required=true)
       private final Output<String> sourceArmResourceId;
 
     public Output<String> getSourceArmResourceId() {

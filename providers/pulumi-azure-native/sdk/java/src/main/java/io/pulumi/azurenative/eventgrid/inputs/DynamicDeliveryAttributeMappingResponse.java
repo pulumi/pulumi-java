@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.eventgrid.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class DynamicDeliveryAttributeMappingResponse extends io.pulumi.res
      * Name of the delivery attribute or header.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -33,7 +33,7 @@ public final class DynamicDeliveryAttributeMappingResponse extends io.pulumi.res
      * JSON path in the event which contains attribute value.
      * 
      */
-    @InputImport(name="sourceField")
+    @Import(name="sourceField")
       private final @Nullable String sourceField;
 
     public Optional<String> getSourceField() {
@@ -45,7 +45,7 @@ public final class DynamicDeliveryAttributeMappingResponse extends io.pulumi.res
      * Expected value is 'Dynamic'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

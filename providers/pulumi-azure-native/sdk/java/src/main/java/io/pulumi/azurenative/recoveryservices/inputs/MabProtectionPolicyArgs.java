@@ -10,7 +10,7 @@ import io.pulumi.azurenative.recoveryservices.inputs.SimpleRetentionPolicyArgs;
 import io.pulumi.azurenative.recoveryservices.inputs.SimpleSchedulePolicyArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -31,7 +31,7 @@ public final class MabProtectionPolicyArgs extends io.pulumi.resources.ResourceA
      * Expected value is 'MAB'.
      * 
      */
-    @InputImport(name="backupManagementType", required=true)
+    @Import(name="backupManagementType", required=true)
       private final Output<String> backupManagementType;
 
     public Output<String> getBackupManagementType() {
@@ -42,7 +42,7 @@ public final class MabProtectionPolicyArgs extends io.pulumi.resources.ResourceA
      * Number of items associated with this policy.
      * 
      */
-    @InputImport(name="protectedItemsCount")
+    @Import(name="protectedItemsCount")
       private final @Nullable Output<Integer> protectedItemsCount;
 
     public Output<Integer> getProtectedItemsCount() {
@@ -53,7 +53,7 @@ public final class MabProtectionPolicyArgs extends io.pulumi.resources.ResourceA
      * Retention policy details.
      * 
      */
-    @InputImport(name="retentionPolicy")
+    @Import(name="retentionPolicy")
       private final @Nullable Output<Either<LongTermRetentionPolicyArgs,SimpleRetentionPolicyArgs>> retentionPolicy;
 
     public Output<Either<LongTermRetentionPolicyArgs,SimpleRetentionPolicyArgs>> getRetentionPolicy() {
@@ -64,7 +64,7 @@ public final class MabProtectionPolicyArgs extends io.pulumi.resources.ResourceA
      * Backup schedule of backup policy.
      * 
      */
-    @InputImport(name="schedulePolicy")
+    @Import(name="schedulePolicy")
       private final @Nullable Output<Object> schedulePolicy;
 
     public Output<Object> getSchedulePolicy() {

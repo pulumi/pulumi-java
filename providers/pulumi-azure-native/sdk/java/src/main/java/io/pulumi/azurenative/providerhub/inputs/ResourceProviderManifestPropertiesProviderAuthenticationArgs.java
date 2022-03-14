@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.providerhub.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -14,7 +14,7 @@ public final class ResourceProviderManifestPropertiesProviderAuthenticationArgs 
 
     public static final ResourceProviderManifestPropertiesProviderAuthenticationArgs Empty = new ResourceProviderManifestPropertiesProviderAuthenticationArgs();
 
-    @InputImport(name="allowedAudiences", required=true)
+    @Import(name="allowedAudiences", required=true)
       private final Output<List<String>> allowedAudiences;
 
     public Output<List<String>> getAllowedAudiences() {

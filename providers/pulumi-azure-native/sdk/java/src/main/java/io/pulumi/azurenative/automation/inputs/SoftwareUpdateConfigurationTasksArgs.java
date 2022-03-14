@@ -5,7 +5,7 @@ package io.pulumi.azurenative.automation.inputs;
 
 import io.pulumi.azurenative.automation.inputs.TaskPropertiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -22,7 +22,7 @@ public final class SoftwareUpdateConfigurationTasksArgs extends io.pulumi.resour
      * Post task properties.
      * 
      */
-    @InputImport(name="postTask")
+    @Import(name="postTask")
       private final @Nullable Output<TaskPropertiesArgs> postTask;
 
     public Output<TaskPropertiesArgs> getPostTask() {
@@ -33,7 +33,7 @@ public final class SoftwareUpdateConfigurationTasksArgs extends io.pulumi.resour
      * Pre task properties.
      * 
      */
-    @InputImport(name="preTask")
+    @Import(name="preTask")
       private final @Nullable Output<TaskPropertiesArgs> preTask;
 
     public Output<TaskPropertiesArgs> getPreTask() {

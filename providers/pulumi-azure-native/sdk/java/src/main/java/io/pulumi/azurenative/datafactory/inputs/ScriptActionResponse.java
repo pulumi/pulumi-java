@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ScriptActionResponse extends io.pulumi.resources.InvokeArgs {
      * The user provided name of the script action.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -34,7 +34,7 @@ public final class ScriptActionResponse extends io.pulumi.resources.InvokeArgs {
      * The parameters for the script action.
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable String parameters;
 
     public Optional<String> getParameters() {
@@ -45,7 +45,7 @@ public final class ScriptActionResponse extends io.pulumi.resources.InvokeArgs {
      * The node types on which the script action should be executed.
      * 
      */
-    @InputImport(name="roles", required=true)
+    @Import(name="roles", required=true)
       private final Object roles;
 
     public Object getRoles() {
@@ -56,7 +56,7 @@ public final class ScriptActionResponse extends io.pulumi.resources.InvokeArgs {
      * The URI for the script action.
      * 
      */
-    @InputImport(name="uri", required=true)
+    @Import(name="uri", required=true)
       private final String uri;
 
     public String getUri() {

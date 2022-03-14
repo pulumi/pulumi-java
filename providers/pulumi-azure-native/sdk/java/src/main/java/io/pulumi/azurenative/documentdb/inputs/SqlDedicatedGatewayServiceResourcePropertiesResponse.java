@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.documentdb.inputs;
 
 import io.pulumi.azurenative.documentdb.inputs.SqlDedicatedGatewayRegionalServiceResourceResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class SqlDedicatedGatewayServiceResourcePropertiesResponse extends 
      * Time of the last state change (ISO-8601 format).
      * 
      */
-    @InputImport(name="creationTime", required=true)
+    @Import(name="creationTime", required=true)
       private final String creationTime;
 
     public String getCreationTime() {
@@ -36,7 +36,7 @@ public final class SqlDedicatedGatewayServiceResourcePropertiesResponse extends 
      * Instance count for the service.
      * 
      */
-    @InputImport(name="instanceCount")
+    @Import(name="instanceCount")
       private final @Nullable Integer instanceCount;
 
     public Optional<Integer> getInstanceCount() {
@@ -47,7 +47,7 @@ public final class SqlDedicatedGatewayServiceResourcePropertiesResponse extends 
      * Instance type for the service.
      * 
      */
-    @InputImport(name="instanceSize")
+    @Import(name="instanceSize")
       private final @Nullable String instanceSize;
 
     public Optional<String> getInstanceSize() {
@@ -58,7 +58,7 @@ public final class SqlDedicatedGatewayServiceResourcePropertiesResponse extends 
      * An array that contains all of the locations for the service.
      * 
      */
-    @InputImport(name="locations", required=true)
+    @Import(name="locations", required=true)
       private final List<SqlDedicatedGatewayRegionalServiceResourceResponse> locations;
 
     public List<SqlDedicatedGatewayRegionalServiceResourceResponse> getLocations() {
@@ -70,7 +70,7 @@ public final class SqlDedicatedGatewayServiceResourcePropertiesResponse extends 
      * Expected value is 'SqlDedicatedGateway'.
      * 
      */
-    @InputImport(name="serviceType", required=true)
+    @Import(name="serviceType", required=true)
       private final String serviceType;
 
     public String getServiceType() {
@@ -81,7 +81,7 @@ public final class SqlDedicatedGatewayServiceResourcePropertiesResponse extends 
      * SqlDedicatedGateway endpoint for the service.
      * 
      */
-    @InputImport(name="sqlDedicatedGatewayEndpoint")
+    @Import(name="sqlDedicatedGatewayEndpoint")
       private final @Nullable String sqlDedicatedGatewayEndpoint;
 
     public Optional<String> getSqlDedicatedGatewayEndpoint() {
@@ -92,7 +92,7 @@ public final class SqlDedicatedGatewayServiceResourcePropertiesResponse extends 
      * Describes the status of a service.
      * 
      */
-    @InputImport(name="status", required=true)
+    @Import(name="status", required=true)
       private final String status;
 
     public String getStatus() {

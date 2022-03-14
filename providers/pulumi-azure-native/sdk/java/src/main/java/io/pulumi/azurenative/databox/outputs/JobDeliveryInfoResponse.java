@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.databox.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class JobDeliveryInfoResponse {
     /**
      * Scheduled date time.
@@ -17,8 +17,8 @@ public final class JobDeliveryInfoResponse {
      */
     private final @Nullable String scheduledDateTime;
 
-    @OutputCustomType.Constructor
-    private JobDeliveryInfoResponse(@OutputCustomType.Parameter("scheduledDateTime") @Nullable String scheduledDateTime) {
+    @CustomType.Constructor
+    private JobDeliveryInfoResponse(@CustomType.Parameter("scheduledDateTime") @Nullable String scheduledDateTime) {
         this.scheduledDateTime = scheduledDateTime;
     }
 

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.sql.IPv6FirewallRuleArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -34,7 +34,7 @@ public class IPv6FirewallRule extends io.pulumi.resources.CustomResource {
      * The end IP address of the firewall rule. Must be IPv6 format. Must be greater than or equal to startIpAddress.
      * 
      */
-    @OutputExport(name="endIPv6Address", type=String.class, parameters={})
+    @Export(name="endIPv6Address", type=String.class, parameters={})
     private Output</* @Nullable */ String> endIPv6Address;
 
     /**
@@ -48,7 +48,7 @@ public class IPv6FirewallRule extends io.pulumi.resources.CustomResource {
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
@@ -62,7 +62,7 @@ public class IPv6FirewallRule extends io.pulumi.resources.CustomResource {
      * The start IP address of the firewall rule. Must be IPv6 format.
      * 
      */
-    @OutputExport(name="startIPv6Address", type=String.class, parameters={})
+    @Export(name="startIPv6Address", type=String.class, parameters={})
     private Output</* @Nullable */ String> startIPv6Address;
 
     /**
@@ -76,7 +76,7 @@ public class IPv6FirewallRule extends io.pulumi.resources.CustomResource {
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

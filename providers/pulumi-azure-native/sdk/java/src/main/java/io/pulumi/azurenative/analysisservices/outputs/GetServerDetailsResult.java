@@ -7,7 +7,7 @@ import io.pulumi.azurenative.analysisservices.outputs.GatewayDetailsResponse;
 import io.pulumi.azurenative.analysisservices.outputs.IPv4FirewallSettingsResponse;
 import io.pulumi.azurenative.analysisservices.outputs.ResourceSkuResponse;
 import io.pulumi.azurenative.analysisservices.outputs.ServerAdministratorsResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -15,7 +15,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetServerDetailsResult {
     /**
      * A collection of AS server administrators
@@ -98,24 +98,24 @@ public final class GetServerDetailsResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetServerDetailsResult(
-        @OutputCustomType.Parameter("asAdministrators") @Nullable ServerAdministratorsResponse asAdministrators,
-        @OutputCustomType.Parameter("backupBlobContainerUri") @Nullable String backupBlobContainerUri,
-        @OutputCustomType.Parameter("gatewayDetails") @Nullable GatewayDetailsResponse gatewayDetails,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("ipV4FirewallSettings") @Nullable IPv4FirewallSettingsResponse ipV4FirewallSettings,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("managedMode") @Nullable Integer managedMode,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("querypoolConnectionMode") @Nullable String querypoolConnectionMode,
-        @OutputCustomType.Parameter("serverFullName") String serverFullName,
-        @OutputCustomType.Parameter("serverMonitorMode") @Nullable Integer serverMonitorMode,
-        @OutputCustomType.Parameter("sku") ResourceSkuResponse sku,
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("asAdministrators") @Nullable ServerAdministratorsResponse asAdministrators,
+        @CustomType.Parameter("backupBlobContainerUri") @Nullable String backupBlobContainerUri,
+        @CustomType.Parameter("gatewayDetails") @Nullable GatewayDetailsResponse gatewayDetails,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("ipV4FirewallSettings") @Nullable IPv4FirewallSettingsResponse ipV4FirewallSettings,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("managedMode") @Nullable Integer managedMode,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("querypoolConnectionMode") @Nullable String querypoolConnectionMode,
+        @CustomType.Parameter("serverFullName") String serverFullName,
+        @CustomType.Parameter("serverMonitorMode") @Nullable Integer serverMonitorMode,
+        @CustomType.Parameter("sku") ResourceSkuResponse sku,
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type) {
         this.asAdministrators = asAdministrators;
         this.backupBlobContainerUri = backupBlobContainerUri;
         this.gatewayDetails = gatewayDetails;

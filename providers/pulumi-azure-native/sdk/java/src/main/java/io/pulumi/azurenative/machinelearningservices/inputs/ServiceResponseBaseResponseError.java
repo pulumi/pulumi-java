@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.azurenative.machinelearningservices.inputs.ErrorResponseResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 
 
@@ -20,7 +20,7 @@ public final class ServiceResponseBaseResponseError extends io.pulumi.resources.
      * The error response.
      * 
      */
-    @InputImport(name="error", required=true)
+    @Import(name="error", required=true)
       private final ErrorResponseResponse error;
 
     public ErrorResponseResponse getError() {

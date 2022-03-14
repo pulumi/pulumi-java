@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.avs.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetAuthorizationResult {
     /**
      * The ID of the ExpressRoute Circuit Authorization
@@ -40,14 +40,14 @@ public final class GetAuthorizationResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetAuthorizationResult(
-        @OutputCustomType.Parameter("expressRouteAuthorizationId") String expressRouteAuthorizationId,
-        @OutputCustomType.Parameter("expressRouteAuthorizationKey") String expressRouteAuthorizationKey,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("expressRouteAuthorizationId") String expressRouteAuthorizationId,
+        @CustomType.Parameter("expressRouteAuthorizationKey") String expressRouteAuthorizationKey,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("type") String type) {
         this.expressRouteAuthorizationId = expressRouteAuthorizationId;
         this.expressRouteAuthorizationKey = expressRouteAuthorizationKey;
         this.id = id;

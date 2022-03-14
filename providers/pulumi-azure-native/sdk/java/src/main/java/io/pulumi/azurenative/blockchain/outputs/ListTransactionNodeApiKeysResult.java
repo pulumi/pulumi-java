@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.blockchain.outputs;
 
 import io.pulumi.azurenative.blockchain.outputs.ApiKeyResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ListTransactionNodeApiKeysResult {
     /**
      * Gets or sets the collection of API key.
@@ -17,8 +17,8 @@ public final class ListTransactionNodeApiKeysResult {
      */
     private final @Nullable List<ApiKeyResponse> keys;
 
-    @OutputCustomType.Constructor
-    private ListTransactionNodeApiKeysResult(@OutputCustomType.Parameter("keys") @Nullable List<ApiKeyResponse> keys) {
+    @CustomType.Constructor
+    private ListTransactionNodeApiKeysResult(@CustomType.Parameter("keys") @Nullable List<ApiKeyResponse> keys) {
         this.keys = keys;
     }
 

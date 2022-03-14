@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.insights.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DataFlowResponse {
     /**
      * List of destinations for this data flow.
@@ -22,10 +22,10 @@ public final class DataFlowResponse {
      */
     private final @Nullable List<String> streams;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DataFlowResponse(
-        @OutputCustomType.Parameter("destinations") @Nullable List<String> destinations,
-        @OutputCustomType.Parameter("streams") @Nullable List<String> streams) {
+        @CustomType.Parameter("destinations") @Nullable List<String> destinations,
+        @CustomType.Parameter("streams") @Nullable List<String> streams) {
         this.destinations = destinations;
         this.streams = streams;
     }

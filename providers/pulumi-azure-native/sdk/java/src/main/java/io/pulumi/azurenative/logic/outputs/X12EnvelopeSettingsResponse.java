@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.logic.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class X12EnvelopeSettingsResponse {
     /**
      * The controls standards id.
@@ -134,32 +134,32 @@ public final class X12EnvelopeSettingsResponse {
      */
     private final Boolean useControlStandardsIdAsRepetitionCharacter;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private X12EnvelopeSettingsResponse(
-        @OutputCustomType.Parameter("controlStandardsId") Integer controlStandardsId,
-        @OutputCustomType.Parameter("controlVersionNumber") String controlVersionNumber,
-        @OutputCustomType.Parameter("enableDefaultGroupHeaders") Boolean enableDefaultGroupHeaders,
-        @OutputCustomType.Parameter("functionalGroupId") @Nullable String functionalGroupId,
-        @OutputCustomType.Parameter("groupControlNumberLowerBound") Integer groupControlNumberLowerBound,
-        @OutputCustomType.Parameter("groupControlNumberUpperBound") Integer groupControlNumberUpperBound,
-        @OutputCustomType.Parameter("groupHeaderAgencyCode") String groupHeaderAgencyCode,
-        @OutputCustomType.Parameter("groupHeaderDateFormat") String groupHeaderDateFormat,
-        @OutputCustomType.Parameter("groupHeaderTimeFormat") String groupHeaderTimeFormat,
-        @OutputCustomType.Parameter("groupHeaderVersion") String groupHeaderVersion,
-        @OutputCustomType.Parameter("interchangeControlNumberLowerBound") Integer interchangeControlNumberLowerBound,
-        @OutputCustomType.Parameter("interchangeControlNumberUpperBound") Integer interchangeControlNumberUpperBound,
-        @OutputCustomType.Parameter("overwriteExistingTransactionSetControlNumber") Boolean overwriteExistingTransactionSetControlNumber,
-        @OutputCustomType.Parameter("receiverApplicationId") String receiverApplicationId,
-        @OutputCustomType.Parameter("rolloverGroupControlNumber") Boolean rolloverGroupControlNumber,
-        @OutputCustomType.Parameter("rolloverInterchangeControlNumber") Boolean rolloverInterchangeControlNumber,
-        @OutputCustomType.Parameter("rolloverTransactionSetControlNumber") Boolean rolloverTransactionSetControlNumber,
-        @OutputCustomType.Parameter("senderApplicationId") String senderApplicationId,
-        @OutputCustomType.Parameter("transactionSetControlNumberLowerBound") Integer transactionSetControlNumberLowerBound,
-        @OutputCustomType.Parameter("transactionSetControlNumberPrefix") @Nullable String transactionSetControlNumberPrefix,
-        @OutputCustomType.Parameter("transactionSetControlNumberSuffix") @Nullable String transactionSetControlNumberSuffix,
-        @OutputCustomType.Parameter("transactionSetControlNumberUpperBound") Integer transactionSetControlNumberUpperBound,
-        @OutputCustomType.Parameter("usageIndicator") String usageIndicator,
-        @OutputCustomType.Parameter("useControlStandardsIdAsRepetitionCharacter") Boolean useControlStandardsIdAsRepetitionCharacter) {
+        @CustomType.Parameter("controlStandardsId") Integer controlStandardsId,
+        @CustomType.Parameter("controlVersionNumber") String controlVersionNumber,
+        @CustomType.Parameter("enableDefaultGroupHeaders") Boolean enableDefaultGroupHeaders,
+        @CustomType.Parameter("functionalGroupId") @Nullable String functionalGroupId,
+        @CustomType.Parameter("groupControlNumberLowerBound") Integer groupControlNumberLowerBound,
+        @CustomType.Parameter("groupControlNumberUpperBound") Integer groupControlNumberUpperBound,
+        @CustomType.Parameter("groupHeaderAgencyCode") String groupHeaderAgencyCode,
+        @CustomType.Parameter("groupHeaderDateFormat") String groupHeaderDateFormat,
+        @CustomType.Parameter("groupHeaderTimeFormat") String groupHeaderTimeFormat,
+        @CustomType.Parameter("groupHeaderVersion") String groupHeaderVersion,
+        @CustomType.Parameter("interchangeControlNumberLowerBound") Integer interchangeControlNumberLowerBound,
+        @CustomType.Parameter("interchangeControlNumberUpperBound") Integer interchangeControlNumberUpperBound,
+        @CustomType.Parameter("overwriteExistingTransactionSetControlNumber") Boolean overwriteExistingTransactionSetControlNumber,
+        @CustomType.Parameter("receiverApplicationId") String receiverApplicationId,
+        @CustomType.Parameter("rolloverGroupControlNumber") Boolean rolloverGroupControlNumber,
+        @CustomType.Parameter("rolloverInterchangeControlNumber") Boolean rolloverInterchangeControlNumber,
+        @CustomType.Parameter("rolloverTransactionSetControlNumber") Boolean rolloverTransactionSetControlNumber,
+        @CustomType.Parameter("senderApplicationId") String senderApplicationId,
+        @CustomType.Parameter("transactionSetControlNumberLowerBound") Integer transactionSetControlNumberLowerBound,
+        @CustomType.Parameter("transactionSetControlNumberPrefix") @Nullable String transactionSetControlNumberPrefix,
+        @CustomType.Parameter("transactionSetControlNumberSuffix") @Nullable String transactionSetControlNumberSuffix,
+        @CustomType.Parameter("transactionSetControlNumberUpperBound") Integer transactionSetControlNumberUpperBound,
+        @CustomType.Parameter("usageIndicator") String usageIndicator,
+        @CustomType.Parameter("useControlStandardsIdAsRepetitionCharacter") Boolean useControlStandardsIdAsRepetitionCharacter) {
         this.controlStandardsId = controlStandardsId;
         this.controlVersionNumber = controlVersionNumber;
         this.enableDefaultGroupHeaders = enableDefaultGroupHeaders;

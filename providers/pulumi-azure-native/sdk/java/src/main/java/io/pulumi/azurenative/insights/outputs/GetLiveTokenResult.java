@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.insights.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetLiveTokenResult {
     /**
      * JWT token for accessing live metrics stream data.
@@ -15,8 +15,8 @@ public final class GetLiveTokenResult {
      */
     private final String liveToken;
 
-    @OutputCustomType.Constructor
-    private GetLiveTokenResult(@OutputCustomType.Parameter("liveToken") String liveToken) {
+    @CustomType.Constructor
+    private GetLiveTokenResult(@CustomType.Parameter("liveToken") String liveToken) {
         this.liveToken = liveToken;
     }
 

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.sql.outputs;
 
 import io.pulumi.azurenative.sql.outputs.SkuResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetInstancePoolResult {
     /**
      * Resource ID.
@@ -60,17 +60,17 @@ public final class GetInstancePoolResult {
      */
     private final Integer vCores;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetInstancePoolResult(
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("licenseType") String licenseType,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("sku") @Nullable SkuResponse sku,
-        @OutputCustomType.Parameter("subnetId") String subnetId,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("vCores") Integer vCores) {
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("licenseType") String licenseType,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("sku") @Nullable SkuResponse sku,
+        @CustomType.Parameter("subnetId") String subnetId,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("vCores") Integer vCores) {
         this.id = id;
         this.licenseType = licenseType;
         this.location = location;

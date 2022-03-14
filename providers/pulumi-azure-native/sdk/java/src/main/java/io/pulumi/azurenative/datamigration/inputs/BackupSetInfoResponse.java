@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datamigration.inputs;
 
 import io.pulumi.azurenative.datamigration.inputs.BackupFileInfoResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class BackupSetInfoResponse extends io.pulumi.resources.InvokeArgs 
      * Date and time that the backup operation finished
      * 
      */
-    @InputImport(name="backupFinishedDate")
+    @Import(name="backupFinishedDate")
       private final @Nullable String backupFinishedDate;
 
     public Optional<String> getBackupFinishedDate() {
@@ -36,7 +36,7 @@ public final class BackupSetInfoResponse extends io.pulumi.resources.InvokeArgs 
      * Id for the set of backup files
      * 
      */
-    @InputImport(name="backupSetId")
+    @Import(name="backupSetId")
       private final @Nullable String backupSetId;
 
     public Optional<String> getBackupSetId() {
@@ -47,7 +47,7 @@ public final class BackupSetInfoResponse extends io.pulumi.resources.InvokeArgs 
      * Date and time that the backup operation began
      * 
      */
-    @InputImport(name="backupStartDate")
+    @Import(name="backupStartDate")
       private final @Nullable String backupStartDate;
 
     public Optional<String> getBackupStartDate() {
@@ -58,7 +58,7 @@ public final class BackupSetInfoResponse extends io.pulumi.resources.InvokeArgs 
      * Enum of the different backup types
      * 
      */
-    @InputImport(name="backupType")
+    @Import(name="backupType")
       private final @Nullable String backupType;
 
     public Optional<String> getBackupType() {
@@ -69,7 +69,7 @@ public final class BackupSetInfoResponse extends io.pulumi.resources.InvokeArgs 
      * Name of the database to which the backup set belongs
      * 
      */
-    @InputImport(name="databaseName")
+    @Import(name="databaseName")
       private final @Nullable String databaseName;
 
     public Optional<String> getDatabaseName() {
@@ -80,7 +80,7 @@ public final class BackupSetInfoResponse extends io.pulumi.resources.InvokeArgs 
      * First log sequence number of the backup file
      * 
      */
-    @InputImport(name="firstLsn")
+    @Import(name="firstLsn")
       private final @Nullable String firstLsn;
 
     public Optional<String> getFirstLsn() {
@@ -91,7 +91,7 @@ public final class BackupSetInfoResponse extends io.pulumi.resources.InvokeArgs 
      * Whether the backup set is restored or not
      * 
      */
-    @InputImport(name="isBackupRestored")
+    @Import(name="isBackupRestored")
       private final @Nullable Boolean isBackupRestored;
 
     public Optional<Boolean> getIsBackupRestored() {
@@ -102,7 +102,7 @@ public final class BackupSetInfoResponse extends io.pulumi.resources.InvokeArgs 
      * Last log sequence number of the backup file
      * 
      */
-    @InputImport(name="lastLsn")
+    @Import(name="lastLsn")
       private final @Nullable String lastLsn;
 
     public Optional<String> getLastLsn() {
@@ -113,7 +113,7 @@ public final class BackupSetInfoResponse extends io.pulumi.resources.InvokeArgs 
      * Last modified time of the backup file in share location
      * 
      */
-    @InputImport(name="lastModifiedTime")
+    @Import(name="lastModifiedTime")
       private final @Nullable String lastModifiedTime;
 
     public Optional<String> getLastModifiedTime() {
@@ -124,7 +124,7 @@ public final class BackupSetInfoResponse extends io.pulumi.resources.InvokeArgs 
      * List of files in the backup set
      * 
      */
-    @InputImport(name="listOfBackupFiles")
+    @Import(name="listOfBackupFiles")
       private final @Nullable List<BackupFileInfoResponse> listOfBackupFiles;
 
     public List<BackupFileInfoResponse> getListOfBackupFiles() {

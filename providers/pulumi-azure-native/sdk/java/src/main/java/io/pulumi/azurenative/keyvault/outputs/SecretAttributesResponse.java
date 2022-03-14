@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.keyvault.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SecretAttributesResponse {
     /**
      * Creation time in seconds since 1970-01-01T00:00:00Z.
@@ -38,13 +38,13 @@ public final class SecretAttributesResponse {
      */
     private final Integer updated;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SecretAttributesResponse(
-        @OutputCustomType.Parameter("created") Integer created,
-        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
-        @OutputCustomType.Parameter("expires") @Nullable Integer expires,
-        @OutputCustomType.Parameter("notBefore") @Nullable Integer notBefore,
-        @OutputCustomType.Parameter("updated") Integer updated) {
+        @CustomType.Parameter("created") Integer created,
+        @CustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @CustomType.Parameter("expires") @Nullable Integer expires,
+        @CustomType.Parameter("notBefore") @Nullable Integer notBefore,
+        @CustomType.Parameter("updated") Integer updated) {
         this.created = created;
         this.enabled = enabled;
         this.expires = expires;

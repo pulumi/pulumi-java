@@ -5,7 +5,7 @@ package io.pulumi.azurenative.openenergyplatform;
 
 import io.pulumi.azurenative.openenergyplatform.inputs.EnergyServicePropertiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,14 +20,14 @@ public final class EnergyServiceArgs extends io.pulumi.resources.ResourceArgs {
      * Geo-location where the resource lives.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
         return this.location == null ? Output.empty() : this.location;
     }
 
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable Output<EnergyServicePropertiesArgs> properties;
 
     public Output<EnergyServicePropertiesArgs> getProperties() {
@@ -38,7 +38,7 @@ public final class EnergyServiceArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -49,7 +49,7 @@ public final class EnergyServiceArgs extends io.pulumi.resources.ResourceArgs {
      * The resource name.
      * 
      */
-    @InputImport(name="resourceName")
+    @Import(name="resourceName")
       private final @Nullable Output<String> resourceName;
 
     public Output<String> getPropResourceName() {
@@ -60,7 +60,7 @@ public final class EnergyServiceArgs extends io.pulumi.resources.ResourceArgs {
      * Resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

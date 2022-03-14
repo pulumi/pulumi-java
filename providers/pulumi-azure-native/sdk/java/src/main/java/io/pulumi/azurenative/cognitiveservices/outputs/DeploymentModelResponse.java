@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.cognitiveservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DeploymentModelResponse {
     /**
      * Deployment model format.
@@ -27,11 +27,11 @@ public final class DeploymentModelResponse {
      */
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DeploymentModelResponse(
-        @OutputCustomType.Parameter("format") @Nullable String format,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("version") @Nullable String version) {
+        @CustomType.Parameter("format") @Nullable String format,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("version") @Nullable String version) {
         this.format = format;
         this.name = name;
         this.version = version;

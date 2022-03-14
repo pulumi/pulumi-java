@@ -10,7 +10,7 @@ import io.pulumi.azurenative.alertsmanagement.outputs.DetectorResponse;
 import io.pulumi.azurenative.alertsmanagement.outputs.ThrottlingInformationResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -38,7 +38,7 @@ public class SmartDetectorAlertRule extends io.pulumi.resources.CustomResource {
      * The alert rule actions.
      * 
      */
-    @OutputExport(name="actionGroups", type=ActionGroupsInformationResponse.class, parameters={})
+    @Export(name="actionGroups", type=ActionGroupsInformationResponse.class, parameters={})
     private Output<ActionGroupsInformationResponse> actionGroups;
 
     /**
@@ -52,7 +52,7 @@ public class SmartDetectorAlertRule extends io.pulumi.resources.CustomResource {
      * The alert rule description.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -66,7 +66,7 @@ public class SmartDetectorAlertRule extends io.pulumi.resources.CustomResource {
      * The alert rule's detector.
      * 
      */
-    @OutputExport(name="detector", type=DetectorResponse.class, parameters={})
+    @Export(name="detector", type=DetectorResponse.class, parameters={})
     private Output<DetectorResponse> detector;
 
     /**
@@ -80,7 +80,7 @@ public class SmartDetectorAlertRule extends io.pulumi.resources.CustomResource {
      * The alert rule frequency in ISO8601 format. The time granularity must be in minutes and minimum value is 5 minutes.
      * 
      */
-    @OutputExport(name="frequency", type=String.class, parameters={})
+    @Export(name="frequency", type=String.class, parameters={})
     private Output<String> frequency;
 
     /**
@@ -94,7 +94,7 @@ public class SmartDetectorAlertRule extends io.pulumi.resources.CustomResource {
      * The resource location.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -108,7 +108,7 @@ public class SmartDetectorAlertRule extends io.pulumi.resources.CustomResource {
      * The resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -122,7 +122,7 @@ public class SmartDetectorAlertRule extends io.pulumi.resources.CustomResource {
      * The alert rule resources scope.
      * 
      */
-    @OutputExport(name="scope", type=List.class, parameters={String.class})
+    @Export(name="scope", type=List.class, parameters={String.class})
     private Output<List<String>> scope;
 
     /**
@@ -136,7 +136,7 @@ public class SmartDetectorAlertRule extends io.pulumi.resources.CustomResource {
      * The alert rule severity.
      * 
      */
-    @OutputExport(name="severity", type=String.class, parameters={})
+    @Export(name="severity", type=String.class, parameters={})
     private Output<String> severity;
 
     /**
@@ -150,7 +150,7 @@ public class SmartDetectorAlertRule extends io.pulumi.resources.CustomResource {
      * The alert rule state.
      * 
      */
-    @OutputExport(name="state", type=String.class, parameters={})
+    @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
@@ -164,7 +164,7 @@ public class SmartDetectorAlertRule extends io.pulumi.resources.CustomResource {
      * The resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -178,7 +178,7 @@ public class SmartDetectorAlertRule extends io.pulumi.resources.CustomResource {
      * The alert rule throttling information.
      * 
      */
-    @OutputExport(name="throttling", type=ThrottlingInformationResponse.class, parameters={})
+    @Export(name="throttling", type=ThrottlingInformationResponse.class, parameters={})
     private Output</* @Nullable */ ThrottlingInformationResponse> throttling;
 
     /**
@@ -192,7 +192,7 @@ public class SmartDetectorAlertRule extends io.pulumi.resources.CustomResource {
      * The resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

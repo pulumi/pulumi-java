@@ -11,7 +11,7 @@ import io.pulumi.azurenative.network.inputs.ConnectionMonitorSuccessThresholdArg
 import io.pulumi.azurenative.network.inputs.ConnectionMonitorTcpConfigurationArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -30,7 +30,7 @@ public final class ConnectionMonitorTestConfigurationArgs extends io.pulumi.reso
      * The parameters used to perform test evaluation over HTTP.
      * 
      */
-    @InputImport(name="httpConfiguration")
+    @Import(name="httpConfiguration")
       private final @Nullable Output<ConnectionMonitorHttpConfigurationArgs> httpConfiguration;
 
     public Output<ConnectionMonitorHttpConfigurationArgs> getHttpConfiguration() {
@@ -41,7 +41,7 @@ public final class ConnectionMonitorTestConfigurationArgs extends io.pulumi.reso
      * The parameters used to perform test evaluation over ICMP.
      * 
      */
-    @InputImport(name="icmpConfiguration")
+    @Import(name="icmpConfiguration")
       private final @Nullable Output<ConnectionMonitorIcmpConfigurationArgs> icmpConfiguration;
 
     public Output<ConnectionMonitorIcmpConfigurationArgs> getIcmpConfiguration() {
@@ -52,7 +52,7 @@ public final class ConnectionMonitorTestConfigurationArgs extends io.pulumi.reso
      * The name of the connection monitor test configuration.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -63,7 +63,7 @@ public final class ConnectionMonitorTestConfigurationArgs extends io.pulumi.reso
      * The preferred IP version to use in test evaluation. The connection monitor may choose to use a different version depending on other parameters.
      * 
      */
-    @InputImport(name="preferredIPVersion")
+    @Import(name="preferredIPVersion")
       private final @Nullable Output<Either<String,PreferredIPVersion>> preferredIPVersion;
 
     public Output<Either<String,PreferredIPVersion>> getPreferredIPVersion() {
@@ -74,7 +74,7 @@ public final class ConnectionMonitorTestConfigurationArgs extends io.pulumi.reso
      * The protocol to use in test evaluation.
      * 
      */
-    @InputImport(name="protocol", required=true)
+    @Import(name="protocol", required=true)
       private final Output<Either<String,ConnectionMonitorTestConfigurationProtocol>> protocol;
 
     public Output<Either<String,ConnectionMonitorTestConfigurationProtocol>> getProtocol() {
@@ -85,7 +85,7 @@ public final class ConnectionMonitorTestConfigurationArgs extends io.pulumi.reso
      * The threshold for declaring a test successful.
      * 
      */
-    @InputImport(name="successThreshold")
+    @Import(name="successThreshold")
       private final @Nullable Output<ConnectionMonitorSuccessThresholdArgs> successThreshold;
 
     public Output<ConnectionMonitorSuccessThresholdArgs> getSuccessThreshold() {
@@ -96,7 +96,7 @@ public final class ConnectionMonitorTestConfigurationArgs extends io.pulumi.reso
      * The parameters used to perform test evaluation over TCP.
      * 
      */
-    @InputImport(name="tcpConfiguration")
+    @Import(name="tcpConfiguration")
       private final @Nullable Output<ConnectionMonitorTcpConfigurationArgs> tcpConfiguration;
 
     public Output<ConnectionMonitorTcpConfigurationArgs> getTcpConfiguration() {
@@ -107,7 +107,7 @@ public final class ConnectionMonitorTestConfigurationArgs extends io.pulumi.reso
      * The frequency of test evaluation, in seconds.
      * 
      */
-    @InputImport(name="testFrequencySec")
+    @Import(name="testFrequencySec")
       private final @Nullable Output<Integer> testFrequencySec;
 
     public Output<Integer> getTestFrequencySec() {

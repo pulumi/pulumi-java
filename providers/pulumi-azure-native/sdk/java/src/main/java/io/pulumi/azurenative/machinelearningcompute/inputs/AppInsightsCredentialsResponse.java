@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningcompute.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class AppInsightsCredentialsResponse extends io.pulumi.resources.In
      * The AppInsights application ID.
      * 
      */
-    @InputImport(name="appId")
+    @Import(name="appId")
       private final @Nullable String appId;
 
     public Optional<String> getAppId() {
@@ -33,7 +33,7 @@ public final class AppInsightsCredentialsResponse extends io.pulumi.resources.In
      * The AppInsights instrumentation key. This is not returned in response of GET/PUT on the resource. To see this please call listKeys API.
      * 
      */
-    @InputImport(name="instrumentationKey")
+    @Import(name="instrumentationKey")
       private final @Nullable String instrumentationKey;
 
     public Optional<String> getInstrumentationKey() {

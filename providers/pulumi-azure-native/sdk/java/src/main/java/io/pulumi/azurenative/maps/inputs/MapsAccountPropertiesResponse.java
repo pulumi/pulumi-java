@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.maps.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class MapsAccountPropertiesResponse extends io.pulumi.resources.Inv
      * A unique identifier for the maps account
      * 
      */
-    @InputImport(name="xMsClientId")
+    @Import(name="xMsClientId")
       private final @Nullable String xMsClientId;
 
     public Optional<String> getXMsClientId() {

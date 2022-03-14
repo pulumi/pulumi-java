@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -24,7 +24,7 @@ public final class SnowflakeExportCopyCommandResponse extends io.pulumi.resource
      * Additional copy options directly passed to snowflake Copy Command. Type: key value pairs (value should be string type) (or Expression with resultType object). Example: "additionalCopyOptions": { "DATE_FORMAT": "MM/DD/YYYY", "TIME_FORMAT": "'HH24:MI:SS.FF'" }
      * 
      */
-    @InputImport(name="additionalCopyOptions")
+    @Import(name="additionalCopyOptions")
       private final @Nullable Map<String,Object> additionalCopyOptions;
 
     public Map<String,Object> getAdditionalCopyOptions() {
@@ -35,7 +35,7 @@ public final class SnowflakeExportCopyCommandResponse extends io.pulumi.resource
      * Additional format options directly passed to snowflake Copy Command. Type: key value pairs (value should be string type) (or Expression with resultType object). Example: "additionalFormatOptions": { "OVERWRITE": "TRUE", "MAX_FILE_SIZE": "'FALSE'" }
      * 
      */
-    @InputImport(name="additionalFormatOptions")
+    @Import(name="additionalFormatOptions")
       private final @Nullable Map<String,Object> additionalFormatOptions;
 
     public Map<String,Object> getAdditionalFormatOptions() {
@@ -47,7 +47,7 @@ public final class SnowflakeExportCopyCommandResponse extends io.pulumi.resource
      * Expected value is 'SnowflakeExportCopyCommand'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

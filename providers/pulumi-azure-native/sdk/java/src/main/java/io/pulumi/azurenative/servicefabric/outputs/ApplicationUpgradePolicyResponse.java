@@ -5,14 +5,14 @@ package io.pulumi.azurenative.servicefabric.outputs;
 
 import io.pulumi.azurenative.servicefabric.outputs.ArmApplicationHealthPolicyResponse;
 import io.pulumi.azurenative.servicefabric.outputs.ArmRollingUpgradeMonitoringPolicyResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ApplicationUpgradePolicyResponse {
     /**
      * Defines a health policy used to evaluate the health of an application or one of its children entities.
@@ -45,14 +45,14 @@ public final class ApplicationUpgradePolicyResponse {
      */
     private final @Nullable String upgradeReplicaSetCheckTimeout;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ApplicationUpgradePolicyResponse(
-        @OutputCustomType.Parameter("applicationHealthPolicy") @Nullable ArmApplicationHealthPolicyResponse applicationHealthPolicy,
-        @OutputCustomType.Parameter("forceRestart") @Nullable Boolean forceRestart,
-        @OutputCustomType.Parameter("recreateApplication") @Nullable Boolean recreateApplication,
-        @OutputCustomType.Parameter("rollingUpgradeMonitoringPolicy") @Nullable ArmRollingUpgradeMonitoringPolicyResponse rollingUpgradeMonitoringPolicy,
-        @OutputCustomType.Parameter("upgradeMode") @Nullable String upgradeMode,
-        @OutputCustomType.Parameter("upgradeReplicaSetCheckTimeout") @Nullable String upgradeReplicaSetCheckTimeout) {
+        @CustomType.Parameter("applicationHealthPolicy") @Nullable ArmApplicationHealthPolicyResponse applicationHealthPolicy,
+        @CustomType.Parameter("forceRestart") @Nullable Boolean forceRestart,
+        @CustomType.Parameter("recreateApplication") @Nullable Boolean recreateApplication,
+        @CustomType.Parameter("rollingUpgradeMonitoringPolicy") @Nullable ArmRollingUpgradeMonitoringPolicyResponse rollingUpgradeMonitoringPolicy,
+        @CustomType.Parameter("upgradeMode") @Nullable String upgradeMode,
+        @CustomType.Parameter("upgradeReplicaSetCheckTimeout") @Nullable String upgradeReplicaSetCheckTimeout) {
         this.applicationHealthPolicy = applicationHealthPolicy;
         this.forceRestart = forceRestart;
         this.recreateApplication = recreateApplication;

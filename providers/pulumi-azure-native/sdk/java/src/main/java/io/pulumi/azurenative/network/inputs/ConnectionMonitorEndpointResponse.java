@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.ConnectionMonitorEndpointFilterResponse;
 import io.pulumi.azurenative.network.inputs.ConnectionMonitorEndpointScopeResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class ConnectionMonitorEndpointResponse extends io.pulumi.resources
      * Address of the connection monitor endpoint (IP or domain name).
      * 
      */
-    @InputImport(name="address")
+    @Import(name="address")
       private final @Nullable String address;
 
     public Optional<String> getAddress() {
@@ -35,7 +35,7 @@ public final class ConnectionMonitorEndpointResponse extends io.pulumi.resources
      * Test coverage for the endpoint.
      * 
      */
-    @InputImport(name="coverageLevel")
+    @Import(name="coverageLevel")
       private final @Nullable String coverageLevel;
 
     public Optional<String> getCoverageLevel() {
@@ -46,7 +46,7 @@ public final class ConnectionMonitorEndpointResponse extends io.pulumi.resources
      * Filter for sub-items within the endpoint.
      * 
      */
-    @InputImport(name="filter")
+    @Import(name="filter")
       private final @Nullable ConnectionMonitorEndpointFilterResponse filter;
 
     public Optional<ConnectionMonitorEndpointFilterResponse> getFilter() {
@@ -57,7 +57,7 @@ public final class ConnectionMonitorEndpointResponse extends io.pulumi.resources
      * The name of the connection monitor endpoint.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -68,7 +68,7 @@ public final class ConnectionMonitorEndpointResponse extends io.pulumi.resources
      * Resource ID of the connection monitor endpoint.
      * 
      */
-    @InputImport(name="resourceId")
+    @Import(name="resourceId")
       private final @Nullable String resourceId;
 
     public Optional<String> getResourceId() {
@@ -79,7 +79,7 @@ public final class ConnectionMonitorEndpointResponse extends io.pulumi.resources
      * Endpoint scope.
      * 
      */
-    @InputImport(name="scope")
+    @Import(name="scope")
       private final @Nullable ConnectionMonitorEndpointScopeResponse scope;
 
     public Optional<ConnectionMonitorEndpointScopeResponse> getScope() {
@@ -90,7 +90,7 @@ public final class ConnectionMonitorEndpointResponse extends io.pulumi.resources
      * The endpoint type.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable String type;
 
     public Optional<String> getType() {

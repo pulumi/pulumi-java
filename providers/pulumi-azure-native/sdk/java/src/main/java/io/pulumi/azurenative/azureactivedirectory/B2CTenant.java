@@ -9,7 +9,7 @@ import io.pulumi.azurenative.azureactivedirectory.outputs.B2CResourceSKUResponse
 import io.pulumi.azurenative.azureactivedirectory.outputs.B2CTenantResourcePropertiesResponseBillingConfig;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -36,7 +36,7 @@ public class B2CTenant extends io.pulumi.resources.CustomResource {
      * The billing configuration for the tenant.
      * 
      */
-    @OutputExport(name="billingConfig", type=B2CTenantResourcePropertiesResponseBillingConfig.class, parameters={})
+    @Export(name="billingConfig", type=B2CTenantResourcePropertiesResponseBillingConfig.class, parameters={})
     private Output</* @Nullable */ B2CTenantResourcePropertiesResponseBillingConfig> billingConfig;
 
     /**
@@ -50,7 +50,7 @@ public class B2CTenant extends io.pulumi.resources.CustomResource {
      * The location in which the resource is hosted and data resides. Can be one of 'United States', 'Europe', 'Asia Pacific', or 'Australia' (preview). Refer to [this documentation](https://aka.ms/B2CDataResidency) for more information.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -64,7 +64,7 @@ public class B2CTenant extends io.pulumi.resources.CustomResource {
      * The name of the B2C tenant resource.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -78,7 +78,7 @@ public class B2CTenant extends io.pulumi.resources.CustomResource {
      * SKU properties of the Azure AD B2C tenant. Learn more about Azure AD B2C billing at [aka.ms/b2cBilling](https://aka.ms/b2cBilling).
      * 
      */
-    @OutputExport(name="sku", type=B2CResourceSKUResponse.class, parameters={})
+    @Export(name="sku", type=B2CResourceSKUResponse.class, parameters={})
     private Output<B2CResourceSKUResponse> sku;
 
     /**
@@ -92,7 +92,7 @@ public class B2CTenant extends io.pulumi.resources.CustomResource {
      * Resource Tags
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -106,7 +106,7 @@ public class B2CTenant extends io.pulumi.resources.CustomResource {
      * An identifier of the B2C tenant.
      * 
      */
-    @OutputExport(name="tenantId", type=String.class, parameters={})
+    @Export(name="tenantId", type=String.class, parameters={})
     private Output</* @Nullable */ String> tenantId;
 
     /**
@@ -120,7 +120,7 @@ public class B2CTenant extends io.pulumi.resources.CustomResource {
      * The type of the B2C tenant resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

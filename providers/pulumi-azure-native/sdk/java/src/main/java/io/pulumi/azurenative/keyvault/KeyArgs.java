@@ -5,7 +5,7 @@ package io.pulumi.azurenative.keyvault;
 
 import io.pulumi.azurenative.keyvault.inputs.KeyPropertiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the key to be created.
      * 
      */
-    @InputImport(name="keyName")
+    @Import(name="keyName")
       private final @Nullable Output<String> keyName;
 
     public Output<String> getKeyName() {
@@ -31,7 +31,7 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
      * The properties of the key to be created.
      * 
      */
-    @InputImport(name="properties", required=true)
+    @Import(name="properties", required=true)
       private final Output<KeyPropertiesArgs> properties;
 
     public Output<KeyPropertiesArgs> getProperties() {
@@ -42,7 +42,7 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group which contains the specified key vault.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -53,7 +53,7 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
      * The tags that will be assigned to the key.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -64,7 +64,7 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the key vault which contains the key to be created.
      * 
      */
-    @InputImport(name="vaultName", required=true)
+    @Import(name="vaultName", required=true)
       private final Output<String> vaultName;
 
     public Output<String> getVaultName() {

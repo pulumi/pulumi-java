@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.customerinsights.ConnectorArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -38,7 +38,7 @@ public class Connector extends io.pulumi.resources.CustomResource {
      * ID of the connector.
      * 
      */
-    @OutputExport(name="connectorId", type=Integer.class, parameters={})
+    @Export(name="connectorId", type=Integer.class, parameters={})
     private Output<Integer> connectorId;
 
     /**
@@ -52,7 +52,7 @@ public class Connector extends io.pulumi.resources.CustomResource {
      * Name of the connector.
      * 
      */
-    @OutputExport(name="connectorName", type=String.class, parameters={})
+    @Export(name="connectorName", type=String.class, parameters={})
     private Output</* @Nullable */ String> connectorName;
 
     /**
@@ -66,7 +66,7 @@ public class Connector extends io.pulumi.resources.CustomResource {
      * The connector properties.
      * 
      */
-    @OutputExport(name="connectorProperties", type=Map.class, parameters={String.class, Object.class})
+    @Export(name="connectorProperties", type=Map.class, parameters={String.class, Object.class})
     private Output<Map<String,Object>> connectorProperties;
 
     /**
@@ -80,7 +80,7 @@ public class Connector extends io.pulumi.resources.CustomResource {
      * Type of connector.
      * 
      */
-    @OutputExport(name="connectorType", type=String.class, parameters={})
+    @Export(name="connectorType", type=String.class, parameters={})
     private Output<String> connectorType;
 
     /**
@@ -94,7 +94,7 @@ public class Connector extends io.pulumi.resources.CustomResource {
      * The created time.
      * 
      */
-    @OutputExport(name="created", type=String.class, parameters={})
+    @Export(name="created", type=String.class, parameters={})
     private Output<String> created;
 
     /**
@@ -108,7 +108,7 @@ public class Connector extends io.pulumi.resources.CustomResource {
      * Description of the connector.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -122,7 +122,7 @@ public class Connector extends io.pulumi.resources.CustomResource {
      * Display name of the connector.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output</* @Nullable */ String> displayName;
 
     /**
@@ -136,7 +136,7 @@ public class Connector extends io.pulumi.resources.CustomResource {
      * If this is an internal connector.
      * 
      */
-    @OutputExport(name="isInternal", type=Boolean.class, parameters={})
+    @Export(name="isInternal", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> isInternal;
 
     /**
@@ -150,7 +150,7 @@ public class Connector extends io.pulumi.resources.CustomResource {
      * The last modified time.
      * 
      */
-    @OutputExport(name="lastModified", type=String.class, parameters={})
+    @Export(name="lastModified", type=String.class, parameters={})
     private Output<String> lastModified;
 
     /**
@@ -164,7 +164,7 @@ public class Connector extends io.pulumi.resources.CustomResource {
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -178,7 +178,7 @@ public class Connector extends io.pulumi.resources.CustomResource {
      * State of connector.
      * 
      */
-    @OutputExport(name="state", type=String.class, parameters={})
+    @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
@@ -192,7 +192,7 @@ public class Connector extends io.pulumi.resources.CustomResource {
      * The hub name.
      * 
      */
-    @OutputExport(name="tenantId", type=String.class, parameters={})
+    @Export(name="tenantId", type=String.class, parameters={})
     private Output<String> tenantId;
 
     /**
@@ -206,7 +206,7 @@ public class Connector extends io.pulumi.resources.CustomResource {
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

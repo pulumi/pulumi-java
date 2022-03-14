@@ -11,7 +11,7 @@ import io.pulumi.azurenative.media.inputs.LiveEventPreviewArgs;
 import io.pulumi.azurenative.media.inputs.LiveEventTranscriptionArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -28,7 +28,7 @@ public final class LiveEventArgs extends io.pulumi.resources.ResourceArgs {
      * The Media Services account name.
      * 
      */
-    @InputImport(name="accountName", required=true)
+    @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
     public Output<String> getAccountName() {
@@ -39,7 +39,7 @@ public final class LiveEventArgs extends io.pulumi.resources.ResourceArgs {
      * The flag indicates if the resource should be automatically started on creation.
      * 
      */
-    @InputImport(name="autoStart")
+    @Import(name="autoStart")
       private final @Nullable Output<Boolean> autoStart;
 
     public Output<Boolean> getAutoStart() {
@@ -50,7 +50,7 @@ public final class LiveEventArgs extends io.pulumi.resources.ResourceArgs {
      * Live event cross site access policies.
      * 
      */
-    @InputImport(name="crossSiteAccessPolicies")
+    @Import(name="crossSiteAccessPolicies")
       private final @Nullable Output<CrossSiteAccessPoliciesArgs> crossSiteAccessPolicies;
 
     public Output<CrossSiteAccessPoliciesArgs> getCrossSiteAccessPolicies() {
@@ -61,7 +61,7 @@ public final class LiveEventArgs extends io.pulumi.resources.ResourceArgs {
      * A description for the live event.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -72,7 +72,7 @@ public final class LiveEventArgs extends io.pulumi.resources.ResourceArgs {
      * Encoding settings for the live event. It configures whether a live encoder is used for the live event and settings for the live encoder if it is used.
      * 
      */
-    @InputImport(name="encoding")
+    @Import(name="encoding")
       private final @Nullable Output<LiveEventEncodingArgs> encoding;
 
     public Output<LiveEventEncodingArgs> getEncoding() {
@@ -83,7 +83,7 @@ public final class LiveEventArgs extends io.pulumi.resources.ResourceArgs {
      * When useStaticHostname is set to true, the hostnamePrefix specifies the first part of the hostname assigned to the live event preview and ingest endpoints. The final hostname would be a combination of this prefix, the media service account name and a short code for the Azure Media Services data center.
      * 
      */
-    @InputImport(name="hostnamePrefix")
+    @Import(name="hostnamePrefix")
       private final @Nullable Output<String> hostnamePrefix;
 
     public Output<String> getHostnamePrefix() {
@@ -94,7 +94,7 @@ public final class LiveEventArgs extends io.pulumi.resources.ResourceArgs {
      * Live event input settings. It defines how the live event receives input from a contribution encoder.
      * 
      */
-    @InputImport(name="input", required=true)
+    @Import(name="input", required=true)
       private final Output<LiveEventInputArgs> input;
 
     public Output<LiveEventInputArgs> getInput() {
@@ -105,7 +105,7 @@ public final class LiveEventArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the live event, maximum length is 32.
      * 
      */
-    @InputImport(name="liveEventName")
+    @Import(name="liveEventName")
       private final @Nullable Output<String> liveEventName;
 
     public Output<String> getLiveEventName() {
@@ -116,7 +116,7 @@ public final class LiveEventArgs extends io.pulumi.resources.ResourceArgs {
      * The geo-location where the resource lives
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -127,7 +127,7 @@ public final class LiveEventArgs extends io.pulumi.resources.ResourceArgs {
      * Live event preview settings. Preview allows live event producers to preview the live streaming content without creating any live output.
      * 
      */
-    @InputImport(name="preview")
+    @Import(name="preview")
       private final @Nullable Output<LiveEventPreviewArgs> preview;
 
     public Output<LiveEventPreviewArgs> getPreview() {
@@ -138,7 +138,7 @@ public final class LiveEventArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group within the Azure subscription.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -149,7 +149,7 @@ public final class LiveEventArgs extends io.pulumi.resources.ResourceArgs {
      * The options to use for the LiveEvent. This value is specified at creation time and cannot be updated. The valid values for the array entry values are 'Default' and 'LowLatency'.
      * 
      */
-    @InputImport(name="streamOptions")
+    @Import(name="streamOptions")
       private final @Nullable Output<List<Either<String,StreamOptionsFlag>>> streamOptions;
 
     public Output<List<Either<String,StreamOptionsFlag>>> getStreamOptions() {
@@ -160,7 +160,7 @@ public final class LiveEventArgs extends io.pulumi.resources.ResourceArgs {
      * Resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -171,7 +171,7 @@ public final class LiveEventArgs extends io.pulumi.resources.ResourceArgs {
      * Live transcription settings for the live event. See https://go.microsoft.com/fwlink/?linkid=2133742 for more information about the live transcription feature.
      * 
      */
-    @InputImport(name="transcriptions")
+    @Import(name="transcriptions")
       private final @Nullable Output<List<LiveEventTranscriptionArgs>> transcriptions;
 
     public Output<List<LiveEventTranscriptionArgs>> getTranscriptions() {
@@ -182,7 +182,7 @@ public final class LiveEventArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies whether a static hostname would be assigned to the live event preview and ingest endpoints. This value can only be updated if the live event is in Standby state
      * 
      */
-    @InputImport(name="useStaticHostname")
+    @Import(name="useStaticHostname")
       private final @Nullable Output<Boolean> useStaticHostname;
 
     public Output<Boolean> getUseStaticHostname() {

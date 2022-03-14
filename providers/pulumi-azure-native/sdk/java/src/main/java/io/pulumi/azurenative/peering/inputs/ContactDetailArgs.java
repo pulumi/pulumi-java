@@ -6,7 +6,7 @@ package io.pulumi.azurenative.peering.inputs;
 import io.pulumi.azurenative.peering.enums.Role;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class ContactDetailArgs extends io.pulumi.resources.ResourceArgs {
      * The e-mail address of the contact.
      * 
      */
-    @InputImport(name="email")
+    @Import(name="email")
       private final @Nullable Output<String> email;
 
     public Output<String> getEmail() {
@@ -35,7 +35,7 @@ public final class ContactDetailArgs extends io.pulumi.resources.ResourceArgs {
      * The phone number of the contact.
      * 
      */
-    @InputImport(name="phone")
+    @Import(name="phone")
       private final @Nullable Output<String> phone;
 
     public Output<String> getPhone() {
@@ -46,7 +46,7 @@ public final class ContactDetailArgs extends io.pulumi.resources.ResourceArgs {
      * The role of the contact.
      * 
      */
-    @InputImport(name="role")
+    @Import(name="role")
       private final @Nullable Output<Either<String,Role>> role;
 
     public Output<Either<String,Role>> getRole() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +18,7 @@ public final class KeyVaultPropertiesResponse extends io.pulumi.resources.Invoke
      * For future use - The client id of the identity which will be used to access key vault.
      * 
      */
-    @InputImport(name="identityClientId")
+    @Import(name="identityClientId")
       private final @Nullable String identityClientId;
 
     public Optional<String> getIdentityClientId() {
@@ -29,7 +29,7 @@ public final class KeyVaultPropertiesResponse extends io.pulumi.resources.Invoke
      * Key vault uri to access the encryption key.
      * 
      */
-    @InputImport(name="keyIdentifier", required=true)
+    @Import(name="keyIdentifier", required=true)
       private final String keyIdentifier;
 
     public String getKeyIdentifier() {
@@ -40,7 +40,7 @@ public final class KeyVaultPropertiesResponse extends io.pulumi.resources.Invoke
      * The ArmId of the keyVault where the customer owned encryption key is present.
      * 
      */
-    @InputImport(name="keyVaultArmId", required=true)
+    @Import(name="keyVaultArmId", required=true)
       private final String keyVaultArmId;
 
     public String getKeyVaultArmId() {

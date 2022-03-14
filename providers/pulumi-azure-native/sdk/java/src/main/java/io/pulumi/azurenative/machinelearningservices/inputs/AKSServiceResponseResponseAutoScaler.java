@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class AKSServiceResponseResponseAutoScaler extends io.pulumi.resour
      * Option to enable/disable auto scaling.
      * 
      */
-    @InputImport(name="autoscaleEnabled")
+    @Import(name="autoscaleEnabled")
       private final @Nullable Boolean autoscaleEnabled;
 
     public Optional<Boolean> getAutoscaleEnabled() {
@@ -34,7 +34,7 @@ public final class AKSServiceResponseResponseAutoScaler extends io.pulumi.resour
      * The maximum number of replicas in the cluster.
      * 
      */
-    @InputImport(name="maxReplicas")
+    @Import(name="maxReplicas")
       private final @Nullable Integer maxReplicas;
 
     public Optional<Integer> getMaxReplicas() {
@@ -45,7 +45,7 @@ public final class AKSServiceResponseResponseAutoScaler extends io.pulumi.resour
      * The minimum number of replicas to scale down to.
      * 
      */
-    @InputImport(name="minReplicas")
+    @Import(name="minReplicas")
       private final @Nullable Integer minReplicas;
 
     public Optional<Integer> getMinReplicas() {
@@ -56,7 +56,7 @@ public final class AKSServiceResponseResponseAutoScaler extends io.pulumi.resour
      * The amount of seconds to wait between auto scale updates.
      * 
      */
-    @InputImport(name="refreshPeriodInSeconds")
+    @Import(name="refreshPeriodInSeconds")
       private final @Nullable Integer refreshPeriodInSeconds;
 
     public Optional<Integer> getRefreshPeriodInSeconds() {
@@ -67,7 +67,7 @@ public final class AKSServiceResponseResponseAutoScaler extends io.pulumi.resour
      * The target utilization percentage to use for determining whether to scale the cluster.
      * 
      */
-    @InputImport(name="targetUtilization")
+    @Import(name="targetUtilization")
       private final @Nullable Integer targetUtilization;
 
     public Optional<Integer> getTargetUtilization() {

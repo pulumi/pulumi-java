@@ -6,7 +6,7 @@ package io.pulumi.azurenative.insights.outputs;
 import io.pulumi.azurenative.insights.outputs.DataCollectionRuleResponseDataSources;
 import io.pulumi.azurenative.insights.outputs.DataCollectionRuleResponseDestinations;
 import io.pulumi.azurenative.insights.outputs.DataFlowResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -14,7 +14,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetDataCollectionRuleResult {
     /**
      * The specification of data flows.
@@ -83,21 +83,21 @@ public final class GetDataCollectionRuleResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDataCollectionRuleResult(
-        @OutputCustomType.Parameter("dataFlows") @Nullable List<DataFlowResponse> dataFlows,
-        @OutputCustomType.Parameter("dataSources") @Nullable DataCollectionRuleResponseDataSources dataSources,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("destinations") @Nullable DataCollectionRuleResponseDestinations destinations,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("immutableId") String immutableId,
-        @OutputCustomType.Parameter("kind") @Nullable String kind,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("dataFlows") @Nullable List<DataFlowResponse> dataFlows,
+        @CustomType.Parameter("dataSources") @Nullable DataCollectionRuleResponseDataSources dataSources,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("destinations") @Nullable DataCollectionRuleResponseDestinations destinations,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("immutableId") String immutableId,
+        @CustomType.Parameter("kind") @Nullable String kind,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type) {
         this.dataFlows = dataFlows;
         this.dataSources = dataSources;
         this.description = description;

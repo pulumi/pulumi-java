@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.blockchain.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class ApiKeyResponse extends io.pulumi.resources.InvokeArgs {
      * Gets or sets the API key name.
      * 
      */
-    @InputImport(name="keyName")
+    @Import(name="keyName")
       private final @Nullable String keyName;
 
     public Optional<String> getKeyName() {
@@ -33,7 +33,7 @@ public final class ApiKeyResponse extends io.pulumi.resources.InvokeArgs {
      * Gets or sets the API key value.
      * 
      */
-    @InputImport(name="value")
+    @Import(name="value")
       private final @Nullable String value;
 
     public Optional<String> getValue() {

@@ -10,7 +10,7 @@ import io.pulumi.azurenative.cdn.outputs.SharedPrivateLinkResourcePropertiesResp
 import io.pulumi.azurenative.cdn.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -38,7 +38,7 @@ public class AFDOrigin extends io.pulumi.resources.CustomResource {
      * Resource reference to the Azure origin resource.
      * 
      */
-    @OutputExport(name="azureOrigin", type=ResourceReferenceResponse.class, parameters={})
+    @Export(name="azureOrigin", type=ResourceReferenceResponse.class, parameters={})
     private Output</* @Nullable */ ResourceReferenceResponse> azureOrigin;
 
     /**
@@ -48,7 +48,7 @@ public class AFDOrigin extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ ResourceReferenceResponse> getAzureOrigin() {
         return this.azureOrigin;
     }
-    @OutputExport(name="deploymentStatus", type=String.class, parameters={})
+    @Export(name="deploymentStatus", type=String.class, parameters={})
     private Output<String> deploymentStatus;
 
     public Output<String> getDeploymentStatus() {
@@ -58,7 +58,7 @@ public class AFDOrigin extends io.pulumi.resources.CustomResource {
      * Whether to enable health probes to be made against backends defined under backendPools. Health probes can only be disabled if there is a single enabled backend in single enabled backend pool.
      * 
      */
-    @OutputExport(name="enabledState", type=String.class, parameters={})
+    @Export(name="enabledState", type=String.class, parameters={})
     private Output</* @Nullable */ String> enabledState;
 
     /**
@@ -72,7 +72,7 @@ public class AFDOrigin extends io.pulumi.resources.CustomResource {
      * The address of the origin. Domain names, IPv4 addresses, and IPv6 addresses are supported.This should be unique across all origins in an endpoint.
      * 
      */
-    @OutputExport(name="hostName", type=String.class, parameters={})
+    @Export(name="hostName", type=String.class, parameters={})
     private Output<String> hostName;
 
     /**
@@ -86,7 +86,7 @@ public class AFDOrigin extends io.pulumi.resources.CustomResource {
      * The value of the HTTP port. Must be between 1 and 65535.
      * 
      */
-    @OutputExport(name="httpPort", type=Integer.class, parameters={})
+    @Export(name="httpPort", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> httpPort;
 
     /**
@@ -100,7 +100,7 @@ public class AFDOrigin extends io.pulumi.resources.CustomResource {
      * The value of the HTTPS port. Must be between 1 and 65535.
      * 
      */
-    @OutputExport(name="httpsPort", type=Integer.class, parameters={})
+    @Export(name="httpsPort", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> httpsPort;
 
     /**
@@ -114,7 +114,7 @@ public class AFDOrigin extends io.pulumi.resources.CustomResource {
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -128,7 +128,7 @@ public class AFDOrigin extends io.pulumi.resources.CustomResource {
      * The host header value sent to the origin with each request. If you leave this blank, the request hostname determines this value. Azure CDN origins, such as Web Apps, Blob Storage, and Cloud Services require this host header value to match the origin hostname by default. This overrides the host header defined at Endpoint
      * 
      */
-    @OutputExport(name="originHostHeader", type=String.class, parameters={})
+    @Export(name="originHostHeader", type=String.class, parameters={})
     private Output</* @Nullable */ String> originHostHeader;
 
     /**
@@ -142,7 +142,7 @@ public class AFDOrigin extends io.pulumi.resources.CustomResource {
      * Priority of origin in given origin group for load balancing. Higher priorities will not be used for load balancing if any lower priority origin is healthy.Must be between 1 and 5
      * 
      */
-    @OutputExport(name="priority", type=Integer.class, parameters={})
+    @Export(name="priority", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> priority;
 
     /**
@@ -156,7 +156,7 @@ public class AFDOrigin extends io.pulumi.resources.CustomResource {
      * Provisioning status
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -170,7 +170,7 @@ public class AFDOrigin extends io.pulumi.resources.CustomResource {
      * The properties of the private link resource for private origin.
      * 
      */
-    @OutputExport(name="sharedPrivateLinkResource", type=SharedPrivateLinkResourcePropertiesResponse.class, parameters={})
+    @Export(name="sharedPrivateLinkResource", type=SharedPrivateLinkResourcePropertiesResponse.class, parameters={})
     private Output</* @Nullable */ SharedPrivateLinkResourcePropertiesResponse> sharedPrivateLinkResource;
 
     /**
@@ -184,7 +184,7 @@ public class AFDOrigin extends io.pulumi.resources.CustomResource {
      * Read only system data
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -198,7 +198,7 @@ public class AFDOrigin extends io.pulumi.resources.CustomResource {
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -212,7 +212,7 @@ public class AFDOrigin extends io.pulumi.resources.CustomResource {
      * Weight of the origin in given origin group for load balancing. Must be between 1 and 1000
      * 
      */
-    @OutputExport(name="weight", type=Integer.class, parameters={})
+    @Export(name="weight", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> weight;
 
     /**

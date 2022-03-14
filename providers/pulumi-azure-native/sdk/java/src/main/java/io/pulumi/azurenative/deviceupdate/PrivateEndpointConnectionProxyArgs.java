@@ -5,7 +5,7 @@ package io.pulumi.azurenative.deviceupdate;
 
 import io.pulumi.azurenative.deviceupdate.inputs.RemotePrivateEndpointArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class PrivateEndpointConnectionProxyArgs extends io.pulumi.resource
      * Account name.
      * 
      */
-    @InputImport(name="accountName", required=true)
+    @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
     public Output<String> getAccountName() {
@@ -30,7 +30,7 @@ public final class PrivateEndpointConnectionProxyArgs extends io.pulumi.resource
      * The ID of the private endpoint connection proxy object.
      * 
      */
-    @InputImport(name="privateEndpointConnectionProxyId")
+    @Import(name="privateEndpointConnectionProxyId")
       private final @Nullable Output<String> privateEndpointConnectionProxyId;
 
     public Output<String> getPrivateEndpointConnectionProxyId() {
@@ -41,7 +41,7 @@ public final class PrivateEndpointConnectionProxyArgs extends io.pulumi.resource
      * Remote private endpoint details.
      * 
      */
-    @InputImport(name="remotePrivateEndpoint")
+    @Import(name="remotePrivateEndpoint")
       private final @Nullable Output<RemotePrivateEndpointArgs> remotePrivateEndpoint;
 
     public Output<RemotePrivateEndpointArgs> getRemotePrivateEndpoint() {
@@ -52,7 +52,7 @@ public final class PrivateEndpointConnectionProxyArgs extends io.pulumi.resource
      * The resource group name.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -63,7 +63,7 @@ public final class PrivateEndpointConnectionProxyArgs extends io.pulumi.resource
      * Operation status.
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable Output<String> status;
 
     public Output<String> getStatus() {

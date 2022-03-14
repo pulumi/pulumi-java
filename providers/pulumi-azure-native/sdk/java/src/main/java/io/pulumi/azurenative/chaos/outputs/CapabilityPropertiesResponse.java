@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.chaos.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class CapabilityPropertiesResponse {
     /**
      * Localized string of the description.
@@ -35,13 +35,13 @@ public final class CapabilityPropertiesResponse {
      */
     private final String urn;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CapabilityPropertiesResponse(
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("parametersSchema") String parametersSchema,
-        @OutputCustomType.Parameter("publisher") String publisher,
-        @OutputCustomType.Parameter("targetType") String targetType,
-        @OutputCustomType.Parameter("urn") String urn) {
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("parametersSchema") String parametersSchema,
+        @CustomType.Parameter("publisher") String publisher,
+        @CustomType.Parameter("targetType") String targetType,
+        @CustomType.Parameter("urn") String urn) {
         this.description = description;
         this.parametersSchema = parametersSchema;
         this.publisher = publisher;

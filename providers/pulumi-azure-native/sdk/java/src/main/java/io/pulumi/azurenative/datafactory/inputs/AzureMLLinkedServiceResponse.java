@@ -8,7 +8,7 @@ import io.pulumi.azurenative.datafactory.inputs.IntegrationRuntimeReferenceRespo
 import io.pulumi.azurenative.datafactory.inputs.ParameterSpecificationResponse;
 import io.pulumi.azurenative.datafactory.inputs.SecureStringResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -30,7 +30,7 @@ public final class AzureMLLinkedServiceResponse extends io.pulumi.resources.Invo
      * List of tags that can be used for describing the linked service.
      * 
      */
-    @InputImport(name="annotations")
+    @Import(name="annotations")
       private final @Nullable List<Object> annotations;
 
     public List<Object> getAnnotations() {
@@ -41,7 +41,7 @@ public final class AzureMLLinkedServiceResponse extends io.pulumi.resources.Invo
      * The API key for accessing the Azure ML model endpoint.
      * 
      */
-    @InputImport(name="apiKey", required=true)
+    @Import(name="apiKey", required=true)
       private final Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> apiKey;
 
     public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> getApiKey() {
@@ -52,7 +52,7 @@ public final class AzureMLLinkedServiceResponse extends io.pulumi.resources.Invo
      * Type of authentication (Required to specify MSI) used to connect to AzureML. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="authentication")
+    @Import(name="authentication")
       private final @Nullable Object authentication;
 
     public Optional<Object> getAuthentication() {
@@ -63,7 +63,7 @@ public final class AzureMLLinkedServiceResponse extends io.pulumi.resources.Invo
      * The integration runtime reference.
      * 
      */
-    @InputImport(name="connectVia")
+    @Import(name="connectVia")
       private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
     public Optional<IntegrationRuntimeReferenceResponse> getConnectVia() {
@@ -74,7 +74,7 @@ public final class AzureMLLinkedServiceResponse extends io.pulumi.resources.Invo
      * Linked service description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable String description;
 
     public Optional<String> getDescription() {
@@ -85,7 +85,7 @@ public final class AzureMLLinkedServiceResponse extends io.pulumi.resources.Invo
      * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="encryptedCredential")
+    @Import(name="encryptedCredential")
       private final @Nullable Object encryptedCredential;
 
     public Optional<Object> getEncryptedCredential() {
@@ -96,7 +96,7 @@ public final class AzureMLLinkedServiceResponse extends io.pulumi.resources.Invo
      * The Batch Execution REST URL for an Azure ML Studio Web Service endpoint. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="mlEndpoint", required=true)
+    @Import(name="mlEndpoint", required=true)
       private final Object mlEndpoint;
 
     public Object getMlEndpoint() {
@@ -107,7 +107,7 @@ public final class AzureMLLinkedServiceResponse extends io.pulumi.resources.Invo
      * Parameters for linked service.
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
     public Map<String,ParameterSpecificationResponse> getParameters() {
@@ -118,7 +118,7 @@ public final class AzureMLLinkedServiceResponse extends io.pulumi.resources.Invo
      * The ID of the service principal used to authenticate against the ARM-based updateResourceEndpoint of an Azure ML Studio web service. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="servicePrincipalId")
+    @Import(name="servicePrincipalId")
       private final @Nullable Object servicePrincipalId;
 
     public Optional<Object> getServicePrincipalId() {
@@ -129,7 +129,7 @@ public final class AzureMLLinkedServiceResponse extends io.pulumi.resources.Invo
      * The key of the service principal used to authenticate against the ARM-based updateResourceEndpoint of an Azure ML Studio web service.
      * 
      */
-    @InputImport(name="servicePrincipalKey")
+    @Import(name="servicePrincipalKey")
       private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey;
 
     public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> getServicePrincipalKey() {
@@ -140,7 +140,7 @@ public final class AzureMLLinkedServiceResponse extends io.pulumi.resources.Invo
      * The name or ID of the tenant to which the service principal belongs. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="tenant")
+    @Import(name="tenant")
       private final @Nullable Object tenant;
 
     public Optional<Object> getTenant() {
@@ -152,7 +152,7 @@ public final class AzureMLLinkedServiceResponse extends io.pulumi.resources.Invo
      * Expected value is 'AzureML'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {
@@ -163,7 +163,7 @@ public final class AzureMLLinkedServiceResponse extends io.pulumi.resources.Invo
      * The Update Resource REST URL for an Azure ML Studio Web Service endpoint. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="updateResourceEndpoint")
+    @Import(name="updateResourceEndpoint")
       private final @Nullable Object updateResourceEndpoint;
 
     public Optional<Object> getUpdateResourceEndpoint() {

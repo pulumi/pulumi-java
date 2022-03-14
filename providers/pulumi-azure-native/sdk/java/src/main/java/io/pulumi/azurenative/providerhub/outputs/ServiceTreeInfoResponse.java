@@ -3,21 +3,21 @@
 
 package io.pulumi.azurenative.providerhub.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ServiceTreeInfoResponse {
     private final @Nullable String componentId;
     private final @Nullable String serviceId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServiceTreeInfoResponse(
-        @OutputCustomType.Parameter("componentId") @Nullable String componentId,
-        @OutputCustomType.Parameter("serviceId") @Nullable String serviceId) {
+        @CustomType.Parameter("componentId") @Nullable String componentId,
+        @CustomType.Parameter("serviceId") @Nullable String serviceId) {
         this.componentId = componentId;
         this.serviceId = serviceId;
     }

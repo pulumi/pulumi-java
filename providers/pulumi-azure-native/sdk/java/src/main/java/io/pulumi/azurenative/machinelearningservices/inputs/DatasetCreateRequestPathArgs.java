@@ -5,7 +5,7 @@ package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.azurenative.machinelearningservices.inputs.DatasetCreateRequestDataPathArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,7 +15,7 @@ public final class DatasetCreateRequestPathArgs extends io.pulumi.resources.Reso
 
     public static final DatasetCreateRequestPathArgs Empty = new DatasetCreateRequestPathArgs();
 
-    @InputImport(name="dataPath")
+    @Import(name="dataPath")
       private final @Nullable Output<DatasetCreateRequestDataPathArgs> dataPath;
 
     public Output<DatasetCreateRequestDataPathArgs> getDataPath() {
@@ -26,7 +26,7 @@ public final class DatasetCreateRequestPathArgs extends io.pulumi.resources.Reso
      * The Http URL.
      * 
      */
-    @InputImport(name="httpUrl")
+    @Import(name="httpUrl")
       private final @Nullable Output<String> httpUrl;
 
     public Output<String> getHttpUrl() {

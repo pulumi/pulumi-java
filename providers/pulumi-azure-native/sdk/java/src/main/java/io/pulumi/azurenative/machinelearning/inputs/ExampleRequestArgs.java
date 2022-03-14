@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearning.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class ExampleRequestArgs extends io.pulumi.resources.ResourceArgs {
      * Sample input data for the web service's global parameters
      * 
      */
-    @InputImport(name="globalParameters")
+    @Import(name="globalParameters")
       private final @Nullable Output<Map<String,Object>> globalParameters;
 
     public Output<Map<String,Object>> getGlobalParameters() {
@@ -36,7 +36,7 @@ public final class ExampleRequestArgs extends io.pulumi.resources.ResourceArgs {
      * Sample input data for the web service's input(s) given as an input name to sample input values matrix map.
      * 
      */
-    @InputImport(name="inputs")
+    @Import(name="inputs")
       private final @Nullable Output<Map<String,List<List<Object>>>> inputs;
 
     public Output<Map<String,List<List<Object>>>> getInputs() {

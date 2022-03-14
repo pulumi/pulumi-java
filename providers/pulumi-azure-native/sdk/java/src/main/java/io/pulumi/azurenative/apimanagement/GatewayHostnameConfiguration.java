@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.apimanagement.GatewayHostnameConfigurationArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -35,7 +35,7 @@ public class GatewayHostnameConfiguration extends io.pulumi.resources.CustomReso
      * Identifier of Certificate entity that will be used for TLS connection establishment
      * 
      */
-    @OutputExport(name="certificateId", type=String.class, parameters={})
+    @Export(name="certificateId", type=String.class, parameters={})
     private Output</* @Nullable */ String> certificateId;
 
     /**
@@ -49,7 +49,7 @@ public class GatewayHostnameConfiguration extends io.pulumi.resources.CustomReso
      * Hostname value. Supports valid domain name, partial or full wildcard
      * 
      */
-    @OutputExport(name="hostname", type=String.class, parameters={})
+    @Export(name="hostname", type=String.class, parameters={})
     private Output</* @Nullable */ String> hostname;
 
     /**
@@ -63,7 +63,7 @@ public class GatewayHostnameConfiguration extends io.pulumi.resources.CustomReso
      * Specifies if HTTP/2.0 is supported
      * 
      */
-    @OutputExport(name="http2Enabled", type=Boolean.class, parameters={})
+    @Export(name="http2Enabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> http2Enabled;
 
     /**
@@ -77,7 +77,7 @@ public class GatewayHostnameConfiguration extends io.pulumi.resources.CustomReso
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -91,7 +91,7 @@ public class GatewayHostnameConfiguration extends io.pulumi.resources.CustomReso
      * Determines whether gateway requests client certificate
      * 
      */
-    @OutputExport(name="negotiateClientCertificate", type=Boolean.class, parameters={})
+    @Export(name="negotiateClientCertificate", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> negotiateClientCertificate;
 
     /**
@@ -105,7 +105,7 @@ public class GatewayHostnameConfiguration extends io.pulumi.resources.CustomReso
      * Specifies if TLS 1.0 is supported
      * 
      */
-    @OutputExport(name="tls10Enabled", type=Boolean.class, parameters={})
+    @Export(name="tls10Enabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> tls10Enabled;
 
     /**
@@ -119,7 +119,7 @@ public class GatewayHostnameConfiguration extends io.pulumi.resources.CustomReso
      * Specifies if TLS 1.1 is supported
      * 
      */
-    @OutputExport(name="tls11Enabled", type=Boolean.class, parameters={})
+    @Export(name="tls11Enabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> tls11Enabled;
 
     /**
@@ -133,7 +133,7 @@ public class GatewayHostnameConfiguration extends io.pulumi.resources.CustomReso
      * Resource type for API Management resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

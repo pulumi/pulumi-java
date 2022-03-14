@@ -4,11 +4,11 @@
 package io.pulumi.azurenative.compute.outputs;
 
 import io.pulumi.azurenative.compute.outputs.SubResourceResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class KeyVaultKeyReferenceResponse {
     /**
      * The URL referencing a key encryption key in Key Vault.
@@ -21,10 +21,10 @@ public final class KeyVaultKeyReferenceResponse {
      */
     private final SubResourceResponse sourceVault;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private KeyVaultKeyReferenceResponse(
-        @OutputCustomType.Parameter("keyUrl") String keyUrl,
-        @OutputCustomType.Parameter("sourceVault") SubResourceResponse sourceVault) {
+        @CustomType.Parameter("keyUrl") String keyUrl,
+        @CustomType.Parameter("sourceVault") SubResourceResponse sourceVault) {
         this.keyUrl = keyUrl;
         this.sourceVault = sourceVault;
     }

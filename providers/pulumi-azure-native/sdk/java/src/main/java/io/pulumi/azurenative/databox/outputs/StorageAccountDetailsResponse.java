@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.databox.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class StorageAccountDetailsResponse {
     /**
      * Account Type of the data to be transferred.
@@ -21,10 +21,10 @@ public final class StorageAccountDetailsResponse {
      */
     private final String storageAccountId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private StorageAccountDetailsResponse(
-        @OutputCustomType.Parameter("dataAccountType") String dataAccountType,
-        @OutputCustomType.Parameter("storageAccountId") String storageAccountId) {
+        @CustomType.Parameter("dataAccountType") String dataAccountType,
+        @CustomType.Parameter("storageAccountId") String storageAccountId) {
         this.dataAccountType = dataAccountType;
         this.storageAccountId = storageAccountId;
     }

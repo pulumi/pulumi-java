@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storage.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class TagPropertyResponse extends io.pulumi.resources.InvokeArgs {
      * Returns the Object ID of the user who added the tag.
      * 
      */
-    @InputImport(name="objectIdentifier", required=true)
+    @Import(name="objectIdentifier", required=true)
       private final String objectIdentifier;
 
     public String getObjectIdentifier() {
@@ -31,7 +31,7 @@ public final class TagPropertyResponse extends io.pulumi.resources.InvokeArgs {
      * The tag value.
      * 
      */
-    @InputImport(name="tag", required=true)
+    @Import(name="tag", required=true)
       private final String tag;
 
     public String getTag() {
@@ -42,7 +42,7 @@ public final class TagPropertyResponse extends io.pulumi.resources.InvokeArgs {
      * Returns the Tenant ID that issued the token for the user who added the tag.
      * 
      */
-    @InputImport(name="tenantId", required=true)
+    @Import(name="tenantId", required=true)
       private final String tenantId;
 
     public String getTenantId() {
@@ -53,7 +53,7 @@ public final class TagPropertyResponse extends io.pulumi.resources.InvokeArgs {
      * Returns the date and time the tag was added.
      * 
      */
-    @InputImport(name="timestamp", required=true)
+    @Import(name="timestamp", required=true)
       private final String timestamp;
 
     public String getTimestamp() {
@@ -64,7 +64,7 @@ public final class TagPropertyResponse extends io.pulumi.resources.InvokeArgs {
      * Returns the User Principal Name of the user who added the tag.
      * 
      */
-    @InputImport(name="upn", required=true)
+    @Import(name="upn", required=true)
       private final String upn;
 
     public String getUpn() {

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.webpubsub;
 
 import io.pulumi.azurenative.webpubsub.inputs.WebPubSubHubPropertiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class WebPubSubHubArgs extends io.pulumi.resources.ResourceArgs {
      * The hub name.
      * 
      */
-    @InputImport(name="hubName")
+    @Import(name="hubName")
       private final @Nullable Output<String> hubName;
 
     public Output<String> getHubName() {
@@ -30,7 +30,7 @@ public final class WebPubSubHubArgs extends io.pulumi.resources.ResourceArgs {
      * Properties of a hub.
      * 
      */
-    @InputImport(name="properties", required=true)
+    @Import(name="properties", required=true)
       private final Output<WebPubSubHubPropertiesArgs> properties;
 
     public Output<WebPubSubHubPropertiesArgs> getProperties() {
@@ -41,7 +41,7 @@ public final class WebPubSubHubArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -52,7 +52,7 @@ public final class WebPubSubHubArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource.
      * 
      */
-    @InputImport(name="resourceName", required=true)
+    @Import(name="resourceName", required=true)
       private final Output<String> resourceName;
 
     public Output<String> getPropResourceName() {

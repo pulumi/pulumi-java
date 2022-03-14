@@ -12,14 +12,14 @@ import io.pulumi.azurenative.machinelearningservices.outputs.MachineLearningServ
 import io.pulumi.azurenative.machinelearningservices.outputs.PersonalComputeInstanceSettingsResponse;
 import io.pulumi.azurenative.machinelearningservices.outputs.ResourceIdResponse;
 import io.pulumi.azurenative.machinelearningservices.outputs.SetupScriptsResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ComputeInstanceResponseProperties {
     /**
      * Policy for sharing applications on this compute instance among users of parent workspace. If Personal, only the creator can access applications on this compute instance. When Shared, any workspace user can access applications on this instance depending on his/her assigned role.
@@ -87,21 +87,21 @@ public final class ComputeInstanceResponseProperties {
      */
     private final @Nullable String vmSize;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ComputeInstanceResponseProperties(
-        @OutputCustomType.Parameter("applicationSharingPolicy") @Nullable String applicationSharingPolicy,
-        @OutputCustomType.Parameter("applications") List<ComputeInstanceApplicationResponse> applications,
-        @OutputCustomType.Parameter("computeInstanceAuthorizationType") @Nullable String computeInstanceAuthorizationType,
-        @OutputCustomType.Parameter("connectivityEndpoints") ComputeInstanceConnectivityEndpointsResponse connectivityEndpoints,
-        @OutputCustomType.Parameter("createdBy") ComputeInstanceCreatedByResponse createdBy,
-        @OutputCustomType.Parameter("errors") List<MachineLearningServiceErrorResponse> errors,
-        @OutputCustomType.Parameter("lastOperation") ComputeInstanceLastOperationResponse lastOperation,
-        @OutputCustomType.Parameter("personalComputeInstanceSettings") @Nullable PersonalComputeInstanceSettingsResponse personalComputeInstanceSettings,
-        @OutputCustomType.Parameter("setupScripts") @Nullable SetupScriptsResponse setupScripts,
-        @OutputCustomType.Parameter("sshSettings") @Nullable ComputeInstanceSshSettingsResponse sshSettings,
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("subnet") @Nullable ResourceIdResponse subnet,
-        @OutputCustomType.Parameter("vmSize") @Nullable String vmSize) {
+        @CustomType.Parameter("applicationSharingPolicy") @Nullable String applicationSharingPolicy,
+        @CustomType.Parameter("applications") List<ComputeInstanceApplicationResponse> applications,
+        @CustomType.Parameter("computeInstanceAuthorizationType") @Nullable String computeInstanceAuthorizationType,
+        @CustomType.Parameter("connectivityEndpoints") ComputeInstanceConnectivityEndpointsResponse connectivityEndpoints,
+        @CustomType.Parameter("createdBy") ComputeInstanceCreatedByResponse createdBy,
+        @CustomType.Parameter("errors") List<MachineLearningServiceErrorResponse> errors,
+        @CustomType.Parameter("lastOperation") ComputeInstanceLastOperationResponse lastOperation,
+        @CustomType.Parameter("personalComputeInstanceSettings") @Nullable PersonalComputeInstanceSettingsResponse personalComputeInstanceSettings,
+        @CustomType.Parameter("setupScripts") @Nullable SetupScriptsResponse setupScripts,
+        @CustomType.Parameter("sshSettings") @Nullable ComputeInstanceSshSettingsResponse sshSettings,
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("subnet") @Nullable ResourceIdResponse subnet,
+        @CustomType.Parameter("vmSize") @Nullable String vmSize) {
         this.applicationSharingPolicy = applicationSharingPolicy;
         this.applications = applications;
         this.computeInstanceAuthorizationType = computeInstanceAuthorizationType;

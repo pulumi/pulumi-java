@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class VirtualMachineScaleSetPublicIPAddressConfigurationDnsSettingsResponse {
     /**
      * The Domain name label.The concatenation of the domain name label and vm index will be the domain name labels of the PublicIPAddress resources that will be created
@@ -15,8 +15,8 @@ public final class VirtualMachineScaleSetPublicIPAddressConfigurationDnsSettings
      */
     private final String domainNameLabel;
 
-    @OutputCustomType.Constructor
-    private VirtualMachineScaleSetPublicIPAddressConfigurationDnsSettingsResponse(@OutputCustomType.Parameter("domainNameLabel") String domainNameLabel) {
+    @CustomType.Constructor
+    private VirtualMachineScaleSetPublicIPAddressConfigurationDnsSettingsResponse(@CustomType.Parameter("domainNameLabel") String domainNameLabel) {
         this.domainNameLabel = domainNameLabel;
     }
 

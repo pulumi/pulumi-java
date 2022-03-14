@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class ConnectionMonitorEndpointScopeItemResponse extends io.pulumi.
      * The address of the endpoint item. Supported types are IPv4/IPv6 subnet mask or IPv4/IPv6 IP address.
      * 
      */
-    @InputImport(name="address")
+    @Import(name="address")
       private final @Nullable String address;
 
     public Optional<String> getAddress() {

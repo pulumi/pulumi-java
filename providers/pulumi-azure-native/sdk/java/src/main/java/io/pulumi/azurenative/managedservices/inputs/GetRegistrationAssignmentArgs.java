@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.managedservices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class GetRegistrationAssignmentArgs extends io.pulumi.resources.Inv
      * Tells whether to return registration definition details also along with registration assignment details.
      * 
      */
-    @InputImport(name="expandRegistrationDefinition")
+    @Import(name="expandRegistrationDefinition")
       private final @Nullable Boolean expandRegistrationDefinition;
 
     public Optional<Boolean> getExpandRegistrationDefinition() {
@@ -30,7 +30,7 @@ public final class GetRegistrationAssignmentArgs extends io.pulumi.resources.Inv
      * Guid of the registration assignment.
      * 
      */
-    @InputImport(name="registrationAssignmentId", required=true)
+    @Import(name="registrationAssignmentId", required=true)
       private final String registrationAssignmentId;
 
     public String getRegistrationAssignmentId() {
@@ -41,7 +41,7 @@ public final class GetRegistrationAssignmentArgs extends io.pulumi.resources.Inv
      * Scope of the resource.
      * 
      */
-    @InputImport(name="scope", required=true)
+    @Import(name="scope", required=true)
       private final String scope;
 
     public String getScope() {

@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ProbeSettingsResponse {
     /**
      * The number of failures to allow before returning an unhealthy status.
@@ -38,13 +38,13 @@ public final class ProbeSettingsResponse {
      */
     private final @Nullable String timeout;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ProbeSettingsResponse(
-        @OutputCustomType.Parameter("failureThreshold") @Nullable Integer failureThreshold,
-        @OutputCustomType.Parameter("initialDelay") @Nullable String initialDelay,
-        @OutputCustomType.Parameter("period") @Nullable String period,
-        @OutputCustomType.Parameter("successThreshold") @Nullable Integer successThreshold,
-        @OutputCustomType.Parameter("timeout") @Nullable String timeout) {
+        @CustomType.Parameter("failureThreshold") @Nullable Integer failureThreshold,
+        @CustomType.Parameter("initialDelay") @Nullable String initialDelay,
+        @CustomType.Parameter("period") @Nullable String period,
+        @CustomType.Parameter("successThreshold") @Nullable Integer successThreshold,
+        @CustomType.Parameter("timeout") @Nullable String timeout) {
         this.failureThreshold = failureThreshold;
         this.initialDelay = initialDelay;
         this.period = period;

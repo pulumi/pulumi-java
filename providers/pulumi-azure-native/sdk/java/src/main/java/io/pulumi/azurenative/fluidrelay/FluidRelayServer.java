@@ -9,7 +9,7 @@ import io.pulumi.azurenative.fluidrelay.outputs.FluidRelayEndpointsResponse;
 import io.pulumi.azurenative.fluidrelay.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -37,7 +37,7 @@ public class FluidRelayServer extends io.pulumi.resources.CustomResource {
      * The Fluid Relay Service endpoints for this server.
      * 
      */
-    @OutputExport(name="fluidRelayEndpoints", type=FluidRelayEndpointsResponse.class, parameters={})
+    @Export(name="fluidRelayEndpoints", type=FluidRelayEndpointsResponse.class, parameters={})
     private Output<FluidRelayEndpointsResponse> fluidRelayEndpoints;
 
     /**
@@ -51,7 +51,7 @@ public class FluidRelayServer extends io.pulumi.resources.CustomResource {
      * The Fluid tenantId for this server
      * 
      */
-    @OutputExport(name="frsTenantId", type=String.class, parameters={})
+    @Export(name="frsTenantId", type=String.class, parameters={})
     private Output<String> frsTenantId;
 
     /**
@@ -65,7 +65,7 @@ public class FluidRelayServer extends io.pulumi.resources.CustomResource {
      * The geo-location where the resource lives
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -79,7 +79,7 @@ public class FluidRelayServer extends io.pulumi.resources.CustomResource {
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -93,7 +93,7 @@ public class FluidRelayServer extends io.pulumi.resources.CustomResource {
      * Provision states for FluidRelay RP
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output</* @Nullable */ String> provisioningState;
 
     /**
@@ -107,7 +107,7 @@ public class FluidRelayServer extends io.pulumi.resources.CustomResource {
      * System meta data for this resource, including creation and modification information.
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -121,7 +121,7 @@ public class FluidRelayServer extends io.pulumi.resources.CustomResource {
      * Resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -135,7 +135,7 @@ public class FluidRelayServer extends io.pulumi.resources.CustomResource {
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

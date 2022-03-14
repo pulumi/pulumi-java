@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.windowsesu.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetMultipleActivationKeyArgs extends io.pulumi.resources.Invo
      * The name of the MAK key.
      * 
      */
-    @InputImport(name="multipleActivationKeyName", required=true)
+    @Import(name="multipleActivationKeyName", required=true)
       private final String multipleActivationKeyName;
 
     public String getMultipleActivationKeyName() {
@@ -27,7 +27,7 @@ public final class GetMultipleActivationKeyArgs extends io.pulumi.resources.Invo
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {

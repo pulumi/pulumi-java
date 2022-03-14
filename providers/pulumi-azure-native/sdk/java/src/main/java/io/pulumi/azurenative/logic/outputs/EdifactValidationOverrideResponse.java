@@ -3,12 +3,12 @@
 
 package io.pulumi.azurenative.logic.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class EdifactValidationOverrideResponse {
     /**
      * The value indicating whether to allow leading and trailing spaces and zeroes.
@@ -46,15 +46,15 @@ public final class EdifactValidationOverrideResponse {
      */
     private final Boolean validateXSDTypes;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EdifactValidationOverrideResponse(
-        @OutputCustomType.Parameter("allowLeadingAndTrailingSpacesAndZeroes") Boolean allowLeadingAndTrailingSpacesAndZeroes,
-        @OutputCustomType.Parameter("enforceCharacterSet") Boolean enforceCharacterSet,
-        @OutputCustomType.Parameter("messageId") String messageId,
-        @OutputCustomType.Parameter("trailingSeparatorPolicy") String trailingSeparatorPolicy,
-        @OutputCustomType.Parameter("trimLeadingAndTrailingSpacesAndZeroes") Boolean trimLeadingAndTrailingSpacesAndZeroes,
-        @OutputCustomType.Parameter("validateEDITypes") Boolean validateEDITypes,
-        @OutputCustomType.Parameter("validateXSDTypes") Boolean validateXSDTypes) {
+        @CustomType.Parameter("allowLeadingAndTrailingSpacesAndZeroes") Boolean allowLeadingAndTrailingSpacesAndZeroes,
+        @CustomType.Parameter("enforceCharacterSet") Boolean enforceCharacterSet,
+        @CustomType.Parameter("messageId") String messageId,
+        @CustomType.Parameter("trailingSeparatorPolicy") String trailingSeparatorPolicy,
+        @CustomType.Parameter("trimLeadingAndTrailingSpacesAndZeroes") Boolean trimLeadingAndTrailingSpacesAndZeroes,
+        @CustomType.Parameter("validateEDITypes") Boolean validateEDITypes,
+        @CustomType.Parameter("validateXSDTypes") Boolean validateXSDTypes) {
         this.allowLeadingAndTrailingSpacesAndZeroes = allowLeadingAndTrailingSpacesAndZeroes;
         this.enforceCharacterSet = enforceCharacterSet;
         this.messageId = messageId;

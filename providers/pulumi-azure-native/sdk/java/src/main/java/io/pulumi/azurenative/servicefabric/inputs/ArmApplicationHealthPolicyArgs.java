@@ -5,7 +5,7 @@ package io.pulumi.azurenative.servicefabric.inputs;
 
 import io.pulumi.azurenative.servicefabric.inputs.ArmServiceTypeHealthPolicyArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -26,7 +26,7 @@ public final class ArmApplicationHealthPolicyArgs extends io.pulumi.resources.Re
      * Indicates whether warnings are treated with the same severity as errors.
      * 
      */
-    @InputImport(name="considerWarningAsError")
+    @Import(name="considerWarningAsError")
       private final @Nullable Output<Boolean> considerWarningAsError;
 
     public Output<Boolean> getConsiderWarningAsError() {
@@ -37,7 +37,7 @@ public final class ArmApplicationHealthPolicyArgs extends io.pulumi.resources.Re
      * The health policy used by default to evaluate the health of a service type.
      * 
      */
-    @InputImport(name="defaultServiceTypeHealthPolicy")
+    @Import(name="defaultServiceTypeHealthPolicy")
       private final @Nullable Output<ArmServiceTypeHealthPolicyArgs> defaultServiceTypeHealthPolicy;
 
     public Output<ArmServiceTypeHealthPolicyArgs> getDefaultServiceTypeHealthPolicy() {
@@ -51,7 +51,7 @@ public final class ArmApplicationHealthPolicyArgs extends io.pulumi.resources.Re
      * The computation rounds up to tolerate one failure on small numbers of nodes. Default percentage is zero.
      * 
      */
-    @InputImport(name="maxPercentUnhealthyDeployedApplications")
+    @Import(name="maxPercentUnhealthyDeployedApplications")
       private final @Nullable Output<Integer> maxPercentUnhealthyDeployedApplications;
 
     public Output<Integer> getMaxPercentUnhealthyDeployedApplications() {
@@ -62,7 +62,7 @@ public final class ArmApplicationHealthPolicyArgs extends io.pulumi.resources.Re
      * The map with service type health policy per service type name. The map is empty by default.
      * 
      */
-    @InputImport(name="serviceTypeHealthPolicyMap")
+    @Import(name="serviceTypeHealthPolicyMap")
       private final @Nullable Output<Map<String,ArmServiceTypeHealthPolicyArgs>> serviceTypeHealthPolicyMap;
 
     public Output<Map<String,ArmServiceTypeHealthPolicyArgs>> getServiceTypeHealthPolicyMap() {

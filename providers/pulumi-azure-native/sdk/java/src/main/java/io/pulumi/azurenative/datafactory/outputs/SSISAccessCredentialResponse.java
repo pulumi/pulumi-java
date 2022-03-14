@@ -6,11 +6,11 @@ package io.pulumi.azurenative.datafactory.outputs;
 import io.pulumi.azurenative.datafactory.outputs.AzureKeyVaultSecretReferenceResponse;
 import io.pulumi.azurenative.datafactory.outputs.SecureStringResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SSISAccessCredentialResponse {
     /**
      * Domain for windows authentication.
@@ -28,11 +28,11 @@ public final class SSISAccessCredentialResponse {
      */
     private final Object userName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SSISAccessCredentialResponse(
-        @OutputCustomType.Parameter("domain") Object domain,
-        @OutputCustomType.Parameter("password") Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password,
-        @OutputCustomType.Parameter("userName") Object userName) {
+        @CustomType.Parameter("domain") Object domain,
+        @CustomType.Parameter("password") Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password,
+        @CustomType.Parameter("userName") Object userName) {
         this.domain = domain;
         this.password = password;
         this.userName = userName;

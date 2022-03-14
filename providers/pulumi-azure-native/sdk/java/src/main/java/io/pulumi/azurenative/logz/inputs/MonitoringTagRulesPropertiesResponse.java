@@ -5,7 +5,7 @@ package io.pulumi.azurenative.logz.inputs;
 
 import io.pulumi.azurenative.logz.inputs.LogRulesResponse;
 import io.pulumi.azurenative.logz.inputs.SystemDataResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class MonitoringTagRulesPropertiesResponse extends io.pulumi.resour
      * Set of rules for sending logs for the Monitor resource.
      * 
      */
-    @InputImport(name="logRules")
+    @Import(name="logRules")
       private final @Nullable LogRulesResponse logRules;
 
     public Optional<LogRulesResponse> getLogRules() {
@@ -35,7 +35,7 @@ public final class MonitoringTagRulesPropertiesResponse extends io.pulumi.resour
      * Flag specifying if the resource provisioning state as tracked by ARM.
      * 
      */
-    @InputImport(name="provisioningState", required=true)
+    @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
     public String getProvisioningState() {
@@ -46,7 +46,7 @@ public final class MonitoringTagRulesPropertiesResponse extends io.pulumi.resour
      * Metadata pertaining to creation and last modification of the resource.
      * 
      */
-    @InputImport(name="systemData", required=true)
+    @Import(name="systemData", required=true)
       private final SystemDataResponse systemData;
 
     public SystemDataResponse getSystemData() {

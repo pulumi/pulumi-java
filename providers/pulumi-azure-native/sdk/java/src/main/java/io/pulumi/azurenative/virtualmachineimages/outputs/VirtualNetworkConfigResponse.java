@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.virtualmachineimages.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VirtualNetworkConfigResponse {
     /**
      * Resource id of a pre-existing subnet.
@@ -17,8 +17,8 @@ public final class VirtualNetworkConfigResponse {
      */
     private final @Nullable String subnetId;
 
-    @OutputCustomType.Constructor
-    private VirtualNetworkConfigResponse(@OutputCustomType.Parameter("subnetId") @Nullable String subnetId) {
+    @CustomType.Constructor
+    private VirtualNetworkConfigResponse(@CustomType.Parameter("subnetId") @Nullable String subnetId) {
         this.subnetId = subnetId;
     }
 

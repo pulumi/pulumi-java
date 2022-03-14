@@ -7,7 +7,7 @@ import io.pulumi.azurenative.cognitiveservices.enums.HostingModel;
 import io.pulumi.azurenative.cognitiveservices.inputs.CommitmentPeriodArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class CommitmentPlanPropertiesArgs extends io.pulumi.resources.Reso
      * AutoRenew commitment plan.
      * 
      */
-    @InputImport(name="autoRenew")
+    @Import(name="autoRenew")
       private final @Nullable Output<Boolean> autoRenew;
 
     public Output<Boolean> getAutoRenew() {
@@ -37,7 +37,7 @@ public final class CommitmentPlanPropertiesArgs extends io.pulumi.resources.Reso
      * Cognitive Services account commitment period.
      * 
      */
-    @InputImport(name="current")
+    @Import(name="current")
       private final @Nullable Output<CommitmentPeriodArgs> current;
 
     public Output<CommitmentPeriodArgs> getCurrent() {
@@ -48,7 +48,7 @@ public final class CommitmentPlanPropertiesArgs extends io.pulumi.resources.Reso
      * Account hosting model.
      * 
      */
-    @InputImport(name="hostingModel")
+    @Import(name="hostingModel")
       private final @Nullable Output<Either<String,HostingModel>> hostingModel;
 
     public Output<Either<String,HostingModel>> getHostingModel() {
@@ -59,7 +59,7 @@ public final class CommitmentPlanPropertiesArgs extends io.pulumi.resources.Reso
      * Cognitive Services account commitment period.
      * 
      */
-    @InputImport(name="next")
+    @Import(name="next")
       private final @Nullable Output<CommitmentPeriodArgs> next;
 
     public Output<CommitmentPeriodArgs> getNext() {
@@ -70,7 +70,7 @@ public final class CommitmentPlanPropertiesArgs extends io.pulumi.resources.Reso
      * Commitment plan type.
      * 
      */
-    @InputImport(name="planType")
+    @Import(name="planType")
       private final @Nullable Output<String> planType;
 
     public Output<String> getPlanType() {

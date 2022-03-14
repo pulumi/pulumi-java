@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.alertsmanagement.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ConditionResponse {
     /**
      * operator for a given condition
@@ -23,10 +23,10 @@ public final class ConditionResponse {
      */
     private final @Nullable List<String> values;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ConditionResponse(
-        @OutputCustomType.Parameter("operator") @Nullable String operator,
-        @OutputCustomType.Parameter("values") @Nullable List<String> values) {
+        @CustomType.Parameter("operator") @Nullable String operator,
+        @CustomType.Parameter("values") @Nullable List<String> values) {
         this.operator = operator;
         this.values = values;
     }

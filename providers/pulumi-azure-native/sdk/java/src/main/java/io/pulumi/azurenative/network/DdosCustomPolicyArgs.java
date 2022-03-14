@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network;
 
 import io.pulumi.azurenative.network.inputs.ProtocolCustomSettingsFormatArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class DdosCustomPolicyArgs extends io.pulumi.resources.ResourceArgs
      * The name of the DDoS custom policy.
      * 
      */
-    @InputImport(name="ddosCustomPolicyName")
+    @Import(name="ddosCustomPolicyName")
       private final @Nullable Output<String> ddosCustomPolicyName;
 
     public Output<String> getDdosCustomPolicyName() {
@@ -32,7 +32,7 @@ public final class DdosCustomPolicyArgs extends io.pulumi.resources.ResourceArgs
      * Resource ID.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
@@ -43,7 +43,7 @@ public final class DdosCustomPolicyArgs extends io.pulumi.resources.ResourceArgs
      * Resource location.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -54,7 +54,7 @@ public final class DdosCustomPolicyArgs extends io.pulumi.resources.ResourceArgs
      * The protocol-specific DDoS policy customization parameters.
      * 
      */
-    @InputImport(name="protocolCustomSettings")
+    @Import(name="protocolCustomSettings")
       private final @Nullable Output<List<ProtocolCustomSettingsFormatArgs>> protocolCustomSettings;
 
     public Output<List<ProtocolCustomSettingsFormatArgs>> getProtocolCustomSettings() {
@@ -65,7 +65,7 @@ public final class DdosCustomPolicyArgs extends io.pulumi.resources.ResourceArgs
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -76,7 +76,7 @@ public final class DdosCustomPolicyArgs extends io.pulumi.resources.ResourceArgs
      * Resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

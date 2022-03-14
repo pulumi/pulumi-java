@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.azurestack.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class ProductLinkResponse extends io.pulumi.resources.InvokeArgs {
      * The description of the link.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable String displayName;
 
     public Optional<String> getDisplayName() {
@@ -33,7 +33,7 @@ public final class ProductLinkResponse extends io.pulumi.resources.InvokeArgs {
      * The URI corresponding to the link.
      * 
      */
-    @InputImport(name="uri")
+    @Import(name="uri")
       private final @Nullable String uri;
 
     public Optional<String> getUri() {

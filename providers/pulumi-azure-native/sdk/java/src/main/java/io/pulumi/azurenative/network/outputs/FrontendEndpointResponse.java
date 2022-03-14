@@ -5,14 +5,14 @@ package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.CustomHttpsConfigurationResponse;
 import io.pulumi.azurenative.network.outputs.FrontendEndpointUpdateParametersResponseWebApplicationFirewallPolicyLink;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FrontendEndpointResponse {
     /**
      * The configuration specifying how to enable HTTPS
@@ -70,19 +70,19 @@ public final class FrontendEndpointResponse {
      */
     private final @Nullable FrontendEndpointUpdateParametersResponseWebApplicationFirewallPolicyLink webApplicationFirewallPolicyLink;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FrontendEndpointResponse(
-        @OutputCustomType.Parameter("customHttpsConfiguration") CustomHttpsConfigurationResponse customHttpsConfiguration,
-        @OutputCustomType.Parameter("customHttpsProvisioningState") String customHttpsProvisioningState,
-        @OutputCustomType.Parameter("customHttpsProvisioningSubstate") String customHttpsProvisioningSubstate,
-        @OutputCustomType.Parameter("hostName") @Nullable String hostName,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("resourceState") String resourceState,
-        @OutputCustomType.Parameter("sessionAffinityEnabledState") @Nullable String sessionAffinityEnabledState,
-        @OutputCustomType.Parameter("sessionAffinityTtlSeconds") @Nullable Integer sessionAffinityTtlSeconds,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("webApplicationFirewallPolicyLink") @Nullable FrontendEndpointUpdateParametersResponseWebApplicationFirewallPolicyLink webApplicationFirewallPolicyLink) {
+        @CustomType.Parameter("customHttpsConfiguration") CustomHttpsConfigurationResponse customHttpsConfiguration,
+        @CustomType.Parameter("customHttpsProvisioningState") String customHttpsProvisioningState,
+        @CustomType.Parameter("customHttpsProvisioningSubstate") String customHttpsProvisioningSubstate,
+        @CustomType.Parameter("hostName") @Nullable String hostName,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("resourceState") String resourceState,
+        @CustomType.Parameter("sessionAffinityEnabledState") @Nullable String sessionAffinityEnabledState,
+        @CustomType.Parameter("sessionAffinityTtlSeconds") @Nullable Integer sessionAffinityTtlSeconds,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("webApplicationFirewallPolicyLink") @Nullable FrontendEndpointUpdateParametersResponseWebApplicationFirewallPolicyLink webApplicationFirewallPolicyLink) {
         this.customHttpsConfiguration = customHttpsConfiguration;
         this.customHttpsProvisioningState = customHttpsProvisioningState;
         this.customHttpsProvisioningSubstate = customHttpsProvisioningSubstate;

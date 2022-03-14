@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.providerhub.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -13,14 +13,14 @@ public final class TypedErrorInfoResponse extends io.pulumi.resources.InvokeArgs
 
     public static final TypedErrorInfoResponse Empty = new TypedErrorInfoResponse();
 
-    @InputImport(name="info", required=true)
+    @Import(name="info", required=true)
       private final Object info;
 
     public Object getInfo() {
         return this.info;
     }
 
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

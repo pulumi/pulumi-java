@@ -7,7 +7,7 @@ import io.pulumi.azurenative.securityinsights.enums.AutomationRulePropertyCondit
 import io.pulumi.azurenative.securityinsights.enums.AutomationRulePropertyConditionSupportedProperty;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class AutomationRulePropertyValuesConditionConditionPropertiesArgs 
      * The operator to use for evaluation the condition
      * 
      */
-    @InputImport(name="operator")
+    @Import(name="operator")
       private final @Nullable Output<Either<String,AutomationRulePropertyConditionSupportedOperator>> operator;
 
     public Output<Either<String,AutomationRulePropertyConditionSupportedOperator>> getOperator() {
@@ -37,7 +37,7 @@ public final class AutomationRulePropertyValuesConditionConditionPropertiesArgs 
      * The property to evaluate
      * 
      */
-    @InputImport(name="propertyName")
+    @Import(name="propertyName")
       private final @Nullable Output<Either<String,AutomationRulePropertyConditionSupportedProperty>> propertyName;
 
     public Output<Either<String,AutomationRulePropertyConditionSupportedProperty>> getPropertyName() {
@@ -48,7 +48,7 @@ public final class AutomationRulePropertyValuesConditionConditionPropertiesArgs 
      * The values to use for evaluating the condition
      * 
      */
-    @InputImport(name="propertyValues")
+    @Import(name="propertyValues")
       private final @Nullable Output<List<String>> propertyValues;
 
     public Output<List<String>> getPropertyValues() {

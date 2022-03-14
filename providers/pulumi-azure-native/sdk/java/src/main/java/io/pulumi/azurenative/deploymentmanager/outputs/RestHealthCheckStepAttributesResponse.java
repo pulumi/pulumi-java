@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.deploymentmanager.outputs;
 
 import io.pulumi.azurenative.deploymentmanager.outputs.RestHealthCheckResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RestHealthCheckStepAttributesResponse {
     /**
      * The list of checks that form the health check step.
@@ -40,13 +40,13 @@ public final class RestHealthCheckStepAttributesResponse {
      */
     private final @Nullable String waitDuration;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RestHealthCheckStepAttributesResponse(
-        @OutputCustomType.Parameter("healthChecks") List<RestHealthCheckResponse> healthChecks,
-        @OutputCustomType.Parameter("healthyStateDuration") String healthyStateDuration,
-        @OutputCustomType.Parameter("maxElasticDuration") @Nullable String maxElasticDuration,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("waitDuration") @Nullable String waitDuration) {
+        @CustomType.Parameter("healthChecks") List<RestHealthCheckResponse> healthChecks,
+        @CustomType.Parameter("healthyStateDuration") String healthyStateDuration,
+        @CustomType.Parameter("maxElasticDuration") @Nullable String maxElasticDuration,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("waitDuration") @Nullable String waitDuration) {
         this.healthChecks = healthChecks;
         this.healthyStateDuration = healthyStateDuration;
         this.maxElasticDuration = maxElasticDuration;

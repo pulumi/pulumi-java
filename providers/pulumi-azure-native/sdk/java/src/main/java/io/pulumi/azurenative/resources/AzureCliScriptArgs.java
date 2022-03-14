@@ -10,7 +10,7 @@ import io.pulumi.azurenative.resources.inputs.ManagedServiceIdentityArgs;
 import io.pulumi.azurenative.resources.inputs.StorageAccountConfigurationArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -26,7 +26,7 @@ public final class AzureCliScriptArgs extends io.pulumi.resources.ResourceArgs {
      * Command line arguments to pass to the script. Arguments are separated by spaces. ex: -Name blue* -Location 'West US 2'
      * 
      */
-    @InputImport(name="arguments")
+    @Import(name="arguments")
       private final @Nullable Output<String> arguments;
 
     public Output<String> getArguments() {
@@ -37,7 +37,7 @@ public final class AzureCliScriptArgs extends io.pulumi.resources.ResourceArgs {
      * Azure CLI module version to be used.
      * 
      */
-    @InputImport(name="azCliVersion", required=true)
+    @Import(name="azCliVersion", required=true)
       private final Output<String> azCliVersion;
 
     public Output<String> getAzCliVersion() {
@@ -48,7 +48,7 @@ public final class AzureCliScriptArgs extends io.pulumi.resources.ResourceArgs {
      * The clean up preference when the script execution gets in a terminal state. Default setting is 'Always'.
      * 
      */
-    @InputImport(name="cleanupPreference")
+    @Import(name="cleanupPreference")
       private final @Nullable Output<Either<String,CleanupOptions>> cleanupPreference;
 
     public Output<Either<String,CleanupOptions>> getCleanupPreference() {
@@ -59,7 +59,7 @@ public final class AzureCliScriptArgs extends io.pulumi.resources.ResourceArgs {
      * Container settings.
      * 
      */
-    @InputImport(name="containerSettings")
+    @Import(name="containerSettings")
       private final @Nullable Output<ContainerConfigurationArgs> containerSettings;
 
     public Output<ContainerConfigurationArgs> getContainerSettings() {
@@ -70,7 +70,7 @@ public final class AzureCliScriptArgs extends io.pulumi.resources.ResourceArgs {
      * The environment variables to pass over to the script.
      * 
      */
-    @InputImport(name="environmentVariables")
+    @Import(name="environmentVariables")
       private final @Nullable Output<List<EnvironmentVariableArgs>> environmentVariables;
 
     public Output<List<EnvironmentVariableArgs>> getEnvironmentVariables() {
@@ -81,7 +81,7 @@ public final class AzureCliScriptArgs extends io.pulumi.resources.ResourceArgs {
      * Gets or sets how the deployment script should be forced to execute even if the script resource has not changed. Can be current time stamp or a GUID.
      * 
      */
-    @InputImport(name="forceUpdateTag")
+    @Import(name="forceUpdateTag")
       private final @Nullable Output<String> forceUpdateTag;
 
     public Output<String> getForceUpdateTag() {
@@ -92,7 +92,7 @@ public final class AzureCliScriptArgs extends io.pulumi.resources.ResourceArgs {
      * Optional property. Managed identity to be used for this deployment script. Currently, only user-assigned MSI is supported.
      * 
      */
-    @InputImport(name="identity")
+    @Import(name="identity")
       private final @Nullable Output<ManagedServiceIdentityArgs> identity;
 
     public Output<ManagedServiceIdentityArgs> getIdentity() {
@@ -104,7 +104,7 @@ public final class AzureCliScriptArgs extends io.pulumi.resources.ResourceArgs {
      * Expected value is 'AzureCLI'.
      * 
      */
-    @InputImport(name="kind", required=true)
+    @Import(name="kind", required=true)
       private final Output<String> kind;
 
     public Output<String> getKind() {
@@ -115,7 +115,7 @@ public final class AzureCliScriptArgs extends io.pulumi.resources.ResourceArgs {
      * The location of the ACI and the storage account for the deployment script.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -126,7 +126,7 @@ public final class AzureCliScriptArgs extends io.pulumi.resources.ResourceArgs {
      * Uri for the script. This is the entry point for the external script.
      * 
      */
-    @InputImport(name="primaryScriptUri")
+    @Import(name="primaryScriptUri")
       private final @Nullable Output<String> primaryScriptUri;
 
     public Output<String> getPrimaryScriptUri() {
@@ -137,7 +137,7 @@ public final class AzureCliScriptArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -148,7 +148,7 @@ public final class AzureCliScriptArgs extends io.pulumi.resources.ResourceArgs {
      * Interval for which the service retains the script resource after it reaches a terminal state. Resource will be deleted when this duration expires. Duration is based on ISO 8601 pattern (for example P1D means one day).
      * 
      */
-    @InputImport(name="retentionInterval", required=true)
+    @Import(name="retentionInterval", required=true)
       private final Output<String> retentionInterval;
 
     public Output<String> getRetentionInterval() {
@@ -159,7 +159,7 @@ public final class AzureCliScriptArgs extends io.pulumi.resources.ResourceArgs {
      * Script body.
      * 
      */
-    @InputImport(name="scriptContent")
+    @Import(name="scriptContent")
       private final @Nullable Output<String> scriptContent;
 
     public Output<String> getScriptContent() {
@@ -170,7 +170,7 @@ public final class AzureCliScriptArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the deployment script.
      * 
      */
-    @InputImport(name="scriptName")
+    @Import(name="scriptName")
       private final @Nullable Output<String> scriptName;
 
     public Output<String> getScriptName() {
@@ -181,7 +181,7 @@ public final class AzureCliScriptArgs extends io.pulumi.resources.ResourceArgs {
      * Storage Account settings.
      * 
      */
-    @InputImport(name="storageAccountSettings")
+    @Import(name="storageAccountSettings")
       private final @Nullable Output<StorageAccountConfigurationArgs> storageAccountSettings;
 
     public Output<StorageAccountConfigurationArgs> getStorageAccountSettings() {
@@ -192,7 +192,7 @@ public final class AzureCliScriptArgs extends io.pulumi.resources.ResourceArgs {
      * Supporting files for the external script.
      * 
      */
-    @InputImport(name="supportingScriptUris")
+    @Import(name="supportingScriptUris")
       private final @Nullable Output<List<String>> supportingScriptUris;
 
     public Output<List<String>> getSupportingScriptUris() {
@@ -203,7 +203,7 @@ public final class AzureCliScriptArgs extends io.pulumi.resources.ResourceArgs {
      * Resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -214,7 +214,7 @@ public final class AzureCliScriptArgs extends io.pulumi.resources.ResourceArgs {
      * Maximum allowed script execution time specified in ISO 8601 format. Default value is P1D
      * 
      */
-    @InputImport(name="timeout")
+    @Import(name="timeout")
       private final @Nullable Output<String> timeout;
 
     public Output<String> getTimeout() {

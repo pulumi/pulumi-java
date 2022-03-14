@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.advisor.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetSuppressionArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the suppression.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -27,7 +27,7 @@ public final class GetSuppressionArgs extends io.pulumi.resources.InvokeArgs {
      * The recommendation ID.
      * 
      */
-    @InputImport(name="recommendationId", required=true)
+    @Import(name="recommendationId", required=true)
       private final String recommendationId;
 
     public String getRecommendationId() {
@@ -38,7 +38,7 @@ public final class GetSuppressionArgs extends io.pulumi.resources.InvokeArgs {
      * The fully qualified Azure Resource Manager identifier of the resource to which the recommendation applies.
      * 
      */
-    @InputImport(name="resourceUri", required=true)
+    @Import(name="resourceUri", required=true)
       private final String resourceUri;
 
     public String getResourceUri() {

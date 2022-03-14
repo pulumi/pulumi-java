@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class StaticRouteResponse extends io.pulumi.resources.InvokeArgs {
      * List of all address prefixes.
      * 
      */
-    @InputImport(name="addressPrefixes")
+    @Import(name="addressPrefixes")
       private final @Nullable List<String> addressPrefixes;
 
     public List<String> getAddressPrefixes() {
@@ -34,7 +34,7 @@ public final class StaticRouteResponse extends io.pulumi.resources.InvokeArgs {
      * The name of the StaticRoute that is unique within a VnetRoute.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -45,7 +45,7 @@ public final class StaticRouteResponse extends io.pulumi.resources.InvokeArgs {
      * The ip address of the next hop.
      * 
      */
-    @InputImport(name="nextHopIpAddress")
+    @Import(name="nextHopIpAddress")
       private final @Nullable String nextHopIpAddress;
 
     public Optional<String> getNextHopIpAddress() {

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.migrate.inputs;
 import io.pulumi.azurenative.migrate.enums.ZoneRedundant;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class SqlDatabaseResourceSettingsArgs extends io.pulumi.resources.R
      * Expected value is 'Microsoft.Sql/servers/databases'.
      * 
      */
-    @InputImport(name="resourceType", required=true)
+    @Import(name="resourceType", required=true)
       private final Output<String> resourceType;
 
     public Output<String> getPropResourceType() {
@@ -36,7 +36,7 @@ public final class SqlDatabaseResourceSettingsArgs extends io.pulumi.resources.R
      * Gets or sets the target Resource name.
      * 
      */
-    @InputImport(name="targetResourceName", required=true)
+    @Import(name="targetResourceName", required=true)
       private final Output<String> targetResourceName;
 
     public Output<String> getTargetResourceName() {
@@ -47,7 +47,7 @@ public final class SqlDatabaseResourceSettingsArgs extends io.pulumi.resources.R
      * Defines the zone redundant resource setting.
      * 
      */
-    @InputImport(name="zoneRedundant")
+    @Import(name="zoneRedundant")
       private final @Nullable Output<Either<String,ZoneRedundant>> zoneRedundant;
 
     public Output<Either<String,ZoneRedundant>> getZoneRedundant() {

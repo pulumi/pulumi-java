@@ -17,7 +17,7 @@ import io.pulumi.azurenative.botservice.outputs.SlackChannelResponse;
 import io.pulumi.azurenative.botservice.outputs.SmsChannelResponse;
 import io.pulumi.azurenative.botservice.outputs.TelegramChannelResponse;
 import io.pulumi.azurenative.botservice.outputs.WebChatChannelResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +26,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetChannelResult {
     /**
      * Entity Tag
@@ -79,18 +79,18 @@ public final class GetChannelResult {
      */
     private final List<String> zones;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetChannelResult(
-        @OutputCustomType.Parameter("etag") @Nullable String etag,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("kind") @Nullable String kind,
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("properties") Object properties,
-        @OutputCustomType.Parameter("sku") @Nullable SkuResponse sku,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("zones") List<String> zones) {
+        @CustomType.Parameter("etag") @Nullable String etag,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("kind") @Nullable String kind,
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("properties") Object properties,
+        @CustomType.Parameter("sku") @Nullable SkuResponse sku,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("zones") List<String> zones) {
         this.etag = etag;
         this.id = id;
         this.kind = kind;

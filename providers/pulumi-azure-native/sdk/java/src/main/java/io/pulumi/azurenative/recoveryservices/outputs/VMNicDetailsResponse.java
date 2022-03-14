@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.recoveryservices.outputs;
 
 import io.pulumi.azurenative.recoveryservices.outputs.IPConfigResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VMNicDetailsResponse {
     /**
      * A value indicating whether the NIC has accelerated networking enabled.
@@ -150,35 +150,35 @@ public final class VMNicDetailsResponse {
      */
     private final @Nullable String vMSubnetName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VMNicDetailsResponse(
-        @OutputCustomType.Parameter("enableAcceleratedNetworkingOnRecovery") @Nullable Boolean enableAcceleratedNetworkingOnRecovery,
-        @OutputCustomType.Parameter("enableAcceleratedNetworkingOnTfo") @Nullable Boolean enableAcceleratedNetworkingOnTfo,
-        @OutputCustomType.Parameter("ipAddressType") @Nullable String ipAddressType,
-        @OutputCustomType.Parameter("nicId") @Nullable String nicId,
-        @OutputCustomType.Parameter("primaryNicStaticIPAddress") @Nullable String primaryNicStaticIPAddress,
-        @OutputCustomType.Parameter("recoveryLBBackendAddressPoolIds") @Nullable List<String> recoveryLBBackendAddressPoolIds,
-        @OutputCustomType.Parameter("recoveryNetworkSecurityGroupId") @Nullable String recoveryNetworkSecurityGroupId,
-        @OutputCustomType.Parameter("recoveryNicIpAddressType") @Nullable String recoveryNicIpAddressType,
-        @OutputCustomType.Parameter("recoveryNicName") @Nullable String recoveryNicName,
-        @OutputCustomType.Parameter("recoveryNicResourceGroupName") @Nullable String recoveryNicResourceGroupName,
-        @OutputCustomType.Parameter("recoveryPublicIpAddressId") @Nullable String recoveryPublicIpAddressId,
-        @OutputCustomType.Parameter("recoveryVMNetworkId") @Nullable String recoveryVMNetworkId,
-        @OutputCustomType.Parameter("recoveryVMSubnetName") @Nullable String recoveryVMSubnetName,
-        @OutputCustomType.Parameter("replicaNicId") @Nullable String replicaNicId,
-        @OutputCustomType.Parameter("replicaNicStaticIPAddress") @Nullable String replicaNicStaticIPAddress,
-        @OutputCustomType.Parameter("reuseExistingNic") @Nullable Boolean reuseExistingNic,
-        @OutputCustomType.Parameter("selectionType") @Nullable String selectionType,
-        @OutputCustomType.Parameter("sourceNicArmId") @Nullable String sourceNicArmId,
-        @OutputCustomType.Parameter("tfoIPConfigs") @Nullable List<IPConfigResponse> tfoIPConfigs,
-        @OutputCustomType.Parameter("tfoNetworkSecurityGroupId") @Nullable String tfoNetworkSecurityGroupId,
-        @OutputCustomType.Parameter("tfoRecoveryNicName") @Nullable String tfoRecoveryNicName,
-        @OutputCustomType.Parameter("tfoRecoveryNicResourceGroupName") @Nullable String tfoRecoveryNicResourceGroupName,
-        @OutputCustomType.Parameter("tfoReuseExistingNic") @Nullable Boolean tfoReuseExistingNic,
-        @OutputCustomType.Parameter("tfoVMNetworkId") @Nullable String tfoVMNetworkId,
-        @OutputCustomType.Parameter("tfoVMSubnetName") @Nullable String tfoVMSubnetName,
-        @OutputCustomType.Parameter("vMNetworkName") @Nullable String vMNetworkName,
-        @OutputCustomType.Parameter("vMSubnetName") @Nullable String vMSubnetName) {
+        @CustomType.Parameter("enableAcceleratedNetworkingOnRecovery") @Nullable Boolean enableAcceleratedNetworkingOnRecovery,
+        @CustomType.Parameter("enableAcceleratedNetworkingOnTfo") @Nullable Boolean enableAcceleratedNetworkingOnTfo,
+        @CustomType.Parameter("ipAddressType") @Nullable String ipAddressType,
+        @CustomType.Parameter("nicId") @Nullable String nicId,
+        @CustomType.Parameter("primaryNicStaticIPAddress") @Nullable String primaryNicStaticIPAddress,
+        @CustomType.Parameter("recoveryLBBackendAddressPoolIds") @Nullable List<String> recoveryLBBackendAddressPoolIds,
+        @CustomType.Parameter("recoveryNetworkSecurityGroupId") @Nullable String recoveryNetworkSecurityGroupId,
+        @CustomType.Parameter("recoveryNicIpAddressType") @Nullable String recoveryNicIpAddressType,
+        @CustomType.Parameter("recoveryNicName") @Nullable String recoveryNicName,
+        @CustomType.Parameter("recoveryNicResourceGroupName") @Nullable String recoveryNicResourceGroupName,
+        @CustomType.Parameter("recoveryPublicIpAddressId") @Nullable String recoveryPublicIpAddressId,
+        @CustomType.Parameter("recoveryVMNetworkId") @Nullable String recoveryVMNetworkId,
+        @CustomType.Parameter("recoveryVMSubnetName") @Nullable String recoveryVMSubnetName,
+        @CustomType.Parameter("replicaNicId") @Nullable String replicaNicId,
+        @CustomType.Parameter("replicaNicStaticIPAddress") @Nullable String replicaNicStaticIPAddress,
+        @CustomType.Parameter("reuseExistingNic") @Nullable Boolean reuseExistingNic,
+        @CustomType.Parameter("selectionType") @Nullable String selectionType,
+        @CustomType.Parameter("sourceNicArmId") @Nullable String sourceNicArmId,
+        @CustomType.Parameter("tfoIPConfigs") @Nullable List<IPConfigResponse> tfoIPConfigs,
+        @CustomType.Parameter("tfoNetworkSecurityGroupId") @Nullable String tfoNetworkSecurityGroupId,
+        @CustomType.Parameter("tfoRecoveryNicName") @Nullable String tfoRecoveryNicName,
+        @CustomType.Parameter("tfoRecoveryNicResourceGroupName") @Nullable String tfoRecoveryNicResourceGroupName,
+        @CustomType.Parameter("tfoReuseExistingNic") @Nullable Boolean tfoReuseExistingNic,
+        @CustomType.Parameter("tfoVMNetworkId") @Nullable String tfoVMNetworkId,
+        @CustomType.Parameter("tfoVMSubnetName") @Nullable String tfoVMSubnetName,
+        @CustomType.Parameter("vMNetworkName") @Nullable String vMNetworkName,
+        @CustomType.Parameter("vMSubnetName") @Nullable String vMSubnetName) {
         this.enableAcceleratedNetworkingOnRecovery = enableAcceleratedNetworkingOnRecovery;
         this.enableAcceleratedNetworkingOnTfo = enableAcceleratedNetworkingOnTfo;
         this.ipAddressType = ipAddressType;

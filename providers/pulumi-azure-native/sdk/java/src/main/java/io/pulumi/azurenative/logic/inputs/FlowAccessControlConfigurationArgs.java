@@ -5,7 +5,7 @@ package io.pulumi.azurenative.logic.inputs;
 
 import io.pulumi.azurenative.logic.inputs.FlowAccessControlConfigurationPolicyArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -22,7 +22,7 @@ public final class FlowAccessControlConfigurationArgs extends io.pulumi.resource
      * The access control configuration for workflow actions.
      * 
      */
-    @InputImport(name="actions")
+    @Import(name="actions")
       private final @Nullable Output<FlowAccessControlConfigurationPolicyArgs> actions;
 
     public Output<FlowAccessControlConfigurationPolicyArgs> getActions() {
@@ -33,7 +33,7 @@ public final class FlowAccessControlConfigurationArgs extends io.pulumi.resource
      * The access control configuration for accessing workflow run contents.
      * 
      */
-    @InputImport(name="contents")
+    @Import(name="contents")
       private final @Nullable Output<FlowAccessControlConfigurationPolicyArgs> contents;
 
     public Output<FlowAccessControlConfigurationPolicyArgs> getContents() {
@@ -44,7 +44,7 @@ public final class FlowAccessControlConfigurationArgs extends io.pulumi.resource
      * The access control configuration for invoking workflow triggers.
      * 
      */
-    @InputImport(name="triggers")
+    @Import(name="triggers")
       private final @Nullable Output<FlowAccessControlConfigurationPolicyArgs> triggers;
 
     public Output<FlowAccessControlConfigurationPolicyArgs> getTriggers() {
@@ -55,7 +55,7 @@ public final class FlowAccessControlConfigurationArgs extends io.pulumi.resource
      * The access control configuration for workflow management.
      * 
      */
-    @InputImport(name="workflowManagement")
+    @Import(name="workflowManagement")
       private final @Nullable Output<FlowAccessControlConfigurationPolicyArgs> workflowManagement;
 
     public Output<FlowAccessControlConfigurationPolicyArgs> getWorkflowManagement() {

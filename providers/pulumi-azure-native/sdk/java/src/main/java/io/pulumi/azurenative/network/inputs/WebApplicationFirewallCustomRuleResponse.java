@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.MatchConditionResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class WebApplicationFirewallCustomRuleResponse extends io.pulumi.re
      * Type of Actions.
      * 
      */
-    @InputImport(name="action", required=true)
+    @Import(name="action", required=true)
       private final String action;
 
     public String getAction() {
@@ -36,7 +36,7 @@ public final class WebApplicationFirewallCustomRuleResponse extends io.pulumi.re
      * A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    @InputImport(name="etag", required=true)
+    @Import(name="etag", required=true)
       private final String etag;
 
     public String getEtag() {
@@ -47,7 +47,7 @@ public final class WebApplicationFirewallCustomRuleResponse extends io.pulumi.re
      * List of match conditions.
      * 
      */
-    @InputImport(name="matchConditions", required=true)
+    @Import(name="matchConditions", required=true)
       private final List<MatchConditionResponse> matchConditions;
 
     public List<MatchConditionResponse> getMatchConditions() {
@@ -58,7 +58,7 @@ public final class WebApplicationFirewallCustomRuleResponse extends io.pulumi.re
      * The name of the resource that is unique within a policy. This name can be used to access the resource.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -69,7 +69,7 @@ public final class WebApplicationFirewallCustomRuleResponse extends io.pulumi.re
      * Priority of the rule. Rules with a lower value will be evaluated before rules with a higher value.
      * 
      */
-    @InputImport(name="priority", required=true)
+    @Import(name="priority", required=true)
       private final Integer priority;
 
     public Integer getPriority() {
@@ -80,7 +80,7 @@ public final class WebApplicationFirewallCustomRuleResponse extends io.pulumi.re
      * The rule type.
      * 
      */
-    @InputImport(name="ruleType", required=true)
+    @Import(name="ruleType", required=true)
       private final String ruleType;
 
     public String getRuleType() {

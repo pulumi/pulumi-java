@@ -5,7 +5,7 @@ package io.pulumi.azurenative.eventgrid;
 
 import io.pulumi.azurenative.eventgrid.inputs.IdentityInfoArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class SystemTopicArgs extends io.pulumi.resources.ResourceArgs {
      * Identity information for the resource.
      * 
      */
-    @InputImport(name="identity")
+    @Import(name="identity")
       private final @Nullable Output<IdentityInfoArgs> identity;
 
     public Output<IdentityInfoArgs> getIdentity() {
@@ -31,7 +31,7 @@ public final class SystemTopicArgs extends io.pulumi.resources.ResourceArgs {
      * Location of the resource.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -42,7 +42,7 @@ public final class SystemTopicArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group within the user's subscription.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -53,7 +53,7 @@ public final class SystemTopicArgs extends io.pulumi.resources.ResourceArgs {
      * Source for the system topic.
      * 
      */
-    @InputImport(name="source")
+    @Import(name="source")
       private final @Nullable Output<String> source;
 
     public Output<String> getSource() {
@@ -64,7 +64,7 @@ public final class SystemTopicArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the system topic.
      * 
      */
-    @InputImport(name="systemTopicName")
+    @Import(name="systemTopicName")
       private final @Nullable Output<String> systemTopicName;
 
     public Output<String> getSystemTopicName() {
@@ -75,7 +75,7 @@ public final class SystemTopicArgs extends io.pulumi.resources.ResourceArgs {
      * Tags of the resource.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -86,7 +86,7 @@ public final class SystemTopicArgs extends io.pulumi.resources.ResourceArgs {
      * TopicType for the system topic.
      * 
      */
-    @InputImport(name="topicType")
+    @Import(name="topicType")
       private final @Nullable Output<String> topicType;
 
     public Output<String> getTopicType() {

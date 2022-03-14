@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.netapp.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ExportPolicyRuleResponse {
     /**
      * Client ingress specification as comma separated string with IPv4 CIDRs, IPv4 host addresses and host names
@@ -84,22 +84,22 @@ public final class ExportPolicyRuleResponse {
      */
     private final @Nullable Boolean unixReadWrite;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ExportPolicyRuleResponse(
-        @OutputCustomType.Parameter("allowedClients") @Nullable String allowedClients,
-        @OutputCustomType.Parameter("cifs") @Nullable Boolean cifs,
-        @OutputCustomType.Parameter("hasRootAccess") @Nullable Boolean hasRootAccess,
-        @OutputCustomType.Parameter("kerberos5ReadOnly") @Nullable Boolean kerberos5ReadOnly,
-        @OutputCustomType.Parameter("kerberos5ReadWrite") @Nullable Boolean kerberos5ReadWrite,
-        @OutputCustomType.Parameter("kerberos5iReadOnly") @Nullable Boolean kerberos5iReadOnly,
-        @OutputCustomType.Parameter("kerberos5iReadWrite") @Nullable Boolean kerberos5iReadWrite,
-        @OutputCustomType.Parameter("kerberos5pReadOnly") @Nullable Boolean kerberos5pReadOnly,
-        @OutputCustomType.Parameter("kerberos5pReadWrite") @Nullable Boolean kerberos5pReadWrite,
-        @OutputCustomType.Parameter("nfsv3") @Nullable Boolean nfsv3,
-        @OutputCustomType.Parameter("nfsv41") @Nullable Boolean nfsv41,
-        @OutputCustomType.Parameter("ruleIndex") @Nullable Integer ruleIndex,
-        @OutputCustomType.Parameter("unixReadOnly") @Nullable Boolean unixReadOnly,
-        @OutputCustomType.Parameter("unixReadWrite") @Nullable Boolean unixReadWrite) {
+        @CustomType.Parameter("allowedClients") @Nullable String allowedClients,
+        @CustomType.Parameter("cifs") @Nullable Boolean cifs,
+        @CustomType.Parameter("hasRootAccess") @Nullable Boolean hasRootAccess,
+        @CustomType.Parameter("kerberos5ReadOnly") @Nullable Boolean kerberos5ReadOnly,
+        @CustomType.Parameter("kerberos5ReadWrite") @Nullable Boolean kerberos5ReadWrite,
+        @CustomType.Parameter("kerberos5iReadOnly") @Nullable Boolean kerberos5iReadOnly,
+        @CustomType.Parameter("kerberos5iReadWrite") @Nullable Boolean kerberos5iReadWrite,
+        @CustomType.Parameter("kerberos5pReadOnly") @Nullable Boolean kerberos5pReadOnly,
+        @CustomType.Parameter("kerberos5pReadWrite") @Nullable Boolean kerberos5pReadWrite,
+        @CustomType.Parameter("nfsv3") @Nullable Boolean nfsv3,
+        @CustomType.Parameter("nfsv41") @Nullable Boolean nfsv41,
+        @CustomType.Parameter("ruleIndex") @Nullable Integer ruleIndex,
+        @CustomType.Parameter("unixReadOnly") @Nullable Boolean unixReadOnly,
+        @CustomType.Parameter("unixReadWrite") @Nullable Boolean unixReadWrite) {
         this.allowedClients = allowedClients;
         this.cifs = cifs;
         this.hasRootAccess = hasRootAccess;

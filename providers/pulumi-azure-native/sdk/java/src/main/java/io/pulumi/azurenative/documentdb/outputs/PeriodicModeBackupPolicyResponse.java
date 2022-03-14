@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.documentdb.outputs;
 
 import io.pulumi.azurenative.documentdb.outputs.PeriodicModePropertiesResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PeriodicModeBackupPolicyResponse {
     /**
      * Configuration values for periodic mode backup
@@ -24,10 +24,10 @@ public final class PeriodicModeBackupPolicyResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PeriodicModeBackupPolicyResponse(
-        @OutputCustomType.Parameter("periodicModeProperties") @Nullable PeriodicModePropertiesResponse periodicModeProperties,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("periodicModeProperties") @Nullable PeriodicModePropertiesResponse periodicModeProperties,
+        @CustomType.Parameter("type") String type) {
         this.periodicModeProperties = periodicModeProperties;
         this.type = type;
     }

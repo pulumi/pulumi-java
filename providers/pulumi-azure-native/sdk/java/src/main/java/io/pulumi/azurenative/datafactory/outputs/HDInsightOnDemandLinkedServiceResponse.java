@@ -11,7 +11,7 @@ import io.pulumi.azurenative.datafactory.outputs.ParameterSpecificationResponse;
 import io.pulumi.azurenative.datafactory.outputs.ScriptActionResponse;
 import io.pulumi.azurenative.datafactory.outputs.SecureStringResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +20,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class HDInsightOnDemandLinkedServiceResponse {
     /**
      * Specifies additional storage accounts for the HDInsight linked service so that the Data Factory service can register them on your behalf.
@@ -219,47 +219,47 @@ public final class HDInsightOnDemandLinkedServiceResponse {
      */
     private final @Nullable Object zookeeperNodeSize;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private HDInsightOnDemandLinkedServiceResponse(
-        @OutputCustomType.Parameter("additionalLinkedServiceNames") @Nullable List<LinkedServiceReferenceResponse> additionalLinkedServiceNames,
-        @OutputCustomType.Parameter("annotations") @Nullable List<Object> annotations,
-        @OutputCustomType.Parameter("clusterNamePrefix") @Nullable Object clusterNamePrefix,
-        @OutputCustomType.Parameter("clusterPassword") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> clusterPassword,
-        @OutputCustomType.Parameter("clusterResourceGroup") Object clusterResourceGroup,
-        @OutputCustomType.Parameter("clusterSize") Object clusterSize,
-        @OutputCustomType.Parameter("clusterSshPassword") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> clusterSshPassword,
-        @OutputCustomType.Parameter("clusterSshUserName") @Nullable Object clusterSshUserName,
-        @OutputCustomType.Parameter("clusterType") @Nullable Object clusterType,
-        @OutputCustomType.Parameter("clusterUserName") @Nullable Object clusterUserName,
-        @OutputCustomType.Parameter("connectVia") @Nullable IntegrationRuntimeReferenceResponse connectVia,
-        @OutputCustomType.Parameter("coreConfiguration") @Nullable Object coreConfiguration,
-        @OutputCustomType.Parameter("credential") @Nullable CredentialReferenceResponse credential,
-        @OutputCustomType.Parameter("dataNodeSize") @Nullable Object dataNodeSize,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("encryptedCredential") @Nullable Object encryptedCredential,
-        @OutputCustomType.Parameter("hBaseConfiguration") @Nullable Object hBaseConfiguration,
-        @OutputCustomType.Parameter("hcatalogLinkedServiceName") @Nullable LinkedServiceReferenceResponse hcatalogLinkedServiceName,
-        @OutputCustomType.Parameter("hdfsConfiguration") @Nullable Object hdfsConfiguration,
-        @OutputCustomType.Parameter("headNodeSize") @Nullable Object headNodeSize,
-        @OutputCustomType.Parameter("hiveConfiguration") @Nullable Object hiveConfiguration,
-        @OutputCustomType.Parameter("hostSubscriptionId") Object hostSubscriptionId,
-        @OutputCustomType.Parameter("linkedServiceName") LinkedServiceReferenceResponse linkedServiceName,
-        @OutputCustomType.Parameter("mapReduceConfiguration") @Nullable Object mapReduceConfiguration,
-        @OutputCustomType.Parameter("oozieConfiguration") @Nullable Object oozieConfiguration,
-        @OutputCustomType.Parameter("parameters") @Nullable Map<String,ParameterSpecificationResponse> parameters,
-        @OutputCustomType.Parameter("scriptActions") @Nullable List<ScriptActionResponse> scriptActions,
-        @OutputCustomType.Parameter("servicePrincipalId") @Nullable Object servicePrincipalId,
-        @OutputCustomType.Parameter("servicePrincipalKey") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey,
-        @OutputCustomType.Parameter("sparkVersion") @Nullable Object sparkVersion,
-        @OutputCustomType.Parameter("stormConfiguration") @Nullable Object stormConfiguration,
-        @OutputCustomType.Parameter("subnetName") @Nullable Object subnetName,
-        @OutputCustomType.Parameter("tenant") Object tenant,
-        @OutputCustomType.Parameter("timeToLive") Object timeToLive,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("version") Object version,
-        @OutputCustomType.Parameter("virtualNetworkId") @Nullable Object virtualNetworkId,
-        @OutputCustomType.Parameter("yarnConfiguration") @Nullable Object yarnConfiguration,
-        @OutputCustomType.Parameter("zookeeperNodeSize") @Nullable Object zookeeperNodeSize) {
+        @CustomType.Parameter("additionalLinkedServiceNames") @Nullable List<LinkedServiceReferenceResponse> additionalLinkedServiceNames,
+        @CustomType.Parameter("annotations") @Nullable List<Object> annotations,
+        @CustomType.Parameter("clusterNamePrefix") @Nullable Object clusterNamePrefix,
+        @CustomType.Parameter("clusterPassword") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> clusterPassword,
+        @CustomType.Parameter("clusterResourceGroup") Object clusterResourceGroup,
+        @CustomType.Parameter("clusterSize") Object clusterSize,
+        @CustomType.Parameter("clusterSshPassword") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> clusterSshPassword,
+        @CustomType.Parameter("clusterSshUserName") @Nullable Object clusterSshUserName,
+        @CustomType.Parameter("clusterType") @Nullable Object clusterType,
+        @CustomType.Parameter("clusterUserName") @Nullable Object clusterUserName,
+        @CustomType.Parameter("connectVia") @Nullable IntegrationRuntimeReferenceResponse connectVia,
+        @CustomType.Parameter("coreConfiguration") @Nullable Object coreConfiguration,
+        @CustomType.Parameter("credential") @Nullable CredentialReferenceResponse credential,
+        @CustomType.Parameter("dataNodeSize") @Nullable Object dataNodeSize,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("encryptedCredential") @Nullable Object encryptedCredential,
+        @CustomType.Parameter("hBaseConfiguration") @Nullable Object hBaseConfiguration,
+        @CustomType.Parameter("hcatalogLinkedServiceName") @Nullable LinkedServiceReferenceResponse hcatalogLinkedServiceName,
+        @CustomType.Parameter("hdfsConfiguration") @Nullable Object hdfsConfiguration,
+        @CustomType.Parameter("headNodeSize") @Nullable Object headNodeSize,
+        @CustomType.Parameter("hiveConfiguration") @Nullable Object hiveConfiguration,
+        @CustomType.Parameter("hostSubscriptionId") Object hostSubscriptionId,
+        @CustomType.Parameter("linkedServiceName") LinkedServiceReferenceResponse linkedServiceName,
+        @CustomType.Parameter("mapReduceConfiguration") @Nullable Object mapReduceConfiguration,
+        @CustomType.Parameter("oozieConfiguration") @Nullable Object oozieConfiguration,
+        @CustomType.Parameter("parameters") @Nullable Map<String,ParameterSpecificationResponse> parameters,
+        @CustomType.Parameter("scriptActions") @Nullable List<ScriptActionResponse> scriptActions,
+        @CustomType.Parameter("servicePrincipalId") @Nullable Object servicePrincipalId,
+        @CustomType.Parameter("servicePrincipalKey") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey,
+        @CustomType.Parameter("sparkVersion") @Nullable Object sparkVersion,
+        @CustomType.Parameter("stormConfiguration") @Nullable Object stormConfiguration,
+        @CustomType.Parameter("subnetName") @Nullable Object subnetName,
+        @CustomType.Parameter("tenant") Object tenant,
+        @CustomType.Parameter("timeToLive") Object timeToLive,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("version") Object version,
+        @CustomType.Parameter("virtualNetworkId") @Nullable Object virtualNetworkId,
+        @CustomType.Parameter("yarnConfiguration") @Nullable Object yarnConfiguration,
+        @CustomType.Parameter("zookeeperNodeSize") @Nullable Object zookeeperNodeSize) {
         this.additionalLinkedServiceNames = additionalLinkedServiceNames;
         this.annotations = annotations;
         this.clusterNamePrefix = clusterNamePrefix;

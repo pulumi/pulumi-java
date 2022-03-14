@@ -7,7 +7,7 @@ import io.pulumi.azurenative.operationalinsights.enums.ColumnDataTypeHintEnum;
 import io.pulumi.azurenative.operationalinsights.enums.ColumnTypeEnum;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class ColumnArgs extends io.pulumi.resources.ResourceArgs {
      * Column data type logical hint.
      * 
      */
-    @InputImport(name="dataTypeHint")
+    @Import(name="dataTypeHint")
       private final @Nullable Output<Either<String,ColumnDataTypeHintEnum>> dataTypeHint;
 
     public Output<Either<String,ColumnDataTypeHintEnum>> getDataTypeHint() {
@@ -36,7 +36,7 @@ public final class ColumnArgs extends io.pulumi.resources.ResourceArgs {
      * Column description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -47,7 +47,7 @@ public final class ColumnArgs extends io.pulumi.resources.ResourceArgs {
      * Column display name.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -58,7 +58,7 @@ public final class ColumnArgs extends io.pulumi.resources.ResourceArgs {
      * Column name.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -69,7 +69,7 @@ public final class ColumnArgs extends io.pulumi.resources.ResourceArgs {
      * Column data type.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<Either<String,ColumnTypeEnum>> type;
 
     public Output<Either<String,ColumnTypeEnum>> getType() {

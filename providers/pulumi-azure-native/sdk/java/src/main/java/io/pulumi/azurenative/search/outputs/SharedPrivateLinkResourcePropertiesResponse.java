@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.search.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SharedPrivateLinkResourcePropertiesResponse {
     /**
      * The group id from the provider of resource the shared private link resource is for.
@@ -42,14 +42,14 @@ public final class SharedPrivateLinkResourcePropertiesResponse {
      */
     private final @Nullable String status;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SharedPrivateLinkResourcePropertiesResponse(
-        @OutputCustomType.Parameter("groupId") @Nullable String groupId,
-        @OutputCustomType.Parameter("privateLinkResourceId") @Nullable String privateLinkResourceId,
-        @OutputCustomType.Parameter("provisioningState") @Nullable String provisioningState,
-        @OutputCustomType.Parameter("requestMessage") @Nullable String requestMessage,
-        @OutputCustomType.Parameter("resourceRegion") @Nullable String resourceRegion,
-        @OutputCustomType.Parameter("status") @Nullable String status) {
+        @CustomType.Parameter("groupId") @Nullable String groupId,
+        @CustomType.Parameter("privateLinkResourceId") @Nullable String privateLinkResourceId,
+        @CustomType.Parameter("provisioningState") @Nullable String provisioningState,
+        @CustomType.Parameter("requestMessage") @Nullable String requestMessage,
+        @CustomType.Parameter("resourceRegion") @Nullable String resourceRegion,
+        @CustomType.Parameter("status") @Nullable String status) {
         this.groupId = groupId;
         this.privateLinkResourceId = privateLinkResourceId;
         this.provisioningState = provisioningState;

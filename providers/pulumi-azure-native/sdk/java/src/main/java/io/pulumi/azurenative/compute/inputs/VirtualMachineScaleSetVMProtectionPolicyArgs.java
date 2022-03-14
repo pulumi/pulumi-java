@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class VirtualMachineScaleSetVMProtectionPolicyArgs extends io.pulum
      * Indicates that the virtual machine scale set VM shouldn't be considered for deletion during a scale-in operation.
      * 
      */
-    @InputImport(name="protectFromScaleIn")
+    @Import(name="protectFromScaleIn")
       private final @Nullable Output<Boolean> protectFromScaleIn;
 
     public Output<Boolean> getProtectFromScaleIn() {
@@ -33,7 +33,7 @@ public final class VirtualMachineScaleSetVMProtectionPolicyArgs extends io.pulum
      * Indicates that model updates or actions (including scale-in) initiated on the virtual machine scale set should not be applied to the virtual machine scale set VM.
      * 
      */
-    @InputImport(name="protectFromScaleSetActions")
+    @Import(name="protectFromScaleSetActions")
       private final @Nullable Output<Boolean> protectFromScaleSetActions;
 
     public Output<Boolean> getProtectFromScaleSetActions() {

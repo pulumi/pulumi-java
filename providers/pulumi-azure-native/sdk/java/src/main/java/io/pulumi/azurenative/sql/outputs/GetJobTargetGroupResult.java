@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.sql.outputs;
 
 import io.pulumi.azurenative.sql.outputs.JobTargetResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetJobTargetGroupResult {
     /**
      * Resource ID.
@@ -32,12 +32,12 @@ public final class GetJobTargetGroupResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetJobTargetGroupResult(
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("members") List<JobTargetResponse> members,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("members") List<JobTargetResponse> members,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("type") String type) {
         this.id = id;
         this.members = members;
         this.name = name;

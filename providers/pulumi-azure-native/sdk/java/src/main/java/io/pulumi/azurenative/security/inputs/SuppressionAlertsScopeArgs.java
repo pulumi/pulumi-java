@@ -5,7 +5,7 @@ package io.pulumi.azurenative.security.inputs;
 
 import io.pulumi.azurenative.security.inputs.ScopeElementArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class SuppressionAlertsScopeArgs extends io.pulumi.resources.Resour
      * All the conditions inside need to be true in order to suppress the alert
      * 
      */
-    @InputImport(name="allOf", required=true)
+    @Import(name="allOf", required=true)
       private final Output<List<ScopeElementArgs>> allOf;
 
     public Output<List<ScopeElementArgs>> getAllOf() {

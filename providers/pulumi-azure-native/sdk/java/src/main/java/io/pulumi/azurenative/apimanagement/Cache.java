@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.apimanagement.CacheArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -34,7 +34,7 @@ public class Cache extends io.pulumi.resources.CustomResource {
      * Runtime connection string to cache
      * 
      */
-    @OutputExport(name="connectionString", type=String.class, parameters={})
+    @Export(name="connectionString", type=String.class, parameters={})
     private Output<String> connectionString;
 
     /**
@@ -48,7 +48,7 @@ public class Cache extends io.pulumi.resources.CustomResource {
      * Cache description
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -62,7 +62,7 @@ public class Cache extends io.pulumi.resources.CustomResource {
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -76,7 +76,7 @@ public class Cache extends io.pulumi.resources.CustomResource {
      * Original uri of entity in external system cache points to
      * 
      */
-    @OutputExport(name="resourceId", type=String.class, parameters={})
+    @Export(name="resourceId", type=String.class, parameters={})
     private Output</* @Nullable */ String> resourceId;
 
     /**
@@ -90,7 +90,7 @@ public class Cache extends io.pulumi.resources.CustomResource {
      * Resource type for API Management resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -104,7 +104,7 @@ public class Cache extends io.pulumi.resources.CustomResource {
      * Location identifier to use cache from (should be either 'default' or valid Azure region identifier)
      * 
      */
-    @OutputExport(name="useFromLocation", type=String.class, parameters={})
+    @Export(name="useFromLocation", type=String.class, parameters={})
     private Output<String> useFromLocation;
 
     /**

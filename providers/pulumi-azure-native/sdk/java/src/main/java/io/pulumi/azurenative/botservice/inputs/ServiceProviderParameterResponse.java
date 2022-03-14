@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.botservice.inputs;
 
 import io.pulumi.azurenative.botservice.inputs.ServiceProviderParameterResponseMetadata;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class ServiceProviderParameterResponse extends io.pulumi.resources.
      * Default Name for the Service Provider
      * 
      */
-    @InputImport(name="default", required=true)
+    @Import(name="default", required=true)
       private final String $default;
 
     public String get$default() {
@@ -32,7 +32,7 @@ public final class ServiceProviderParameterResponse extends io.pulumi.resources.
      * Description of the Service Provider
      * 
      */
-    @InputImport(name="description", required=true)
+    @Import(name="description", required=true)
       private final String description;
 
     public String getDescription() {
@@ -43,7 +43,7 @@ public final class ServiceProviderParameterResponse extends io.pulumi.resources.
      * Display Name of the Service Provider
      * 
      */
-    @InputImport(name="displayName", required=true)
+    @Import(name="displayName", required=true)
       private final String displayName;
 
     public String getDisplayName() {
@@ -54,7 +54,7 @@ public final class ServiceProviderParameterResponse extends io.pulumi.resources.
      * Help Url for the  Service Provider
      * 
      */
-    @InputImport(name="helpUrl", required=true)
+    @Import(name="helpUrl", required=true)
       private final String helpUrl;
 
     public String getHelpUrl() {
@@ -65,7 +65,7 @@ public final class ServiceProviderParameterResponse extends io.pulumi.resources.
      * Meta data for the Service Provider
      * 
      */
-    @InputImport(name="metadata", required=true)
+    @Import(name="metadata", required=true)
       private final ServiceProviderParameterResponseMetadata metadata;
 
     public ServiceProviderParameterResponseMetadata getMetadata() {
@@ -76,7 +76,7 @@ public final class ServiceProviderParameterResponse extends io.pulumi.resources.
      * Name of the Service Provider
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -87,7 +87,7 @@ public final class ServiceProviderParameterResponse extends io.pulumi.resources.
      * Type of the Service Provider
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

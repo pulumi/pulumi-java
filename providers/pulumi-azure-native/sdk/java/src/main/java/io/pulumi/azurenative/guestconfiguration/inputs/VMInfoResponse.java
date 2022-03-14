@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.guestconfiguration.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class VMInfoResponse extends io.pulumi.resources.InvokeArgs {
      * Azure resource Id of the VM.
      * 
      */
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final String id;
 
     public String getId() {
@@ -31,7 +31,7 @@ public final class VMInfoResponse extends io.pulumi.resources.InvokeArgs {
      * UUID(Universally Unique Identifier) of the VM.
      * 
      */
-    @InputImport(name="uuid", required=true)
+    @Import(name="uuid", required=true)
       private final String uuid;
 
     public String getUuid() {

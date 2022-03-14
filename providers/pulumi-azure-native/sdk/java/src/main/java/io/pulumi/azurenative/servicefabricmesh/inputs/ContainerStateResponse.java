@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.servicefabricmesh.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class ContainerStateResponse extends io.pulumi.resources.InvokeArgs
      * Human-readable status of this state.
      * 
      */
-    @InputImport(name="detailStatus")
+    @Import(name="detailStatus")
       private final @Nullable String detailStatus;
 
     public Optional<String> getDetailStatus() {
@@ -33,7 +33,7 @@ public final class ContainerStateResponse extends io.pulumi.resources.InvokeArgs
      * The container exit code.
      * 
      */
-    @InputImport(name="exitCode")
+    @Import(name="exitCode")
       private final @Nullable String exitCode;
 
     public Optional<String> getExitCode() {
@@ -44,7 +44,7 @@ public final class ContainerStateResponse extends io.pulumi.resources.InvokeArgs
      * Date/time when the container state finished.
      * 
      */
-    @InputImport(name="finishTime")
+    @Import(name="finishTime")
       private final @Nullable String finishTime;
 
     public Optional<String> getFinishTime() {
@@ -55,7 +55,7 @@ public final class ContainerStateResponse extends io.pulumi.resources.InvokeArgs
      * Date/time when the container state started.
      * 
      */
-    @InputImport(name="startTime")
+    @Import(name="startTime")
       private final @Nullable String startTime;
 
     public Optional<String> getStartTime() {
@@ -66,7 +66,7 @@ public final class ContainerStateResponse extends io.pulumi.resources.InvokeArgs
      * The state of this container
      * 
      */
-    @InputImport(name="state")
+    @Import(name="state")
       private final @Nullable String state;
 
     public Optional<String> getState() {

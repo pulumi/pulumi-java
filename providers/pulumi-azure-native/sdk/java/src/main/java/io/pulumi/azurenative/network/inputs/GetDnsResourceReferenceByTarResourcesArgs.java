@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.SubResource;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +19,7 @@ public final class GetDnsResourceReferenceByTarResourcesArgs extends io.pulumi.r
      * A list of references to azure resources for which referencing dns records need to be queried.
      * 
      */
-    @InputImport(name="targetResources")
+    @Import(name="targetResources")
       private final @Nullable List<SubResource> targetResources;
 
     public List<SubResource> getTargetResources() {

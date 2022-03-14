@@ -11,7 +11,7 @@ import io.pulumi.azurenative.insights.outputs.MetricAlertSingleResourceMultipleM
 import io.pulumi.azurenative.insights.outputs.WebtestLocationAvailabilityCriteriaResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -42,7 +42,7 @@ public class MetricAlert extends io.pulumi.resources.CustomResource {
      * the array of actions that are performed when the alert rule becomes active, and when an alert condition is resolved.
      * 
      */
-    @OutputExport(name="actions", type=List.class, parameters={MetricAlertActionResponse.class})
+    @Export(name="actions", type=List.class, parameters={MetricAlertActionResponse.class})
     private Output</* @Nullable */ List<MetricAlertActionResponse>> actions;
 
     /**
@@ -56,7 +56,7 @@ public class MetricAlert extends io.pulumi.resources.CustomResource {
      * the flag that indicates whether the alert should be auto resolved or not. The default is true.
      * 
      */
-    @OutputExport(name="autoMitigate", type=Boolean.class, parameters={})
+    @Export(name="autoMitigate", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> autoMitigate;
 
     /**
@@ -70,7 +70,7 @@ public class MetricAlert extends io.pulumi.resources.CustomResource {
      * defines the specific alert criteria information.
      * 
      */
-    @OutputExport(name="criteria", type=Object.class, parameters={})
+    @Export(name="criteria", type=Object.class, parameters={})
     private Output<Object> criteria;
 
     /**
@@ -84,7 +84,7 @@ public class MetricAlert extends io.pulumi.resources.CustomResource {
      * the description of the metric alert that will be included in the alert email.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -98,7 +98,7 @@ public class MetricAlert extends io.pulumi.resources.CustomResource {
      * the flag that indicates whether the metric alert is enabled.
      * 
      */
-    @OutputExport(name="enabled", type=Boolean.class, parameters={})
+    @Export(name="enabled", type=Boolean.class, parameters={})
     private Output<Boolean> enabled;
 
     /**
@@ -112,7 +112,7 @@ public class MetricAlert extends io.pulumi.resources.CustomResource {
      * how often the metric alert is evaluated represented in ISO 8601 duration format.
      * 
      */
-    @OutputExport(name="evaluationFrequency", type=String.class, parameters={})
+    @Export(name="evaluationFrequency", type=String.class, parameters={})
     private Output<String> evaluationFrequency;
 
     /**
@@ -126,7 +126,7 @@ public class MetricAlert extends io.pulumi.resources.CustomResource {
      * the value indicating whether this alert rule is migrated.
      * 
      */
-    @OutputExport(name="isMigrated", type=Boolean.class, parameters={})
+    @Export(name="isMigrated", type=Boolean.class, parameters={})
     private Output<Boolean> isMigrated;
 
     /**
@@ -140,7 +140,7 @@ public class MetricAlert extends io.pulumi.resources.CustomResource {
      * Last time the rule was updated in ISO8601 format.
      * 
      */
-    @OutputExport(name="lastUpdatedTime", type=String.class, parameters={})
+    @Export(name="lastUpdatedTime", type=String.class, parameters={})
     private Output<String> lastUpdatedTime;
 
     /**
@@ -154,7 +154,7 @@ public class MetricAlert extends io.pulumi.resources.CustomResource {
      * Resource location
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -168,7 +168,7 @@ public class MetricAlert extends io.pulumi.resources.CustomResource {
      * Azure resource name
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -182,7 +182,7 @@ public class MetricAlert extends io.pulumi.resources.CustomResource {
      * the list of resource id's that this metric alert is scoped to.
      * 
      */
-    @OutputExport(name="scopes", type=List.class, parameters={String.class})
+    @Export(name="scopes", type=List.class, parameters={String.class})
     private Output<List<String>> scopes;
 
     /**
@@ -196,7 +196,7 @@ public class MetricAlert extends io.pulumi.resources.CustomResource {
      * Alert severity {0, 1, 2, 3, 4}
      * 
      */
-    @OutputExport(name="severity", type=Integer.class, parameters={})
+    @Export(name="severity", type=Integer.class, parameters={})
     private Output<Integer> severity;
 
     /**
@@ -210,7 +210,7 @@ public class MetricAlert extends io.pulumi.resources.CustomResource {
      * Resource tags
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -224,7 +224,7 @@ public class MetricAlert extends io.pulumi.resources.CustomResource {
      * the region of the target resource(s) on which the alert is created/updated. Mandatory if the scope contains a subscription, resource group, or more than one resource.
      * 
      */
-    @OutputExport(name="targetResourceRegion", type=String.class, parameters={})
+    @Export(name="targetResourceRegion", type=String.class, parameters={})
     private Output</* @Nullable */ String> targetResourceRegion;
 
     /**
@@ -238,7 +238,7 @@ public class MetricAlert extends io.pulumi.resources.CustomResource {
      * the resource type of the target resource(s) on which the alert is created/updated. Mandatory if the scope contains a subscription, resource group, or more than one resource.
      * 
      */
-    @OutputExport(name="targetResourceType", type=String.class, parameters={})
+    @Export(name="targetResourceType", type=String.class, parameters={})
     private Output</* @Nullable */ String> targetResourceType;
 
     /**
@@ -252,7 +252,7 @@ public class MetricAlert extends io.pulumi.resources.CustomResource {
      * Azure resource type
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -266,7 +266,7 @@ public class MetricAlert extends io.pulumi.resources.CustomResource {
      * the period of time (in ISO 8601 duration format) that is used to monitor alert activity based on the threshold.
      * 
      */
-    @OutputExport(name="windowSize", type=String.class, parameters={})
+    @Export(name="windowSize", type=String.class, parameters={})
     private Output<String> windowSize;
 
     /**

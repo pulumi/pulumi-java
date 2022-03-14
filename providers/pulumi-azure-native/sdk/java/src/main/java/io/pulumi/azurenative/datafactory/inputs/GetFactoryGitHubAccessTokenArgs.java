@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.azurenative.datafactory.inputs.GitHubClientSecret;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +19,7 @@ public final class GetFactoryGitHubAccessTokenArgs extends io.pulumi.resources.I
      * The factory name.
      * 
      */
-    @InputImport(name="factoryName", required=true)
+    @Import(name="factoryName", required=true)
       private final String factoryName;
 
     public String getFactoryName() {
@@ -30,7 +30,7 @@ public final class GetFactoryGitHubAccessTokenArgs extends io.pulumi.resources.I
      * GitHub access code.
      * 
      */
-    @InputImport(name="gitHubAccessCode", required=true)
+    @Import(name="gitHubAccessCode", required=true)
       private final String gitHubAccessCode;
 
     public String getGitHubAccessCode() {
@@ -41,7 +41,7 @@ public final class GetFactoryGitHubAccessTokenArgs extends io.pulumi.resources.I
      * GitHub access token base URL.
      * 
      */
-    @InputImport(name="gitHubAccessTokenBaseUrl", required=true)
+    @Import(name="gitHubAccessTokenBaseUrl", required=true)
       private final String gitHubAccessTokenBaseUrl;
 
     public String getGitHubAccessTokenBaseUrl() {
@@ -52,7 +52,7 @@ public final class GetFactoryGitHubAccessTokenArgs extends io.pulumi.resources.I
      * GitHub application client ID.
      * 
      */
-    @InputImport(name="gitHubClientId")
+    @Import(name="gitHubClientId")
       private final @Nullable String gitHubClientId;
 
     public Optional<String> getGitHubClientId() {
@@ -63,7 +63,7 @@ public final class GetFactoryGitHubAccessTokenArgs extends io.pulumi.resources.I
      * GitHub bring your own app client secret information.
      * 
      */
-    @InputImport(name="gitHubClientSecret")
+    @Import(name="gitHubClientSecret")
       private final @Nullable GitHubClientSecret gitHubClientSecret;
 
     public Optional<GitHubClientSecret> getGitHubClientSecret() {
@@ -74,7 +74,7 @@ public final class GetFactoryGitHubAccessTokenArgs extends io.pulumi.resources.I
      * The resource group name.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {

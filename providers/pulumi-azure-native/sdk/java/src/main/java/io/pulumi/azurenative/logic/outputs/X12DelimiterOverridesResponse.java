@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.logic.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class X12DelimiterOverridesResponse {
     /**
      * The component separator.
@@ -59,17 +59,17 @@ public final class X12DelimiterOverridesResponse {
      */
     private final @Nullable String targetNamespace;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private X12DelimiterOverridesResponse(
-        @OutputCustomType.Parameter("componentSeparator") Integer componentSeparator,
-        @OutputCustomType.Parameter("dataElementSeparator") Integer dataElementSeparator,
-        @OutputCustomType.Parameter("messageId") @Nullable String messageId,
-        @OutputCustomType.Parameter("protocolVersion") @Nullable String protocolVersion,
-        @OutputCustomType.Parameter("replaceCharacter") Integer replaceCharacter,
-        @OutputCustomType.Parameter("replaceSeparatorsInPayload") Boolean replaceSeparatorsInPayload,
-        @OutputCustomType.Parameter("segmentTerminator") Integer segmentTerminator,
-        @OutputCustomType.Parameter("segmentTerminatorSuffix") String segmentTerminatorSuffix,
-        @OutputCustomType.Parameter("targetNamespace") @Nullable String targetNamespace) {
+        @CustomType.Parameter("componentSeparator") Integer componentSeparator,
+        @CustomType.Parameter("dataElementSeparator") Integer dataElementSeparator,
+        @CustomType.Parameter("messageId") @Nullable String messageId,
+        @CustomType.Parameter("protocolVersion") @Nullable String protocolVersion,
+        @CustomType.Parameter("replaceCharacter") Integer replaceCharacter,
+        @CustomType.Parameter("replaceSeparatorsInPayload") Boolean replaceSeparatorsInPayload,
+        @CustomType.Parameter("segmentTerminator") Integer segmentTerminator,
+        @CustomType.Parameter("segmentTerminatorSuffix") String segmentTerminatorSuffix,
+        @CustomType.Parameter("targetNamespace") @Nullable String targetNamespace) {
         this.componentSeparator = componentSeparator;
         this.dataElementSeparator = dataElementSeparator;
         this.messageId = messageId;

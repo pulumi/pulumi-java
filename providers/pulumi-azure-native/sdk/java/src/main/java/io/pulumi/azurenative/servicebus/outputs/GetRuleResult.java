@@ -6,13 +6,13 @@ package io.pulumi.azurenative.servicebus.outputs;
 import io.pulumi.azurenative.servicebus.outputs.ActionResponse;
 import io.pulumi.azurenative.servicebus.outputs.CorrelationFilterResponse;
 import io.pulumi.azurenative.servicebus.outputs.SqlFilterResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetRuleResult {
     /**
      * Represents the filter actions which are allowed for the transformation of a message that have been matched by a filter expression.
@@ -50,15 +50,15 @@ public final class GetRuleResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetRuleResult(
-        @OutputCustomType.Parameter("action") @Nullable ActionResponse action,
-        @OutputCustomType.Parameter("correlationFilter") @Nullable CorrelationFilterResponse correlationFilter,
-        @OutputCustomType.Parameter("filterType") @Nullable String filterType,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("sqlFilter") @Nullable SqlFilterResponse sqlFilter,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("action") @Nullable ActionResponse action,
+        @CustomType.Parameter("correlationFilter") @Nullable CorrelationFilterResponse correlationFilter,
+        @CustomType.Parameter("filterType") @Nullable String filterType,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("sqlFilter") @Nullable SqlFilterResponse sqlFilter,
+        @CustomType.Parameter("type") String type) {
         this.action = action;
         this.correlationFilter = correlationFilter;
         this.filterType = filterType;

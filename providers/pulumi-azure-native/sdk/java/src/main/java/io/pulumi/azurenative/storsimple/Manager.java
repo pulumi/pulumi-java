@@ -9,7 +9,7 @@ import io.pulumi.azurenative.storsimple.outputs.ManagerIntrinsicSettingsResponse
 import io.pulumi.azurenative.storsimple.outputs.ManagerSkuResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -37,7 +37,7 @@ public class Manager extends io.pulumi.resources.CustomResource {
      * Represents the type of StorSimple Manager.
      * 
      */
-    @OutputExport(name="cisIntrinsicSettings", type=ManagerIntrinsicSettingsResponse.class, parameters={})
+    @Export(name="cisIntrinsicSettings", type=ManagerIntrinsicSettingsResponse.class, parameters={})
     private Output</* @Nullable */ ManagerIntrinsicSettingsResponse> cisIntrinsicSettings;
 
     /**
@@ -51,7 +51,7 @@ public class Manager extends io.pulumi.resources.CustomResource {
      * The etag of the manager.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output</* @Nullable */ String> etag;
 
     /**
@@ -65,7 +65,7 @@ public class Manager extends io.pulumi.resources.CustomResource {
      * The geo location of the resource.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -79,7 +79,7 @@ public class Manager extends io.pulumi.resources.CustomResource {
      * The resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -93,7 +93,7 @@ public class Manager extends io.pulumi.resources.CustomResource {
      * Specifies the state of the resource as it is getting provisioned. Value of "Succeeded" means the Manager was successfully created.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output</* @Nullable */ String> provisioningState;
 
     /**
@@ -107,7 +107,7 @@ public class Manager extends io.pulumi.resources.CustomResource {
      * Specifies the Sku.
      * 
      */
-    @OutputExport(name="sku", type=ManagerSkuResponse.class, parameters={})
+    @Export(name="sku", type=ManagerSkuResponse.class, parameters={})
     private Output</* @Nullable */ ManagerSkuResponse> sku;
 
     /**
@@ -121,7 +121,7 @@ public class Manager extends io.pulumi.resources.CustomResource {
      * The tags attached to the resource.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -135,7 +135,7 @@ public class Manager extends io.pulumi.resources.CustomResource {
      * The resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.documentdb.outputs.CompositePathResponse;
 import io.pulumi.azurenative.documentdb.outputs.ExcludedPathResponse;
 import io.pulumi.azurenative.documentdb.outputs.IncludedPathResponse;
 import io.pulumi.azurenative.documentdb.outputs.SpatialSpecResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -15,7 +15,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class IndexingPolicyResponse {
     /**
      * Indicates if the indexing policy is automatic
@@ -48,14 +48,14 @@ public final class IndexingPolicyResponse {
      */
     private final @Nullable List<SpatialSpecResponse> spatialIndexes;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private IndexingPolicyResponse(
-        @OutputCustomType.Parameter("automatic") @Nullable Boolean automatic,
-        @OutputCustomType.Parameter("compositeIndexes") @Nullable List<List<CompositePathResponse>> compositeIndexes,
-        @OutputCustomType.Parameter("excludedPaths") @Nullable List<ExcludedPathResponse> excludedPaths,
-        @OutputCustomType.Parameter("includedPaths") @Nullable List<IncludedPathResponse> includedPaths,
-        @OutputCustomType.Parameter("indexingMode") @Nullable String indexingMode,
-        @OutputCustomType.Parameter("spatialIndexes") @Nullable List<SpatialSpecResponse> spatialIndexes) {
+        @CustomType.Parameter("automatic") @Nullable Boolean automatic,
+        @CustomType.Parameter("compositeIndexes") @Nullable List<List<CompositePathResponse>> compositeIndexes,
+        @CustomType.Parameter("excludedPaths") @Nullable List<ExcludedPathResponse> excludedPaths,
+        @CustomType.Parameter("includedPaths") @Nullable List<IncludedPathResponse> includedPaths,
+        @CustomType.Parameter("indexingMode") @Nullable String indexingMode,
+        @CustomType.Parameter("spatialIndexes") @Nullable List<SpatialSpecResponse> spatialIndexes) {
         this.automatic = automatic;
         this.compositeIndexes = compositeIndexes;
         this.excludedPaths = excludedPaths;

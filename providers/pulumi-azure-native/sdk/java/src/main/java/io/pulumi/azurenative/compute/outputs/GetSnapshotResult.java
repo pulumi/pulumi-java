@@ -9,7 +9,7 @@ import io.pulumi.azurenative.compute.outputs.EncryptionSettingsCollectionRespons
 import io.pulumi.azurenative.compute.outputs.ExtendedLocationResponse;
 import io.pulumi.azurenative.compute.outputs.PurchasePlanResponse;
 import io.pulumi.azurenative.compute.outputs.SnapshotSkuResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -19,7 +19,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetSnapshotResult {
     /**
      * Disk source information. CreationData information cannot be changed after the disk has been created.
@@ -142,32 +142,32 @@ public final class GetSnapshotResult {
      */
     private final String uniqueId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetSnapshotResult(
-        @OutputCustomType.Parameter("creationData") CreationDataResponse creationData,
-        @OutputCustomType.Parameter("diskAccessId") @Nullable String diskAccessId,
-        @OutputCustomType.Parameter("diskSizeBytes") Double diskSizeBytes,
-        @OutputCustomType.Parameter("diskSizeGB") @Nullable Integer diskSizeGB,
-        @OutputCustomType.Parameter("diskState") String diskState,
-        @OutputCustomType.Parameter("encryption") @Nullable EncryptionResponse encryption,
-        @OutputCustomType.Parameter("encryptionSettingsCollection") @Nullable EncryptionSettingsCollectionResponse encryptionSettingsCollection,
-        @OutputCustomType.Parameter("extendedLocation") @Nullable ExtendedLocationResponse extendedLocation,
-        @OutputCustomType.Parameter("hyperVGeneration") @Nullable String hyperVGeneration,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("incremental") @Nullable Boolean incremental,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("managedBy") String managedBy,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("networkAccessPolicy") @Nullable String networkAccessPolicy,
-        @OutputCustomType.Parameter("osType") @Nullable String osType,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("purchasePlan") @Nullable PurchasePlanResponse purchasePlan,
-        @OutputCustomType.Parameter("sku") @Nullable SnapshotSkuResponse sku,
-        @OutputCustomType.Parameter("supportsHibernation") @Nullable Boolean supportsHibernation,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("timeCreated") String timeCreated,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("uniqueId") String uniqueId) {
+        @CustomType.Parameter("creationData") CreationDataResponse creationData,
+        @CustomType.Parameter("diskAccessId") @Nullable String diskAccessId,
+        @CustomType.Parameter("diskSizeBytes") Double diskSizeBytes,
+        @CustomType.Parameter("diskSizeGB") @Nullable Integer diskSizeGB,
+        @CustomType.Parameter("diskState") String diskState,
+        @CustomType.Parameter("encryption") @Nullable EncryptionResponse encryption,
+        @CustomType.Parameter("encryptionSettingsCollection") @Nullable EncryptionSettingsCollectionResponse encryptionSettingsCollection,
+        @CustomType.Parameter("extendedLocation") @Nullable ExtendedLocationResponse extendedLocation,
+        @CustomType.Parameter("hyperVGeneration") @Nullable String hyperVGeneration,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("incremental") @Nullable Boolean incremental,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("managedBy") String managedBy,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("networkAccessPolicy") @Nullable String networkAccessPolicy,
+        @CustomType.Parameter("osType") @Nullable String osType,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("purchasePlan") @Nullable PurchasePlanResponse purchasePlan,
+        @CustomType.Parameter("sku") @Nullable SnapshotSkuResponse sku,
+        @CustomType.Parameter("supportsHibernation") @Nullable Boolean supportsHibernation,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("timeCreated") String timeCreated,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("uniqueId") String uniqueId) {
         this.creationData = creationData;
         this.diskAccessId = diskAccessId;
         this.diskSizeBytes = diskSizeBytes;

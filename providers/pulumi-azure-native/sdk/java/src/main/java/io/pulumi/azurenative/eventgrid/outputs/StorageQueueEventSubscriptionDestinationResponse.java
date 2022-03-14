@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.eventgrid.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class StorageQueueEventSubscriptionDestinationResponse {
     /**
      * Type of the endpoint for the event subscription destination.
@@ -28,11 +28,11 @@ public final class StorageQueueEventSubscriptionDestinationResponse {
      */
     private final @Nullable String resourceId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private StorageQueueEventSubscriptionDestinationResponse(
-        @OutputCustomType.Parameter("endpointType") String endpointType,
-        @OutputCustomType.Parameter("queueName") @Nullable String queueName,
-        @OutputCustomType.Parameter("resourceId") @Nullable String resourceId) {
+        @CustomType.Parameter("endpointType") String endpointType,
+        @CustomType.Parameter("queueName") @Nullable String queueName,
+        @CustomType.Parameter("resourceId") @Nullable String resourceId) {
         this.endpointType = endpointType;
         this.queueName = queueName;
         this.resourceId = resourceId;

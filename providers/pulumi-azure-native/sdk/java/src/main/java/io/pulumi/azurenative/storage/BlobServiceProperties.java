@@ -13,7 +13,7 @@ import io.pulumi.azurenative.storage.outputs.RestorePolicyPropertiesResponse;
 import io.pulumi.azurenative.storage.outputs.SkuResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -41,7 +41,7 @@ public class BlobServiceProperties extends io.pulumi.resources.CustomResource {
      * Deprecated in favor of isVersioningEnabled property.
      * 
      */
-    @OutputExport(name="automaticSnapshotPolicyEnabled", type=Boolean.class, parameters={})
+    @Export(name="automaticSnapshotPolicyEnabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> automaticSnapshotPolicyEnabled;
 
     /**
@@ -55,7 +55,7 @@ public class BlobServiceProperties extends io.pulumi.resources.CustomResource {
      * The blob service properties for change feed events.
      * 
      */
-    @OutputExport(name="changeFeed", type=ChangeFeedResponse.class, parameters={})
+    @Export(name="changeFeed", type=ChangeFeedResponse.class, parameters={})
     private Output</* @Nullable */ ChangeFeedResponse> changeFeed;
 
     /**
@@ -69,7 +69,7 @@ public class BlobServiceProperties extends io.pulumi.resources.CustomResource {
      * The blob service properties for container soft delete.
      * 
      */
-    @OutputExport(name="containerDeleteRetentionPolicy", type=DeleteRetentionPolicyResponse.class, parameters={})
+    @Export(name="containerDeleteRetentionPolicy", type=DeleteRetentionPolicyResponse.class, parameters={})
     private Output</* @Nullable */ DeleteRetentionPolicyResponse> containerDeleteRetentionPolicy;
 
     /**
@@ -83,7 +83,7 @@ public class BlobServiceProperties extends io.pulumi.resources.CustomResource {
      * Specifies CORS rules for the Blob service. You can include up to five CorsRule elements in the request. If no CorsRule elements are included in the request body, all CORS rules will be deleted, and CORS will be disabled for the Blob service.
      * 
      */
-    @OutputExport(name="cors", type=CorsRulesResponse.class, parameters={})
+    @Export(name="cors", type=CorsRulesResponse.class, parameters={})
     private Output</* @Nullable */ CorsRulesResponse> cors;
 
     /**
@@ -97,7 +97,7 @@ public class BlobServiceProperties extends io.pulumi.resources.CustomResource {
      * DefaultServiceVersion indicates the default version to use for requests to the Blob service if an incoming request’s version is not specified. Possible values include version 2008-10-27 and all more recent versions.
      * 
      */
-    @OutputExport(name="defaultServiceVersion", type=String.class, parameters={})
+    @Export(name="defaultServiceVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> defaultServiceVersion;
 
     /**
@@ -111,7 +111,7 @@ public class BlobServiceProperties extends io.pulumi.resources.CustomResource {
      * The blob service properties for blob soft delete.
      * 
      */
-    @OutputExport(name="deleteRetentionPolicy", type=DeleteRetentionPolicyResponse.class, parameters={})
+    @Export(name="deleteRetentionPolicy", type=DeleteRetentionPolicyResponse.class, parameters={})
     private Output</* @Nullable */ DeleteRetentionPolicyResponse> deleteRetentionPolicy;
 
     /**
@@ -125,7 +125,7 @@ public class BlobServiceProperties extends io.pulumi.resources.CustomResource {
      * Versioning is enabled if set to true.
      * 
      */
-    @OutputExport(name="isVersioningEnabled", type=Boolean.class, parameters={})
+    @Export(name="isVersioningEnabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> isVersioningEnabled;
 
     /**
@@ -139,7 +139,7 @@ public class BlobServiceProperties extends io.pulumi.resources.CustomResource {
      * The blob service property to configure last access time based tracking policy.
      * 
      */
-    @OutputExport(name="lastAccessTimeTrackingPolicy", type=LastAccessTimeTrackingPolicyResponse.class, parameters={})
+    @Export(name="lastAccessTimeTrackingPolicy", type=LastAccessTimeTrackingPolicyResponse.class, parameters={})
     private Output</* @Nullable */ LastAccessTimeTrackingPolicyResponse> lastAccessTimeTrackingPolicy;
 
     /**
@@ -153,7 +153,7 @@ public class BlobServiceProperties extends io.pulumi.resources.CustomResource {
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -167,7 +167,7 @@ public class BlobServiceProperties extends io.pulumi.resources.CustomResource {
      * The blob service properties for blob restore policy.
      * 
      */
-    @OutputExport(name="restorePolicy", type=RestorePolicyPropertiesResponse.class, parameters={})
+    @Export(name="restorePolicy", type=RestorePolicyPropertiesResponse.class, parameters={})
     private Output</* @Nullable */ RestorePolicyPropertiesResponse> restorePolicy;
 
     /**
@@ -181,7 +181,7 @@ public class BlobServiceProperties extends io.pulumi.resources.CustomResource {
      * Sku name and tier.
      * 
      */
-    @OutputExport(name="sku", type=SkuResponse.class, parameters={})
+    @Export(name="sku", type=SkuResponse.class, parameters={})
     private Output<SkuResponse> sku;
 
     /**
@@ -195,7 +195,7 @@ public class BlobServiceProperties extends io.pulumi.resources.CustomResource {
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

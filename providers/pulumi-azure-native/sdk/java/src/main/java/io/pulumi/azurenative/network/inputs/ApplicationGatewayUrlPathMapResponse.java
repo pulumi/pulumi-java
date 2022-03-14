@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.ApplicationGatewayPathRuleResponse;
 import io.pulumi.azurenative.network.inputs.SubResourceResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class ApplicationGatewayUrlPathMapResponse extends io.pulumi.resour
      * Default backend address pool resource of URL path map.
      * 
      */
-    @InputImport(name="defaultBackendAddressPool")
+    @Import(name="defaultBackendAddressPool")
       private final @Nullable SubResourceResponse defaultBackendAddressPool;
 
     public Optional<SubResourceResponse> getDefaultBackendAddressPool() {
@@ -36,7 +36,7 @@ public final class ApplicationGatewayUrlPathMapResponse extends io.pulumi.resour
      * Default backend http settings resource of URL path map.
      * 
      */
-    @InputImport(name="defaultBackendHttpSettings")
+    @Import(name="defaultBackendHttpSettings")
       private final @Nullable SubResourceResponse defaultBackendHttpSettings;
 
     public Optional<SubResourceResponse> getDefaultBackendHttpSettings() {
@@ -47,7 +47,7 @@ public final class ApplicationGatewayUrlPathMapResponse extends io.pulumi.resour
      * Default redirect configuration resource of URL path map.
      * 
      */
-    @InputImport(name="defaultRedirectConfiguration")
+    @Import(name="defaultRedirectConfiguration")
       private final @Nullable SubResourceResponse defaultRedirectConfiguration;
 
     public Optional<SubResourceResponse> getDefaultRedirectConfiguration() {
@@ -58,7 +58,7 @@ public final class ApplicationGatewayUrlPathMapResponse extends io.pulumi.resour
      * Default Rewrite rule set resource of URL path map.
      * 
      */
-    @InputImport(name="defaultRewriteRuleSet")
+    @Import(name="defaultRewriteRuleSet")
       private final @Nullable SubResourceResponse defaultRewriteRuleSet;
 
     public Optional<SubResourceResponse> getDefaultRewriteRuleSet() {
@@ -69,7 +69,7 @@ public final class ApplicationGatewayUrlPathMapResponse extends io.pulumi.resour
      * A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    @InputImport(name="etag", required=true)
+    @Import(name="etag", required=true)
       private final String etag;
 
     public String getEtag() {
@@ -80,7 +80,7 @@ public final class ApplicationGatewayUrlPathMapResponse extends io.pulumi.resour
      * Resource ID.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable String id;
 
     public Optional<String> getId() {
@@ -91,7 +91,7 @@ public final class ApplicationGatewayUrlPathMapResponse extends io.pulumi.resour
      * Name of the URL path map that is unique within an Application Gateway.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -102,7 +102,7 @@ public final class ApplicationGatewayUrlPathMapResponse extends io.pulumi.resour
      * Path rule of URL path map resource.
      * 
      */
-    @InputImport(name="pathRules")
+    @Import(name="pathRules")
       private final @Nullable List<ApplicationGatewayPathRuleResponse> pathRules;
 
     public List<ApplicationGatewayPathRuleResponse> getPathRules() {
@@ -113,7 +113,7 @@ public final class ApplicationGatewayUrlPathMapResponse extends io.pulumi.resour
      * The provisioning state of the URL path map resource.
      * 
      */
-    @InputImport(name="provisioningState", required=true)
+    @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
     public String getProvisioningState() {
@@ -124,7 +124,7 @@ public final class ApplicationGatewayUrlPathMapResponse extends io.pulumi.resour
      * Type of the resource.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

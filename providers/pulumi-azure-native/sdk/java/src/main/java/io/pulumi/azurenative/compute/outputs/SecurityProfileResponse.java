@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.compute.outputs;
 
 import io.pulumi.azurenative.compute.outputs.UefiSettingsResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SecurityProfileResponse {
     /**
      * This property can be used by user in the request to enable or disable the Host Encryption for the virtual machine or virtual machine scale set. This will enable the encryption for all the disks including Resource/Temp disk at host itself. <br><br> Default: The Encryption at host will be disabled unless this property is set to true for the resource.
@@ -29,11 +29,11 @@ public final class SecurityProfileResponse {
      */
     private final @Nullable UefiSettingsResponse uefiSettings;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SecurityProfileResponse(
-        @OutputCustomType.Parameter("encryptionAtHost") @Nullable Boolean encryptionAtHost,
-        @OutputCustomType.Parameter("securityType") @Nullable String securityType,
-        @OutputCustomType.Parameter("uefiSettings") @Nullable UefiSettingsResponse uefiSettings) {
+        @CustomType.Parameter("encryptionAtHost") @Nullable Boolean encryptionAtHost,
+        @CustomType.Parameter("securityType") @Nullable String securityType,
+        @CustomType.Parameter("uefiSettings") @Nullable UefiSettingsResponse uefiSettings) {
         this.encryptionAtHost = encryptionAtHost;
         this.securityType = securityType;
         this.uefiSettings = uefiSettings;

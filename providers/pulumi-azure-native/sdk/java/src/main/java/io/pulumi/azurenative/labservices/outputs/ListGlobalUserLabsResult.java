@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.labservices.outputs;
 
 import io.pulumi.azurenative.labservices.outputs.LabDetailsResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ListGlobalUserLabsResult {
     /**
      * List of all the labs
@@ -17,8 +17,8 @@ public final class ListGlobalUserLabsResult {
      */
     private final @Nullable List<LabDetailsResponse> labs;
 
-    @OutputCustomType.Constructor
-    private ListGlobalUserLabsResult(@OutputCustomType.Parameter("labs") @Nullable List<LabDetailsResponse> labs) {
+    @CustomType.Constructor
+    private ListGlobalUserLabsResult(@CustomType.Parameter("labs") @Nullable List<LabDetailsResponse> labs) {
         this.labs = labs;
     }
 

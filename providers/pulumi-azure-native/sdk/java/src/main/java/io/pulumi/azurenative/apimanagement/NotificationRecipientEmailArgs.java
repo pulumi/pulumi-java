@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.apimanagement;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class NotificationRecipientEmailArgs extends io.pulumi.resources.Re
      * Email identifier.
      * 
      */
-    @InputImport(name="email")
+    @Import(name="email")
       private final @Nullable Output<String> email;
 
     public Output<String> getEmail() {
@@ -29,7 +29,7 @@ public final class NotificationRecipientEmailArgs extends io.pulumi.resources.Re
      * Notification Name Identifier.
      * 
      */
-    @InputImport(name="notificationName", required=true)
+    @Import(name="notificationName", required=true)
       private final Output<String> notificationName;
 
     public Output<String> getNotificationName() {
@@ -40,7 +40,7 @@ public final class NotificationRecipientEmailArgs extends io.pulumi.resources.Re
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -51,7 +51,7 @@ public final class NotificationRecipientEmailArgs extends io.pulumi.resources.Re
      * The name of the API Management service.
      * 
      */
-    @InputImport(name="serviceName", required=true)
+    @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
 
     public Output<String> getServiceName() {

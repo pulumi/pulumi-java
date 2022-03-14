@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GroupMembersItemResponse {
     /**
      * Resource Id.
@@ -17,8 +17,8 @@ public final class GroupMembersItemResponse {
      */
     private final @Nullable String resourceId;
 
-    @OutputCustomType.Constructor
-    private GroupMembersItemResponse(@OutputCustomType.Parameter("resourceId") @Nullable String resourceId) {
+    @CustomType.Constructor
+    private GroupMembersItemResponse(@CustomType.Parameter("resourceId") @Nullable String resourceId) {
         this.resourceId = resourceId;
     }
 

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.compute.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class EncryptionResponse extends io.pulumi.resources.InvokeArgs {
      * ResourceId of the disk encryption set to use for enabling encryption at rest.
      * 
      */
-    @InputImport(name="diskEncryptionSetId")
+    @Import(name="diskEncryptionSetId")
       private final @Nullable String diskEncryptionSetId;
 
     public Optional<String> getDiskEncryptionSetId() {
@@ -33,7 +33,7 @@ public final class EncryptionResponse extends io.pulumi.resources.InvokeArgs {
      * The type of key used to encrypt the data of the disk.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable String type;
 
     public Optional<String> getType() {

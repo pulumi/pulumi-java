@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class VMwareCbtProtectionContainerMappingDetailsResponse extends io
      * Expected value is 'VMwareCbt'.
      * 
      */
-    @InputImport(name="instanceType", required=true)
+    @Import(name="instanceType", required=true)
       private final String instanceType;
 
     public String getInstanceType() {
@@ -32,7 +32,7 @@ public final class VMwareCbtProtectionContainerMappingDetailsResponse extends io
      * The target key vault ARM Id.
      * 
      */
-    @InputImport(name="keyVaultId", required=true)
+    @Import(name="keyVaultId", required=true)
       private final String keyVaultId;
 
     public String getKeyVaultId() {
@@ -43,7 +43,7 @@ public final class VMwareCbtProtectionContainerMappingDetailsResponse extends io
      * The target key vault URI.
      * 
      */
-    @InputImport(name="keyVaultUri", required=true)
+    @Import(name="keyVaultUri", required=true)
       private final String keyVaultUri;
 
     public String getKeyVaultUri() {
@@ -54,7 +54,7 @@ public final class VMwareCbtProtectionContainerMappingDetailsResponse extends io
      * The secret name of the service bus connection string.
      * 
      */
-    @InputImport(name="serviceBusConnectionStringSecretName", required=true)
+    @Import(name="serviceBusConnectionStringSecretName", required=true)
       private final String serviceBusConnectionStringSecretName;
 
     public String getServiceBusConnectionStringSecretName() {
@@ -65,7 +65,7 @@ public final class VMwareCbtProtectionContainerMappingDetailsResponse extends io
      * The storage account ARM Id.
      * 
      */
-    @InputImport(name="storageAccountId", required=true)
+    @Import(name="storageAccountId", required=true)
       private final String storageAccountId;
 
     public String getStorageAccountId() {
@@ -76,7 +76,7 @@ public final class VMwareCbtProtectionContainerMappingDetailsResponse extends io
      * The secret name of the storage account.
      * 
      */
-    @InputImport(name="storageAccountSasSecretName", required=true)
+    @Import(name="storageAccountSasSecretName", required=true)
       private final String storageAccountSasSecretName;
 
     public String getStorageAccountSasSecretName() {
@@ -87,7 +87,7 @@ public final class VMwareCbtProtectionContainerMappingDetailsResponse extends io
      * The target location.
      * 
      */
-    @InputImport(name="targetLocation", required=true)
+    @Import(name="targetLocation", required=true)
       private final String targetLocation;
 
     public String getTargetLocation() {

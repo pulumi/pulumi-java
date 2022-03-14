@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ListMachineLearningComputeKeysResult {
     /**
      * The type of compute
@@ -15,8 +15,8 @@ public final class ListMachineLearningComputeKeysResult {
      */
     private final String computeType;
 
-    @OutputCustomType.Constructor
-    private ListMachineLearningComputeKeysResult(@OutputCustomType.Parameter("computeType") String computeType) {
+    @CustomType.Constructor
+    private ListMachineLearningComputeKeysResult(@CustomType.Parameter("computeType") String computeType) {
         this.computeType = computeType;
     }
 

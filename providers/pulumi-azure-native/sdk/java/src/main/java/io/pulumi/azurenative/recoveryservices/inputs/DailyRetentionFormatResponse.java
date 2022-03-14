@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.recoveryservices.inputs;
 
 import io.pulumi.azurenative.recoveryservices.inputs.DayResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class DailyRetentionFormatResponse extends io.pulumi.resources.Invo
      * List of days of the month.
      * 
      */
-    @InputImport(name="daysOfTheMonth")
+    @Import(name="daysOfTheMonth")
       private final @Nullable List<DayResponse> daysOfTheMonth;
 
     public List<DayResponse> getDaysOfTheMonth() {

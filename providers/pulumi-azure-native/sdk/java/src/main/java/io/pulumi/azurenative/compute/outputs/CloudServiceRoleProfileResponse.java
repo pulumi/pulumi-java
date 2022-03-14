@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.compute.outputs;
 
 import io.pulumi.azurenative.compute.outputs.CloudServiceRoleProfilePropertiesResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CloudServiceRoleProfileResponse {
     /**
      * List of roles for the cloud service.
@@ -17,8 +17,8 @@ public final class CloudServiceRoleProfileResponse {
      */
     private final @Nullable List<CloudServiceRoleProfilePropertiesResponse> roles;
 
-    @OutputCustomType.Constructor
-    private CloudServiceRoleProfileResponse(@OutputCustomType.Parameter("roles") @Nullable List<CloudServiceRoleProfilePropertiesResponse> roles) {
+    @CustomType.Constructor
+    private CloudServiceRoleProfileResponse(@CustomType.Parameter("roles") @Nullable List<CloudServiceRoleProfilePropertiesResponse> roles) {
         this.roles = roles;
     }
 

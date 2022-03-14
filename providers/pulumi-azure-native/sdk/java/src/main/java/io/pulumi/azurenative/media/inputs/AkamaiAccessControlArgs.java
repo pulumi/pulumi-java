@@ -5,7 +5,7 @@ package io.pulumi.azurenative.media.inputs;
 
 import io.pulumi.azurenative.media.inputs.AkamaiSignatureHeaderAuthenticationKeyArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class AkamaiAccessControlArgs extends io.pulumi.resources.ResourceA
      * authentication key list
      * 
      */
-    @InputImport(name="akamaiSignatureHeaderAuthenticationKeyList")
+    @Import(name="akamaiSignatureHeaderAuthenticationKeyList")
       private final @Nullable Output<List<AkamaiSignatureHeaderAuthenticationKeyArgs>> akamaiSignatureHeaderAuthenticationKeyList;
 
     public Output<List<AkamaiSignatureHeaderAuthenticationKeyArgs>> getAkamaiSignatureHeaderAuthenticationKeyList() {

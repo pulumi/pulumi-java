@@ -8,7 +8,7 @@ import io.pulumi.azurenative.network.VirtualHubRouteTableV2Args;
 import io.pulumi.azurenative.network.outputs.VirtualHubRouteV2Response;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +35,7 @@ public class VirtualHubRouteTableV2 extends io.pulumi.resources.CustomResource {
      * List of all connections attached to this route table v2.
      * 
      */
-    @OutputExport(name="attachedConnections", type=List.class, parameters={String.class})
+    @Export(name="attachedConnections", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> attachedConnections;
 
     /**
@@ -49,7 +49,7 @@ public class VirtualHubRouteTableV2 extends io.pulumi.resources.CustomResource {
      * A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -63,7 +63,7 @@ public class VirtualHubRouteTableV2 extends io.pulumi.resources.CustomResource {
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
@@ -77,7 +77,7 @@ public class VirtualHubRouteTableV2 extends io.pulumi.resources.CustomResource {
      * The provisioning state of the virtual hub route table v2 resource.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -91,7 +91,7 @@ public class VirtualHubRouteTableV2 extends io.pulumi.resources.CustomResource {
      * List of all routes.
      * 
      */
-    @OutputExport(name="routes", type=List.class, parameters={VirtualHubRouteV2Response.class})
+    @Export(name="routes", type=List.class, parameters={VirtualHubRouteV2Response.class})
     private Output</* @Nullable */ List<VirtualHubRouteV2Response>> routes;
 
     /**

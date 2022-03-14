@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.media.outputs;
 
 import io.pulumi.azurenative.media.outputs.AkamaiSignatureHeaderAuthenticationKeyResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AkamaiAccessControlResponse {
     /**
      * authentication key list
@@ -17,8 +17,8 @@ public final class AkamaiAccessControlResponse {
      */
     private final @Nullable List<AkamaiSignatureHeaderAuthenticationKeyResponse> akamaiSignatureHeaderAuthenticationKeyList;
 
-    @OutputCustomType.Constructor
-    private AkamaiAccessControlResponse(@OutputCustomType.Parameter("akamaiSignatureHeaderAuthenticationKeyList") @Nullable List<AkamaiSignatureHeaderAuthenticationKeyResponse> akamaiSignatureHeaderAuthenticationKeyList) {
+    @CustomType.Constructor
+    private AkamaiAccessControlResponse(@CustomType.Parameter("akamaiSignatureHeaderAuthenticationKeyList") @Nullable List<AkamaiSignatureHeaderAuthenticationKeyResponse> akamaiSignatureHeaderAuthenticationKeyList) {
         this.akamaiSignatureHeaderAuthenticationKeyList = akamaiSignatureHeaderAuthenticationKeyList;
     }
 

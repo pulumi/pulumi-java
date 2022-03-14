@@ -7,7 +7,7 @@ import io.pulumi.azurenative.network.enums.DdosSettingsProtectionCoverage;
 import io.pulumi.azurenative.network.inputs.SubResourceArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class DdosSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * The DDoS custom policy associated with the public IP.
      * 
      */
-    @InputImport(name="ddosCustomPolicy")
+    @Import(name="ddosCustomPolicy")
       private final @Nullable Output<SubResourceArgs> ddosCustomPolicy;
 
     public Output<SubResourceArgs> getDdosCustomPolicy() {
@@ -37,7 +37,7 @@ public final class DdosSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * Enables DDoS protection on the public IP.
      * 
      */
-    @InputImport(name="protectedIP")
+    @Import(name="protectedIP")
       private final @Nullable Output<Boolean> protectedIP;
 
     public Output<Boolean> getProtectedIP() {
@@ -48,7 +48,7 @@ public final class DdosSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * The DDoS protection policy customizability of the public IP. Only standard coverage will have the ability to be customized.
      * 
      */
-    @InputImport(name="protectionCoverage")
+    @Import(name="protectionCoverage")
       private final @Nullable Output<Either<String,DdosSettingsProtectionCoverage>> protectionCoverage;
 
     public Output<Either<String,DdosSettingsProtectionCoverage>> getProtectionCoverage() {

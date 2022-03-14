@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.customerinsights.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class KpiParticipantProfilesMetadataResponse extends io.pulumi.reso
      * Name of the type.
      * 
      */
-    @InputImport(name="typeName", required=true)
+    @Import(name="typeName", required=true)
       private final String typeName;
 
     public String getTypeName() {

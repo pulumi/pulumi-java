@@ -5,7 +5,7 @@ package io.pulumi.azurenative.kubernetes.outputs;
 
 import io.pulumi.azurenative.kubernetes.outputs.ConnectedClusterIdentityResponse;
 import io.pulumi.azurenative.kubernetes.outputs.SystemDataResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetConnectedClusterResult {
     /**
      * Base64 encoded public certificate used by the agent to do the initial handshake to the backend services in Azure.
@@ -111,27 +111,27 @@ public final class GetConnectedClusterResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetConnectedClusterResult(
-        @OutputCustomType.Parameter("agentPublicKeyCertificate") String agentPublicKeyCertificate,
-        @OutputCustomType.Parameter("agentVersion") String agentVersion,
-        @OutputCustomType.Parameter("connectivityStatus") String connectivityStatus,
-        @OutputCustomType.Parameter("distribution") @Nullable String distribution,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("identity") ConnectedClusterIdentityResponse identity,
-        @OutputCustomType.Parameter("infrastructure") @Nullable String infrastructure,
-        @OutputCustomType.Parameter("kubernetesVersion") String kubernetesVersion,
-        @OutputCustomType.Parameter("lastConnectivityTime") String lastConnectivityTime,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("managedIdentityCertificateExpirationTime") String managedIdentityCertificateExpirationTime,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("offering") String offering,
-        @OutputCustomType.Parameter("provisioningState") @Nullable String provisioningState,
-        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("totalCoreCount") Integer totalCoreCount,
-        @OutputCustomType.Parameter("totalNodeCount") Integer totalNodeCount,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("agentPublicKeyCertificate") String agentPublicKeyCertificate,
+        @CustomType.Parameter("agentVersion") String agentVersion,
+        @CustomType.Parameter("connectivityStatus") String connectivityStatus,
+        @CustomType.Parameter("distribution") @Nullable String distribution,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("identity") ConnectedClusterIdentityResponse identity,
+        @CustomType.Parameter("infrastructure") @Nullable String infrastructure,
+        @CustomType.Parameter("kubernetesVersion") String kubernetesVersion,
+        @CustomType.Parameter("lastConnectivityTime") String lastConnectivityTime,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("managedIdentityCertificateExpirationTime") String managedIdentityCertificateExpirationTime,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("offering") String offering,
+        @CustomType.Parameter("provisioningState") @Nullable String provisioningState,
+        @CustomType.Parameter("systemData") SystemDataResponse systemData,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("totalCoreCount") Integer totalCoreCount,
+        @CustomType.Parameter("totalNodeCount") Integer totalNodeCount,
+        @CustomType.Parameter("type") String type) {
         this.agentPublicKeyCertificate = agentPublicKeyCertificate;
         this.agentVersion = agentVersion;
         this.connectivityStatus = connectivityStatus;

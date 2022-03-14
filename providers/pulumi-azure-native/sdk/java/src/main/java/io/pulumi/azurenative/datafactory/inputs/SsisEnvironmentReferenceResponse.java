@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class SsisEnvironmentReferenceResponse extends io.pulumi.resources.
      * Environment folder name.
      * 
      */
-    @InputImport(name="environmentFolderName")
+    @Import(name="environmentFolderName")
       private final @Nullable String environmentFolderName;
 
     public Optional<String> getEnvironmentFolderName() {
@@ -34,7 +34,7 @@ public final class SsisEnvironmentReferenceResponse extends io.pulumi.resources.
      * Environment name.
      * 
      */
-    @InputImport(name="environmentName")
+    @Import(name="environmentName")
       private final @Nullable String environmentName;
 
     public Optional<String> getEnvironmentName() {
@@ -45,7 +45,7 @@ public final class SsisEnvironmentReferenceResponse extends io.pulumi.resources.
      * Environment reference id.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Double id;
 
     public Optional<Double> getId() {
@@ -56,7 +56,7 @@ public final class SsisEnvironmentReferenceResponse extends io.pulumi.resources.
      * Reference type
      * 
      */
-    @InputImport(name="referenceType")
+    @Import(name="referenceType")
       private final @Nullable String referenceType;
 
     public Optional<String> getReferenceType() {

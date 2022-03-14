@@ -6,7 +6,7 @@ package io.pulumi.azurenative.storsimple;
 import io.pulumi.azurenative.storsimple.enums.Kind;
 import io.pulumi.azurenative.storsimple.inputs.BandwidthScheduleArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class BandwidthSettingArgs extends io.pulumi.resources.ResourceArgs
      * The bandwidth setting name.
      * 
      */
-    @InputImport(name="bandwidthSettingName")
+    @Import(name="bandwidthSettingName")
       private final @Nullable Output<String> bandwidthSettingName;
 
     public Output<String> getBandwidthSettingName() {
@@ -32,7 +32,7 @@ public final class BandwidthSettingArgs extends io.pulumi.resources.ResourceArgs
      * The Kind of the object. Currently only Series8000 is supported
      * 
      */
-    @InputImport(name="kind")
+    @Import(name="kind")
       private final @Nullable Output<Kind> kind;
 
     public Output<Kind> getKind() {
@@ -43,7 +43,7 @@ public final class BandwidthSettingArgs extends io.pulumi.resources.ResourceArgs
      * The manager name
      * 
      */
-    @InputImport(name="managerName", required=true)
+    @Import(name="managerName", required=true)
       private final Output<String> managerName;
 
     public Output<String> getManagerName() {
@@ -54,7 +54,7 @@ public final class BandwidthSettingArgs extends io.pulumi.resources.ResourceArgs
      * The resource group name
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -65,7 +65,7 @@ public final class BandwidthSettingArgs extends io.pulumi.resources.ResourceArgs
      * The schedules.
      * 
      */
-    @InputImport(name="schedules", required=true)
+    @Import(name="schedules", required=true)
       private final Output<List<BandwidthScheduleArgs>> schedules;
 
     public Output<List<BandwidthScheduleArgs>> getSchedules() {

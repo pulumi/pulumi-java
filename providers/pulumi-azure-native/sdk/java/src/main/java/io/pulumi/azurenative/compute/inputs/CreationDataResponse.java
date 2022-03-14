@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.azurenative.compute.inputs.ImageDiskReferenceResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class CreationDataResponse extends io.pulumi.resources.InvokeArgs {
      * This enumerates the possible sources of a disk's creation.
      * 
      */
-    @InputImport(name="createOption", required=true)
+    @Import(name="createOption", required=true)
       private final String createOption;
 
     public String getCreateOption() {
@@ -36,7 +36,7 @@ public final class CreationDataResponse extends io.pulumi.resources.InvokeArgs {
      * Required if creating from a Gallery Image. The id of the ImageDiskReference will be the ARM id of the shared galley image version from which to create a disk.
      * 
      */
-    @InputImport(name="galleryImageReference")
+    @Import(name="galleryImageReference")
       private final @Nullable ImageDiskReferenceResponse galleryImageReference;
 
     public Optional<ImageDiskReferenceResponse> getGalleryImageReference() {
@@ -47,7 +47,7 @@ public final class CreationDataResponse extends io.pulumi.resources.InvokeArgs {
      * Disk source information.
      * 
      */
-    @InputImport(name="imageReference")
+    @Import(name="imageReference")
       private final @Nullable ImageDiskReferenceResponse imageReference;
 
     public Optional<ImageDiskReferenceResponse> getImageReference() {
@@ -58,7 +58,7 @@ public final class CreationDataResponse extends io.pulumi.resources.InvokeArgs {
      * Logical sector size in bytes for Ultra disks. Supported values are 512 ad 4096. 4096 is the default.
      * 
      */
-    @InputImport(name="logicalSectorSize")
+    @Import(name="logicalSectorSize")
       private final @Nullable Integer logicalSectorSize;
 
     public Optional<Integer> getLogicalSectorSize() {
@@ -69,7 +69,7 @@ public final class CreationDataResponse extends io.pulumi.resources.InvokeArgs {
      * If createOption is Copy, this is the ARM id of the source snapshot or disk.
      * 
      */
-    @InputImport(name="sourceResourceId")
+    @Import(name="sourceResourceId")
       private final @Nullable String sourceResourceId;
 
     public Optional<String> getSourceResourceId() {
@@ -80,7 +80,7 @@ public final class CreationDataResponse extends io.pulumi.resources.InvokeArgs {
      * If this field is set, this is the unique id identifying the source of this resource.
      * 
      */
-    @InputImport(name="sourceUniqueId", required=true)
+    @Import(name="sourceUniqueId", required=true)
       private final String sourceUniqueId;
 
     public String getSourceUniqueId() {
@@ -91,7 +91,7 @@ public final class CreationDataResponse extends io.pulumi.resources.InvokeArgs {
      * If createOption is Import, this is the URI of a blob to be imported into a managed disk.
      * 
      */
-    @InputImport(name="sourceUri")
+    @Import(name="sourceUri")
       private final @Nullable String sourceUri;
 
     public Optional<String> getSourceUri() {
@@ -102,7 +102,7 @@ public final class CreationDataResponse extends io.pulumi.resources.InvokeArgs {
      * Required if createOption is Import. The Azure Resource Manager identifier of the storage account containing the blob to import as a disk.
      * 
      */
-    @InputImport(name="storageAccountId")
+    @Import(name="storageAccountId")
       private final @Nullable String storageAccountId;
 
     public Optional<String> getStorageAccountId() {
@@ -113,7 +113,7 @@ public final class CreationDataResponse extends io.pulumi.resources.InvokeArgs {
      * If createOption is Upload, this is the size of the contents of the upload including the VHD footer. This value should be between 20972032 (20 MiB + 512 bytes for the VHD footer) and 35183298347520 bytes (32 TiB + 512 bytes for the VHD footer).
      * 
      */
-    @InputImport(name="uploadSizeBytes")
+    @Import(name="uploadSizeBytes")
       private final @Nullable Double uploadSizeBytes;
 
     public Optional<Double> getUploadSizeBytes() {

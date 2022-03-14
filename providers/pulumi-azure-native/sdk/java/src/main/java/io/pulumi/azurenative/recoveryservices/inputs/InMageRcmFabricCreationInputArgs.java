@@ -5,7 +5,7 @@ package io.pulumi.azurenative.recoveryservices.inputs;
 
 import io.pulumi.azurenative.recoveryservices.inputs.IdentityProviderInputArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class InMageRcmFabricCreationInputArgs extends io.pulumi.resources.
      * The certificate to be used for AAD authentication.
      * 
      */
-    @InputImport(name="authCertificate")
+    @Import(name="authCertificate")
       private final @Nullable Output<String> authCertificate;
 
     public Output<String> getAuthCertificate() {
@@ -35,7 +35,7 @@ public final class InMageRcmFabricCreationInputArgs extends io.pulumi.resources.
      * Expected value is 'InMageRcm'.
      * 
      */
-    @InputImport(name="instanceType")
+    @Import(name="instanceType")
       private final @Nullable Output<String> instanceType;
 
     public Output<String> getInstanceType() {
@@ -46,7 +46,7 @@ public final class InMageRcmFabricCreationInputArgs extends io.pulumi.resources.
      * The ARM Id of the physical site.
      * 
      */
-    @InputImport(name="physicalSiteId")
+    @Import(name="physicalSiteId")
       private final @Nullable Output<String> physicalSiteId;
 
     public Output<String> getPhysicalSiteId() {
@@ -57,7 +57,7 @@ public final class InMageRcmFabricCreationInputArgs extends io.pulumi.resources.
      * The identity provider input for source agent authentication.
      * 
      */
-    @InputImport(name="sourceAgentIdentity")
+    @Import(name="sourceAgentIdentity")
       private final @Nullable Output<IdentityProviderInputArgs> sourceAgentIdentity;
 
     public Output<IdentityProviderInputArgs> getSourceAgentIdentity() {
@@ -68,7 +68,7 @@ public final class InMageRcmFabricCreationInputArgs extends io.pulumi.resources.
      * The ARM Id of the VMware site.
      * 
      */
-    @InputImport(name="vmwareSiteId")
+    @Import(name="vmwareSiteId")
       private final @Nullable Output<String> vmwareSiteId;
 
     public Output<String> getVmwareSiteId() {

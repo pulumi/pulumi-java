@@ -8,7 +8,7 @@ import io.pulumi.azurenative.hybriddata.DataStoreArgs;
 import io.pulumi.azurenative.hybriddata.outputs.CustomerSecretResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Object;
 import java.lang.String;
@@ -36,7 +36,7 @@ public class DataStore extends io.pulumi.resources.CustomResource {
      * List of customer secrets containing a key identifier and key value. The key identifier is a way for the specific data source to understand the key. Value contains customer secret encrypted by the encryptionKeys.
      * 
      */
-    @OutputExport(name="customerSecrets", type=List.class, parameters={CustomerSecretResponse.class})
+    @Export(name="customerSecrets", type=List.class, parameters={CustomerSecretResponse.class})
     private Output</* @Nullable */ List<CustomerSecretResponse>> customerSecrets;
 
     /**
@@ -50,7 +50,7 @@ public class DataStore extends io.pulumi.resources.CustomResource {
      * The arm id of the data store type.
      * 
      */
-    @OutputExport(name="dataStoreTypeId", type=String.class, parameters={})
+    @Export(name="dataStoreTypeId", type=String.class, parameters={})
     private Output<String> dataStoreTypeId;
 
     /**
@@ -64,7 +64,7 @@ public class DataStore extends io.pulumi.resources.CustomResource {
      * A generic json used differently by each data source type.
      * 
      */
-    @OutputExport(name="extendedProperties", type=Object.class, parameters={})
+    @Export(name="extendedProperties", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> extendedProperties;
 
     /**
@@ -78,7 +78,7 @@ public class DataStore extends io.pulumi.resources.CustomResource {
      * Name of the object.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -92,7 +92,7 @@ public class DataStore extends io.pulumi.resources.CustomResource {
      * Arm Id for the manager resource to which the data source is associated. This is optional.
      * 
      */
-    @OutputExport(name="repositoryId", type=String.class, parameters={})
+    @Export(name="repositoryId", type=String.class, parameters={})
     private Output</* @Nullable */ String> repositoryId;
 
     /**
@@ -106,7 +106,7 @@ public class DataStore extends io.pulumi.resources.CustomResource {
      * State of the data source.
      * 
      */
-    @OutputExport(name="state", type=String.class, parameters={})
+    @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
@@ -120,7 +120,7 @@ public class DataStore extends io.pulumi.resources.CustomResource {
      * Type of the object.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

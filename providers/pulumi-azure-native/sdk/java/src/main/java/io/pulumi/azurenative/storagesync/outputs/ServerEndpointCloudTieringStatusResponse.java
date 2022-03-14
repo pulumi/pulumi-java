@@ -8,12 +8,12 @@ import io.pulumi.azurenative.storagesync.outputs.CloudTieringDatePolicyStatusRes
 import io.pulumi.azurenative.storagesync.outputs.CloudTieringFilesNotTieringResponse;
 import io.pulumi.azurenative.storagesync.outputs.CloudTieringSpaceSavingsResponse;
 import io.pulumi.azurenative.storagesync.outputs.CloudTieringVolumeFreeSpacePolicyStatusResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ServerEndpointCloudTieringStatusResponse {
     /**
      * Information regarding how well the local cache on the server is performing.
@@ -66,18 +66,18 @@ public final class ServerEndpointCloudTieringStatusResponse {
      */
     private final CloudTieringVolumeFreeSpacePolicyStatusResponse volumeFreeSpacePolicyStatus;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServerEndpointCloudTieringStatusResponse(
-        @OutputCustomType.Parameter("cachePerformance") CloudTieringCachePerformanceResponse cachePerformance,
-        @OutputCustomType.Parameter("datePolicyStatus") CloudTieringDatePolicyStatusResponse datePolicyStatus,
-        @OutputCustomType.Parameter("filesNotTiering") CloudTieringFilesNotTieringResponse filesNotTiering,
-        @OutputCustomType.Parameter("health") String health,
-        @OutputCustomType.Parameter("healthLastUpdatedTimestamp") String healthLastUpdatedTimestamp,
-        @OutputCustomType.Parameter("lastCloudTieringResult") Integer lastCloudTieringResult,
-        @OutputCustomType.Parameter("lastSuccessTimestamp") String lastSuccessTimestamp,
-        @OutputCustomType.Parameter("lastUpdatedTimestamp") String lastUpdatedTimestamp,
-        @OutputCustomType.Parameter("spaceSavings") CloudTieringSpaceSavingsResponse spaceSavings,
-        @OutputCustomType.Parameter("volumeFreeSpacePolicyStatus") CloudTieringVolumeFreeSpacePolicyStatusResponse volumeFreeSpacePolicyStatus) {
+        @CustomType.Parameter("cachePerformance") CloudTieringCachePerformanceResponse cachePerformance,
+        @CustomType.Parameter("datePolicyStatus") CloudTieringDatePolicyStatusResponse datePolicyStatus,
+        @CustomType.Parameter("filesNotTiering") CloudTieringFilesNotTieringResponse filesNotTiering,
+        @CustomType.Parameter("health") String health,
+        @CustomType.Parameter("healthLastUpdatedTimestamp") String healthLastUpdatedTimestamp,
+        @CustomType.Parameter("lastCloudTieringResult") Integer lastCloudTieringResult,
+        @CustomType.Parameter("lastSuccessTimestamp") String lastSuccessTimestamp,
+        @CustomType.Parameter("lastUpdatedTimestamp") String lastUpdatedTimestamp,
+        @CustomType.Parameter("spaceSavings") CloudTieringSpaceSavingsResponse spaceSavings,
+        @CustomType.Parameter("volumeFreeSpacePolicyStatus") CloudTieringVolumeFreeSpacePolicyStatusResponse volumeFreeSpacePolicyStatus) {
         this.cachePerformance = cachePerformance;
         this.datePolicyStatus = datePolicyStatus;
         this.filesNotTiering = filesNotTiering;

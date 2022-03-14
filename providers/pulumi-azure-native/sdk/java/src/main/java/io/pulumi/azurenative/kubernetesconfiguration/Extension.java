@@ -12,7 +12,7 @@ import io.pulumi.azurenative.kubernetesconfiguration.outputs.ScopeResponse;
 import io.pulumi.azurenative.kubernetesconfiguration.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -41,7 +41,7 @@ public class Extension extends io.pulumi.resources.CustomResource {
      * Flag to note if this instance participates in auto upgrade of minor version, or not.
      * 
      */
-    @OutputExport(name="autoUpgradeMinorVersion", type=Boolean.class, parameters={})
+    @Export(name="autoUpgradeMinorVersion", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> autoUpgradeMinorVersion;
 
     /**
@@ -55,7 +55,7 @@ public class Extension extends io.pulumi.resources.CustomResource {
      * Configuration settings that are sensitive, as name-value pairs for configuring this instance of the extension.
      * 
      */
-    @OutputExport(name="configurationProtectedSettings", type=Map.class, parameters={String.class, String.class})
+    @Export(name="configurationProtectedSettings", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> configurationProtectedSettings;
 
     /**
@@ -69,7 +69,7 @@ public class Extension extends io.pulumi.resources.CustomResource {
      * Configuration settings, as name-value pairs for configuring this instance of the extension.
      * 
      */
-    @OutputExport(name="configurationSettings", type=Map.class, parameters={String.class, String.class})
+    @Export(name="configurationSettings", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> configurationSettings;
 
     /**
@@ -83,7 +83,7 @@ public class Extension extends io.pulumi.resources.CustomResource {
      * DateLiteral (per ISO8601) noting the time the resource was created by the client (user).
      * 
      */
-    @OutputExport(name="creationTime", type=String.class, parameters={})
+    @Export(name="creationTime", type=String.class, parameters={})
     private Output<String> creationTime;
 
     /**
@@ -97,7 +97,7 @@ public class Extension extends io.pulumi.resources.CustomResource {
      * Error information from the Agent - e.g. errors during installation.
      * 
      */
-    @OutputExport(name="errorInfo", type=ErrorDefinitionResponse.class, parameters={})
+    @Export(name="errorInfo", type=ErrorDefinitionResponse.class, parameters={})
     private Output<ErrorDefinitionResponse> errorInfo;
 
     /**
@@ -111,7 +111,7 @@ public class Extension extends io.pulumi.resources.CustomResource {
      * Type of the Extension, of which this resource is an instance of.  It must be one of the Extension Types registered with Microsoft.KubernetesConfiguration by the Extension publisher.
      * 
      */
-    @OutputExport(name="extensionType", type=String.class, parameters={})
+    @Export(name="extensionType", type=String.class, parameters={})
     private Output</* @Nullable */ String> extensionType;
 
     /**
@@ -125,7 +125,7 @@ public class Extension extends io.pulumi.resources.CustomResource {
      * The identity of the configuration.
      * 
      */
-    @OutputExport(name="identity", type=ConfigurationIdentityResponse.class, parameters={})
+    @Export(name="identity", type=ConfigurationIdentityResponse.class, parameters={})
     private Output</* @Nullable */ ConfigurationIdentityResponse> identity;
 
     /**
@@ -139,7 +139,7 @@ public class Extension extends io.pulumi.resources.CustomResource {
      * Status of installation of this instance of the extension.
      * 
      */
-    @OutputExport(name="installState", type=String.class, parameters={})
+    @Export(name="installState", type=String.class, parameters={})
     private Output<String> installState;
 
     /**
@@ -153,7 +153,7 @@ public class Extension extends io.pulumi.resources.CustomResource {
      * DateLiteral (per ISO8601) noting the time the resource was modified by the client (user).
      * 
      */
-    @OutputExport(name="lastModifiedTime", type=String.class, parameters={})
+    @Export(name="lastModifiedTime", type=String.class, parameters={})
     private Output<String> lastModifiedTime;
 
     /**
@@ -167,7 +167,7 @@ public class Extension extends io.pulumi.resources.CustomResource {
      * DateLiteral (per ISO8601) noting the time of last status from the agent.
      * 
      */
-    @OutputExport(name="lastStatusTime", type=String.class, parameters={})
+    @Export(name="lastStatusTime", type=String.class, parameters={})
     private Output<String> lastStatusTime;
 
     /**
@@ -181,7 +181,7 @@ public class Extension extends io.pulumi.resources.CustomResource {
      * Resource name
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -195,7 +195,7 @@ public class Extension extends io.pulumi.resources.CustomResource {
      * ReleaseTrain this extension instance participates in for auto-upgrade (e.g. Stable, Preview, etc.) - only if autoUpgradeMinorVersion is 'true'.
      * 
      */
-    @OutputExport(name="releaseTrain", type=String.class, parameters={})
+    @Export(name="releaseTrain", type=String.class, parameters={})
     private Output</* @Nullable */ String> releaseTrain;
 
     /**
@@ -209,7 +209,7 @@ public class Extension extends io.pulumi.resources.CustomResource {
      * Scope at which the extension instance is installed.
      * 
      */
-    @OutputExport(name="scope", type=ScopeResponse.class, parameters={})
+    @Export(name="scope", type=ScopeResponse.class, parameters={})
     private Output</* @Nullable */ ScopeResponse> scope;
 
     /**
@@ -223,7 +223,7 @@ public class Extension extends io.pulumi.resources.CustomResource {
      * Status from this instance of the extension.
      * 
      */
-    @OutputExport(name="statuses", type=List.class, parameters={ExtensionStatusResponse.class})
+    @Export(name="statuses", type=List.class, parameters={ExtensionStatusResponse.class})
     private Output</* @Nullable */ List<ExtensionStatusResponse>> statuses;
 
     /**
@@ -237,7 +237,7 @@ public class Extension extends io.pulumi.resources.CustomResource {
      * Top level metadata https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/common-api-contracts.md#system-metadata-for-all-azure-resources
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output</* @Nullable */ SystemDataResponse> systemData;
 
     /**
@@ -251,7 +251,7 @@ public class Extension extends io.pulumi.resources.CustomResource {
      * Resource type
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -265,7 +265,7 @@ public class Extension extends io.pulumi.resources.CustomResource {
      * Version of the extension for this extension instance, if it is 'pinned' to a specific version. autoUpgradeMinorVersion must be 'false'.
      * 
      */
-    @OutputExport(name="version", type=String.class, parameters={})
+    @Export(name="version", type=String.class, parameters={})
     private Output</* @Nullable */ String> version;
 
     /**

@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.aad.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ForestTrustResponse {
     /**
      * Friendly Name
@@ -37,13 +37,13 @@ public final class ForestTrustResponse {
      */
     private final @Nullable String trustedDomainFqdn;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ForestTrustResponse(
-        @OutputCustomType.Parameter("friendlyName") @Nullable String friendlyName,
-        @OutputCustomType.Parameter("remoteDnsIps") @Nullable String remoteDnsIps,
-        @OutputCustomType.Parameter("trustDirection") @Nullable String trustDirection,
-        @OutputCustomType.Parameter("trustPassword") @Nullable String trustPassword,
-        @OutputCustomType.Parameter("trustedDomainFqdn") @Nullable String trustedDomainFqdn) {
+        @CustomType.Parameter("friendlyName") @Nullable String friendlyName,
+        @CustomType.Parameter("remoteDnsIps") @Nullable String remoteDnsIps,
+        @CustomType.Parameter("trustDirection") @Nullable String trustDirection,
+        @CustomType.Parameter("trustPassword") @Nullable String trustPassword,
+        @CustomType.Parameter("trustedDomainFqdn") @Nullable String trustedDomainFqdn) {
         this.friendlyName = friendlyName;
         this.remoteDnsIps = remoteDnsIps;
         this.trustDirection = trustDirection;

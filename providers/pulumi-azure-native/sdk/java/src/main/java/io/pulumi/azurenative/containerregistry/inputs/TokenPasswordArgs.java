@@ -6,7 +6,7 @@ package io.pulumi.azurenative.containerregistry.inputs;
 import io.pulumi.azurenative.containerregistry.enums.TokenPasswordName;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class TokenPasswordArgs extends io.pulumi.resources.ResourceArgs {
      * The creation datetime of the password.
      * 
      */
-    @InputImport(name="creationTime")
+    @Import(name="creationTime")
       private final @Nullable Output<String> creationTime;
 
     public Output<String> getCreationTime() {
@@ -35,7 +35,7 @@ public final class TokenPasswordArgs extends io.pulumi.resources.ResourceArgs {
      * The expiry datetime of the password.
      * 
      */
-    @InputImport(name="expiry")
+    @Import(name="expiry")
       private final @Nullable Output<String> expiry;
 
     public Output<String> getExpiry() {
@@ -46,7 +46,7 @@ public final class TokenPasswordArgs extends io.pulumi.resources.ResourceArgs {
      * The password name "password1" or "password2"
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<Either<String,TokenPasswordName>> name;
 
     public Output<Either<String,TokenPasswordName>> getName() {

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.azurenative.datafactory.inputs.GitHubClientSecretResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class FactoryGitHubConfigurationResponse extends io.pulumi.resource
      * Account name.
      * 
      */
-    @InputImport(name="accountName", required=true)
+    @Import(name="accountName", required=true)
       private final String accountName;
 
     public String getAccountName() {
@@ -34,7 +34,7 @@ public final class FactoryGitHubConfigurationResponse extends io.pulumi.resource
      * GitHub bring your own app client id.
      * 
      */
-    @InputImport(name="clientId")
+    @Import(name="clientId")
       private final @Nullable String clientId;
 
     public Optional<String> getClientId() {
@@ -45,7 +45,7 @@ public final class FactoryGitHubConfigurationResponse extends io.pulumi.resource
      * GitHub bring your own app client secret information.
      * 
      */
-    @InputImport(name="clientSecret")
+    @Import(name="clientSecret")
       private final @Nullable GitHubClientSecretResponse clientSecret;
 
     public Optional<GitHubClientSecretResponse> getClientSecret() {
@@ -56,7 +56,7 @@ public final class FactoryGitHubConfigurationResponse extends io.pulumi.resource
      * Collaboration branch.
      * 
      */
-    @InputImport(name="collaborationBranch", required=true)
+    @Import(name="collaborationBranch", required=true)
       private final String collaborationBranch;
 
     public String getCollaborationBranch() {
@@ -67,7 +67,7 @@ public final class FactoryGitHubConfigurationResponse extends io.pulumi.resource
      * GitHub Enterprise host name. For example: https://github.mydomain.com
      * 
      */
-    @InputImport(name="hostName")
+    @Import(name="hostName")
       private final @Nullable String hostName;
 
     public Optional<String> getHostName() {
@@ -78,7 +78,7 @@ public final class FactoryGitHubConfigurationResponse extends io.pulumi.resource
      * Last commit id.
      * 
      */
-    @InputImport(name="lastCommitId")
+    @Import(name="lastCommitId")
       private final @Nullable String lastCommitId;
 
     public Optional<String> getLastCommitId() {
@@ -89,7 +89,7 @@ public final class FactoryGitHubConfigurationResponse extends io.pulumi.resource
      * Repository name.
      * 
      */
-    @InputImport(name="repositoryName", required=true)
+    @Import(name="repositoryName", required=true)
       private final String repositoryName;
 
     public String getRepositoryName() {
@@ -100,7 +100,7 @@ public final class FactoryGitHubConfigurationResponse extends io.pulumi.resource
      * Root folder.
      * 
      */
-    @InputImport(name="rootFolder", required=true)
+    @Import(name="rootFolder", required=true)
       private final String rootFolder;
 
     public String getRootFolder() {
@@ -112,7 +112,7 @@ public final class FactoryGitHubConfigurationResponse extends io.pulumi.resource
      * Expected value is 'FactoryGitHubConfiguration'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

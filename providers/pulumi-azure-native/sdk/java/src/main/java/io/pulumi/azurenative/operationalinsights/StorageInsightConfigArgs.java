@@ -5,7 +5,7 @@ package io.pulumi.azurenative.operationalinsights;
 
 import io.pulumi.azurenative.operationalinsights.inputs.StorageAccountArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class StorageInsightConfigArgs extends io.pulumi.resources.Resource
      * The names of the blob containers that the workspace should read
      * 
      */
-    @InputImport(name="containers")
+    @Import(name="containers")
       private final @Nullable Output<List<String>> containers;
 
     public Output<List<String>> getContainers() {
@@ -32,7 +32,7 @@ public final class StorageInsightConfigArgs extends io.pulumi.resources.Resource
      * The ETag of the storage insight.
      * 
      */
-    @InputImport(name="eTag")
+    @Import(name="eTag")
       private final @Nullable Output<String> eTag;
 
     public Output<String> getETag() {
@@ -43,7 +43,7 @@ public final class StorageInsightConfigArgs extends io.pulumi.resources.Resource
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -54,7 +54,7 @@ public final class StorageInsightConfigArgs extends io.pulumi.resources.Resource
      * The storage account connection details
      * 
      */
-    @InputImport(name="storageAccount", required=true)
+    @Import(name="storageAccount", required=true)
       private final Output<StorageAccountArgs> storageAccount;
 
     public Output<StorageAccountArgs> getStorageAccount() {
@@ -65,7 +65,7 @@ public final class StorageInsightConfigArgs extends io.pulumi.resources.Resource
      * Name of the storageInsightsConfigs resource
      * 
      */
-    @InputImport(name="storageInsightName")
+    @Import(name="storageInsightName")
       private final @Nullable Output<String> storageInsightName;
 
     public Output<String> getStorageInsightName() {
@@ -76,7 +76,7 @@ public final class StorageInsightConfigArgs extends io.pulumi.resources.Resource
      * The names of the Azure tables that the workspace should read
      * 
      */
-    @InputImport(name="tables")
+    @Import(name="tables")
       private final @Nullable Output<List<String>> tables;
 
     public Output<List<String>> getTables() {
@@ -87,7 +87,7 @@ public final class StorageInsightConfigArgs extends io.pulumi.resources.Resource
      * Resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -98,7 +98,7 @@ public final class StorageInsightConfigArgs extends io.pulumi.resources.Resource
      * The name of the workspace.
      * 
      */
-    @InputImport(name="workspaceName", required=true)
+    @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;
 
     public Output<String> getWorkspaceName() {

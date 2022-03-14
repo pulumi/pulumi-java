@@ -10,7 +10,7 @@ import io.pulumi.azurenative.databox.inputs.KeyEncryptionKeyArgs;
 import io.pulumi.azurenative.databox.inputs.PreferencesArgs;
 import io.pulumi.azurenative.databox.inputs.ShippingAddressArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -31,7 +31,7 @@ public final class DataBoxDiskJobDetailsArgs extends io.pulumi.resources.Resourc
      * Contact details for notification and shipping.
      * 
      */
-    @InputImport(name="contactDetails", required=true)
+    @Import(name="contactDetails", required=true)
       private final Output<ContactDetailsArgs> contactDetails;
 
     public Output<ContactDetailsArgs> getContactDetails() {
@@ -42,7 +42,7 @@ public final class DataBoxDiskJobDetailsArgs extends io.pulumi.resources.Resourc
      * Details of the data to be exported from azure.
      * 
      */
-    @InputImport(name="dataExportDetails")
+    @Import(name="dataExportDetails")
       private final @Nullable Output<List<DataExportDetailsArgs>> dataExportDetails;
 
     public Output<List<DataExportDetailsArgs>> getDataExportDetails() {
@@ -53,7 +53,7 @@ public final class DataBoxDiskJobDetailsArgs extends io.pulumi.resources.Resourc
      * Details of the data to be imported into azure.
      * 
      */
-    @InputImport(name="dataImportDetails")
+    @Import(name="dataImportDetails")
       private final @Nullable Output<List<DataImportDetailsArgs>> dataImportDetails;
 
     public Output<List<DataImportDetailsArgs>> getDataImportDetails() {
@@ -64,7 +64,7 @@ public final class DataBoxDiskJobDetailsArgs extends io.pulumi.resources.Resourc
      * The expected size of the data, which needs to be transferred in this job, in terabytes.
      * 
      */
-    @InputImport(name="expectedDataSizeInTeraBytes")
+    @Import(name="expectedDataSizeInTeraBytes")
       private final @Nullable Output<Integer> expectedDataSizeInTeraBytes;
 
     public Output<Integer> getExpectedDataSizeInTeraBytes() {
@@ -76,7 +76,7 @@ public final class DataBoxDiskJobDetailsArgs extends io.pulumi.resources.Resourc
      * Expected value is 'DataBoxDisk'.
      * 
      */
-    @InputImport(name="jobDetailsType", required=true)
+    @Import(name="jobDetailsType", required=true)
       private final Output<String> jobDetailsType;
 
     public Output<String> getJobDetailsType() {
@@ -87,7 +87,7 @@ public final class DataBoxDiskJobDetailsArgs extends io.pulumi.resources.Resourc
      * Details about which key encryption type is being used.
      * 
      */
-    @InputImport(name="keyEncryptionKey")
+    @Import(name="keyEncryptionKey")
       private final @Nullable Output<KeyEncryptionKeyArgs> keyEncryptionKey;
 
     public Output<KeyEncryptionKeyArgs> getKeyEncryptionKey() {
@@ -98,7 +98,7 @@ public final class DataBoxDiskJobDetailsArgs extends io.pulumi.resources.Resourc
      * User entered passkey for DataBox Disk job.
      * 
      */
-    @InputImport(name="passkey")
+    @Import(name="passkey")
       private final @Nullable Output<String> passkey;
 
     public Output<String> getPasskey() {
@@ -109,7 +109,7 @@ public final class DataBoxDiskJobDetailsArgs extends io.pulumi.resources.Resourc
      * Preferences for the order.
      * 
      */
-    @InputImport(name="preferences")
+    @Import(name="preferences")
       private final @Nullable Output<PreferencesArgs> preferences;
 
     public Output<PreferencesArgs> getPreferences() {
@@ -120,7 +120,7 @@ public final class DataBoxDiskJobDetailsArgs extends io.pulumi.resources.Resourc
      * User preference on what size disks are needed for the job. The map is from the disk size in TB to the count. Eg. {2,5} means 5 disks of 2 TB size. Key is string but will be checked against an int.
      * 
      */
-    @InputImport(name="preferredDisks")
+    @Import(name="preferredDisks")
       private final @Nullable Output<Map<String,Integer>> preferredDisks;
 
     public Output<Map<String,Integer>> getPreferredDisks() {
@@ -131,7 +131,7 @@ public final class DataBoxDiskJobDetailsArgs extends io.pulumi.resources.Resourc
      * Shipping address of the customer.
      * 
      */
-    @InputImport(name="shippingAddress")
+    @Import(name="shippingAddress")
       private final @Nullable Output<ShippingAddressArgs> shippingAddress;
 
     public Output<ShippingAddressArgs> getShippingAddress() {

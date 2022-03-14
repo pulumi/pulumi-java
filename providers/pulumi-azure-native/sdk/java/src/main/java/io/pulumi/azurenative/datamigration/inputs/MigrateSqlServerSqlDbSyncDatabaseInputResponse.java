@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datamigration.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class MigrateSqlServerSqlDbSyncDatabaseInputResponse extends io.pul
      * Unique identifier for database
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable String id;
 
     public Optional<String> getId() {
@@ -34,7 +34,7 @@ public final class MigrateSqlServerSqlDbSyncDatabaseInputResponse extends io.pul
      * Migration settings which tune the migration behavior
      * 
      */
-    @InputImport(name="migrationSetting")
+    @Import(name="migrationSetting")
       private final @Nullable Map<String,String> migrationSetting;
 
     public Map<String,String> getMigrationSetting() {
@@ -45,7 +45,7 @@ public final class MigrateSqlServerSqlDbSyncDatabaseInputResponse extends io.pul
      * Name of database
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -56,7 +56,7 @@ public final class MigrateSqlServerSqlDbSyncDatabaseInputResponse extends io.pul
      * Schema name to be migrated
      * 
      */
-    @InputImport(name="schemaName")
+    @Import(name="schemaName")
       private final @Nullable String schemaName;
 
     public Optional<String> getSchemaName() {
@@ -67,7 +67,7 @@ public final class MigrateSqlServerSqlDbSyncDatabaseInputResponse extends io.pul
      * Source settings to tune source endpoint migration behavior
      * 
      */
-    @InputImport(name="sourceSetting")
+    @Import(name="sourceSetting")
       private final @Nullable Map<String,String> sourceSetting;
 
     public Map<String,String> getSourceSetting() {
@@ -78,7 +78,7 @@ public final class MigrateSqlServerSqlDbSyncDatabaseInputResponse extends io.pul
      * Mapping of source to target tables
      * 
      */
-    @InputImport(name="tableMap")
+    @Import(name="tableMap")
       private final @Nullable Map<String,String> tableMap;
 
     public Map<String,String> getTableMap() {
@@ -89,7 +89,7 @@ public final class MigrateSqlServerSqlDbSyncDatabaseInputResponse extends io.pul
      * Target database name
      * 
      */
-    @InputImport(name="targetDatabaseName")
+    @Import(name="targetDatabaseName")
       private final @Nullable String targetDatabaseName;
 
     public Optional<String> getTargetDatabaseName() {
@@ -100,7 +100,7 @@ public final class MigrateSqlServerSqlDbSyncDatabaseInputResponse extends io.pul
      * Target settings to tune target endpoint migration behavior
      * 
      */
-    @InputImport(name="targetSetting")
+    @Import(name="targetSetting")
       private final @Nullable Map<String,String> targetSetting;
 
     public Map<String,String> getTargetSetting() {

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.eventgrid.enums.PublicNetworkAccess;
 import io.pulumi.azurenative.eventgrid.inputs.InboundIpRuleArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class PartnerNamespaceArgs extends io.pulumi.resources.ResourceArgs
      * This boolean is used to enable or disable local auth. Default value is false. When the property is set to true, only AAD token will be used to authenticate if user is allowed to publish to the partner namespace.
      * 
      */
-    @InputImport(name="disableLocalAuth")
+    @Import(name="disableLocalAuth")
       private final @Nullable Output<Boolean> disableLocalAuth;
 
     public Output<Boolean> getDisableLocalAuth() {
@@ -35,7 +35,7 @@ public final class PartnerNamespaceArgs extends io.pulumi.resources.ResourceArgs
      * This can be used to restrict traffic from specific IPs instead of all IPs. Note: These are considered only if PublicNetworkAccess is enabled.
      * 
      */
-    @InputImport(name="inboundIpRules")
+    @Import(name="inboundIpRules")
       private final @Nullable Output<List<InboundIpRuleArgs>> inboundIpRules;
 
     public Output<List<InboundIpRuleArgs>> getInboundIpRules() {
@@ -46,7 +46,7 @@ public final class PartnerNamespaceArgs extends io.pulumi.resources.ResourceArgs
      * Location of the resource.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -57,7 +57,7 @@ public final class PartnerNamespaceArgs extends io.pulumi.resources.ResourceArgs
      * Name of the partner namespace.
      * 
      */
-    @InputImport(name="partnerNamespaceName")
+    @Import(name="partnerNamespaceName")
       private final @Nullable Output<String> partnerNamespaceName;
 
     public Output<String> getPartnerNamespaceName() {
@@ -69,7 +69,7 @@ public final class PartnerNamespaceArgs extends io.pulumi.resources.ResourceArgs
      * /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventGrid/partnerRegistrations/{partnerRegistrationName}.
      * 
      */
-    @InputImport(name="partnerRegistrationFullyQualifiedId")
+    @Import(name="partnerRegistrationFullyQualifiedId")
       private final @Nullable Output<String> partnerRegistrationFullyQualifiedId;
 
     public Output<String> getPartnerRegistrationFullyQualifiedId() {
@@ -81,7 +81,7 @@ public final class PartnerNamespaceArgs extends io.pulumi.resources.ResourceArgs
      * You can further restrict to specific IPs by configuring <seealso cref="P:Microsoft.Azure.Events.ResourceProvider.Common.Contracts.PartnerNamespaceProperties.InboundIpRules" />
      * 
      */
-    @InputImport(name="publicNetworkAccess")
+    @Import(name="publicNetworkAccess")
       private final @Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess;
 
     public Output<Either<String,PublicNetworkAccess>> getPublicNetworkAccess() {
@@ -92,7 +92,7 @@ public final class PartnerNamespaceArgs extends io.pulumi.resources.ResourceArgs
      * The name of the resource group within the user's subscription.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -103,7 +103,7 @@ public final class PartnerNamespaceArgs extends io.pulumi.resources.ResourceArgs
      * Tags of the resource.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

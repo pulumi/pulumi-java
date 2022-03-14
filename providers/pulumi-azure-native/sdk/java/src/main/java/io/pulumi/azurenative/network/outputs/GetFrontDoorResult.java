@@ -10,7 +10,7 @@ import io.pulumi.azurenative.network.outputs.HealthProbeSettingsModelResponse;
 import io.pulumi.azurenative.network.outputs.LoadBalancingSettingsModelResponse;
 import io.pulumi.azurenative.network.outputs.RoutingRuleResponse;
 import io.pulumi.azurenative.network.outputs.RulesEngineResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -18,7 +18,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetFrontDoorResult {
     /**
      * Backend pools available to routing rules.
@@ -111,26 +111,26 @@ public final class GetFrontDoorResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetFrontDoorResult(
-        @OutputCustomType.Parameter("backendPools") @Nullable List<BackendPoolResponse> backendPools,
-        @OutputCustomType.Parameter("backendPoolsSettings") @Nullable BackendPoolsSettingsResponse backendPoolsSettings,
-        @OutputCustomType.Parameter("cname") String cname,
-        @OutputCustomType.Parameter("enabledState") @Nullable String enabledState,
-        @OutputCustomType.Parameter("friendlyName") @Nullable String friendlyName,
-        @OutputCustomType.Parameter("frontdoorId") String frontdoorId,
-        @OutputCustomType.Parameter("frontendEndpoints") @Nullable List<FrontendEndpointResponse> frontendEndpoints,
-        @OutputCustomType.Parameter("healthProbeSettings") @Nullable List<HealthProbeSettingsModelResponse> healthProbeSettings,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("loadBalancingSettings") @Nullable List<LoadBalancingSettingsModelResponse> loadBalancingSettings,
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("resourceState") String resourceState,
-        @OutputCustomType.Parameter("routingRules") @Nullable List<RoutingRuleResponse> routingRules,
-        @OutputCustomType.Parameter("rulesEngines") List<RulesEngineResponse> rulesEngines,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("backendPools") @Nullable List<BackendPoolResponse> backendPools,
+        @CustomType.Parameter("backendPoolsSettings") @Nullable BackendPoolsSettingsResponse backendPoolsSettings,
+        @CustomType.Parameter("cname") String cname,
+        @CustomType.Parameter("enabledState") @Nullable String enabledState,
+        @CustomType.Parameter("friendlyName") @Nullable String friendlyName,
+        @CustomType.Parameter("frontdoorId") String frontdoorId,
+        @CustomType.Parameter("frontendEndpoints") @Nullable List<FrontendEndpointResponse> frontendEndpoints,
+        @CustomType.Parameter("healthProbeSettings") @Nullable List<HealthProbeSettingsModelResponse> healthProbeSettings,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("loadBalancingSettings") @Nullable List<LoadBalancingSettingsModelResponse> loadBalancingSettings,
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("resourceState") String resourceState,
+        @CustomType.Parameter("routingRules") @Nullable List<RoutingRuleResponse> routingRules,
+        @CustomType.Parameter("rulesEngines") List<RulesEngineResponse> rulesEngines,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type) {
         this.backendPools = backendPools;
         this.backendPoolsSettings = backendPoolsSettings;
         this.cname = cname;

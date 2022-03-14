@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
 import io.pulumi.azurenative.machinelearningservices.outputs.ComputeBindingResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class MLAssistConfigurationResponse {
     /**
      * The compute designated for inferencing.
@@ -40,13 +40,13 @@ public final class MLAssistConfigurationResponse {
      */
     private final ComputeBindingResponse trainingComputeBinding;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MLAssistConfigurationResponse(
-        @OutputCustomType.Parameter("inferencingComputeBinding") ComputeBindingResponse inferencingComputeBinding,
-        @OutputCustomType.Parameter("mlAssistEnabled") @Nullable Boolean mlAssistEnabled,
-        @OutputCustomType.Parameter("modelNamePrefix") String modelNamePrefix,
-        @OutputCustomType.Parameter("prelabelAccuracyThreshold") @Nullable Double prelabelAccuracyThreshold,
-        @OutputCustomType.Parameter("trainingComputeBinding") ComputeBindingResponse trainingComputeBinding) {
+        @CustomType.Parameter("inferencingComputeBinding") ComputeBindingResponse inferencingComputeBinding,
+        @CustomType.Parameter("mlAssistEnabled") @Nullable Boolean mlAssistEnabled,
+        @CustomType.Parameter("modelNamePrefix") String modelNamePrefix,
+        @CustomType.Parameter("prelabelAccuracyThreshold") @Nullable Double prelabelAccuracyThreshold,
+        @CustomType.Parameter("trainingComputeBinding") ComputeBindingResponse trainingComputeBinding) {
         this.inferencingComputeBinding = inferencingComputeBinding;
         this.mlAssistEnabled = mlAssistEnabled;
         this.modelNamePrefix = modelNamePrefix;

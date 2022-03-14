@@ -6,7 +6,7 @@ package io.pulumi.azurenative.storage.inputs;
 import io.pulumi.azurenative.storage.enums.ExpirationAction;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class SasPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * The SAS expiration action. Can only be Log.
      * 
      */
-    @InputImport(name="expirationAction", required=true)
+    @Import(name="expirationAction", required=true)
       private final Output<Either<String,ExpirationAction>> expirationAction;
 
     public Output<Either<String,ExpirationAction>> getExpirationAction() {
@@ -34,7 +34,7 @@ public final class SasPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * The SAS expiration period, DD.HH:MM:SS.
      * 
      */
-    @InputImport(name="sasExpirationPeriod", required=true)
+    @Import(name="sasExpirationPeriod", required=true)
       private final Output<String> sasExpirationPeriod;
 
     public Output<String> getSasExpirationPeriod() {

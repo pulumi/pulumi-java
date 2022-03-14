@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.security;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class IngestionSettingArgs extends io.pulumi.resources.ResourceArgs
      * Name of the ingestion setting
      * 
      */
-    @InputImport(name="ingestionSettingName")
+    @Import(name="ingestionSettingName")
       private final @Nullable Output<String> ingestionSettingName;
 
     public Output<String> getIngestionSettingName() {

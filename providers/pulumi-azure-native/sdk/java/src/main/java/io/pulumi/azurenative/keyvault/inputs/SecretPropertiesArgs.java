@@ -5,7 +5,7 @@ package io.pulumi.azurenative.keyvault.inputs;
 
 import io.pulumi.azurenative.keyvault.inputs.SecretAttributesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class SecretPropertiesArgs extends io.pulumi.resources.ResourceArgs
      * The attributes of the secret.
      * 
      */
-    @InputImport(name="attributes")
+    @Import(name="attributes")
       private final @Nullable Output<SecretAttributesArgs> attributes;
 
     public Output<SecretAttributesArgs> getAttributes() {
@@ -34,7 +34,7 @@ public final class SecretPropertiesArgs extends io.pulumi.resources.ResourceArgs
      * The content type of the secret.
      * 
      */
-    @InputImport(name="contentType")
+    @Import(name="contentType")
       private final @Nullable Output<String> contentType;
 
     public Output<String> getContentType() {
@@ -45,7 +45,7 @@ public final class SecretPropertiesArgs extends io.pulumi.resources.ResourceArgs
      * The value of the secret. NOTE: 'value' will never be returned from the service, as APIs using this model are is intended for internal use in ARM deployments. Users should use the data-plane REST service for interaction with vault secrets.
      * 
      */
-    @InputImport(name="value")
+    @Import(name="value")
       private final @Nullable Output<String> value;
 
     public Output<String> getValue() {

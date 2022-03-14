@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.apimanagement.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class UserIdentityContractResponse extends io.pulumi.resources.Invo
      * Identifier value within provider.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable String id;
 
     public Optional<String> getId() {
@@ -33,7 +33,7 @@ public final class UserIdentityContractResponse extends io.pulumi.resources.Invo
      * Identity provider name.
      * 
      */
-    @InputImport(name="provider")
+    @Import(name="provider")
       private final @Nullable String provider;
 
     public Optional<String> getProvider() {

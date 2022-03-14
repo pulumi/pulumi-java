@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class ComputeInstanceLastOperationResponse extends io.pulumi.resour
      * Name of the last operation.
      * 
      */
-    @InputImport(name="operationName")
+    @Import(name="operationName")
       private final @Nullable String operationName;
 
     public Optional<String> getOperationName() {
@@ -33,7 +33,7 @@ public final class ComputeInstanceLastOperationResponse extends io.pulumi.resour
      * Operation status.
      * 
      */
-    @InputImport(name="operationStatus")
+    @Import(name="operationStatus")
       private final @Nullable String operationStatus;
 
     public Optional<String> getOperationStatus() {
@@ -44,7 +44,7 @@ public final class ComputeInstanceLastOperationResponse extends io.pulumi.resour
      * Time of the last operation.
      * 
      */
-    @InputImport(name="operationTime")
+    @Import(name="operationTime")
       private final @Nullable String operationTime;
 
     public Optional<String> getOperationTime() {

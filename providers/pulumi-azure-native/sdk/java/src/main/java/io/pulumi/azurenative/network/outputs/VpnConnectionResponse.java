@@ -8,7 +8,7 @@ import io.pulumi.azurenative.network.outputs.RoutingConfigurationResponse;
 import io.pulumi.azurenative.network.outputs.SubResourceResponse;
 import io.pulumi.azurenative.network.outputs.TrafficSelectorPolicyResponse;
 import io.pulumi.azurenative.network.outputs.VpnSiteLinkConnectionResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -18,7 +18,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VpnConnectionResponse {
     /**
      * Expected bandwidth in MBPS.
@@ -131,30 +131,30 @@ public final class VpnConnectionResponse {
      */
     private final @Nullable List<VpnSiteLinkConnectionResponse> vpnLinkConnections;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VpnConnectionResponse(
-        @OutputCustomType.Parameter("connectionBandwidth") @Nullable Integer connectionBandwidth,
-        @OutputCustomType.Parameter("connectionStatus") String connectionStatus,
-        @OutputCustomType.Parameter("dpdTimeoutSeconds") @Nullable Integer dpdTimeoutSeconds,
-        @OutputCustomType.Parameter("egressBytesTransferred") Double egressBytesTransferred,
-        @OutputCustomType.Parameter("enableBgp") @Nullable Boolean enableBgp,
-        @OutputCustomType.Parameter("enableInternetSecurity") @Nullable Boolean enableInternetSecurity,
-        @OutputCustomType.Parameter("enableRateLimiting") @Nullable Boolean enableRateLimiting,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("ingressBytesTransferred") Double ingressBytesTransferred,
-        @OutputCustomType.Parameter("ipsecPolicies") @Nullable List<IpsecPolicyResponse> ipsecPolicies,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("remoteVpnSite") @Nullable SubResourceResponse remoteVpnSite,
-        @OutputCustomType.Parameter("routingConfiguration") @Nullable RoutingConfigurationResponse routingConfiguration,
-        @OutputCustomType.Parameter("routingWeight") @Nullable Integer routingWeight,
-        @OutputCustomType.Parameter("sharedKey") @Nullable String sharedKey,
-        @OutputCustomType.Parameter("trafficSelectorPolicies") @Nullable List<TrafficSelectorPolicyResponse> trafficSelectorPolicies,
-        @OutputCustomType.Parameter("useLocalAzureIpAddress") @Nullable Boolean useLocalAzureIpAddress,
-        @OutputCustomType.Parameter("usePolicyBasedTrafficSelectors") @Nullable Boolean usePolicyBasedTrafficSelectors,
-        @OutputCustomType.Parameter("vpnConnectionProtocolType") @Nullable String vpnConnectionProtocolType,
-        @OutputCustomType.Parameter("vpnLinkConnections") @Nullable List<VpnSiteLinkConnectionResponse> vpnLinkConnections) {
+        @CustomType.Parameter("connectionBandwidth") @Nullable Integer connectionBandwidth,
+        @CustomType.Parameter("connectionStatus") String connectionStatus,
+        @CustomType.Parameter("dpdTimeoutSeconds") @Nullable Integer dpdTimeoutSeconds,
+        @CustomType.Parameter("egressBytesTransferred") Double egressBytesTransferred,
+        @CustomType.Parameter("enableBgp") @Nullable Boolean enableBgp,
+        @CustomType.Parameter("enableInternetSecurity") @Nullable Boolean enableInternetSecurity,
+        @CustomType.Parameter("enableRateLimiting") @Nullable Boolean enableRateLimiting,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("ingressBytesTransferred") Double ingressBytesTransferred,
+        @CustomType.Parameter("ipsecPolicies") @Nullable List<IpsecPolicyResponse> ipsecPolicies,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("remoteVpnSite") @Nullable SubResourceResponse remoteVpnSite,
+        @CustomType.Parameter("routingConfiguration") @Nullable RoutingConfigurationResponse routingConfiguration,
+        @CustomType.Parameter("routingWeight") @Nullable Integer routingWeight,
+        @CustomType.Parameter("sharedKey") @Nullable String sharedKey,
+        @CustomType.Parameter("trafficSelectorPolicies") @Nullable List<TrafficSelectorPolicyResponse> trafficSelectorPolicies,
+        @CustomType.Parameter("useLocalAzureIpAddress") @Nullable Boolean useLocalAzureIpAddress,
+        @CustomType.Parameter("usePolicyBasedTrafficSelectors") @Nullable Boolean usePolicyBasedTrafficSelectors,
+        @CustomType.Parameter("vpnConnectionProtocolType") @Nullable String vpnConnectionProtocolType,
+        @CustomType.Parameter("vpnLinkConnections") @Nullable List<VpnSiteLinkConnectionResponse> vpnLinkConnections) {
         this.connectionBandwidth = connectionBandwidth;
         this.connectionStatus = connectionStatus;
         this.dpdTimeoutSeconds = dpdTimeoutSeconds;

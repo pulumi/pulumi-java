@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datamigration.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class PostgreSqlConnectionInfoArgs extends io.pulumi.resources.Reso
      * Name of the database
      * 
      */
-    @InputImport(name="databaseName")
+    @Import(name="databaseName")
       private final @Nullable Output<String> databaseName;
 
     public Output<String> getDatabaseName() {
@@ -34,7 +34,7 @@ public final class PostgreSqlConnectionInfoArgs extends io.pulumi.resources.Reso
      * Password credential.
      * 
      */
-    @InputImport(name="password")
+    @Import(name="password")
       private final @Nullable Output<String> password;
 
     public Output<String> getPassword() {
@@ -45,7 +45,7 @@ public final class PostgreSqlConnectionInfoArgs extends io.pulumi.resources.Reso
      * Port for Server
      * 
      */
-    @InputImport(name="port", required=true)
+    @Import(name="port", required=true)
       private final Output<Integer> port;
 
     public Output<Integer> getPort() {
@@ -56,7 +56,7 @@ public final class PostgreSqlConnectionInfoArgs extends io.pulumi.resources.Reso
      * Name of the server
      * 
      */
-    @InputImport(name="serverName", required=true)
+    @Import(name="serverName", required=true)
       private final Output<String> serverName;
 
     public Output<String> getServerName() {
@@ -68,7 +68,7 @@ public final class PostgreSqlConnectionInfoArgs extends io.pulumi.resources.Reso
      * Expected value is 'PostgreSqlConnectionInfo'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {
@@ -79,7 +79,7 @@ public final class PostgreSqlConnectionInfoArgs extends io.pulumi.resources.Reso
      * User name
      * 
      */
-    @InputImport(name="userName")
+    @Import(name="userName")
       private final @Nullable Output<String> userName;
 
     public Output<String> getUserName() {

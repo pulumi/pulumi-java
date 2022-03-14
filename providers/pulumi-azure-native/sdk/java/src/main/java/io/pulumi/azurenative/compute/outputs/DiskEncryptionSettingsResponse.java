@@ -5,13 +5,13 @@ package io.pulumi.azurenative.compute.outputs;
 
 import io.pulumi.azurenative.compute.outputs.KeyVaultKeyReferenceResponse;
 import io.pulumi.azurenative.compute.outputs.KeyVaultSecretReferenceResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DiskEncryptionSettingsResponse {
     /**
      * Specifies the location of the disk encryption key, which is a Key Vault Secret.
@@ -29,11 +29,11 @@ public final class DiskEncryptionSettingsResponse {
      */
     private final @Nullable KeyVaultKeyReferenceResponse keyEncryptionKey;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DiskEncryptionSettingsResponse(
-        @OutputCustomType.Parameter("diskEncryptionKey") @Nullable KeyVaultSecretReferenceResponse diskEncryptionKey,
-        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
-        @OutputCustomType.Parameter("keyEncryptionKey") @Nullable KeyVaultKeyReferenceResponse keyEncryptionKey) {
+        @CustomType.Parameter("diskEncryptionKey") @Nullable KeyVaultSecretReferenceResponse diskEncryptionKey,
+        @CustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @CustomType.Parameter("keyEncryptionKey") @Nullable KeyVaultKeyReferenceResponse keyEncryptionKey) {
         this.diskEncryptionKey = diskEncryptionKey;
         this.enabled = enabled;
         this.keyEncryptionKey = keyEncryptionKey;

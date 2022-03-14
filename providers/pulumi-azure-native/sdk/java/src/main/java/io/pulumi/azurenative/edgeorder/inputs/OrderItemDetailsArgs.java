@@ -8,7 +8,7 @@ import io.pulumi.azurenative.edgeorder.inputs.PreferencesArgs;
 import io.pulumi.azurenative.edgeorder.inputs.ProductDetailsArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +27,7 @@ public final class OrderItemDetailsArgs extends io.pulumi.resources.ResourceArgs
      * Additional notification email list
      * 
      */
-    @InputImport(name="notificationEmailList")
+    @Import(name="notificationEmailList")
       private final @Nullable Output<List<String>> notificationEmailList;
 
     public Output<List<String>> getNotificationEmailList() {
@@ -38,7 +38,7 @@ public final class OrderItemDetailsArgs extends io.pulumi.resources.ResourceArgs
      * Order item type.
      * 
      */
-    @InputImport(name="orderItemType", required=true)
+    @Import(name="orderItemType", required=true)
       private final Output<Either<String,OrderItemType>> orderItemType;
 
     public Output<Either<String,OrderItemType>> getOrderItemType() {
@@ -49,7 +49,7 @@ public final class OrderItemDetailsArgs extends io.pulumi.resources.ResourceArgs
      * Customer notification Preferences
      * 
      */
-    @InputImport(name="preferences")
+    @Import(name="preferences")
       private final @Nullable Output<PreferencesArgs> preferences;
 
     public Output<PreferencesArgs> getPreferences() {
@@ -60,7 +60,7 @@ public final class OrderItemDetailsArgs extends io.pulumi.resources.ResourceArgs
      * Unique identifier for configuration.
      * 
      */
-    @InputImport(name="productDetails", required=true)
+    @Import(name="productDetails", required=true)
       private final Output<ProductDetailsArgs> productDetails;
 
     public Output<ProductDetailsArgs> getProductDetails() {

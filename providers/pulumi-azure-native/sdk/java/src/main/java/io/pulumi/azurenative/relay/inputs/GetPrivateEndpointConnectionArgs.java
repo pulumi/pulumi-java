@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.relay.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetPrivateEndpointConnectionArgs extends io.pulumi.resources.
      * The namespace name
      * 
      */
-    @InputImport(name="namespaceName", required=true)
+    @Import(name="namespaceName", required=true)
       private final String namespaceName;
 
     public String getNamespaceName() {
@@ -27,7 +27,7 @@ public final class GetPrivateEndpointConnectionArgs extends io.pulumi.resources.
      * The PrivateEndpointConnection name.
      * 
      */
-    @InputImport(name="privateEndpointConnectionName", required=true)
+    @Import(name="privateEndpointConnectionName", required=true)
       private final String privateEndpointConnectionName;
 
     public String getPrivateEndpointConnectionName() {
@@ -38,7 +38,7 @@ public final class GetPrivateEndpointConnectionArgs extends io.pulumi.resources.
      * Name of the Resource group within the Azure subscription.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {

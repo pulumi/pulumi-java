@@ -7,7 +7,7 @@ import io.pulumi.azurenative.storage.enums.HttpProtocol;
 import io.pulumi.azurenative.storage.enums.Permissions;
 import io.pulumi.azurenative.storage.enums.SignedResource;
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class ListStorageAccountServiceSASArgs extends io.pulumi.resources.
      * The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.
      * 
      */
-    @InputImport(name="accountName", required=true)
+    @Import(name="accountName", required=true)
       private final String accountName;
 
     public String getAccountName() {
@@ -33,7 +33,7 @@ public final class ListStorageAccountServiceSASArgs extends io.pulumi.resources.
      * The response header override for cache control.
      * 
      */
-    @InputImport(name="cacheControl")
+    @Import(name="cacheControl")
       private final @Nullable String cacheControl;
 
     public Optional<String> getCacheControl() {
@@ -44,7 +44,7 @@ public final class ListStorageAccountServiceSASArgs extends io.pulumi.resources.
      * The canonical path to the signed resource.
      * 
      */
-    @InputImport(name="canonicalizedResource", required=true)
+    @Import(name="canonicalizedResource", required=true)
       private final String canonicalizedResource;
 
     public String getCanonicalizedResource() {
@@ -55,7 +55,7 @@ public final class ListStorageAccountServiceSASArgs extends io.pulumi.resources.
      * The response header override for content disposition.
      * 
      */
-    @InputImport(name="contentDisposition")
+    @Import(name="contentDisposition")
       private final @Nullable String contentDisposition;
 
     public Optional<String> getContentDisposition() {
@@ -66,7 +66,7 @@ public final class ListStorageAccountServiceSASArgs extends io.pulumi.resources.
      * The response header override for content encoding.
      * 
      */
-    @InputImport(name="contentEncoding")
+    @Import(name="contentEncoding")
       private final @Nullable String contentEncoding;
 
     public Optional<String> getContentEncoding() {
@@ -77,7 +77,7 @@ public final class ListStorageAccountServiceSASArgs extends io.pulumi.resources.
      * The response header override for content language.
      * 
      */
-    @InputImport(name="contentLanguage")
+    @Import(name="contentLanguage")
       private final @Nullable String contentLanguage;
 
     public Optional<String> getContentLanguage() {
@@ -88,7 +88,7 @@ public final class ListStorageAccountServiceSASArgs extends io.pulumi.resources.
      * The response header override for content type.
      * 
      */
-    @InputImport(name="contentType")
+    @Import(name="contentType")
       private final @Nullable String contentType;
 
     public Optional<String> getContentType() {
@@ -99,7 +99,7 @@ public final class ListStorageAccountServiceSASArgs extends io.pulumi.resources.
      * An IP address or a range of IP addresses from which to accept requests.
      * 
      */
-    @InputImport(name="iPAddressOrRange")
+    @Import(name="iPAddressOrRange")
       private final @Nullable String iPAddressOrRange;
 
     public Optional<String> getIPAddressOrRange() {
@@ -110,7 +110,7 @@ public final class ListStorageAccountServiceSASArgs extends io.pulumi.resources.
      * A unique value up to 64 characters in length that correlates to an access policy specified for the container, queue, or table.
      * 
      */
-    @InputImport(name="identifier")
+    @Import(name="identifier")
       private final @Nullable String identifier;
 
     public Optional<String> getIdentifier() {
@@ -121,7 +121,7 @@ public final class ListStorageAccountServiceSASArgs extends io.pulumi.resources.
      * The key to sign the account SAS token with.
      * 
      */
-    @InputImport(name="keyToSign")
+    @Import(name="keyToSign")
       private final @Nullable String keyToSign;
 
     public Optional<String> getKeyToSign() {
@@ -132,7 +132,7 @@ public final class ListStorageAccountServiceSASArgs extends io.pulumi.resources.
      * The end of partition key.
      * 
      */
-    @InputImport(name="partitionKeyEnd")
+    @Import(name="partitionKeyEnd")
       private final @Nullable String partitionKeyEnd;
 
     public Optional<String> getPartitionKeyEnd() {
@@ -143,7 +143,7 @@ public final class ListStorageAccountServiceSASArgs extends io.pulumi.resources.
      * The start of partition key.
      * 
      */
-    @InputImport(name="partitionKeyStart")
+    @Import(name="partitionKeyStart")
       private final @Nullable String partitionKeyStart;
 
     public Optional<String> getPartitionKeyStart() {
@@ -154,7 +154,7 @@ public final class ListStorageAccountServiceSASArgs extends io.pulumi.resources.
      * The signed permissions for the service SAS. Possible values include: Read (r), Write (w), Delete (d), List (l), Add (a), Create (c), Update (u) and Process (p).
      * 
      */
-    @InputImport(name="permissions")
+    @Import(name="permissions")
       private final @Nullable Either<String,Permissions> permissions;
 
     public Either<String,Permissions> getPermissions() {
@@ -165,7 +165,7 @@ public final class ListStorageAccountServiceSASArgs extends io.pulumi.resources.
      * The protocol permitted for a request made with the account SAS.
      * 
      */
-    @InputImport(name="protocols")
+    @Import(name="protocols")
       private final @Nullable HttpProtocol protocols;
 
     public Optional<HttpProtocol> getProtocols() {
@@ -176,7 +176,7 @@ public final class ListStorageAccountServiceSASArgs extends io.pulumi.resources.
      * The signed services accessible with the service SAS. Possible values include: Blob (b), Container (c), File (f), Share (s).
      * 
      */
-    @InputImport(name="resource")
+    @Import(name="resource")
       private final @Nullable Either<String,SignedResource> resource;
 
     public Either<String,SignedResource> getResource() {
@@ -187,7 +187,7 @@ public final class ListStorageAccountServiceSASArgs extends io.pulumi.resources.
      * The name of the resource group within the user's subscription. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {
@@ -198,7 +198,7 @@ public final class ListStorageAccountServiceSASArgs extends io.pulumi.resources.
      * The end of row key.
      * 
      */
-    @InputImport(name="rowKeyEnd")
+    @Import(name="rowKeyEnd")
       private final @Nullable String rowKeyEnd;
 
     public Optional<String> getRowKeyEnd() {
@@ -209,7 +209,7 @@ public final class ListStorageAccountServiceSASArgs extends io.pulumi.resources.
      * The start of row key.
      * 
      */
-    @InputImport(name="rowKeyStart")
+    @Import(name="rowKeyStart")
       private final @Nullable String rowKeyStart;
 
     public Optional<String> getRowKeyStart() {
@@ -220,7 +220,7 @@ public final class ListStorageAccountServiceSASArgs extends io.pulumi.resources.
      * The time at which the shared access signature becomes invalid.
      * 
      */
-    @InputImport(name="sharedAccessExpiryTime")
+    @Import(name="sharedAccessExpiryTime")
       private final @Nullable String sharedAccessExpiryTime;
 
     public Optional<String> getSharedAccessExpiryTime() {
@@ -231,7 +231,7 @@ public final class ListStorageAccountServiceSASArgs extends io.pulumi.resources.
      * The time at which the SAS becomes valid.
      * 
      */
-    @InputImport(name="sharedAccessStartTime")
+    @Import(name="sharedAccessStartTime")
       private final @Nullable String sharedAccessStartTime;
 
     public Optional<String> getSharedAccessStartTime() {

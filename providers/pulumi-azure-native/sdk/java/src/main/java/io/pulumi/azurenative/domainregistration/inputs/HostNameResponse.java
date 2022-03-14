@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.domainregistration.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class HostNameResponse extends io.pulumi.resources.InvokeArgs {
      * Name of the Azure resource the hostname is assigned to. If it is assigned to a Traffic Manager then it will be the Traffic Manager name otherwise it will be the app name.
      * 
      */
-    @InputImport(name="azureResourceName")
+    @Import(name="azureResourceName")
       private final @Nullable String azureResourceName;
 
     public Optional<String> getAzureResourceName() {
@@ -34,7 +34,7 @@ public final class HostNameResponse extends io.pulumi.resources.InvokeArgs {
      * Type of the Azure resource the hostname is assigned to.
      * 
      */
-    @InputImport(name="azureResourceType")
+    @Import(name="azureResourceType")
       private final @Nullable String azureResourceType;
 
     public Optional<String> getAzureResourceType() {
@@ -45,7 +45,7 @@ public final class HostNameResponse extends io.pulumi.resources.InvokeArgs {
      * Type of the DNS record.
      * 
      */
-    @InputImport(name="customHostNameDnsRecordType")
+    @Import(name="customHostNameDnsRecordType")
       private final @Nullable String customHostNameDnsRecordType;
 
     public Optional<String> getCustomHostNameDnsRecordType() {
@@ -56,7 +56,7 @@ public final class HostNameResponse extends io.pulumi.resources.InvokeArgs {
      * Type of the hostname.
      * 
      */
-    @InputImport(name="hostNameType")
+    @Import(name="hostNameType")
       private final @Nullable String hostNameType;
 
     public Optional<String> getHostNameType() {
@@ -67,7 +67,7 @@ public final class HostNameResponse extends io.pulumi.resources.InvokeArgs {
      * Name of the hostname.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -78,7 +78,7 @@ public final class HostNameResponse extends io.pulumi.resources.InvokeArgs {
      * List of apps the hostname is assigned to. This list will have more than one app only if the hostname is pointing to a Traffic Manager.
      * 
      */
-    @InputImport(name="siteNames")
+    @Import(name="siteNames")
       private final @Nullable List<String> siteNames;
 
     public List<String> getSiteNames() {

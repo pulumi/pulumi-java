@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningcompute.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class AutoScaleConfigurationResponse extends io.pulumi.resources.In
      * The maximum number of replicas for each service.
      * 
      */
-    @InputImport(name="maxReplicas")
+    @Import(name="maxReplicas")
       private final @Nullable Integer maxReplicas;
 
     public Optional<Integer> getMaxReplicas() {
@@ -35,7 +35,7 @@ public final class AutoScaleConfigurationResponse extends io.pulumi.resources.In
      * The minimum number of replicas for each service.
      * 
      */
-    @InputImport(name="minReplicas")
+    @Import(name="minReplicas")
       private final @Nullable Integer minReplicas;
 
     public Optional<Integer> getMinReplicas() {
@@ -46,7 +46,7 @@ public final class AutoScaleConfigurationResponse extends io.pulumi.resources.In
      * Refresh period in seconds.
      * 
      */
-    @InputImport(name="refreshPeriodInSeconds")
+    @Import(name="refreshPeriodInSeconds")
       private final @Nullable Integer refreshPeriodInSeconds;
 
     public Optional<Integer> getRefreshPeriodInSeconds() {
@@ -57,7 +57,7 @@ public final class AutoScaleConfigurationResponse extends io.pulumi.resources.In
      * If auto-scale is enabled for all services. Each service can turn it off individually.
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable String status;
 
     public Optional<String> getStatus() {
@@ -68,7 +68,7 @@ public final class AutoScaleConfigurationResponse extends io.pulumi.resources.In
      * The target utilization.
      * 
      */
-    @InputImport(name="targetUtilization")
+    @Import(name="targetUtilization")
       private final @Nullable Double targetUtilization;
 
     public Optional<Double> getTargetUtilization() {

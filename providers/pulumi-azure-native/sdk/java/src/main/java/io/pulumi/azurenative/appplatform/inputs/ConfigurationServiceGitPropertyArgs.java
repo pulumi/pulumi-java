@@ -5,7 +5,7 @@ package io.pulumi.azurenative.appplatform.inputs;
 
 import io.pulumi.azurenative.appplatform.inputs.ConfigurationServiceGitRepositoryArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class ConfigurationServiceGitPropertyArgs extends io.pulumi.resourc
      * Repositories of Application Configuration Service git property.
      * 
      */
-    @InputImport(name="repositories")
+    @Import(name="repositories")
       private final @Nullable Output<List<ConfigurationServiceGitRepositoryArgs>> repositories;
 
     public Output<List<ConfigurationServiceGitRepositoryArgs>> getRepositories() {

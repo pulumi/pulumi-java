@@ -10,7 +10,7 @@ import io.pulumi.azurenative.storage.inputs.ResourceAccessRuleArgs;
 import io.pulumi.azurenative.storage.inputs.VirtualNetworkRuleArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -29,7 +29,7 @@ public final class NetworkRuleSetArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies whether traffic is bypassed for Logging/Metrics/AzureServices. Possible values are any combination of Logging|Metrics|AzureServices (For example, "Logging, Metrics"), or None to bypass none of those traffics.
      * 
      */
-    @InputImport(name="bypass")
+    @Import(name="bypass")
       private final @Nullable Output<Either<String,Bypass>> bypass;
 
     public Output<Either<String,Bypass>> getBypass() {
@@ -40,7 +40,7 @@ public final class NetworkRuleSetArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the default action of allow or deny when no other rules match.
      * 
      */
-    @InputImport(name="defaultAction", required=true)
+    @Import(name="defaultAction", required=true)
       private final Output<DefaultAction> defaultAction;
 
     public Output<DefaultAction> getDefaultAction() {
@@ -51,7 +51,7 @@ public final class NetworkRuleSetArgs extends io.pulumi.resources.ResourceArgs {
      * Sets the IP ACL rules
      * 
      */
-    @InputImport(name="ipRules")
+    @Import(name="ipRules")
       private final @Nullable Output<List<IPRuleArgs>> ipRules;
 
     public Output<List<IPRuleArgs>> getIpRules() {
@@ -62,7 +62,7 @@ public final class NetworkRuleSetArgs extends io.pulumi.resources.ResourceArgs {
      * Sets the resource access rules
      * 
      */
-    @InputImport(name="resourceAccessRules")
+    @Import(name="resourceAccessRules")
       private final @Nullable Output<List<ResourceAccessRuleArgs>> resourceAccessRules;
 
     public Output<List<ResourceAccessRuleArgs>> getResourceAccessRules() {
@@ -73,7 +73,7 @@ public final class NetworkRuleSetArgs extends io.pulumi.resources.ResourceArgs {
      * Sets the virtual network rules
      * 
      */
-    @InputImport(name="virtualNetworkRules")
+    @Import(name="virtualNetworkRules")
       private final @Nullable Output<List<VirtualNetworkRuleArgs>> virtualNetworkRules;
 
     public Output<List<VirtualNetworkRuleArgs>> getVirtualNetworkRules() {

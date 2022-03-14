@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.storage.outputs;
 
 import io.pulumi.azurenative.storage.outputs.UpdateHistoryPropertyResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ImmutabilityPolicyPropertiesResponse {
     /**
      * This property can only be changed for unlocked time-based retention policies. When enabled, new blocks can be written to an append blob while maintaining immutability protection and compliance. Only new blocks can be added and any existing blocks cannot be modified or deleted. This property cannot be changed with ExtendImmutabilityPolicy API
@@ -41,13 +41,13 @@ public final class ImmutabilityPolicyPropertiesResponse {
      */
     private final List<UpdateHistoryPropertyResponse> updateHistory;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ImmutabilityPolicyPropertiesResponse(
-        @OutputCustomType.Parameter("allowProtectedAppendWrites") @Nullable Boolean allowProtectedAppendWrites,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("immutabilityPeriodSinceCreationInDays") @Nullable Integer immutabilityPeriodSinceCreationInDays,
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("updateHistory") List<UpdateHistoryPropertyResponse> updateHistory) {
+        @CustomType.Parameter("allowProtectedAppendWrites") @Nullable Boolean allowProtectedAppendWrites,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("immutabilityPeriodSinceCreationInDays") @Nullable Integer immutabilityPeriodSinceCreationInDays,
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("updateHistory") List<UpdateHistoryPropertyResponse> updateHistory) {
         this.allowProtectedAppendWrites = allowProtectedAppendWrites;
         this.etag = etag;
         this.immutabilityPeriodSinceCreationInDays = immutabilityPeriodSinceCreationInDays;

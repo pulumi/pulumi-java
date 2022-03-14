@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.migrate.outputs;
 
 import io.pulumi.azurenative.migrate.outputs.NsgSecurityRuleResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class NetworkSecurityGroupResourceSettingsResponse {
     /**
      * The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
@@ -29,11 +29,11 @@ public final class NetworkSecurityGroupResourceSettingsResponse {
      */
     private final String targetResourceName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NetworkSecurityGroupResourceSettingsResponse(
-        @OutputCustomType.Parameter("resourceType") String resourceType,
-        @OutputCustomType.Parameter("securityRules") @Nullable List<NsgSecurityRuleResponse> securityRules,
-        @OutputCustomType.Parameter("targetResourceName") String targetResourceName) {
+        @CustomType.Parameter("resourceType") String resourceType,
+        @CustomType.Parameter("securityRules") @Nullable List<NsgSecurityRuleResponse> securityRules,
+        @CustomType.Parameter("targetResourceName") String targetResourceName) {
         this.resourceType = resourceType;
         this.securityRules = securityRules;
         this.targetResourceName = targetResourceName;

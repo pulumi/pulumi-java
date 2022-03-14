@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.elastic.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class MonitoredResourceResponse extends io.pulumi.resources.InvokeA
      * The ARM id of the resource.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable String id;
 
     public Optional<String> getId() {
@@ -33,7 +33,7 @@ public final class MonitoredResourceResponse extends io.pulumi.resources.InvokeA
      * Reason for why the resource is sending logs (or why it is not sending).
      * 
      */
-    @InputImport(name="reasonForLogsStatus")
+    @Import(name="reasonForLogsStatus")
       private final @Nullable String reasonForLogsStatus;
 
     public Optional<String> getReasonForLogsStatus() {
@@ -44,7 +44,7 @@ public final class MonitoredResourceResponse extends io.pulumi.resources.InvokeA
      * Flag indicating the status of the resource for sending logs operation to Elastic.
      * 
      */
-    @InputImport(name="sendingLogs")
+    @Import(name="sendingLogs")
       private final @Nullable String sendingLogs;
 
     public Optional<String> getSendingLogs() {

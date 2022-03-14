@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class ConnectionMonitorEndpointFilterItemResponse extends io.pulumi
      * The address of the filter item.
      * 
      */
-    @InputImport(name="address")
+    @Import(name="address")
       private final @Nullable String address;
 
     public Optional<String> getAddress() {
@@ -33,7 +33,7 @@ public final class ConnectionMonitorEndpointFilterItemResponse extends io.pulumi
      * The type of item included in the filter. Currently only 'AgentAddress' is supported.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable String type;
 
     public Optional<String> getType() {

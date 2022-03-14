@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.web.WebAppPublicCertificateArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -31,7 +31,7 @@ public class WebAppPublicCertificate extends io.pulumi.resources.CustomResource 
      * Public Certificate byte array
      * 
      */
-    @OutputExport(name="blob", type=String.class, parameters={})
+    @Export(name="blob", type=String.class, parameters={})
     private Output</* @Nullable */ String> blob;
 
     /**
@@ -45,7 +45,7 @@ public class WebAppPublicCertificate extends io.pulumi.resources.CustomResource 
      * Kind of resource.
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
     /**
@@ -59,7 +59,7 @@ public class WebAppPublicCertificate extends io.pulumi.resources.CustomResource 
      * Resource Name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -73,7 +73,7 @@ public class WebAppPublicCertificate extends io.pulumi.resources.CustomResource 
      * Public Certificate Location
      * 
      */
-    @OutputExport(name="publicCertificateLocation", type=String.class, parameters={})
+    @Export(name="publicCertificateLocation", type=String.class, parameters={})
     private Output</* @Nullable */ String> publicCertificateLocation;
 
     /**
@@ -87,7 +87,7 @@ public class WebAppPublicCertificate extends io.pulumi.resources.CustomResource 
      * Certificate Thumbprint
      * 
      */
-    @OutputExport(name="thumbprint", type=String.class, parameters={})
+    @Export(name="thumbprint", type=String.class, parameters={})
     private Output<String> thumbprint;
 
     /**
@@ -101,7 +101,7 @@ public class WebAppPublicCertificate extends io.pulumi.resources.CustomResource 
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

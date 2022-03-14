@@ -7,7 +7,7 @@ import io.pulumi.azurenative.devices.inputs.IotHubDefinitionDescriptionResponse;
 import io.pulumi.azurenative.devices.inputs.PrivateEndpointConnectionResponse;
 import io.pulumi.azurenative.devices.inputs.SharedAccessSignatureAuthorizationRuleAccessRightsDescriptionResponse;
 import io.pulumi.azurenative.devices.inputs.TargetIpFilterRuleResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +27,7 @@ public final class IotDpsPropertiesDescriptionResponse extends io.pulumi.resourc
      * Allocation policy to be used by this provisioning service.
      * 
      */
-    @InputImport(name="allocationPolicy")
+    @Import(name="allocationPolicy")
       private final @Nullable String allocationPolicy;
 
     public Optional<String> getAllocationPolicy() {
@@ -38,7 +38,7 @@ public final class IotDpsPropertiesDescriptionResponse extends io.pulumi.resourc
      * List of authorization keys for a provisioning service.
      * 
      */
-    @InputImport(name="authorizationPolicies")
+    @Import(name="authorizationPolicies")
       private final @Nullable List<SharedAccessSignatureAuthorizationRuleAccessRightsDescriptionResponse> authorizationPolicies;
 
     public List<SharedAccessSignatureAuthorizationRuleAccessRightsDescriptionResponse> getAuthorizationPolicies() {
@@ -49,7 +49,7 @@ public final class IotDpsPropertiesDescriptionResponse extends io.pulumi.resourc
      * Device endpoint for this provisioning service.
      * 
      */
-    @InputImport(name="deviceProvisioningHostName", required=true)
+    @Import(name="deviceProvisioningHostName", required=true)
       private final String deviceProvisioningHostName;
 
     public String getDeviceProvisioningHostName() {
@@ -60,7 +60,7 @@ public final class IotDpsPropertiesDescriptionResponse extends io.pulumi.resourc
      * Unique identifier of this provisioning service.
      * 
      */
-    @InputImport(name="idScope", required=true)
+    @Import(name="idScope", required=true)
       private final String idScope;
 
     public String getIdScope() {
@@ -71,7 +71,7 @@ public final class IotDpsPropertiesDescriptionResponse extends io.pulumi.resourc
      * List of IoT hubs associated with this provisioning service.
      * 
      */
-    @InputImport(name="iotHubs")
+    @Import(name="iotHubs")
       private final @Nullable List<IotHubDefinitionDescriptionResponse> iotHubs;
 
     public List<IotHubDefinitionDescriptionResponse> getIotHubs() {
@@ -82,7 +82,7 @@ public final class IotDpsPropertiesDescriptionResponse extends io.pulumi.resourc
      * The IP filter rules.
      * 
      */
-    @InputImport(name="ipFilterRules")
+    @Import(name="ipFilterRules")
       private final @Nullable List<TargetIpFilterRuleResponse> ipFilterRules;
 
     public List<TargetIpFilterRuleResponse> getIpFilterRules() {
@@ -93,7 +93,7 @@ public final class IotDpsPropertiesDescriptionResponse extends io.pulumi.resourc
      * Private endpoint connections created on this IotHub
      * 
      */
-    @InputImport(name="privateEndpointConnections")
+    @Import(name="privateEndpointConnections")
       private final @Nullable List<PrivateEndpointConnectionResponse> privateEndpointConnections;
 
     public List<PrivateEndpointConnectionResponse> getPrivateEndpointConnections() {
@@ -104,7 +104,7 @@ public final class IotDpsPropertiesDescriptionResponse extends io.pulumi.resourc
      * The ARM provisioning state of the provisioning service.
      * 
      */
-    @InputImport(name="provisioningState")
+    @Import(name="provisioningState")
       private final @Nullable String provisioningState;
 
     public Optional<String> getProvisioningState() {
@@ -115,7 +115,7 @@ public final class IotDpsPropertiesDescriptionResponse extends io.pulumi.resourc
      * Whether requests from Public Network are allowed
      * 
      */
-    @InputImport(name="publicNetworkAccess")
+    @Import(name="publicNetworkAccess")
       private final @Nullable String publicNetworkAccess;
 
     public Optional<String> getPublicNetworkAccess() {
@@ -126,7 +126,7 @@ public final class IotDpsPropertiesDescriptionResponse extends io.pulumi.resourc
      * Service endpoint for provisioning service.
      * 
      */
-    @InputImport(name="serviceOperationsHostName", required=true)
+    @Import(name="serviceOperationsHostName", required=true)
       private final String serviceOperationsHostName;
 
     public String getServiceOperationsHostName() {
@@ -137,7 +137,7 @@ public final class IotDpsPropertiesDescriptionResponse extends io.pulumi.resourc
      * Current state of the provisioning service.
      * 
      */
-    @InputImport(name="state")
+    @Import(name="state")
       private final @Nullable String state;
 
     public Optional<String> getState() {

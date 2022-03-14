@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class AutoScaleSettingsResponse extends io.pulumi.resources.InvokeA
      * Maximum number of instances for this deployment.
      * 
      */
-    @InputImport(name="maxInstances")
+    @Import(name="maxInstances")
       private final @Nullable Integer maxInstances;
 
     public Optional<Integer> getMaxInstances() {
@@ -30,7 +30,7 @@ public final class AutoScaleSettingsResponse extends io.pulumi.resources.InvokeA
      * Minimum number of instances for this deployment.
      * 
      */
-    @InputImport(name="minInstances")
+    @Import(name="minInstances")
       private final @Nullable Integer minInstances;
 
     public Optional<Integer> getMinInstances() {
@@ -41,7 +41,7 @@ public final class AutoScaleSettingsResponse extends io.pulumi.resources.InvokeA
      * The polling interval in ISO 8691 format. Only supports duration with precision as low as Seconds.
      * 
      */
-    @InputImport(name="pollingInterval")
+    @Import(name="pollingInterval")
       private final @Nullable String pollingInterval;
 
     public Optional<String> getPollingInterval() {
@@ -52,7 +52,7 @@ public final class AutoScaleSettingsResponse extends io.pulumi.resources.InvokeA
      * Expected value is 'Auto'.
      * 
      */
-    @InputImport(name="scaleType", required=true)
+    @Import(name="scaleType", required=true)
       private final String scaleType;
 
     public String getScaleType() {
@@ -63,7 +63,7 @@ public final class AutoScaleSettingsResponse extends io.pulumi.resources.InvokeA
      * Target CPU usage for the autoscaler.
      * 
      */
-    @InputImport(name="targetUtilizationPercentage")
+    @Import(name="targetUtilizationPercentage")
       private final @Nullable Integer targetUtilizationPercentage;
 
     public Optional<Integer> getTargetUtilizationPercentage() {

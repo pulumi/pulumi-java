@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.eventhub.outputs;
 
 import io.pulumi.azurenative.eventhub.outputs.SubnetResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class NWRuleSetVirtualNetworkRulesResponse {
     /**
      * Value that indicates whether to ignore missing VNet Service Endpoint
@@ -23,10 +23,10 @@ public final class NWRuleSetVirtualNetworkRulesResponse {
      */
     private final @Nullable SubnetResponse subnet;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NWRuleSetVirtualNetworkRulesResponse(
-        @OutputCustomType.Parameter("ignoreMissingVnetServiceEndpoint") @Nullable Boolean ignoreMissingVnetServiceEndpoint,
-        @OutputCustomType.Parameter("subnet") @Nullable SubnetResponse subnet) {
+        @CustomType.Parameter("ignoreMissingVnetServiceEndpoint") @Nullable Boolean ignoreMissingVnetServiceEndpoint,
+        @CustomType.Parameter("subnet") @Nullable SubnetResponse subnet) {
         this.ignoreMissingVnetServiceEndpoint = ignoreMissingVnetServiceEndpoint;
         this.subnet = subnet;
     }

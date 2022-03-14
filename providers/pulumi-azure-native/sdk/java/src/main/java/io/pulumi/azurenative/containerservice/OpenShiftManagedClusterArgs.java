@@ -10,7 +10,7 @@ import io.pulumi.azurenative.containerservice.inputs.OpenShiftManagedClusterMast
 import io.pulumi.azurenative.containerservice.inputs.OpenShiftRouterProfileArgs;
 import io.pulumi.azurenative.containerservice.inputs.PurchasePlanArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -26,7 +26,7 @@ public final class OpenShiftManagedClusterArgs extends io.pulumi.resources.Resou
      * Configuration of OpenShift cluster VMs.
      * 
      */
-    @InputImport(name="agentPoolProfiles")
+    @Import(name="agentPoolProfiles")
       private final @Nullable Output<List<OpenShiftManagedClusterAgentPoolProfileArgs>> agentPoolProfiles;
 
     public Output<List<OpenShiftManagedClusterAgentPoolProfileArgs>> getAgentPoolProfiles() {
@@ -37,7 +37,7 @@ public final class OpenShiftManagedClusterArgs extends io.pulumi.resources.Resou
      * Configures OpenShift authentication.
      * 
      */
-    @InputImport(name="authProfile")
+    @Import(name="authProfile")
       private final @Nullable Output<OpenShiftManagedClusterAuthProfileArgs> authProfile;
 
     public Output<OpenShiftManagedClusterAuthProfileArgs> getAuthProfile() {
@@ -48,7 +48,7 @@ public final class OpenShiftManagedClusterArgs extends io.pulumi.resources.Resou
      * Resource location
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -59,7 +59,7 @@ public final class OpenShiftManagedClusterArgs extends io.pulumi.resources.Resou
      * Configuration for OpenShift master VMs.
      * 
      */
-    @InputImport(name="masterPoolProfile")
+    @Import(name="masterPoolProfile")
       private final @Nullable Output<OpenShiftManagedClusterMasterPoolProfileArgs> masterPoolProfile;
 
     public Output<OpenShiftManagedClusterMasterPoolProfileArgs> getMasterPoolProfile() {
@@ -70,7 +70,7 @@ public final class OpenShiftManagedClusterArgs extends io.pulumi.resources.Resou
      * Configuration for OpenShift networking.
      * 
      */
-    @InputImport(name="networkProfile")
+    @Import(name="networkProfile")
       private final @Nullable Output<NetworkProfileArgs> networkProfile;
 
     public Output<NetworkProfileArgs> getNetworkProfile() {
@@ -81,7 +81,7 @@ public final class OpenShiftManagedClusterArgs extends io.pulumi.resources.Resou
      * Version of OpenShift specified when creating the cluster.
      * 
      */
-    @InputImport(name="openShiftVersion", required=true)
+    @Import(name="openShiftVersion", required=true)
       private final Output<String> openShiftVersion;
 
     public Output<String> getOpenShiftVersion() {
@@ -92,7 +92,7 @@ public final class OpenShiftManagedClusterArgs extends io.pulumi.resources.Resou
      * Define the resource plan as required by ARM for billing purposes
      * 
      */
-    @InputImport(name="plan")
+    @Import(name="plan")
       private final @Nullable Output<PurchasePlanArgs> plan;
 
     public Output<PurchasePlanArgs> getPlan() {
@@ -103,7 +103,7 @@ public final class OpenShiftManagedClusterArgs extends io.pulumi.resources.Resou
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -114,7 +114,7 @@ public final class OpenShiftManagedClusterArgs extends io.pulumi.resources.Resou
      * The name of the OpenShift managed cluster resource.
      * 
      */
-    @InputImport(name="resourceName")
+    @Import(name="resourceName")
       private final @Nullable Output<String> resourceName;
 
     public Output<String> getPropResourceName() {
@@ -125,7 +125,7 @@ public final class OpenShiftManagedClusterArgs extends io.pulumi.resources.Resou
      * Configuration for OpenShift router(s).
      * 
      */
-    @InputImport(name="routerProfiles")
+    @Import(name="routerProfiles")
       private final @Nullable Output<List<OpenShiftRouterProfileArgs>> routerProfiles;
 
     public Output<List<OpenShiftRouterProfileArgs>> getRouterProfiles() {
@@ -136,7 +136,7 @@ public final class OpenShiftManagedClusterArgs extends io.pulumi.resources.Resou
      * Resource tags
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.insights.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class WorkbookUserAssignedIdentitiesResponse {
     /**
      * The client ID of resource.
@@ -25,11 +25,11 @@ public final class WorkbookUserAssignedIdentitiesResponse {
      */
     private final String tenantId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WorkbookUserAssignedIdentitiesResponse(
-        @OutputCustomType.Parameter("clientId") String clientId,
-        @OutputCustomType.Parameter("principalId") String principalId,
-        @OutputCustomType.Parameter("tenantId") String tenantId) {
+        @CustomType.Parameter("clientId") String clientId,
+        @CustomType.Parameter("principalId") String principalId,
+        @CustomType.Parameter("tenantId") String tenantId) {
         this.clientId = clientId;
         this.principalId = principalId;
         this.tenantId = tenantId;

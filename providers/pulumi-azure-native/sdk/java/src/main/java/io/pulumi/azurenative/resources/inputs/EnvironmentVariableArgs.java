@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.resources.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class EnvironmentVariableArgs extends io.pulumi.resources.ResourceA
      * The name of the environment variable.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -33,7 +33,7 @@ public final class EnvironmentVariableArgs extends io.pulumi.resources.ResourceA
      * The value of the secure environment variable.
      * 
      */
-    @InputImport(name="secureValue")
+    @Import(name="secureValue")
       private final @Nullable Output<String> secureValue;
 
     public Output<String> getSecureValue() {
@@ -44,7 +44,7 @@ public final class EnvironmentVariableArgs extends io.pulumi.resources.ResourceA
      * The value of the environment variable.
      * 
      */
-    @InputImport(name="value")
+    @Import(name="value")
       private final @Nullable Output<String> value;
 
     public Output<String> getValue() {

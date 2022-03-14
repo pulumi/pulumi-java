@@ -5,7 +5,7 @@ package io.pulumi.azurenative.logic.inputs;
 
 import io.pulumi.azurenative.logic.inputs.ApiDeploymentParameterMetadataSetResponse;
 import io.pulumi.azurenative.logic.inputs.WsdlServiceResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class ApiResourceMetadataResponse extends io.pulumi.resources.Invok
      * The api type.
      * 
      */
-    @InputImport(name="apiType")
+    @Import(name="apiType")
       private final @Nullable String apiType;
 
     public Optional<String> getApiType() {
@@ -36,7 +36,7 @@ public final class ApiResourceMetadataResponse extends io.pulumi.resources.Invok
      * The brand color.
      * 
      */
-    @InputImport(name="brandColor")
+    @Import(name="brandColor")
       private final @Nullable String brandColor;
 
     public Optional<String> getBrandColor() {
@@ -47,7 +47,7 @@ public final class ApiResourceMetadataResponse extends io.pulumi.resources.Invok
      * The connection type.
      * 
      */
-    @InputImport(name="connectionType")
+    @Import(name="connectionType")
       private final @Nullable String connectionType;
 
     public Optional<String> getConnectionType() {
@@ -58,7 +58,7 @@ public final class ApiResourceMetadataResponse extends io.pulumi.resources.Invok
      * The connector deployment parameters metadata.
      * 
      */
-    @InputImport(name="deploymentParameters")
+    @Import(name="deploymentParameters")
       private final @Nullable ApiDeploymentParameterMetadataSetResponse deploymentParameters;
 
     public Optional<ApiDeploymentParameterMetadataSetResponse> getDeploymentParameters() {
@@ -69,7 +69,7 @@ public final class ApiResourceMetadataResponse extends io.pulumi.resources.Invok
      * The hide key.
      * 
      */
-    @InputImport(name="hideKey")
+    @Import(name="hideKey")
       private final @Nullable String hideKey;
 
     public Optional<String> getHideKey() {
@@ -80,7 +80,7 @@ public final class ApiResourceMetadataResponse extends io.pulumi.resources.Invok
      * The provisioning state.
      * 
      */
-    @InputImport(name="provisioningState")
+    @Import(name="provisioningState")
       private final @Nullable String provisioningState;
 
     public Optional<String> getProvisioningState() {
@@ -91,7 +91,7 @@ public final class ApiResourceMetadataResponse extends io.pulumi.resources.Invok
      * The source.
      * 
      */
-    @InputImport(name="source")
+    @Import(name="source")
       private final @Nullable String source;
 
     public Optional<String> getSource() {
@@ -102,7 +102,7 @@ public final class ApiResourceMetadataResponse extends io.pulumi.resources.Invok
      * The tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {
@@ -113,7 +113,7 @@ public final class ApiResourceMetadataResponse extends io.pulumi.resources.Invok
      * The WSDL import method.
      * 
      */
-    @InputImport(name="wsdlImportMethod")
+    @Import(name="wsdlImportMethod")
       private final @Nullable String wsdlImportMethod;
 
     public Optional<String> getWsdlImportMethod() {
@@ -124,7 +124,7 @@ public final class ApiResourceMetadataResponse extends io.pulumi.resources.Invok
      * The WSDL service.
      * 
      */
-    @InputImport(name="wsdlService")
+    @Import(name="wsdlService")
       private final @Nullable WsdlServiceResponse wsdlService;
 
     public Optional<WsdlServiceResponse> getWsdlService() {

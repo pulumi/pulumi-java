@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.azurenative.compute.inputs.DiskEncryptionSetParametersResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class VirtualMachineScaleSetManagedDiskParametersResponse extends i
      * Specifies the customer managed disk encryption set resource id for the managed disk.
      * 
      */
-    @InputImport(name="diskEncryptionSet")
+    @Import(name="diskEncryptionSet")
       private final @Nullable DiskEncryptionSetParametersResponse diskEncryptionSet;
 
     public Optional<DiskEncryptionSetParametersResponse> getDiskEncryptionSet() {
@@ -34,7 +34,7 @@ public final class VirtualMachineScaleSetManagedDiskParametersResponse extends i
      * Specifies the storage account type for the managed disk. NOTE: UltraSSD_LRS can only be used with data disks, it cannot be used with OS Disk.
      * 
      */
-    @InputImport(name="storageAccountType")
+    @Import(name="storageAccountType")
       private final @Nullable String storageAccountType;
 
     public Optional<String> getStorageAccountType() {

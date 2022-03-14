@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.costmanagement.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetReportByDepartmentArgs extends io.pulumi.resources.InvokeA
      * Department ID
      * 
      */
-    @InputImport(name="departmentId", required=true)
+    @Import(name="departmentId", required=true)
       private final String departmentId;
 
     public String getDepartmentId() {
@@ -27,7 +27,7 @@ public final class GetReportByDepartmentArgs extends io.pulumi.resources.InvokeA
      * Report Name.
      * 
      */
-    @InputImport(name="reportName", required=true)
+    @Import(name="reportName", required=true)
       private final String reportName;
 
     public String getReportName() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class ContainerIdentityInfoResponse extends io.pulumi.resources.Inv
      * Protection container identity - AAD Tenant
      * 
      */
-    @InputImport(name="aadTenantId")
+    @Import(name="aadTenantId")
       private final @Nullable String aadTenantId;
 
     public Optional<String> getAadTenantId() {
@@ -33,7 +33,7 @@ public final class ContainerIdentityInfoResponse extends io.pulumi.resources.Inv
      * Protection container identity - Audience
      * 
      */
-    @InputImport(name="audience")
+    @Import(name="audience")
       private final @Nullable String audience;
 
     public Optional<String> getAudience() {
@@ -44,7 +44,7 @@ public final class ContainerIdentityInfoResponse extends io.pulumi.resources.Inv
      * Protection container identity - AAD Service Principal
      * 
      */
-    @InputImport(name="servicePrincipalClientId")
+    @Import(name="servicePrincipalClientId")
       private final @Nullable String servicePrincipalClientId;
 
     public Optional<String> getServicePrincipalClientId() {
@@ -55,7 +55,7 @@ public final class ContainerIdentityInfoResponse extends io.pulumi.resources.Inv
      * Unique name of the container
      * 
      */
-    @InputImport(name="uniqueName")
+    @Import(name="uniqueName")
       private final @Nullable String uniqueName;
 
     public Optional<String> getUniqueName() {

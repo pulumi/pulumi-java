@@ -8,7 +8,7 @@ import io.pulumi.azurenative.iotcentral.AppArgs;
 import io.pulumi.azurenative.iotcentral.outputs.AppSkuInfoResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -36,7 +36,7 @@ public class App extends io.pulumi.resources.CustomResource {
      * The ID of the application.
      * 
      */
-    @OutputExport(name="applicationId", type=String.class, parameters={})
+    @Export(name="applicationId", type=String.class, parameters={})
     private Output<String> applicationId;
 
     /**
@@ -50,7 +50,7 @@ public class App extends io.pulumi.resources.CustomResource {
      * The display name of the application.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output</* @Nullable */ String> displayName;
 
     /**
@@ -64,7 +64,7 @@ public class App extends io.pulumi.resources.CustomResource {
      * The resource location.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -78,7 +78,7 @@ public class App extends io.pulumi.resources.CustomResource {
      * The ARM resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -92,7 +92,7 @@ public class App extends io.pulumi.resources.CustomResource {
      * A valid instance SKU.
      * 
      */
-    @OutputExport(name="sku", type=AppSkuInfoResponse.class, parameters={})
+    @Export(name="sku", type=AppSkuInfoResponse.class, parameters={})
     private Output<AppSkuInfoResponse> sku;
 
     /**
@@ -106,7 +106,7 @@ public class App extends io.pulumi.resources.CustomResource {
      * The subdomain of the application.
      * 
      */
-    @OutputExport(name="subdomain", type=String.class, parameters={})
+    @Export(name="subdomain", type=String.class, parameters={})
     private Output</* @Nullable */ String> subdomain;
 
     /**
@@ -120,7 +120,7 @@ public class App extends io.pulumi.resources.CustomResource {
      * The resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -134,7 +134,7 @@ public class App extends io.pulumi.resources.CustomResource {
      * The ID of the application template, which is a blueprint that defines the characteristics and behaviors of an application. Optional; if not specified, defaults to a blank blueprint and allows the application to be defined from scratch.
      * 
      */
-    @OutputExport(name="template", type=String.class, parameters={})
+    @Export(name="template", type=String.class, parameters={})
     private Output</* @Nullable */ String> template;
 
     /**
@@ -148,7 +148,7 @@ public class App extends io.pulumi.resources.CustomResource {
      * The resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

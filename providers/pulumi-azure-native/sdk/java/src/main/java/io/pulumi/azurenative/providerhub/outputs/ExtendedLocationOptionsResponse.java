@@ -3,21 +3,21 @@
 
 package io.pulumi.azurenative.providerhub.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ExtendedLocationOptionsResponse {
     private final @Nullable String supportedPolicy;
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ExtendedLocationOptionsResponse(
-        @OutputCustomType.Parameter("supportedPolicy") @Nullable String supportedPolicy,
-        @OutputCustomType.Parameter("type") @Nullable String type) {
+        @CustomType.Parameter("supportedPolicy") @Nullable String supportedPolicy,
+        @CustomType.Parameter("type") @Nullable String type) {
         this.supportedPolicy = supportedPolicy;
         this.type = type;
     }

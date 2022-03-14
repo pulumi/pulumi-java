@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GalleryArtifactVersionSourceResponse {
     /**
      * The id of the gallery artifact version source. Can specify a disk uri, snapshot uri, user image or storage account resource.
@@ -22,10 +22,10 @@ public final class GalleryArtifactVersionSourceResponse {
      */
     private final @Nullable String uri;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GalleryArtifactVersionSourceResponse(
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("uri") @Nullable String uri) {
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("uri") @Nullable String uri) {
         this.id = id;
         this.uri = uri;
     }

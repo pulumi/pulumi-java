@@ -6,7 +6,7 @@ package io.pulumi.azurenative.resources.outputs;
 import io.pulumi.azurenative.resources.outputs.IdentityResponse;
 import io.pulumi.azurenative.resources.outputs.PlanResponse;
 import io.pulumi.azurenative.resources.outputs.SkuResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -14,7 +14,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetResourceResult {
     /**
      * Resource ID
@@ -72,19 +72,19 @@ public final class GetResourceResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetResourceResult(
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("identity") @Nullable IdentityResponse identity,
-        @OutputCustomType.Parameter("kind") @Nullable String kind,
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("managedBy") @Nullable String managedBy,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("plan") @Nullable PlanResponse plan,
-        @OutputCustomType.Parameter("properties") Object properties,
-        @OutputCustomType.Parameter("sku") @Nullable SkuResponse sku,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("identity") @Nullable IdentityResponse identity,
+        @CustomType.Parameter("kind") @Nullable String kind,
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("managedBy") @Nullable String managedBy,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("plan") @Nullable PlanResponse plan,
+        @CustomType.Parameter("properties") Object properties,
+        @CustomType.Parameter("sku") @Nullable SkuResponse sku,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type) {
         this.id = id;
         this.identity = identity;
         this.kind = kind;

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.kusto.DatabasePrincipalAssignmentArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -34,7 +34,7 @@ public class DatabasePrincipalAssignment extends io.pulumi.resources.CustomResou
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -48,7 +48,7 @@ public class DatabasePrincipalAssignment extends io.pulumi.resources.CustomResou
      * The principal ID assigned to the database principal. It can be a user email, application ID, or security group name.
      * 
      */
-    @OutputExport(name="principalId", type=String.class, parameters={})
+    @Export(name="principalId", type=String.class, parameters={})
     private Output<String> principalId;
 
     /**
@@ -62,7 +62,7 @@ public class DatabasePrincipalAssignment extends io.pulumi.resources.CustomResou
      * The principal name
      * 
      */
-    @OutputExport(name="principalName", type=String.class, parameters={})
+    @Export(name="principalName", type=String.class, parameters={})
     private Output<String> principalName;
 
     /**
@@ -76,7 +76,7 @@ public class DatabasePrincipalAssignment extends io.pulumi.resources.CustomResou
      * Principal type.
      * 
      */
-    @OutputExport(name="principalType", type=String.class, parameters={})
+    @Export(name="principalType", type=String.class, parameters={})
     private Output<String> principalType;
 
     /**
@@ -90,7 +90,7 @@ public class DatabasePrincipalAssignment extends io.pulumi.resources.CustomResou
      * The provisioned state of the resource.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -104,7 +104,7 @@ public class DatabasePrincipalAssignment extends io.pulumi.resources.CustomResou
      * Database principal role.
      * 
      */
-    @OutputExport(name="role", type=String.class, parameters={})
+    @Export(name="role", type=String.class, parameters={})
     private Output<String> role;
 
     /**
@@ -118,7 +118,7 @@ public class DatabasePrincipalAssignment extends io.pulumi.resources.CustomResou
      * The tenant id of the principal
      * 
      */
-    @OutputExport(name="tenantId", type=String.class, parameters={})
+    @Export(name="tenantId", type=String.class, parameters={})
     private Output</* @Nullable */ String> tenantId;
 
     /**
@@ -132,7 +132,7 @@ public class DatabasePrincipalAssignment extends io.pulumi.resources.CustomResou
      * The tenant name of the principal
      * 
      */
-    @OutputExport(name="tenantName", type=String.class, parameters={})
+    @Export(name="tenantName", type=String.class, parameters={})
     private Output<String> tenantName;
 
     /**
@@ -146,7 +146,7 @@ public class DatabasePrincipalAssignment extends io.pulumi.resources.CustomResou
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

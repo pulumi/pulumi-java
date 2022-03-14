@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.cognitiveservices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class CognitiveServicesAccountApiPropertiesResponse extends io.pulu
      * (Metrics Advisor Only) The Azure AD Client Id (Application Id).
      * 
      */
-    @InputImport(name="aadClientId")
+    @Import(name="aadClientId")
       private final @Nullable String aadClientId;
 
     public Optional<String> getAadClientId() {
@@ -34,7 +34,7 @@ public final class CognitiveServicesAccountApiPropertiesResponse extends io.pulu
      * (Metrics Advisor Only) The Azure AD Tenant Id.
      * 
      */
-    @InputImport(name="aadTenantId")
+    @Import(name="aadTenantId")
       private final @Nullable String aadTenantId;
 
     public Optional<String> getAadTenantId() {
@@ -45,7 +45,7 @@ public final class CognitiveServicesAccountApiPropertiesResponse extends io.pulu
      * (Personalization Only) The flag to enable statistics of Bing Search.
      * 
      */
-    @InputImport(name="eventHubConnectionString")
+    @Import(name="eventHubConnectionString")
       private final @Nullable String eventHubConnectionString;
 
     public Optional<String> getEventHubConnectionString() {
@@ -56,7 +56,7 @@ public final class CognitiveServicesAccountApiPropertiesResponse extends io.pulu
      * (QnAMaker Only) The Azure Search endpoint id of QnAMaker.
      * 
      */
-    @InputImport(name="qnaAzureSearchEndpointId")
+    @Import(name="qnaAzureSearchEndpointId")
       private final @Nullable String qnaAzureSearchEndpointId;
 
     public Optional<String> getQnaAzureSearchEndpointId() {
@@ -67,7 +67,7 @@ public final class CognitiveServicesAccountApiPropertiesResponse extends io.pulu
      * (QnAMaker Only) The Azure Search endpoint key of QnAMaker.
      * 
      */
-    @InputImport(name="qnaAzureSearchEndpointKey")
+    @Import(name="qnaAzureSearchEndpointKey")
       private final @Nullable String qnaAzureSearchEndpointKey;
 
     public Optional<String> getQnaAzureSearchEndpointKey() {
@@ -78,7 +78,7 @@ public final class CognitiveServicesAccountApiPropertiesResponse extends io.pulu
      * (QnAMaker Only) The runtime endpoint of QnAMaker.
      * 
      */
-    @InputImport(name="qnaRuntimeEndpoint")
+    @Import(name="qnaRuntimeEndpoint")
       private final @Nullable String qnaRuntimeEndpoint;
 
     public Optional<String> getQnaRuntimeEndpoint() {
@@ -89,7 +89,7 @@ public final class CognitiveServicesAccountApiPropertiesResponse extends io.pulu
      * (Bing Search Only) The flag to enable statistics of Bing Search.
      * 
      */
-    @InputImport(name="statisticsEnabled")
+    @Import(name="statisticsEnabled")
       private final @Nullable Boolean statisticsEnabled;
 
     public Optional<Boolean> getStatisticsEnabled() {
@@ -100,7 +100,7 @@ public final class CognitiveServicesAccountApiPropertiesResponse extends io.pulu
      * (Personalization Only) The storage account connection string.
      * 
      */
-    @InputImport(name="storageAccountConnectionString")
+    @Import(name="storageAccountConnectionString")
       private final @Nullable String storageAccountConnectionString;
 
     public Optional<String> getStorageAccountConnectionString() {
@@ -111,7 +111,7 @@ public final class CognitiveServicesAccountApiPropertiesResponse extends io.pulu
      * (Metrics Advisor Only) The super user of Metrics Advisor.
      * 
      */
-    @InputImport(name="superUser")
+    @Import(name="superUser")
       private final @Nullable String superUser;
 
     public Optional<String> getSuperUser() {
@@ -122,7 +122,7 @@ public final class CognitiveServicesAccountApiPropertiesResponse extends io.pulu
      * (Metrics Advisor Only) The website name of Metrics Advisor.
      * 
      */
-    @InputImport(name="websiteName")
+    @Import(name="websiteName")
       private final @Nullable String websiteName;
 
     public Optional<String> getWebsiteName() {

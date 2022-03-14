@@ -6,7 +6,7 @@ package io.pulumi.azurenative.hybridcompute;
 import io.pulumi.azurenative.hybridcompute.inputs.LocationDataArgs;
 import io.pulumi.azurenative.hybridcompute.inputs.MachineIdentityArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -21,14 +21,14 @@ public final class MachineArgs extends io.pulumi.resources.ResourceArgs {
      * Public Key that the client provides to be used during initial resource onboarding
      * 
      */
-    @InputImport(name="clientPublicKey")
+    @Import(name="clientPublicKey")
       private final @Nullable Output<String> clientPublicKey;
 
     public Output<String> getClientPublicKey() {
         return this.clientPublicKey == null ? Output.empty() : this.clientPublicKey;
     }
 
-    @InputImport(name="identity")
+    @Import(name="identity")
       private final @Nullable Output<MachineIdentityArgs> identity;
 
     public Output<MachineIdentityArgs> getIdentity() {
@@ -39,7 +39,7 @@ public final class MachineArgs extends io.pulumi.resources.ResourceArgs {
      * The geo-location where the resource lives
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -50,7 +50,7 @@ public final class MachineArgs extends io.pulumi.resources.ResourceArgs {
      * Metadata pertaining to the geographic location of the resource.
      * 
      */
-    @InputImport(name="locationData")
+    @Import(name="locationData")
       private final @Nullable Output<LocationDataArgs> locationData;
 
     public Output<LocationDataArgs> getLocationData() {
@@ -61,7 +61,7 @@ public final class MachineArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the hybrid machine.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -72,7 +72,7 @@ public final class MachineArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -83,7 +83,7 @@ public final class MachineArgs extends io.pulumi.resources.ResourceArgs {
      * Resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -94,7 +94,7 @@ public final class MachineArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the hybrid machine unique ID.
      * 
      */
-    @InputImport(name="vmId")
+    @Import(name="vmId")
       private final @Nullable Output<String> vmId;
 
     public Output<String> getVmId() {

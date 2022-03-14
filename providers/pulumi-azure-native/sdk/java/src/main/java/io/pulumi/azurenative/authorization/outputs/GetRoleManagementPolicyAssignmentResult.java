@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.authorization.outputs;
 
 import io.pulumi.azurenative.authorization.outputs.PolicyAssignmentPropertiesResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetRoleManagementPolicyAssignmentResult {
     /**
      * The role management policy Id.
@@ -48,15 +48,15 @@ public final class GetRoleManagementPolicyAssignmentResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetRoleManagementPolicyAssignmentResult(
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("policyAssignmentProperties") PolicyAssignmentPropertiesResponse policyAssignmentProperties,
-        @OutputCustomType.Parameter("policyId") @Nullable String policyId,
-        @OutputCustomType.Parameter("roleDefinitionId") @Nullable String roleDefinitionId,
-        @OutputCustomType.Parameter("scope") @Nullable String scope,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("policyAssignmentProperties") PolicyAssignmentPropertiesResponse policyAssignmentProperties,
+        @CustomType.Parameter("policyId") @Nullable String policyId,
+        @CustomType.Parameter("roleDefinitionId") @Nullable String roleDefinitionId,
+        @CustomType.Parameter("scope") @Nullable String scope,
+        @CustomType.Parameter("type") String type) {
         this.id = id;
         this.name = name;
         this.policyAssignmentProperties = policyAssignmentProperties;

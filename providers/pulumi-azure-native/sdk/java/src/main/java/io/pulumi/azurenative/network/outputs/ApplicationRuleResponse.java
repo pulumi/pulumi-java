@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.FirewallPolicyRuleApplicationProtocolResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ApplicationRuleResponse {
     /**
      * Description of the rule.
@@ -76,20 +76,20 @@ public final class ApplicationRuleResponse {
      */
     private final @Nullable List<String> webCategories;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ApplicationRuleResponse(
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("destinationAddresses") @Nullable List<String> destinationAddresses,
-        @OutputCustomType.Parameter("fqdnTags") @Nullable List<String> fqdnTags,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("protocols") @Nullable List<FirewallPolicyRuleApplicationProtocolResponse> protocols,
-        @OutputCustomType.Parameter("ruleType") String ruleType,
-        @OutputCustomType.Parameter("sourceAddresses") @Nullable List<String> sourceAddresses,
-        @OutputCustomType.Parameter("sourceIpGroups") @Nullable List<String> sourceIpGroups,
-        @OutputCustomType.Parameter("targetFqdns") @Nullable List<String> targetFqdns,
-        @OutputCustomType.Parameter("targetUrls") @Nullable List<String> targetUrls,
-        @OutputCustomType.Parameter("terminateTLS") @Nullable Boolean terminateTLS,
-        @OutputCustomType.Parameter("webCategories") @Nullable List<String> webCategories) {
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("destinationAddresses") @Nullable List<String> destinationAddresses,
+        @CustomType.Parameter("fqdnTags") @Nullable List<String> fqdnTags,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("protocols") @Nullable List<FirewallPolicyRuleApplicationProtocolResponse> protocols,
+        @CustomType.Parameter("ruleType") String ruleType,
+        @CustomType.Parameter("sourceAddresses") @Nullable List<String> sourceAddresses,
+        @CustomType.Parameter("sourceIpGroups") @Nullable List<String> sourceIpGroups,
+        @CustomType.Parameter("targetFqdns") @Nullable List<String> targetFqdns,
+        @CustomType.Parameter("targetUrls") @Nullable List<String> targetUrls,
+        @CustomType.Parameter("terminateTLS") @Nullable Boolean terminateTLS,
+        @CustomType.Parameter("webCategories") @Nullable List<String> webCategories) {
         this.description = description;
         this.destinationAddresses = destinationAddresses;
         this.fqdnTags = fqdnTags;

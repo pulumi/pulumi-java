@@ -7,7 +7,7 @@ import io.pulumi.azurenative.appconfiguration.outputs.EncryptionPropertiesRespon
 import io.pulumi.azurenative.appconfiguration.outputs.PrivateEndpointConnectionReferenceResponse;
 import io.pulumi.azurenative.appconfiguration.outputs.ResourceIdentityResponse;
 import io.pulumi.azurenative.appconfiguration.outputs.SkuResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -15,7 +15,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetConfigurationStoreResult {
     /**
      * The creation date of configuration store.
@@ -83,21 +83,21 @@ public final class GetConfigurationStoreResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetConfigurationStoreResult(
-        @OutputCustomType.Parameter("creationDate") String creationDate,
-        @OutputCustomType.Parameter("encryption") @Nullable EncryptionPropertiesResponse encryption,
-        @OutputCustomType.Parameter("endpoint") String endpoint,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("identity") @Nullable ResourceIdentityResponse identity,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("privateEndpointConnections") List<PrivateEndpointConnectionReferenceResponse> privateEndpointConnections,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("publicNetworkAccess") @Nullable String publicNetworkAccess,
-        @OutputCustomType.Parameter("sku") SkuResponse sku,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("creationDate") String creationDate,
+        @CustomType.Parameter("encryption") @Nullable EncryptionPropertiesResponse encryption,
+        @CustomType.Parameter("endpoint") String endpoint,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("identity") @Nullable ResourceIdentityResponse identity,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("privateEndpointConnections") List<PrivateEndpointConnectionReferenceResponse> privateEndpointConnections,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("publicNetworkAccess") @Nullable String publicNetworkAccess,
+        @CustomType.Parameter("sku") SkuResponse sku,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type) {
         this.creationDate = creationDate;
         this.encryption = encryption;
         this.endpoint = endpoint;

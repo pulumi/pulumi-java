@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.automation;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the automation account.
      * 
      */
-    @InputImport(name="automationAccountName", required=true)
+    @Import(name="automationAccountName", required=true)
       private final Output<String> automationAccountName;
 
     public Output<String> getAutomationAccountName() {
@@ -30,7 +30,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * Gets or sets the base64 encoded value of the certificate.
      * 
      */
-    @InputImport(name="base64Value", required=true)
+    @Import(name="base64Value", required=true)
       private final Output<String> base64Value;
 
     public Output<String> getBase64Value() {
@@ -41,7 +41,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * The parameters supplied to the create or update certificate operation.
      * 
      */
-    @InputImport(name="certificateName")
+    @Import(name="certificateName")
       private final @Nullable Output<String> certificateName;
 
     public Output<String> getCertificateName() {
@@ -52,7 +52,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * Gets or sets the description of the certificate.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -63,7 +63,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * Gets or sets the is exportable flag of the certificate.
      * 
      */
-    @InputImport(name="isExportable")
+    @Import(name="isExportable")
       private final @Nullable Output<Boolean> isExportable;
 
     public Output<Boolean> getIsExportable() {
@@ -74,7 +74,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * Gets or sets the name of the certificate.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -85,7 +85,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * Name of an Azure Resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -96,7 +96,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * Gets or sets the thumbprint of the certificate.
      * 
      */
-    @InputImport(name="thumbprint")
+    @Import(name="thumbprint")
       private final @Nullable Output<String> thumbprint;
 
     public Output<String> getThumbprint() {

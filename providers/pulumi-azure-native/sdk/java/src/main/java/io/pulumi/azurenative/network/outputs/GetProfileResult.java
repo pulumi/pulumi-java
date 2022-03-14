@@ -6,7 +6,7 @@ package io.pulumi.azurenative.network.outputs;
 import io.pulumi.azurenative.network.outputs.DnsConfigResponse;
 import io.pulumi.azurenative.network.outputs.EndpointResponse;
 import io.pulumi.azurenative.network.outputs.MonitorConfigResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -15,7 +15,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetProfileResult {
     /**
      * The list of allowed endpoint record types.
@@ -83,21 +83,21 @@ public final class GetProfileResult {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetProfileResult(
-        @OutputCustomType.Parameter("allowedEndpointRecordTypes") @Nullable List<String> allowedEndpointRecordTypes,
-        @OutputCustomType.Parameter("dnsConfig") @Nullable DnsConfigResponse dnsConfig,
-        @OutputCustomType.Parameter("endpoints") @Nullable List<EndpointResponse> endpoints,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("maxReturn") @Nullable Double maxReturn,
-        @OutputCustomType.Parameter("monitorConfig") @Nullable MonitorConfigResponse monitorConfig,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("profileStatus") @Nullable String profileStatus,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("trafficRoutingMethod") @Nullable String trafficRoutingMethod,
-        @OutputCustomType.Parameter("trafficViewEnrollmentStatus") @Nullable String trafficViewEnrollmentStatus,
-        @OutputCustomType.Parameter("type") @Nullable String type) {
+        @CustomType.Parameter("allowedEndpointRecordTypes") @Nullable List<String> allowedEndpointRecordTypes,
+        @CustomType.Parameter("dnsConfig") @Nullable DnsConfigResponse dnsConfig,
+        @CustomType.Parameter("endpoints") @Nullable List<EndpointResponse> endpoints,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("maxReturn") @Nullable Double maxReturn,
+        @CustomType.Parameter("monitorConfig") @Nullable MonitorConfigResponse monitorConfig,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("profileStatus") @Nullable String profileStatus,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("trafficRoutingMethod") @Nullable String trafficRoutingMethod,
+        @CustomType.Parameter("trafficViewEnrollmentStatus") @Nullable String trafficViewEnrollmentStatus,
+        @CustomType.Parameter("type") @Nullable String type) {
         this.allowedEndpointRecordTypes = allowedEndpointRecordTypes;
         this.dnsConfig = dnsConfig;
         this.endpoints = endpoints;

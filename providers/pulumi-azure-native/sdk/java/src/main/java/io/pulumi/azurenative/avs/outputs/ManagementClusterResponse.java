@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.avs.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ManagementClusterResponse {
     /**
      * The identity
@@ -32,12 +32,12 @@ public final class ManagementClusterResponse {
      */
     private final String provisioningState;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ManagementClusterResponse(
-        @OutputCustomType.Parameter("clusterId") Integer clusterId,
-        @OutputCustomType.Parameter("clusterSize") Integer clusterSize,
-        @OutputCustomType.Parameter("hosts") List<String> hosts,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState) {
+        @CustomType.Parameter("clusterId") Integer clusterId,
+        @CustomType.Parameter("clusterSize") Integer clusterSize,
+        @CustomType.Parameter("hosts") List<String> hosts,
+        @CustomType.Parameter("provisioningState") String provisioningState) {
         this.clusterId = clusterId;
         this.clusterSize = clusterSize;
         this.hosts = hosts;

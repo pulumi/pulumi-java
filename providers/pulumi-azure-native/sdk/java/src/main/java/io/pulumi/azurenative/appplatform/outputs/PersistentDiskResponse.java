@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.appplatform.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PersistentDiskResponse {
     /**
      * Mount path of the persistent disk
@@ -28,11 +28,11 @@ public final class PersistentDiskResponse {
      */
     private final Integer usedInGB;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PersistentDiskResponse(
-        @OutputCustomType.Parameter("mountPath") @Nullable String mountPath,
-        @OutputCustomType.Parameter("sizeInGB") @Nullable Integer sizeInGB,
-        @OutputCustomType.Parameter("usedInGB") Integer usedInGB) {
+        @CustomType.Parameter("mountPath") @Nullable String mountPath,
+        @CustomType.Parameter("sizeInGB") @Nullable Integer sizeInGB,
+        @CustomType.Parameter("usedInGB") Integer usedInGB) {
         this.mountPath = mountPath;
         this.sizeInGB = sizeInGB;
         this.usedInGB = usedInGB;

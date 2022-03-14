@@ -5,13 +5,13 @@ package io.pulumi.azurenative.compute.outputs;
 
 import io.pulumi.azurenative.compute.outputs.LoadBalancerConfigurationResponse;
 import io.pulumi.azurenative.compute.outputs.SubResourceResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CloudServiceNetworkProfileResponse {
     /**
      * List of Load balancer configurations. Cloud service can have up to two load balancer configurations, corresponding to a Public Load Balancer and an Internal Load Balancer.
@@ -24,10 +24,10 @@ public final class CloudServiceNetworkProfileResponse {
      */
     private final @Nullable SubResourceResponse swappableCloudService;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CloudServiceNetworkProfileResponse(
-        @OutputCustomType.Parameter("loadBalancerConfigurations") @Nullable List<LoadBalancerConfigurationResponse> loadBalancerConfigurations,
-        @OutputCustomType.Parameter("swappableCloudService") @Nullable SubResourceResponse swappableCloudService) {
+        @CustomType.Parameter("loadBalancerConfigurations") @Nullable List<LoadBalancerConfigurationResponse> loadBalancerConfigurations,
+        @CustomType.Parameter("swappableCloudService") @Nullable SubResourceResponse swappableCloudService) {
         this.loadBalancerConfigurations = loadBalancerConfigurations;
         this.swappableCloudService = swappableCloudService;
     }

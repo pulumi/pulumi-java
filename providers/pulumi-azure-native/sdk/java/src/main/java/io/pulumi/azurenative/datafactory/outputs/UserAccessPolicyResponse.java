@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.datafactory.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class UserAccessPolicyResponse {
     /**
      * The resource path to get access relative to factory. Currently only empty string is supported which corresponds to the factory resource.
@@ -37,13 +37,13 @@ public final class UserAccessPolicyResponse {
      */
     private final @Nullable String startTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private UserAccessPolicyResponse(
-        @OutputCustomType.Parameter("accessResourcePath") @Nullable String accessResourcePath,
-        @OutputCustomType.Parameter("expireTime") @Nullable String expireTime,
-        @OutputCustomType.Parameter("permissions") @Nullable String permissions,
-        @OutputCustomType.Parameter("profileName") @Nullable String profileName,
-        @OutputCustomType.Parameter("startTime") @Nullable String startTime) {
+        @CustomType.Parameter("accessResourcePath") @Nullable String accessResourcePath,
+        @CustomType.Parameter("expireTime") @Nullable String expireTime,
+        @CustomType.Parameter("permissions") @Nullable String permissions,
+        @CustomType.Parameter("profileName") @Nullable String profileName,
+        @CustomType.Parameter("startTime") @Nullable String startTime) {
         this.accessResourcePath = accessResourcePath;
         this.expireTime = expireTime;
         this.permissions = permissions;

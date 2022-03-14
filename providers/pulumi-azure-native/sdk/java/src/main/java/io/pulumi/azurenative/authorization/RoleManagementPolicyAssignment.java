@@ -8,7 +8,7 @@ import io.pulumi.azurenative.authorization.RoleManagementPolicyAssignmentArgs;
 import io.pulumi.azurenative.authorization.outputs.PolicyAssignmentPropertiesResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +35,7 @@ public class RoleManagementPolicyAssignment extends io.pulumi.resources.CustomRe
      * The role management policy name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -49,7 +49,7 @@ public class RoleManagementPolicyAssignment extends io.pulumi.resources.CustomRe
      * Additional properties of scope, role definition and policy
      * 
      */
-    @OutputExport(name="policyAssignmentProperties", type=PolicyAssignmentPropertiesResponse.class, parameters={})
+    @Export(name="policyAssignmentProperties", type=PolicyAssignmentPropertiesResponse.class, parameters={})
     private Output<PolicyAssignmentPropertiesResponse> policyAssignmentProperties;
 
     /**
@@ -63,7 +63,7 @@ public class RoleManagementPolicyAssignment extends io.pulumi.resources.CustomRe
      * The policy id role management policy assignment.
      * 
      */
-    @OutputExport(name="policyId", type=String.class, parameters={})
+    @Export(name="policyId", type=String.class, parameters={})
     private Output</* @Nullable */ String> policyId;
 
     /**
@@ -77,7 +77,7 @@ public class RoleManagementPolicyAssignment extends io.pulumi.resources.CustomRe
      * The role definition of management policy assignment.
      * 
      */
-    @OutputExport(name="roleDefinitionId", type=String.class, parameters={})
+    @Export(name="roleDefinitionId", type=String.class, parameters={})
     private Output</* @Nullable */ String> roleDefinitionId;
 
     /**
@@ -91,7 +91,7 @@ public class RoleManagementPolicyAssignment extends io.pulumi.resources.CustomRe
      * The role management policy scope.
      * 
      */
-    @OutputExport(name="scope", type=String.class, parameters={})
+    @Export(name="scope", type=String.class, parameters={})
     private Output</* @Nullable */ String> scope;
 
     /**
@@ -105,7 +105,7 @@ public class RoleManagementPolicyAssignment extends io.pulumi.resources.CustomRe
      * The role management policy type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

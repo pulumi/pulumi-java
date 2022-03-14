@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.logic.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class EdifactSchemaReferenceArgs extends io.pulumi.resources.Resour
      * The association assigned code.
      * 
      */
-    @InputImport(name="associationAssignedCode")
+    @Import(name="associationAssignedCode")
       private final @Nullable Output<String> associationAssignedCode;
 
     public Output<String> getAssociationAssignedCode() {
@@ -33,7 +33,7 @@ public final class EdifactSchemaReferenceArgs extends io.pulumi.resources.Resour
      * The message id.
      * 
      */
-    @InputImport(name="messageId", required=true)
+    @Import(name="messageId", required=true)
       private final Output<String> messageId;
 
     public Output<String> getMessageId() {
@@ -44,7 +44,7 @@ public final class EdifactSchemaReferenceArgs extends io.pulumi.resources.Resour
      * The message release version.
      * 
      */
-    @InputImport(name="messageRelease", required=true)
+    @Import(name="messageRelease", required=true)
       private final Output<String> messageRelease;
 
     public Output<String> getMessageRelease() {
@@ -55,7 +55,7 @@ public final class EdifactSchemaReferenceArgs extends io.pulumi.resources.Resour
      * The message version.
      * 
      */
-    @InputImport(name="messageVersion", required=true)
+    @Import(name="messageVersion", required=true)
       private final Output<String> messageVersion;
 
     public Output<String> getMessageVersion() {
@@ -66,7 +66,7 @@ public final class EdifactSchemaReferenceArgs extends io.pulumi.resources.Resour
      * The schema name.
      * 
      */
-    @InputImport(name="schemaName", required=true)
+    @Import(name="schemaName", required=true)
       private final Output<String> schemaName;
 
     public Output<String> getSchemaName() {
@@ -77,7 +77,7 @@ public final class EdifactSchemaReferenceArgs extends io.pulumi.resources.Resour
      * The sender application id.
      * 
      */
-    @InputImport(name="senderApplicationId")
+    @Import(name="senderApplicationId")
       private final @Nullable Output<String> senderApplicationId;
 
     public Output<String> getSenderApplicationId() {
@@ -88,7 +88,7 @@ public final class EdifactSchemaReferenceArgs extends io.pulumi.resources.Resour
      * The sender application qualifier.
      * 
      */
-    @InputImport(name="senderApplicationQualifier")
+    @Import(name="senderApplicationQualifier")
       private final @Nullable Output<String> senderApplicationQualifier;
 
     public Output<String> getSenderApplicationQualifier() {

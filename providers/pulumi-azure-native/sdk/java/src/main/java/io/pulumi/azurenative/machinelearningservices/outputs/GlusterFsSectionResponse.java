@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GlusterFsSectionResponse {
     /**
      * The server address of one of the servers that hosts the GlusterFS. Can be either the IP address or server name.
@@ -20,10 +20,10 @@ public final class GlusterFsSectionResponse {
      */
     private final String volumeName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GlusterFsSectionResponse(
-        @OutputCustomType.Parameter("serverAddress") String serverAddress,
-        @OutputCustomType.Parameter("volumeName") String volumeName) {
+        @CustomType.Parameter("serverAddress") String serverAddress,
+        @CustomType.Parameter("volumeName") String volumeName) {
         this.serverAddress = serverAddress;
         this.volumeName = volumeName;
     }

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.machinelearningservices.enums.ResourceIdentityAssig
 import io.pulumi.azurenative.machinelearningservices.inputs.UserAssignedIdentityMetaArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class ResourceIdentityArgs extends io.pulumi.resources.ResourceArgs
      * Defines values for a ResourceIdentity's type.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<Either<String,ResourceIdentityAssignment>> type;
 
     public Output<Either<String,ResourceIdentityAssignment>> getType() {
@@ -37,7 +37,7 @@ public final class ResourceIdentityArgs extends io.pulumi.resources.ResourceArgs
      * Dictionary of the user assigned identities, key is ARM resource ID of the UAI.
      * 
      */
-    @InputImport(name="userAssignedIdentities")
+    @Import(name="userAssignedIdentities")
       private final @Nullable Output<Map<String,UserAssignedIdentityMetaArgs>> userAssignedIdentities;
 
     public Output<Map<String,UserAssignedIdentityMetaArgs>> getUserAssignedIdentities() {

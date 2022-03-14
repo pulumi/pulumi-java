@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class EntityReferenceResponse extends io.pulumi.resources.InvokeArg
      * The name of this referenced entity.
      * 
      */
-    @InputImport(name="referenceName")
+    @Import(name="referenceName")
       private final @Nullable String referenceName;
 
     public Optional<String> getReferenceName() {
@@ -33,7 +33,7 @@ public final class EntityReferenceResponse extends io.pulumi.resources.InvokeArg
      * The type of this referenced entity.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable String type;
 
     public Optional<String> getType() {

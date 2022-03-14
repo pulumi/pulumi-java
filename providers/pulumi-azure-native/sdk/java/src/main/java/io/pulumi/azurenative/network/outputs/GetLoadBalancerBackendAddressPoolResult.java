@@ -6,14 +6,14 @@ package io.pulumi.azurenative.network.outputs;
 import io.pulumi.azurenative.network.outputs.LoadBalancerBackendAddressResponse;
 import io.pulumi.azurenative.network.outputs.NetworkInterfaceIPConfigurationResponse;
 import io.pulumi.azurenative.network.outputs.SubResourceResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetLoadBalancerBackendAddressPoolResult {
     /**
      * An array of references to IP addresses defined in network interfaces.
@@ -71,19 +71,19 @@ public final class GetLoadBalancerBackendAddressPoolResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetLoadBalancerBackendAddressPoolResult(
-        @OutputCustomType.Parameter("backendIPConfigurations") List<NetworkInterfaceIPConfigurationResponse> backendIPConfigurations,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("loadBalancerBackendAddresses") @Nullable List<LoadBalancerBackendAddressResponse> loadBalancerBackendAddresses,
-        @OutputCustomType.Parameter("loadBalancingRules") List<SubResourceResponse> loadBalancingRules,
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("outboundRule") SubResourceResponse outboundRule,
-        @OutputCustomType.Parameter("outboundRules") List<SubResourceResponse> outboundRules,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("backendIPConfigurations") List<NetworkInterfaceIPConfigurationResponse> backendIPConfigurations,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("loadBalancerBackendAddresses") @Nullable List<LoadBalancerBackendAddressResponse> loadBalancerBackendAddresses,
+        @CustomType.Parameter("loadBalancingRules") List<SubResourceResponse> loadBalancingRules,
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("outboundRule") SubResourceResponse outboundRule,
+        @CustomType.Parameter("outboundRules") List<SubResourceResponse> outboundRules,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("type") String type) {
         this.backendIPConfigurations = backendIPConfigurations;
         this.etag = etag;
         this.id = id;

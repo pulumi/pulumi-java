@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.deploymentmanager.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SasAuthenticationResponse {
     /**
      * The SAS URI to the Azure Storage blob container. Any offset from the root of the container to where the artifacts are located can be defined in the artifactRoot.
@@ -21,10 +21,10 @@ public final class SasAuthenticationResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SasAuthenticationResponse(
-        @OutputCustomType.Parameter("sasUri") String sasUri,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("sasUri") String sasUri,
+        @CustomType.Parameter("type") String type) {
         this.sasUri = sasUri;
         this.type = type;
     }

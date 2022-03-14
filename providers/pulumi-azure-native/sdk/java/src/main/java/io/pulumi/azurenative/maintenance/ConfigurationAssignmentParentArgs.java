@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.maintenance;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class ConfigurationAssignmentParentArgs extends io.pulumi.resources
      * Configuration assignment name
      * 
      */
-    @InputImport(name="configurationAssignmentName")
+    @Import(name="configurationAssignmentName")
       private final @Nullable Output<String> configurationAssignmentName;
 
     public Output<String> getConfigurationAssignmentName() {
@@ -29,7 +29,7 @@ public final class ConfigurationAssignmentParentArgs extends io.pulumi.resources
      * Location of the resource
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -40,7 +40,7 @@ public final class ConfigurationAssignmentParentArgs extends io.pulumi.resources
      * The maintenance configuration Id
      * 
      */
-    @InputImport(name="maintenanceConfigurationId")
+    @Import(name="maintenanceConfigurationId")
       private final @Nullable Output<String> maintenanceConfigurationId;
 
     public Output<String> getMaintenanceConfigurationId() {
@@ -51,7 +51,7 @@ public final class ConfigurationAssignmentParentArgs extends io.pulumi.resources
      * Resource provider name
      * 
      */
-    @InputImport(name="providerName", required=true)
+    @Import(name="providerName", required=true)
       private final Output<String> providerName;
 
     public Output<String> getProviderName() {
@@ -62,7 +62,7 @@ public final class ConfigurationAssignmentParentArgs extends io.pulumi.resources
      * Resource group name
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -73,7 +73,7 @@ public final class ConfigurationAssignmentParentArgs extends io.pulumi.resources
      * The unique resourceId
      * 
      */
-    @InputImport(name="resourceId")
+    @Import(name="resourceId")
       private final @Nullable Output<String> resourceId;
 
     public Output<String> getResourceId() {
@@ -84,7 +84,7 @@ public final class ConfigurationAssignmentParentArgs extends io.pulumi.resources
      * Resource identifier
      * 
      */
-    @InputImport(name="resourceName", required=true)
+    @Import(name="resourceName", required=true)
       private final Output<String> resourceName;
 
     public Output<String> getPropResourceName() {
@@ -95,7 +95,7 @@ public final class ConfigurationAssignmentParentArgs extends io.pulumi.resources
      * Resource parent identifier
      * 
      */
-    @InputImport(name="resourceParentName", required=true)
+    @Import(name="resourceParentName", required=true)
       private final Output<String> resourceParentName;
 
     public Output<String> getResourceParentName() {
@@ -106,7 +106,7 @@ public final class ConfigurationAssignmentParentArgs extends io.pulumi.resources
      * Resource parent type
      * 
      */
-    @InputImport(name="resourceParentType", required=true)
+    @Import(name="resourceParentType", required=true)
       private final Output<String> resourceParentType;
 
     public Output<String> getResourceParentType() {
@@ -117,7 +117,7 @@ public final class ConfigurationAssignmentParentArgs extends io.pulumi.resources
      * Resource type
      * 
      */
-    @InputImport(name="resourceType", required=true)
+    @Import(name="resourceType", required=true)
       private final Output<String> resourceType;
 
     public Output<String> getPropResourceType() {

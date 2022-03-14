@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.vmwarecloudsimple.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetDedicatedCloudServiceResult {
     /**
      * gateway Subnet for the account. It will collect the subnet address and always treat it as /28
@@ -58,17 +58,17 @@ public final class GetDedicatedCloudServiceResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDedicatedCloudServiceResult(
-        @OutputCustomType.Parameter("gatewaySubnet") String gatewaySubnet,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("isAccountOnboarded") String isAccountOnboarded,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("nodes") Integer nodes,
-        @OutputCustomType.Parameter("serviceURL") String serviceURL,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("gatewaySubnet") String gatewaySubnet,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("isAccountOnboarded") String isAccountOnboarded,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("nodes") Integer nodes,
+        @CustomType.Parameter("serviceURL") String serviceURL,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type) {
         this.gatewaySubnet = gatewaySubnet;
         this.id = id;
         this.isAccountOnboarded = isAccountOnboarded;

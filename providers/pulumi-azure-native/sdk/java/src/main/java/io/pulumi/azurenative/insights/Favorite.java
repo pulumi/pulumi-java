@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.insights.FavoriteArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -35,7 +35,7 @@ public class Favorite extends io.pulumi.resources.CustomResource {
      * Favorite category, as defined by the user at creation time.
      * 
      */
-    @OutputExport(name="category", type=String.class, parameters={})
+    @Export(name="category", type=String.class, parameters={})
     private Output</* @Nullable */ String> category;
 
     /**
@@ -49,7 +49,7 @@ public class Favorite extends io.pulumi.resources.CustomResource {
      * Configuration of this particular favorite, which are driven by the Azure portal UX. Configuration data is a string containing valid JSON
      * 
      */
-    @OutputExport(name="config", type=String.class, parameters={})
+    @Export(name="config", type=String.class, parameters={})
     private Output</* @Nullable */ String> config;
 
     /**
@@ -63,7 +63,7 @@ public class Favorite extends io.pulumi.resources.CustomResource {
      * Internally assigned unique id of the favorite definition.
      * 
      */
-    @OutputExport(name="favoriteId", type=String.class, parameters={})
+    @Export(name="favoriteId", type=String.class, parameters={})
     private Output<String> favoriteId;
 
     /**
@@ -77,7 +77,7 @@ public class Favorite extends io.pulumi.resources.CustomResource {
      * Enum indicating if this favorite definition is owned by a specific user or is shared between all users with access to the Application Insights component.
      * 
      */
-    @OutputExport(name="favoriteType", type=String.class, parameters={})
+    @Export(name="favoriteType", type=String.class, parameters={})
     private Output</* @Nullable */ String> favoriteType;
 
     /**
@@ -91,7 +91,7 @@ public class Favorite extends io.pulumi.resources.CustomResource {
      * Flag denoting wether or not this favorite was generated from a template.
      * 
      */
-    @OutputExport(name="isGeneratedFromTemplate", type=Boolean.class, parameters={})
+    @Export(name="isGeneratedFromTemplate", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> isGeneratedFromTemplate;
 
     /**
@@ -105,7 +105,7 @@ public class Favorite extends io.pulumi.resources.CustomResource {
      * The user-defined name of the favorite.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
@@ -119,7 +119,7 @@ public class Favorite extends io.pulumi.resources.CustomResource {
      * The source of the favorite definition.
      * 
      */
-    @OutputExport(name="sourceType", type=String.class, parameters={})
+    @Export(name="sourceType", type=String.class, parameters={})
     private Output</* @Nullable */ String> sourceType;
 
     /**
@@ -133,7 +133,7 @@ public class Favorite extends io.pulumi.resources.CustomResource {
      * A list of 0 or more tags that are associated with this favorite definition
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={String.class})
+    @Export(name="tags", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> tags;
 
     /**
@@ -147,7 +147,7 @@ public class Favorite extends io.pulumi.resources.CustomResource {
      * Date and time in UTC of the last modification that was made to this favorite definition.
      * 
      */
-    @OutputExport(name="timeModified", type=String.class, parameters={})
+    @Export(name="timeModified", type=String.class, parameters={})
     private Output<String> timeModified;
 
     /**
@@ -161,7 +161,7 @@ public class Favorite extends io.pulumi.resources.CustomResource {
      * Unique user id of the specific user that owns this favorite.
      * 
      */
-    @OutputExport(name="userId", type=String.class, parameters={})
+    @Export(name="userId", type=String.class, parameters={})
     private Output<String> userId;
 
     /**
@@ -175,7 +175,7 @@ public class Favorite extends io.pulumi.resources.CustomResource {
      * This instance's version of the data model. This can change as new features are added that can be marked favorite. Current examples include MetricsExplorer (ME) and Search.
      * 
      */
-    @OutputExport(name="version", type=String.class, parameters={})
+    @Export(name="version", type=String.class, parameters={})
     private Output</* @Nullable */ String> version;
 
     /**

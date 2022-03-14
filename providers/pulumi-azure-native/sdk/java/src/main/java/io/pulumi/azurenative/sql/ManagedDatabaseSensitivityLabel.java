@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.sql.ManagedDatabaseSensitivityLabelArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -35,7 +35,7 @@ public class ManagedDatabaseSensitivityLabel extends io.pulumi.resources.CustomR
      * The column name.
      * 
      */
-    @OutputExport(name="columnName", type=String.class, parameters={})
+    @Export(name="columnName", type=String.class, parameters={})
     private Output<String> columnName;
 
     /**
@@ -49,7 +49,7 @@ public class ManagedDatabaseSensitivityLabel extends io.pulumi.resources.CustomR
      * The information type.
      * 
      */
-    @OutputExport(name="informationType", type=String.class, parameters={})
+    @Export(name="informationType", type=String.class, parameters={})
     private Output</* @Nullable */ String> informationType;
 
     /**
@@ -63,7 +63,7 @@ public class ManagedDatabaseSensitivityLabel extends io.pulumi.resources.CustomR
      * The information type ID.
      * 
      */
-    @OutputExport(name="informationTypeId", type=String.class, parameters={})
+    @Export(name="informationTypeId", type=String.class, parameters={})
     private Output</* @Nullable */ String> informationTypeId;
 
     /**
@@ -77,7 +77,7 @@ public class ManagedDatabaseSensitivityLabel extends io.pulumi.resources.CustomR
      * Is sensitivity recommendation disabled. Applicable for recommended sensitivity label only. Specifies whether the sensitivity recommendation on this column is disabled (dismissed) or not.
      * 
      */
-    @OutputExport(name="isDisabled", type=Boolean.class, parameters={})
+    @Export(name="isDisabled", type=Boolean.class, parameters={})
     private Output<Boolean> isDisabled;
 
     /**
@@ -91,7 +91,7 @@ public class ManagedDatabaseSensitivityLabel extends io.pulumi.resources.CustomR
      * The label ID.
      * 
      */
-    @OutputExport(name="labelId", type=String.class, parameters={})
+    @Export(name="labelId", type=String.class, parameters={})
     private Output</* @Nullable */ String> labelId;
 
     /**
@@ -105,7 +105,7 @@ public class ManagedDatabaseSensitivityLabel extends io.pulumi.resources.CustomR
      * The label name.
      * 
      */
-    @OutputExport(name="labelName", type=String.class, parameters={})
+    @Export(name="labelName", type=String.class, parameters={})
     private Output</* @Nullable */ String> labelName;
 
     /**
@@ -119,7 +119,7 @@ public class ManagedDatabaseSensitivityLabel extends io.pulumi.resources.CustomR
      * Resource that manages the sensitivity label.
      * 
      */
-    @OutputExport(name="managedBy", type=String.class, parameters={})
+    @Export(name="managedBy", type=String.class, parameters={})
     private Output<String> managedBy;
 
     /**
@@ -133,7 +133,7 @@ public class ManagedDatabaseSensitivityLabel extends io.pulumi.resources.CustomR
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -143,7 +143,7 @@ public class ManagedDatabaseSensitivityLabel extends io.pulumi.resources.CustomR
     public Output<String> getName() {
         return this.name;
     }
-    @OutputExport(name="rank", type=String.class, parameters={})
+    @Export(name="rank", type=String.class, parameters={})
     private Output</* @Nullable */ String> rank;
 
     public Output</* @Nullable */ String> getRank() {
@@ -153,7 +153,7 @@ public class ManagedDatabaseSensitivityLabel extends io.pulumi.resources.CustomR
      * The schema name.
      * 
      */
-    @OutputExport(name="schemaName", type=String.class, parameters={})
+    @Export(name="schemaName", type=String.class, parameters={})
     private Output<String> schemaName;
 
     /**
@@ -167,7 +167,7 @@ public class ManagedDatabaseSensitivityLabel extends io.pulumi.resources.CustomR
      * The table name.
      * 
      */
-    @OutputExport(name="tableName", type=String.class, parameters={})
+    @Export(name="tableName", type=String.class, parameters={})
     private Output<String> tableName;
 
     /**
@@ -181,7 +181,7 @@ public class ManagedDatabaseSensitivityLabel extends io.pulumi.resources.CustomR
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

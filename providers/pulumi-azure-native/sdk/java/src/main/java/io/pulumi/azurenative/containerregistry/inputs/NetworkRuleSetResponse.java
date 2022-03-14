@@ -5,7 +5,7 @@ package io.pulumi.azurenative.containerregistry.inputs;
 
 import io.pulumi.azurenative.containerregistry.inputs.IPRuleResponse;
 import io.pulumi.azurenative.containerregistry.inputs.VirtualNetworkRuleResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class NetworkRuleSetResponse extends io.pulumi.resources.InvokeArgs
      * The default action of allow or deny when no other rules match.
      * 
      */
-    @InputImport(name="defaultAction", required=true)
+    @Import(name="defaultAction", required=true)
       private final String defaultAction;
 
     public String getDefaultAction() {
@@ -36,7 +36,7 @@ public final class NetworkRuleSetResponse extends io.pulumi.resources.InvokeArgs
      * The IP ACL rules.
      * 
      */
-    @InputImport(name="ipRules")
+    @Import(name="ipRules")
       private final @Nullable List<IPRuleResponse> ipRules;
 
     public List<IPRuleResponse> getIpRules() {
@@ -47,7 +47,7 @@ public final class NetworkRuleSetResponse extends io.pulumi.resources.InvokeArgs
      * The virtual network rules.
      * 
      */
-    @InputImport(name="virtualNetworkRules")
+    @Import(name="virtualNetworkRules")
       private final @Nullable List<VirtualNetworkRuleResponse> virtualNetworkRules;
 
     public List<VirtualNetworkRuleResponse> getVirtualNetworkRules() {

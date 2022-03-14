@@ -11,7 +11,7 @@ import io.pulumi.azurenative.dbformysql.enums.SslEnforcementEnum;
 import io.pulumi.azurenative.dbformysql.inputs.StorageProfileArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -30,7 +30,7 @@ public final class ServerPropertiesForGeoRestoreArgs extends io.pulumi.resources
      * Expected value is 'GeoRestore'.
      * 
      */
-    @InputImport(name="createMode", required=true)
+    @Import(name="createMode", required=true)
       private final Output<String> createMode;
 
     public Output<String> getCreateMode() {
@@ -41,7 +41,7 @@ public final class ServerPropertiesForGeoRestoreArgs extends io.pulumi.resources
      * Status showing whether the server enabled infrastructure encryption.
      * 
      */
-    @InputImport(name="infrastructureEncryption")
+    @Import(name="infrastructureEncryption")
       private final @Nullable Output<Either<String,InfrastructureEncryption>> infrastructureEncryption;
 
     public Output<Either<String,InfrastructureEncryption>> getInfrastructureEncryption() {
@@ -52,7 +52,7 @@ public final class ServerPropertiesForGeoRestoreArgs extends io.pulumi.resources
      * Enforce a minimal Tls version for the server.
      * 
      */
-    @InputImport(name="minimalTlsVersion")
+    @Import(name="minimalTlsVersion")
       private final @Nullable Output<Either<String,MinimalTlsVersionEnum>> minimalTlsVersion;
 
     public Output<Either<String,MinimalTlsVersionEnum>> getMinimalTlsVersion() {
@@ -63,7 +63,7 @@ public final class ServerPropertiesForGeoRestoreArgs extends io.pulumi.resources
      * Whether or not public network access is allowed for this server. Value is optional but if passed in, must be 'Enabled' or 'Disabled'
      * 
      */
-    @InputImport(name="publicNetworkAccess")
+    @Import(name="publicNetworkAccess")
       private final @Nullable Output<Either<String,PublicNetworkAccessEnum>> publicNetworkAccess;
 
     public Output<Either<String,PublicNetworkAccessEnum>> getPublicNetworkAccess() {
@@ -74,7 +74,7 @@ public final class ServerPropertiesForGeoRestoreArgs extends io.pulumi.resources
      * The source server id to restore from.
      * 
      */
-    @InputImport(name="sourceServerId", required=true)
+    @Import(name="sourceServerId", required=true)
       private final Output<String> sourceServerId;
 
     public Output<String> getSourceServerId() {
@@ -85,7 +85,7 @@ public final class ServerPropertiesForGeoRestoreArgs extends io.pulumi.resources
      * Enable ssl enforcement or not when connect to server.
      * 
      */
-    @InputImport(name="sslEnforcement")
+    @Import(name="sslEnforcement")
       private final @Nullable Output<SslEnforcementEnum> sslEnforcement;
 
     public Output<SslEnforcementEnum> getSslEnforcement() {
@@ -96,7 +96,7 @@ public final class ServerPropertiesForGeoRestoreArgs extends io.pulumi.resources
      * Storage profile of a server.
      * 
      */
-    @InputImport(name="storageProfile")
+    @Import(name="storageProfile")
       private final @Nullable Output<StorageProfileArgs> storageProfile;
 
     public Output<StorageProfileArgs> getStorageProfile() {
@@ -107,7 +107,7 @@ public final class ServerPropertiesForGeoRestoreArgs extends io.pulumi.resources
      * Server version.
      * 
      */
-    @InputImport(name="version")
+    @Import(name="version")
       private final @Nullable Output<Either<String,ServerVersion>> version;
 
     public Output<Either<String,ServerVersion>> getVersion() {

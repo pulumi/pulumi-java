@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.insights.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetPrivateLinkScopedResourceResult {
     /**
      * Azure resource Id
@@ -37,13 +37,13 @@ public final class GetPrivateLinkScopedResourceResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetPrivateLinkScopedResourceResult(
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("linkedResourceId") @Nullable String linkedResourceId,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("linkedResourceId") @Nullable String linkedResourceId,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("type") String type) {
         this.id = id;
         this.linkedResourceId = linkedResourceId;
         this.name = name;

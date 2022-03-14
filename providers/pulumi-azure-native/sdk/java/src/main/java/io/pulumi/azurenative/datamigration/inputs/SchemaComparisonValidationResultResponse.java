@@ -5,7 +5,7 @@ package io.pulumi.azurenative.datamigration.inputs;
 
 import io.pulumi.azurenative.datamigration.inputs.SchemaComparisonValidationResultTypeResponse;
 import io.pulumi.azurenative.datamigration.inputs.ValidationErrorResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Map;
@@ -26,7 +26,7 @@ public final class SchemaComparisonValidationResultResponse extends io.pulumi.re
      * List of schema differences between the source and target databases
      * 
      */
-    @InputImport(name="schemaDifferences", required=true)
+    @Import(name="schemaDifferences", required=true)
       private final SchemaComparisonValidationResultTypeResponse schemaDifferences;
 
     public SchemaComparisonValidationResultTypeResponse getSchemaDifferences() {
@@ -37,7 +37,7 @@ public final class SchemaComparisonValidationResultResponse extends io.pulumi.re
      * Count of source database objects
      * 
      */
-    @InputImport(name="sourceDatabaseObjectCount")
+    @Import(name="sourceDatabaseObjectCount")
       private final @Nullable Map<String,Double> sourceDatabaseObjectCount;
 
     public Map<String,Double> getSourceDatabaseObjectCount() {
@@ -48,7 +48,7 @@ public final class SchemaComparisonValidationResultResponse extends io.pulumi.re
      * Count of target database objects
      * 
      */
-    @InputImport(name="targetDatabaseObjectCount")
+    @Import(name="targetDatabaseObjectCount")
       private final @Nullable Map<String,Double> targetDatabaseObjectCount;
 
     public Map<String,Double> getTargetDatabaseObjectCount() {
@@ -59,7 +59,7 @@ public final class SchemaComparisonValidationResultResponse extends io.pulumi.re
      * List of errors that happened while performing schema compare validation
      * 
      */
-    @InputImport(name="validationErrors", required=true)
+    @Import(name="validationErrors", required=true)
       private final ValidationErrorResponse validationErrors;
 
     public ValidationErrorResponse getValidationErrors() {

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.containerregistry.inputs;
 import io.pulumi.azurenative.containerregistry.enums.ResourceIdentityType;
 import io.pulumi.azurenative.containerregistry.inputs.UserIdentityPropertiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class IdentityPropertiesArgs extends io.pulumi.resources.ResourceAr
      * The principal ID of resource identity.
      * 
      */
-    @InputImport(name="principalId")
+    @Import(name="principalId")
       private final @Nullable Output<String> principalId;
 
     public Output<String> getPrincipalId() {
@@ -36,7 +36,7 @@ public final class IdentityPropertiesArgs extends io.pulumi.resources.ResourceAr
      * The tenant ID of resource.
      * 
      */
-    @InputImport(name="tenantId")
+    @Import(name="tenantId")
       private final @Nullable Output<String> tenantId;
 
     public Output<String> getTenantId() {
@@ -47,7 +47,7 @@ public final class IdentityPropertiesArgs extends io.pulumi.resources.ResourceAr
      * The identity type.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<ResourceIdentityType> type;
 
     public Output<ResourceIdentityType> getType() {
@@ -61,7 +61,7 @@ public final class IdentityPropertiesArgs extends io.pulumi.resources.ResourceAr
      *     providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
      * 
      */
-    @InputImport(name="userAssignedIdentities")
+    @Import(name="userAssignedIdentities")
       private final @Nullable Output<Map<String,UserIdentityPropertiesArgs>> userAssignedIdentities;
 
     public Output<Map<String,UserIdentityPropertiesArgs>> getUserAssignedIdentities() {

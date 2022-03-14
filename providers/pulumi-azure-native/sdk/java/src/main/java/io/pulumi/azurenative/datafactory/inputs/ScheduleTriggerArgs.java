@@ -6,7 +6,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 import io.pulumi.azurenative.datafactory.inputs.ScheduleTriggerRecurrenceArgs;
 import io.pulumi.azurenative.datafactory.inputs.TriggerPipelineReferenceArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +26,7 @@ public final class ScheduleTriggerArgs extends io.pulumi.resources.ResourceArgs 
      * List of tags that can be used for describing the trigger.
      * 
      */
-    @InputImport(name="annotations")
+    @Import(name="annotations")
       private final @Nullable Output<List<Object>> annotations;
 
     public Output<List<Object>> getAnnotations() {
@@ -37,7 +37,7 @@ public final class ScheduleTriggerArgs extends io.pulumi.resources.ResourceArgs 
      * Trigger description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -48,7 +48,7 @@ public final class ScheduleTriggerArgs extends io.pulumi.resources.ResourceArgs 
      * Pipelines that need to be started.
      * 
      */
-    @InputImport(name="pipelines")
+    @Import(name="pipelines")
       private final @Nullable Output<List<TriggerPipelineReferenceArgs>> pipelines;
 
     public Output<List<TriggerPipelineReferenceArgs>> getPipelines() {
@@ -59,7 +59,7 @@ public final class ScheduleTriggerArgs extends io.pulumi.resources.ResourceArgs 
      * Recurrence schedule configuration.
      * 
      */
-    @InputImport(name="recurrence", required=true)
+    @Import(name="recurrence", required=true)
       private final Output<ScheduleTriggerRecurrenceArgs> recurrence;
 
     public Output<ScheduleTriggerRecurrenceArgs> getRecurrence() {
@@ -71,7 +71,7 @@ public final class ScheduleTriggerArgs extends io.pulumi.resources.ResourceArgs 
      * Expected value is 'ScheduleTrigger'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {

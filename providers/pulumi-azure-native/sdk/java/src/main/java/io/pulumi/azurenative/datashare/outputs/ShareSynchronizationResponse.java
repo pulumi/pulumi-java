@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.datashare.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ShareSynchronizationResponse {
     /**
      * Email of the user who created the synchronization
@@ -63,18 +63,18 @@ public final class ShareSynchronizationResponse {
      */
     private final String synchronizationMode;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ShareSynchronizationResponse(
-        @OutputCustomType.Parameter("consumerEmail") @Nullable String consumerEmail,
-        @OutputCustomType.Parameter("consumerName") @Nullable String consumerName,
-        @OutputCustomType.Parameter("consumerTenantName") @Nullable String consumerTenantName,
-        @OutputCustomType.Parameter("durationMs") @Nullable Integer durationMs,
-        @OutputCustomType.Parameter("endTime") @Nullable String endTime,
-        @OutputCustomType.Parameter("message") @Nullable String message,
-        @OutputCustomType.Parameter("startTime") @Nullable String startTime,
-        @OutputCustomType.Parameter("status") @Nullable String status,
-        @OutputCustomType.Parameter("synchronizationId") @Nullable String synchronizationId,
-        @OutputCustomType.Parameter("synchronizationMode") String synchronizationMode) {
+        @CustomType.Parameter("consumerEmail") @Nullable String consumerEmail,
+        @CustomType.Parameter("consumerName") @Nullable String consumerName,
+        @CustomType.Parameter("consumerTenantName") @Nullable String consumerTenantName,
+        @CustomType.Parameter("durationMs") @Nullable Integer durationMs,
+        @CustomType.Parameter("endTime") @Nullable String endTime,
+        @CustomType.Parameter("message") @Nullable String message,
+        @CustomType.Parameter("startTime") @Nullable String startTime,
+        @CustomType.Parameter("status") @Nullable String status,
+        @CustomType.Parameter("synchronizationId") @Nullable String synchronizationId,
+        @CustomType.Parameter("synchronizationMode") String synchronizationMode) {
         this.consumerEmail = consumerEmail;
         this.consumerName = consumerName;
         this.consumerTenantName = consumerTenantName;

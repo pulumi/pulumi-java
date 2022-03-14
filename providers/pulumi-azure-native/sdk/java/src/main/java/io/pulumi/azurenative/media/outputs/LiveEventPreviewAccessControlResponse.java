@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.media.outputs;
 
 import io.pulumi.azurenative.media.outputs.IPAccessControlResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class LiveEventPreviewAccessControlResponse {
     /**
      * The IP access control properties.
@@ -17,8 +17,8 @@ public final class LiveEventPreviewAccessControlResponse {
      */
     private final @Nullable IPAccessControlResponse ip;
 
-    @OutputCustomType.Constructor
-    private LiveEventPreviewAccessControlResponse(@OutputCustomType.Parameter("ip") @Nullable IPAccessControlResponse ip) {
+    @CustomType.Constructor
+    private LiveEventPreviewAccessControlResponse(@CustomType.Parameter("ip") @Nullable IPAccessControlResponse ip) {
         this.ip = ip;
     }
 

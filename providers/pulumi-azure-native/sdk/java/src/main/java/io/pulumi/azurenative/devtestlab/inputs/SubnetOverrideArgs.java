@@ -7,7 +7,7 @@ import io.pulumi.azurenative.devtestlab.enums.UsagePermissionType;
 import io.pulumi.azurenative.devtestlab.inputs.SubnetSharedPublicIpAddressConfigurationArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class SubnetOverrideArgs extends io.pulumi.resources.ResourceArgs {
      * The name given to the subnet within the lab.
      * 
      */
-    @InputImport(name="labSubnetName")
+    @Import(name="labSubnetName")
       private final @Nullable Output<String> labSubnetName;
 
     public Output<String> getLabSubnetName() {
@@ -36,7 +36,7 @@ public final class SubnetOverrideArgs extends io.pulumi.resources.ResourceArgs {
      * The resource ID of the subnet.
      * 
      */
-    @InputImport(name="resourceId")
+    @Import(name="resourceId")
       private final @Nullable Output<String> resourceId;
 
     public Output<String> getResourceId() {
@@ -47,7 +47,7 @@ public final class SubnetOverrideArgs extends io.pulumi.resources.ResourceArgs {
      * Properties that virtual machines on this subnet will share.
      * 
      */
-    @InputImport(name="sharedPublicIpAddressConfiguration")
+    @Import(name="sharedPublicIpAddressConfiguration")
       private final @Nullable Output<SubnetSharedPublicIpAddressConfigurationArgs> sharedPublicIpAddressConfiguration;
 
     public Output<SubnetSharedPublicIpAddressConfigurationArgs> getSharedPublicIpAddressConfiguration() {
@@ -58,7 +58,7 @@ public final class SubnetOverrideArgs extends io.pulumi.resources.ResourceArgs {
      * Indicates whether this subnet can be used during virtual machine creation (i.e. Allow, Deny).
      * 
      */
-    @InputImport(name="useInVmCreationPermission")
+    @Import(name="useInVmCreationPermission")
       private final @Nullable Output<Either<String,UsagePermissionType>> useInVmCreationPermission;
 
     public Output<Either<String,UsagePermissionType>> getUseInVmCreationPermission() {
@@ -69,7 +69,7 @@ public final class SubnetOverrideArgs extends io.pulumi.resources.ResourceArgs {
      * Indicates whether public IP addresses can be assigned to virtual machines on this subnet (i.e. Allow, Deny).
      * 
      */
-    @InputImport(name="usePublicIpAddressPermission")
+    @Import(name="usePublicIpAddressPermission")
       private final @Nullable Output<Either<String,UsagePermissionType>> usePublicIpAddressPermission;
 
     public Output<Either<String,UsagePermissionType>> getUsePublicIpAddressPermission() {
@@ -80,7 +80,7 @@ public final class SubnetOverrideArgs extends io.pulumi.resources.ResourceArgs {
      * The virtual network pool associated with this subnet.
      * 
      */
-    @InputImport(name="virtualNetworkPoolName")
+    @Import(name="virtualNetworkPoolName")
       private final @Nullable Output<String> virtualNetworkPoolName;
 
     public Output<String> getVirtualNetworkPoolName() {

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.servicefabric.enums.ProbeProtocol;
 import io.pulumi.azurenative.servicefabric.enums.Protocol;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class LoadBalancingRuleArgs extends io.pulumi.resources.ResourceArg
      * The port used for internal connections on the endpoint. Acceptable values are between 1 and 65535.
      * 
      */
-    @InputImport(name="backendPort", required=true)
+    @Import(name="backendPort", required=true)
       private final Output<Integer> backendPort;
 
     public Output<Integer> getBackendPort() {
@@ -37,7 +37,7 @@ public final class LoadBalancingRuleArgs extends io.pulumi.resources.ResourceArg
      * The port for the external endpoint. Port numbers for each rule must be unique within the Load Balancer. Acceptable values are between 1 and 65534.
      * 
      */
-    @InputImport(name="frontendPort", required=true)
+    @Import(name="frontendPort", required=true)
       private final Output<Integer> frontendPort;
 
     public Output<Integer> getFrontendPort() {
@@ -48,7 +48,7 @@ public final class LoadBalancingRuleArgs extends io.pulumi.resources.ResourceArg
      * the reference to the load balancer probe used by the load balancing rule.
      * 
      */
-    @InputImport(name="probeProtocol", required=true)
+    @Import(name="probeProtocol", required=true)
       private final Output<Either<String,ProbeProtocol>> probeProtocol;
 
     public Output<Either<String,ProbeProtocol>> getProbeProtocol() {
@@ -59,7 +59,7 @@ public final class LoadBalancingRuleArgs extends io.pulumi.resources.ResourceArg
      * The probe request path. Only supported for HTTP/HTTPS probes.
      * 
      */
-    @InputImport(name="probeRequestPath")
+    @Import(name="probeRequestPath")
       private final @Nullable Output<String> probeRequestPath;
 
     public Output<String> getProbeRequestPath() {
@@ -70,7 +70,7 @@ public final class LoadBalancingRuleArgs extends io.pulumi.resources.ResourceArg
      * The reference to the transport protocol used by the load balancing rule.
      * 
      */
-    @InputImport(name="protocol", required=true)
+    @Import(name="protocol", required=true)
       private final Output<Either<String,Protocol>> protocol;
 
     public Output<Either<String,Protocol>> getProtocol() {

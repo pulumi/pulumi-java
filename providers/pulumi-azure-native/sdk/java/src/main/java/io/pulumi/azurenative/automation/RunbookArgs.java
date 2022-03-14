@@ -8,7 +8,7 @@ import io.pulumi.azurenative.automation.inputs.ContentLinkArgs;
 import io.pulumi.azurenative.automation.inputs.RunbookDraftArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class RunbookArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the automation account.
      * 
      */
-    @InputImport(name="automationAccountName", required=true)
+    @Import(name="automationAccountName", required=true)
       private final Output<String> automationAccountName;
 
     public Output<String> getAutomationAccountName() {
@@ -36,7 +36,7 @@ public final class RunbookArgs extends io.pulumi.resources.ResourceArgs {
      * Gets or sets the description of the runbook.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -47,7 +47,7 @@ public final class RunbookArgs extends io.pulumi.resources.ResourceArgs {
      * Gets or sets the draft runbook properties.
      * 
      */
-    @InputImport(name="draft")
+    @Import(name="draft")
       private final @Nullable Output<RunbookDraftArgs> draft;
 
     public Output<RunbookDraftArgs> getDraft() {
@@ -58,7 +58,7 @@ public final class RunbookArgs extends io.pulumi.resources.ResourceArgs {
      * Gets or sets the location of the resource.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -69,7 +69,7 @@ public final class RunbookArgs extends io.pulumi.resources.ResourceArgs {
      * Gets or sets the activity-level tracing options of the runbook.
      * 
      */
-    @InputImport(name="logActivityTrace")
+    @Import(name="logActivityTrace")
       private final @Nullable Output<Integer> logActivityTrace;
 
     public Output<Integer> getLogActivityTrace() {
@@ -80,7 +80,7 @@ public final class RunbookArgs extends io.pulumi.resources.ResourceArgs {
      * Gets or sets progress log option.
      * 
      */
-    @InputImport(name="logProgress")
+    @Import(name="logProgress")
       private final @Nullable Output<Boolean> logProgress;
 
     public Output<Boolean> getLogProgress() {
@@ -91,7 +91,7 @@ public final class RunbookArgs extends io.pulumi.resources.ResourceArgs {
      * Gets or sets verbose log option.
      * 
      */
-    @InputImport(name="logVerbose")
+    @Import(name="logVerbose")
       private final @Nullable Output<Boolean> logVerbose;
 
     public Output<Boolean> getLogVerbose() {
@@ -102,7 +102,7 @@ public final class RunbookArgs extends io.pulumi.resources.ResourceArgs {
      * Gets or sets the name of the resource.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -113,7 +113,7 @@ public final class RunbookArgs extends io.pulumi.resources.ResourceArgs {
      * Gets or sets the published runbook content link.
      * 
      */
-    @InputImport(name="publishContentLink")
+    @Import(name="publishContentLink")
       private final @Nullable Output<ContentLinkArgs> publishContentLink;
 
     public Output<ContentLinkArgs> getPublishContentLink() {
@@ -124,7 +124,7 @@ public final class RunbookArgs extends io.pulumi.resources.ResourceArgs {
      * Name of an Azure Resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -135,7 +135,7 @@ public final class RunbookArgs extends io.pulumi.resources.ResourceArgs {
      * The runbook name.
      * 
      */
-    @InputImport(name="runbookName")
+    @Import(name="runbookName")
       private final @Nullable Output<String> runbookName;
 
     public Output<String> getRunbookName() {
@@ -146,7 +146,7 @@ public final class RunbookArgs extends io.pulumi.resources.ResourceArgs {
      * Gets or sets the type of the runbook.
      * 
      */
-    @InputImport(name="runbookType", required=true)
+    @Import(name="runbookType", required=true)
       private final Output<Either<String,RunbookTypeEnum>> runbookType;
 
     public Output<Either<String,RunbookTypeEnum>> getRunbookType() {
@@ -157,7 +157,7 @@ public final class RunbookArgs extends io.pulumi.resources.ResourceArgs {
      * Gets or sets the tags attached to the resource.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

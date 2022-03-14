@@ -15,7 +15,7 @@ import io.pulumi.azurenative.cdn.outputs.SystemDataResponse;
 import io.pulumi.azurenative.cdn.outputs.UrlSigningKeyResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -44,7 +44,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * List of content types on which compression applies. The value should be a valid MIME type.
      * 
      */
-    @OutputExport(name="contentTypesToCompress", type=List.class, parameters={String.class})
+    @Export(name="contentTypesToCompress", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> contentTypesToCompress;
 
     /**
@@ -58,7 +58,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * A reference to the origin group.
      * 
      */
-    @OutputExport(name="defaultOriginGroup", type=ResourceReferenceResponse.class, parameters={})
+    @Export(name="defaultOriginGroup", type=ResourceReferenceResponse.class, parameters={})
     private Output</* @Nullable */ ResourceReferenceResponse> defaultOriginGroup;
 
     /**
@@ -72,7 +72,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * A policy that specifies the delivery rules to be used for an endpoint.
      * 
      */
-    @OutputExport(name="deliveryPolicy", type=EndpointPropertiesUpdateParametersResponseDeliveryPolicy.class, parameters={})
+    @Export(name="deliveryPolicy", type=EndpointPropertiesUpdateParametersResponseDeliveryPolicy.class, parameters={})
     private Output</* @Nullable */ EndpointPropertiesUpdateParametersResponseDeliveryPolicy> deliveryPolicy;
 
     /**
@@ -86,7 +86,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * List of rules defining the user's geo access within a CDN endpoint. Each geo filter defines an access rule to a specified path or content, e.g. block APAC for path /pictures/
      * 
      */
-    @OutputExport(name="geoFilters", type=List.class, parameters={GeoFilterResponse.class})
+    @Export(name="geoFilters", type=List.class, parameters={GeoFilterResponse.class})
     private Output</* @Nullable */ List<GeoFilterResponse>> geoFilters;
 
     /**
@@ -100,7 +100,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * The host name of the endpoint structured as {endpointName}.{DNSZone}, e.g. contoso.azureedge.net
      * 
      */
-    @OutputExport(name="hostName", type=String.class, parameters={})
+    @Export(name="hostName", type=String.class, parameters={})
     private Output<String> hostName;
 
     /**
@@ -114,7 +114,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * Indicates whether content compression is enabled on CDN. Default value is false. If compression is enabled, content will be served as compressed if user requests for a compressed version. Content won't be compressed on CDN when requested content is smaller than 1 byte or larger than 1 MB.
      * 
      */
-    @OutputExport(name="isCompressionEnabled", type=Boolean.class, parameters={})
+    @Export(name="isCompressionEnabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> isCompressionEnabled;
 
     /**
@@ -128,7 +128,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * Indicates whether HTTP traffic is allowed on the endpoint. Default value is true. At least one protocol (HTTP or HTTPS) must be allowed.
      * 
      */
-    @OutputExport(name="isHttpAllowed", type=Boolean.class, parameters={})
+    @Export(name="isHttpAllowed", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> isHttpAllowed;
 
     /**
@@ -142,7 +142,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * Indicates whether HTTPS traffic is allowed on the endpoint. Default value is true. At least one protocol (HTTP or HTTPS) must be allowed.
      * 
      */
-    @OutputExport(name="isHttpsAllowed", type=Boolean.class, parameters={})
+    @Export(name="isHttpsAllowed", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> isHttpsAllowed;
 
     /**
@@ -156,7 +156,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * Resource location.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -170,7 +170,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -184,7 +184,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * Specifies what scenario the customer wants this CDN endpoint to optimize for, e.g. Download, Media services. With this information, CDN can apply scenario driven optimization.
      * 
      */
-    @OutputExport(name="optimizationType", type=String.class, parameters={})
+    @Export(name="optimizationType", type=String.class, parameters={})
     private Output</* @Nullable */ String> optimizationType;
 
     /**
@@ -198,7 +198,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * The origin groups comprising of origins that are used for load balancing the traffic based on availability.
      * 
      */
-    @OutputExport(name="originGroups", type=List.class, parameters={DeepCreatedOriginGroupResponse.class})
+    @Export(name="originGroups", type=List.class, parameters={DeepCreatedOriginGroupResponse.class})
     private Output</* @Nullable */ List<DeepCreatedOriginGroupResponse>> originGroups;
 
     /**
@@ -212,7 +212,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * The host header value sent to the origin with each request. This property at Endpoint is only allowed when endpoint uses single origin and can be overridden by the same property specified at origin.If you leave this blank, the request hostname determines this value. Azure CDN origins, such as Web Apps, Blob Storage, and Cloud Services require this host header value to match the origin hostname by default.
      * 
      */
-    @OutputExport(name="originHostHeader", type=String.class, parameters={})
+    @Export(name="originHostHeader", type=String.class, parameters={})
     private Output</* @Nullable */ String> originHostHeader;
 
     /**
@@ -226,7 +226,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * A directory path on the origin that CDN can use to retrieve content from, e.g. contoso.cloudapp.net/originpath.
      * 
      */
-    @OutputExport(name="originPath", type=String.class, parameters={})
+    @Export(name="originPath", type=String.class, parameters={})
     private Output</* @Nullable */ String> originPath;
 
     /**
@@ -240,7 +240,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * The source of the content being delivered via CDN.
      * 
      */
-    @OutputExport(name="origins", type=List.class, parameters={DeepCreatedOriginResponse.class})
+    @Export(name="origins", type=List.class, parameters={DeepCreatedOriginResponse.class})
     private Output<List<DeepCreatedOriginResponse>> origins;
 
     /**
@@ -254,7 +254,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * Path to a file hosted on the origin which helps accelerate delivery of the dynamic content and calculate the most optimal routes for the CDN. This is relative to the origin path. This property is only relevant when using a single origin.
      * 
      */
-    @OutputExport(name="probePath", type=String.class, parameters={})
+    @Export(name="probePath", type=String.class, parameters={})
     private Output</* @Nullable */ String> probePath;
 
     /**
@@ -268,7 +268,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * Provisioning status of the endpoint.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -282,7 +282,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * Defines how CDN caches requests that include query strings. You can ignore any query strings when caching, bypass caching to prevent requests that contain query strings from being cached, or cache every request with a unique URL.
      * 
      */
-    @OutputExport(name="queryStringCachingBehavior", type=String.class, parameters={})
+    @Export(name="queryStringCachingBehavior", type=String.class, parameters={})
     private Output</* @Nullable */ String> queryStringCachingBehavior;
 
     /**
@@ -296,7 +296,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * Resource status of the endpoint.
      * 
      */
-    @OutputExport(name="resourceState", type=String.class, parameters={})
+    @Export(name="resourceState", type=String.class, parameters={})
     private Output<String> resourceState;
 
     /**
@@ -310,7 +310,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * Read only system data
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -324,7 +324,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * Resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -338,7 +338,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -352,7 +352,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * List of keys used to validate the signed URL hashes.
      * 
      */
-    @OutputExport(name="urlSigningKeys", type=List.class, parameters={UrlSigningKeyResponse.class})
+    @Export(name="urlSigningKeys", type=List.class, parameters={UrlSigningKeyResponse.class})
     private Output</* @Nullable */ List<UrlSigningKeyResponse>> urlSigningKeys;
 
     /**
@@ -366,7 +366,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * Defines the Web Application Firewall policy for the endpoint (if applicable)
      * 
      */
-    @OutputExport(name="webApplicationFirewallPolicyLink", type=EndpointPropertiesUpdateParametersResponseWebApplicationFirewallPolicyLink.class, parameters={})
+    @Export(name="webApplicationFirewallPolicyLink", type=EndpointPropertiesUpdateParametersResponseWebApplicationFirewallPolicyLink.class, parameters={})
     private Output</* @Nullable */ EndpointPropertiesUpdateParametersResponseWebApplicationFirewallPolicyLink> webApplicationFirewallPolicyLink;
 
     /**

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.documentdb.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class FailoverPolicyResponse extends io.pulumi.resources.InvokeArgs
      * The failover priority of the region. A failover priority of 0 indicates a write region. The maximum value for a failover priority = (total number of regions - 1). Failover priority values must be unique for each of the regions in which the database account exists.
      * 
      */
-    @InputImport(name="failoverPriority")
+    @Import(name="failoverPriority")
       private final @Nullable Integer failoverPriority;
 
     public Optional<Integer> getFailoverPriority() {
@@ -34,7 +34,7 @@ public final class FailoverPolicyResponse extends io.pulumi.resources.InvokeArgs
      * The unique identifier of the region in which the database account replicates to. Example: &lt;accountName&gt;-&lt;locationName&gt;.
      * 
      */
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final String id;
 
     public String getId() {
@@ -45,7 +45,7 @@ public final class FailoverPolicyResponse extends io.pulumi.resources.InvokeArgs
      * The name of the region in which the database account exists.
      * 
      */
-    @InputImport(name="locationName")
+    @Import(name="locationName")
       private final @Nullable String locationName;
 
     public Optional<String> getLocationName() {

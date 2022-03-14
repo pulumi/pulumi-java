@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.resources.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ResourceReferenceResponse {
     /**
      * The fully qualified resource Id.
@@ -15,8 +15,8 @@ public final class ResourceReferenceResponse {
      */
     private final String id;
 
-    @OutputCustomType.Constructor
-    private ResourceReferenceResponse(@OutputCustomType.Parameter("id") String id) {
+    @CustomType.Constructor
+    private ResourceReferenceResponse(@CustomType.Parameter("id") String id) {
         this.id = id;
     }
 

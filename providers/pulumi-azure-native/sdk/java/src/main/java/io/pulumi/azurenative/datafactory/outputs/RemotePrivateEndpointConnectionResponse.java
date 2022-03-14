@@ -5,13 +5,13 @@ package io.pulumi.azurenative.datafactory.outputs;
 
 import io.pulumi.azurenative.datafactory.outputs.ArmIdWrapperResponse;
 import io.pulumi.azurenative.datafactory.outputs.PrivateLinkConnectionStateResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RemotePrivateEndpointConnectionResponse {
     /**
      * PrivateEndpoint of a remote private endpoint connection
@@ -25,11 +25,11 @@ public final class RemotePrivateEndpointConnectionResponse {
     private final @Nullable PrivateLinkConnectionStateResponse privateLinkServiceConnectionState;
     private final String provisioningState;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RemotePrivateEndpointConnectionResponse(
-        @OutputCustomType.Parameter("privateEndpoint") @Nullable ArmIdWrapperResponse privateEndpoint,
-        @OutputCustomType.Parameter("privateLinkServiceConnectionState") @Nullable PrivateLinkConnectionStateResponse privateLinkServiceConnectionState,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState) {
+        @CustomType.Parameter("privateEndpoint") @Nullable ArmIdWrapperResponse privateEndpoint,
+        @CustomType.Parameter("privateLinkServiceConnectionState") @Nullable PrivateLinkConnectionStateResponse privateLinkServiceConnectionState,
+        @CustomType.Parameter("provisioningState") String provisioningState) {
         this.privateEndpoint = privateEndpoint;
         this.privateLinkServiceConnectionState = privateLinkServiceConnectionState;
         this.provisioningState = provisioningState;

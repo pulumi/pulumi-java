@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.eventgrid.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EventChannelDestinationResponse {
     /**
      * Azure subscription ID of the customer creating the event channel. The partner topic
@@ -29,11 +29,11 @@ public final class EventChannelDestinationResponse {
      */
     private final @Nullable String resourceGroup;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EventChannelDestinationResponse(
-        @OutputCustomType.Parameter("azureSubscriptionId") @Nullable String azureSubscriptionId,
-        @OutputCustomType.Parameter("partnerTopicName") @Nullable String partnerTopicName,
-        @OutputCustomType.Parameter("resourceGroup") @Nullable String resourceGroup) {
+        @CustomType.Parameter("azureSubscriptionId") @Nullable String azureSubscriptionId,
+        @CustomType.Parameter("partnerTopicName") @Nullable String partnerTopicName,
+        @CustomType.Parameter("resourceGroup") @Nullable String resourceGroup) {
         this.azureSubscriptionId = azureSubscriptionId;
         this.partnerTopicName = partnerTopicName;
         this.resourceGroup = resourceGroup;

@@ -8,14 +8,14 @@ import io.pulumi.azurenative.datamigration.outputs.FileShareResponse;
 import io.pulumi.azurenative.datamigration.outputs.MiSqlConnectionInfoResponse;
 import io.pulumi.azurenative.datamigration.outputs.MigrateSqlServerSqlMIDatabaseInputResponse;
 import io.pulumi.azurenative.datamigration.outputs.SqlConnectionInfoResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class MigrateSqlServerSqlMISyncTaskInputResponse {
     /**
      * Azure Active Directory Application the DMS instance will use to connect to the target instance of Azure SQL Database Managed Instance and the Azure Storage Account
@@ -48,14 +48,14 @@ public final class MigrateSqlServerSqlMISyncTaskInputResponse {
      */
     private final MiSqlConnectionInfoResponse targetConnectionInfo;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MigrateSqlServerSqlMISyncTaskInputResponse(
-        @OutputCustomType.Parameter("azureApp") AzureActiveDirectoryAppResponse azureApp,
-        @OutputCustomType.Parameter("backupFileShare") @Nullable FileShareResponse backupFileShare,
-        @OutputCustomType.Parameter("selectedDatabases") List<MigrateSqlServerSqlMIDatabaseInputResponse> selectedDatabases,
-        @OutputCustomType.Parameter("sourceConnectionInfo") SqlConnectionInfoResponse sourceConnectionInfo,
-        @OutputCustomType.Parameter("storageResourceId") String storageResourceId,
-        @OutputCustomType.Parameter("targetConnectionInfo") MiSqlConnectionInfoResponse targetConnectionInfo) {
+        @CustomType.Parameter("azureApp") AzureActiveDirectoryAppResponse azureApp,
+        @CustomType.Parameter("backupFileShare") @Nullable FileShareResponse backupFileShare,
+        @CustomType.Parameter("selectedDatabases") List<MigrateSqlServerSqlMIDatabaseInputResponse> selectedDatabases,
+        @CustomType.Parameter("sourceConnectionInfo") SqlConnectionInfoResponse sourceConnectionInfo,
+        @CustomType.Parameter("storageResourceId") String storageResourceId,
+        @CustomType.Parameter("targetConnectionInfo") MiSqlConnectionInfoResponse targetConnectionInfo) {
         this.azureApp = azureApp;
         this.backupFileShare = backupFileShare;
         this.selectedDatabases = selectedDatabases;

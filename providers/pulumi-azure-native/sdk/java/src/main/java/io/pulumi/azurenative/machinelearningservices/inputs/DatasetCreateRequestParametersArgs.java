@@ -9,7 +9,7 @@ import io.pulumi.azurenative.machinelearningservices.inputs.DatasetCreateRequest
 import io.pulumi.azurenative.machinelearningservices.inputs.DatasetCreateRequestQueryArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class DatasetCreateRequestParametersArgs extends io.pulumi.resource
      * Header type.
      * 
      */
-    @InputImport(name="header")
+    @Import(name="header")
       private final @Nullable Output<Either<String,Header>> header;
 
     public Output<Either<String,Header>> getHeader() {
@@ -35,7 +35,7 @@ public final class DatasetCreateRequestParametersArgs extends io.pulumi.resource
      * Boolean to keep path information as column in the dataset. Defaults to False. This is useful when reading multiple files, and want to know which file a particular record originated from, or to keep useful information in file path.
      * 
      */
-    @InputImport(name="includePath")
+    @Import(name="includePath")
       private final @Nullable Output<Boolean> includePath;
 
     public Output<Boolean> getIncludePath() {
@@ -46,21 +46,21 @@ public final class DatasetCreateRequestParametersArgs extends io.pulumi.resource
      * The partition information of each path will be extracted into columns based on the specified format. Format part '{column_name}' creates string column, and '{column_name:yyyy/MM/dd/HH/mm/ss}' creates datetime column, where 'yyyy', 'MM', 'dd', 'HH', 'mm' and 'ss' are used to extract year, month, day, hour, minute and second for the datetime type. The format should start from the position of first partition key until the end of file path. For example, given the path '../USA/2019/01/01/data.parquet' where the partition is by country/region and time, partition_format='/{CountryOrRegion}/{PartitionDate:yyyy/MM/dd}/data.csv' creates a string column 'CountryOrRegion' with the value 'USA' and a datetime column 'PartitionDate' with the value '2019-01-01
      * 
      */
-    @InputImport(name="partitionFormat")
+    @Import(name="partitionFormat")
       private final @Nullable Output<String> partitionFormat;
 
     public Output<String> getPartitionFormat() {
         return this.partitionFormat == null ? Output.empty() : this.partitionFormat;
     }
 
-    @InputImport(name="path")
+    @Import(name="path")
       private final @Nullable Output<DatasetCreateRequestPathArgs> path;
 
     public Output<DatasetCreateRequestPathArgs> getPath() {
         return this.path == null ? Output.empty() : this.path;
     }
 
-    @InputImport(name="query")
+    @Import(name="query")
       private final @Nullable Output<DatasetCreateRequestQueryArgs> query;
 
     public Output<DatasetCreateRequestQueryArgs> getQuery() {
@@ -71,7 +71,7 @@ public final class DatasetCreateRequestParametersArgs extends io.pulumi.resource
      * The separator used to split columns for 'delimited_files' sourceType.
      * 
      */
-    @InputImport(name="separator")
+    @Import(name="separator")
       private final @Nullable Output<String> separator;
 
     public Output<String> getSeparator() {
@@ -82,7 +82,7 @@ public final class DatasetCreateRequestParametersArgs extends io.pulumi.resource
      * Data source type.
      * 
      */
-    @InputImport(name="sourceType")
+    @Import(name="sourceType")
       private final @Nullable Output<Either<String,SourceType>> sourceType;
 
     public Output<Either<String,SourceType>> getSourceType() {

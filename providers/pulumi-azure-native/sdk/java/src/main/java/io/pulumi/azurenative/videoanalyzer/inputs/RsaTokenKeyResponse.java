@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.videoanalyzer.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class RsaTokenKeyResponse extends io.pulumi.resources.InvokeArgs {
      * RSA algorithm to be used: RS256, RS384 or RS512.
      * 
      */
-    @InputImport(name="alg", required=true)
+    @Import(name="alg", required=true)
       private final String alg;
 
     public String getAlg() {
@@ -31,7 +31,7 @@ public final class RsaTokenKeyResponse extends io.pulumi.resources.InvokeArgs {
      * RSA public key exponent.
      * 
      */
-    @InputImport(name="e", required=true)
+    @Import(name="e", required=true)
       private final String e;
 
     public String getE() {
@@ -42,7 +42,7 @@ public final class RsaTokenKeyResponse extends io.pulumi.resources.InvokeArgs {
      * JWT token key id. Validation keys are looked up based on the key id present on the JWT token header.
      * 
      */
-    @InputImport(name="kid", required=true)
+    @Import(name="kid", required=true)
       private final String kid;
 
     public String getKid() {
@@ -53,7 +53,7 @@ public final class RsaTokenKeyResponse extends io.pulumi.resources.InvokeArgs {
      * RSA public key modulus.
      * 
      */
-    @InputImport(name="n", required=true)
+    @Import(name="n", required=true)
       private final String n;
 
     public String getN() {
@@ -65,7 +65,7 @@ public final class RsaTokenKeyResponse extends io.pulumi.resources.InvokeArgs {
      * Expected value is '#Microsoft.VideoAnalyzer.RsaTokenKey'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

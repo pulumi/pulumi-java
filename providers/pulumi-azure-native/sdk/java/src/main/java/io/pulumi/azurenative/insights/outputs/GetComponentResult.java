@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.insights.outputs;
 
 import io.pulumi.azurenative.insights.outputs.PrivateLinkScopedResourceResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -15,7 +15,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetComponentResult {
     /**
      * Application Insights Unique ID for your Application.
@@ -138,32 +138,32 @@ public final class GetComponentResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetComponentResult(
-        @OutputCustomType.Parameter("appId") String appId,
-        @OutputCustomType.Parameter("applicationId") String applicationId,
-        @OutputCustomType.Parameter("applicationType") String applicationType,
-        @OutputCustomType.Parameter("connectionString") String connectionString,
-        @OutputCustomType.Parameter("creationDate") String creationDate,
-        @OutputCustomType.Parameter("disableIpMasking") @Nullable Boolean disableIpMasking,
-        @OutputCustomType.Parameter("flowType") @Nullable String flowType,
-        @OutputCustomType.Parameter("hockeyAppId") @Nullable String hockeyAppId,
-        @OutputCustomType.Parameter("hockeyAppToken") String hockeyAppToken,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("immediatePurgeDataOn30Days") @Nullable Boolean immediatePurgeDataOn30Days,
-        @OutputCustomType.Parameter("ingestionMode") @Nullable String ingestionMode,
-        @OutputCustomType.Parameter("instrumentationKey") String instrumentationKey,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("privateLinkScopedResources") List<PrivateLinkScopedResourceResponse> privateLinkScopedResources,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("requestSource") @Nullable String requestSource,
-        @OutputCustomType.Parameter("retentionInDays") @Nullable Integer retentionInDays,
-        @OutputCustomType.Parameter("samplingPercentage") @Nullable Double samplingPercentage,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("tenantId") String tenantId,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("appId") String appId,
+        @CustomType.Parameter("applicationId") String applicationId,
+        @CustomType.Parameter("applicationType") String applicationType,
+        @CustomType.Parameter("connectionString") String connectionString,
+        @CustomType.Parameter("creationDate") String creationDate,
+        @CustomType.Parameter("disableIpMasking") @Nullable Boolean disableIpMasking,
+        @CustomType.Parameter("flowType") @Nullable String flowType,
+        @CustomType.Parameter("hockeyAppId") @Nullable String hockeyAppId,
+        @CustomType.Parameter("hockeyAppToken") String hockeyAppToken,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("immediatePurgeDataOn30Days") @Nullable Boolean immediatePurgeDataOn30Days,
+        @CustomType.Parameter("ingestionMode") @Nullable String ingestionMode,
+        @CustomType.Parameter("instrumentationKey") String instrumentationKey,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("privateLinkScopedResources") List<PrivateLinkScopedResourceResponse> privateLinkScopedResources,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("requestSource") @Nullable String requestSource,
+        @CustomType.Parameter("retentionInDays") @Nullable Integer retentionInDays,
+        @CustomType.Parameter("samplingPercentage") @Nullable Double samplingPercentage,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("tenantId") String tenantId,
+        @CustomType.Parameter("type") String type) {
         this.appId = appId;
         this.applicationId = applicationId;
         this.applicationType = applicationType;

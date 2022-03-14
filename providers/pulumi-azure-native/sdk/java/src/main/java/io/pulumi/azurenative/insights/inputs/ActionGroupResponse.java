@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.insights.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ActionGroupResponse extends io.pulumi.resources.InvokeArgs {
      * The resource ID of the Action Group. This cannot be null or empty.
      * 
      */
-    @InputImport(name="actionGroupId", required=true)
+    @Import(name="actionGroupId", required=true)
       private final String actionGroupId;
 
     public String getActionGroupId() {
@@ -34,7 +34,7 @@ public final class ActionGroupResponse extends io.pulumi.resources.InvokeArgs {
      * the dictionary of custom properties to include with the post operation. These data are appended to the webhook payload.
      * 
      */
-    @InputImport(name="webhookProperties")
+    @Import(name="webhookProperties")
       private final @Nullable Map<String,String> webhookProperties;
 
     public Map<String,String> getWebhookProperties() {

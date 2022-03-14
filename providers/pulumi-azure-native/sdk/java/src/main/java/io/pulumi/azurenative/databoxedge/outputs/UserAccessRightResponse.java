@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.databoxedge.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class UserAccessRightResponse {
     /**
      * Type of access to be allowed for the user.
@@ -20,10 +20,10 @@ public final class UserAccessRightResponse {
      */
     private final String userId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private UserAccessRightResponse(
-        @OutputCustomType.Parameter("accessType") String accessType,
-        @OutputCustomType.Parameter("userId") String userId) {
+        @CustomType.Parameter("accessType") String accessType,
+        @CustomType.Parameter("userId") String userId) {
         this.accessType = accessType;
         this.userId = userId;
     }

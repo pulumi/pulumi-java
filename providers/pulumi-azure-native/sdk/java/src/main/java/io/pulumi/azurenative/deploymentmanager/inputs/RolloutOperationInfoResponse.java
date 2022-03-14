@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.deploymentmanager.inputs;
 
 import io.pulumi.azurenative.deploymentmanager.inputs.CloudErrorBodyResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class RolloutOperationInfoResponse extends io.pulumi.resources.Invo
      * The start time of the rollout in UTC. This property will not be set if the rollout has not completed yet.
      * 
      */
-    @InputImport(name="endTime", required=true)
+    @Import(name="endTime", required=true)
       private final String endTime;
 
     public String getEndTime() {
@@ -34,7 +34,7 @@ public final class RolloutOperationInfoResponse extends io.pulumi.resources.Invo
      * The detailed error information for any failure.
      * 
      */
-    @InputImport(name="error", required=true)
+    @Import(name="error", required=true)
       private final CloudErrorBodyResponse error;
 
     public CloudErrorBodyResponse getError() {
@@ -45,7 +45,7 @@ public final class RolloutOperationInfoResponse extends io.pulumi.resources.Invo
      * The ordinal count of the number of retry attempts on a rollout. 0 if no retries of the rollout have been performed. If the rollout is updated with a PUT, this count is reset to 0.
      * 
      */
-    @InputImport(name="retryAttempt", required=true)
+    @Import(name="retryAttempt", required=true)
       private final Integer retryAttempt;
 
     public Integer getRetryAttempt() {
@@ -56,7 +56,7 @@ public final class RolloutOperationInfoResponse extends io.pulumi.resources.Invo
      * True, if all steps that succeeded on the previous run/attempt were chosen to be skipped in this retry attempt. False, otherwise.
      * 
      */
-    @InputImport(name="skipSucceededOnRetry", required=true)
+    @Import(name="skipSucceededOnRetry", required=true)
       private final Boolean skipSucceededOnRetry;
 
     public Boolean getSkipSucceededOnRetry() {
@@ -67,7 +67,7 @@ public final class RolloutOperationInfoResponse extends io.pulumi.resources.Invo
      * The start time of the rollout in UTC.
      * 
      */
-    @InputImport(name="startTime", required=true)
+    @Import(name="startTime", required=true)
       private final String startTime;
 
     public String getStartTime() {

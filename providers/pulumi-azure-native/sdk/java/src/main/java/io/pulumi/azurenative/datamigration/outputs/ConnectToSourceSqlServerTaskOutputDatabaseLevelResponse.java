@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.datamigration.outputs;
 
 import io.pulumi.azurenative.datamigration.outputs.DatabaseFileInfoResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ConnectToSourceSqlServerTaskOutputDatabaseLevelResponse {
     /**
      * SQL Server compatibility level of database
@@ -49,15 +49,15 @@ public final class ConnectToSourceSqlServerTaskOutputDatabaseLevelResponse {
      */
     private final Double sizeMB;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ConnectToSourceSqlServerTaskOutputDatabaseLevelResponse(
-        @OutputCustomType.Parameter("compatibilityLevel") String compatibilityLevel,
-        @OutputCustomType.Parameter("databaseFiles") List<DatabaseFileInfoResponse> databaseFiles,
-        @OutputCustomType.Parameter("databaseState") String databaseState,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("resultType") String resultType,
-        @OutputCustomType.Parameter("sizeMB") Double sizeMB) {
+        @CustomType.Parameter("compatibilityLevel") String compatibilityLevel,
+        @CustomType.Parameter("databaseFiles") List<DatabaseFileInfoResponse> databaseFiles,
+        @CustomType.Parameter("databaseState") String databaseState,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("resultType") String resultType,
+        @CustomType.Parameter("sizeMB") Double sizeMB) {
         this.compatibilityLevel = compatibilityLevel;
         this.databaseFiles = databaseFiles;
         this.databaseState = databaseState;

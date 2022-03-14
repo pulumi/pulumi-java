@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.devtestlab.outputs;
 
 import io.pulumi.azurenative.devtestlab.outputs.EventResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetNotificationChannelResult {
     /**
      * The creation date of the notification channel.
@@ -80,21 +80,21 @@ public final class GetNotificationChannelResult {
      */
     private final @Nullable String webHookUrl;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetNotificationChannelResult(
-        @OutputCustomType.Parameter("createdDate") String createdDate,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("emailRecipient") @Nullable String emailRecipient,
-        @OutputCustomType.Parameter("events") @Nullable List<EventResponse> events,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("notificationLocale") @Nullable String notificationLocale,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("uniqueIdentifier") String uniqueIdentifier,
-        @OutputCustomType.Parameter("webHookUrl") @Nullable String webHookUrl) {
+        @CustomType.Parameter("createdDate") String createdDate,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("emailRecipient") @Nullable String emailRecipient,
+        @CustomType.Parameter("events") @Nullable List<EventResponse> events,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("notificationLocale") @Nullable String notificationLocale,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("uniqueIdentifier") String uniqueIdentifier,
+        @CustomType.Parameter("webHookUrl") @Nullable String webHookUrl) {
         this.createdDate = createdDate;
         this.description = description;
         this.emailRecipient = emailRecipient;

@@ -6,14 +6,14 @@ package io.pulumi.azurenative.operationalinsights.outputs;
 import io.pulumi.azurenative.operationalinsights.outputs.ColumnResponse;
 import io.pulumi.azurenative.operationalinsights.outputs.RestoredLogsResponse;
 import io.pulumi.azurenative.operationalinsights.outputs.SearchResultsResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SchemaResponse {
     /**
      * Table category.
@@ -81,21 +81,21 @@ public final class SchemaResponse {
      */
     private final String tableType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SchemaResponse(
-        @OutputCustomType.Parameter("categories") List<String> categories,
-        @OutputCustomType.Parameter("columns") @Nullable List<ColumnResponse> columns,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
-        @OutputCustomType.Parameter("labels") List<String> labels,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("restoredLogs") RestoredLogsResponse restoredLogs,
-        @OutputCustomType.Parameter("searchResults") SearchResultsResponse searchResults,
-        @OutputCustomType.Parameter("solutions") List<String> solutions,
-        @OutputCustomType.Parameter("source") String source,
-        @OutputCustomType.Parameter("standardColumns") List<ColumnResponse> standardColumns,
-        @OutputCustomType.Parameter("tableSubType") String tableSubType,
-        @OutputCustomType.Parameter("tableType") String tableType) {
+        @CustomType.Parameter("categories") List<String> categories,
+        @CustomType.Parameter("columns") @Nullable List<ColumnResponse> columns,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("displayName") @Nullable String displayName,
+        @CustomType.Parameter("labels") List<String> labels,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("restoredLogs") RestoredLogsResponse restoredLogs,
+        @CustomType.Parameter("searchResults") SearchResultsResponse searchResults,
+        @CustomType.Parameter("solutions") List<String> solutions,
+        @CustomType.Parameter("source") String source,
+        @CustomType.Parameter("standardColumns") List<ColumnResponse> standardColumns,
+        @CustomType.Parameter("tableSubType") String tableSubType,
+        @CustomType.Parameter("tableType") String tableType) {
         this.categories = categories;
         this.columns = columns;
         this.description = description;

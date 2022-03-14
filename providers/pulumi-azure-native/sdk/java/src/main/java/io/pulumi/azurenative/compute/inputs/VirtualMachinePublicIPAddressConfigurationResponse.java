@@ -7,7 +7,7 @@ import io.pulumi.azurenative.compute.inputs.PublicIPAddressSkuResponse;
 import io.pulumi.azurenative.compute.inputs.SubResourceResponse;
 import io.pulumi.azurenative.compute.inputs.VirtualMachineIpTagResponse;
 import io.pulumi.azurenative.compute.inputs.VirtualMachinePublicIPAddressDnsSettingsConfigurationResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -28,7 +28,7 @@ public final class VirtualMachinePublicIPAddressConfigurationResponse extends io
      * Specify what happens to the public IP address when the VM is deleted
      * 
      */
-    @InputImport(name="deleteOption")
+    @Import(name="deleteOption")
       private final @Nullable String deleteOption;
 
     public Optional<String> getDeleteOption() {
@@ -39,7 +39,7 @@ public final class VirtualMachinePublicIPAddressConfigurationResponse extends io
      * The dns settings to be applied on the publicIP addresses .
      * 
      */
-    @InputImport(name="dnsSettings")
+    @Import(name="dnsSettings")
       private final @Nullable VirtualMachinePublicIPAddressDnsSettingsConfigurationResponse dnsSettings;
 
     public Optional<VirtualMachinePublicIPAddressDnsSettingsConfigurationResponse> getDnsSettings() {
@@ -50,7 +50,7 @@ public final class VirtualMachinePublicIPAddressConfigurationResponse extends io
      * The idle timeout of the public IP address.
      * 
      */
-    @InputImport(name="idleTimeoutInMinutes")
+    @Import(name="idleTimeoutInMinutes")
       private final @Nullable Integer idleTimeoutInMinutes;
 
     public Optional<Integer> getIdleTimeoutInMinutes() {
@@ -61,7 +61,7 @@ public final class VirtualMachinePublicIPAddressConfigurationResponse extends io
      * The list of IP tags associated with the public IP address.
      * 
      */
-    @InputImport(name="ipTags")
+    @Import(name="ipTags")
       private final @Nullable List<VirtualMachineIpTagResponse> ipTags;
 
     public List<VirtualMachineIpTagResponse> getIpTags() {
@@ -72,7 +72,7 @@ public final class VirtualMachinePublicIPAddressConfigurationResponse extends io
      * The publicIP address configuration name.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -83,7 +83,7 @@ public final class VirtualMachinePublicIPAddressConfigurationResponse extends io
      * Available from Api-Version 2019-07-01 onwards, it represents whether the specific ipconfiguration is IPv4 or IPv6. Default is taken as IPv4. Possible values are: 'IPv4' and 'IPv6'.
      * 
      */
-    @InputImport(name="publicIPAddressVersion")
+    @Import(name="publicIPAddressVersion")
       private final @Nullable String publicIPAddressVersion;
 
     public Optional<String> getPublicIPAddressVersion() {
@@ -94,7 +94,7 @@ public final class VirtualMachinePublicIPAddressConfigurationResponse extends io
      * Specify the public IP allocation type
      * 
      */
-    @InputImport(name="publicIPAllocationMethod")
+    @Import(name="publicIPAllocationMethod")
       private final @Nullable String publicIPAllocationMethod;
 
     public Optional<String> getPublicIPAllocationMethod() {
@@ -105,7 +105,7 @@ public final class VirtualMachinePublicIPAddressConfigurationResponse extends io
      * The PublicIPPrefix from which to allocate publicIP addresses.
      * 
      */
-    @InputImport(name="publicIPPrefix")
+    @Import(name="publicIPPrefix")
       private final @Nullable SubResourceResponse publicIPPrefix;
 
     public Optional<SubResourceResponse> getPublicIPPrefix() {
@@ -116,7 +116,7 @@ public final class VirtualMachinePublicIPAddressConfigurationResponse extends io
      * Describes the public IP Sku
      * 
      */
-    @InputImport(name="sku")
+    @Import(name="sku")
       private final @Nullable PublicIPAddressSkuResponse sku;
 
     public Optional<PublicIPAddressSkuResponse> getSku() {

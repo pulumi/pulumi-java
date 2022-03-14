@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.engagementfabric;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -20,7 +20,7 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
      * Account Name
      * 
      */
-    @InputImport(name="accountName", required=true)
+    @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
     public Output<String> getAccountName() {
@@ -31,7 +31,7 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
      * The functions to be enabled for the channel
      * 
      */
-    @InputImport(name="channelFunctions")
+    @Import(name="channelFunctions")
       private final @Nullable Output<List<String>> channelFunctions;
 
     public Output<List<String>> getChannelFunctions() {
@@ -42,7 +42,7 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
      * Channel Name
      * 
      */
-    @InputImport(name="channelName")
+    @Import(name="channelName")
       private final @Nullable Output<String> channelName;
 
     public Output<String> getChannelName() {
@@ -53,7 +53,7 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
      * The channel type
      * 
      */
-    @InputImport(name="channelType", required=true)
+    @Import(name="channelType", required=true)
       private final Output<String> channelType;
 
     public Output<String> getChannelType() {
@@ -64,7 +64,7 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
      * The channel credentials
      * 
      */
-    @InputImport(name="credentials")
+    @Import(name="credentials")
       private final @Nullable Output<Map<String,String>> credentials;
 
     public Output<Map<String,String>> getCredentials() {
@@ -75,7 +75,7 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
      * Resource Group Name
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {

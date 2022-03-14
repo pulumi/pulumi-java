@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AdditionalUnattendContentResponse {
     /**
      * The component name. Currently, the only allowable value is Microsoft-Windows-Shell-Setup.
@@ -32,12 +32,12 @@ public final class AdditionalUnattendContentResponse {
      */
     private final @Nullable String settingName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AdditionalUnattendContentResponse(
-        @OutputCustomType.Parameter("componentName") @Nullable String componentName,
-        @OutputCustomType.Parameter("content") @Nullable String content,
-        @OutputCustomType.Parameter("passName") @Nullable String passName,
-        @OutputCustomType.Parameter("settingName") @Nullable String settingName) {
+        @CustomType.Parameter("componentName") @Nullable String componentName,
+        @CustomType.Parameter("content") @Nullable String content,
+        @CustomType.Parameter("passName") @Nullable String passName,
+        @CustomType.Parameter("settingName") @Nullable String settingName) {
         this.componentName = componentName;
         this.content = content;
         this.passName = passName;

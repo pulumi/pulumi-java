@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datamigration.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.Object;
@@ -11,7 +11,7 @@ import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class NodeMonitoringDataResponse {
     /**
      *  Unmatched properties from the message are deserialized in this collection.
@@ -59,17 +59,17 @@ public final class NodeMonitoringDataResponse {
      */
     private final Double sentBytes;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NodeMonitoringDataResponse(
-        @OutputCustomType.Parameter("additionalProperties") Map<String,Object> additionalProperties,
-        @OutputCustomType.Parameter("availableMemoryInMB") Integer availableMemoryInMB,
-        @OutputCustomType.Parameter("concurrentJobsLimit") Integer concurrentJobsLimit,
-        @OutputCustomType.Parameter("concurrentJobsRunning") Integer concurrentJobsRunning,
-        @OutputCustomType.Parameter("cpuUtilization") Integer cpuUtilization,
-        @OutputCustomType.Parameter("maxConcurrentJobs") Integer maxConcurrentJobs,
-        @OutputCustomType.Parameter("nodeName") String nodeName,
-        @OutputCustomType.Parameter("receivedBytes") Double receivedBytes,
-        @OutputCustomType.Parameter("sentBytes") Double sentBytes) {
+        @CustomType.Parameter("additionalProperties") Map<String,Object> additionalProperties,
+        @CustomType.Parameter("availableMemoryInMB") Integer availableMemoryInMB,
+        @CustomType.Parameter("concurrentJobsLimit") Integer concurrentJobsLimit,
+        @CustomType.Parameter("concurrentJobsRunning") Integer concurrentJobsRunning,
+        @CustomType.Parameter("cpuUtilization") Integer cpuUtilization,
+        @CustomType.Parameter("maxConcurrentJobs") Integer maxConcurrentJobs,
+        @CustomType.Parameter("nodeName") String nodeName,
+        @CustomType.Parameter("receivedBytes") Double receivedBytes,
+        @CustomType.Parameter("sentBytes") Double sentBytes) {
         this.additionalProperties = additionalProperties;
         this.availableMemoryInMB = availableMemoryInMB;
         this.concurrentJobsLimit = concurrentJobsLimit;

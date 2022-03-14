@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.security.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetSecurityContactArgs extends io.pulumi.resources.InvokeArgs
      * Name of the security contact object
      * 
      */
-    @InputImport(name="securityContactName", required=true)
+    @Import(name="securityContactName", required=true)
       private final String securityContactName;
 
     public String getSecurityContactName() {

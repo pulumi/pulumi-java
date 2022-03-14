@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.datamigration.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInputResponse {
     /**
      * Migration settings which tune the migration behavior
@@ -38,13 +38,13 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInputRespons
      */
     private final @Nullable Map<String,String> targetSetting;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInputResponse(
-        @OutputCustomType.Parameter("migrationSetting") @Nullable Map<String,String> migrationSetting,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("sourceSetting") @Nullable Map<String,String> sourceSetting,
-        @OutputCustomType.Parameter("targetDatabaseName") @Nullable String targetDatabaseName,
-        @OutputCustomType.Parameter("targetSetting") @Nullable Map<String,String> targetSetting) {
+        @CustomType.Parameter("migrationSetting") @Nullable Map<String,String> migrationSetting,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("sourceSetting") @Nullable Map<String,String> sourceSetting,
+        @CustomType.Parameter("targetDatabaseName") @Nullable String targetDatabaseName,
+        @CustomType.Parameter("targetSetting") @Nullable Map<String,String> targetSetting) {
         this.migrationSetting = migrationSetting;
         this.name = name;
         this.sourceSetting = sourceSetting;

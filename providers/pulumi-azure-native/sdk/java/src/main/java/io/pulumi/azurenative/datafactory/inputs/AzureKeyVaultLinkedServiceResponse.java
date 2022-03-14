@@ -6,7 +6,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 import io.pulumi.azurenative.datafactory.inputs.CredentialReferenceResponse;
 import io.pulumi.azurenative.datafactory.inputs.IntegrationRuntimeReferenceResponse;
 import io.pulumi.azurenative.datafactory.inputs.ParameterSpecificationResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -28,7 +28,7 @@ public final class AzureKeyVaultLinkedServiceResponse extends io.pulumi.resource
      * List of tags that can be used for describing the linked service.
      * 
      */
-    @InputImport(name="annotations")
+    @Import(name="annotations")
       private final @Nullable List<Object> annotations;
 
     public List<Object> getAnnotations() {
@@ -39,7 +39,7 @@ public final class AzureKeyVaultLinkedServiceResponse extends io.pulumi.resource
      * The base URL of the Azure Key Vault. e.g. https://myakv.vault.azure.net Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="baseUrl", required=true)
+    @Import(name="baseUrl", required=true)
       private final Object baseUrl;
 
     public Object getBaseUrl() {
@@ -50,7 +50,7 @@ public final class AzureKeyVaultLinkedServiceResponse extends io.pulumi.resource
      * The integration runtime reference.
      * 
      */
-    @InputImport(name="connectVia")
+    @Import(name="connectVia")
       private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
     public Optional<IntegrationRuntimeReferenceResponse> getConnectVia() {
@@ -61,7 +61,7 @@ public final class AzureKeyVaultLinkedServiceResponse extends io.pulumi.resource
      * The credential reference containing authentication information.
      * 
      */
-    @InputImport(name="credential")
+    @Import(name="credential")
       private final @Nullable CredentialReferenceResponse credential;
 
     public Optional<CredentialReferenceResponse> getCredential() {
@@ -72,7 +72,7 @@ public final class AzureKeyVaultLinkedServiceResponse extends io.pulumi.resource
      * Linked service description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable String description;
 
     public Optional<String> getDescription() {
@@ -83,7 +83,7 @@ public final class AzureKeyVaultLinkedServiceResponse extends io.pulumi.resource
      * Parameters for linked service.
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
     public Map<String,ParameterSpecificationResponse> getParameters() {
@@ -95,7 +95,7 @@ public final class AzureKeyVaultLinkedServiceResponse extends io.pulumi.resource
      * Expected value is 'AzureKeyVault'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

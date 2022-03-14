@@ -41,7 +41,7 @@ import io.pulumi.azurenative.datafactory.outputs.ValidationActivityResponse;
 import io.pulumi.azurenative.datafactory.outputs.WaitActivityResponse;
 import io.pulumi.azurenative.datafactory.outputs.WebActivityResponse;
 import io.pulumi.azurenative.datafactory.outputs.WebHookActivityResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -49,7 +49,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SwitchCaseResponse {
     /**
      * List of activities to execute for satisfied case condition.
@@ -62,10 +62,10 @@ public final class SwitchCaseResponse {
      */
     private final @Nullable String value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SwitchCaseResponse(
-        @OutputCustomType.Parameter("activities") @Nullable List<Object> activities,
-        @OutputCustomType.Parameter("value") @Nullable String value) {
+        @CustomType.Parameter("activities") @Nullable List<Object> activities,
+        @CustomType.Parameter("value") @Nullable String value) {
         this.activities = activities;
         this.value = value;
     }

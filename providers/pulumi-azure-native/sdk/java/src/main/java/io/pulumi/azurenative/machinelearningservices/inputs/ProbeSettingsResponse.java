@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ProbeSettingsResponse extends io.pulumi.resources.InvokeArgs 
      * The number of failures to allow before returning an unhealthy status.
      * 
      */
-    @InputImport(name="failureThreshold")
+    @Import(name="failureThreshold")
       private final @Nullable Integer failureThreshold;
 
     public Optional<Integer> getFailureThreshold() {
@@ -34,7 +34,7 @@ public final class ProbeSettingsResponse extends io.pulumi.resources.InvokeArgs 
      * The delay before the first probe in ISO 8601 format.
      * 
      */
-    @InputImport(name="initialDelay")
+    @Import(name="initialDelay")
       private final @Nullable String initialDelay;
 
     public Optional<String> getInitialDelay() {
@@ -45,7 +45,7 @@ public final class ProbeSettingsResponse extends io.pulumi.resources.InvokeArgs 
      * The length of time between probes in ISO 8601 format.
      * 
      */
-    @InputImport(name="period")
+    @Import(name="period")
       private final @Nullable String period;
 
     public Optional<String> getPeriod() {
@@ -56,7 +56,7 @@ public final class ProbeSettingsResponse extends io.pulumi.resources.InvokeArgs 
      * The number of successful probes before returning a healthy status.
      * 
      */
-    @InputImport(name="successThreshold")
+    @Import(name="successThreshold")
       private final @Nullable Integer successThreshold;
 
     public Optional<Integer> getSuccessThreshold() {
@@ -67,7 +67,7 @@ public final class ProbeSettingsResponse extends io.pulumi.resources.InvokeArgs 
      * The probe timeout in ISO 8601 format.
      * 
      */
-    @InputImport(name="timeout")
+    @Import(name="timeout")
       private final @Nullable String timeout;
 
     public Optional<String> getTimeout() {

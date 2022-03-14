@@ -6,7 +6,7 @@ package io.pulumi.azurenative.scheduler.inputs;
 import io.pulumi.azurenative.scheduler.inputs.JobActionResponse;
 import io.pulumi.azurenative.scheduler.inputs.JobRecurrenceResponse;
 import io.pulumi.azurenative.scheduler.inputs.JobStatusResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -21,7 +21,7 @@ public final class JobPropertiesResponse extends io.pulumi.resources.InvokeArgs 
      * Gets or sets the job action.
      * 
      */
-    @InputImport(name="action")
+    @Import(name="action")
       private final @Nullable JobActionResponse action;
 
     public Optional<JobActionResponse> getAction() {
@@ -32,7 +32,7 @@ public final class JobPropertiesResponse extends io.pulumi.resources.InvokeArgs 
      * Gets or sets the job recurrence.
      * 
      */
-    @InputImport(name="recurrence")
+    @Import(name="recurrence")
       private final @Nullable JobRecurrenceResponse recurrence;
 
     public Optional<JobRecurrenceResponse> getRecurrence() {
@@ -43,7 +43,7 @@ public final class JobPropertiesResponse extends io.pulumi.resources.InvokeArgs 
      * Gets or sets the job start time.
      * 
      */
-    @InputImport(name="startTime")
+    @Import(name="startTime")
       private final @Nullable String startTime;
 
     public Optional<String> getStartTime() {
@@ -54,7 +54,7 @@ public final class JobPropertiesResponse extends io.pulumi.resources.InvokeArgs 
      * Gets or set the job state.
      * 
      */
-    @InputImport(name="state")
+    @Import(name="state")
       private final @Nullable String state;
 
     public Optional<String> getState() {
@@ -65,7 +65,7 @@ public final class JobPropertiesResponse extends io.pulumi.resources.InvokeArgs 
      * Gets the job status.
      * 
      */
-    @InputImport(name="status", required=true)
+    @Import(name="status", required=true)
       private final JobStatusResponse status;
 
     public JobStatusResponse getStatus() {

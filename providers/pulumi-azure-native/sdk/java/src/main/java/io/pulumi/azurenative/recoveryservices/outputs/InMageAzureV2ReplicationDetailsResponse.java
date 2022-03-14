@@ -8,7 +8,7 @@ import io.pulumi.azurenative.recoveryservices.outputs.HealthErrorResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.InMageAzureV2ManagedDiskDetailsResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.InMageAzureV2ProtectedDiskDetailsResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.VMNicDetailsResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -17,7 +17,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class InMageAzureV2ReplicationDetailsResponse {
     /**
      * Agent expiry date.
@@ -296,63 +296,63 @@ public final class InMageAzureV2ReplicationDetailsResponse {
      */
     private final @Nullable String vmProtectionStateDescription;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private InMageAzureV2ReplicationDetailsResponse(
-        @OutputCustomType.Parameter("agentExpiryDate") @Nullable String agentExpiryDate,
-        @OutputCustomType.Parameter("agentVersion") @Nullable String agentVersion,
-        @OutputCustomType.Parameter("azureVMDiskDetails") @Nullable List<AzureVmDiskDetailsResponse> azureVMDiskDetails,
-        @OutputCustomType.Parameter("compressedDataRateInMB") @Nullable Double compressedDataRateInMB,
-        @OutputCustomType.Parameter("datastores") @Nullable List<String> datastores,
-        @OutputCustomType.Parameter("discoveryType") @Nullable String discoveryType,
-        @OutputCustomType.Parameter("diskResized") @Nullable String diskResized,
-        @OutputCustomType.Parameter("enableRdpOnTargetOption") @Nullable String enableRdpOnTargetOption,
-        @OutputCustomType.Parameter("infrastructureVmId") @Nullable String infrastructureVmId,
-        @OutputCustomType.Parameter("instanceType") String instanceType,
-        @OutputCustomType.Parameter("ipAddress") @Nullable String ipAddress,
-        @OutputCustomType.Parameter("isAgentUpdateRequired") @Nullable String isAgentUpdateRequired,
-        @OutputCustomType.Parameter("isRebootAfterUpdateRequired") @Nullable String isRebootAfterUpdateRequired,
-        @OutputCustomType.Parameter("lastHeartbeat") @Nullable String lastHeartbeat,
-        @OutputCustomType.Parameter("lastRpoCalculatedTime") @Nullable String lastRpoCalculatedTime,
-        @OutputCustomType.Parameter("lastUpdateReceivedTime") @Nullable String lastUpdateReceivedTime,
-        @OutputCustomType.Parameter("licenseType") @Nullable String licenseType,
-        @OutputCustomType.Parameter("masterTargetId") @Nullable String masterTargetId,
-        @OutputCustomType.Parameter("multiVmGroupId") @Nullable String multiVmGroupId,
-        @OutputCustomType.Parameter("multiVmGroupName") @Nullable String multiVmGroupName,
-        @OutputCustomType.Parameter("multiVmSyncStatus") @Nullable String multiVmSyncStatus,
-        @OutputCustomType.Parameter("osDiskId") @Nullable String osDiskId,
-        @OutputCustomType.Parameter("osType") @Nullable String osType,
-        @OutputCustomType.Parameter("osVersion") @Nullable String osVersion,
-        @OutputCustomType.Parameter("processServerId") @Nullable String processServerId,
-        @OutputCustomType.Parameter("processServerName") String processServerName,
-        @OutputCustomType.Parameter("protectedDisks") @Nullable List<InMageAzureV2ProtectedDiskDetailsResponse> protectedDisks,
-        @OutputCustomType.Parameter("protectedManagedDisks") @Nullable List<InMageAzureV2ManagedDiskDetailsResponse> protectedManagedDisks,
-        @OutputCustomType.Parameter("protectionStage") @Nullable String protectionStage,
-        @OutputCustomType.Parameter("recoveryAvailabilitySetId") @Nullable String recoveryAvailabilitySetId,
-        @OutputCustomType.Parameter("recoveryAzureLogStorageAccountId") @Nullable String recoveryAzureLogStorageAccountId,
-        @OutputCustomType.Parameter("recoveryAzureResourceGroupId") @Nullable String recoveryAzureResourceGroupId,
-        @OutputCustomType.Parameter("recoveryAzureStorageAccount") @Nullable String recoveryAzureStorageAccount,
-        @OutputCustomType.Parameter("recoveryAzureVMName") @Nullable String recoveryAzureVMName,
-        @OutputCustomType.Parameter("recoveryAzureVMSize") @Nullable String recoveryAzureVMSize,
-        @OutputCustomType.Parameter("replicaId") @Nullable String replicaId,
-        @OutputCustomType.Parameter("resyncProgressPercentage") @Nullable Integer resyncProgressPercentage,
-        @OutputCustomType.Parameter("rpoInSeconds") @Nullable Double rpoInSeconds,
-        @OutputCustomType.Parameter("selectedRecoveryAzureNetworkId") @Nullable String selectedRecoveryAzureNetworkId,
-        @OutputCustomType.Parameter("selectedSourceNicId") @Nullable String selectedSourceNicId,
-        @OutputCustomType.Parameter("selectedTfoAzureNetworkId") @Nullable String selectedTfoAzureNetworkId,
-        @OutputCustomType.Parameter("sourceVmCpuCount") @Nullable Integer sourceVmCpuCount,
-        @OutputCustomType.Parameter("sourceVmRamSizeInMB") @Nullable Integer sourceVmRamSizeInMB,
-        @OutputCustomType.Parameter("targetAvailabilityZone") @Nullable String targetAvailabilityZone,
-        @OutputCustomType.Parameter("targetProximityPlacementGroupId") @Nullable String targetProximityPlacementGroupId,
-        @OutputCustomType.Parameter("targetVmId") @Nullable String targetVmId,
-        @OutputCustomType.Parameter("uncompressedDataRateInMB") @Nullable Double uncompressedDataRateInMB,
-        @OutputCustomType.Parameter("useManagedDisks") @Nullable String useManagedDisks,
-        @OutputCustomType.Parameter("vCenterInfrastructureId") @Nullable String vCenterInfrastructureId,
-        @OutputCustomType.Parameter("validationErrors") @Nullable List<HealthErrorResponse> validationErrors,
-        @OutputCustomType.Parameter("vhdName") @Nullable String vhdName,
-        @OutputCustomType.Parameter("vmId") @Nullable String vmId,
-        @OutputCustomType.Parameter("vmNics") @Nullable List<VMNicDetailsResponse> vmNics,
-        @OutputCustomType.Parameter("vmProtectionState") @Nullable String vmProtectionState,
-        @OutputCustomType.Parameter("vmProtectionStateDescription") @Nullable String vmProtectionStateDescription) {
+        @CustomType.Parameter("agentExpiryDate") @Nullable String agentExpiryDate,
+        @CustomType.Parameter("agentVersion") @Nullable String agentVersion,
+        @CustomType.Parameter("azureVMDiskDetails") @Nullable List<AzureVmDiskDetailsResponse> azureVMDiskDetails,
+        @CustomType.Parameter("compressedDataRateInMB") @Nullable Double compressedDataRateInMB,
+        @CustomType.Parameter("datastores") @Nullable List<String> datastores,
+        @CustomType.Parameter("discoveryType") @Nullable String discoveryType,
+        @CustomType.Parameter("diskResized") @Nullable String diskResized,
+        @CustomType.Parameter("enableRdpOnTargetOption") @Nullable String enableRdpOnTargetOption,
+        @CustomType.Parameter("infrastructureVmId") @Nullable String infrastructureVmId,
+        @CustomType.Parameter("instanceType") String instanceType,
+        @CustomType.Parameter("ipAddress") @Nullable String ipAddress,
+        @CustomType.Parameter("isAgentUpdateRequired") @Nullable String isAgentUpdateRequired,
+        @CustomType.Parameter("isRebootAfterUpdateRequired") @Nullable String isRebootAfterUpdateRequired,
+        @CustomType.Parameter("lastHeartbeat") @Nullable String lastHeartbeat,
+        @CustomType.Parameter("lastRpoCalculatedTime") @Nullable String lastRpoCalculatedTime,
+        @CustomType.Parameter("lastUpdateReceivedTime") @Nullable String lastUpdateReceivedTime,
+        @CustomType.Parameter("licenseType") @Nullable String licenseType,
+        @CustomType.Parameter("masterTargetId") @Nullable String masterTargetId,
+        @CustomType.Parameter("multiVmGroupId") @Nullable String multiVmGroupId,
+        @CustomType.Parameter("multiVmGroupName") @Nullable String multiVmGroupName,
+        @CustomType.Parameter("multiVmSyncStatus") @Nullable String multiVmSyncStatus,
+        @CustomType.Parameter("osDiskId") @Nullable String osDiskId,
+        @CustomType.Parameter("osType") @Nullable String osType,
+        @CustomType.Parameter("osVersion") @Nullable String osVersion,
+        @CustomType.Parameter("processServerId") @Nullable String processServerId,
+        @CustomType.Parameter("processServerName") String processServerName,
+        @CustomType.Parameter("protectedDisks") @Nullable List<InMageAzureV2ProtectedDiskDetailsResponse> protectedDisks,
+        @CustomType.Parameter("protectedManagedDisks") @Nullable List<InMageAzureV2ManagedDiskDetailsResponse> protectedManagedDisks,
+        @CustomType.Parameter("protectionStage") @Nullable String protectionStage,
+        @CustomType.Parameter("recoveryAvailabilitySetId") @Nullable String recoveryAvailabilitySetId,
+        @CustomType.Parameter("recoveryAzureLogStorageAccountId") @Nullable String recoveryAzureLogStorageAccountId,
+        @CustomType.Parameter("recoveryAzureResourceGroupId") @Nullable String recoveryAzureResourceGroupId,
+        @CustomType.Parameter("recoveryAzureStorageAccount") @Nullable String recoveryAzureStorageAccount,
+        @CustomType.Parameter("recoveryAzureVMName") @Nullable String recoveryAzureVMName,
+        @CustomType.Parameter("recoveryAzureVMSize") @Nullable String recoveryAzureVMSize,
+        @CustomType.Parameter("replicaId") @Nullable String replicaId,
+        @CustomType.Parameter("resyncProgressPercentage") @Nullable Integer resyncProgressPercentage,
+        @CustomType.Parameter("rpoInSeconds") @Nullable Double rpoInSeconds,
+        @CustomType.Parameter("selectedRecoveryAzureNetworkId") @Nullable String selectedRecoveryAzureNetworkId,
+        @CustomType.Parameter("selectedSourceNicId") @Nullable String selectedSourceNicId,
+        @CustomType.Parameter("selectedTfoAzureNetworkId") @Nullable String selectedTfoAzureNetworkId,
+        @CustomType.Parameter("sourceVmCpuCount") @Nullable Integer sourceVmCpuCount,
+        @CustomType.Parameter("sourceVmRamSizeInMB") @Nullable Integer sourceVmRamSizeInMB,
+        @CustomType.Parameter("targetAvailabilityZone") @Nullable String targetAvailabilityZone,
+        @CustomType.Parameter("targetProximityPlacementGroupId") @Nullable String targetProximityPlacementGroupId,
+        @CustomType.Parameter("targetVmId") @Nullable String targetVmId,
+        @CustomType.Parameter("uncompressedDataRateInMB") @Nullable Double uncompressedDataRateInMB,
+        @CustomType.Parameter("useManagedDisks") @Nullable String useManagedDisks,
+        @CustomType.Parameter("vCenterInfrastructureId") @Nullable String vCenterInfrastructureId,
+        @CustomType.Parameter("validationErrors") @Nullable List<HealthErrorResponse> validationErrors,
+        @CustomType.Parameter("vhdName") @Nullable String vhdName,
+        @CustomType.Parameter("vmId") @Nullable String vmId,
+        @CustomType.Parameter("vmNics") @Nullable List<VMNicDetailsResponse> vmNics,
+        @CustomType.Parameter("vmProtectionState") @Nullable String vmProtectionState,
+        @CustomType.Parameter("vmProtectionStateDescription") @Nullable String vmProtectionStateDescription) {
         this.agentExpiryDate = agentExpiryDate;
         this.agentVersion = agentVersion;
         this.azureVMDiskDetails = azureVMDiskDetails;

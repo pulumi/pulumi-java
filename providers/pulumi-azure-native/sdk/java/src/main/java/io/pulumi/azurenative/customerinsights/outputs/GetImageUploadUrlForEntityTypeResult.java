@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.customerinsights.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetImageUploadUrlForEntityTypeResult {
     /**
      * Content URL for the image blob.
@@ -28,11 +28,11 @@ public final class GetImageUploadUrlForEntityTypeResult {
      */
     private final @Nullable String relativePath;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetImageUploadUrlForEntityTypeResult(
-        @OutputCustomType.Parameter("contentUrl") @Nullable String contentUrl,
-        @OutputCustomType.Parameter("imageExists") @Nullable Boolean imageExists,
-        @OutputCustomType.Parameter("relativePath") @Nullable String relativePath) {
+        @CustomType.Parameter("contentUrl") @Nullable String contentUrl,
+        @CustomType.Parameter("imageExists") @Nullable Boolean imageExists,
+        @CustomType.Parameter("relativePath") @Nullable String relativePath) {
         this.contentUrl = contentUrl;
         this.imageExists = imageExists;
         this.relativePath = relativePath;

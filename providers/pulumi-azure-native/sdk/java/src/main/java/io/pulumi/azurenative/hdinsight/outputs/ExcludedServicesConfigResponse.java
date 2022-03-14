@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.hdinsight.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ExcludedServicesConfigResponse {
     /**
      * The config id of excluded services.
@@ -22,10 +22,10 @@ public final class ExcludedServicesConfigResponse {
      */
     private final @Nullable String excludedServicesList;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ExcludedServicesConfigResponse(
-        @OutputCustomType.Parameter("excludedServicesConfigId") @Nullable String excludedServicesConfigId,
-        @OutputCustomType.Parameter("excludedServicesList") @Nullable String excludedServicesList) {
+        @CustomType.Parameter("excludedServicesConfigId") @Nullable String excludedServicesConfigId,
+        @CustomType.Parameter("excludedServicesList") @Nullable String excludedServicesList) {
         this.excludedServicesConfigId = excludedServicesConfigId;
         this.excludedServicesList = excludedServicesList;
     }

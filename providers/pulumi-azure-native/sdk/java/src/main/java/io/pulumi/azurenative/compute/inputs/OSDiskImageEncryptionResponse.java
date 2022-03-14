@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.compute.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class OSDiskImageEncryptionResponse extends io.pulumi.resources.Inv
      * A relative URI containing the resource ID of the disk encryption set.
      * 
      */
-    @InputImport(name="diskEncryptionSetId")
+    @Import(name="diskEncryptionSetId")
       private final @Nullable String diskEncryptionSetId;
 
     public Optional<String> getDiskEncryptionSetId() {

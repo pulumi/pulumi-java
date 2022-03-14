@@ -21,7 +21,7 @@ import io.pulumi.azurenative.containerservice.outputs.ManagedClusterServicePrinc
 import io.pulumi.azurenative.containerservice.outputs.ManagedClusterWindowsProfileResponse;
 import io.pulumi.azurenative.containerservice.outputs.PowerStateResponse;
 import io.pulumi.azurenative.containerservice.outputs.PrivateLinkResourceResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -31,7 +31,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetManagedClusterResult {
     /**
      * Profile of Azure Active Directory configuration.
@@ -214,44 +214,44 @@ public final class GetManagedClusterResult {
      */
     private final @Nullable ManagedClusterWindowsProfileResponse windowsProfile;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetManagedClusterResult(
-        @OutputCustomType.Parameter("aadProfile") @Nullable ManagedClusterAADProfileResponse aadProfile,
-        @OutputCustomType.Parameter("addonProfiles") @Nullable Map<String,ManagedClusterAddonProfileResponse> addonProfiles,
-        @OutputCustomType.Parameter("agentPoolProfiles") @Nullable List<ManagedClusterAgentPoolProfileResponse> agentPoolProfiles,
-        @OutputCustomType.Parameter("apiServerAccessProfile") @Nullable ManagedClusterAPIServerAccessProfileResponse apiServerAccessProfile,
-        @OutputCustomType.Parameter("autoScalerProfile") @Nullable ManagedClusterPropertiesResponseAutoScalerProfile autoScalerProfile,
-        @OutputCustomType.Parameter("autoUpgradeProfile") @Nullable ManagedClusterAutoUpgradeProfileResponse autoUpgradeProfile,
-        @OutputCustomType.Parameter("azurePortalFQDN") String azurePortalFQDN,
-        @OutputCustomType.Parameter("disableLocalAccounts") @Nullable Boolean disableLocalAccounts,
-        @OutputCustomType.Parameter("diskEncryptionSetID") @Nullable String diskEncryptionSetID,
-        @OutputCustomType.Parameter("dnsPrefix") @Nullable String dnsPrefix,
-        @OutputCustomType.Parameter("enablePodSecurityPolicy") @Nullable Boolean enablePodSecurityPolicy,
-        @OutputCustomType.Parameter("enableRBAC") @Nullable Boolean enableRBAC,
-        @OutputCustomType.Parameter("extendedLocation") @Nullable ExtendedLocationResponse extendedLocation,
-        @OutputCustomType.Parameter("fqdn") String fqdn,
-        @OutputCustomType.Parameter("fqdnSubdomain") @Nullable String fqdnSubdomain,
-        @OutputCustomType.Parameter("httpProxyConfig") @Nullable ManagedClusterHTTPProxyConfigResponse httpProxyConfig,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("identity") @Nullable ManagedClusterIdentityResponse identity,
-        @OutputCustomType.Parameter("identityProfile") @Nullable Map<String,ManagedClusterPropertiesResponseIdentityProfile> identityProfile,
-        @OutputCustomType.Parameter("kubernetesVersion") @Nullable String kubernetesVersion,
-        @OutputCustomType.Parameter("linuxProfile") @Nullable ContainerServiceLinuxProfileResponse linuxProfile,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("maxAgentPools") Integer maxAgentPools,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("networkProfile") @Nullable ContainerServiceNetworkProfileResponse networkProfile,
-        @OutputCustomType.Parameter("nodeResourceGroup") @Nullable String nodeResourceGroup,
-        @OutputCustomType.Parameter("podIdentityProfile") @Nullable ManagedClusterPodIdentityProfileResponse podIdentityProfile,
-        @OutputCustomType.Parameter("powerState") PowerStateResponse powerState,
-        @OutputCustomType.Parameter("privateFQDN") String privateFQDN,
-        @OutputCustomType.Parameter("privateLinkResources") @Nullable List<PrivateLinkResourceResponse> privateLinkResources,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("servicePrincipalProfile") @Nullable ManagedClusterServicePrincipalProfileResponse servicePrincipalProfile,
-        @OutputCustomType.Parameter("sku") @Nullable ManagedClusterSKUResponse sku,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("windowsProfile") @Nullable ManagedClusterWindowsProfileResponse windowsProfile) {
+        @CustomType.Parameter("aadProfile") @Nullable ManagedClusterAADProfileResponse aadProfile,
+        @CustomType.Parameter("addonProfiles") @Nullable Map<String,ManagedClusterAddonProfileResponse> addonProfiles,
+        @CustomType.Parameter("agentPoolProfiles") @Nullable List<ManagedClusterAgentPoolProfileResponse> agentPoolProfiles,
+        @CustomType.Parameter("apiServerAccessProfile") @Nullable ManagedClusterAPIServerAccessProfileResponse apiServerAccessProfile,
+        @CustomType.Parameter("autoScalerProfile") @Nullable ManagedClusterPropertiesResponseAutoScalerProfile autoScalerProfile,
+        @CustomType.Parameter("autoUpgradeProfile") @Nullable ManagedClusterAutoUpgradeProfileResponse autoUpgradeProfile,
+        @CustomType.Parameter("azurePortalFQDN") String azurePortalFQDN,
+        @CustomType.Parameter("disableLocalAccounts") @Nullable Boolean disableLocalAccounts,
+        @CustomType.Parameter("diskEncryptionSetID") @Nullable String diskEncryptionSetID,
+        @CustomType.Parameter("dnsPrefix") @Nullable String dnsPrefix,
+        @CustomType.Parameter("enablePodSecurityPolicy") @Nullable Boolean enablePodSecurityPolicy,
+        @CustomType.Parameter("enableRBAC") @Nullable Boolean enableRBAC,
+        @CustomType.Parameter("extendedLocation") @Nullable ExtendedLocationResponse extendedLocation,
+        @CustomType.Parameter("fqdn") String fqdn,
+        @CustomType.Parameter("fqdnSubdomain") @Nullable String fqdnSubdomain,
+        @CustomType.Parameter("httpProxyConfig") @Nullable ManagedClusterHTTPProxyConfigResponse httpProxyConfig,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("identity") @Nullable ManagedClusterIdentityResponse identity,
+        @CustomType.Parameter("identityProfile") @Nullable Map<String,ManagedClusterPropertiesResponseIdentityProfile> identityProfile,
+        @CustomType.Parameter("kubernetesVersion") @Nullable String kubernetesVersion,
+        @CustomType.Parameter("linuxProfile") @Nullable ContainerServiceLinuxProfileResponse linuxProfile,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("maxAgentPools") Integer maxAgentPools,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("networkProfile") @Nullable ContainerServiceNetworkProfileResponse networkProfile,
+        @CustomType.Parameter("nodeResourceGroup") @Nullable String nodeResourceGroup,
+        @CustomType.Parameter("podIdentityProfile") @Nullable ManagedClusterPodIdentityProfileResponse podIdentityProfile,
+        @CustomType.Parameter("powerState") PowerStateResponse powerState,
+        @CustomType.Parameter("privateFQDN") String privateFQDN,
+        @CustomType.Parameter("privateLinkResources") @Nullable List<PrivateLinkResourceResponse> privateLinkResources,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("servicePrincipalProfile") @Nullable ManagedClusterServicePrincipalProfileResponse servicePrincipalProfile,
+        @CustomType.Parameter("sku") @Nullable ManagedClusterSKUResponse sku,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("windowsProfile") @Nullable ManagedClusterWindowsProfileResponse windowsProfile) {
         this.aadProfile = aadProfile;
         this.addonProfiles = addonProfiles;
         this.agentPoolProfiles = agentPoolProfiles;

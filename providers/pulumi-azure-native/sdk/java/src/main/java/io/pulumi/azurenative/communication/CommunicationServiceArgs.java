@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.communication;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class CommunicationServiceArgs extends io.pulumi.resources.Resource
      * The name of the CommunicationService resource.
      * 
      */
-    @InputImport(name="communicationServiceName")
+    @Import(name="communicationServiceName")
       private final @Nullable Output<String> communicationServiceName;
 
     public Output<String> getCommunicationServiceName() {
@@ -30,7 +30,7 @@ public final class CommunicationServiceArgs extends io.pulumi.resources.Resource
      * The location where the communication service stores its data at rest.
      * 
      */
-    @InputImport(name="dataLocation", required=true)
+    @Import(name="dataLocation", required=true)
       private final Output<String> dataLocation;
 
     public Output<String> getDataLocation() {
@@ -41,7 +41,7 @@ public final class CommunicationServiceArgs extends io.pulumi.resources.Resource
      * The Azure location where the CommunicationService is running.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -52,7 +52,7 @@ public final class CommunicationServiceArgs extends io.pulumi.resources.Resource
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -63,7 +63,7 @@ public final class CommunicationServiceArgs extends io.pulumi.resources.Resource
      * Tags of the service which is a list of key value pairs that describe the resource.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

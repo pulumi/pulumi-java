@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.devtestlab.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ComputeVmInstanceViewStatusResponse {
     /**
      * Gets the status Code.
@@ -27,11 +27,11 @@ public final class ComputeVmInstanceViewStatusResponse {
      */
     private final @Nullable String message;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ComputeVmInstanceViewStatusResponse(
-        @OutputCustomType.Parameter("code") @Nullable String code,
-        @OutputCustomType.Parameter("displayStatus") @Nullable String displayStatus,
-        @OutputCustomType.Parameter("message") @Nullable String message) {
+        @CustomType.Parameter("code") @Nullable String code,
+        @CustomType.Parameter("displayStatus") @Nullable String displayStatus,
+        @CustomType.Parameter("message") @Nullable String message) {
         this.code = code;
         this.displayStatus = displayStatus;
         this.message = message;

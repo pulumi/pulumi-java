@@ -7,7 +7,7 @@ import io.pulumi.azurenative.azurestack.inputs.CompatibilityResponse;
 import io.pulumi.azurenative.azurestack.inputs.IconUrisResponse;
 import io.pulumi.azurenative.azurestack.inputs.ProductLinkResponse;
 import io.pulumi.azurenative.azurestack.inputs.ProductPropertiesResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -28,7 +28,7 @@ public final class ProductResponse extends io.pulumi.resources.InvokeArgs {
      * The part number used for billing purposes.
      * 
      */
-    @InputImport(name="billingPartNumber")
+    @Import(name="billingPartNumber")
       private final @Nullable String billingPartNumber;
 
     public Optional<String> getBillingPartNumber() {
@@ -39,7 +39,7 @@ public final class ProductResponse extends io.pulumi.resources.InvokeArgs {
      * Product compatibility with current device.
      * 
      */
-    @InputImport(name="compatibility")
+    @Import(name="compatibility")
       private final @Nullable CompatibilityResponse compatibility;
 
     public Optional<CompatibilityResponse> getCompatibility() {
@@ -50,7 +50,7 @@ public final class ProductResponse extends io.pulumi.resources.InvokeArgs {
      * The description of the product.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable String description;
 
     public Optional<String> getDescription() {
@@ -61,7 +61,7 @@ public final class ProductResponse extends io.pulumi.resources.InvokeArgs {
      * The display name of the product.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable String displayName;
 
     public Optional<String> getDisplayName() {
@@ -72,7 +72,7 @@ public final class ProductResponse extends io.pulumi.resources.InvokeArgs {
      * The entity tag used for optimistic concurrency when modifying the resource.
      * 
      */
-    @InputImport(name="etag")
+    @Import(name="etag")
       private final @Nullable String etag;
 
     public Optional<String> getEtag() {
@@ -83,7 +83,7 @@ public final class ProductResponse extends io.pulumi.resources.InvokeArgs {
      * The identifier of the gallery item corresponding to the product.
      * 
      */
-    @InputImport(name="galleryItemIdentity")
+    @Import(name="galleryItemIdentity")
       private final @Nullable String galleryItemIdentity;
 
     public Optional<String> getGalleryItemIdentity() {
@@ -94,7 +94,7 @@ public final class ProductResponse extends io.pulumi.resources.InvokeArgs {
      * Additional links available for this product.
      * 
      */
-    @InputImport(name="iconUris")
+    @Import(name="iconUris")
       private final @Nullable IconUrisResponse iconUris;
 
     public Optional<IconUrisResponse> getIconUris() {
@@ -105,7 +105,7 @@ public final class ProductResponse extends io.pulumi.resources.InvokeArgs {
      * ID of the resource.
      * 
      */
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final String id;
 
     public String getId() {
@@ -116,7 +116,7 @@ public final class ProductResponse extends io.pulumi.resources.InvokeArgs {
      * The legal terms.
      * 
      */
-    @InputImport(name="legalTerms")
+    @Import(name="legalTerms")
       private final @Nullable String legalTerms;
 
     public Optional<String> getLegalTerms() {
@@ -127,7 +127,7 @@ public final class ProductResponse extends io.pulumi.resources.InvokeArgs {
      * Additional links available for this product.
      * 
      */
-    @InputImport(name="links")
+    @Import(name="links")
       private final @Nullable List<ProductLinkResponse> links;
 
     public List<ProductLinkResponse> getLinks() {
@@ -138,7 +138,7 @@ public final class ProductResponse extends io.pulumi.resources.InvokeArgs {
      * Name of the resource.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -149,7 +149,7 @@ public final class ProductResponse extends io.pulumi.resources.InvokeArgs {
      * The offer representing the product.
      * 
      */
-    @InputImport(name="offer")
+    @Import(name="offer")
       private final @Nullable String offer;
 
     public Optional<String> getOffer() {
@@ -160,7 +160,7 @@ public final class ProductResponse extends io.pulumi.resources.InvokeArgs {
      * The version of the product offer.
      * 
      */
-    @InputImport(name="offerVersion")
+    @Import(name="offerVersion")
       private final @Nullable String offerVersion;
 
     public Optional<String> getOfferVersion() {
@@ -171,7 +171,7 @@ public final class ProductResponse extends io.pulumi.resources.InvokeArgs {
      * The length of product content.
      * 
      */
-    @InputImport(name="payloadLength")
+    @Import(name="payloadLength")
       private final @Nullable Double payloadLength;
 
     public Optional<Double> getPayloadLength() {
@@ -182,7 +182,7 @@ public final class ProductResponse extends io.pulumi.resources.InvokeArgs {
      * The privacy policy.
      * 
      */
-    @InputImport(name="privacyPolicy")
+    @Import(name="privacyPolicy")
       private final @Nullable String privacyPolicy;
 
     public Optional<String> getPrivacyPolicy() {
@@ -193,7 +193,7 @@ public final class ProductResponse extends io.pulumi.resources.InvokeArgs {
      * The kind of the product (virtualMachine or virtualMachineExtension)
      * 
      */
-    @InputImport(name="productKind")
+    @Import(name="productKind")
       private final @Nullable String productKind;
 
     public Optional<String> getProductKind() {
@@ -204,7 +204,7 @@ public final class ProductResponse extends io.pulumi.resources.InvokeArgs {
      * Additional properties for the product.
      * 
      */
-    @InputImport(name="productProperties")
+    @Import(name="productProperties")
       private final @Nullable ProductPropertiesResponse productProperties;
 
     public Optional<ProductPropertiesResponse> getProductProperties() {
@@ -215,7 +215,7 @@ public final class ProductResponse extends io.pulumi.resources.InvokeArgs {
      * The user-friendly name of the product publisher.
      * 
      */
-    @InputImport(name="publisherDisplayName")
+    @Import(name="publisherDisplayName")
       private final @Nullable String publisherDisplayName;
 
     public Optional<String> getPublisherDisplayName() {
@@ -226,7 +226,7 @@ public final class ProductResponse extends io.pulumi.resources.InvokeArgs {
      * Publisher identifier.
      * 
      */
-    @InputImport(name="publisherIdentifier")
+    @Import(name="publisherIdentifier")
       private final @Nullable String publisherIdentifier;
 
     public Optional<String> getPublisherIdentifier() {
@@ -237,7 +237,7 @@ public final class ProductResponse extends io.pulumi.resources.InvokeArgs {
      * The product SKU.
      * 
      */
-    @InputImport(name="sku")
+    @Import(name="sku")
       private final @Nullable String sku;
 
     public Optional<String> getSku() {
@@ -248,7 +248,7 @@ public final class ProductResponse extends io.pulumi.resources.InvokeArgs {
      * Type of Resource.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {
@@ -259,7 +259,7 @@ public final class ProductResponse extends io.pulumi.resources.InvokeArgs {
      * The type of the Virtual Machine Extension.
      * 
      */
-    @InputImport(name="vmExtensionType")
+    @Import(name="vmExtensionType")
       private final @Nullable String vmExtensionType;
 
     public Optional<String> getVmExtensionType() {

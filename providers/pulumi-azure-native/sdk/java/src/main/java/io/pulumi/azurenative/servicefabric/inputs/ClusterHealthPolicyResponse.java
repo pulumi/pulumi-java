@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.servicefabric.inputs;
 
 import io.pulumi.azurenative.servicefabric.inputs.ApplicationHealthPolicyResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -25,7 +25,7 @@ public final class ClusterHealthPolicyResponse extends io.pulumi.resources.Invok
      * Defines the application health policy map used to evaluate the health of an application or one of its children entities.
      * 
      */
-    @InputImport(name="applicationHealthPolicies")
+    @Import(name="applicationHealthPolicies")
       private final @Nullable Map<String,ApplicationHealthPolicyResponse> applicationHealthPolicies;
 
     public Map<String,ApplicationHealthPolicyResponse> getApplicationHealthPolicies() {
@@ -41,7 +41,7 @@ public final class ClusterHealthPolicyResponse extends io.pulumi.resources.Invok
      * The computation rounds up to tolerate one failure on small numbers of applications. Default percentage is zero.
      * 
      */
-    @InputImport(name="maxPercentUnhealthyApplications")
+    @Import(name="maxPercentUnhealthyApplications")
       private final @Nullable Integer maxPercentUnhealthyApplications;
 
     public Optional<Integer> getMaxPercentUnhealthyApplications() {
@@ -59,7 +59,7 @@ public final class ClusterHealthPolicyResponse extends io.pulumi.resources.Invok
      * In large clusters, some nodes will always be down or out for repairs, so this percentage should be configured to tolerate that.
      * 
      */
-    @InputImport(name="maxPercentUnhealthyNodes")
+    @Import(name="maxPercentUnhealthyNodes")
       private final @Nullable Integer maxPercentUnhealthyNodes;
 
     public Optional<Integer> getMaxPercentUnhealthyNodes() {

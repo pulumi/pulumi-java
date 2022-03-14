@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.security;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class CustomEntityStoreAssignmentArgs extends io.pulumi.resources.R
      * Name of the custom entity store assignment. Generated name is GUID.
      * 
      */
-    @InputImport(name="customEntityStoreAssignmentName")
+    @Import(name="customEntityStoreAssignmentName")
       private final @Nullable Output<String> customEntityStoreAssignmentName;
 
     public Output<String> getCustomEntityStoreAssignmentName() {
@@ -29,7 +29,7 @@ public final class CustomEntityStoreAssignmentArgs extends io.pulumi.resources.R
      * The principal assigned with entity store. If not provided, will use caller principal. Format of principal is: [AAD type]=[PrincipalObjectId];[TenantId]
      * 
      */
-    @InputImport(name="principal")
+    @Import(name="principal")
       private final @Nullable Output<String> principal;
 
     public Output<String> getPrincipal() {
@@ -40,7 +40,7 @@ public final class CustomEntityStoreAssignmentArgs extends io.pulumi.resources.R
      * The name of the resource group within the user's subscription. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {

@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.logic.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AS2MdnSettingsResponse {
     /**
      * The disposition notification to header value.
@@ -58,17 +58,17 @@ public final class AS2MdnSettingsResponse {
      */
     private final Boolean signOutboundMDNIfOptional;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AS2MdnSettingsResponse(
-        @OutputCustomType.Parameter("dispositionNotificationTo") @Nullable String dispositionNotificationTo,
-        @OutputCustomType.Parameter("mdnText") @Nullable String mdnText,
-        @OutputCustomType.Parameter("micHashingAlgorithm") String micHashingAlgorithm,
-        @OutputCustomType.Parameter("needMDN") Boolean needMDN,
-        @OutputCustomType.Parameter("receiptDeliveryUrl") @Nullable String receiptDeliveryUrl,
-        @OutputCustomType.Parameter("sendInboundMDNToMessageBox") Boolean sendInboundMDNToMessageBox,
-        @OutputCustomType.Parameter("sendMDNAsynchronously") Boolean sendMDNAsynchronously,
-        @OutputCustomType.Parameter("signMDN") Boolean signMDN,
-        @OutputCustomType.Parameter("signOutboundMDNIfOptional") Boolean signOutboundMDNIfOptional) {
+        @CustomType.Parameter("dispositionNotificationTo") @Nullable String dispositionNotificationTo,
+        @CustomType.Parameter("mdnText") @Nullable String mdnText,
+        @CustomType.Parameter("micHashingAlgorithm") String micHashingAlgorithm,
+        @CustomType.Parameter("needMDN") Boolean needMDN,
+        @CustomType.Parameter("receiptDeliveryUrl") @Nullable String receiptDeliveryUrl,
+        @CustomType.Parameter("sendInboundMDNToMessageBox") Boolean sendInboundMDNToMessageBox,
+        @CustomType.Parameter("sendMDNAsynchronously") Boolean sendMDNAsynchronously,
+        @CustomType.Parameter("signMDN") Boolean signMDN,
+        @CustomType.Parameter("signOutboundMDNIfOptional") Boolean signOutboundMDNIfOptional) {
         this.dispositionNotificationTo = dispositionNotificationTo;
         this.mdnText = mdnText;
         this.micHashingAlgorithm = micHashingAlgorithm;

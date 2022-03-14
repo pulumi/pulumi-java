@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.ConnectionMonitorEndpointFilterItemResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ConnectionMonitorEndpointFilterResponse extends io.pulumi.res
      * List of items in the filter.
      * 
      */
-    @InputImport(name="items")
+    @Import(name="items")
       private final @Nullable List<ConnectionMonitorEndpointFilterItemResponse> items;
 
     public List<ConnectionMonitorEndpointFilterItemResponse> getItems() {
@@ -35,7 +35,7 @@ public final class ConnectionMonitorEndpointFilterResponse extends io.pulumi.res
      * The behavior of the endpoint filter. Currently only 'Include' is supported.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable String type;
 
     public Optional<String> getType() {

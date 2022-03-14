@@ -5,7 +5,7 @@ package io.pulumi.azurenative.containerregistry.inputs;
 
 import io.pulumi.azurenative.containerregistry.inputs.BaseImageDependencyResponse;
 import io.pulumi.azurenative.containerregistry.inputs.SetValueResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class EncodedTaskStepResponse extends io.pulumi.resources.InvokeArg
      * List of base image dependencies for a step.
      * 
      */
-    @InputImport(name="baseImageDependencies", required=true)
+    @Import(name="baseImageDependencies", required=true)
       private final List<BaseImageDependencyResponse> baseImageDependencies;
 
     public List<BaseImageDependencyResponse> getBaseImageDependencies() {
@@ -36,7 +36,7 @@ public final class EncodedTaskStepResponse extends io.pulumi.resources.InvokeArg
      * The token (git PAT or SAS token of storage account blob) associated with the context for a step.
      * 
      */
-    @InputImport(name="contextAccessToken")
+    @Import(name="contextAccessToken")
       private final @Nullable String contextAccessToken;
 
     public Optional<String> getContextAccessToken() {
@@ -47,7 +47,7 @@ public final class EncodedTaskStepResponse extends io.pulumi.resources.InvokeArg
      * The URL(absolute or relative) of the source context for the task step.
      * 
      */
-    @InputImport(name="contextPath")
+    @Import(name="contextPath")
       private final @Nullable String contextPath;
 
     public Optional<String> getContextPath() {
@@ -58,7 +58,7 @@ public final class EncodedTaskStepResponse extends io.pulumi.resources.InvokeArg
      * Base64 encoded value of the template/definition file content.
      * 
      */
-    @InputImport(name="encodedTaskContent", required=true)
+    @Import(name="encodedTaskContent", required=true)
       private final String encodedTaskContent;
 
     public String getEncodedTaskContent() {
@@ -69,7 +69,7 @@ public final class EncodedTaskStepResponse extends io.pulumi.resources.InvokeArg
      * Base64 encoded value of the parameters/values file content.
      * 
      */
-    @InputImport(name="encodedValuesContent")
+    @Import(name="encodedValuesContent")
       private final @Nullable String encodedValuesContent;
 
     public Optional<String> getEncodedValuesContent() {
@@ -81,7 +81,7 @@ public final class EncodedTaskStepResponse extends io.pulumi.resources.InvokeArg
      * Expected value is 'EncodedTask'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {
@@ -92,7 +92,7 @@ public final class EncodedTaskStepResponse extends io.pulumi.resources.InvokeArg
      * The collection of overridable values that can be passed when running a task.
      * 
      */
-    @InputImport(name="values")
+    @Import(name="values")
       private final @Nullable List<SetValueResponse> values;
 
     public List<SetValueResponse> getValues() {

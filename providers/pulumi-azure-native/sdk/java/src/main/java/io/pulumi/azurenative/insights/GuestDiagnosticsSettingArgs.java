@@ -5,7 +5,7 @@ package io.pulumi.azurenative.insights;
 
 import io.pulumi.azurenative.insights.inputs.DataSourceArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class GuestDiagnosticsSettingArgs extends io.pulumi.resources.Resou
      * the array of data source object which are configured to collect and send data
      * 
      */
-    @InputImport(name="dataSources")
+    @Import(name="dataSources")
       private final @Nullable Output<List<DataSourceArgs>> dataSources;
 
     public Output<List<DataSourceArgs>> getDataSources() {
@@ -32,7 +32,7 @@ public final class GuestDiagnosticsSettingArgs extends io.pulumi.resources.Resou
      * The name of the diagnostic setting.
      * 
      */
-    @InputImport(name="diagnosticSettingsName")
+    @Import(name="diagnosticSettingsName")
       private final @Nullable Output<String> diagnosticSettingsName;
 
     public Output<String> getDiagnosticSettingsName() {
@@ -43,7 +43,7 @@ public final class GuestDiagnosticsSettingArgs extends io.pulumi.resources.Resou
      * Resource location
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -54,14 +54,14 @@ public final class GuestDiagnosticsSettingArgs extends io.pulumi.resources.Resou
      * Operating system type for the configuration
      * 
      */
-    @InputImport(name="osType")
+    @Import(name="osType")
       private final @Nullable Output<String> osType;
 
     public Output<String> getOsType() {
         return this.osType == null ? Output.empty() : this.osType;
     }
 
-    @InputImport(name="proxySetting")
+    @Import(name="proxySetting")
       private final @Nullable Output<String> proxySetting;
 
     public Output<String> getProxySetting() {
@@ -72,7 +72,7 @@ public final class GuestDiagnosticsSettingArgs extends io.pulumi.resources.Resou
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -83,7 +83,7 @@ public final class GuestDiagnosticsSettingArgs extends io.pulumi.resources.Resou
      * Resource tags
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

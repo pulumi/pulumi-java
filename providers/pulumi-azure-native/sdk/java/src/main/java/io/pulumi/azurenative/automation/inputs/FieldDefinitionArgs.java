@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.automation.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class FieldDefinitionArgs extends io.pulumi.resources.ResourceArgs 
      * Gets or sets the isEncrypted flag of the connection field definition.
      * 
      */
-    @InputImport(name="isEncrypted")
+    @Import(name="isEncrypted")
       private final @Nullable Output<Boolean> isEncrypted;
 
     public Output<Boolean> getIsEncrypted() {
@@ -34,7 +34,7 @@ public final class FieldDefinitionArgs extends io.pulumi.resources.ResourceArgs 
      * Gets or sets the isOptional flag of the connection field definition.
      * 
      */
-    @InputImport(name="isOptional")
+    @Import(name="isOptional")
       private final @Nullable Output<Boolean> isOptional;
 
     public Output<Boolean> getIsOptional() {
@@ -45,7 +45,7 @@ public final class FieldDefinitionArgs extends io.pulumi.resources.ResourceArgs 
      * Gets or sets the type of the connection field definition.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {

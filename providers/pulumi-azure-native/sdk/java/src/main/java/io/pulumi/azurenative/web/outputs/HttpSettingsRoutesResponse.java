@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class HttpSettingsRoutesResponse {
     /**
      * The prefix that should precede all the authentication/authorization paths.
@@ -17,8 +17,8 @@ public final class HttpSettingsRoutesResponse {
      */
     private final @Nullable String apiPrefix;
 
-    @OutputCustomType.Constructor
-    private HttpSettingsRoutesResponse(@OutputCustomType.Parameter("apiPrefix") @Nullable String apiPrefix) {
+    @CustomType.Constructor
+    private HttpSettingsRoutesResponse(@CustomType.Parameter("apiPrefix") @Nullable String apiPrefix) {
         this.apiPrefix = apiPrefix;
     }
 

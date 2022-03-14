@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.compute.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +18,7 @@ public final class UserArtifactManageResponse extends io.pulumi.resources.Invoke
      * Required. The path and arguments to install the gallery application. This is limited to 4096 characters.
      * 
      */
-    @InputImport(name="install", required=true)
+    @Import(name="install", required=true)
       private final String install;
 
     public String getInstall() {
@@ -29,7 +29,7 @@ public final class UserArtifactManageResponse extends io.pulumi.resources.Invoke
      * Required. The path and arguments to remove the gallery application. This is limited to 4096 characters.
      * 
      */
-    @InputImport(name="remove", required=true)
+    @Import(name="remove", required=true)
       private final String remove;
 
     public String getRemove() {
@@ -40,7 +40,7 @@ public final class UserArtifactManageResponse extends io.pulumi.resources.Invoke
      * Optional. The path and arguments to update the gallery application. If not present, then update operation will invoke remove command on the previous version and install command on the current version of the gallery application. This is limited to 4096 characters.
      * 
      */
-    @InputImport(name="update")
+    @Import(name="update")
       private final @Nullable String update;
 
     public Optional<String> getUpdate() {

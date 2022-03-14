@@ -6,7 +6,7 @@ package io.pulumi.azurenative.machinelearningservices.inputs;
 import io.pulumi.azurenative.machinelearningservices.inputs.DatasetResponseDataPath;
 import io.pulumi.azurenative.machinelearningservices.inputs.DatasetStateResponse;
 import io.pulumi.azurenative.machinelearningservices.inputs.UserInfoResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -28,7 +28,7 @@ public final class DatasetResponseLatest extends io.pulumi.resources.InvokeArgs 
      * User who created.
      * 
      */
-    @InputImport(name="createdBy")
+    @Import(name="createdBy")
       private final @Nullable UserInfoResponse createdBy;
 
     public Optional<UserInfoResponse> getCreatedBy() {
@@ -39,7 +39,7 @@ public final class DatasetResponseLatest extends io.pulumi.resources.InvokeArgs 
      * The dataset creation time (UTC).
      * 
      */
-    @InputImport(name="createdTime", required=true)
+    @Import(name="createdTime", required=true)
       private final String createdTime;
 
     public String getCreatedTime() {
@@ -50,7 +50,7 @@ public final class DatasetResponseLatest extends io.pulumi.resources.InvokeArgs 
      *  Datastore and reference to location of data such as relativePath, Sql Query and etc.
      * 
      */
-    @InputImport(name="dataPath")
+    @Import(name="dataPath")
       private final @Nullable DatasetResponseDataPath dataPath;
 
     public Optional<DatasetResponseDataPath> getDataPath() {
@@ -61,7 +61,7 @@ public final class DatasetResponseLatest extends io.pulumi.resources.InvokeArgs 
      * Dataflow Json
      * 
      */
-    @InputImport(name="dataflow", required=true)
+    @Import(name="dataflow", required=true)
       private final String dataflow;
 
     public String getDataflow() {
@@ -72,7 +72,7 @@ public final class DatasetResponseLatest extends io.pulumi.resources.InvokeArgs 
      * Dataset state
      * 
      */
-    @InputImport(name="datasetDefinitionState")
+    @Import(name="datasetDefinitionState")
       private final @Nullable DatasetStateResponse datasetDefinitionState;
 
     public Optional<DatasetStateResponse> getDatasetDefinitionState() {
@@ -83,7 +83,7 @@ public final class DatasetResponseLatest extends io.pulumi.resources.InvokeArgs 
      * Unique Dataset identifier.
      * 
      */
-    @InputImport(name="datasetId", required=true)
+    @Import(name="datasetId", required=true)
       private final String datasetId;
 
     public String getDatasetId() {
@@ -94,7 +94,7 @@ public final class DatasetResponseLatest extends io.pulumi.resources.InvokeArgs 
      * Description about the dataset.
      * 
      */
-    @InputImport(name="description", required=true)
+    @Import(name="description", required=true)
       private final String description;
 
     public String getDescription() {
@@ -105,7 +105,7 @@ public final class DatasetResponseLatest extends io.pulumi.resources.InvokeArgs 
      * eTag description
      * 
      */
-    @InputImport(name="etag", required=true)
+    @Import(name="etag", required=true)
       private final String etag;
 
     public String getEtag() {
@@ -116,7 +116,7 @@ public final class DatasetResponseLatest extends io.pulumi.resources.InvokeArgs 
      * Dataset FileType, specified by user.
      * 
      */
-    @InputImport(name="fileType", required=true)
+    @Import(name="fileType", required=true)
       private final String fileType;
 
     public String getFileType() {
@@ -127,7 +127,7 @@ public final class DatasetResponseLatest extends io.pulumi.resources.InvokeArgs 
      * The dataset last modified time (UTC).
      * 
      */
-    @InputImport(name="modifiedTime", required=true)
+    @Import(name="modifiedTime", required=true)
       private final String modifiedTime;
 
     public String getModifiedTime() {
@@ -138,7 +138,7 @@ public final class DatasetResponseLatest extends io.pulumi.resources.InvokeArgs 
      * Summary of Definition changes.
      * 
      */
-    @InputImport(name="notes", required=true)
+    @Import(name="notes", required=true)
       private final String notes;
 
     public String getNotes() {
@@ -149,7 +149,7 @@ public final class DatasetResponseLatest extends io.pulumi.resources.InvokeArgs 
      * Indicates how the source data is partitioned. This is defined to filter on a range of partitioned data before performing actions or materialization.
      * 
      */
-    @InputImport(name="partitionFormatInPath", required=true)
+    @Import(name="partitionFormatInPath", required=true)
       private final Boolean partitionFormatInPath;
 
     public Boolean getPartitionFormatInPath() {
@@ -160,7 +160,7 @@ public final class DatasetResponseLatest extends io.pulumi.resources.InvokeArgs 
      * Properties stores information like name of time series column for time series dataset.
      * 
      */
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable Map<String,Object> properties;
 
     public Map<String,Object> getProperties() {
@@ -171,7 +171,7 @@ public final class DatasetResponseLatest extends io.pulumi.resources.InvokeArgs 
      * Indicates the saved dataset this definition is mapping to, populated on Get.
      * 
      */
-    @InputImport(name="savedDatasetId", required=true)
+    @Import(name="savedDatasetId", required=true)
       private final String savedDatasetId;
 
     public String getSavedDatasetId() {
@@ -182,7 +182,7 @@ public final class DatasetResponseLatest extends io.pulumi.resources.InvokeArgs 
      * Tags associated with the dataset.
      * 
      */
-    @InputImport(name="tags", required=true)
+    @Import(name="tags", required=true)
       private final Map<String,String> tags;
 
     public Map<String,String> getTags() {
@@ -193,7 +193,7 @@ public final class DatasetResponseLatest extends io.pulumi.resources.InvokeArgs 
      *  Telemetry information about the dataset including information like which service the dataset was created from.
      * 
      */
-    @InputImport(name="telemetryInfo", required=true)
+    @Import(name="telemetryInfo", required=true)
       private final Map<String,String> telemetryInfo;
 
     public Map<String,String> getTelemetryInfo() {
@@ -204,7 +204,7 @@ public final class DatasetResponseLatest extends io.pulumi.resources.InvokeArgs 
      *  Whether to use description and tags from the definition level as opposed to dataset level (old behavior).
      * 
      */
-    @InputImport(name="useDescriptionTagsFromDefinition", required=true)
+    @Import(name="useDescriptionTagsFromDefinition", required=true)
       private final Boolean useDescriptionTagsFromDefinition;
 
     public Boolean getUseDescriptionTagsFromDefinition() {
@@ -215,7 +215,7 @@ public final class DatasetResponseLatest extends io.pulumi.resources.InvokeArgs 
      * An identifier uniquely identifies a definition change.
      * 
      */
-    @InputImport(name="versionId", required=true)
+    @Import(name="versionId", required=true)
       private final String versionId;
 
     public String getVersionId() {

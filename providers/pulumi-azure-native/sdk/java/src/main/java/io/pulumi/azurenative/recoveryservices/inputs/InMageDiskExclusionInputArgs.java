@@ -6,7 +6,7 @@ package io.pulumi.azurenative.recoveryservices.inputs;
 import io.pulumi.azurenative.recoveryservices.inputs.InMageDiskSignatureExclusionOptionsArgs;
 import io.pulumi.azurenative.recoveryservices.inputs.InMageVolumeExclusionOptionsArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class InMageDiskExclusionInputArgs extends io.pulumi.resources.Reso
      * The guest disk signature based option for disk exclusion.
      * 
      */
-    @InputImport(name="diskSignatureOptions")
+    @Import(name="diskSignatureOptions")
       private final @Nullable Output<List<InMageDiskSignatureExclusionOptionsArgs>> diskSignatureOptions;
 
     public Output<List<InMageDiskSignatureExclusionOptionsArgs>> getDiskSignatureOptions() {
@@ -35,7 +35,7 @@ public final class InMageDiskExclusionInputArgs extends io.pulumi.resources.Reso
      * The volume label based option for disk exclusion.
      * 
      */
-    @InputImport(name="volumeOptions")
+    @Import(name="volumeOptions")
       private final @Nullable Output<List<InMageVolumeExclusionOptionsArgs>> volumeOptions;
 
     public Output<List<InMageVolumeExclusionOptionsArgs>> getVolumeOptions() {

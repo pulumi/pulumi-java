@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class HostNameSslStateResponse {
     /**
      * Indicates whether the hostname is a standard or repository hostname.
@@ -43,14 +43,14 @@ public final class HostNameSslStateResponse {
      */
     private final @Nullable String virtualIP;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private HostNameSslStateResponse(
-        @OutputCustomType.Parameter("hostType") @Nullable String hostType,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("sslState") @Nullable String sslState,
-        @OutputCustomType.Parameter("thumbprint") @Nullable String thumbprint,
-        @OutputCustomType.Parameter("toUpdate") @Nullable Boolean toUpdate,
-        @OutputCustomType.Parameter("virtualIP") @Nullable String virtualIP) {
+        @CustomType.Parameter("hostType") @Nullable String hostType,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("sslState") @Nullable String sslState,
+        @CustomType.Parameter("thumbprint") @Nullable String thumbprint,
+        @CustomType.Parameter("toUpdate") @Nullable Boolean toUpdate,
+        @CustomType.Parameter("virtualIP") @Nullable String virtualIP) {
         this.hostType = hostType;
         this.name = name;
         this.sslState = sslState;

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.avs.WorkloadNetworkDnsZoneArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Double;
 import java.lang.String;
@@ -35,7 +35,7 @@ public class WorkloadNetworkDnsZone extends io.pulumi.resources.CustomResource {
      * Display name of the DNS Zone.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output</* @Nullable */ String> displayName;
 
     /**
@@ -49,7 +49,7 @@ public class WorkloadNetworkDnsZone extends io.pulumi.resources.CustomResource {
      * DNS Server IP array of the DNS Zone.
      * 
      */
-    @OutputExport(name="dnsServerIps", type=List.class, parameters={String.class})
+    @Export(name="dnsServerIps", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> dnsServerIps;
 
     /**
@@ -63,7 +63,7 @@ public class WorkloadNetworkDnsZone extends io.pulumi.resources.CustomResource {
      * Number of DNS Services using the DNS zone.
      * 
      */
-    @OutputExport(name="dnsServices", type=Double.class, parameters={})
+    @Export(name="dnsServices", type=Double.class, parameters={})
     private Output</* @Nullable */ Double> dnsServices;
 
     /**
@@ -77,7 +77,7 @@ public class WorkloadNetworkDnsZone extends io.pulumi.resources.CustomResource {
      * Domain names of the DNS Zone.
      * 
      */
-    @OutputExport(name="domain", type=List.class, parameters={String.class})
+    @Export(name="domain", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> domain;
 
     /**
@@ -91,7 +91,7 @@ public class WorkloadNetworkDnsZone extends io.pulumi.resources.CustomResource {
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -105,7 +105,7 @@ public class WorkloadNetworkDnsZone extends io.pulumi.resources.CustomResource {
      * The provisioning state
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -119,7 +119,7 @@ public class WorkloadNetworkDnsZone extends io.pulumi.resources.CustomResource {
      * NSX revision number.
      * 
      */
-    @OutputExport(name="revision", type=Double.class, parameters={})
+    @Export(name="revision", type=Double.class, parameters={})
     private Output</* @Nullable */ Double> revision;
 
     /**
@@ -133,7 +133,7 @@ public class WorkloadNetworkDnsZone extends io.pulumi.resources.CustomResource {
      * Source IP of the DNS Zone.
      * 
      */
-    @OutputExport(name="sourceIp", type=String.class, parameters={})
+    @Export(name="sourceIp", type=String.class, parameters={})
     private Output</* @Nullable */ String> sourceIp;
 
     /**
@@ -147,7 +147,7 @@ public class WorkloadNetworkDnsZone extends io.pulumi.resources.CustomResource {
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

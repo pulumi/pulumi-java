@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.eventhub;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class ConsumerGroupArgs extends io.pulumi.resources.ResourceArgs {
      * The consumer group name
      * 
      */
-    @InputImport(name="consumerGroupName")
+    @Import(name="consumerGroupName")
       private final @Nullable Output<String> consumerGroupName;
 
     public Output<String> getConsumerGroupName() {
@@ -29,7 +29,7 @@ public final class ConsumerGroupArgs extends io.pulumi.resources.ResourceArgs {
      * The Event Hub name
      * 
      */
-    @InputImport(name="eventHubName", required=true)
+    @Import(name="eventHubName", required=true)
       private final Output<String> eventHubName;
 
     public Output<String> getEventHubName() {
@@ -40,7 +40,7 @@ public final class ConsumerGroupArgs extends io.pulumi.resources.ResourceArgs {
      * The Namespace name
      * 
      */
-    @InputImport(name="namespaceName", required=true)
+    @Import(name="namespaceName", required=true)
       private final Output<String> namespaceName;
 
     public Output<String> getNamespaceName() {
@@ -51,7 +51,7 @@ public final class ConsumerGroupArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the resource group within the azure subscription.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -62,7 +62,7 @@ public final class ConsumerGroupArgs extends io.pulumi.resources.ResourceArgs {
      * User Metadata is a placeholder to store user-defined string data with maximum length 1024. e.g. it can be used to store descriptive data, such as list of teams and their contact information also user-defined configuration settings can be stored.
      * 
      */
-    @InputImport(name="userMetadata")
+    @Import(name="userMetadata")
       private final @Nullable Output<String> userMetadata;
 
     public Output<String> getUserMetadata() {

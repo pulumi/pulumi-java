@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.vmwarecloudsimple.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetVirtualMachineArgs extends io.pulumi.resources.InvokeArgs 
      * The name of the resource group
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {
@@ -27,7 +27,7 @@ public final class GetVirtualMachineArgs extends io.pulumi.resources.InvokeArgs 
      * virtual machine name
      * 
      */
-    @InputImport(name="virtualMachineName", required=true)
+    @Import(name="virtualMachineName", required=true)
       private final String virtualMachineName;
 
     public String getVirtualMachineName() {

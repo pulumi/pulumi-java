@@ -5,7 +5,7 @@ package io.pulumi.azurenative.operationsmanagement;
 
 import io.pulumi.azurenative.operationsmanagement.inputs.ManagementAssociationPropertiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class ManagementAssociationArgs extends io.pulumi.resources.Resourc
      * Resource location
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -30,7 +30,7 @@ public final class ManagementAssociationArgs extends io.pulumi.resources.Resourc
      * User ManagementAssociation Name.
      * 
      */
-    @InputImport(name="managementAssociationName")
+    @Import(name="managementAssociationName")
       private final @Nullable Output<String> managementAssociationName;
 
     public Output<String> getManagementAssociationName() {
@@ -41,7 +41,7 @@ public final class ManagementAssociationArgs extends io.pulumi.resources.Resourc
      * Properties for ManagementAssociation object supported by the OperationsManagement resource provider.
      * 
      */
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable Output<ManagementAssociationPropertiesArgs> properties;
 
     public Output<ManagementAssociationPropertiesArgs> getProperties() {
@@ -52,7 +52,7 @@ public final class ManagementAssociationArgs extends io.pulumi.resources.Resourc
      * Provider name for the parent resource.
      * 
      */
-    @InputImport(name="providerName", required=true)
+    @Import(name="providerName", required=true)
       private final Output<String> providerName;
 
     public Output<String> getProviderName() {
@@ -63,7 +63,7 @@ public final class ManagementAssociationArgs extends io.pulumi.resources.Resourc
      * The name of the resource group to get. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -74,7 +74,7 @@ public final class ManagementAssociationArgs extends io.pulumi.resources.Resourc
      * Parent resource name.
      * 
      */
-    @InputImport(name="resourceName", required=true)
+    @Import(name="resourceName", required=true)
       private final Output<String> resourceName;
 
     public Output<String> getPropResourceName() {
@@ -85,7 +85,7 @@ public final class ManagementAssociationArgs extends io.pulumi.resources.Resourc
      * Resource type for the parent resource
      * 
      */
-    @InputImport(name="resourceType", required=true)
+    @Import(name="resourceType", required=true)
       private final Output<String> resourceType;
 
     public Output<String> getPropResourceType() {

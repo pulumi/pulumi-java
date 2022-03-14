@@ -5,14 +5,14 @@ package io.pulumi.azurenative.apimanagement.outputs;
 
 import io.pulumi.azurenative.apimanagement.outputs.ParameterContractResponse;
 import io.pulumi.azurenative.apimanagement.outputs.RepresentationContractResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RequestContractResponse {
     /**
      * Operation request description.
@@ -35,12 +35,12 @@ public final class RequestContractResponse {
      */
     private final @Nullable List<RepresentationContractResponse> representations;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RequestContractResponse(
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("headers") @Nullable List<ParameterContractResponse> headers,
-        @OutputCustomType.Parameter("queryParameters") @Nullable List<ParameterContractResponse> queryParameters,
-        @OutputCustomType.Parameter("representations") @Nullable List<RepresentationContractResponse> representations) {
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("headers") @Nullable List<ParameterContractResponse> headers,
+        @CustomType.Parameter("queryParameters") @Nullable List<ParameterContractResponse> queryParameters,
+        @CustomType.Parameter("representations") @Nullable List<RepresentationContractResponse> representations) {
         this.description = description;
         this.headers = headers;
         this.queryParameters = queryParameters;

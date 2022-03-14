@@ -8,7 +8,7 @@ import io.pulumi.azurenative.network.inputs.CacheConfigurationArgs;
 import io.pulumi.azurenative.network.inputs.SubResourceArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +26,7 @@ public final class ForwardingConfigurationArgs extends io.pulumi.resources.Resou
      * A reference to the BackendPool which this rule routes to.
      * 
      */
-    @InputImport(name="backendPool")
+    @Import(name="backendPool")
       private final @Nullable Output<SubResourceArgs> backendPool;
 
     public Output<SubResourceArgs> getBackendPool() {
@@ -37,7 +37,7 @@ public final class ForwardingConfigurationArgs extends io.pulumi.resources.Resou
      * The caching configuration associated with this rule.
      * 
      */
-    @InputImport(name="cacheConfiguration")
+    @Import(name="cacheConfiguration")
       private final @Nullable Output<CacheConfigurationArgs> cacheConfiguration;
 
     public Output<CacheConfigurationArgs> getCacheConfiguration() {
@@ -48,7 +48,7 @@ public final class ForwardingConfigurationArgs extends io.pulumi.resources.Resou
      * A custom path used to rewrite resource paths matched by this rule. Leave empty to use incoming path.
      * 
      */
-    @InputImport(name="customForwardingPath")
+    @Import(name="customForwardingPath")
       private final @Nullable Output<String> customForwardingPath;
 
     public Output<String> getCustomForwardingPath() {
@@ -59,7 +59,7 @@ public final class ForwardingConfigurationArgs extends io.pulumi.resources.Resou
      * Protocol this rule will use when forwarding traffic to backends.
      * 
      */
-    @InputImport(name="forwardingProtocol")
+    @Import(name="forwardingProtocol")
       private final @Nullable Output<Either<String,FrontDoorForwardingProtocol>> forwardingProtocol;
 
     public Output<Either<String,FrontDoorForwardingProtocol>> getForwardingProtocol() {
@@ -70,7 +70,7 @@ public final class ForwardingConfigurationArgs extends io.pulumi.resources.Resou
      * Expected value is '#Microsoft.Azure.FrontDoor.Models.FrontdoorForwardingConfiguration'.
      * 
      */
-    @InputImport(name="odataType", required=true)
+    @Import(name="odataType", required=true)
       private final Output<String> odataType;
 
     public Output<String> getOdataType() {

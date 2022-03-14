@@ -6,7 +6,7 @@ package io.pulumi.azurenative.servicefabricmesh;
 import io.pulumi.azurenative.servicefabricmesh.inputs.DiagnosticsDescriptionArgs;
 import io.pulumi.azurenative.servicefabricmesh.inputs.ServiceResourceDescriptionArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -22,7 +22,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * The identity of the application.
      * 
      */
-    @InputImport(name="applicationResourceName")
+    @Import(name="applicationResourceName")
       private final @Nullable Output<String> applicationResourceName;
 
     public Output<String> getApplicationResourceName() {
@@ -33,7 +33,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * Internal - used by Visual Studio to setup the debugging session on the local development environment.
      * 
      */
-    @InputImport(name="debugParams")
+    @Import(name="debugParams")
       private final @Nullable Output<String> debugParams;
 
     public Output<String> getDebugParams() {
@@ -44,7 +44,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * User readable description of the application.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -55,7 +55,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * Describes the diagnostics definition and usage for an application resource.
      * 
      */
-    @InputImport(name="diagnostics")
+    @Import(name="diagnostics")
       private final @Nullable Output<DiagnosticsDescriptionArgs> diagnostics;
 
     public Output<DiagnosticsDescriptionArgs> getDiagnostics() {
@@ -66,7 +66,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * The geo-location where the resource lives
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -77,7 +77,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * Azure resource group name
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -88,7 +88,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * Describes the services in the application. This property is used to create or modify services of the application. On get only the name of the service is returned. The service description can be obtained by querying for the service resource.
      * 
      */
-    @InputImport(name="services")
+    @Import(name="services")
       private final @Nullable Output<List<ServiceResourceDescriptionArgs>> services;
 
     public Output<List<ServiceResourceDescriptionArgs>> getServices() {
@@ -99,7 +99,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * Resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

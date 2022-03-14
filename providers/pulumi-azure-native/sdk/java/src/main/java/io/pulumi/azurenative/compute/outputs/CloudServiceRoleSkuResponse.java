@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CloudServiceRoleSkuResponse {
     /**
      * Specifies the number of role instances in the cloud service.
@@ -28,11 +28,11 @@ public final class CloudServiceRoleSkuResponse {
      */
     private final @Nullable String tier;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CloudServiceRoleSkuResponse(
-        @OutputCustomType.Parameter("capacity") @Nullable Double capacity,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("tier") @Nullable String tier) {
+        @CustomType.Parameter("capacity") @Nullable Double capacity,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("tier") @Nullable String tier) {
         this.capacity = capacity;
         this.name = name;
         this.tier = tier;

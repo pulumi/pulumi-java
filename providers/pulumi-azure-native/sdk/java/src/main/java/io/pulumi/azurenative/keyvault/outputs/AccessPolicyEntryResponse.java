@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.keyvault.outputs;
 
 import io.pulumi.azurenative.keyvault.outputs.PermissionsResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AccessPolicyEntryResponse {
     /**
      *  Application ID of the client making request on behalf of a principal
@@ -33,12 +33,12 @@ public final class AccessPolicyEntryResponse {
      */
     private final String tenantId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AccessPolicyEntryResponse(
-        @OutputCustomType.Parameter("applicationId") @Nullable String applicationId,
-        @OutputCustomType.Parameter("objectId") String objectId,
-        @OutputCustomType.Parameter("permissions") PermissionsResponse permissions,
-        @OutputCustomType.Parameter("tenantId") String tenantId) {
+        @CustomType.Parameter("applicationId") @Nullable String applicationId,
+        @CustomType.Parameter("objectId") String objectId,
+        @CustomType.Parameter("permissions") PermissionsResponse permissions,
+        @CustomType.Parameter("tenantId") String tenantId) {
         this.applicationId = applicationId;
         this.objectId = objectId;
         this.permissions = permissions;

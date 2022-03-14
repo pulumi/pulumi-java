@@ -5,14 +5,14 @@ package io.pulumi.azurenative.web.outputs;
 
 import io.pulumi.azurenative.web.outputs.BlobStorageTokenStoreResponse;
 import io.pulumi.azurenative.web.outputs.FileSystemTokenStoreResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TokenStoreResponse {
     /**
      * The configuration settings of the storage of the tokens if blob storage is used.
@@ -37,12 +37,12 @@ public final class TokenStoreResponse {
      */
     private final @Nullable Double tokenRefreshExtensionHours;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TokenStoreResponse(
-        @OutputCustomType.Parameter("azureBlobStorage") @Nullable BlobStorageTokenStoreResponse azureBlobStorage,
-        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
-        @OutputCustomType.Parameter("fileSystem") @Nullable FileSystemTokenStoreResponse fileSystem,
-        @OutputCustomType.Parameter("tokenRefreshExtensionHours") @Nullable Double tokenRefreshExtensionHours) {
+        @CustomType.Parameter("azureBlobStorage") @Nullable BlobStorageTokenStoreResponse azureBlobStorage,
+        @CustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @CustomType.Parameter("fileSystem") @Nullable FileSystemTokenStoreResponse fileSystem,
+        @CustomType.Parameter("tokenRefreshExtensionHours") @Nullable Double tokenRefreshExtensionHours) {
         this.azureBlobStorage = azureBlobStorage;
         this.enabled = enabled;
         this.fileSystem = fileSystem;

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.extendedlocation.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class CustomLocationPropertiesResponseAuthentication extends io.pul
      * The type of the Custom Locations authentication
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable String type;
 
     public Optional<String> getType() {

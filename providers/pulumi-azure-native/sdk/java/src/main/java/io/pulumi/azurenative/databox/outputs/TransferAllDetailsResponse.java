@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.databox.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TransferAllDetailsResponse {
     /**
      * Type of the account of data
@@ -28,11 +28,11 @@ public final class TransferAllDetailsResponse {
      */
     private final @Nullable Boolean transferAllFiles;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TransferAllDetailsResponse(
-        @OutputCustomType.Parameter("dataAccountType") String dataAccountType,
-        @OutputCustomType.Parameter("transferAllBlobs") @Nullable Boolean transferAllBlobs,
-        @OutputCustomType.Parameter("transferAllFiles") @Nullable Boolean transferAllFiles) {
+        @CustomType.Parameter("dataAccountType") String dataAccountType,
+        @CustomType.Parameter("transferAllBlobs") @Nullable Boolean transferAllBlobs,
+        @CustomType.Parameter("transferAllFiles") @Nullable Boolean transferAllFiles) {
         this.dataAccountType = dataAccountType;
         this.transferAllBlobs = transferAllBlobs;
         this.transferAllFiles = transferAllFiles;

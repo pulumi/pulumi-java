@@ -5,7 +5,7 @@ package io.pulumi.azurenative.devops.outputs;
 
 import io.pulumi.azurenative.devops.outputs.BootstrapConfigurationResponse;
 import io.pulumi.azurenative.devops.outputs.SystemDataResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetPipelineResult {
     /**
      * Configuration used to bootstrap the Pipeline.
@@ -61,17 +61,17 @@ public final class GetPipelineResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetPipelineResult(
-        @OutputCustomType.Parameter("bootstrapConfiguration") BootstrapConfigurationResponse bootstrapConfiguration,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("pipelineId") Integer pipelineId,
-        @OutputCustomType.Parameter("pipelineType") String pipelineType,
-        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("bootstrapConfiguration") BootstrapConfigurationResponse bootstrapConfiguration,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("pipelineId") Integer pipelineId,
+        @CustomType.Parameter("pipelineType") String pipelineType,
+        @CustomType.Parameter("systemData") SystemDataResponse systemData,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type) {
         this.bootstrapConfiguration = bootstrapConfiguration;
         this.id = id;
         this.location = location;

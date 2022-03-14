@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.recoveryservices.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class KeyEncryptionKeyInfoArgs extends io.pulumi.resources.Resource
      * The key URL / identifier.
      * 
      */
-    @InputImport(name="keyIdentifier")
+    @Import(name="keyIdentifier")
       private final @Nullable Output<String> keyIdentifier;
 
     public Output<String> getKeyIdentifier() {
@@ -33,7 +33,7 @@ public final class KeyEncryptionKeyInfoArgs extends io.pulumi.resources.Resource
      * The KeyVault resource ARM Id for key.
      * 
      */
-    @InputImport(name="keyVaultResourceArmId")
+    @Import(name="keyVaultResourceArmId")
       private final @Nullable Output<String> keyVaultResourceArmId;
 
     public Output<String> getKeyVaultResourceArmId() {

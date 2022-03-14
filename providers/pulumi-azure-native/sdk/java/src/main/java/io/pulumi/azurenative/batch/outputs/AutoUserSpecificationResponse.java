@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.batch.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AutoUserSpecificationResponse {
     /**
      * The default value is nonAdmin.
@@ -22,10 +22,10 @@ public final class AutoUserSpecificationResponse {
      */
     private final @Nullable String scope;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AutoUserSpecificationResponse(
-        @OutputCustomType.Parameter("elevationLevel") @Nullable String elevationLevel,
-        @OutputCustomType.Parameter("scope") @Nullable String scope) {
+        @CustomType.Parameter("elevationLevel") @Nullable String elevationLevel,
+        @CustomType.Parameter("scope") @Nullable String scope) {
         this.elevationLevel = elevationLevel;
         this.scope = scope;
     }

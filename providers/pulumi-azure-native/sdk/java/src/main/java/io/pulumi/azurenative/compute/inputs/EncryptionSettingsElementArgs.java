@@ -6,7 +6,7 @@ package io.pulumi.azurenative.compute.inputs;
 import io.pulumi.azurenative.compute.inputs.KeyVaultAndKeyReferenceArgs;
 import io.pulumi.azurenative.compute.inputs.KeyVaultAndSecretReferenceArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -23,7 +23,7 @@ public final class EncryptionSettingsElementArgs extends io.pulumi.resources.Res
      * Key Vault Secret Url and vault id of the disk encryption key
      * 
      */
-    @InputImport(name="diskEncryptionKey")
+    @Import(name="diskEncryptionKey")
       private final @Nullable Output<KeyVaultAndSecretReferenceArgs> diskEncryptionKey;
 
     public Output<KeyVaultAndSecretReferenceArgs> getDiskEncryptionKey() {
@@ -34,7 +34,7 @@ public final class EncryptionSettingsElementArgs extends io.pulumi.resources.Res
      * Key Vault Key Url and vault id of the key encryption key. KeyEncryptionKey is optional and when provided is used to unwrap the disk encryption key.
      * 
      */
-    @InputImport(name="keyEncryptionKey")
+    @Import(name="keyEncryptionKey")
       private final @Nullable Output<KeyVaultAndKeyReferenceArgs> keyEncryptionKey;
 
     public Output<KeyVaultAndKeyReferenceArgs> getKeyEncryptionKey() {

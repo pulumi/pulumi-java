@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.storagesync.outputs;
 
 import io.pulumi.azurenative.storagesync.outputs.ServerEndpointRecallErrorResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ServerEndpointRecallStatusResponse {
     /**
      * Last updated timestamp
@@ -28,11 +28,11 @@ public final class ServerEndpointRecallStatusResponse {
      */
     private final Double totalRecallErrorsCount;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServerEndpointRecallStatusResponse(
-        @OutputCustomType.Parameter("lastUpdatedTimestamp") String lastUpdatedTimestamp,
-        @OutputCustomType.Parameter("recallErrors") List<ServerEndpointRecallErrorResponse> recallErrors,
-        @OutputCustomType.Parameter("totalRecallErrorsCount") Double totalRecallErrorsCount) {
+        @CustomType.Parameter("lastUpdatedTimestamp") String lastUpdatedTimestamp,
+        @CustomType.Parameter("recallErrors") List<ServerEndpointRecallErrorResponse> recallErrors,
+        @CustomType.Parameter("totalRecallErrorsCount") Double totalRecallErrorsCount) {
         this.lastUpdatedTimestamp = lastUpdatedTimestamp;
         this.recallErrors = recallErrors;
         this.totalRecallErrorsCount = totalRecallErrorsCount;

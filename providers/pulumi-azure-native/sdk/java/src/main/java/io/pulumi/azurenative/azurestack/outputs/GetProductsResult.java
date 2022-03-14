@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.azurestack.outputs;
 
 import io.pulumi.azurenative.azurestack.outputs.ProductResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetProductsResult {
     /**
      * URI to the next page.
@@ -24,10 +24,10 @@ public final class GetProductsResult {
      */
     private final @Nullable List<ProductResponse> value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetProductsResult(
-        @OutputCustomType.Parameter("nextLink") @Nullable String nextLink,
-        @OutputCustomType.Parameter("value") @Nullable List<ProductResponse> value) {
+        @CustomType.Parameter("nextLink") @Nullable String nextLink,
+        @CustomType.Parameter("value") @Nullable List<ProductResponse> value) {
         this.nextLink = nextLink;
         this.value = value;
     }

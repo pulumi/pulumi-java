@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.sql.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class JobStepActionResponse {
     /**
      * The source of the action to execute.
@@ -27,11 +27,11 @@ public final class JobStepActionResponse {
      */
     private final String value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private JobStepActionResponse(
-        @OutputCustomType.Parameter("source") @Nullable String source,
-        @OutputCustomType.Parameter("type") @Nullable String type,
-        @OutputCustomType.Parameter("value") String value) {
+        @CustomType.Parameter("source") @Nullable String source,
+        @CustomType.Parameter("type") @Nullable String type,
+        @CustomType.Parameter("value") String value) {
         this.source = source;
         this.type = type;
         this.value = value;

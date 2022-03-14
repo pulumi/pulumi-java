@@ -11,7 +11,7 @@ import io.pulumi.azurenative.network.outputs.VpnServerConfigRadiusClientRootCert
 import io.pulumi.azurenative.network.outputs.VpnServerConfigRadiusServerRootCertificateResponse;
 import io.pulumi.azurenative.network.outputs.VpnServerConfigVpnClientRevokedCertificateResponse;
 import io.pulumi.azurenative.network.outputs.VpnServerConfigVpnClientRootCertificateResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -19,7 +19,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetVpnServerConfigurationResult {
     /**
      * The set of aad vpn authentication parameters.
@@ -117,27 +117,27 @@ public final class GetVpnServerConfigurationResult {
      */
     private final @Nullable List<String> vpnProtocols;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetVpnServerConfigurationResult(
-        @OutputCustomType.Parameter("aadAuthenticationParameters") @Nullable AadAuthenticationParametersResponse aadAuthenticationParameters,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("p2SVpnGateways") List<P2SVpnGatewayResponse> p2SVpnGateways,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("radiusClientRootCertificates") @Nullable List<VpnServerConfigRadiusClientRootCertificateResponse> radiusClientRootCertificates,
-        @OutputCustomType.Parameter("radiusServerAddress") @Nullable String radiusServerAddress,
-        @OutputCustomType.Parameter("radiusServerRootCertificates") @Nullable List<VpnServerConfigRadiusServerRootCertificateResponse> radiusServerRootCertificates,
-        @OutputCustomType.Parameter("radiusServerSecret") @Nullable String radiusServerSecret,
-        @OutputCustomType.Parameter("radiusServers") @Nullable List<RadiusServerResponse> radiusServers,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("vpnAuthenticationTypes") @Nullable List<String> vpnAuthenticationTypes,
-        @OutputCustomType.Parameter("vpnClientIpsecPolicies") @Nullable List<IpsecPolicyResponse> vpnClientIpsecPolicies,
-        @OutputCustomType.Parameter("vpnClientRevokedCertificates") @Nullable List<VpnServerConfigVpnClientRevokedCertificateResponse> vpnClientRevokedCertificates,
-        @OutputCustomType.Parameter("vpnClientRootCertificates") @Nullable List<VpnServerConfigVpnClientRootCertificateResponse> vpnClientRootCertificates,
-        @OutputCustomType.Parameter("vpnProtocols") @Nullable List<String> vpnProtocols) {
+        @CustomType.Parameter("aadAuthenticationParameters") @Nullable AadAuthenticationParametersResponse aadAuthenticationParameters,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("p2SVpnGateways") List<P2SVpnGatewayResponse> p2SVpnGateways,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("radiusClientRootCertificates") @Nullable List<VpnServerConfigRadiusClientRootCertificateResponse> radiusClientRootCertificates,
+        @CustomType.Parameter("radiusServerAddress") @Nullable String radiusServerAddress,
+        @CustomType.Parameter("radiusServerRootCertificates") @Nullable List<VpnServerConfigRadiusServerRootCertificateResponse> radiusServerRootCertificates,
+        @CustomType.Parameter("radiusServerSecret") @Nullable String radiusServerSecret,
+        @CustomType.Parameter("radiusServers") @Nullable List<RadiusServerResponse> radiusServers,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("vpnAuthenticationTypes") @Nullable List<String> vpnAuthenticationTypes,
+        @CustomType.Parameter("vpnClientIpsecPolicies") @Nullable List<IpsecPolicyResponse> vpnClientIpsecPolicies,
+        @CustomType.Parameter("vpnClientRevokedCertificates") @Nullable List<VpnServerConfigVpnClientRevokedCertificateResponse> vpnClientRevokedCertificates,
+        @CustomType.Parameter("vpnClientRootCertificates") @Nullable List<VpnServerConfigVpnClientRootCertificateResponse> vpnClientRootCertificates,
+        @CustomType.Parameter("vpnProtocols") @Nullable List<String> vpnProtocols) {
         this.aadAuthenticationParameters = aadAuthenticationParameters;
         this.etag = etag;
         this.id = id;

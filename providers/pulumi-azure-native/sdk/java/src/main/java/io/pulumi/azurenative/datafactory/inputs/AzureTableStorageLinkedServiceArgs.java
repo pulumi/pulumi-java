@@ -7,7 +7,7 @@ import io.pulumi.azurenative.datafactory.inputs.AzureKeyVaultSecretReferenceArgs
 import io.pulumi.azurenative.datafactory.inputs.IntegrationRuntimeReferenceArgs;
 import io.pulumi.azurenative.datafactory.inputs.ParameterSpecificationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -28,7 +28,7 @@ public final class AzureTableStorageLinkedServiceArgs extends io.pulumi.resource
      * The Azure key vault secret reference of accountKey in connection string.
      * 
      */
-    @InputImport(name="accountKey")
+    @Import(name="accountKey")
       private final @Nullable Output<AzureKeyVaultSecretReferenceArgs> accountKey;
 
     public Output<AzureKeyVaultSecretReferenceArgs> getAccountKey() {
@@ -39,7 +39,7 @@ public final class AzureTableStorageLinkedServiceArgs extends io.pulumi.resource
      * List of tags that can be used for describing the linked service.
      * 
      */
-    @InputImport(name="annotations")
+    @Import(name="annotations")
       private final @Nullable Output<List<Object>> annotations;
 
     public Output<List<Object>> getAnnotations() {
@@ -50,7 +50,7 @@ public final class AzureTableStorageLinkedServiceArgs extends io.pulumi.resource
      * The integration runtime reference.
      * 
      */
-    @InputImport(name="connectVia")
+    @Import(name="connectVia")
       private final @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
 
     public Output<IntegrationRuntimeReferenceArgs> getConnectVia() {
@@ -61,7 +61,7 @@ public final class AzureTableStorageLinkedServiceArgs extends io.pulumi.resource
      * The connection string. It is mutually exclusive with sasUri property. Type: string, SecureString or AzureKeyVaultSecretReference.
      * 
      */
-    @InputImport(name="connectionString")
+    @Import(name="connectionString")
       private final @Nullable Output<Object> connectionString;
 
     public Output<Object> getConnectionString() {
@@ -72,7 +72,7 @@ public final class AzureTableStorageLinkedServiceArgs extends io.pulumi.resource
      * Linked service description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -83,7 +83,7 @@ public final class AzureTableStorageLinkedServiceArgs extends io.pulumi.resource
      * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="encryptedCredential")
+    @Import(name="encryptedCredential")
       private final @Nullable Output<String> encryptedCredential;
 
     public Output<String> getEncryptedCredential() {
@@ -94,7 +94,7 @@ public final class AzureTableStorageLinkedServiceArgs extends io.pulumi.resource
      * Parameters for linked service.
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
     public Output<Map<String,ParameterSpecificationArgs>> getParameters() {
@@ -105,7 +105,7 @@ public final class AzureTableStorageLinkedServiceArgs extends io.pulumi.resource
      * The Azure key vault secret reference of sasToken in sas uri.
      * 
      */
-    @InputImport(name="sasToken")
+    @Import(name="sasToken")
       private final @Nullable Output<AzureKeyVaultSecretReferenceArgs> sasToken;
 
     public Output<AzureKeyVaultSecretReferenceArgs> getSasToken() {
@@ -116,7 +116,7 @@ public final class AzureTableStorageLinkedServiceArgs extends io.pulumi.resource
      * SAS URI of the Azure Storage resource. It is mutually exclusive with connectionString property. Type: string, SecureString or AzureKeyVaultSecretReference.
      * 
      */
-    @InputImport(name="sasUri")
+    @Import(name="sasUri")
       private final @Nullable Output<Object> sasUri;
 
     public Output<Object> getSasUri() {
@@ -128,7 +128,7 @@ public final class AzureTableStorageLinkedServiceArgs extends io.pulumi.resource
      * Expected value is 'AzureTableStorage'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {

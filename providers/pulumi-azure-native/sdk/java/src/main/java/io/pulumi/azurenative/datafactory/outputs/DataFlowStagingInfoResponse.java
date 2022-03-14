@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.datafactory.outputs;
 
 import io.pulumi.azurenative.datafactory.outputs.LinkedServiceReferenceResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DataFlowStagingInfoResponse {
     /**
      * Folder path for staging blob. Type: string (or Expression with resultType string)
@@ -23,10 +23,10 @@ public final class DataFlowStagingInfoResponse {
      */
     private final @Nullable LinkedServiceReferenceResponse linkedService;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DataFlowStagingInfoResponse(
-        @OutputCustomType.Parameter("folderPath") @Nullable Object folderPath,
-        @OutputCustomType.Parameter("linkedService") @Nullable LinkedServiceReferenceResponse linkedService) {
+        @CustomType.Parameter("folderPath") @Nullable Object folderPath,
+        @CustomType.Parameter("linkedService") @Nullable LinkedServiceReferenceResponse linkedService) {
         this.folderPath = folderPath;
         this.linkedService = linkedService;
     }

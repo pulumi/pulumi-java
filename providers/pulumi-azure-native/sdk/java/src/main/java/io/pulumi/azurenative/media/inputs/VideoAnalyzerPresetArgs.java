@@ -7,7 +7,7 @@ import io.pulumi.azurenative.media.enums.AudioAnalysisMode;
 import io.pulumi.azurenative.media.enums.InsightsType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class VideoAnalyzerPresetArgs extends io.pulumi.resources.ResourceA
      * The language for the audio payload in the input using the BCP-47 format of 'language tag-region' (e.g: 'en-US').  If you know the language of your content, it is recommended that you specify it. The language must be specified explicitly for AudioAnalysisMode::Basic, since automatic language detection is not included in basic mode. If the language isn't specified or set to null, automatic language detection will choose the first language detected and process with the selected language for the duration of the file. It does not currently support dynamically switching between languages after the first language is detected. The automatic detection works best with audio recordings with clearly discernable speech. If automatic detection fails to find the language, transcription would fallback to 'en-US'." The list of supported languages is available here: https://go.microsoft.com/fwlink/?linkid=2109463
      * 
      */
-    @InputImport(name="audioLanguage")
+    @Import(name="audioLanguage")
       private final @Nullable Output<String> audioLanguage;
 
     public Output<String> getAudioLanguage() {
@@ -37,7 +37,7 @@ public final class VideoAnalyzerPresetArgs extends io.pulumi.resources.ResourceA
      * Dictionary containing key value pairs for parameters not exposed in the preset itself
      * 
      */
-    @InputImport(name="experimentalOptions")
+    @Import(name="experimentalOptions")
       private final @Nullable Output<Map<String,String>> experimentalOptions;
 
     public Output<Map<String,String>> getExperimentalOptions() {
@@ -48,7 +48,7 @@ public final class VideoAnalyzerPresetArgs extends io.pulumi.resources.ResourceA
      * Defines the type of insights that you want the service to generate. The allowed values are 'AudioInsightsOnly', 'VideoInsightsOnly', and 'AllInsights'. The default is AllInsights. If you set this to AllInsights and the input is audio only, then only audio insights are generated. Similarly if the input is video only, then only video insights are generated. It is recommended that you not use AudioInsightsOnly if you expect some of your inputs to be video only; or use VideoInsightsOnly if you expect some of your inputs to be audio only. Your Jobs in such conditions would error out.
      * 
      */
-    @InputImport(name="insightsToExtract")
+    @Import(name="insightsToExtract")
       private final @Nullable Output<Either<String,InsightsType>> insightsToExtract;
 
     public Output<Either<String,InsightsType>> getInsightsToExtract() {
@@ -59,7 +59,7 @@ public final class VideoAnalyzerPresetArgs extends io.pulumi.resources.ResourceA
      * Determines the set of audio analysis operations to be performed. If unspecified, the Standard AudioAnalysisMode would be chosen.
      * 
      */
-    @InputImport(name="mode")
+    @Import(name="mode")
       private final @Nullable Output<Either<String,AudioAnalysisMode>> mode;
 
     public Output<Either<String,AudioAnalysisMode>> getMode() {
@@ -71,7 +71,7 @@ public final class VideoAnalyzerPresetArgs extends io.pulumi.resources.ResourceA
      * Expected value is '#Microsoft.Media.VideoAnalyzerPreset'.
      * 
      */
-    @InputImport(name="odataType", required=true)
+    @Import(name="odataType", required=true)
       private final Output<String> odataType;
 
     public Output<String> getOdataType() {

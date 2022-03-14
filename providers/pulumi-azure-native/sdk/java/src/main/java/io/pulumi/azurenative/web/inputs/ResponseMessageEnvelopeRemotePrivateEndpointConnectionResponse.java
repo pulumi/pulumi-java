@@ -8,7 +8,7 @@ import io.pulumi.azurenative.web.inputs.ErrorEntityResponse;
 import io.pulumi.azurenative.web.inputs.ManagedServiceIdentityResponse;
 import io.pulumi.azurenative.web.inputs.RemotePrivateEndpointConnectionResponse;
 import io.pulumi.azurenative.web.inputs.SkuDescriptionResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -29,7 +29,7 @@ public final class ResponseMessageEnvelopeRemotePrivateEndpointConnectionRespons
      * Azure-AsyncOperation Error info.
      * 
      */
-    @InputImport(name="error")
+    @Import(name="error")
       private final @Nullable ErrorEntityResponse error;
 
     public Optional<ErrorEntityResponse> getError() {
@@ -42,7 +42,7 @@ public final class ResponseMessageEnvelopeRemotePrivateEndpointConnectionRespons
      * For example: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupId}/providers/Microsoft.Web/sites/{sitename}
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable String id;
 
     public Optional<String> getId() {
@@ -53,7 +53,7 @@ public final class ResponseMessageEnvelopeRemotePrivateEndpointConnectionRespons
      * MSI resource
      * 
      */
-    @InputImport(name="identity")
+    @Import(name="identity")
       private final @Nullable ManagedServiceIdentityResponse identity;
 
     public Optional<ManagedServiceIdentityResponse> getIdentity() {
@@ -64,7 +64,7 @@ public final class ResponseMessageEnvelopeRemotePrivateEndpointConnectionRespons
      * Geographical region resource belongs to e.g. SouthCentralUS, SouthEastAsia.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable String location;
 
     public Optional<String> getLocation() {
@@ -75,7 +75,7 @@ public final class ResponseMessageEnvelopeRemotePrivateEndpointConnectionRespons
      * Name of resource.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -86,7 +86,7 @@ public final class ResponseMessageEnvelopeRemotePrivateEndpointConnectionRespons
      * Azure resource manager plan.
      * 
      */
-    @InputImport(name="plan")
+    @Import(name="plan")
       private final @Nullable ArmPlanResponse plan;
 
     public Optional<ArmPlanResponse> getPlan() {
@@ -97,7 +97,7 @@ public final class ResponseMessageEnvelopeRemotePrivateEndpointConnectionRespons
      * Resource specific properties.
      * 
      */
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable RemotePrivateEndpointConnectionResponse properties;
 
     public Optional<RemotePrivateEndpointConnectionResponse> getProperties() {
@@ -108,7 +108,7 @@ public final class ResponseMessageEnvelopeRemotePrivateEndpointConnectionRespons
      * SKU description of the resource.
      * 
      */
-    @InputImport(name="sku")
+    @Import(name="sku")
       private final @Nullable SkuDescriptionResponse sku;
 
     public Optional<SkuDescriptionResponse> getSku() {
@@ -119,7 +119,7 @@ public final class ResponseMessageEnvelopeRemotePrivateEndpointConnectionRespons
      * Azure-AsyncOperation Status info.
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable String status;
 
     public Optional<String> getStatus() {
@@ -130,7 +130,7 @@ public final class ResponseMessageEnvelopeRemotePrivateEndpointConnectionRespons
      * Tags associated with resource.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {
@@ -141,7 +141,7 @@ public final class ResponseMessageEnvelopeRemotePrivateEndpointConnectionRespons
      * Type of resource e.g "Microsoft.Web/sites".
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable String type;
 
     public Optional<String> getType() {
@@ -152,7 +152,7 @@ public final class ResponseMessageEnvelopeRemotePrivateEndpointConnectionRespons
      * Logical Availability Zones the service is hosted in
      * 
      */
-    @InputImport(name="zones")
+    @Import(name="zones")
       private final @Nullable List<String> zones;
 
     public List<String> getZones() {

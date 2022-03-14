@@ -5,7 +5,7 @@ package io.pulumi.azurenative.providerhub.outputs;
 
 import io.pulumi.azurenative.providerhub.outputs.ResourceTypeEndpointResponseFeaturesRule;
 import io.pulumi.azurenative.providerhub.outputs.ResourceTypeExtensionResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ResourceTypeEndpointResponse {
     private final @Nullable List<String> apiVersions;
     private final @Nullable Boolean enabled;
@@ -23,15 +23,15 @@ public final class ResourceTypeEndpointResponse {
     private final @Nullable List<String> requiredFeatures;
     private final @Nullable String timeout;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ResourceTypeEndpointResponse(
-        @OutputCustomType.Parameter("apiVersions") @Nullable List<String> apiVersions,
-        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
-        @OutputCustomType.Parameter("extensions") @Nullable List<ResourceTypeExtensionResponse> extensions,
-        @OutputCustomType.Parameter("featuresRule") @Nullable ResourceTypeEndpointResponseFeaturesRule featuresRule,
-        @OutputCustomType.Parameter("locations") @Nullable List<String> locations,
-        @OutputCustomType.Parameter("requiredFeatures") @Nullable List<String> requiredFeatures,
-        @OutputCustomType.Parameter("timeout") @Nullable String timeout) {
+        @CustomType.Parameter("apiVersions") @Nullable List<String> apiVersions,
+        @CustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @CustomType.Parameter("extensions") @Nullable List<ResourceTypeExtensionResponse> extensions,
+        @CustomType.Parameter("featuresRule") @Nullable ResourceTypeEndpointResponseFeaturesRule featuresRule,
+        @CustomType.Parameter("locations") @Nullable List<String> locations,
+        @CustomType.Parameter("requiredFeatures") @Nullable List<String> requiredFeatures,
+        @CustomType.Parameter("timeout") @Nullable String timeout) {
         this.apiVersions = apiVersions;
         this.enabled = enabled;
         this.extensions = extensions;

@@ -9,7 +9,7 @@ import io.pulumi.azurenative.compute.outputs.EncryptionSetIdentityResponse;
 import io.pulumi.azurenative.compute.outputs.KeyForDiskEncryptionSetResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -38,7 +38,7 @@ public class DiskEncryptionSet extends io.pulumi.resources.CustomResource {
      * The key vault key which is currently used by this disk encryption set.
      * 
      */
-    @OutputExport(name="activeKey", type=KeyForDiskEncryptionSetResponse.class, parameters={})
+    @Export(name="activeKey", type=KeyForDiskEncryptionSetResponse.class, parameters={})
     private Output</* @Nullable */ KeyForDiskEncryptionSetResponse> activeKey;
 
     /**
@@ -52,7 +52,7 @@ public class DiskEncryptionSet extends io.pulumi.resources.CustomResource {
      * The type of key used to encrypt the data of the disk.
      * 
      */
-    @OutputExport(name="encryptionType", type=String.class, parameters={})
+    @Export(name="encryptionType", type=String.class, parameters={})
     private Output</* @Nullable */ String> encryptionType;
 
     /**
@@ -66,7 +66,7 @@ public class DiskEncryptionSet extends io.pulumi.resources.CustomResource {
      * The managed identity for the disk encryption set. It should be given permission on the key vault before it can be used to encrypt disks.
      * 
      */
-    @OutputExport(name="identity", type=EncryptionSetIdentityResponse.class, parameters={})
+    @Export(name="identity", type=EncryptionSetIdentityResponse.class, parameters={})
     private Output</* @Nullable */ EncryptionSetIdentityResponse> identity;
 
     /**
@@ -80,7 +80,7 @@ public class DiskEncryptionSet extends io.pulumi.resources.CustomResource {
      * The time when the active key of this disk encryption set was updated.
      * 
      */
-    @OutputExport(name="lastKeyRotationTimestamp", type=String.class, parameters={})
+    @Export(name="lastKeyRotationTimestamp", type=String.class, parameters={})
     private Output<String> lastKeyRotationTimestamp;
 
     /**
@@ -94,7 +94,7 @@ public class DiskEncryptionSet extends io.pulumi.resources.CustomResource {
      * Resource location
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -108,7 +108,7 @@ public class DiskEncryptionSet extends io.pulumi.resources.CustomResource {
      * Resource name
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -122,7 +122,7 @@ public class DiskEncryptionSet extends io.pulumi.resources.CustomResource {
      * A readonly collection of key vault keys previously used by this disk encryption set while a key rotation is in progress. It will be empty if there is no ongoing key rotation.
      * 
      */
-    @OutputExport(name="previousKeys", type=List.class, parameters={KeyForDiskEncryptionSetResponse.class})
+    @Export(name="previousKeys", type=List.class, parameters={KeyForDiskEncryptionSetResponse.class})
     private Output<List<KeyForDiskEncryptionSetResponse>> previousKeys;
 
     /**
@@ -136,7 +136,7 @@ public class DiskEncryptionSet extends io.pulumi.resources.CustomResource {
      * The disk encryption set provisioning state.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -150,7 +150,7 @@ public class DiskEncryptionSet extends io.pulumi.resources.CustomResource {
      * Set this flag to true to enable auto-updating of this disk encryption set to the latest key version.
      * 
      */
-    @OutputExport(name="rotationToLatestKeyVersionEnabled", type=Boolean.class, parameters={})
+    @Export(name="rotationToLatestKeyVersionEnabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> rotationToLatestKeyVersionEnabled;
 
     /**
@@ -164,7 +164,7 @@ public class DiskEncryptionSet extends io.pulumi.resources.CustomResource {
      * Resource tags
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -178,7 +178,7 @@ public class DiskEncryptionSet extends io.pulumi.resources.CustomResource {
      * Resource type
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.timeseriesinsights.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EnvironmentStateDetailsResponse {
     /**
      * Contains the code that represents the reason of an environment being in a particular state. Can be used to programmatically handle specific cases.
@@ -22,10 +22,10 @@ public final class EnvironmentStateDetailsResponse {
      */
     private final @Nullable String message;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EnvironmentStateDetailsResponse(
-        @OutputCustomType.Parameter("code") @Nullable String code,
-        @OutputCustomType.Parameter("message") @Nullable String message) {
+        @CustomType.Parameter("code") @Nullable String code,
+        @CustomType.Parameter("message") @Nullable String message) {
         this.code = code;
         this.message = message;
     }

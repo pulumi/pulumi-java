@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.cache.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class RedisInstanceDetailsResponse extends io.pulumi.resources.Invo
      * Specifies whether the instance is a master node.
      * 
      */
-    @InputImport(name="isMaster", required=true)
+    @Import(name="isMaster", required=true)
       private final Boolean isMaster;
 
     public Boolean getIsMaster() {
@@ -33,7 +33,7 @@ public final class RedisInstanceDetailsResponse extends io.pulumi.resources.Invo
      * If enableNonSslPort is true, provides Redis instance Non-SSL port.
      * 
      */
-    @InputImport(name="nonSslPort", required=true)
+    @Import(name="nonSslPort", required=true)
       private final Integer nonSslPort;
 
     public Integer getNonSslPort() {
@@ -44,7 +44,7 @@ public final class RedisInstanceDetailsResponse extends io.pulumi.resources.Invo
      * If clustering is enabled, the Shard ID of Redis Instance
      * 
      */
-    @InputImport(name="shardId", required=true)
+    @Import(name="shardId", required=true)
       private final Integer shardId;
 
     public Integer getShardId() {
@@ -55,7 +55,7 @@ public final class RedisInstanceDetailsResponse extends io.pulumi.resources.Invo
      * Redis instance SSL port.
      * 
      */
-    @InputImport(name="sslPort", required=true)
+    @Import(name="sslPort", required=true)
       private final Integer sslPort;
 
     public Integer getSslPort() {
@@ -66,7 +66,7 @@ public final class RedisInstanceDetailsResponse extends io.pulumi.resources.Invo
      * If the Cache uses availability zones, specifies availability zone where this instance is located.
      * 
      */
-    @InputImport(name="zone", required=true)
+    @Import(name="zone", required=true)
       private final String zone;
 
     public String getZone() {

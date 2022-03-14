@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.security.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class AssignmentPropertiesResponseAdditionalData extends io.pulumi.
      * Exemption category of this assignment
      * 
      */
-    @InputImport(name="exemptionCategory")
+    @Import(name="exemptionCategory")
       private final @Nullable String exemptionCategory;
 
     public Optional<String> getExemptionCategory() {

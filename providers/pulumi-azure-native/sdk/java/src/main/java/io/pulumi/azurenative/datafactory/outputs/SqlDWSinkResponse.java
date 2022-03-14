@@ -6,14 +6,14 @@ package io.pulumi.azurenative.datafactory.outputs;
 import io.pulumi.azurenative.datafactory.outputs.DWCopyCommandSettingsResponse;
 import io.pulumi.azurenative.datafactory.outputs.PolybaseSettingsResponse;
 import io.pulumi.azurenative.datafactory.outputs.SqlDWUpsertSettingsResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SqlDWSinkResponse {
     /**
      * Indicates to use Copy Command to copy data into SQL Data Warehouse. Type: boolean (or Expression with resultType boolean).
@@ -97,24 +97,24 @@ public final class SqlDWSinkResponse {
      */
     private final @Nullable Object writeBehavior;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SqlDWSinkResponse(
-        @OutputCustomType.Parameter("allowCopyCommand") @Nullable Object allowCopyCommand,
-        @OutputCustomType.Parameter("allowPolyBase") @Nullable Object allowPolyBase,
-        @OutputCustomType.Parameter("copyCommandSettings") @Nullable DWCopyCommandSettingsResponse copyCommandSettings,
-        @OutputCustomType.Parameter("disableMetricsCollection") @Nullable Object disableMetricsCollection,
-        @OutputCustomType.Parameter("maxConcurrentConnections") @Nullable Object maxConcurrentConnections,
-        @OutputCustomType.Parameter("polyBaseSettings") @Nullable PolybaseSettingsResponse polyBaseSettings,
-        @OutputCustomType.Parameter("preCopyScript") @Nullable Object preCopyScript,
-        @OutputCustomType.Parameter("sinkRetryCount") @Nullable Object sinkRetryCount,
-        @OutputCustomType.Parameter("sinkRetryWait") @Nullable Object sinkRetryWait,
-        @OutputCustomType.Parameter("sqlWriterUseTableLock") @Nullable Object sqlWriterUseTableLock,
-        @OutputCustomType.Parameter("tableOption") @Nullable Object tableOption,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("upsertSettings") @Nullable SqlDWUpsertSettingsResponse upsertSettings,
-        @OutputCustomType.Parameter("writeBatchSize") @Nullable Object writeBatchSize,
-        @OutputCustomType.Parameter("writeBatchTimeout") @Nullable Object writeBatchTimeout,
-        @OutputCustomType.Parameter("writeBehavior") @Nullable Object writeBehavior) {
+        @CustomType.Parameter("allowCopyCommand") @Nullable Object allowCopyCommand,
+        @CustomType.Parameter("allowPolyBase") @Nullable Object allowPolyBase,
+        @CustomType.Parameter("copyCommandSettings") @Nullable DWCopyCommandSettingsResponse copyCommandSettings,
+        @CustomType.Parameter("disableMetricsCollection") @Nullable Object disableMetricsCollection,
+        @CustomType.Parameter("maxConcurrentConnections") @Nullable Object maxConcurrentConnections,
+        @CustomType.Parameter("polyBaseSettings") @Nullable PolybaseSettingsResponse polyBaseSettings,
+        @CustomType.Parameter("preCopyScript") @Nullable Object preCopyScript,
+        @CustomType.Parameter("sinkRetryCount") @Nullable Object sinkRetryCount,
+        @CustomType.Parameter("sinkRetryWait") @Nullable Object sinkRetryWait,
+        @CustomType.Parameter("sqlWriterUseTableLock") @Nullable Object sqlWriterUseTableLock,
+        @CustomType.Parameter("tableOption") @Nullable Object tableOption,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("upsertSettings") @Nullable SqlDWUpsertSettingsResponse upsertSettings,
+        @CustomType.Parameter("writeBatchSize") @Nullable Object writeBatchSize,
+        @CustomType.Parameter("writeBatchTimeout") @Nullable Object writeBatchTimeout,
+        @CustomType.Parameter("writeBehavior") @Nullable Object writeBehavior) {
         this.allowCopyCommand = allowCopyCommand;
         this.allowPolyBase = allowPolyBase;
         this.copyCommandSettings = copyCommandSettings;

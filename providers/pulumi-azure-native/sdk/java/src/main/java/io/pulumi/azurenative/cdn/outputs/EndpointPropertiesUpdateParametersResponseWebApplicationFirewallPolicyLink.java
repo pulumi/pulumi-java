@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.cdn.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EndpointPropertiesUpdateParametersResponseWebApplicationFirewallPolicyLink {
     /**
      * Resource ID.
@@ -17,8 +17,8 @@ public final class EndpointPropertiesUpdateParametersResponseWebApplicationFirew
      */
     private final @Nullable String id;
 
-    @OutputCustomType.Constructor
-    private EndpointPropertiesUpdateParametersResponseWebApplicationFirewallPolicyLink(@OutputCustomType.Parameter("id") @Nullable String id) {
+    @CustomType.Constructor
+    private EndpointPropertiesUpdateParametersResponseWebApplicationFirewallPolicyLink(@CustomType.Parameter("id") @Nullable String id) {
         this.id = id;
     }
 

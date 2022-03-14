@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SingleQueryResultResponse {
     /**
      * Describes what is the signature enforces
@@ -70,19 +70,19 @@ public final class SingleQueryResultResponse {
      */
     private final @Nullable List<String> sourcePorts;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SingleQueryResultResponse(
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("destinationPorts") @Nullable List<String> destinationPorts,
-        @OutputCustomType.Parameter("direction") @Nullable Integer direction,
-        @OutputCustomType.Parameter("group") @Nullable String group,
-        @OutputCustomType.Parameter("inheritedFromParentPolicy") @Nullable Boolean inheritedFromParentPolicy,
-        @OutputCustomType.Parameter("lastUpdated") @Nullable String lastUpdated,
-        @OutputCustomType.Parameter("mode") @Nullable Integer mode,
-        @OutputCustomType.Parameter("protocol") @Nullable String protocol,
-        @OutputCustomType.Parameter("severity") @Nullable Integer severity,
-        @OutputCustomType.Parameter("signatureId") @Nullable Integer signatureId,
-        @OutputCustomType.Parameter("sourcePorts") @Nullable List<String> sourcePorts) {
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("destinationPorts") @Nullable List<String> destinationPorts,
+        @CustomType.Parameter("direction") @Nullable Integer direction,
+        @CustomType.Parameter("group") @Nullable String group,
+        @CustomType.Parameter("inheritedFromParentPolicy") @Nullable Boolean inheritedFromParentPolicy,
+        @CustomType.Parameter("lastUpdated") @Nullable String lastUpdated,
+        @CustomType.Parameter("mode") @Nullable Integer mode,
+        @CustomType.Parameter("protocol") @Nullable String protocol,
+        @CustomType.Parameter("severity") @Nullable Integer severity,
+        @CustomType.Parameter("signatureId") @Nullable Integer signatureId,
+        @CustomType.Parameter("sourcePorts") @Nullable List<String> sourcePorts) {
         this.description = description;
         this.destinationPorts = destinationPorts;
         this.direction = direction;

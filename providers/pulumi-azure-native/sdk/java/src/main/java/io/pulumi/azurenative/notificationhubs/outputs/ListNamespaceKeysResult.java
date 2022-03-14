@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.notificationhubs.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ListNamespaceKeysResult {
     /**
      * KeyName of the created AuthorizationRule
@@ -37,13 +37,13 @@ public final class ListNamespaceKeysResult {
      */
     private final @Nullable String secondaryKey;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ListNamespaceKeysResult(
-        @OutputCustomType.Parameter("keyName") @Nullable String keyName,
-        @OutputCustomType.Parameter("primaryConnectionString") @Nullable String primaryConnectionString,
-        @OutputCustomType.Parameter("primaryKey") @Nullable String primaryKey,
-        @OutputCustomType.Parameter("secondaryConnectionString") @Nullable String secondaryConnectionString,
-        @OutputCustomType.Parameter("secondaryKey") @Nullable String secondaryKey) {
+        @CustomType.Parameter("keyName") @Nullable String keyName,
+        @CustomType.Parameter("primaryConnectionString") @Nullable String primaryConnectionString,
+        @CustomType.Parameter("primaryKey") @Nullable String primaryKey,
+        @CustomType.Parameter("secondaryConnectionString") @Nullable String secondaryConnectionString,
+        @CustomType.Parameter("secondaryKey") @Nullable String secondaryKey) {
         this.keyName = keyName;
         this.primaryConnectionString = primaryConnectionString;
         this.primaryKey = primaryKey;

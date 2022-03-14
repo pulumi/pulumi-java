@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class SkuCapacityResponse extends io.pulumi.resources.InvokeArgs {
      * Default number of workers for this App Service plan SKU.
      * 
      */
-    @InputImport(name="default")
+    @Import(name="default")
       private final @Nullable Integer $default;
 
     public Optional<Integer> get$default() {
@@ -34,7 +34,7 @@ public final class SkuCapacityResponse extends io.pulumi.resources.InvokeArgs {
      * Maximum number of Elastic workers for this App Service plan SKU.
      * 
      */
-    @InputImport(name="elasticMaximum")
+    @Import(name="elasticMaximum")
       private final @Nullable Integer elasticMaximum;
 
     public Optional<Integer> getElasticMaximum() {
@@ -45,7 +45,7 @@ public final class SkuCapacityResponse extends io.pulumi.resources.InvokeArgs {
      * Maximum number of workers for this App Service plan SKU.
      * 
      */
-    @InputImport(name="maximum")
+    @Import(name="maximum")
       private final @Nullable Integer maximum;
 
     public Optional<Integer> getMaximum() {
@@ -56,7 +56,7 @@ public final class SkuCapacityResponse extends io.pulumi.resources.InvokeArgs {
      * Minimum number of workers for this App Service plan SKU.
      * 
      */
-    @InputImport(name="minimum")
+    @Import(name="minimum")
       private final @Nullable Integer minimum;
 
     public Optional<Integer> getMinimum() {
@@ -67,7 +67,7 @@ public final class SkuCapacityResponse extends io.pulumi.resources.InvokeArgs {
      * Available scale configurations for an App Service plan.
      * 
      */
-    @InputImport(name="scaleType")
+    @Import(name="scaleType")
       private final @Nullable String scaleType;
 
     public Optional<String> getScaleType() {

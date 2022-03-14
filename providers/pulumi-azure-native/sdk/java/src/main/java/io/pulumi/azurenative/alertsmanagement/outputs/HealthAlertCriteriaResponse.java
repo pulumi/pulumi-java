@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.alertsmanagement.outputs;
 
 import io.pulumi.azurenative.alertsmanagement.outputs.VmGuestHealthAlertCriterionResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class HealthAlertCriteriaResponse {
     /**
      * The list of metric criteria for this 'all of' operation.
@@ -17,8 +17,8 @@ public final class HealthAlertCriteriaResponse {
      */
     private final @Nullable List<VmGuestHealthAlertCriterionResponse> allOf;
 
-    @OutputCustomType.Constructor
-    private HealthAlertCriteriaResponse(@OutputCustomType.Parameter("allOf") @Nullable List<VmGuestHealthAlertCriterionResponse> allOf) {
+    @CustomType.Constructor
+    private HealthAlertCriteriaResponse(@CustomType.Parameter("allOf") @Nullable List<VmGuestHealthAlertCriterionResponse> allOf) {
         this.allOf = allOf;
     }
 

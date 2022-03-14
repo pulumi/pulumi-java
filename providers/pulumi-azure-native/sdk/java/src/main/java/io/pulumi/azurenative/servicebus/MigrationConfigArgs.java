@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.servicebus;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class MigrationConfigArgs extends io.pulumi.resources.ResourceArgs 
      * The configuration name. Should always be "$default".
      * 
      */
-    @InputImport(name="configName")
+    @Import(name="configName")
       private final @Nullable Output<String> configName;
 
     public Output<String> getConfigName() {
@@ -29,7 +29,7 @@ public final class MigrationConfigArgs extends io.pulumi.resources.ResourceArgs 
      * The namespace name
      * 
      */
-    @InputImport(name="namespaceName", required=true)
+    @Import(name="namespaceName", required=true)
       private final Output<String> namespaceName;
 
     public Output<String> getNamespaceName() {
@@ -40,7 +40,7 @@ public final class MigrationConfigArgs extends io.pulumi.resources.ResourceArgs 
      * Name to access Standard Namespace after migration
      * 
      */
-    @InputImport(name="postMigrationName", required=true)
+    @Import(name="postMigrationName", required=true)
       private final Output<String> postMigrationName;
 
     public Output<String> getPostMigrationName() {
@@ -51,7 +51,7 @@ public final class MigrationConfigArgs extends io.pulumi.resources.ResourceArgs 
      * Name of the Resource group within the Azure subscription.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -62,7 +62,7 @@ public final class MigrationConfigArgs extends io.pulumi.resources.ResourceArgs 
      * Existing premium Namespace ARM Id name which has no entities, will be used for migration
      * 
      */
-    @InputImport(name="targetNamespace", required=true)
+    @Import(name="targetNamespace", required=true)
       private final Output<String> targetNamespace;
 
     public Output<String> getTargetNamespace() {

@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.storage.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ChangeFeedResponse {
     /**
      * Indicates whether change feed event logging is enabled for the Blob service.
@@ -23,10 +23,10 @@ public final class ChangeFeedResponse {
      */
     private final @Nullable Integer retentionInDays;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ChangeFeedResponse(
-        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
-        @OutputCustomType.Parameter("retentionInDays") @Nullable Integer retentionInDays) {
+        @CustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @CustomType.Parameter("retentionInDays") @Nullable Integer retentionInDays) {
         this.enabled = enabled;
         this.retentionInDays = retentionInDays;
     }

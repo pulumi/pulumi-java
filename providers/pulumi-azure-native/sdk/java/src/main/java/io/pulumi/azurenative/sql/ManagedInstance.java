@@ -11,7 +11,7 @@ import io.pulumi.azurenative.sql.outputs.ResourceIdentityResponse;
 import io.pulumi.azurenative.sql.outputs.SkuResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -41,7 +41,7 @@ public class ManagedInstance extends io.pulumi.resources.CustomResource {
      * Administrator username for the managed instance. Can only be specified when the managed instance is being created (and is required for creation).
      * 
      */
-    @OutputExport(name="administratorLogin", type=String.class, parameters={})
+    @Export(name="administratorLogin", type=String.class, parameters={})
     private Output</* @Nullable */ String> administratorLogin;
 
     /**
@@ -55,7 +55,7 @@ public class ManagedInstance extends io.pulumi.resources.CustomResource {
      * The Azure Active Directory administrator of the server.
      * 
      */
-    @OutputExport(name="administrators", type=ManagedInstanceExternalAdministratorResponse.class, parameters={})
+    @Export(name="administrators", type=ManagedInstanceExternalAdministratorResponse.class, parameters={})
     private Output</* @Nullable */ ManagedInstanceExternalAdministratorResponse> administrators;
 
     /**
@@ -69,7 +69,7 @@ public class ManagedInstance extends io.pulumi.resources.CustomResource {
      * Collation of the managed instance.
      * 
      */
-    @OutputExport(name="collation", type=String.class, parameters={})
+    @Export(name="collation", type=String.class, parameters={})
     private Output</* @Nullable */ String> collation;
 
     /**
@@ -83,7 +83,7 @@ public class ManagedInstance extends io.pulumi.resources.CustomResource {
      * The Dns Zone that the managed instance is in.
      * 
      */
-    @OutputExport(name="dnsZone", type=String.class, parameters={})
+    @Export(name="dnsZone", type=String.class, parameters={})
     private Output<String> dnsZone;
 
     /**
@@ -97,7 +97,7 @@ public class ManagedInstance extends io.pulumi.resources.CustomResource {
      * The fully qualified domain name of the managed instance.
      * 
      */
-    @OutputExport(name="fullyQualifiedDomainName", type=String.class, parameters={})
+    @Export(name="fullyQualifiedDomainName", type=String.class, parameters={})
     private Output<String> fullyQualifiedDomainName;
 
     /**
@@ -111,7 +111,7 @@ public class ManagedInstance extends io.pulumi.resources.CustomResource {
      * The Azure Active Directory identity of the managed instance.
      * 
      */
-    @OutputExport(name="identity", type=ResourceIdentityResponse.class, parameters={})
+    @Export(name="identity", type=ResourceIdentityResponse.class, parameters={})
     private Output</* @Nullable */ ResourceIdentityResponse> identity;
 
     /**
@@ -125,7 +125,7 @@ public class ManagedInstance extends io.pulumi.resources.CustomResource {
      * The Id of the instance pool this managed server belongs to.
      * 
      */
-    @OutputExport(name="instancePoolId", type=String.class, parameters={})
+    @Export(name="instancePoolId", type=String.class, parameters={})
     private Output</* @Nullable */ String> instancePoolId;
 
     /**
@@ -139,7 +139,7 @@ public class ManagedInstance extends io.pulumi.resources.CustomResource {
      * A CMK URI of the key to use for encryption.
      * 
      */
-    @OutputExport(name="keyId", type=String.class, parameters={})
+    @Export(name="keyId", type=String.class, parameters={})
     private Output</* @Nullable */ String> keyId;
 
     /**
@@ -153,7 +153,7 @@ public class ManagedInstance extends io.pulumi.resources.CustomResource {
      * The license type. Possible values are 'LicenseIncluded' (regular price inclusive of a new SQL license) and 'BasePrice' (discounted AHB price for bringing your own SQL licenses).
      * 
      */
-    @OutputExport(name="licenseType", type=String.class, parameters={})
+    @Export(name="licenseType", type=String.class, parameters={})
     private Output</* @Nullable */ String> licenseType;
 
     /**
@@ -167,7 +167,7 @@ public class ManagedInstance extends io.pulumi.resources.CustomResource {
      * Resource location.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -181,7 +181,7 @@ public class ManagedInstance extends io.pulumi.resources.CustomResource {
      * Specifies maintenance configuration id to apply to this managed instance.
      * 
      */
-    @OutputExport(name="maintenanceConfigurationId", type=String.class, parameters={})
+    @Export(name="maintenanceConfigurationId", type=String.class, parameters={})
     private Output</* @Nullable */ String> maintenanceConfigurationId;
 
     /**
@@ -195,7 +195,7 @@ public class ManagedInstance extends io.pulumi.resources.CustomResource {
      * Minimal TLS version. Allowed values: 'None', '1.0', '1.1', '1.2'
      * 
      */
-    @OutputExport(name="minimalTlsVersion", type=String.class, parameters={})
+    @Export(name="minimalTlsVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> minimalTlsVersion;
 
     /**
@@ -209,7 +209,7 @@ public class ManagedInstance extends io.pulumi.resources.CustomResource {
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -223,7 +223,7 @@ public class ManagedInstance extends io.pulumi.resources.CustomResource {
      * The resource id of a user assigned identity to be used by default.
      * 
      */
-    @OutputExport(name="primaryUserAssignedIdentityId", type=String.class, parameters={})
+    @Export(name="primaryUserAssignedIdentityId", type=String.class, parameters={})
     private Output</* @Nullable */ String> primaryUserAssignedIdentityId;
 
     /**
@@ -237,7 +237,7 @@ public class ManagedInstance extends io.pulumi.resources.CustomResource {
      * List of private endpoint connections on a managed instance.
      * 
      */
-    @OutputExport(name="privateEndpointConnections", type=List.class, parameters={ManagedInstancePecPropertyResponse.class})
+    @Export(name="privateEndpointConnections", type=List.class, parameters={ManagedInstancePecPropertyResponse.class})
     private Output<List<ManagedInstancePecPropertyResponse>> privateEndpointConnections;
 
     /**
@@ -247,7 +247,7 @@ public class ManagedInstance extends io.pulumi.resources.CustomResource {
     public Output<List<ManagedInstancePecPropertyResponse>> getPrivateEndpointConnections() {
         return this.privateEndpointConnections;
     }
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     public Output<String> getProvisioningState() {
@@ -257,7 +257,7 @@ public class ManagedInstance extends io.pulumi.resources.CustomResource {
      * Connection type used for connecting to the instance.
      * 
      */
-    @OutputExport(name="proxyOverride", type=String.class, parameters={})
+    @Export(name="proxyOverride", type=String.class, parameters={})
     private Output</* @Nullable */ String> proxyOverride;
 
     /**
@@ -271,7 +271,7 @@ public class ManagedInstance extends io.pulumi.resources.CustomResource {
      * Whether or not the public data endpoint is enabled.
      * 
      */
-    @OutputExport(name="publicDataEndpointEnabled", type=Boolean.class, parameters={})
+    @Export(name="publicDataEndpointEnabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> publicDataEndpointEnabled;
 
     /**
@@ -285,7 +285,7 @@ public class ManagedInstance extends io.pulumi.resources.CustomResource {
      * Managed instance SKU. Allowed values for sku.name: GP_Gen4, GP_Gen5, BC_Gen4, BC_Gen5
      * 
      */
-    @OutputExport(name="sku", type=SkuResponse.class, parameters={})
+    @Export(name="sku", type=SkuResponse.class, parameters={})
     private Output</* @Nullable */ SkuResponse> sku;
 
     /**
@@ -299,7 +299,7 @@ public class ManagedInstance extends io.pulumi.resources.CustomResource {
      * The state of the managed instance.
      * 
      */
-    @OutputExport(name="state", type=String.class, parameters={})
+    @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
@@ -313,7 +313,7 @@ public class ManagedInstance extends io.pulumi.resources.CustomResource {
      * The storage account type used to store backups for this instance. The options are LRS (LocallyRedundantStorage), ZRS (ZoneRedundantStorage) and GRS (GeoRedundantStorage)
      * 
      */
-    @OutputExport(name="storageAccountType", type=String.class, parameters={})
+    @Export(name="storageAccountType", type=String.class, parameters={})
     private Output</* @Nullable */ String> storageAccountType;
 
     /**
@@ -327,7 +327,7 @@ public class ManagedInstance extends io.pulumi.resources.CustomResource {
      * Storage size in GB. Minimum value: 32. Maximum value: 8192. Increments of 32 GB allowed only.
      * 
      */
-    @OutputExport(name="storageSizeInGB", type=Integer.class, parameters={})
+    @Export(name="storageSizeInGB", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> storageSizeInGB;
 
     /**
@@ -341,7 +341,7 @@ public class ManagedInstance extends io.pulumi.resources.CustomResource {
      * Subnet resource ID for the managed instance.
      * 
      */
-    @OutputExport(name="subnetId", type=String.class, parameters={})
+    @Export(name="subnetId", type=String.class, parameters={})
     private Output</* @Nullable */ String> subnetId;
 
     /**
@@ -355,7 +355,7 @@ public class ManagedInstance extends io.pulumi.resources.CustomResource {
      * Resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -374,7 +374,7 @@ public class ManagedInstance extends io.pulumi.resources.CustomResource {
      * An example of valid timezone id is "Pacific Standard Time" or "W. Europe Standard Time".
      * 
      */
-    @OutputExport(name="timezoneId", type=String.class, parameters={})
+    @Export(name="timezoneId", type=String.class, parameters={})
     private Output</* @Nullable */ String> timezoneId;
 
     /**
@@ -393,7 +393,7 @@ public class ManagedInstance extends io.pulumi.resources.CustomResource {
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -407,7 +407,7 @@ public class ManagedInstance extends io.pulumi.resources.CustomResource {
      * The number of vCores. Allowed values: 8, 16, 24, 32, 40, 64, 80.
      * 
      */
-    @OutputExport(name="vCores", type=Integer.class, parameters={})
+    @Export(name="vCores", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> vCores;
 
     /**
@@ -421,7 +421,7 @@ public class ManagedInstance extends io.pulumi.resources.CustomResource {
      * Whether or not the multi-az is enabled.
      * 
      */
-    @OutputExport(name="zoneRedundant", type=Boolean.class, parameters={})
+    @Export(name="zoneRedundant", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> zoneRedundant;
 
     /**

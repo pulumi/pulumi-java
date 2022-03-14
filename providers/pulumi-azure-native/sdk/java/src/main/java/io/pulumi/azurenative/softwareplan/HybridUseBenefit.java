@@ -8,7 +8,7 @@ import io.pulumi.azurenative.softwareplan.HybridUseBenefitArgs;
 import io.pulumi.azurenative.softwareplan.outputs.SkuResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -36,7 +36,7 @@ public class HybridUseBenefit extends io.pulumi.resources.CustomResource {
      * Created date
      * 
      */
-    @OutputExport(name="createdDate", type=String.class, parameters={})
+    @Export(name="createdDate", type=String.class, parameters={})
     private Output<String> createdDate;
 
     /**
@@ -50,7 +50,7 @@ public class HybridUseBenefit extends io.pulumi.resources.CustomResource {
      * Indicates the revision of the hybrid use benefit
      * 
      */
-    @OutputExport(name="etag", type=Integer.class, parameters={})
+    @Export(name="etag", type=Integer.class, parameters={})
     private Output<Integer> etag;
 
     /**
@@ -64,7 +64,7 @@ public class HybridUseBenefit extends io.pulumi.resources.CustomResource {
      * Last updated date
      * 
      */
-    @OutputExport(name="lastUpdatedDate", type=String.class, parameters={})
+    @Export(name="lastUpdatedDate", type=String.class, parameters={})
     private Output<String> lastUpdatedDate;
 
     /**
@@ -78,7 +78,7 @@ public class HybridUseBenefit extends io.pulumi.resources.CustomResource {
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -92,7 +92,7 @@ public class HybridUseBenefit extends io.pulumi.resources.CustomResource {
      * Provisioning state
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -106,7 +106,7 @@ public class HybridUseBenefit extends io.pulumi.resources.CustomResource {
      * Hybrid use benefit SKU
      * 
      */
-    @OutputExport(name="sku", type=SkuResponse.class, parameters={})
+    @Export(name="sku", type=SkuResponse.class, parameters={})
     private Output<SkuResponse> sku;
 
     /**
@@ -120,7 +120,7 @@ public class HybridUseBenefit extends io.pulumi.resources.CustomResource {
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.storage.inputs;
 
 import io.pulumi.azurenative.storage.inputs.SmbSettingResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class ProtocolSettingsResponse extends io.pulumi.resources.InvokeAr
      * Setting for SMB protocol
      * 
      */
-    @InputImport(name="smb")
+    @Import(name="smb")
       private final @Nullable SmbSettingResponse smb;
 
     public Optional<SmbSettingResponse> getSmb() {

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.datamigration.inputs;
 import io.pulumi.azurenative.datamigration.inputs.MigrateSqlServerSqlDbSyncDatabaseInputResponse;
 import io.pulumi.azurenative.datamigration.inputs.MigrationValidationOptionsResponse;
 import io.pulumi.azurenative.datamigration.inputs.SqlConnectionInfoResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class MigrateSqlServerSqlDbSyncTaskInputResponse extends io.pulumi.
      * Databases to migrate
      * 
      */
-    @InputImport(name="selectedDatabases", required=true)
+    @Import(name="selectedDatabases", required=true)
       private final List<MigrateSqlServerSqlDbSyncDatabaseInputResponse> selectedDatabases;
 
     public List<MigrateSqlServerSqlDbSyncDatabaseInputResponse> getSelectedDatabases() {
@@ -36,7 +36,7 @@ public final class MigrateSqlServerSqlDbSyncTaskInputResponse extends io.pulumi.
      * Information for connecting to source
      * 
      */
-    @InputImport(name="sourceConnectionInfo", required=true)
+    @Import(name="sourceConnectionInfo", required=true)
       private final SqlConnectionInfoResponse sourceConnectionInfo;
 
     public SqlConnectionInfoResponse getSourceConnectionInfo() {
@@ -47,7 +47,7 @@ public final class MigrateSqlServerSqlDbSyncTaskInputResponse extends io.pulumi.
      * Information for connecting to target
      * 
      */
-    @InputImport(name="targetConnectionInfo", required=true)
+    @Import(name="targetConnectionInfo", required=true)
       private final SqlConnectionInfoResponse targetConnectionInfo;
 
     public SqlConnectionInfoResponse getTargetConnectionInfo() {
@@ -58,7 +58,7 @@ public final class MigrateSqlServerSqlDbSyncTaskInputResponse extends io.pulumi.
      * Validation options
      * 
      */
-    @InputImport(name="validationOptions")
+    @Import(name="validationOptions")
       private final @Nullable MigrationValidationOptionsResponse validationOptions;
 
     public Optional<MigrationValidationOptionsResponse> getValidationOptions() {

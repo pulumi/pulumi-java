@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.security.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PublisherInfoResponse {
     /**
      * The "OriginalName" field taken from the file's version resource
@@ -32,12 +32,12 @@ public final class PublisherInfoResponse {
      */
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PublisherInfoResponse(
-        @OutputCustomType.Parameter("binaryName") @Nullable String binaryName,
-        @OutputCustomType.Parameter("productName") @Nullable String productName,
-        @OutputCustomType.Parameter("publisherName") @Nullable String publisherName,
-        @OutputCustomType.Parameter("version") @Nullable String version) {
+        @CustomType.Parameter("binaryName") @Nullable String binaryName,
+        @CustomType.Parameter("productName") @Nullable String productName,
+        @CustomType.Parameter("publisherName") @Nullable String publisherName,
+        @CustomType.Parameter("version") @Nullable String version) {
         this.binaryName = binaryName;
         this.productName = productName;
         this.publisherName = publisherName;

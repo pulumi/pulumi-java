@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.kubernetesconfiguration.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class ScopeClusterResponse extends io.pulumi.resources.InvokeArgs {
      * Namespace where the extension Release must be placed, for a Cluster scoped extensionInstance.  If this namespace does not exist, it will be created
      * 
      */
-    @InputImport(name="releaseNamespace")
+    @Import(name="releaseNamespace")
       private final @Nullable String releaseNamespace;
 
     public Optional<String> getReleaseNamespace() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datalakestore.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetTrustedIdProviderArgs extends io.pulumi.resources.InvokeAr
      * The name of the Data Lake Store account.
      * 
      */
-    @InputImport(name="accountName", required=true)
+    @Import(name="accountName", required=true)
       private final String accountName;
 
     public String getAccountName() {
@@ -27,7 +27,7 @@ public final class GetTrustedIdProviderArgs extends io.pulumi.resources.InvokeAr
      * The name of the Azure resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {
@@ -38,7 +38,7 @@ public final class GetTrustedIdProviderArgs extends io.pulumi.resources.InvokeAr
      * The name of the trusted identity provider to retrieve.
      * 
      */
-    @InputImport(name="trustedIdProviderName", required=true)
+    @Import(name="trustedIdProviderName", required=true)
       private final String trustedIdProviderName;
 
     public String getTrustedIdProviderName() {

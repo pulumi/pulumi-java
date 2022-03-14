@@ -3,16 +3,16 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ArmIdWrapperResponse {
     private final String id;
 
-    @OutputCustomType.Constructor
-    private ArmIdWrapperResponse(@OutputCustomType.Parameter("id") String id) {
+    @CustomType.Constructor
+    private ArmIdWrapperResponse(@CustomType.Parameter("id") String id) {
         this.id = id;
     }
 

@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.media.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class FirstQualityResponse {
     /**
      * The first quality bitrate.
@@ -15,8 +15,8 @@ public final class FirstQualityResponse {
      */
     private final Integer bitrate;
 
-    @OutputCustomType.Constructor
-    private FirstQualityResponse(@OutputCustomType.Parameter("bitrate") Integer bitrate) {
+    @CustomType.Constructor
+    private FirstQualityResponse(@CustomType.Parameter("bitrate") Integer bitrate) {
         this.bitrate = bitrate;
     }
 

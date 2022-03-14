@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.authorization.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetManagementLockAtSubscriptionLevelArgs extends io.pulumi.re
      * The name of the lock to get.
      * 
      */
-    @InputImport(name="lockName", required=true)
+    @Import(name="lockName", required=true)
       private final String lockName;
 
     public String getLockName() {

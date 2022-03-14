@@ -11,7 +11,7 @@ import io.pulumi.azurenative.containerservice.outputs.LinuxOSConfigResponse;
 import io.pulumi.azurenative.containerservice.outputs.PowerStateResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Double;
@@ -42,7 +42,7 @@ public class AgentPool extends io.pulumi.resources.CustomResource {
      * Availability zones for nodes. Must use VirtualMachineScaleSets AgentPoolType.
      * 
      */
-    @OutputExport(name="availabilityZones", type=List.class, parameters={String.class})
+    @Export(name="availabilityZones", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> availabilityZones;
 
     /**
@@ -56,7 +56,7 @@ public class AgentPool extends io.pulumi.resources.CustomResource {
      * Number of agents (VMs) to host docker containers. Allowed values must be in the range of 0 to 100 (inclusive) for user pools and in the range of 1 to 100 (inclusive) for system pools. The default value is 1.
      * 
      */
-    @OutputExport(name="count", type=Integer.class, parameters={})
+    @Export(name="count", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> count;
 
     /**
@@ -70,7 +70,7 @@ public class AgentPool extends io.pulumi.resources.CustomResource {
      * Whether to enable auto-scaler
      * 
      */
-    @OutputExport(name="enableAutoScaling", type=Boolean.class, parameters={})
+    @Export(name="enableAutoScaling", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableAutoScaling;
 
     /**
@@ -84,7 +84,7 @@ public class AgentPool extends io.pulumi.resources.CustomResource {
      * Whether to enable EncryptionAtHost
      * 
      */
-    @OutputExport(name="enableEncryptionAtHost", type=Boolean.class, parameters={})
+    @Export(name="enableEncryptionAtHost", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableEncryptionAtHost;
 
     /**
@@ -98,7 +98,7 @@ public class AgentPool extends io.pulumi.resources.CustomResource {
      * Whether to use FIPS enabled OS
      * 
      */
-    @OutputExport(name="enableFIPS", type=Boolean.class, parameters={})
+    @Export(name="enableFIPS", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableFIPS;
 
     /**
@@ -112,7 +112,7 @@ public class AgentPool extends io.pulumi.resources.CustomResource {
      * Enable public IP for nodes
      * 
      */
-    @OutputExport(name="enableNodePublicIP", type=Boolean.class, parameters={})
+    @Export(name="enableNodePublicIP", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableNodePublicIP;
 
     /**
@@ -126,7 +126,7 @@ public class AgentPool extends io.pulumi.resources.CustomResource {
      * GPUInstanceProfile to be used to specify GPU MIG instance profile for supported GPU VM SKU. Supported values are MIG1g, MIG2g, MIG3g, MIG4g and MIG7g.
      * 
      */
-    @OutputExport(name="gpuInstanceProfile", type=String.class, parameters={})
+    @Export(name="gpuInstanceProfile", type=String.class, parameters={})
     private Output</* @Nullable */ String> gpuInstanceProfile;
 
     /**
@@ -140,7 +140,7 @@ public class AgentPool extends io.pulumi.resources.CustomResource {
      * KubeletConfig specifies the configuration of kubelet on agent nodes.
      * 
      */
-    @OutputExport(name="kubeletConfig", type=KubeletConfigResponse.class, parameters={})
+    @Export(name="kubeletConfig", type=KubeletConfigResponse.class, parameters={})
     private Output</* @Nullable */ KubeletConfigResponse> kubeletConfig;
 
     /**
@@ -154,7 +154,7 @@ public class AgentPool extends io.pulumi.resources.CustomResource {
      * KubeletDiskType determines the placement of emptyDir volumes, container runtime data root, and Kubelet ephemeral storage. Currently allows one value, OS, resulting in Kubelet using the OS disk for data.
      * 
      */
-    @OutputExport(name="kubeletDiskType", type=String.class, parameters={})
+    @Export(name="kubeletDiskType", type=String.class, parameters={})
     private Output</* @Nullable */ String> kubeletDiskType;
 
     /**
@@ -168,7 +168,7 @@ public class AgentPool extends io.pulumi.resources.CustomResource {
      * LinuxOSConfig specifies the OS configuration of linux agent nodes.
      * 
      */
-    @OutputExport(name="linuxOSConfig", type=LinuxOSConfigResponse.class, parameters={})
+    @Export(name="linuxOSConfig", type=LinuxOSConfigResponse.class, parameters={})
     private Output</* @Nullable */ LinuxOSConfigResponse> linuxOSConfig;
 
     /**
@@ -182,7 +182,7 @@ public class AgentPool extends io.pulumi.resources.CustomResource {
      * Maximum number of nodes for auto-scaling
      * 
      */
-    @OutputExport(name="maxCount", type=Integer.class, parameters={})
+    @Export(name="maxCount", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> maxCount;
 
     /**
@@ -196,7 +196,7 @@ public class AgentPool extends io.pulumi.resources.CustomResource {
      * Maximum number of pods that can run on a node.
      * 
      */
-    @OutputExport(name="maxPods", type=Integer.class, parameters={})
+    @Export(name="maxPods", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> maxPods;
 
     /**
@@ -210,7 +210,7 @@ public class AgentPool extends io.pulumi.resources.CustomResource {
      * Minimum number of nodes for auto-scaling
      * 
      */
-    @OutputExport(name="minCount", type=Integer.class, parameters={})
+    @Export(name="minCount", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> minCount;
 
     /**
@@ -224,7 +224,7 @@ public class AgentPool extends io.pulumi.resources.CustomResource {
      * AgentPoolMode represents mode of an agent pool
      * 
      */
-    @OutputExport(name="mode", type=String.class, parameters={})
+    @Export(name="mode", type=String.class, parameters={})
     private Output</* @Nullable */ String> mode;
 
     /**
@@ -238,7 +238,7 @@ public class AgentPool extends io.pulumi.resources.CustomResource {
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -252,7 +252,7 @@ public class AgentPool extends io.pulumi.resources.CustomResource {
      * Version of node image
      * 
      */
-    @OutputExport(name="nodeImageVersion", type=String.class, parameters={})
+    @Export(name="nodeImageVersion", type=String.class, parameters={})
     private Output<String> nodeImageVersion;
 
     /**
@@ -266,7 +266,7 @@ public class AgentPool extends io.pulumi.resources.CustomResource {
      * Agent pool node labels to be persisted across all nodes in agent pool.
      * 
      */
-    @OutputExport(name="nodeLabels", type=Map.class, parameters={String.class, String.class})
+    @Export(name="nodeLabels", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> nodeLabels;
 
     /**
@@ -280,7 +280,7 @@ public class AgentPool extends io.pulumi.resources.CustomResource {
      * Public IP Prefix ID. VM nodes use IPs assigned from this Public IP Prefix.
      * 
      */
-    @OutputExport(name="nodePublicIPPrefixID", type=String.class, parameters={})
+    @Export(name="nodePublicIPPrefixID", type=String.class, parameters={})
     private Output</* @Nullable */ String> nodePublicIPPrefixID;
 
     /**
@@ -294,7 +294,7 @@ public class AgentPool extends io.pulumi.resources.CustomResource {
      * Taints added to new nodes during node pool create and scale. For example, key=value:NoSchedule.
      * 
      */
-    @OutputExport(name="nodeTaints", type=List.class, parameters={String.class})
+    @Export(name="nodeTaints", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> nodeTaints;
 
     /**
@@ -308,7 +308,7 @@ public class AgentPool extends io.pulumi.resources.CustomResource {
      * Version of orchestrator specified when creating the managed cluster.
      * 
      */
-    @OutputExport(name="orchestratorVersion", type=String.class, parameters={})
+    @Export(name="orchestratorVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> orchestratorVersion;
 
     /**
@@ -322,7 +322,7 @@ public class AgentPool extends io.pulumi.resources.CustomResource {
      * OS Disk Size in GB to be used to specify the disk size for every machine in this master/agent pool. If you specify 0, it will apply the default osDisk size according to the vmSize specified.
      * 
      */
-    @OutputExport(name="osDiskSizeGB", type=Integer.class, parameters={})
+    @Export(name="osDiskSizeGB", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> osDiskSizeGB;
 
     /**
@@ -336,7 +336,7 @@ public class AgentPool extends io.pulumi.resources.CustomResource {
      * OS disk type to be used for machines in a given agent pool. Allowed values are 'Ephemeral' and 'Managed'. If unspecified, defaults to 'Ephemeral' when the VM supports ephemeral OS and has a cache disk larger than the requested OSDiskSizeGB. Otherwise, defaults to 'Managed'. May not be changed after creation.
      * 
      */
-    @OutputExport(name="osDiskType", type=String.class, parameters={})
+    @Export(name="osDiskType", type=String.class, parameters={})
     private Output</* @Nullable */ String> osDiskType;
 
     /**
@@ -350,7 +350,7 @@ public class AgentPool extends io.pulumi.resources.CustomResource {
      * OsSKU to be used to specify os sku. Choose from Ubuntu(default) and CBLMariner for Linux OSType. Not applicable to Windows OSType.
      * 
      */
-    @OutputExport(name="osSKU", type=String.class, parameters={})
+    @Export(name="osSKU", type=String.class, parameters={})
     private Output</* @Nullable */ String> osSKU;
 
     /**
@@ -364,7 +364,7 @@ public class AgentPool extends io.pulumi.resources.CustomResource {
      * OsType to be used to specify os type. Choose from Linux and Windows. Default to Linux.
      * 
      */
-    @OutputExport(name="osType", type=String.class, parameters={})
+    @Export(name="osType", type=String.class, parameters={})
     private Output</* @Nullable */ String> osType;
 
     /**
@@ -378,7 +378,7 @@ public class AgentPool extends io.pulumi.resources.CustomResource {
      * Pod SubnetID specifies the VNet's subnet identifier for pods.
      * 
      */
-    @OutputExport(name="podSubnetID", type=String.class, parameters={})
+    @Export(name="podSubnetID", type=String.class, parameters={})
     private Output</* @Nullable */ String> podSubnetID;
 
     /**
@@ -392,7 +392,7 @@ public class AgentPool extends io.pulumi.resources.CustomResource {
      * Describes whether the Agent Pool is Running or Stopped
      * 
      */
-    @OutputExport(name="powerState", type=PowerStateResponse.class, parameters={})
+    @Export(name="powerState", type=PowerStateResponse.class, parameters={})
     private Output<PowerStateResponse> powerState;
 
     /**
@@ -406,7 +406,7 @@ public class AgentPool extends io.pulumi.resources.CustomResource {
      * The current deployment or provisioning state, which only appears in the response.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -420,7 +420,7 @@ public class AgentPool extends io.pulumi.resources.CustomResource {
      * The ID for Proximity Placement Group.
      * 
      */
-    @OutputExport(name="proximityPlacementGroupID", type=String.class, parameters={})
+    @Export(name="proximityPlacementGroupID", type=String.class, parameters={})
     private Output</* @Nullable */ String> proximityPlacementGroupID;
 
     /**
@@ -434,7 +434,7 @@ public class AgentPool extends io.pulumi.resources.CustomResource {
      * ScaleSetEvictionPolicy to be used to specify eviction policy for Spot virtual machine scale set. Default to Delete.
      * 
      */
-    @OutputExport(name="scaleSetEvictionPolicy", type=String.class, parameters={})
+    @Export(name="scaleSetEvictionPolicy", type=String.class, parameters={})
     private Output</* @Nullable */ String> scaleSetEvictionPolicy;
 
     /**
@@ -448,7 +448,7 @@ public class AgentPool extends io.pulumi.resources.CustomResource {
      * ScaleSetPriority to be used to specify virtual machine scale set priority. Default to regular.
      * 
      */
-    @OutputExport(name="scaleSetPriority", type=String.class, parameters={})
+    @Export(name="scaleSetPriority", type=String.class, parameters={})
     private Output</* @Nullable */ String> scaleSetPriority;
 
     /**
@@ -462,7 +462,7 @@ public class AgentPool extends io.pulumi.resources.CustomResource {
      * SpotMaxPrice to be used to specify the maximum price you are willing to pay in US Dollars. Possible values are any decimal value greater than zero or -1 which indicates default price to be up-to on-demand.
      * 
      */
-    @OutputExport(name="spotMaxPrice", type=Double.class, parameters={})
+    @Export(name="spotMaxPrice", type=Double.class, parameters={})
     private Output</* @Nullable */ Double> spotMaxPrice;
 
     /**
@@ -476,7 +476,7 @@ public class AgentPool extends io.pulumi.resources.CustomResource {
      * Agent pool tags to be persisted on the agent pool virtual machine scale set.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -490,7 +490,7 @@ public class AgentPool extends io.pulumi.resources.CustomResource {
      * AgentPoolType represents types of an agent pool
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -504,7 +504,7 @@ public class AgentPool extends io.pulumi.resources.CustomResource {
      * Settings for upgrading the agentpool
      * 
      */
-    @OutputExport(name="upgradeSettings", type=AgentPoolUpgradeSettingsResponse.class, parameters={})
+    @Export(name="upgradeSettings", type=AgentPoolUpgradeSettingsResponse.class, parameters={})
     private Output</* @Nullable */ AgentPoolUpgradeSettingsResponse> upgradeSettings;
 
     /**
@@ -518,7 +518,7 @@ public class AgentPool extends io.pulumi.resources.CustomResource {
      * Size of agent VMs.
      * 
      */
-    @OutputExport(name="vmSize", type=String.class, parameters={})
+    @Export(name="vmSize", type=String.class, parameters={})
     private Output</* @Nullable */ String> vmSize;
 
     /**
@@ -532,7 +532,7 @@ public class AgentPool extends io.pulumi.resources.CustomResource {
      * VNet SubnetID specifies the VNet's subnet identifier for nodes and maybe pods
      * 
      */
-    @OutputExport(name="vnetSubnetID", type=String.class, parameters={})
+    @Export(name="vnetSubnetID", type=String.class, parameters={})
     private Output</* @Nullable */ String> vnetSubnetID;
 
     /**

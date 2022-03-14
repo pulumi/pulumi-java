@@ -8,7 +8,7 @@ import io.pulumi.azurenative.operationsmanagement.ManagementAssociationArgs;
 import io.pulumi.azurenative.operationsmanagement.outputs.ManagementAssociationPropertiesResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +35,7 @@ public class ManagementAssociation extends io.pulumi.resources.CustomResource {
      * Resource location
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -49,7 +49,7 @@ public class ManagementAssociation extends io.pulumi.resources.CustomResource {
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -63,7 +63,7 @@ public class ManagementAssociation extends io.pulumi.resources.CustomResource {
      * Properties for ManagementAssociation object supported by the OperationsManagement resource provider.
      * 
      */
-    @OutputExport(name="properties", type=ManagementAssociationPropertiesResponse.class, parameters={})
+    @Export(name="properties", type=ManagementAssociationPropertiesResponse.class, parameters={})
     private Output<ManagementAssociationPropertiesResponse> properties;
 
     /**
@@ -77,7 +77,7 @@ public class ManagementAssociation extends io.pulumi.resources.CustomResource {
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

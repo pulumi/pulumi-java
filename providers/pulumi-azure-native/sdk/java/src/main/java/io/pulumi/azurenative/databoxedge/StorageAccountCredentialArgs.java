@@ -8,7 +8,7 @@ import io.pulumi.azurenative.databoxedge.enums.SSLStatus;
 import io.pulumi.azurenative.databoxedge.inputs.AsymmetricEncryptedSecretArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class StorageAccountCredentialArgs extends io.pulumi.resources.Reso
      * Encrypted storage key.
      * 
      */
-    @InputImport(name="accountKey")
+    @Import(name="accountKey")
       private final @Nullable Output<AsymmetricEncryptedSecretArgs> accountKey;
 
     public Output<AsymmetricEncryptedSecretArgs> getAccountKey() {
@@ -33,7 +33,7 @@ public final class StorageAccountCredentialArgs extends io.pulumi.resources.Reso
      * Type of storage accessed on the storage account.
      * 
      */
-    @InputImport(name="accountType", required=true)
+    @Import(name="accountType", required=true)
       private final Output<Either<String,AccountType>> accountType;
 
     public Output<Either<String,AccountType>> getAccountType() {
@@ -44,7 +44,7 @@ public final class StorageAccountCredentialArgs extends io.pulumi.resources.Reso
      * Alias for the storage account.
      * 
      */
-    @InputImport(name="alias", required=true)
+    @Import(name="alias", required=true)
       private final Output<String> alias;
 
     public Output<String> getAlias() {
@@ -55,7 +55,7 @@ public final class StorageAccountCredentialArgs extends io.pulumi.resources.Reso
      * Blob end point for private clouds.
      * 
      */
-    @InputImport(name="blobDomainName")
+    @Import(name="blobDomainName")
       private final @Nullable Output<String> blobDomainName;
 
     public Output<String> getBlobDomainName() {
@@ -66,7 +66,7 @@ public final class StorageAccountCredentialArgs extends io.pulumi.resources.Reso
      * Connection string for the storage account. Use this string if username and account key are not specified.
      * 
      */
-    @InputImport(name="connectionString")
+    @Import(name="connectionString")
       private final @Nullable Output<String> connectionString;
 
     public Output<String> getConnectionString() {
@@ -77,7 +77,7 @@ public final class StorageAccountCredentialArgs extends io.pulumi.resources.Reso
      * The device name.
      * 
      */
-    @InputImport(name="deviceName", required=true)
+    @Import(name="deviceName", required=true)
       private final Output<String> deviceName;
 
     public Output<String> getDeviceName() {
@@ -88,7 +88,7 @@ public final class StorageAccountCredentialArgs extends io.pulumi.resources.Reso
      * The storage account credential name.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -99,7 +99,7 @@ public final class StorageAccountCredentialArgs extends io.pulumi.resources.Reso
      * The resource group name.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -110,7 +110,7 @@ public final class StorageAccountCredentialArgs extends io.pulumi.resources.Reso
      * Signifies whether SSL needs to be enabled or not.
      * 
      */
-    @InputImport(name="sslStatus", required=true)
+    @Import(name="sslStatus", required=true)
       private final Output<Either<String,SSLStatus>> sslStatus;
 
     public Output<Either<String,SSLStatus>> getSslStatus() {
@@ -121,7 +121,7 @@ public final class StorageAccountCredentialArgs extends io.pulumi.resources.Reso
      * Id of the storage account.
      * 
      */
-    @InputImport(name="storageAccountId")
+    @Import(name="storageAccountId")
       private final @Nullable Output<String> storageAccountId;
 
     public Output<String> getStorageAccountId() {
@@ -132,7 +132,7 @@ public final class StorageAccountCredentialArgs extends io.pulumi.resources.Reso
      * Username for the storage account.
      * 
      */
-    @InputImport(name="userName")
+    @Import(name="userName")
       private final @Nullable Output<String> userName;
 
     public Output<String> getUserName() {

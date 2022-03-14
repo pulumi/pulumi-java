@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.containerregistry.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class StorageAccountPropertiesResponse {
     /**
      * The resource ID of the storage account.
@@ -15,8 +15,8 @@ public final class StorageAccountPropertiesResponse {
      */
     private final String id;
 
-    @OutputCustomType.Constructor
-    private StorageAccountPropertiesResponse(@OutputCustomType.Parameter("id") String id) {
+    @CustomType.Constructor
+    private StorageAccountPropertiesResponse(@CustomType.Parameter("id") String id) {
         this.id = id;
     }
 

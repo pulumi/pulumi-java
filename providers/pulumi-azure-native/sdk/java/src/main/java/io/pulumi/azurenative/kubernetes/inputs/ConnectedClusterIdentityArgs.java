@@ -5,7 +5,7 @@ package io.pulumi.azurenative.kubernetes.inputs;
 
 import io.pulumi.azurenative.kubernetes.enums.ResourceIdentityType;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 
 
@@ -21,7 +21,7 @@ public final class ConnectedClusterIdentityArgs extends io.pulumi.resources.Reso
      * The type of identity used for the connected cluster. The type 'SystemAssigned, includes a system created identity. The type 'None' means no identity is assigned to the connected cluster.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<ResourceIdentityType> type;
 
     public Output<ResourceIdentityType> getType() {

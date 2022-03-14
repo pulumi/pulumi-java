@@ -7,12 +7,12 @@ import io.pulumi.azurenative.sqlvirtualmachine.outputs.AdditionalFeaturesServerC
 import io.pulumi.azurenative.sqlvirtualmachine.outputs.SqlConnectivityUpdateSettingsResponse;
 import io.pulumi.azurenative.sqlvirtualmachine.outputs.SqlStorageUpdateSettingsResponse;
 import io.pulumi.azurenative.sqlvirtualmachine.outputs.SqlWorkloadTypeUpdateSettingsResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ServerConfigurationsManagementSettingsResponse {
     /**
      * Additional SQL feature settings.
@@ -35,12 +35,12 @@ public final class ServerConfigurationsManagementSettingsResponse {
      */
     private final @Nullable SqlWorkloadTypeUpdateSettingsResponse sqlWorkloadTypeUpdateSettings;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServerConfigurationsManagementSettingsResponse(
-        @OutputCustomType.Parameter("additionalFeaturesServerConfigurations") @Nullable AdditionalFeaturesServerConfigurationsResponse additionalFeaturesServerConfigurations,
-        @OutputCustomType.Parameter("sqlConnectivityUpdateSettings") @Nullable SqlConnectivityUpdateSettingsResponse sqlConnectivityUpdateSettings,
-        @OutputCustomType.Parameter("sqlStorageUpdateSettings") @Nullable SqlStorageUpdateSettingsResponse sqlStorageUpdateSettings,
-        @OutputCustomType.Parameter("sqlWorkloadTypeUpdateSettings") @Nullable SqlWorkloadTypeUpdateSettingsResponse sqlWorkloadTypeUpdateSettings) {
+        @CustomType.Parameter("additionalFeaturesServerConfigurations") @Nullable AdditionalFeaturesServerConfigurationsResponse additionalFeaturesServerConfigurations,
+        @CustomType.Parameter("sqlConnectivityUpdateSettings") @Nullable SqlConnectivityUpdateSettingsResponse sqlConnectivityUpdateSettings,
+        @CustomType.Parameter("sqlStorageUpdateSettings") @Nullable SqlStorageUpdateSettingsResponse sqlStorageUpdateSettings,
+        @CustomType.Parameter("sqlWorkloadTypeUpdateSettings") @Nullable SqlWorkloadTypeUpdateSettingsResponse sqlWorkloadTypeUpdateSettings) {
         this.additionalFeaturesServerConfigurations = additionalFeaturesServerConfigurations;
         this.sqlConnectivityUpdateSettings = sqlConnectivityUpdateSettings;
         this.sqlStorageUpdateSettings = sqlStorageUpdateSettings;

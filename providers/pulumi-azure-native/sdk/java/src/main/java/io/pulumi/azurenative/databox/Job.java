@@ -15,7 +15,7 @@ import io.pulumi.azurenative.databox.outputs.SkuResponse;
 import io.pulumi.azurenative.databox.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Object;
@@ -45,7 +45,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * Reason for cancellation.
      * 
      */
-    @OutputExport(name="cancellationReason", type=String.class, parameters={})
+    @Export(name="cancellationReason", type=String.class, parameters={})
     private Output<String> cancellationReason;
 
     /**
@@ -59,7 +59,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * Delivery Info of Job.
      * 
      */
-    @OutputExport(name="deliveryInfo", type=JobDeliveryInfoResponse.class, parameters={})
+    @Export(name="deliveryInfo", type=JobDeliveryInfoResponse.class, parameters={})
     private Output</* @Nullable */ JobDeliveryInfoResponse> deliveryInfo;
 
     /**
@@ -73,7 +73,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * Delivery type of Job.
      * 
      */
-    @OutputExport(name="deliveryType", type=String.class, parameters={})
+    @Export(name="deliveryType", type=String.class, parameters={})
     private Output</* @Nullable */ String> deliveryType;
 
     /**
@@ -87,7 +87,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * Details of a job run. This field will only be sent for expand details filter.
      * 
      */
-    @OutputExport(name="details", type=Object.class, parameters={})
+    @Export(name="details", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> details;
 
     /**
@@ -101,7 +101,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * Top level error for the job.
      * 
      */
-    @OutputExport(name="error", type=CloudErrorResponse.class, parameters={})
+    @Export(name="error", type=CloudErrorResponse.class, parameters={})
     private Output<CloudErrorResponse> error;
 
     /**
@@ -115,7 +115,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * Msi identity of the resource
      * 
      */
-    @OutputExport(name="identity", type=ResourceIdentityResponse.class, parameters={})
+    @Export(name="identity", type=ResourceIdentityResponse.class, parameters={})
     private Output</* @Nullable */ ResourceIdentityResponse> identity;
 
     /**
@@ -129,7 +129,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * Describes whether the job is cancellable or not.
      * 
      */
-    @OutputExport(name="isCancellable", type=Boolean.class, parameters={})
+    @Export(name="isCancellable", type=Boolean.class, parameters={})
     private Output<Boolean> isCancellable;
 
     /**
@@ -143,7 +143,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * Flag to indicate cancellation of scheduled job.
      * 
      */
-    @OutputExport(name="isCancellableWithoutFee", type=Boolean.class, parameters={})
+    @Export(name="isCancellableWithoutFee", type=Boolean.class, parameters={})
     private Output<Boolean> isCancellableWithoutFee;
 
     /**
@@ -157,7 +157,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * Describes whether the job is deletable or not.
      * 
      */
-    @OutputExport(name="isDeletable", type=Boolean.class, parameters={})
+    @Export(name="isDeletable", type=Boolean.class, parameters={})
     private Output<Boolean> isDeletable;
 
     /**
@@ -171,7 +171,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * Is Prepare To Ship Enabled on this job
      * 
      */
-    @OutputExport(name="isPrepareToShipEnabled", type=Boolean.class, parameters={})
+    @Export(name="isPrepareToShipEnabled", type=Boolean.class, parameters={})
     private Output<Boolean> isPrepareToShipEnabled;
 
     /**
@@ -185,7 +185,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * Describes whether the shipping address is editable or not.
      * 
      */
-    @OutputExport(name="isShippingAddressEditable", type=Boolean.class, parameters={})
+    @Export(name="isShippingAddressEditable", type=Boolean.class, parameters={})
     private Output<Boolean> isShippingAddressEditable;
 
     /**
@@ -199,7 +199,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * The location of the resource. This will be one of the supported and registered Azure Regions (e.g. West US, East US, Southeast Asia, etc.). The region of a resource cannot be changed once it is created, but if an identical region is specified on update the request will succeed.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -213,7 +213,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * Name of the object.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -227,7 +227,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * The sku type.
      * 
      */
-    @OutputExport(name="sku", type=SkuResponse.class, parameters={})
+    @Export(name="sku", type=SkuResponse.class, parameters={})
     private Output<SkuResponse> sku;
 
     /**
@@ -241,7 +241,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * Time at which the job was started in UTC ISO 8601 format.
      * 
      */
-    @OutputExport(name="startTime", type=String.class, parameters={})
+    @Export(name="startTime", type=String.class, parameters={})
     private Output<String> startTime;
 
     /**
@@ -255,7 +255,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * Name of the stage which is in progress.
      * 
      */
-    @OutputExport(name="status", type=String.class, parameters={})
+    @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
     /**
@@ -269,7 +269,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * Metadata pertaining to creation and last modification of the resource.
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -283,7 +283,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * The list of key value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups).
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -297,7 +297,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * Type of the data transfer.
      * 
      */
-    @OutputExport(name="transferType", type=String.class, parameters={})
+    @Export(name="transferType", type=String.class, parameters={})
     private Output<String> transferType;
 
     /**
@@ -311,7 +311,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * Type of the object.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

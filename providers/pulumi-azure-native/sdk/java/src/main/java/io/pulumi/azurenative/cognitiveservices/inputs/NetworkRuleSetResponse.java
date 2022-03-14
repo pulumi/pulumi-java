@@ -5,7 +5,7 @@ package io.pulumi.azurenative.cognitiveservices.inputs;
 
 import io.pulumi.azurenative.cognitiveservices.inputs.IpRuleResponse;
 import io.pulumi.azurenative.cognitiveservices.inputs.VirtualNetworkRuleResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class NetworkRuleSetResponse extends io.pulumi.resources.InvokeArgs
      * The default action when no rule from ipRules and from virtualNetworkRules match. This is only used after the bypass property has been evaluated.
      * 
      */
-    @InputImport(name="defaultAction")
+    @Import(name="defaultAction")
       private final @Nullable String defaultAction;
 
     public Optional<String> getDefaultAction() {
@@ -36,7 +36,7 @@ public final class NetworkRuleSetResponse extends io.pulumi.resources.InvokeArgs
      * The list of IP address rules.
      * 
      */
-    @InputImport(name="ipRules")
+    @Import(name="ipRules")
       private final @Nullable List<IpRuleResponse> ipRules;
 
     public List<IpRuleResponse> getIpRules() {
@@ -47,7 +47,7 @@ public final class NetworkRuleSetResponse extends io.pulumi.resources.InvokeArgs
      * The list of virtual network rules.
      * 
      */
-    @InputImport(name="virtualNetworkRules")
+    @Import(name="virtualNetworkRules")
       private final @Nullable List<VirtualNetworkRuleResponse> virtualNetworkRules;
 
     public List<VirtualNetworkRuleResponse> getVirtualNetworkRules() {

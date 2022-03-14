@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.insights.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class WebtestLocationAvailabilityCriteriaArgs extends io.pulumi.res
      * The Application Insights resource Id.
      * 
      */
-    @InputImport(name="componentId", required=true)
+    @Import(name="componentId", required=true)
       private final Output<String> componentId;
 
     public Output<String> getComponentId() {
@@ -33,7 +33,7 @@ public final class WebtestLocationAvailabilityCriteriaArgs extends io.pulumi.res
      * The number of failed locations.
      * 
      */
-    @InputImport(name="failedLocationCount", required=true)
+    @Import(name="failedLocationCount", required=true)
       private final Output<Double> failedLocationCount;
 
     public Output<Double> getFailedLocationCount() {
@@ -45,7 +45,7 @@ public final class WebtestLocationAvailabilityCriteriaArgs extends io.pulumi.res
      * Expected value is 'Microsoft.Azure.Monitor.WebtestLocationAvailabilityCriteria'.
      * 
      */
-    @InputImport(name="odataType", required=true)
+    @Import(name="odataType", required=true)
       private final Output<String> odataType;
 
     public Output<String> getOdataType() {
@@ -56,7 +56,7 @@ public final class WebtestLocationAvailabilityCriteriaArgs extends io.pulumi.res
      * The Application Insights web test Id.
      * 
      */
-    @InputImport(name="webTestId", required=true)
+    @Import(name="webTestId", required=true)
       private final Output<String> webTestId;
 
     public Output<String> getWebTestId() {

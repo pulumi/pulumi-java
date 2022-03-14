@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datamigration.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.Object;
@@ -20,7 +20,7 @@ public final class NodeMonitoringDataResponse extends io.pulumi.resources.Invoke
      *  Unmatched properties from the message are deserialized in this collection.
      * 
      */
-    @InputImport(name="additionalProperties", required=true)
+    @Import(name="additionalProperties", required=true)
       private final Map<String,Object> additionalProperties;
 
     public Map<String,Object> getAdditionalProperties() {
@@ -31,7 +31,7 @@ public final class NodeMonitoringDataResponse extends io.pulumi.resources.Invoke
      * Available memory (MB) on the integration runtime node.
      * 
      */
-    @InputImport(name="availableMemoryInMB", required=true)
+    @Import(name="availableMemoryInMB", required=true)
       private final Integer availableMemoryInMB;
 
     public Integer getAvailableMemoryInMB() {
@@ -42,7 +42,7 @@ public final class NodeMonitoringDataResponse extends io.pulumi.resources.Invoke
      * Maximum concurrent jobs on the integration runtime node.
      * 
      */
-    @InputImport(name="concurrentJobsLimit", required=true)
+    @Import(name="concurrentJobsLimit", required=true)
       private final Integer concurrentJobsLimit;
 
     public Integer getConcurrentJobsLimit() {
@@ -53,7 +53,7 @@ public final class NodeMonitoringDataResponse extends io.pulumi.resources.Invoke
      * The number of jobs currently running on the integration runtime node.
      * 
      */
-    @InputImport(name="concurrentJobsRunning", required=true)
+    @Import(name="concurrentJobsRunning", required=true)
       private final Integer concurrentJobsRunning;
 
     public Integer getConcurrentJobsRunning() {
@@ -64,7 +64,7 @@ public final class NodeMonitoringDataResponse extends io.pulumi.resources.Invoke
      * CPU percentage on the integration runtime node.
      * 
      */
-    @InputImport(name="cpuUtilization", required=true)
+    @Import(name="cpuUtilization", required=true)
       private final Integer cpuUtilization;
 
     public Integer getCpuUtilization() {
@@ -75,7 +75,7 @@ public final class NodeMonitoringDataResponse extends io.pulumi.resources.Invoke
      * The maximum concurrent jobs in this integration runtime.
      * 
      */
-    @InputImport(name="maxConcurrentJobs", required=true)
+    @Import(name="maxConcurrentJobs", required=true)
       private final Integer maxConcurrentJobs;
 
     public Integer getMaxConcurrentJobs() {
@@ -86,7 +86,7 @@ public final class NodeMonitoringDataResponse extends io.pulumi.resources.Invoke
      * Name of the integration runtime node.
      * 
      */
-    @InputImport(name="nodeName", required=true)
+    @Import(name="nodeName", required=true)
       private final String nodeName;
 
     public String getNodeName() {
@@ -97,7 +97,7 @@ public final class NodeMonitoringDataResponse extends io.pulumi.resources.Invoke
      * Received bytes on the integration runtime node.
      * 
      */
-    @InputImport(name="receivedBytes", required=true)
+    @Import(name="receivedBytes", required=true)
       private final Double receivedBytes;
 
     public Double getReceivedBytes() {
@@ -108,7 +108,7 @@ public final class NodeMonitoringDataResponse extends io.pulumi.resources.Invoke
      * Sent bytes on the integration runtime node.
      * 
      */
-    @InputImport(name="sentBytes", required=true)
+    @Import(name="sentBytes", required=true)
       private final Double sentBytes;
 
     public Double getSentBytes() {

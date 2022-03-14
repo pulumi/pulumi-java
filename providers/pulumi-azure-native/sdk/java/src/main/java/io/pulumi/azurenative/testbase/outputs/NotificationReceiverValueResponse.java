@@ -6,12 +6,12 @@ package io.pulumi.azurenative.testbase.outputs;
 import io.pulumi.azurenative.testbase.outputs.DistributionGroupListReceiverValueResponse;
 import io.pulumi.azurenative.testbase.outputs.SubscriptionReceiverValueResponse;
 import io.pulumi.azurenative.testbase.outputs.UserObjectReceiverValueResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class NotificationReceiverValueResponse {
     /**
      * The user object receiver value.
@@ -29,11 +29,11 @@ public final class NotificationReceiverValueResponse {
      */
     private final @Nullable UserObjectReceiverValueResponse userObjectReceiverValue;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NotificationReceiverValueResponse(
-        @OutputCustomType.Parameter("distributionGroupListReceiverValue") @Nullable DistributionGroupListReceiverValueResponse distributionGroupListReceiverValue,
-        @OutputCustomType.Parameter("subscriptionReceiverValue") @Nullable SubscriptionReceiverValueResponse subscriptionReceiverValue,
-        @OutputCustomType.Parameter("userObjectReceiverValue") @Nullable UserObjectReceiverValueResponse userObjectReceiverValue) {
+        @CustomType.Parameter("distributionGroupListReceiverValue") @Nullable DistributionGroupListReceiverValueResponse distributionGroupListReceiverValue,
+        @CustomType.Parameter("subscriptionReceiverValue") @Nullable SubscriptionReceiverValueResponse subscriptionReceiverValue,
+        @CustomType.Parameter("userObjectReceiverValue") @Nullable UserObjectReceiverValueResponse userObjectReceiverValue) {
         this.distributionGroupListReceiverValue = distributionGroupListReceiverValue;
         this.subscriptionReceiverValue = subscriptionReceiverValue;
         this.userObjectReceiverValue = userObjectReceiverValue;

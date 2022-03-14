@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.apimanagement.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class KeyVaultContractCreatePropertiesArgs extends io.pulumi.resour
      * SystemAssignedIdentity or UserAssignedIdentity Client Id which will be used to access key vault secret.
      * 
      */
-    @InputImport(name="identityClientId")
+    @Import(name="identityClientId")
       private final @Nullable Output<String> identityClientId;
 
     public Output<String> getIdentityClientId() {
@@ -33,7 +33,7 @@ public final class KeyVaultContractCreatePropertiesArgs extends io.pulumi.resour
      * Key vault secret identifier for fetching secret. Providing a versioned secret will prevent auto-refresh. This requires Api Management service to be configured with aka.ms/apimmsi
      * 
      */
-    @InputImport(name="secretIdentifier")
+    @Import(name="secretIdentifier")
       private final @Nullable Output<String> secretIdentifier;
 
     public Output<String> getSecretIdentifier() {

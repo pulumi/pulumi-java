@@ -7,7 +7,7 @@ import io.pulumi.azurenative.connectedvmwarevsphere.enums.DiskMode;
 import io.pulumi.azurenative.connectedvmwarevsphere.enums.DiskType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class VirtualDiskArgs extends io.pulumi.resources.ResourceArgs {
      * Gets or sets the controller id.
      * 
      */
-    @InputImport(name="controllerKey")
+    @Import(name="controllerKey")
       private final @Nullable Output<Integer> controllerKey;
 
     public Output<Integer> getControllerKey() {
@@ -37,7 +37,7 @@ public final class VirtualDiskArgs extends io.pulumi.resources.ResourceArgs {
      * Gets or sets the device key value.
      * 
      */
-    @InputImport(name="deviceKey")
+    @Import(name="deviceKey")
       private final @Nullable Output<Integer> deviceKey;
 
     public Output<Integer> getDeviceKey() {
@@ -48,7 +48,7 @@ public final class VirtualDiskArgs extends io.pulumi.resources.ResourceArgs {
      * Gets or sets the device name.
      * 
      */
-    @InputImport(name="deviceName")
+    @Import(name="deviceName")
       private final @Nullable Output<String> deviceName;
 
     public Output<String> getDeviceName() {
@@ -59,7 +59,7 @@ public final class VirtualDiskArgs extends io.pulumi.resources.ResourceArgs {
      * Gets or sets the disk mode.
      * 
      */
-    @InputImport(name="diskMode")
+    @Import(name="diskMode")
       private final @Nullable Output<Either<String,DiskMode>> diskMode;
 
     public Output<Either<String,DiskMode>> getDiskMode() {
@@ -70,7 +70,7 @@ public final class VirtualDiskArgs extends io.pulumi.resources.ResourceArgs {
      * Gets or sets the disk total size.
      * 
      */
-    @InputImport(name="diskSizeGB")
+    @Import(name="diskSizeGB")
       private final @Nullable Output<Integer> diskSizeGB;
 
     public Output<Integer> getDiskSizeGB() {
@@ -81,7 +81,7 @@ public final class VirtualDiskArgs extends io.pulumi.resources.ResourceArgs {
      * Gets or sets the disk backing type.
      * 
      */
-    @InputImport(name="diskType")
+    @Import(name="diskType")
       private final @Nullable Output<Either<String,DiskType>> diskType;
 
     public Output<Either<String,DiskType>> getDiskType() {
@@ -92,7 +92,7 @@ public final class VirtualDiskArgs extends io.pulumi.resources.ResourceArgs {
      * Gets or sets the name of the virtual disk.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -103,7 +103,7 @@ public final class VirtualDiskArgs extends io.pulumi.resources.ResourceArgs {
      * Gets or sets the unit number of the disk on the controller.
      * 
      */
-    @InputImport(name="unitNumber")
+    @Import(name="unitNumber")
       private final @Nullable Output<Integer> unitNumber;
 
     public Output<Integer> getUnitNumber() {

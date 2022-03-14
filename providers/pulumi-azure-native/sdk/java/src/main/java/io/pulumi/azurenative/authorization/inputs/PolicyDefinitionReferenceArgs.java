@@ -5,7 +5,7 @@ package io.pulumi.azurenative.authorization.inputs;
 
 import io.pulumi.azurenative.authorization.inputs.ParameterValuesValueArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -25,7 +25,7 @@ public final class PolicyDefinitionReferenceArgs extends io.pulumi.resources.Res
      * The name of the groups that this policy definition reference belongs to.
      * 
      */
-    @InputImport(name="groupNames")
+    @Import(name="groupNames")
       private final @Nullable Output<List<String>> groupNames;
 
     public Output<List<String>> getGroupNames() {
@@ -36,7 +36,7 @@ public final class PolicyDefinitionReferenceArgs extends io.pulumi.resources.Res
      * The parameter values for the referenced policy rule. The keys are the parameter names.
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable Output<Map<String,ParameterValuesValueArgs>> parameters;
 
     public Output<Map<String,ParameterValuesValueArgs>> getParameters() {
@@ -47,7 +47,7 @@ public final class PolicyDefinitionReferenceArgs extends io.pulumi.resources.Res
      * The ID of the policy definition or policy set definition.
      * 
      */
-    @InputImport(name="policyDefinitionId", required=true)
+    @Import(name="policyDefinitionId", required=true)
       private final Output<String> policyDefinitionId;
 
     public Output<String> getPolicyDefinitionId() {
@@ -58,7 +58,7 @@ public final class PolicyDefinitionReferenceArgs extends io.pulumi.resources.Res
      * A unique id (within the policy set definition) for this policy definition reference.
      * 
      */
-    @InputImport(name="policyDefinitionReferenceId")
+    @Import(name="policyDefinitionReferenceId")
       private final @Nullable Output<String> policyDefinitionReferenceId;
 
     public Output<String> getPolicyDefinitionReferenceId() {

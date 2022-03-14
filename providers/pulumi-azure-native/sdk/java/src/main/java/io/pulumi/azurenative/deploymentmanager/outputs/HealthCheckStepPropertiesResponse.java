@@ -4,11 +4,11 @@
 package io.pulumi.azurenative.deploymentmanager.outputs;
 
 import io.pulumi.azurenative.deploymentmanager.outputs.RestHealthCheckStepAttributesResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class HealthCheckStepPropertiesResponse {
     /**
      * The health check step attributes
@@ -22,10 +22,10 @@ public final class HealthCheckStepPropertiesResponse {
      */
     private final String stepType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private HealthCheckStepPropertiesResponse(
-        @OutputCustomType.Parameter("attributes") RestHealthCheckStepAttributesResponse attributes,
-        @OutputCustomType.Parameter("stepType") String stepType) {
+        @CustomType.Parameter("attributes") RestHealthCheckStepAttributesResponse attributes,
+        @CustomType.Parameter("stepType") String stepType) {
         this.attributes = attributes;
         this.stepType = stepType;
     }

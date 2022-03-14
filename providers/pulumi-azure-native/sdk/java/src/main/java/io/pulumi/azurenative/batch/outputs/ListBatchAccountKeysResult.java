@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.batch.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ListBatchAccountKeysResult {
     /**
      * The Batch account name.
@@ -25,11 +25,11 @@ public final class ListBatchAccountKeysResult {
      */
     private final String secondary;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ListBatchAccountKeysResult(
-        @OutputCustomType.Parameter("accountName") String accountName,
-        @OutputCustomType.Parameter("primary") String primary,
-        @OutputCustomType.Parameter("secondary") String secondary) {
+        @CustomType.Parameter("accountName") String accountName,
+        @CustomType.Parameter("primary") String primary,
+        @CustomType.Parameter("secondary") String secondary) {
         this.accountName = accountName;
         this.primary = primary;
         this.secondary = secondary;

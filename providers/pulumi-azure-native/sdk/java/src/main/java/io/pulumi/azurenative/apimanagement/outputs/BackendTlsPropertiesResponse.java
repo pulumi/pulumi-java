@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.apimanagement.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BackendTlsPropertiesResponse {
     /**
      * Flag indicating whether SSL certificate chain validation should be done when using self-signed certificates for this backend host.
@@ -22,10 +22,10 @@ public final class BackendTlsPropertiesResponse {
      */
     private final @Nullable Boolean validateCertificateName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BackendTlsPropertiesResponse(
-        @OutputCustomType.Parameter("validateCertificateChain") @Nullable Boolean validateCertificateChain,
-        @OutputCustomType.Parameter("validateCertificateName") @Nullable Boolean validateCertificateName) {
+        @CustomType.Parameter("validateCertificateChain") @Nullable Boolean validateCertificateChain,
+        @CustomType.Parameter("validateCertificateName") @Nullable Boolean validateCertificateName) {
         this.validateCertificateChain = validateCertificateChain;
         this.validateCertificateName = validateCertificateName;
     }

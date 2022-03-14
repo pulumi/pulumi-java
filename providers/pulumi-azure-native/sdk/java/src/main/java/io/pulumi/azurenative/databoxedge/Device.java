@@ -12,7 +12,7 @@ import io.pulumi.azurenative.databoxedge.outputs.SkuResponse;
 import io.pulumi.azurenative.databoxedge.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Double;
 import java.lang.Integer;
@@ -42,7 +42,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * Type of compute roles configured.
      * 
      */
-    @OutputExport(name="configuredRoleTypes", type=List.class, parameters={String.class})
+    @Export(name="configuredRoleTypes", type=List.class, parameters={String.class})
     private Output<List<String>> configuredRoleTypes;
 
     /**
@@ -56,7 +56,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * The Data Box Edge/Gateway device culture.
      * 
      */
-    @OutputExport(name="culture", type=String.class, parameters={})
+    @Export(name="culture", type=String.class, parameters={})
     private Output<String> culture;
 
     /**
@@ -70,7 +70,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * The status of the Data Box Edge/Gateway device.
      * 
      */
-    @OutputExport(name="dataBoxEdgeDeviceStatus", type=String.class, parameters={})
+    @Export(name="dataBoxEdgeDeviceStatus", type=String.class, parameters={})
     private Output</* @Nullable */ String> dataBoxEdgeDeviceStatus;
 
     /**
@@ -84,7 +84,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * The Description of the Data Box Edge/Gateway device.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
@@ -98,7 +98,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * The device software version number of the device (eg: 1.2.18105.6).
      * 
      */
-    @OutputExport(name="deviceHcsVersion", type=String.class, parameters={})
+    @Export(name="deviceHcsVersion", type=String.class, parameters={})
     private Output<String> deviceHcsVersion;
 
     /**
@@ -112,7 +112,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * The Data Box Edge/Gateway device local capacity in MB.
      * 
      */
-    @OutputExport(name="deviceLocalCapacity", type=Double.class, parameters={})
+    @Export(name="deviceLocalCapacity", type=Double.class, parameters={})
     private Output<Double> deviceLocalCapacity;
 
     /**
@@ -126,7 +126,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * The Data Box Edge/Gateway device model.
      * 
      */
-    @OutputExport(name="deviceModel", type=String.class, parameters={})
+    @Export(name="deviceModel", type=String.class, parameters={})
     private Output<String> deviceModel;
 
     /**
@@ -140,7 +140,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * The Data Box Edge/Gateway device software version.
      * 
      */
-    @OutputExport(name="deviceSoftwareVersion", type=String.class, parameters={})
+    @Export(name="deviceSoftwareVersion", type=String.class, parameters={})
     private Output<String> deviceSoftwareVersion;
 
     /**
@@ -154,7 +154,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * The type of the Data Box Edge/Gateway device.
      * 
      */
-    @OutputExport(name="deviceType", type=String.class, parameters={})
+    @Export(name="deviceType", type=String.class, parameters={})
     private Output<String> deviceType;
 
     /**
@@ -168,7 +168,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * The details of Edge Profile for this resource
      * 
      */
-    @OutputExport(name="edgeProfile", type=EdgeProfileResponse.class, parameters={})
+    @Export(name="edgeProfile", type=EdgeProfileResponse.class, parameters={})
     private Output<EdgeProfileResponse> edgeProfile;
 
     /**
@@ -182,7 +182,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * The etag for the devices.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output</* @Nullable */ String> etag;
 
     /**
@@ -196,7 +196,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * The Data Box Edge/Gateway device name.
      * 
      */
-    @OutputExport(name="friendlyName", type=String.class, parameters={})
+    @Export(name="friendlyName", type=String.class, parameters={})
     private Output<String> friendlyName;
 
     /**
@@ -210,7 +210,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * Msi identity of the resource
      * 
      */
-    @OutputExport(name="identity", type=ResourceIdentityResponse.class, parameters={})
+    @Export(name="identity", type=ResourceIdentityResponse.class, parameters={})
     private Output</* @Nullable */ ResourceIdentityResponse> identity;
 
     /**
@@ -224,7 +224,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * The etag for the devices.
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
     /**
@@ -238,7 +238,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * The location of the device. This is a supported and registered Azure geographical region (for example, West US, East US, or Southeast Asia). The geographical region of a device cannot be changed once it is created, but if an identical geographical region is specified on update, the request will succeed.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -252,7 +252,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * The description of the Data Box Edge/Gateway device model.
      * 
      */
-    @OutputExport(name="modelDescription", type=String.class, parameters={})
+    @Export(name="modelDescription", type=String.class, parameters={})
     private Output<String> modelDescription;
 
     /**
@@ -266,7 +266,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * The object name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -280,7 +280,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * The number of nodes in the cluster.
      * 
      */
-    @OutputExport(name="nodeCount", type=Integer.class, parameters={})
+    @Export(name="nodeCount", type=Integer.class, parameters={})
     private Output<Integer> nodeCount;
 
     /**
@@ -294,7 +294,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * The details of the move operation on this resource.
      * 
      */
-    @OutputExport(name="resourceMoveDetails", type=ResourceMoveDetailsResponse.class, parameters={})
+    @Export(name="resourceMoveDetails", type=ResourceMoveDetailsResponse.class, parameters={})
     private Output<ResourceMoveDetailsResponse> resourceMoveDetails;
 
     /**
@@ -308,7 +308,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * The Serial Number of Data Box Edge/Gateway device.
      * 
      */
-    @OutputExport(name="serialNumber", type=String.class, parameters={})
+    @Export(name="serialNumber", type=String.class, parameters={})
     private Output<String> serialNumber;
 
     /**
@@ -322,7 +322,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * The SKU type.
      * 
      */
-    @OutputExport(name="sku", type=SkuResponse.class, parameters={})
+    @Export(name="sku", type=SkuResponse.class, parameters={})
     private Output</* @Nullable */ SkuResponse> sku;
 
     /**
@@ -336,7 +336,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * DataBoxEdge Resource
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -350,7 +350,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * The list of tags that describe the device. These tags can be used to view and group this device (across resource groups).
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -364,7 +364,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * The Data Box Edge/Gateway device timezone.
      * 
      */
-    @OutputExport(name="timeZone", type=String.class, parameters={})
+    @Export(name="timeZone", type=String.class, parameters={})
     private Output<String> timeZone;
 
     /**
@@ -378,7 +378,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * The hierarchical type of the object.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.media.inputs;
 
 import io.pulumi.azurenative.media.inputs.JobErrorDetailResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class JobErrorResponse extends io.pulumi.resources.InvokeArgs {
      * Helps with categorization of errors.
      * 
      */
-    @InputImport(name="category", required=true)
+    @Import(name="category", required=true)
       private final String category;
 
     public String getCategory() {
@@ -33,7 +33,7 @@ public final class JobErrorResponse extends io.pulumi.resources.InvokeArgs {
      * Error code describing the error.
      * 
      */
-    @InputImport(name="code", required=true)
+    @Import(name="code", required=true)
       private final String code;
 
     public String getCode() {
@@ -44,7 +44,7 @@ public final class JobErrorResponse extends io.pulumi.resources.InvokeArgs {
      * An array of details about specific errors that led to this reported error.
      * 
      */
-    @InputImport(name="details", required=true)
+    @Import(name="details", required=true)
       private final List<JobErrorDetailResponse> details;
 
     public List<JobErrorDetailResponse> getDetails() {
@@ -55,7 +55,7 @@ public final class JobErrorResponse extends io.pulumi.resources.InvokeArgs {
      * A human-readable language-dependent representation of the error.
      * 
      */
-    @InputImport(name="message", required=true)
+    @Import(name="message", required=true)
       private final String message;
 
     public String getMessage() {
@@ -66,7 +66,7 @@ public final class JobErrorResponse extends io.pulumi.resources.InvokeArgs {
      * Indicates that it may be possible to retry the Job. If retry is unsuccessful, please contact Azure support via Azure Portal.
      * 
      */
-    @InputImport(name="retry", required=true)
+    @Import(name="retry", required=true)
       private final String retry;
 
     public String getRetry() {

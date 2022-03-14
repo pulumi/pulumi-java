@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DiskExclusionPropertiesResponse {
     /**
      * List of Disks' Logical Unit Numbers (LUN) to be used for VM Protection.
@@ -24,10 +24,10 @@ public final class DiskExclusionPropertiesResponse {
      */
     private final @Nullable Boolean isInclusionList;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DiskExclusionPropertiesResponse(
-        @OutputCustomType.Parameter("diskLunList") @Nullable List<Integer> diskLunList,
-        @OutputCustomType.Parameter("isInclusionList") @Nullable Boolean isInclusionList) {
+        @CustomType.Parameter("diskLunList") @Nullable List<Integer> diskLunList,
+        @CustomType.Parameter("isInclusionList") @Nullable Boolean isInclusionList) {
         this.diskLunList = diskLunList;
         this.isInclusionList = isInclusionList;
     }

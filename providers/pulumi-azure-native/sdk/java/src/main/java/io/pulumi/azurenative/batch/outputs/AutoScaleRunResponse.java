@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.batch.outputs;
 
 import io.pulumi.azurenative.batch.outputs.AutoScaleRunErrorResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AutoScaleRunResponse {
     private final @Nullable AutoScaleRunErrorResponse error;
     private final String evaluationTime;
@@ -20,11 +20,11 @@ public final class AutoScaleRunResponse {
      */
     private final @Nullable String results;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AutoScaleRunResponse(
-        @OutputCustomType.Parameter("error") @Nullable AutoScaleRunErrorResponse error,
-        @OutputCustomType.Parameter("evaluationTime") String evaluationTime,
-        @OutputCustomType.Parameter("results") @Nullable String results) {
+        @CustomType.Parameter("error") @Nullable AutoScaleRunErrorResponse error,
+        @CustomType.Parameter("evaluationTime") String evaluationTime,
+        @CustomType.Parameter("results") @Nullable String results) {
         this.error = error;
         this.evaluationTime = evaluationTime;
         this.results = results;

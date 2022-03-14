@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.alertsmanagement.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ScopeResponse {
     /**
      * type of target scope
@@ -23,10 +23,10 @@ public final class ScopeResponse {
      */
     private final @Nullable List<String> values;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ScopeResponse(
-        @OutputCustomType.Parameter("scopeType") @Nullable String scopeType,
-        @OutputCustomType.Parameter("values") @Nullable List<String> values) {
+        @CustomType.Parameter("scopeType") @Nullable String scopeType,
+        @CustomType.Parameter("values") @Nullable List<String> values) {
         this.scopeType = scopeType;
         this.values = values;
     }

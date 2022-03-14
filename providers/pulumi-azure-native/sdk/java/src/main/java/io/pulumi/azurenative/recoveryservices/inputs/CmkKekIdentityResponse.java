@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class CmkKekIdentityResponse extends io.pulumi.resources.InvokeArgs
      * Indicate that system assigned identity should be used. Mutually exclusive with 'userAssignedIdentity' field
      * 
      */
-    @InputImport(name="useSystemAssignedIdentity")
+    @Import(name="useSystemAssignedIdentity")
       private final @Nullable Boolean useSystemAssignedIdentity;
 
     public Optional<Boolean> getUseSystemAssignedIdentity() {
@@ -34,7 +34,7 @@ public final class CmkKekIdentityResponse extends io.pulumi.resources.InvokeArgs
      * The user assigned identity to be used to grant permissions in case the type of identity used is UserAssigned
      * 
      */
-    @InputImport(name="userAssignedIdentity")
+    @Import(name="userAssignedIdentity")
       private final @Nullable String userAssignedIdentity;
 
     public Optional<String> getUserAssignedIdentity() {

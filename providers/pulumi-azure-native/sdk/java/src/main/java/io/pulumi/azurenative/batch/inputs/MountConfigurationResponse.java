@@ -7,7 +7,7 @@ import io.pulumi.azurenative.batch.inputs.AzureBlobFileSystemConfigurationRespon
 import io.pulumi.azurenative.batch.inputs.AzureFileShareConfigurationResponse;
 import io.pulumi.azurenative.batch.inputs.CIFSMountConfigurationResponse;
 import io.pulumi.azurenative.batch.inputs.NFSMountConfigurationResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public final class MountConfigurationResponse extends io.pulumi.resources.Invoke
      * This property is mutually exclusive with all other properties.
      * 
      */
-    @InputImport(name="azureBlobFileSystemConfiguration")
+    @Import(name="azureBlobFileSystemConfiguration")
       private final @Nullable AzureBlobFileSystemConfigurationResponse azureBlobFileSystemConfiguration;
 
     public Optional<AzureBlobFileSystemConfigurationResponse> getAzureBlobFileSystemConfiguration() {
@@ -32,7 +32,7 @@ public final class MountConfigurationResponse extends io.pulumi.resources.Invoke
      * This property is mutually exclusive with all other properties.
      * 
      */
-    @InputImport(name="azureFileShareConfiguration")
+    @Import(name="azureFileShareConfiguration")
       private final @Nullable AzureFileShareConfigurationResponse azureFileShareConfiguration;
 
     public Optional<AzureFileShareConfigurationResponse> getAzureFileShareConfiguration() {
@@ -43,7 +43,7 @@ public final class MountConfigurationResponse extends io.pulumi.resources.Invoke
      * This property is mutually exclusive with all other properties.
      * 
      */
-    @InputImport(name="cifsMountConfiguration")
+    @Import(name="cifsMountConfiguration")
       private final @Nullable CIFSMountConfigurationResponse cifsMountConfiguration;
 
     public Optional<CIFSMountConfigurationResponse> getCifsMountConfiguration() {
@@ -54,7 +54,7 @@ public final class MountConfigurationResponse extends io.pulumi.resources.Invoke
      * This property is mutually exclusive with all other properties.
      * 
      */
-    @InputImport(name="nfsMountConfiguration")
+    @Import(name="nfsMountConfiguration")
       private final @Nullable NFSMountConfigurationResponse nfsMountConfiguration;
 
     public Optional<NFSMountConfigurationResponse> getNfsMountConfiguration() {

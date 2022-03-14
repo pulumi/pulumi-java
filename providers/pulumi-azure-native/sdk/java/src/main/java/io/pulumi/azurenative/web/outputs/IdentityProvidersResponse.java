@@ -12,14 +12,14 @@ import io.pulumi.azurenative.web.outputs.GitHubResponse;
 import io.pulumi.azurenative.web.outputs.GoogleResponse;
 import io.pulumi.azurenative.web.outputs.LegacyMicrosoftAccountResponse;
 import io.pulumi.azurenative.web.outputs.TwitterResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class IdentityProvidersResponse {
     /**
      * The configuration settings of the Apple provider.
@@ -68,17 +68,17 @@ public final class IdentityProvidersResponse {
      */
     private final @Nullable TwitterResponse twitter;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private IdentityProvidersResponse(
-        @OutputCustomType.Parameter("apple") @Nullable AppleResponse apple,
-        @OutputCustomType.Parameter("azureActiveDirectory") @Nullable AzureActiveDirectoryResponse azureActiveDirectory,
-        @OutputCustomType.Parameter("azureStaticWebApps") @Nullable AzureStaticWebAppsResponse azureStaticWebApps,
-        @OutputCustomType.Parameter("customOpenIdConnectProviders") @Nullable Map<String,CustomOpenIdConnectProviderResponse> customOpenIdConnectProviders,
-        @OutputCustomType.Parameter("facebook") @Nullable FacebookResponse facebook,
-        @OutputCustomType.Parameter("gitHub") @Nullable GitHubResponse gitHub,
-        @OutputCustomType.Parameter("google") @Nullable GoogleResponse google,
-        @OutputCustomType.Parameter("legacyMicrosoftAccount") @Nullable LegacyMicrosoftAccountResponse legacyMicrosoftAccount,
-        @OutputCustomType.Parameter("twitter") @Nullable TwitterResponse twitter) {
+        @CustomType.Parameter("apple") @Nullable AppleResponse apple,
+        @CustomType.Parameter("azureActiveDirectory") @Nullable AzureActiveDirectoryResponse azureActiveDirectory,
+        @CustomType.Parameter("azureStaticWebApps") @Nullable AzureStaticWebAppsResponse azureStaticWebApps,
+        @CustomType.Parameter("customOpenIdConnectProviders") @Nullable Map<String,CustomOpenIdConnectProviderResponse> customOpenIdConnectProviders,
+        @CustomType.Parameter("facebook") @Nullable FacebookResponse facebook,
+        @CustomType.Parameter("gitHub") @Nullable GitHubResponse gitHub,
+        @CustomType.Parameter("google") @Nullable GoogleResponse google,
+        @CustomType.Parameter("legacyMicrosoftAccount") @Nullable LegacyMicrosoftAccountResponse legacyMicrosoftAccount,
+        @CustomType.Parameter("twitter") @Nullable TwitterResponse twitter) {
         this.apple = apple;
         this.azureActiveDirectory = azureActiveDirectory;
         this.azureStaticWebApps = azureStaticWebApps;

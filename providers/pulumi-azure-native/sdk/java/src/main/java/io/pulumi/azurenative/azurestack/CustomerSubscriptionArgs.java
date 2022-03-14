@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.azurestack;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class CustomerSubscriptionArgs extends io.pulumi.resources.Resource
      * Name of the product.
      * 
      */
-    @InputImport(name="customerSubscriptionName")
+    @Import(name="customerSubscriptionName")
       private final @Nullable Output<String> customerSubscriptionName;
 
     public Output<String> getCustomerSubscriptionName() {
@@ -29,7 +29,7 @@ public final class CustomerSubscriptionArgs extends io.pulumi.resources.Resource
      * Name of the Azure Stack registration.
      * 
      */
-    @InputImport(name="registrationName", required=true)
+    @Import(name="registrationName", required=true)
       private final Output<String> registrationName;
 
     public Output<String> getRegistrationName() {
@@ -40,7 +40,7 @@ public final class CustomerSubscriptionArgs extends io.pulumi.resources.Resource
      * Name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroup", required=true)
+    @Import(name="resourceGroup", required=true)
       private final Output<String> resourceGroup;
 
     public Output<String> getResourceGroup() {
@@ -51,7 +51,7 @@ public final class CustomerSubscriptionArgs extends io.pulumi.resources.Resource
      * Tenant Id.
      * 
      */
-    @InputImport(name="tenantId")
+    @Import(name="tenantId")
       private final @Nullable Output<String> tenantId;
 
     public Output<String> getTenantId() {

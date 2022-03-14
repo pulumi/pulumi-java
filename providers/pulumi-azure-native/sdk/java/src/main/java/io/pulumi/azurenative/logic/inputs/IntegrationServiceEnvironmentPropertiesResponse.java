@@ -6,7 +6,7 @@ package io.pulumi.azurenative.logic.inputs;
 import io.pulumi.azurenative.logic.inputs.FlowEndpointsConfigurationResponse;
 import io.pulumi.azurenative.logic.inputs.IntegrationServiceEnvironmenEncryptionConfigurationResponse;
 import io.pulumi.azurenative.logic.inputs.NetworkConfigurationResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class IntegrationServiceEnvironmentPropertiesResponse extends io.pu
      * The encryption configuration.
      * 
      */
-    @InputImport(name="encryptionConfiguration")
+    @Import(name="encryptionConfiguration")
       private final @Nullable IntegrationServiceEnvironmenEncryptionConfigurationResponse encryptionConfiguration;
 
     public Optional<IntegrationServiceEnvironmenEncryptionConfigurationResponse> getEncryptionConfiguration() {
@@ -36,7 +36,7 @@ public final class IntegrationServiceEnvironmentPropertiesResponse extends io.pu
      * The endpoints configuration.
      * 
      */
-    @InputImport(name="endpointsConfiguration")
+    @Import(name="endpointsConfiguration")
       private final @Nullable FlowEndpointsConfigurationResponse endpointsConfiguration;
 
     public Optional<FlowEndpointsConfigurationResponse> getEndpointsConfiguration() {
@@ -47,7 +47,7 @@ public final class IntegrationServiceEnvironmentPropertiesResponse extends io.pu
      * Gets the tracking id.
      * 
      */
-    @InputImport(name="integrationServiceEnvironmentId")
+    @Import(name="integrationServiceEnvironmentId")
       private final @Nullable String integrationServiceEnvironmentId;
 
     public Optional<String> getIntegrationServiceEnvironmentId() {
@@ -58,7 +58,7 @@ public final class IntegrationServiceEnvironmentPropertiesResponse extends io.pu
      * The network configuration.
      * 
      */
-    @InputImport(name="networkConfiguration")
+    @Import(name="networkConfiguration")
       private final @Nullable NetworkConfigurationResponse networkConfiguration;
 
     public Optional<NetworkConfigurationResponse> getNetworkConfiguration() {
@@ -69,7 +69,7 @@ public final class IntegrationServiceEnvironmentPropertiesResponse extends io.pu
      * The provisioning state.
      * 
      */
-    @InputImport(name="provisioningState")
+    @Import(name="provisioningState")
       private final @Nullable String provisioningState;
 
     public Optional<String> getProvisioningState() {
@@ -80,7 +80,7 @@ public final class IntegrationServiceEnvironmentPropertiesResponse extends io.pu
      * The integration service environment state.
      * 
      */
-    @InputImport(name="state")
+    @Import(name="state")
       private final @Nullable String state;
 
     public Optional<String> getState() {

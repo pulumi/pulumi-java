@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.customerinsights.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class KpiGroupByMetadataResponse extends io.pulumi.resources.Invoke
      * The display name.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Map<String,String> displayName;
 
     public Map<String,String> getDisplayName() {
@@ -34,7 +34,7 @@ public final class KpiGroupByMetadataResponse extends io.pulumi.resources.Invoke
      * The name of the field.
      * 
      */
-    @InputImport(name="fieldName")
+    @Import(name="fieldName")
       private final @Nullable String fieldName;
 
     public Optional<String> getFieldName() {
@@ -45,7 +45,7 @@ public final class KpiGroupByMetadataResponse extends io.pulumi.resources.Invoke
      * The type of the field.
      * 
      */
-    @InputImport(name="fieldType")
+    @Import(name="fieldType")
       private final @Nullable String fieldType;
 
     public Optional<String> getFieldType() {

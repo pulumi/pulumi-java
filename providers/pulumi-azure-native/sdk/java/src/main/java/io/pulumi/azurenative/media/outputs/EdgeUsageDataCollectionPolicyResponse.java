@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.media.outputs;
 
 import io.pulumi.azurenative.media.outputs.EdgeUsageDataEventHubResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EdgeUsageDataCollectionPolicyResponse {
     /**
      * Usage data collection frequency in ISO 8601 duration format e.g. PT10M , PT5H.
@@ -33,12 +33,12 @@ public final class EdgeUsageDataCollectionPolicyResponse {
      */
     private final @Nullable String maxAllowedUnreportedUsageDuration;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EdgeUsageDataCollectionPolicyResponse(
-        @OutputCustomType.Parameter("dataCollectionFrequency") @Nullable String dataCollectionFrequency,
-        @OutputCustomType.Parameter("dataReportingFrequency") @Nullable String dataReportingFrequency,
-        @OutputCustomType.Parameter("eventHubDetails") @Nullable EdgeUsageDataEventHubResponse eventHubDetails,
-        @OutputCustomType.Parameter("maxAllowedUnreportedUsageDuration") @Nullable String maxAllowedUnreportedUsageDuration) {
+        @CustomType.Parameter("dataCollectionFrequency") @Nullable String dataCollectionFrequency,
+        @CustomType.Parameter("dataReportingFrequency") @Nullable String dataReportingFrequency,
+        @CustomType.Parameter("eventHubDetails") @Nullable EdgeUsageDataEventHubResponse eventHubDetails,
+        @CustomType.Parameter("maxAllowedUnreportedUsageDuration") @Nullable String maxAllowedUnreportedUsageDuration) {
         this.dataCollectionFrequency = dataCollectionFrequency;
         this.dataReportingFrequency = dataReportingFrequency;
         this.eventHubDetails = eventHubDetails;

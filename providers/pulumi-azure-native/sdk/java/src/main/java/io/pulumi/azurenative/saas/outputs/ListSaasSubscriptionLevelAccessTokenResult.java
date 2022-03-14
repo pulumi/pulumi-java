@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.saas.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ListSaasSubscriptionLevelAccessTokenResult {
     /**
      * The Publisher Offer Base Uri
@@ -22,10 +22,10 @@ public final class ListSaasSubscriptionLevelAccessTokenResult {
      */
     private final @Nullable String token;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ListSaasSubscriptionLevelAccessTokenResult(
-        @OutputCustomType.Parameter("publisherOfferBaseUri") @Nullable String publisherOfferBaseUri,
-        @OutputCustomType.Parameter("token") @Nullable String token) {
+        @CustomType.Parameter("publisherOfferBaseUri") @Nullable String publisherOfferBaseUri,
+        @CustomType.Parameter("token") @Nullable String token) {
         this.publisherOfferBaseUri = publisherOfferBaseUri;
         this.token = token;
     }

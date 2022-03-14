@@ -5,13 +5,13 @@ package io.pulumi.azurenative.compute.outputs;
 
 import io.pulumi.azurenative.compute.outputs.CapacityReservationUtilizationResponse;
 import io.pulumi.azurenative.compute.outputs.InstanceViewStatusResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CapacityReservationInstanceViewResponse {
     /**
      * The resource status information.
@@ -24,10 +24,10 @@ public final class CapacityReservationInstanceViewResponse {
      */
     private final @Nullable CapacityReservationUtilizationResponse utilizationInfo;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CapacityReservationInstanceViewResponse(
-        @OutputCustomType.Parameter("statuses") @Nullable List<InstanceViewStatusResponse> statuses,
-        @OutputCustomType.Parameter("utilizationInfo") @Nullable CapacityReservationUtilizationResponse utilizationInfo) {
+        @CustomType.Parameter("statuses") @Nullable List<InstanceViewStatusResponse> statuses,
+        @CustomType.Parameter("utilizationInfo") @Nullable CapacityReservationUtilizationResponse utilizationInfo) {
         this.statuses = statuses;
         this.utilizationInfo = utilizationInfo;
     }

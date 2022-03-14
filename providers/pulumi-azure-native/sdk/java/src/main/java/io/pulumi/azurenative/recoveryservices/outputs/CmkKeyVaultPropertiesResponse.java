@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.recoveryservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CmkKeyVaultPropertiesResponse {
     /**
      * The key uri of the Customer Managed Key
@@ -17,8 +17,8 @@ public final class CmkKeyVaultPropertiesResponse {
      */
     private final @Nullable String keyUri;
 
-    @OutputCustomType.Constructor
-    private CmkKeyVaultPropertiesResponse(@OutputCustomType.Parameter("keyUri") @Nullable String keyUri) {
+    @CustomType.Constructor
+    private CmkKeyVaultPropertiesResponse(@CustomType.Parameter("keyUri") @Nullable String keyUri) {
         this.keyUri = keyUri;
     }
 

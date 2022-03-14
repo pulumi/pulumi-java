@@ -11,7 +11,7 @@ import io.pulumi.azurenative.compute.inputs.VirtualMachineScaleSetExtensionProfi
 import io.pulumi.azurenative.compute.inputs.VirtualMachineScaleSetNetworkProfileResponse;
 import io.pulumi.azurenative.compute.inputs.VirtualMachineScaleSetOSProfileResponse;
 import io.pulumi.azurenative.compute.inputs.VirtualMachineScaleSetStorageProfileResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -30,7 +30,7 @@ public final class VirtualMachineScaleSetVMProfileResponse extends io.pulumi.res
      * Specifies the billing related details of a Azure Spot VMSS. <br><br>Minimum api-version: 2019-03-01.
      * 
      */
-    @InputImport(name="billingProfile")
+    @Import(name="billingProfile")
       private final @Nullable BillingProfileResponse billingProfile;
 
     public Optional<BillingProfileResponse> getBillingProfile() {
@@ -41,7 +41,7 @@ public final class VirtualMachineScaleSetVMProfileResponse extends io.pulumi.res
      * Specifies the boot diagnostic settings state. <br><br>Minimum api-version: 2015-06-15.
      * 
      */
-    @InputImport(name="diagnosticsProfile")
+    @Import(name="diagnosticsProfile")
       private final @Nullable DiagnosticsProfileResponse diagnosticsProfile;
 
     public Optional<DiagnosticsProfileResponse> getDiagnosticsProfile() {
@@ -52,7 +52,7 @@ public final class VirtualMachineScaleSetVMProfileResponse extends io.pulumi.res
      * Specifies the eviction policy for the Azure Spot virtual machine and Azure Spot scale set. <br><br>For Azure Spot virtual machines, both 'Deallocate' and 'Delete' are supported and the minimum api-version is 2019-03-01. <br><br>For Azure Spot scale sets, both 'Deallocate' and 'Delete' are supported and the minimum api-version is 2017-10-30-preview.
      * 
      */
-    @InputImport(name="evictionPolicy")
+    @Import(name="evictionPolicy")
       private final @Nullable String evictionPolicy;
 
     public Optional<String> getEvictionPolicy() {
@@ -63,7 +63,7 @@ public final class VirtualMachineScaleSetVMProfileResponse extends io.pulumi.res
      * Specifies a collection of settings for extensions installed on virtual machines in the scale set.
      * 
      */
-    @InputImport(name="extensionProfile")
+    @Import(name="extensionProfile")
       private final @Nullable VirtualMachineScaleSetExtensionProfileResponse extensionProfile;
 
     public Optional<VirtualMachineScaleSetExtensionProfileResponse> getExtensionProfile() {
@@ -74,7 +74,7 @@ public final class VirtualMachineScaleSetVMProfileResponse extends io.pulumi.res
      * Specifies that the image or disk that is being used was licensed on-premises. <br><br> Possible values for Windows Server operating system are: <br><br> Windows_Client <br><br> Windows_Server <br><br> Possible values for Linux Server operating system are: <br><br> RHEL_BYOS (for RHEL) <br><br> SLES_BYOS (for SUSE) <br><br> For more information, see [Azure Hybrid Use Benefit for Windows Server](https://docs.microsoft.com/azure/virtual-machines/windows/hybrid-use-benefit-licensing) <br><br> [Azure Hybrid Use Benefit for Linux Server](https://docs.microsoft.com/azure/virtual-machines/linux/azure-hybrid-benefit-linux) <br><br> Minimum api-version: 2015-06-15
      * 
      */
-    @InputImport(name="licenseType")
+    @Import(name="licenseType")
       private final @Nullable String licenseType;
 
     public Optional<String> getLicenseType() {
@@ -85,7 +85,7 @@ public final class VirtualMachineScaleSetVMProfileResponse extends io.pulumi.res
      * Specifies properties of the network interfaces of the virtual machines in the scale set.
      * 
      */
-    @InputImport(name="networkProfile")
+    @Import(name="networkProfile")
       private final @Nullable VirtualMachineScaleSetNetworkProfileResponse networkProfile;
 
     public Optional<VirtualMachineScaleSetNetworkProfileResponse> getNetworkProfile() {
@@ -96,7 +96,7 @@ public final class VirtualMachineScaleSetVMProfileResponse extends io.pulumi.res
      * Specifies the operating system settings for the virtual machines in the scale set.
      * 
      */
-    @InputImport(name="osProfile")
+    @Import(name="osProfile")
       private final @Nullable VirtualMachineScaleSetOSProfileResponse osProfile;
 
     public Optional<VirtualMachineScaleSetOSProfileResponse> getOsProfile() {
@@ -107,7 +107,7 @@ public final class VirtualMachineScaleSetVMProfileResponse extends io.pulumi.res
      * Specifies the priority for the virtual machines in the scale set. <br><br>Minimum api-version: 2017-10-30-preview
      * 
      */
-    @InputImport(name="priority")
+    @Import(name="priority")
       private final @Nullable String priority;
 
     public Optional<String> getPriority() {
@@ -118,7 +118,7 @@ public final class VirtualMachineScaleSetVMProfileResponse extends io.pulumi.res
      * Specifies Scheduled Event related configurations.
      * 
      */
-    @InputImport(name="scheduledEventsProfile")
+    @Import(name="scheduledEventsProfile")
       private final @Nullable ScheduledEventsProfileResponse scheduledEventsProfile;
 
     public Optional<ScheduledEventsProfileResponse> getScheduledEventsProfile() {
@@ -129,7 +129,7 @@ public final class VirtualMachineScaleSetVMProfileResponse extends io.pulumi.res
      * Specifies the Security related profile settings for the virtual machines in the scale set.
      * 
      */
-    @InputImport(name="securityProfile")
+    @Import(name="securityProfile")
       private final @Nullable SecurityProfileResponse securityProfile;
 
     public Optional<SecurityProfileResponse> getSecurityProfile() {
@@ -140,7 +140,7 @@ public final class VirtualMachineScaleSetVMProfileResponse extends io.pulumi.res
      * Specifies the storage settings for the virtual machine disks.
      * 
      */
-    @InputImport(name="storageProfile")
+    @Import(name="storageProfile")
       private final @Nullable VirtualMachineScaleSetStorageProfileResponse storageProfile;
 
     public Optional<VirtualMachineScaleSetStorageProfileResponse> getStorageProfile() {
@@ -151,7 +151,7 @@ public final class VirtualMachineScaleSetVMProfileResponse extends io.pulumi.res
      * UserData for the virtual machines in the scale set, which must be base-64 encoded. Customer should not pass any secrets in here. <br><br>Minimum api-version: 2021-03-01
      * 
      */
-    @InputImport(name="userData")
+    @Import(name="userData")
       private final @Nullable String userData;
 
     public Optional<String> getUserData() {

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class StaticSiteCustomDomainArgs extends io.pulumi.resources.Resour
      * The custom domain to create.
      * 
      */
-    @InputImport(name="domainName")
+    @Import(name="domainName")
       private final @Nullable Output<String> domainName;
 
     public Output<String> getDomainName() {
@@ -29,7 +29,7 @@ public final class StaticSiteCustomDomainArgs extends io.pulumi.resources.Resour
      * Kind of resource.
      * 
      */
-    @InputImport(name="kind")
+    @Import(name="kind")
       private final @Nullable Output<String> kind;
 
     public Output<String> getKind() {
@@ -40,7 +40,7 @@ public final class StaticSiteCustomDomainArgs extends io.pulumi.resources.Resour
      * Name of the static site.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -51,7 +51,7 @@ public final class StaticSiteCustomDomainArgs extends io.pulumi.resources.Resour
      * Name of the resource group to which the resource belongs.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -62,7 +62,7 @@ public final class StaticSiteCustomDomainArgs extends io.pulumi.resources.Resour
      * Validation method for adding a custom domain
      * 
      */
-    @InputImport(name="validationMethod")
+    @Import(name="validationMethod")
       private final @Nullable Output<String> validationMethod;
 
     public Output<String> getValidationMethod() {

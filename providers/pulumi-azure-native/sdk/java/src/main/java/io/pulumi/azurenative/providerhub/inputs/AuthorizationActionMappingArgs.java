@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.providerhub.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -14,14 +14,14 @@ public final class AuthorizationActionMappingArgs extends io.pulumi.resources.Re
 
     public static final AuthorizationActionMappingArgs Empty = new AuthorizationActionMappingArgs();
 
-    @InputImport(name="desired")
+    @Import(name="desired")
       private final @Nullable Output<String> desired;
 
     public Output<String> getDesired() {
         return this.desired == null ? Output.empty() : this.desired;
     }
 
-    @InputImport(name="original")
+    @Import(name="original")
       private final @Nullable Output<String> original;
 
     public Output<String> getOriginal() {

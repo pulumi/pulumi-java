@@ -6,7 +6,7 @@ package io.pulumi.azurenative.cognitiveservices.inputs;
 import io.pulumi.azurenative.cognitiveservices.inputs.DeploymentModelArgs;
 import io.pulumi.azurenative.cognitiveservices.inputs.DeploymentScaleSettingsArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -23,7 +23,7 @@ public final class DeploymentPropertiesArgs extends io.pulumi.resources.Resource
      * Properties of Cognitive Services account deployment model.
      * 
      */
-    @InputImport(name="model")
+    @Import(name="model")
       private final @Nullable Output<DeploymentModelArgs> model;
 
     public Output<DeploymentModelArgs> getModel() {
@@ -34,7 +34,7 @@ public final class DeploymentPropertiesArgs extends io.pulumi.resources.Resource
      * Properties of Cognitive Services account deployment model.
      * 
      */
-    @InputImport(name="scaleSettings")
+    @Import(name="scaleSettings")
       private final @Nullable Output<DeploymentScaleSettingsArgs> scaleSettings;
 
     public Output<DeploymentScaleSettingsArgs> getScaleSettings() {

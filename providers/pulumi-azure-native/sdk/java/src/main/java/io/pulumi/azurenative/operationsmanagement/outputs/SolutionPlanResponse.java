@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.operationsmanagement.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SolutionPlanResponse {
     /**
      * name of the solution to be created. For Microsoft published solution it should be in the format of solutionType(workspaceName). SolutionType part is case sensitive. For third party solution, it can be anything.
@@ -32,12 +32,12 @@ public final class SolutionPlanResponse {
      */
     private final @Nullable String publisher;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SolutionPlanResponse(
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("product") @Nullable String product,
-        @OutputCustomType.Parameter("promotionCode") @Nullable String promotionCode,
-        @OutputCustomType.Parameter("publisher") @Nullable String publisher) {
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("product") @Nullable String product,
+        @CustomType.Parameter("promotionCode") @Nullable String promotionCode,
+        @CustomType.Parameter("publisher") @Nullable String publisher) {
         this.name = name;
         this.product = product;
         this.promotionCode = promotionCode;

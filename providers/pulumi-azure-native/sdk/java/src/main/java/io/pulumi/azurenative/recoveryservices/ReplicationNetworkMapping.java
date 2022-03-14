@@ -8,7 +8,7 @@ import io.pulumi.azurenative.recoveryservices.ReplicationNetworkMappingArgs;
 import io.pulumi.azurenative.recoveryservices.outputs.NetworkMappingPropertiesResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +35,7 @@ public class ReplicationNetworkMapping extends io.pulumi.resources.CustomResourc
      * Resource Location
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -49,7 +49,7 @@ public class ReplicationNetworkMapping extends io.pulumi.resources.CustomResourc
      * Resource Name
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -63,7 +63,7 @@ public class ReplicationNetworkMapping extends io.pulumi.resources.CustomResourc
      * The Network Mapping Properties.
      * 
      */
-    @OutputExport(name="properties", type=NetworkMappingPropertiesResponse.class, parameters={})
+    @Export(name="properties", type=NetworkMappingPropertiesResponse.class, parameters={})
     private Output<NetworkMappingPropertiesResponse> properties;
 
     /**
@@ -77,7 +77,7 @@ public class ReplicationNetworkMapping extends io.pulumi.resources.CustomResourc
      * Resource Type
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

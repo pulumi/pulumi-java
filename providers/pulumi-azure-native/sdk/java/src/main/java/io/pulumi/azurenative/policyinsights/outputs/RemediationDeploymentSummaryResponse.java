@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.policyinsights.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RemediationDeploymentSummaryResponse {
     /**
      * The number of deployments required by the remediation that have failed.
@@ -25,11 +25,11 @@ public final class RemediationDeploymentSummaryResponse {
      */
     private final Integer totalDeployments;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RemediationDeploymentSummaryResponse(
-        @OutputCustomType.Parameter("failedDeployments") Integer failedDeployments,
-        @OutputCustomType.Parameter("successfulDeployments") Integer successfulDeployments,
-        @OutputCustomType.Parameter("totalDeployments") Integer totalDeployments) {
+        @CustomType.Parameter("failedDeployments") Integer failedDeployments,
+        @CustomType.Parameter("successfulDeployments") Integer successfulDeployments,
+        @CustomType.Parameter("totalDeployments") Integer totalDeployments) {
         this.failedDeployments = failedDeployments;
         this.successfulDeployments = successfulDeployments;
         this.totalDeployments = totalDeployments;

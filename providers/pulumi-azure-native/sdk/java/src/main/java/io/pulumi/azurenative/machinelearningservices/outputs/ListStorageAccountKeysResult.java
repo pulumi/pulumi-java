@@ -3,16 +3,16 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ListStorageAccountKeysResult {
     private final String userStorageKey;
 
-    @OutputCustomType.Constructor
-    private ListStorageAccountKeysResult(@OutputCustomType.Parameter("userStorageKey") String userStorageKey) {
+    @CustomType.Constructor
+    private ListStorageAccountKeysResult(@CustomType.Parameter("userStorageKey") String userStorageKey) {
         this.userStorageKey = userStorageKey;
     }
 

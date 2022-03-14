@@ -6,7 +6,7 @@ package io.pulumi.azurenative.powerbidedicated.inputs;
 import io.pulumi.azurenative.powerbidedicated.enums.IdentityType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class SystemDataArgs extends io.pulumi.resources.ResourceArgs {
      * The timestamp of resource creation (UTC)
      * 
      */
-    @InputImport(name="createdAt")
+    @Import(name="createdAt")
       private final @Nullable Output<String> createdAt;
 
     public Output<String> getCreatedAt() {
@@ -35,7 +35,7 @@ public final class SystemDataArgs extends io.pulumi.resources.ResourceArgs {
      * An identifier for the identity that created the resource
      * 
      */
-    @InputImport(name="createdBy")
+    @Import(name="createdBy")
       private final @Nullable Output<String> createdBy;
 
     public Output<String> getCreatedBy() {
@@ -46,7 +46,7 @@ public final class SystemDataArgs extends io.pulumi.resources.ResourceArgs {
      * The type of identity that created the resource
      * 
      */
-    @InputImport(name="createdByType")
+    @Import(name="createdByType")
       private final @Nullable Output<Either<String,IdentityType>> createdByType;
 
     public Output<Either<String,IdentityType>> getCreatedByType() {
@@ -57,7 +57,7 @@ public final class SystemDataArgs extends io.pulumi.resources.ResourceArgs {
      * The timestamp of resource last modification (UTC)
      * 
      */
-    @InputImport(name="lastModifiedAt")
+    @Import(name="lastModifiedAt")
       private final @Nullable Output<String> lastModifiedAt;
 
     public Output<String> getLastModifiedAt() {
@@ -68,7 +68,7 @@ public final class SystemDataArgs extends io.pulumi.resources.ResourceArgs {
      * An identifier for the identity that last modified the resource
      * 
      */
-    @InputImport(name="lastModifiedBy")
+    @Import(name="lastModifiedBy")
       private final @Nullable Output<String> lastModifiedBy;
 
     public Output<String> getLastModifiedBy() {
@@ -79,7 +79,7 @@ public final class SystemDataArgs extends io.pulumi.resources.ResourceArgs {
      * The type of identity that last modified the resource
      * 
      */
-    @InputImport(name="lastModifiedByType")
+    @Import(name="lastModifiedByType")
       private final @Nullable Output<Either<String,IdentityType>> lastModifiedByType;
 
     public Output<Either<String,IdentityType>> getLastModifiedByType() {

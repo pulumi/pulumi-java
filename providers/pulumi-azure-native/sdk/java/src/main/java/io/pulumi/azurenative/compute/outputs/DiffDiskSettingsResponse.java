@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DiffDiskSettingsResponse {
     /**
      * Specifies the ephemeral disk settings for operating system disk.
@@ -22,10 +22,10 @@ public final class DiffDiskSettingsResponse {
      */
     private final @Nullable String placement;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DiffDiskSettingsResponse(
-        @OutputCustomType.Parameter("option") @Nullable String option,
-        @OutputCustomType.Parameter("placement") @Nullable String placement) {
+        @CustomType.Parameter("option") @Nullable String option,
+        @CustomType.Parameter("placement") @Nullable String placement) {
         this.option = option;
         this.placement = placement;
     }

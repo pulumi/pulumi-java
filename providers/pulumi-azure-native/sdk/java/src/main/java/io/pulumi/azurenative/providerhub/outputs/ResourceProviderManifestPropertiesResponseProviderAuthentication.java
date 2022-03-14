@@ -3,17 +3,17 @@
 
 package io.pulumi.azurenative.providerhub.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ResourceProviderManifestPropertiesResponseProviderAuthentication {
     private final List<String> allowedAudiences;
 
-    @OutputCustomType.Constructor
-    private ResourceProviderManifestPropertiesResponseProviderAuthentication(@OutputCustomType.Parameter("allowedAudiences") List<String> allowedAudiences) {
+    @CustomType.Constructor
+    private ResourceProviderManifestPropertiesResponseProviderAuthentication(@CustomType.Parameter("allowedAudiences") List<String> allowedAudiences) {
         this.allowedAudiences = allowedAudiences;
     }
 

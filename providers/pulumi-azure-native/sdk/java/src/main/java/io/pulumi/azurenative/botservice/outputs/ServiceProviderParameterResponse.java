@@ -4,11 +4,11 @@
 package io.pulumi.azurenative.botservice.outputs;
 
 import io.pulumi.azurenative.botservice.outputs.ServiceProviderParameterResponseMetadata;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ServiceProviderParameterResponse {
     /**
      * Default Name for the Service Provider
@@ -46,15 +46,15 @@ public final class ServiceProviderParameterResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServiceProviderParameterResponse(
-        @OutputCustomType.Parameter("default") String $default,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("helpUrl") String helpUrl,
-        @OutputCustomType.Parameter("metadata") ServiceProviderParameterResponseMetadata metadata,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("default") String $default,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("helpUrl") String helpUrl,
+        @CustomType.Parameter("metadata") ServiceProviderParameterResponseMetadata metadata,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("type") String type) {
         this.$default = $default;
         this.description = description;
         this.displayName = displayName;

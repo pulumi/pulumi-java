@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.web.WebAppInstanceFunctionSlotArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Object;
@@ -34,7 +34,7 @@ public class WebAppInstanceFunctionSlot extends io.pulumi.resources.CustomResour
      * Config information.
      * 
      */
-    @OutputExport(name="config", type=Object.class, parameters={})
+    @Export(name="config", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> config;
 
     /**
@@ -48,7 +48,7 @@ public class WebAppInstanceFunctionSlot extends io.pulumi.resources.CustomResour
      * Config URI.
      * 
      */
-    @OutputExport(name="configHref", type=String.class, parameters={})
+    @Export(name="configHref", type=String.class, parameters={})
     private Output</* @Nullable */ String> configHref;
 
     /**
@@ -62,7 +62,7 @@ public class WebAppInstanceFunctionSlot extends io.pulumi.resources.CustomResour
      * File list.
      * 
      */
-    @OutputExport(name="files", type=Map.class, parameters={String.class, String.class})
+    @Export(name="files", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> files;
 
     /**
@@ -76,7 +76,7 @@ public class WebAppInstanceFunctionSlot extends io.pulumi.resources.CustomResour
      * Function App ID.
      * 
      */
-    @OutputExport(name="functionAppId", type=String.class, parameters={})
+    @Export(name="functionAppId", type=String.class, parameters={})
     private Output</* @Nullable */ String> functionAppId;
 
     /**
@@ -90,7 +90,7 @@ public class WebAppInstanceFunctionSlot extends io.pulumi.resources.CustomResour
      * Function URI.
      * 
      */
-    @OutputExport(name="href", type=String.class, parameters={})
+    @Export(name="href", type=String.class, parameters={})
     private Output</* @Nullable */ String> href;
 
     /**
@@ -104,7 +104,7 @@ public class WebAppInstanceFunctionSlot extends io.pulumi.resources.CustomResour
      * The invocation URL
      * 
      */
-    @OutputExport(name="invokeUrlTemplate", type=String.class, parameters={})
+    @Export(name="invokeUrlTemplate", type=String.class, parameters={})
     private Output</* @Nullable */ String> invokeUrlTemplate;
 
     /**
@@ -118,7 +118,7 @@ public class WebAppInstanceFunctionSlot extends io.pulumi.resources.CustomResour
      * Gets or sets a value indicating whether the function is disabled
      * 
      */
-    @OutputExport(name="isDisabled", type=Boolean.class, parameters={})
+    @Export(name="isDisabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> isDisabled;
 
     /**
@@ -132,7 +132,7 @@ public class WebAppInstanceFunctionSlot extends io.pulumi.resources.CustomResour
      * Kind of resource.
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
     /**
@@ -146,7 +146,7 @@ public class WebAppInstanceFunctionSlot extends io.pulumi.resources.CustomResour
      * The function language
      * 
      */
-    @OutputExport(name="language", type=String.class, parameters={})
+    @Export(name="language", type=String.class, parameters={})
     private Output</* @Nullable */ String> language;
 
     /**
@@ -160,7 +160,7 @@ public class WebAppInstanceFunctionSlot extends io.pulumi.resources.CustomResour
      * Resource Name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -174,7 +174,7 @@ public class WebAppInstanceFunctionSlot extends io.pulumi.resources.CustomResour
      * Script URI.
      * 
      */
-    @OutputExport(name="scriptHref", type=String.class, parameters={})
+    @Export(name="scriptHref", type=String.class, parameters={})
     private Output</* @Nullable */ String> scriptHref;
 
     /**
@@ -188,7 +188,7 @@ public class WebAppInstanceFunctionSlot extends io.pulumi.resources.CustomResour
      * Script root path URI.
      * 
      */
-    @OutputExport(name="scriptRootPathHref", type=String.class, parameters={})
+    @Export(name="scriptRootPathHref", type=String.class, parameters={})
     private Output</* @Nullable */ String> scriptRootPathHref;
 
     /**
@@ -202,7 +202,7 @@ public class WebAppInstanceFunctionSlot extends io.pulumi.resources.CustomResour
      * Secrets file URI.
      * 
      */
-    @OutputExport(name="secretsFileHref", type=String.class, parameters={})
+    @Export(name="secretsFileHref", type=String.class, parameters={})
     private Output</* @Nullable */ String> secretsFileHref;
 
     /**
@@ -216,7 +216,7 @@ public class WebAppInstanceFunctionSlot extends io.pulumi.resources.CustomResour
      * Test data used when testing via the Azure Portal.
      * 
      */
-    @OutputExport(name="testData", type=String.class, parameters={})
+    @Export(name="testData", type=String.class, parameters={})
     private Output</* @Nullable */ String> testData;
 
     /**
@@ -230,7 +230,7 @@ public class WebAppInstanceFunctionSlot extends io.pulumi.resources.CustomResour
      * Test data URI.
      * 
      */
-    @OutputExport(name="testDataHref", type=String.class, parameters={})
+    @Export(name="testDataHref", type=String.class, parameters={})
     private Output</* @Nullable */ String> testDataHref;
 
     /**
@@ -244,7 +244,7 @@ public class WebAppInstanceFunctionSlot extends io.pulumi.resources.CustomResour
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

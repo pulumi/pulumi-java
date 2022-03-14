@@ -6,14 +6,14 @@ package io.pulumi.azurenative.insights.outputs;
 import io.pulumi.azurenative.insights.outputs.RuleManagementEventDataSourceResponse;
 import io.pulumi.azurenative.insights.outputs.RuleMetricDataSourceResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ThresholdRuleConditionResponse {
     /**
      * the resource from which the rule collects its data. For this type dataSource will always be of type RuleMetricDataSource.
@@ -47,14 +47,14 @@ public final class ThresholdRuleConditionResponse {
      */
     private final @Nullable String windowSize;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ThresholdRuleConditionResponse(
-        @OutputCustomType.Parameter("dataSource") @Nullable Either<RuleManagementEventDataSourceResponse,RuleMetricDataSourceResponse> dataSource,
-        @OutputCustomType.Parameter("odataType") String odataType,
-        @OutputCustomType.Parameter("operator") String operator,
-        @OutputCustomType.Parameter("threshold") Double threshold,
-        @OutputCustomType.Parameter("timeAggregation") @Nullable String timeAggregation,
-        @OutputCustomType.Parameter("windowSize") @Nullable String windowSize) {
+        @CustomType.Parameter("dataSource") @Nullable Either<RuleManagementEventDataSourceResponse,RuleMetricDataSourceResponse> dataSource,
+        @CustomType.Parameter("odataType") String odataType,
+        @CustomType.Parameter("operator") String operator,
+        @CustomType.Parameter("threshold") Double threshold,
+        @CustomType.Parameter("timeAggregation") @Nullable String timeAggregation,
+        @CustomType.Parameter("windowSize") @Nullable String windowSize) {
         this.dataSource = dataSource;
         this.odataType = odataType;
         this.operator = operator;

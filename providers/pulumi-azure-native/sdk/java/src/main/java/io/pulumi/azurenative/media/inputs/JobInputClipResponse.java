@@ -9,7 +9,7 @@ import io.pulumi.azurenative.media.inputs.FromEachInputFileResponse;
 import io.pulumi.azurenative.media.inputs.InputFileResponse;
 import io.pulumi.azurenative.media.inputs.UtcClipTimeResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -30,7 +30,7 @@ public final class JobInputClipResponse extends io.pulumi.resources.InvokeArgs {
      * Defines a point on the timeline of the input media at which processing will end. Defaults to the end of the input media.
      * 
      */
-    @InputImport(name="end")
+    @Import(name="end")
       private final @Nullable Either<AbsoluteClipTimeResponse,UtcClipTimeResponse> end;
 
     public Either<AbsoluteClipTimeResponse,UtcClipTimeResponse> getEnd() {
@@ -41,7 +41,7 @@ public final class JobInputClipResponse extends io.pulumi.resources.InvokeArgs {
      * List of files. Required for JobInputHttp. Maximum of 4000 characters each.
      * 
      */
-    @InputImport(name="files")
+    @Import(name="files")
       private final @Nullable List<String> files;
 
     public List<String> getFiles() {
@@ -52,7 +52,7 @@ public final class JobInputClipResponse extends io.pulumi.resources.InvokeArgs {
      * Defines a list of InputDefinitions. For each InputDefinition, it defines a list of track selections and related metadata.
      * 
      */
-    @InputImport(name="inputDefinitions")
+    @Import(name="inputDefinitions")
       private final @Nullable List<Object> inputDefinitions;
 
     public List<Object> getInputDefinitions() {
@@ -63,7 +63,7 @@ public final class JobInputClipResponse extends io.pulumi.resources.InvokeArgs {
      * A label that is assigned to a JobInputClip, that is used to satisfy a reference used in the Transform. For example, a Transform can be authored so as to take an image file with the label 'xyz' and apply it as an overlay onto the input video before it is encoded. When submitting a Job, exactly one of the JobInputs should be the image file, and it should have the label 'xyz'.
      * 
      */
-    @InputImport(name="label")
+    @Import(name="label")
       private final @Nullable String label;
 
     public Optional<String> getLabel() {
@@ -75,7 +75,7 @@ public final class JobInputClipResponse extends io.pulumi.resources.InvokeArgs {
      * Expected value is '#Microsoft.Media.JobInputClip'.
      * 
      */
-    @InputImport(name="odataType", required=true)
+    @Import(name="odataType", required=true)
       private final String odataType;
 
     public String getOdataType() {
@@ -86,7 +86,7 @@ public final class JobInputClipResponse extends io.pulumi.resources.InvokeArgs {
      * Defines a point on the timeline of the input media at which processing will start. Defaults to the beginning of the input media.
      * 
      */
-    @InputImport(name="start")
+    @Import(name="start")
       private final @Nullable Either<AbsoluteClipTimeResponse,UtcClipTimeResponse> start;
 
     public Either<AbsoluteClipTimeResponse,UtcClipTimeResponse> getStart() {

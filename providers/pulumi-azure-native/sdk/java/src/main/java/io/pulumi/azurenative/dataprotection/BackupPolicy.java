@@ -9,7 +9,7 @@ import io.pulumi.azurenative.dataprotection.outputs.BackupPolicyResponse;
 import io.pulumi.azurenative.dataprotection.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -36,7 +36,7 @@ public class BackupPolicy extends io.pulumi.resources.CustomResource {
      * Resource name associated with the resource.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -50,7 +50,7 @@ public class BackupPolicy extends io.pulumi.resources.CustomResource {
      * BaseBackupPolicyResource properties
      * 
      */
-    @OutputExport(name="properties", type=BackupPolicyResponse.class, parameters={})
+    @Export(name="properties", type=BackupPolicyResponse.class, parameters={})
     private Output<BackupPolicyResponse> properties;
 
     /**
@@ -64,7 +64,7 @@ public class BackupPolicy extends io.pulumi.resources.CustomResource {
      * Metadata pertaining to creation and last modification of the resource.
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -78,7 +78,7 @@ public class BackupPolicy extends io.pulumi.resources.CustomResource {
      * Resource type represents the complete path of the form Namespace/ResourceType/ResourceType/...
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

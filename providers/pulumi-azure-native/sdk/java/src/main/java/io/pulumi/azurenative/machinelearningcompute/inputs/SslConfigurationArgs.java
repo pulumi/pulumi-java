@@ -6,7 +6,7 @@ package io.pulumi.azurenative.machinelearningcompute.inputs;
 import io.pulumi.azurenative.machinelearningcompute.enums.Status;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class SslConfigurationArgs extends io.pulumi.resources.ResourceArgs
      * The SSL cert data in PEM format.
      * 
      */
-    @InputImport(name="cert")
+    @Import(name="cert")
       private final @Nullable Output<String> cert;
 
     public Output<String> getCert() {
@@ -35,7 +35,7 @@ public final class SslConfigurationArgs extends io.pulumi.resources.ResourceArgs
      * The CName of the certificate.
      * 
      */
-    @InputImport(name="cname")
+    @Import(name="cname")
       private final @Nullable Output<String> cname;
 
     public Output<String> getCname() {
@@ -46,7 +46,7 @@ public final class SslConfigurationArgs extends io.pulumi.resources.ResourceArgs
      * The SSL key data in PEM format. This is not returned in response of GET/PUT on the resource. To see this please call listKeys API.
      * 
      */
-    @InputImport(name="key")
+    @Import(name="key")
       private final @Nullable Output<String> key;
 
     public Output<String> getKey() {
@@ -57,7 +57,7 @@ public final class SslConfigurationArgs extends io.pulumi.resources.ResourceArgs
      * SSL status. Allowed values are Enabled and Disabled.
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable Output<Either<String,Status>> status;
 
     public Output<Either<String,Status>> getStatus() {

@@ -9,7 +9,7 @@ import io.pulumi.azurenative.costmanagement.inputs.ExportDeliveryInfoArgs;
 import io.pulumi.azurenative.costmanagement.inputs.ExportScheduleArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class ExportArgs extends io.pulumi.resources.ResourceArgs {
      * Has the definition for the export.
      * 
      */
-    @InputImport(name="definition", required=true)
+    @Import(name="definition", required=true)
       private final Output<ExportDefinitionArgs> definition;
 
     public Output<ExportDefinitionArgs> getDefinition() {
@@ -34,7 +34,7 @@ public final class ExportArgs extends io.pulumi.resources.ResourceArgs {
      * Has delivery information for the export.
      * 
      */
-    @InputImport(name="deliveryInfo", required=true)
+    @Import(name="deliveryInfo", required=true)
       private final Output<ExportDeliveryInfoArgs> deliveryInfo;
 
     public Output<ExportDeliveryInfoArgs> getDeliveryInfo() {
@@ -45,7 +45,7 @@ public final class ExportArgs extends io.pulumi.resources.ResourceArgs {
      * eTag of the resource. To handle concurrent update scenario, this field will be used to determine whether the user is updating the latest version or not.
      * 
      */
-    @InputImport(name="eTag")
+    @Import(name="eTag")
       private final @Nullable Output<String> eTag;
 
     public Output<String> getETag() {
@@ -56,7 +56,7 @@ public final class ExportArgs extends io.pulumi.resources.ResourceArgs {
      * Export Name.
      * 
      */
-    @InputImport(name="exportName")
+    @Import(name="exportName")
       private final @Nullable Output<String> exportName;
 
     public Output<String> getExportName() {
@@ -67,7 +67,7 @@ public final class ExportArgs extends io.pulumi.resources.ResourceArgs {
      * The format of the export being delivered. Currently only 'Csv' is supported.
      * 
      */
-    @InputImport(name="format")
+    @Import(name="format")
       private final @Nullable Output<Either<String,FormatType>> format;
 
     public Output<Either<String,FormatType>> getFormat() {
@@ -78,7 +78,7 @@ public final class ExportArgs extends io.pulumi.resources.ResourceArgs {
      * Has schedule information for the export.
      * 
      */
-    @InputImport(name="schedule")
+    @Import(name="schedule")
       private final @Nullable Output<ExportScheduleArgs> schedule;
 
     public Output<ExportScheduleArgs> getSchedule() {
@@ -89,7 +89,7 @@ public final class ExportArgs extends io.pulumi.resources.ResourceArgs {
      * The scope associated with export operations. This includes '/subscriptions/{subscriptionId}/' for subscription scope, '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}' for resourceGroup scope, '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}' for Billing Account scope and '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/departments/{departmentId}' for Department scope, '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/enrollmentAccounts/{enrollmentAccountId}' for EnrollmentAccount scope, '/providers/Microsoft.Management/managementGroups/{managementGroupId} for Management Group scope, '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}' for billingProfile scope, '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}/invoiceSections/{invoiceSectionId}' for invoiceSection scope, and '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/customers/{customerId}' specific for partners.
      * 
      */
-    @InputImport(name="scope", required=true)
+    @Import(name="scope", required=true)
       private final Output<String> scope;
 
     public Output<String> getScope() {

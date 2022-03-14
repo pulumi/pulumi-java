@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.resources;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -20,7 +20,7 @@ public final class TemplateSpecArgs extends io.pulumi.resources.ResourceArgs {
      * Template Spec description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -31,7 +31,7 @@ public final class TemplateSpecArgs extends io.pulumi.resources.ResourceArgs {
      * Template Spec display name.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -42,7 +42,7 @@ public final class TemplateSpecArgs extends io.pulumi.resources.ResourceArgs {
      * The location of the Template Spec. It cannot be changed after Template Spec creation. It must be one of the supported Azure locations.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -53,7 +53,7 @@ public final class TemplateSpecArgs extends io.pulumi.resources.ResourceArgs {
      * The Template Spec metadata. Metadata is an open-ended object and is typically a collection of key-value pairs.
      * 
      */
-    @InputImport(name="metadata")
+    @Import(name="metadata")
       private final @Nullable Output<Object> metadata;
 
     public Output<Object> getMetadata() {
@@ -64,7 +64,7 @@ public final class TemplateSpecArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -75,7 +75,7 @@ public final class TemplateSpecArgs extends io.pulumi.resources.ResourceArgs {
      * Resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -86,7 +86,7 @@ public final class TemplateSpecArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the Template Spec.
      * 
      */
-    @InputImport(name="templateSpecName")
+    @Import(name="templateSpecName")
       private final @Nullable Output<String> templateSpecName;
 
     public Output<String> getTemplateSpecName() {

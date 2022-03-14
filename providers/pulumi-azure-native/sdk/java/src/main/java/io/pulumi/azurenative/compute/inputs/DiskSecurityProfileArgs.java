@@ -6,7 +6,7 @@ package io.pulumi.azurenative.compute.inputs;
 import io.pulumi.azurenative.compute.enums.DiskSecurityTypes;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class DiskSecurityProfileArgs extends io.pulumi.resources.ResourceA
      * Specifies the SecurityType of the VM. Applicable for OS disks only.
      * 
      */
-    @InputImport(name="securityType")
+    @Import(name="securityType")
       private final @Nullable Output<Either<String,DiskSecurityTypes>> securityType;
 
     public Output<Either<String,DiskSecurityTypes>> getSecurityType() {

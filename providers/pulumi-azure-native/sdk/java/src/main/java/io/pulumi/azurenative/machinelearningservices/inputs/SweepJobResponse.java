@@ -14,7 +14,7 @@ import io.pulumi.azurenative.machinelearningservices.inputs.ObjectiveResponse;
 import io.pulumi.azurenative.machinelearningservices.inputs.TrialComponentResponse;
 import io.pulumi.azurenative.machinelearningservices.inputs.TruncationSelectionPolicyResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -36,7 +36,7 @@ public final class SweepJobResponse extends io.pulumi.resources.InvokeArgs {
      * Type of the hyperparameter sampling algorithms
      * 
      */
-    @InputImport(name="algorithm", required=true)
+    @Import(name="algorithm", required=true)
       private final String algorithm;
 
     public String getAlgorithm() {
@@ -47,7 +47,7 @@ public final class SweepJobResponse extends io.pulumi.resources.InvokeArgs {
      * Compute binding for the job.
      * 
      */
-    @InputImport(name="compute", required=true)
+    @Import(name="compute", required=true)
       private final ComputeConfigurationResponse compute;
 
     public ComputeConfigurationResponse getCompute() {
@@ -58,7 +58,7 @@ public final class SweepJobResponse extends io.pulumi.resources.InvokeArgs {
      * The asset description text.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable String description;
 
     public Optional<String> getDescription() {
@@ -69,7 +69,7 @@ public final class SweepJobResponse extends io.pulumi.resources.InvokeArgs {
      * Early termination policies enable canceling poor-performing runs before they complete.
      * 
      */
-    @InputImport(name="earlyTermination")
+    @Import(name="earlyTermination")
       private final @Nullable Object earlyTermination;
 
     public Object getEarlyTermination() {
@@ -80,7 +80,7 @@ public final class SweepJobResponse extends io.pulumi.resources.InvokeArgs {
      * The name of the experiment the job belongs to. If not set, the job is placed in the "Default" experiment.
      * 
      */
-    @InputImport(name="experimentName")
+    @Import(name="experimentName")
       private final @Nullable String experimentName;
 
     public Optional<String> getExperimentName() {
@@ -92,7 +92,7 @@ public final class SweepJobResponse extends io.pulumi.resources.InvokeArgs {
      * Defaults to AmlToken if null.
      * 
      */
-    @InputImport(name="identity")
+    @Import(name="identity")
       private final @Nullable Either<AmlTokenResponse,ManagedIdentityResponse> identity;
 
     public Either<AmlTokenResponse,ManagedIdentityResponse> getIdentity() {
@@ -104,7 +104,7 @@ public final class SweepJobResponse extends io.pulumi.resources.InvokeArgs {
      * For local jobs, a job endpoint will have an endpoint value of FileStreamObject.
      * 
      */
-    @InputImport(name="interactionEndpoints", required=true)
+    @Import(name="interactionEndpoints", required=true)
       private final Map<String,JobEndpointResponse> interactionEndpoints;
 
     public Map<String,JobEndpointResponse> getInteractionEndpoints() {
@@ -116,7 +116,7 @@ public final class SweepJobResponse extends io.pulumi.resources.InvokeArgs {
      * Expected value is 'Sweep'.
      * 
      */
-    @InputImport(name="jobType", required=true)
+    @Import(name="jobType", required=true)
       private final String jobType;
 
     public String getJobType() {
@@ -127,7 +127,7 @@ public final class SweepJobResponse extends io.pulumi.resources.InvokeArgs {
      * An upper bound on the number of trials performed in parallel.
      * 
      */
-    @InputImport(name="maxConcurrentTrials")
+    @Import(name="maxConcurrentTrials")
       private final @Nullable Integer maxConcurrentTrials;
 
     public Optional<Integer> getMaxConcurrentTrials() {
@@ -138,7 +138,7 @@ public final class SweepJobResponse extends io.pulumi.resources.InvokeArgs {
      * An upper bound on the number of trials to perform.
      * 
      */
-    @InputImport(name="maxTotalTrials")
+    @Import(name="maxTotalTrials")
       private final @Nullable Integer maxTotalTrials;
 
     public Optional<Integer> getMaxTotalTrials() {
@@ -149,7 +149,7 @@ public final class SweepJobResponse extends io.pulumi.resources.InvokeArgs {
      * Optimization objective.
      * 
      */
-    @InputImport(name="objective", required=true)
+    @Import(name="objective", required=true)
       private final ObjectiveResponse objective;
 
     public ObjectiveResponse getObjective() {
@@ -160,7 +160,7 @@ public final class SweepJobResponse extends io.pulumi.resources.InvokeArgs {
      * Location of the job output logs and artifacts.
      * 
      */
-    @InputImport(name="output", required=true)
+    @Import(name="output", required=true)
       private final JobOutputResponse output;
 
     public JobOutputResponse getOutput() {
@@ -172,7 +172,7 @@ public final class SweepJobResponse extends io.pulumi.resources.InvokeArgs {
      * Private preview feature and only available to users on the allow list.
      * 
      */
-    @InputImport(name="priority")
+    @Import(name="priority")
       private final @Nullable Integer priority;
 
     public Optional<Integer> getPriority() {
@@ -183,7 +183,7 @@ public final class SweepJobResponse extends io.pulumi.resources.InvokeArgs {
      * The asset property dictionary.
      * 
      */
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable Map<String,String> properties;
 
     public Map<String,String> getProperties() {
@@ -194,7 +194,7 @@ public final class SweepJobResponse extends io.pulumi.resources.InvokeArgs {
      * Specifies the job provisioning state.
      * 
      */
-    @InputImport(name="provisioningState", required=true)
+    @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
     public String getProvisioningState() {
@@ -205,7 +205,7 @@ public final class SweepJobResponse extends io.pulumi.resources.InvokeArgs {
      * A dictionary containing each parameter and its distribution. The dictionary key is the name of the parameter
      * 
      */
-    @InputImport(name="searchSpace", required=true)
+    @Import(name="searchSpace", required=true)
       private final Map<String,Object> searchSpace;
 
     public Map<String,Object> getSearchSpace() {
@@ -216,7 +216,7 @@ public final class SweepJobResponse extends io.pulumi.resources.InvokeArgs {
      * The status of a job.
      * 
      */
-    @InputImport(name="status", required=true)
+    @Import(name="status", required=true)
       private final String status;
 
     public String getStatus() {
@@ -227,7 +227,7 @@ public final class SweepJobResponse extends io.pulumi.resources.InvokeArgs {
      * Tag dictionary. Tags can be added, removed, and updated.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {
@@ -238,7 +238,7 @@ public final class SweepJobResponse extends io.pulumi.resources.InvokeArgs {
      * The total timeout in ISO 8601 format. Only supports duration with precision as low as Minutes.
      * 
      */
-    @InputImport(name="timeout")
+    @Import(name="timeout")
       private final @Nullable String timeout;
 
     public Optional<String> getTimeout() {
@@ -249,7 +249,7 @@ public final class SweepJobResponse extends io.pulumi.resources.InvokeArgs {
      * Trial component definition.
      * 
      */
-    @InputImport(name="trial")
+    @Import(name="trial")
       private final @Nullable TrialComponentResponse trial;
 
     public Optional<TrialComponentResponse> getTrial() {

@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.compute.outputs;
 
 import io.pulumi.azurenative.compute.outputs.DiskEncryptionSetParametersResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ManagedDiskParametersResponse {
     /**
      * Specifies the customer managed disk encryption set resource id for the managed disk.
@@ -28,11 +28,11 @@ public final class ManagedDiskParametersResponse {
      */
     private final @Nullable String storageAccountType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ManagedDiskParametersResponse(
-        @OutputCustomType.Parameter("diskEncryptionSet") @Nullable DiskEncryptionSetParametersResponse diskEncryptionSet,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("storageAccountType") @Nullable String storageAccountType) {
+        @CustomType.Parameter("diskEncryptionSet") @Nullable DiskEncryptionSetParametersResponse diskEncryptionSet,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("storageAccountType") @Nullable String storageAccountType) {
         this.diskEncryptionSet = diskEncryptionSet;
         this.id = id;
         this.storageAccountType = storageAccountType;

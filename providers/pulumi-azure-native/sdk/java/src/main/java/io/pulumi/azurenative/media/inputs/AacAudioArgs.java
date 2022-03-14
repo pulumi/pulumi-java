@@ -6,7 +6,7 @@ package io.pulumi.azurenative.media.inputs;
 import io.pulumi.azurenative.media.enums.AacAudioProfile;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class AacAudioArgs extends io.pulumi.resources.ResourceArgs {
      * The bitrate, in bits per second, of the output encoded audio.
      * 
      */
-    @InputImport(name="bitrate")
+    @Import(name="bitrate")
       private final @Nullable Output<Integer> bitrate;
 
     public Output<Integer> getBitrate() {
@@ -36,7 +36,7 @@ public final class AacAudioArgs extends io.pulumi.resources.ResourceArgs {
      * The number of channels in the audio.
      * 
      */
-    @InputImport(name="channels")
+    @Import(name="channels")
       private final @Nullable Output<Integer> channels;
 
     public Output<Integer> getChannels() {
@@ -47,7 +47,7 @@ public final class AacAudioArgs extends io.pulumi.resources.ResourceArgs {
      * An optional label for the codec. The label can be used to control muxing behavior.
      * 
      */
-    @InputImport(name="label")
+    @Import(name="label")
       private final @Nullable Output<String> label;
 
     public Output<String> getLabel() {
@@ -59,7 +59,7 @@ public final class AacAudioArgs extends io.pulumi.resources.ResourceArgs {
      * Expected value is '#Microsoft.Media.AacAudio'.
      * 
      */
-    @InputImport(name="odataType", required=true)
+    @Import(name="odataType", required=true)
       private final Output<String> odataType;
 
     public Output<String> getOdataType() {
@@ -70,7 +70,7 @@ public final class AacAudioArgs extends io.pulumi.resources.ResourceArgs {
      * The encoding profile to be used when encoding audio with AAC.
      * 
      */
-    @InputImport(name="profile")
+    @Import(name="profile")
       private final @Nullable Output<Either<String,AacAudioProfile>> profile;
 
     public Output<Either<String,AacAudioProfile>> getProfile() {
@@ -81,7 +81,7 @@ public final class AacAudioArgs extends io.pulumi.resources.ResourceArgs {
      * The sampling rate to use for encoding in hertz.
      * 
      */
-    @InputImport(name="samplingRate")
+    @Import(name="samplingRate")
       private final @Nullable Output<Integer> samplingRate;
 
     public Output<Integer> getSamplingRate() {

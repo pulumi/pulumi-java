@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class VirtualHubRouteV2Args extends io.pulumi.resources.ResourceArg
      * The type of destinations.
      * 
      */
-    @InputImport(name="destinationType")
+    @Import(name="destinationType")
       private final @Nullable Output<String> destinationType;
 
     public Output<String> getDestinationType() {
@@ -34,7 +34,7 @@ public final class VirtualHubRouteV2Args extends io.pulumi.resources.ResourceArg
      * List of all destinations.
      * 
      */
-    @InputImport(name="destinations")
+    @Import(name="destinations")
       private final @Nullable Output<List<String>> destinations;
 
     public Output<List<String>> getDestinations() {
@@ -45,7 +45,7 @@ public final class VirtualHubRouteV2Args extends io.pulumi.resources.ResourceArg
      * The type of next hops.
      * 
      */
-    @InputImport(name="nextHopType")
+    @Import(name="nextHopType")
       private final @Nullable Output<String> nextHopType;
 
     public Output<String> getNextHopType() {
@@ -56,7 +56,7 @@ public final class VirtualHubRouteV2Args extends io.pulumi.resources.ResourceArg
      * NextHops ip address.
      * 
      */
-    @InputImport(name="nextHops")
+    @Import(name="nextHops")
       private final @Nullable Output<List<String>> nextHops;
 
     public Output<List<String>> getNextHops() {

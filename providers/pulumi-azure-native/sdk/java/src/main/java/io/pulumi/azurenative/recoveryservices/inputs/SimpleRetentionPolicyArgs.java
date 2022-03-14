@@ -5,7 +5,7 @@ package io.pulumi.azurenative.recoveryservices.inputs;
 
 import io.pulumi.azurenative.recoveryservices.inputs.RetentionDurationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class SimpleRetentionPolicyArgs extends io.pulumi.resources.Resourc
      * Retention duration of the protection policy.
      * 
      */
-    @InputImport(name="retentionDuration")
+    @Import(name="retentionDuration")
       private final @Nullable Output<RetentionDurationArgs> retentionDuration;
 
     public Output<RetentionDurationArgs> getRetentionDuration() {
@@ -35,7 +35,7 @@ public final class SimpleRetentionPolicyArgs extends io.pulumi.resources.Resourc
      * Expected value is 'SimpleRetentionPolicy'.
      * 
      */
-    @InputImport(name="retentionPolicyType", required=true)
+    @Import(name="retentionPolicyType", required=true)
       private final Output<String> retentionPolicyType;
 
     public Output<String> getRetentionPolicyType() {

@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.datamigration.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BlobShareResponse {
     /**
      * SAS URI of Azure Storage Account Container.
@@ -15,8 +15,8 @@ public final class BlobShareResponse {
      */
     private final String sasUri;
 
-    @OutputCustomType.Constructor
-    private BlobShareResponse(@OutputCustomType.Parameter("sasUri") String sasUri) {
+    @CustomType.Constructor
+    private BlobShareResponse(@CustomType.Parameter("sasUri") String sasUri) {
         this.sasUri = sasUri;
     }
 

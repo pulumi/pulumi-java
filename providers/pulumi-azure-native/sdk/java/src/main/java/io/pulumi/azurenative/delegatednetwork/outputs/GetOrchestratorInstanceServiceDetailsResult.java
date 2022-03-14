@@ -5,14 +5,14 @@ package io.pulumi.azurenative.delegatednetwork.outputs;
 
 import io.pulumi.azurenative.delegatednetwork.outputs.ControllerDetailsResponse;
 import io.pulumi.azurenative.delegatednetwork.outputs.OrchestratorIdentityResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetOrchestratorInstanceServiceDetailsResult {
     /**
      * K8s APIServer url. Either one of apiServerEndpoint or privateLinkResourceId can be specified
@@ -90,23 +90,23 @@ public final class GetOrchestratorInstanceServiceDetailsResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetOrchestratorInstanceServiceDetailsResult(
-        @OutputCustomType.Parameter("apiServerEndpoint") @Nullable String apiServerEndpoint,
-        @OutputCustomType.Parameter("clusterRootCA") @Nullable String clusterRootCA,
-        @OutputCustomType.Parameter("controllerDetails") ControllerDetailsResponse controllerDetails,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("identity") @Nullable OrchestratorIdentityResponse identity,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("orchestratorAppId") @Nullable String orchestratorAppId,
-        @OutputCustomType.Parameter("orchestratorTenantId") @Nullable String orchestratorTenantId,
-        @OutputCustomType.Parameter("privateLinkResourceId") @Nullable String privateLinkResourceId,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("resourceGuid") String resourceGuid,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("apiServerEndpoint") @Nullable String apiServerEndpoint,
+        @CustomType.Parameter("clusterRootCA") @Nullable String clusterRootCA,
+        @CustomType.Parameter("controllerDetails") ControllerDetailsResponse controllerDetails,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("identity") @Nullable OrchestratorIdentityResponse identity,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("orchestratorAppId") @Nullable String orchestratorAppId,
+        @CustomType.Parameter("orchestratorTenantId") @Nullable String orchestratorTenantId,
+        @CustomType.Parameter("privateLinkResourceId") @Nullable String privateLinkResourceId,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("resourceGuid") String resourceGuid,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type) {
         this.apiServerEndpoint = apiServerEndpoint;
         this.clusterRootCA = clusterRootCA;
         this.controllerDetails = controllerDetails;

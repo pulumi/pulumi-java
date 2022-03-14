@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ServiceEndpointPropertiesFormatResponse {
     /**
      * A list of locations.
@@ -28,11 +28,11 @@ public final class ServiceEndpointPropertiesFormatResponse {
      */
     private final @Nullable String service;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServiceEndpointPropertiesFormatResponse(
-        @OutputCustomType.Parameter("locations") @Nullable List<String> locations,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("service") @Nullable String service) {
+        @CustomType.Parameter("locations") @Nullable List<String> locations,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("service") @Nullable String service) {
         this.locations = locations;
         this.provisioningState = provisioningState;
         this.service = service;

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.datafactory.outputs;
 
 import io.pulumi.azurenative.datafactory.outputs.DataFlowResponseFolder;
 import io.pulumi.azurenative.datafactory.outputs.PowerQuerySourceResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class WranglingDataFlowResponse {
     /**
      * List of tags that can be used for describing the data flow.
@@ -52,15 +52,15 @@ public final class WranglingDataFlowResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WranglingDataFlowResponse(
-        @OutputCustomType.Parameter("annotations") @Nullable List<Object> annotations,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("documentLocale") @Nullable String documentLocale,
-        @OutputCustomType.Parameter("folder") @Nullable DataFlowResponseFolder folder,
-        @OutputCustomType.Parameter("script") @Nullable String script,
-        @OutputCustomType.Parameter("sources") @Nullable List<PowerQuerySourceResponse> sources,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("annotations") @Nullable List<Object> annotations,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("documentLocale") @Nullable String documentLocale,
+        @CustomType.Parameter("folder") @Nullable DataFlowResponseFolder folder,
+        @CustomType.Parameter("script") @Nullable String script,
+        @CustomType.Parameter("sources") @Nullable List<PowerQuerySourceResponse> sources,
+        @CustomType.Parameter("type") String type) {
         this.annotations = annotations;
         this.description = description;
         this.documentLocale = documentLocale;

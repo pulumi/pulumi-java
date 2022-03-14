@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.insights.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DestinationsSpecResponseAzureMonitorMetrics {
     /**
      * A friendly name for the destination.
@@ -18,8 +18,8 @@ public final class DestinationsSpecResponseAzureMonitorMetrics {
      */
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor
-    private DestinationsSpecResponseAzureMonitorMetrics(@OutputCustomType.Parameter("name") @Nullable String name) {
+    @CustomType.Constructor
+    private DestinationsSpecResponseAzureMonitorMetrics(@CustomType.Parameter("name") @Nullable String name) {
         this.name = name;
     }
 

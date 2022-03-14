@@ -5,7 +5,7 @@ package io.pulumi.azurenative.labservices.outputs;
 
 import io.pulumi.azurenative.labservices.outputs.LatestOperationResultResponse;
 import io.pulumi.azurenative.labservices.outputs.SizeConfigurationPropertiesResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetLabAccountResult {
     /**
      * Represents if region selection is enabled
@@ -66,18 +66,18 @@ public final class GetLabAccountResult {
      */
     private final @Nullable String uniqueIdentifier;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetLabAccountResult(
-        @OutputCustomType.Parameter("enabledRegionSelection") @Nullable Boolean enabledRegionSelection,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("latestOperationResult") LatestOperationResultResponse latestOperationResult,
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("provisioningState") @Nullable String provisioningState,
-        @OutputCustomType.Parameter("sizeConfiguration") SizeConfigurationPropertiesResponse sizeConfiguration,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("uniqueIdentifier") @Nullable String uniqueIdentifier) {
+        @CustomType.Parameter("enabledRegionSelection") @Nullable Boolean enabledRegionSelection,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("latestOperationResult") LatestOperationResultResponse latestOperationResult,
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("provisioningState") @Nullable String provisioningState,
+        @CustomType.Parameter("sizeConfiguration") SizeConfigurationPropertiesResponse sizeConfiguration,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("uniqueIdentifier") @Nullable String uniqueIdentifier) {
         this.enabledRegionSelection = enabledRegionSelection;
         this.id = id;
         this.latestOperationResult = latestOperationResult;

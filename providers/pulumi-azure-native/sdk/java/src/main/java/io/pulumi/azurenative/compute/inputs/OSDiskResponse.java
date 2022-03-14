@@ -7,7 +7,7 @@ import io.pulumi.azurenative.compute.inputs.DiffDiskSettingsResponse;
 import io.pulumi.azurenative.compute.inputs.DiskEncryptionSettingsResponse;
 import io.pulumi.azurenative.compute.inputs.ManagedDiskParametersResponse;
 import io.pulumi.azurenative.compute.inputs.VirtualHardDiskResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -28,7 +28,7 @@ public final class OSDiskResponse extends io.pulumi.resources.InvokeArgs {
      * Specifies the caching requirements. <br><br> Possible values are: <br><br> **None** <br><br> **ReadOnly** <br><br> **ReadWrite** <br><br> Default: **None** for Standard storage. **ReadOnly** for Premium storage.
      * 
      */
-    @InputImport(name="caching")
+    @Import(name="caching")
       private final @Nullable String caching;
 
     public Optional<String> getCaching() {
@@ -39,7 +39,7 @@ public final class OSDiskResponse extends io.pulumi.resources.InvokeArgs {
      * Specifies how the virtual machine should be created.<br><br> Possible values are:<br><br> **Attach** \u2013 This value is used when you are using a specialized disk to create the virtual machine.<br><br> **FromImage** \u2013 This value is used when you are using an image to create the virtual machine. If you are using a platform image, you also use the imageReference element described above. If you are using a marketplace image, you  also use the plan element previously described.
      * 
      */
-    @InputImport(name="createOption", required=true)
+    @Import(name="createOption", required=true)
       private final String createOption;
 
     public String getCreateOption() {
@@ -50,7 +50,7 @@ public final class OSDiskResponse extends io.pulumi.resources.InvokeArgs {
      * Specifies whether OS Disk should be deleted or detached upon VM deletion. <br><br> Possible values: <br><br> **Delete** If this value is used, the OS disk is deleted when VM is deleted.<br><br> **Detach** If this value is used, the os disk is retained after VM is deleted. <br><br> The default value is set to **detach**. For an ephemeral OS Disk, the default value is set to **Delete**. User cannot change the delete option for ephemeral OS Disk.
      * 
      */
-    @InputImport(name="deleteOption")
+    @Import(name="deleteOption")
       private final @Nullable String deleteOption;
 
     public Optional<String> getDeleteOption() {
@@ -61,7 +61,7 @@ public final class OSDiskResponse extends io.pulumi.resources.InvokeArgs {
      * Specifies the ephemeral Disk Settings for the operating system disk used by the virtual machine.
      * 
      */
-    @InputImport(name="diffDiskSettings")
+    @Import(name="diffDiskSettings")
       private final @Nullable DiffDiskSettingsResponse diffDiskSettings;
 
     public Optional<DiffDiskSettingsResponse> getDiffDiskSettings() {
@@ -72,7 +72,7 @@ public final class OSDiskResponse extends io.pulumi.resources.InvokeArgs {
      * Specifies the size of an empty data disk in gigabytes. This element can be used to overwrite the size of the disk in a virtual machine image. <br><br> This value cannot be larger than 1023 GB
      * 
      */
-    @InputImport(name="diskSizeGB")
+    @Import(name="diskSizeGB")
       private final @Nullable Integer diskSizeGB;
 
     public Optional<Integer> getDiskSizeGB() {
@@ -83,7 +83,7 @@ public final class OSDiskResponse extends io.pulumi.resources.InvokeArgs {
      * Specifies the encryption settings for the OS Disk. <br><br> Minimum api-version: 2015-06-15
      * 
      */
-    @InputImport(name="encryptionSettings")
+    @Import(name="encryptionSettings")
       private final @Nullable DiskEncryptionSettingsResponse encryptionSettings;
 
     public Optional<DiskEncryptionSettingsResponse> getEncryptionSettings() {
@@ -94,7 +94,7 @@ public final class OSDiskResponse extends io.pulumi.resources.InvokeArgs {
      * The source user image virtual hard disk. The virtual hard disk will be copied before being attached to the virtual machine. If SourceImage is provided, the destination virtual hard drive must not exist.
      * 
      */
-    @InputImport(name="image")
+    @Import(name="image")
       private final @Nullable VirtualHardDiskResponse image;
 
     public Optional<VirtualHardDiskResponse> getImage() {
@@ -105,7 +105,7 @@ public final class OSDiskResponse extends io.pulumi.resources.InvokeArgs {
      * The managed disk parameters.
      * 
      */
-    @InputImport(name="managedDisk")
+    @Import(name="managedDisk")
       private final @Nullable ManagedDiskParametersResponse managedDisk;
 
     public Optional<ManagedDiskParametersResponse> getManagedDisk() {
@@ -116,7 +116,7 @@ public final class OSDiskResponse extends io.pulumi.resources.InvokeArgs {
      * The disk name.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -127,7 +127,7 @@ public final class OSDiskResponse extends io.pulumi.resources.InvokeArgs {
      * This property allows you to specify the type of the OS that is included in the disk if creating a VM from user-image or a specialized VHD. <br><br> Possible values are: <br><br> **Windows** <br><br> **Linux**
      * 
      */
-    @InputImport(name="osType")
+    @Import(name="osType")
       private final @Nullable String osType;
 
     public Optional<String> getOsType() {
@@ -138,7 +138,7 @@ public final class OSDiskResponse extends io.pulumi.resources.InvokeArgs {
      * The virtual hard disk.
      * 
      */
-    @InputImport(name="vhd")
+    @Import(name="vhd")
       private final @Nullable VirtualHardDiskResponse vhd;
 
     public Optional<VirtualHardDiskResponse> getVhd() {
@@ -149,7 +149,7 @@ public final class OSDiskResponse extends io.pulumi.resources.InvokeArgs {
      * Specifies whether writeAccelerator should be enabled or disabled on the disk.
      * 
      */
-    @InputImport(name="writeAcceleratorEnabled")
+    @Import(name="writeAcceleratorEnabled")
       private final @Nullable Boolean writeAcceleratorEnabled;
 
     public Optional<Boolean> getWriteAcceleratorEnabled() {

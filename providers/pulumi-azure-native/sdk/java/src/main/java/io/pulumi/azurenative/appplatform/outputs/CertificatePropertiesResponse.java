@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.appplatform.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CertificatePropertiesResponse {
     /**
      * The activate date of certificate.
@@ -63,18 +63,18 @@ public final class CertificatePropertiesResponse {
      */
     private final String vaultUri;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CertificatePropertiesResponse(
-        @OutputCustomType.Parameter("activateDate") String activateDate,
-        @OutputCustomType.Parameter("certVersion") @Nullable String certVersion,
-        @OutputCustomType.Parameter("dnsNames") List<String> dnsNames,
-        @OutputCustomType.Parameter("expirationDate") String expirationDate,
-        @OutputCustomType.Parameter("issuedDate") String issuedDate,
-        @OutputCustomType.Parameter("issuer") String issuer,
-        @OutputCustomType.Parameter("keyVaultCertName") String keyVaultCertName,
-        @OutputCustomType.Parameter("subjectName") String subjectName,
-        @OutputCustomType.Parameter("thumbprint") String thumbprint,
-        @OutputCustomType.Parameter("vaultUri") String vaultUri) {
+        @CustomType.Parameter("activateDate") String activateDate,
+        @CustomType.Parameter("certVersion") @Nullable String certVersion,
+        @CustomType.Parameter("dnsNames") List<String> dnsNames,
+        @CustomType.Parameter("expirationDate") String expirationDate,
+        @CustomType.Parameter("issuedDate") String issuedDate,
+        @CustomType.Parameter("issuer") String issuer,
+        @CustomType.Parameter("keyVaultCertName") String keyVaultCertName,
+        @CustomType.Parameter("subjectName") String subjectName,
+        @CustomType.Parameter("thumbprint") String thumbprint,
+        @CustomType.Parameter("vaultUri") String vaultUri) {
         this.activateDate = activateDate;
         this.certVersion = certVersion;
         this.dnsNames = dnsNames;

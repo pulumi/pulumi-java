@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.engagementfabric.outputs;
 
 import io.pulumi.azurenative.engagementfabric.outputs.ChannelTypeDescriptionResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ListAccountChannelTypesResult {
     /**
      * Channel descriptions
@@ -17,8 +17,8 @@ public final class ListAccountChannelTypesResult {
      */
     private final @Nullable List<ChannelTypeDescriptionResponse> value;
 
-    @OutputCustomType.Constructor
-    private ListAccountChannelTypesResult(@OutputCustomType.Parameter("value") @Nullable List<ChannelTypeDescriptionResponse> value) {
+    @CustomType.Constructor
+    private ListAccountChannelTypesResult(@CustomType.Parameter("value") @Nullable List<ChannelTypeDescriptionResponse> value) {
         this.value = value;
     }
 

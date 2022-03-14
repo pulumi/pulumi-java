@@ -8,7 +8,7 @@ import io.pulumi.azurenative.videoanalyzer.inputs.EncoderSystemPresetArgs;
 import io.pulumi.azurenative.videoanalyzer.inputs.NodeInputArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class EncoderProcessorArgs extends io.pulumi.resources.ResourceArgs
      * An array of upstream node references within the topology to be used as inputs for this node.
      * 
      */
-    @InputImport(name="inputs", required=true)
+    @Import(name="inputs", required=true)
       private final Output<List<NodeInputArgs>> inputs;
 
     public Output<List<NodeInputArgs>> getInputs() {
@@ -37,7 +37,7 @@ public final class EncoderProcessorArgs extends io.pulumi.resources.ResourceArgs
      * Node name. Must be unique within the topology.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -48,7 +48,7 @@ public final class EncoderProcessorArgs extends io.pulumi.resources.ResourceArgs
      * The encoder preset, which defines the recipe or instructions on how the input content should be processed.
      * 
      */
-    @InputImport(name="preset", required=true)
+    @Import(name="preset", required=true)
       private final Output<Either<EncoderCustomPresetArgs,EncoderSystemPresetArgs>> preset;
 
     public Output<Either<EncoderCustomPresetArgs,EncoderSystemPresetArgs>> getPreset() {
@@ -60,7 +60,7 @@ public final class EncoderProcessorArgs extends io.pulumi.resources.ResourceArgs
      * Expected value is '#Microsoft.VideoAnalyzer.EncoderProcessor'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {

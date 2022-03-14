@@ -8,7 +8,7 @@ import io.pulumi.azurenative.datafactory.inputs.IntegrationRuntimeReferenceRespo
 import io.pulumi.azurenative.datafactory.inputs.ParameterSpecificationResponse;
 import io.pulumi.azurenative.datafactory.inputs.SecureStringResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -30,7 +30,7 @@ public final class SalesforceLinkedServiceResponse extends io.pulumi.resources.I
      * List of tags that can be used for describing the linked service.
      * 
      */
-    @InputImport(name="annotations")
+    @Import(name="annotations")
       private final @Nullable List<Object> annotations;
 
     public List<Object> getAnnotations() {
@@ -41,7 +41,7 @@ public final class SalesforceLinkedServiceResponse extends io.pulumi.resources.I
      * The Salesforce API version used in ADF. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="apiVersion")
+    @Import(name="apiVersion")
       private final @Nullable Object apiVersion;
 
     public Optional<Object> getApiVersion() {
@@ -52,7 +52,7 @@ public final class SalesforceLinkedServiceResponse extends io.pulumi.resources.I
      * The integration runtime reference.
      * 
      */
-    @InputImport(name="connectVia")
+    @Import(name="connectVia")
       private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
     public Optional<IntegrationRuntimeReferenceResponse> getConnectVia() {
@@ -63,7 +63,7 @@ public final class SalesforceLinkedServiceResponse extends io.pulumi.resources.I
      * Linked service description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable String description;
 
     public Optional<String> getDescription() {
@@ -74,7 +74,7 @@ public final class SalesforceLinkedServiceResponse extends io.pulumi.resources.I
      * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="encryptedCredential")
+    @Import(name="encryptedCredential")
       private final @Nullable Object encryptedCredential;
 
     public Optional<Object> getEncryptedCredential() {
@@ -85,7 +85,7 @@ public final class SalesforceLinkedServiceResponse extends io.pulumi.resources.I
      * The URL of Salesforce instance. Default is 'https://login.salesforce.com'. To copy data from sandbox, specify 'https://test.salesforce.com'. To copy data from custom domain, specify, for example, 'https://[domain].my.salesforce.com'. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="environmentUrl")
+    @Import(name="environmentUrl")
       private final @Nullable Object environmentUrl;
 
     public Optional<Object> getEnvironmentUrl() {
@@ -96,7 +96,7 @@ public final class SalesforceLinkedServiceResponse extends io.pulumi.resources.I
      * Parameters for linked service.
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
     public Map<String,ParameterSpecificationResponse> getParameters() {
@@ -107,7 +107,7 @@ public final class SalesforceLinkedServiceResponse extends io.pulumi.resources.I
      * The password for Basic authentication of the Salesforce instance.
      * 
      */
-    @InputImport(name="password")
+    @Import(name="password")
       private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
 
     public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> getPassword() {
@@ -118,7 +118,7 @@ public final class SalesforceLinkedServiceResponse extends io.pulumi.resources.I
      * The security token is optional to remotely access Salesforce instance.
      * 
      */
-    @InputImport(name="securityToken")
+    @Import(name="securityToken")
       private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> securityToken;
 
     public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> getSecurityToken() {
@@ -130,7 +130,7 @@ public final class SalesforceLinkedServiceResponse extends io.pulumi.resources.I
      * Expected value is 'Salesforce'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {
@@ -141,7 +141,7 @@ public final class SalesforceLinkedServiceResponse extends io.pulumi.resources.I
      * The username for Basic authentication of the Salesforce instance. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="username")
+    @Import(name="username")
       private final @Nullable Object username;
 
     public Optional<Object> getUsername() {

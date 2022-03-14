@@ -8,7 +8,7 @@ import io.pulumi.azurenative.storage.enums.RootSquashType;
 import io.pulumi.azurenative.storage.enums.ShareAccessTier;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -24,7 +24,7 @@ public final class FileShareArgs extends io.pulumi.resources.ResourceArgs {
      * Access tier for specific share. GpV2 account can choose between TransactionOptimized (default), Hot, and Cool. FileStorage account can choose Premium.
      * 
      */
-    @InputImport(name="accessTier")
+    @Import(name="accessTier")
       private final @Nullable Output<Either<String,ShareAccessTier>> accessTier;
 
     public Output<Either<String,ShareAccessTier>> getAccessTier() {
@@ -35,7 +35,7 @@ public final class FileShareArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.
      * 
      */
-    @InputImport(name="accountName", required=true)
+    @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
     public Output<String> getAccountName() {
@@ -46,7 +46,7 @@ public final class FileShareArgs extends io.pulumi.resources.ResourceArgs {
      * The authentication protocol that is used for the file share. Can only be specified when creating a share.
      * 
      */
-    @InputImport(name="enabledProtocols")
+    @Import(name="enabledProtocols")
       private final @Nullable Output<Either<String,EnabledProtocols>> enabledProtocols;
 
     public Output<Either<String,EnabledProtocols>> getEnabledProtocols() {
@@ -57,7 +57,7 @@ public final class FileShareArgs extends io.pulumi.resources.ResourceArgs {
      * Optional, used to create a snapshot.
      * 
      */
-    @InputImport(name="expand")
+    @Import(name="expand")
       private final @Nullable Output<String> expand;
 
     public Output<String> getExpand() {
@@ -68,7 +68,7 @@ public final class FileShareArgs extends io.pulumi.resources.ResourceArgs {
      * A name-value pair to associate with the share as metadata.
      * 
      */
-    @InputImport(name="metadata")
+    @Import(name="metadata")
       private final @Nullable Output<Map<String,String>> metadata;
 
     public Output<Map<String,String>> getMetadata() {
@@ -79,7 +79,7 @@ public final class FileShareArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group within the user's subscription. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -90,7 +90,7 @@ public final class FileShareArgs extends io.pulumi.resources.ResourceArgs {
      * The property is for NFS share only. The default is NoRootSquash.
      * 
      */
-    @InputImport(name="rootSquash")
+    @Import(name="rootSquash")
       private final @Nullable Output<Either<String,RootSquashType>> rootSquash;
 
     public Output<Either<String,RootSquashType>> getRootSquash() {
@@ -101,7 +101,7 @@ public final class FileShareArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the file share within the specified storage account. File share names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only. Every dash (-) character must be immediately preceded and followed by a letter or number.
      * 
      */
-    @InputImport(name="shareName")
+    @Import(name="shareName")
       private final @Nullable Output<String> shareName;
 
     public Output<String> getShareName() {
@@ -112,7 +112,7 @@ public final class FileShareArgs extends io.pulumi.resources.ResourceArgs {
      * The maximum size of the share, in gigabytes. Must be greater than 0, and less than or equal to 5TB (5120). For Large File Shares, the maximum size is 102400.
      * 
      */
-    @InputImport(name="shareQuota")
+    @Import(name="shareQuota")
       private final @Nullable Output<Integer> shareQuota;
 
     public Output<Integer> getShareQuota() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetWebAppSiteExtensionSlotArgs extends io.pulumi.resources.In
      * Site name.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -27,7 +27,7 @@ public final class GetWebAppSiteExtensionSlotArgs extends io.pulumi.resources.In
      * Name of the resource group to which the resource belongs.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {
@@ -38,7 +38,7 @@ public final class GetWebAppSiteExtensionSlotArgs extends io.pulumi.resources.In
      * Site extension name.
      * 
      */
-    @InputImport(name="siteExtensionId", required=true)
+    @Import(name="siteExtensionId", required=true)
       private final String siteExtensionId;
 
     public String getSiteExtensionId() {
@@ -49,7 +49,7 @@ public final class GetWebAppSiteExtensionSlotArgs extends io.pulumi.resources.In
      * Name of the deployment slot. If a slot is not specified, the API uses the production slot.
      * 
      */
-    @InputImport(name="slot", required=true)
+    @Import(name="slot", required=true)
       private final String slot;
 
     public String getSlot() {

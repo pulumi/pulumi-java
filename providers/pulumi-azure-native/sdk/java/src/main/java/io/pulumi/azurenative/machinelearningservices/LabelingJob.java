@@ -9,7 +9,7 @@ import io.pulumi.azurenative.machinelearningservices.outputs.LabelingJobProperti
 import io.pulumi.azurenative.machinelearningservices.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -36,7 +36,7 @@ public class LabelingJob extends io.pulumi.resources.CustomResource {
      * The name of the resource entity.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -50,7 +50,7 @@ public class LabelingJob extends io.pulumi.resources.CustomResource {
      * Definition of a labeling job.
      * 
      */
-    @OutputExport(name="properties", type=LabelingJobPropertiesResponse.class, parameters={})
+    @Export(name="properties", type=LabelingJobPropertiesResponse.class, parameters={})
     private Output<LabelingJobPropertiesResponse> properties;
 
     /**
@@ -64,7 +64,7 @@ public class LabelingJob extends io.pulumi.resources.CustomResource {
      * Metadata pertaining to creation and last modification of the resource.
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -78,7 +78,7 @@ public class LabelingJob extends io.pulumi.resources.CustomResource {
      * The resource provider and type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

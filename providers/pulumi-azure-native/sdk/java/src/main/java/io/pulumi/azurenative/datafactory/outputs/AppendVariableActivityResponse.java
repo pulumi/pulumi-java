@@ -5,7 +5,7 @@ package io.pulumi.azurenative.datafactory.outputs;
 
 import io.pulumi.azurenative.datafactory.outputs.ActivityDependencyResponse;
 import io.pulumi.azurenative.datafactory.outputs.UserPropertyResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AppendVariableActivityResponse {
     /**
      * Activity depends on condition.
@@ -52,15 +52,15 @@ public final class AppendVariableActivityResponse {
      */
     private final @Nullable String variableName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AppendVariableActivityResponse(
-        @OutputCustomType.Parameter("dependsOn") @Nullable List<ActivityDependencyResponse> dependsOn,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("userProperties") @Nullable List<UserPropertyResponse> userProperties,
-        @OutputCustomType.Parameter("value") @Nullable Object value,
-        @OutputCustomType.Parameter("variableName") @Nullable String variableName) {
+        @CustomType.Parameter("dependsOn") @Nullable List<ActivityDependencyResponse> dependsOn,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("userProperties") @Nullable List<UserPropertyResponse> userProperties,
+        @CustomType.Parameter("value") @Nullable Object value,
+        @CustomType.Parameter("variableName") @Nullable String variableName) {
         this.dependsOn = dependsOn;
         this.description = description;
         this.name = name;

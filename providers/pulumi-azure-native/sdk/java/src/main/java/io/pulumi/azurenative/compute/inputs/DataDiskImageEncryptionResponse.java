@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.compute.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class DataDiskImageEncryptionResponse extends io.pulumi.resources.I
      * A relative URI containing the resource ID of the disk encryption set.
      * 
      */
-    @InputImport(name="diskEncryptionSetId")
+    @Import(name="diskEncryptionSetId")
       private final @Nullable String diskEncryptionSetId;
 
     public Optional<String> getDiskEncryptionSetId() {
@@ -34,7 +34,7 @@ public final class DataDiskImageEncryptionResponse extends io.pulumi.resources.I
      * This property specifies the logical unit number of the data disk. This value is used to identify data disks within the Virtual Machine and therefore must be unique for each data disk attached to the Virtual Machine.
      * 
      */
-    @InputImport(name="lun", required=true)
+    @Import(name="lun", required=true)
       private final Integer lun;
 
     public Integer getLun() {

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.azurenative.web.enums.ClientCredentialMethod;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class OpenIdConnectClientCredentialArgs extends io.pulumi.resources
      * The app setting that contains the client secret for the custom Open ID Connect provider.
      * 
      */
-    @InputImport(name="clientSecretSettingName")
+    @Import(name="clientSecretSettingName")
       private final @Nullable Output<String> clientSecretSettingName;
 
     public Output<String> getClientSecretSettingName() {
@@ -34,7 +34,7 @@ public final class OpenIdConnectClientCredentialArgs extends io.pulumi.resources
      * The method that should be used to authenticate the user.
      * 
      */
-    @InputImport(name="method")
+    @Import(name="method")
       private final @Nullable Output<ClientCredentialMethod> method;
 
     public Output<ClientCredentialMethod> getMethod() {

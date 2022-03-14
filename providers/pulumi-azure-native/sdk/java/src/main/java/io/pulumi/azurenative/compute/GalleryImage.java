@@ -12,7 +12,7 @@ import io.pulumi.azurenative.compute.outputs.ImagePurchasePlanResponse;
 import io.pulumi.azurenative.compute.outputs.RecommendedMachineConfigurationResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -40,7 +40,7 @@ public class GalleryImage extends io.pulumi.resources.CustomResource {
      * The description of this gallery image definition resource. This property is updatable.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -54,7 +54,7 @@ public class GalleryImage extends io.pulumi.resources.CustomResource {
      * Describes the disallowed disk types.
      * 
      */
-    @OutputExport(name="disallowed", type=DisallowedResponse.class, parameters={})
+    @Export(name="disallowed", type=DisallowedResponse.class, parameters={})
     private Output</* @Nullable */ DisallowedResponse> disallowed;
 
     /**
@@ -68,7 +68,7 @@ public class GalleryImage extends io.pulumi.resources.CustomResource {
      * The end of life date of the gallery image definition. This property can be used for decommissioning purposes. This property is updatable.
      * 
      */
-    @OutputExport(name="endOfLifeDate", type=String.class, parameters={})
+    @Export(name="endOfLifeDate", type=String.class, parameters={})
     private Output</* @Nullable */ String> endOfLifeDate;
 
     /**
@@ -82,7 +82,7 @@ public class GalleryImage extends io.pulumi.resources.CustomResource {
      * The Eula agreement for the gallery image definition.
      * 
      */
-    @OutputExport(name="eula", type=String.class, parameters={})
+    @Export(name="eula", type=String.class, parameters={})
     private Output</* @Nullable */ String> eula;
 
     /**
@@ -96,7 +96,7 @@ public class GalleryImage extends io.pulumi.resources.CustomResource {
      * A list of gallery image features.
      * 
      */
-    @OutputExport(name="features", type=List.class, parameters={GalleryImageFeatureResponse.class})
+    @Export(name="features", type=List.class, parameters={GalleryImageFeatureResponse.class})
     private Output</* @Nullable */ List<GalleryImageFeatureResponse>> features;
 
     /**
@@ -110,7 +110,7 @@ public class GalleryImage extends io.pulumi.resources.CustomResource {
      * The hypervisor generation of the Virtual Machine. Applicable to OS disks only.
      * 
      */
-    @OutputExport(name="hyperVGeneration", type=String.class, parameters={})
+    @Export(name="hyperVGeneration", type=String.class, parameters={})
     private Output</* @Nullable */ String> hyperVGeneration;
 
     /**
@@ -124,7 +124,7 @@ public class GalleryImage extends io.pulumi.resources.CustomResource {
      * This is the gallery image definition identifier.
      * 
      */
-    @OutputExport(name="identifier", type=GalleryImageIdentifierResponse.class, parameters={})
+    @Export(name="identifier", type=GalleryImageIdentifierResponse.class, parameters={})
     private Output<GalleryImageIdentifierResponse> identifier;
 
     /**
@@ -138,7 +138,7 @@ public class GalleryImage extends io.pulumi.resources.CustomResource {
      * Resource location
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -152,7 +152,7 @@ public class GalleryImage extends io.pulumi.resources.CustomResource {
      * Resource name
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -166,7 +166,7 @@ public class GalleryImage extends io.pulumi.resources.CustomResource {
      * This property allows the user to specify whether the virtual machines created under this image are 'Generalized' or 'Specialized'.
      * 
      */
-    @OutputExport(name="osState", type=String.class, parameters={})
+    @Export(name="osState", type=String.class, parameters={})
     private Output<String> osState;
 
     /**
@@ -180,7 +180,7 @@ public class GalleryImage extends io.pulumi.resources.CustomResource {
      * This property allows you to specify the type of the OS that is included in the disk when creating a VM from a managed image. <br><br> Possible values are: <br><br> **Windows** <br><br> **Linux**
      * 
      */
-    @OutputExport(name="osType", type=String.class, parameters={})
+    @Export(name="osType", type=String.class, parameters={})
     private Output<String> osType;
 
     /**
@@ -194,7 +194,7 @@ public class GalleryImage extends io.pulumi.resources.CustomResource {
      * The privacy statement uri.
      * 
      */
-    @OutputExport(name="privacyStatementUri", type=String.class, parameters={})
+    @Export(name="privacyStatementUri", type=String.class, parameters={})
     private Output</* @Nullable */ String> privacyStatementUri;
 
     /**
@@ -208,7 +208,7 @@ public class GalleryImage extends io.pulumi.resources.CustomResource {
      * The provisioning state, which only appears in the response.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -222,7 +222,7 @@ public class GalleryImage extends io.pulumi.resources.CustomResource {
      * Describes the gallery image definition purchase plan. This is used by marketplace images.
      * 
      */
-    @OutputExport(name="purchasePlan", type=ImagePurchasePlanResponse.class, parameters={})
+    @Export(name="purchasePlan", type=ImagePurchasePlanResponse.class, parameters={})
     private Output</* @Nullable */ ImagePurchasePlanResponse> purchasePlan;
 
     /**
@@ -236,7 +236,7 @@ public class GalleryImage extends io.pulumi.resources.CustomResource {
      * The properties describe the recommended machine configuration for this Image Definition. These properties are updatable.
      * 
      */
-    @OutputExport(name="recommended", type=RecommendedMachineConfigurationResponse.class, parameters={})
+    @Export(name="recommended", type=RecommendedMachineConfigurationResponse.class, parameters={})
     private Output</* @Nullable */ RecommendedMachineConfigurationResponse> recommended;
 
     /**
@@ -250,7 +250,7 @@ public class GalleryImage extends io.pulumi.resources.CustomResource {
      * The release note uri.
      * 
      */
-    @OutputExport(name="releaseNoteUri", type=String.class, parameters={})
+    @Export(name="releaseNoteUri", type=String.class, parameters={})
     private Output</* @Nullable */ String> releaseNoteUri;
 
     /**
@@ -264,7 +264,7 @@ public class GalleryImage extends io.pulumi.resources.CustomResource {
      * Resource tags
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -278,7 +278,7 @@ public class GalleryImage extends io.pulumi.resources.CustomResource {
      * Resource type
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

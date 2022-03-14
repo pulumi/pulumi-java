@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.hybridcompute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class LocationDataArgs extends io.pulumi.resources.ResourceArgs {
      * The city or locality where the resource is located.
      * 
      */
-    @InputImport(name="city")
+    @Import(name="city")
       private final @Nullable Output<String> city;
 
     public Output<String> getCity() {
@@ -33,7 +33,7 @@ public final class LocationDataArgs extends io.pulumi.resources.ResourceArgs {
      * The country or region where the resource is located
      * 
      */
-    @InputImport(name="countryOrRegion")
+    @Import(name="countryOrRegion")
       private final @Nullable Output<String> countryOrRegion;
 
     public Output<String> getCountryOrRegion() {
@@ -44,7 +44,7 @@ public final class LocationDataArgs extends io.pulumi.resources.ResourceArgs {
      * The district, state, or province where the resource is located.
      * 
      */
-    @InputImport(name="district")
+    @Import(name="district")
       private final @Nullable Output<String> district;
 
     public Output<String> getDistrict() {
@@ -55,7 +55,7 @@ public final class LocationDataArgs extends io.pulumi.resources.ResourceArgs {
      * A canonical name for the geographic or physical location.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {

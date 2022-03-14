@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.streamanalytics.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FunctionOutputResponse {
     /**
      * The (Azure Stream Analytics supported) data type of the function output. A list of valid Azure Stream Analytics data types are described at https://msdn.microsoft.com/en-us/library/azure/dn835065.aspx
@@ -17,8 +17,8 @@ public final class FunctionOutputResponse {
      */
     private final @Nullable String dataType;
 
-    @OutputCustomType.Constructor
-    private FunctionOutputResponse(@OutputCustomType.Parameter("dataType") @Nullable String dataType) {
+    @CustomType.Constructor
+    private FunctionOutputResponse(@CustomType.Parameter("dataType") @Nullable String dataType) {
         this.dataType = dataType;
     }
 

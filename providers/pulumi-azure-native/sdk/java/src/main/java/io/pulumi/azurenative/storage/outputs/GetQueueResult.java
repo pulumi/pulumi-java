@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.storage.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetQueueResult {
     /**
      * Integer indicating an approximate number of messages in the queue. This number is not lower than the actual number of messages in the queue, but could be higher.
@@ -38,13 +38,13 @@ public final class GetQueueResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetQueueResult(
-        @OutputCustomType.Parameter("approximateMessageCount") Integer approximateMessageCount,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("metadata") @Nullable Map<String,String> metadata,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("approximateMessageCount") Integer approximateMessageCount,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("metadata") @Nullable Map<String,String> metadata,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("type") String type) {
         this.approximateMessageCount = approximateMessageCount;
         this.id = id;
         this.metadata = metadata;

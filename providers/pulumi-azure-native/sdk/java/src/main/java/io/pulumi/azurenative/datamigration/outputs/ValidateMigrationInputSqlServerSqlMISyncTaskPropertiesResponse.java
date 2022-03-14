@@ -9,14 +9,14 @@ import io.pulumi.azurenative.datamigration.outputs.ODataErrorResponse;
 import io.pulumi.azurenative.datamigration.outputs.ValidateMigrationInputSqlServerSqlMISyncTaskInputResponse;
 import io.pulumi.azurenative.datamigration.outputs.ValidateMigrationInputSqlServerSqlMISyncTaskOutputResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ValidateMigrationInputSqlServerSqlMISyncTaskPropertiesResponse {
     /**
      * Array of command properties.
@@ -50,14 +50,14 @@ public final class ValidateMigrationInputSqlServerSqlMISyncTaskPropertiesRespons
      */
     private final String taskType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ValidateMigrationInputSqlServerSqlMISyncTaskPropertiesResponse(
-        @OutputCustomType.Parameter("commands") List<Either<MigrateMISyncCompleteCommandPropertiesResponse,MigrateSyncCompleteCommandPropertiesResponse>> commands,
-        @OutputCustomType.Parameter("errors") List<ODataErrorResponse> errors,
-        @OutputCustomType.Parameter("input") @Nullable ValidateMigrationInputSqlServerSqlMISyncTaskInputResponse input,
-        @OutputCustomType.Parameter("output") List<ValidateMigrationInputSqlServerSqlMISyncTaskOutputResponse> output,
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("taskType") String taskType) {
+        @CustomType.Parameter("commands") List<Either<MigrateMISyncCompleteCommandPropertiesResponse,MigrateSyncCompleteCommandPropertiesResponse>> commands,
+        @CustomType.Parameter("errors") List<ODataErrorResponse> errors,
+        @CustomType.Parameter("input") @Nullable ValidateMigrationInputSqlServerSqlMISyncTaskInputResponse input,
+        @CustomType.Parameter("output") List<ValidateMigrationInputSqlServerSqlMISyncTaskOutputResponse> output,
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("taskType") String taskType) {
         this.commands = commands;
         this.errors = errors;
         this.input = input;

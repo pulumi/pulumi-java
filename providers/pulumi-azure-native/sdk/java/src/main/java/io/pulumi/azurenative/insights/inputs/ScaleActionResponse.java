@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.insights.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class ScaleActionResponse extends io.pulumi.resources.InvokeArgs {
      * the amount of time to wait since the last scaling action before this action occurs. It must be between 1 week and 1 minute in ISO 8601 format.
      * 
      */
-    @InputImport(name="cooldown", required=true)
+    @Import(name="cooldown", required=true)
       private final String cooldown;
 
     public String getCooldown() {
@@ -33,7 +33,7 @@ public final class ScaleActionResponse extends io.pulumi.resources.InvokeArgs {
      * the scale direction. Whether the scaling action increases or decreases the number of instances.
      * 
      */
-    @InputImport(name="direction", required=true)
+    @Import(name="direction", required=true)
       private final String direction;
 
     public String getDirection() {
@@ -44,7 +44,7 @@ public final class ScaleActionResponse extends io.pulumi.resources.InvokeArgs {
      * the type of action that should occur when the scale rule fires.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {
@@ -55,7 +55,7 @@ public final class ScaleActionResponse extends io.pulumi.resources.InvokeArgs {
      * the number of instances that are involved in the scaling action. This value must be 1 or greater. The default value is 1.
      * 
      */
-    @InputImport(name="value")
+    @Import(name="value")
       private final @Nullable String value;
 
     public Optional<String> getValue() {

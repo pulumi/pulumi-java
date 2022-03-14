@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.costmanagement.outputs;
 
 import io.pulumi.azurenative.costmanagement.outputs.ConnectorCollectionErrorInfoResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ConnectorCollectionInfoResponse {
     /**
      * Error information of last collection
@@ -33,12 +33,12 @@ public final class ConnectorCollectionInfoResponse {
      */
     private final String sourceLastUpdated;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ConnectorCollectionInfoResponse(
-        @OutputCustomType.Parameter("error") @Nullable ConnectorCollectionErrorInfoResponse error,
-        @OutputCustomType.Parameter("lastChecked") String lastChecked,
-        @OutputCustomType.Parameter("lastUpdated") String lastUpdated,
-        @OutputCustomType.Parameter("sourceLastUpdated") String sourceLastUpdated) {
+        @CustomType.Parameter("error") @Nullable ConnectorCollectionErrorInfoResponse error,
+        @CustomType.Parameter("lastChecked") String lastChecked,
+        @CustomType.Parameter("lastUpdated") String lastUpdated,
+        @CustomType.Parameter("sourceLastUpdated") String sourceLastUpdated) {
         this.error = error;
         this.lastChecked = lastChecked;
         this.lastUpdated = lastUpdated;

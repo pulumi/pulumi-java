@@ -6,14 +6,14 @@ package io.pulumi.azurenative.machinelearning.outputs;
 import io.pulumi.azurenative.machinelearning.outputs.GraphEdgeResponse;
 import io.pulumi.azurenative.machinelearning.outputs.GraphNodeResponse;
 import io.pulumi.azurenative.machinelearning.outputs.GraphParameterResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GraphPackageResponse {
     /**
      * The list of edges making up the graph.
@@ -31,11 +31,11 @@ public final class GraphPackageResponse {
      */
     private final @Nullable Map<String,GraphNodeResponse> nodes;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GraphPackageResponse(
-        @OutputCustomType.Parameter("edges") @Nullable List<GraphEdgeResponse> edges,
-        @OutputCustomType.Parameter("graphParameters") @Nullable Map<String,GraphParameterResponse> graphParameters,
-        @OutputCustomType.Parameter("nodes") @Nullable Map<String,GraphNodeResponse> nodes) {
+        @CustomType.Parameter("edges") @Nullable List<GraphEdgeResponse> edges,
+        @CustomType.Parameter("graphParameters") @Nullable Map<String,GraphParameterResponse> graphParameters,
+        @CustomType.Parameter("nodes") @Nullable Map<String,GraphNodeResponse> nodes) {
         this.edges = edges;
         this.graphParameters = graphParameters;
         this.nodes = nodes;

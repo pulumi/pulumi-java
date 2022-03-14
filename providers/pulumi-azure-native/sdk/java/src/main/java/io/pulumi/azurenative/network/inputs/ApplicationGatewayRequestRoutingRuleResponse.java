@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.SubResourceResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ApplicationGatewayRequestRoutingRuleResponse extends io.pulum
      * Backend address pool resource of the application gateway.
      * 
      */
-    @InputImport(name="backendAddressPool")
+    @Import(name="backendAddressPool")
       private final @Nullable SubResourceResponse backendAddressPool;
 
     public Optional<SubResourceResponse> getBackendAddressPool() {
@@ -35,7 +35,7 @@ public final class ApplicationGatewayRequestRoutingRuleResponse extends io.pulum
      * Backend http settings resource of the application gateway.
      * 
      */
-    @InputImport(name="backendHttpSettings")
+    @Import(name="backendHttpSettings")
       private final @Nullable SubResourceResponse backendHttpSettings;
 
     public Optional<SubResourceResponse> getBackendHttpSettings() {
@@ -46,7 +46,7 @@ public final class ApplicationGatewayRequestRoutingRuleResponse extends io.pulum
      * A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    @InputImport(name="etag", required=true)
+    @Import(name="etag", required=true)
       private final String etag;
 
     public String getEtag() {
@@ -57,7 +57,7 @@ public final class ApplicationGatewayRequestRoutingRuleResponse extends io.pulum
      * Http listener resource of the application gateway.
      * 
      */
-    @InputImport(name="httpListener")
+    @Import(name="httpListener")
       private final @Nullable SubResourceResponse httpListener;
 
     public Optional<SubResourceResponse> getHttpListener() {
@@ -68,7 +68,7 @@ public final class ApplicationGatewayRequestRoutingRuleResponse extends io.pulum
      * Resource ID.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable String id;
 
     public Optional<String> getId() {
@@ -79,7 +79,7 @@ public final class ApplicationGatewayRequestRoutingRuleResponse extends io.pulum
      * Name of the request routing rule that is unique within an Application Gateway.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -90,7 +90,7 @@ public final class ApplicationGatewayRequestRoutingRuleResponse extends io.pulum
      * Priority of the request routing rule.
      * 
      */
-    @InputImport(name="priority")
+    @Import(name="priority")
       private final @Nullable Integer priority;
 
     public Optional<Integer> getPriority() {
@@ -101,7 +101,7 @@ public final class ApplicationGatewayRequestRoutingRuleResponse extends io.pulum
      * The provisioning state of the request routing rule resource.
      * 
      */
-    @InputImport(name="provisioningState", required=true)
+    @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
     public String getProvisioningState() {
@@ -112,7 +112,7 @@ public final class ApplicationGatewayRequestRoutingRuleResponse extends io.pulum
      * Redirect configuration resource of the application gateway.
      * 
      */
-    @InputImport(name="redirectConfiguration")
+    @Import(name="redirectConfiguration")
       private final @Nullable SubResourceResponse redirectConfiguration;
 
     public Optional<SubResourceResponse> getRedirectConfiguration() {
@@ -123,7 +123,7 @@ public final class ApplicationGatewayRequestRoutingRuleResponse extends io.pulum
      * Rewrite Rule Set resource in Basic rule of the application gateway.
      * 
      */
-    @InputImport(name="rewriteRuleSet")
+    @Import(name="rewriteRuleSet")
       private final @Nullable SubResourceResponse rewriteRuleSet;
 
     public Optional<SubResourceResponse> getRewriteRuleSet() {
@@ -134,7 +134,7 @@ public final class ApplicationGatewayRequestRoutingRuleResponse extends io.pulum
      * Rule type.
      * 
      */
-    @InputImport(name="ruleType")
+    @Import(name="ruleType")
       private final @Nullable String ruleType;
 
     public Optional<String> getRuleType() {
@@ -145,7 +145,7 @@ public final class ApplicationGatewayRequestRoutingRuleResponse extends io.pulum
      * Type of the resource.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {
@@ -156,7 +156,7 @@ public final class ApplicationGatewayRequestRoutingRuleResponse extends io.pulum
      * URL path map resource of the application gateway.
      * 
      */
-    @InputImport(name="urlPathMap")
+    @Import(name="urlPathMap")
       private final @Nullable SubResourceResponse urlPathMap;
 
     public Optional<SubResourceResponse> getUrlPathMap() {

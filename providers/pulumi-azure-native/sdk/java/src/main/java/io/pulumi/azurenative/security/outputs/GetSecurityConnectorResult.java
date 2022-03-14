@@ -8,7 +8,7 @@ import io.pulumi.azurenative.security.outputs.DefenderForContainersAwsOfferingRe
 import io.pulumi.azurenative.security.outputs.DefenderForServersAwsOfferingResponse;
 import io.pulumi.azurenative.security.outputs.SecurityConnectorPropertiesResponseOrganizationalData;
 import io.pulumi.azurenative.security.outputs.SystemDataResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -17,7 +17,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetSecurityConnectorResult {
     /**
      * The multi cloud resource's cloud name.
@@ -80,20 +80,20 @@ public final class GetSecurityConnectorResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetSecurityConnectorResult(
-        @OutputCustomType.Parameter("cloudName") @Nullable String cloudName,
-        @OutputCustomType.Parameter("etag") @Nullable String etag,
-        @OutputCustomType.Parameter("hierarchyIdentifier") @Nullable String hierarchyIdentifier,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("kind") @Nullable String kind,
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("offerings") @Nullable List<Object> offerings,
-        @OutputCustomType.Parameter("organizationalData") @Nullable SecurityConnectorPropertiesResponseOrganizationalData organizationalData,
-        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("cloudName") @Nullable String cloudName,
+        @CustomType.Parameter("etag") @Nullable String etag,
+        @CustomType.Parameter("hierarchyIdentifier") @Nullable String hierarchyIdentifier,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("kind") @Nullable String kind,
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("offerings") @Nullable List<Object> offerings,
+        @CustomType.Parameter("organizationalData") @Nullable SecurityConnectorPropertiesResponseOrganizationalData organizationalData,
+        @CustomType.Parameter("systemData") SystemDataResponse systemData,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type) {
         this.cloudName = cloudName;
         this.etag = etag;
         this.hierarchyIdentifier = hierarchyIdentifier;

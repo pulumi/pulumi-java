@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.databoxedge.outputs;
 
 import io.pulumi.azurenative.databoxedge.outputs.ImageRepositoryCredentialResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class IoTEdgeAgentInfoResponse {
     /**
      * Name of the IoT edge agent image.
@@ -28,11 +28,11 @@ public final class IoTEdgeAgentInfoResponse {
      */
     private final String tag;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private IoTEdgeAgentInfoResponse(
-        @OutputCustomType.Parameter("imageName") String imageName,
-        @OutputCustomType.Parameter("imageRepository") @Nullable ImageRepositoryCredentialResponse imageRepository,
-        @OutputCustomType.Parameter("tag") String tag) {
+        @CustomType.Parameter("imageName") String imageName,
+        @CustomType.Parameter("imageRepository") @Nullable ImageRepositoryCredentialResponse imageRepository,
+        @CustomType.Parameter("tag") String tag) {
         this.imageName = imageName;
         this.imageRepository = imageRepository;
         this.tag = tag;

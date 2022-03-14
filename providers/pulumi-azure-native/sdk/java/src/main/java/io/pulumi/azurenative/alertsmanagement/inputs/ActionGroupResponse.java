@@ -5,7 +5,7 @@ package io.pulumi.azurenative.alertsmanagement.inputs;
 
 import io.pulumi.azurenative.alertsmanagement.inputs.ConditionsResponse;
 import io.pulumi.azurenative.alertsmanagement.inputs.ScopeResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class ActionGroupResponse extends io.pulumi.resources.InvokeArgs {
      * Action group to trigger if action rule matches
      * 
      */
-    @InputImport(name="actionGroupId", required=true)
+    @Import(name="actionGroupId", required=true)
       private final String actionGroupId;
 
     public String getActionGroupId() {
@@ -35,7 +35,7 @@ public final class ActionGroupResponse extends io.pulumi.resources.InvokeArgs {
      * conditions on which alerts will be filtered
      * 
      */
-    @InputImport(name="conditions")
+    @Import(name="conditions")
       private final @Nullable ConditionsResponse conditions;
 
     public Optional<ConditionsResponse> getConditions() {
@@ -46,7 +46,7 @@ public final class ActionGroupResponse extends io.pulumi.resources.InvokeArgs {
      * Creation time of action rule. Date-Time in ISO-8601 format.
      * 
      */
-    @InputImport(name="createdAt", required=true)
+    @Import(name="createdAt", required=true)
       private final String createdAt;
 
     public String getCreatedAt() {
@@ -57,7 +57,7 @@ public final class ActionGroupResponse extends io.pulumi.resources.InvokeArgs {
      * Created by user name.
      * 
      */
-    @InputImport(name="createdBy", required=true)
+    @Import(name="createdBy", required=true)
       private final String createdBy;
 
     public String getCreatedBy() {
@@ -68,7 +68,7 @@ public final class ActionGroupResponse extends io.pulumi.resources.InvokeArgs {
      * Description of action rule
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable String description;
 
     public Optional<String> getDescription() {
@@ -79,7 +79,7 @@ public final class ActionGroupResponse extends io.pulumi.resources.InvokeArgs {
      * Last updated time of action rule. Date-Time in ISO-8601 format.
      * 
      */
-    @InputImport(name="lastModifiedAt", required=true)
+    @Import(name="lastModifiedAt", required=true)
       private final String lastModifiedAt;
 
     public String getLastModifiedAt() {
@@ -90,7 +90,7 @@ public final class ActionGroupResponse extends io.pulumi.resources.InvokeArgs {
      * Last modified by user name.
      * 
      */
-    @InputImport(name="lastModifiedBy", required=true)
+    @Import(name="lastModifiedBy", required=true)
       private final String lastModifiedBy;
 
     public String getLastModifiedBy() {
@@ -101,7 +101,7 @@ public final class ActionGroupResponse extends io.pulumi.resources.InvokeArgs {
      * scope on which action rule will apply
      * 
      */
-    @InputImport(name="scope")
+    @Import(name="scope")
       private final @Nullable ScopeResponse scope;
 
     public Optional<ScopeResponse> getScope() {
@@ -112,7 +112,7 @@ public final class ActionGroupResponse extends io.pulumi.resources.InvokeArgs {
      * Indicates if the given action rule is enabled or disabled
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable String status;
 
     public Optional<String> getStatus() {
@@ -124,7 +124,7 @@ public final class ActionGroupResponse extends io.pulumi.resources.InvokeArgs {
      * Expected value is 'ActionGroup'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

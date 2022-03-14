@@ -5,7 +5,7 @@ package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.azurenative.compute.inputs.SourceVaultArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class KeyForDiskEncryptionSetArgs extends io.pulumi.resources.Resou
      * Fully versioned Key Url pointing to a key in KeyVault. Version segment of the Url is required regardless of rotationToLatestKeyVersionEnabled value.
      * 
      */
-    @InputImport(name="keyUrl", required=true)
+    @Import(name="keyUrl", required=true)
       private final Output<String> keyUrl;
 
     public Output<String> getKeyUrl() {
@@ -34,7 +34,7 @@ public final class KeyForDiskEncryptionSetArgs extends io.pulumi.resources.Resou
      * Resource id of the KeyVault containing the key or secret. This property is optional and cannot be used if the KeyVault subscription is not the same as the Disk Encryption Set subscription.
      * 
      */
-    @InputImport(name="sourceVault")
+    @Import(name="sourceVault")
       private final @Nullable Output<SourceVaultArgs> sourceVault;
 
     public Output<SourceVaultArgs> getSourceVault() {

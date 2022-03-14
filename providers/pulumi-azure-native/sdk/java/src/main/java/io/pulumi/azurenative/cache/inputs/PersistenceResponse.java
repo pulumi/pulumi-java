@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.cache.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class PersistenceResponse extends io.pulumi.resources.InvokeArgs {
      * Sets whether AOF is enabled.
      * 
      */
-    @InputImport(name="aofEnabled")
+    @Import(name="aofEnabled")
       private final @Nullable Boolean aofEnabled;
 
     public Optional<Boolean> getAofEnabled() {
@@ -34,7 +34,7 @@ public final class PersistenceResponse extends io.pulumi.resources.InvokeArgs {
      * Sets the frequency at which data is written to disk.
      * 
      */
-    @InputImport(name="aofFrequency")
+    @Import(name="aofFrequency")
       private final @Nullable String aofFrequency;
 
     public Optional<String> getAofFrequency() {
@@ -45,7 +45,7 @@ public final class PersistenceResponse extends io.pulumi.resources.InvokeArgs {
      * Sets whether RDB is enabled.
      * 
      */
-    @InputImport(name="rdbEnabled")
+    @Import(name="rdbEnabled")
       private final @Nullable Boolean rdbEnabled;
 
     public Optional<Boolean> getRdbEnabled() {
@@ -56,7 +56,7 @@ public final class PersistenceResponse extends io.pulumi.resources.InvokeArgs {
      * Sets the frequency at which a snapshot of the database is created.
      * 
      */
-    @InputImport(name="rdbFrequency")
+    @Import(name="rdbFrequency")
       private final @Nullable String rdbFrequency;
 
     public Optional<String> getRdbFrequency() {

@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.batch.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ImageReferenceResponse {
     /**
      * This property is mutually exclusive with other properties. The Shared Image Gallery image must have replicas in the same region as the Azure Batch account. For information about the firewall settings for the Batch node agent to communicate with the Batch service see https://docs.microsoft.com/en-us/azure/batch/batch-api-basics#virtual-network-vnet-and-firewall-configuration.
@@ -37,13 +37,13 @@ public final class ImageReferenceResponse {
      */
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ImageReferenceResponse(
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("offer") @Nullable String offer,
-        @OutputCustomType.Parameter("publisher") @Nullable String publisher,
-        @OutputCustomType.Parameter("sku") @Nullable String sku,
-        @OutputCustomType.Parameter("version") @Nullable String version) {
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("offer") @Nullable String offer,
+        @CustomType.Parameter("publisher") @Nullable String publisher,
+        @CustomType.Parameter("sku") @Nullable String sku,
+        @CustomType.Parameter("version") @Nullable String version) {
         this.id = id;
         this.offer = offer;
         this.publisher = publisher;

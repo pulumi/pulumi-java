@@ -5,13 +5,13 @@ package io.pulumi.azurenative.edgeorder.outputs;
 
 import io.pulumi.azurenative.edgeorder.outputs.ContactDetailsResponse;
 import io.pulumi.azurenative.edgeorder.outputs.ShippingAddressResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AddressPropertiesResponse {
     /**
      * Status of address validation
@@ -29,11 +29,11 @@ public final class AddressPropertiesResponse {
      */
     private final @Nullable ShippingAddressResponse shippingAddress;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AddressPropertiesResponse(
-        @OutputCustomType.Parameter("addressValidationStatus") String addressValidationStatus,
-        @OutputCustomType.Parameter("contactDetails") ContactDetailsResponse contactDetails,
-        @OutputCustomType.Parameter("shippingAddress") @Nullable ShippingAddressResponse shippingAddress) {
+        @CustomType.Parameter("addressValidationStatus") String addressValidationStatus,
+        @CustomType.Parameter("contactDetails") ContactDetailsResponse contactDetails,
+        @CustomType.Parameter("shippingAddress") @Nullable ShippingAddressResponse shippingAddress) {
         this.addressValidationStatus = addressValidationStatus;
         this.contactDetails = contactDetails;
         this.shippingAddress = shippingAddress;

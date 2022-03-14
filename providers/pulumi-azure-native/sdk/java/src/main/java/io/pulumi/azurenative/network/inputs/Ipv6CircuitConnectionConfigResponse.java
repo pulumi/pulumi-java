@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class Ipv6CircuitConnectionConfigResponse extends io.pulumi.resourc
      * /125 IP address space to carve out customer addresses for global reach.
      * 
      */
-    @InputImport(name="addressPrefix")
+    @Import(name="addressPrefix")
       private final @Nullable String addressPrefix;
 
     public Optional<String> getAddressPrefix() {
@@ -33,7 +33,7 @@ public final class Ipv6CircuitConnectionConfigResponse extends io.pulumi.resourc
      * Express Route Circuit connection state.
      * 
      */
-    @InputImport(name="circuitConnectionStatus", required=true)
+    @Import(name="circuitConnectionStatus", required=true)
       private final String circuitConnectionStatus;
 
     public String getCircuitConnectionStatus() {

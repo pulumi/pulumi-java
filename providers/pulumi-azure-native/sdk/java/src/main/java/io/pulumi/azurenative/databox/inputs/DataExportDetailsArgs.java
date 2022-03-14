@@ -9,7 +9,7 @@ import io.pulumi.azurenative.databox.inputs.StorageAccountDetailsArgs;
 import io.pulumi.azurenative.databox.inputs.TransferConfigurationArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,7 +27,7 @@ public final class DataExportDetailsArgs extends io.pulumi.resources.ResourceArg
      * Account details of the data to be transferred
      * 
      */
-    @InputImport(name="accountDetails", required=true)
+    @Import(name="accountDetails", required=true)
       private final Output<Either<ManagedDiskDetailsArgs,StorageAccountDetailsArgs>> accountDetails;
 
     public Output<Either<ManagedDiskDetailsArgs,StorageAccountDetailsArgs>> getAccountDetails() {
@@ -38,7 +38,7 @@ public final class DataExportDetailsArgs extends io.pulumi.resources.ResourceArg
      * Level of the logs to be collected.
      * 
      */
-    @InputImport(name="logCollectionLevel")
+    @Import(name="logCollectionLevel")
       private final @Nullable Output<Either<String,LogCollectionLevel>> logCollectionLevel;
 
     public Output<Either<String,LogCollectionLevel>> getLogCollectionLevel() {
@@ -49,7 +49,7 @@ public final class DataExportDetailsArgs extends io.pulumi.resources.ResourceArg
      * Configuration for the data transfer.
      * 
      */
-    @InputImport(name="transferConfiguration", required=true)
+    @Import(name="transferConfiguration", required=true)
       private final Output<TransferConfigurationArgs> transferConfiguration;
 
     public Output<TransferConfigurationArgs> getTransferConfiguration() {

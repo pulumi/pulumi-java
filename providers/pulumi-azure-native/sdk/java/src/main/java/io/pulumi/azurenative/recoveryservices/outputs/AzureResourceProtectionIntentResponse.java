@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.recoveryservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AzureResourceProtectionIntentResponse {
     /**
      * Type of backup management for the backed up item.
@@ -48,15 +48,15 @@ public final class AzureResourceProtectionIntentResponse {
      */
     private final @Nullable String sourceResourceId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AzureResourceProtectionIntentResponse(
-        @OutputCustomType.Parameter("backupManagementType") @Nullable String backupManagementType,
-        @OutputCustomType.Parameter("friendlyName") @Nullable String friendlyName,
-        @OutputCustomType.Parameter("itemId") @Nullable String itemId,
-        @OutputCustomType.Parameter("policyId") @Nullable String policyId,
-        @OutputCustomType.Parameter("protectionIntentItemType") String protectionIntentItemType,
-        @OutputCustomType.Parameter("protectionState") @Nullable String protectionState,
-        @OutputCustomType.Parameter("sourceResourceId") @Nullable String sourceResourceId) {
+        @CustomType.Parameter("backupManagementType") @Nullable String backupManagementType,
+        @CustomType.Parameter("friendlyName") @Nullable String friendlyName,
+        @CustomType.Parameter("itemId") @Nullable String itemId,
+        @CustomType.Parameter("policyId") @Nullable String policyId,
+        @CustomType.Parameter("protectionIntentItemType") String protectionIntentItemType,
+        @CustomType.Parameter("protectionState") @Nullable String protectionState,
+        @CustomType.Parameter("sourceResourceId") @Nullable String sourceResourceId) {
         this.backupManagementType = backupManagementType;
         this.friendlyName = friendlyName;
         this.itemId = itemId;

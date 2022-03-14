@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.insights.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ExtensionDataSourceResponse {
     /**
      * The name of the VM extension.
@@ -41,13 +41,13 @@ public final class ExtensionDataSourceResponse {
      */
     private final @Nullable List<String> streams;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ExtensionDataSourceResponse(
-        @OutputCustomType.Parameter("extensionName") String extensionName,
-        @OutputCustomType.Parameter("extensionSettings") @Nullable Object extensionSettings,
-        @OutputCustomType.Parameter("inputDataSources") @Nullable List<String> inputDataSources,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("streams") @Nullable List<String> streams) {
+        @CustomType.Parameter("extensionName") String extensionName,
+        @CustomType.Parameter("extensionSettings") @Nullable Object extensionSettings,
+        @CustomType.Parameter("inputDataSources") @Nullable List<String> inputDataSources,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("streams") @Nullable List<String> streams) {
         this.extensionName = extensionName;
         this.extensionSettings = extensionSettings;
         this.inputDataSources = inputDataSources;

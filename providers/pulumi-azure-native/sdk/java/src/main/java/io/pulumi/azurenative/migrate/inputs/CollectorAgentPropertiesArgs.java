@@ -5,7 +5,7 @@ package io.pulumi.azurenative.migrate.inputs;
 
 import io.pulumi.azurenative.migrate.inputs.CollectorBodyAgentSpnPropertiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -14,7 +14,7 @@ public final class CollectorAgentPropertiesArgs extends io.pulumi.resources.Reso
 
     public static final CollectorAgentPropertiesArgs Empty = new CollectorAgentPropertiesArgs();
 
-    @InputImport(name="spnDetails")
+    @Import(name="spnDetails")
       private final @Nullable Output<CollectorBodyAgentSpnPropertiesArgs> spnDetails;
 
     public Output<CollectorBodyAgentSpnPropertiesArgs> getSpnDetails() {

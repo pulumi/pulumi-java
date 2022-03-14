@@ -5,7 +5,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.azurenative.datafactory.inputs.ActivityDependencyResponse;
 import io.pulumi.azurenative.datafactory.inputs.UserPropertyResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +26,7 @@ public final class FailActivityResponse extends io.pulumi.resources.InvokeArgs {
      * Activity depends on condition.
      * 
      */
-    @InputImport(name="dependsOn")
+    @Import(name="dependsOn")
       private final @Nullable List<ActivityDependencyResponse> dependsOn;
 
     public List<ActivityDependencyResponse> getDependsOn() {
@@ -37,7 +37,7 @@ public final class FailActivityResponse extends io.pulumi.resources.InvokeArgs {
      * Activity description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable String description;
 
     public Optional<String> getDescription() {
@@ -48,7 +48,7 @@ public final class FailActivityResponse extends io.pulumi.resources.InvokeArgs {
      * The error code that categorizes the error type of the Fail activity. It can be dynamic content that's evaluated to a non empty/blank string at runtime. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="errorCode", required=true)
+    @Import(name="errorCode", required=true)
       private final Object errorCode;
 
     public Object getErrorCode() {
@@ -59,7 +59,7 @@ public final class FailActivityResponse extends io.pulumi.resources.InvokeArgs {
      * The error message that surfaced in the Fail activity. It can be dynamic content that's evaluated to a non empty/blank string at runtime. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="message", required=true)
+    @Import(name="message", required=true)
       private final Object message;
 
     public Object getMessage() {
@@ -70,7 +70,7 @@ public final class FailActivityResponse extends io.pulumi.resources.InvokeArgs {
      * Activity name.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -82,7 +82,7 @@ public final class FailActivityResponse extends io.pulumi.resources.InvokeArgs {
      * Expected value is 'Fail'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {
@@ -93,7 +93,7 @@ public final class FailActivityResponse extends io.pulumi.resources.InvokeArgs {
      * Activity user properties.
      * 
      */
-    @InputImport(name="userProperties")
+    @Import(name="userProperties")
       private final @Nullable List<UserPropertyResponse> userProperties;
 
     public List<UserPropertyResponse> getUserProperties() {

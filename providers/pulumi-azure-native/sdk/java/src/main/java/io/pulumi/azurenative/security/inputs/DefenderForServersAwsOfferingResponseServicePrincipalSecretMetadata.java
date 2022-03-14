@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.security.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class DefenderForServersAwsOfferingResponseServicePrincipalSecretMe
      * expiration date of service principal secret
      * 
      */
-    @InputImport(name="expiryDate")
+    @Import(name="expiryDate")
       private final @Nullable String expiryDate;
 
     public Optional<String> getExpiryDate() {
@@ -33,7 +33,7 @@ public final class DefenderForServersAwsOfferingResponseServicePrincipalSecretMe
      * name of secret resource in parameter store
      * 
      */
-    @InputImport(name="parameterNameInStore")
+    @Import(name="parameterNameInStore")
       private final @Nullable String parameterNameInStore;
 
     public Optional<String> getParameterNameInStore() {
@@ -44,7 +44,7 @@ public final class DefenderForServersAwsOfferingResponseServicePrincipalSecretMe
      * region of parameter store where secret is kept
      * 
      */
-    @InputImport(name="parameterStoreRegion")
+    @Import(name="parameterStoreRegion")
       private final @Nullable String parameterStoreRegion;
 
     public Optional<String> getParameterStoreRegion() {

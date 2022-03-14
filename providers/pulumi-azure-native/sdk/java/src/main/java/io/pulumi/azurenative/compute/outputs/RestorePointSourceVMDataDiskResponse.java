@@ -5,14 +5,14 @@ package io.pulumi.azurenative.compute.outputs;
 
 import io.pulumi.azurenative.compute.outputs.ApiEntityReferenceResponse;
 import io.pulumi.azurenative.compute.outputs.ManagedDiskParametersResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RestorePointSourceVMDataDiskResponse {
     /**
      * Gets the caching type.
@@ -45,14 +45,14 @@ public final class RestorePointSourceVMDataDiskResponse {
      */
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RestorePointSourceVMDataDiskResponse(
-        @OutputCustomType.Parameter("caching") @Nullable String caching,
-        @OutputCustomType.Parameter("diskRestorePoint") @Nullable ApiEntityReferenceResponse diskRestorePoint,
-        @OutputCustomType.Parameter("diskSizeGB") @Nullable Integer diskSizeGB,
-        @OutputCustomType.Parameter("lun") @Nullable Integer lun,
-        @OutputCustomType.Parameter("managedDisk") @Nullable ManagedDiskParametersResponse managedDisk,
-        @OutputCustomType.Parameter("name") @Nullable String name) {
+        @CustomType.Parameter("caching") @Nullable String caching,
+        @CustomType.Parameter("diskRestorePoint") @Nullable ApiEntityReferenceResponse diskRestorePoint,
+        @CustomType.Parameter("diskSizeGB") @Nullable Integer diskSizeGB,
+        @CustomType.Parameter("lun") @Nullable Integer lun,
+        @CustomType.Parameter("managedDisk") @Nullable ManagedDiskParametersResponse managedDisk,
+        @CustomType.Parameter("name") @Nullable String name) {
         this.caching = caching;
         this.diskRestorePoint = diskRestorePoint;
         this.diskSizeGB = diskSizeGB;

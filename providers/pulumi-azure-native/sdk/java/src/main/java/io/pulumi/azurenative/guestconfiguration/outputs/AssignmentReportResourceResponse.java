@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.guestconfiguration.outputs;
 
 import io.pulumi.azurenative.guestconfiguration.outputs.AssignmentReportResourceComplianceReasonResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AssignmentReportResourceResponse {
     /**
      * A value indicating compliance status of the machine for the assigned guest configuration.
@@ -34,12 +34,12 @@ public final class AssignmentReportResourceResponse {
      */
     private final String resourceId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AssignmentReportResourceResponse(
-        @OutputCustomType.Parameter("complianceStatus") String complianceStatus,
-        @OutputCustomType.Parameter("properties") Object properties,
-        @OutputCustomType.Parameter("reasons") @Nullable List<AssignmentReportResourceComplianceReasonResponse> reasons,
-        @OutputCustomType.Parameter("resourceId") String resourceId) {
+        @CustomType.Parameter("complianceStatus") String complianceStatus,
+        @CustomType.Parameter("properties") Object properties,
+        @CustomType.Parameter("reasons") @Nullable List<AssignmentReportResourceComplianceReasonResponse> reasons,
+        @CustomType.Parameter("resourceId") String resourceId) {
         this.complianceStatus = complianceStatus;
         this.properties = properties;
         this.reasons = reasons;

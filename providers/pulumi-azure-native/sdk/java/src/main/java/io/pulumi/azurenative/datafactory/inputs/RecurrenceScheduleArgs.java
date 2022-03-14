@@ -6,7 +6,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 import io.pulumi.azurenative.datafactory.enums.DaysOfWeek;
 import io.pulumi.azurenative.datafactory.inputs.RecurrenceScheduleOccurrenceArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class RecurrenceScheduleArgs extends io.pulumi.resources.ResourceAr
      * The hours.
      * 
      */
-    @InputImport(name="hours")
+    @Import(name="hours")
       private final @Nullable Output<List<Integer>> hours;
 
     public Output<List<Integer>> getHours() {
@@ -36,7 +36,7 @@ public final class RecurrenceScheduleArgs extends io.pulumi.resources.ResourceAr
      * The minutes.
      * 
      */
-    @InputImport(name="minutes")
+    @Import(name="minutes")
       private final @Nullable Output<List<Integer>> minutes;
 
     public Output<List<Integer>> getMinutes() {
@@ -47,7 +47,7 @@ public final class RecurrenceScheduleArgs extends io.pulumi.resources.ResourceAr
      * The month days.
      * 
      */
-    @InputImport(name="monthDays")
+    @Import(name="monthDays")
       private final @Nullable Output<List<Integer>> monthDays;
 
     public Output<List<Integer>> getMonthDays() {
@@ -58,7 +58,7 @@ public final class RecurrenceScheduleArgs extends io.pulumi.resources.ResourceAr
      * The monthly occurrences.
      * 
      */
-    @InputImport(name="monthlyOccurrences")
+    @Import(name="monthlyOccurrences")
       private final @Nullable Output<List<RecurrenceScheduleOccurrenceArgs>> monthlyOccurrences;
 
     public Output<List<RecurrenceScheduleOccurrenceArgs>> getMonthlyOccurrences() {
@@ -69,7 +69,7 @@ public final class RecurrenceScheduleArgs extends io.pulumi.resources.ResourceAr
      * The days of the week.
      * 
      */
-    @InputImport(name="weekDays")
+    @Import(name="weekDays")
       private final @Nullable Output<List<DaysOfWeek>> weekDays;
 
     public Output<List<DaysOfWeek>> getWeekDays() {

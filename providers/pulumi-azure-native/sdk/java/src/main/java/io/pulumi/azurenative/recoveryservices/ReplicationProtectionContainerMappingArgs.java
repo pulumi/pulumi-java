@@ -5,7 +5,7 @@ package io.pulumi.azurenative.recoveryservices;
 
 import io.pulumi.azurenative.recoveryservices.inputs.CreateProtectionContainerMappingInputPropertiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class ReplicationProtectionContainerMappingArgs extends io.pulumi.r
      * Fabric name.
      * 
      */
-    @InputImport(name="fabricName", required=true)
+    @Import(name="fabricName", required=true)
       private final Output<String> fabricName;
 
     public Output<String> getFabricName() {
@@ -30,7 +30,7 @@ public final class ReplicationProtectionContainerMappingArgs extends io.pulumi.r
      * Protection container mapping name.
      * 
      */
-    @InputImport(name="mappingName")
+    @Import(name="mappingName")
       private final @Nullable Output<String> mappingName;
 
     public Output<String> getMappingName() {
@@ -41,7 +41,7 @@ public final class ReplicationProtectionContainerMappingArgs extends io.pulumi.r
      * Configure protection input properties.
      * 
      */
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable Output<CreateProtectionContainerMappingInputPropertiesArgs> properties;
 
     public Output<CreateProtectionContainerMappingInputPropertiesArgs> getProperties() {
@@ -52,7 +52,7 @@ public final class ReplicationProtectionContainerMappingArgs extends io.pulumi.r
      * Protection container name.
      * 
      */
-    @InputImport(name="protectionContainerName", required=true)
+    @Import(name="protectionContainerName", required=true)
       private final Output<String> protectionContainerName;
 
     public Output<String> getProtectionContainerName() {
@@ -63,7 +63,7 @@ public final class ReplicationProtectionContainerMappingArgs extends io.pulumi.r
      * The name of the resource group where the recovery services vault is present.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -74,7 +74,7 @@ public final class ReplicationProtectionContainerMappingArgs extends io.pulumi.r
      * The name of the recovery services vault.
      * 
      */
-    @InputImport(name="resourceName", required=true)
+    @Import(name="resourceName", required=true)
       private final Output<String> resourceName;
 
     public Output<String> getPropResourceName() {

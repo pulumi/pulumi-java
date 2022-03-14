@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.insights.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class ItsmReceiverArgs extends io.pulumi.resources.ResourceArgs {
      * Unique identification of ITSM connection among multiple defined in above workspace.
      * 
      */
-    @InputImport(name="connectionId", required=true)
+    @Import(name="connectionId", required=true)
       private final Output<String> connectionId;
 
     public Output<String> getConnectionId() {
@@ -32,7 +32,7 @@ public final class ItsmReceiverArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the Itsm receiver. Names must be unique across all receivers within an action group.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -43,7 +43,7 @@ public final class ItsmReceiverArgs extends io.pulumi.resources.ResourceArgs {
      * Region in which workspace resides. Supported values:'centralindia','japaneast','southeastasia','australiasoutheast','uksouth','westcentralus','canadacentral','eastus','westeurope'
      * 
      */
-    @InputImport(name="region", required=true)
+    @Import(name="region", required=true)
       private final Output<String> region;
 
     public Output<String> getRegion() {
@@ -54,7 +54,7 @@ public final class ItsmReceiverArgs extends io.pulumi.resources.ResourceArgs {
      * JSON blob for the configurations of the ITSM action. CreateMultipleWorkItems option will be part of this blob as well.
      * 
      */
-    @InputImport(name="ticketConfiguration", required=true)
+    @Import(name="ticketConfiguration", required=true)
       private final Output<String> ticketConfiguration;
 
     public Output<String> getTicketConfiguration() {
@@ -65,7 +65,7 @@ public final class ItsmReceiverArgs extends io.pulumi.resources.ResourceArgs {
      * OMS LA instance identifier.
      * 
      */
-    @InputImport(name="workspaceId", required=true)
+    @Import(name="workspaceId", required=true)
       private final Output<String> workspaceId;
 
     public Output<String> getWorkspaceId() {

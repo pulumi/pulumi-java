@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.labservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class NetworkInterfaceResponse {
     /**
      * PrivateIp address of the Compute VM
@@ -30,12 +30,12 @@ public final class NetworkInterfaceResponse {
      */
     private final String username;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NetworkInterfaceResponse(
-        @OutputCustomType.Parameter("privateIpAddress") String privateIpAddress,
-        @OutputCustomType.Parameter("rdpAuthority") String rdpAuthority,
-        @OutputCustomType.Parameter("sshAuthority") String sshAuthority,
-        @OutputCustomType.Parameter("username") String username) {
+        @CustomType.Parameter("privateIpAddress") String privateIpAddress,
+        @CustomType.Parameter("rdpAuthority") String rdpAuthority,
+        @CustomType.Parameter("sshAuthority") String sshAuthority,
+        @CustomType.Parameter("username") String username) {
         this.privateIpAddress = privateIpAddress;
         this.rdpAuthority = rdpAuthority;
         this.sshAuthority = sshAuthority;

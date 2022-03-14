@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.documentdb.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class IpAddressOrRangeResponse extends io.pulumi.resources.InvokeAr
      * A single IPv4 address or a single IPv4 address range in CIDR format. Provided IPs must be well-formatted and cannot be contained in one of the following ranges: 10.0.0.0/8, 100.64.0.0/10, 172.16.0.0/12, 192.168.0.0/16, since these are not enforceable by the IP address filter. Example of valid inputs: “23.40.210.245” or “23.40.210.0/8”.
      * 
      */
-    @InputImport(name="ipAddressOrRange")
+    @Import(name="ipAddressOrRange")
       private final @Nullable String ipAddressOrRange;
 
     public Optional<String> getIpAddressOrRange() {

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.media.outputs;
 
 import io.pulumi.azurenative.media.outputs.JpgLayerResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class JpgImageResponse {
     /**
      * The distance between two key frames. The value should be non-zero in the range [0.5, 20] seconds, specified in ISO 8601 format. The default is 2 seconds(PT2S). Note that this setting is ignored if VideoSyncMode.Passthrough is set, where the KeyFrameInterval value will follow the input source setting.
@@ -66,18 +66,18 @@ public final class JpgImageResponse {
      */
     private final @Nullable String syncMode;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private JpgImageResponse(
-        @OutputCustomType.Parameter("keyFrameInterval") @Nullable String keyFrameInterval,
-        @OutputCustomType.Parameter("label") @Nullable String label,
-        @OutputCustomType.Parameter("layers") @Nullable List<JpgLayerResponse> layers,
-        @OutputCustomType.Parameter("odataType") String odataType,
-        @OutputCustomType.Parameter("range") @Nullable String range,
-        @OutputCustomType.Parameter("spriteColumn") @Nullable Integer spriteColumn,
-        @OutputCustomType.Parameter("start") String start,
-        @OutputCustomType.Parameter("step") @Nullable String step,
-        @OutputCustomType.Parameter("stretchMode") @Nullable String stretchMode,
-        @OutputCustomType.Parameter("syncMode") @Nullable String syncMode) {
+        @CustomType.Parameter("keyFrameInterval") @Nullable String keyFrameInterval,
+        @CustomType.Parameter("label") @Nullable String label,
+        @CustomType.Parameter("layers") @Nullable List<JpgLayerResponse> layers,
+        @CustomType.Parameter("odataType") String odataType,
+        @CustomType.Parameter("range") @Nullable String range,
+        @CustomType.Parameter("spriteColumn") @Nullable Integer spriteColumn,
+        @CustomType.Parameter("start") String start,
+        @CustomType.Parameter("step") @Nullable String step,
+        @CustomType.Parameter("stretchMode") @Nullable String stretchMode,
+        @CustomType.Parameter("syncMode") @Nullable String syncMode) {
         this.keyFrameInterval = keyFrameInterval;
         this.label = label;
         this.layers = layers;

@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.security.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SecurityConnectorPropertiesResponseOrganizationalData {
     /**
      * If the multi cloud account is of membership type organization, list of accounts excluded from offering
@@ -33,12 +33,12 @@ public final class SecurityConnectorPropertiesResponseOrganizationalData {
      */
     private final @Nullable String stacksetName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SecurityConnectorPropertiesResponseOrganizationalData(
-        @OutputCustomType.Parameter("excludedAccountIds") @Nullable List<String> excludedAccountIds,
-        @OutputCustomType.Parameter("organizationMembershipType") @Nullable String organizationMembershipType,
-        @OutputCustomType.Parameter("parentHierarchyId") @Nullable String parentHierarchyId,
-        @OutputCustomType.Parameter("stacksetName") @Nullable String stacksetName) {
+        @CustomType.Parameter("excludedAccountIds") @Nullable List<String> excludedAccountIds,
+        @CustomType.Parameter("organizationMembershipType") @Nullable String organizationMembershipType,
+        @CustomType.Parameter("parentHierarchyId") @Nullable String parentHierarchyId,
+        @CustomType.Parameter("stacksetName") @Nullable String stacksetName) {
         this.excludedAccountIds = excludedAccountIds;
         this.organizationMembershipType = organizationMembershipType;
         this.parentHierarchyId = parentHierarchyId;

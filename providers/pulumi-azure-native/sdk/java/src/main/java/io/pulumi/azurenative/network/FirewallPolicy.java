@@ -16,7 +16,7 @@ import io.pulumi.azurenative.network.outputs.ManagedServiceIdentityResponse;
 import io.pulumi.azurenative.network.outputs.SubResourceResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -44,7 +44,7 @@ public class FirewallPolicy extends io.pulumi.resources.CustomResource {
      * The parent firewall policy from which rules are inherited.
      * 
      */
-    @OutputExport(name="basePolicy", type=SubResourceResponse.class, parameters={})
+    @Export(name="basePolicy", type=SubResourceResponse.class, parameters={})
     private Output</* @Nullable */ SubResourceResponse> basePolicy;
 
     /**
@@ -58,7 +58,7 @@ public class FirewallPolicy extends io.pulumi.resources.CustomResource {
      * List of references to Child Firewall Policies.
      * 
      */
-    @OutputExport(name="childPolicies", type=List.class, parameters={SubResourceResponse.class})
+    @Export(name="childPolicies", type=List.class, parameters={SubResourceResponse.class})
     private Output<List<SubResourceResponse>> childPolicies;
 
     /**
@@ -72,7 +72,7 @@ public class FirewallPolicy extends io.pulumi.resources.CustomResource {
      * DNS Proxy Settings definition.
      * 
      */
-    @OutputExport(name="dnsSettings", type=DnsSettingsResponse.class, parameters={})
+    @Export(name="dnsSettings", type=DnsSettingsResponse.class, parameters={})
     private Output</* @Nullable */ DnsSettingsResponse> dnsSettings;
 
     /**
@@ -86,7 +86,7 @@ public class FirewallPolicy extends io.pulumi.resources.CustomResource {
      * A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -100,7 +100,7 @@ public class FirewallPolicy extends io.pulumi.resources.CustomResource {
      * List of references to Azure Firewalls that this Firewall Policy is associated with.
      * 
      */
-    @OutputExport(name="firewalls", type=List.class, parameters={SubResourceResponse.class})
+    @Export(name="firewalls", type=List.class, parameters={SubResourceResponse.class})
     private Output<List<SubResourceResponse>> firewalls;
 
     /**
@@ -114,7 +114,7 @@ public class FirewallPolicy extends io.pulumi.resources.CustomResource {
      * The identity of the firewall policy.
      * 
      */
-    @OutputExport(name="identity", type=ManagedServiceIdentityResponse.class, parameters={})
+    @Export(name="identity", type=ManagedServiceIdentityResponse.class, parameters={})
     private Output</* @Nullable */ ManagedServiceIdentityResponse> identity;
 
     /**
@@ -128,7 +128,7 @@ public class FirewallPolicy extends io.pulumi.resources.CustomResource {
      * Insights on Firewall Policy.
      * 
      */
-    @OutputExport(name="insights", type=FirewallPolicyInsightsResponse.class, parameters={})
+    @Export(name="insights", type=FirewallPolicyInsightsResponse.class, parameters={})
     private Output</* @Nullable */ FirewallPolicyInsightsResponse> insights;
 
     /**
@@ -142,7 +142,7 @@ public class FirewallPolicy extends io.pulumi.resources.CustomResource {
      * The configuration for Intrusion detection.
      * 
      */
-    @OutputExport(name="intrusionDetection", type=FirewallPolicyIntrusionDetectionResponse.class, parameters={})
+    @Export(name="intrusionDetection", type=FirewallPolicyIntrusionDetectionResponse.class, parameters={})
     private Output</* @Nullable */ FirewallPolicyIntrusionDetectionResponse> intrusionDetection;
 
     /**
@@ -156,7 +156,7 @@ public class FirewallPolicy extends io.pulumi.resources.CustomResource {
      * Resource location.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -170,7 +170,7 @@ public class FirewallPolicy extends io.pulumi.resources.CustomResource {
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -184,7 +184,7 @@ public class FirewallPolicy extends io.pulumi.resources.CustomResource {
      * The provisioning state of the firewall policy resource.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -198,7 +198,7 @@ public class FirewallPolicy extends io.pulumi.resources.CustomResource {
      * List of references to FirewallPolicyRuleCollectionGroups.
      * 
      */
-    @OutputExport(name="ruleCollectionGroups", type=List.class, parameters={SubResourceResponse.class})
+    @Export(name="ruleCollectionGroups", type=List.class, parameters={SubResourceResponse.class})
     private Output<List<SubResourceResponse>> ruleCollectionGroups;
 
     /**
@@ -212,7 +212,7 @@ public class FirewallPolicy extends io.pulumi.resources.CustomResource {
      * The Firewall Policy SKU.
      * 
      */
-    @OutputExport(name="sku", type=FirewallPolicySkuResponse.class, parameters={})
+    @Export(name="sku", type=FirewallPolicySkuResponse.class, parameters={})
     private Output</* @Nullable */ FirewallPolicySkuResponse> sku;
 
     /**
@@ -226,7 +226,7 @@ public class FirewallPolicy extends io.pulumi.resources.CustomResource {
      * The private IP addresses/IP ranges to which traffic will not be SNAT.
      * 
      */
-    @OutputExport(name="snat", type=FirewallPolicySNATResponse.class, parameters={})
+    @Export(name="snat", type=FirewallPolicySNATResponse.class, parameters={})
     private Output</* @Nullable */ FirewallPolicySNATResponse> snat;
 
     /**
@@ -240,7 +240,7 @@ public class FirewallPolicy extends io.pulumi.resources.CustomResource {
      * Resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -254,7 +254,7 @@ public class FirewallPolicy extends io.pulumi.resources.CustomResource {
      * The operation mode for Threat Intelligence.
      * 
      */
-    @OutputExport(name="threatIntelMode", type=String.class, parameters={})
+    @Export(name="threatIntelMode", type=String.class, parameters={})
     private Output</* @Nullable */ String> threatIntelMode;
 
     /**
@@ -268,7 +268,7 @@ public class FirewallPolicy extends io.pulumi.resources.CustomResource {
      * ThreatIntel Whitelist for Firewall Policy.
      * 
      */
-    @OutputExport(name="threatIntelWhitelist", type=FirewallPolicyThreatIntelWhitelistResponse.class, parameters={})
+    @Export(name="threatIntelWhitelist", type=FirewallPolicyThreatIntelWhitelistResponse.class, parameters={})
     private Output</* @Nullable */ FirewallPolicyThreatIntelWhitelistResponse> threatIntelWhitelist;
 
     /**
@@ -282,7 +282,7 @@ public class FirewallPolicy extends io.pulumi.resources.CustomResource {
      * TLS Configuration definition.
      * 
      */
-    @OutputExport(name="transportSecurity", type=FirewallPolicyTransportSecurityResponse.class, parameters={})
+    @Export(name="transportSecurity", type=FirewallPolicyTransportSecurityResponse.class, parameters={})
     private Output</* @Nullable */ FirewallPolicyTransportSecurityResponse> transportSecurity;
 
     /**
@@ -296,7 +296,7 @@ public class FirewallPolicy extends io.pulumi.resources.CustomResource {
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

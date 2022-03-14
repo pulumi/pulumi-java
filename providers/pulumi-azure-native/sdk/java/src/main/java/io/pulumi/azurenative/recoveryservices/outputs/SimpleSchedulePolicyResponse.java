@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SimpleSchedulePolicyResponse {
     /**
      * This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
@@ -40,13 +40,13 @@ public final class SimpleSchedulePolicyResponse {
      */
     private final @Nullable Integer scheduleWeeklyFrequency;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SimpleSchedulePolicyResponse(
-        @OutputCustomType.Parameter("schedulePolicyType") String schedulePolicyType,
-        @OutputCustomType.Parameter("scheduleRunDays") @Nullable List<String> scheduleRunDays,
-        @OutputCustomType.Parameter("scheduleRunFrequency") @Nullable String scheduleRunFrequency,
-        @OutputCustomType.Parameter("scheduleRunTimes") @Nullable List<String> scheduleRunTimes,
-        @OutputCustomType.Parameter("scheduleWeeklyFrequency") @Nullable Integer scheduleWeeklyFrequency) {
+        @CustomType.Parameter("schedulePolicyType") String schedulePolicyType,
+        @CustomType.Parameter("scheduleRunDays") @Nullable List<String> scheduleRunDays,
+        @CustomType.Parameter("scheduleRunFrequency") @Nullable String scheduleRunFrequency,
+        @CustomType.Parameter("scheduleRunTimes") @Nullable List<String> scheduleRunTimes,
+        @CustomType.Parameter("scheduleWeeklyFrequency") @Nullable Integer scheduleWeeklyFrequency) {
         this.schedulePolicyType = schedulePolicyType;
         this.scheduleRunDays = scheduleRunDays;
         this.scheduleRunFrequency = scheduleRunFrequency;

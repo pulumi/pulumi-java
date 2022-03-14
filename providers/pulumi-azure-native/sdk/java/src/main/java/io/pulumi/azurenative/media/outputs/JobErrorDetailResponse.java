@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.media.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class JobErrorDetailResponse {
     /**
      * Code describing the error detail.
@@ -20,10 +20,10 @@ public final class JobErrorDetailResponse {
      */
     private final String message;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private JobErrorDetailResponse(
-        @OutputCustomType.Parameter("code") String code,
-        @OutputCustomType.Parameter("message") String message) {
+        @CustomType.Parameter("code") String code,
+        @CustomType.Parameter("message") String message) {
         this.code = code;
         this.message = message;
     }

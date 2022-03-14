@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.web.outputs;
 
 import io.pulumi.azurenative.web.outputs.FrontEndConfigurationResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ArcConfigurationResponse {
     private final @Nullable String artifactStorageAccessMode;
     private final @Nullable String artifactStorageClassName;
@@ -19,14 +19,14 @@ public final class ArcConfigurationResponse {
     private final @Nullable String artifactsStorageType;
     private final @Nullable FrontEndConfigurationResponse frontEndServiceConfiguration;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ArcConfigurationResponse(
-        @OutputCustomType.Parameter("artifactStorageAccessMode") @Nullable String artifactStorageAccessMode,
-        @OutputCustomType.Parameter("artifactStorageClassName") @Nullable String artifactStorageClassName,
-        @OutputCustomType.Parameter("artifactStorageMountPath") @Nullable String artifactStorageMountPath,
-        @OutputCustomType.Parameter("artifactStorageNodeName") @Nullable String artifactStorageNodeName,
-        @OutputCustomType.Parameter("artifactsStorageType") @Nullable String artifactsStorageType,
-        @OutputCustomType.Parameter("frontEndServiceConfiguration") @Nullable FrontEndConfigurationResponse frontEndServiceConfiguration) {
+        @CustomType.Parameter("artifactStorageAccessMode") @Nullable String artifactStorageAccessMode,
+        @CustomType.Parameter("artifactStorageClassName") @Nullable String artifactStorageClassName,
+        @CustomType.Parameter("artifactStorageMountPath") @Nullable String artifactStorageMountPath,
+        @CustomType.Parameter("artifactStorageNodeName") @Nullable String artifactStorageNodeName,
+        @CustomType.Parameter("artifactsStorageType") @Nullable String artifactsStorageType,
+        @CustomType.Parameter("frontEndServiceConfiguration") @Nullable FrontEndConfigurationResponse frontEndServiceConfiguration) {
         this.artifactStorageAccessMode = artifactStorageAccessMode;
         this.artifactStorageClassName = artifactStorageClassName;
         this.artifactStorageMountPath = artifactStorageMountPath;

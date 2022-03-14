@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.customerinsights.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +18,7 @@ public final class GetImageUploadUrlForDataArgs extends io.pulumi.resources.Invo
      * Type of entity. Can be Profile or Interaction.
      * 
      */
-    @InputImport(name="entityType")
+    @Import(name="entityType")
       private final @Nullable String entityType;
 
     public Optional<String> getEntityType() {
@@ -29,7 +29,7 @@ public final class GetImageUploadUrlForDataArgs extends io.pulumi.resources.Invo
      * Name of the entity type.
      * 
      */
-    @InputImport(name="entityTypeName")
+    @Import(name="entityTypeName")
       private final @Nullable String entityTypeName;
 
     public Optional<String> getEntityTypeName() {
@@ -40,7 +40,7 @@ public final class GetImageUploadUrlForDataArgs extends io.pulumi.resources.Invo
      * The name of the hub.
      * 
      */
-    @InputImport(name="hubName", required=true)
+    @Import(name="hubName", required=true)
       private final String hubName;
 
     public String getHubName() {
@@ -51,7 +51,7 @@ public final class GetImageUploadUrlForDataArgs extends io.pulumi.resources.Invo
      * Relative path of the image.
      * 
      */
-    @InputImport(name="relativePath")
+    @Import(name="relativePath")
       private final @Nullable String relativePath;
 
     public Optional<String> getRelativePath() {
@@ -62,7 +62,7 @@ public final class GetImageUploadUrlForDataArgs extends io.pulumi.resources.Invo
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {

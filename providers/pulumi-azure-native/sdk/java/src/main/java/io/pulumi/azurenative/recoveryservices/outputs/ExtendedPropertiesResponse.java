@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.recoveryservices.outputs;
 
 import io.pulumi.azurenative.recoveryservices.outputs.DiskExclusionPropertiesResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ExtendedPropertiesResponse {
     /**
      * Extended Properties for Disk Exclusion.
@@ -17,8 +17,8 @@ public final class ExtendedPropertiesResponse {
      */
     private final @Nullable DiskExclusionPropertiesResponse diskExclusionProperties;
 
-    @OutputCustomType.Constructor
-    private ExtendedPropertiesResponse(@OutputCustomType.Parameter("diskExclusionProperties") @Nullable DiskExclusionPropertiesResponse diskExclusionProperties) {
+    @CustomType.Constructor
+    private ExtendedPropertiesResponse(@CustomType.Parameter("diskExclusionProperties") @Nullable DiskExclusionPropertiesResponse diskExclusionProperties) {
         this.diskExclusionProperties = diskExclusionProperties;
     }
 

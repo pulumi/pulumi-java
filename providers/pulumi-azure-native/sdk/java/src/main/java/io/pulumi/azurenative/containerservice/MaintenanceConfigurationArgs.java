@@ -6,7 +6,7 @@ package io.pulumi.azurenative.containerservice;
 import io.pulumi.azurenative.containerservice.inputs.TimeInWeekArgs;
 import io.pulumi.azurenative.containerservice.inputs.TimeSpanArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class MaintenanceConfigurationArgs extends io.pulumi.resources.Reso
      * The name of the maintenance configuration.
      * 
      */
-    @InputImport(name="configName")
+    @Import(name="configName")
       private final @Nullable Output<String> configName;
 
     public Output<String> getConfigName() {
@@ -32,7 +32,7 @@ public final class MaintenanceConfigurationArgs extends io.pulumi.resources.Reso
      * Time slots on which upgrade is not allowed.
      * 
      */
-    @InputImport(name="notAllowedTime")
+    @Import(name="notAllowedTime")
       private final @Nullable Output<List<TimeSpanArgs>> notAllowedTime;
 
     public Output<List<TimeSpanArgs>> getNotAllowedTime() {
@@ -43,7 +43,7 @@ public final class MaintenanceConfigurationArgs extends io.pulumi.resources.Reso
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -54,7 +54,7 @@ public final class MaintenanceConfigurationArgs extends io.pulumi.resources.Reso
      * The name of the managed cluster resource.
      * 
      */
-    @InputImport(name="resourceName", required=true)
+    @Import(name="resourceName", required=true)
       private final Output<String> resourceName;
 
     public Output<String> getPropResourceName() {
@@ -65,7 +65,7 @@ public final class MaintenanceConfigurationArgs extends io.pulumi.resources.Reso
      * Weekday time slots allowed to upgrade.
      * 
      */
-    @InputImport(name="timeInWeek")
+    @Import(name="timeInWeek")
       private final @Nullable Output<List<TimeInWeekArgs>> timeInWeek;
 
     public Output<List<TimeInWeekArgs>> getTimeInWeek() {

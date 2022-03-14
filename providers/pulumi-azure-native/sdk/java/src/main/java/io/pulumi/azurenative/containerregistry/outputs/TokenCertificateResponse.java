@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.containerregistry.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TokenCertificateResponse {
     /**
      * Base 64 encoded string of the public certificate1 in PEM format that will be used for authenticating the token.
@@ -28,12 +28,12 @@ public final class TokenCertificateResponse {
      */
     private final @Nullable String thumbprint;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TokenCertificateResponse(
-        @OutputCustomType.Parameter("encodedPemCertificate") @Nullable String encodedPemCertificate,
-        @OutputCustomType.Parameter("expiry") @Nullable String expiry,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("thumbprint") @Nullable String thumbprint) {
+        @CustomType.Parameter("encodedPemCertificate") @Nullable String encodedPemCertificate,
+        @CustomType.Parameter("expiry") @Nullable String expiry,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("thumbprint") @Nullable String thumbprint) {
         this.encodedPemCertificate = encodedPemCertificate;
         this.expiry = expiry;
         this.name = name;

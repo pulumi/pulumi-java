@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.peering.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetRegisteredPrefixArgs extends io.pulumi.resources.InvokeArg
      * The name of the peering.
      * 
      */
-    @InputImport(name="peeringName", required=true)
+    @Import(name="peeringName", required=true)
       private final String peeringName;
 
     public String getPeeringName() {
@@ -27,7 +27,7 @@ public final class GetRegisteredPrefixArgs extends io.pulumi.resources.InvokeArg
      * The name of the registered prefix.
      * 
      */
-    @InputImport(name="registeredPrefixName", required=true)
+    @Import(name="registeredPrefixName", required=true)
       private final String registeredPrefixName;
 
     public String getRegisteredPrefixName() {
@@ -38,7 +38,7 @@ public final class GetRegisteredPrefixArgs extends io.pulumi.resources.InvokeArg
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {

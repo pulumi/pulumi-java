@@ -7,7 +7,7 @@ import io.pulumi.azurenative.databricks.inputs.SkuArgs;
 import io.pulumi.azurenative.databricks.inputs.WorkspaceCustomParametersArgs;
 import io.pulumi.azurenative.databricks.inputs.WorkspaceProviderAuthorizationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -23,7 +23,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * The workspace provider authorizations.
      * 
      */
-    @InputImport(name="authorizations")
+    @Import(name="authorizations")
       private final @Nullable Output<List<WorkspaceProviderAuthorizationArgs>> authorizations;
 
     public Output<List<WorkspaceProviderAuthorizationArgs>> getAuthorizations() {
@@ -34,7 +34,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * The geo-location where the resource lives
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -45,7 +45,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * The managed resource group Id.
      * 
      */
-    @InputImport(name="managedResourceGroupId", required=true)
+    @Import(name="managedResourceGroupId", required=true)
       private final Output<String> managedResourceGroupId;
 
     public Output<String> getManagedResourceGroupId() {
@@ -56,7 +56,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * The workspace's custom parameters.
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable Output<WorkspaceCustomParametersArgs> parameters;
 
     public Output<WorkspaceCustomParametersArgs> getParameters() {
@@ -67,7 +67,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -78,7 +78,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * The SKU of the resource.
      * 
      */
-    @InputImport(name="sku")
+    @Import(name="sku")
       private final @Nullable Output<SkuArgs> sku;
 
     public Output<SkuArgs> getSku() {
@@ -89,7 +89,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * Resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -100,7 +100,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * The blob URI where the UI definition file is located.
      * 
      */
-    @InputImport(name="uiDefinitionUri")
+    @Import(name="uiDefinitionUri")
       private final @Nullable Output<String> uiDefinitionUri;
 
     public Output<String> getUiDefinitionUri() {
@@ -111,7 +111,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the workspace.
      * 
      */
-    @InputImport(name="workspaceName")
+    @Import(name="workspaceName")
       private final @Nullable Output<String> workspaceName;
 
     public Output<String> getWorkspaceName() {

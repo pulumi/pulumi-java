@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SecurityPolicyLinkResponse {
     /**
      * Resource ID.
@@ -17,8 +17,8 @@ public final class SecurityPolicyLinkResponse {
      */
     private final @Nullable String id;
 
-    @OutputCustomType.Constructor
-    private SecurityPolicyLinkResponse(@OutputCustomType.Parameter("id") @Nullable String id) {
+    @CustomType.Constructor
+    private SecurityPolicyLinkResponse(@CustomType.Parameter("id") @Nullable String id) {
         this.id = id;
     }
 

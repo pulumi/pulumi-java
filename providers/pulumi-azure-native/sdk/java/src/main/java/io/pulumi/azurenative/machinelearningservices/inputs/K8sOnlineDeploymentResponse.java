@@ -13,7 +13,7 @@ import io.pulumi.azurenative.machinelearningservices.inputs.OnlineRequestSetting
 import io.pulumi.azurenative.machinelearningservices.inputs.OutputPathAssetReferenceResponse;
 import io.pulumi.azurenative.machinelearningservices.inputs.ProbeSettingsResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -31,7 +31,7 @@ public final class K8sOnlineDeploymentResponse extends io.pulumi.resources.Invok
      * If true, enables Application Insights logging.
      * 
      */
-    @InputImport(name="appInsightsEnabled")
+    @Import(name="appInsightsEnabled")
       private final @Nullable Boolean appInsightsEnabled;
 
     public Optional<Boolean> getAppInsightsEnabled() {
@@ -42,7 +42,7 @@ public final class K8sOnlineDeploymentResponse extends io.pulumi.resources.Invok
      * Code configuration for the endpoint deployment.
      * 
      */
-    @InputImport(name="codeConfiguration")
+    @Import(name="codeConfiguration")
       private final @Nullable CodeConfigurationResponse codeConfiguration;
 
     public Optional<CodeConfigurationResponse> getCodeConfiguration() {
@@ -53,7 +53,7 @@ public final class K8sOnlineDeploymentResponse extends io.pulumi.resources.Invok
      * Resource requirements for each container instance within an online deployment.
      * 
      */
-    @InputImport(name="containerResourceRequirements")
+    @Import(name="containerResourceRequirements")
       private final @Nullable ContainerResourceRequirementsResponse containerResourceRequirements;
 
     public Optional<ContainerResourceRequirementsResponse> getContainerResourceRequirements() {
@@ -64,7 +64,7 @@ public final class K8sOnlineDeploymentResponse extends io.pulumi.resources.Invok
      * Description of the endpoint deployment.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable String description;
 
     public Optional<String> getDescription() {
@@ -76,7 +76,7 @@ public final class K8sOnlineDeploymentResponse extends io.pulumi.resources.Invok
      * Expected value is 'K8S'.
      * 
      */
-    @InputImport(name="endpointComputeType", required=true)
+    @Import(name="endpointComputeType", required=true)
       private final String endpointComputeType;
 
     public String getEndpointComputeType() {
@@ -87,7 +87,7 @@ public final class K8sOnlineDeploymentResponse extends io.pulumi.resources.Invok
      * ARM resource ID of the environment specification for the endpoint deployment.
      * 
      */
-    @InputImport(name="environmentId")
+    @Import(name="environmentId")
       private final @Nullable String environmentId;
 
     public Optional<String> getEnvironmentId() {
@@ -98,7 +98,7 @@ public final class K8sOnlineDeploymentResponse extends io.pulumi.resources.Invok
      * Environment variables configuration for the deployment.
      * 
      */
-    @InputImport(name="environmentVariables")
+    @Import(name="environmentVariables")
       private final @Nullable Map<String,String> environmentVariables;
 
     public Map<String,String> getEnvironmentVariables() {
@@ -109,7 +109,7 @@ public final class K8sOnlineDeploymentResponse extends io.pulumi.resources.Invok
      * Deployment container liveness/readiness probe configuration.
      * 
      */
-    @InputImport(name="livenessProbe")
+    @Import(name="livenessProbe")
       private final @Nullable ProbeSettingsResponse livenessProbe;
 
     public Optional<ProbeSettingsResponse> getLivenessProbe() {
@@ -120,7 +120,7 @@ public final class K8sOnlineDeploymentResponse extends io.pulumi.resources.Invok
      * Reference to the model asset for the endpoint deployment.
      * 
      */
-    @InputImport(name="model")
+    @Import(name="model")
       private final @Nullable Object model;
 
     public Object getModel() {
@@ -131,7 +131,7 @@ public final class K8sOnlineDeploymentResponse extends io.pulumi.resources.Invok
      * Property dictionary. Properties can be added, but not removed or altered.
      * 
      */
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable Map<String,String> properties;
 
     public Map<String,String> getProperties() {
@@ -142,7 +142,7 @@ public final class K8sOnlineDeploymentResponse extends io.pulumi.resources.Invok
      * Provisioning state for the endpoint deployment.
      * 
      */
-    @InputImport(name="provisioningState", required=true)
+    @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
     public String getProvisioningState() {
@@ -153,7 +153,7 @@ public final class K8sOnlineDeploymentResponse extends io.pulumi.resources.Invok
      * Online deployment scoring requests configuration.
      * 
      */
-    @InputImport(name="requestSettings")
+    @Import(name="requestSettings")
       private final @Nullable OnlineRequestSettingsResponse requestSettings;
 
     public Optional<OnlineRequestSettingsResponse> getRequestSettings() {
@@ -164,7 +164,7 @@ public final class K8sOnlineDeploymentResponse extends io.pulumi.resources.Invok
      * Online deployment scaling configuration.
      * 
      */
-    @InputImport(name="scaleSettings")
+    @Import(name="scaleSettings")
       private final @Nullable Either<AutoScaleSettingsResponse,ManualScaleSettingsResponse> scaleSettings;
 
     public Either<AutoScaleSettingsResponse,ManualScaleSettingsResponse> getScaleSettings() {

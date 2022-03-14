@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.dbforpostgresql.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetVirtualNetworkRuleArgs extends io.pulumi.resources.InvokeA
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {
@@ -27,7 +27,7 @@ public final class GetVirtualNetworkRuleArgs extends io.pulumi.resources.InvokeA
      * The name of the server.
      * 
      */
-    @InputImport(name="serverName", required=true)
+    @Import(name="serverName", required=true)
       private final String serverName;
 
     public String getServerName() {
@@ -38,7 +38,7 @@ public final class GetVirtualNetworkRuleArgs extends io.pulumi.resources.InvokeA
      * The name of the virtual network rule.
      * 
      */
-    @InputImport(name="virtualNetworkRuleName", required=true)
+    @Import(name="virtualNetworkRuleName", required=true)
       private final String virtualNetworkRuleName;
 
     public String getVirtualNetworkRuleName() {

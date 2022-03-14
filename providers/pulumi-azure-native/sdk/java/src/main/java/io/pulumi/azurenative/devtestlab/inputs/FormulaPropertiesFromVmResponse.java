@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.devtestlab.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class FormulaPropertiesFromVmResponse extends io.pulumi.resources.I
      * The identifier of the VM from which a formula is to be created.
      * 
      */
-    @InputImport(name="labVmId")
+    @Import(name="labVmId")
       private final @Nullable String labVmId;
 
     public Optional<String> getLabVmId() {

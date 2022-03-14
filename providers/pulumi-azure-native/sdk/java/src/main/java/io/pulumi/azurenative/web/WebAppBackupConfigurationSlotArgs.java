@@ -6,7 +6,7 @@ package io.pulumi.azurenative.web;
 import io.pulumi.azurenative.web.inputs.BackupScheduleArgs;
 import io.pulumi.azurenative.web.inputs.DatabaseBackupSettingArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class WebAppBackupConfigurationSlotArgs extends io.pulumi.resources
      * Name of the backup.
      * 
      */
-    @InputImport(name="backupName")
+    @Import(name="backupName")
       private final @Nullable Output<String> backupName;
 
     public Output<String> getBackupName() {
@@ -33,7 +33,7 @@ public final class WebAppBackupConfigurationSlotArgs extends io.pulumi.resources
      * Schedule for the backup if it is executed periodically.
      * 
      */
-    @InputImport(name="backupSchedule")
+    @Import(name="backupSchedule")
       private final @Nullable Output<BackupScheduleArgs> backupSchedule;
 
     public Output<BackupScheduleArgs> getBackupSchedule() {
@@ -44,7 +44,7 @@ public final class WebAppBackupConfigurationSlotArgs extends io.pulumi.resources
      * Databases included in the backup.
      * 
      */
-    @InputImport(name="databases")
+    @Import(name="databases")
       private final @Nullable Output<List<DatabaseBackupSettingArgs>> databases;
 
     public Output<List<DatabaseBackupSettingArgs>> getDatabases() {
@@ -55,7 +55,7 @@ public final class WebAppBackupConfigurationSlotArgs extends io.pulumi.resources
      * True if the backup schedule is enabled (must be included in that case), false if the backup schedule should be disabled.
      * 
      */
-    @InputImport(name="enabled")
+    @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
@@ -66,7 +66,7 @@ public final class WebAppBackupConfigurationSlotArgs extends io.pulumi.resources
      * Kind of resource.
      * 
      */
-    @InputImport(name="kind")
+    @Import(name="kind")
       private final @Nullable Output<String> kind;
 
     public Output<String> getKind() {
@@ -77,7 +77,7 @@ public final class WebAppBackupConfigurationSlotArgs extends io.pulumi.resources
      * Name of the app.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -88,7 +88,7 @@ public final class WebAppBackupConfigurationSlotArgs extends io.pulumi.resources
      * Name of the resource group to which the resource belongs.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -99,7 +99,7 @@ public final class WebAppBackupConfigurationSlotArgs extends io.pulumi.resources
      * Name of the deployment slot. If a slot is not specified, the API will update the backup configuration for the production slot.
      * 
      */
-    @InputImport(name="slot", required=true)
+    @Import(name="slot", required=true)
       private final Output<String> slot;
 
     public Output<String> getSlot() {
@@ -110,7 +110,7 @@ public final class WebAppBackupConfigurationSlotArgs extends io.pulumi.resources
      * SAS URL to the container.
      * 
      */
-    @InputImport(name="storageAccountUrl", required=true)
+    @Import(name="storageAccountUrl", required=true)
       private final Output<String> storageAccountUrl;
 
     public Output<String> getStorageAccountUrl() {

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.insights.ComponentLinkedStorageAccountArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -34,7 +34,7 @@ public class ComponentLinkedStorageAccount extends io.pulumi.resources.CustomRes
      * Linked storage account resource ID
      * 
      */
-    @OutputExport(name="linkedStorageAccount", type=String.class, parameters={})
+    @Export(name="linkedStorageAccount", type=String.class, parameters={})
     private Output</* @Nullable */ String> linkedStorageAccount;
 
     /**
@@ -48,7 +48,7 @@ public class ComponentLinkedStorageAccount extends io.pulumi.resources.CustomRes
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -62,7 +62,7 @@ public class ComponentLinkedStorageAccount extends io.pulumi.resources.CustomRes
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

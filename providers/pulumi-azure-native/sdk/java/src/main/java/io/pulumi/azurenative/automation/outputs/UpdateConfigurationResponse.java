@@ -6,14 +6,14 @@ package io.pulumi.azurenative.automation.outputs;
 import io.pulumi.azurenative.automation.outputs.LinuxPropertiesResponse;
 import io.pulumi.azurenative.automation.outputs.TargetPropertiesResponse;
 import io.pulumi.azurenative.automation.outputs.WindowsPropertiesResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class UpdateConfigurationResponse {
     /**
      * List of azure resource Ids for azure virtual machines targeted by the software update configuration.
@@ -51,15 +51,15 @@ public final class UpdateConfigurationResponse {
      */
     private final @Nullable WindowsPropertiesResponse windows;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private UpdateConfigurationResponse(
-        @OutputCustomType.Parameter("azureVirtualMachines") @Nullable List<String> azureVirtualMachines,
-        @OutputCustomType.Parameter("duration") @Nullable String duration,
-        @OutputCustomType.Parameter("linux") @Nullable LinuxPropertiesResponse linux,
-        @OutputCustomType.Parameter("nonAzureComputerNames") @Nullable List<String> nonAzureComputerNames,
-        @OutputCustomType.Parameter("operatingSystem") String operatingSystem,
-        @OutputCustomType.Parameter("targets") @Nullable TargetPropertiesResponse targets,
-        @OutputCustomType.Parameter("windows") @Nullable WindowsPropertiesResponse windows) {
+        @CustomType.Parameter("azureVirtualMachines") @Nullable List<String> azureVirtualMachines,
+        @CustomType.Parameter("duration") @Nullable String duration,
+        @CustomType.Parameter("linux") @Nullable LinuxPropertiesResponse linux,
+        @CustomType.Parameter("nonAzureComputerNames") @Nullable List<String> nonAzureComputerNames,
+        @CustomType.Parameter("operatingSystem") String operatingSystem,
+        @CustomType.Parameter("targets") @Nullable TargetPropertiesResponse targets,
+        @CustomType.Parameter("windows") @Nullable WindowsPropertiesResponse windows) {
         this.azureVirtualMachines = azureVirtualMachines;
         this.duration = duration;
         this.linux = linux;

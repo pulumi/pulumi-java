@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datamigration.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class MigrateMySqlAzureDbForMySqlSyncDatabaseInputArgs extends io.p
      * Migration settings which tune the migration behavior
      * 
      */
-    @InputImport(name="migrationSetting")
+    @Import(name="migrationSetting")
       private final @Nullable Output<Map<String,String>> migrationSetting;
 
     public Output<Map<String,String>> getMigrationSetting() {
@@ -34,7 +34,7 @@ public final class MigrateMySqlAzureDbForMySqlSyncDatabaseInputArgs extends io.p
      * Name of the database
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -45,7 +45,7 @@ public final class MigrateMySqlAzureDbForMySqlSyncDatabaseInputArgs extends io.p
      * Source settings to tune source endpoint migration behavior
      * 
      */
-    @InputImport(name="sourceSetting")
+    @Import(name="sourceSetting")
       private final @Nullable Output<Map<String,String>> sourceSetting;
 
     public Output<Map<String,String>> getSourceSetting() {
@@ -56,7 +56,7 @@ public final class MigrateMySqlAzureDbForMySqlSyncDatabaseInputArgs extends io.p
      * Name of target database. Note: Target database will be truncated before starting migration.
      * 
      */
-    @InputImport(name="targetDatabaseName")
+    @Import(name="targetDatabaseName")
       private final @Nullable Output<String> targetDatabaseName;
 
     public Output<String> getTargetDatabaseName() {
@@ -67,7 +67,7 @@ public final class MigrateMySqlAzureDbForMySqlSyncDatabaseInputArgs extends io.p
      * Target settings to tune target endpoint migration behavior
      * 
      */
-    @InputImport(name="targetSetting")
+    @Import(name="targetSetting")
       private final @Nullable Output<Map<String,String>> targetSetting;
 
     public Output<Map<String,String>> getTargetSetting() {

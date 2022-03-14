@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -20,7 +20,7 @@ public final class VirtualWanArgs extends io.pulumi.resources.ResourceArgs {
      * True if branch to branch traffic is allowed.
      * 
      */
-    @InputImport(name="allowBranchToBranchTraffic")
+    @Import(name="allowBranchToBranchTraffic")
       private final @Nullable Output<Boolean> allowBranchToBranchTraffic;
 
     public Output<Boolean> getAllowBranchToBranchTraffic() {
@@ -31,7 +31,7 @@ public final class VirtualWanArgs extends io.pulumi.resources.ResourceArgs {
      * True if Vnet to Vnet traffic is allowed.
      * 
      */
-    @InputImport(name="allowVnetToVnetTraffic")
+    @Import(name="allowVnetToVnetTraffic")
       private final @Nullable Output<Boolean> allowVnetToVnetTraffic;
 
     public Output<Boolean> getAllowVnetToVnetTraffic() {
@@ -42,7 +42,7 @@ public final class VirtualWanArgs extends io.pulumi.resources.ResourceArgs {
      * Vpn encryption to be disabled or not.
      * 
      */
-    @InputImport(name="disableVpnEncryption")
+    @Import(name="disableVpnEncryption")
       private final @Nullable Output<Boolean> disableVpnEncryption;
 
     public Output<Boolean> getDisableVpnEncryption() {
@@ -53,7 +53,7 @@ public final class VirtualWanArgs extends io.pulumi.resources.ResourceArgs {
      * Resource ID.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
@@ -64,7 +64,7 @@ public final class VirtualWanArgs extends io.pulumi.resources.ResourceArgs {
      * Resource location.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -75,7 +75,7 @@ public final class VirtualWanArgs extends io.pulumi.resources.ResourceArgs {
      * The resource group name of the VirtualWan.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -86,7 +86,7 @@ public final class VirtualWanArgs extends io.pulumi.resources.ResourceArgs {
      * Resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -97,7 +97,7 @@ public final class VirtualWanArgs extends io.pulumi.resources.ResourceArgs {
      * The type of the VirtualWAN.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {
@@ -108,7 +108,7 @@ public final class VirtualWanArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the VirtualWAN being created or updated.
      * 
      */
-    @InputImport(name="virtualWANName")
+    @Import(name="virtualWANName")
       private final @Nullable Output<String> virtualWANName;
 
     public Output<String> getVirtualWANName() {

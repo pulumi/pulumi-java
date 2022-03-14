@@ -5,7 +5,7 @@ package io.pulumi.azurenative.compute;
 
 import io.pulumi.azurenative.compute.inputs.PrivateLinkServiceConnectionStateArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class DiskAccessAPrivateEndpointConnectionArgs extends io.pulumi.re
      * The name of the disk access resource that is being created. The name can't be changed after the disk encryption set is created. Supported characters for the name are a-z, A-Z, 0-9 and _. The maximum name length is 80 characters.
      * 
      */
-    @InputImport(name="diskAccessName", required=true)
+    @Import(name="diskAccessName", required=true)
       private final Output<String> diskAccessName;
 
     public Output<String> getDiskAccessName() {
@@ -30,7 +30,7 @@ public final class DiskAccessAPrivateEndpointConnectionArgs extends io.pulumi.re
      * The name of the private endpoint connection
      * 
      */
-    @InputImport(name="privateEndpointConnectionName")
+    @Import(name="privateEndpointConnectionName")
       private final @Nullable Output<String> privateEndpointConnectionName;
 
     public Output<String> getPrivateEndpointConnectionName() {
@@ -41,7 +41,7 @@ public final class DiskAccessAPrivateEndpointConnectionArgs extends io.pulumi.re
      * A collection of information about the state of the connection between DiskAccess and Virtual Network.
      * 
      */
-    @InputImport(name="privateLinkServiceConnectionState", required=true)
+    @Import(name="privateLinkServiceConnectionState", required=true)
       private final Output<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState;
 
     public Output<PrivateLinkServiceConnectionStateArgs> getPrivateLinkServiceConnectionState() {
@@ -52,7 +52,7 @@ public final class DiskAccessAPrivateEndpointConnectionArgs extends io.pulumi.re
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {

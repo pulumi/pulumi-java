@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datamigration.inputs;
 
 import io.pulumi.azurenative.datamigration.inputs.ReportableExceptionResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -19,7 +19,7 @@ public final class MigrateSqlServerSqlMITaskOutputAgentJobLevelResponse extends 
      * Migration end time
      * 
      */
-    @InputImport(name="endedOn", required=true)
+    @Import(name="endedOn", required=true)
       private final String endedOn;
 
     public String getEndedOn() {
@@ -30,7 +30,7 @@ public final class MigrateSqlServerSqlMITaskOutputAgentJobLevelResponse extends 
      * Migration errors and warnings per job
      * 
      */
-    @InputImport(name="exceptionsAndWarnings", required=true)
+    @Import(name="exceptionsAndWarnings", required=true)
       private final List<ReportableExceptionResponse> exceptionsAndWarnings;
 
     public List<ReportableExceptionResponse> getExceptionsAndWarnings() {
@@ -41,7 +41,7 @@ public final class MigrateSqlServerSqlMITaskOutputAgentJobLevelResponse extends 
      * Result identifier
      * 
      */
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final String id;
 
     public String getId() {
@@ -52,7 +52,7 @@ public final class MigrateSqlServerSqlMITaskOutputAgentJobLevelResponse extends 
      * The state of the original Agent Job.
      * 
      */
-    @InputImport(name="isEnabled", required=true)
+    @Import(name="isEnabled", required=true)
       private final Boolean isEnabled;
 
     public Boolean getIsEnabled() {
@@ -63,7 +63,7 @@ public final class MigrateSqlServerSqlMITaskOutputAgentJobLevelResponse extends 
      * Migration progress message
      * 
      */
-    @InputImport(name="message", required=true)
+    @Import(name="message", required=true)
       private final String message;
 
     public String getMessage() {
@@ -74,7 +74,7 @@ public final class MigrateSqlServerSqlMITaskOutputAgentJobLevelResponse extends 
      * Agent Job name.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -86,7 +86,7 @@ public final class MigrateSqlServerSqlMITaskOutputAgentJobLevelResponse extends 
      * Expected value is 'AgentJobLevelOutput'.
      * 
      */
-    @InputImport(name="resultType", required=true)
+    @Import(name="resultType", required=true)
       private final String resultType;
 
     public String getResultType() {
@@ -97,7 +97,7 @@ public final class MigrateSqlServerSqlMITaskOutputAgentJobLevelResponse extends 
      * Migration start time
      * 
      */
-    @InputImport(name="startedOn", required=true)
+    @Import(name="startedOn", required=true)
       private final String startedOn;
 
     public String getStartedOn() {
@@ -108,7 +108,7 @@ public final class MigrateSqlServerSqlMITaskOutputAgentJobLevelResponse extends 
      * Current state of migration
      * 
      */
-    @InputImport(name="state", required=true)
+    @Import(name="state", required=true)
       private final String state;
 
     public String getState() {

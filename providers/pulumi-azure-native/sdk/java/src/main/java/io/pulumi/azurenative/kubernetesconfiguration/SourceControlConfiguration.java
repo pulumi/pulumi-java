@@ -10,7 +10,7 @@ import io.pulumi.azurenative.kubernetesconfiguration.outputs.HelmOperatorPropert
 import io.pulumi.azurenative.kubernetesconfiguration.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -39,7 +39,7 @@ public class SourceControlConfiguration extends io.pulumi.resources.CustomResour
      * Compliance Status of the Configuration
      * 
      */
-    @OutputExport(name="complianceStatus", type=ComplianceStatusResponse.class, parameters={})
+    @Export(name="complianceStatus", type=ComplianceStatusResponse.class, parameters={})
     private Output<ComplianceStatusResponse> complianceStatus;
 
     /**
@@ -53,7 +53,7 @@ public class SourceControlConfiguration extends io.pulumi.resources.CustomResour
      * Name-value pairs of protected configuration settings for the configuration
      * 
      */
-    @OutputExport(name="configurationProtectedSettings", type=Map.class, parameters={String.class, String.class})
+    @Export(name="configurationProtectedSettings", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> configurationProtectedSettings;
 
     /**
@@ -67,7 +67,7 @@ public class SourceControlConfiguration extends io.pulumi.resources.CustomResour
      * Option to enable Helm Operator for this git configuration.
      * 
      */
-    @OutputExport(name="enableHelmOperator", type=Boolean.class, parameters={})
+    @Export(name="enableHelmOperator", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableHelmOperator;
 
     /**
@@ -81,7 +81,7 @@ public class SourceControlConfiguration extends io.pulumi.resources.CustomResour
      * Properties for Helm operator.
      * 
      */
-    @OutputExport(name="helmOperatorProperties", type=HelmOperatorPropertiesResponse.class, parameters={})
+    @Export(name="helmOperatorProperties", type=HelmOperatorPropertiesResponse.class, parameters={})
     private Output</* @Nullable */ HelmOperatorPropertiesResponse> helmOperatorProperties;
 
     /**
@@ -95,7 +95,7 @@ public class SourceControlConfiguration extends io.pulumi.resources.CustomResour
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -109,7 +109,7 @@ public class SourceControlConfiguration extends io.pulumi.resources.CustomResour
      * Instance name of the operator - identifying the specific configuration.
      * 
      */
-    @OutputExport(name="operatorInstanceName", type=String.class, parameters={})
+    @Export(name="operatorInstanceName", type=String.class, parameters={})
     private Output</* @Nullable */ String> operatorInstanceName;
 
     /**
@@ -123,7 +123,7 @@ public class SourceControlConfiguration extends io.pulumi.resources.CustomResour
      * The namespace to which this operator is installed to. Maximum of 253 lower case alphanumeric characters, hyphen and period only.
      * 
      */
-    @OutputExport(name="operatorNamespace", type=String.class, parameters={})
+    @Export(name="operatorNamespace", type=String.class, parameters={})
     private Output</* @Nullable */ String> operatorNamespace;
 
     /**
@@ -137,7 +137,7 @@ public class SourceControlConfiguration extends io.pulumi.resources.CustomResour
      * Any Parameters for the Operator instance in string format.
      * 
      */
-    @OutputExport(name="operatorParams", type=String.class, parameters={})
+    @Export(name="operatorParams", type=String.class, parameters={})
     private Output</* @Nullable */ String> operatorParams;
 
     /**
@@ -151,7 +151,7 @@ public class SourceControlConfiguration extends io.pulumi.resources.CustomResour
      * Scope at which the operator will be installed.
      * 
      */
-    @OutputExport(name="operatorScope", type=String.class, parameters={})
+    @Export(name="operatorScope", type=String.class, parameters={})
     private Output</* @Nullable */ String> operatorScope;
 
     /**
@@ -165,7 +165,7 @@ public class SourceControlConfiguration extends io.pulumi.resources.CustomResour
      * Type of the operator
      * 
      */
-    @OutputExport(name="operatorType", type=String.class, parameters={})
+    @Export(name="operatorType", type=String.class, parameters={})
     private Output</* @Nullable */ String> operatorType;
 
     /**
@@ -179,7 +179,7 @@ public class SourceControlConfiguration extends io.pulumi.resources.CustomResour
      * The provisioning state of the resource provider.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -193,7 +193,7 @@ public class SourceControlConfiguration extends io.pulumi.resources.CustomResour
      * Public Key associated with this SourceControl configuration (either generated within the cluster or provided by the user).
      * 
      */
-    @OutputExport(name="repositoryPublicKey", type=String.class, parameters={})
+    @Export(name="repositoryPublicKey", type=String.class, parameters={})
     private Output<String> repositoryPublicKey;
 
     /**
@@ -207,7 +207,7 @@ public class SourceControlConfiguration extends io.pulumi.resources.CustomResour
      * Url of the SourceControl Repository.
      * 
      */
-    @OutputExport(name="repositoryUrl", type=String.class, parameters={})
+    @Export(name="repositoryUrl", type=String.class, parameters={})
     private Output</* @Nullable */ String> repositoryUrl;
 
     /**
@@ -221,7 +221,7 @@ public class SourceControlConfiguration extends io.pulumi.resources.CustomResour
      * Base64-encoded known_hosts contents containing public SSH keys required to access private Git instances
      * 
      */
-    @OutputExport(name="sshKnownHostsContents", type=String.class, parameters={})
+    @Export(name="sshKnownHostsContents", type=String.class, parameters={})
     private Output</* @Nullable */ String> sshKnownHostsContents;
 
     /**
@@ -235,7 +235,7 @@ public class SourceControlConfiguration extends io.pulumi.resources.CustomResour
      * Top level metadata https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/common-api-contracts.md#system-metadata-for-all-azure-resources
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -249,7 +249,7 @@ public class SourceControlConfiguration extends io.pulumi.resources.CustomResour
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

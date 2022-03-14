@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.operationalinsights.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RestoredLogsResponse {
     /**
      * The timestamp to end the restore by (UTC).
@@ -27,11 +27,11 @@ public final class RestoredLogsResponse {
      */
     private final @Nullable String startRestoreTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RestoredLogsResponse(
-        @OutputCustomType.Parameter("endRestoreTime") @Nullable String endRestoreTime,
-        @OutputCustomType.Parameter("sourceTable") String sourceTable,
-        @OutputCustomType.Parameter("startRestoreTime") @Nullable String startRestoreTime) {
+        @CustomType.Parameter("endRestoreTime") @Nullable String endRestoreTime,
+        @CustomType.Parameter("sourceTable") String sourceTable,
+        @CustomType.Parameter("startRestoreTime") @Nullable String startRestoreTime) {
         this.endRestoreTime = endRestoreTime;
         this.sourceTable = sourceTable;
         this.startRestoreTime = startRestoreTime;

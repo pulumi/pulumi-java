@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.datafactory.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class Office365SourceResponse {
     /**
      * The groups containing all the users. Type: array of strings (or Expression with resultType array of strings).
@@ -69,19 +69,19 @@ public final class Office365SourceResponse {
      */
     private final @Nullable Object userScopeFilterUri;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private Office365SourceResponse(
-        @OutputCustomType.Parameter("allowedGroups") @Nullable Object allowedGroups,
-        @OutputCustomType.Parameter("dateFilterColumn") @Nullable Object dateFilterColumn,
-        @OutputCustomType.Parameter("disableMetricsCollection") @Nullable Object disableMetricsCollection,
-        @OutputCustomType.Parameter("endTime") @Nullable Object endTime,
-        @OutputCustomType.Parameter("maxConcurrentConnections") @Nullable Object maxConcurrentConnections,
-        @OutputCustomType.Parameter("outputColumns") @Nullable Object outputColumns,
-        @OutputCustomType.Parameter("sourceRetryCount") @Nullable Object sourceRetryCount,
-        @OutputCustomType.Parameter("sourceRetryWait") @Nullable Object sourceRetryWait,
-        @OutputCustomType.Parameter("startTime") @Nullable Object startTime,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("userScopeFilterUri") @Nullable Object userScopeFilterUri) {
+        @CustomType.Parameter("allowedGroups") @Nullable Object allowedGroups,
+        @CustomType.Parameter("dateFilterColumn") @Nullable Object dateFilterColumn,
+        @CustomType.Parameter("disableMetricsCollection") @Nullable Object disableMetricsCollection,
+        @CustomType.Parameter("endTime") @Nullable Object endTime,
+        @CustomType.Parameter("maxConcurrentConnections") @Nullable Object maxConcurrentConnections,
+        @CustomType.Parameter("outputColumns") @Nullable Object outputColumns,
+        @CustomType.Parameter("sourceRetryCount") @Nullable Object sourceRetryCount,
+        @CustomType.Parameter("sourceRetryWait") @Nullable Object sourceRetryWait,
+        @CustomType.Parameter("startTime") @Nullable Object startTime,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("userScopeFilterUri") @Nullable Object userScopeFilterUri) {
         this.allowedGroups = allowedGroups;
         this.dateFilterColumn = dateFilterColumn;
         this.disableMetricsCollection = disableMetricsCollection;

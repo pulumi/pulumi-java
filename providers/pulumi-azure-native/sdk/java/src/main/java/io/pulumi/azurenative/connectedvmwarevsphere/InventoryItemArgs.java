@@ -6,7 +6,7 @@ package io.pulumi.azurenative.connectedvmwarevsphere;
 import io.pulumi.azurenative.connectedvmwarevsphere.enums.InventoryType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class InventoryItemArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the inventoryItem.
      * 
      */
-    @InputImport(name="inventoryItemName")
+    @Import(name="inventoryItemName")
       private final @Nullable Output<String> inventoryItemName;
 
     public Output<String> getInventoryItemName() {
@@ -31,7 +31,7 @@ public final class InventoryItemArgs extends io.pulumi.resources.ResourceArgs {
      * They inventory type.
      * 
      */
-    @InputImport(name="inventoryType", required=true)
+    @Import(name="inventoryType", required=true)
       private final Output<Either<String,InventoryType>> inventoryType;
 
     public Output<Either<String,InventoryType>> getInventoryType() {
@@ -42,7 +42,7 @@ public final class InventoryItemArgs extends io.pulumi.resources.ResourceArgs {
      * Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
      * 
      */
-    @InputImport(name="kind")
+    @Import(name="kind")
       private final @Nullable Output<String> kind;
 
     public Output<String> getKind() {
@@ -53,7 +53,7 @@ public final class InventoryItemArgs extends io.pulumi.resources.ResourceArgs {
      * Gets or sets the tracked resource id corresponding to the inventory resource.
      * 
      */
-    @InputImport(name="managedResourceId")
+    @Import(name="managedResourceId")
       private final @Nullable Output<String> managedResourceId;
 
     public Output<String> getManagedResourceId() {
@@ -64,7 +64,7 @@ public final class InventoryItemArgs extends io.pulumi.resources.ResourceArgs {
      * Gets or sets the vCenter Managed Object name for the inventory item.
      * 
      */
-    @InputImport(name="moName")
+    @Import(name="moName")
       private final @Nullable Output<String> moName;
 
     public Output<String> getMoName() {
@@ -75,7 +75,7 @@ public final class InventoryItemArgs extends io.pulumi.resources.ResourceArgs {
      * Gets or sets the MoRef (Managed Object Reference) ID for the inventory item.
      * 
      */
-    @InputImport(name="moRefId")
+    @Import(name="moRefId")
       private final @Nullable Output<String> moRefId;
 
     public Output<String> getMoRefId() {
@@ -86,7 +86,7 @@ public final class InventoryItemArgs extends io.pulumi.resources.ResourceArgs {
      * The Resource Group Name.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -97,7 +97,7 @@ public final class InventoryItemArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the vCenter.
      * 
      */
-    @InputImport(name="vcenterName", required=true)
+    @Import(name="vcenterName", required=true)
       private final Output<String> vcenterName;
 
     public Output<String> getVcenterName() {

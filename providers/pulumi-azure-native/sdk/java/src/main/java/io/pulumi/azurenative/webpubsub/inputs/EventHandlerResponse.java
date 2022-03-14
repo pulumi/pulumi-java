@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.webpubsub.inputs;
 
 import io.pulumi.azurenative.webpubsub.inputs.UpstreamAuthSettingsResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class EventHandlerResponse extends io.pulumi.resources.InvokeArgs {
      * Upstream auth settings. If not set, no auth is used for upstream messages.
      * 
      */
-    @InputImport(name="auth")
+    @Import(name="auth")
       private final @Nullable UpstreamAuthSettingsResponse auth;
 
     public Optional<UpstreamAuthSettingsResponse> getAuth() {
@@ -35,7 +35,7 @@ public final class EventHandlerResponse extends io.pulumi.resources.InvokeArgs {
      * Gets ot sets the list of system events.
      * 
      */
-    @InputImport(name="systemEvents")
+    @Import(name="systemEvents")
       private final @Nullable List<String> systemEvents;
 
     public List<String> getSystemEvents() {
@@ -47,7 +47,7 @@ public final class EventHandlerResponse extends io.pulumi.resources.InvokeArgs {
      * For example, UrlTemplate can be `http://example.com/api/{hub}/{event}`. The host part can't contains parameters.
      * 
      */
-    @InputImport(name="urlTemplate", required=true)
+    @Import(name="urlTemplate", required=true)
       private final String urlTemplate;
 
     public String getUrlTemplate() {
@@ -62,7 +62,7 @@ public final class EventHandlerResponse extends io.pulumi.resources.InvokeArgs {
      *     3. The single event name, for example, "event1", it matches "event1"
      * 
      */
-    @InputImport(name="userEventPattern")
+    @Import(name="userEventPattern")
       private final @Nullable String userEventPattern;
 
     public Optional<String> getUserEventPattern() {

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.azurenative.datafactory.inputs.LinkedServiceReferenceResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class StagingSettingsResponse extends io.pulumi.resources.InvokeArg
      * Specifies whether to use compression when copying data via an interim staging. Default value is false. Type: boolean (or Expression with resultType boolean).
      * 
      */
-    @InputImport(name="enableCompression")
+    @Import(name="enableCompression")
       private final @Nullable Object enableCompression;
 
     public Optional<Object> getEnableCompression() {
@@ -34,7 +34,7 @@ public final class StagingSettingsResponse extends io.pulumi.resources.InvokeArg
      * Staging linked service reference.
      * 
      */
-    @InputImport(name="linkedServiceName", required=true)
+    @Import(name="linkedServiceName", required=true)
       private final LinkedServiceReferenceResponse linkedServiceName;
 
     public LinkedServiceReferenceResponse getLinkedServiceName() {
@@ -45,7 +45,7 @@ public final class StagingSettingsResponse extends io.pulumi.resources.InvokeArg
      * The path to storage for storing the interim data. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="path")
+    @Import(name="path")
       private final @Nullable Object path;
 
     public Optional<Object> getPath() {

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.hdinsight.inputs;
 
 import io.pulumi.azurenative.hdinsight.inputs.LinuxOperatingSystemProfileArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -22,7 +22,7 @@ public final class OsProfileArgs extends io.pulumi.resources.ResourceArgs {
      * The Linux OS profile.
      * 
      */
-    @InputImport(name="linuxOperatingSystemProfile")
+    @Import(name="linuxOperatingSystemProfile")
       private final @Nullable Output<LinuxOperatingSystemProfileArgs> linuxOperatingSystemProfile;
 
     public Output<LinuxOperatingSystemProfileArgs> getLinuxOperatingSystemProfile() {

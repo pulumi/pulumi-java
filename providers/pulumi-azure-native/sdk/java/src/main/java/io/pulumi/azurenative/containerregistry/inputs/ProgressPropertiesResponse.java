@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerregistry.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +18,7 @@ public final class ProgressPropertiesResponse extends io.pulumi.resources.Invoke
      * The percentage complete of the copy operation.
      * 
      */
-    @InputImport(name="percentage")
+    @Import(name="percentage")
       private final @Nullable String percentage;
 
     public Optional<String> getPercentage() {

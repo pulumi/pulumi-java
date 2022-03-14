@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.azurenative.compute.inputs.SubResourceReadOnlyResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class CapacityReservationUtilizationResponse extends io.pulumi.reso
      * A list of all virtual machines resource ids allocated against the capacity reservation.
      * 
      */
-    @InputImport(name="virtualMachinesAllocated", required=true)
+    @Import(name="virtualMachinesAllocated", required=true)
       private final List<SubResourceReadOnlyResponse> virtualMachinesAllocated;
 
     public List<SubResourceReadOnlyResponse> getVirtualMachinesAllocated() {

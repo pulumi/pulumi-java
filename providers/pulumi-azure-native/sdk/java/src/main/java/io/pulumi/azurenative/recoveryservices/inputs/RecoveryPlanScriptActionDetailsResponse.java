@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class RecoveryPlanScriptActionDetailsResponse extends io.pulumi.res
      * The fabric location.
      * 
      */
-    @InputImport(name="fabricLocation", required=true)
+    @Import(name="fabricLocation", required=true)
       private final String fabricLocation;
 
     public String getFabricLocation() {
@@ -34,7 +34,7 @@ public final class RecoveryPlanScriptActionDetailsResponse extends io.pulumi.res
      * Expected value is 'ScriptActionDetails'.
      * 
      */
-    @InputImport(name="instanceType", required=true)
+    @Import(name="instanceType", required=true)
       private final String instanceType;
 
     public String getInstanceType() {
@@ -45,7 +45,7 @@ public final class RecoveryPlanScriptActionDetailsResponse extends io.pulumi.res
      * The script path.
      * 
      */
-    @InputImport(name="path", required=true)
+    @Import(name="path", required=true)
       private final String path;
 
     public String getPath() {
@@ -56,7 +56,7 @@ public final class RecoveryPlanScriptActionDetailsResponse extends io.pulumi.res
      * The script timeout.
      * 
      */
-    @InputImport(name="timeout")
+    @Import(name="timeout")
       private final @Nullable String timeout;
 
     public Optional<String> getTimeout() {

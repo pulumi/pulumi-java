@@ -13,7 +13,7 @@ import io.pulumi.azurenative.logic.outputs.SkuResponse;
 import io.pulumi.azurenative.logic.outputs.WorkflowParameterResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Object;
 import java.lang.String;
@@ -42,7 +42,7 @@ public class Workflow extends io.pulumi.resources.CustomResource {
      * The access control configuration.
      * 
      */
-    @OutputExport(name="accessControl", type=FlowAccessControlConfigurationResponse.class, parameters={})
+    @Export(name="accessControl", type=FlowAccessControlConfigurationResponse.class, parameters={})
     private Output</* @Nullable */ FlowAccessControlConfigurationResponse> accessControl;
 
     /**
@@ -56,7 +56,7 @@ public class Workflow extends io.pulumi.resources.CustomResource {
      * Gets the access endpoint.
      * 
      */
-    @OutputExport(name="accessEndpoint", type=String.class, parameters={})
+    @Export(name="accessEndpoint", type=String.class, parameters={})
     private Output<String> accessEndpoint;
 
     /**
@@ -70,7 +70,7 @@ public class Workflow extends io.pulumi.resources.CustomResource {
      * Gets the changed time.
      * 
      */
-    @OutputExport(name="changedTime", type=String.class, parameters={})
+    @Export(name="changedTime", type=String.class, parameters={})
     private Output<String> changedTime;
 
     /**
@@ -84,7 +84,7 @@ public class Workflow extends io.pulumi.resources.CustomResource {
      * Gets the created time.
      * 
      */
-    @OutputExport(name="createdTime", type=String.class, parameters={})
+    @Export(name="createdTime", type=String.class, parameters={})
     private Output<String> createdTime;
 
     /**
@@ -98,7 +98,7 @@ public class Workflow extends io.pulumi.resources.CustomResource {
      * The definition.
      * 
      */
-    @OutputExport(name="definition", type=Object.class, parameters={})
+    @Export(name="definition", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> definition;
 
     /**
@@ -112,7 +112,7 @@ public class Workflow extends io.pulumi.resources.CustomResource {
      * The endpoints configuration.
      * 
      */
-    @OutputExport(name="endpointsConfiguration", type=FlowEndpointsConfigurationResponse.class, parameters={})
+    @Export(name="endpointsConfiguration", type=FlowEndpointsConfigurationResponse.class, parameters={})
     private Output</* @Nullable */ FlowEndpointsConfigurationResponse> endpointsConfiguration;
 
     /**
@@ -126,7 +126,7 @@ public class Workflow extends io.pulumi.resources.CustomResource {
      * Managed service identity properties.
      * 
      */
-    @OutputExport(name="identity", type=ManagedServiceIdentityResponse.class, parameters={})
+    @Export(name="identity", type=ManagedServiceIdentityResponse.class, parameters={})
     private Output</* @Nullable */ ManagedServiceIdentityResponse> identity;
 
     /**
@@ -140,7 +140,7 @@ public class Workflow extends io.pulumi.resources.CustomResource {
      * The integration account.
      * 
      */
-    @OutputExport(name="integrationAccount", type=ResourceReferenceResponse.class, parameters={})
+    @Export(name="integrationAccount", type=ResourceReferenceResponse.class, parameters={})
     private Output</* @Nullable */ ResourceReferenceResponse> integrationAccount;
 
     /**
@@ -154,7 +154,7 @@ public class Workflow extends io.pulumi.resources.CustomResource {
      * The integration service environment.
      * 
      */
-    @OutputExport(name="integrationServiceEnvironment", type=ResourceReferenceResponse.class, parameters={})
+    @Export(name="integrationServiceEnvironment", type=ResourceReferenceResponse.class, parameters={})
     private Output</* @Nullable */ ResourceReferenceResponse> integrationServiceEnvironment;
 
     /**
@@ -168,7 +168,7 @@ public class Workflow extends io.pulumi.resources.CustomResource {
      * The resource location.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -182,7 +182,7 @@ public class Workflow extends io.pulumi.resources.CustomResource {
      * Gets the resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -196,7 +196,7 @@ public class Workflow extends io.pulumi.resources.CustomResource {
      * The parameters.
      * 
      */
-    @OutputExport(name="parameters", type=Map.class, parameters={String.class, WorkflowParameterResponse.class})
+    @Export(name="parameters", type=Map.class, parameters={String.class, WorkflowParameterResponse.class})
     private Output</* @Nullable */ Map<String,WorkflowParameterResponse>> parameters;
 
     /**
@@ -210,7 +210,7 @@ public class Workflow extends io.pulumi.resources.CustomResource {
      * Gets the provisioning state.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -224,7 +224,7 @@ public class Workflow extends io.pulumi.resources.CustomResource {
      * The sku.
      * 
      */
-    @OutputExport(name="sku", type=SkuResponse.class, parameters={})
+    @Export(name="sku", type=SkuResponse.class, parameters={})
     private Output<SkuResponse> sku;
 
     /**
@@ -238,7 +238,7 @@ public class Workflow extends io.pulumi.resources.CustomResource {
      * The state.
      * 
      */
-    @OutputExport(name="state", type=String.class, parameters={})
+    @Export(name="state", type=String.class, parameters={})
     private Output</* @Nullable */ String> state;
 
     /**
@@ -252,7 +252,7 @@ public class Workflow extends io.pulumi.resources.CustomResource {
      * The resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -266,7 +266,7 @@ public class Workflow extends io.pulumi.resources.CustomResource {
      * Gets the resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -280,7 +280,7 @@ public class Workflow extends io.pulumi.resources.CustomResource {
      * Gets the version.
      * 
      */
-    @OutputExport(name="version", type=String.class, parameters={})
+    @Export(name="version", type=String.class, parameters={})
     private Output<String> version;
 
     /**

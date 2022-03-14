@@ -5,13 +5,13 @@ package io.pulumi.azurenative.securityinsights.outputs;
 
 import io.pulumi.azurenative.securityinsights.outputs.TimelineAggregationResponse;
 import io.pulumi.azurenative.securityinsights.outputs.TimelineErrorResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TimelineResultsMetadataResponse {
     /**
      * timeline aggregation per kind
@@ -29,11 +29,11 @@ public final class TimelineResultsMetadataResponse {
      */
     private final Integer totalCount;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TimelineResultsMetadataResponse(
-        @OutputCustomType.Parameter("aggregations") List<TimelineAggregationResponse> aggregations,
-        @OutputCustomType.Parameter("errors") @Nullable List<TimelineErrorResponse> errors,
-        @OutputCustomType.Parameter("totalCount") Integer totalCount) {
+        @CustomType.Parameter("aggregations") List<TimelineAggregationResponse> aggregations,
+        @CustomType.Parameter("errors") @Nullable List<TimelineErrorResponse> errors,
+        @CustomType.Parameter("totalCount") Integer totalCount) {
         this.aggregations = aggregations;
         this.errors = errors;
         this.totalCount = totalCount;

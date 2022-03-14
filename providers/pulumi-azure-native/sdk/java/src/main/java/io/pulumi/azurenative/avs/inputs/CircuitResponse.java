@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.avs.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class CircuitResponse extends io.pulumi.resources.InvokeArgs {
      * Identifier of the ExpressRoute Circuit (Microsoft Colo only)
      * 
      */
-    @InputImport(name="expressRouteID", required=true)
+    @Import(name="expressRouteID", required=true)
       private final String expressRouteID;
 
     public String getExpressRouteID() {
@@ -31,7 +31,7 @@ public final class CircuitResponse extends io.pulumi.resources.InvokeArgs {
      * ExpressRoute Circuit private peering identifier
      * 
      */
-    @InputImport(name="expressRoutePrivatePeeringID", required=true)
+    @Import(name="expressRoutePrivatePeeringID", required=true)
       private final String expressRoutePrivatePeeringID;
 
     public String getExpressRoutePrivatePeeringID() {
@@ -42,7 +42,7 @@ public final class CircuitResponse extends io.pulumi.resources.InvokeArgs {
      * CIDR of primary subnet
      * 
      */
-    @InputImport(name="primarySubnet", required=true)
+    @Import(name="primarySubnet", required=true)
       private final String primarySubnet;
 
     public String getPrimarySubnet() {
@@ -53,7 +53,7 @@ public final class CircuitResponse extends io.pulumi.resources.InvokeArgs {
      * CIDR of secondary subnet
      * 
      */
-    @InputImport(name="secondarySubnet", required=true)
+    @Import(name="secondarySubnet", required=true)
       private final String secondarySubnet;
 
     public String getSecondarySubnet() {

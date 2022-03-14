@@ -8,7 +8,7 @@ import io.pulumi.azurenative.servicefabric.inputs.ApplicationUpgradePolicyArgs;
 import io.pulumi.azurenative.servicefabric.inputs.ApplicationUserAssignedIdentityArgs;
 import io.pulumi.azurenative.servicefabric.inputs.ManagedIdentityArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -26,7 +26,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the application resource.
      * 
      */
-    @InputImport(name="applicationName")
+    @Import(name="applicationName")
       private final @Nullable Output<String> applicationName;
 
     public Output<String> getApplicationName() {
@@ -37,7 +37,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the cluster resource.
      * 
      */
-    @InputImport(name="clusterName", required=true)
+    @Import(name="clusterName", required=true)
       private final Output<String> clusterName;
 
     public Output<String> getClusterName() {
@@ -48,7 +48,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * Describes the managed identities for an Azure resource.
      * 
      */
-    @InputImport(name="identity")
+    @Import(name="identity")
       private final @Nullable Output<ManagedIdentityArgs> identity;
 
     public Output<ManagedIdentityArgs> getIdentity() {
@@ -59,7 +59,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * It will be deprecated in New API, resource location depends on the parent resource.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -70,7 +70,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * List of user assigned identities for the application, each mapped to a friendly name.
      * 
      */
-    @InputImport(name="managedIdentities")
+    @Import(name="managedIdentities")
       private final @Nullable Output<List<ApplicationUserAssignedIdentityArgs>> managedIdentities;
 
     public Output<List<ApplicationUserAssignedIdentityArgs>> getManagedIdentities() {
@@ -81,7 +81,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * The maximum number of nodes where Service Fabric will reserve capacity for this application. Note that this does not mean that the services of this application will be placed on all of those nodes. By default, the value of this property is zero and it means that the services can be placed on any node.
      * 
      */
-    @InputImport(name="maximumNodes")
+    @Import(name="maximumNodes")
       private final @Nullable Output<Double> maximumNodes;
 
     public Output<Double> getMaximumNodes() {
@@ -92,7 +92,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * List of application capacity metric description.
      * 
      */
-    @InputImport(name="metrics")
+    @Import(name="metrics")
       private final @Nullable Output<List<ApplicationMetricDescriptionArgs>> metrics;
 
     public Output<List<ApplicationMetricDescriptionArgs>> getMetrics() {
@@ -103,7 +103,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * The minimum number of nodes where Service Fabric will reserve capacity for this application. Note that this does not mean that the services of this application will be placed on all of those nodes. If this property is set to zero, no capacity will be reserved. The value of this property cannot be more than the value of the MaximumNodes property.
      * 
      */
-    @InputImport(name="minimumNodes")
+    @Import(name="minimumNodes")
       private final @Nullable Output<Double> minimumNodes;
 
     public Output<Double> getMinimumNodes() {
@@ -114,7 +114,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * List of application parameters with overridden values from their default values specified in the application manifest.
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable Output<Map<String,String>> parameters;
 
     public Output<Map<String,String>> getParameters() {
@@ -125,7 +125,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * Remove the current application capacity settings.
      * 
      */
-    @InputImport(name="removeApplicationCapacity")
+    @Import(name="removeApplicationCapacity")
       private final @Nullable Output<Boolean> removeApplicationCapacity;
 
     public Output<Boolean> getRemoveApplicationCapacity() {
@@ -136,7 +136,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -147,7 +147,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * Azure resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -158,7 +158,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * The application type name as defined in the application manifest.
      * 
      */
-    @InputImport(name="typeName")
+    @Import(name="typeName")
       private final @Nullable Output<String> typeName;
 
     public Output<String> getTypeName() {
@@ -169,7 +169,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * The version of the application type as defined in the application manifest.
      * 
      */
-    @InputImport(name="typeVersion")
+    @Import(name="typeVersion")
       private final @Nullable Output<String> typeVersion;
 
     public Output<String> getTypeVersion() {
@@ -180,7 +180,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * Describes the policy for a monitored application upgrade.
      * 
      */
-    @InputImport(name="upgradePolicy")
+    @Import(name="upgradePolicy")
       private final @Nullable Output<ApplicationUpgradePolicyArgs> upgradePolicy;
 
     public Output<ApplicationUpgradePolicyArgs> getUpgradePolicy() {

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.kubernetesconfiguration.inputs;
 import io.pulumi.azurenative.kubernetesconfiguration.inputs.ScopeClusterArgs;
 import io.pulumi.azurenative.kubernetesconfiguration.inputs.ScopeNamespaceArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -23,7 +23,7 @@ public final class ScopeArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies that the scope of the extensionInstance is Cluster
      * 
      */
-    @InputImport(name="cluster")
+    @Import(name="cluster")
       private final @Nullable Output<ScopeClusterArgs> cluster;
 
     public Output<ScopeClusterArgs> getCluster() {
@@ -34,7 +34,7 @@ public final class ScopeArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies that the scope of the extensionInstance is Namespace
      * 
      */
-    @InputImport(name="namespace")
+    @Import(name="namespace")
       private final @Nullable Output<ScopeNamespaceArgs> namespace;
 
     public Output<ScopeNamespaceArgs> getNamespace() {

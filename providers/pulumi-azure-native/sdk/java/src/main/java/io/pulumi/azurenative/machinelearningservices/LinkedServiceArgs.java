@@ -6,7 +6,7 @@ package io.pulumi.azurenative.machinelearningservices;
 import io.pulumi.azurenative.machinelearningservices.inputs.IdentityArgs;
 import io.pulumi.azurenative.machinelearningservices.inputs.LinkedServicePropsArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class LinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
      * Identity for the resource.
      * 
      */
-    @InputImport(name="identity")
+    @Import(name="identity")
       private final @Nullable Output<IdentityArgs> identity;
 
     public Output<IdentityArgs> getIdentity() {
@@ -31,7 +31,7 @@ public final class LinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
      * Friendly name of the linked workspace
      * 
      */
-    @InputImport(name="linkName")
+    @Import(name="linkName")
       private final @Nullable Output<String> linkName;
 
     public Output<String> getLinkName() {
@@ -42,7 +42,7 @@ public final class LinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
      * location of the linked service.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -53,7 +53,7 @@ public final class LinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
      * Friendly name of the linked service
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -64,7 +64,7 @@ public final class LinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
      * LinkedService specific properties.
      * 
      */
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable Output<LinkedServicePropsArgs> properties;
 
     public Output<LinkedServicePropsArgs> getProperties() {
@@ -75,7 +75,7 @@ public final class LinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the resource group in which workspace is located.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -86,7 +86,7 @@ public final class LinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
      * Name of Azure Machine Learning workspace.
      * 
      */
-    @InputImport(name="workspaceName", required=true)
+    @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;
 
     public Output<String> getWorkspaceName() {

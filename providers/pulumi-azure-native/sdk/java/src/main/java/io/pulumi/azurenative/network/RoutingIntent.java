@@ -8,7 +8,7 @@ import io.pulumi.azurenative.network.RoutingIntentArgs;
 import io.pulumi.azurenative.network.outputs.RoutingPolicyResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +35,7 @@ public class RoutingIntent extends io.pulumi.resources.CustomResource {
      * A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -49,7 +49,7 @@ public class RoutingIntent extends io.pulumi.resources.CustomResource {
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
@@ -63,7 +63,7 @@ public class RoutingIntent extends io.pulumi.resources.CustomResource {
      * The provisioning state of the RoutingIntent resource.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -77,7 +77,7 @@ public class RoutingIntent extends io.pulumi.resources.CustomResource {
      * List of routing policies.
      * 
      */
-    @OutputExport(name="routingPolicies", type=List.class, parameters={RoutingPolicyResponse.class})
+    @Export(name="routingPolicies", type=List.class, parameters={RoutingPolicyResponse.class})
     private Output</* @Nullable */ List<RoutingPolicyResponse>> routingPolicies;
 
     /**
@@ -91,7 +91,7 @@ public class RoutingIntent extends io.pulumi.resources.CustomResource {
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

@@ -5,14 +5,14 @@ package io.pulumi.azurenative.apimanagement.outputs;
 
 import io.pulumi.azurenative.apimanagement.outputs.GroupContractPropertiesResponse;
 import io.pulumi.azurenative.apimanagement.outputs.UserIdentityContractResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetUserResult {
     /**
      * Email address.
@@ -70,19 +70,19 @@ public final class GetUserResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetUserResult(
-        @OutputCustomType.Parameter("email") @Nullable String email,
-        @OutputCustomType.Parameter("firstName") @Nullable String firstName,
-        @OutputCustomType.Parameter("groups") List<GroupContractPropertiesResponse> groups,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("identities") @Nullable List<UserIdentityContractResponse> identities,
-        @OutputCustomType.Parameter("lastName") @Nullable String lastName,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("note") @Nullable String note,
-        @OutputCustomType.Parameter("registrationDate") @Nullable String registrationDate,
-        @OutputCustomType.Parameter("state") @Nullable String state,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("email") @Nullable String email,
+        @CustomType.Parameter("firstName") @Nullable String firstName,
+        @CustomType.Parameter("groups") List<GroupContractPropertiesResponse> groups,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("identities") @Nullable List<UserIdentityContractResponse> identities,
+        @CustomType.Parameter("lastName") @Nullable String lastName,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("note") @Nullable String note,
+        @CustomType.Parameter("registrationDate") @Nullable String registrationDate,
+        @CustomType.Parameter("state") @Nullable String state,
+        @CustomType.Parameter("type") String type) {
         this.email = email;
         this.firstName = firstName;
         this.groups = groups;

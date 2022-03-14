@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.digitaltwins.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetTimeSeriesDatabaseConnectionArgs extends io.pulumi.resourc
      * The name of the resource group that contains the DigitalTwinsInstance.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {
@@ -27,7 +27,7 @@ public final class GetTimeSeriesDatabaseConnectionArgs extends io.pulumi.resourc
      * The name of the DigitalTwinsInstance.
      * 
      */
-    @InputImport(name="resourceName", required=true)
+    @Import(name="resourceName", required=true)
       private final String resourceName;
 
     public String getPropResourceName() {
@@ -38,7 +38,7 @@ public final class GetTimeSeriesDatabaseConnectionArgs extends io.pulumi.resourc
      * Name of time series database connection.
      * 
      */
-    @InputImport(name="timeSeriesDatabaseConnectionName", required=true)
+    @Import(name="timeSeriesDatabaseConnectionName", required=true)
       private final String timeSeriesDatabaseConnectionName;
 
     public String getTimeSeriesDatabaseConnectionName() {

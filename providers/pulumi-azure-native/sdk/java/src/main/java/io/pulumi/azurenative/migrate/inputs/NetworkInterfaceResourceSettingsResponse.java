@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.migrate.inputs;
 
 import io.pulumi.azurenative.migrate.inputs.NicIpConfigurationResourceSettingsResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class NetworkInterfaceResourceSettingsResponse extends io.pulumi.re
      * Gets or sets a value indicating whether accelerated networking is enabled.
      * 
      */
-    @InputImport(name="enableAcceleratedNetworking")
+    @Import(name="enableAcceleratedNetworking")
       private final @Nullable Boolean enableAcceleratedNetworking;
 
     public Optional<Boolean> getEnableAcceleratedNetworking() {
@@ -36,7 +36,7 @@ public final class NetworkInterfaceResourceSettingsResponse extends io.pulumi.re
      * Gets or sets the IP configurations of the NIC.
      * 
      */
-    @InputImport(name="ipConfigurations")
+    @Import(name="ipConfigurations")
       private final @Nullable List<NicIpConfigurationResourceSettingsResponse> ipConfigurations;
 
     public List<NicIpConfigurationResourceSettingsResponse> getIpConfigurations() {
@@ -48,7 +48,7 @@ public final class NetworkInterfaceResourceSettingsResponse extends io.pulumi.re
      * Expected value is 'Microsoft.Network/networkInterfaces'.
      * 
      */
-    @InputImport(name="resourceType", required=true)
+    @Import(name="resourceType", required=true)
       private final String resourceType;
 
     public String getPropResourceType() {
@@ -59,7 +59,7 @@ public final class NetworkInterfaceResourceSettingsResponse extends io.pulumi.re
      * Gets or sets the target Resource name.
      * 
      */
-    @InputImport(name="targetResourceName", required=true)
+    @Import(name="targetResourceName", required=true)
       private final String targetResourceName;
 
     public String getTargetResourceName() {

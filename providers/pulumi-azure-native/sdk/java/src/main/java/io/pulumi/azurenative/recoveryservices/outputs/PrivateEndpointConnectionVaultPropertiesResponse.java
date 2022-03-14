@@ -4,11 +4,11 @@
 package io.pulumi.azurenative.recoveryservices.outputs;
 
 import io.pulumi.azurenative.recoveryservices.outputs.VaultPrivateEndpointConnectionResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class PrivateEndpointConnectionVaultPropertiesResponse {
     /**
      * Format of id subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.[Service]/{resource}/{resourceName}/privateEndpointConnections/{connectionName}.
@@ -21,10 +21,10 @@ public final class PrivateEndpointConnectionVaultPropertiesResponse {
      */
     private final VaultPrivateEndpointConnectionResponse properties;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PrivateEndpointConnectionVaultPropertiesResponse(
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("properties") VaultPrivateEndpointConnectionResponse properties) {
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("properties") VaultPrivateEndpointConnectionResponse properties) {
         this.id = id;
         this.properties = properties;
     }

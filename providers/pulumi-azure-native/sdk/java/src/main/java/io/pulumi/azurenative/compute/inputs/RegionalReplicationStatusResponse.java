@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.compute.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class RegionalReplicationStatusResponse extends io.pulumi.resources
      * The details of the replication status.
      * 
      */
-    @InputImport(name="details", required=true)
+    @Import(name="details", required=true)
       private final String details;
 
     public String getDetails() {
@@ -32,7 +32,7 @@ public final class RegionalReplicationStatusResponse extends io.pulumi.resources
      * It indicates progress of the replication job.
      * 
      */
-    @InputImport(name="progress", required=true)
+    @Import(name="progress", required=true)
       private final Integer progress;
 
     public Integer getProgress() {
@@ -43,7 +43,7 @@ public final class RegionalReplicationStatusResponse extends io.pulumi.resources
      * The region to which the gallery image version is being replicated to.
      * 
      */
-    @InputImport(name="region", required=true)
+    @Import(name="region", required=true)
       private final String region;
 
     public String getRegion() {
@@ -54,7 +54,7 @@ public final class RegionalReplicationStatusResponse extends io.pulumi.resources
      * This is the regional replication state.
      * 
      */
-    @InputImport(name="state", required=true)
+    @Import(name="state", required=true)
       private final String state;
 
     public String getState() {

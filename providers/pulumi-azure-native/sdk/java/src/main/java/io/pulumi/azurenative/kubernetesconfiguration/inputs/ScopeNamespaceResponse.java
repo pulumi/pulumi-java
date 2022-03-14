@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.kubernetesconfiguration.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class ScopeNamespaceResponse extends io.pulumi.resources.InvokeArgs
      * Namespace where the extensionInstance will be created for an Namespace scoped extensionInstance.  If this namespace does not exist, it will be created
      * 
      */
-    @InputImport(name="targetNamespace")
+    @Import(name="targetNamespace")
       private final @Nullable String targetNamespace;
 
     public Optional<String> getTargetNamespace() {

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.azurenative.compute.inputs.ApiEntityReferenceResponse;
 import io.pulumi.azurenative.compute.inputs.RestorePointSourceMetadataResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class RestorePointResponse extends io.pulumi.resources.InvokeArgs {
      * Gets the consistency mode for the restore point. Please refer to https://aka.ms/RestorePoints for more details.
      * 
      */
-    @InputImport(name="consistencyMode", required=true)
+    @Import(name="consistencyMode", required=true)
       private final String consistencyMode;
 
     public String getConsistencyMode() {
@@ -36,7 +36,7 @@ public final class RestorePointResponse extends io.pulumi.resources.InvokeArgs {
      * List of disk resource ids that the customer wishes to exclude from the restore point. If no disks are specified, all disks will be included.
      * 
      */
-    @InputImport(name="excludeDisks")
+    @Import(name="excludeDisks")
       private final @Nullable List<ApiEntityReferenceResponse> excludeDisks;
 
     public List<ApiEntityReferenceResponse> getExcludeDisks() {
@@ -47,7 +47,7 @@ public final class RestorePointResponse extends io.pulumi.resources.InvokeArgs {
      * Resource Id
      * 
      */
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final String id;
 
     public String getId() {
@@ -58,7 +58,7 @@ public final class RestorePointResponse extends io.pulumi.resources.InvokeArgs {
      * Resource name
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -69,7 +69,7 @@ public final class RestorePointResponse extends io.pulumi.resources.InvokeArgs {
      * Gets the provisioning state of the restore point.
      * 
      */
-    @InputImport(name="provisioningState", required=true)
+    @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
     public String getProvisioningState() {
@@ -80,7 +80,7 @@ public final class RestorePointResponse extends io.pulumi.resources.InvokeArgs {
      * Gets the details of the VM captured at the time of the restore point creation.
      * 
      */
-    @InputImport(name="sourceMetadata", required=true)
+    @Import(name="sourceMetadata", required=true)
       private final RestorePointSourceMetadataResponse sourceMetadata;
 
     public RestorePointSourceMetadataResponse getSourceMetadata() {
@@ -91,7 +91,7 @@ public final class RestorePointResponse extends io.pulumi.resources.InvokeArgs {
      * Gets the creation time of the restore point.
      * 
      */
-    @InputImport(name="timeCreated")
+    @Import(name="timeCreated")
       private final @Nullable String timeCreated;
 
     public Optional<String> getTimeCreated() {
@@ -102,7 +102,7 @@ public final class RestorePointResponse extends io.pulumi.resources.InvokeArgs {
      * Resource type
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

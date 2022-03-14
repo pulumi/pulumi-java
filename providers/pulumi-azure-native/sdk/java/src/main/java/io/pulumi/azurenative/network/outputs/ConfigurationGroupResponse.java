@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.GroupMembersItemResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ConfigurationGroupResponse {
     /**
      * Network group conditional filter.
@@ -49,15 +49,15 @@ public final class ConfigurationGroupResponse {
      */
     private final String provisioningState;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ConfigurationGroupResponse(
-        @OutputCustomType.Parameter("conditionalMembership") @Nullable String conditionalMembership,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
-        @OutputCustomType.Parameter("groupMembers") @Nullable List<GroupMembersItemResponse> groupMembers,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("memberType") @Nullable String memberType,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState) {
+        @CustomType.Parameter("conditionalMembership") @Nullable String conditionalMembership,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("displayName") @Nullable String displayName,
+        @CustomType.Parameter("groupMembers") @Nullable List<GroupMembersItemResponse> groupMembers,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("memberType") @Nullable String memberType,
+        @CustomType.Parameter("provisioningState") String provisioningState) {
         this.conditionalMembership = conditionalMembership;
         this.description = description;
         this.displayName = displayName;

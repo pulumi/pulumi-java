@@ -18,7 +18,7 @@ import io.pulumi.azurenative.containerinstance.inputs.IpAddressArgs;
 import io.pulumi.azurenative.containerinstance.inputs.VolumeArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -34,7 +34,7 @@ public final class ContainerGroupArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the container group.
      * 
      */
-    @InputImport(name="containerGroupName")
+    @Import(name="containerGroupName")
       private final @Nullable Output<String> containerGroupName;
 
     public Output<String> getContainerGroupName() {
@@ -45,7 +45,7 @@ public final class ContainerGroupArgs extends io.pulumi.resources.ResourceArgs {
      * The containers within the container group.
      * 
      */
-    @InputImport(name="containers", required=true)
+    @Import(name="containers", required=true)
       private final Output<List<ContainerArgs>> containers;
 
     public Output<List<ContainerArgs>> getContainers() {
@@ -56,7 +56,7 @@ public final class ContainerGroupArgs extends io.pulumi.resources.ResourceArgs {
      * The diagnostic information for a container group.
      * 
      */
-    @InputImport(name="diagnostics")
+    @Import(name="diagnostics")
       private final @Nullable Output<ContainerGroupDiagnosticsArgs> diagnostics;
 
     public Output<ContainerGroupDiagnosticsArgs> getDiagnostics() {
@@ -67,7 +67,7 @@ public final class ContainerGroupArgs extends io.pulumi.resources.ResourceArgs {
      * The DNS config information for a container group.
      * 
      */
-    @InputImport(name="dnsConfig")
+    @Import(name="dnsConfig")
       private final @Nullable Output<DnsConfigurationArgs> dnsConfig;
 
     public Output<DnsConfigurationArgs> getDnsConfig() {
@@ -78,7 +78,7 @@ public final class ContainerGroupArgs extends io.pulumi.resources.ResourceArgs {
      * The encryption properties for a container group.
      * 
      */
-    @InputImport(name="encryptionProperties")
+    @Import(name="encryptionProperties")
       private final @Nullable Output<EncryptionPropertiesArgs> encryptionProperties;
 
     public Output<EncryptionPropertiesArgs> getEncryptionProperties() {
@@ -89,7 +89,7 @@ public final class ContainerGroupArgs extends io.pulumi.resources.ResourceArgs {
      * The identity of the container group, if configured.
      * 
      */
-    @InputImport(name="identity")
+    @Import(name="identity")
       private final @Nullable Output<ContainerGroupIdentityArgs> identity;
 
     public Output<ContainerGroupIdentityArgs> getIdentity() {
@@ -100,7 +100,7 @@ public final class ContainerGroupArgs extends io.pulumi.resources.ResourceArgs {
      * The image registry credentials by which the container group is created from.
      * 
      */
-    @InputImport(name="imageRegistryCredentials")
+    @Import(name="imageRegistryCredentials")
       private final @Nullable Output<List<ImageRegistryCredentialArgs>> imageRegistryCredentials;
 
     public Output<List<ImageRegistryCredentialArgs>> getImageRegistryCredentials() {
@@ -111,7 +111,7 @@ public final class ContainerGroupArgs extends io.pulumi.resources.ResourceArgs {
      * The init containers for a container group.
      * 
      */
-    @InputImport(name="initContainers")
+    @Import(name="initContainers")
       private final @Nullable Output<List<InitContainerDefinitionArgs>> initContainers;
 
     public Output<List<InitContainerDefinitionArgs>> getInitContainers() {
@@ -122,7 +122,7 @@ public final class ContainerGroupArgs extends io.pulumi.resources.ResourceArgs {
      * The IP address type of the container group.
      * 
      */
-    @InputImport(name="ipAddress")
+    @Import(name="ipAddress")
       private final @Nullable Output<IpAddressArgs> ipAddress;
 
     public Output<IpAddressArgs> getIpAddress() {
@@ -133,7 +133,7 @@ public final class ContainerGroupArgs extends io.pulumi.resources.ResourceArgs {
      * The resource location.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -144,7 +144,7 @@ public final class ContainerGroupArgs extends io.pulumi.resources.ResourceArgs {
      * The network profile information for a container group.
      * 
      */
-    @InputImport(name="networkProfile")
+    @Import(name="networkProfile")
       private final @Nullable Output<ContainerGroupNetworkProfileArgs> networkProfile;
 
     public Output<ContainerGroupNetworkProfileArgs> getNetworkProfile() {
@@ -155,7 +155,7 @@ public final class ContainerGroupArgs extends io.pulumi.resources.ResourceArgs {
      * The operating system type required by the containers in the container group.
      * 
      */
-    @InputImport(name="osType", required=true)
+    @Import(name="osType", required=true)
       private final Output<Either<String,OperatingSystemTypes>> osType;
 
     public Output<Either<String,OperatingSystemTypes>> getOsType() {
@@ -166,7 +166,7 @@ public final class ContainerGroupArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -180,7 +180,7 @@ public final class ContainerGroupArgs extends io.pulumi.resources.ResourceArgs {
      * - `Never` Never restart
      * 
      */
-    @InputImport(name="restartPolicy")
+    @Import(name="restartPolicy")
       private final @Nullable Output<Either<String,ContainerGroupRestartPolicy>> restartPolicy;
 
     public Output<Either<String,ContainerGroupRestartPolicy>> getRestartPolicy() {
@@ -191,7 +191,7 @@ public final class ContainerGroupArgs extends io.pulumi.resources.ResourceArgs {
      * The SKU for a container group.
      * 
      */
-    @InputImport(name="sku")
+    @Import(name="sku")
       private final @Nullable Output<Either<String,ContainerGroupSku>> sku;
 
     public Output<Either<String,ContainerGroupSku>> getSku() {
@@ -202,7 +202,7 @@ public final class ContainerGroupArgs extends io.pulumi.resources.ResourceArgs {
      * The resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -213,7 +213,7 @@ public final class ContainerGroupArgs extends io.pulumi.resources.ResourceArgs {
      * The list of volumes that can be mounted by containers in this container group.
      * 
      */
-    @InputImport(name="volumes")
+    @Import(name="volumes")
       private final @Nullable Output<List<VolumeArgs>> volumes;
 
     public Output<List<VolumeArgs>> getVolumes() {

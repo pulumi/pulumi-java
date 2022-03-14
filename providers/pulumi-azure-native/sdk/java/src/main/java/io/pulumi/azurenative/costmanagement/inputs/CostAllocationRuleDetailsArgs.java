@@ -6,7 +6,7 @@ package io.pulumi.azurenative.costmanagement.inputs;
 import io.pulumi.azurenative.costmanagement.inputs.SourceCostAllocationResourceArgs;
 import io.pulumi.azurenative.costmanagement.inputs.TargetCostAllocationResourceArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class CostAllocationRuleDetailsArgs extends io.pulumi.resources.Res
      * Source resources for cost allocation. At this time, this list can contain no more than one element.
      * 
      */
-    @InputImport(name="sourceResources")
+    @Import(name="sourceResources")
       private final @Nullable Output<List<SourceCostAllocationResourceArgs>> sourceResources;
 
     public Output<List<SourceCostAllocationResourceArgs>> getSourceResources() {
@@ -35,7 +35,7 @@ public final class CostAllocationRuleDetailsArgs extends io.pulumi.resources.Res
      * Target resources for cost allocation. At this time, this list can contain no more than one element.
      * 
      */
-    @InputImport(name="targetResources")
+    @Import(name="targetResources")
       private final @Nullable Output<List<TargetCostAllocationResourceArgs>> targetResources;
 
     public Output<List<TargetCostAllocationResourceArgs>> getTargetResources() {

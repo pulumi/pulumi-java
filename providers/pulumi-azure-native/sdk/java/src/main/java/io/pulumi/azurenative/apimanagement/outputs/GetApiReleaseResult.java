@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.apimanagement.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetApiReleaseResult {
     /**
      * Identifier of the API the release belongs to.
@@ -47,15 +47,15 @@ public final class GetApiReleaseResult {
      */
     private final String updatedDateTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetApiReleaseResult(
-        @OutputCustomType.Parameter("apiId") @Nullable String apiId,
-        @OutputCustomType.Parameter("createdDateTime") String createdDateTime,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("notes") @Nullable String notes,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("updatedDateTime") String updatedDateTime) {
+        @CustomType.Parameter("apiId") @Nullable String apiId,
+        @CustomType.Parameter("createdDateTime") String createdDateTime,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("notes") @Nullable String notes,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("updatedDateTime") String updatedDateTime) {
         this.apiId = apiId;
         this.createdDateTime = createdDateTime;
         this.id = id;

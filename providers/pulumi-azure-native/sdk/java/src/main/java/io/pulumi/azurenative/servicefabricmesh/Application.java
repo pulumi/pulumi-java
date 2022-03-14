@@ -9,7 +9,7 @@ import io.pulumi.azurenative.servicefabricmesh.outputs.DiagnosticsDescriptionRes
 import io.pulumi.azurenative.servicefabricmesh.outputs.ServiceResourceDescriptionResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -37,7 +37,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * Internal - used by Visual Studio to setup the debugging session on the local development environment.
      * 
      */
-    @OutputExport(name="debugParams", type=String.class, parameters={})
+    @Export(name="debugParams", type=String.class, parameters={})
     private Output</* @Nullable */ String> debugParams;
 
     /**
@@ -51,7 +51,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * User readable description of the application.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -65,7 +65,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * Describes the diagnostics definition and usage for an application resource.
      * 
      */
-    @OutputExport(name="diagnostics", type=DiagnosticsDescriptionResponse.class, parameters={})
+    @Export(name="diagnostics", type=DiagnosticsDescriptionResponse.class, parameters={})
     private Output</* @Nullable */ DiagnosticsDescriptionResponse> diagnostics;
 
     /**
@@ -79,7 +79,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * Describes the health state of an application resource.
      * 
      */
-    @OutputExport(name="healthState", type=String.class, parameters={})
+    @Export(name="healthState", type=String.class, parameters={})
     private Output<String> healthState;
 
     /**
@@ -93,7 +93,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * The geo-location where the resource lives
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -107,7 +107,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -121,7 +121,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * State of the resource.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -135,7 +135,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * Names of the services in the application.
      * 
      */
-    @OutputExport(name="serviceNames", type=List.class, parameters={String.class})
+    @Export(name="serviceNames", type=List.class, parameters={String.class})
     private Output<List<String>> serviceNames;
 
     /**
@@ -149,7 +149,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * Describes the services in the application. This property is used to create or modify services of the application. On get only the name of the service is returned. The service description can be obtained by querying for the service resource.
      * 
      */
-    @OutputExport(name="services", type=List.class, parameters={ServiceResourceDescriptionResponse.class})
+    @Export(name="services", type=List.class, parameters={ServiceResourceDescriptionResponse.class})
     private Output</* @Nullable */ List<ServiceResourceDescriptionResponse>> services;
 
     /**
@@ -163,7 +163,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * Status of the application.
      * 
      */
-    @OutputExport(name="status", type=String.class, parameters={})
+    @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
     /**
@@ -177,7 +177,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * Gives additional information about the current status of the application.
      * 
      */
-    @OutputExport(name="statusDetails", type=String.class, parameters={})
+    @Export(name="statusDetails", type=String.class, parameters={})
     private Output<String> statusDetails;
 
     /**
@@ -191,7 +191,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * Resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -205,7 +205,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -219,7 +219,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * When the application's health state is not 'Ok', this additional details from service fabric Health Manager for the user to know why the application is marked unhealthy.
      * 
      */
-    @OutputExport(name="unhealthyEvaluation", type=String.class, parameters={})
+    @Export(name="unhealthyEvaluation", type=String.class, parameters={})
     private Output<String> unhealthyEvaluation;
 
     /**

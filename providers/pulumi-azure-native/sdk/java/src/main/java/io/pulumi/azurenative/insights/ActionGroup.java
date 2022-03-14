@@ -17,7 +17,7 @@ import io.pulumi.azurenative.insights.outputs.VoiceReceiverResponse;
 import io.pulumi.azurenative.insights.outputs.WebhookReceiverResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -46,7 +46,7 @@ public class ActionGroup extends io.pulumi.resources.CustomResource {
      * The list of ARM role receivers that are part of this action group. Roles are Azure RBAC roles and only built-in roles are supported.
      * 
      */
-    @OutputExport(name="armRoleReceivers", type=List.class, parameters={ArmRoleReceiverResponse.class})
+    @Export(name="armRoleReceivers", type=List.class, parameters={ArmRoleReceiverResponse.class})
     private Output</* @Nullable */ List<ArmRoleReceiverResponse>> armRoleReceivers;
 
     /**
@@ -60,7 +60,7 @@ public class ActionGroup extends io.pulumi.resources.CustomResource {
      * The list of AutomationRunbook receivers that are part of this action group.
      * 
      */
-    @OutputExport(name="automationRunbookReceivers", type=List.class, parameters={AutomationRunbookReceiverResponse.class})
+    @Export(name="automationRunbookReceivers", type=List.class, parameters={AutomationRunbookReceiverResponse.class})
     private Output</* @Nullable */ List<AutomationRunbookReceiverResponse>> automationRunbookReceivers;
 
     /**
@@ -74,7 +74,7 @@ public class ActionGroup extends io.pulumi.resources.CustomResource {
      * The list of AzureAppPush receivers that are part of this action group.
      * 
      */
-    @OutputExport(name="azureAppPushReceivers", type=List.class, parameters={AzureAppPushReceiverResponse.class})
+    @Export(name="azureAppPushReceivers", type=List.class, parameters={AzureAppPushReceiverResponse.class})
     private Output</* @Nullable */ List<AzureAppPushReceiverResponse>> azureAppPushReceivers;
 
     /**
@@ -88,7 +88,7 @@ public class ActionGroup extends io.pulumi.resources.CustomResource {
      * The list of azure function receivers that are part of this action group.
      * 
      */
-    @OutputExport(name="azureFunctionReceivers", type=List.class, parameters={AzureFunctionReceiverResponse.class})
+    @Export(name="azureFunctionReceivers", type=List.class, parameters={AzureFunctionReceiverResponse.class})
     private Output</* @Nullable */ List<AzureFunctionReceiverResponse>> azureFunctionReceivers;
 
     /**
@@ -102,7 +102,7 @@ public class ActionGroup extends io.pulumi.resources.CustomResource {
      * The list of email receivers that are part of this action group.
      * 
      */
-    @OutputExport(name="emailReceivers", type=List.class, parameters={EmailReceiverResponse.class})
+    @Export(name="emailReceivers", type=List.class, parameters={EmailReceiverResponse.class})
     private Output</* @Nullable */ List<EmailReceiverResponse>> emailReceivers;
 
     /**
@@ -116,7 +116,7 @@ public class ActionGroup extends io.pulumi.resources.CustomResource {
      * Indicates whether this action group is enabled. If an action group is not enabled, then none of its receivers will receive communications.
      * 
      */
-    @OutputExport(name="enabled", type=Boolean.class, parameters={})
+    @Export(name="enabled", type=Boolean.class, parameters={})
     private Output<Boolean> enabled;
 
     /**
@@ -130,7 +130,7 @@ public class ActionGroup extends io.pulumi.resources.CustomResource {
      * The short name of the action group. This will be used in SMS messages.
      * 
      */
-    @OutputExport(name="groupShortName", type=String.class, parameters={})
+    @Export(name="groupShortName", type=String.class, parameters={})
     private Output<String> groupShortName;
 
     /**
@@ -144,7 +144,7 @@ public class ActionGroup extends io.pulumi.resources.CustomResource {
      * Azure resource identity
      * 
      */
-    @OutputExport(name="identity", type=String.class, parameters={})
+    @Export(name="identity", type=String.class, parameters={})
     private Output<String> identity;
 
     /**
@@ -158,7 +158,7 @@ public class ActionGroup extends io.pulumi.resources.CustomResource {
      * The list of ITSM receivers that are part of this action group.
      * 
      */
-    @OutputExport(name="itsmReceivers", type=List.class, parameters={ItsmReceiverResponse.class})
+    @Export(name="itsmReceivers", type=List.class, parameters={ItsmReceiverResponse.class})
     private Output</* @Nullable */ List<ItsmReceiverResponse>> itsmReceivers;
 
     /**
@@ -172,7 +172,7 @@ public class ActionGroup extends io.pulumi.resources.CustomResource {
      * Azure resource kind
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
     /**
@@ -186,7 +186,7 @@ public class ActionGroup extends io.pulumi.resources.CustomResource {
      * Resource location
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -200,7 +200,7 @@ public class ActionGroup extends io.pulumi.resources.CustomResource {
      * The list of logic app receivers that are part of this action group.
      * 
      */
-    @OutputExport(name="logicAppReceivers", type=List.class, parameters={LogicAppReceiverResponse.class})
+    @Export(name="logicAppReceivers", type=List.class, parameters={LogicAppReceiverResponse.class})
     private Output</* @Nullable */ List<LogicAppReceiverResponse>> logicAppReceivers;
 
     /**
@@ -214,7 +214,7 @@ public class ActionGroup extends io.pulumi.resources.CustomResource {
      * Azure resource name
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -228,7 +228,7 @@ public class ActionGroup extends io.pulumi.resources.CustomResource {
      * The list of SMS receivers that are part of this action group.
      * 
      */
-    @OutputExport(name="smsReceivers", type=List.class, parameters={SmsReceiverResponse.class})
+    @Export(name="smsReceivers", type=List.class, parameters={SmsReceiverResponse.class})
     private Output</* @Nullable */ List<SmsReceiverResponse>> smsReceivers;
 
     /**
@@ -242,7 +242,7 @@ public class ActionGroup extends io.pulumi.resources.CustomResource {
      * Resource tags
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -256,7 +256,7 @@ public class ActionGroup extends io.pulumi.resources.CustomResource {
      * Azure resource type
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -270,7 +270,7 @@ public class ActionGroup extends io.pulumi.resources.CustomResource {
      * The list of voice receivers that are part of this action group.
      * 
      */
-    @OutputExport(name="voiceReceivers", type=List.class, parameters={VoiceReceiverResponse.class})
+    @Export(name="voiceReceivers", type=List.class, parameters={VoiceReceiverResponse.class})
     private Output</* @Nullable */ List<VoiceReceiverResponse>> voiceReceivers;
 
     /**
@@ -284,7 +284,7 @@ public class ActionGroup extends io.pulumi.resources.CustomResource {
      * The list of webhook receivers that are part of this action group.
      * 
      */
-    @OutputExport(name="webhookReceivers", type=List.class, parameters={WebhookReceiverResponse.class})
+    @Export(name="webhookReceivers", type=List.class, parameters={WebhookReceiverResponse.class})
     private Output</* @Nullable */ List<WebhookReceiverResponse>> webhookReceivers;
 
     /**

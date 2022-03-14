@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearning.inputs;
 
 import io.pulumi.azurenative.machinelearning.inputs.GraphParameterLinkResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class GraphParameterResponse extends io.pulumi.resources.InvokeArgs
      * Description of this graph parameter.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable String description;
 
     public Optional<String> getDescription() {
@@ -35,7 +35,7 @@ public final class GraphParameterResponse extends io.pulumi.resources.InvokeArgs
      * Association links for this parameter to nodes in the graph.
      * 
      */
-    @InputImport(name="links", required=true)
+    @Import(name="links", required=true)
       private final List<GraphParameterLinkResponse> links;
 
     public List<GraphParameterLinkResponse> getLinks() {
@@ -46,7 +46,7 @@ public final class GraphParameterResponse extends io.pulumi.resources.InvokeArgs
      * Graph parameter's type.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

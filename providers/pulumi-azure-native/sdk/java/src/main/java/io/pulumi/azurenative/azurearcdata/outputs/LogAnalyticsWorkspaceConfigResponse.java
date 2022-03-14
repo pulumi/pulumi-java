@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.azurearcdata.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class LogAnalyticsWorkspaceConfigResponse {
     /**
      * Azure Log Analytics workspace ID
@@ -17,8 +17,8 @@ public final class LogAnalyticsWorkspaceConfigResponse {
      */
     private final @Nullable String workspaceId;
 
-    @OutputCustomType.Constructor
-    private LogAnalyticsWorkspaceConfigResponse(@OutputCustomType.Parameter("workspaceId") @Nullable String workspaceId) {
+    @CustomType.Constructor
+    private LogAnalyticsWorkspaceConfigResponse(@CustomType.Parameter("workspaceId") @Nullable String workspaceId) {
         this.workspaceId = workspaceId;
     }
 

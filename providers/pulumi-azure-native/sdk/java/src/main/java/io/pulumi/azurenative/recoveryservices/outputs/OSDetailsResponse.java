@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.recoveryservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class OSDetailsResponse {
     /**
      * The OS Major Version.
@@ -42,14 +42,14 @@ public final class OSDetailsResponse {
      */
     private final @Nullable String productType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private OSDetailsResponse(
-        @OutputCustomType.Parameter("oSMajorVersion") @Nullable String oSMajorVersion,
-        @OutputCustomType.Parameter("oSMinorVersion") @Nullable String oSMinorVersion,
-        @OutputCustomType.Parameter("oSVersion") @Nullable String oSVersion,
-        @OutputCustomType.Parameter("osEdition") @Nullable String osEdition,
-        @OutputCustomType.Parameter("osType") @Nullable String osType,
-        @OutputCustomType.Parameter("productType") @Nullable String productType) {
+        @CustomType.Parameter("oSMajorVersion") @Nullable String oSMajorVersion,
+        @CustomType.Parameter("oSMinorVersion") @Nullable String oSMinorVersion,
+        @CustomType.Parameter("oSVersion") @Nullable String oSVersion,
+        @CustomType.Parameter("osEdition") @Nullable String osEdition,
+        @CustomType.Parameter("osType") @Nullable String osType,
+        @CustomType.Parameter("productType") @Nullable String productType) {
         this.oSMajorVersion = oSMajorVersion;
         this.oSMinorVersion = oSMinorVersion;
         this.oSVersion = oSVersion;

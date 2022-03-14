@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.insights.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SmsReceiverResponse {
     /**
      * The country code of the SMS receiver.
@@ -30,12 +30,12 @@ public final class SmsReceiverResponse {
      */
     private final String status;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SmsReceiverResponse(
-        @OutputCustomType.Parameter("countryCode") String countryCode,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("phoneNumber") String phoneNumber,
-        @OutputCustomType.Parameter("status") String status) {
+        @CustomType.Parameter("countryCode") String countryCode,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("phoneNumber") String phoneNumber,
+        @CustomType.Parameter("status") String status) {
         this.countryCode = countryCode;
         this.name = name;
         this.phoneNumber = phoneNumber;

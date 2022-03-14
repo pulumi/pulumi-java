@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.customerinsights.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TypePropertiesMappingResponse {
     /**
      * Link type.
@@ -27,11 +27,11 @@ public final class TypePropertiesMappingResponse {
      */
     private final String targetPropertyName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TypePropertiesMappingResponse(
-        @OutputCustomType.Parameter("linkType") @Nullable String linkType,
-        @OutputCustomType.Parameter("sourcePropertyName") String sourcePropertyName,
-        @OutputCustomType.Parameter("targetPropertyName") String targetPropertyName) {
+        @CustomType.Parameter("linkType") @Nullable String linkType,
+        @CustomType.Parameter("sourcePropertyName") String sourcePropertyName,
+        @CustomType.Parameter("targetPropertyName") String targetPropertyName) {
         this.linkType = linkType;
         this.sourcePropertyName = sourcePropertyName;
         this.targetPropertyName = targetPropertyName;

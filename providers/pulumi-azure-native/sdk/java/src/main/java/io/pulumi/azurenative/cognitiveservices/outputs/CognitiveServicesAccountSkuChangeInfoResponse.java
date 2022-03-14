@@ -3,12 +3,12 @@
 
 package io.pulumi.azurenative.cognitiveservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class CognitiveServicesAccountSkuChangeInfoResponse {
     /**
      * Gets the count of downgrades.
@@ -26,11 +26,11 @@ public final class CognitiveServicesAccountSkuChangeInfoResponse {
      */
     private final String lastChangeDate;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CognitiveServicesAccountSkuChangeInfoResponse(
-        @OutputCustomType.Parameter("countOfDowngrades") Double countOfDowngrades,
-        @OutputCustomType.Parameter("countOfUpgradesAfterDowngrades") Double countOfUpgradesAfterDowngrades,
-        @OutputCustomType.Parameter("lastChangeDate") String lastChangeDate) {
+        @CustomType.Parameter("countOfDowngrades") Double countOfDowngrades,
+        @CustomType.Parameter("countOfUpgradesAfterDowngrades") Double countOfUpgradesAfterDowngrades,
+        @CustomType.Parameter("lastChangeDate") String lastChangeDate) {
         this.countOfDowngrades = countOfDowngrades;
         this.countOfUpgradesAfterDowngrades = countOfUpgradesAfterDowngrades;
         this.lastChangeDate = lastChangeDate;

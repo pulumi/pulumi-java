@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.eventgrid.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class EventSubscriptionIdentityResponse extends io.pulumi.resources
      * The type of managed identity used. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user-assigned identities. The type 'None' will remove any identity.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable String type;
 
     public Optional<String> getType() {
@@ -33,7 +33,7 @@ public final class EventSubscriptionIdentityResponse extends io.pulumi.resources
      * The user identity associated with the resource.
      * 
      */
-    @InputImport(name="userAssignedIdentity")
+    @Import(name="userAssignedIdentity")
       private final @Nullable String userAssignedIdentity;
 
     public Optional<String> getUserAssignedIdentity() {

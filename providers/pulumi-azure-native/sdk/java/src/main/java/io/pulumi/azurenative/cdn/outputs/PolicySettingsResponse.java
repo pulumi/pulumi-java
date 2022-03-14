@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.cdn.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PolicySettingsResponse {
     /**
      * If the action type is block, customer can override the response body. The body must be specified in base64 encoding.
@@ -38,13 +38,13 @@ public final class PolicySettingsResponse {
      */
     private final @Nullable String mode;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PolicySettingsResponse(
-        @OutputCustomType.Parameter("defaultCustomBlockResponseBody") @Nullable String defaultCustomBlockResponseBody,
-        @OutputCustomType.Parameter("defaultCustomBlockResponseStatusCode") @Nullable Integer defaultCustomBlockResponseStatusCode,
-        @OutputCustomType.Parameter("defaultRedirectUrl") @Nullable String defaultRedirectUrl,
-        @OutputCustomType.Parameter("enabledState") @Nullable String enabledState,
-        @OutputCustomType.Parameter("mode") @Nullable String mode) {
+        @CustomType.Parameter("defaultCustomBlockResponseBody") @Nullable String defaultCustomBlockResponseBody,
+        @CustomType.Parameter("defaultCustomBlockResponseStatusCode") @Nullable Integer defaultCustomBlockResponseStatusCode,
+        @CustomType.Parameter("defaultRedirectUrl") @Nullable String defaultRedirectUrl,
+        @CustomType.Parameter("enabledState") @Nullable String enabledState,
+        @CustomType.Parameter("mode") @Nullable String mode) {
         this.defaultCustomBlockResponseBody = defaultCustomBlockResponseBody;
         this.defaultCustomBlockResponseStatusCode = defaultCustomBlockResponseStatusCode;
         this.defaultRedirectUrl = defaultRedirectUrl;

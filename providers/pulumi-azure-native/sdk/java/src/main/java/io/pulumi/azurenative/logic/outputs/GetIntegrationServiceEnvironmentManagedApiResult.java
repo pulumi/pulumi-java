@@ -10,7 +10,7 @@ import io.pulumi.azurenative.logic.outputs.ApiResourceMetadataResponse;
 import io.pulumi.azurenative.logic.outputs.ApiResourcePoliciesResponse;
 import io.pulumi.azurenative.logic.outputs.IntegrationServiceEnvironmentManagedApiDeploymentParametersResponse;
 import io.pulumi.azurenative.logic.outputs.ResourceReferenceResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -19,7 +19,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetIntegrationServiceEnvironmentManagedApiResult {
     /**
      * The API definition.
@@ -112,26 +112,26 @@ public final class GetIntegrationServiceEnvironmentManagedApiResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetIntegrationServiceEnvironmentManagedApiResult(
-        @OutputCustomType.Parameter("apiDefinitionUrl") String apiDefinitionUrl,
-        @OutputCustomType.Parameter("apiDefinitions") ApiResourceDefinitionsResponse apiDefinitions,
-        @OutputCustomType.Parameter("backendService") ApiResourceBackendServiceResponse backendService,
-        @OutputCustomType.Parameter("capabilities") List<String> capabilities,
-        @OutputCustomType.Parameter("category") String category,
-        @OutputCustomType.Parameter("connectionParameters") Map<String,Object> connectionParameters,
-        @OutputCustomType.Parameter("deploymentParameters") @Nullable IntegrationServiceEnvironmentManagedApiDeploymentParametersResponse deploymentParameters,
-        @OutputCustomType.Parameter("generalInformation") ApiResourceGeneralInformationResponse generalInformation,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("integrationServiceEnvironment") @Nullable ResourceReferenceResponse integrationServiceEnvironment,
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("metadata") ApiResourceMetadataResponse metadata,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("policies") ApiResourcePoliciesResponse policies,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("runtimeUrls") List<String> runtimeUrls,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("apiDefinitionUrl") String apiDefinitionUrl,
+        @CustomType.Parameter("apiDefinitions") ApiResourceDefinitionsResponse apiDefinitions,
+        @CustomType.Parameter("backendService") ApiResourceBackendServiceResponse backendService,
+        @CustomType.Parameter("capabilities") List<String> capabilities,
+        @CustomType.Parameter("category") String category,
+        @CustomType.Parameter("connectionParameters") Map<String,Object> connectionParameters,
+        @CustomType.Parameter("deploymentParameters") @Nullable IntegrationServiceEnvironmentManagedApiDeploymentParametersResponse deploymentParameters,
+        @CustomType.Parameter("generalInformation") ApiResourceGeneralInformationResponse generalInformation,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("integrationServiceEnvironment") @Nullable ResourceReferenceResponse integrationServiceEnvironment,
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("metadata") ApiResourceMetadataResponse metadata,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("policies") ApiResourcePoliciesResponse policies,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("runtimeUrls") List<String> runtimeUrls,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type) {
         this.apiDefinitionUrl = apiDefinitionUrl;
         this.apiDefinitions = apiDefinitions;
         this.backendService = backendService;

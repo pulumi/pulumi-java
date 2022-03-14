@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.storsimple.BackupPolicyArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Double;
 import java.lang.String;
@@ -35,7 +35,7 @@ public class BackupPolicy extends io.pulumi.resources.CustomResource {
      * The backup policy creation type. Indicates whether this was created through SaaS or through StorSimple Snapshot Manager.
      * 
      */
-    @OutputExport(name="backupPolicyCreationType", type=String.class, parameters={})
+    @Export(name="backupPolicyCreationType", type=String.class, parameters={})
     private Output<String> backupPolicyCreationType;
 
     /**
@@ -49,7 +49,7 @@ public class BackupPolicy extends io.pulumi.resources.CustomResource {
      * The Kind of the object. Currently only Series8000 is supported
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
     /**
@@ -63,7 +63,7 @@ public class BackupPolicy extends io.pulumi.resources.CustomResource {
      * The time of the last backup for the backup policy.
      * 
      */
-    @OutputExport(name="lastBackupTime", type=String.class, parameters={})
+    @Export(name="lastBackupTime", type=String.class, parameters={})
     private Output<String> lastBackupTime;
 
     /**
@@ -77,7 +77,7 @@ public class BackupPolicy extends io.pulumi.resources.CustomResource {
      * The name of the object.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -91,7 +91,7 @@ public class BackupPolicy extends io.pulumi.resources.CustomResource {
      * The time of the next backup for the backup policy.
      * 
      */
-    @OutputExport(name="nextBackupTime", type=String.class, parameters={})
+    @Export(name="nextBackupTime", type=String.class, parameters={})
     private Output<String> nextBackupTime;
 
     /**
@@ -105,7 +105,7 @@ public class BackupPolicy extends io.pulumi.resources.CustomResource {
      * Indicates whether at least one of the schedules in the backup policy is active or not.
      * 
      */
-    @OutputExport(name="scheduledBackupStatus", type=String.class, parameters={})
+    @Export(name="scheduledBackupStatus", type=String.class, parameters={})
     private Output<String> scheduledBackupStatus;
 
     /**
@@ -119,7 +119,7 @@ public class BackupPolicy extends io.pulumi.resources.CustomResource {
      * The count of schedules the backup policy contains.
      * 
      */
-    @OutputExport(name="schedulesCount", type=Double.class, parameters={})
+    @Export(name="schedulesCount", type=Double.class, parameters={})
     private Output<Double> schedulesCount;
 
     /**
@@ -133,7 +133,7 @@ public class BackupPolicy extends io.pulumi.resources.CustomResource {
      * If the backup policy was created by StorSimple Snapshot Manager, then this field indicates the hostname of the StorSimple Snapshot Manager.
      * 
      */
-    @OutputExport(name="ssmHostName", type=String.class, parameters={})
+    @Export(name="ssmHostName", type=String.class, parameters={})
     private Output<String> ssmHostName;
 
     /**
@@ -147,7 +147,7 @@ public class BackupPolicy extends io.pulumi.resources.CustomResource {
      * The hierarchical type of the object.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -161,7 +161,7 @@ public class BackupPolicy extends io.pulumi.resources.CustomResource {
      * The path IDs of the volumes which are part of the backup policy.
      * 
      */
-    @OutputExport(name="volumeIds", type=List.class, parameters={String.class})
+    @Export(name="volumeIds", type=List.class, parameters={String.class})
     private Output<List<String>> volumeIds;
 
     /**

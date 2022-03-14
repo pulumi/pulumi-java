@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.recoveryservices.outputs;
 
 import io.pulumi.azurenative.recoveryservices.outputs.InputEndpointResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AzureToAzureVmSyncedConfigDetailsResponse {
     /**
      * The Azure VM input endpoints.
@@ -24,10 +24,10 @@ public final class AzureToAzureVmSyncedConfigDetailsResponse {
      */
     private final @Nullable Map<String,String> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AzureToAzureVmSyncedConfigDetailsResponse(
-        @OutputCustomType.Parameter("inputEndpoints") @Nullable List<InputEndpointResponse> inputEndpoints,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags) {
+        @CustomType.Parameter("inputEndpoints") @Nullable List<InputEndpointResponse> inputEndpoints,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags) {
         this.inputEndpoints = inputEndpoints;
         this.tags = tags;
     }

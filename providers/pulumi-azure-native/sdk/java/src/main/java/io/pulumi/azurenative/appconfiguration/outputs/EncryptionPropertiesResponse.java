@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.appconfiguration.outputs;
 
 import io.pulumi.azurenative.appconfiguration.outputs.KeyVaultPropertiesResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EncryptionPropertiesResponse {
     /**
      * Key vault properties.
@@ -17,8 +17,8 @@ public final class EncryptionPropertiesResponse {
      */
     private final @Nullable KeyVaultPropertiesResponse keyVaultProperties;
 
-    @OutputCustomType.Constructor
-    private EncryptionPropertiesResponse(@OutputCustomType.Parameter("keyVaultProperties") @Nullable KeyVaultPropertiesResponse keyVaultProperties) {
+    @CustomType.Constructor
+    private EncryptionPropertiesResponse(@CustomType.Parameter("keyVaultProperties") @Nullable KeyVaultPropertiesResponse keyVaultProperties) {
         this.keyVaultProperties = keyVaultProperties;
     }
 

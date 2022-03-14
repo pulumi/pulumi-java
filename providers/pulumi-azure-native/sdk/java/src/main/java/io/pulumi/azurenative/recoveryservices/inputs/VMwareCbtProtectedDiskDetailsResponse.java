@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class VMwareCbtProtectedDiskDetailsResponse extends io.pulumi.resou
      * The disk capacity in bytes.
      * 
      */
-    @InputImport(name="capacityInBytes", required=true)
+    @Import(name="capacityInBytes", required=true)
       private final Double capacityInBytes;
 
     public Double getCapacityInBytes() {
@@ -34,7 +34,7 @@ public final class VMwareCbtProtectedDiskDetailsResponse extends io.pulumi.resou
      * The disk id.
      * 
      */
-    @InputImport(name="diskId", required=true)
+    @Import(name="diskId", required=true)
       private final String diskId;
 
     public String getDiskId() {
@@ -45,7 +45,7 @@ public final class VMwareCbtProtectedDiskDetailsResponse extends io.pulumi.resou
      * The disk name.
      * 
      */
-    @InputImport(name="diskName", required=true)
+    @Import(name="diskName", required=true)
       private final String diskName;
 
     public String getDiskName() {
@@ -56,7 +56,7 @@ public final class VMwareCbtProtectedDiskDetailsResponse extends io.pulumi.resou
      * The disk path.
      * 
      */
-    @InputImport(name="diskPath", required=true)
+    @Import(name="diskPath", required=true)
       private final String diskPath;
 
     public String getDiskPath() {
@@ -67,7 +67,7 @@ public final class VMwareCbtProtectedDiskDetailsResponse extends io.pulumi.resou
      * The disk type.
      * 
      */
-    @InputImport(name="diskType")
+    @Import(name="diskType")
       private final @Nullable String diskType;
 
     public Optional<String> getDiskType() {
@@ -78,7 +78,7 @@ public final class VMwareCbtProtectedDiskDetailsResponse extends io.pulumi.resou
      * A value indicating whether the disk is the OS disk.
      * 
      */
-    @InputImport(name="isOSDisk", required=true)
+    @Import(name="isOSDisk", required=true)
       private final String isOSDisk;
 
     public String getIsOSDisk() {
@@ -89,7 +89,7 @@ public final class VMwareCbtProtectedDiskDetailsResponse extends io.pulumi.resou
      * The log storage account ARM Id.
      * 
      */
-    @InputImport(name="logStorageAccountId", required=true)
+    @Import(name="logStorageAccountId", required=true)
       private final String logStorageAccountId;
 
     public String getLogStorageAccountId() {
@@ -100,7 +100,7 @@ public final class VMwareCbtProtectedDiskDetailsResponse extends io.pulumi.resou
      * The key vault secret name of the log storage account.
      * 
      */
-    @InputImport(name="logStorageAccountSasSecretName", required=true)
+    @Import(name="logStorageAccountSasSecretName", required=true)
       private final String logStorageAccountSasSecretName;
 
     public String getLogStorageAccountSasSecretName() {
@@ -111,7 +111,7 @@ public final class VMwareCbtProtectedDiskDetailsResponse extends io.pulumi.resou
      * The ARM Id of the seed managed disk.
      * 
      */
-    @InputImport(name="seedManagedDiskId", required=true)
+    @Import(name="seedManagedDiskId", required=true)
       private final String seedManagedDiskId;
 
     public String getSeedManagedDiskId() {
@@ -122,7 +122,7 @@ public final class VMwareCbtProtectedDiskDetailsResponse extends io.pulumi.resou
      * The ARM Id of the target managed disk.
      * 
      */
-    @InputImport(name="targetManagedDiskId", required=true)
+    @Import(name="targetManagedDiskId", required=true)
       private final String targetManagedDiskId;
 
     public String getTargetManagedDiskId() {

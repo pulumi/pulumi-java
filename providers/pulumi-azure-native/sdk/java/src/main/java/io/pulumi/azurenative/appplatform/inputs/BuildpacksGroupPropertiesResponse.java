@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.appplatform.inputs;
 
 import io.pulumi.azurenative.appplatform.inputs.BuildpackPropertiesResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class BuildpacksGroupPropertiesResponse extends io.pulumi.resources
      * Buildpacks in the buildpack group
      * 
      */
-    @InputImport(name="buildpacks")
+    @Import(name="buildpacks")
       private final @Nullable List<BuildpackPropertiesResponse> buildpacks;
 
     public List<BuildpackPropertiesResponse> getBuildpacks() {
@@ -35,7 +35,7 @@ public final class BuildpacksGroupPropertiesResponse extends io.pulumi.resources
      * Buildpack group name
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {

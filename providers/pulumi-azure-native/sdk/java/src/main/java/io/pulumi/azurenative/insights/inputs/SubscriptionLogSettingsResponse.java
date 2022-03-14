@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.insights.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class SubscriptionLogSettingsResponse extends io.pulumi.resources.I
      * Name of a Subscription Diagnostic Log category for a resource type this setting is applied to.
      * 
      */
-    @InputImport(name="category")
+    @Import(name="category")
       private final @Nullable String category;
 
     public Optional<String> getCategory() {
@@ -34,7 +34,7 @@ public final class SubscriptionLogSettingsResponse extends io.pulumi.resources.I
      * a value indicating whether this log is enabled.
      * 
      */
-    @InputImport(name="enabled", required=true)
+    @Import(name="enabled", required=true)
       private final Boolean enabled;
 
     public Boolean getEnabled() {

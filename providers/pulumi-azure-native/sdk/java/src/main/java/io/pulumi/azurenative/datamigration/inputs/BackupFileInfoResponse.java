@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datamigration.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class BackupFileInfoResponse extends io.pulumi.resources.InvokeArgs
      * Sequence number of the backup file in the backup set
      * 
      */
-    @InputImport(name="familySequenceNumber")
+    @Import(name="familySequenceNumber")
       private final @Nullable Integer familySequenceNumber;
 
     public Optional<Integer> getFamilySequenceNumber() {
@@ -34,7 +34,7 @@ public final class BackupFileInfoResponse extends io.pulumi.resources.InvokeArgs
      * Location of the backup file in shared folder
      * 
      */
-    @InputImport(name="fileLocation")
+    @Import(name="fileLocation")
       private final @Nullable String fileLocation;
 
     public Optional<String> getFileLocation() {
@@ -45,7 +45,7 @@ public final class BackupFileInfoResponse extends io.pulumi.resources.InvokeArgs
      * Status of the backup file during migration
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable String status;
 
     public Optional<String> getStatus() {

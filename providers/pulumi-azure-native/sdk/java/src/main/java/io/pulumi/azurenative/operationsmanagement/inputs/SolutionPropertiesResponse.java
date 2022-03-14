@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.operationsmanagement.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class SolutionPropertiesResponse extends io.pulumi.resources.Invoke
      * The azure resources that will be contained within the solutions. They will be locked and gets deleted automatically when the solution is deleted.
      * 
      */
-    @InputImport(name="containedResources")
+    @Import(name="containedResources")
       private final @Nullable List<String> containedResources;
 
     public List<String> getContainedResources() {
@@ -34,7 +34,7 @@ public final class SolutionPropertiesResponse extends io.pulumi.resources.Invoke
      * The provisioning state for the solution.
      * 
      */
-    @InputImport(name="provisioningState", required=true)
+    @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
     public String getProvisioningState() {
@@ -45,7 +45,7 @@ public final class SolutionPropertiesResponse extends io.pulumi.resources.Invoke
      * The resources that will be referenced from this solution. Deleting any of those solution out of band will break the solution.
      * 
      */
-    @InputImport(name="referencedResources")
+    @Import(name="referencedResources")
       private final @Nullable List<String> referencedResources;
 
     public List<String> getReferencedResources() {
@@ -56,7 +56,7 @@ public final class SolutionPropertiesResponse extends io.pulumi.resources.Invoke
      * The azure resourceId for the workspace where the solution will be deployed/enabled.
      * 
      */
-    @InputImport(name="workspaceResourceId", required=true)
+    @Import(name="workspaceResourceId", required=true)
       private final String workspaceResourceId;
 
     public String getWorkspaceResourceId() {

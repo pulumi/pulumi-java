@@ -4,11 +4,11 @@
 package io.pulumi.azurenative.cdn.outputs;
 
 import io.pulumi.azurenative.cdn.outputs.HeaderActionParametersResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DeliveryRuleRequestHeaderActionResponse {
     /**
      * The name of the action for the delivery rule.
@@ -22,10 +22,10 @@ public final class DeliveryRuleRequestHeaderActionResponse {
      */
     private final HeaderActionParametersResponse parameters;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DeliveryRuleRequestHeaderActionResponse(
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("parameters") HeaderActionParametersResponse parameters) {
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("parameters") HeaderActionParametersResponse parameters) {
         this.name = name;
         this.parameters = parameters;
     }

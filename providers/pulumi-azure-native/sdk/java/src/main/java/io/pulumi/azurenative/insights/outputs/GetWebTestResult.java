@@ -5,7 +5,7 @@ package io.pulumi.azurenative.insights.outputs;
 
 import io.pulumi.azurenative.insights.outputs.WebTestGeolocationResponse;
 import io.pulumi.azurenative.insights.outputs.WebTestPropertiesResponseConfiguration;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -15,7 +15,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetWebTestResult {
     /**
      * An XML configuration specification for a WebTest.
@@ -103,25 +103,25 @@ public final class GetWebTestResult {
      */
     private final String webTestName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetWebTestResult(
-        @OutputCustomType.Parameter("configuration") @Nullable WebTestPropertiesResponseConfiguration configuration,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
-        @OutputCustomType.Parameter("frequency") @Nullable Integer frequency,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("kind") @Nullable String kind,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("locations") List<WebTestGeolocationResponse> locations,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("retryEnabled") @Nullable Boolean retryEnabled,
-        @OutputCustomType.Parameter("syntheticMonitorId") String syntheticMonitorId,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("timeout") @Nullable Integer timeout,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("webTestKind") String webTestKind,
-        @OutputCustomType.Parameter("webTestName") String webTestName) {
+        @CustomType.Parameter("configuration") @Nullable WebTestPropertiesResponseConfiguration configuration,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @CustomType.Parameter("frequency") @Nullable Integer frequency,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("kind") @Nullable String kind,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("locations") List<WebTestGeolocationResponse> locations,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("retryEnabled") @Nullable Boolean retryEnabled,
+        @CustomType.Parameter("syntheticMonitorId") String syntheticMonitorId,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("timeout") @Nullable Integer timeout,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("webTestKind") String webTestKind,
+        @CustomType.Parameter("webTestName") String webTestName) {
         this.configuration = configuration;
         this.description = description;
         this.enabled = enabled;

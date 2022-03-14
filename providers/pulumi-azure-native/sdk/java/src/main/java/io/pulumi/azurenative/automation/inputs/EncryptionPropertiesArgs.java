@@ -7,7 +7,7 @@ import io.pulumi.azurenative.automation.enums.EncryptionKeySourceType;
 import io.pulumi.azurenative.automation.inputs.EncryptionPropertiesIdentityArgs;
 import io.pulumi.azurenative.automation.inputs.KeyVaultPropertiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -24,7 +24,7 @@ public final class EncryptionPropertiesArgs extends io.pulumi.resources.Resource
      * User identity used for CMK.
      * 
      */
-    @InputImport(name="identity")
+    @Import(name="identity")
       private final @Nullable Output<EncryptionPropertiesIdentityArgs> identity;
 
     public Output<EncryptionPropertiesIdentityArgs> getIdentity() {
@@ -35,7 +35,7 @@ public final class EncryptionPropertiesArgs extends io.pulumi.resources.Resource
      * Encryption Key Source
      * 
      */
-    @InputImport(name="keySource")
+    @Import(name="keySource")
       private final @Nullable Output<EncryptionKeySourceType> keySource;
 
     public Output<EncryptionKeySourceType> getKeySource() {
@@ -46,7 +46,7 @@ public final class EncryptionPropertiesArgs extends io.pulumi.resources.Resource
      * Key vault properties.
      * 
      */
-    @InputImport(name="keyVaultProperties")
+    @Import(name="keyVaultProperties")
       private final @Nullable Output<KeyVaultPropertiesArgs> keyVaultProperties;
 
     public Output<KeyVaultPropertiesArgs> getKeyVaultProperties() {

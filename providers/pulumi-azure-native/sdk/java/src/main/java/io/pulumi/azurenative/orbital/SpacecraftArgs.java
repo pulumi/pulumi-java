@@ -5,7 +5,7 @@ package io.pulumi.azurenative.orbital;
 
 import io.pulumi.azurenative.orbital.inputs.SpacecraftLinkArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class SpacecraftArgs extends io.pulumi.resources.ResourceArgs {
      * Links of the Spacecraft
      * 
      */
-    @InputImport(name="links")
+    @Import(name="links")
       private final @Nullable Output<List<SpacecraftLinkArgs>> links;
 
     public Output<List<SpacecraftLinkArgs>> getLinks() {
@@ -32,7 +32,7 @@ public final class SpacecraftArgs extends io.pulumi.resources.ResourceArgs {
      * The geo-location where the resource lives
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -43,7 +43,7 @@ public final class SpacecraftArgs extends io.pulumi.resources.ResourceArgs {
      * NORAD ID of the spacecraft.
      * 
      */
-    @InputImport(name="noradId", required=true)
+    @Import(name="noradId", required=true)
       private final Output<String> noradId;
 
     public Output<String> getNoradId() {
@@ -54,7 +54,7 @@ public final class SpacecraftArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -65,7 +65,7 @@ public final class SpacecraftArgs extends io.pulumi.resources.ResourceArgs {
      * Spacecraft ID
      * 
      */
-    @InputImport(name="spacecraftName")
+    @Import(name="spacecraftName")
       private final @Nullable Output<String> spacecraftName;
 
     public Output<String> getSpacecraftName() {
@@ -76,7 +76,7 @@ public final class SpacecraftArgs extends io.pulumi.resources.ResourceArgs {
      * Resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -87,7 +87,7 @@ public final class SpacecraftArgs extends io.pulumi.resources.ResourceArgs {
      * Title line of Two Line Element (TLE).
      * 
      */
-    @InputImport(name="titleLine")
+    @Import(name="titleLine")
       private final @Nullable Output<String> titleLine;
 
     public Output<String> getTitleLine() {
@@ -98,7 +98,7 @@ public final class SpacecraftArgs extends io.pulumi.resources.ResourceArgs {
      * Line 1 of Two Line Element (TLE).
      * 
      */
-    @InputImport(name="tleLine1")
+    @Import(name="tleLine1")
       private final @Nullable Output<String> tleLine1;
 
     public Output<String> getTleLine1() {
@@ -109,7 +109,7 @@ public final class SpacecraftArgs extends io.pulumi.resources.ResourceArgs {
      * Line 2 of Two Line Element (TLE).
      * 
      */
-    @InputImport(name="tleLine2")
+    @Import(name="tleLine2")
       private final @Nullable Output<String> tleLine2;
 
     public Output<String> getTleLine2() {

@@ -8,7 +8,7 @@ import io.pulumi.azurenative.media.enums.BlurType;
 import io.pulumi.azurenative.media.enums.FaceRedactorMode;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -27,7 +27,7 @@ public final class FaceDetectorPresetArgs extends io.pulumi.resources.ResourceAr
      * Blur type
      * 
      */
-    @InputImport(name="blurType")
+    @Import(name="blurType")
       private final @Nullable Output<Either<String,BlurType>> blurType;
 
     public Output<Either<String,BlurType>> getBlurType() {
@@ -38,7 +38,7 @@ public final class FaceDetectorPresetArgs extends io.pulumi.resources.ResourceAr
      * Dictionary containing key value pairs for parameters not exposed in the preset itself
      * 
      */
-    @InputImport(name="experimentalOptions")
+    @Import(name="experimentalOptions")
       private final @Nullable Output<Map<String,String>> experimentalOptions;
 
     public Output<Map<String,String>> getExperimentalOptions() {
@@ -49,7 +49,7 @@ public final class FaceDetectorPresetArgs extends io.pulumi.resources.ResourceAr
      * This mode provides the ability to choose between the following settings: 1) Analyze - For detection only.This mode generates a metadata JSON file marking appearances of faces throughout the video.Where possible, appearances of the same person are assigned the same ID. 2) Combined - Additionally redacts(blurs) detected faces. 3) Redact - This enables a 2-pass process, allowing for selective redaction of a subset of detected faces.It takes in the metadata file from a prior analyze pass, along with the source video, and a user-selected subset of IDs that require redaction.
      * 
      */
-    @InputImport(name="mode")
+    @Import(name="mode")
       private final @Nullable Output<Either<String,FaceRedactorMode>> mode;
 
     public Output<Either<String,FaceRedactorMode>> getMode() {
@@ -61,7 +61,7 @@ public final class FaceDetectorPresetArgs extends io.pulumi.resources.ResourceAr
      * Expected value is '#Microsoft.Media.FaceDetectorPreset'.
      * 
      */
-    @InputImport(name="odataType", required=true)
+    @Import(name="odataType", required=true)
       private final Output<String> odataType;
 
     public Output<String> getOdataType() {
@@ -72,7 +72,7 @@ public final class FaceDetectorPresetArgs extends io.pulumi.resources.ResourceAr
      * Specifies the maximum resolution at which your video is analyzed. The default behavior is "SourceResolution," which will keep the input video at its original resolution when analyzed. Using "StandardDefinition" will resize input videos to standard definition while preserving the appropriate aspect ratio. It will only resize if the video is of higher resolution. For example, a 1920x1080 input would be scaled to 640x360 before processing. Switching to "StandardDefinition" will reduce the time it takes to process high resolution video. It may also reduce the cost of using this component (see https://azure.microsoft.com/en-us/pricing/details/media-services/#analytics for details). However, faces that end up being too small in the resized video may not be detected.
      * 
      */
-    @InputImport(name="resolution")
+    @Import(name="resolution")
       private final @Nullable Output<Either<String,AnalysisResolution>> resolution;
 
     public Output<Either<String,AnalysisResolution>> getResolution() {

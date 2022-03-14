@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.devices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class IotHubSkuInfoResponse {
     /**
      * The number of provisioned IoT Hub units. See: https://docs.microsoft.com/azure/azure-subscription-service-limits#iot-hub-limits.
@@ -28,11 +28,11 @@ public final class IotHubSkuInfoResponse {
      */
     private final String tier;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private IotHubSkuInfoResponse(
-        @OutputCustomType.Parameter("capacity") @Nullable Double capacity,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("tier") String tier) {
+        @CustomType.Parameter("capacity") @Nullable Double capacity,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("tier") String tier) {
         this.capacity = capacity;
         this.name = name;
         this.tier = tier;

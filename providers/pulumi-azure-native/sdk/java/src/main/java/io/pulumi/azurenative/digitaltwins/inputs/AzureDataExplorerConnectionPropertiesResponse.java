@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.digitaltwins.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class AzureDataExplorerConnectionPropertiesResponse extends io.pulu
      * The name of the Azure Data Explorer database.
      * 
      */
-    @InputImport(name="adxDatabaseName", required=true)
+    @Import(name="adxDatabaseName", required=true)
       private final String adxDatabaseName;
 
     public String getAdxDatabaseName() {
@@ -33,7 +33,7 @@ public final class AzureDataExplorerConnectionPropertiesResponse extends io.pulu
      * The URI of the Azure Data Explorer endpoint.
      * 
      */
-    @InputImport(name="adxEndpointUri", required=true)
+    @Import(name="adxEndpointUri", required=true)
       private final String adxEndpointUri;
 
     public String getAdxEndpointUri() {
@@ -44,7 +44,7 @@ public final class AzureDataExplorerConnectionPropertiesResponse extends io.pulu
      * The resource ID of the Azure Data Explorer cluster.
      * 
      */
-    @InputImport(name="adxResourceId", required=true)
+    @Import(name="adxResourceId", required=true)
       private final String adxResourceId;
 
     public String getAdxResourceId() {
@@ -55,7 +55,7 @@ public final class AzureDataExplorerConnectionPropertiesResponse extends io.pulu
      * The name of the Azure Data Explorer table.
      * 
      */
-    @InputImport(name="adxTableName")
+    @Import(name="adxTableName")
       private final @Nullable String adxTableName;
 
     public Optional<String> getAdxTableName() {
@@ -67,7 +67,7 @@ public final class AzureDataExplorerConnectionPropertiesResponse extends io.pulu
      * Expected value is 'AzureDataExplorer'.
      * 
      */
-    @InputImport(name="connectionType", required=true)
+    @Import(name="connectionType", required=true)
       private final String connectionType;
 
     public String getConnectionType() {
@@ -78,7 +78,7 @@ public final class AzureDataExplorerConnectionPropertiesResponse extends io.pulu
      * The EventHub consumer group to use when ADX reads from EventHub. Defaults to $Default.
      * 
      */
-    @InputImport(name="eventHubConsumerGroup")
+    @Import(name="eventHubConsumerGroup")
       private final @Nullable String eventHubConsumerGroup;
 
     public Optional<String> getEventHubConsumerGroup() {
@@ -89,7 +89,7 @@ public final class AzureDataExplorerConnectionPropertiesResponse extends io.pulu
      * The URL of the EventHub namespace for identity-based authentication. It must include the protocol sb://
      * 
      */
-    @InputImport(name="eventHubEndpointUri", required=true)
+    @Import(name="eventHubEndpointUri", required=true)
       private final String eventHubEndpointUri;
 
     public String getEventHubEndpointUri() {
@@ -100,7 +100,7 @@ public final class AzureDataExplorerConnectionPropertiesResponse extends io.pulu
      * The EventHub name in the EventHub namespace for identity-based authentication.
      * 
      */
-    @InputImport(name="eventHubEntityPath", required=true)
+    @Import(name="eventHubEntityPath", required=true)
       private final String eventHubEntityPath;
 
     public String getEventHubEntityPath() {
@@ -111,7 +111,7 @@ public final class AzureDataExplorerConnectionPropertiesResponse extends io.pulu
      * The resource ID of the EventHub namespace.
      * 
      */
-    @InputImport(name="eventHubNamespaceResourceId", required=true)
+    @Import(name="eventHubNamespaceResourceId", required=true)
       private final String eventHubNamespaceResourceId;
 
     public String getEventHubNamespaceResourceId() {
@@ -122,7 +122,7 @@ public final class AzureDataExplorerConnectionPropertiesResponse extends io.pulu
      * The provisioning state.
      * 
      */
-    @InputImport(name="provisioningState", required=true)
+    @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
     public String getProvisioningState() {

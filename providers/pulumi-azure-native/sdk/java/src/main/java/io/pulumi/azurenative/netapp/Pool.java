@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.netapp.PoolArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Double;
 import java.lang.String;
@@ -36,7 +36,7 @@ public class Pool extends io.pulumi.resources.CustomResource {
      * Resource location
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -50,7 +50,7 @@ public class Pool extends io.pulumi.resources.CustomResource {
      * Resource name
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -64,7 +64,7 @@ public class Pool extends io.pulumi.resources.CustomResource {
      * UUID v4 used to identify the Pool
      * 
      */
-    @OutputExport(name="poolId", type=String.class, parameters={})
+    @Export(name="poolId", type=String.class, parameters={})
     private Output<String> poolId;
 
     /**
@@ -78,7 +78,7 @@ public class Pool extends io.pulumi.resources.CustomResource {
      * Azure lifecycle management
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -92,7 +92,7 @@ public class Pool extends io.pulumi.resources.CustomResource {
      * The qos type of the pool
      * 
      */
-    @OutputExport(name="qosType", type=String.class, parameters={})
+    @Export(name="qosType", type=String.class, parameters={})
     private Output</* @Nullable */ String> qosType;
 
     /**
@@ -106,7 +106,7 @@ public class Pool extends io.pulumi.resources.CustomResource {
      * The service level of the file system
      * 
      */
-    @OutputExport(name="serviceLevel", type=String.class, parameters={})
+    @Export(name="serviceLevel", type=String.class, parameters={})
     private Output<String> serviceLevel;
 
     /**
@@ -120,7 +120,7 @@ public class Pool extends io.pulumi.resources.CustomResource {
      * Provisioned size of the pool (in bytes). Allowed values are in 4TiB chunks (value must be multiply of 4398046511104).
      * 
      */
-    @OutputExport(name="size", type=Double.class, parameters={})
+    @Export(name="size", type=Double.class, parameters={})
     private Output<Double> size;
 
     /**
@@ -134,7 +134,7 @@ public class Pool extends io.pulumi.resources.CustomResource {
      * Resource tags
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -148,7 +148,7 @@ public class Pool extends io.pulumi.resources.CustomResource {
      * Total throughput of pool in Mibps
      * 
      */
-    @OutputExport(name="totalThroughputMibps", type=Double.class, parameters={})
+    @Export(name="totalThroughputMibps", type=Double.class, parameters={})
     private Output<Double> totalThroughputMibps;
 
     /**
@@ -162,7 +162,7 @@ public class Pool extends io.pulumi.resources.CustomResource {
      * Resource type
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -176,7 +176,7 @@ public class Pool extends io.pulumi.resources.CustomResource {
      * Utilized throughput of pool in Mibps
      * 
      */
-    @OutputExport(name="utilizedThroughputMibps", type=Double.class, parameters={})
+    @Export(name="utilizedThroughputMibps", type=Double.class, parameters={})
     private Output<Double> utilizedThroughputMibps;
 
     /**

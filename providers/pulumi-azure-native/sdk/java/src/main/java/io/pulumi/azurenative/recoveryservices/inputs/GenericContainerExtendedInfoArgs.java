@@ -5,7 +5,7 @@ package io.pulumi.azurenative.recoveryservices.inputs;
 
 import io.pulumi.azurenative.recoveryservices.inputs.ContainerIdentityInfoArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class GenericContainerExtendedInfoArgs extends io.pulumi.resources.
      * Container identity information
      * 
      */
-    @InputImport(name="containerIdentityInfo")
+    @Import(name="containerIdentityInfo")
       private final @Nullable Output<ContainerIdentityInfoArgs> containerIdentityInfo;
 
     public Output<ContainerIdentityInfoArgs> getContainerIdentityInfo() {
@@ -35,7 +35,7 @@ public final class GenericContainerExtendedInfoArgs extends io.pulumi.resources.
      * Public key of container cert
      * 
      */
-    @InputImport(name="rawCertData")
+    @Import(name="rawCertData")
       private final @Nullable Output<String> rawCertData;
 
     public Output<String> getRawCertData() {
@@ -46,7 +46,7 @@ public final class GenericContainerExtendedInfoArgs extends io.pulumi.resources.
      * Azure Backup Service Endpoints for the container
      * 
      */
-    @InputImport(name="serviceEndpoints")
+    @Import(name="serviceEndpoints")
       private final @Nullable Output<Map<String,String>> serviceEndpoints;
 
     public Output<Map<String,String>> getServiceEndpoints() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.webpubsub.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class NetworkACLResponse extends io.pulumi.resources.InvokeArgs {
      * Allowed request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.
      * 
      */
-    @InputImport(name="allow")
+    @Import(name="allow")
       private final @Nullable List<String> allow;
 
     public List<String> getAllow() {
@@ -34,7 +34,7 @@ public final class NetworkACLResponse extends io.pulumi.resources.InvokeArgs {
      * Denied request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.
      * 
      */
-    @InputImport(name="deny")
+    @Import(name="deny")
       private final @Nullable List<String> deny;
 
     public List<String> getDeny() {

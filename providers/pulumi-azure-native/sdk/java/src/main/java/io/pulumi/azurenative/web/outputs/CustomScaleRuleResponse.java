@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web.outputs;
 
 import io.pulumi.azurenative.web.outputs.ScaleRuleAuthResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CustomScaleRuleResponse {
     /**
      * Authentication secrets for the custom scale rule.
@@ -31,11 +31,11 @@ public final class CustomScaleRuleResponse {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CustomScaleRuleResponse(
-        @OutputCustomType.Parameter("auth") @Nullable List<ScaleRuleAuthResponse> auth,
-        @OutputCustomType.Parameter("metadata") @Nullable Map<String,String> metadata,
-        @OutputCustomType.Parameter("type") @Nullable String type) {
+        @CustomType.Parameter("auth") @Nullable List<ScaleRuleAuthResponse> auth,
+        @CustomType.Parameter("metadata") @Nullable Map<String,String> metadata,
+        @CustomType.Parameter("type") @Nullable String type) {
         this.auth = auth;
         this.metadata = metadata;
         this.type = type;

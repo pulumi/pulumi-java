@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,7 +20,7 @@ public final class WebAppDeploymentSlotArgs extends io.pulumi.resources.Resource
      * True if deployment is currently active, false if completed and null if not started.
      * 
      */
-    @InputImport(name="active")
+    @Import(name="active")
       private final @Nullable Output<Boolean> active;
 
     public Output<Boolean> getActive() {
@@ -31,7 +31,7 @@ public final class WebAppDeploymentSlotArgs extends io.pulumi.resources.Resource
      * Who authored the deployment.
      * 
      */
-    @InputImport(name="author")
+    @Import(name="author")
       private final @Nullable Output<String> author;
 
     public Output<String> getAuthor() {
@@ -42,7 +42,7 @@ public final class WebAppDeploymentSlotArgs extends io.pulumi.resources.Resource
      * Author email.
      * 
      */
-    @InputImport(name="authorEmail")
+    @Import(name="authorEmail")
       private final @Nullable Output<String> authorEmail;
 
     public Output<String> getAuthorEmail() {
@@ -53,7 +53,7 @@ public final class WebAppDeploymentSlotArgs extends io.pulumi.resources.Resource
      * Who performed the deployment.
      * 
      */
-    @InputImport(name="deployer")
+    @Import(name="deployer")
       private final @Nullable Output<String> deployer;
 
     public Output<String> getDeployer() {
@@ -64,7 +64,7 @@ public final class WebAppDeploymentSlotArgs extends io.pulumi.resources.Resource
      * Details on deployment.
      * 
      */
-    @InputImport(name="details")
+    @Import(name="details")
       private final @Nullable Output<String> details;
 
     public Output<String> getDetails() {
@@ -75,7 +75,7 @@ public final class WebAppDeploymentSlotArgs extends io.pulumi.resources.Resource
      * End time.
      * 
      */
-    @InputImport(name="endTime")
+    @Import(name="endTime")
       private final @Nullable Output<String> endTime;
 
     public Output<String> getEndTime() {
@@ -86,7 +86,7 @@ public final class WebAppDeploymentSlotArgs extends io.pulumi.resources.Resource
      * ID of an existing deployment.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
@@ -97,7 +97,7 @@ public final class WebAppDeploymentSlotArgs extends io.pulumi.resources.Resource
      * Kind of resource.
      * 
      */
-    @InputImport(name="kind")
+    @Import(name="kind")
       private final @Nullable Output<String> kind;
 
     public Output<String> getKind() {
@@ -108,7 +108,7 @@ public final class WebAppDeploymentSlotArgs extends io.pulumi.resources.Resource
      * Details about deployment status.
      * 
      */
-    @InputImport(name="message")
+    @Import(name="message")
       private final @Nullable Output<String> message;
 
     public Output<String> getMessage() {
@@ -119,7 +119,7 @@ public final class WebAppDeploymentSlotArgs extends io.pulumi.resources.Resource
      * Name of the app.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -130,7 +130,7 @@ public final class WebAppDeploymentSlotArgs extends io.pulumi.resources.Resource
      * Name of the resource group to which the resource belongs.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -141,7 +141,7 @@ public final class WebAppDeploymentSlotArgs extends io.pulumi.resources.Resource
      * Name of the deployment slot. If a slot is not specified, the API creates a deployment for the production slot.
      * 
      */
-    @InputImport(name="slot", required=true)
+    @Import(name="slot", required=true)
       private final Output<String> slot;
 
     public Output<String> getSlot() {
@@ -152,7 +152,7 @@ public final class WebAppDeploymentSlotArgs extends io.pulumi.resources.Resource
      * Start time.
      * 
      */
-    @InputImport(name="startTime")
+    @Import(name="startTime")
       private final @Nullable Output<String> startTime;
 
     public Output<String> getStartTime() {
@@ -163,7 +163,7 @@ public final class WebAppDeploymentSlotArgs extends io.pulumi.resources.Resource
      * Deployment status.
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable Output<Integer> status;
 
     public Output<Integer> getStatus() {

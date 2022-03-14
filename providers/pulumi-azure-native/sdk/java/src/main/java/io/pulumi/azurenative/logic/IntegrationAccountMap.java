@@ -9,7 +9,7 @@ import io.pulumi.azurenative.logic.outputs.ContentLinkResponse;
 import io.pulumi.azurenative.logic.outputs.IntegrationAccountMapPropertiesResponseParametersSchema;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Object;
 import java.lang.String;
@@ -38,7 +38,7 @@ public class IntegrationAccountMap extends io.pulumi.resources.CustomResource {
      * The changed time.
      * 
      */
-    @OutputExport(name="changedTime", type=String.class, parameters={})
+    @Export(name="changedTime", type=String.class, parameters={})
     private Output<String> changedTime;
 
     /**
@@ -52,7 +52,7 @@ public class IntegrationAccountMap extends io.pulumi.resources.CustomResource {
      * The content.
      * 
      */
-    @OutputExport(name="content", type=String.class, parameters={})
+    @Export(name="content", type=String.class, parameters={})
     private Output</* @Nullable */ String> content;
 
     /**
@@ -66,7 +66,7 @@ public class IntegrationAccountMap extends io.pulumi.resources.CustomResource {
      * The content link.
      * 
      */
-    @OutputExport(name="contentLink", type=ContentLinkResponse.class, parameters={})
+    @Export(name="contentLink", type=ContentLinkResponse.class, parameters={})
     private Output<ContentLinkResponse> contentLink;
 
     /**
@@ -80,7 +80,7 @@ public class IntegrationAccountMap extends io.pulumi.resources.CustomResource {
      * The content type.
      * 
      */
-    @OutputExport(name="contentType", type=String.class, parameters={})
+    @Export(name="contentType", type=String.class, parameters={})
     private Output</* @Nullable */ String> contentType;
 
     /**
@@ -94,7 +94,7 @@ public class IntegrationAccountMap extends io.pulumi.resources.CustomResource {
      * The created time.
      * 
      */
-    @OutputExport(name="createdTime", type=String.class, parameters={})
+    @Export(name="createdTime", type=String.class, parameters={})
     private Output<String> createdTime;
 
     /**
@@ -108,7 +108,7 @@ public class IntegrationAccountMap extends io.pulumi.resources.CustomResource {
      * The resource location.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -122,7 +122,7 @@ public class IntegrationAccountMap extends io.pulumi.resources.CustomResource {
      * The map type.
      * 
      */
-    @OutputExport(name="mapType", type=String.class, parameters={})
+    @Export(name="mapType", type=String.class, parameters={})
     private Output<String> mapType;
 
     /**
@@ -136,7 +136,7 @@ public class IntegrationAccountMap extends io.pulumi.resources.CustomResource {
      * The metadata.
      * 
      */
-    @OutputExport(name="metadata", type=Object.class, parameters={})
+    @Export(name="metadata", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> metadata;
 
     /**
@@ -150,7 +150,7 @@ public class IntegrationAccountMap extends io.pulumi.resources.CustomResource {
      * Gets the resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -164,7 +164,7 @@ public class IntegrationAccountMap extends io.pulumi.resources.CustomResource {
      * The parameters schema of integration account map.
      * 
      */
-    @OutputExport(name="parametersSchema", type=IntegrationAccountMapPropertiesResponseParametersSchema.class, parameters={})
+    @Export(name="parametersSchema", type=IntegrationAccountMapPropertiesResponseParametersSchema.class, parameters={})
     private Output</* @Nullable */ IntegrationAccountMapPropertiesResponseParametersSchema> parametersSchema;
 
     /**
@@ -178,7 +178,7 @@ public class IntegrationAccountMap extends io.pulumi.resources.CustomResource {
      * The resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -192,7 +192,7 @@ public class IntegrationAccountMap extends io.pulumi.resources.CustomResource {
      * Gets the resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.RouteResponse;
 import io.pulumi.azurenative.network.outputs.SubnetResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -14,7 +14,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RouteTableResponse {
     /**
      * Whether to disable the routes learned by BGP on that route table. True means disable.
@@ -72,19 +72,19 @@ public final class RouteTableResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RouteTableResponse(
-        @OutputCustomType.Parameter("disableBgpRoutePropagation") @Nullable Boolean disableBgpRoutePropagation,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("resourceGuid") String resourceGuid,
-        @OutputCustomType.Parameter("routes") @Nullable List<RouteResponse> routes,
-        @OutputCustomType.Parameter("subnets") List<SubnetResponse> subnets,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("disableBgpRoutePropagation") @Nullable Boolean disableBgpRoutePropagation,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("resourceGuid") String resourceGuid,
+        @CustomType.Parameter("routes") @Nullable List<RouteResponse> routes,
+        @CustomType.Parameter("subnets") List<SubnetResponse> subnets,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type) {
         this.disableBgpRoutePropagation = disableBgpRoutePropagation;
         this.etag = etag;
         this.id = id;

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.storage;
 
 import io.pulumi.azurenative.storage.inputs.CorsRulesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class QueueServicePropertiesArgs extends io.pulumi.resources.Resour
      * The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.
      * 
      */
-    @InputImport(name="accountName", required=true)
+    @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
     public Output<String> getAccountName() {
@@ -30,7 +30,7 @@ public final class QueueServicePropertiesArgs extends io.pulumi.resources.Resour
      * Specifies CORS rules for the Queue service. You can include up to five CorsRule elements in the request. If no CorsRule elements are included in the request body, all CORS rules will be deleted, and CORS will be disabled for the Queue service.
      * 
      */
-    @InputImport(name="cors")
+    @Import(name="cors")
       private final @Nullable Output<CorsRulesArgs> cors;
 
     public Output<CorsRulesArgs> getCors() {
@@ -41,7 +41,7 @@ public final class QueueServicePropertiesArgs extends io.pulumi.resources.Resour
      * The name of the Queue Service within the specified storage account. Queue Service Name must be 'default'
      * 
      */
-    @InputImport(name="queueServiceName")
+    @Import(name="queueServiceName")
       private final @Nullable Output<String> queueServiceName;
 
     public Output<String> getQueueServiceName() {
@@ -52,7 +52,7 @@ public final class QueueServicePropertiesArgs extends io.pulumi.resources.Resour
      * The name of the resource group within the user's subscription. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {

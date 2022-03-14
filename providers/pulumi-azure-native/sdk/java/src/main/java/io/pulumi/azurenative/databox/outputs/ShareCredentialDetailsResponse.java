@@ -3,12 +3,12 @@
 
 package io.pulumi.azurenative.databox.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ShareCredentialDetailsResponse {
     /**
      * Password for the share.
@@ -36,13 +36,13 @@ public final class ShareCredentialDetailsResponse {
      */
     private final String userName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ShareCredentialDetailsResponse(
-        @OutputCustomType.Parameter("password") String password,
-        @OutputCustomType.Parameter("shareName") String shareName,
-        @OutputCustomType.Parameter("shareType") String shareType,
-        @OutputCustomType.Parameter("supportedAccessProtocols") List<String> supportedAccessProtocols,
-        @OutputCustomType.Parameter("userName") String userName) {
+        @CustomType.Parameter("password") String password,
+        @CustomType.Parameter("shareName") String shareName,
+        @CustomType.Parameter("shareType") String shareType,
+        @CustomType.Parameter("supportedAccessProtocols") List<String> supportedAccessProtocols,
+        @CustomType.Parameter("userName") String userName) {
         this.password = password;
         this.shareName = shareName;
         this.shareType = shareType;

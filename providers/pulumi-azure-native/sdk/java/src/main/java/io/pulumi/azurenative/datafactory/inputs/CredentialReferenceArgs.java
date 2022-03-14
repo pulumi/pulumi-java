@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class CredentialReferenceArgs extends io.pulumi.resources.ResourceA
      * Reference credential name.
      * 
      */
-    @InputImport(name="referenceName", required=true)
+    @Import(name="referenceName", required=true)
       private final Output<String> referenceName;
 
     public Output<String> getReferenceName() {
@@ -32,7 +32,7 @@ public final class CredentialReferenceArgs extends io.pulumi.resources.ResourceA
      * Credential reference type.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {

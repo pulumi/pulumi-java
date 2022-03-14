@@ -5,7 +5,7 @@ package io.pulumi.azurenative.datamigration.inputs;
 
 import io.pulumi.azurenative.datamigration.inputs.SqlConnectionInfoArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class GetUserTablesSqlTaskInputArgs extends io.pulumi.resources.Res
      * Connection information for SQL Server
      * 
      */
-    @InputImport(name="connectionInfo", required=true)
+    @Import(name="connectionInfo", required=true)
       private final Output<SqlConnectionInfoArgs> connectionInfo;
 
     public Output<SqlConnectionInfoArgs> getConnectionInfo() {
@@ -34,7 +34,7 @@ public final class GetUserTablesSqlTaskInputArgs extends io.pulumi.resources.Res
      * List of database names to collect tables for
      * 
      */
-    @InputImport(name="selectedDatabases", required=true)
+    @Import(name="selectedDatabases", required=true)
       private final Output<List<String>> selectedDatabases;
 
     public Output<List<String>> getSelectedDatabases() {

@@ -18,7 +18,7 @@ import io.pulumi.azurenative.eventgrid.inputs.StorageQueueEventSubscriptionDesti
 import io.pulumi.azurenative.eventgrid.inputs.WebHookEventSubscriptionDestinationArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +35,7 @@ public final class SystemTopicEventSubscriptionArgs extends io.pulumi.resources.
      * Uses Azure Event Grid's identity to acquire the authentication tokens being used during delivery / dead-lettering.
      * 
      */
-    @InputImport(name="deadLetterDestination")
+    @Import(name="deadLetterDestination")
       private final @Nullable Output<StorageBlobDeadLetterDestinationArgs> deadLetterDestination;
 
     public Output<StorageBlobDeadLetterDestinationArgs> getDeadLetterDestination() {
@@ -47,7 +47,7 @@ public final class SystemTopicEventSubscriptionArgs extends io.pulumi.resources.
      * Uses the managed identity setup on the parent resource (namely, topic or domain) to acquire the authentication tokens being used during delivery / dead-lettering.
      * 
      */
-    @InputImport(name="deadLetterWithResourceIdentity")
+    @Import(name="deadLetterWithResourceIdentity")
       private final @Nullable Output<DeadLetterWithResourceIdentityArgs> deadLetterWithResourceIdentity;
 
     public Output<DeadLetterWithResourceIdentityArgs> getDeadLetterWithResourceIdentity() {
@@ -59,7 +59,7 @@ public final class SystemTopicEventSubscriptionArgs extends io.pulumi.resources.
      * Uses the managed identity setup on the parent resource (namely, topic or domain) to acquire the authentication tokens being used during delivery / dead-lettering.
      * 
      */
-    @InputImport(name="deliveryWithResourceIdentity")
+    @Import(name="deliveryWithResourceIdentity")
       private final @Nullable Output<DeliveryWithResourceIdentityArgs> deliveryWithResourceIdentity;
 
     public Output<DeliveryWithResourceIdentityArgs> getDeliveryWithResourceIdentity() {
@@ -71,7 +71,7 @@ public final class SystemTopicEventSubscriptionArgs extends io.pulumi.resources.
      * Uses Azure Event Grid's identity to acquire the authentication tokens being used during delivery / dead-lettering.
      * 
      */
-    @InputImport(name="destination")
+    @Import(name="destination")
       private final @Nullable Output<Object> destination;
 
     public Output<Object> getDestination() {
@@ -82,7 +82,7 @@ public final class SystemTopicEventSubscriptionArgs extends io.pulumi.resources.
      * The event delivery schema for the event subscription.
      * 
      */
-    @InputImport(name="eventDeliverySchema")
+    @Import(name="eventDeliverySchema")
       private final @Nullable Output<Either<String,EventDeliverySchema>> eventDeliverySchema;
 
     public Output<Either<String,EventDeliverySchema>> getEventDeliverySchema() {
@@ -93,7 +93,7 @@ public final class SystemTopicEventSubscriptionArgs extends io.pulumi.resources.
      * Name of the event subscription to be created. Event subscription names must be between 3 and 100 characters in length and use alphanumeric letters only.
      * 
      */
-    @InputImport(name="eventSubscriptionName")
+    @Import(name="eventSubscriptionName")
       private final @Nullable Output<String> eventSubscriptionName;
 
     public Output<String> getEventSubscriptionName() {
@@ -104,7 +104,7 @@ public final class SystemTopicEventSubscriptionArgs extends io.pulumi.resources.
      * Expiration time of the event subscription.
      * 
      */
-    @InputImport(name="expirationTimeUtc")
+    @Import(name="expirationTimeUtc")
       private final @Nullable Output<String> expirationTimeUtc;
 
     public Output<String> getExpirationTimeUtc() {
@@ -115,7 +115,7 @@ public final class SystemTopicEventSubscriptionArgs extends io.pulumi.resources.
      * Information about the filter for the event subscription.
      * 
      */
-    @InputImport(name="filter")
+    @Import(name="filter")
       private final @Nullable Output<EventSubscriptionFilterArgs> filter;
 
     public Output<EventSubscriptionFilterArgs> getFilter() {
@@ -126,7 +126,7 @@ public final class SystemTopicEventSubscriptionArgs extends io.pulumi.resources.
      * List of user defined labels.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<List<String>> labels;
 
     public Output<List<String>> getLabels() {
@@ -137,7 +137,7 @@ public final class SystemTopicEventSubscriptionArgs extends io.pulumi.resources.
      * The name of the resource group within the user's subscription.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -148,7 +148,7 @@ public final class SystemTopicEventSubscriptionArgs extends io.pulumi.resources.
      * The retry policy for events. This can be used to configure maximum number of delivery attempts and time to live for events.
      * 
      */
-    @InputImport(name="retryPolicy")
+    @Import(name="retryPolicy")
       private final @Nullable Output<RetryPolicyArgs> retryPolicy;
 
     public Output<RetryPolicyArgs> getRetryPolicy() {
@@ -159,7 +159,7 @@ public final class SystemTopicEventSubscriptionArgs extends io.pulumi.resources.
      * Name of the system topic.
      * 
      */
-    @InputImport(name="systemTopicName", required=true)
+    @Import(name="systemTopicName", required=true)
       private final Output<String> systemTopicName;
 
     public Output<String> getSystemTopicName() {

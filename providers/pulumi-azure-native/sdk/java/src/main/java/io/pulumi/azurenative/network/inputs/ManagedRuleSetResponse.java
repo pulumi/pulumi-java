@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.ManagedRuleGroupOverrideResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ManagedRuleSetResponse extends io.pulumi.resources.InvokeArgs
      * Defines the rule group overrides to apply to the rule set.
      * 
      */
-    @InputImport(name="ruleGroupOverrides")
+    @Import(name="ruleGroupOverrides")
       private final @Nullable List<ManagedRuleGroupOverrideResponse> ruleGroupOverrides;
 
     public List<ManagedRuleGroupOverrideResponse> getRuleGroupOverrides() {
@@ -35,7 +35,7 @@ public final class ManagedRuleSetResponse extends io.pulumi.resources.InvokeArgs
      * Defines the rule set type to use.
      * 
      */
-    @InputImport(name="ruleSetType", required=true)
+    @Import(name="ruleSetType", required=true)
       private final String ruleSetType;
 
     public String getRuleSetType() {
@@ -46,7 +46,7 @@ public final class ManagedRuleSetResponse extends io.pulumi.resources.InvokeArgs
      * Defines the version of the rule set to use.
      * 
      */
-    @InputImport(name="ruleSetVersion", required=true)
+    @Import(name="ruleSetVersion", required=true)
       private final String ruleSetVersion;
 
     public String getRuleSetVersion() {

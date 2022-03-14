@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.engagementfabric.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ChannelTypeDescriptionResponse extends io.pulumi.resources.In
      * Text description for the channel
      * 
      */
-    @InputImport(name="channelDescription")
+    @Import(name="channelDescription")
       private final @Nullable String channelDescription;
 
     public Optional<String> getChannelDescription() {
@@ -34,7 +34,7 @@ public final class ChannelTypeDescriptionResponse extends io.pulumi.resources.In
      * All the available functions for the channel
      * 
      */
-    @InputImport(name="channelFunctions")
+    @Import(name="channelFunctions")
       private final @Nullable List<String> channelFunctions;
 
     public List<String> getChannelFunctions() {
@@ -45,7 +45,7 @@ public final class ChannelTypeDescriptionResponse extends io.pulumi.resources.In
      * Channel type
      * 
      */
-    @InputImport(name="channelType")
+    @Import(name="channelType")
       private final @Nullable String channelType;
 
     public Optional<String> getChannelType() {

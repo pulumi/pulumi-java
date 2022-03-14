@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.azurestack.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class DataDiskImageResponse extends io.pulumi.resources.InvokeArgs 
      * The LUN.
      * 
      */
-    @InputImport(name="lun", required=true)
+    @Import(name="lun", required=true)
       private final Integer lun;
 
     public Integer getLun() {
@@ -32,7 +32,7 @@ public final class DataDiskImageResponse extends io.pulumi.resources.InvokeArgs 
      * SAS key for source blob.
      * 
      */
-    @InputImport(name="sourceBlobSasUri", required=true)
+    @Import(name="sourceBlobSasUri", required=true)
       private final String sourceBlobSasUri;
 
     public String getSourceBlobSasUri() {

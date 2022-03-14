@@ -5,7 +5,7 @@ package io.pulumi.azurenative.dbforpostgresql;
 
 import io.pulumi.azurenative.dbforpostgresql.enums.ServerSecurityAlertPolicyState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class ServerSecurityAlertPolicyArgs extends io.pulumi.resources.Res
      * Specifies an array of alerts that are disabled. Allowed values are: Sql_Injection, Sql_Injection_Vulnerability, Access_Anomaly
      * 
      */
-    @InputImport(name="disabledAlerts")
+    @Import(name="disabledAlerts")
       private final @Nullable Output<List<String>> disabledAlerts;
 
     public Output<List<String>> getDisabledAlerts() {
@@ -33,7 +33,7 @@ public final class ServerSecurityAlertPolicyArgs extends io.pulumi.resources.Res
      * Specifies that the alert is sent to the account administrators.
      * 
      */
-    @InputImport(name="emailAccountAdmins")
+    @Import(name="emailAccountAdmins")
       private final @Nullable Output<Boolean> emailAccountAdmins;
 
     public Output<Boolean> getEmailAccountAdmins() {
@@ -44,7 +44,7 @@ public final class ServerSecurityAlertPolicyArgs extends io.pulumi.resources.Res
      * Specifies an array of e-mail addresses to which the alert is sent.
      * 
      */
-    @InputImport(name="emailAddresses")
+    @Import(name="emailAddresses")
       private final @Nullable Output<List<String>> emailAddresses;
 
     public Output<List<String>> getEmailAddresses() {
@@ -55,7 +55,7 @@ public final class ServerSecurityAlertPolicyArgs extends io.pulumi.resources.Res
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -66,7 +66,7 @@ public final class ServerSecurityAlertPolicyArgs extends io.pulumi.resources.Res
      * Specifies the number of days to keep in the Threat Detection audit logs.
      * 
      */
-    @InputImport(name="retentionDays")
+    @Import(name="retentionDays")
       private final @Nullable Output<Integer> retentionDays;
 
     public Output<Integer> getRetentionDays() {
@@ -77,7 +77,7 @@ public final class ServerSecurityAlertPolicyArgs extends io.pulumi.resources.Res
      * The name of the threat detection policy.
      * 
      */
-    @InputImport(name="securityAlertPolicyName")
+    @Import(name="securityAlertPolicyName")
       private final @Nullable Output<String> securityAlertPolicyName;
 
     public Output<String> getSecurityAlertPolicyName() {
@@ -88,7 +88,7 @@ public final class ServerSecurityAlertPolicyArgs extends io.pulumi.resources.Res
      * The name of the server.
      * 
      */
-    @InputImport(name="serverName", required=true)
+    @Import(name="serverName", required=true)
       private final Output<String> serverName;
 
     public Output<String> getServerName() {
@@ -99,7 +99,7 @@ public final class ServerSecurityAlertPolicyArgs extends io.pulumi.resources.Res
      * Specifies the state of the policy, whether it is enabled or disabled.
      * 
      */
-    @InputImport(name="state", required=true)
+    @Import(name="state", required=true)
       private final Output<ServerSecurityAlertPolicyState> state;
 
     public Output<ServerSecurityAlertPolicyState> getState() {
@@ -110,7 +110,7 @@ public final class ServerSecurityAlertPolicyArgs extends io.pulumi.resources.Res
      * Specifies the identifier key of the Threat Detection audit storage account.
      * 
      */
-    @InputImport(name="storageAccountAccessKey")
+    @Import(name="storageAccountAccessKey")
       private final @Nullable Output<String> storageAccountAccessKey;
 
     public Output<String> getStorageAccountAccessKey() {
@@ -121,7 +121,7 @@ public final class ServerSecurityAlertPolicyArgs extends io.pulumi.resources.Res
      * Specifies the blob storage endpoint (e.g. https://MyAccount.blob.core.windows.net). This blob storage will hold all Threat Detection audit logs.
      * 
      */
-    @InputImport(name="storageEndpoint")
+    @Import(name="storageEndpoint")
       private final @Nullable Output<String> storageEndpoint;
 
     public Output<String> getStorageEndpoint() {

@@ -23,7 +23,7 @@ import io.pulumi.azurenative.web.inputs.SiteLimitsArgs;
 import io.pulumi.azurenative.web.inputs.VirtualApplicationArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -45,7 +45,7 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
      * Flag to use Managed Identity Creds for ACR pull
      * 
      */
-    @InputImport(name="acrUseManagedIdentityCreds")
+    @Import(name="acrUseManagedIdentityCreds")
       private final @Nullable Output<Boolean> acrUseManagedIdentityCreds;
 
     public Output<Boolean> getAcrUseManagedIdentityCreds() {
@@ -56,7 +56,7 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
      * If using user managed identity, the user managed identity ClientId
      * 
      */
-    @InputImport(name="acrUserManagedIdentityID")
+    @Import(name="acrUserManagedIdentityID")
       private final @Nullable Output<String> acrUserManagedIdentityID;
 
     public Output<String> getAcrUserManagedIdentityID() {
@@ -67,7 +67,7 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
      * <code>true</code> if Always On is enabled; otherwise, <code>false</code>.
      * 
      */
-    @InputImport(name="alwaysOn")
+    @Import(name="alwaysOn")
       private final @Nullable Output<Boolean> alwaysOn;
 
     public Output<Boolean> getAlwaysOn() {
@@ -78,7 +78,7 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
      * Information about the formal API definition for the app.
      * 
      */
-    @InputImport(name="apiDefinition")
+    @Import(name="apiDefinition")
       private final @Nullable Output<ApiDefinitionInfoArgs> apiDefinition;
 
     public Output<ApiDefinitionInfoArgs> getApiDefinition() {
@@ -89,7 +89,7 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
      * Azure API management settings linked to the app.
      * 
      */
-    @InputImport(name="apiManagementConfig")
+    @Import(name="apiManagementConfig")
       private final @Nullable Output<ApiManagementConfigArgs> apiManagementConfig;
 
     public Output<ApiManagementConfigArgs> getApiManagementConfig() {
@@ -100,7 +100,7 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
      * App command line to launch.
      * 
      */
-    @InputImport(name="appCommandLine")
+    @Import(name="appCommandLine")
       private final @Nullable Output<String> appCommandLine;
 
     public Output<String> getAppCommandLine() {
@@ -111,7 +111,7 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
      * Application settings.
      * 
      */
-    @InputImport(name="appSettings")
+    @Import(name="appSettings")
       private final @Nullable Output<List<NameValuePairArgs>> appSettings;
 
     public Output<List<NameValuePairArgs>> getAppSettings() {
@@ -122,7 +122,7 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
      * <code>true</code> if Auto Heal is enabled; otherwise, <code>false</code>.
      * 
      */
-    @InputImport(name="autoHealEnabled")
+    @Import(name="autoHealEnabled")
       private final @Nullable Output<Boolean> autoHealEnabled;
 
     public Output<Boolean> getAutoHealEnabled() {
@@ -133,7 +133,7 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
      * Auto Heal rules.
      * 
      */
-    @InputImport(name="autoHealRules")
+    @Import(name="autoHealRules")
       private final @Nullable Output<AutoHealRulesArgs> autoHealRules;
 
     public Output<AutoHealRulesArgs> getAutoHealRules() {
@@ -144,7 +144,7 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
      * Auto-swap slot name.
      * 
      */
-    @InputImport(name="autoSwapSlotName")
+    @Import(name="autoSwapSlotName")
       private final @Nullable Output<String> autoSwapSlotName;
 
     public Output<String> getAutoSwapSlotName() {
@@ -155,7 +155,7 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
      * List of Azure Storage Accounts.
      * 
      */
-    @InputImport(name="azureStorageAccounts")
+    @Import(name="azureStorageAccounts")
       private final @Nullable Output<Map<String,AzureStorageInfoValueArgs>> azureStorageAccounts;
 
     public Output<Map<String,AzureStorageInfoValueArgs>> getAzureStorageAccounts() {
@@ -166,7 +166,7 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
      * Connection strings.
      * 
      */
-    @InputImport(name="connectionStrings")
+    @Import(name="connectionStrings")
       private final @Nullable Output<List<ConnStringInfoArgs>> connectionStrings;
 
     public Output<List<ConnStringInfoArgs>> getConnectionStrings() {
@@ -177,7 +177,7 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
      * Cross-Origin Resource Sharing (CORS) settings.
      * 
      */
-    @InputImport(name="cors")
+    @Import(name="cors")
       private final @Nullable Output<CorsSettingsArgs> cors;
 
     public Output<CorsSettingsArgs> getCors() {
@@ -188,7 +188,7 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
      * Default documents.
      * 
      */
-    @InputImport(name="defaultDocuments")
+    @Import(name="defaultDocuments")
       private final @Nullable Output<List<String>> defaultDocuments;
 
     public Output<List<String>> getDefaultDocuments() {
@@ -199,7 +199,7 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
      * <code>true</code> if detailed error logging is enabled; otherwise, <code>false</code>.
      * 
      */
-    @InputImport(name="detailedErrorLoggingEnabled")
+    @Import(name="detailedErrorLoggingEnabled")
       private final @Nullable Output<Boolean> detailedErrorLoggingEnabled;
 
     public Output<Boolean> getDetailedErrorLoggingEnabled() {
@@ -210,7 +210,7 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
      * Document root.
      * 
      */
-    @InputImport(name="documentRoot")
+    @Import(name="documentRoot")
       private final @Nullable Output<String> documentRoot;
 
     public Output<String> getDocumentRoot() {
@@ -221,7 +221,7 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
      * This is work around for polymorphic types.
      * 
      */
-    @InputImport(name="experiments")
+    @Import(name="experiments")
       private final @Nullable Output<ExperimentsArgs> experiments;
 
     public Output<ExperimentsArgs> getExperiments() {
@@ -232,7 +232,7 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
      * State of FTP / FTPS service
      * 
      */
-    @InputImport(name="ftpsState")
+    @Import(name="ftpsState")
       private final @Nullable Output<Either<String,FtpsState>> ftpsState;
 
     public Output<Either<String,FtpsState>> getFtpsState() {
@@ -244,7 +244,7 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
      * This setting only applies to the Consumption and Elastic Premium Plans
      * 
      */
-    @InputImport(name="functionAppScaleLimit")
+    @Import(name="functionAppScaleLimit")
       private final @Nullable Output<Integer> functionAppScaleLimit;
 
     public Output<Integer> getFunctionAppScaleLimit() {
@@ -257,7 +257,7 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
      * runtime to get scale status.
      * 
      */
-    @InputImport(name="functionsRuntimeScaleMonitoringEnabled")
+    @Import(name="functionsRuntimeScaleMonitoringEnabled")
       private final @Nullable Output<Boolean> functionsRuntimeScaleMonitoringEnabled;
 
     public Output<Boolean> getFunctionsRuntimeScaleMonitoringEnabled() {
@@ -268,7 +268,7 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
      * Handler mappings.
      * 
      */
-    @InputImport(name="handlerMappings")
+    @Import(name="handlerMappings")
       private final @Nullable Output<List<HandlerMappingArgs>> handlerMappings;
 
     public Output<List<HandlerMappingArgs>> getHandlerMappings() {
@@ -279,7 +279,7 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
      * Health check path
      * 
      */
-    @InputImport(name="healthCheckPath")
+    @Import(name="healthCheckPath")
       private final @Nullable Output<String> healthCheckPath;
 
     public Output<String> getHealthCheckPath() {
@@ -290,7 +290,7 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
      * Http20Enabled: configures a web site to allow clients to connect over http2.0
      * 
      */
-    @InputImport(name="http20Enabled")
+    @Import(name="http20Enabled")
       private final @Nullable Output<Boolean> http20Enabled;
 
     public Output<Boolean> getHttp20Enabled() {
@@ -301,7 +301,7 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
      * <code>true</code> if HTTP logging is enabled; otherwise, <code>false</code>.
      * 
      */
-    @InputImport(name="httpLoggingEnabled")
+    @Import(name="httpLoggingEnabled")
       private final @Nullable Output<Boolean> httpLoggingEnabled;
 
     public Output<Boolean> getHttpLoggingEnabled() {
@@ -312,7 +312,7 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
      * IP security restrictions for main.
      * 
      */
-    @InputImport(name="ipSecurityRestrictions")
+    @Import(name="ipSecurityRestrictions")
       private final @Nullable Output<List<IpSecurityRestrictionArgs>> ipSecurityRestrictions;
 
     public Output<List<IpSecurityRestrictionArgs>> getIpSecurityRestrictions() {
@@ -323,7 +323,7 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
      * Java container.
      * 
      */
-    @InputImport(name="javaContainer")
+    @Import(name="javaContainer")
       private final @Nullable Output<String> javaContainer;
 
     public Output<String> getJavaContainer() {
@@ -334,7 +334,7 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
      * Java container version.
      * 
      */
-    @InputImport(name="javaContainerVersion")
+    @Import(name="javaContainerVersion")
       private final @Nullable Output<String> javaContainerVersion;
 
     public Output<String> getJavaContainerVersion() {
@@ -345,7 +345,7 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
      * Java version.
      * 
      */
-    @InputImport(name="javaVersion")
+    @Import(name="javaVersion")
       private final @Nullable Output<String> javaVersion;
 
     public Output<String> getJavaVersion() {
@@ -356,7 +356,7 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
      * Identity to use for Key Vault Reference authentication.
      * 
      */
-    @InputImport(name="keyVaultReferenceIdentity")
+    @Import(name="keyVaultReferenceIdentity")
       private final @Nullable Output<String> keyVaultReferenceIdentity;
 
     public Output<String> getKeyVaultReferenceIdentity() {
@@ -367,7 +367,7 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
      * Site limits.
      * 
      */
-    @InputImport(name="limits")
+    @Import(name="limits")
       private final @Nullable Output<SiteLimitsArgs> limits;
 
     public Output<SiteLimitsArgs> getLimits() {
@@ -378,7 +378,7 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
      * Linux App Framework and version
      * 
      */
-    @InputImport(name="linuxFxVersion")
+    @Import(name="linuxFxVersion")
       private final @Nullable Output<String> linuxFxVersion;
 
     public Output<String> getLinuxFxVersion() {
@@ -389,7 +389,7 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
      * Site load balancing.
      * 
      */
-    @InputImport(name="loadBalancing")
+    @Import(name="loadBalancing")
       private final @Nullable Output<SiteLoadBalancing> loadBalancing;
 
     public Output<SiteLoadBalancing> getLoadBalancing() {
@@ -400,7 +400,7 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
      * <code>true</code> to enable local MySQL; otherwise, <code>false</code>.
      * 
      */
-    @InputImport(name="localMySqlEnabled")
+    @Import(name="localMySqlEnabled")
       private final @Nullable Output<Boolean> localMySqlEnabled;
 
     public Output<Boolean> getLocalMySqlEnabled() {
@@ -411,7 +411,7 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
      * HTTP logs directory size limit.
      * 
      */
-    @InputImport(name="logsDirectorySizeLimit")
+    @Import(name="logsDirectorySizeLimit")
       private final @Nullable Output<Integer> logsDirectorySizeLimit;
 
     public Output<Integer> getLogsDirectorySizeLimit() {
@@ -422,7 +422,7 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
      * Managed pipeline mode.
      * 
      */
-    @InputImport(name="managedPipelineMode")
+    @Import(name="managedPipelineMode")
       private final @Nullable Output<ManagedPipelineMode> managedPipelineMode;
 
     public Output<ManagedPipelineMode> getManagedPipelineMode() {
@@ -433,7 +433,7 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
      * Managed Service Identity Id
      * 
      */
-    @InputImport(name="managedServiceIdentityId")
+    @Import(name="managedServiceIdentityId")
       private final @Nullable Output<Integer> managedServiceIdentityId;
 
     public Output<Integer> getManagedServiceIdentityId() {
@@ -444,7 +444,7 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
      * MinTlsVersion: configures the minimum version of TLS required for SSL requests
      * 
      */
-    @InputImport(name="minTlsVersion")
+    @Import(name="minTlsVersion")
       private final @Nullable Output<Either<String,SupportedTlsVersions>> minTlsVersion;
 
     public Output<Either<String,SupportedTlsVersions>> getMinTlsVersion() {
@@ -456,7 +456,7 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
      * This setting only applies to the Elastic Plans
      * 
      */
-    @InputImport(name="minimumElasticInstanceCount")
+    @Import(name="minimumElasticInstanceCount")
       private final @Nullable Output<Integer> minimumElasticInstanceCount;
 
     public Output<Integer> getMinimumElasticInstanceCount() {
@@ -467,7 +467,7 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
      * .NET Framework version.
      * 
      */
-    @InputImport(name="netFrameworkVersion")
+    @Import(name="netFrameworkVersion")
       private final @Nullable Output<String> netFrameworkVersion;
 
     public Output<String> getNetFrameworkVersion() {
@@ -478,7 +478,7 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
      * Version of Node.js.
      * 
      */
-    @InputImport(name="nodeVersion")
+    @Import(name="nodeVersion")
       private final @Nullable Output<String> nodeVersion;
 
     public Output<String> getNodeVersion() {
@@ -489,7 +489,7 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
      * Number of workers.
      * 
      */
-    @InputImport(name="numberOfWorkers")
+    @Import(name="numberOfWorkers")
       private final @Nullable Output<Integer> numberOfWorkers;
 
     public Output<Integer> getNumberOfWorkers() {
@@ -500,7 +500,7 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
      * Version of PHP.
      * 
      */
-    @InputImport(name="phpVersion")
+    @Import(name="phpVersion")
       private final @Nullable Output<String> phpVersion;
 
     public Output<String> getPhpVersion() {
@@ -511,7 +511,7 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
      * Version of PowerShell.
      * 
      */
-    @InputImport(name="powerShellVersion")
+    @Import(name="powerShellVersion")
       private final @Nullable Output<String> powerShellVersion;
 
     public Output<String> getPowerShellVersion() {
@@ -523,7 +523,7 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
      * This setting only applies to the Consumption and Elastic Plans
      * 
      */
-    @InputImport(name="preWarmedInstanceCount")
+    @Import(name="preWarmedInstanceCount")
       private final @Nullable Output<Integer> preWarmedInstanceCount;
 
     public Output<Integer> getPreWarmedInstanceCount() {
@@ -534,7 +534,7 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
      * Property to allow or block all public traffic.
      * 
      */
-    @InputImport(name="publicNetworkAccess")
+    @Import(name="publicNetworkAccess")
       private final @Nullable Output<String> publicNetworkAccess;
 
     public Output<String> getPublicNetworkAccess() {
@@ -545,7 +545,7 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
      * Publishing user name.
      * 
      */
-    @InputImport(name="publishingUsername")
+    @Import(name="publishingUsername")
       private final @Nullable Output<String> publishingUsername;
 
     public Output<String> getPublishingUsername() {
@@ -556,7 +556,7 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
      * Push endpoint settings.
      * 
      */
-    @InputImport(name="push")
+    @Import(name="push")
       private final @Nullable Output<PushSettingsArgs> push;
 
     public Output<PushSettingsArgs> getPush() {
@@ -567,7 +567,7 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
      * Version of Python.
      * 
      */
-    @InputImport(name="pythonVersion")
+    @Import(name="pythonVersion")
       private final @Nullable Output<String> pythonVersion;
 
     public Output<String> getPythonVersion() {
@@ -578,7 +578,7 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
      * <code>true</code> if remote debugging is enabled; otherwise, <code>false</code>.
      * 
      */
-    @InputImport(name="remoteDebuggingEnabled")
+    @Import(name="remoteDebuggingEnabled")
       private final @Nullable Output<Boolean> remoteDebuggingEnabled;
 
     public Output<Boolean> getRemoteDebuggingEnabled() {
@@ -589,7 +589,7 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
      * Remote debugging version.
      * 
      */
-    @InputImport(name="remoteDebuggingVersion")
+    @Import(name="remoteDebuggingVersion")
       private final @Nullable Output<String> remoteDebuggingVersion;
 
     public Output<String> getRemoteDebuggingVersion() {
@@ -600,7 +600,7 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
      * <code>true</code> if request tracing is enabled; otherwise, <code>false</code>.
      * 
      */
-    @InputImport(name="requestTracingEnabled")
+    @Import(name="requestTracingEnabled")
       private final @Nullable Output<Boolean> requestTracingEnabled;
 
     public Output<Boolean> getRequestTracingEnabled() {
@@ -611,7 +611,7 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
      * Request tracing expiration time.
      * 
      */
-    @InputImport(name="requestTracingExpirationTime")
+    @Import(name="requestTracingExpirationTime")
       private final @Nullable Output<String> requestTracingExpirationTime;
 
     public Output<String> getRequestTracingExpirationTime() {
@@ -622,7 +622,7 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
      * IP security restrictions for scm.
      * 
      */
-    @InputImport(name="scmIpSecurityRestrictions")
+    @Import(name="scmIpSecurityRestrictions")
       private final @Nullable Output<List<IpSecurityRestrictionArgs>> scmIpSecurityRestrictions;
 
     public Output<List<IpSecurityRestrictionArgs>> getScmIpSecurityRestrictions() {
@@ -633,7 +633,7 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
      * IP security restrictions for scm to use main.
      * 
      */
-    @InputImport(name="scmIpSecurityRestrictionsUseMain")
+    @Import(name="scmIpSecurityRestrictionsUseMain")
       private final @Nullable Output<Boolean> scmIpSecurityRestrictionsUseMain;
 
     public Output<Boolean> getScmIpSecurityRestrictionsUseMain() {
@@ -644,7 +644,7 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
      * ScmMinTlsVersion: configures the minimum version of TLS required for SSL requests for SCM site
      * 
      */
-    @InputImport(name="scmMinTlsVersion")
+    @Import(name="scmMinTlsVersion")
       private final @Nullable Output<Either<String,SupportedTlsVersions>> scmMinTlsVersion;
 
     public Output<Either<String,SupportedTlsVersions>> getScmMinTlsVersion() {
@@ -655,7 +655,7 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
      * SCM type.
      * 
      */
-    @InputImport(name="scmType")
+    @Import(name="scmType")
       private final @Nullable Output<Either<String,ScmType>> scmType;
 
     public Output<Either<String,ScmType>> getScmType() {
@@ -666,7 +666,7 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
      * Tracing options.
      * 
      */
-    @InputImport(name="tracingOptions")
+    @Import(name="tracingOptions")
       private final @Nullable Output<String> tracingOptions;
 
     public Output<String> getTracingOptions() {
@@ -677,7 +677,7 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
      * <code>true</code> to use 32-bit worker process; otherwise, <code>false</code>.
      * 
      */
-    @InputImport(name="use32BitWorkerProcess")
+    @Import(name="use32BitWorkerProcess")
       private final @Nullable Output<Boolean> use32BitWorkerProcess;
 
     public Output<Boolean> getUse32BitWorkerProcess() {
@@ -688,7 +688,7 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
      * Virtual applications.
      * 
      */
-    @InputImport(name="virtualApplications")
+    @Import(name="virtualApplications")
       private final @Nullable Output<List<VirtualApplicationArgs>> virtualApplications;
 
     public Output<List<VirtualApplicationArgs>> getVirtualApplications() {
@@ -699,7 +699,7 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
      * Virtual Network name.
      * 
      */
-    @InputImport(name="vnetName")
+    @Import(name="vnetName")
       private final @Nullable Output<String> vnetName;
 
     public Output<String> getVnetName() {
@@ -710,7 +710,7 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
      * The number of private ports assigned to this app. These will be assigned dynamically on runtime.
      * 
      */
-    @InputImport(name="vnetPrivatePortsCount")
+    @Import(name="vnetPrivatePortsCount")
       private final @Nullable Output<Integer> vnetPrivatePortsCount;
 
     public Output<Integer> getVnetPrivatePortsCount() {
@@ -721,7 +721,7 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
      * Virtual Network Route All enabled. This causes all outbound traffic to have Virtual Network Security Groups and User Defined Routes applied.
      * 
      */
-    @InputImport(name="vnetRouteAllEnabled")
+    @Import(name="vnetRouteAllEnabled")
       private final @Nullable Output<Boolean> vnetRouteAllEnabled;
 
     public Output<Boolean> getVnetRouteAllEnabled() {
@@ -732,7 +732,7 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
      * <code>true</code> if WebSocket is enabled; otherwise, <code>false</code>.
      * 
      */
-    @InputImport(name="webSocketsEnabled")
+    @Import(name="webSocketsEnabled")
       private final @Nullable Output<Boolean> webSocketsEnabled;
 
     public Output<Boolean> getWebSocketsEnabled() {
@@ -743,7 +743,7 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
      * Sets the time zone a site uses for generating timestamps. Compatible with Linux and Windows App Service. Setting the WEBSITE_TIME_ZONE app setting takes precedence over this config. For Linux, expects tz database values https://www.iana.org/time-zones (for a quick reference see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones). For Windows, expects one of the time zones listed under HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time Zones
      * 
      */
-    @InputImport(name="websiteTimeZone")
+    @Import(name="websiteTimeZone")
       private final @Nullable Output<String> websiteTimeZone;
 
     public Output<String> getWebsiteTimeZone() {
@@ -754,7 +754,7 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
      * Xenon App Framework and version
      * 
      */
-    @InputImport(name="windowsFxVersion")
+    @Import(name="windowsFxVersion")
       private final @Nullable Output<String> windowsFxVersion;
 
     public Output<String> getWindowsFxVersion() {
@@ -765,7 +765,7 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
      * Explicit Managed Service Identity Id
      * 
      */
-    @InputImport(name="xManagedServiceIdentityId")
+    @Import(name="xManagedServiceIdentityId")
       private final @Nullable Output<Integer> xManagedServiceIdentityId;
 
     public Output<Integer> getXManagedServiceIdentityId() {

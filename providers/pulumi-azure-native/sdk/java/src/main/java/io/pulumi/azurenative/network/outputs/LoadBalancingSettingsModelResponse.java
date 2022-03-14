@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class LoadBalancingSettingsModelResponse {
     /**
      * The additional latency in milliseconds for probes to fall into the lowest latency bucket
@@ -48,15 +48,15 @@ public final class LoadBalancingSettingsModelResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LoadBalancingSettingsModelResponse(
-        @OutputCustomType.Parameter("additionalLatencyMilliseconds") @Nullable Integer additionalLatencyMilliseconds,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("resourceState") String resourceState,
-        @OutputCustomType.Parameter("sampleSize") @Nullable Integer sampleSize,
-        @OutputCustomType.Parameter("successfulSamplesRequired") @Nullable Integer successfulSamplesRequired,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("additionalLatencyMilliseconds") @Nullable Integer additionalLatencyMilliseconds,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("resourceState") String resourceState,
+        @CustomType.Parameter("sampleSize") @Nullable Integer sampleSize,
+        @CustomType.Parameter("successfulSamplesRequired") @Nullable Integer successfulSamplesRequired,
+        @CustomType.Parameter("type") String type) {
         this.additionalLatencyMilliseconds = additionalLatencyMilliseconds;
         this.id = id;
         this.name = name;

@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.storagecache.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BlobNfsTargetResponse {
     /**
      * Resource ID of the storage container.
@@ -22,10 +22,10 @@ public final class BlobNfsTargetResponse {
      */
     private final @Nullable String usageModel;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BlobNfsTargetResponse(
-        @OutputCustomType.Parameter("target") @Nullable String target,
-        @OutputCustomType.Parameter("usageModel") @Nullable String usageModel) {
+        @CustomType.Parameter("target") @Nullable String target,
+        @CustomType.Parameter("usageModel") @Nullable String usageModel) {
         this.target = target;
         this.usageModel = usageModel;
     }

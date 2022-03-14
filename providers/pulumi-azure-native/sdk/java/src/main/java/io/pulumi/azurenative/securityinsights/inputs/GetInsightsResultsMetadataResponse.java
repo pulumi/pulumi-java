@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.securityinsights.inputs;
 
 import io.pulumi.azurenative.securityinsights.inputs.GetInsightsErrorResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class GetInsightsResultsMetadataResponse extends io.pulumi.resource
      * information about the failed queries
      * 
      */
-    @InputImport(name="errors")
+    @Import(name="errors")
       private final @Nullable List<GetInsightsErrorResponse> errors;
 
     public List<GetInsightsErrorResponse> getErrors() {
@@ -35,7 +35,7 @@ public final class GetInsightsResultsMetadataResponse extends io.pulumi.resource
      * the total items found for the insights request
      * 
      */
-    @InputImport(name="totalCount", required=true)
+    @Import(name="totalCount", required=true)
       private final Integer totalCount;
 
     public Integer getTotalCount() {

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.apimanagement.GatewayCertificateAuthorityArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -35,7 +35,7 @@ public class GatewayCertificateAuthority extends io.pulumi.resources.CustomResou
      * Determines whether certificate authority is trusted.
      * 
      */
-    @OutputExport(name="isTrusted", type=Boolean.class, parameters={})
+    @Export(name="isTrusted", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> isTrusted;
 
     /**
@@ -49,7 +49,7 @@ public class GatewayCertificateAuthority extends io.pulumi.resources.CustomResou
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -63,7 +63,7 @@ public class GatewayCertificateAuthority extends io.pulumi.resources.CustomResou
      * Resource type for API Management resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

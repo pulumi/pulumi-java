@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.apimanagement.ApiIssueAttachmentArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -34,7 +34,7 @@ public class ApiIssueAttachment extends io.pulumi.resources.CustomResource {
      * An HTTP link or Base64-encoded binary data.
      * 
      */
-    @OutputExport(name="content", type=String.class, parameters={})
+    @Export(name="content", type=String.class, parameters={})
     private Output<String> content;
 
     /**
@@ -48,7 +48,7 @@ public class ApiIssueAttachment extends io.pulumi.resources.CustomResource {
      * Either 'link' if content is provided via an HTTP link or the MIME type of the Base64-encoded binary data provided in the 'content' property.
      * 
      */
-    @OutputExport(name="contentFormat", type=String.class, parameters={})
+    @Export(name="contentFormat", type=String.class, parameters={})
     private Output<String> contentFormat;
 
     /**
@@ -62,7 +62,7 @@ public class ApiIssueAttachment extends io.pulumi.resources.CustomResource {
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -76,7 +76,7 @@ public class ApiIssueAttachment extends io.pulumi.resources.CustomResource {
      * Filename by which the binary data will be saved.
      * 
      */
-    @OutputExport(name="title", type=String.class, parameters={})
+    @Export(name="title", type=String.class, parameters={})
     private Output<String> title;
 
     /**
@@ -90,7 +90,7 @@ public class ApiIssueAttachment extends io.pulumi.resources.CustomResource {
      * Resource type for API Management resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

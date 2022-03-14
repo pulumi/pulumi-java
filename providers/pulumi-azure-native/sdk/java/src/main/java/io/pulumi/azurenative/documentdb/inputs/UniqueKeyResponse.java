@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.documentdb.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class UniqueKeyResponse extends io.pulumi.resources.InvokeArgs {
      * List of paths must be unique for each document in the Azure Cosmos DB service
      * 
      */
-    @InputImport(name="paths")
+    @Import(name="paths")
       private final @Nullable List<String> paths;
 
     public List<String> getPaths() {

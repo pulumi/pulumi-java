@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.datafactory.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TeradataPartitionSettingsResponse {
     /**
      * The name of the column that will be used for proceeding range or hash partitioning. Type: string (or Expression with resultType string).
@@ -27,11 +27,11 @@ public final class TeradataPartitionSettingsResponse {
      */
     private final @Nullable Object partitionUpperBound;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TeradataPartitionSettingsResponse(
-        @OutputCustomType.Parameter("partitionColumnName") @Nullable Object partitionColumnName,
-        @OutputCustomType.Parameter("partitionLowerBound") @Nullable Object partitionLowerBound,
-        @OutputCustomType.Parameter("partitionUpperBound") @Nullable Object partitionUpperBound) {
+        @CustomType.Parameter("partitionColumnName") @Nullable Object partitionColumnName,
+        @CustomType.Parameter("partitionLowerBound") @Nullable Object partitionLowerBound,
+        @CustomType.Parameter("partitionUpperBound") @Nullable Object partitionUpperBound) {
         this.partitionColumnName = partitionColumnName;
         this.partitionLowerBound = partitionLowerBound;
         this.partitionUpperBound = partitionUpperBound;

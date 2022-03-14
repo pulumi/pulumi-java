@@ -20,7 +20,7 @@ import io.pulumi.azurenative.providerhub.outputs.ServiceTreeInfoResponse;
 import io.pulumi.azurenative.providerhub.outputs.SubscriptionStateRuleResponse;
 import io.pulumi.azurenative.providerhub.outputs.SwaggerSpecificationResponse;
 import io.pulumi.azurenative.providerhub.outputs.ThrottlingRuleResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -28,7 +28,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ResourceTypeRegistrationResponseProperties {
     private final @Nullable List<String> allowedUnauthorizedActions;
     private final @Nullable List<AuthorizationActionMappingResponse> authorizationActionMappings;
@@ -60,37 +60,37 @@ public final class ResourceTypeRegistrationResponseProperties {
     private final @Nullable ResourceTypeRegistrationPropertiesResponseTemplateDeploymentOptions templateDeploymentOptions;
     private final @Nullable List<ThrottlingRuleResponse> throttlingRules;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ResourceTypeRegistrationResponseProperties(
-        @OutputCustomType.Parameter("allowedUnauthorizedActions") @Nullable List<String> allowedUnauthorizedActions,
-        @OutputCustomType.Parameter("authorizationActionMappings") @Nullable List<AuthorizationActionMappingResponse> authorizationActionMappings,
-        @OutputCustomType.Parameter("checkNameAvailabilitySpecifications") @Nullable ResourceTypeRegistrationPropertiesResponseCheckNameAvailabilitySpecifications checkNameAvailabilitySpecifications,
-        @OutputCustomType.Parameter("defaultApiVersion") @Nullable String defaultApiVersion,
-        @OutputCustomType.Parameter("disallowedActionVerbs") @Nullable List<String> disallowedActionVerbs,
-        @OutputCustomType.Parameter("enableAsyncOperation") @Nullable Boolean enableAsyncOperation,
-        @OutputCustomType.Parameter("enableThirdPartyS2S") @Nullable Boolean enableThirdPartyS2S,
-        @OutputCustomType.Parameter("endpoints") @Nullable List<ResourceTypeEndpointResponse> endpoints,
-        @OutputCustomType.Parameter("extendedLocations") @Nullable List<ExtendedLocationOptionsResponse> extendedLocations,
-        @OutputCustomType.Parameter("extensionOptions") @Nullable ResourceTypeRegistrationPropertiesResponseExtensionOptions extensionOptions,
-        @OutputCustomType.Parameter("featuresRule") @Nullable ResourceTypeRegistrationPropertiesResponseFeaturesRule featuresRule,
-        @OutputCustomType.Parameter("identityManagement") @Nullable ResourceTypeRegistrationPropertiesResponseIdentityManagement identityManagement,
-        @OutputCustomType.Parameter("isPureProxy") @Nullable Boolean isPureProxy,
-        @OutputCustomType.Parameter("linkedAccessChecks") @Nullable List<LinkedAccessCheckResponse> linkedAccessChecks,
-        @OutputCustomType.Parameter("loggingRules") @Nullable List<LoggingRuleResponse> loggingRules,
-        @OutputCustomType.Parameter("marketplaceType") @Nullable String marketplaceType,
-        @OutputCustomType.Parameter("provisioningState") @Nullable String provisioningState,
-        @OutputCustomType.Parameter("regionality") @Nullable String regionality,
-        @OutputCustomType.Parameter("requestHeaderOptions") @Nullable ResourceTypeRegistrationPropertiesResponseRequestHeaderOptions requestHeaderOptions,
-        @OutputCustomType.Parameter("requiredFeatures") @Nullable List<String> requiredFeatures,
-        @OutputCustomType.Parameter("resourceDeletionPolicy") @Nullable String resourceDeletionPolicy,
-        @OutputCustomType.Parameter("resourceMovePolicy") @Nullable ResourceTypeRegistrationPropertiesResponseResourceMovePolicy resourceMovePolicy,
-        @OutputCustomType.Parameter("routingType") @Nullable String routingType,
-        @OutputCustomType.Parameter("serviceTreeInfos") @Nullable List<ServiceTreeInfoResponse> serviceTreeInfos,
-        @OutputCustomType.Parameter("subscriptionLifecycleNotificationSpecifications") @Nullable ResourceTypeRegistrationPropertiesResponseSubscriptionLifecycleNotificationSpecifications subscriptionLifecycleNotificationSpecifications,
-        @OutputCustomType.Parameter("subscriptionStateRules") @Nullable List<SubscriptionStateRuleResponse> subscriptionStateRules,
-        @OutputCustomType.Parameter("swaggerSpecifications") @Nullable List<SwaggerSpecificationResponse> swaggerSpecifications,
-        @OutputCustomType.Parameter("templateDeploymentOptions") @Nullable ResourceTypeRegistrationPropertiesResponseTemplateDeploymentOptions templateDeploymentOptions,
-        @OutputCustomType.Parameter("throttlingRules") @Nullable List<ThrottlingRuleResponse> throttlingRules) {
+        @CustomType.Parameter("allowedUnauthorizedActions") @Nullable List<String> allowedUnauthorizedActions,
+        @CustomType.Parameter("authorizationActionMappings") @Nullable List<AuthorizationActionMappingResponse> authorizationActionMappings,
+        @CustomType.Parameter("checkNameAvailabilitySpecifications") @Nullable ResourceTypeRegistrationPropertiesResponseCheckNameAvailabilitySpecifications checkNameAvailabilitySpecifications,
+        @CustomType.Parameter("defaultApiVersion") @Nullable String defaultApiVersion,
+        @CustomType.Parameter("disallowedActionVerbs") @Nullable List<String> disallowedActionVerbs,
+        @CustomType.Parameter("enableAsyncOperation") @Nullable Boolean enableAsyncOperation,
+        @CustomType.Parameter("enableThirdPartyS2S") @Nullable Boolean enableThirdPartyS2S,
+        @CustomType.Parameter("endpoints") @Nullable List<ResourceTypeEndpointResponse> endpoints,
+        @CustomType.Parameter("extendedLocations") @Nullable List<ExtendedLocationOptionsResponse> extendedLocations,
+        @CustomType.Parameter("extensionOptions") @Nullable ResourceTypeRegistrationPropertiesResponseExtensionOptions extensionOptions,
+        @CustomType.Parameter("featuresRule") @Nullable ResourceTypeRegistrationPropertiesResponseFeaturesRule featuresRule,
+        @CustomType.Parameter("identityManagement") @Nullable ResourceTypeRegistrationPropertiesResponseIdentityManagement identityManagement,
+        @CustomType.Parameter("isPureProxy") @Nullable Boolean isPureProxy,
+        @CustomType.Parameter("linkedAccessChecks") @Nullable List<LinkedAccessCheckResponse> linkedAccessChecks,
+        @CustomType.Parameter("loggingRules") @Nullable List<LoggingRuleResponse> loggingRules,
+        @CustomType.Parameter("marketplaceType") @Nullable String marketplaceType,
+        @CustomType.Parameter("provisioningState") @Nullable String provisioningState,
+        @CustomType.Parameter("regionality") @Nullable String regionality,
+        @CustomType.Parameter("requestHeaderOptions") @Nullable ResourceTypeRegistrationPropertiesResponseRequestHeaderOptions requestHeaderOptions,
+        @CustomType.Parameter("requiredFeatures") @Nullable List<String> requiredFeatures,
+        @CustomType.Parameter("resourceDeletionPolicy") @Nullable String resourceDeletionPolicy,
+        @CustomType.Parameter("resourceMovePolicy") @Nullable ResourceTypeRegistrationPropertiesResponseResourceMovePolicy resourceMovePolicy,
+        @CustomType.Parameter("routingType") @Nullable String routingType,
+        @CustomType.Parameter("serviceTreeInfos") @Nullable List<ServiceTreeInfoResponse> serviceTreeInfos,
+        @CustomType.Parameter("subscriptionLifecycleNotificationSpecifications") @Nullable ResourceTypeRegistrationPropertiesResponseSubscriptionLifecycleNotificationSpecifications subscriptionLifecycleNotificationSpecifications,
+        @CustomType.Parameter("subscriptionStateRules") @Nullable List<SubscriptionStateRuleResponse> subscriptionStateRules,
+        @CustomType.Parameter("swaggerSpecifications") @Nullable List<SwaggerSpecificationResponse> swaggerSpecifications,
+        @CustomType.Parameter("templateDeploymentOptions") @Nullable ResourceTypeRegistrationPropertiesResponseTemplateDeploymentOptions templateDeploymentOptions,
+        @CustomType.Parameter("throttlingRules") @Nullable List<ThrottlingRuleResponse> throttlingRules) {
         this.allowedUnauthorizedActions = allowedUnauthorizedActions;
         this.authorizationActionMappings = authorizationActionMappings;
         this.checkNameAvailabilitySpecifications = checkNameAvailabilitySpecifications;

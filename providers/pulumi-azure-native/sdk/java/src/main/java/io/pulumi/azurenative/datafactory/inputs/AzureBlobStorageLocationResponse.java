@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class AzureBlobStorageLocationResponse extends io.pulumi.resources.
      * Specify the container of azure blob. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="container")
+    @Import(name="container")
       private final @Nullable Object container;
 
     public Optional<Object> getContainer() {
@@ -34,7 +34,7 @@ public final class AzureBlobStorageLocationResponse extends io.pulumi.resources.
      * Specify the file name of dataset. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="fileName")
+    @Import(name="fileName")
       private final @Nullable Object fileName;
 
     public Optional<Object> getFileName() {
@@ -45,7 +45,7 @@ public final class AzureBlobStorageLocationResponse extends io.pulumi.resources.
      * Specify the folder path of dataset. Type: string (or Expression with resultType string)
      * 
      */
-    @InputImport(name="folderPath")
+    @Import(name="folderPath")
       private final @Nullable Object folderPath;
 
     public Optional<Object> getFolderPath() {
@@ -57,7 +57,7 @@ public final class AzureBlobStorageLocationResponse extends io.pulumi.resources.
      * Expected value is 'AzureBlobStorageLocation'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

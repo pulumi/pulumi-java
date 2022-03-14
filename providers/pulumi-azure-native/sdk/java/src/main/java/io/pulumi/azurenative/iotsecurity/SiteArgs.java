@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.iotsecurity;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class SiteArgs extends io.pulumi.resources.ResourceArgs {
      * Display name of the IoT site
      * 
      */
-    @InputImport(name="displayName", required=true)
+    @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -30,7 +30,7 @@ public final class SiteArgs extends io.pulumi.resources.ResourceArgs {
      * Scope of the query (IoT Hub, /providers/Microsoft.Devices/iotHubs/myHub)
      * 
      */
-    @InputImport(name="scope", required=true)
+    @Import(name="scope", required=true)
       private final Output<String> scope;
 
     public Output<String> getScope() {
@@ -41,7 +41,7 @@ public final class SiteArgs extends io.pulumi.resources.ResourceArgs {
      * Tags of the IoT site
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

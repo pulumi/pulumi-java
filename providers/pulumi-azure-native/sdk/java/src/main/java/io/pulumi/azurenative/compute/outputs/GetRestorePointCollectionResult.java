@@ -5,7 +5,7 @@ package io.pulumi.azurenative.compute.outputs;
 
 import io.pulumi.azurenative.compute.outputs.RestorePointCollectionSourcePropertiesResponse;
 import io.pulumi.azurenative.compute.outputs.RestorePointResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetRestorePointCollectionResult {
     /**
      * Resource Id
@@ -61,17 +61,17 @@ public final class GetRestorePointCollectionResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetRestorePointCollectionResult(
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("restorePointCollectionId") String restorePointCollectionId,
-        @OutputCustomType.Parameter("restorePoints") List<RestorePointResponse> restorePoints,
-        @OutputCustomType.Parameter("source") @Nullable RestorePointCollectionSourcePropertiesResponse source,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("restorePointCollectionId") String restorePointCollectionId,
+        @CustomType.Parameter("restorePoints") List<RestorePointResponse> restorePoints,
+        @CustomType.Parameter("source") @Nullable RestorePointCollectionSourcePropertiesResponse source,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type) {
         this.id = id;
         this.location = location;
         this.name = name;

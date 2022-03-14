@@ -9,7 +9,7 @@ import io.pulumi.azurenative.logic.outputs.AgreementContentResponse;
 import io.pulumi.azurenative.logic.outputs.BusinessIdentityResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Object;
 import java.lang.String;
@@ -38,7 +38,7 @@ public class IntegrationAccountAgreement extends io.pulumi.resources.CustomResou
      * The agreement type.
      * 
      */
-    @OutputExport(name="agreementType", type=String.class, parameters={})
+    @Export(name="agreementType", type=String.class, parameters={})
     private Output<String> agreementType;
 
     /**
@@ -52,7 +52,7 @@ public class IntegrationAccountAgreement extends io.pulumi.resources.CustomResou
      * The changed time.
      * 
      */
-    @OutputExport(name="changedTime", type=String.class, parameters={})
+    @Export(name="changedTime", type=String.class, parameters={})
     private Output<String> changedTime;
 
     /**
@@ -66,7 +66,7 @@ public class IntegrationAccountAgreement extends io.pulumi.resources.CustomResou
      * The agreement content.
      * 
      */
-    @OutputExport(name="content", type=AgreementContentResponse.class, parameters={})
+    @Export(name="content", type=AgreementContentResponse.class, parameters={})
     private Output<AgreementContentResponse> content;
 
     /**
@@ -80,7 +80,7 @@ public class IntegrationAccountAgreement extends io.pulumi.resources.CustomResou
      * The created time.
      * 
      */
-    @OutputExport(name="createdTime", type=String.class, parameters={})
+    @Export(name="createdTime", type=String.class, parameters={})
     private Output<String> createdTime;
 
     /**
@@ -94,7 +94,7 @@ public class IntegrationAccountAgreement extends io.pulumi.resources.CustomResou
      * The business identity of the guest partner.
      * 
      */
-    @OutputExport(name="guestIdentity", type=BusinessIdentityResponse.class, parameters={})
+    @Export(name="guestIdentity", type=BusinessIdentityResponse.class, parameters={})
     private Output<BusinessIdentityResponse> guestIdentity;
 
     /**
@@ -108,7 +108,7 @@ public class IntegrationAccountAgreement extends io.pulumi.resources.CustomResou
      * The integration account partner that is set as guest partner for this agreement.
      * 
      */
-    @OutputExport(name="guestPartner", type=String.class, parameters={})
+    @Export(name="guestPartner", type=String.class, parameters={})
     private Output<String> guestPartner;
 
     /**
@@ -122,7 +122,7 @@ public class IntegrationAccountAgreement extends io.pulumi.resources.CustomResou
      * The business identity of the host partner.
      * 
      */
-    @OutputExport(name="hostIdentity", type=BusinessIdentityResponse.class, parameters={})
+    @Export(name="hostIdentity", type=BusinessIdentityResponse.class, parameters={})
     private Output<BusinessIdentityResponse> hostIdentity;
 
     /**
@@ -136,7 +136,7 @@ public class IntegrationAccountAgreement extends io.pulumi.resources.CustomResou
      * The integration account partner that is set as host partner for this agreement.
      * 
      */
-    @OutputExport(name="hostPartner", type=String.class, parameters={})
+    @Export(name="hostPartner", type=String.class, parameters={})
     private Output<String> hostPartner;
 
     /**
@@ -150,7 +150,7 @@ public class IntegrationAccountAgreement extends io.pulumi.resources.CustomResou
      * The resource location.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -164,7 +164,7 @@ public class IntegrationAccountAgreement extends io.pulumi.resources.CustomResou
      * The metadata.
      * 
      */
-    @OutputExport(name="metadata", type=Object.class, parameters={})
+    @Export(name="metadata", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> metadata;
 
     /**
@@ -178,7 +178,7 @@ public class IntegrationAccountAgreement extends io.pulumi.resources.CustomResou
      * Gets the resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -192,7 +192,7 @@ public class IntegrationAccountAgreement extends io.pulumi.resources.CustomResou
      * The resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -206,7 +206,7 @@ public class IntegrationAccountAgreement extends io.pulumi.resources.CustomResou
      * Gets the resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

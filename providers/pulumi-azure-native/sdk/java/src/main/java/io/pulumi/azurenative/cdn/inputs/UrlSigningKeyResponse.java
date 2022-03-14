@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.cdn.inputs;
 
 import io.pulumi.azurenative.cdn.inputs.KeyVaultSigningKeyParametersResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class UrlSigningKeyResponse extends io.pulumi.resources.InvokeArgs 
      * Defines the customer defined key Id. This id will exist in the incoming request to indicate the key used to form the hash.
      * 
      */
-    @InputImport(name="keyId", required=true)
+    @Import(name="keyId", required=true)
       private final String keyId;
 
     public String getKeyId() {
@@ -32,7 +32,7 @@ public final class UrlSigningKeyResponse extends io.pulumi.resources.InvokeArgs 
      * Defines the parameters for using customer key vault for Url Signing Key.
      * 
      */
-    @InputImport(name="keySourceParameters", required=true)
+    @Import(name="keySourceParameters", required=true)
       private final KeyVaultSigningKeyParametersResponse keySourceParameters;
 
     public KeyVaultSigningKeyParametersResponse getKeySourceParameters() {

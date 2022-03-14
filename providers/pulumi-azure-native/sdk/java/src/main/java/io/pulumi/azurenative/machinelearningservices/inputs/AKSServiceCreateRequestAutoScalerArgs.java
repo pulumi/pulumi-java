@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class AKSServiceCreateRequestAutoScalerArgs extends io.pulumi.resou
      * Option to enable/disable auto scaling.
      * 
      */
-    @InputImport(name="autoscaleEnabled")
+    @Import(name="autoscaleEnabled")
       private final @Nullable Output<Boolean> autoscaleEnabled;
 
     public Output<Boolean> getAutoscaleEnabled() {
@@ -34,7 +34,7 @@ public final class AKSServiceCreateRequestAutoScalerArgs extends io.pulumi.resou
      * The maximum number of replicas in the cluster.
      * 
      */
-    @InputImport(name="maxReplicas")
+    @Import(name="maxReplicas")
       private final @Nullable Output<Integer> maxReplicas;
 
     public Output<Integer> getMaxReplicas() {
@@ -45,7 +45,7 @@ public final class AKSServiceCreateRequestAutoScalerArgs extends io.pulumi.resou
      * The minimum number of replicas to scale down to.
      * 
      */
-    @InputImport(name="minReplicas")
+    @Import(name="minReplicas")
       private final @Nullable Output<Integer> minReplicas;
 
     public Output<Integer> getMinReplicas() {
@@ -56,7 +56,7 @@ public final class AKSServiceCreateRequestAutoScalerArgs extends io.pulumi.resou
      * The amount of seconds to wait between auto scale updates.
      * 
      */
-    @InputImport(name="refreshPeriodInSeconds")
+    @Import(name="refreshPeriodInSeconds")
       private final @Nullable Output<Integer> refreshPeriodInSeconds;
 
     public Output<Integer> getRefreshPeriodInSeconds() {
@@ -67,7 +67,7 @@ public final class AKSServiceCreateRequestAutoScalerArgs extends io.pulumi.resou
      * The target utilization percentage to use for determining whether to scale the cluster.
      * 
      */
-    @InputImport(name="targetUtilization")
+    @Import(name="targetUtilization")
       private final @Nullable Output<Integer> targetUtilization;
 
     public Output<Integer> getTargetUtilization() {

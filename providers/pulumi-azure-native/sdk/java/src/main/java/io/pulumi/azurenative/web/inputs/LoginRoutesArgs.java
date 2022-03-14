@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class LoginRoutesArgs extends io.pulumi.resources.ResourceArgs {
      * The endpoint at which a logout request should be made.
      * 
      */
-    @InputImport(name="logoutEndpoint")
+    @Import(name="logoutEndpoint")
       private final @Nullable Output<String> logoutEndpoint;
 
     public Output<String> getLogoutEndpoint() {

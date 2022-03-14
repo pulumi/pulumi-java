@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.databox.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class ManagedDiskDetailsResponse extends io.pulumi.resources.Invoke
      * Expected value is 'ManagedDisk'.
      * 
      */
-    @InputImport(name="dataAccountType", required=true)
+    @Import(name="dataAccountType", required=true)
       private final String dataAccountType;
 
     public String getDataAccountType() {
@@ -32,7 +32,7 @@ public final class ManagedDiskDetailsResponse extends io.pulumi.resources.Invoke
      * Resource Group Id of the compute disks.
      * 
      */
-    @InputImport(name="resourceGroupId", required=true)
+    @Import(name="resourceGroupId", required=true)
       private final String resourceGroupId;
 
     public String getResourceGroupId() {
@@ -43,7 +43,7 @@ public final class ManagedDiskDetailsResponse extends io.pulumi.resources.Invoke
      * Resource Id of the storage account that can be used to copy the vhd for staging.
      * 
      */
-    @InputImport(name="stagingStorageAccountId", required=true)
+    @Import(name="stagingStorageAccountId", required=true)
       private final String stagingStorageAccountId;
 
     public String getStagingStorageAccountId() {

@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.security.outputs;
 
 import io.pulumi.azurenative.security.outputs.JitNetworkAccessRequestVirtualMachineResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class JitNetworkAccessRequestResponse {
     /**
      * The justification for making the initiate request
@@ -30,12 +30,12 @@ public final class JitNetworkAccessRequestResponse {
     private final String startTimeUtc;
     private final List<JitNetworkAccessRequestVirtualMachineResponse> virtualMachines;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private JitNetworkAccessRequestResponse(
-        @OutputCustomType.Parameter("justification") @Nullable String justification,
-        @OutputCustomType.Parameter("requestor") String requestor,
-        @OutputCustomType.Parameter("startTimeUtc") String startTimeUtc,
-        @OutputCustomType.Parameter("virtualMachines") List<JitNetworkAccessRequestVirtualMachineResponse> virtualMachines) {
+        @CustomType.Parameter("justification") @Nullable String justification,
+        @CustomType.Parameter("requestor") String requestor,
+        @CustomType.Parameter("startTimeUtc") String startTimeUtc,
+        @CustomType.Parameter("virtualMachines") List<JitNetworkAccessRequestVirtualMachineResponse> virtualMachines) {
         this.justification = justification;
         this.requestor = requestor;
         this.startTimeUtc = startTimeUtc;

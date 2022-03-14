@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.storagecache.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class BlobNfsTargetArgs extends io.pulumi.resources.ResourceArgs {
      * Resource ID of the storage container.
      * 
      */
-    @InputImport(name="target")
+    @Import(name="target")
       private final @Nullable Output<String> target;
 
     public Output<String> getTarget() {
@@ -33,7 +33,7 @@ public final class BlobNfsTargetArgs extends io.pulumi.resources.ResourceArgs {
      * Identifies the StorageCache usage model to be used for this storage target.
      * 
      */
-    @InputImport(name="usageModel")
+    @Import(name="usageModel")
       private final @Nullable Output<String> usageModel;
 
     public Output<String> getUsageModel() {

@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.datafactory.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CopyActivityLogSettingsResponse {
     /**
      * Specifies whether to enable reliable logging. Type: boolean (or Expression with resultType boolean).
@@ -22,10 +22,10 @@ public final class CopyActivityLogSettingsResponse {
      */
     private final @Nullable Object logLevel;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CopyActivityLogSettingsResponse(
-        @OutputCustomType.Parameter("enableReliableLogging") @Nullable Object enableReliableLogging,
-        @OutputCustomType.Parameter("logLevel") @Nullable Object logLevel) {
+        @CustomType.Parameter("enableReliableLogging") @Nullable Object enableReliableLogging,
+        @CustomType.Parameter("logLevel") @Nullable Object logLevel) {
         this.enableReliableLogging = enableReliableLogging;
         this.logLevel = logLevel;
     }

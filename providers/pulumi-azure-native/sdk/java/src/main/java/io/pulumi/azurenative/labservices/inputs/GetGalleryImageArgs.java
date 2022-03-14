@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.labservices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +18,7 @@ public final class GetGalleryImageArgs extends io.pulumi.resources.InvokeArgs {
      * Specify the $expand query. Example: 'properties($select=author)'
      * 
      */
-    @InputImport(name="expand")
+    @Import(name="expand")
       private final @Nullable String expand;
 
     public Optional<String> getExpand() {
@@ -29,7 +29,7 @@ public final class GetGalleryImageArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the gallery Image.
      * 
      */
-    @InputImport(name="galleryImageName", required=true)
+    @Import(name="galleryImageName", required=true)
       private final String galleryImageName;
 
     public String getGalleryImageName() {
@@ -40,7 +40,7 @@ public final class GetGalleryImageArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the lab Account.
      * 
      */
-    @InputImport(name="labAccountName", required=true)
+    @Import(name="labAccountName", required=true)
       private final String labAccountName;
 
     public String getLabAccountName() {
@@ -51,7 +51,7 @@ public final class GetGalleryImageArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {

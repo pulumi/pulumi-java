@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.portal.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class ViolationResponse extends io.pulumi.resources.InvokeArgs {
      * Error message.
      * 
      */
-    @InputImport(name="errorMessage", required=true)
+    @Import(name="errorMessage", required=true)
       private final String errorMessage;
 
     public String getErrorMessage() {
@@ -31,7 +31,7 @@ public final class ViolationResponse extends io.pulumi.resources.InvokeArgs {
      * Id of the item that violates tenant configuration.
      * 
      */
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final String id;
 
     public String getId() {
@@ -42,7 +42,7 @@ public final class ViolationResponse extends io.pulumi.resources.InvokeArgs {
      * Id of the user who owns violated item.
      * 
      */
-    @InputImport(name="userId", required=true)
+    @Import(name="userId", required=true)
       private final String userId;
 
     public String getUserId() {

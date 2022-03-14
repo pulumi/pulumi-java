@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.avs.AuthorizationArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -34,7 +34,7 @@ public class Authorization extends io.pulumi.resources.CustomResource {
      * The ID of the ExpressRoute Circuit Authorization
      * 
      */
-    @OutputExport(name="expressRouteAuthorizationId", type=String.class, parameters={})
+    @Export(name="expressRouteAuthorizationId", type=String.class, parameters={})
     private Output<String> expressRouteAuthorizationId;
 
     /**
@@ -48,7 +48,7 @@ public class Authorization extends io.pulumi.resources.CustomResource {
      * The key of the ExpressRoute Circuit Authorization
      * 
      */
-    @OutputExport(name="expressRouteAuthorizationKey", type=String.class, parameters={})
+    @Export(name="expressRouteAuthorizationKey", type=String.class, parameters={})
     private Output<String> expressRouteAuthorizationKey;
 
     /**
@@ -62,7 +62,7 @@ public class Authorization extends io.pulumi.resources.CustomResource {
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -76,7 +76,7 @@ public class Authorization extends io.pulumi.resources.CustomResource {
      * The state of the  ExpressRoute Circuit Authorization provisioning
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -90,7 +90,7 @@ public class Authorization extends io.pulumi.resources.CustomResource {
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

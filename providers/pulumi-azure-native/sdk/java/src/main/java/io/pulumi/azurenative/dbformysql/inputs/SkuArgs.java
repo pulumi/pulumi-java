@@ -6,7 +6,7 @@ package io.pulumi.azurenative.dbformysql.inputs;
 import io.pulumi.azurenative.dbformysql.enums.SkuTier;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
      * The scale up/out capacity, representing server's compute units.
      * 
      */
-    @InputImport(name="capacity")
+    @Import(name="capacity")
       private final @Nullable Output<Integer> capacity;
 
     public Output<Integer> getCapacity() {
@@ -36,7 +36,7 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
      * The family of hardware.
      * 
      */
-    @InputImport(name="family")
+    @Import(name="family")
       private final @Nullable Output<String> family;
 
     public Output<String> getFamily() {
@@ -47,7 +47,7 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the sku, typically, tier + family + cores, e.g. B_Gen4_1, GP_Gen5_8.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -58,7 +58,7 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
      * The size code, to be interpreted by resource as appropriate.
      * 
      */
-    @InputImport(name="size")
+    @Import(name="size")
       private final @Nullable Output<String> size;
 
     public Output<String> getSize() {
@@ -69,7 +69,7 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
      * The tier of the particular SKU, e.g. Basic.
      * 
      */
-    @InputImport(name="tier")
+    @Import(name="tier")
       private final @Nullable Output<Either<String,SkuTier>> tier;
 
     public Output<Either<String,SkuTier>> getTier() {

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class VirtualApplianceSkuPropertiesArgs extends io.pulumi.resources
      * Virtual Appliance Scale Unit.
      * 
      */
-    @InputImport(name="bundledScaleUnit")
+    @Import(name="bundledScaleUnit")
       private final @Nullable Output<String> bundledScaleUnit;
 
     public Output<String> getBundledScaleUnit() {
@@ -33,7 +33,7 @@ public final class VirtualApplianceSkuPropertiesArgs extends io.pulumi.resources
      * Virtual Appliance Version.
      * 
      */
-    @InputImport(name="marketPlaceVersion")
+    @Import(name="marketPlaceVersion")
       private final @Nullable Output<String> marketPlaceVersion;
 
     public Output<String> getMarketPlaceVersion() {
@@ -44,7 +44,7 @@ public final class VirtualApplianceSkuPropertiesArgs extends io.pulumi.resources
      * Virtual Appliance Vendor.
      * 
      */
-    @InputImport(name="vendor")
+    @Import(name="vendor")
       private final @Nullable Output<String> vendor;
 
     public Output<String> getVendor() {

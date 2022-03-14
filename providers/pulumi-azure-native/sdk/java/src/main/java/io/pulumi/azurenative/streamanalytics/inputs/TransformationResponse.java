@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.streamanalytics.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class TransformationResponse extends io.pulumi.resources.InvokeArgs
      * The current entity tag for the transformation. This is an opaque string. You can use it to detect whether the resource has changed between requests. You can also use it in the If-Match or If-None-Match headers for write operations for optimistic concurrency.
      * 
      */
-    @InputImport(name="etag", required=true)
+    @Import(name="etag", required=true)
       private final String etag;
 
     public String getEtag() {
@@ -34,7 +34,7 @@ public final class TransformationResponse extends io.pulumi.resources.InvokeArgs
      * Resource Id
      * 
      */
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final String id;
 
     public String getId() {
@@ -45,7 +45,7 @@ public final class TransformationResponse extends io.pulumi.resources.InvokeArgs
      * Resource name
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -56,7 +56,7 @@ public final class TransformationResponse extends io.pulumi.resources.InvokeArgs
      * Specifies the query that will be run in the streaming job. You can learn more about the Stream Analytics Query Language (SAQL) here: https://msdn.microsoft.com/library/azure/dn834998 . Required on PUT (CreateOrReplace) requests.
      * 
      */
-    @InputImport(name="query")
+    @Import(name="query")
       private final @Nullable String query;
 
     public Optional<String> getQuery() {
@@ -67,7 +67,7 @@ public final class TransformationResponse extends io.pulumi.resources.InvokeArgs
      * Specifies the number of streaming units that the streaming job uses.
      * 
      */
-    @InputImport(name="streamingUnits")
+    @Import(name="streamingUnits")
       private final @Nullable Integer streamingUnits;
 
     public Optional<Integer> getStreamingUnits() {
@@ -78,7 +78,7 @@ public final class TransformationResponse extends io.pulumi.resources.InvokeArgs
      * Resource type
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

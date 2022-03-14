@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.automation.outputs;
 
 import io.pulumi.azurenative.automation.outputs.TaskPropertiesResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SoftwareUpdateConfigurationTasksResponse {
     /**
      * Post task properties.
@@ -22,10 +22,10 @@ public final class SoftwareUpdateConfigurationTasksResponse {
      */
     private final @Nullable TaskPropertiesResponse preTask;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SoftwareUpdateConfigurationTasksResponse(
-        @OutputCustomType.Parameter("postTask") @Nullable TaskPropertiesResponse postTask,
-        @OutputCustomType.Parameter("preTask") @Nullable TaskPropertiesResponse preTask) {
+        @CustomType.Parameter("postTask") @Nullable TaskPropertiesResponse postTask,
+        @CustomType.Parameter("preTask") @Nullable TaskPropertiesResponse preTask) {
         this.postTask = postTask;
         this.preTask = preTask;
     }

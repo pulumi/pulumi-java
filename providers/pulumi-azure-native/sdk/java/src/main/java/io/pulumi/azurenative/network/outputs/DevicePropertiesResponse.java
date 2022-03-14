@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DevicePropertiesResponse {
     /**
      * Model of the device.
@@ -28,11 +28,11 @@ public final class DevicePropertiesResponse {
      */
     private final @Nullable Integer linkSpeedInMbps;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DevicePropertiesResponse(
-        @OutputCustomType.Parameter("deviceModel") @Nullable String deviceModel,
-        @OutputCustomType.Parameter("deviceVendor") @Nullable String deviceVendor,
-        @OutputCustomType.Parameter("linkSpeedInMbps") @Nullable Integer linkSpeedInMbps) {
+        @CustomType.Parameter("deviceModel") @Nullable String deviceModel,
+        @CustomType.Parameter("deviceVendor") @Nullable String deviceVendor,
+        @CustomType.Parameter("linkSpeedInMbps") @Nullable Integer linkSpeedInMbps) {
         this.deviceModel = deviceModel;
         this.deviceVendor = deviceVendor;
         this.linkSpeedInMbps = linkSpeedInMbps;

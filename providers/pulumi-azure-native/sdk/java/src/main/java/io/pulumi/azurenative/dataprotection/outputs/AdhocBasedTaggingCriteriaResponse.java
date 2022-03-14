@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.dataprotection.outputs;
 
 import io.pulumi.azurenative.dataprotection.outputs.RetentionTagResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AdhocBasedTaggingCriteriaResponse {
     /**
      * Retention tag information
@@ -17,8 +17,8 @@ public final class AdhocBasedTaggingCriteriaResponse {
      */
     private final @Nullable RetentionTagResponse tagInfo;
 
-    @OutputCustomType.Constructor
-    private AdhocBasedTaggingCriteriaResponse(@OutputCustomType.Parameter("tagInfo") @Nullable RetentionTagResponse tagInfo) {
+    @CustomType.Constructor
+    private AdhocBasedTaggingCriteriaResponse(@CustomType.Parameter("tagInfo") @Nullable RetentionTagResponse tagInfo) {
         this.tagInfo = tagInfo;
     }
 

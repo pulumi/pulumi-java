@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.aad.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class HealthAlertResponse extends io.pulumi.resources.InvokeArgs {
      * Health Alert Id
      * 
      */
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final String id;
 
     public String getId() {
@@ -31,7 +31,7 @@ public final class HealthAlertResponse extends io.pulumi.resources.InvokeArgs {
      * Health Alert Issue
      * 
      */
-    @InputImport(name="issue", required=true)
+    @Import(name="issue", required=true)
       private final String issue;
 
     public String getIssue() {
@@ -42,7 +42,7 @@ public final class HealthAlertResponse extends io.pulumi.resources.InvokeArgs {
      * Health Alert Last Detected DateTime
      * 
      */
-    @InputImport(name="lastDetected", required=true)
+    @Import(name="lastDetected", required=true)
       private final String lastDetected;
 
     public String getLastDetected() {
@@ -53,7 +53,7 @@ public final class HealthAlertResponse extends io.pulumi.resources.InvokeArgs {
      * Health Alert Name
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -64,7 +64,7 @@ public final class HealthAlertResponse extends io.pulumi.resources.InvokeArgs {
      * Health Alert Raised DateTime
      * 
      */
-    @InputImport(name="raised", required=true)
+    @Import(name="raised", required=true)
       private final String raised;
 
     public String getRaised() {
@@ -75,7 +75,7 @@ public final class HealthAlertResponse extends io.pulumi.resources.InvokeArgs {
      * Health Alert TSG Link
      * 
      */
-    @InputImport(name="resolutionUri", required=true)
+    @Import(name="resolutionUri", required=true)
       private final String resolutionUri;
 
     public String getResolutionUri() {
@@ -86,7 +86,7 @@ public final class HealthAlertResponse extends io.pulumi.resources.InvokeArgs {
      * Health Alert Severity
      * 
      */
-    @InputImport(name="severity", required=true)
+    @Import(name="severity", required=true)
       private final String severity;
 
     public String getSeverity() {

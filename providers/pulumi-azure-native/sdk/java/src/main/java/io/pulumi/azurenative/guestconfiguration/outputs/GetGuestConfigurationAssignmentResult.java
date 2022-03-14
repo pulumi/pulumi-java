@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.guestconfiguration.outputs;
 
 import io.pulumi.azurenative.guestconfiguration.outputs.GuestConfigurationAssignmentPropertiesResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetGuestConfigurationAssignmentResult {
     /**
      * ARM resource id of the guest configuration assignment.
@@ -38,13 +38,13 @@ public final class GetGuestConfigurationAssignmentResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetGuestConfigurationAssignmentResult(
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("properties") GuestConfigurationAssignmentPropertiesResponse properties,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("properties") GuestConfigurationAssignmentPropertiesResponse properties,
+        @CustomType.Parameter("type") String type) {
         this.id = id;
         this.location = location;
         this.name = name;

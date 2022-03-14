@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.network.ExpressRouteCircuitAuthorizationArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -34,7 +34,7 @@ public class ExpressRouteCircuitAuthorization extends io.pulumi.resources.Custom
      * The authorization key.
      * 
      */
-    @OutputExport(name="authorizationKey", type=String.class, parameters={})
+    @Export(name="authorizationKey", type=String.class, parameters={})
     private Output</* @Nullable */ String> authorizationKey;
 
     /**
@@ -48,7 +48,7 @@ public class ExpressRouteCircuitAuthorization extends io.pulumi.resources.Custom
      * The authorization use status.
      * 
      */
-    @OutputExport(name="authorizationUseStatus", type=String.class, parameters={})
+    @Export(name="authorizationUseStatus", type=String.class, parameters={})
     private Output</* @Nullable */ String> authorizationUseStatus;
 
     /**
@@ -62,7 +62,7 @@ public class ExpressRouteCircuitAuthorization extends io.pulumi.resources.Custom
      * A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -76,7 +76,7 @@ public class ExpressRouteCircuitAuthorization extends io.pulumi.resources.Custom
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
@@ -90,7 +90,7 @@ public class ExpressRouteCircuitAuthorization extends io.pulumi.resources.Custom
      * The provisioning state of the authorization resource.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -104,7 +104,7 @@ public class ExpressRouteCircuitAuthorization extends io.pulumi.resources.Custom
      * Type of the resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

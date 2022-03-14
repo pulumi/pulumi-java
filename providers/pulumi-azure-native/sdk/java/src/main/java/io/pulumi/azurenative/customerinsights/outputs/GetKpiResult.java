@@ -8,7 +8,7 @@ import io.pulumi.azurenative.customerinsights.outputs.KpiExtractResponse;
 import io.pulumi.azurenative.customerinsights.outputs.KpiGroupByMetadataResponse;
 import io.pulumi.azurenative.customerinsights.outputs.KpiParticipantProfilesMetadataResponse;
 import io.pulumi.azurenative.customerinsights.outputs.KpiThresholdsResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -16,7 +16,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetKpiResult {
     /**
      * The aliases.
@@ -129,30 +129,30 @@ public final class GetKpiResult {
      */
     private final @Nullable String unit;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetKpiResult(
-        @OutputCustomType.Parameter("aliases") @Nullable List<KpiAliasResponse> aliases,
-        @OutputCustomType.Parameter("calculationWindow") String calculationWindow,
-        @OutputCustomType.Parameter("calculationWindowFieldName") @Nullable String calculationWindowFieldName,
-        @OutputCustomType.Parameter("description") @Nullable Map<String,String> description,
-        @OutputCustomType.Parameter("displayName") @Nullable Map<String,String> displayName,
-        @OutputCustomType.Parameter("entityType") String entityType,
-        @OutputCustomType.Parameter("entityTypeName") String entityTypeName,
-        @OutputCustomType.Parameter("expression") String expression,
-        @OutputCustomType.Parameter("extracts") @Nullable List<KpiExtractResponse> extracts,
-        @OutputCustomType.Parameter("filter") @Nullable String filter,
-        @OutputCustomType.Parameter("function") String function,
-        @OutputCustomType.Parameter("groupBy") @Nullable List<String> groupBy,
-        @OutputCustomType.Parameter("groupByMetadata") List<KpiGroupByMetadataResponse> groupByMetadata,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("kpiName") String kpiName,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("participantProfilesMetadata") List<KpiParticipantProfilesMetadataResponse> participantProfilesMetadata,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("tenantId") String tenantId,
-        @OutputCustomType.Parameter("thresHolds") @Nullable KpiThresholdsResponse thresHolds,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("unit") @Nullable String unit) {
+        @CustomType.Parameter("aliases") @Nullable List<KpiAliasResponse> aliases,
+        @CustomType.Parameter("calculationWindow") String calculationWindow,
+        @CustomType.Parameter("calculationWindowFieldName") @Nullable String calculationWindowFieldName,
+        @CustomType.Parameter("description") @Nullable Map<String,String> description,
+        @CustomType.Parameter("displayName") @Nullable Map<String,String> displayName,
+        @CustomType.Parameter("entityType") String entityType,
+        @CustomType.Parameter("entityTypeName") String entityTypeName,
+        @CustomType.Parameter("expression") String expression,
+        @CustomType.Parameter("extracts") @Nullable List<KpiExtractResponse> extracts,
+        @CustomType.Parameter("filter") @Nullable String filter,
+        @CustomType.Parameter("function") String function,
+        @CustomType.Parameter("groupBy") @Nullable List<String> groupBy,
+        @CustomType.Parameter("groupByMetadata") List<KpiGroupByMetadataResponse> groupByMetadata,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("kpiName") String kpiName,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("participantProfilesMetadata") List<KpiParticipantProfilesMetadataResponse> participantProfilesMetadata,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("tenantId") String tenantId,
+        @CustomType.Parameter("thresHolds") @Nullable KpiThresholdsResponse thresHolds,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("unit") @Nullable String unit) {
         this.aliases = aliases;
         this.calculationWindow = calculationWindow;
         this.calculationWindowFieldName = calculationWindowFieldName;

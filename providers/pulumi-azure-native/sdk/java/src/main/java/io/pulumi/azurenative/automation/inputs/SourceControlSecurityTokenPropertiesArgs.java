@@ -6,7 +6,7 @@ package io.pulumi.azurenative.automation.inputs;
 import io.pulumi.azurenative.automation.enums.TokenType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class SourceControlSecurityTokenPropertiesArgs extends io.pulumi.re
      * The access token.
      * 
      */
-    @InputImport(name="accessToken")
+    @Import(name="accessToken")
       private final @Nullable Output<String> accessToken;
 
     public Output<String> getAccessToken() {
@@ -31,7 +31,7 @@ public final class SourceControlSecurityTokenPropertiesArgs extends io.pulumi.re
      * The refresh token.
      * 
      */
-    @InputImport(name="refreshToken")
+    @Import(name="refreshToken")
       private final @Nullable Output<String> refreshToken;
 
     public Output<String> getRefreshToken() {
@@ -42,7 +42,7 @@ public final class SourceControlSecurityTokenPropertiesArgs extends io.pulumi.re
      * The token type. Must be either PersonalAccessToken or Oauth.
      * 
      */
-    @InputImport(name="tokenType")
+    @Import(name="tokenType")
       private final @Nullable Output<Either<String,TokenType>> tokenType;
 
     public Output<Either<String,TokenType>> getTokenType() {

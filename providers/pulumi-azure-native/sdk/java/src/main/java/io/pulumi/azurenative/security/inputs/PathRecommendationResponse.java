@@ -5,7 +5,7 @@ package io.pulumi.azurenative.security.inputs;
 
 import io.pulumi.azurenative.security.inputs.PublisherInfoResponse;
 import io.pulumi.azurenative.security.inputs.UserRecommendationResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +26,7 @@ public final class PathRecommendationResponse extends io.pulumi.resources.Invoke
      * The recommendation action of the machine or rule
      * 
      */
-    @InputImport(name="action")
+    @Import(name="action")
       private final @Nullable String action;
 
     public Optional<String> getAction() {
@@ -37,7 +37,7 @@ public final class PathRecommendationResponse extends io.pulumi.resources.Invoke
      * Whether the application is commonly run on the machine
      * 
      */
-    @InputImport(name="common")
+    @Import(name="common")
       private final @Nullable Boolean common;
 
     public Optional<Boolean> getCommon() {
@@ -48,7 +48,7 @@ public final class PathRecommendationResponse extends io.pulumi.resources.Invoke
      * The configuration status of the machines group or machine or rule
      * 
      */
-    @InputImport(name="configurationStatus")
+    @Import(name="configurationStatus")
       private final @Nullable String configurationStatus;
 
     public Optional<String> getConfigurationStatus() {
@@ -59,7 +59,7 @@ public final class PathRecommendationResponse extends io.pulumi.resources.Invoke
      * The type of the file (for Linux files - Executable is used)
      * 
      */
-    @InputImport(name="fileType")
+    @Import(name="fileType")
       private final @Nullable String fileType;
 
     public Optional<String> getFileType() {
@@ -70,7 +70,7 @@ public final class PathRecommendationResponse extends io.pulumi.resources.Invoke
      * The full path of the file, or an identifier of the application
      * 
      */
-    @InputImport(name="path")
+    @Import(name="path")
       private final @Nullable String path;
 
     public Optional<String> getPath() {
@@ -81,7 +81,7 @@ public final class PathRecommendationResponse extends io.pulumi.resources.Invoke
      * Represents the publisher information of a process/rule
      * 
      */
-    @InputImport(name="publisherInfo")
+    @Import(name="publisherInfo")
       private final @Nullable PublisherInfoResponse publisherInfo;
 
     public Optional<PublisherInfoResponse> getPublisherInfo() {
@@ -92,21 +92,21 @@ public final class PathRecommendationResponse extends io.pulumi.resources.Invoke
      * The type of the rule to be allowed
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable String type;
 
     public Optional<String> getType() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
     }
 
-    @InputImport(name="userSids")
+    @Import(name="userSids")
       private final @Nullable List<String> userSids;
 
     public List<String> getUserSids() {
         return this.userSids == null ? List.of() : this.userSids;
     }
 
-    @InputImport(name="usernames")
+    @Import(name="usernames")
       private final @Nullable List<UserRecommendationResponse> usernames;
 
     public List<UserRecommendationResponse> getUsernames() {

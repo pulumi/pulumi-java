@@ -9,7 +9,7 @@ import io.pulumi.azurenative.sql.outputs.SkuResponse;
 import io.pulumi.azurenative.sql.outputs.SyncGroupSchemaResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -38,7 +38,7 @@ public class SyncGroup extends io.pulumi.resources.CustomResource {
      * Conflict logging retention period.
      * 
      */
-    @OutputExport(name="conflictLoggingRetentionInDays", type=Integer.class, parameters={})
+    @Export(name="conflictLoggingRetentionInDays", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> conflictLoggingRetentionInDays;
 
     /**
@@ -52,7 +52,7 @@ public class SyncGroup extends io.pulumi.resources.CustomResource {
      * Conflict resolution policy of the sync group.
      * 
      */
-    @OutputExport(name="conflictResolutionPolicy", type=String.class, parameters={})
+    @Export(name="conflictResolutionPolicy", type=String.class, parameters={})
     private Output</* @Nullable */ String> conflictResolutionPolicy;
 
     /**
@@ -66,7 +66,7 @@ public class SyncGroup extends io.pulumi.resources.CustomResource {
      * If conflict logging is enabled.
      * 
      */
-    @OutputExport(name="enableConflictLogging", type=Boolean.class, parameters={})
+    @Export(name="enableConflictLogging", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableConflictLogging;
 
     /**
@@ -80,7 +80,7 @@ public class SyncGroup extends io.pulumi.resources.CustomResource {
      * User name for the sync group hub database credential.
      * 
      */
-    @OutputExport(name="hubDatabaseUserName", type=String.class, parameters={})
+    @Export(name="hubDatabaseUserName", type=String.class, parameters={})
     private Output</* @Nullable */ String> hubDatabaseUserName;
 
     /**
@@ -94,7 +94,7 @@ public class SyncGroup extends io.pulumi.resources.CustomResource {
      * Sync interval of the sync group.
      * 
      */
-    @OutputExport(name="interval", type=Integer.class, parameters={})
+    @Export(name="interval", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> interval;
 
     /**
@@ -108,7 +108,7 @@ public class SyncGroup extends io.pulumi.resources.CustomResource {
      * Last sync time of the sync group.
      * 
      */
-    @OutputExport(name="lastSyncTime", type=String.class, parameters={})
+    @Export(name="lastSyncTime", type=String.class, parameters={})
     private Output<String> lastSyncTime;
 
     /**
@@ -122,7 +122,7 @@ public class SyncGroup extends io.pulumi.resources.CustomResource {
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -136,7 +136,7 @@ public class SyncGroup extends io.pulumi.resources.CustomResource {
      * Private endpoint name of the sync group if use private link connection is enabled.
      * 
      */
-    @OutputExport(name="privateEndpointName", type=String.class, parameters={})
+    @Export(name="privateEndpointName", type=String.class, parameters={})
     private Output<String> privateEndpointName;
 
     /**
@@ -150,7 +150,7 @@ public class SyncGroup extends io.pulumi.resources.CustomResource {
      * Sync schema of the sync group.
      * 
      */
-    @OutputExport(name="schema", type=SyncGroupSchemaResponse.class, parameters={})
+    @Export(name="schema", type=SyncGroupSchemaResponse.class, parameters={})
     private Output</* @Nullable */ SyncGroupSchemaResponse> schema;
 
     /**
@@ -164,7 +164,7 @@ public class SyncGroup extends io.pulumi.resources.CustomResource {
      * The name and capacity of the SKU.
      * 
      */
-    @OutputExport(name="sku", type=SkuResponse.class, parameters={})
+    @Export(name="sku", type=SkuResponse.class, parameters={})
     private Output</* @Nullable */ SkuResponse> sku;
 
     /**
@@ -178,7 +178,7 @@ public class SyncGroup extends io.pulumi.resources.CustomResource {
      * ARM resource id of the sync database in the sync group.
      * 
      */
-    @OutputExport(name="syncDatabaseId", type=String.class, parameters={})
+    @Export(name="syncDatabaseId", type=String.class, parameters={})
     private Output</* @Nullable */ String> syncDatabaseId;
 
     /**
@@ -192,7 +192,7 @@ public class SyncGroup extends io.pulumi.resources.CustomResource {
      * Sync state of the sync group.
      * 
      */
-    @OutputExport(name="syncState", type=String.class, parameters={})
+    @Export(name="syncState", type=String.class, parameters={})
     private Output<String> syncState;
 
     /**
@@ -206,7 +206,7 @@ public class SyncGroup extends io.pulumi.resources.CustomResource {
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -220,7 +220,7 @@ public class SyncGroup extends io.pulumi.resources.CustomResource {
      * If use private link connection is enabled.
      * 
      */
-    @OutputExport(name="usePrivateLinkConnection", type=Boolean.class, parameters={})
+    @Export(name="usePrivateLinkConnection", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> usePrivateLinkConnection;
 
     /**

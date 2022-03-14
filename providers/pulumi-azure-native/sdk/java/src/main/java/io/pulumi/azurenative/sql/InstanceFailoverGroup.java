@@ -11,7 +11,7 @@ import io.pulumi.azurenative.sql.outputs.ManagedInstancePairInfoResponse;
 import io.pulumi.azurenative.sql.outputs.PartnerRegionInfoResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -38,7 +38,7 @@ public class InstanceFailoverGroup extends io.pulumi.resources.CustomResource {
      * List of managed instance pairs in the failover group.
      * 
      */
-    @OutputExport(name="managedInstancePairs", type=List.class, parameters={ManagedInstancePairInfoResponse.class})
+    @Export(name="managedInstancePairs", type=List.class, parameters={ManagedInstancePairInfoResponse.class})
     private Output<List<ManagedInstancePairInfoResponse>> managedInstancePairs;
 
     /**
@@ -52,7 +52,7 @@ public class InstanceFailoverGroup extends io.pulumi.resources.CustomResource {
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -66,7 +66,7 @@ public class InstanceFailoverGroup extends io.pulumi.resources.CustomResource {
      * Partner region information for the failover group.
      * 
      */
-    @OutputExport(name="partnerRegions", type=List.class, parameters={PartnerRegionInfoResponse.class})
+    @Export(name="partnerRegions", type=List.class, parameters={PartnerRegionInfoResponse.class})
     private Output<List<PartnerRegionInfoResponse>> partnerRegions;
 
     /**
@@ -80,7 +80,7 @@ public class InstanceFailoverGroup extends io.pulumi.resources.CustomResource {
      * Read-only endpoint of the failover group instance.
      * 
      */
-    @OutputExport(name="readOnlyEndpoint", type=InstanceFailoverGroupReadOnlyEndpointResponse.class, parameters={})
+    @Export(name="readOnlyEndpoint", type=InstanceFailoverGroupReadOnlyEndpointResponse.class, parameters={})
     private Output</* @Nullable */ InstanceFailoverGroupReadOnlyEndpointResponse> readOnlyEndpoint;
 
     /**
@@ -94,7 +94,7 @@ public class InstanceFailoverGroup extends io.pulumi.resources.CustomResource {
      * Read-write endpoint of the failover group instance.
      * 
      */
-    @OutputExport(name="readWriteEndpoint", type=InstanceFailoverGroupReadWriteEndpointResponse.class, parameters={})
+    @Export(name="readWriteEndpoint", type=InstanceFailoverGroupReadWriteEndpointResponse.class, parameters={})
     private Output<InstanceFailoverGroupReadWriteEndpointResponse> readWriteEndpoint;
 
     /**
@@ -108,7 +108,7 @@ public class InstanceFailoverGroup extends io.pulumi.resources.CustomResource {
      * Local replication role of the failover group instance.
      * 
      */
-    @OutputExport(name="replicationRole", type=String.class, parameters={})
+    @Export(name="replicationRole", type=String.class, parameters={})
     private Output<String> replicationRole;
 
     /**
@@ -122,7 +122,7 @@ public class InstanceFailoverGroup extends io.pulumi.resources.CustomResource {
      * Replication state of the failover group instance.
      * 
      */
-    @OutputExport(name="replicationState", type=String.class, parameters={})
+    @Export(name="replicationState", type=String.class, parameters={})
     private Output<String> replicationState;
 
     /**
@@ -136,7 +136,7 @@ public class InstanceFailoverGroup extends io.pulumi.resources.CustomResource {
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

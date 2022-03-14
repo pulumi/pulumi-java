@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.logic.inputs;
 
 import io.pulumi.azurenative.logic.inputs.X12OneWayAgreementResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 
 
@@ -20,7 +20,7 @@ public final class X12AgreementContentResponse extends io.pulumi.resources.Invok
      * The X12 one-way receive agreement.
      * 
      */
-    @InputImport(name="receiveAgreement", required=true)
+    @Import(name="receiveAgreement", required=true)
       private final X12OneWayAgreementResponse receiveAgreement;
 
     public X12OneWayAgreementResponse getReceiveAgreement() {
@@ -31,7 +31,7 @@ public final class X12AgreementContentResponse extends io.pulumi.resources.Invok
      * The X12 one-way send agreement.
      * 
      */
-    @InputImport(name="sendAgreement", required=true)
+    @Import(name="sendAgreement", required=true)
       private final X12OneWayAgreementResponse sendAgreement;
 
     public X12OneWayAgreementResponse getSendAgreement() {

@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.containerservice.outputs;
 
 import io.pulumi.azurenative.containerservice.outputs.SysctlConfigResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class LinuxOSConfigResponse {
     /**
      * SwapFileSizeMB specifies size in MB of a swap file will be created on each node.
@@ -34,12 +34,12 @@ public final class LinuxOSConfigResponse {
      */
     private final @Nullable String transparentHugePageEnabled;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LinuxOSConfigResponse(
-        @OutputCustomType.Parameter("swapFileSizeMB") @Nullable Integer swapFileSizeMB,
-        @OutputCustomType.Parameter("sysctls") @Nullable SysctlConfigResponse sysctls,
-        @OutputCustomType.Parameter("transparentHugePageDefrag") @Nullable String transparentHugePageDefrag,
-        @OutputCustomType.Parameter("transparentHugePageEnabled") @Nullable String transparentHugePageEnabled) {
+        @CustomType.Parameter("swapFileSizeMB") @Nullable Integer swapFileSizeMB,
+        @CustomType.Parameter("sysctls") @Nullable SysctlConfigResponse sysctls,
+        @CustomType.Parameter("transparentHugePageDefrag") @Nullable String transparentHugePageDefrag,
+        @CustomType.Parameter("transparentHugePageEnabled") @Nullable String transparentHugePageEnabled) {
         this.swapFileSizeMB = swapFileSizeMB;
         this.sysctls = sysctls;
         this.transparentHugePageDefrag = transparentHugePageDefrag;

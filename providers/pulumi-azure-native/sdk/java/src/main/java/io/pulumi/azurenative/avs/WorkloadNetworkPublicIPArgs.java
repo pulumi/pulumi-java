@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.avs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class WorkloadNetworkPublicIPArgs extends io.pulumi.resources.Resou
      * Display name of the Public IP Block.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -30,7 +30,7 @@ public final class WorkloadNetworkPublicIPArgs extends io.pulumi.resources.Resou
      * Number of Public IPs requested.
      * 
      */
-    @InputImport(name="numberOfPublicIPs")
+    @Import(name="numberOfPublicIPs")
       private final @Nullable Output<Double> numberOfPublicIPs;
 
     public Output<Double> getNumberOfPublicIPs() {
@@ -41,7 +41,7 @@ public final class WorkloadNetworkPublicIPArgs extends io.pulumi.resources.Resou
      * Name of the private cloud
      * 
      */
-    @InputImport(name="privateCloudName", required=true)
+    @Import(name="privateCloudName", required=true)
       private final Output<String> privateCloudName;
 
     public Output<String> getPrivateCloudName() {
@@ -52,7 +52,7 @@ public final class WorkloadNetworkPublicIPArgs extends io.pulumi.resources.Resou
      * NSX Public IP Block identifier. Generally the same as the Public IP Block's display name
      * 
      */
-    @InputImport(name="publicIPId")
+    @Import(name="publicIPId")
       private final @Nullable Output<String> publicIPId;
 
     public Output<String> getPublicIPId() {
@@ -63,7 +63,7 @@ public final class WorkloadNetworkPublicIPArgs extends io.pulumi.resources.Resou
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {

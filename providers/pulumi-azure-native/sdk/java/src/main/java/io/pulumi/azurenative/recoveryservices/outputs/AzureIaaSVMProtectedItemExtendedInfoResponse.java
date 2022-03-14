@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AzureIaaSVMProtectedItemExtendedInfoResponse {
     /**
      * The oldest backup copy available for this backup item.
@@ -29,11 +29,11 @@ public final class AzureIaaSVMProtectedItemExtendedInfoResponse {
      */
     private final @Nullable Integer recoveryPointCount;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AzureIaaSVMProtectedItemExtendedInfoResponse(
-        @OutputCustomType.Parameter("oldestRecoveryPoint") @Nullable String oldestRecoveryPoint,
-        @OutputCustomType.Parameter("policyInconsistent") @Nullable Boolean policyInconsistent,
-        @OutputCustomType.Parameter("recoveryPointCount") @Nullable Integer recoveryPointCount) {
+        @CustomType.Parameter("oldestRecoveryPoint") @Nullable String oldestRecoveryPoint,
+        @CustomType.Parameter("policyInconsistent") @Nullable Boolean policyInconsistent,
+        @CustomType.Parameter("recoveryPointCount") @Nullable Integer recoveryPointCount) {
         this.oldestRecoveryPoint = oldestRecoveryPoint;
         this.policyInconsistent = policyInconsistent;
         this.recoveryPointCount = recoveryPointCount;

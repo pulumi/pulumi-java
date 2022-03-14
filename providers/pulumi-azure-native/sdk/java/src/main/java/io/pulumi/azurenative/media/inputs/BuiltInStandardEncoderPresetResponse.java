@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.media.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class BuiltInStandardEncoderPresetResponse extends io.pulumi.resour
      * Expected value is '#Microsoft.Media.BuiltInStandardEncoderPreset'.
      * 
      */
-    @InputImport(name="odataType", required=true)
+    @Import(name="odataType", required=true)
       private final String odataType;
 
     public String getOdataType() {
@@ -32,7 +32,7 @@ public final class BuiltInStandardEncoderPresetResponse extends io.pulumi.resour
      * The built-in preset to be used for encoding videos.
      * 
      */
-    @InputImport(name="presetName", required=true)
+    @Import(name="presetName", required=true)
       private final String presetName;
 
     public String getPresetName() {

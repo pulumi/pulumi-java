@@ -6,7 +6,7 @@ package io.pulumi.azurenative.recoveryservices.inputs;
 import io.pulumi.azurenative.recoveryservices.inputs.DiskEncryptionKeyInfoArgs;
 import io.pulumi.azurenative.recoveryservices.inputs.KeyEncryptionKeyInfoArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -23,7 +23,7 @@ public final class DiskEncryptionInfoArgs extends io.pulumi.resources.ResourceAr
      * The recovery KeyVault reference for secret.
      * 
      */
-    @InputImport(name="diskEncryptionKeyInfo")
+    @Import(name="diskEncryptionKeyInfo")
       private final @Nullable Output<DiskEncryptionKeyInfoArgs> diskEncryptionKeyInfo;
 
     public Output<DiskEncryptionKeyInfoArgs> getDiskEncryptionKeyInfo() {
@@ -34,7 +34,7 @@ public final class DiskEncryptionInfoArgs extends io.pulumi.resources.ResourceAr
      * The recovery KeyVault reference for key.
      * 
      */
-    @InputImport(name="keyEncryptionKeyInfo")
+    @Import(name="keyEncryptionKeyInfo")
       private final @Nullable Output<KeyEncryptionKeyInfoArgs> keyEncryptionKeyInfo;
 
     public Output<KeyEncryptionKeyInfoArgs> getKeyEncryptionKeyInfo() {

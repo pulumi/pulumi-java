@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.compute.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class AutomaticOSUpgradePolicyResponse extends io.pulumi.resources.
      * Whether OS image rollback feature should be disabled. Default value is false.
      * 
      */
-    @InputImport(name="disableAutomaticRollback")
+    @Import(name="disableAutomaticRollback")
       private final @Nullable Boolean disableAutomaticRollback;
 
     public Optional<Boolean> getDisableAutomaticRollback() {
@@ -33,7 +33,7 @@ public final class AutomaticOSUpgradePolicyResponse extends io.pulumi.resources.
      * Indicates whether OS upgrades should automatically be applied to scale set instances in a rolling fashion when a newer version of the OS image becomes available. Default value is false. <br><br> If this is set to true for Windows based scale sets, [enableAutomaticUpdates](https://docs.microsoft.com/dotnet/api/microsoft.azure.management.compute.models.windowsconfiguration.enableautomaticupdates?view=azure-dotnet) is automatically set to false and cannot be set to true.
      * 
      */
-    @InputImport(name="enableAutomaticOSUpgrade")
+    @Import(name="enableAutomaticOSUpgrade")
       private final @Nullable Boolean enableAutomaticOSUpgrade;
 
     public Optional<Boolean> getEnableAutomaticOSUpgrade() {

@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.managedservices.outputs;
 
 import io.pulumi.azurenative.managedservices.outputs.AuthorizationResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RegistrationAssignmentPropertiesResponseProperties {
     /**
      * Authorization tuple containing principal id of the user/security group or service principal and id of the build-in role.
@@ -54,16 +54,16 @@ public final class RegistrationAssignmentPropertiesResponseProperties {
      */
     private final @Nullable String registrationDefinitionName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RegistrationAssignmentPropertiesResponseProperties(
-        @OutputCustomType.Parameter("authorizations") @Nullable List<AuthorizationResponse> authorizations,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("managedByTenantId") @Nullable String managedByTenantId,
-        @OutputCustomType.Parameter("managedByTenantName") @Nullable String managedByTenantName,
-        @OutputCustomType.Parameter("manageeTenantId") @Nullable String manageeTenantId,
-        @OutputCustomType.Parameter("manageeTenantName") @Nullable String manageeTenantName,
-        @OutputCustomType.Parameter("provisioningState") @Nullable String provisioningState,
-        @OutputCustomType.Parameter("registrationDefinitionName") @Nullable String registrationDefinitionName) {
+        @CustomType.Parameter("authorizations") @Nullable List<AuthorizationResponse> authorizations,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("managedByTenantId") @Nullable String managedByTenantId,
+        @CustomType.Parameter("managedByTenantName") @Nullable String managedByTenantName,
+        @CustomType.Parameter("manageeTenantId") @Nullable String manageeTenantId,
+        @CustomType.Parameter("manageeTenantName") @Nullable String manageeTenantName,
+        @CustomType.Parameter("provisioningState") @Nullable String provisioningState,
+        @CustomType.Parameter("registrationDefinitionName") @Nullable String registrationDefinitionName) {
         this.authorizations = authorizations;
         this.description = description;
         this.managedByTenantId = managedByTenantId;

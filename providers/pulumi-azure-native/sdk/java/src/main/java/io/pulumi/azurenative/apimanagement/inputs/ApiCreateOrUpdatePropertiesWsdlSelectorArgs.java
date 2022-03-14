@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.apimanagement.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class ApiCreateOrUpdatePropertiesWsdlSelectorArgs extends io.pulumi
      * Name of endpoint(port) to import from WSDL
      * 
      */
-    @InputImport(name="wsdlEndpointName")
+    @Import(name="wsdlEndpointName")
       private final @Nullable Output<String> wsdlEndpointName;
 
     public Output<String> getWsdlEndpointName() {
@@ -33,7 +33,7 @@ public final class ApiCreateOrUpdatePropertiesWsdlSelectorArgs extends io.pulumi
      * Name of service to import from WSDL
      * 
      */
-    @InputImport(name="wsdlServiceName")
+    @Import(name="wsdlServiceName")
       private final @Nullable Output<String> wsdlServiceName;
 
     public Output<String> getWsdlServiceName() {

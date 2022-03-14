@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.containerregistry;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class ScopeMapArgs extends io.pulumi.resources.ResourceArgs {
      * repositories/repository-name/metadata/write
      * 
      */
-    @InputImport(name="actions", required=true)
+    @Import(name="actions", required=true)
       private final Output<List<String>> actions;
 
     public Output<List<String>> getActions() {
@@ -32,7 +32,7 @@ public final class ScopeMapArgs extends io.pulumi.resources.ResourceArgs {
      * The user friendly description of the scope map.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -43,7 +43,7 @@ public final class ScopeMapArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the container registry.
      * 
      */
-    @InputImport(name="registryName", required=true)
+    @Import(name="registryName", required=true)
       private final Output<String> registryName;
 
     public Output<String> getRegistryName() {
@@ -54,7 +54,7 @@ public final class ScopeMapArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group to which the container registry belongs.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -65,7 +65,7 @@ public final class ScopeMapArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the scope map.
      * 
      */
-    @InputImport(name="scopeMapName")
+    @Import(name="scopeMapName")
       private final @Nullable Output<String> scopeMapName;
 
     public Output<String> getScopeMapName() {

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.blueprint;
 
 import io.pulumi.azurenative.blueprint.inputs.ParameterValueArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class PolicyAssignmentArtifactArgs extends io.pulumi.resources.Reso
      * Name of the blueprint artifact.
      * 
      */
-    @InputImport(name="artifactName")
+    @Import(name="artifactName")
       private final @Nullable Output<String> artifactName;
 
     public Output<String> getArtifactName() {
@@ -32,7 +32,7 @@ public final class PolicyAssignmentArtifactArgs extends io.pulumi.resources.Reso
      * Name of the blueprint definition.
      * 
      */
-    @InputImport(name="blueprintName", required=true)
+    @Import(name="blueprintName", required=true)
       private final Output<String> blueprintName;
 
     public Output<String> getBlueprintName() {
@@ -43,7 +43,7 @@ public final class PolicyAssignmentArtifactArgs extends io.pulumi.resources.Reso
      * Artifacts which need to be deployed before the specified artifact.
      * 
      */
-    @InputImport(name="dependsOn")
+    @Import(name="dependsOn")
       private final @Nullable Output<List<String>> dependsOn;
 
     public Output<List<String>> getDependsOn() {
@@ -54,7 +54,7 @@ public final class PolicyAssignmentArtifactArgs extends io.pulumi.resources.Reso
      * Multi-line explain this resource.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -65,7 +65,7 @@ public final class PolicyAssignmentArtifactArgs extends io.pulumi.resources.Reso
      * One-liner string explain this resource.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -77,7 +77,7 @@ public final class PolicyAssignmentArtifactArgs extends io.pulumi.resources.Reso
      * Expected value is 'policyAssignment'.
      * 
      */
-    @InputImport(name="kind", required=true)
+    @Import(name="kind", required=true)
       private final Output<String> kind;
 
     public Output<String> getKind() {
@@ -88,7 +88,7 @@ public final class PolicyAssignmentArtifactArgs extends io.pulumi.resources.Reso
      * Parameter values for the policy definition.
      * 
      */
-    @InputImport(name="parameters", required=true)
+    @Import(name="parameters", required=true)
       private final Output<Map<String,ParameterValueArgs>> parameters;
 
     public Output<Map<String,ParameterValueArgs>> getParameters() {
@@ -99,7 +99,7 @@ public final class PolicyAssignmentArtifactArgs extends io.pulumi.resources.Reso
      * Azure resource ID of the policy definition.
      * 
      */
-    @InputImport(name="policyDefinitionId", required=true)
+    @Import(name="policyDefinitionId", required=true)
       private final Output<String> policyDefinitionId;
 
     public Output<String> getPolicyDefinitionId() {
@@ -110,7 +110,7 @@ public final class PolicyAssignmentArtifactArgs extends io.pulumi.resources.Reso
      * Name of the resource group placeholder to which the policy will be assigned.
      * 
      */
-    @InputImport(name="resourceGroup")
+    @Import(name="resourceGroup")
       private final @Nullable Output<String> resourceGroup;
 
     public Output<String> getResourceGroup() {
@@ -121,7 +121,7 @@ public final class PolicyAssignmentArtifactArgs extends io.pulumi.resources.Reso
      * The scope of the resource. Valid scopes are: management group (format: '/providers/Microsoft.Management/managementGroups/{managementGroup}'), subscription (format: '/subscriptions/{subscriptionId}').
      * 
      */
-    @InputImport(name="resourceScope", required=true)
+    @Import(name="resourceScope", required=true)
       private final Output<String> resourceScope;
 
     public Output<String> getResourceScope() {

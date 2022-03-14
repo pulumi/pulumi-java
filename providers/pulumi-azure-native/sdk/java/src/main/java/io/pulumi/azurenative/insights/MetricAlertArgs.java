@@ -8,7 +8,7 @@ import io.pulumi.azurenative.insights.inputs.MetricAlertMultipleResourceMultiple
 import io.pulumi.azurenative.insights.inputs.MetricAlertSingleResourceMultipleMetricCriteriaArgs;
 import io.pulumi.azurenative.insights.inputs.WebtestLocationAvailabilityCriteriaArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.Object;
@@ -27,7 +27,7 @@ public final class MetricAlertArgs extends io.pulumi.resources.ResourceArgs {
      * the array of actions that are performed when the alert rule becomes active, and when an alert condition is resolved.
      * 
      */
-    @InputImport(name="actions")
+    @Import(name="actions")
       private final @Nullable Output<List<MetricAlertActionArgs>> actions;
 
     public Output<List<MetricAlertActionArgs>> getActions() {
@@ -38,7 +38,7 @@ public final class MetricAlertArgs extends io.pulumi.resources.ResourceArgs {
      * the flag that indicates whether the alert should be auto resolved or not. The default is true.
      * 
      */
-    @InputImport(name="autoMitigate")
+    @Import(name="autoMitigate")
       private final @Nullable Output<Boolean> autoMitigate;
 
     public Output<Boolean> getAutoMitigate() {
@@ -49,7 +49,7 @@ public final class MetricAlertArgs extends io.pulumi.resources.ResourceArgs {
      * defines the specific alert criteria information.
      * 
      */
-    @InputImport(name="criteria", required=true)
+    @Import(name="criteria", required=true)
       private final Output<Object> criteria;
 
     public Output<Object> getCriteria() {
@@ -60,7 +60,7 @@ public final class MetricAlertArgs extends io.pulumi.resources.ResourceArgs {
      * the description of the metric alert that will be included in the alert email.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -71,7 +71,7 @@ public final class MetricAlertArgs extends io.pulumi.resources.ResourceArgs {
      * the flag that indicates whether the metric alert is enabled.
      * 
      */
-    @InputImport(name="enabled", required=true)
+    @Import(name="enabled", required=true)
       private final Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
@@ -82,7 +82,7 @@ public final class MetricAlertArgs extends io.pulumi.resources.ResourceArgs {
      * how often the metric alert is evaluated represented in ISO 8601 duration format.
      * 
      */
-    @InputImport(name="evaluationFrequency", required=true)
+    @Import(name="evaluationFrequency", required=true)
       private final Output<String> evaluationFrequency;
 
     public Output<String> getEvaluationFrequency() {
@@ -93,7 +93,7 @@ public final class MetricAlertArgs extends io.pulumi.resources.ResourceArgs {
      * Resource location
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -104,7 +104,7 @@ public final class MetricAlertArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -115,7 +115,7 @@ public final class MetricAlertArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the rule.
      * 
      */
-    @InputImport(name="ruleName")
+    @Import(name="ruleName")
       private final @Nullable Output<String> ruleName;
 
     public Output<String> getRuleName() {
@@ -126,7 +126,7 @@ public final class MetricAlertArgs extends io.pulumi.resources.ResourceArgs {
      * the list of resource id's that this metric alert is scoped to.
      * 
      */
-    @InputImport(name="scopes", required=true)
+    @Import(name="scopes", required=true)
       private final Output<List<String>> scopes;
 
     public Output<List<String>> getScopes() {
@@ -137,7 +137,7 @@ public final class MetricAlertArgs extends io.pulumi.resources.ResourceArgs {
      * Alert severity {0, 1, 2, 3, 4}
      * 
      */
-    @InputImport(name="severity", required=true)
+    @Import(name="severity", required=true)
       private final Output<Integer> severity;
 
     public Output<Integer> getSeverity() {
@@ -148,7 +148,7 @@ public final class MetricAlertArgs extends io.pulumi.resources.ResourceArgs {
      * Resource tags
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -159,7 +159,7 @@ public final class MetricAlertArgs extends io.pulumi.resources.ResourceArgs {
      * the region of the target resource(s) on which the alert is created/updated. Mandatory if the scope contains a subscription, resource group, or more than one resource.
      * 
      */
-    @InputImport(name="targetResourceRegion")
+    @Import(name="targetResourceRegion")
       private final @Nullable Output<String> targetResourceRegion;
 
     public Output<String> getTargetResourceRegion() {
@@ -170,7 +170,7 @@ public final class MetricAlertArgs extends io.pulumi.resources.ResourceArgs {
      * the resource type of the target resource(s) on which the alert is created/updated. Mandatory if the scope contains a subscription, resource group, or more than one resource.
      * 
      */
-    @InputImport(name="targetResourceType")
+    @Import(name="targetResourceType")
       private final @Nullable Output<String> targetResourceType;
 
     public Output<String> getTargetResourceType() {
@@ -181,7 +181,7 @@ public final class MetricAlertArgs extends io.pulumi.resources.ResourceArgs {
      * the period of time (in ISO 8601 duration format) that is used to monitor alert activity based on the threshold.
      * 
      */
-    @InputImport(name="windowSize", required=true)
+    @Import(name="windowSize", required=true)
       private final Output<String> windowSize;
 
     public Output<String> getWindowSize() {

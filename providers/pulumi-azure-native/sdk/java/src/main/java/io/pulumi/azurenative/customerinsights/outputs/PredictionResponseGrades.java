@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.customerinsights.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PredictionResponseGrades {
     /**
      * Name of the grade.
@@ -28,11 +28,11 @@ public final class PredictionResponseGrades {
      */
     private final @Nullable Integer minScoreThreshold;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PredictionResponseGrades(
-        @OutputCustomType.Parameter("gradeName") @Nullable String gradeName,
-        @OutputCustomType.Parameter("maxScoreThreshold") @Nullable Integer maxScoreThreshold,
-        @OutputCustomType.Parameter("minScoreThreshold") @Nullable Integer minScoreThreshold) {
+        @CustomType.Parameter("gradeName") @Nullable String gradeName,
+        @CustomType.Parameter("maxScoreThreshold") @Nullable Integer maxScoreThreshold,
+        @CustomType.Parameter("minScoreThreshold") @Nullable Integer minScoreThreshold) {
         this.gradeName = gradeName;
         this.maxScoreThreshold = maxScoreThreshold;
         this.minScoreThreshold = minScoreThreshold;

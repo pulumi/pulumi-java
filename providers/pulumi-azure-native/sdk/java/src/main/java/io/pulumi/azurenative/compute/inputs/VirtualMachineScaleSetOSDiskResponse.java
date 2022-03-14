@@ -6,7 +6,7 @@ package io.pulumi.azurenative.compute.inputs;
 import io.pulumi.azurenative.compute.inputs.DiffDiskSettingsResponse;
 import io.pulumi.azurenative.compute.inputs.VirtualHardDiskResponse;
 import io.pulumi.azurenative.compute.inputs.VirtualMachineScaleSetManagedDiskParametersResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -28,7 +28,7 @@ public final class VirtualMachineScaleSetOSDiskResponse extends io.pulumi.resour
      * Specifies the caching requirements. <br><br> Possible values are: <br><br> **None** <br><br> **ReadOnly** <br><br> **ReadWrite** <br><br> Default: **None for Standard storage. ReadOnly for Premium storage**
      * 
      */
-    @InputImport(name="caching")
+    @Import(name="caching")
       private final @Nullable String caching;
 
     public Optional<String> getCaching() {
@@ -39,7 +39,7 @@ public final class VirtualMachineScaleSetOSDiskResponse extends io.pulumi.resour
      * Specifies how the virtual machines in the scale set should be created.<br><br> The only allowed value is: **FromImage** \u2013 This value is used when you are using an image to create the virtual machine. If you are using a platform image, you also use the imageReference element described above. If you are using a marketplace image, you  also use the plan element previously described.
      * 
      */
-    @InputImport(name="createOption", required=true)
+    @Import(name="createOption", required=true)
       private final String createOption;
 
     public String getCreateOption() {
@@ -50,7 +50,7 @@ public final class VirtualMachineScaleSetOSDiskResponse extends io.pulumi.resour
      * Specifies the ephemeral disk Settings for the operating system disk used by the virtual machine scale set.
      * 
      */
-    @InputImport(name="diffDiskSettings")
+    @Import(name="diffDiskSettings")
       private final @Nullable DiffDiskSettingsResponse diffDiskSettings;
 
     public Optional<DiffDiskSettingsResponse> getDiffDiskSettings() {
@@ -61,7 +61,7 @@ public final class VirtualMachineScaleSetOSDiskResponse extends io.pulumi.resour
      * Specifies the size of the operating system disk in gigabytes. This element can be used to overwrite the size of the disk in a virtual machine image. <br><br> This value cannot be larger than 1023 GB
      * 
      */
-    @InputImport(name="diskSizeGB")
+    @Import(name="diskSizeGB")
       private final @Nullable Integer diskSizeGB;
 
     public Optional<Integer> getDiskSizeGB() {
@@ -72,7 +72,7 @@ public final class VirtualMachineScaleSetOSDiskResponse extends io.pulumi.resour
      * Specifies information about the unmanaged user image to base the scale set on.
      * 
      */
-    @InputImport(name="image")
+    @Import(name="image")
       private final @Nullable VirtualHardDiskResponse image;
 
     public Optional<VirtualHardDiskResponse> getImage() {
@@ -83,7 +83,7 @@ public final class VirtualMachineScaleSetOSDiskResponse extends io.pulumi.resour
      * The managed disk parameters.
      * 
      */
-    @InputImport(name="managedDisk")
+    @Import(name="managedDisk")
       private final @Nullable VirtualMachineScaleSetManagedDiskParametersResponse managedDisk;
 
     public Optional<VirtualMachineScaleSetManagedDiskParametersResponse> getManagedDisk() {
@@ -94,7 +94,7 @@ public final class VirtualMachineScaleSetOSDiskResponse extends io.pulumi.resour
      * The disk name.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -105,7 +105,7 @@ public final class VirtualMachineScaleSetOSDiskResponse extends io.pulumi.resour
      * This property allows you to specify the type of the OS that is included in the disk if creating a VM from user-image or a specialized VHD. <br><br> Possible values are: <br><br> **Windows** <br><br> **Linux**
      * 
      */
-    @InputImport(name="osType")
+    @Import(name="osType")
       private final @Nullable String osType;
 
     public Optional<String> getOsType() {
@@ -116,7 +116,7 @@ public final class VirtualMachineScaleSetOSDiskResponse extends io.pulumi.resour
      * Specifies the container urls that are used to store operating system disks for the scale set.
      * 
      */
-    @InputImport(name="vhdContainers")
+    @Import(name="vhdContainers")
       private final @Nullable List<String> vhdContainers;
 
     public List<String> getVhdContainers() {
@@ -127,7 +127,7 @@ public final class VirtualMachineScaleSetOSDiskResponse extends io.pulumi.resour
      * Specifies whether writeAccelerator should be enabled or disabled on the disk.
      * 
      */
-    @InputImport(name="writeAcceleratorEnabled")
+    @Import(name="writeAcceleratorEnabled")
       private final @Nullable Boolean writeAcceleratorEnabled;
 
     public Optional<Boolean> getWriteAcceleratorEnabled() {

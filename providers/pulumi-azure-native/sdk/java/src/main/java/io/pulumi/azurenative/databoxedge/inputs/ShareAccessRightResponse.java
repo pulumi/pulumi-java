@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.databoxedge.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class ShareAccessRightResponse extends io.pulumi.resources.InvokeAr
      * Type of access to be allowed on the share for this user.
      * 
      */
-    @InputImport(name="accessType", required=true)
+    @Import(name="accessType", required=true)
       private final String accessType;
 
     public String getAccessType() {
@@ -31,7 +31,7 @@ public final class ShareAccessRightResponse extends io.pulumi.resources.InvokeAr
      * The share ID.
      * 
      */
-    @InputImport(name="shareId", required=true)
+    @Import(name="shareId", required=true)
       private final String shareId;
 
     public String getShareId() {

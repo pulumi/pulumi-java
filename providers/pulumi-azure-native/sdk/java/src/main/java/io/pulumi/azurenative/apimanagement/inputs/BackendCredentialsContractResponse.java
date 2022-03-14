@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.apimanagement.inputs;
 
 import io.pulumi.azurenative.apimanagement.inputs.BackendAuthorizationHeaderCredentialsResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -25,7 +25,7 @@ public final class BackendCredentialsContractResponse extends io.pulumi.resource
      * Authorization header authentication
      * 
      */
-    @InputImport(name="authorization")
+    @Import(name="authorization")
       private final @Nullable BackendAuthorizationHeaderCredentialsResponse authorization;
 
     public Optional<BackendAuthorizationHeaderCredentialsResponse> getAuthorization() {
@@ -36,7 +36,7 @@ public final class BackendCredentialsContractResponse extends io.pulumi.resource
      * List of Client Certificate Thumbprints. Will be ignored if certificatesIds are provided.
      * 
      */
-    @InputImport(name="certificate")
+    @Import(name="certificate")
       private final @Nullable List<String> certificate;
 
     public List<String> getCertificate() {
@@ -47,7 +47,7 @@ public final class BackendCredentialsContractResponse extends io.pulumi.resource
      * List of Client Certificate Ids.
      * 
      */
-    @InputImport(name="certificateIds")
+    @Import(name="certificateIds")
       private final @Nullable List<String> certificateIds;
 
     public List<String> getCertificateIds() {
@@ -58,7 +58,7 @@ public final class BackendCredentialsContractResponse extends io.pulumi.resource
      * Header Parameter description.
      * 
      */
-    @InputImport(name="header")
+    @Import(name="header")
       private final @Nullable Map<String,List<String>> header;
 
     public Map<String,List<String>> getHeader() {
@@ -69,7 +69,7 @@ public final class BackendCredentialsContractResponse extends io.pulumi.resource
      * Query Parameter description.
      * 
      */
-    @InputImport(name="query")
+    @Import(name="query")
       private final @Nullable Map<String,List<String>> query;
 
     public Map<String,List<String>> getQuery() {

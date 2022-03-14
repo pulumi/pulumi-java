@@ -11,7 +11,7 @@ import io.pulumi.azurenative.web.inputs.HostingEnvironmentProfileArgs;
 import io.pulumi.azurenative.web.inputs.ManagedServiceIdentityArgs;
 import io.pulumi.azurenative.web.inputs.SiteConfigArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -29,7 +29,7 @@ public final class WebAppArgs extends io.pulumi.resources.ResourceArgs {
      * <code>true</code> to enable client affinity; <code>false</code> to stop sending session affinity cookies, which route client requests in the same session to the same instance. Default is <code>true</code>.
      * 
      */
-    @InputImport(name="clientAffinityEnabled")
+    @Import(name="clientAffinityEnabled")
       private final @Nullable Output<Boolean> clientAffinityEnabled;
 
     public Output<Boolean> getClientAffinityEnabled() {
@@ -40,7 +40,7 @@ public final class WebAppArgs extends io.pulumi.resources.ResourceArgs {
      * <code>true</code> to enable client certificate authentication (TLS mutual authentication); otherwise, <code>false</code>. Default is <code>false</code>.
      * 
      */
-    @InputImport(name="clientCertEnabled")
+    @Import(name="clientCertEnabled")
       private final @Nullable Output<Boolean> clientCertEnabled;
 
     public Output<Boolean> getClientCertEnabled() {
@@ -51,7 +51,7 @@ public final class WebAppArgs extends io.pulumi.resources.ResourceArgs {
      * client certificate authentication comma-separated exclusion paths
      * 
      */
-    @InputImport(name="clientCertExclusionPaths")
+    @Import(name="clientCertExclusionPaths")
       private final @Nullable Output<String> clientCertExclusionPaths;
 
     public Output<String> getClientCertExclusionPaths() {
@@ -65,7 +65,7 @@ public final class WebAppArgs extends io.pulumi.resources.ResourceArgs {
      * - ClientCertEnabled: true and ClientCertMode: Optional means ClientCert is optional or accepted.
      * 
      */
-    @InputImport(name="clientCertMode")
+    @Import(name="clientCertMode")
       private final @Nullable Output<ClientCertMode> clientCertMode;
 
     public Output<ClientCertMode> getClientCertMode() {
@@ -76,7 +76,7 @@ public final class WebAppArgs extends io.pulumi.resources.ResourceArgs {
      * If specified during app creation, the app is cloned from a source app.
      * 
      */
-    @InputImport(name="cloningInfo")
+    @Import(name="cloningInfo")
       private final @Nullable Output<CloningInfoArgs> cloningInfo;
 
     public Output<CloningInfoArgs> getCloningInfo() {
@@ -87,7 +87,7 @@ public final class WebAppArgs extends io.pulumi.resources.ResourceArgs {
      * Size of the function container.
      * 
      */
-    @InputImport(name="containerSize")
+    @Import(name="containerSize")
       private final @Nullable Output<Integer> containerSize;
 
     public Output<Integer> getContainerSize() {
@@ -98,7 +98,7 @@ public final class WebAppArgs extends io.pulumi.resources.ResourceArgs {
      * Unique identifier that verifies the custom domains assigned to the app. Customer will add this id to a txt record for verification.
      * 
      */
-    @InputImport(name="customDomainVerificationId")
+    @Import(name="customDomainVerificationId")
       private final @Nullable Output<String> customDomainVerificationId;
 
     public Output<String> getCustomDomainVerificationId() {
@@ -109,7 +109,7 @@ public final class WebAppArgs extends io.pulumi.resources.ResourceArgs {
      * Maximum allowed daily memory-time quota (applicable on dynamic apps only).
      * 
      */
-    @InputImport(name="dailyMemoryTimeQuota")
+    @Import(name="dailyMemoryTimeQuota")
       private final @Nullable Output<Integer> dailyMemoryTimeQuota;
 
     public Output<Integer> getDailyMemoryTimeQuota() {
@@ -120,7 +120,7 @@ public final class WebAppArgs extends io.pulumi.resources.ResourceArgs {
      * <code>true</code> if the app is enabled; otherwise, <code>false</code>. Setting this value to false disables the app (takes the app offline).
      * 
      */
-    @InputImport(name="enabled")
+    @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
@@ -131,7 +131,7 @@ public final class WebAppArgs extends io.pulumi.resources.ResourceArgs {
      * Hostname SSL states are used to manage the SSL bindings for app's hostnames.
      * 
      */
-    @InputImport(name="hostNameSslStates")
+    @Import(name="hostNameSslStates")
       private final @Nullable Output<List<HostNameSslStateArgs>> hostNameSslStates;
 
     public Output<List<HostNameSslStateArgs>> getHostNameSslStates() {
@@ -143,7 +143,7 @@ public final class WebAppArgs extends io.pulumi.resources.ResourceArgs {
      *  If <code>true</code>, the app is only accessible via API management process.
      * 
      */
-    @InputImport(name="hostNamesDisabled")
+    @Import(name="hostNamesDisabled")
       private final @Nullable Output<Boolean> hostNamesDisabled;
 
     public Output<Boolean> getHostNamesDisabled() {
@@ -154,7 +154,7 @@ public final class WebAppArgs extends io.pulumi.resources.ResourceArgs {
      * App Service Environment to use for the app.
      * 
      */
-    @InputImport(name="hostingEnvironmentProfile")
+    @Import(name="hostingEnvironmentProfile")
       private final @Nullable Output<HostingEnvironmentProfileArgs> hostingEnvironmentProfile;
 
     public Output<HostingEnvironmentProfileArgs> getHostingEnvironmentProfile() {
@@ -166,7 +166,7 @@ public final class WebAppArgs extends io.pulumi.resources.ResourceArgs {
      * http requests
      * 
      */
-    @InputImport(name="httpsOnly")
+    @Import(name="httpsOnly")
       private final @Nullable Output<Boolean> httpsOnly;
 
     public Output<Boolean> getHttpsOnly() {
@@ -177,7 +177,7 @@ public final class WebAppArgs extends io.pulumi.resources.ResourceArgs {
      * Hyper-V sandbox.
      * 
      */
-    @InputImport(name="hyperV")
+    @Import(name="hyperV")
       private final @Nullable Output<Boolean> hyperV;
 
     public Output<Boolean> getHyperV() {
@@ -188,7 +188,7 @@ public final class WebAppArgs extends io.pulumi.resources.ResourceArgs {
      * Managed service identity.
      * 
      */
-    @InputImport(name="identity")
+    @Import(name="identity")
       private final @Nullable Output<ManagedServiceIdentityArgs> identity;
 
     public Output<ManagedServiceIdentityArgs> getIdentity() {
@@ -199,7 +199,7 @@ public final class WebAppArgs extends io.pulumi.resources.ResourceArgs {
      * Obsolete: Hyper-V sandbox.
      * 
      */
-    @InputImport(name="isXenon")
+    @Import(name="isXenon")
       private final @Nullable Output<Boolean> isXenon;
 
     public Output<Boolean> getIsXenon() {
@@ -210,7 +210,7 @@ public final class WebAppArgs extends io.pulumi.resources.ResourceArgs {
      * Identity to use for Key Vault Reference authentication.
      * 
      */
-    @InputImport(name="keyVaultReferenceIdentity")
+    @Import(name="keyVaultReferenceIdentity")
       private final @Nullable Output<String> keyVaultReferenceIdentity;
 
     public Output<String> getKeyVaultReferenceIdentity() {
@@ -221,7 +221,7 @@ public final class WebAppArgs extends io.pulumi.resources.ResourceArgs {
      * Kind of resource.
      * 
      */
-    @InputImport(name="kind")
+    @Import(name="kind")
       private final @Nullable Output<String> kind;
 
     public Output<String> getKind() {
@@ -232,7 +232,7 @@ public final class WebAppArgs extends io.pulumi.resources.ResourceArgs {
      * Resource Location.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -243,7 +243,7 @@ public final class WebAppArgs extends io.pulumi.resources.ResourceArgs {
      * Unique name of the app to create or update. To create or update a deployment slot, use the {slot} parameter.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -254,7 +254,7 @@ public final class WebAppArgs extends io.pulumi.resources.ResourceArgs {
      * Site redundancy mode
      * 
      */
-    @InputImport(name="redundancyMode")
+    @Import(name="redundancyMode")
       private final @Nullable Output<RedundancyMode> redundancyMode;
 
     public Output<RedundancyMode> getRedundancyMode() {
@@ -265,7 +265,7 @@ public final class WebAppArgs extends io.pulumi.resources.ResourceArgs {
      * <code>true</code> if reserved; otherwise, <code>false</code>.
      * 
      */
-    @InputImport(name="reserved")
+    @Import(name="reserved")
       private final @Nullable Output<Boolean> reserved;
 
     public Output<Boolean> getReserved() {
@@ -276,7 +276,7 @@ public final class WebAppArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the resource group to which the resource belongs.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -287,7 +287,7 @@ public final class WebAppArgs extends io.pulumi.resources.ResourceArgs {
      * <code>true</code> to stop SCM (KUDU) site when the app is stopped; otherwise, <code>false</code>. The default is <code>false</code>.
      * 
      */
-    @InputImport(name="scmSiteAlsoStopped")
+    @Import(name="scmSiteAlsoStopped")
       private final @Nullable Output<Boolean> scmSiteAlsoStopped;
 
     public Output<Boolean> getScmSiteAlsoStopped() {
@@ -298,7 +298,7 @@ public final class WebAppArgs extends io.pulumi.resources.ResourceArgs {
      * Resource ID of the associated App Service plan, formatted as: "/subscriptions/{subscriptionID}/resourceGroups/{groupName}/providers/Microsoft.Web/serverfarms/{appServicePlanName}".
      * 
      */
-    @InputImport(name="serverFarmId")
+    @Import(name="serverFarmId")
       private final @Nullable Output<String> serverFarmId;
 
     public Output<String> getServerFarmId() {
@@ -309,7 +309,7 @@ public final class WebAppArgs extends io.pulumi.resources.ResourceArgs {
      * Configuration of the app.
      * 
      */
-    @InputImport(name="siteConfig")
+    @Import(name="siteConfig")
       private final @Nullable Output<SiteConfigArgs> siteConfig;
 
     public Output<SiteConfigArgs> getSiteConfig() {
@@ -320,7 +320,7 @@ public final class WebAppArgs extends io.pulumi.resources.ResourceArgs {
      * Checks if Customer provided storage account is required
      * 
      */
-    @InputImport(name="storageAccountRequired")
+    @Import(name="storageAccountRequired")
       private final @Nullable Output<Boolean> storageAccountRequired;
 
     public Output<Boolean> getStorageAccountRequired() {
@@ -331,7 +331,7 @@ public final class WebAppArgs extends io.pulumi.resources.ResourceArgs {
      * Resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -343,7 +343,7 @@ public final class WebAppArgs extends io.pulumi.resources.ResourceArgs {
      * This must be of the form /subscriptions/{subscriptionName}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{vnetName}/subnets/{subnetName}
      * 
      */
-    @InputImport(name="virtualNetworkSubnetId")
+    @Import(name="virtualNetworkSubnetId")
       private final @Nullable Output<String> virtualNetworkSubnetId;
 
     public Output<String> getVirtualNetworkSubnetId() {

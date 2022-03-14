@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.containerregistry.inputs;
 
 import io.pulumi.azurenative.containerregistry.inputs.SourcePropertiesResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class SourceTriggerResponse extends io.pulumi.resources.InvokeArgs 
      * The name of the trigger.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -35,7 +35,7 @@ public final class SourceTriggerResponse extends io.pulumi.resources.InvokeArgs 
      * The properties that describes the source(code) for the task.
      * 
      */
-    @InputImport(name="sourceRepository", required=true)
+    @Import(name="sourceRepository", required=true)
       private final SourcePropertiesResponse sourceRepository;
 
     public SourcePropertiesResponse getSourceRepository() {
@@ -46,7 +46,7 @@ public final class SourceTriggerResponse extends io.pulumi.resources.InvokeArgs 
      * The source event corresponding to the trigger.
      * 
      */
-    @InputImport(name="sourceTriggerEvents", required=true)
+    @Import(name="sourceTriggerEvents", required=true)
       private final List<String> sourceTriggerEvents;
 
     public List<String> getSourceTriggerEvents() {
@@ -57,7 +57,7 @@ public final class SourceTriggerResponse extends io.pulumi.resources.InvokeArgs 
      * The current status of trigger.
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable String status;
 
     public Optional<String> getStatus() {

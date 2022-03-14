@@ -22,7 +22,7 @@ import io.pulumi.azurenative.datafactory.outputs.LogStorageSettingsResponse;
 import io.pulumi.azurenative.datafactory.outputs.OracleCloudStorageReadSettingsResponse;
 import io.pulumi.azurenative.datafactory.outputs.SftpReadSettingsResponse;
 import io.pulumi.azurenative.datafactory.outputs.UserPropertyResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -31,7 +31,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DeleteActivityResponse {
     /**
      * Delete activity dataset reference.
@@ -100,21 +100,21 @@ public final class DeleteActivityResponse {
      */
     private final @Nullable List<UserPropertyResponse> userProperties;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DeleteActivityResponse(
-        @OutputCustomType.Parameter("dataset") DatasetReferenceResponse dataset,
-        @OutputCustomType.Parameter("dependsOn") @Nullable List<ActivityDependencyResponse> dependsOn,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("enableLogging") @Nullable Object enableLogging,
-        @OutputCustomType.Parameter("linkedServiceName") @Nullable LinkedServiceReferenceResponse linkedServiceName,
-        @OutputCustomType.Parameter("logStorageSettings") @Nullable LogStorageSettingsResponse logStorageSettings,
-        @OutputCustomType.Parameter("maxConcurrentConnections") @Nullable Integer maxConcurrentConnections,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("policy") @Nullable ActivityPolicyResponse policy,
-        @OutputCustomType.Parameter("recursive") @Nullable Object recursive,
-        @OutputCustomType.Parameter("storeSettings") @Nullable Object storeSettings,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("userProperties") @Nullable List<UserPropertyResponse> userProperties) {
+        @CustomType.Parameter("dataset") DatasetReferenceResponse dataset,
+        @CustomType.Parameter("dependsOn") @Nullable List<ActivityDependencyResponse> dependsOn,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("enableLogging") @Nullable Object enableLogging,
+        @CustomType.Parameter("linkedServiceName") @Nullable LinkedServiceReferenceResponse linkedServiceName,
+        @CustomType.Parameter("logStorageSettings") @Nullable LogStorageSettingsResponse logStorageSettings,
+        @CustomType.Parameter("maxConcurrentConnections") @Nullable Integer maxConcurrentConnections,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("policy") @Nullable ActivityPolicyResponse policy,
+        @CustomType.Parameter("recursive") @Nullable Object recursive,
+        @CustomType.Parameter("storeSettings") @Nullable Object storeSettings,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("userProperties") @Nullable List<UserPropertyResponse> userProperties) {
         this.dataset = dataset;
         this.dependsOn = dependsOn;
         this.description = description;

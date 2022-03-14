@@ -10,7 +10,7 @@ import io.pulumi.azurenative.compute.outputs.MaintenanceRedeployStatusResponse;
 import io.pulumi.azurenative.compute.outputs.VirtualMachineAgentInstanceViewResponse;
 import io.pulumi.azurenative.compute.outputs.VirtualMachineExtensionInstanceViewResponse;
 import io.pulumi.azurenative.compute.outputs.VirtualMachineHealthStatusResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -18,7 +18,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VirtualMachineScaleSetVMInstanceViewResponse {
     /**
      * Resource id of the dedicated host, on which the virtual machine is allocated through automatic placement, when the virtual machine is associated with a dedicated host group that has automatic placement enabled. <br><br>Minimum api-version: 2020-06-01.
@@ -81,20 +81,20 @@ public final class VirtualMachineScaleSetVMInstanceViewResponse {
      */
     private final VirtualMachineHealthStatusResponse vmHealth;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VirtualMachineScaleSetVMInstanceViewResponse(
-        @OutputCustomType.Parameter("assignedHost") String assignedHost,
-        @OutputCustomType.Parameter("bootDiagnostics") @Nullable BootDiagnosticsInstanceViewResponse bootDiagnostics,
-        @OutputCustomType.Parameter("disks") @Nullable List<DiskInstanceViewResponse> disks,
-        @OutputCustomType.Parameter("extensions") @Nullable List<VirtualMachineExtensionInstanceViewResponse> extensions,
-        @OutputCustomType.Parameter("maintenanceRedeployStatus") @Nullable MaintenanceRedeployStatusResponse maintenanceRedeployStatus,
-        @OutputCustomType.Parameter("placementGroupId") @Nullable String placementGroupId,
-        @OutputCustomType.Parameter("platformFaultDomain") @Nullable Integer platformFaultDomain,
-        @OutputCustomType.Parameter("platformUpdateDomain") @Nullable Integer platformUpdateDomain,
-        @OutputCustomType.Parameter("rdpThumbPrint") @Nullable String rdpThumbPrint,
-        @OutputCustomType.Parameter("statuses") @Nullable List<InstanceViewStatusResponse> statuses,
-        @OutputCustomType.Parameter("vmAgent") @Nullable VirtualMachineAgentInstanceViewResponse vmAgent,
-        @OutputCustomType.Parameter("vmHealth") VirtualMachineHealthStatusResponse vmHealth) {
+        @CustomType.Parameter("assignedHost") String assignedHost,
+        @CustomType.Parameter("bootDiagnostics") @Nullable BootDiagnosticsInstanceViewResponse bootDiagnostics,
+        @CustomType.Parameter("disks") @Nullable List<DiskInstanceViewResponse> disks,
+        @CustomType.Parameter("extensions") @Nullable List<VirtualMachineExtensionInstanceViewResponse> extensions,
+        @CustomType.Parameter("maintenanceRedeployStatus") @Nullable MaintenanceRedeployStatusResponse maintenanceRedeployStatus,
+        @CustomType.Parameter("placementGroupId") @Nullable String placementGroupId,
+        @CustomType.Parameter("platformFaultDomain") @Nullable Integer platformFaultDomain,
+        @CustomType.Parameter("platformUpdateDomain") @Nullable Integer platformUpdateDomain,
+        @CustomType.Parameter("rdpThumbPrint") @Nullable String rdpThumbPrint,
+        @CustomType.Parameter("statuses") @Nullable List<InstanceViewStatusResponse> statuses,
+        @CustomType.Parameter("vmAgent") @Nullable VirtualMachineAgentInstanceViewResponse vmAgent,
+        @CustomType.Parameter("vmHealth") VirtualMachineHealthStatusResponse vmHealth) {
         this.assignedHost = assignedHost;
         this.bootDiagnostics = bootDiagnostics;
         this.disks = disks;

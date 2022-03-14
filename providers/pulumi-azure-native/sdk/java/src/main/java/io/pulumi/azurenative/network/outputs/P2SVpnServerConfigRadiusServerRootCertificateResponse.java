@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class P2SVpnServerConfigRadiusServerRootCertificateResponse {
     /**
      * A unique read-only string that changes whenever the resource is updated.
@@ -37,13 +37,13 @@ public final class P2SVpnServerConfigRadiusServerRootCertificateResponse {
      */
     private final String publicCertData;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private P2SVpnServerConfigRadiusServerRootCertificateResponse(
-        @OutputCustomType.Parameter("etag") @Nullable String etag,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("publicCertData") String publicCertData) {
+        @CustomType.Parameter("etag") @Nullable String etag,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("publicCertData") String publicCertData) {
         this.etag = etag;
         this.id = id;
         this.name = name;

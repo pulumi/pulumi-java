@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.migrate.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class DatabaseProjectSummaryResponse extends io.pulumi.resources.In
      * Gets or sets the extended summary.
      * 
      */
-    @InputImport(name="extendedSummary")
+    @Import(name="extendedSummary")
       private final @Nullable Map<String,String> extendedSummary;
 
     public Map<String,String> getExtendedSummary() {
@@ -35,7 +35,7 @@ public final class DatabaseProjectSummaryResponse extends io.pulumi.resources.In
      * Expected value is 'Databases'.
      * 
      */
-    @InputImport(name="instanceType", required=true)
+    @Import(name="instanceType", required=true)
       private final String instanceType;
 
     public String getInstanceType() {
@@ -46,7 +46,7 @@ public final class DatabaseProjectSummaryResponse extends io.pulumi.resources.In
      * Gets or sets the time when summary was last refreshed.
      * 
      */
-    @InputImport(name="lastSummaryRefreshedTime")
+    @Import(name="lastSummaryRefreshedTime")
       private final @Nullable String lastSummaryRefreshedTime;
 
     public Optional<String> getLastSummaryRefreshedTime() {
@@ -57,7 +57,7 @@ public final class DatabaseProjectSummaryResponse extends io.pulumi.resources.In
      * Gets or sets the state of refresh summary.
      * 
      */
-    @InputImport(name="refreshSummaryState")
+    @Import(name="refreshSummaryState")
       private final @Nullable String refreshSummaryState;
 
     public Optional<String> getRefreshSummaryState() {

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.powerplatform.inputs;
 
 import io.pulumi.azurenative.powerplatform.inputs.VirtualNetworkPropertiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class VirtualNetworkPropertiesListArgs extends io.pulumi.resources.
      * Next page link if any.
      * 
      */
-    @InputImport(name="nextLink")
+    @Import(name="nextLink")
       private final @Nullable Output<String> nextLink;
 
     public Output<String> getNextLink() {
@@ -35,7 +35,7 @@ public final class VirtualNetworkPropertiesListArgs extends io.pulumi.resources.
      * Array of virtual networks.
      * 
      */
-    @InputImport(name="value")
+    @Import(name="value")
       private final @Nullable Output<List<VirtualNetworkPropertiesArgs>> value;
 
     public Output<List<VirtualNetworkPropertiesArgs>> getValue() {

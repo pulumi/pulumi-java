@@ -5,12 +5,12 @@ package io.pulumi.azurenative.dataprotection.outputs;
 
 import io.pulumi.azurenative.dataprotection.outputs.BackupScheduleResponse;
 import io.pulumi.azurenative.dataprotection.outputs.TaggingCriteriaResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ScheduleBasedTriggerContextResponse {
     /**
      * Type of the specific object - used for deserializing
@@ -29,11 +29,11 @@ public final class ScheduleBasedTriggerContextResponse {
      */
     private final List<TaggingCriteriaResponse> taggingCriteria;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ScheduleBasedTriggerContextResponse(
-        @OutputCustomType.Parameter("objectType") String objectType,
-        @OutputCustomType.Parameter("schedule") BackupScheduleResponse schedule,
-        @OutputCustomType.Parameter("taggingCriteria") List<TaggingCriteriaResponse> taggingCriteria) {
+        @CustomType.Parameter("objectType") String objectType,
+        @CustomType.Parameter("schedule") BackupScheduleResponse schedule,
+        @CustomType.Parameter("taggingCriteria") List<TaggingCriteriaResponse> taggingCriteria) {
         this.objectType = objectType;
         this.schedule = schedule;
         this.taggingCriteria = taggingCriteria;

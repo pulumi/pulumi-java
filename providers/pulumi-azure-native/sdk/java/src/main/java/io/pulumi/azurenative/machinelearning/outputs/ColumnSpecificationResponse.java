@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearning.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ColumnSpecificationResponse {
     /**
      * If the data type is categorical, this provides the list of accepted categories.
@@ -40,13 +40,13 @@ public final class ColumnSpecificationResponse {
      */
     private final @Nullable Boolean xMsIsordered;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ColumnSpecificationResponse(
-        @OutputCustomType.Parameter("enum") @Nullable List<Object> $enum,
-        @OutputCustomType.Parameter("format") @Nullable String format,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("xMsIsnullable") @Nullable Boolean xMsIsnullable,
-        @OutputCustomType.Parameter("xMsIsordered") @Nullable Boolean xMsIsordered) {
+        @CustomType.Parameter("enum") @Nullable List<Object> $enum,
+        @CustomType.Parameter("format") @Nullable String format,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("xMsIsnullable") @Nullable Boolean xMsIsnullable,
+        @CustomType.Parameter("xMsIsordered") @Nullable Boolean xMsIsordered) {
         this.$enum = $enum;
         this.format = format;
         this.type = type;

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.automation;
 
 import io.pulumi.azurenative.automation.inputs.FieldDefinitionArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class ConnectionTypeArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the automation account.
      * 
      */
-    @InputImport(name="automationAccountName", required=true)
+    @Import(name="automationAccountName", required=true)
       private final Output<String> automationAccountName;
 
     public Output<String> getAutomationAccountName() {
@@ -32,7 +32,7 @@ public final class ConnectionTypeArgs extends io.pulumi.resources.ResourceArgs {
      * The parameters supplied to the create or update connection type operation.
      * 
      */
-    @InputImport(name="connectionTypeName")
+    @Import(name="connectionTypeName")
       private final @Nullable Output<String> connectionTypeName;
 
     public Output<String> getConnectionTypeName() {
@@ -43,7 +43,7 @@ public final class ConnectionTypeArgs extends io.pulumi.resources.ResourceArgs {
      * Gets or sets the field definitions of the connection type.
      * 
      */
-    @InputImport(name="fieldDefinitions", required=true)
+    @Import(name="fieldDefinitions", required=true)
       private final Output<Map<String,FieldDefinitionArgs>> fieldDefinitions;
 
     public Output<Map<String,FieldDefinitionArgs>> getFieldDefinitions() {
@@ -54,7 +54,7 @@ public final class ConnectionTypeArgs extends io.pulumi.resources.ResourceArgs {
      * Gets or sets a Boolean value to indicate if the connection type is global.
      * 
      */
-    @InputImport(name="isGlobal")
+    @Import(name="isGlobal")
       private final @Nullable Output<Boolean> isGlobal;
 
     public Output<Boolean> getIsGlobal() {
@@ -65,7 +65,7 @@ public final class ConnectionTypeArgs extends io.pulumi.resources.ResourceArgs {
      * Gets or sets the name of the connection type.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -76,7 +76,7 @@ public final class ConnectionTypeArgs extends io.pulumi.resources.ResourceArgs {
      * Name of an Azure Resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {

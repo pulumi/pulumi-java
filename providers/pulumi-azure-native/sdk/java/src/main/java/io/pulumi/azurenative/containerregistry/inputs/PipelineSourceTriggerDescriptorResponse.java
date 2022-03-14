@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerregistry.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +18,7 @@ public final class PipelineSourceTriggerDescriptorResponse extends io.pulumi.res
      * The timestamp when the source update happened.
      * 
      */
-    @InputImport(name="timestamp")
+    @Import(name="timestamp")
       private final @Nullable String timestamp;
 
     public Optional<String> getTimestamp() {

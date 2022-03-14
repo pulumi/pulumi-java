@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.kubernetesconfiguration.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class HelmOperatorPropertiesResponse {
     /**
      * Values override for the operator Helm chart.
@@ -22,10 +22,10 @@ public final class HelmOperatorPropertiesResponse {
      */
     private final @Nullable String chartVersion;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private HelmOperatorPropertiesResponse(
-        @OutputCustomType.Parameter("chartValues") @Nullable String chartValues,
-        @OutputCustomType.Parameter("chartVersion") @Nullable String chartVersion) {
+        @CustomType.Parameter("chartValues") @Nullable String chartValues,
+        @CustomType.Parameter("chartVersion") @Nullable String chartVersion) {
         this.chartValues = chartValues;
         this.chartVersion = chartVersion;
     }

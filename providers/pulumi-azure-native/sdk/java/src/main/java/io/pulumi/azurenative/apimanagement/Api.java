@@ -10,7 +10,7 @@ import io.pulumi.azurenative.apimanagement.outputs.AuthenticationSettingsContrac
 import io.pulumi.azurenative.apimanagement.outputs.SubscriptionKeyParameterNamesContractResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -38,7 +38,7 @@ public class Api extends io.pulumi.resources.CustomResource {
      * Describes the Revision of the Api. If no value is provided, default revision 1 is created
      * 
      */
-    @OutputExport(name="apiRevision", type=String.class, parameters={})
+    @Export(name="apiRevision", type=String.class, parameters={})
     private Output</* @Nullable */ String> apiRevision;
 
     /**
@@ -52,7 +52,7 @@ public class Api extends io.pulumi.resources.CustomResource {
      * Description of the Api Revision.
      * 
      */
-    @OutputExport(name="apiRevisionDescription", type=String.class, parameters={})
+    @Export(name="apiRevisionDescription", type=String.class, parameters={})
     private Output</* @Nullable */ String> apiRevisionDescription;
 
     /**
@@ -66,7 +66,7 @@ public class Api extends io.pulumi.resources.CustomResource {
      * Type of API.
      * 
      */
-    @OutputExport(name="apiType", type=String.class, parameters={})
+    @Export(name="apiType", type=String.class, parameters={})
     private Output</* @Nullable */ String> apiType;
 
     /**
@@ -80,7 +80,7 @@ public class Api extends io.pulumi.resources.CustomResource {
      * Indicates the Version identifier of the API if the API is versioned
      * 
      */
-    @OutputExport(name="apiVersion", type=String.class, parameters={})
+    @Export(name="apiVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> apiVersion;
 
     /**
@@ -94,7 +94,7 @@ public class Api extends io.pulumi.resources.CustomResource {
      * Description of the Api Version.
      * 
      */
-    @OutputExport(name="apiVersionDescription", type=String.class, parameters={})
+    @Export(name="apiVersionDescription", type=String.class, parameters={})
     private Output</* @Nullable */ String> apiVersionDescription;
 
     /**
@@ -108,7 +108,7 @@ public class Api extends io.pulumi.resources.CustomResource {
      * Version set details
      * 
      */
-    @OutputExport(name="apiVersionSet", type=ApiVersionSetContractDetailsResponse.class, parameters={})
+    @Export(name="apiVersionSet", type=ApiVersionSetContractDetailsResponse.class, parameters={})
     private Output</* @Nullable */ ApiVersionSetContractDetailsResponse> apiVersionSet;
 
     /**
@@ -122,7 +122,7 @@ public class Api extends io.pulumi.resources.CustomResource {
      * A resource identifier for the related ApiVersionSet.
      * 
      */
-    @OutputExport(name="apiVersionSetId", type=String.class, parameters={})
+    @Export(name="apiVersionSetId", type=String.class, parameters={})
     private Output</* @Nullable */ String> apiVersionSetId;
 
     /**
@@ -136,7 +136,7 @@ public class Api extends io.pulumi.resources.CustomResource {
      * Collection of authentication settings included into this API.
      * 
      */
-    @OutputExport(name="authenticationSettings", type=AuthenticationSettingsContractResponse.class, parameters={})
+    @Export(name="authenticationSettings", type=AuthenticationSettingsContractResponse.class, parameters={})
     private Output</* @Nullable */ AuthenticationSettingsContractResponse> authenticationSettings;
 
     /**
@@ -150,7 +150,7 @@ public class Api extends io.pulumi.resources.CustomResource {
      * Description of the API. May include HTML formatting tags.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -164,7 +164,7 @@ public class Api extends io.pulumi.resources.CustomResource {
      * API name. Must be 1 to 300 characters long.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output</* @Nullable */ String> displayName;
 
     /**
@@ -178,7 +178,7 @@ public class Api extends io.pulumi.resources.CustomResource {
      * Indicates if API revision is current api revision.
      * 
      */
-    @OutputExport(name="isCurrent", type=Boolean.class, parameters={})
+    @Export(name="isCurrent", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> isCurrent;
 
     /**
@@ -192,7 +192,7 @@ public class Api extends io.pulumi.resources.CustomResource {
      * Indicates if API revision is accessible via the gateway.
      * 
      */
-    @OutputExport(name="isOnline", type=Boolean.class, parameters={})
+    @Export(name="isOnline", type=Boolean.class, parameters={})
     private Output<Boolean> isOnline;
 
     /**
@@ -206,7 +206,7 @@ public class Api extends io.pulumi.resources.CustomResource {
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -220,7 +220,7 @@ public class Api extends io.pulumi.resources.CustomResource {
      * Relative URL uniquely identifying this API and all of its resource paths within the API Management service instance. It is appended to the API endpoint base URL specified during the service instance creation to form a public URL for this API.
      * 
      */
-    @OutputExport(name="path", type=String.class, parameters={})
+    @Export(name="path", type=String.class, parameters={})
     private Output<String> path;
 
     /**
@@ -234,7 +234,7 @@ public class Api extends io.pulumi.resources.CustomResource {
      * Describes on which protocols the operations in this API can be invoked.
      * 
      */
-    @OutputExport(name="protocols", type=List.class, parameters={String.class})
+    @Export(name="protocols", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> protocols;
 
     /**
@@ -248,7 +248,7 @@ public class Api extends io.pulumi.resources.CustomResource {
      * Absolute URL of the backend service implementing this API. Cannot be more than 2000 characters long.
      * 
      */
-    @OutputExport(name="serviceUrl", type=String.class, parameters={})
+    @Export(name="serviceUrl", type=String.class, parameters={})
     private Output</* @Nullable */ String> serviceUrl;
 
     /**
@@ -262,7 +262,7 @@ public class Api extends io.pulumi.resources.CustomResource {
      * API identifier of the source API.
      * 
      */
-    @OutputExport(name="sourceApiId", type=String.class, parameters={})
+    @Export(name="sourceApiId", type=String.class, parameters={})
     private Output</* @Nullable */ String> sourceApiId;
 
     /**
@@ -276,7 +276,7 @@ public class Api extends io.pulumi.resources.CustomResource {
      * Protocols over which API is made available.
      * 
      */
-    @OutputExport(name="subscriptionKeyParameterNames", type=SubscriptionKeyParameterNamesContractResponse.class, parameters={})
+    @Export(name="subscriptionKeyParameterNames", type=SubscriptionKeyParameterNamesContractResponse.class, parameters={})
     private Output</* @Nullable */ SubscriptionKeyParameterNamesContractResponse> subscriptionKeyParameterNames;
 
     /**
@@ -290,7 +290,7 @@ public class Api extends io.pulumi.resources.CustomResource {
      * Specifies whether an API or Product subscription is required for accessing the API.
      * 
      */
-    @OutputExport(name="subscriptionRequired", type=Boolean.class, parameters={})
+    @Export(name="subscriptionRequired", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> subscriptionRequired;
 
     /**
@@ -304,7 +304,7 @@ public class Api extends io.pulumi.resources.CustomResource {
      * Resource type for API Management resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.costmanagement.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class ReportDeliveryDestinationArgs extends io.pulumi.resources.Res
      * The name of the container where reports will be uploaded.
      * 
      */
-    @InputImport(name="container", required=true)
+    @Import(name="container", required=true)
       private final Output<String> container;
 
     public Output<String> getContainer() {
@@ -33,7 +33,7 @@ public final class ReportDeliveryDestinationArgs extends io.pulumi.resources.Res
      * The resource id of the storage account where reports will be delivered.
      * 
      */
-    @InputImport(name="resourceId", required=true)
+    @Import(name="resourceId", required=true)
       private final Output<String> resourceId;
 
     public Output<String> getResourceId() {
@@ -44,7 +44,7 @@ public final class ReportDeliveryDestinationArgs extends io.pulumi.resources.Res
      * The name of the directory where reports will be uploaded.
      * 
      */
-    @InputImport(name="rootFolderPath")
+    @Import(name="rootFolderPath")
       private final @Nullable Output<String> rootFolderPath;
 
     public Output<String> getRootFolderPath() {

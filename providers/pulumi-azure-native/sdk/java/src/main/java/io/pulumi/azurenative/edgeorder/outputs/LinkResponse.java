@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.edgeorder.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class LinkResponse {
     /**
      * Type of link
@@ -20,10 +20,10 @@ public final class LinkResponse {
      */
     private final String linkUrl;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LinkResponse(
-        @OutputCustomType.Parameter("linkType") String linkType,
-        @OutputCustomType.Parameter("linkUrl") String linkUrl) {
+        @CustomType.Parameter("linkType") String linkType,
+        @CustomType.Parameter("linkUrl") String linkUrl) {
         this.linkType = linkType;
         this.linkUrl = linkUrl;
     }

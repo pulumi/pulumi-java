@@ -10,12 +10,12 @@ import io.pulumi.azurenative.recoveryservices.outputs.PushInstallerDetailsRespon
 import io.pulumi.azurenative.recoveryservices.outputs.RcmProxyDetailsResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.ReplicationAgentDetailsResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.ReprotectAgentDetailsResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class InMageRcmFabricSpecificDetailsResponse {
     /**
      * The list of agent details.
@@ -94,23 +94,23 @@ public final class InMageRcmFabricSpecificDetailsResponse {
      */
     private final String vmwareSiteId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private InMageRcmFabricSpecificDetailsResponse(
-        @OutputCustomType.Parameter("agentDetails") List<AgentDetailsResponse> agentDetails,
-        @OutputCustomType.Parameter("controlPlaneUri") String controlPlaneUri,
-        @OutputCustomType.Parameter("dataPlaneUri") String dataPlaneUri,
-        @OutputCustomType.Parameter("dras") List<DraDetailsResponse> dras,
-        @OutputCustomType.Parameter("instanceType") String instanceType,
-        @OutputCustomType.Parameter("physicalSiteId") String physicalSiteId,
-        @OutputCustomType.Parameter("processServers") List<ProcessServerDetailsResponse> processServers,
-        @OutputCustomType.Parameter("pushInstallers") List<PushInstallerDetailsResponse> pushInstallers,
-        @OutputCustomType.Parameter("rcmProxies") List<RcmProxyDetailsResponse> rcmProxies,
-        @OutputCustomType.Parameter("replicationAgents") List<ReplicationAgentDetailsResponse> replicationAgents,
-        @OutputCustomType.Parameter("reprotectAgents") List<ReprotectAgentDetailsResponse> reprotectAgents,
-        @OutputCustomType.Parameter("serviceContainerId") String serviceContainerId,
-        @OutputCustomType.Parameter("serviceEndpoint") String serviceEndpoint,
-        @OutputCustomType.Parameter("serviceResourceId") String serviceResourceId,
-        @OutputCustomType.Parameter("vmwareSiteId") String vmwareSiteId) {
+        @CustomType.Parameter("agentDetails") List<AgentDetailsResponse> agentDetails,
+        @CustomType.Parameter("controlPlaneUri") String controlPlaneUri,
+        @CustomType.Parameter("dataPlaneUri") String dataPlaneUri,
+        @CustomType.Parameter("dras") List<DraDetailsResponse> dras,
+        @CustomType.Parameter("instanceType") String instanceType,
+        @CustomType.Parameter("physicalSiteId") String physicalSiteId,
+        @CustomType.Parameter("processServers") List<ProcessServerDetailsResponse> processServers,
+        @CustomType.Parameter("pushInstallers") List<PushInstallerDetailsResponse> pushInstallers,
+        @CustomType.Parameter("rcmProxies") List<RcmProxyDetailsResponse> rcmProxies,
+        @CustomType.Parameter("replicationAgents") List<ReplicationAgentDetailsResponse> replicationAgents,
+        @CustomType.Parameter("reprotectAgents") List<ReprotectAgentDetailsResponse> reprotectAgents,
+        @CustomType.Parameter("serviceContainerId") String serviceContainerId,
+        @CustomType.Parameter("serviceEndpoint") String serviceEndpoint,
+        @CustomType.Parameter("serviceResourceId") String serviceResourceId,
+        @CustomType.Parameter("vmwareSiteId") String vmwareSiteId) {
         this.agentDetails = agentDetails;
         this.controlPlaneUri = controlPlaneUri;
         this.dataPlaneUri = dataPlaneUri;

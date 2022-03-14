@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.devtestlab.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class PortResponse extends io.pulumi.resources.InvokeArgs {
      * Backend port of the target virtual machine.
      * 
      */
-    @InputImport(name="backendPort")
+    @Import(name="backendPort")
       private final @Nullable Integer backendPort;
 
     public Optional<Integer> getBackendPort() {
@@ -34,7 +34,7 @@ public final class PortResponse extends io.pulumi.resources.InvokeArgs {
      * Protocol type of the port.
      * 
      */
-    @InputImport(name="transportProtocol")
+    @Import(name="transportProtocol")
       private final @Nullable String transportProtocol;
 
     public Optional<String> getTransportProtocol() {

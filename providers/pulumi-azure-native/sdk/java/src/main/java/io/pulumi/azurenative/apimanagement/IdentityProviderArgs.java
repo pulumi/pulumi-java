@@ -6,7 +6,7 @@ package io.pulumi.azurenative.apimanagement;
 import io.pulumi.azurenative.apimanagement.enums.IdentityProviderType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class IdentityProviderArgs extends io.pulumi.resources.ResourceArgs
      * List of Allowed Tenants when configuring Azure Active Directory login.
      * 
      */
-    @InputImport(name="allowedTenants")
+    @Import(name="allowedTenants")
       private final @Nullable Output<List<String>> allowedTenants;
 
     public Output<List<String>> getAllowedTenants() {
@@ -32,7 +32,7 @@ public final class IdentityProviderArgs extends io.pulumi.resources.ResourceArgs
      * OpenID Connect discovery endpoint hostname for AAD or AAD B2C.
      * 
      */
-    @InputImport(name="authority")
+    @Import(name="authority")
       private final @Nullable Output<String> authority;
 
     public Output<String> getAuthority() {
@@ -43,7 +43,7 @@ public final class IdentityProviderArgs extends io.pulumi.resources.ResourceArgs
      * Client Id of the Application in the external Identity Provider. It is App ID for Facebook login, Client ID for Google login, App ID for Microsoft.
      * 
      */
-    @InputImport(name="clientId", required=true)
+    @Import(name="clientId", required=true)
       private final Output<String> clientId;
 
     public Output<String> getClientId() {
@@ -54,7 +54,7 @@ public final class IdentityProviderArgs extends io.pulumi.resources.ResourceArgs
      * Client secret of the Application in external Identity Provider, used to authenticate login request. For example, it is App Secret for Facebook login, API Key for Google login, Public Key for Microsoft. This property will not be filled on 'GET' operations! Use '/listSecrets' POST request to get the value.
      * 
      */
-    @InputImport(name="clientSecret", required=true)
+    @Import(name="clientSecret", required=true)
       private final Output<String> clientSecret;
 
     public Output<String> getClientSecret() {
@@ -65,7 +65,7 @@ public final class IdentityProviderArgs extends io.pulumi.resources.ResourceArgs
      * Identity Provider Type identifier.
      * 
      */
-    @InputImport(name="identityProviderName")
+    @Import(name="identityProviderName")
       private final @Nullable Output<String> identityProviderName;
 
     public Output<String> getIdentityProviderName() {
@@ -76,7 +76,7 @@ public final class IdentityProviderArgs extends io.pulumi.resources.ResourceArgs
      * Password Reset Policy Name. Only applies to AAD B2C Identity Provider.
      * 
      */
-    @InputImport(name="passwordResetPolicyName")
+    @Import(name="passwordResetPolicyName")
       private final @Nullable Output<String> passwordResetPolicyName;
 
     public Output<String> getPasswordResetPolicyName() {
@@ -87,7 +87,7 @@ public final class IdentityProviderArgs extends io.pulumi.resources.ResourceArgs
      * Profile Editing Policy Name. Only applies to AAD B2C Identity Provider.
      * 
      */
-    @InputImport(name="profileEditingPolicyName")
+    @Import(name="profileEditingPolicyName")
       private final @Nullable Output<String> profileEditingPolicyName;
 
     public Output<String> getProfileEditingPolicyName() {
@@ -98,7 +98,7 @@ public final class IdentityProviderArgs extends io.pulumi.resources.ResourceArgs
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -109,7 +109,7 @@ public final class IdentityProviderArgs extends io.pulumi.resources.ResourceArgs
      * The name of the API Management service.
      * 
      */
-    @InputImport(name="serviceName", required=true)
+    @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
 
     public Output<String> getServiceName() {
@@ -120,7 +120,7 @@ public final class IdentityProviderArgs extends io.pulumi.resources.ResourceArgs
      * Signin Policy Name. Only applies to AAD B2C Identity Provider.
      * 
      */
-    @InputImport(name="signinPolicyName")
+    @Import(name="signinPolicyName")
       private final @Nullable Output<String> signinPolicyName;
 
     public Output<String> getSigninPolicyName() {
@@ -131,7 +131,7 @@ public final class IdentityProviderArgs extends io.pulumi.resources.ResourceArgs
      * The TenantId to use instead of Common when logging into Active Directory
      * 
      */
-    @InputImport(name="signinTenant")
+    @Import(name="signinTenant")
       private final @Nullable Output<String> signinTenant;
 
     public Output<String> getSigninTenant() {
@@ -142,7 +142,7 @@ public final class IdentityProviderArgs extends io.pulumi.resources.ResourceArgs
      * Signup Policy Name. Only applies to AAD B2C Identity Provider.
      * 
      */
-    @InputImport(name="signupPolicyName")
+    @Import(name="signupPolicyName")
       private final @Nullable Output<String> signupPolicyName;
 
     public Output<String> getSignupPolicyName() {
@@ -153,7 +153,7 @@ public final class IdentityProviderArgs extends io.pulumi.resources.ResourceArgs
      * Identity Provider Type identifier.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<Either<String,IdentityProviderType>> type;
 
     public Output<Either<String,IdentityProviderType>> getType() {

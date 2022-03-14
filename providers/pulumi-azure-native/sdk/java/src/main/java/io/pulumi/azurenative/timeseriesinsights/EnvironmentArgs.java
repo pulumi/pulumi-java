@@ -7,7 +7,7 @@ import io.pulumi.azurenative.timeseriesinsights.enums.EnvironmentKind;
 import io.pulumi.azurenative.timeseriesinsights.inputs.SkuArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the environment
      * 
      */
-    @InputImport(name="environmentName")
+    @Import(name="environmentName")
       private final @Nullable Output<String> environmentName;
 
     public Output<String> getEnvironmentName() {
@@ -33,7 +33,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * The kind of the environment.
      * 
      */
-    @InputImport(name="kind", required=true)
+    @Import(name="kind", required=true)
       private final Output<Either<String,EnvironmentKind>> kind;
 
     public Output<Either<String,EnvironmentKind>> getKind() {
@@ -44,7 +44,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * The location of the resource.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -55,7 +55,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * Name of an Azure Resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -66,7 +66,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * The sku determines the type of environment, either Gen1 (S1 or S2) or Gen2 (L1). For Gen1 environments the sku determines the capacity of the environment, the ingress rate, and the billing rate.
      * 
      */
-    @InputImport(name="sku", required=true)
+    @Import(name="sku", required=true)
       private final Output<SkuArgs> sku;
 
     public Output<SkuArgs> getSku() {
@@ -77,7 +77,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * Key-value pairs of additional properties for the resource.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

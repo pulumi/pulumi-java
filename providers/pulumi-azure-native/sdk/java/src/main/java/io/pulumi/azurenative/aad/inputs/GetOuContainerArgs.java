@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.aad.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetOuContainerArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the domain service.
      * 
      */
-    @InputImport(name="domainServiceName", required=true)
+    @Import(name="domainServiceName", required=true)
       private final String domainServiceName;
 
     public String getDomainServiceName() {
@@ -27,7 +27,7 @@ public final class GetOuContainerArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the OuContainer.
      * 
      */
-    @InputImport(name="ouContainerName", required=true)
+    @Import(name="ouContainerName", required=true)
       private final String ouContainerName;
 
     public String getOuContainerName() {
@@ -38,7 +38,7 @@ public final class GetOuContainerArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the resource group within the user's subscription. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {

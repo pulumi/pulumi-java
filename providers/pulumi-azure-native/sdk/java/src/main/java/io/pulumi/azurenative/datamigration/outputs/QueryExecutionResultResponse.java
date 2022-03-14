@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.datamigration.outputs;
 
 import io.pulumi.azurenative.datamigration.outputs.ExecutionStatisticsResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class QueryExecutionResultResponse {
     /**
      * Query text retrieved from the source server
@@ -32,12 +32,12 @@ public final class QueryExecutionResultResponse {
      */
     private final ExecutionStatisticsResponse targetResult;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private QueryExecutionResultResponse(
-        @OutputCustomType.Parameter("queryText") String queryText,
-        @OutputCustomType.Parameter("sourceResult") ExecutionStatisticsResponse sourceResult,
-        @OutputCustomType.Parameter("statementsInBatch") Double statementsInBatch,
-        @OutputCustomType.Parameter("targetResult") ExecutionStatisticsResponse targetResult) {
+        @CustomType.Parameter("queryText") String queryText,
+        @CustomType.Parameter("sourceResult") ExecutionStatisticsResponse sourceResult,
+        @CustomType.Parameter("statementsInBatch") Double statementsInBatch,
+        @CustomType.Parameter("targetResult") ExecutionStatisticsResponse targetResult) {
         this.queryText = queryText;
         this.sourceResult = sourceResult;
         this.statementsInBatch = statementsInBatch;

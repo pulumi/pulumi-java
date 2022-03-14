@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.media.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class EnabledProtocolsResponse extends io.pulumi.resources.InvokeAr
      * Enable DASH protocol or not
      * 
      */
-    @InputImport(name="dash", required=true)
+    @Import(name="dash", required=true)
       private final Boolean dash;
 
     public Boolean getDash() {
@@ -31,7 +31,7 @@ public final class EnabledProtocolsResponse extends io.pulumi.resources.InvokeAr
      * Enable Download protocol or not
      * 
      */
-    @InputImport(name="download", required=true)
+    @Import(name="download", required=true)
       private final Boolean download;
 
     public Boolean getDownload() {
@@ -42,7 +42,7 @@ public final class EnabledProtocolsResponse extends io.pulumi.resources.InvokeAr
      * Enable HLS protocol or not
      * 
      */
-    @InputImport(name="hls", required=true)
+    @Import(name="hls", required=true)
       private final Boolean hls;
 
     public Boolean getHls() {
@@ -53,7 +53,7 @@ public final class EnabledProtocolsResponse extends io.pulumi.resources.InvokeAr
      * Enable SmoothStreaming protocol or not
      * 
      */
-    @InputImport(name="smoothStreaming", required=true)
+    @Import(name="smoothStreaming", required=true)
       private final Boolean smoothStreaming;
 
     public Boolean getSmoothStreaming() {

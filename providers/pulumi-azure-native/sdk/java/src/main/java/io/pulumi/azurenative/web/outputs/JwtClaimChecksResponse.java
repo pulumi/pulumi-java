@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class JwtClaimChecksResponse {
     /**
      * The list of the allowed client applications.
@@ -22,10 +22,10 @@ public final class JwtClaimChecksResponse {
      */
     private final @Nullable List<String> allowedGroups;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private JwtClaimChecksResponse(
-        @OutputCustomType.Parameter("allowedClientApplications") @Nullable List<String> allowedClientApplications,
-        @OutputCustomType.Parameter("allowedGroups") @Nullable List<String> allowedGroups) {
+        @CustomType.Parameter("allowedClientApplications") @Nullable List<String> allowedClientApplications,
+        @CustomType.Parameter("allowedGroups") @Nullable List<String> allowedGroups) {
         this.allowedClientApplications = allowedClientApplications;
         this.allowedGroups = allowedGroups;
     }

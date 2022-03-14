@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.appplatform.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CustomDomainPropertiesResponse {
     /**
      * The app name of domain.
@@ -27,11 +27,11 @@ public final class CustomDomainPropertiesResponse {
      */
     private final @Nullable String thumbprint;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CustomDomainPropertiesResponse(
-        @OutputCustomType.Parameter("appName") String appName,
-        @OutputCustomType.Parameter("certName") @Nullable String certName,
-        @OutputCustomType.Parameter("thumbprint") @Nullable String thumbprint) {
+        @CustomType.Parameter("appName") String appName,
+        @CustomType.Parameter("certName") @Nullable String certName,
+        @CustomType.Parameter("thumbprint") @Nullable String thumbprint) {
         this.appName = appName;
         this.certName = certName;
         this.thumbprint = thumbprint;

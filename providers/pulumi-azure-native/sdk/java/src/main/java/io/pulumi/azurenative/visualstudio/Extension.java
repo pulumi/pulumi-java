@@ -8,7 +8,7 @@ import io.pulumi.azurenative.visualstudio.ExtensionArgs;
 import io.pulumi.azurenative.visualstudio.outputs.ExtensionResourcePlanResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -36,7 +36,7 @@ public class Extension extends io.pulumi.resources.CustomResource {
      * Resource location.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -50,7 +50,7 @@ public class Extension extends io.pulumi.resources.CustomResource {
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -64,7 +64,7 @@ public class Extension extends io.pulumi.resources.CustomResource {
      * The extension plan that was purchased.
      * 
      */
-    @OutputExport(name="plan", type=ExtensionResourcePlanResponse.class, parameters={})
+    @Export(name="plan", type=ExtensionResourcePlanResponse.class, parameters={})
     private Output</* @Nullable */ ExtensionResourcePlanResponse> plan;
 
     /**
@@ -78,7 +78,7 @@ public class Extension extends io.pulumi.resources.CustomResource {
      * Resource properties.
      * 
      */
-    @OutputExport(name="properties", type=Map.class, parameters={String.class, String.class})
+    @Export(name="properties", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> properties;
 
     /**
@@ -92,7 +92,7 @@ public class Extension extends io.pulumi.resources.CustomResource {
      * Resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -106,7 +106,7 @@ public class Extension extends io.pulumi.resources.CustomResource {
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

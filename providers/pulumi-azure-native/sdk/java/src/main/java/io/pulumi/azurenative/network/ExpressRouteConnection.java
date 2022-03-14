@@ -9,7 +9,7 @@ import io.pulumi.azurenative.network.outputs.ExpressRouteCircuitPeeringIdRespons
 import io.pulumi.azurenative.network.outputs.RoutingConfigurationResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -38,7 +38,7 @@ public class ExpressRouteConnection extends io.pulumi.resources.CustomResource {
      * Authorization key to establish the connection.
      * 
      */
-    @OutputExport(name="authorizationKey", type=String.class, parameters={})
+    @Export(name="authorizationKey", type=String.class, parameters={})
     private Output</* @Nullable */ String> authorizationKey;
 
     /**
@@ -52,7 +52,7 @@ public class ExpressRouteConnection extends io.pulumi.resources.CustomResource {
      * Enable internet security.
      * 
      */
-    @OutputExport(name="enableInternetSecurity", type=Boolean.class, parameters={})
+    @Export(name="enableInternetSecurity", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableInternetSecurity;
 
     /**
@@ -66,7 +66,7 @@ public class ExpressRouteConnection extends io.pulumi.resources.CustomResource {
      * The ExpressRoute circuit peering.
      * 
      */
-    @OutputExport(name="expressRouteCircuitPeering", type=ExpressRouteCircuitPeeringIdResponse.class, parameters={})
+    @Export(name="expressRouteCircuitPeering", type=ExpressRouteCircuitPeeringIdResponse.class, parameters={})
     private Output<ExpressRouteCircuitPeeringIdResponse> expressRouteCircuitPeering;
 
     /**
@@ -80,7 +80,7 @@ public class ExpressRouteConnection extends io.pulumi.resources.CustomResource {
      * Enable FastPath to vWan Firewall hub.
      * 
      */
-    @OutputExport(name="expressRouteGatewayBypass", type=Boolean.class, parameters={})
+    @Export(name="expressRouteGatewayBypass", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> expressRouteGatewayBypass;
 
     /**
@@ -94,7 +94,7 @@ public class ExpressRouteConnection extends io.pulumi.resources.CustomResource {
      * The name of the resource.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -108,7 +108,7 @@ public class ExpressRouteConnection extends io.pulumi.resources.CustomResource {
      * The provisioning state of the express route connection resource.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -122,7 +122,7 @@ public class ExpressRouteConnection extends io.pulumi.resources.CustomResource {
      * The Routing Configuration indicating the associated and propagated route tables on this connection.
      * 
      */
-    @OutputExport(name="routingConfiguration", type=RoutingConfigurationResponse.class, parameters={})
+    @Export(name="routingConfiguration", type=RoutingConfigurationResponse.class, parameters={})
     private Output</* @Nullable */ RoutingConfigurationResponse> routingConfiguration;
 
     /**
@@ -136,7 +136,7 @@ public class ExpressRouteConnection extends io.pulumi.resources.CustomResource {
      * The routing weight associated to the connection.
      * 
      */
-    @OutputExport(name="routingWeight", type=Integer.class, parameters={})
+    @Export(name="routingWeight", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> routingWeight;
 
     /**

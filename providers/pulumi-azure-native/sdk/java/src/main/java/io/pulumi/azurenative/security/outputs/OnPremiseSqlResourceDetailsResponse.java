@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.security.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class OnPremiseSqlResourceDetailsResponse {
     /**
      * The Sql database name installed on the machine
@@ -46,15 +46,15 @@ public final class OnPremiseSqlResourceDetailsResponse {
      */
     private final String workspaceId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private OnPremiseSqlResourceDetailsResponse(
-        @OutputCustomType.Parameter("databaseName") String databaseName,
-        @OutputCustomType.Parameter("machineName") String machineName,
-        @OutputCustomType.Parameter("serverName") String serverName,
-        @OutputCustomType.Parameter("source") String source,
-        @OutputCustomType.Parameter("sourceComputerId") String sourceComputerId,
-        @OutputCustomType.Parameter("vmuuid") String vmuuid,
-        @OutputCustomType.Parameter("workspaceId") String workspaceId) {
+        @CustomType.Parameter("databaseName") String databaseName,
+        @CustomType.Parameter("machineName") String machineName,
+        @CustomType.Parameter("serverName") String serverName,
+        @CustomType.Parameter("source") String source,
+        @CustomType.Parameter("sourceComputerId") String sourceComputerId,
+        @CustomType.Parameter("vmuuid") String vmuuid,
+        @CustomType.Parameter("workspaceId") String workspaceId) {
         this.databaseName = databaseName;
         this.machineName = machineName;
         this.serverName = serverName;

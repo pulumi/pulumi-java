@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.recoveryservices.outputs;
 
 import io.pulumi.azurenative.recoveryservices.outputs.HealthErrorResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ProcessServerDetailsResponse {
     /**
      * The available memory.
@@ -103,26 +103,26 @@ public final class ProcessServerDetailsResponse {
      */
     private final String version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ProcessServerDetailsResponse(
-        @OutputCustomType.Parameter("availableMemoryInBytes") Double availableMemoryInBytes,
-        @OutputCustomType.Parameter("availableSpaceInBytes") Double availableSpaceInBytes,
-        @OutputCustomType.Parameter("freeSpacePercentage") Double freeSpacePercentage,
-        @OutputCustomType.Parameter("health") String health,
-        @OutputCustomType.Parameter("healthErrors") List<HealthErrorResponse> healthErrors,
-        @OutputCustomType.Parameter("historicHealth") String historicHealth,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("lastHeartbeatUtc") String lastHeartbeatUtc,
-        @OutputCustomType.Parameter("memoryUsagePercentage") Double memoryUsagePercentage,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("processorUsagePercentage") Double processorUsagePercentage,
-        @OutputCustomType.Parameter("throughputInBytes") Double throughputInBytes,
-        @OutputCustomType.Parameter("throughputUploadPendingDataInBytes") Double throughputUploadPendingDataInBytes,
-        @OutputCustomType.Parameter("totalMemoryInBytes") Double totalMemoryInBytes,
-        @OutputCustomType.Parameter("totalSpaceInBytes") Double totalSpaceInBytes,
-        @OutputCustomType.Parameter("usedMemoryInBytes") Double usedMemoryInBytes,
-        @OutputCustomType.Parameter("usedSpaceInBytes") Double usedSpaceInBytes,
-        @OutputCustomType.Parameter("version") String version) {
+        @CustomType.Parameter("availableMemoryInBytes") Double availableMemoryInBytes,
+        @CustomType.Parameter("availableSpaceInBytes") Double availableSpaceInBytes,
+        @CustomType.Parameter("freeSpacePercentage") Double freeSpacePercentage,
+        @CustomType.Parameter("health") String health,
+        @CustomType.Parameter("healthErrors") List<HealthErrorResponse> healthErrors,
+        @CustomType.Parameter("historicHealth") String historicHealth,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("lastHeartbeatUtc") String lastHeartbeatUtc,
+        @CustomType.Parameter("memoryUsagePercentage") Double memoryUsagePercentage,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("processorUsagePercentage") Double processorUsagePercentage,
+        @CustomType.Parameter("throughputInBytes") Double throughputInBytes,
+        @CustomType.Parameter("throughputUploadPendingDataInBytes") Double throughputUploadPendingDataInBytes,
+        @CustomType.Parameter("totalMemoryInBytes") Double totalMemoryInBytes,
+        @CustomType.Parameter("totalSpaceInBytes") Double totalSpaceInBytes,
+        @CustomType.Parameter("usedMemoryInBytes") Double usedMemoryInBytes,
+        @CustomType.Parameter("usedSpaceInBytes") Double usedSpaceInBytes,
+        @CustomType.Parameter("version") String version) {
         this.availableMemoryInBytes = availableMemoryInBytes;
         this.availableSpaceInBytes = availableSpaceInBytes;
         this.freeSpacePercentage = freeSpacePercentage;

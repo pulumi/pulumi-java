@@ -3,12 +3,12 @@
 
 package io.pulumi.azurenative.apimanagement.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ApiManagementServiceSkuPropertiesResponse {
     /**
      * Capacity of the SKU (number of deployed units of the SKU). For Consumption SKU capacity must be specified as 0.
@@ -21,10 +21,10 @@ public final class ApiManagementServiceSkuPropertiesResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ApiManagementServiceSkuPropertiesResponse(
-        @OutputCustomType.Parameter("capacity") Integer capacity,
-        @OutputCustomType.Parameter("name") String name) {
+        @CustomType.Parameter("capacity") Integer capacity,
+        @CustomType.Parameter("name") String name) {
         this.capacity = capacity;
         this.name = name;
     }

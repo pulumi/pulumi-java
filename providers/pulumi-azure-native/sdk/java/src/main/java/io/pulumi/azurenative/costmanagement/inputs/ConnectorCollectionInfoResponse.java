@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.costmanagement.inputs;
 
 import io.pulumi.azurenative.costmanagement.inputs.ConnectorCollectionErrorInfoResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class ConnectorCollectionInfoResponse extends io.pulumi.resources.I
      * Error information of last collection
      * 
      */
-    @InputImport(name="error")
+    @Import(name="error")
       private final @Nullable ConnectorCollectionErrorInfoResponse error;
 
     public Optional<ConnectorCollectionErrorInfoResponse> getError() {
@@ -34,7 +34,7 @@ public final class ConnectorCollectionInfoResponse extends io.pulumi.resources.I
      * Last time the data acquisition process initiated connecting to the external provider
      * 
      */
-    @InputImport(name="lastChecked", required=true)
+    @Import(name="lastChecked", required=true)
       private final String lastChecked;
 
     public String getLastChecked() {
@@ -45,7 +45,7 @@ public final class ConnectorCollectionInfoResponse extends io.pulumi.resources.I
      * Last time the external data was updated into Azure
      * 
      */
-    @InputImport(name="lastUpdated", required=true)
+    @Import(name="lastUpdated", required=true)
       private final String lastUpdated;
 
     public String getLastUpdated() {
@@ -56,7 +56,7 @@ public final class ConnectorCollectionInfoResponse extends io.pulumi.resources.I
      * Source timestamp of external data currently available in Azure (eg AWS last processed CUR file timestamp)
      * 
      */
-    @InputImport(name="sourceLastUpdated", required=true)
+    @Import(name="sourceLastUpdated", required=true)
       private final String sourceLastUpdated;
 
     public String getSourceLastUpdated() {

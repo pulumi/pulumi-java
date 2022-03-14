@@ -8,7 +8,7 @@ import io.pulumi.azurenative.kusto.ManagedPrivateEndpointArgs;
 import io.pulumi.azurenative.kusto.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +35,7 @@ public class ManagedPrivateEndpoint extends io.pulumi.resources.CustomResource {
      * The groupId in which the managed private endpoint is created.
      * 
      */
-    @OutputExport(name="groupId", type=String.class, parameters={})
+    @Export(name="groupId", type=String.class, parameters={})
     private Output<String> groupId;
 
     /**
@@ -49,7 +49,7 @@ public class ManagedPrivateEndpoint extends io.pulumi.resources.CustomResource {
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -63,7 +63,7 @@ public class ManagedPrivateEndpoint extends io.pulumi.resources.CustomResource {
      * The ARM resource ID of the resource for which the managed private endpoint is created.
      * 
      */
-    @OutputExport(name="privateLinkResourceId", type=String.class, parameters={})
+    @Export(name="privateLinkResourceId", type=String.class, parameters={})
     private Output<String> privateLinkResourceId;
 
     /**
@@ -77,7 +77,7 @@ public class ManagedPrivateEndpoint extends io.pulumi.resources.CustomResource {
      * The region of the resource to which the managed private endpoint is created.
      * 
      */
-    @OutputExport(name="privateLinkResourceRegion", type=String.class, parameters={})
+    @Export(name="privateLinkResourceRegion", type=String.class, parameters={})
     private Output</* @Nullable */ String> privateLinkResourceRegion;
 
     /**
@@ -91,7 +91,7 @@ public class ManagedPrivateEndpoint extends io.pulumi.resources.CustomResource {
      * The provisioned state of the resource.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -105,7 +105,7 @@ public class ManagedPrivateEndpoint extends io.pulumi.resources.CustomResource {
      * The user request message.
      * 
      */
-    @OutputExport(name="requestMessage", type=String.class, parameters={})
+    @Export(name="requestMessage", type=String.class, parameters={})
     private Output</* @Nullable */ String> requestMessage;
 
     /**
@@ -119,7 +119,7 @@ public class ManagedPrivateEndpoint extends io.pulumi.resources.CustomResource {
      * Metadata pertaining to creation and last modification of the resource.
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -133,7 +133,7 @@ public class ManagedPrivateEndpoint extends io.pulumi.resources.CustomResource {
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

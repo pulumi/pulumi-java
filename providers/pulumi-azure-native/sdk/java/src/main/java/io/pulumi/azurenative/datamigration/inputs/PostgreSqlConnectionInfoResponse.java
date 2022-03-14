@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datamigration.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class PostgreSqlConnectionInfoResponse extends io.pulumi.resources.
      * Name of the database
      * 
      */
-    @InputImport(name="databaseName")
+    @Import(name="databaseName")
       private final @Nullable String databaseName;
 
     public Optional<String> getDatabaseName() {
@@ -34,7 +34,7 @@ public final class PostgreSqlConnectionInfoResponse extends io.pulumi.resources.
      * Password credential.
      * 
      */
-    @InputImport(name="password")
+    @Import(name="password")
       private final @Nullable String password;
 
     public Optional<String> getPassword() {
@@ -45,7 +45,7 @@ public final class PostgreSqlConnectionInfoResponse extends io.pulumi.resources.
      * Port for Server
      * 
      */
-    @InputImport(name="port", required=true)
+    @Import(name="port", required=true)
       private final Integer port;
 
     public Integer getPort() {
@@ -56,7 +56,7 @@ public final class PostgreSqlConnectionInfoResponse extends io.pulumi.resources.
      * Name of the server
      * 
      */
-    @InputImport(name="serverName", required=true)
+    @Import(name="serverName", required=true)
       private final String serverName;
 
     public String getServerName() {
@@ -68,7 +68,7 @@ public final class PostgreSqlConnectionInfoResponse extends io.pulumi.resources.
      * Expected value is 'PostgreSqlConnectionInfo'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {
@@ -79,7 +79,7 @@ public final class PostgreSqlConnectionInfoResponse extends io.pulumi.resources.
      * User name
      * 
      */
-    @InputImport(name="userName")
+    @Import(name="userName")
       private final @Nullable String userName;
 
     public Optional<String> getUserName() {

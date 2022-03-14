@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.botservice.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class KikChannelPropertiesResponse extends io.pulumi.resources.Invo
      * Kik API key. Value only returned through POST to the action Channel List API, otherwise empty.
      * 
      */
-    @InputImport(name="apiKey")
+    @Import(name="apiKey")
       private final @Nullable String apiKey;
 
     public Optional<String> getApiKey() {
@@ -34,7 +34,7 @@ public final class KikChannelPropertiesResponse extends io.pulumi.resources.Invo
      * Whether this channel is enabled for the bot
      * 
      */
-    @InputImport(name="isEnabled", required=true)
+    @Import(name="isEnabled", required=true)
       private final Boolean isEnabled;
 
     public Boolean getIsEnabled() {
@@ -45,7 +45,7 @@ public final class KikChannelPropertiesResponse extends io.pulumi.resources.Invo
      * Whether this channel is validated for the bot
      * 
      */
-    @InputImport(name="isValidated")
+    @Import(name="isValidated")
       private final @Nullable Boolean isValidated;
 
     public Optional<Boolean> getIsValidated() {
@@ -56,7 +56,7 @@ public final class KikChannelPropertiesResponse extends io.pulumi.resources.Invo
      * The Kik user name
      * 
      */
-    @InputImport(name="userName", required=true)
+    @Import(name="userName", required=true)
       private final String userName;
 
     public String getUserName() {

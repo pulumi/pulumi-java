@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.providerhub.inputs;
 
 import io.pulumi.azurenative.providerhub.inputs.SkuSettingResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,14 +16,14 @@ public final class SkuResourceResponseProperties extends io.pulumi.resources.Inv
 
     public static final SkuResourceResponseProperties Empty = new SkuResourceResponseProperties();
 
-    @InputImport(name="provisioningState")
+    @Import(name="provisioningState")
       private final @Nullable String provisioningState;
 
     public Optional<String> getProvisioningState() {
         return this.provisioningState == null ? Optional.empty() : Optional.ofNullable(this.provisioningState);
     }
 
-    @InputImport(name="skuSettings", required=true)
+    @Import(name="skuSettings", required=true)
       private final List<SkuSettingResponse> skuSettings;
 
     public List<SkuSettingResponse> getSkuSettings() {

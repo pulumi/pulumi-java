@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.recoveryservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class VmmToAzureNetworkMappingSettingsResponse {
     /**
      * Gets the Instance type.
@@ -16,8 +16,8 @@ public final class VmmToAzureNetworkMappingSettingsResponse {
      */
     private final String instanceType;
 
-    @OutputCustomType.Constructor
-    private VmmToAzureNetworkMappingSettingsResponse(@OutputCustomType.Parameter("instanceType") String instanceType) {
+    @CustomType.Constructor
+    private VmmToAzureNetworkMappingSettingsResponse(@CustomType.Parameter("instanceType") String instanceType) {
         this.instanceType = instanceType;
     }
 

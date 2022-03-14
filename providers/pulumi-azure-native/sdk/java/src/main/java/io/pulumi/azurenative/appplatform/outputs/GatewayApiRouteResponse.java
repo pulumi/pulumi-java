@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.appplatform.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GatewayApiRouteResponse {
     /**
      * A description, will be applied to methods in the generated OpenAPI documentation.
@@ -60,17 +60,17 @@ public final class GatewayApiRouteResponse {
      */
     private final @Nullable String uri;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GatewayApiRouteResponse(
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("filters") @Nullable List<String> filters,
-        @OutputCustomType.Parameter("order") @Nullable Integer order,
-        @OutputCustomType.Parameter("predicates") @Nullable List<String> predicates,
-        @OutputCustomType.Parameter("ssoEnabled") @Nullable Boolean ssoEnabled,
-        @OutputCustomType.Parameter("tags") @Nullable List<String> tags,
-        @OutputCustomType.Parameter("title") @Nullable String title,
-        @OutputCustomType.Parameter("tokenRelay") @Nullable Boolean tokenRelay,
-        @OutputCustomType.Parameter("uri") @Nullable String uri) {
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("filters") @Nullable List<String> filters,
+        @CustomType.Parameter("order") @Nullable Integer order,
+        @CustomType.Parameter("predicates") @Nullable List<String> predicates,
+        @CustomType.Parameter("ssoEnabled") @Nullable Boolean ssoEnabled,
+        @CustomType.Parameter("tags") @Nullable List<String> tags,
+        @CustomType.Parameter("title") @Nullable String title,
+        @CustomType.Parameter("tokenRelay") @Nullable Boolean tokenRelay,
+        @CustomType.Parameter("uri") @Nullable String uri) {
         this.description = description;
         this.filters = filters;
         this.order = order;

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.providerhub;
 
 import io.pulumi.azurenative.providerhub.inputs.DefaultRolloutPropertiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class DefaultRolloutArgs extends io.pulumi.resources.ResourceArgs {
      * Properties of the rollout.
      * 
      */
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable Output<DefaultRolloutPropertiesArgs> properties;
 
     public Output<DefaultRolloutPropertiesArgs> getProperties() {
@@ -30,7 +30,7 @@ public final class DefaultRolloutArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource provider hosted within ProviderHub.
      * 
      */
-    @InputImport(name="providerNamespace", required=true)
+    @Import(name="providerNamespace", required=true)
       private final Output<String> providerNamespace;
 
     public Output<String> getProviderNamespace() {
@@ -41,7 +41,7 @@ public final class DefaultRolloutArgs extends io.pulumi.resources.ResourceArgs {
      * The rollout name.
      * 
      */
-    @InputImport(name="rolloutName")
+    @Import(name="rolloutName")
       private final @Nullable Output<String> rolloutName;
 
     public Output<String> getRolloutName() {

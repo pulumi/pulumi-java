@@ -3,12 +3,12 @@
 
 package io.pulumi.azurenative.aadiam.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RetentionPolicyResponse {
     /**
      * The number of days for the retention in days. A value of 0 will retain the events indefinitely.
@@ -21,10 +21,10 @@ public final class RetentionPolicyResponse {
      */
     private final Boolean enabled;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RetentionPolicyResponse(
-        @OutputCustomType.Parameter("days") Integer days,
-        @OutputCustomType.Parameter("enabled") Boolean enabled) {
+        @CustomType.Parameter("days") Integer days,
+        @CustomType.Parameter("enabled") Boolean enabled) {
         this.days = days;
         this.enabled = enabled;
     }

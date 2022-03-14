@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.migrate.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetProjectKeysResult {
     /**
      * ID of Migration Project.
@@ -20,10 +20,10 @@ public final class GetProjectKeysResult {
      */
     private final String workspaceKey;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetProjectKeysResult(
-        @OutputCustomType.Parameter("workspaceId") String workspaceId,
-        @OutputCustomType.Parameter("workspaceKey") String workspaceKey) {
+        @CustomType.Parameter("workspaceId") String workspaceId,
+        @CustomType.Parameter("workspaceKey") String workspaceKey) {
         this.workspaceId = workspaceId;
         this.workspaceKey = workspaceKey;
     }

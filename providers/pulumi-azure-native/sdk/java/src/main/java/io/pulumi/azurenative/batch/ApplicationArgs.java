@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.batch;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the Batch account.
      * 
      */
-    @InputImport(name="accountName", required=true)
+    @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
     public Output<String> getAccountName() {
@@ -30,7 +30,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * A value indicating whether packages within the application may be overwritten using the same version string.
      * 
      */
-    @InputImport(name="allowUpdates")
+    @Import(name="allowUpdates")
       private final @Nullable Output<Boolean> allowUpdates;
 
     public Output<Boolean> getAllowUpdates() {
@@ -41,7 +41,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the application. This must be unique within the account.
      * 
      */
-    @InputImport(name="applicationName")
+    @Import(name="applicationName")
       private final @Nullable Output<String> applicationName;
 
     public Output<String> getApplicationName() {
@@ -52,7 +52,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * The package to use if a client requests the application but does not specify a version. This property can only be set to the name of an existing package.
      * 
      */
-    @InputImport(name="defaultVersion")
+    @Import(name="defaultVersion")
       private final @Nullable Output<String> defaultVersion;
 
     public Output<String> getDefaultVersion() {
@@ -63,7 +63,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * The display name for the application.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -74,7 +74,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group that contains the Batch account.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {

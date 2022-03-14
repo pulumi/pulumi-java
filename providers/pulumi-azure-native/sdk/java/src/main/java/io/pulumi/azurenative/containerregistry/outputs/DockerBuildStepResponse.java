@@ -5,7 +5,7 @@ package io.pulumi.azurenative.containerregistry.outputs;
 
 import io.pulumi.azurenative.containerregistry.outputs.ArgumentResponse;
 import io.pulumi.azurenative.containerregistry.outputs.BaseImageDependencyResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DockerBuildStepResponse {
     /**
      * The collection of override arguments to be used when executing this build step.
@@ -67,18 +67,18 @@ public final class DockerBuildStepResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DockerBuildStepResponse(
-        @OutputCustomType.Parameter("arguments") @Nullable List<ArgumentResponse> arguments,
-        @OutputCustomType.Parameter("baseImageDependencies") List<BaseImageDependencyResponse> baseImageDependencies,
-        @OutputCustomType.Parameter("contextAccessToken") @Nullable String contextAccessToken,
-        @OutputCustomType.Parameter("contextPath") @Nullable String contextPath,
-        @OutputCustomType.Parameter("dockerFilePath") String dockerFilePath,
-        @OutputCustomType.Parameter("imageNames") @Nullable List<String> imageNames,
-        @OutputCustomType.Parameter("isPushEnabled") @Nullable Boolean isPushEnabled,
-        @OutputCustomType.Parameter("noCache") @Nullable Boolean noCache,
-        @OutputCustomType.Parameter("target") @Nullable String target,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("arguments") @Nullable List<ArgumentResponse> arguments,
+        @CustomType.Parameter("baseImageDependencies") List<BaseImageDependencyResponse> baseImageDependencies,
+        @CustomType.Parameter("contextAccessToken") @Nullable String contextAccessToken,
+        @CustomType.Parameter("contextPath") @Nullable String contextPath,
+        @CustomType.Parameter("dockerFilePath") String dockerFilePath,
+        @CustomType.Parameter("imageNames") @Nullable List<String> imageNames,
+        @CustomType.Parameter("isPushEnabled") @Nullable Boolean isPushEnabled,
+        @CustomType.Parameter("noCache") @Nullable Boolean noCache,
+        @CustomType.Parameter("target") @Nullable String target,
+        @CustomType.Parameter("type") String type) {
         this.arguments = arguments;
         this.baseImageDependencies = baseImageDependencies;
         this.contextAccessToken = contextAccessToken;

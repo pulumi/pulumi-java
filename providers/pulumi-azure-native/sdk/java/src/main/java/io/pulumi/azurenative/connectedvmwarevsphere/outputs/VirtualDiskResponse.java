@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.connectedvmwarevsphere.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VirtualDiskResponse {
     /**
      * Gets or sets the controller id.
@@ -63,18 +63,18 @@ public final class VirtualDiskResponse {
      */
     private final @Nullable Integer unitNumber;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VirtualDiskResponse(
-        @OutputCustomType.Parameter("controllerKey") @Nullable Integer controllerKey,
-        @OutputCustomType.Parameter("deviceKey") @Nullable Integer deviceKey,
-        @OutputCustomType.Parameter("deviceName") @Nullable String deviceName,
-        @OutputCustomType.Parameter("diskMode") @Nullable String diskMode,
-        @OutputCustomType.Parameter("diskObjectId") String diskObjectId,
-        @OutputCustomType.Parameter("diskSizeGB") @Nullable Integer diskSizeGB,
-        @OutputCustomType.Parameter("diskType") @Nullable String diskType,
-        @OutputCustomType.Parameter("label") String label,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("unitNumber") @Nullable Integer unitNumber) {
+        @CustomType.Parameter("controllerKey") @Nullable Integer controllerKey,
+        @CustomType.Parameter("deviceKey") @Nullable Integer deviceKey,
+        @CustomType.Parameter("deviceName") @Nullable String deviceName,
+        @CustomType.Parameter("diskMode") @Nullable String diskMode,
+        @CustomType.Parameter("diskObjectId") String diskObjectId,
+        @CustomType.Parameter("diskSizeGB") @Nullable Integer diskSizeGB,
+        @CustomType.Parameter("diskType") @Nullable String diskType,
+        @CustomType.Parameter("label") String label,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("unitNumber") @Nullable Integer unitNumber) {
         this.controllerKey = controllerKey;
         this.deviceKey = deviceKey;
         this.deviceName = deviceName;

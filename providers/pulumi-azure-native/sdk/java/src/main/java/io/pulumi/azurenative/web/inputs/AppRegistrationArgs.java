@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class AppRegistrationArgs extends io.pulumi.resources.ResourceArgs 
      * The App ID of the app used for login.
      * 
      */
-    @InputImport(name="appId")
+    @Import(name="appId")
       private final @Nullable Output<String> appId;
 
     public Output<String> getAppId() {
@@ -33,7 +33,7 @@ public final class AppRegistrationArgs extends io.pulumi.resources.ResourceArgs 
      * The app setting name that contains the app secret.
      * 
      */
-    @InputImport(name="appSecretSettingName")
+    @Import(name="appSecretSettingName")
       private final @Nullable Output<String> appSecretSettingName;
 
     public Output<String> getAppSecretSettingName() {

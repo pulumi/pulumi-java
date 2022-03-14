@@ -5,7 +5,7 @@ package io.pulumi.azurenative.web;
 
 import io.pulumi.azurenative.web.inputs.CustomApiPropertiesDefinitionArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class CustomApiArgs extends io.pulumi.resources.ResourceArgs {
      * API name
      * 
      */
-    @InputImport(name="apiName")
+    @Import(name="apiName")
       private final @Nullable Output<String> apiName;
 
     public Output<String> getApiName() {
@@ -31,7 +31,7 @@ public final class CustomApiArgs extends io.pulumi.resources.ResourceArgs {
      * Resource location
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -42,7 +42,7 @@ public final class CustomApiArgs extends io.pulumi.resources.ResourceArgs {
      * Custom API properties
      * 
      */
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable Output<CustomApiPropertiesDefinitionArgs> properties;
 
     public Output<CustomApiPropertiesDefinitionArgs> getProperties() {
@@ -53,7 +53,7 @@ public final class CustomApiArgs extends io.pulumi.resources.ResourceArgs {
      * The resource group
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -64,7 +64,7 @@ public final class CustomApiArgs extends io.pulumi.resources.ResourceArgs {
      * Subscription Id
      * 
      */
-    @InputImport(name="subscriptionId")
+    @Import(name="subscriptionId")
       private final @Nullable Output<String> subscriptionId;
 
     public Output<String> getSubscriptionId() {
@@ -75,7 +75,7 @@ public final class CustomApiArgs extends io.pulumi.resources.ResourceArgs {
      * Resource tags
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

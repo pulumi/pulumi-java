@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class ExpressRouteCircuitPeeringConfigArgs extends io.pulumi.resour
      * The communities of bgp peering. Specified for microsoft peering.
      * 
      */
-    @InputImport(name="advertisedCommunities")
+    @Import(name="advertisedCommunities")
       private final @Nullable Output<List<String>> advertisedCommunities;
 
     public Output<List<String>> getAdvertisedCommunities() {
@@ -35,7 +35,7 @@ public final class ExpressRouteCircuitPeeringConfigArgs extends io.pulumi.resour
      * The reference to AdvertisedPublicPrefixes.
      * 
      */
-    @InputImport(name="advertisedPublicPrefixes")
+    @Import(name="advertisedPublicPrefixes")
       private final @Nullable Output<List<String>> advertisedPublicPrefixes;
 
     public Output<List<String>> getAdvertisedPublicPrefixes() {
@@ -46,7 +46,7 @@ public final class ExpressRouteCircuitPeeringConfigArgs extends io.pulumi.resour
      * The CustomerASN of the peering.
      * 
      */
-    @InputImport(name="customerASN")
+    @Import(name="customerASN")
       private final @Nullable Output<Integer> customerASN;
 
     public Output<Integer> getCustomerASN() {
@@ -57,7 +57,7 @@ public final class ExpressRouteCircuitPeeringConfigArgs extends io.pulumi.resour
      * The legacy mode of the peering.
      * 
      */
-    @InputImport(name="legacyMode")
+    @Import(name="legacyMode")
       private final @Nullable Output<Integer> legacyMode;
 
     public Output<Integer> getLegacyMode() {
@@ -68,7 +68,7 @@ public final class ExpressRouteCircuitPeeringConfigArgs extends io.pulumi.resour
      * The RoutingRegistryName of the configuration.
      * 
      */
-    @InputImport(name="routingRegistryName")
+    @Import(name="routingRegistryName")
       private final @Nullable Output<String> routingRegistryName;
 
     public Output<String> getRoutingRegistryName() {

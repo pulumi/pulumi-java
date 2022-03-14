@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.eventgrid.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class AzureFunctionEventSubscriptionDestinationArgs extends io.pulu
      * Expected value is 'AzureFunction'.
      * 
      */
-    @InputImport(name="endpointType", required=true)
+    @Import(name="endpointType", required=true)
       private final Output<String> endpointType;
 
     public Output<String> getEndpointType() {
@@ -35,7 +35,7 @@ public final class AzureFunctionEventSubscriptionDestinationArgs extends io.pulu
      * Maximum number of events per batch.
      * 
      */
-    @InputImport(name="maxEventsPerBatch")
+    @Import(name="maxEventsPerBatch")
       private final @Nullable Output<Integer> maxEventsPerBatch;
 
     public Output<Integer> getMaxEventsPerBatch() {
@@ -46,7 +46,7 @@ public final class AzureFunctionEventSubscriptionDestinationArgs extends io.pulu
      * Preferred batch size in Kilobytes.
      * 
      */
-    @InputImport(name="preferredBatchSizeInKilobytes")
+    @Import(name="preferredBatchSizeInKilobytes")
       private final @Nullable Output<Integer> preferredBatchSizeInKilobytes;
 
     public Output<Integer> getPreferredBatchSizeInKilobytes() {
@@ -57,7 +57,7 @@ public final class AzureFunctionEventSubscriptionDestinationArgs extends io.pulu
      * The Azure Resource Id that represents the endpoint of the Azure Function destination of an event subscription.
      * 
      */
-    @InputImport(name="resourceId")
+    @Import(name="resourceId")
       private final @Nullable Output<String> resourceId;
 
     public Output<String> getResourceId() {

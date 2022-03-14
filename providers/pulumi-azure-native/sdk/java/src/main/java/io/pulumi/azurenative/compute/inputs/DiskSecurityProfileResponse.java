@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.compute.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class DiskSecurityProfileResponse extends io.pulumi.resources.Invok
      * Specifies the SecurityType of the VM. Applicable for OS disks only.
      * 
      */
-    @InputImport(name="securityType")
+    @Import(name="securityType")
       private final @Nullable String securityType;
 
     public Optional<String> getSecurityType() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.synapse.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetSqlPoolWorkloadGroupResult {
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
@@ -59,17 +59,17 @@ public final class GetSqlPoolWorkloadGroupResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetSqlPoolWorkloadGroupResult(
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("importance") @Nullable String importance,
-        @OutputCustomType.Parameter("maxResourcePercent") Integer maxResourcePercent,
-        @OutputCustomType.Parameter("maxResourcePercentPerRequest") @Nullable Double maxResourcePercentPerRequest,
-        @OutputCustomType.Parameter("minResourcePercent") Integer minResourcePercent,
-        @OutputCustomType.Parameter("minResourcePercentPerRequest") Double minResourcePercentPerRequest,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("queryExecutionTimeout") @Nullable Integer queryExecutionTimeout,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("importance") @Nullable String importance,
+        @CustomType.Parameter("maxResourcePercent") Integer maxResourcePercent,
+        @CustomType.Parameter("maxResourcePercentPerRequest") @Nullable Double maxResourcePercentPerRequest,
+        @CustomType.Parameter("minResourcePercent") Integer minResourcePercent,
+        @CustomType.Parameter("minResourcePercentPerRequest") Double minResourcePercentPerRequest,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("queryExecutionTimeout") @Nullable Integer queryExecutionTimeout,
+        @CustomType.Parameter("type") String type) {
         this.id = id;
         this.importance = importance;
         this.maxResourcePercent = maxResourcePercent;

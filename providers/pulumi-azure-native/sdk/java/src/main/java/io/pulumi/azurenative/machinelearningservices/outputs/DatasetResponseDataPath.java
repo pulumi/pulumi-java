@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
 import io.pulumi.azurenative.machinelearningservices.outputs.DatasetResponseSqlDataPath;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -14,7 +14,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DatasetResponseDataPath {
     /**
      * Additional Properties.
@@ -62,17 +62,17 @@ public final class DatasetResponseDataPath {
      */
     private final @Nullable DatasetResponseSqlDataPath sqlDataPath;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DatasetResponseDataPath(
-        @OutputCustomType.Parameter("additionalProperties") @Nullable Map<String,Object> additionalProperties,
-        @OutputCustomType.Parameter("azureFilePath") String azureFilePath,
-        @OutputCustomType.Parameter("datastoreName") String datastoreName,
-        @OutputCustomType.Parameter("httpUrl") String httpUrl,
-        @OutputCustomType.Parameter("partitionFormat") String partitionFormat,
-        @OutputCustomType.Parameter("partitionFormatIgnoreError") Boolean partitionFormatIgnoreError,
-        @OutputCustomType.Parameter("paths") List<String> paths,
-        @OutputCustomType.Parameter("relativePath") String relativePath,
-        @OutputCustomType.Parameter("sqlDataPath") @Nullable DatasetResponseSqlDataPath sqlDataPath) {
+        @CustomType.Parameter("additionalProperties") @Nullable Map<String,Object> additionalProperties,
+        @CustomType.Parameter("azureFilePath") String azureFilePath,
+        @CustomType.Parameter("datastoreName") String datastoreName,
+        @CustomType.Parameter("httpUrl") String httpUrl,
+        @CustomType.Parameter("partitionFormat") String partitionFormat,
+        @CustomType.Parameter("partitionFormatIgnoreError") Boolean partitionFormatIgnoreError,
+        @CustomType.Parameter("paths") List<String> paths,
+        @CustomType.Parameter("relativePath") String relativePath,
+        @CustomType.Parameter("sqlDataPath") @Nullable DatasetResponseSqlDataPath sqlDataPath) {
         this.additionalProperties = additionalProperties;
         this.azureFilePath = azureFilePath;
         this.datastoreName = datastoreName;

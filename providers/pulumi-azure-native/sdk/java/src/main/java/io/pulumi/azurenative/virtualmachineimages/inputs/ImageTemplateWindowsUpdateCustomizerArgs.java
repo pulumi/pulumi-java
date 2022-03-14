@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.virtualmachineimages.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class ImageTemplateWindowsUpdateCustomizerArgs extends io.pulumi.re
      * Array of filters to select updates to apply. Omit or specify empty array to use the default (no filter). Refer to above link for examples and detailed description of this field.
      * 
      */
-    @InputImport(name="filters")
+    @Import(name="filters")
       private final @Nullable Output<List<String>> filters;
 
     public Output<List<String>> getFilters() {
@@ -35,7 +35,7 @@ public final class ImageTemplateWindowsUpdateCustomizerArgs extends io.pulumi.re
      * Friendly Name to provide context on what this customization step does
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -46,7 +46,7 @@ public final class ImageTemplateWindowsUpdateCustomizerArgs extends io.pulumi.re
      * Criteria to search updates. Omit or specify empty string to use the default (search all). Refer to above link for examples and detailed description of this field.
      * 
      */
-    @InputImport(name="searchCriteria")
+    @Import(name="searchCriteria")
       private final @Nullable Output<String> searchCriteria;
 
     public Output<String> getSearchCriteria() {
@@ -58,7 +58,7 @@ public final class ImageTemplateWindowsUpdateCustomizerArgs extends io.pulumi.re
      * Expected value is 'WindowsUpdate'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {
@@ -69,7 +69,7 @@ public final class ImageTemplateWindowsUpdateCustomizerArgs extends io.pulumi.re
      * Maximum number of updates to apply at a time. Omit or specify 0 to use the default (1000)
      * 
      */
-    @InputImport(name="updateLimit")
+    @Import(name="updateLimit")
       private final @Nullable Output<Integer> updateLimit;
 
     public Output<Integer> getUpdateLimit() {

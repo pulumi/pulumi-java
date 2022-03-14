@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.operationalinsights.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ColumnResponse extends io.pulumi.resources.InvokeArgs {
      * Column data type logical hint.
      * 
      */
-    @InputImport(name="dataTypeHint")
+    @Import(name="dataTypeHint")
       private final @Nullable String dataTypeHint;
 
     public Optional<String> getDataTypeHint() {
@@ -34,7 +34,7 @@ public final class ColumnResponse extends io.pulumi.resources.InvokeArgs {
      * Column description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable String description;
 
     public Optional<String> getDescription() {
@@ -45,7 +45,7 @@ public final class ColumnResponse extends io.pulumi.resources.InvokeArgs {
      * Column display name.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable String displayName;
 
     public Optional<String> getDisplayName() {
@@ -56,7 +56,7 @@ public final class ColumnResponse extends io.pulumi.resources.InvokeArgs {
      * Is displayed by default.
      * 
      */
-    @InputImport(name="isDefaultDisplay", required=true)
+    @Import(name="isDefaultDisplay", required=true)
       private final Boolean isDefaultDisplay;
 
     public Boolean getIsDefaultDisplay() {
@@ -67,7 +67,7 @@ public final class ColumnResponse extends io.pulumi.resources.InvokeArgs {
      * Is column hidden.
      * 
      */
-    @InputImport(name="isHidden", required=true)
+    @Import(name="isHidden", required=true)
       private final Boolean isHidden;
 
     public Boolean getIsHidden() {
@@ -78,7 +78,7 @@ public final class ColumnResponse extends io.pulumi.resources.InvokeArgs {
      * Column name.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -89,7 +89,7 @@ public final class ColumnResponse extends io.pulumi.resources.InvokeArgs {
      * Column data type.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable String type;
 
     public Optional<String> getType() {

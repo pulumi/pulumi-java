@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.devices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RoutePropertiesResponse {
     /**
      * The condition that is evaluated to apply the routing rule. If no condition is provided, it evaluates to true by default. For grammar, see: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-query-language
@@ -39,13 +39,13 @@ public final class RoutePropertiesResponse {
      */
     private final String source;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RoutePropertiesResponse(
-        @OutputCustomType.Parameter("condition") @Nullable String condition,
-        @OutputCustomType.Parameter("endpointNames") List<String> endpointNames,
-        @OutputCustomType.Parameter("isEnabled") Boolean isEnabled,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("source") String source) {
+        @CustomType.Parameter("condition") @Nullable String condition,
+        @CustomType.Parameter("endpointNames") List<String> endpointNames,
+        @CustomType.Parameter("isEnabled") Boolean isEnabled,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("source") String source) {
         this.condition = condition;
         this.endpointNames = endpointNames;
         this.isEnabled = isEnabled;

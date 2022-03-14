@@ -12,7 +12,7 @@ import io.pulumi.azurenative.datamigration.inputs.PostgreSqlConnectionInfoArgs;
 import io.pulumi.azurenative.datamigration.inputs.SqlConnectionInfoArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -29,7 +29,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
      * List of DatabaseInfo
      * 
      */
-    @InputImport(name="databasesInfo")
+    @Import(name="databasesInfo")
       private final @Nullable Output<List<DatabaseInfoArgs>> databasesInfo;
 
     public Output<List<DatabaseInfoArgs>> getDatabasesInfo() {
@@ -40,7 +40,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the resource group
      * 
      */
-    @InputImport(name="groupName", required=true)
+    @Import(name="groupName", required=true)
       private final Output<String> groupName;
 
     public Output<String> getGroupName() {
@@ -51,7 +51,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
      * Resource location.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -62,7 +62,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the project
      * 
      */
-    @InputImport(name="projectName")
+    @Import(name="projectName")
       private final @Nullable Output<String> projectName;
 
     public Output<String> getProjectName() {
@@ -73,7 +73,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the service
      * 
      */
-    @InputImport(name="serviceName", required=true)
+    @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
 
     public Output<String> getServiceName() {
@@ -84,7 +84,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
      * Information for connecting to source
      * 
      */
-    @InputImport(name="sourceConnectionInfo")
+    @Import(name="sourceConnectionInfo")
       private final @Nullable Output<Object> sourceConnectionInfo;
 
     public Output<Object> getSourceConnectionInfo() {
@@ -95,7 +95,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
      * Source platform for the project
      * 
      */
-    @InputImport(name="sourcePlatform", required=true)
+    @Import(name="sourcePlatform", required=true)
       private final Output<Either<String,ProjectSourcePlatform>> sourcePlatform;
 
     public Output<Either<String,ProjectSourcePlatform>> getSourcePlatform() {
@@ -106,7 +106,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
      * Resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -117,7 +117,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
      * Information for connecting to target
      * 
      */
-    @InputImport(name="targetConnectionInfo")
+    @Import(name="targetConnectionInfo")
       private final @Nullable Output<Object> targetConnectionInfo;
 
     public Output<Object> getTargetConnectionInfo() {
@@ -128,7 +128,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
      * Target platform for the project
      * 
      */
-    @InputImport(name="targetPlatform", required=true)
+    @Import(name="targetPlatform", required=true)
       private final Output<Either<String,ProjectTargetPlatform>> targetPlatform;
 
     public Output<Either<String,ProjectTargetPlatform>> getTargetPlatform() {

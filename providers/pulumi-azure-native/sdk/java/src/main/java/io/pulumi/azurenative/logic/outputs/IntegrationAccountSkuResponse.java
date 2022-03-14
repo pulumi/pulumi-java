@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.logic.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class IntegrationAccountSkuResponse {
     /**
      * The sku name.
@@ -15,8 +15,8 @@ public final class IntegrationAccountSkuResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor
-    private IntegrationAccountSkuResponse(@OutputCustomType.Parameter("name") String name) {
+    @CustomType.Constructor
+    private IntegrationAccountSkuResponse(@CustomType.Parameter("name") String name) {
         this.name = name;
     }
 

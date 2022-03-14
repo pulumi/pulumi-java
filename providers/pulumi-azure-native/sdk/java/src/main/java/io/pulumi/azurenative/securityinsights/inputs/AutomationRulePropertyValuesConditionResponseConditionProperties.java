@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.securityinsights.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class AutomationRulePropertyValuesConditionResponseConditionPropert
      * The operator to use for evaluation the condition
      * 
      */
-    @InputImport(name="operator")
+    @Import(name="operator")
       private final @Nullable String operator;
 
     public Optional<String> getOperator() {
@@ -34,7 +34,7 @@ public final class AutomationRulePropertyValuesConditionResponseConditionPropert
      * The property to evaluate
      * 
      */
-    @InputImport(name="propertyName")
+    @Import(name="propertyName")
       private final @Nullable String propertyName;
 
     public Optional<String> getPropertyName() {
@@ -45,7 +45,7 @@ public final class AutomationRulePropertyValuesConditionResponseConditionPropert
      * The values to use for evaluating the condition
      * 
      */
-    @InputImport(name="propertyValues")
+    @Import(name="propertyValues")
       private final @Nullable List<String> propertyValues;
 
     public List<String> getPropertyValues() {

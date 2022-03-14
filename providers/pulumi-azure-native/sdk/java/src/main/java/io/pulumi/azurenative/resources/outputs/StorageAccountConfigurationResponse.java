@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.resources.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class StorageAccountConfigurationResponse {
     /**
      * The storage account access key.
@@ -22,10 +22,10 @@ public final class StorageAccountConfigurationResponse {
      */
     private final @Nullable String storageAccountName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private StorageAccountConfigurationResponse(
-        @OutputCustomType.Parameter("storageAccountKey") @Nullable String storageAccountKey,
-        @OutputCustomType.Parameter("storageAccountName") @Nullable String storageAccountName) {
+        @CustomType.Parameter("storageAccountKey") @Nullable String storageAccountKey,
+        @CustomType.Parameter("storageAccountName") @Nullable String storageAccountName) {
         this.storageAccountKey = storageAccountKey;
         this.storageAccountName = storageAccountName;
     }

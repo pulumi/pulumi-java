@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.avs.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class WorkloadNetworkSegmentSubnetResponse extends io.pulumi.resour
      * DHCP Range assigned for subnet.
      * 
      */
-    @InputImport(name="dhcpRanges")
+    @Import(name="dhcpRanges")
       private final @Nullable List<String> dhcpRanges;
 
     public List<String> getDhcpRanges() {
@@ -34,7 +34,7 @@ public final class WorkloadNetworkSegmentSubnetResponse extends io.pulumi.resour
      * Gateway address.
      * 
      */
-    @InputImport(name="gatewayAddress")
+    @Import(name="gatewayAddress")
       private final @Nullable String gatewayAddress;
 
     public Optional<String> getGatewayAddress() {

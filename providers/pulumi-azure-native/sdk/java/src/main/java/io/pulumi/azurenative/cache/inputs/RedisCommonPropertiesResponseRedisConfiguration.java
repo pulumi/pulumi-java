@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.cache.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class RedisCommonPropertiesResponseRedisConfiguration extends io.pu
      * First storage account connection string
      * 
      */
-    @InputImport(name="aofStorageConnectionString0")
+    @Import(name="aofStorageConnectionString0")
       private final @Nullable String aofStorageConnectionString0;
 
     public Optional<String> getAofStorageConnectionString0() {
@@ -33,7 +33,7 @@ public final class RedisCommonPropertiesResponseRedisConfiguration extends io.pu
      * Second storage account connection string
      * 
      */
-    @InputImport(name="aofStorageConnectionString1")
+    @Import(name="aofStorageConnectionString1")
       private final @Nullable String aofStorageConnectionString1;
 
     public Optional<String> getAofStorageConnectionString1() {
@@ -44,7 +44,7 @@ public final class RedisCommonPropertiesResponseRedisConfiguration extends io.pu
      * The max clients config
      * 
      */
-    @InputImport(name="maxclients", required=true)
+    @Import(name="maxclients", required=true)
       private final String maxclients;
 
     public String getMaxclients() {
@@ -55,7 +55,7 @@ public final class RedisCommonPropertiesResponseRedisConfiguration extends io.pu
      * Value in megabytes reserved for fragmentation per shard
      * 
      */
-    @InputImport(name="maxfragmentationmemoryReserved")
+    @Import(name="maxfragmentationmemoryReserved")
       private final @Nullable String maxfragmentationmemoryReserved;
 
     public Optional<String> getMaxfragmentationmemoryReserved() {
@@ -66,7 +66,7 @@ public final class RedisCommonPropertiesResponseRedisConfiguration extends io.pu
      * Value in megabytes reserved for non-cache usage per shard e.g. failover.
      * 
      */
-    @InputImport(name="maxmemoryDelta")
+    @Import(name="maxmemoryDelta")
       private final @Nullable String maxmemoryDelta;
 
     public Optional<String> getMaxmemoryDelta() {
@@ -77,7 +77,7 @@ public final class RedisCommonPropertiesResponseRedisConfiguration extends io.pu
      * The eviction strategy used when your data won't fit within its memory limit.
      * 
      */
-    @InputImport(name="maxmemoryPolicy")
+    @Import(name="maxmemoryPolicy")
       private final @Nullable String maxmemoryPolicy;
 
     public Optional<String> getMaxmemoryPolicy() {
@@ -88,7 +88,7 @@ public final class RedisCommonPropertiesResponseRedisConfiguration extends io.pu
      * Value in megabytes reserved for non-cache usage per shard e.g. failover.
      * 
      */
-    @InputImport(name="maxmemoryReserved")
+    @Import(name="maxmemoryReserved")
       private final @Nullable String maxmemoryReserved;
 
     public Optional<String> getMaxmemoryReserved() {
@@ -99,7 +99,7 @@ public final class RedisCommonPropertiesResponseRedisConfiguration extends io.pu
      * Specifies whether the rdb backup is enabled
      * 
      */
-    @InputImport(name="rdbBackupEnabled")
+    @Import(name="rdbBackupEnabled")
       private final @Nullable String rdbBackupEnabled;
 
     public Optional<String> getRdbBackupEnabled() {
@@ -110,7 +110,7 @@ public final class RedisCommonPropertiesResponseRedisConfiguration extends io.pu
      * Specifies the frequency for creating rdb backup
      * 
      */
-    @InputImport(name="rdbBackupFrequency")
+    @Import(name="rdbBackupFrequency")
       private final @Nullable String rdbBackupFrequency;
 
     public Optional<String> getRdbBackupFrequency() {
@@ -121,7 +121,7 @@ public final class RedisCommonPropertiesResponseRedisConfiguration extends io.pu
      * Specifies the maximum number of snapshots for rdb backup
      * 
      */
-    @InputImport(name="rdbBackupMaxSnapshotCount")
+    @Import(name="rdbBackupMaxSnapshotCount")
       private final @Nullable String rdbBackupMaxSnapshotCount;
 
     public Optional<String> getRdbBackupMaxSnapshotCount() {
@@ -132,7 +132,7 @@ public final class RedisCommonPropertiesResponseRedisConfiguration extends io.pu
      * The storage account connection string for storing rdb file
      * 
      */
-    @InputImport(name="rdbStorageConnectionString")
+    @Import(name="rdbStorageConnectionString")
       private final @Nullable String rdbStorageConnectionString;
 
     public Optional<String> getRdbStorageConnectionString() {

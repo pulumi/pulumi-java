@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.logic.outputs;
 
 import io.pulumi.azurenative.logic.outputs.BatchReleaseCriteriaResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BatchConfigurationPropertiesResponse {
     /**
      * The name of the batch group.
@@ -35,13 +35,13 @@ public final class BatchConfigurationPropertiesResponse {
      */
     private final BatchReleaseCriteriaResponse releaseCriteria;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BatchConfigurationPropertiesResponse(
-        @OutputCustomType.Parameter("batchGroupName") String batchGroupName,
-        @OutputCustomType.Parameter("changedTime") @Nullable String changedTime,
-        @OutputCustomType.Parameter("createdTime") @Nullable String createdTime,
-        @OutputCustomType.Parameter("metadata") @Nullable Object metadata,
-        @OutputCustomType.Parameter("releaseCriteria") BatchReleaseCriteriaResponse releaseCriteria) {
+        @CustomType.Parameter("batchGroupName") String batchGroupName,
+        @CustomType.Parameter("changedTime") @Nullable String changedTime,
+        @CustomType.Parameter("createdTime") @Nullable String createdTime,
+        @CustomType.Parameter("metadata") @Nullable Object metadata,
+        @CustomType.Parameter("releaseCriteria") BatchReleaseCriteriaResponse releaseCriteria) {
         this.batchGroupName = batchGroupName;
         this.changedTime = changedTime;
         this.createdTime = createdTime;

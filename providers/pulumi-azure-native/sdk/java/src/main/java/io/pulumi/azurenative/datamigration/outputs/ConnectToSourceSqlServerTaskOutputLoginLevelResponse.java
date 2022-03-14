@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.datamigration.outputs;
 
 import io.pulumi.azurenative.datamigration.outputs.MigrationEligibilityInfoResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ConnectToSourceSqlServerTaskOutputLoginLevelResponse {
     /**
      * The default database for the login.
@@ -48,15 +48,15 @@ public final class ConnectToSourceSqlServerTaskOutputLoginLevelResponse {
      */
     private final String resultType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ConnectToSourceSqlServerTaskOutputLoginLevelResponse(
-        @OutputCustomType.Parameter("defaultDatabase") String defaultDatabase,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("isEnabled") Boolean isEnabled,
-        @OutputCustomType.Parameter("loginType") String loginType,
-        @OutputCustomType.Parameter("migrationEligibility") MigrationEligibilityInfoResponse migrationEligibility,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("resultType") String resultType) {
+        @CustomType.Parameter("defaultDatabase") String defaultDatabase,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("isEnabled") Boolean isEnabled,
+        @CustomType.Parameter("loginType") String loginType,
+        @CustomType.Parameter("migrationEligibility") MigrationEligibilityInfoResponse migrationEligibility,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("resultType") String resultType) {
         this.defaultDatabase = defaultDatabase;
         this.id = id;
         this.isEnabled = isEnabled;

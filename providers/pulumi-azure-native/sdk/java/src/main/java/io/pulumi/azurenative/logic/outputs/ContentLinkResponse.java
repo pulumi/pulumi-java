@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.logic.outputs;
 
 import io.pulumi.azurenative.logic.outputs.ContentHashResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.Object;
 import java.lang.String;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ContentLinkResponse {
     /**
      * The content hash.
@@ -40,13 +40,13 @@ public final class ContentLinkResponse {
      */
     private final @Nullable String uri;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ContentLinkResponse(
-        @OutputCustomType.Parameter("contentHash") ContentHashResponse contentHash,
-        @OutputCustomType.Parameter("contentSize") Double contentSize,
-        @OutputCustomType.Parameter("contentVersion") String contentVersion,
-        @OutputCustomType.Parameter("metadata") Object metadata,
-        @OutputCustomType.Parameter("uri") @Nullable String uri) {
+        @CustomType.Parameter("contentHash") ContentHashResponse contentHash,
+        @CustomType.Parameter("contentSize") Double contentSize,
+        @CustomType.Parameter("contentVersion") String contentVersion,
+        @CustomType.Parameter("metadata") Object metadata,
+        @CustomType.Parameter("uri") @Nullable String uri) {
         this.contentHash = contentHash;
         this.contentSize = contentSize;
         this.contentVersion = contentVersion;

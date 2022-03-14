@@ -6,7 +6,7 @@ package io.pulumi.azurenative.sql.inputs;
 import io.pulumi.azurenative.sql.enums.ReadWriteEndpointFailoverPolicy;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class FailoverGroupReadWriteEndpointArgs extends io.pulumi.resource
      * Failover policy of the read-write endpoint for the failover group. If failoverPolicy is Automatic then failoverWithDataLossGracePeriodMinutes is required.
      * 
      */
-    @InputImport(name="failoverPolicy", required=true)
+    @Import(name="failoverPolicy", required=true)
       private final Output<Either<String,ReadWriteEndpointFailoverPolicy>> failoverPolicy;
 
     public Output<Either<String,ReadWriteEndpointFailoverPolicy>> getFailoverPolicy() {
@@ -36,7 +36,7 @@ public final class FailoverGroupReadWriteEndpointArgs extends io.pulumi.resource
      * Grace period before failover with data loss is attempted for the read-write endpoint. If failoverPolicy is Automatic then failoverWithDataLossGracePeriodMinutes is required.
      * 
      */
-    @InputImport(name="failoverWithDataLossGracePeriodMinutes")
+    @Import(name="failoverWithDataLossGracePeriodMinutes")
       private final @Nullable Output<Integer> failoverWithDataLossGracePeriodMinutes;
 
     public Output<Integer> getFailoverWithDataLossGracePeriodMinutes() {

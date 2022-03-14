@@ -6,14 +6,14 @@ package io.pulumi.azurenative.recoveryservices.outputs;
 import io.pulumi.azurenative.recoveryservices.outputs.PrivateEndpointConnectionVaultPropertiesResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.UpgradeDetailsResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.VaultPropertiesResponseEncryption;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VaultPropertiesResponse {
     /**
      * Customer Managed Key details of the resource.
@@ -46,14 +46,14 @@ public final class VaultPropertiesResponse {
      */
     private final @Nullable UpgradeDetailsResponse upgradeDetails;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VaultPropertiesResponse(
-        @OutputCustomType.Parameter("encryption") @Nullable VaultPropertiesResponseEncryption encryption,
-        @OutputCustomType.Parameter("privateEndpointConnections") List<PrivateEndpointConnectionVaultPropertiesResponse> privateEndpointConnections,
-        @OutputCustomType.Parameter("privateEndpointStateForBackup") String privateEndpointStateForBackup,
-        @OutputCustomType.Parameter("privateEndpointStateForSiteRecovery") String privateEndpointStateForSiteRecovery,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("upgradeDetails") @Nullable UpgradeDetailsResponse upgradeDetails) {
+        @CustomType.Parameter("encryption") @Nullable VaultPropertiesResponseEncryption encryption,
+        @CustomType.Parameter("privateEndpointConnections") List<PrivateEndpointConnectionVaultPropertiesResponse> privateEndpointConnections,
+        @CustomType.Parameter("privateEndpointStateForBackup") String privateEndpointStateForBackup,
+        @CustomType.Parameter("privateEndpointStateForSiteRecovery") String privateEndpointStateForSiteRecovery,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("upgradeDetails") @Nullable UpgradeDetailsResponse upgradeDetails) {
         this.encryption = encryption;
         this.privateEndpointConnections = privateEndpointConnections;
         this.privateEndpointStateForBackup = privateEndpointStateForBackup;

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.scheduler.inputs;
 
 import io.pulumi.azurenative.scheduler.inputs.JobMaxRecurrenceArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class JobCollectionQuotaArgs extends io.pulumi.resources.ResourceAr
      * Gets or set the maximum job count.
      * 
      */
-    @InputImport(name="maxJobCount")
+    @Import(name="maxJobCount")
       private final @Nullable Output<Integer> maxJobCount;
 
     public Output<Integer> getMaxJobCount() {
@@ -30,7 +30,7 @@ public final class JobCollectionQuotaArgs extends io.pulumi.resources.ResourceAr
      * Gets or sets the maximum job occurrence.
      * 
      */
-    @InputImport(name="maxJobOccurrence")
+    @Import(name="maxJobOccurrence")
       private final @Nullable Output<Integer> maxJobOccurrence;
 
     public Output<Integer> getMaxJobOccurrence() {
@@ -41,7 +41,7 @@ public final class JobCollectionQuotaArgs extends io.pulumi.resources.ResourceAr
      * Gets or set the maximum recurrence.
      * 
      */
-    @InputImport(name="maxRecurrence")
+    @Import(name="maxRecurrence")
       private final @Nullable Output<JobMaxRecurrenceArgs> maxRecurrence;
 
     public Output<JobMaxRecurrenceArgs> getMaxRecurrence() {

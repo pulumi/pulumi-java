@@ -3,19 +3,19 @@
 
 package io.pulumi.azurenative.providerhub.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SubscriptionStateOverrideActionResponse {
     private final String action;
     private final String state;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SubscriptionStateOverrideActionResponse(
-        @OutputCustomType.Parameter("action") String action,
-        @OutputCustomType.Parameter("state") String state) {
+        @CustomType.Parameter("action") String action,
+        @CustomType.Parameter("state") String state) {
         this.action = action;
         this.state = state;
     }

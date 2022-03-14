@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DedicatedHostAllocatableVMResponse {
     /**
      * Maximum number of VMs of size vmSize that can fit in the dedicated host's remaining capacity.
@@ -23,10 +23,10 @@ public final class DedicatedHostAllocatableVMResponse {
      */
     private final @Nullable String vmSize;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DedicatedHostAllocatableVMResponse(
-        @OutputCustomType.Parameter("count") @Nullable Double count,
-        @OutputCustomType.Parameter("vmSize") @Nullable String vmSize) {
+        @CustomType.Parameter("count") @Nullable Double count,
+        @CustomType.Parameter("vmSize") @Nullable String vmSize) {
         this.count = count;
         this.vmSize = vmSize;
     }

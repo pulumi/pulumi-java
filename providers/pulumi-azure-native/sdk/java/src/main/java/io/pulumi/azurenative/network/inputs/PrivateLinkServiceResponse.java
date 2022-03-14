@@ -10,7 +10,7 @@ import io.pulumi.azurenative.network.inputs.PrivateEndpointConnectionResponse;
 import io.pulumi.azurenative.network.inputs.PrivateLinkServiceIpConfigurationResponse;
 import io.pulumi.azurenative.network.inputs.PrivateLinkServicePropertiesResponseAutoApproval;
 import io.pulumi.azurenative.network.inputs.PrivateLinkServicePropertiesResponseVisibility;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -32,7 +32,7 @@ public final class PrivateLinkServiceResponse extends io.pulumi.resources.Invoke
      * The alias of the private link service.
      * 
      */
-    @InputImport(name="alias", required=true)
+    @Import(name="alias", required=true)
       private final String alias;
 
     public String getAlias() {
@@ -43,7 +43,7 @@ public final class PrivateLinkServiceResponse extends io.pulumi.resources.Invoke
      * The auto-approval list of the private link service.
      * 
      */
-    @InputImport(name="autoApproval")
+    @Import(name="autoApproval")
       private final @Nullable PrivateLinkServicePropertiesResponseAutoApproval autoApproval;
 
     public Optional<PrivateLinkServicePropertiesResponseAutoApproval> getAutoApproval() {
@@ -54,7 +54,7 @@ public final class PrivateLinkServiceResponse extends io.pulumi.resources.Invoke
      * Whether the private link service is enabled for proxy protocol or not.
      * 
      */
-    @InputImport(name="enableProxyProtocol")
+    @Import(name="enableProxyProtocol")
       private final @Nullable Boolean enableProxyProtocol;
 
     public Optional<Boolean> getEnableProxyProtocol() {
@@ -65,7 +65,7 @@ public final class PrivateLinkServiceResponse extends io.pulumi.resources.Invoke
      * A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    @InputImport(name="etag", required=true)
+    @Import(name="etag", required=true)
       private final String etag;
 
     public String getEtag() {
@@ -76,7 +76,7 @@ public final class PrivateLinkServiceResponse extends io.pulumi.resources.Invoke
      * The extended location of the load balancer.
      * 
      */
-    @InputImport(name="extendedLocation")
+    @Import(name="extendedLocation")
       private final @Nullable ExtendedLocationResponse extendedLocation;
 
     public Optional<ExtendedLocationResponse> getExtendedLocation() {
@@ -87,7 +87,7 @@ public final class PrivateLinkServiceResponse extends io.pulumi.resources.Invoke
      * The list of Fqdn.
      * 
      */
-    @InputImport(name="fqdns")
+    @Import(name="fqdns")
       private final @Nullable List<String> fqdns;
 
     public List<String> getFqdns() {
@@ -98,7 +98,7 @@ public final class PrivateLinkServiceResponse extends io.pulumi.resources.Invoke
      * Resource ID.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable String id;
 
     public Optional<String> getId() {
@@ -109,7 +109,7 @@ public final class PrivateLinkServiceResponse extends io.pulumi.resources.Invoke
      * An array of private link service IP configurations.
      * 
      */
-    @InputImport(name="ipConfigurations")
+    @Import(name="ipConfigurations")
       private final @Nullable List<PrivateLinkServiceIpConfigurationResponse> ipConfigurations;
 
     public List<PrivateLinkServiceIpConfigurationResponse> getIpConfigurations() {
@@ -120,7 +120,7 @@ public final class PrivateLinkServiceResponse extends io.pulumi.resources.Invoke
      * An array of references to the load balancer IP configurations.
      * 
      */
-    @InputImport(name="loadBalancerFrontendIpConfigurations")
+    @Import(name="loadBalancerFrontendIpConfigurations")
       private final @Nullable List<FrontendIPConfigurationResponse> loadBalancerFrontendIpConfigurations;
 
     public List<FrontendIPConfigurationResponse> getLoadBalancerFrontendIpConfigurations() {
@@ -131,7 +131,7 @@ public final class PrivateLinkServiceResponse extends io.pulumi.resources.Invoke
      * Resource location.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable String location;
 
     public Optional<String> getLocation() {
@@ -142,7 +142,7 @@ public final class PrivateLinkServiceResponse extends io.pulumi.resources.Invoke
      * Resource name.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -153,7 +153,7 @@ public final class PrivateLinkServiceResponse extends io.pulumi.resources.Invoke
      * An array of references to the network interfaces created for this private link service.
      * 
      */
-    @InputImport(name="networkInterfaces", required=true)
+    @Import(name="networkInterfaces", required=true)
       private final List<NetworkInterfaceResponse> networkInterfaces;
 
     public List<NetworkInterfaceResponse> getNetworkInterfaces() {
@@ -164,7 +164,7 @@ public final class PrivateLinkServiceResponse extends io.pulumi.resources.Invoke
      * An array of list about connections to the private endpoint.
      * 
      */
-    @InputImport(name="privateEndpointConnections", required=true)
+    @Import(name="privateEndpointConnections", required=true)
       private final List<PrivateEndpointConnectionResponse> privateEndpointConnections;
 
     public List<PrivateEndpointConnectionResponse> getPrivateEndpointConnections() {
@@ -175,7 +175,7 @@ public final class PrivateLinkServiceResponse extends io.pulumi.resources.Invoke
      * The provisioning state of the private link service resource.
      * 
      */
-    @InputImport(name="provisioningState", required=true)
+    @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
     public String getProvisioningState() {
@@ -186,7 +186,7 @@ public final class PrivateLinkServiceResponse extends io.pulumi.resources.Invoke
      * Resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {
@@ -197,7 +197,7 @@ public final class PrivateLinkServiceResponse extends io.pulumi.resources.Invoke
      * Resource type.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {
@@ -208,7 +208,7 @@ public final class PrivateLinkServiceResponse extends io.pulumi.resources.Invoke
      * The visibility list of the private link service.
      * 
      */
-    @InputImport(name="visibility")
+    @Import(name="visibility")
       private final @Nullable PrivateLinkServicePropertiesResponseVisibility visibility;
 
     public Optional<PrivateLinkServicePropertiesResponseVisibility> getVisibility() {

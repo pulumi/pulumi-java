@@ -7,7 +7,7 @@ import io.pulumi.azurenative.providerhub.inputs.ProviderHubMetadataProviderAuthe
 import io.pulumi.azurenative.providerhub.inputs.ProviderHubMetadataThirdPartyProviderAuthorizationArgs;
 import io.pulumi.azurenative.providerhub.inputs.ResourceProviderAuthorizationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -17,21 +17,21 @@ public final class ProviderRegistrationPropertiesProviderHubMetadataArgs extends
 
     public static final ProviderRegistrationPropertiesProviderHubMetadataArgs Empty = new ProviderRegistrationPropertiesProviderHubMetadataArgs();
 
-    @InputImport(name="providerAuthentication")
+    @Import(name="providerAuthentication")
       private final @Nullable Output<ProviderHubMetadataProviderAuthenticationArgs> providerAuthentication;
 
     public Output<ProviderHubMetadataProviderAuthenticationArgs> getProviderAuthentication() {
         return this.providerAuthentication == null ? Output.empty() : this.providerAuthentication;
     }
 
-    @InputImport(name="providerAuthorizations")
+    @Import(name="providerAuthorizations")
       private final @Nullable Output<List<ResourceProviderAuthorizationArgs>> providerAuthorizations;
 
     public Output<List<ResourceProviderAuthorizationArgs>> getProviderAuthorizations() {
         return this.providerAuthorizations == null ? Output.empty() : this.providerAuthorizations;
     }
 
-    @InputImport(name="thirdPartyProviderAuthorization")
+    @Import(name="thirdPartyProviderAuthorization")
       private final @Nullable Output<ProviderHubMetadataThirdPartyProviderAuthorizationArgs> thirdPartyProviderAuthorization;
 
     public Output<ProviderHubMetadataThirdPartyProviderAuthorizationArgs> getThirdPartyProviderAuthorization() {

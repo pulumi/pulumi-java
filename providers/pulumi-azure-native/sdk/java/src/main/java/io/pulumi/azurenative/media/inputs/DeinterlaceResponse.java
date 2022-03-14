@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.media.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class DeinterlaceResponse extends io.pulumi.resources.InvokeArgs {
      * The deinterlacing mode. Defaults to AutoPixelAdaptive.
      * 
      */
-    @InputImport(name="mode")
+    @Import(name="mode")
       private final @Nullable String mode;
 
     public Optional<String> getMode() {
@@ -33,7 +33,7 @@ public final class DeinterlaceResponse extends io.pulumi.resources.InvokeArgs {
      * The field parity for de-interlacing, defaults to Auto.
      * 
      */
-    @InputImport(name="parity")
+    @Import(name="parity")
       private final @Nullable String parity;
 
     public Optional<String> getParity() {

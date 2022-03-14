@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.avs.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ScriptSecureStringExecutionParameterResponse {
     /**
      * The parameter name
@@ -28,11 +28,11 @@ public final class ScriptSecureStringExecutionParameterResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ScriptSecureStringExecutionParameterResponse(
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("secureValue") @Nullable String secureValue,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("secureValue") @Nullable String secureValue,
+        @CustomType.Parameter("type") String type) {
         this.name = name;
         this.secureValue = secureValue;
         this.type = type;

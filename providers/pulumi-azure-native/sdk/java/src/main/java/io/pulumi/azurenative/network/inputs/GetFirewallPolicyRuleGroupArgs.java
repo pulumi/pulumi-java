@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetFirewallPolicyRuleGroupArgs extends io.pulumi.resources.In
      * The name of the Firewall Policy.
      * 
      */
-    @InputImport(name="firewallPolicyName", required=true)
+    @Import(name="firewallPolicyName", required=true)
       private final String firewallPolicyName;
 
     public String getFirewallPolicyName() {
@@ -27,7 +27,7 @@ public final class GetFirewallPolicyRuleGroupArgs extends io.pulumi.resources.In
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {
@@ -38,7 +38,7 @@ public final class GetFirewallPolicyRuleGroupArgs extends io.pulumi.resources.In
      * The name of the FirewallPolicyRuleGroup.
      * 
      */
-    @InputImport(name="ruleGroupName", required=true)
+    @Import(name="ruleGroupName", required=true)
       private final String ruleGroupName;
 
     public String getRuleGroupName() {

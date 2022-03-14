@@ -5,7 +5,7 @@ package io.pulumi.azurenative.media.inputs;
 
 import io.pulumi.azurenative.media.inputs.TrackSelectionArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class StreamingPolicyContentKeyArgs extends io.pulumi.resources.Res
      * Label can be used to specify Content Key when creating a Streaming Locator
      * 
      */
-    @InputImport(name="label")
+    @Import(name="label")
       private final @Nullable Output<String> label;
 
     public Output<String> getLabel() {
@@ -35,7 +35,7 @@ public final class StreamingPolicyContentKeyArgs extends io.pulumi.resources.Res
      * Policy used by Content Key
      * 
      */
-    @InputImport(name="policyName")
+    @Import(name="policyName")
       private final @Nullable Output<String> policyName;
 
     public Output<String> getPolicyName() {
@@ -46,7 +46,7 @@ public final class StreamingPolicyContentKeyArgs extends io.pulumi.resources.Res
      * Tracks which use this content key
      * 
      */
-    @InputImport(name="tracks")
+    @Import(name="tracks")
       private final @Nullable Output<List<TrackSelectionArgs>> tracks;
 
     public Output<List<TrackSelectionArgs>> getTracks() {

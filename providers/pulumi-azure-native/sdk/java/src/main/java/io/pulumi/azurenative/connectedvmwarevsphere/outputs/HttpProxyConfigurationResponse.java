@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.connectedvmwarevsphere.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class HttpProxyConfigurationResponse {
     /**
      * Gets or sets httpsProxy url.
@@ -17,8 +17,8 @@ public final class HttpProxyConfigurationResponse {
      */
     private final @Nullable String httpsProxy;
 
-    @OutputCustomType.Constructor
-    private HttpProxyConfigurationResponse(@OutputCustomType.Parameter("httpsProxy") @Nullable String httpsProxy) {
+    @CustomType.Constructor
+    private HttpProxyConfigurationResponse(@CustomType.Parameter("httpsProxy") @Nullable String httpsProxy) {
         this.httpsProxy = httpsProxy;
     }
 

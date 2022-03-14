@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.logz.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +18,7 @@ public final class PlanDataResponse extends io.pulumi.resources.InvokeArgs {
      * different billing cycles like MONTHLY/WEEKLY. this could be enum
      * 
      */
-    @InputImport(name="billingCycle")
+    @Import(name="billingCycle")
       private final @Nullable String billingCycle;
 
     public Optional<String> getBillingCycle() {
@@ -29,7 +29,7 @@ public final class PlanDataResponse extends io.pulumi.resources.InvokeArgs {
      * date when plan was applied
      * 
      */
-    @InputImport(name="effectiveDate")
+    @Import(name="effectiveDate")
       private final @Nullable String effectiveDate;
 
     public Optional<String> getEffectiveDate() {
@@ -40,7 +40,7 @@ public final class PlanDataResponse extends io.pulumi.resources.InvokeArgs {
      * plan id as published by Logz
      * 
      */
-    @InputImport(name="planDetails")
+    @Import(name="planDetails")
       private final @Nullable String planDetails;
 
     public Optional<String> getPlanDetails() {
@@ -51,7 +51,7 @@ public final class PlanDataResponse extends io.pulumi.resources.InvokeArgs {
      * different usage type like PAYG/COMMITTED. this could be enum
      * 
      */
-    @InputImport(name="usageType")
+    @Import(name="usageType")
       private final @Nullable String usageType;
 
     public Optional<String> getUsageType() {

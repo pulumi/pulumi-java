@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.logz.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class UserInfoResponse {
     /**
      * Email of the user used by Logz for contacting them if needed
@@ -32,12 +32,12 @@ public final class UserInfoResponse {
      */
     private final @Nullable String phoneNumber;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private UserInfoResponse(
-        @OutputCustomType.Parameter("emailAddress") @Nullable String emailAddress,
-        @OutputCustomType.Parameter("firstName") @Nullable String firstName,
-        @OutputCustomType.Parameter("lastName") @Nullable String lastName,
-        @OutputCustomType.Parameter("phoneNumber") @Nullable String phoneNumber) {
+        @CustomType.Parameter("emailAddress") @Nullable String emailAddress,
+        @CustomType.Parameter("firstName") @Nullable String firstName,
+        @CustomType.Parameter("lastName") @Nullable String lastName,
+        @CustomType.Parameter("phoneNumber") @Nullable String phoneNumber) {
         this.emailAddress = emailAddress;
         this.firstName = firstName;
         this.lastName = lastName;

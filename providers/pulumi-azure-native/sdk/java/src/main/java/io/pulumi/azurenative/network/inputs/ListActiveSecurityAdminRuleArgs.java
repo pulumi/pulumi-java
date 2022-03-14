@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class ListActiveSecurityAdminRuleArgs extends io.pulumi.resources.I
      * The name of the network manager.
      * 
      */
-    @InputImport(name="networkManagerName", required=true)
+    @Import(name="networkManagerName", required=true)
       private final String networkManagerName;
 
     public String getNetworkManagerName() {
@@ -30,7 +30,7 @@ public final class ListActiveSecurityAdminRuleArgs extends io.pulumi.resources.I
      * List of regions.
      * 
      */
-    @InputImport(name="regions")
+    @Import(name="regions")
       private final @Nullable List<String> regions;
 
     public List<String> getRegions() {
@@ -41,7 +41,7 @@ public final class ListActiveSecurityAdminRuleArgs extends io.pulumi.resources.I
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {
@@ -52,7 +52,7 @@ public final class ListActiveSecurityAdminRuleArgs extends io.pulumi.resources.I
      * When present, the value can be passed to a subsequent query call (together with the same query and scopes used in the current request) to retrieve the next page of data.
      * 
      */
-    @InputImport(name="skipToken")
+    @Import(name="skipToken")
       private final @Nullable String skipToken;
 
     public Optional<String> getSkipToken() {

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.hdinsight.inputs;
 
 import io.pulumi.azurenative.hdinsight.inputs.StorageAccountResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class StorageProfileResponse extends io.pulumi.resources.InvokeArgs
      * The list of storage accounts in the cluster.
      * 
      */
-    @InputImport(name="storageaccounts")
+    @Import(name="storageaccounts")
       private final @Nullable List<StorageAccountResponse> storageaccounts;
 
     public List<StorageAccountResponse> getStorageaccounts() {

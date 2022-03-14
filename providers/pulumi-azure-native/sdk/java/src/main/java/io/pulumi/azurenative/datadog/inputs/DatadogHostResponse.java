@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datadog.inputs;
 
 import io.pulumi.azurenative.datadog.inputs.DatadogHostMetadataResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class DatadogHostResponse extends io.pulumi.resources.InvokeArgs {
      * The aliases for the host.
      * 
      */
-    @InputImport(name="aliases")
+    @Import(name="aliases")
       private final @Nullable List<String> aliases;
 
     public List<String> getAliases() {
@@ -31,14 +31,14 @@ public final class DatadogHostResponse extends io.pulumi.resources.InvokeArgs {
      * The Datadog integrations reporting metrics for the host.
      * 
      */
-    @InputImport(name="apps")
+    @Import(name="apps")
       private final @Nullable List<String> apps;
 
     public List<String> getApps() {
         return this.apps == null ? List.of() : this.apps;
     }
 
-    @InputImport(name="meta")
+    @Import(name="meta")
       private final @Nullable DatadogHostMetadataResponse meta;
 
     public Optional<DatadogHostMetadataResponse> getMeta() {
@@ -49,7 +49,7 @@ public final class DatadogHostResponse extends io.pulumi.resources.InvokeArgs {
      * The name of the host.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {

@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.apimanagement.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class X509CertificateNameResponse {
     /**
      * Thumbprint for the Issuer of the Certificate.
@@ -22,10 +22,10 @@ public final class X509CertificateNameResponse {
      */
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private X509CertificateNameResponse(
-        @OutputCustomType.Parameter("issuerCertificateThumbprint") @Nullable String issuerCertificateThumbprint,
-        @OutputCustomType.Parameter("name") @Nullable String name) {
+        @CustomType.Parameter("issuerCertificateThumbprint") @Nullable String issuerCertificateThumbprint,
+        @CustomType.Parameter("name") @Nullable String name) {
         this.issuerCertificateThumbprint = issuerCertificateThumbprint;
         this.name = name;
     }

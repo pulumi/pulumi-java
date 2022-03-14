@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.operationalinsights.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AssociatedWorkspaceResponse {
     /**
      * The time of workspace association.
@@ -30,12 +30,12 @@ public final class AssociatedWorkspaceResponse {
      */
     private final String workspaceName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AssociatedWorkspaceResponse(
-        @OutputCustomType.Parameter("associateDate") String associateDate,
-        @OutputCustomType.Parameter("resourceId") String resourceId,
-        @OutputCustomType.Parameter("workspaceId") String workspaceId,
-        @OutputCustomType.Parameter("workspaceName") String workspaceName) {
+        @CustomType.Parameter("associateDate") String associateDate,
+        @CustomType.Parameter("resourceId") String resourceId,
+        @CustomType.Parameter("workspaceId") String workspaceId,
+        @CustomType.Parameter("workspaceName") String workspaceName) {
         this.associateDate = associateDate;
         this.resourceId = resourceId;
         this.workspaceId = workspaceId;

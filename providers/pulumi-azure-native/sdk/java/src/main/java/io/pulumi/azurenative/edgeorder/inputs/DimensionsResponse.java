@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.edgeorder.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class DimensionsResponse extends io.pulumi.resources.InvokeArgs {
      * Depth of the device.
      * 
      */
-    @InputImport(name="depth", required=true)
+    @Import(name="depth", required=true)
       private final Double depth;
 
     public Double getDepth() {
@@ -32,7 +32,7 @@ public final class DimensionsResponse extends io.pulumi.resources.InvokeArgs {
      * Height of the device.
      * 
      */
-    @InputImport(name="height", required=true)
+    @Import(name="height", required=true)
       private final Double height;
 
     public Double getHeight() {
@@ -43,7 +43,7 @@ public final class DimensionsResponse extends io.pulumi.resources.InvokeArgs {
      * Length of the device.
      * 
      */
-    @InputImport(name="length", required=true)
+    @Import(name="length", required=true)
       private final Double length;
 
     public Double getLength() {
@@ -54,7 +54,7 @@ public final class DimensionsResponse extends io.pulumi.resources.InvokeArgs {
      * Unit for the dimensions of length, height and width.
      * 
      */
-    @InputImport(name="lengthHeightUnit", required=true)
+    @Import(name="lengthHeightUnit", required=true)
       private final String lengthHeightUnit;
 
     public String getLengthHeightUnit() {
@@ -65,7 +65,7 @@ public final class DimensionsResponse extends io.pulumi.resources.InvokeArgs {
      * Weight of the device.
      * 
      */
-    @InputImport(name="weight", required=true)
+    @Import(name="weight", required=true)
       private final Double weight;
 
     public Double getWeight() {
@@ -76,7 +76,7 @@ public final class DimensionsResponse extends io.pulumi.resources.InvokeArgs {
      * Unit for the dimensions of weight.
      * 
      */
-    @InputImport(name="weightUnit", required=true)
+    @Import(name="weightUnit", required=true)
       private final String weightUnit;
 
     public String getWeightUnit() {
@@ -87,7 +87,7 @@ public final class DimensionsResponse extends io.pulumi.resources.InvokeArgs {
      * Width of the device.
      * 
      */
-    @InputImport(name="width", required=true)
+    @Import(name="width", required=true)
       private final Double width;
 
     public Double getWidth() {

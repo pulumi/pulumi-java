@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.storagecache.outputs;
 
 import io.pulumi.azurenative.storagecache.outputs.NfsAccessRuleResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class NfsAccessPolicyResponse {
     /**
      * The set of rules describing client accesses allowed under this policy.
@@ -22,10 +22,10 @@ public final class NfsAccessPolicyResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NfsAccessPolicyResponse(
-        @OutputCustomType.Parameter("accessRules") List<NfsAccessRuleResponse> accessRules,
-        @OutputCustomType.Parameter("name") String name) {
+        @CustomType.Parameter("accessRules") List<NfsAccessRuleResponse> accessRules,
+        @CustomType.Parameter("name") String name) {
         this.accessRules = accessRules;
         this.name = name;
     }

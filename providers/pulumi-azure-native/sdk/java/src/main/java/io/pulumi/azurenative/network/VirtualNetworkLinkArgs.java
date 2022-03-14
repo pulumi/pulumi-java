@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network;
 
 import io.pulumi.azurenative.network.inputs.SubResourceArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class VirtualNetworkLinkArgs extends io.pulumi.resources.ResourceAr
      * The Azure Region where the resource lives
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -32,7 +32,7 @@ public final class VirtualNetworkLinkArgs extends io.pulumi.resources.ResourceAr
      * The name of the Private DNS zone (without a terminating dot).
      * 
      */
-    @InputImport(name="privateZoneName", required=true)
+    @Import(name="privateZoneName", required=true)
       private final Output<String> privateZoneName;
 
     public Output<String> getPrivateZoneName() {
@@ -43,7 +43,7 @@ public final class VirtualNetworkLinkArgs extends io.pulumi.resources.ResourceAr
      * Is auto-registration of virtual machine records in the virtual network in the Private DNS zone enabled?
      * 
      */
-    @InputImport(name="registrationEnabled")
+    @Import(name="registrationEnabled")
       private final @Nullable Output<Boolean> registrationEnabled;
 
     public Output<Boolean> getRegistrationEnabled() {
@@ -54,7 +54,7 @@ public final class VirtualNetworkLinkArgs extends io.pulumi.resources.ResourceAr
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -65,7 +65,7 @@ public final class VirtualNetworkLinkArgs extends io.pulumi.resources.ResourceAr
      * Resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -76,7 +76,7 @@ public final class VirtualNetworkLinkArgs extends io.pulumi.resources.ResourceAr
      * The reference of the virtual network.
      * 
      */
-    @InputImport(name="virtualNetwork")
+    @Import(name="virtualNetwork")
       private final @Nullable Output<SubResourceArgs> virtualNetwork;
 
     public Output<SubResourceArgs> getVirtualNetwork() {
@@ -87,7 +87,7 @@ public final class VirtualNetworkLinkArgs extends io.pulumi.resources.ResourceAr
      * The name of the virtual network link.
      * 
      */
-    @InputImport(name="virtualNetworkLinkName")
+    @Import(name="virtualNetworkLinkName")
       private final @Nullable Output<String> virtualNetworkLinkName;
 
     public Output<String> getVirtualNetworkLinkName() {

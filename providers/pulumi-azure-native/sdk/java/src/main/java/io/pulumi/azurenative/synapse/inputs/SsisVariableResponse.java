@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.synapse.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class SsisVariableResponse extends io.pulumi.resources.InvokeArgs {
      * Variable type.
      * 
      */
-    @InputImport(name="dataType")
+    @Import(name="dataType")
       private final @Nullable String dataType;
 
     public Optional<String> getDataType() {
@@ -35,7 +35,7 @@ public final class SsisVariableResponse extends io.pulumi.resources.InvokeArgs {
      * Variable description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable String description;
 
     public Optional<String> getDescription() {
@@ -46,7 +46,7 @@ public final class SsisVariableResponse extends io.pulumi.resources.InvokeArgs {
      * Variable id.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Double id;
 
     public Optional<Double> getId() {
@@ -57,7 +57,7 @@ public final class SsisVariableResponse extends io.pulumi.resources.InvokeArgs {
      * Variable name.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -68,7 +68,7 @@ public final class SsisVariableResponse extends io.pulumi.resources.InvokeArgs {
      * Whether variable is sensitive.
      * 
      */
-    @InputImport(name="sensitive")
+    @Import(name="sensitive")
       private final @Nullable Boolean sensitive;
 
     public Optional<Boolean> getSensitive() {
@@ -79,7 +79,7 @@ public final class SsisVariableResponse extends io.pulumi.resources.InvokeArgs {
      * Variable sensitive value.
      * 
      */
-    @InputImport(name="sensitiveValue")
+    @Import(name="sensitiveValue")
       private final @Nullable String sensitiveValue;
 
     public Optional<String> getSensitiveValue() {
@@ -90,7 +90,7 @@ public final class SsisVariableResponse extends io.pulumi.resources.InvokeArgs {
      * Variable value.
      * 
      */
-    @InputImport(name="value")
+    @Import(name="value")
       private final @Nullable String value;
 
     public Optional<String> getValue() {

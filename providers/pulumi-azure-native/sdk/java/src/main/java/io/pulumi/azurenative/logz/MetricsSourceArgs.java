@@ -6,7 +6,7 @@ package io.pulumi.azurenative.logz;
 import io.pulumi.azurenative.logz.inputs.IdentityPropertiesArgs;
 import io.pulumi.azurenative.logz.inputs.MonitorPropertiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -17,14 +17,14 @@ public final class MetricsSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final MetricsSourceArgs Empty = new MetricsSourceArgs();
 
-    @InputImport(name="identity")
+    @Import(name="identity")
       private final @Nullable Output<IdentityPropertiesArgs> identity;
 
     public Output<IdentityPropertiesArgs> getIdentity() {
         return this.identity == null ? Output.empty() : this.identity;
     }
 
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -35,7 +35,7 @@ public final class MetricsSourceArgs extends io.pulumi.resources.ResourceArgs {
      * Metrics Account resource name
      * 
      */
-    @InputImport(name="metricsSourceName")
+    @Import(name="metricsSourceName")
       private final @Nullable Output<String> metricsSourceName;
 
     public Output<String> getMetricsSourceName() {
@@ -46,7 +46,7 @@ public final class MetricsSourceArgs extends io.pulumi.resources.ResourceArgs {
      * Monitor resource name
      * 
      */
-    @InputImport(name="monitorName", required=true)
+    @Import(name="monitorName", required=true)
       private final Output<String> monitorName;
 
     public Output<String> getMonitorName() {
@@ -57,7 +57,7 @@ public final class MetricsSourceArgs extends io.pulumi.resources.ResourceArgs {
      * Properties specific to the monitor resource.
      * 
      */
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable Output<MonitorPropertiesArgs> properties;
 
     public Output<MonitorPropertiesArgs> getProperties() {
@@ -68,14 +68,14 @@ public final class MetricsSourceArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

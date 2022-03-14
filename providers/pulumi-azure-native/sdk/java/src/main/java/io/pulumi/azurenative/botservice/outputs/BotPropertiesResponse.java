@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.botservice.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BotPropertiesResponse {
     /**
      * Contains resource all settings defined as key/value pairs.
@@ -180,41 +180,41 @@ public final class BotPropertiesResponse {
      */
     private final @Nullable String storageResourceId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BotPropertiesResponse(
-        @OutputCustomType.Parameter("allSettings") @Nullable Map<String,String> allSettings,
-        @OutputCustomType.Parameter("appPasswordHint") @Nullable String appPasswordHint,
-        @OutputCustomType.Parameter("cmekEncryptionStatus") String cmekEncryptionStatus,
-        @OutputCustomType.Parameter("cmekKeyVaultUrl") @Nullable String cmekKeyVaultUrl,
-        @OutputCustomType.Parameter("configuredChannels") List<String> configuredChannels,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("developerAppInsightKey") @Nullable String developerAppInsightKey,
-        @OutputCustomType.Parameter("developerAppInsightsApiKey") @Nullable String developerAppInsightsApiKey,
-        @OutputCustomType.Parameter("developerAppInsightsApplicationId") @Nullable String developerAppInsightsApplicationId,
-        @OutputCustomType.Parameter("disableLocalAuth") @Nullable Boolean disableLocalAuth,
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("enabledChannels") List<String> enabledChannels,
-        @OutputCustomType.Parameter("endpoint") String endpoint,
-        @OutputCustomType.Parameter("endpointVersion") String endpointVersion,
-        @OutputCustomType.Parameter("iconUrl") @Nullable String iconUrl,
-        @OutputCustomType.Parameter("isCmekEnabled") @Nullable Boolean isCmekEnabled,
-        @OutputCustomType.Parameter("isDeveloperAppInsightsApiKeySet") Boolean isDeveloperAppInsightsApiKeySet,
-        @OutputCustomType.Parameter("isStreamingSupported") @Nullable Boolean isStreamingSupported,
-        @OutputCustomType.Parameter("luisAppIds") @Nullable List<String> luisAppIds,
-        @OutputCustomType.Parameter("luisKey") @Nullable String luisKey,
-        @OutputCustomType.Parameter("manifestUrl") @Nullable String manifestUrl,
-        @OutputCustomType.Parameter("migrationToken") String migrationToken,
-        @OutputCustomType.Parameter("msaAppId") String msaAppId,
-        @OutputCustomType.Parameter("msaAppMSIResourceId") @Nullable String msaAppMSIResourceId,
-        @OutputCustomType.Parameter("msaAppTenantId") @Nullable String msaAppTenantId,
-        @OutputCustomType.Parameter("msaAppType") @Nullable String msaAppType,
-        @OutputCustomType.Parameter("openWithHint") @Nullable String openWithHint,
-        @OutputCustomType.Parameter("parameters") @Nullable Map<String,String> parameters,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("publicNetworkAccess") @Nullable String publicNetworkAccess,
-        @OutputCustomType.Parameter("publishingCredentials") @Nullable String publishingCredentials,
-        @OutputCustomType.Parameter("schemaTransformationVersion") @Nullable String schemaTransformationVersion,
-        @OutputCustomType.Parameter("storageResourceId") @Nullable String storageResourceId) {
+        @CustomType.Parameter("allSettings") @Nullable Map<String,String> allSettings,
+        @CustomType.Parameter("appPasswordHint") @Nullable String appPasswordHint,
+        @CustomType.Parameter("cmekEncryptionStatus") String cmekEncryptionStatus,
+        @CustomType.Parameter("cmekKeyVaultUrl") @Nullable String cmekKeyVaultUrl,
+        @CustomType.Parameter("configuredChannels") List<String> configuredChannels,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("developerAppInsightKey") @Nullable String developerAppInsightKey,
+        @CustomType.Parameter("developerAppInsightsApiKey") @Nullable String developerAppInsightsApiKey,
+        @CustomType.Parameter("developerAppInsightsApplicationId") @Nullable String developerAppInsightsApplicationId,
+        @CustomType.Parameter("disableLocalAuth") @Nullable Boolean disableLocalAuth,
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("enabledChannels") List<String> enabledChannels,
+        @CustomType.Parameter("endpoint") String endpoint,
+        @CustomType.Parameter("endpointVersion") String endpointVersion,
+        @CustomType.Parameter("iconUrl") @Nullable String iconUrl,
+        @CustomType.Parameter("isCmekEnabled") @Nullable Boolean isCmekEnabled,
+        @CustomType.Parameter("isDeveloperAppInsightsApiKeySet") Boolean isDeveloperAppInsightsApiKeySet,
+        @CustomType.Parameter("isStreamingSupported") @Nullable Boolean isStreamingSupported,
+        @CustomType.Parameter("luisAppIds") @Nullable List<String> luisAppIds,
+        @CustomType.Parameter("luisKey") @Nullable String luisKey,
+        @CustomType.Parameter("manifestUrl") @Nullable String manifestUrl,
+        @CustomType.Parameter("migrationToken") String migrationToken,
+        @CustomType.Parameter("msaAppId") String msaAppId,
+        @CustomType.Parameter("msaAppMSIResourceId") @Nullable String msaAppMSIResourceId,
+        @CustomType.Parameter("msaAppTenantId") @Nullable String msaAppTenantId,
+        @CustomType.Parameter("msaAppType") @Nullable String msaAppType,
+        @CustomType.Parameter("openWithHint") @Nullable String openWithHint,
+        @CustomType.Parameter("parameters") @Nullable Map<String,String> parameters,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("publicNetworkAccess") @Nullable String publicNetworkAccess,
+        @CustomType.Parameter("publishingCredentials") @Nullable String publishingCredentials,
+        @CustomType.Parameter("schemaTransformationVersion") @Nullable String schemaTransformationVersion,
+        @CustomType.Parameter("storageResourceId") @Nullable String storageResourceId) {
         this.allSettings = allSettings;
         this.appPasswordHint = appPasswordHint;
         this.cmekEncryptionStatus = cmekEncryptionStatus;

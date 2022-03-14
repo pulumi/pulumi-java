@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class KeyVaultPropertiesResponse {
     /**
      * For future use - The client id of the identity which will be used to access key vault.
@@ -27,11 +27,11 @@ public final class KeyVaultPropertiesResponse {
      */
     private final String keyVaultArmId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private KeyVaultPropertiesResponse(
-        @OutputCustomType.Parameter("identityClientId") @Nullable String identityClientId,
-        @OutputCustomType.Parameter("keyIdentifier") String keyIdentifier,
-        @OutputCustomType.Parameter("keyVaultArmId") String keyVaultArmId) {
+        @CustomType.Parameter("identityClientId") @Nullable String identityClientId,
+        @CustomType.Parameter("keyIdentifier") String keyIdentifier,
+        @CustomType.Parameter("keyVaultArmId") String keyVaultArmId) {
         this.identityClientId = identityClientId;
         this.keyIdentifier = keyIdentifier;
         this.keyVaultArmId = keyVaultArmId;

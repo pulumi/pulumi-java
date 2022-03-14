@@ -5,7 +5,7 @@ package io.pulumi.azurenative.recoveryservices.inputs;
 
 import io.pulumi.azurenative.recoveryservices.inputs.DistributedNodesInfoResponse;
 import io.pulumi.azurenative.recoveryservices.inputs.InquiryInfoResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class AzureWorkloadContainerExtendedInfoResponse extends io.pulumi.
      * Host Os Name in case of Stand Alone and Cluster Name in case of distributed container.
      * 
      */
-    @InputImport(name="hostServerName")
+    @Import(name="hostServerName")
       private final @Nullable String hostServerName;
 
     public Optional<String> getHostServerName() {
@@ -36,7 +36,7 @@ public final class AzureWorkloadContainerExtendedInfoResponse extends io.pulumi.
      * Inquiry Status for the container.
      * 
      */
-    @InputImport(name="inquiryInfo")
+    @Import(name="inquiryInfo")
       private final @Nullable InquiryInfoResponse inquiryInfo;
 
     public Optional<InquiryInfoResponse> getInquiryInfo() {
@@ -47,7 +47,7 @@ public final class AzureWorkloadContainerExtendedInfoResponse extends io.pulumi.
      * List of the nodes in case of distributed container.
      * 
      */
-    @InputImport(name="nodesList")
+    @Import(name="nodesList")
       private final @Nullable List<DistributedNodesInfoResponse> nodesList;
 
     public List<DistributedNodesInfoResponse> getNodesList() {

@@ -4,11 +4,11 @@
 package io.pulumi.azurenative.cdn.outputs;
 
 import io.pulumi.azurenative.cdn.outputs.CacheKeyQueryStringActionParametersResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DeliveryRuleCacheKeyQueryStringActionResponse {
     /**
      * The name of the action for the delivery rule.
@@ -22,10 +22,10 @@ public final class DeliveryRuleCacheKeyQueryStringActionResponse {
      */
     private final CacheKeyQueryStringActionParametersResponse parameters;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DeliveryRuleCacheKeyQueryStringActionResponse(
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("parameters") CacheKeyQueryStringActionParametersResponse parameters) {
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("parameters") CacheKeyQueryStringActionParametersResponse parameters) {
         this.name = name;
         this.parameters = parameters;
     }

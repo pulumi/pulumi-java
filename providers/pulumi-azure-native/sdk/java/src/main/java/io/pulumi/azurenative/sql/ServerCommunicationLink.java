@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.sql.ServerCommunicationLinkArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -34,7 +34,7 @@ public class ServerCommunicationLink extends io.pulumi.resources.CustomResource 
      * Communication link kind.  This property is used for Azure Portal metadata.
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
     /**
@@ -48,7 +48,7 @@ public class ServerCommunicationLink extends io.pulumi.resources.CustomResource 
      * Communication link location.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -62,7 +62,7 @@ public class ServerCommunicationLink extends io.pulumi.resources.CustomResource 
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -76,7 +76,7 @@ public class ServerCommunicationLink extends io.pulumi.resources.CustomResource 
      * The name of the partner server.
      * 
      */
-    @OutputExport(name="partnerServer", type=String.class, parameters={})
+    @Export(name="partnerServer", type=String.class, parameters={})
     private Output<String> partnerServer;
 
     /**
@@ -90,7 +90,7 @@ public class ServerCommunicationLink extends io.pulumi.resources.CustomResource 
      * The state.
      * 
      */
-    @OutputExport(name="state", type=String.class, parameters={})
+    @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
@@ -104,7 +104,7 @@ public class ServerCommunicationLink extends io.pulumi.resources.CustomResource 
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

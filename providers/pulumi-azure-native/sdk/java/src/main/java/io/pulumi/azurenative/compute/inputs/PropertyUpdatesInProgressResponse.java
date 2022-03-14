@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.compute.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class PropertyUpdatesInProgressResponse extends io.pulumi.resources
      * The target performance tier of the disk if a tier change operation is in progress.
      * 
      */
-    @InputImport(name="targetTier")
+    @Import(name="targetTier")
       private final @Nullable String targetTier;
 
     public Optional<String> getTargetTier() {

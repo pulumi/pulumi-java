@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class OpenIdConnectLoginResponse {
     /**
      * The name of the claim that contains the users name.
@@ -23,10 +23,10 @@ public final class OpenIdConnectLoginResponse {
      */
     private final @Nullable List<String> scopes;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private OpenIdConnectLoginResponse(
-        @OutputCustomType.Parameter("nameClaimType") @Nullable String nameClaimType,
-        @OutputCustomType.Parameter("scopes") @Nullable List<String> scopes) {
+        @CustomType.Parameter("nameClaimType") @Nullable String nameClaimType,
+        @CustomType.Parameter("scopes") @Nullable List<String> scopes) {
         this.nameClaimType = nameClaimType;
         this.scopes = scopes;
     }

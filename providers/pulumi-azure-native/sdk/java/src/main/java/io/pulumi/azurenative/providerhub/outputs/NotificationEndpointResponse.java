@@ -3,22 +3,22 @@
 
 package io.pulumi.azurenative.providerhub.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class NotificationEndpointResponse {
     private final @Nullable List<String> locations;
     private final @Nullable String notificationDestination;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NotificationEndpointResponse(
-        @OutputCustomType.Parameter("locations") @Nullable List<String> locations,
-        @OutputCustomType.Parameter("notificationDestination") @Nullable String notificationDestination) {
+        @CustomType.Parameter("locations") @Nullable List<String> locations,
+        @CustomType.Parameter("notificationDestination") @Nullable String notificationDestination) {
         this.locations = locations;
         this.notificationDestination = notificationDestination;
     }

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.storagesync.CloudEndpointArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -34,7 +34,7 @@ public class CloudEndpoint extends io.pulumi.resources.CustomResource {
      * Azure file share name
      * 
      */
-    @OutputExport(name="azureFileShareName", type=String.class, parameters={})
+    @Export(name="azureFileShareName", type=String.class, parameters={})
     private Output</* @Nullable */ String> azureFileShareName;
 
     /**
@@ -48,7 +48,7 @@ public class CloudEndpoint extends io.pulumi.resources.CustomResource {
      * Backup Enabled
      * 
      */
-    @OutputExport(name="backupEnabled", type=String.class, parameters={})
+    @Export(name="backupEnabled", type=String.class, parameters={})
     private Output<String> backupEnabled;
 
     /**
@@ -62,7 +62,7 @@ public class CloudEndpoint extends io.pulumi.resources.CustomResource {
      * Friendly Name
      * 
      */
-    @OutputExport(name="friendlyName", type=String.class, parameters={})
+    @Export(name="friendlyName", type=String.class, parameters={})
     private Output</* @Nullable */ String> friendlyName;
 
     /**
@@ -76,7 +76,7 @@ public class CloudEndpoint extends io.pulumi.resources.CustomResource {
      * Resource Last Operation Name
      * 
      */
-    @OutputExport(name="lastOperationName", type=String.class, parameters={})
+    @Export(name="lastOperationName", type=String.class, parameters={})
     private Output</* @Nullable */ String> lastOperationName;
 
     /**
@@ -90,7 +90,7 @@ public class CloudEndpoint extends io.pulumi.resources.CustomResource {
      * CloudEndpoint lastWorkflowId
      * 
      */
-    @OutputExport(name="lastWorkflowId", type=String.class, parameters={})
+    @Export(name="lastWorkflowId", type=String.class, parameters={})
     private Output</* @Nullable */ String> lastWorkflowId;
 
     /**
@@ -104,7 +104,7 @@ public class CloudEndpoint extends io.pulumi.resources.CustomResource {
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -118,7 +118,7 @@ public class CloudEndpoint extends io.pulumi.resources.CustomResource {
      * Partnership Id
      * 
      */
-    @OutputExport(name="partnershipId", type=String.class, parameters={})
+    @Export(name="partnershipId", type=String.class, parameters={})
     private Output</* @Nullable */ String> partnershipId;
 
     /**
@@ -132,7 +132,7 @@ public class CloudEndpoint extends io.pulumi.resources.CustomResource {
      * CloudEndpoint Provisioning State
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output</* @Nullable */ String> provisioningState;
 
     /**
@@ -146,7 +146,7 @@ public class CloudEndpoint extends io.pulumi.resources.CustomResource {
      * Storage Account Resource Id
      * 
      */
-    @OutputExport(name="storageAccountResourceId", type=String.class, parameters={})
+    @Export(name="storageAccountResourceId", type=String.class, parameters={})
     private Output</* @Nullable */ String> storageAccountResourceId;
 
     /**
@@ -160,7 +160,7 @@ public class CloudEndpoint extends io.pulumi.resources.CustomResource {
      * Storage Account Tenant Id
      * 
      */
-    @OutputExport(name="storageAccountTenantId", type=String.class, parameters={})
+    @Export(name="storageAccountTenantId", type=String.class, parameters={})
     private Output</* @Nullable */ String> storageAccountTenantId;
 
     /**
@@ -174,7 +174,7 @@ public class CloudEndpoint extends io.pulumi.resources.CustomResource {
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

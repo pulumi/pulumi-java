@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.logz.inputs;
 
 import io.pulumi.azurenative.logz.inputs.SystemDataResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class MonitoredResourceResponse extends io.pulumi.resources.InvokeA
      * The ARM id of the resource.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable String id;
 
     public Optional<String> getId() {
@@ -35,7 +35,7 @@ public final class MonitoredResourceResponse extends io.pulumi.resources.InvokeA
      * Reason for why the resource is sending logs (or why it is not sending).
      * 
      */
-    @InputImport(name="reasonForLogsStatus")
+    @Import(name="reasonForLogsStatus")
       private final @Nullable String reasonForLogsStatus;
 
     public Optional<String> getReasonForLogsStatus() {
@@ -46,7 +46,7 @@ public final class MonitoredResourceResponse extends io.pulumi.resources.InvokeA
      * Reason for why the resource is sending metrics (or why it is not sending).
      * 
      */
-    @InputImport(name="reasonForMetricsStatus")
+    @Import(name="reasonForMetricsStatus")
       private final @Nullable String reasonForMetricsStatus;
 
     public Optional<String> getReasonForMetricsStatus() {
@@ -57,7 +57,7 @@ public final class MonitoredResourceResponse extends io.pulumi.resources.InvokeA
      * Flag indicating if resource is sending logs to Logz.
      * 
      */
-    @InputImport(name="sendingLogs")
+    @Import(name="sendingLogs")
       private final @Nullable Boolean sendingLogs;
 
     public Optional<Boolean> getSendingLogs() {
@@ -68,7 +68,7 @@ public final class MonitoredResourceResponse extends io.pulumi.resources.InvokeA
      * Flag indicating if resource is sending metrics to Logz.
      * 
      */
-    @InputImport(name="sendingMetrics")
+    @Import(name="sendingMetrics")
       private final @Nullable Boolean sendingMetrics;
 
     public Optional<Boolean> getSendingMetrics() {
@@ -79,7 +79,7 @@ public final class MonitoredResourceResponse extends io.pulumi.resources.InvokeA
      * Metadata pertaining to creation and last modification of the resource.
      * 
      */
-    @InputImport(name="systemData", required=true)
+    @Import(name="systemData", required=true)
       private final SystemDataResponse systemData;
 
     public SystemDataResponse getSystemData() {

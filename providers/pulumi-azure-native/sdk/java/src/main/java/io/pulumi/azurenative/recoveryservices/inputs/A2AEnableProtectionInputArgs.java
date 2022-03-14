@@ -7,7 +7,7 @@ import io.pulumi.azurenative.recoveryservices.inputs.A2AVmDiskInputDetailsArgs;
 import io.pulumi.azurenative.recoveryservices.inputs.A2AVmManagedDiskInputDetailsArgs;
 import io.pulumi.azurenative.recoveryservices.inputs.DiskEncryptionInfoArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class A2AEnableProtectionInputArgs extends io.pulumi.resources.Reso
      * The recovery disk encryption information.
      * 
      */
-    @InputImport(name="diskEncryptionInfo")
+    @Import(name="diskEncryptionInfo")
       private final @Nullable Output<DiskEncryptionInfoArgs> diskEncryptionInfo;
 
     public Output<DiskEncryptionInfoArgs> getDiskEncryptionInfo() {
@@ -37,7 +37,7 @@ public final class A2AEnableProtectionInputArgs extends io.pulumi.resources.Reso
      * The fabric specific object Id of the virtual machine.
      * 
      */
-    @InputImport(name="fabricObjectId")
+    @Import(name="fabricObjectId")
       private final @Nullable Output<String> fabricObjectId;
 
     public Output<String> getFabricObjectId() {
@@ -49,7 +49,7 @@ public final class A2AEnableProtectionInputArgs extends io.pulumi.resources.Reso
      * Expected value is 'A2A'.
      * 
      */
-    @InputImport(name="instanceType")
+    @Import(name="instanceType")
       private final @Nullable Output<String> instanceType;
 
     public Output<String> getInstanceType() {
@@ -60,7 +60,7 @@ public final class A2AEnableProtectionInputArgs extends io.pulumi.resources.Reso
      * The multi vm group name.
      * 
      */
-    @InputImport(name="multiVmGroupName")
+    @Import(name="multiVmGroupName")
       private final @Nullable Output<String> multiVmGroupName;
 
     public Output<String> getMultiVmGroupName() {
@@ -71,7 +71,7 @@ public final class A2AEnableProtectionInputArgs extends io.pulumi.resources.Reso
      * The recovery availability set Id.
      * 
      */
-    @InputImport(name="recoveryAvailabilitySetId")
+    @Import(name="recoveryAvailabilitySetId")
       private final @Nullable Output<String> recoveryAvailabilitySetId;
 
     public Output<String> getRecoveryAvailabilitySetId() {
@@ -82,7 +82,7 @@ public final class A2AEnableProtectionInputArgs extends io.pulumi.resources.Reso
      * The recovery availability zone.
      * 
      */
-    @InputImport(name="recoveryAvailabilityZone")
+    @Import(name="recoveryAvailabilityZone")
       private final @Nullable Output<String> recoveryAvailabilityZone;
 
     public Output<String> getRecoveryAvailabilityZone() {
@@ -93,7 +93,7 @@ public final class A2AEnableProtectionInputArgs extends io.pulumi.resources.Reso
      * The recovery Azure virtual network ARM id.
      * 
      */
-    @InputImport(name="recoveryAzureNetworkId")
+    @Import(name="recoveryAzureNetworkId")
       private final @Nullable Output<String> recoveryAzureNetworkId;
 
     public Output<String> getRecoveryAzureNetworkId() {
@@ -104,7 +104,7 @@ public final class A2AEnableProtectionInputArgs extends io.pulumi.resources.Reso
      * The boot diagnostic storage account.
      * 
      */
-    @InputImport(name="recoveryBootDiagStorageAccountId")
+    @Import(name="recoveryBootDiagStorageAccountId")
       private final @Nullable Output<String> recoveryBootDiagStorageAccountId;
 
     public Output<String> getRecoveryBootDiagStorageAccountId() {
@@ -115,7 +115,7 @@ public final class A2AEnableProtectionInputArgs extends io.pulumi.resources.Reso
      * The recovery cloud service Id. Valid for V1 scenarios.
      * 
      */
-    @InputImport(name="recoveryCloudServiceId")
+    @Import(name="recoveryCloudServiceId")
       private final @Nullable Output<String> recoveryCloudServiceId;
 
     public Output<String> getRecoveryCloudServiceId() {
@@ -126,7 +126,7 @@ public final class A2AEnableProtectionInputArgs extends io.pulumi.resources.Reso
      * The recovery container Id.
      * 
      */
-    @InputImport(name="recoveryContainerId")
+    @Import(name="recoveryContainerId")
       private final @Nullable Output<String> recoveryContainerId;
 
     public Output<String> getRecoveryContainerId() {
@@ -137,7 +137,7 @@ public final class A2AEnableProtectionInputArgs extends io.pulumi.resources.Reso
      * The recovery proximity placement group Id.
      * 
      */
-    @InputImport(name="recoveryProximityPlacementGroupId")
+    @Import(name="recoveryProximityPlacementGroupId")
       private final @Nullable Output<String> recoveryProximityPlacementGroupId;
 
     public Output<String> getRecoveryProximityPlacementGroupId() {
@@ -148,7 +148,7 @@ public final class A2AEnableProtectionInputArgs extends io.pulumi.resources.Reso
      * The recovery resource group Id. Valid for V2 scenarios.
      * 
      */
-    @InputImport(name="recoveryResourceGroupId")
+    @Import(name="recoveryResourceGroupId")
       private final @Nullable Output<String> recoveryResourceGroupId;
 
     public Output<String> getRecoveryResourceGroupId() {
@@ -159,7 +159,7 @@ public final class A2AEnableProtectionInputArgs extends io.pulumi.resources.Reso
      * The recovery subnet name.
      * 
      */
-    @InputImport(name="recoverySubnetName")
+    @Import(name="recoverySubnetName")
       private final @Nullable Output<String> recoverySubnetName;
 
     public Output<String> getRecoverySubnetName() {
@@ -170,7 +170,7 @@ public final class A2AEnableProtectionInputArgs extends io.pulumi.resources.Reso
      * The list of vm disk details.
      * 
      */
-    @InputImport(name="vmDisks")
+    @Import(name="vmDisks")
       private final @Nullable Output<List<A2AVmDiskInputDetailsArgs>> vmDisks;
 
     public Output<List<A2AVmDiskInputDetailsArgs>> getVmDisks() {
@@ -181,7 +181,7 @@ public final class A2AEnableProtectionInputArgs extends io.pulumi.resources.Reso
      * The list of vm managed disk details.
      * 
      */
-    @InputImport(name="vmManagedDisks")
+    @Import(name="vmManagedDisks")
       private final @Nullable Output<List<A2AVmManagedDiskInputDetailsArgs>> vmManagedDisks;
 
     public Output<List<A2AVmManagedDiskInputDetailsArgs>> getVmManagedDisks() {

@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.labservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class LabDetailsResponse {
     /**
      * The Id of the lab.
@@ -32,12 +32,12 @@ public final class LabDetailsResponse {
      */
     private final String usageQuota;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LabDetailsResponse(
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("provisioningState") @Nullable String provisioningState,
-        @OutputCustomType.Parameter("usageQuota") String usageQuota) {
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("provisioningState") @Nullable String provisioningState,
+        @CustomType.Parameter("usageQuota") String usageQuota) {
         this.id = id;
         this.name = name;
         this.provisioningState = provisioningState;

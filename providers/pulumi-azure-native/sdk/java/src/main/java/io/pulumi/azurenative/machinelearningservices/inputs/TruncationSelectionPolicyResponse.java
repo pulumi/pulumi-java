@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class TruncationSelectionPolicyResponse extends io.pulumi.resources
      * Number of intervals by which to delay the first evaluation.
      * 
      */
-    @InputImport(name="delayEvaluation")
+    @Import(name="delayEvaluation")
       private final @Nullable Integer delayEvaluation;
 
     public Optional<Integer> getDelayEvaluation() {
@@ -34,7 +34,7 @@ public final class TruncationSelectionPolicyResponse extends io.pulumi.resources
      * Interval (number of runs) between policy evaluations.
      * 
      */
-    @InputImport(name="evaluationInterval")
+    @Import(name="evaluationInterval")
       private final @Nullable Integer evaluationInterval;
 
     public Optional<Integer> getEvaluationInterval() {
@@ -45,7 +45,7 @@ public final class TruncationSelectionPolicyResponse extends io.pulumi.resources
      * Expected value is 'TruncationSelection'.
      * 
      */
-    @InputImport(name="policyType", required=true)
+    @Import(name="policyType", required=true)
       private final String policyType;
 
     public String getPolicyType() {
@@ -56,7 +56,7 @@ public final class TruncationSelectionPolicyResponse extends io.pulumi.resources
      * The percentage of runs to cancel at each evaluation interval.
      * 
      */
-    @InputImport(name="truncationPercentage")
+    @Import(name="truncationPercentage")
       private final @Nullable Integer truncationPercentage;
 
     public Optional<Integer> getTruncationPercentage() {

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.containerinstance.inputs;
 
 import io.pulumi.azurenative.containerinstance.inputs.GpuResourceArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class ResourceRequestsArgs extends io.pulumi.resources.ResourceArgs
      * The CPU request of this container instance.
      * 
      */
-    @InputImport(name="cpu", required=true)
+    @Import(name="cpu", required=true)
       private final Output<Double> cpu;
 
     public Output<Double> getCpu() {
@@ -34,7 +34,7 @@ public final class ResourceRequestsArgs extends io.pulumi.resources.ResourceArgs
      * The GPU request of this container instance.
      * 
      */
-    @InputImport(name="gpu")
+    @Import(name="gpu")
       private final @Nullable Output<GpuResourceArgs> gpu;
 
     public Output<GpuResourceArgs> getGpu() {
@@ -45,7 +45,7 @@ public final class ResourceRequestsArgs extends io.pulumi.resources.ResourceArgs
      * The memory request in GB of this container instance.
      * 
      */
-    @InputImport(name="memoryInGB", required=true)
+    @Import(name="memoryInGB", required=true)
       private final Output<Double> memoryInGB;
 
     public Output<Double> getMemoryInGB() {

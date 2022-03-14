@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearning.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +18,7 @@ public final class GetWebServiceArgs extends io.pulumi.resources.InvokeArgs {
      * The region for which encrypted credential parameters are valid.
      * 
      */
-    @InputImport(name="region")
+    @Import(name="region")
       private final @Nullable String region;
 
     public Optional<String> getRegion() {
@@ -29,7 +29,7 @@ public final class GetWebServiceArgs extends io.pulumi.resources.InvokeArgs {
      * Name of the resource group in which the web service is located.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {
@@ -40,7 +40,7 @@ public final class GetWebServiceArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the web service.
      * 
      */
-    @InputImport(name="webServiceName", required=true)
+    @Import(name="webServiceName", required=true)
       private final String webServiceName;
 
     public String getWebServiceName() {

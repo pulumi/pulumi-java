@@ -7,7 +7,7 @@ import io.pulumi.azurenative.web.inputs.RequestsBasedTriggerResponse;
 import io.pulumi.azurenative.web.inputs.SlowRequestsBasedTriggerResponse;
 import io.pulumi.azurenative.web.inputs.StatusCodesBasedTriggerResponse;
 import io.pulumi.azurenative.web.inputs.StatusCodesRangeBasedTriggerResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +27,7 @@ public final class AutoHealTriggersResponse extends io.pulumi.resources.InvokeAr
      * A rule based on private bytes.
      * 
      */
-    @InputImport(name="privateBytesInKB")
+    @Import(name="privateBytesInKB")
       private final @Nullable Integer privateBytesInKB;
 
     public Optional<Integer> getPrivateBytesInKB() {
@@ -38,7 +38,7 @@ public final class AutoHealTriggersResponse extends io.pulumi.resources.InvokeAr
      * A rule based on total requests.
      * 
      */
-    @InputImport(name="requests")
+    @Import(name="requests")
       private final @Nullable RequestsBasedTriggerResponse requests;
 
     public Optional<RequestsBasedTriggerResponse> getRequests() {
@@ -49,7 +49,7 @@ public final class AutoHealTriggersResponse extends io.pulumi.resources.InvokeAr
      * A rule based on request execution time.
      * 
      */
-    @InputImport(name="slowRequests")
+    @Import(name="slowRequests")
       private final @Nullable SlowRequestsBasedTriggerResponse slowRequests;
 
     public Optional<SlowRequestsBasedTriggerResponse> getSlowRequests() {
@@ -60,7 +60,7 @@ public final class AutoHealTriggersResponse extends io.pulumi.resources.InvokeAr
      * A rule based on multiple Slow Requests Rule with path
      * 
      */
-    @InputImport(name="slowRequestsWithPath")
+    @Import(name="slowRequestsWithPath")
       private final @Nullable List<SlowRequestsBasedTriggerResponse> slowRequestsWithPath;
 
     public List<SlowRequestsBasedTriggerResponse> getSlowRequestsWithPath() {
@@ -71,7 +71,7 @@ public final class AutoHealTriggersResponse extends io.pulumi.resources.InvokeAr
      * A rule based on status codes.
      * 
      */
-    @InputImport(name="statusCodes")
+    @Import(name="statusCodes")
       private final @Nullable List<StatusCodesBasedTriggerResponse> statusCodes;
 
     public List<StatusCodesBasedTriggerResponse> getStatusCodes() {
@@ -82,7 +82,7 @@ public final class AutoHealTriggersResponse extends io.pulumi.resources.InvokeAr
      * A rule based on status codes ranges.
      * 
      */
-    @InputImport(name="statusCodesRange")
+    @Import(name="statusCodesRange")
       private final @Nullable List<StatusCodesRangeBasedTriggerResponse> statusCodesRange;
 
     public List<StatusCodesRangeBasedTriggerResponse> getStatusCodesRange() {

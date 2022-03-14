@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.kusto;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class ManagedPrivateEndpointArgs extends io.pulumi.resources.Resour
      * The name of the Kusto cluster.
      * 
      */
-    @InputImport(name="clusterName", required=true)
+    @Import(name="clusterName", required=true)
       private final Output<String> clusterName;
 
     public Output<String> getClusterName() {
@@ -29,7 +29,7 @@ public final class ManagedPrivateEndpointArgs extends io.pulumi.resources.Resour
      * The groupId in which the managed private endpoint is created.
      * 
      */
-    @InputImport(name="groupId", required=true)
+    @Import(name="groupId", required=true)
       private final Output<String> groupId;
 
     public Output<String> getGroupId() {
@@ -40,7 +40,7 @@ public final class ManagedPrivateEndpointArgs extends io.pulumi.resources.Resour
      * The name of the managed private endpoint.
      * 
      */
-    @InputImport(name="managedPrivateEndpointName")
+    @Import(name="managedPrivateEndpointName")
       private final @Nullable Output<String> managedPrivateEndpointName;
 
     public Output<String> getManagedPrivateEndpointName() {
@@ -51,7 +51,7 @@ public final class ManagedPrivateEndpointArgs extends io.pulumi.resources.Resour
      * The ARM resource ID of the resource for which the managed private endpoint is created.
      * 
      */
-    @InputImport(name="privateLinkResourceId", required=true)
+    @Import(name="privateLinkResourceId", required=true)
       private final Output<String> privateLinkResourceId;
 
     public Output<String> getPrivateLinkResourceId() {
@@ -62,7 +62,7 @@ public final class ManagedPrivateEndpointArgs extends io.pulumi.resources.Resour
      * The region of the resource to which the managed private endpoint is created.
      * 
      */
-    @InputImport(name="privateLinkResourceRegion")
+    @Import(name="privateLinkResourceRegion")
       private final @Nullable Output<String> privateLinkResourceRegion;
 
     public Output<String> getPrivateLinkResourceRegion() {
@@ -73,7 +73,7 @@ public final class ManagedPrivateEndpointArgs extends io.pulumi.resources.Resour
      * The user request message.
      * 
      */
-    @InputImport(name="requestMessage")
+    @Import(name="requestMessage")
       private final @Nullable Output<String> requestMessage;
 
     public Output<String> getRequestMessage() {
@@ -84,7 +84,7 @@ public final class ManagedPrivateEndpointArgs extends io.pulumi.resources.Resour
      * The name of the resource group containing the Kusto cluster.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {

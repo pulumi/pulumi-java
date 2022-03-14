@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.eventgrid.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class ListTopicSharedAccessKeysArgs extends io.pulumi.resources.Inv
      * The name of the resource group within the user's subscription.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {
@@ -27,7 +27,7 @@ public final class ListTopicSharedAccessKeysArgs extends io.pulumi.resources.Inv
      * Name of the topic.
      * 
      */
-    @InputImport(name="topicName", required=true)
+    @Import(name="topicName", required=true)
       private final String topicName;
 
     public String getTopicName() {

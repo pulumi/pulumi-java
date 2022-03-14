@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.servicelinker.outputs;
 
 import io.pulumi.azurenative.servicelinker.outputs.SourceConfigurationResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ListLinkerConfigurationsResult {
     /**
      * The configuration properties for source resource.
@@ -17,8 +17,8 @@ public final class ListLinkerConfigurationsResult {
      */
     private final @Nullable List<SourceConfigurationResponse> configurations;
 
-    @OutputCustomType.Constructor
-    private ListLinkerConfigurationsResult(@OutputCustomType.Parameter("configurations") @Nullable List<SourceConfigurationResponse> configurations) {
+    @CustomType.Constructor
+    private ListLinkerConfigurationsResult(@CustomType.Parameter("configurations") @Nullable List<SourceConfigurationResponse> configurations) {
         this.configurations = configurations;
     }
 

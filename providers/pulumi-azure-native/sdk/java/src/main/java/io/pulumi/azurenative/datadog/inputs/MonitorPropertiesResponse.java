@@ -5,7 +5,7 @@ package io.pulumi.azurenative.datadog.inputs;
 
 import io.pulumi.azurenative.datadog.inputs.DatadogOrganizationPropertiesResponse;
 import io.pulumi.azurenative.datadog.inputs.UserInfoResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -25,14 +25,14 @@ public final class MonitorPropertiesResponse extends io.pulumi.resources.InvokeA
      * Datadog organization properties
      * 
      */
-    @InputImport(name="datadogOrganizationProperties")
+    @Import(name="datadogOrganizationProperties")
       private final @Nullable DatadogOrganizationPropertiesResponse datadogOrganizationProperties;
 
     public Optional<DatadogOrganizationPropertiesResponse> getDatadogOrganizationProperties() {
         return this.datadogOrganizationProperties == null ? Optional.empty() : Optional.ofNullable(this.datadogOrganizationProperties);
     }
 
-    @InputImport(name="liftrResourceCategory", required=true)
+    @Import(name="liftrResourceCategory", required=true)
       private final String liftrResourceCategory;
 
     public String getLiftrResourceCategory() {
@@ -43,7 +43,7 @@ public final class MonitorPropertiesResponse extends io.pulumi.resources.InvokeA
      * The priority of the resource.
      * 
      */
-    @InputImport(name="liftrResourcePreference", required=true)
+    @Import(name="liftrResourcePreference", required=true)
       private final Integer liftrResourcePreference;
 
     public Integer getLiftrResourcePreference() {
@@ -54,7 +54,7 @@ public final class MonitorPropertiesResponse extends io.pulumi.resources.InvokeA
      * Flag specifying the Marketplace Subscription Status of the resource. If payment is not made in time, the resource will go in Suspended state.
      * 
      */
-    @InputImport(name="marketplaceSubscriptionStatus", required=true)
+    @Import(name="marketplaceSubscriptionStatus", required=true)
       private final String marketplaceSubscriptionStatus;
 
     public String getMarketplaceSubscriptionStatus() {
@@ -65,14 +65,14 @@ public final class MonitorPropertiesResponse extends io.pulumi.resources.InvokeA
      * Flag specifying if the resource monitoring is enabled or disabled.
      * 
      */
-    @InputImport(name="monitoringStatus")
+    @Import(name="monitoringStatus")
       private final @Nullable String monitoringStatus;
 
     public Optional<String> getMonitoringStatus() {
         return this.monitoringStatus == null ? Optional.empty() : Optional.ofNullable(this.monitoringStatus);
     }
 
-    @InputImport(name="provisioningState", required=true)
+    @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
     public String getProvisioningState() {
@@ -83,7 +83,7 @@ public final class MonitorPropertiesResponse extends io.pulumi.resources.InvokeA
      * User info
      * 
      */
-    @InputImport(name="userInfo")
+    @Import(name="userInfo")
       private final @Nullable UserInfoResponse userInfo;
 
     public Optional<UserInfoResponse> getUserInfo() {

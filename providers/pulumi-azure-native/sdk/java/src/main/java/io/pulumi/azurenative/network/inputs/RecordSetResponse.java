@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class RecordSetResponse extends io.pulumi.resources.InvokeArgs {
      * Fqdn that resolves to private endpoint ip address.
      * 
      */
-    @InputImport(name="fqdn")
+    @Import(name="fqdn")
       private final @Nullable String fqdn;
 
     public Optional<String> getFqdn() {
@@ -35,7 +35,7 @@ public final class RecordSetResponse extends io.pulumi.resources.InvokeArgs {
      * The private ip address of the private endpoint.
      * 
      */
-    @InputImport(name="ipAddresses")
+    @Import(name="ipAddresses")
       private final @Nullable List<String> ipAddresses;
 
     public List<String> getIpAddresses() {
@@ -46,7 +46,7 @@ public final class RecordSetResponse extends io.pulumi.resources.InvokeArgs {
      * The provisioning state of the recordset.
      * 
      */
-    @InputImport(name="provisioningState", required=true)
+    @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
     public String getProvisioningState() {
@@ -57,7 +57,7 @@ public final class RecordSetResponse extends io.pulumi.resources.InvokeArgs {
      * Recordset name.
      * 
      */
-    @InputImport(name="recordSetName")
+    @Import(name="recordSetName")
       private final @Nullable String recordSetName;
 
     public Optional<String> getRecordSetName() {
@@ -68,7 +68,7 @@ public final class RecordSetResponse extends io.pulumi.resources.InvokeArgs {
      * Resource record type.
      * 
      */
-    @InputImport(name="recordType")
+    @Import(name="recordType")
       private final @Nullable String recordType;
 
     public Optional<String> getRecordType() {
@@ -79,7 +79,7 @@ public final class RecordSetResponse extends io.pulumi.resources.InvokeArgs {
      * Recordset time to live.
      * 
      */
-    @InputImport(name="ttl")
+    @Import(name="ttl")
       private final @Nullable Integer ttl;
 
     public Optional<Integer> getTtl() {

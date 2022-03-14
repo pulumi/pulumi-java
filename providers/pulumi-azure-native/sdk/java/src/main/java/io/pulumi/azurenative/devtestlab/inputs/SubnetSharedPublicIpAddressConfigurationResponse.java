@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.devtestlab.inputs;
 
 import io.pulumi.azurenative.devtestlab.inputs.PortResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class SubnetSharedPublicIpAddressConfigurationResponse extends io.p
      * Backend ports that virtual machines on this subnet are allowed to expose
      * 
      */
-    @InputImport(name="allowedPorts")
+    @Import(name="allowedPorts")
       private final @Nullable List<PortResponse> allowedPorts;
 
     public List<PortResponse> getAllowedPorts() {

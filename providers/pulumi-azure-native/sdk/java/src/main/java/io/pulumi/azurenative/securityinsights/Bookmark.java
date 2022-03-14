@@ -9,7 +9,7 @@ import io.pulumi.azurenative.securityinsights.outputs.IncidentInfoResponse;
 import io.pulumi.azurenative.securityinsights.outputs.UserInfoResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -36,7 +36,7 @@ public class Bookmark extends io.pulumi.resources.CustomResource {
      * The time the bookmark was created
      * 
      */
-    @OutputExport(name="created", type=String.class, parameters={})
+    @Export(name="created", type=String.class, parameters={})
     private Output</* @Nullable */ String> created;
 
     /**
@@ -50,7 +50,7 @@ public class Bookmark extends io.pulumi.resources.CustomResource {
      * Describes a user that created the bookmark
      * 
      */
-    @OutputExport(name="createdBy", type=UserInfoResponse.class, parameters={})
+    @Export(name="createdBy", type=UserInfoResponse.class, parameters={})
     private Output</* @Nullable */ UserInfoResponse> createdBy;
 
     /**
@@ -64,7 +64,7 @@ public class Bookmark extends io.pulumi.resources.CustomResource {
      * The display name of the bookmark
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
@@ -78,7 +78,7 @@ public class Bookmark extends io.pulumi.resources.CustomResource {
      * Etag of the azure resource
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output</* @Nullable */ String> etag;
 
     /**
@@ -92,7 +92,7 @@ public class Bookmark extends io.pulumi.resources.CustomResource {
      * The bookmark event time
      * 
      */
-    @OutputExport(name="eventTime", type=String.class, parameters={})
+    @Export(name="eventTime", type=String.class, parameters={})
     private Output</* @Nullable */ String> eventTime;
 
     /**
@@ -106,7 +106,7 @@ public class Bookmark extends io.pulumi.resources.CustomResource {
      * Describes an incident that relates to bookmark
      * 
      */
-    @OutputExport(name="incidentInfo", type=IncidentInfoResponse.class, parameters={})
+    @Export(name="incidentInfo", type=IncidentInfoResponse.class, parameters={})
     private Output</* @Nullable */ IncidentInfoResponse> incidentInfo;
 
     /**
@@ -120,7 +120,7 @@ public class Bookmark extends io.pulumi.resources.CustomResource {
      * List of labels relevant to this bookmark
      * 
      */
-    @OutputExport(name="labels", type=List.class, parameters={String.class})
+    @Export(name="labels", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> labels;
 
     /**
@@ -134,7 +134,7 @@ public class Bookmark extends io.pulumi.resources.CustomResource {
      * Azure resource name
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -148,7 +148,7 @@ public class Bookmark extends io.pulumi.resources.CustomResource {
      * The notes of the bookmark
      * 
      */
-    @OutputExport(name="notes", type=String.class, parameters={})
+    @Export(name="notes", type=String.class, parameters={})
     private Output</* @Nullable */ String> notes;
 
     /**
@@ -162,7 +162,7 @@ public class Bookmark extends io.pulumi.resources.CustomResource {
      * The query of the bookmark.
      * 
      */
-    @OutputExport(name="query", type=String.class, parameters={})
+    @Export(name="query", type=String.class, parameters={})
     private Output<String> query;
 
     /**
@@ -176,7 +176,7 @@ public class Bookmark extends io.pulumi.resources.CustomResource {
      * The end time for the query
      * 
      */
-    @OutputExport(name="queryEndTime", type=String.class, parameters={})
+    @Export(name="queryEndTime", type=String.class, parameters={})
     private Output</* @Nullable */ String> queryEndTime;
 
     /**
@@ -190,7 +190,7 @@ public class Bookmark extends io.pulumi.resources.CustomResource {
      * The query result of the bookmark.
      * 
      */
-    @OutputExport(name="queryResult", type=String.class, parameters={})
+    @Export(name="queryResult", type=String.class, parameters={})
     private Output</* @Nullable */ String> queryResult;
 
     /**
@@ -204,7 +204,7 @@ public class Bookmark extends io.pulumi.resources.CustomResource {
      * The start time for the query
      * 
      */
-    @OutputExport(name="queryStartTime", type=String.class, parameters={})
+    @Export(name="queryStartTime", type=String.class, parameters={})
     private Output</* @Nullable */ String> queryStartTime;
 
     /**
@@ -218,7 +218,7 @@ public class Bookmark extends io.pulumi.resources.CustomResource {
      * Azure resource type
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -232,7 +232,7 @@ public class Bookmark extends io.pulumi.resources.CustomResource {
      * The last time the bookmark was updated
      * 
      */
-    @OutputExport(name="updated", type=String.class, parameters={})
+    @Export(name="updated", type=String.class, parameters={})
     private Output</* @Nullable */ String> updated;
 
     /**
@@ -246,7 +246,7 @@ public class Bookmark extends io.pulumi.resources.CustomResource {
      * Describes a user that updated the bookmark
      * 
      */
-    @OutputExport(name="updatedBy", type=UserInfoResponse.class, parameters={})
+    @Export(name="updatedBy", type=UserInfoResponse.class, parameters={})
     private Output</* @Nullable */ UserInfoResponse> updatedBy;
 
     /**

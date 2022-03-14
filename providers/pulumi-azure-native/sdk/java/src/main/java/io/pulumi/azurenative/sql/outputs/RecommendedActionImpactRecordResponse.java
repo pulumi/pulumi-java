@@ -3,12 +3,12 @@
 
 package io.pulumi.azurenative.sql.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RecommendedActionImpactRecordResponse {
     /**
      * Gets the absolute value of this dimension if applicable. e.g., Number of Queries affected
@@ -36,13 +36,13 @@ public final class RecommendedActionImpactRecordResponse {
      */
     private final String unit;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RecommendedActionImpactRecordResponse(
-        @OutputCustomType.Parameter("absoluteValue") Double absoluteValue,
-        @OutputCustomType.Parameter("changeValueAbsolute") Double changeValueAbsolute,
-        @OutputCustomType.Parameter("changeValueRelative") Double changeValueRelative,
-        @OutputCustomType.Parameter("dimensionName") String dimensionName,
-        @OutputCustomType.Parameter("unit") String unit) {
+        @CustomType.Parameter("absoluteValue") Double absoluteValue,
+        @CustomType.Parameter("changeValueAbsolute") Double changeValueAbsolute,
+        @CustomType.Parameter("changeValueRelative") Double changeValueRelative,
+        @CustomType.Parameter("dimensionName") String dimensionName,
+        @CustomType.Parameter("unit") String unit) {
         this.absoluteValue = absoluteValue;
         this.changeValueAbsolute = changeValueAbsolute;
         this.changeValueRelative = changeValueRelative;

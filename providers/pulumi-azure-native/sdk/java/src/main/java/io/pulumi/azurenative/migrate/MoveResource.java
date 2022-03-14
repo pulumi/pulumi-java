@@ -8,7 +8,7 @@ import io.pulumi.azurenative.migrate.MoveResourceArgs;
 import io.pulumi.azurenative.migrate.outputs.MoveResourcePropertiesResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +35,7 @@ public class MoveResource extends io.pulumi.resources.CustomResource {
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -49,7 +49,7 @@ public class MoveResource extends io.pulumi.resources.CustomResource {
      * Defines the move resource properties.
      * 
      */
-    @OutputExport(name="properties", type=MoveResourcePropertiesResponse.class, parameters={})
+    @Export(name="properties", type=MoveResourcePropertiesResponse.class, parameters={})
     private Output<MoveResourcePropertiesResponse> properties;
 
     /**
@@ -63,7 +63,7 @@ public class MoveResource extends io.pulumi.resources.CustomResource {
      * The type of the resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

@@ -5,14 +5,14 @@ package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.ApplicationGatewayBackendAddressResponse;
 import io.pulumi.azurenative.network.outputs.NetworkInterfaceIPConfigurationResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ApplicationGatewayBackendAddressPoolResponse {
     /**
      * Backend addresses.
@@ -50,15 +50,15 @@ public final class ApplicationGatewayBackendAddressPoolResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ApplicationGatewayBackendAddressPoolResponse(
-        @OutputCustomType.Parameter("backendAddresses") @Nullable List<ApplicationGatewayBackendAddressResponse> backendAddresses,
-        @OutputCustomType.Parameter("backendIPConfigurations") List<NetworkInterfaceIPConfigurationResponse> backendIPConfigurations,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("backendAddresses") @Nullable List<ApplicationGatewayBackendAddressResponse> backendAddresses,
+        @CustomType.Parameter("backendIPConfigurations") List<NetworkInterfaceIPConfigurationResponse> backendIPConfigurations,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("type") String type) {
         this.backendAddresses = backendAddresses;
         this.backendIPConfigurations = backendIPConfigurations;
         this.etag = etag;

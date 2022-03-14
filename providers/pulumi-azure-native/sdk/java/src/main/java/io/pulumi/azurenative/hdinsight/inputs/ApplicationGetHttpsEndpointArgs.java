@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.hdinsight.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class ApplicationGetHttpsEndpointArgs extends io.pulumi.resources.R
      * The list of access modes for the application.
      * 
      */
-    @InputImport(name="accessModes")
+    @Import(name="accessModes")
       private final @Nullable Output<List<String>> accessModes;
 
     public Output<List<String>> getAccessModes() {
@@ -36,7 +36,7 @@ public final class ApplicationGetHttpsEndpointArgs extends io.pulumi.resources.R
      * The destination port to connect to.
      * 
      */
-    @InputImport(name="destinationPort")
+    @Import(name="destinationPort")
       private final @Nullable Output<Integer> destinationPort;
 
     public Output<Integer> getDestinationPort() {
@@ -47,7 +47,7 @@ public final class ApplicationGetHttpsEndpointArgs extends io.pulumi.resources.R
      * The value indicates whether to disable GatewayAuth.
      * 
      */
-    @InputImport(name="disableGatewayAuth")
+    @Import(name="disableGatewayAuth")
       private final @Nullable Output<Boolean> disableGatewayAuth;
 
     public Output<Boolean> getDisableGatewayAuth() {
@@ -58,7 +58,7 @@ public final class ApplicationGetHttpsEndpointArgs extends io.pulumi.resources.R
      * The private ip address of the endpoint.
      * 
      */
-    @InputImport(name="privateIPAddress")
+    @Import(name="privateIPAddress")
       private final @Nullable Output<String> privateIPAddress;
 
     public Output<String> getPrivateIPAddress() {
@@ -69,7 +69,7 @@ public final class ApplicationGetHttpsEndpointArgs extends io.pulumi.resources.R
      * The subdomain suffix of the application.
      * 
      */
-    @InputImport(name="subDomainSuffix")
+    @Import(name="subDomainSuffix")
       private final @Nullable Output<String> subDomainSuffix;
 
     public Output<String> getSubDomainSuffix() {

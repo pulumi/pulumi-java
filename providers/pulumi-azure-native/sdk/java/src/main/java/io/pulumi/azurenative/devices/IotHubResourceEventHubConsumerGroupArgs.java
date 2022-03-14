@@ -5,7 +5,7 @@ package io.pulumi.azurenative.devices;
 
 import io.pulumi.azurenative.devices.inputs.EventHubConsumerGroupNameArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class IotHubResourceEventHubConsumerGroupArgs extends io.pulumi.res
      * The name of the Event Hub-compatible endpoint in the IoT hub.
      * 
      */
-    @InputImport(name="eventHubEndpointName", required=true)
+    @Import(name="eventHubEndpointName", required=true)
       private final Output<String> eventHubEndpointName;
 
     public Output<String> getEventHubEndpointName() {
@@ -30,7 +30,7 @@ public final class IotHubResourceEventHubConsumerGroupArgs extends io.pulumi.res
      * The name of the consumer group to add.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -41,7 +41,7 @@ public final class IotHubResourceEventHubConsumerGroupArgs extends io.pulumi.res
      * The EventHub consumer group name.
      * 
      */
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable Output<EventHubConsumerGroupNameArgs> properties;
 
     public Output<EventHubConsumerGroupNameArgs> getProperties() {
@@ -52,7 +52,7 @@ public final class IotHubResourceEventHubConsumerGroupArgs extends io.pulumi.res
      * The name of the resource group that contains the IoT hub.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -63,7 +63,7 @@ public final class IotHubResourceEventHubConsumerGroupArgs extends io.pulumi.res
      * The name of the IoT hub.
      * 
      */
-    @InputImport(name="resourceName", required=true)
+    @Import(name="resourceName", required=true)
       private final Output<String> resourceName;
 
     public Output<String> getPropResourceName() {

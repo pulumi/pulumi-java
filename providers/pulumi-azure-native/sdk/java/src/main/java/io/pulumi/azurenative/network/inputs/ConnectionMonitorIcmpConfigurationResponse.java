@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class ConnectionMonitorIcmpConfigurationResponse extends io.pulumi.
      * Value indicating whether path evaluation with trace route should be disabled.
      * 
      */
-    @InputImport(name="disableTraceRoute")
+    @Import(name="disableTraceRoute")
       private final @Nullable Boolean disableTraceRoute;
 
     public Optional<Boolean> getDisableTraceRoute() {

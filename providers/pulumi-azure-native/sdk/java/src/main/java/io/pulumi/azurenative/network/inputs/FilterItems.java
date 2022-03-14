@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class FilterItems extends io.pulumi.resources.InvokeArgs {
      * The name of the field we would like to filter
      * 
      */
-    @InputImport(name="field")
+    @Import(name="field")
       private final @Nullable String field;
 
     public Optional<String> getField() {
@@ -34,7 +34,7 @@ public final class FilterItems extends io.pulumi.resources.InvokeArgs {
      * List of values to filter the current field by
      * 
      */
-    @InputImport(name="values")
+    @Import(name="values")
       private final @Nullable List<String> values;
 
     public List<String> getValues() {

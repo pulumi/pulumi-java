@@ -6,7 +6,7 @@ package io.pulumi.azurenative.devices.inputs;
 import io.pulumi.azurenative.devices.enums.IotHubSku;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class IotHubSkuInfoArgs extends io.pulumi.resources.ResourceArgs {
      * The number of provisioned IoT Hub units. See: https://docs.microsoft.com/azure/azure-subscription-service-limits#iot-hub-limits.
      * 
      */
-    @InputImport(name="capacity")
+    @Import(name="capacity")
       private final @Nullable Output<Double> capacity;
 
     public Output<Double> getCapacity() {
@@ -36,7 +36,7 @@ public final class IotHubSkuInfoArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the SKU.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<Either<String,IotHubSku>> name;
 
     public Output<Either<String,IotHubSku>> getName() {

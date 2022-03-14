@@ -5,7 +5,7 @@ package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.azurenative.compute.inputs.TerminateNotificationProfileArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -18,7 +18,7 @@ public final class ScheduledEventsProfileArgs extends io.pulumi.resources.Resour
      * Specifies Terminate Scheduled Event related configurations.
      * 
      */
-    @InputImport(name="terminateNotificationProfile")
+    @Import(name="terminateNotificationProfile")
       private final @Nullable Output<TerminateNotificationProfileArgs> terminateNotificationProfile;
 
     public Output<TerminateNotificationProfileArgs> getTerminateNotificationProfile() {

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.apimanagement;
 
 import io.pulumi.azurenative.apimanagement.enums.SubscriptionState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
      * Determines whether tracing can be enabled
      * 
      */
-    @InputImport(name="allowTracing")
+    @Import(name="allowTracing")
       private final @Nullable Output<Boolean> allowTracing;
 
     public Output<Boolean> getAllowTracing() {
@@ -31,7 +31,7 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
      * Determines the type of application which send the create user request. Default is legacy publisher portal.
      * 
      */
-    @InputImport(name="appType")
+    @Import(name="appType")
       private final @Nullable Output<String> appType;
 
     public Output<String> getAppType() {
@@ -42,7 +42,7 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
      * Subscription name.
      * 
      */
-    @InputImport(name="displayName", required=true)
+    @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -55,7 +55,7 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
      *  - If true, send email notification of change of state of subscription
      * 
      */
-    @InputImport(name="notify")
+    @Import(name="notify")
       private final @Nullable Output<Boolean> notify;
 
     public Output<Boolean> getNotify() {
@@ -66,7 +66,7 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
      * User (user id path) for whom subscription is being created in form /users/{userId}
      * 
      */
-    @InputImport(name="ownerId")
+    @Import(name="ownerId")
       private final @Nullable Output<String> ownerId;
 
     public Output<String> getOwnerId() {
@@ -77,7 +77,7 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
      * Primary subscription key. If not specified during request key will be generated automatically.
      * 
      */
-    @InputImport(name="primaryKey")
+    @Import(name="primaryKey")
       private final @Nullable Output<String> primaryKey;
 
     public Output<String> getPrimaryKey() {
@@ -88,7 +88,7 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -99,7 +99,7 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
      * Scope like /products/{productId} or /apis or /apis/{apiId}.
      * 
      */
-    @InputImport(name="scope", required=true)
+    @Import(name="scope", required=true)
       private final Output<String> scope;
 
     public Output<String> getScope() {
@@ -110,7 +110,7 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
      * Secondary subscription key. If not specified during request key will be generated automatically.
      * 
      */
-    @InputImport(name="secondaryKey")
+    @Import(name="secondaryKey")
       private final @Nullable Output<String> secondaryKey;
 
     public Output<String> getSecondaryKey() {
@@ -121,7 +121,7 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the API Management service.
      * 
      */
-    @InputImport(name="serviceName", required=true)
+    @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
 
     public Output<String> getServiceName() {
@@ -132,7 +132,7 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
      * Subscription entity Identifier. The entity represents the association between a user and a product in API Management.
      * 
      */
-    @InputImport(name="sid")
+    @Import(name="sid")
       private final @Nullable Output<String> sid;
 
     public Output<String> getSid() {
@@ -143,7 +143,7 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
      * Initial subscription state. If no value is specified, subscription is created with Submitted state. Possible states are * active – the subscription is active, * suspended – the subscription is blocked, and the subscriber cannot call any APIs of the product, * submitted – the subscription request has been made by the developer, but has not yet been approved or rejected, * rejected – the subscription request has been denied by an administrator, * cancelled – the subscription has been cancelled by the developer or administrator, * expired – the subscription reached its expiration date and was deactivated.
      * 
      */
-    @InputImport(name="state")
+    @Import(name="state")
       private final @Nullable Output<SubscriptionState> state;
 
     public Output<SubscriptionState> getState() {

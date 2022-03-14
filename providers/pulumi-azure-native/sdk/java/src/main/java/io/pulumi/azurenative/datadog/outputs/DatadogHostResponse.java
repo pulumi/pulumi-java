@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.datadog.outputs;
 
 import io.pulumi.azurenative.datadog.outputs.DatadogHostMetadataResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DatadogHostResponse {
     /**
      * The aliases for the host.
@@ -30,12 +30,12 @@ public final class DatadogHostResponse {
      */
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DatadogHostResponse(
-        @OutputCustomType.Parameter("aliases") @Nullable List<String> aliases,
-        @OutputCustomType.Parameter("apps") @Nullable List<String> apps,
-        @OutputCustomType.Parameter("meta") @Nullable DatadogHostMetadataResponse meta,
-        @OutputCustomType.Parameter("name") @Nullable String name) {
+        @CustomType.Parameter("aliases") @Nullable List<String> aliases,
+        @CustomType.Parameter("apps") @Nullable List<String> apps,
+        @CustomType.Parameter("meta") @Nullable DatadogHostMetadataResponse meta,
+        @CustomType.Parameter("name") @Nullable String name) {
         this.aliases = aliases;
         this.apps = apps;
         this.meta = meta;

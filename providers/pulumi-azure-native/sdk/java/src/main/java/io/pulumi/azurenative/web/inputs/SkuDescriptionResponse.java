@@ -5,7 +5,7 @@ package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.azurenative.web.inputs.CapabilityResponse;
 import io.pulumi.azurenative.web.inputs.SkuCapacityResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +26,7 @@ public final class SkuDescriptionResponse extends io.pulumi.resources.InvokeArgs
      * Capabilities of the SKU, e.g., is traffic manager enabled?
      * 
      */
-    @InputImport(name="capabilities")
+    @Import(name="capabilities")
       private final @Nullable List<CapabilityResponse> capabilities;
 
     public List<CapabilityResponse> getCapabilities() {
@@ -37,7 +37,7 @@ public final class SkuDescriptionResponse extends io.pulumi.resources.InvokeArgs
      * Current number of instances assigned to the resource.
      * 
      */
-    @InputImport(name="capacity")
+    @Import(name="capacity")
       private final @Nullable Integer capacity;
 
     public Optional<Integer> getCapacity() {
@@ -48,7 +48,7 @@ public final class SkuDescriptionResponse extends io.pulumi.resources.InvokeArgs
      * Family code of the resource SKU.
      * 
      */
-    @InputImport(name="family")
+    @Import(name="family")
       private final @Nullable String family;
 
     public Optional<String> getFamily() {
@@ -59,7 +59,7 @@ public final class SkuDescriptionResponse extends io.pulumi.resources.InvokeArgs
      * Locations of the SKU.
      * 
      */
-    @InputImport(name="locations")
+    @Import(name="locations")
       private final @Nullable List<String> locations;
 
     public List<String> getLocations() {
@@ -70,7 +70,7 @@ public final class SkuDescriptionResponse extends io.pulumi.resources.InvokeArgs
      * Name of the resource SKU.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -81,7 +81,7 @@ public final class SkuDescriptionResponse extends io.pulumi.resources.InvokeArgs
      * Size specifier of the resource SKU.
      * 
      */
-    @InputImport(name="size")
+    @Import(name="size")
       private final @Nullable String size;
 
     public Optional<String> getSize() {
@@ -92,7 +92,7 @@ public final class SkuDescriptionResponse extends io.pulumi.resources.InvokeArgs
      * Min, max, and default scale values of the SKU.
      * 
      */
-    @InputImport(name="skuCapacity")
+    @Import(name="skuCapacity")
       private final @Nullable SkuCapacityResponse skuCapacity;
 
     public Optional<SkuCapacityResponse> getSkuCapacity() {
@@ -103,7 +103,7 @@ public final class SkuDescriptionResponse extends io.pulumi.resources.InvokeArgs
      * Service tier of the resource SKU.
      * 
      */
-    @InputImport(name="tier")
+    @Import(name="tier")
       private final @Nullable String tier;
 
     public Optional<String> getTier() {

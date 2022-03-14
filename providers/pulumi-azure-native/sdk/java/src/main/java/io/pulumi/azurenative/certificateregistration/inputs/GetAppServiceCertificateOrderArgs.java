@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.certificateregistration.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetAppServiceCertificateOrderArgs extends io.pulumi.resources
      * Name of the certificate order..
      * 
      */
-    @InputImport(name="certificateOrderName", required=true)
+    @Import(name="certificateOrderName", required=true)
       private final String certificateOrderName;
 
     public String getCertificateOrderName() {
@@ -27,7 +27,7 @@ public final class GetAppServiceCertificateOrderArgs extends io.pulumi.resources
      * Name of the resource group to which the resource belongs.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {

@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.security.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AdaptiveApplicationControlIssueSummaryResponse {
     /**
      * An alert that machines within a group can have
@@ -23,10 +23,10 @@ public final class AdaptiveApplicationControlIssueSummaryResponse {
      */
     private final @Nullable Double numberOfVms;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AdaptiveApplicationControlIssueSummaryResponse(
-        @OutputCustomType.Parameter("issue") @Nullable String issue,
-        @OutputCustomType.Parameter("numberOfVms") @Nullable Double numberOfVms) {
+        @CustomType.Parameter("issue") @Nullable String issue,
+        @CustomType.Parameter("numberOfVms") @Nullable Double numberOfVms) {
         this.issue = issue;
         this.numberOfVms = numberOfVms;
     }

@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.storagecache.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class NamespaceJunctionResponse {
     /**
      * Namespace path on a Cache for a Storage Target.
@@ -32,12 +32,12 @@ public final class NamespaceJunctionResponse {
      */
     private final @Nullable String targetPath;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NamespaceJunctionResponse(
-        @OutputCustomType.Parameter("namespacePath") @Nullable String namespacePath,
-        @OutputCustomType.Parameter("nfsAccessPolicy") @Nullable String nfsAccessPolicy,
-        @OutputCustomType.Parameter("nfsExport") @Nullable String nfsExport,
-        @OutputCustomType.Parameter("targetPath") @Nullable String targetPath) {
+        @CustomType.Parameter("namespacePath") @Nullable String namespacePath,
+        @CustomType.Parameter("nfsAccessPolicy") @Nullable String nfsAccessPolicy,
+        @CustomType.Parameter("nfsExport") @Nullable String nfsExport,
+        @CustomType.Parameter("targetPath") @Nullable String targetPath) {
         this.namespacePath = namespacePath;
         this.nfsAccessPolicy = nfsAccessPolicy;
         this.nfsExport = nfsExport;

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.containerregistry.inputs;
 
 import io.pulumi.azurenative.containerregistry.inputs.EventRequestMessageResponse;
 import io.pulumi.azurenative.containerregistry.inputs.EventResponseMessageResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class EventResponse extends io.pulumi.resources.InvokeArgs {
      * The event request message sent to the service URI.
      * 
      */
-    @InputImport(name="eventRequestMessage")
+    @Import(name="eventRequestMessage")
       private final @Nullable EventRequestMessageResponse eventRequestMessage;
 
     public Optional<EventRequestMessageResponse> getEventRequestMessage() {
@@ -35,7 +35,7 @@ public final class EventResponse extends io.pulumi.resources.InvokeArgs {
      * The event response message received from the service URI.
      * 
      */
-    @InputImport(name="eventResponseMessage")
+    @Import(name="eventResponseMessage")
       private final @Nullable EventResponseMessageResponse eventResponseMessage;
 
     public Optional<EventResponseMessageResponse> getEventResponseMessage() {
@@ -46,7 +46,7 @@ public final class EventResponse extends io.pulumi.resources.InvokeArgs {
      * The event ID.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable String id;
 
     public Optional<String> getId() {

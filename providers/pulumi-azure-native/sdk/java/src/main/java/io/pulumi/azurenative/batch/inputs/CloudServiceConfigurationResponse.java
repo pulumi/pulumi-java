@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.batch.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +18,7 @@ public final class CloudServiceConfigurationResponse extends io.pulumi.resources
      * Possible values are: 2 - OS Family 2, equivalent to Windows Server 2008 R2 SP1. 3 - OS Family 3, equivalent to Windows Server 2012. 4 - OS Family 4, equivalent to Windows Server 2012 R2. 5 - OS Family 5, equivalent to Windows Server 2016. 6 - OS Family 6, equivalent to Windows Server 2019. For more information, see Azure Guest OS Releases (https://azure.microsoft.com/documentation/articles/cloud-services-guestos-update-matrix/#releases).
      * 
      */
-    @InputImport(name="osFamily", required=true)
+    @Import(name="osFamily", required=true)
       private final String osFamily;
 
     public String getOsFamily() {
@@ -29,7 +29,7 @@ public final class CloudServiceConfigurationResponse extends io.pulumi.resources
      * The default value is * which specifies the latest operating system version for the specified OS family.
      * 
      */
-    @InputImport(name="osVersion")
+    @Import(name="osVersion")
       private final @Nullable String osVersion;
 
     public Optional<String> getOsVersion() {

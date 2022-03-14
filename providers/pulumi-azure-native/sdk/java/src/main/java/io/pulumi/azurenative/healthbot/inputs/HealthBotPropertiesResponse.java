@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.healthbot.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class HealthBotPropertiesResponse extends io.pulumi.resources.Invok
      * The link.
      * 
      */
-    @InputImport(name="botManagementPortalLink", required=true)
+    @Import(name="botManagementPortalLink", required=true)
       private final String botManagementPortalLink;
 
     public String getBotManagementPortalLink() {
@@ -31,7 +31,7 @@ public final class HealthBotPropertiesResponse extends io.pulumi.resources.Invok
      * The provisioning state of the Healthbot resource.
      * 
      */
-    @InputImport(name="provisioningState", required=true)
+    @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
     public String getProvisioningState() {

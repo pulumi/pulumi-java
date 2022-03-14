@@ -6,12 +6,12 @@ package io.pulumi.azurenative.dataprotection.outputs;
 import io.pulumi.azurenative.dataprotection.outputs.AbsoluteDeleteOptionResponse;
 import io.pulumi.azurenative.dataprotection.outputs.DataStoreInfoBaseResponse;
 import io.pulumi.azurenative.dataprotection.outputs.TargetCopySettingResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SourceLifeCycleResponse {
     /**
      * Delete Option
@@ -25,11 +25,11 @@ public final class SourceLifeCycleResponse {
     private final DataStoreInfoBaseResponse sourceDataStore;
     private final @Nullable List<TargetCopySettingResponse> targetDataStoreCopySettings;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SourceLifeCycleResponse(
-        @OutputCustomType.Parameter("deleteAfter") AbsoluteDeleteOptionResponse deleteAfter,
-        @OutputCustomType.Parameter("sourceDataStore") DataStoreInfoBaseResponse sourceDataStore,
-        @OutputCustomType.Parameter("targetDataStoreCopySettings") @Nullable List<TargetCopySettingResponse> targetDataStoreCopySettings) {
+        @CustomType.Parameter("deleteAfter") AbsoluteDeleteOptionResponse deleteAfter,
+        @CustomType.Parameter("sourceDataStore") DataStoreInfoBaseResponse sourceDataStore,
+        @CustomType.Parameter("targetDataStoreCopySettings") @Nullable List<TargetCopySettingResponse> targetDataStoreCopySettings) {
         this.deleteAfter = deleteAfter;
         this.sourceDataStore = sourceDataStore;
         this.targetDataStoreCopySettings = targetDataStoreCopySettings;

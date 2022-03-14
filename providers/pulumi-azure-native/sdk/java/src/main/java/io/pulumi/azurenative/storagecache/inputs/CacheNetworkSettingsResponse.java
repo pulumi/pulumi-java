@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storagecache.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class CacheNetworkSettingsResponse extends io.pulumi.resources.Invo
      * DNS search domain
      * 
      */
-    @InputImport(name="dnsSearchDomain")
+    @Import(name="dnsSearchDomain")
       private final @Nullable String dnsSearchDomain;
 
     public Optional<String> getDnsSearchDomain() {
@@ -35,7 +35,7 @@ public final class CacheNetworkSettingsResponse extends io.pulumi.resources.Invo
      * DNS servers for the cache to use.  It will be set from the network configuration if no value is provided.
      * 
      */
-    @InputImport(name="dnsServers")
+    @Import(name="dnsServers")
       private final @Nullable List<String> dnsServers;
 
     public List<String> getDnsServers() {
@@ -46,7 +46,7 @@ public final class CacheNetworkSettingsResponse extends io.pulumi.resources.Invo
      * The IPv4 maximum transmission unit configured for the subnet.
      * 
      */
-    @InputImport(name="mtu")
+    @Import(name="mtu")
       private final @Nullable Integer mtu;
 
     public Optional<Integer> getMtu() {
@@ -57,7 +57,7 @@ public final class CacheNetworkSettingsResponse extends io.pulumi.resources.Invo
      * NTP server IP Address or FQDN for the cache to use. The default is time.windows.com.
      * 
      */
-    @InputImport(name="ntpServer")
+    @Import(name="ntpServer")
       private final @Nullable String ntpServer;
 
     public Optional<String> getNtpServer() {
@@ -68,7 +68,7 @@ public final class CacheNetworkSettingsResponse extends io.pulumi.resources.Invo
      * Array of additional IP addresses used by this Cache.
      * 
      */
-    @InputImport(name="utilityAddresses", required=true)
+    @Import(name="utilityAddresses", required=true)
       private final List<String> utilityAddresses;
 
     public List<String> getUtilityAddresses() {

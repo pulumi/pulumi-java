@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class BreakOutCategoryPoliciesArgs extends io.pulumi.resources.Reso
      * Flag to control breakout of o365 allow category.
      * 
      */
-    @InputImport(name="allow")
+    @Import(name="allow")
       private final @Nullable Output<Boolean> allow;
 
     public Output<Boolean> getAllow() {
@@ -33,7 +33,7 @@ public final class BreakOutCategoryPoliciesArgs extends io.pulumi.resources.Reso
      * Flag to control breakout of o365 default category.
      * 
      */
-    @InputImport(name="default")
+    @Import(name="default")
       private final @Nullable Output<Boolean> $default;
 
     public Output<Boolean> get$default() {
@@ -44,7 +44,7 @@ public final class BreakOutCategoryPoliciesArgs extends io.pulumi.resources.Reso
      * Flag to control breakout of o365 optimize category.
      * 
      */
-    @InputImport(name="optimize")
+    @Import(name="optimize")
       private final @Nullable Output<Boolean> optimize;
 
     public Output<Boolean> getOptimize() {

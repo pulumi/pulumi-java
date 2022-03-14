@@ -3,18 +3,18 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FrontEndConfigurationResponse {
     private final @Nullable String kind;
 
-    @OutputCustomType.Constructor
-    private FrontEndConfigurationResponse(@OutputCustomType.Parameter("kind") @Nullable String kind) {
+    @CustomType.Constructor
+    private FrontEndConfigurationResponse(@CustomType.Parameter("kind") @Nullable String kind) {
         this.kind = kind;
     }
 

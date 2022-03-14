@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.netapp.outputs;
 
 import io.pulumi.azurenative.netapp.outputs.VolumeBackupsResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -14,7 +14,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetBackupPolicyResult {
     /**
      * Daily backups count to keep
@@ -82,21 +82,21 @@ public final class GetBackupPolicyResult {
      */
     private final @Nullable Integer yearlyBackupsToKeep;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetBackupPolicyResult(
-        @OutputCustomType.Parameter("dailyBackupsToKeep") @Nullable Integer dailyBackupsToKeep,
-        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("monthlyBackupsToKeep") @Nullable Integer monthlyBackupsToKeep,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("volumeBackups") @Nullable List<VolumeBackupsResponse> volumeBackups,
-        @OutputCustomType.Parameter("volumesAssigned") @Nullable Integer volumesAssigned,
-        @OutputCustomType.Parameter("weeklyBackupsToKeep") @Nullable Integer weeklyBackupsToKeep,
-        @OutputCustomType.Parameter("yearlyBackupsToKeep") @Nullable Integer yearlyBackupsToKeep) {
+        @CustomType.Parameter("dailyBackupsToKeep") @Nullable Integer dailyBackupsToKeep,
+        @CustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("monthlyBackupsToKeep") @Nullable Integer monthlyBackupsToKeep,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("volumeBackups") @Nullable List<VolumeBackupsResponse> volumeBackups,
+        @CustomType.Parameter("volumesAssigned") @Nullable Integer volumesAssigned,
+        @CustomType.Parameter("weeklyBackupsToKeep") @Nullable Integer weeklyBackupsToKeep,
+        @CustomType.Parameter("yearlyBackupsToKeep") @Nullable Integer yearlyBackupsToKeep) {
         this.dailyBackupsToKeep = dailyBackupsToKeep;
         this.enabled = enabled;
         this.id = id;

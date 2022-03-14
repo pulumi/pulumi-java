@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class RedirectIncompatibleRowSettingsResponse extends io.pulumi.res
      * Name of the Azure Storage, Storage SAS, or Azure Data Lake Store linked service used for redirecting incompatible row. Must be specified if redirectIncompatibleRowSettings is specified. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="linkedServiceName", required=true)
+    @Import(name="linkedServiceName", required=true)
       private final Object linkedServiceName;
 
     public Object getLinkedServiceName() {
@@ -33,7 +33,7 @@ public final class RedirectIncompatibleRowSettingsResponse extends io.pulumi.res
      * The path for storing the redirect incompatible row data. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="path")
+    @Import(name="path")
       private final @Nullable Object path;
 
     public Optional<Object> getPath() {

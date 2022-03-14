@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.logic.inputs;
 
 import io.pulumi.azurenative.logic.inputs.KeyVaultKeyReferenceResponseKeyVault;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class KeyVaultKeyReferenceResponse extends io.pulumi.resources.Invo
      * The private key name in key vault.
      * 
      */
-    @InputImport(name="keyName", required=true)
+    @Import(name="keyName", required=true)
       private final String keyName;
 
     public String getKeyName() {
@@ -34,7 +34,7 @@ public final class KeyVaultKeyReferenceResponse extends io.pulumi.resources.Invo
      * The key vault reference.
      * 
      */
-    @InputImport(name="keyVault", required=true)
+    @Import(name="keyVault", required=true)
       private final KeyVaultKeyReferenceResponseKeyVault keyVault;
 
     public KeyVaultKeyReferenceResponseKeyVault getKeyVault() {
@@ -45,7 +45,7 @@ public final class KeyVaultKeyReferenceResponse extends io.pulumi.resources.Invo
      * The private key version in key vault.
      * 
      */
-    @InputImport(name="keyVersion")
+    @Import(name="keyVersion")
       private final @Nullable String keyVersion;
 
     public Optional<String> getKeyVersion() {

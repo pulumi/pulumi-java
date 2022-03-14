@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.servicefabric.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ServiceTypeDeltaHealthPolicyResponse {
     /**
      * The maximum allowed percentage of services health degradation allowed during cluster upgrades.
@@ -19,8 +19,8 @@ public final class ServiceTypeDeltaHealthPolicyResponse {
      */
     private final @Nullable Integer maxPercentDeltaUnhealthyServices;
 
-    @OutputCustomType.Constructor
-    private ServiceTypeDeltaHealthPolicyResponse(@OutputCustomType.Parameter("maxPercentDeltaUnhealthyServices") @Nullable Integer maxPercentDeltaUnhealthyServices) {
+    @CustomType.Constructor
+    private ServiceTypeDeltaHealthPolicyResponse(@CustomType.Parameter("maxPercentDeltaUnhealthyServices") @Nullable Integer maxPercentDeltaUnhealthyServices) {
         this.maxPercentDeltaUnhealthyServices = maxPercentDeltaUnhealthyServices;
     }
 

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.synapse.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class SsisParameterResponse extends io.pulumi.resources.InvokeArgs 
      * Parameter type.
      * 
      */
-    @InputImport(name="dataType")
+    @Import(name="dataType")
       private final @Nullable String dataType;
 
     public Optional<String> getDataType() {
@@ -35,7 +35,7 @@ public final class SsisParameterResponse extends io.pulumi.resources.InvokeArgs 
      * Default value of parameter.
      * 
      */
-    @InputImport(name="defaultValue")
+    @Import(name="defaultValue")
       private final @Nullable String defaultValue;
 
     public Optional<String> getDefaultValue() {
@@ -46,7 +46,7 @@ public final class SsisParameterResponse extends io.pulumi.resources.InvokeArgs 
      * Parameter description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable String description;
 
     public Optional<String> getDescription() {
@@ -57,7 +57,7 @@ public final class SsisParameterResponse extends io.pulumi.resources.InvokeArgs 
      * Design default value of parameter.
      * 
      */
-    @InputImport(name="designDefaultValue")
+    @Import(name="designDefaultValue")
       private final @Nullable String designDefaultValue;
 
     public Optional<String> getDesignDefaultValue() {
@@ -68,7 +68,7 @@ public final class SsisParameterResponse extends io.pulumi.resources.InvokeArgs 
      * Parameter id.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Double id;
 
     public Optional<Double> getId() {
@@ -79,7 +79,7 @@ public final class SsisParameterResponse extends io.pulumi.resources.InvokeArgs 
      * Parameter name.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -90,7 +90,7 @@ public final class SsisParameterResponse extends io.pulumi.resources.InvokeArgs 
      * Whether parameter is required.
      * 
      */
-    @InputImport(name="required")
+    @Import(name="required")
       private final @Nullable Boolean required;
 
     public Optional<Boolean> getRequired() {
@@ -101,7 +101,7 @@ public final class SsisParameterResponse extends io.pulumi.resources.InvokeArgs 
      * Whether parameter is sensitive.
      * 
      */
-    @InputImport(name="sensitive")
+    @Import(name="sensitive")
       private final @Nullable Boolean sensitive;
 
     public Optional<Boolean> getSensitive() {
@@ -112,7 +112,7 @@ public final class SsisParameterResponse extends io.pulumi.resources.InvokeArgs 
      * Default sensitive value of parameter.
      * 
      */
-    @InputImport(name="sensitiveDefaultValue")
+    @Import(name="sensitiveDefaultValue")
       private final @Nullable String sensitiveDefaultValue;
 
     public Optional<String> getSensitiveDefaultValue() {
@@ -123,7 +123,7 @@ public final class SsisParameterResponse extends io.pulumi.resources.InvokeArgs 
      * Parameter value set.
      * 
      */
-    @InputImport(name="valueSet")
+    @Import(name="valueSet")
       private final @Nullable Boolean valueSet;
 
     public Optional<Boolean> getValueSet() {
@@ -134,7 +134,7 @@ public final class SsisParameterResponse extends io.pulumi.resources.InvokeArgs 
      * Parameter value type.
      * 
      */
-    @InputImport(name="valueType")
+    @Import(name="valueType")
       private final @Nullable String valueType;
 
     public Optional<String> getValueType() {
@@ -145,7 +145,7 @@ public final class SsisParameterResponse extends io.pulumi.resources.InvokeArgs 
      * Parameter reference variable.
      * 
      */
-    @InputImport(name="variable")
+    @Import(name="variable")
       private final @Nullable String variable;
 
     public Optional<String> getVariable() {

@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.edgeorder.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class StageDetailsResponse {
     /**
      * Display name of the resource stage.
@@ -30,12 +30,12 @@ public final class StageDetailsResponse {
      */
     private final String startTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private StageDetailsResponse(
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("stageName") String stageName,
-        @OutputCustomType.Parameter("stageStatus") String stageStatus,
-        @OutputCustomType.Parameter("startTime") String startTime) {
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("stageName") String stageName,
+        @CustomType.Parameter("stageStatus") String stageStatus,
+        @CustomType.Parameter("startTime") String startTime) {
         this.displayName = displayName;
         this.stageName = stageName;
         this.stageStatus = stageStatus;

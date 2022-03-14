@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetP2sVpnServerConfigurationArgs extends io.pulumi.resources.
      * The name of the P2SVpnServerConfiguration.
      * 
      */
-    @InputImport(name="p2SVpnServerConfigurationName", required=true)
+    @Import(name="p2SVpnServerConfigurationName", required=true)
       private final String p2SVpnServerConfigurationName;
 
     public String getP2SVpnServerConfigurationName() {
@@ -27,7 +27,7 @@ public final class GetP2sVpnServerConfigurationArgs extends io.pulumi.resources.
      * The resource group name of the P2SVpnServerConfiguration.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {
@@ -38,7 +38,7 @@ public final class GetP2sVpnServerConfigurationArgs extends io.pulumi.resources.
      * The name of the VirtualWan.
      * 
      */
-    @InputImport(name="virtualWanName", required=true)
+    @Import(name="virtualWanName", required=true)
       private final String virtualWanName;
 
     public String getVirtualWanName() {

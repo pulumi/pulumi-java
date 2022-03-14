@@ -11,12 +11,12 @@ import io.pulumi.azurenative.edgeorder.outputs.FilterablePropertyResponse;
 import io.pulumi.azurenative.edgeorder.outputs.HierarchyInformationResponse;
 import io.pulumi.azurenative.edgeorder.outputs.ImageInformationResponse;
 import io.pulumi.azurenative.edgeorder.outputs.SpecificationResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ConfigurationResponse {
     /**
      * Availability information of the product system.
@@ -64,17 +64,17 @@ public final class ConfigurationResponse {
      */
     private final List<SpecificationResponse> specifications;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ConfigurationResponse(
-        @OutputCustomType.Parameter("availabilityInformation") AvailabilityInformationResponse availabilityInformation,
-        @OutputCustomType.Parameter("costInformation") CostInformationResponse costInformation,
-        @OutputCustomType.Parameter("description") DescriptionResponse description,
-        @OutputCustomType.Parameter("dimensions") DimensionsResponse dimensions,
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("filterableProperties") List<FilterablePropertyResponse> filterableProperties,
-        @OutputCustomType.Parameter("hierarchyInformation") HierarchyInformationResponse hierarchyInformation,
-        @OutputCustomType.Parameter("imageInformation") List<ImageInformationResponse> imageInformation,
-        @OutputCustomType.Parameter("specifications") List<SpecificationResponse> specifications) {
+        @CustomType.Parameter("availabilityInformation") AvailabilityInformationResponse availabilityInformation,
+        @CustomType.Parameter("costInformation") CostInformationResponse costInformation,
+        @CustomType.Parameter("description") DescriptionResponse description,
+        @CustomType.Parameter("dimensions") DimensionsResponse dimensions,
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("filterableProperties") List<FilterablePropertyResponse> filterableProperties,
+        @CustomType.Parameter("hierarchyInformation") HierarchyInformationResponse hierarchyInformation,
+        @CustomType.Parameter("imageInformation") List<ImageInformationResponse> imageInformation,
+        @CustomType.Parameter("specifications") List<SpecificationResponse> specifications) {
         this.availabilityInformation = availabilityInformation;
         this.costInformation = costInformation;
         this.description = description;

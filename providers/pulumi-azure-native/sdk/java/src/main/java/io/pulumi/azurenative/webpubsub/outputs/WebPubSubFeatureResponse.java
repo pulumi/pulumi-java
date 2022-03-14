@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.webpubsub.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class WebPubSubFeatureResponse {
     /**
      * FeatureFlags is the supported features of Azure SignalR service.
@@ -30,11 +30,11 @@ public final class WebPubSubFeatureResponse {
      */
     private final String value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WebPubSubFeatureResponse(
-        @OutputCustomType.Parameter("flag") String flag,
-        @OutputCustomType.Parameter("properties") @Nullable Map<String,String> properties,
-        @OutputCustomType.Parameter("value") String value) {
+        @CustomType.Parameter("flag") String flag,
+        @CustomType.Parameter("properties") @Nullable Map<String,String> properties,
+        @CustomType.Parameter("value") String value) {
         this.flag = flag;
         this.properties = properties;
         this.value = value;

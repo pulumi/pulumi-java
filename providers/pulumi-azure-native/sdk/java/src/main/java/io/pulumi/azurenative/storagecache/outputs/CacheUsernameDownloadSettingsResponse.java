@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.storagecache.outputs;
 
 import io.pulumi.azurenative.storagecache.outputs.CacheUsernameDownloadSettingsResponseCredentials;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CacheUsernameDownloadSettingsResponse {
     /**
      * Determines if the certificate should be automatically downloaded. This applies to 'caCertificateURI' only if 'requireValidCertificate' is true.
@@ -74,20 +74,20 @@ public final class CacheUsernameDownloadSettingsResponse {
      */
     private final @Nullable String usernameSource;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CacheUsernameDownloadSettingsResponse(
-        @OutputCustomType.Parameter("autoDownloadCertificate") @Nullable Boolean autoDownloadCertificate,
-        @OutputCustomType.Parameter("caCertificateURI") @Nullable String caCertificateURI,
-        @OutputCustomType.Parameter("credentials") @Nullable CacheUsernameDownloadSettingsResponseCredentials credentials,
-        @OutputCustomType.Parameter("encryptLdapConnection") @Nullable Boolean encryptLdapConnection,
-        @OutputCustomType.Parameter("extendedGroups") @Nullable Boolean extendedGroups,
-        @OutputCustomType.Parameter("groupFileURI") @Nullable String groupFileURI,
-        @OutputCustomType.Parameter("ldapBaseDN") @Nullable String ldapBaseDN,
-        @OutputCustomType.Parameter("ldapServer") @Nullable String ldapServer,
-        @OutputCustomType.Parameter("requireValidCertificate") @Nullable Boolean requireValidCertificate,
-        @OutputCustomType.Parameter("userFileURI") @Nullable String userFileURI,
-        @OutputCustomType.Parameter("usernameDownloaded") String usernameDownloaded,
-        @OutputCustomType.Parameter("usernameSource") @Nullable String usernameSource) {
+        @CustomType.Parameter("autoDownloadCertificate") @Nullable Boolean autoDownloadCertificate,
+        @CustomType.Parameter("caCertificateURI") @Nullable String caCertificateURI,
+        @CustomType.Parameter("credentials") @Nullable CacheUsernameDownloadSettingsResponseCredentials credentials,
+        @CustomType.Parameter("encryptLdapConnection") @Nullable Boolean encryptLdapConnection,
+        @CustomType.Parameter("extendedGroups") @Nullable Boolean extendedGroups,
+        @CustomType.Parameter("groupFileURI") @Nullable String groupFileURI,
+        @CustomType.Parameter("ldapBaseDN") @Nullable String ldapBaseDN,
+        @CustomType.Parameter("ldapServer") @Nullable String ldapServer,
+        @CustomType.Parameter("requireValidCertificate") @Nullable Boolean requireValidCertificate,
+        @CustomType.Parameter("userFileURI") @Nullable String userFileURI,
+        @CustomType.Parameter("usernameDownloaded") String usernameDownloaded,
+        @CustomType.Parameter("usernameSource") @Nullable String usernameSource) {
         this.autoDownloadCertificate = autoDownloadCertificate;
         this.caCertificateURI = caCertificateURI;
         this.credentials = credentials;

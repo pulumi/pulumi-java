@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AutoScaleSettingsResponse {
     /**
      * Maximum number of instances for this deployment.
@@ -38,13 +38,13 @@ public final class AutoScaleSettingsResponse {
      */
     private final @Nullable Integer targetUtilizationPercentage;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AutoScaleSettingsResponse(
-        @OutputCustomType.Parameter("maxInstances") @Nullable Integer maxInstances,
-        @OutputCustomType.Parameter("minInstances") @Nullable Integer minInstances,
-        @OutputCustomType.Parameter("pollingInterval") @Nullable String pollingInterval,
-        @OutputCustomType.Parameter("scaleType") String scaleType,
-        @OutputCustomType.Parameter("targetUtilizationPercentage") @Nullable Integer targetUtilizationPercentage) {
+        @CustomType.Parameter("maxInstances") @Nullable Integer maxInstances,
+        @CustomType.Parameter("minInstances") @Nullable Integer minInstances,
+        @CustomType.Parameter("pollingInterval") @Nullable String pollingInterval,
+        @CustomType.Parameter("scaleType") String scaleType,
+        @CustomType.Parameter("targetUtilizationPercentage") @Nullable Integer targetUtilizationPercentage) {
         this.maxInstances = maxInstances;
         this.minInstances = minInstances;
         this.pollingInterval = pollingInterval;

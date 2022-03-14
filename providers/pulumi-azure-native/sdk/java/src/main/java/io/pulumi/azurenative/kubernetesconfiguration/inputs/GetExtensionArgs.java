@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.kubernetesconfiguration.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetExtensionArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the kubernetes cluster.
      * 
      */
-    @InputImport(name="clusterName", required=true)
+    @Import(name="clusterName", required=true)
       private final String clusterName;
 
     public String getClusterName() {
@@ -27,7 +27,7 @@ public final class GetExtensionArgs extends io.pulumi.resources.InvokeArgs {
      * The Kubernetes cluster resource name - either managedClusters (for AKS clusters) or connectedClusters (for OnPrem K8S clusters).
      * 
      */
-    @InputImport(name="clusterResourceName", required=true)
+    @Import(name="clusterResourceName", required=true)
       private final String clusterResourceName;
 
     public String getClusterResourceName() {
@@ -38,7 +38,7 @@ public final class GetExtensionArgs extends io.pulumi.resources.InvokeArgs {
      * The Kubernetes cluster RP - either Microsoft.ContainerService (for AKS clusters) or Microsoft.Kubernetes (for OnPrem K8S clusters).
      * 
      */
-    @InputImport(name="clusterRp", required=true)
+    @Import(name="clusterRp", required=true)
       private final String clusterRp;
 
     public String getClusterRp() {
@@ -49,7 +49,7 @@ public final class GetExtensionArgs extends io.pulumi.resources.InvokeArgs {
      * Name of an instance of the Extension.
      * 
      */
-    @InputImport(name="extensionInstanceName", required=true)
+    @Import(name="extensionInstanceName", required=true)
       private final String extensionInstanceName;
 
     public String getExtensionInstanceName() {
@@ -60,7 +60,7 @@ public final class GetExtensionArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {

@@ -8,7 +8,7 @@ import io.pulumi.azurenative.operationalinsights.outputs.CapacityReservationProp
 import io.pulumi.azurenative.operationalinsights.outputs.ClusterSkuResponse;
 import io.pulumi.azurenative.operationalinsights.outputs.IdentityResponse;
 import io.pulumi.azurenative.operationalinsights.outputs.KeyVaultPropertiesResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -17,7 +17,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetClusterResult {
     /**
      * The list of Log Analytics workspaces associated with the cluster
@@ -100,24 +100,24 @@ public final class GetClusterResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetClusterResult(
-        @OutputCustomType.Parameter("associatedWorkspaces") @Nullable List<AssociatedWorkspaceResponse> associatedWorkspaces,
-        @OutputCustomType.Parameter("billingType") @Nullable String billingType,
-        @OutputCustomType.Parameter("capacityReservationProperties") @Nullable CapacityReservationPropertiesResponse capacityReservationProperties,
-        @OutputCustomType.Parameter("clusterId") String clusterId,
-        @OutputCustomType.Parameter("createdDate") String createdDate,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("identity") @Nullable IdentityResponse identity,
-        @OutputCustomType.Parameter("isAvailabilityZonesEnabled") @Nullable Boolean isAvailabilityZonesEnabled,
-        @OutputCustomType.Parameter("keyVaultProperties") @Nullable KeyVaultPropertiesResponse keyVaultProperties,
-        @OutputCustomType.Parameter("lastModifiedDate") String lastModifiedDate,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("sku") @Nullable ClusterSkuResponse sku,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("associatedWorkspaces") @Nullable List<AssociatedWorkspaceResponse> associatedWorkspaces,
+        @CustomType.Parameter("billingType") @Nullable String billingType,
+        @CustomType.Parameter("capacityReservationProperties") @Nullable CapacityReservationPropertiesResponse capacityReservationProperties,
+        @CustomType.Parameter("clusterId") String clusterId,
+        @CustomType.Parameter("createdDate") String createdDate,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("identity") @Nullable IdentityResponse identity,
+        @CustomType.Parameter("isAvailabilityZonesEnabled") @Nullable Boolean isAvailabilityZonesEnabled,
+        @CustomType.Parameter("keyVaultProperties") @Nullable KeyVaultPropertiesResponse keyVaultProperties,
+        @CustomType.Parameter("lastModifiedDate") String lastModifiedDate,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("sku") @Nullable ClusterSkuResponse sku,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type) {
         this.associatedWorkspaces = associatedWorkspaces;
         this.billingType = billingType;
         this.capacityReservationProperties = capacityReservationProperties;

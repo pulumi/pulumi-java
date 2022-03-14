@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.SubResourceArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ApplicationGatewayPathRuleArgs extends io.pulumi.resources.Re
      * Backend address pool resource of URL path map path rule.
      * 
      */
-    @InputImport(name="backendAddressPool")
+    @Import(name="backendAddressPool")
       private final @Nullable Output<SubResourceArgs> backendAddressPool;
 
     public Output<SubResourceArgs> getBackendAddressPool() {
@@ -35,7 +35,7 @@ public final class ApplicationGatewayPathRuleArgs extends io.pulumi.resources.Re
      * Backend http settings resource of URL path map path rule.
      * 
      */
-    @InputImport(name="backendHttpSettings")
+    @Import(name="backendHttpSettings")
       private final @Nullable Output<SubResourceArgs> backendHttpSettings;
 
     public Output<SubResourceArgs> getBackendHttpSettings() {
@@ -46,7 +46,7 @@ public final class ApplicationGatewayPathRuleArgs extends io.pulumi.resources.Re
      * Reference to the FirewallPolicy resource.
      * 
      */
-    @InputImport(name="firewallPolicy")
+    @Import(name="firewallPolicy")
       private final @Nullable Output<SubResourceArgs> firewallPolicy;
 
     public Output<SubResourceArgs> getFirewallPolicy() {
@@ -57,7 +57,7 @@ public final class ApplicationGatewayPathRuleArgs extends io.pulumi.resources.Re
      * Resource ID.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
@@ -68,7 +68,7 @@ public final class ApplicationGatewayPathRuleArgs extends io.pulumi.resources.Re
      * Name of the path rule that is unique within an Application Gateway.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -79,7 +79,7 @@ public final class ApplicationGatewayPathRuleArgs extends io.pulumi.resources.Re
      * Path rules of URL path map.
      * 
      */
-    @InputImport(name="paths")
+    @Import(name="paths")
       private final @Nullable Output<List<String>> paths;
 
     public Output<List<String>> getPaths() {
@@ -90,7 +90,7 @@ public final class ApplicationGatewayPathRuleArgs extends io.pulumi.resources.Re
      * Redirect configuration resource of URL path map path rule.
      * 
      */
-    @InputImport(name="redirectConfiguration")
+    @Import(name="redirectConfiguration")
       private final @Nullable Output<SubResourceArgs> redirectConfiguration;
 
     public Output<SubResourceArgs> getRedirectConfiguration() {
@@ -101,7 +101,7 @@ public final class ApplicationGatewayPathRuleArgs extends io.pulumi.resources.Re
      * Rewrite rule set resource of URL path map path rule.
      * 
      */
-    @InputImport(name="rewriteRuleSet")
+    @Import(name="rewriteRuleSet")
       private final @Nullable Output<SubResourceArgs> rewriteRuleSet;
 
     public Output<SubResourceArgs> getRewriteRuleSet() {

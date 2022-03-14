@@ -5,7 +5,7 @@ package io.pulumi.azurenative.machinelearningservices.outputs;
 
 import io.pulumi.azurenative.machinelearningservices.outputs.ContainerResourceRequirementsResponse;
 import io.pulumi.azurenative.machinelearningservices.outputs.DatasetReferenceResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -15,7 +15,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ModelResponse {
     /**
      * The Model creation time (UTC).
@@ -123,29 +123,29 @@ public final class ModelResponse {
      */
     private final @Nullable Double version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ModelResponse(
-        @OutputCustomType.Parameter("createdTime") @Nullable String createdTime,
-        @OutputCustomType.Parameter("datasets") @Nullable List<DatasetReferenceResponse> datasets,
-        @OutputCustomType.Parameter("derivedModelIds") @Nullable List<String> derivedModelIds,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("experimentName") @Nullable String experimentName,
-        @OutputCustomType.Parameter("framework") @Nullable String framework,
-        @OutputCustomType.Parameter("frameworkVersion") @Nullable String frameworkVersion,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("kvTags") @Nullable Map<String,String> kvTags,
-        @OutputCustomType.Parameter("mimeType") String mimeType,
-        @OutputCustomType.Parameter("modifiedTime") @Nullable String modifiedTime,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("parentModelId") @Nullable String parentModelId,
-        @OutputCustomType.Parameter("properties") @Nullable Map<String,String> properties,
-        @OutputCustomType.Parameter("resourceRequirements") @Nullable ContainerResourceRequirementsResponse resourceRequirements,
-        @OutputCustomType.Parameter("runId") @Nullable String runId,
-        @OutputCustomType.Parameter("sampleInputData") @Nullable String sampleInputData,
-        @OutputCustomType.Parameter("sampleOutputData") @Nullable String sampleOutputData,
-        @OutputCustomType.Parameter("unpack") @Nullable Boolean unpack,
-        @OutputCustomType.Parameter("url") String url,
-        @OutputCustomType.Parameter("version") @Nullable Double version) {
+        @CustomType.Parameter("createdTime") @Nullable String createdTime,
+        @CustomType.Parameter("datasets") @Nullable List<DatasetReferenceResponse> datasets,
+        @CustomType.Parameter("derivedModelIds") @Nullable List<String> derivedModelIds,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("experimentName") @Nullable String experimentName,
+        @CustomType.Parameter("framework") @Nullable String framework,
+        @CustomType.Parameter("frameworkVersion") @Nullable String frameworkVersion,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("kvTags") @Nullable Map<String,String> kvTags,
+        @CustomType.Parameter("mimeType") String mimeType,
+        @CustomType.Parameter("modifiedTime") @Nullable String modifiedTime,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("parentModelId") @Nullable String parentModelId,
+        @CustomType.Parameter("properties") @Nullable Map<String,String> properties,
+        @CustomType.Parameter("resourceRequirements") @Nullable ContainerResourceRequirementsResponse resourceRequirements,
+        @CustomType.Parameter("runId") @Nullable String runId,
+        @CustomType.Parameter("sampleInputData") @Nullable String sampleInputData,
+        @CustomType.Parameter("sampleOutputData") @Nullable String sampleOutputData,
+        @CustomType.Parameter("unpack") @Nullable Boolean unpack,
+        @CustomType.Parameter("url") String url,
+        @CustomType.Parameter("version") @Nullable Double version) {
         this.createdTime = createdTime;
         this.datasets = datasets;
         this.derivedModelIds = derivedModelIds;

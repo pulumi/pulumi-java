@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.storsimple.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ListManagerPublicEncryptionKeyResult {
     /**
      * The algorithm used to encrypt the "Value".
@@ -27,11 +27,11 @@ public final class ListManagerPublicEncryptionKeyResult {
      */
     private final @Nullable String valueCertificateThumbprint;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ListManagerPublicEncryptionKeyResult(
-        @OutputCustomType.Parameter("encryptionAlgorithm") String encryptionAlgorithm,
-        @OutputCustomType.Parameter("value") String value,
-        @OutputCustomType.Parameter("valueCertificateThumbprint") @Nullable String valueCertificateThumbprint) {
+        @CustomType.Parameter("encryptionAlgorithm") String encryptionAlgorithm,
+        @CustomType.Parameter("value") String value,
+        @CustomType.Parameter("valueCertificateThumbprint") @Nullable String valueCertificateThumbprint) {
         this.encryptionAlgorithm = encryptionAlgorithm;
         this.value = value;
         this.valueCertificateThumbprint = valueCertificateThumbprint;

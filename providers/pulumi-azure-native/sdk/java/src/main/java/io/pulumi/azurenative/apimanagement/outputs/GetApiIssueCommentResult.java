@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.apimanagement.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetApiIssueCommentResult {
     /**
      * Date and time when the comment was created.
@@ -42,14 +42,14 @@ public final class GetApiIssueCommentResult {
      */
     private final String userId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetApiIssueCommentResult(
-        @OutputCustomType.Parameter("createdDate") @Nullable String createdDate,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("text") String text,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("userId") String userId) {
+        @CustomType.Parameter("createdDate") @Nullable String createdDate,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("text") String text,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("userId") String userId) {
         this.createdDate = createdDate;
         this.id = id;
         this.name = name;

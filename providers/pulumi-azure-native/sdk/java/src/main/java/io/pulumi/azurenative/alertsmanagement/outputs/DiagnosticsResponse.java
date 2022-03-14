@@ -5,13 +5,13 @@ package io.pulumi.azurenative.alertsmanagement.outputs;
 
 import io.pulumi.azurenative.alertsmanagement.outputs.ConditionsResponse;
 import io.pulumi.azurenative.alertsmanagement.outputs.ScopeResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DiagnosticsResponse {
     /**
      * conditions on which alerts will be filtered
@@ -60,17 +60,17 @@ public final class DiagnosticsResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DiagnosticsResponse(
-        @OutputCustomType.Parameter("conditions") @Nullable ConditionsResponse conditions,
-        @OutputCustomType.Parameter("createdAt") String createdAt,
-        @OutputCustomType.Parameter("createdBy") String createdBy,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("lastModifiedAt") String lastModifiedAt,
-        @OutputCustomType.Parameter("lastModifiedBy") String lastModifiedBy,
-        @OutputCustomType.Parameter("scope") @Nullable ScopeResponse scope,
-        @OutputCustomType.Parameter("status") @Nullable String status,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("conditions") @Nullable ConditionsResponse conditions,
+        @CustomType.Parameter("createdAt") String createdAt,
+        @CustomType.Parameter("createdBy") String createdBy,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("lastModifiedAt") String lastModifiedAt,
+        @CustomType.Parameter("lastModifiedBy") String lastModifiedBy,
+        @CustomType.Parameter("scope") @Nullable ScopeResponse scope,
+        @CustomType.Parameter("status") @Nullable String status,
+        @CustomType.Parameter("type") String type) {
         this.conditions = conditions;
         this.createdAt = createdAt;
         this.createdBy = createdBy;

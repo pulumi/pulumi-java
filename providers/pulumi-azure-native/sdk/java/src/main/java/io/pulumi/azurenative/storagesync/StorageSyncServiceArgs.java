@@ -6,7 +6,7 @@ package io.pulumi.azurenative.storagesync;
 import io.pulumi.azurenative.storagesync.enums.IncomingTrafficPolicy;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class StorageSyncServiceArgs extends io.pulumi.resources.ResourceAr
      * Incoming Traffic Policy
      * 
      */
-    @InputImport(name="incomingTrafficPolicy")
+    @Import(name="incomingTrafficPolicy")
       private final @Nullable Output<Either<String,IncomingTrafficPolicy>> incomingTrafficPolicy;
 
     public Output<Either<String,IncomingTrafficPolicy>> getIncomingTrafficPolicy() {
@@ -32,7 +32,7 @@ public final class StorageSyncServiceArgs extends io.pulumi.resources.ResourceAr
      * Required. Gets or sets the location of the resource. This will be one of the supported and registered Azure Geo Regions (e.g. West US, East US, Southeast Asia, etc.). The geo region of a resource cannot be changed once it is created, but if an identical geo region is specified on update, the request will succeed.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -43,7 +43,7 @@ public final class StorageSyncServiceArgs extends io.pulumi.resources.ResourceAr
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -54,7 +54,7 @@ public final class StorageSyncServiceArgs extends io.pulumi.resources.ResourceAr
      * Name of Storage Sync Service resource.
      * 
      */
-    @InputImport(name="storageSyncServiceName")
+    @Import(name="storageSyncServiceName")
       private final @Nullable Output<String> storageSyncServiceName;
 
     public Output<String> getStorageSyncServiceName() {
@@ -65,7 +65,7 @@ public final class StorageSyncServiceArgs extends io.pulumi.resources.ResourceAr
      * Gets or sets a list of key value pairs that describe the resource. These tags can be used for viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key with a length no greater than 128 characters and a value with a length no greater than 256 characters.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

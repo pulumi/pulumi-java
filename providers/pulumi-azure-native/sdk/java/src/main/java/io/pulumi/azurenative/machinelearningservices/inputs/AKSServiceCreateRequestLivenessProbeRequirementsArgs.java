@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class AKSServiceCreateRequestLivenessProbeRequirementsArgs extends 
      * The number of failures to allow before returning an unhealthy status.
      * 
      */
-    @InputImport(name="failureThreshold")
+    @Import(name="failureThreshold")
       private final @Nullable Output<Integer> failureThreshold;
 
     public Output<Integer> getFailureThreshold() {
@@ -33,7 +33,7 @@ public final class AKSServiceCreateRequestLivenessProbeRequirementsArgs extends 
      * The delay before the first probe in seconds.
      * 
      */
-    @InputImport(name="initialDelaySeconds")
+    @Import(name="initialDelaySeconds")
       private final @Nullable Output<Integer> initialDelaySeconds;
 
     public Output<Integer> getInitialDelaySeconds() {
@@ -44,7 +44,7 @@ public final class AKSServiceCreateRequestLivenessProbeRequirementsArgs extends 
      * The length of time between probes in seconds.
      * 
      */
-    @InputImport(name="periodSeconds")
+    @Import(name="periodSeconds")
       private final @Nullable Output<Integer> periodSeconds;
 
     public Output<Integer> getPeriodSeconds() {
@@ -55,7 +55,7 @@ public final class AKSServiceCreateRequestLivenessProbeRequirementsArgs extends 
      * The number of successful probes before returning a healthy status.
      * 
      */
-    @InputImport(name="successThreshold")
+    @Import(name="successThreshold")
       private final @Nullable Output<Integer> successThreshold;
 
     public Output<Integer> getSuccessThreshold() {
@@ -66,7 +66,7 @@ public final class AKSServiceCreateRequestLivenessProbeRequirementsArgs extends 
      * The probe timeout in seconds.
      * 
      */
-    @InputImport(name="timeoutSeconds")
+    @Import(name="timeoutSeconds")
       private final @Nullable Output<Integer> timeoutSeconds;
 
     public Output<Integer> getTimeoutSeconds() {

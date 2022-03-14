@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.insights.outputs;
 
 import io.pulumi.azurenative.insights.outputs.DimensionResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CriteriaResponse {
     /**
      * List of Dimensions for creating metric
@@ -23,10 +23,10 @@ public final class CriteriaResponse {
      */
     private final String metricName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CriteriaResponse(
-        @OutputCustomType.Parameter("dimensions") @Nullable List<DimensionResponse> dimensions,
-        @OutputCustomType.Parameter("metricName") String metricName) {
+        @CustomType.Parameter("dimensions") @Nullable List<DimensionResponse> dimensions,
+        @CustomType.Parameter("metricName") String metricName) {
         this.dimensions = dimensions;
         this.metricName = metricName;
     }

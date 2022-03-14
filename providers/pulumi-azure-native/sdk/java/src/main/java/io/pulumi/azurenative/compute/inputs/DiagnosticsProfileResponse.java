@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.azurenative.compute.inputs.BootDiagnosticsResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class DiagnosticsProfileResponse extends io.pulumi.resources.Invoke
      * Boot Diagnostics is a debugging feature which allows you to view Console Output and Screenshot to diagnose VM status. <br><br> You can easily view the output of your console log. <br><br> Azure also enables you to see a screenshot of the VM from the hypervisor.
      * 
      */
-    @InputImport(name="bootDiagnostics")
+    @Import(name="bootDiagnostics")
       private final @Nullable BootDiagnosticsResponse bootDiagnostics;
 
     public Optional<BootDiagnosticsResponse> getBootDiagnostics() {

@@ -8,7 +8,7 @@ import io.pulumi.azurenative.eventgrid.PartnerRegistrationArgs;
 import io.pulumi.azurenative.eventgrid.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -39,7 +39,7 @@ public class PartnerRegistration extends io.pulumi.resources.CustomResource {
      * for creating the partner registration.
      * 
      */
-    @OutputExport(name="authorizedAzureSubscriptionIds", type=List.class, parameters={String.class})
+    @Export(name="authorizedAzureSubscriptionIds", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> authorizedAzureSubscriptionIds;
 
     /**
@@ -56,7 +56,7 @@ public class PartnerRegistration extends io.pulumi.resources.CustomResource {
      * The extension of the customer service URI of the publisher.
      * 
      */
-    @OutputExport(name="customerServiceUri", type=String.class, parameters={})
+    @Export(name="customerServiceUri", type=String.class, parameters={})
     private Output</* @Nullable */ String> customerServiceUri;
 
     /**
@@ -70,7 +70,7 @@ public class PartnerRegistration extends io.pulumi.resources.CustomResource {
      * Location of the resource.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -84,7 +84,7 @@ public class PartnerRegistration extends io.pulumi.resources.CustomResource {
      * URI of the logo.
      * 
      */
-    @OutputExport(name="logoUri", type=String.class, parameters={})
+    @Export(name="logoUri", type=String.class, parameters={})
     private Output</* @Nullable */ String> logoUri;
 
     /**
@@ -99,7 +99,7 @@ public class PartnerRegistration extends io.pulumi.resources.CustomResource {
      * Length of this description should not exceed 2048 characters.
      * 
      */
-    @OutputExport(name="longDescription", type=String.class, parameters={})
+    @Export(name="longDescription", type=String.class, parameters={})
     private Output</* @Nullable */ String> longDescription;
 
     /**
@@ -114,7 +114,7 @@ public class PartnerRegistration extends io.pulumi.resources.CustomResource {
      * Name of the resource.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -128,7 +128,7 @@ public class PartnerRegistration extends io.pulumi.resources.CustomResource {
      * The extension of the customer service number of the publisher. Only digits are allowed and number of digits should not exceed 10.
      * 
      */
-    @OutputExport(name="partnerCustomerServiceExtension", type=String.class, parameters={})
+    @Export(name="partnerCustomerServiceExtension", type=String.class, parameters={})
     private Output</* @Nullable */ String> partnerCustomerServiceExtension;
 
     /**
@@ -145,7 +145,7 @@ public class PartnerRegistration extends io.pulumi.resources.CustomResource {
      * +966 7 5115 2471. Examples of invalid phone numbers are: +1 (515) 123-4567, 1 515 123 4567 and +966 121 5115 24 7 551 1234 43
      * 
      */
-    @OutputExport(name="partnerCustomerServiceNumber", type=String.class, parameters={})
+    @Export(name="partnerCustomerServiceNumber", type=String.class, parameters={})
     private Output</* @Nullable */ String> partnerCustomerServiceNumber;
 
     /**
@@ -162,7 +162,7 @@ public class PartnerRegistration extends io.pulumi.resources.CustomResource {
      * Official name of the partner name. For example: "Contoso".
      * 
      */
-    @OutputExport(name="partnerName", type=String.class, parameters={})
+    @Export(name="partnerName", type=String.class, parameters={})
     private Output</* @Nullable */ String> partnerName;
 
     /**
@@ -176,7 +176,7 @@ public class PartnerRegistration extends io.pulumi.resources.CustomResource {
      * Short description of the partner resource type. The length of this description should not exceed 256 characters.
      * 
      */
-    @OutputExport(name="partnerResourceTypeDescription", type=String.class, parameters={})
+    @Export(name="partnerResourceTypeDescription", type=String.class, parameters={})
     private Output</* @Nullable */ String> partnerResourceTypeDescription;
 
     /**
@@ -190,7 +190,7 @@ public class PartnerRegistration extends io.pulumi.resources.CustomResource {
      * Display name of the partner resource type.
      * 
      */
-    @OutputExport(name="partnerResourceTypeDisplayName", type=String.class, parameters={})
+    @Export(name="partnerResourceTypeDisplayName", type=String.class, parameters={})
     private Output</* @Nullable */ String> partnerResourceTypeDisplayName;
 
     /**
@@ -204,7 +204,7 @@ public class PartnerRegistration extends io.pulumi.resources.CustomResource {
      * Name of the partner resource type.
      * 
      */
-    @OutputExport(name="partnerResourceTypeName", type=String.class, parameters={})
+    @Export(name="partnerResourceTypeName", type=String.class, parameters={})
     private Output</* @Nullable */ String> partnerResourceTypeName;
 
     /**
@@ -218,7 +218,7 @@ public class PartnerRegistration extends io.pulumi.resources.CustomResource {
      * Provisioning state of the partner registration.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -233,7 +233,7 @@ public class PartnerRegistration extends io.pulumi.resources.CustomResource {
      * integration on an event source.
      * 
      */
-    @OutputExport(name="setupUri", type=String.class, parameters={})
+    @Export(name="setupUri", type=String.class, parameters={})
     private Output</* @Nullable */ String> setupUri;
 
     /**
@@ -248,7 +248,7 @@ public class PartnerRegistration extends io.pulumi.resources.CustomResource {
      * The system metadata relating to Partner Registration resource.
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -262,7 +262,7 @@ public class PartnerRegistration extends io.pulumi.resources.CustomResource {
      * Tags of the resource.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -276,7 +276,7 @@ public class PartnerRegistration extends io.pulumi.resources.CustomResource {
      * Type of the resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -290,7 +290,7 @@ public class PartnerRegistration extends io.pulumi.resources.CustomResource {
      * Visibility state of the partner registration.
      * 
      */
-    @OutputExport(name="visibilityState", type=String.class, parameters={})
+    @Export(name="visibilityState", type=String.class, parameters={})
     private Output</* @Nullable */ String> visibilityState;
 
     /**

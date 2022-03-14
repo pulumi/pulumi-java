@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.datafactory.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ExecuteDataFlowActivityTypePropertiesResponseCompute {
     /**
      * Compute type of the cluster which will execute data flow job. Possible values include: 'General', 'MemoryOptimized', 'ComputeOptimized'. Type: string (or Expression with resultType string)
@@ -22,10 +22,10 @@ public final class ExecuteDataFlowActivityTypePropertiesResponseCompute {
      */
     private final @Nullable Object coreCount;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ExecuteDataFlowActivityTypePropertiesResponseCompute(
-        @OutputCustomType.Parameter("computeType") @Nullable Object computeType,
-        @OutputCustomType.Parameter("coreCount") @Nullable Object coreCount) {
+        @CustomType.Parameter("computeType") @Nullable Object computeType,
+        @CustomType.Parameter("coreCount") @Nullable Object coreCount) {
         this.computeType = computeType;
         this.coreCount = coreCount;
     }

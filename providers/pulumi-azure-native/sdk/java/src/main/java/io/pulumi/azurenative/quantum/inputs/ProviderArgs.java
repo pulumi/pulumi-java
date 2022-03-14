@@ -6,7 +6,7 @@ package io.pulumi.azurenative.quantum.inputs;
 import io.pulumi.azurenative.quantum.enums.Status;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * The provider's marketplace application display name.
      * 
      */
-    @InputImport(name="applicationName")
+    @Import(name="applicationName")
       private final @Nullable Output<String> applicationName;
 
     public Output<String> getApplicationName() {
@@ -35,7 +35,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * A Uri identifying the specific instance of this provider.
      * 
      */
-    @InputImport(name="instanceUri")
+    @Import(name="instanceUri")
       private final @Nullable Output<String> instanceUri;
 
     public Output<String> getInstanceUri() {
@@ -46,7 +46,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * Unique id of this provider.
      * 
      */
-    @InputImport(name="providerId")
+    @Import(name="providerId")
       private final @Nullable Output<String> providerId;
 
     public Output<String> getProviderId() {
@@ -57,7 +57,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * The sku associated with pricing information for this provider.
      * 
      */
-    @InputImport(name="providerSku")
+    @Import(name="providerSku")
       private final @Nullable Output<String> providerSku;
 
     public Output<String> getProviderSku() {
@@ -68,7 +68,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * Provisioning status field
      * 
      */
-    @InputImport(name="provisioningState")
+    @Import(name="provisioningState")
       private final @Nullable Output<Either<String,Status>> provisioningState;
 
     public Output<Either<String,Status>> getProvisioningState() {
@@ -79,7 +79,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * Id to track resource usage for the provider.
      * 
      */
-    @InputImport(name="resourceUsageId")
+    @Import(name="resourceUsageId")
       private final @Nullable Output<String> resourceUsageId;
 
     public Output<String> getResourceUsageId() {

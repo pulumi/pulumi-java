@@ -6,7 +6,7 @@ package io.pulumi.azurenative.cdn;
 import io.pulumi.azurenative.cdn.enums.EnabledState;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -22,7 +22,7 @@ public final class AFDEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * Whether to enable use of this rule. Permitted values are 'Enabled' or 'Disabled'
      * 
      */
-    @InputImport(name="enabledState")
+    @Import(name="enabledState")
       private final @Nullable Output<Either<String,EnabledState>> enabledState;
 
     public Output<Either<String,EnabledState>> getEnabledState() {
@@ -33,7 +33,7 @@ public final class AFDEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the endpoint under the profile which is unique globally.
      * 
      */
-    @InputImport(name="endpointName")
+    @Import(name="endpointName")
       private final @Nullable Output<String> endpointName;
 
     public Output<String> getEndpointName() {
@@ -44,7 +44,7 @@ public final class AFDEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * Resource location.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -55,7 +55,7 @@ public final class AFDEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * Send and receive timeout on forwarding request to the origin. When timeout is reached, the request fails and returns.
      * 
      */
-    @InputImport(name="originResponseTimeoutSeconds")
+    @Import(name="originResponseTimeoutSeconds")
       private final @Nullable Output<Integer> originResponseTimeoutSeconds;
 
     public Output<Integer> getOriginResponseTimeoutSeconds() {
@@ -66,7 +66,7 @@ public final class AFDEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the CDN profile which is unique within the resource group.
      * 
      */
-    @InputImport(name="profileName", required=true)
+    @Import(name="profileName", required=true)
       private final Output<String> profileName;
 
     public Output<String> getProfileName() {
@@ -77,7 +77,7 @@ public final class AFDEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the Resource group within the Azure subscription.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -88,7 +88,7 @@ public final class AFDEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * Resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

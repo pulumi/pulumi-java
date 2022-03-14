@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class WeeklyRetentionFormatResponse extends io.pulumi.resources.Inv
      * List of days of the week.
      * 
      */
-    @InputImport(name="daysOfTheWeek")
+    @Import(name="daysOfTheWeek")
       private final @Nullable List<String> daysOfTheWeek;
 
     public List<String> getDaysOfTheWeek() {
@@ -34,7 +34,7 @@ public final class WeeklyRetentionFormatResponse extends io.pulumi.resources.Inv
      * List of weeks of month.
      * 
      */
-    @InputImport(name="weeksOfTheMonth")
+    @Import(name="weeksOfTheMonth")
       private final @Nullable List<String> weeksOfTheMonth;
 
     public List<String> getWeeksOfTheMonth() {

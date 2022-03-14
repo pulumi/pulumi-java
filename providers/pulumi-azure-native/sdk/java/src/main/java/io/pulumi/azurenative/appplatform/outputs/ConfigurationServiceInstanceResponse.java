@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.appplatform.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ConfigurationServiceInstanceResponse {
     /**
      * Name of the Application Configuration Service instance
@@ -20,10 +20,10 @@ public final class ConfigurationServiceInstanceResponse {
      */
     private final String status;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ConfigurationServiceInstanceResponse(
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("status") String status) {
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("status") String status) {
         this.name = name;
         this.status = status;
     }

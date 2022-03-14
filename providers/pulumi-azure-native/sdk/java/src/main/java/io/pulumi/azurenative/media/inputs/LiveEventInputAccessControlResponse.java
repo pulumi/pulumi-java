@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.media.inputs;
 
 import io.pulumi.azurenative.media.inputs.IPAccessControlResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class LiveEventInputAccessControlResponse extends io.pulumi.resourc
      * The IP access control properties.
      * 
      */
-    @InputImport(name="ip")
+    @Import(name="ip")
       private final @Nullable IPAccessControlResponse ip;
 
     public Optional<IPAccessControlResponse> getIp() {

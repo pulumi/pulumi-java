@@ -6,7 +6,7 @@ package io.pulumi.azurenative.saas.inputs;
 import io.pulumi.azurenative.saas.enums.PaymentChannelType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -27,7 +27,7 @@ public final class SaasCreationPropertiesArgs extends io.pulumi.resources.Resour
      * Whether the SaaS subscription will auto renew upon term end.
      * 
      */
-    @InputImport(name="autoRenew")
+    @Import(name="autoRenew")
       private final @Nullable Output<Boolean> autoRenew;
 
     public Output<Boolean> getAutoRenew() {
@@ -38,7 +38,7 @@ public final class SaasCreationPropertiesArgs extends io.pulumi.resources.Resour
      * The offer id.
      * 
      */
-    @InputImport(name="offerId")
+    @Import(name="offerId")
       private final @Nullable Output<String> offerId;
 
     public Output<String> getOfferId() {
@@ -49,7 +49,7 @@ public final class SaasCreationPropertiesArgs extends io.pulumi.resources.Resour
      * The metadata about the SaaS subscription such as the AzureSubscriptionId and ResourceUri.
      * 
      */
-    @InputImport(name="paymentChannelMetadata")
+    @Import(name="paymentChannelMetadata")
       private final @Nullable Output<Map<String,String>> paymentChannelMetadata;
 
     public Output<Map<String,String>> getPaymentChannelMetadata() {
@@ -60,7 +60,7 @@ public final class SaasCreationPropertiesArgs extends io.pulumi.resources.Resour
      * The Payment channel for the SaasSubscription.
      * 
      */
-    @InputImport(name="paymentChannelType")
+    @Import(name="paymentChannelType")
       private final @Nullable Output<Either<String,PaymentChannelType>> paymentChannelType;
 
     public Output<Either<String,PaymentChannelType>> getPaymentChannelType() {
@@ -71,7 +71,7 @@ public final class SaasCreationPropertiesArgs extends io.pulumi.resources.Resour
      * The publisher id.
      * 
      */
-    @InputImport(name="publisherId")
+    @Import(name="publisherId")
       private final @Nullable Output<String> publisherId;
 
     public Output<String> getPublisherId() {
@@ -82,7 +82,7 @@ public final class SaasCreationPropertiesArgs extends io.pulumi.resources.Resour
      * The environment in the publisher side for this resource.
      * 
      */
-    @InputImport(name="publisherTestEnvironment")
+    @Import(name="publisherTestEnvironment")
       private final @Nullable Output<String> publisherTestEnvironment;
 
     public Output<String> getPublisherTestEnvironment() {
@@ -93,7 +93,7 @@ public final class SaasCreationPropertiesArgs extends io.pulumi.resources.Resour
      * The seat count.
      * 
      */
-    @InputImport(name="quantity")
+    @Import(name="quantity")
       private final @Nullable Output<Double> quantity;
 
     public Output<Double> getQuantity() {
@@ -104,7 +104,7 @@ public final class SaasCreationPropertiesArgs extends io.pulumi.resources.Resour
      * The SaaS resource name.
      * 
      */
-    @InputImport(name="saasResourceName")
+    @Import(name="saasResourceName")
       private final @Nullable Output<String> saasResourceName;
 
     public Output<String> getSaasResourceName() {
@@ -115,7 +115,7 @@ public final class SaasCreationPropertiesArgs extends io.pulumi.resources.Resour
      * The saas session id used for dev service migration request.
      * 
      */
-    @InputImport(name="saasSessionId")
+    @Import(name="saasSessionId")
       private final @Nullable Output<String> saasSessionId;
 
     public Output<String> getSaasSessionId() {
@@ -126,7 +126,7 @@ public final class SaasCreationPropertiesArgs extends io.pulumi.resources.Resour
      * The saas subscription id used for tenant to subscription level migration request.
      * 
      */
-    @InputImport(name="saasSubscriptionId")
+    @Import(name="saasSubscriptionId")
       private final @Nullable Output<String> saasSubscriptionId;
 
     public Output<String> getSaasSubscriptionId() {
@@ -137,7 +137,7 @@ public final class SaasCreationPropertiesArgs extends io.pulumi.resources.Resour
      * The plan id.
      * 
      */
-    @InputImport(name="skuId")
+    @Import(name="skuId")
       private final @Nullable Output<String> skuId;
 
     public Output<String> getSkuId() {
@@ -148,7 +148,7 @@ public final class SaasCreationPropertiesArgs extends io.pulumi.resources.Resour
      * The current Term id.
      * 
      */
-    @InputImport(name="termId")
+    @Import(name="termId")
       private final @Nullable Output<String> termId;
 
     public Output<String> getTermId() {

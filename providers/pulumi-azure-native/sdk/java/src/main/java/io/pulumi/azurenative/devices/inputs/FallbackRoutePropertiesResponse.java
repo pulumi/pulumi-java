@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.devices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class FallbackRoutePropertiesResponse extends io.pulumi.resources.I
      * The condition which is evaluated in order to apply the fallback route. If the condition is not provided it will evaluate to true by default. For grammar, See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-query-language
      * 
      */
-    @InputImport(name="condition")
+    @Import(name="condition")
       private final @Nullable String condition;
 
     public Optional<String> getCondition() {
@@ -35,7 +35,7 @@ public final class FallbackRoutePropertiesResponse extends io.pulumi.resources.I
      * The list of endpoints to which the messages that satisfy the condition are routed to. Currently only 1 endpoint is allowed.
      * 
      */
-    @InputImport(name="endpointNames", required=true)
+    @Import(name="endpointNames", required=true)
       private final List<String> endpointNames;
 
     public List<String> getEndpointNames() {
@@ -46,7 +46,7 @@ public final class FallbackRoutePropertiesResponse extends io.pulumi.resources.I
      * Used to specify whether the fallback route is enabled.
      * 
      */
-    @InputImport(name="isEnabled", required=true)
+    @Import(name="isEnabled", required=true)
       private final Boolean isEnabled;
 
     public Boolean getIsEnabled() {
@@ -57,7 +57,7 @@ public final class FallbackRoutePropertiesResponse extends io.pulumi.resources.I
      * The name of the route. The name can only include alphanumeric characters, periods, underscores, hyphens, has a maximum length of 64 characters, and must be unique.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -68,7 +68,7 @@ public final class FallbackRoutePropertiesResponse extends io.pulumi.resources.I
      * The source to which the routing rule is to be applied to. For example, DeviceMessages
      * 
      */
-    @InputImport(name="source", required=true)
+    @Import(name="source", required=true)
       private final String source;
 
     public String getSource() {

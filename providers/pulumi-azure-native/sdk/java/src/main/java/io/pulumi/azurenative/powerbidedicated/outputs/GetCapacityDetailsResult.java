@@ -6,14 +6,14 @@ package io.pulumi.azurenative.powerbidedicated.outputs;
 import io.pulumi.azurenative.powerbidedicated.outputs.CapacitySkuResponse;
 import io.pulumi.azurenative.powerbidedicated.outputs.DedicatedCapacityAdministratorsResponse;
 import io.pulumi.azurenative.powerbidedicated.outputs.SystemDataResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetCapacityDetailsResult {
     /**
      * A collection of Dedicated capacity administrators
@@ -81,21 +81,21 @@ public final class GetCapacityDetailsResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetCapacityDetailsResult(
-        @OutputCustomType.Parameter("administration") @Nullable DedicatedCapacityAdministratorsResponse administration,
-        @OutputCustomType.Parameter("friendlyName") String friendlyName,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("mode") @Nullable String mode,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("sku") CapacitySkuResponse sku,
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("systemData") @Nullable SystemDataResponse systemData,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("tenantId") String tenantId,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("administration") @Nullable DedicatedCapacityAdministratorsResponse administration,
+        @CustomType.Parameter("friendlyName") String friendlyName,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("mode") @Nullable String mode,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("sku") CapacitySkuResponse sku,
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("systemData") @Nullable SystemDataResponse systemData,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("tenantId") String tenantId,
+        @CustomType.Parameter("type") String type) {
         this.administration = administration;
         this.friendlyName = friendlyName;
         this.id = id;

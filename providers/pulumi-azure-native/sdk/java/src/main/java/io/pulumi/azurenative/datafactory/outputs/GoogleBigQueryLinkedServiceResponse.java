@@ -8,7 +8,7 @@ import io.pulumi.azurenative.datafactory.outputs.IntegrationRuntimeReferenceResp
 import io.pulumi.azurenative.datafactory.outputs.ParameterSpecificationResponse;
 import io.pulumi.azurenative.datafactory.outputs.SecureStringResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -17,7 +17,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GoogleBigQueryLinkedServiceResponse {
     /**
      * A comma-separated list of public BigQuery projects to access.
@@ -106,25 +106,25 @@ public final class GoogleBigQueryLinkedServiceResponse {
      */
     private final @Nullable Object useSystemTrustStore;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleBigQueryLinkedServiceResponse(
-        @OutputCustomType.Parameter("additionalProjects") @Nullable Object additionalProjects,
-        @OutputCustomType.Parameter("annotations") @Nullable List<Object> annotations,
-        @OutputCustomType.Parameter("authenticationType") String authenticationType,
-        @OutputCustomType.Parameter("clientId") @Nullable Object clientId,
-        @OutputCustomType.Parameter("clientSecret") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> clientSecret,
-        @OutputCustomType.Parameter("connectVia") @Nullable IntegrationRuntimeReferenceResponse connectVia,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("email") @Nullable Object email,
-        @OutputCustomType.Parameter("encryptedCredential") @Nullable Object encryptedCredential,
-        @OutputCustomType.Parameter("keyFilePath") @Nullable Object keyFilePath,
-        @OutputCustomType.Parameter("parameters") @Nullable Map<String,ParameterSpecificationResponse> parameters,
-        @OutputCustomType.Parameter("project") Object project,
-        @OutputCustomType.Parameter("refreshToken") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> refreshToken,
-        @OutputCustomType.Parameter("requestGoogleDriveScope") @Nullable Object requestGoogleDriveScope,
-        @OutputCustomType.Parameter("trustedCertPath") @Nullable Object trustedCertPath,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("useSystemTrustStore") @Nullable Object useSystemTrustStore) {
+        @CustomType.Parameter("additionalProjects") @Nullable Object additionalProjects,
+        @CustomType.Parameter("annotations") @Nullable List<Object> annotations,
+        @CustomType.Parameter("authenticationType") String authenticationType,
+        @CustomType.Parameter("clientId") @Nullable Object clientId,
+        @CustomType.Parameter("clientSecret") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> clientSecret,
+        @CustomType.Parameter("connectVia") @Nullable IntegrationRuntimeReferenceResponse connectVia,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("email") @Nullable Object email,
+        @CustomType.Parameter("encryptedCredential") @Nullable Object encryptedCredential,
+        @CustomType.Parameter("keyFilePath") @Nullable Object keyFilePath,
+        @CustomType.Parameter("parameters") @Nullable Map<String,ParameterSpecificationResponse> parameters,
+        @CustomType.Parameter("project") Object project,
+        @CustomType.Parameter("refreshToken") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> refreshToken,
+        @CustomType.Parameter("requestGoogleDriveScope") @Nullable Object requestGoogleDriveScope,
+        @CustomType.Parameter("trustedCertPath") @Nullable Object trustedCertPath,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("useSystemTrustStore") @Nullable Object useSystemTrustStore) {
         this.additionalProjects = additionalProjects;
         this.annotations = annotations;
         this.authenticationType = authenticationType;

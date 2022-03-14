@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.storsimple.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ListManagerActivationKeyResult {
     /**
      * The activation key for the device.
@@ -15,8 +15,8 @@ public final class ListManagerActivationKeyResult {
      */
     private final String activationKey;
 
-    @OutputCustomType.Constructor
-    private ListManagerActivationKeyResult(@OutputCustomType.Parameter("activationKey") String activationKey) {
+    @CustomType.Constructor
+    private ListManagerActivationKeyResult(@CustomType.Parameter("activationKey") String activationKey) {
         this.activationKey = activationKey;
     }
 

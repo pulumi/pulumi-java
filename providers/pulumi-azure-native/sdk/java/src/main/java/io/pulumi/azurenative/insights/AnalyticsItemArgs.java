@@ -8,7 +8,7 @@ import io.pulumi.azurenative.insights.enums.ItemType;
 import io.pulumi.azurenative.insights.inputs.ApplicationInsightsComponentAnalyticsItemPropertiesArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class AnalyticsItemArgs extends io.pulumi.resources.ResourceArgs {
      * The content of this item
      * 
      */
-    @InputImport(name="content")
+    @Import(name="content")
       private final @Nullable Output<String> content;
 
     public Output<String> getContent() {
@@ -34,7 +34,7 @@ public final class AnalyticsItemArgs extends io.pulumi.resources.ResourceArgs {
      * Internally assigned unique id of the item definition.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
@@ -45,7 +45,7 @@ public final class AnalyticsItemArgs extends io.pulumi.resources.ResourceArgs {
      * The user-defined name of the item.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -56,7 +56,7 @@ public final class AnalyticsItemArgs extends io.pulumi.resources.ResourceArgs {
      * Flag indicating whether or not to force save an item. This allows overriding an item if it already exists.
      * 
      */
-    @InputImport(name="overrideItem")
+    @Import(name="overrideItem")
       private final @Nullable Output<Boolean> overrideItem;
 
     public Output<Boolean> getOverrideItem() {
@@ -67,7 +67,7 @@ public final class AnalyticsItemArgs extends io.pulumi.resources.ResourceArgs {
      * A set of properties that can be defined in the context of a specific item type. Each type may have its own properties.
      * 
      */
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable Output<ApplicationInsightsComponentAnalyticsItemPropertiesArgs> properties;
 
     public Output<ApplicationInsightsComponentAnalyticsItemPropertiesArgs> getProperties() {
@@ -78,7 +78,7 @@ public final class AnalyticsItemArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -89,7 +89,7 @@ public final class AnalyticsItemArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the Application Insights component resource.
      * 
      */
-    @InputImport(name="resourceName", required=true)
+    @Import(name="resourceName", required=true)
       private final Output<String> resourceName;
 
     public Output<String> getPropResourceName() {
@@ -100,7 +100,7 @@ public final class AnalyticsItemArgs extends io.pulumi.resources.ResourceArgs {
      * Enum indicating if this item definition is owned by a specific user or is shared between all users with access to the Application Insights component.
      * 
      */
-    @InputImport(name="scope")
+    @Import(name="scope")
       private final @Nullable Output<Either<String,ItemScope>> scope;
 
     public Output<Either<String,ItemScope>> getScope() {
@@ -111,7 +111,7 @@ public final class AnalyticsItemArgs extends io.pulumi.resources.ResourceArgs {
      * Enum indicating if this item definition is owned by a specific user or is shared between all users with access to the Application Insights component.
      * 
      */
-    @InputImport(name="scopePath", required=true)
+    @Import(name="scopePath", required=true)
       private final Output<String> scopePath;
 
     public Output<String> getScopePath() {
@@ -122,7 +122,7 @@ public final class AnalyticsItemArgs extends io.pulumi.resources.ResourceArgs {
      * Enum indicating the type of the Analytics item.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<Either<String,ItemType>> type;
 
     public Output<Either<String,ItemType>> getType() {

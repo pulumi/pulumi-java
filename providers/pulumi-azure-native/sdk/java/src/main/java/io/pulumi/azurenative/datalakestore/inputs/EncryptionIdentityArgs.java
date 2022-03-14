@@ -5,7 +5,7 @@ package io.pulumi.azurenative.datalakestore.inputs;
 
 import io.pulumi.azurenative.datalakestore.enums.EncryptionIdentityType;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 
 
@@ -21,7 +21,7 @@ public final class EncryptionIdentityArgs extends io.pulumi.resources.ResourceAr
      * The type of encryption being used. Currently the only supported type is 'SystemAssigned'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<EncryptionIdentityType> type;
 
     public Output<EncryptionIdentityType> getType() {

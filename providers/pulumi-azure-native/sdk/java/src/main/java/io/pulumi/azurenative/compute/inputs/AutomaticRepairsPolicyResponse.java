@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.compute.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class AutomaticRepairsPolicyResponse extends io.pulumi.resources.In
      * Specifies whether automatic repairs should be enabled on the virtual machine scale set. The default value is false.
      * 
      */
-    @InputImport(name="enabled")
+    @Import(name="enabled")
       private final @Nullable Boolean enabled;
 
     public Optional<Boolean> getEnabled() {
@@ -34,7 +34,7 @@ public final class AutomaticRepairsPolicyResponse extends io.pulumi.resources.In
      * The amount of time for which automatic repairs are suspended due to a state change on VM. The grace time starts after the state change has completed. This helps avoid premature or accidental repairs. The time duration should be specified in ISO 8601 format. The minimum allowed grace period is 30 minutes (PT30M), which is also the default value. The maximum allowed grace period is 90 minutes (PT90M).
      * 
      */
-    @InputImport(name="gracePeriod")
+    @Import(name="gracePeriod")
       private final @Nullable String gracePeriod;
 
     public Optional<String> getGracePeriod() {

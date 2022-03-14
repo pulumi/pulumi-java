@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.media.outputs;
 
 import io.pulumi.azurenative.media.outputs.SystemDataResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetAssetResult {
     /**
      * The alternate ID of the Asset.
@@ -73,20 +73,20 @@ public final class GetAssetResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetAssetResult(
-        @OutputCustomType.Parameter("alternateId") @Nullable String alternateId,
-        @OutputCustomType.Parameter("assetId") String assetId,
-        @OutputCustomType.Parameter("container") @Nullable String container,
-        @OutputCustomType.Parameter("created") String created,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("lastModified") String lastModified,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("storageAccountName") @Nullable String storageAccountName,
-        @OutputCustomType.Parameter("storageEncryptionFormat") String storageEncryptionFormat,
-        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("alternateId") @Nullable String alternateId,
+        @CustomType.Parameter("assetId") String assetId,
+        @CustomType.Parameter("container") @Nullable String container,
+        @CustomType.Parameter("created") String created,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("lastModified") String lastModified,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("storageAccountName") @Nullable String storageAccountName,
+        @CustomType.Parameter("storageEncryptionFormat") String storageEncryptionFormat,
+        @CustomType.Parameter("systemData") SystemDataResponse systemData,
+        @CustomType.Parameter("type") String type) {
         this.alternateId = alternateId;
         this.assetId = assetId;
         this.container = container;

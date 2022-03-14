@@ -5,7 +5,7 @@ package io.pulumi.azurenative.powerplatform.inputs;
 
 import io.pulumi.azurenative.powerplatform.inputs.KeyPropertiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class KeyVaultPropertiesArgs extends io.pulumi.resources.ResourceAr
      * Uri of KeyVault
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
@@ -34,7 +34,7 @@ public final class KeyVaultPropertiesArgs extends io.pulumi.resources.ResourceAr
      * Identity of the secret that includes name and version.
      * 
      */
-    @InputImport(name="key")
+    @Import(name="key")
       private final @Nullable Output<KeyPropertiesArgs> key;
 
     public Output<KeyPropertiesArgs> getKey() {

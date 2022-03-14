@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.compute.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +18,7 @@ public final class GetVirtualMachineScaleSetArgs extends io.pulumi.resources.Inv
      * The expand expression to apply on the operation. 'UserData' retrieves the UserData property of the VM scale set that was provided by the user during the VM scale set Create/Update operation
      * 
      */
-    @InputImport(name="expand")
+    @Import(name="expand")
       private final @Nullable String expand;
 
     public Optional<String> getExpand() {
@@ -29,7 +29,7 @@ public final class GetVirtualMachineScaleSetArgs extends io.pulumi.resources.Inv
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {
@@ -40,7 +40,7 @@ public final class GetVirtualMachineScaleSetArgs extends io.pulumi.resources.Inv
      * The name of the VM scale set.
      * 
      */
-    @InputImport(name="vmScaleSetName", required=true)
+    @Import(name="vmScaleSetName", required=true)
       private final String vmScaleSetName;
 
     public String getVmScaleSetName() {

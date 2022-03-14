@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.synapse.inputs;
 
 import io.pulumi.azurenative.synapse.inputs.SecureStringResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class CmdkeySetupResponse extends io.pulumi.resources.InvokeArgs {
      * The password of data source access.
      * 
      */
-    @InputImport(name="password", required=true)
+    @Import(name="password", required=true)
       private final SecureStringResponse password;
 
     public SecureStringResponse getPassword() {
@@ -33,7 +33,7 @@ public final class CmdkeySetupResponse extends io.pulumi.resources.InvokeArgs {
      * The server name of data source access.
      * 
      */
-    @InputImport(name="targetName", required=true)
+    @Import(name="targetName", required=true)
       private final Object targetName;
 
     public Object getTargetName() {
@@ -45,7 +45,7 @@ public final class CmdkeySetupResponse extends io.pulumi.resources.InvokeArgs {
      * Expected value is 'CmdkeySetup'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {
@@ -56,7 +56,7 @@ public final class CmdkeySetupResponse extends io.pulumi.resources.InvokeArgs {
      * The user name of data source access.
      * 
      */
-    @InputImport(name="userName", required=true)
+    @Import(name="userName", required=true)
       private final Object userName;
 
     public Object getUserName() {

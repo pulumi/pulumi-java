@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.avs.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetWorkloadNetworkDhcpResult {
     /**
      * Type of DHCP: SERVER or RELAY.
@@ -54,16 +54,16 @@ public final class GetWorkloadNetworkDhcpResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetWorkloadNetworkDhcpResult(
-        @OutputCustomType.Parameter("dhcpType") String dhcpType,
-        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("revision") @Nullable Double revision,
-        @OutputCustomType.Parameter("segments") List<String> segments,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("dhcpType") String dhcpType,
+        @CustomType.Parameter("displayName") @Nullable String displayName,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("revision") @Nullable Double revision,
+        @CustomType.Parameter("segments") List<String> segments,
+        @CustomType.Parameter("type") String type) {
         this.dhcpType = dhcpType;
         this.displayName = displayName;
         this.id = id;

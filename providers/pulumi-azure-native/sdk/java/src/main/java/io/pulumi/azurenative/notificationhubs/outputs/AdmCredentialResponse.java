@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.notificationhubs.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AdmCredentialResponse {
     /**
      * The URL of the authorization token.
@@ -27,11 +27,11 @@ public final class AdmCredentialResponse {
      */
     private final @Nullable String clientSecret;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AdmCredentialResponse(
-        @OutputCustomType.Parameter("authTokenUrl") @Nullable String authTokenUrl,
-        @OutputCustomType.Parameter("clientId") @Nullable String clientId,
-        @OutputCustomType.Parameter("clientSecret") @Nullable String clientSecret) {
+        @CustomType.Parameter("authTokenUrl") @Nullable String authTokenUrl,
+        @CustomType.Parameter("clientId") @Nullable String clientId,
+        @CustomType.Parameter("clientSecret") @Nullable String clientSecret) {
         this.authTokenUrl = authTokenUrl;
         this.clientId = clientId;
         this.clientSecret = clientSecret;

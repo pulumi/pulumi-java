@@ -7,7 +7,7 @@ import io.pulumi.azurenative.network.enums.ExpressRouteLinkMacSecCipher;
 import io.pulumi.azurenative.network.enums.ExpressRouteLinkMacSecSciState;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class ExpressRouteLinkMacSecConfigArgs extends io.pulumi.resources.
      * Keyvault Secret Identifier URL containing Mac security CAK key.
      * 
      */
-    @InputImport(name="cakSecretIdentifier")
+    @Import(name="cakSecretIdentifier")
       private final @Nullable Output<String> cakSecretIdentifier;
 
     public Output<String> getCakSecretIdentifier() {
@@ -36,7 +36,7 @@ public final class ExpressRouteLinkMacSecConfigArgs extends io.pulumi.resources.
      * Mac security cipher.
      * 
      */
-    @InputImport(name="cipher")
+    @Import(name="cipher")
       private final @Nullable Output<Either<String,ExpressRouteLinkMacSecCipher>> cipher;
 
     public Output<Either<String,ExpressRouteLinkMacSecCipher>> getCipher() {
@@ -47,7 +47,7 @@ public final class ExpressRouteLinkMacSecConfigArgs extends io.pulumi.resources.
      * Keyvault Secret Identifier URL containing Mac security CKN key.
      * 
      */
-    @InputImport(name="cknSecretIdentifier")
+    @Import(name="cknSecretIdentifier")
       private final @Nullable Output<String> cknSecretIdentifier;
 
     public Output<String> getCknSecretIdentifier() {
@@ -58,7 +58,7 @@ public final class ExpressRouteLinkMacSecConfigArgs extends io.pulumi.resources.
      * Sci mode enabled/disabled.
      * 
      */
-    @InputImport(name="sciState")
+    @Import(name="sciState")
       private final @Nullable Output<Either<String,ExpressRouteLinkMacSecSciState>> sciState;
 
     public Output<Either<String,ExpressRouteLinkMacSecSciState>> getSciState() {

@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.media.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class IPRangeResponse {
     /**
      * The IP address.
@@ -28,11 +28,11 @@ public final class IPRangeResponse {
      */
     private final @Nullable Integer subnetPrefixLength;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private IPRangeResponse(
-        @OutputCustomType.Parameter("address") @Nullable String address,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("subnetPrefixLength") @Nullable Integer subnetPrefixLength) {
+        @CustomType.Parameter("address") @Nullable String address,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("subnetPrefixLength") @Nullable Integer subnetPrefixLength) {
         this.address = address;
         this.name = name;
         this.subnetPrefixLength = subnetPrefixLength;

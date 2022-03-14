@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.documentdb.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class PeriodicModePropertiesResponse extends io.pulumi.resources.In
      * An integer representing the interval in minutes between two backups
      * 
      */
-    @InputImport(name="backupIntervalInMinutes")
+    @Import(name="backupIntervalInMinutes")
       private final @Nullable Integer backupIntervalInMinutes;
 
     public Optional<Integer> getBackupIntervalInMinutes() {
@@ -33,7 +33,7 @@ public final class PeriodicModePropertiesResponse extends io.pulumi.resources.In
      * An integer representing the time (in hours) that each backup is retained
      * 
      */
-    @InputImport(name="backupRetentionIntervalInHours")
+    @Import(name="backupRetentionIntervalInHours")
       private final @Nullable Integer backupRetentionIntervalInHours;
 
     public Optional<Integer> getBackupRetentionIntervalInHours() {

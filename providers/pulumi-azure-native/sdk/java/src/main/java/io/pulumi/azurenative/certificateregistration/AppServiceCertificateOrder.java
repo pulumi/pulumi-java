@@ -10,7 +10,7 @@ import io.pulumi.azurenative.certificateregistration.outputs.CertificateDetailsR
 import io.pulumi.azurenative.certificateregistration.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -37,7 +37,7 @@ public class AppServiceCertificateOrder extends io.pulumi.resources.CustomResour
      * Reasons why App Service Certificate is not renewable at the current moment.
      * 
      */
-    @OutputExport(name="appServiceCertificateNotRenewableReasons", type=List.class, parameters={String.class})
+    @Export(name="appServiceCertificateNotRenewableReasons", type=List.class, parameters={String.class})
     private Output<List<String>> appServiceCertificateNotRenewableReasons;
 
     /**
@@ -51,7 +51,7 @@ public class AppServiceCertificateOrder extends io.pulumi.resources.CustomResour
      * <code>true</code> if the certificate should be automatically renewed when it expires; otherwise, <code>false</code>.
      * 
      */
-    @OutputExport(name="autoRenew", type=Boolean.class, parameters={})
+    @Export(name="autoRenew", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> autoRenew;
 
     /**
@@ -65,7 +65,7 @@ public class AppServiceCertificateOrder extends io.pulumi.resources.CustomResour
      * State of the Key Vault secret.
      * 
      */
-    @OutputExport(name="certificates", type=Map.class, parameters={String.class, AppServiceCertificateResponse.class})
+    @Export(name="certificates", type=Map.class, parameters={String.class, AppServiceCertificateResponse.class})
     private Output</* @Nullable */ Map<String,AppServiceCertificateResponse>> certificates;
 
     /**
@@ -79,7 +79,7 @@ public class AppServiceCertificateOrder extends io.pulumi.resources.CustomResour
      * Last CSR that was created for this order.
      * 
      */
-    @OutputExport(name="csr", type=String.class, parameters={})
+    @Export(name="csr", type=String.class, parameters={})
     private Output</* @Nullable */ String> csr;
 
     /**
@@ -93,7 +93,7 @@ public class AppServiceCertificateOrder extends io.pulumi.resources.CustomResour
      * Certificate distinguished name.
      * 
      */
-    @OutputExport(name="distinguishedName", type=String.class, parameters={})
+    @Export(name="distinguishedName", type=String.class, parameters={})
     private Output</* @Nullable */ String> distinguishedName;
 
     /**
@@ -107,7 +107,7 @@ public class AppServiceCertificateOrder extends io.pulumi.resources.CustomResour
      * Domain verification token.
      * 
      */
-    @OutputExport(name="domainVerificationToken", type=String.class, parameters={})
+    @Export(name="domainVerificationToken", type=String.class, parameters={})
     private Output<String> domainVerificationToken;
 
     /**
@@ -121,7 +121,7 @@ public class AppServiceCertificateOrder extends io.pulumi.resources.CustomResour
      * Certificate expiration time.
      * 
      */
-    @OutputExport(name="expirationTime", type=String.class, parameters={})
+    @Export(name="expirationTime", type=String.class, parameters={})
     private Output<String> expirationTime;
 
     /**
@@ -135,7 +135,7 @@ public class AppServiceCertificateOrder extends io.pulumi.resources.CustomResour
      * Intermediate certificate.
      * 
      */
-    @OutputExport(name="intermediate", type=CertificateDetailsResponse.class, parameters={})
+    @Export(name="intermediate", type=CertificateDetailsResponse.class, parameters={})
     private Output<CertificateDetailsResponse> intermediate;
 
     /**
@@ -149,7 +149,7 @@ public class AppServiceCertificateOrder extends io.pulumi.resources.CustomResour
      * <code>true</code> if private key is external; otherwise, <code>false</code>.
      * 
      */
-    @OutputExport(name="isPrivateKeyExternal", type=Boolean.class, parameters={})
+    @Export(name="isPrivateKeyExternal", type=Boolean.class, parameters={})
     private Output<Boolean> isPrivateKeyExternal;
 
     /**
@@ -163,7 +163,7 @@ public class AppServiceCertificateOrder extends io.pulumi.resources.CustomResour
      * Certificate key size.
      * 
      */
-    @OutputExport(name="keySize", type=Integer.class, parameters={})
+    @Export(name="keySize", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> keySize;
 
     /**
@@ -177,7 +177,7 @@ public class AppServiceCertificateOrder extends io.pulumi.resources.CustomResour
      * Kind of resource.
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
     /**
@@ -191,7 +191,7 @@ public class AppServiceCertificateOrder extends io.pulumi.resources.CustomResour
      * Certificate last issuance time.
      * 
      */
-    @OutputExport(name="lastCertificateIssuanceTime", type=String.class, parameters={})
+    @Export(name="lastCertificateIssuanceTime", type=String.class, parameters={})
     private Output<String> lastCertificateIssuanceTime;
 
     /**
@@ -205,7 +205,7 @@ public class AppServiceCertificateOrder extends io.pulumi.resources.CustomResour
      * Resource Location.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -219,7 +219,7 @@ public class AppServiceCertificateOrder extends io.pulumi.resources.CustomResour
      * Resource Name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -233,7 +233,7 @@ public class AppServiceCertificateOrder extends io.pulumi.resources.CustomResour
      * Time stamp when the certificate would be auto renewed next
      * 
      */
-    @OutputExport(name="nextAutoRenewalTimeStamp", type=String.class, parameters={})
+    @Export(name="nextAutoRenewalTimeStamp", type=String.class, parameters={})
     private Output<String> nextAutoRenewalTimeStamp;
 
     /**
@@ -247,7 +247,7 @@ public class AppServiceCertificateOrder extends io.pulumi.resources.CustomResour
      * Certificate product type.
      * 
      */
-    @OutputExport(name="productType", type=String.class, parameters={})
+    @Export(name="productType", type=String.class, parameters={})
     private Output<String> productType;
 
     /**
@@ -261,7 +261,7 @@ public class AppServiceCertificateOrder extends io.pulumi.resources.CustomResour
      * Status of certificate order.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -275,7 +275,7 @@ public class AppServiceCertificateOrder extends io.pulumi.resources.CustomResour
      * Root certificate.
      * 
      */
-    @OutputExport(name="root", type=CertificateDetailsResponse.class, parameters={})
+    @Export(name="root", type=CertificateDetailsResponse.class, parameters={})
     private Output<CertificateDetailsResponse> root;
 
     /**
@@ -289,7 +289,7 @@ public class AppServiceCertificateOrder extends io.pulumi.resources.CustomResour
      * Current serial number of the certificate.
      * 
      */
-    @OutputExport(name="serialNumber", type=String.class, parameters={})
+    @Export(name="serialNumber", type=String.class, parameters={})
     private Output<String> serialNumber;
 
     /**
@@ -303,7 +303,7 @@ public class AppServiceCertificateOrder extends io.pulumi.resources.CustomResour
      * Signed certificate.
      * 
      */
-    @OutputExport(name="signedCertificate", type=CertificateDetailsResponse.class, parameters={})
+    @Export(name="signedCertificate", type=CertificateDetailsResponse.class, parameters={})
     private Output<CertificateDetailsResponse> signedCertificate;
 
     /**
@@ -317,7 +317,7 @@ public class AppServiceCertificateOrder extends io.pulumi.resources.CustomResour
      * Current order status.
      * 
      */
-    @OutputExport(name="status", type=String.class, parameters={})
+    @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
     /**
@@ -331,7 +331,7 @@ public class AppServiceCertificateOrder extends io.pulumi.resources.CustomResour
      * The system metadata relating to this resource.
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -345,7 +345,7 @@ public class AppServiceCertificateOrder extends io.pulumi.resources.CustomResour
      * Resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -359,7 +359,7 @@ public class AppServiceCertificateOrder extends io.pulumi.resources.CustomResour
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -373,7 +373,7 @@ public class AppServiceCertificateOrder extends io.pulumi.resources.CustomResour
      * Duration in years (must be between 1 and 3).
      * 
      */
-    @OutputExport(name="validityInYears", type=Integer.class, parameters={})
+    @Export(name="validityInYears", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> validityInYears;
 
     /**

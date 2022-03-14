@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.PublicIPAddressResponse;
 import io.pulumi.azurenative.network.inputs.SubnetResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class IPConfigurationResponse extends io.pulumi.resources.InvokeArg
      * A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    @InputImport(name="etag", required=true)
+    @Import(name="etag", required=true)
       private final String etag;
 
     public String getEtag() {
@@ -35,7 +35,7 @@ public final class IPConfigurationResponse extends io.pulumi.resources.InvokeArg
      * Resource ID.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable String id;
 
     public Optional<String> getId() {
@@ -46,7 +46,7 @@ public final class IPConfigurationResponse extends io.pulumi.resources.InvokeArg
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -57,7 +57,7 @@ public final class IPConfigurationResponse extends io.pulumi.resources.InvokeArg
      * The private IP address of the IP configuration.
      * 
      */
-    @InputImport(name="privateIPAddress")
+    @Import(name="privateIPAddress")
       private final @Nullable String privateIPAddress;
 
     public Optional<String> getPrivateIPAddress() {
@@ -68,7 +68,7 @@ public final class IPConfigurationResponse extends io.pulumi.resources.InvokeArg
      * The private IP address allocation method.
      * 
      */
-    @InputImport(name="privateIPAllocationMethod")
+    @Import(name="privateIPAllocationMethod")
       private final @Nullable String privateIPAllocationMethod;
 
     public Optional<String> getPrivateIPAllocationMethod() {
@@ -79,7 +79,7 @@ public final class IPConfigurationResponse extends io.pulumi.resources.InvokeArg
      * The provisioning state of the IP configuration resource.
      * 
      */
-    @InputImport(name="provisioningState", required=true)
+    @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
     public String getProvisioningState() {
@@ -90,7 +90,7 @@ public final class IPConfigurationResponse extends io.pulumi.resources.InvokeArg
      * The reference to the public IP resource.
      * 
      */
-    @InputImport(name="publicIPAddress")
+    @Import(name="publicIPAddress")
       private final @Nullable PublicIPAddressResponse publicIPAddress;
 
     public Optional<PublicIPAddressResponse> getPublicIPAddress() {
@@ -101,7 +101,7 @@ public final class IPConfigurationResponse extends io.pulumi.resources.InvokeArg
      * The reference to the subnet resource.
      * 
      */
-    @InputImport(name="subnet")
+    @Import(name="subnet")
       private final @Nullable SubnetResponse subnet;
 
     public Optional<SubnetResponse> getSubnet() {

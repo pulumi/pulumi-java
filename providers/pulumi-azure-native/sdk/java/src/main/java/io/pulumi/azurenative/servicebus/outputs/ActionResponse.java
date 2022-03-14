@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.servicebus.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ActionResponse {
     /**
      * This property is reserved for future use. An integer value showing the compatibility level, currently hard-coded to 20.
@@ -29,11 +29,11 @@ public final class ActionResponse {
      */
     private final @Nullable String sqlExpression;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ActionResponse(
-        @OutputCustomType.Parameter("compatibilityLevel") @Nullable Integer compatibilityLevel,
-        @OutputCustomType.Parameter("requiresPreprocessing") @Nullable Boolean requiresPreprocessing,
-        @OutputCustomType.Parameter("sqlExpression") @Nullable String sqlExpression) {
+        @CustomType.Parameter("compatibilityLevel") @Nullable Integer compatibilityLevel,
+        @CustomType.Parameter("requiresPreprocessing") @Nullable Boolean requiresPreprocessing,
+        @CustomType.Parameter("sqlExpression") @Nullable String sqlExpression) {
         this.compatibilityLevel = compatibilityLevel;
         this.requiresPreprocessing = requiresPreprocessing;
         this.sqlExpression = sqlExpression;

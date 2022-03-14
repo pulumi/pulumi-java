@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.aad.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class NotificationSettingsResponse {
     /**
      * The list of additional recipients
@@ -28,11 +28,11 @@ public final class NotificationSettingsResponse {
      */
     private final @Nullable String notifyGlobalAdmins;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NotificationSettingsResponse(
-        @OutputCustomType.Parameter("additionalRecipients") @Nullable List<String> additionalRecipients,
-        @OutputCustomType.Parameter("notifyDcAdmins") @Nullable String notifyDcAdmins,
-        @OutputCustomType.Parameter("notifyGlobalAdmins") @Nullable String notifyGlobalAdmins) {
+        @CustomType.Parameter("additionalRecipients") @Nullable List<String> additionalRecipients,
+        @CustomType.Parameter("notifyDcAdmins") @Nullable String notifyDcAdmins,
+        @CustomType.Parameter("notifyGlobalAdmins") @Nullable String notifyGlobalAdmins) {
         this.additionalRecipients = additionalRecipients;
         this.notifyDcAdmins = notifyDcAdmins;
         this.notifyGlobalAdmins = notifyGlobalAdmins;

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.guestconfiguration.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class VMSSVMInfoResponse extends io.pulumi.resources.InvokeArgs {
      * A value indicating compliance status of the machine for the assigned guest configuration.
      * 
      */
-    @InputImport(name="complianceStatus", required=true)
+    @Import(name="complianceStatus", required=true)
       private final String complianceStatus;
 
     public String getComplianceStatus() {
@@ -31,7 +31,7 @@ public final class VMSSVMInfoResponse extends io.pulumi.resources.InvokeArgs {
      * Date and time when last compliance status was checked.
      * 
      */
-    @InputImport(name="lastComplianceChecked", required=true)
+    @Import(name="lastComplianceChecked", required=true)
       private final String lastComplianceChecked;
 
     public String getLastComplianceChecked() {
@@ -42,7 +42,7 @@ public final class VMSSVMInfoResponse extends io.pulumi.resources.InvokeArgs {
      * Id of the latest report for the guest configuration assignment.
      * 
      */
-    @InputImport(name="latestReportId", required=true)
+    @Import(name="latestReportId", required=true)
       private final String latestReportId;
 
     public String getLatestReportId() {
@@ -53,7 +53,7 @@ public final class VMSSVMInfoResponse extends io.pulumi.resources.InvokeArgs {
      * UUID of the VM.
      * 
      */
-    @InputImport(name="vmId", required=true)
+    @Import(name="vmId", required=true)
       private final String vmId;
 
     public String getVmId() {
@@ -64,7 +64,7 @@ public final class VMSSVMInfoResponse extends io.pulumi.resources.InvokeArgs {
      * Azure resource Id of the VM.
      * 
      */
-    @InputImport(name="vmResourceId", required=true)
+    @Import(name="vmResourceId", required=true)
       private final String vmResourceId;
 
     public String getVmResourceId() {

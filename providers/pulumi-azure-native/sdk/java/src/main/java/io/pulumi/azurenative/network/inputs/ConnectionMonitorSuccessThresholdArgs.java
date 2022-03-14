@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ConnectionMonitorSuccessThresholdArgs extends io.pulumi.resou
      * The maximum percentage of failed checks permitted for a test to evaluate as successful.
      * 
      */
-    @InputImport(name="checksFailedPercent")
+    @Import(name="checksFailedPercent")
       private final @Nullable Output<Integer> checksFailedPercent;
 
     public Output<Integer> getChecksFailedPercent() {
@@ -34,7 +34,7 @@ public final class ConnectionMonitorSuccessThresholdArgs extends io.pulumi.resou
      * The maximum round-trip time in milliseconds permitted for a test to evaluate as successful.
      * 
      */
-    @InputImport(name="roundTripTimeMs")
+    @Import(name="roundTripTimeMs")
       private final @Nullable Output<Double> roundTripTimeMs;
 
     public Output<Double> getRoundTripTimeMs() {

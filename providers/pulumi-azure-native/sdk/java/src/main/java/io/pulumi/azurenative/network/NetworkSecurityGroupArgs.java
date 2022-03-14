@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network;
 
 import io.pulumi.azurenative.network.inputs.SecurityRuleArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class NetworkSecurityGroupArgs extends io.pulumi.resources.Resource
      * Resource ID.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
@@ -32,7 +32,7 @@ public final class NetworkSecurityGroupArgs extends io.pulumi.resources.Resource
      * Resource location.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -43,7 +43,7 @@ public final class NetworkSecurityGroupArgs extends io.pulumi.resources.Resource
      * The name of the network security group.
      * 
      */
-    @InputImport(name="networkSecurityGroupName")
+    @Import(name="networkSecurityGroupName")
       private final @Nullable Output<String> networkSecurityGroupName;
 
     public Output<String> getNetworkSecurityGroupName() {
@@ -54,7 +54,7 @@ public final class NetworkSecurityGroupArgs extends io.pulumi.resources.Resource
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -65,7 +65,7 @@ public final class NetworkSecurityGroupArgs extends io.pulumi.resources.Resource
      * A collection of security rules of the network security group.
      * 
      */
-    @InputImport(name="securityRules")
+    @Import(name="securityRules")
       private final @Nullable Output<List<SecurityRuleArgs>> securityRules;
 
     public Output<List<SecurityRuleArgs>> getSecurityRules() {
@@ -76,7 +76,7 @@ public final class NetworkSecurityGroupArgs extends io.pulumi.resources.Resource
      * Resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

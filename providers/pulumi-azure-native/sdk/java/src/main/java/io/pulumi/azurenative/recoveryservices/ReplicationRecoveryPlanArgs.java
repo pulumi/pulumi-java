@@ -5,7 +5,7 @@ package io.pulumi.azurenative.recoveryservices;
 
 import io.pulumi.azurenative.recoveryservices.inputs.CreateRecoveryPlanInputPropertiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class ReplicationRecoveryPlanArgs extends io.pulumi.resources.Resou
      * Recovery plan creation properties.
      * 
      */
-    @InputImport(name="properties", required=true)
+    @Import(name="properties", required=true)
       private final Output<CreateRecoveryPlanInputPropertiesArgs> properties;
 
     public Output<CreateRecoveryPlanInputPropertiesArgs> getProperties() {
@@ -30,7 +30,7 @@ public final class ReplicationRecoveryPlanArgs extends io.pulumi.resources.Resou
      * Recovery plan name.
      * 
      */
-    @InputImport(name="recoveryPlanName")
+    @Import(name="recoveryPlanName")
       private final @Nullable Output<String> recoveryPlanName;
 
     public Output<String> getRecoveryPlanName() {
@@ -41,7 +41,7 @@ public final class ReplicationRecoveryPlanArgs extends io.pulumi.resources.Resou
      * The name of the resource group where the recovery services vault is present.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -52,7 +52,7 @@ public final class ReplicationRecoveryPlanArgs extends io.pulumi.resources.Resou
      * The name of the recovery services vault.
      * 
      */
-    @InputImport(name="resourceName", required=true)
+    @Import(name="resourceName", required=true)
       private final Output<String> resourceName;
 
     public Output<String> getPropResourceName() {

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 import io.pulumi.azurenative.datafactory.inputs.AzureKeyVaultSecretReferenceResponse;
 import io.pulumi.azurenative.datafactory.inputs.SecureStringResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class ComponentSetupResponse extends io.pulumi.resources.InvokeArgs
      * The name of the 3rd party component.
      * 
      */
-    @InputImport(name="componentName", required=true)
+    @Import(name="componentName", required=true)
       private final String componentName;
 
     public String getComponentName() {
@@ -36,7 +36,7 @@ public final class ComponentSetupResponse extends io.pulumi.resources.InvokeArgs
      * The license key to activate the component.
      * 
      */
-    @InputImport(name="licenseKey")
+    @Import(name="licenseKey")
       private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> licenseKey;
 
     public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> getLicenseKey() {
@@ -48,7 +48,7 @@ public final class ComponentSetupResponse extends io.pulumi.resources.InvokeArgs
      * Expected value is 'ComponentSetup'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

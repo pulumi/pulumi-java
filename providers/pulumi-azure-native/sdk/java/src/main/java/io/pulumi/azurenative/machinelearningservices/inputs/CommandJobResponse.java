@@ -14,7 +14,7 @@ import io.pulumi.azurenative.machinelearningservices.inputs.OutputDataBindingRes
 import io.pulumi.azurenative.machinelearningservices.inputs.PyTorchResponse;
 import io.pulumi.azurenative.machinelearningservices.inputs.TensorFlowResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -36,7 +36,7 @@ public final class CommandJobResponse extends io.pulumi.resources.InvokeArgs {
      * ARM resource ID of the code asset.
      * 
      */
-    @InputImport(name="codeId")
+    @Import(name="codeId")
       private final @Nullable String codeId;
 
     public Optional<String> getCodeId() {
@@ -47,7 +47,7 @@ public final class CommandJobResponse extends io.pulumi.resources.InvokeArgs {
      * The command to execute on startup of the job. eg. "python train.py"
      * 
      */
-    @InputImport(name="command", required=true)
+    @Import(name="command", required=true)
       private final String command;
 
     public String getCommand() {
@@ -58,7 +58,7 @@ public final class CommandJobResponse extends io.pulumi.resources.InvokeArgs {
      * Compute binding for the job.
      * 
      */
-    @InputImport(name="compute", required=true)
+    @Import(name="compute", required=true)
       private final ComputeConfigurationResponse compute;
 
     public ComputeConfigurationResponse getCompute() {
@@ -69,7 +69,7 @@ public final class CommandJobResponse extends io.pulumi.resources.InvokeArgs {
      * The asset description text.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable String description;
 
     public Optional<String> getDescription() {
@@ -80,7 +80,7 @@ public final class CommandJobResponse extends io.pulumi.resources.InvokeArgs {
      * Distribution configuration of the job. If set, this should be one of Mpi, Tensorflow, PyTorch, or null.
      * 
      */
-    @InputImport(name="distribution")
+    @Import(name="distribution")
       private final @Nullable Object distribution;
 
     public Object getDistribution() {
@@ -91,7 +91,7 @@ public final class CommandJobResponse extends io.pulumi.resources.InvokeArgs {
      * The ARM resource ID of the Environment specification for the job.
      * 
      */
-    @InputImport(name="environmentId")
+    @Import(name="environmentId")
       private final @Nullable String environmentId;
 
     public Optional<String> getEnvironmentId() {
@@ -102,7 +102,7 @@ public final class CommandJobResponse extends io.pulumi.resources.InvokeArgs {
      * Environment variables included in the job.
      * 
      */
-    @InputImport(name="environmentVariables")
+    @Import(name="environmentVariables")
       private final @Nullable Map<String,String> environmentVariables;
 
     public Map<String,String> getEnvironmentVariables() {
@@ -113,7 +113,7 @@ public final class CommandJobResponse extends io.pulumi.resources.InvokeArgs {
      * The name of the experiment the job belongs to. If not set, the job is placed in the "Default" experiment.
      * 
      */
-    @InputImport(name="experimentName")
+    @Import(name="experimentName")
       private final @Nullable String experimentName;
 
     public Optional<String> getExperimentName() {
@@ -125,7 +125,7 @@ public final class CommandJobResponse extends io.pulumi.resources.InvokeArgs {
      * Defaults to AmlToken if null.
      * 
      */
-    @InputImport(name="identity")
+    @Import(name="identity")
       private final @Nullable Either<AmlTokenResponse,ManagedIdentityResponse> identity;
 
     public Either<AmlTokenResponse,ManagedIdentityResponse> getIdentity() {
@@ -136,7 +136,7 @@ public final class CommandJobResponse extends io.pulumi.resources.InvokeArgs {
      * Mapping of input data bindings used in the job.
      * 
      */
-    @InputImport(name="inputDataBindings")
+    @Import(name="inputDataBindings")
       private final @Nullable Map<String,InputDataBindingResponse> inputDataBindings;
 
     public Map<String,InputDataBindingResponse> getInputDataBindings() {
@@ -148,7 +148,7 @@ public final class CommandJobResponse extends io.pulumi.resources.InvokeArgs {
      * For local jobs, a job endpoint will have an endpoint value of FileStreamObject.
      * 
      */
-    @InputImport(name="interactionEndpoints", required=true)
+    @Import(name="interactionEndpoints", required=true)
       private final Map<String,JobEndpointResponse> interactionEndpoints;
 
     public Map<String,JobEndpointResponse> getInteractionEndpoints() {
@@ -160,7 +160,7 @@ public final class CommandJobResponse extends io.pulumi.resources.InvokeArgs {
      * Expected value is 'Command'.
      * 
      */
-    @InputImport(name="jobType", required=true)
+    @Import(name="jobType", required=true)
       private final String jobType;
 
     public String getJobType() {
@@ -171,7 +171,7 @@ public final class CommandJobResponse extends io.pulumi.resources.InvokeArgs {
      * Location of the job output logs and artifacts.
      * 
      */
-    @InputImport(name="output", required=true)
+    @Import(name="output", required=true)
       private final JobOutputResponse output;
 
     public JobOutputResponse getOutput() {
@@ -182,7 +182,7 @@ public final class CommandJobResponse extends io.pulumi.resources.InvokeArgs {
      * Mapping of output data bindings used in the job.
      * 
      */
-    @InputImport(name="outputDataBindings")
+    @Import(name="outputDataBindings")
       private final @Nullable Map<String,OutputDataBindingResponse> outputDataBindings;
 
     public Map<String,OutputDataBindingResponse> getOutputDataBindings() {
@@ -193,7 +193,7 @@ public final class CommandJobResponse extends io.pulumi.resources.InvokeArgs {
      * Input parameters.
      * 
      */
-    @InputImport(name="parameters", required=true)
+    @Import(name="parameters", required=true)
       private final Object parameters;
 
     public Object getParameters() {
@@ -205,7 +205,7 @@ public final class CommandJobResponse extends io.pulumi.resources.InvokeArgs {
      * Private preview feature and only available to users on the allow list.
      * 
      */
-    @InputImport(name="priority")
+    @Import(name="priority")
       private final @Nullable Integer priority;
 
     public Optional<Integer> getPriority() {
@@ -216,7 +216,7 @@ public final class CommandJobResponse extends io.pulumi.resources.InvokeArgs {
      * The asset property dictionary.
      * 
      */
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable Map<String,String> properties;
 
     public Map<String,String> getProperties() {
@@ -227,7 +227,7 @@ public final class CommandJobResponse extends io.pulumi.resources.InvokeArgs {
      * Specifies the job provisioning state.
      * 
      */
-    @InputImport(name="provisioningState", required=true)
+    @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
     public String getProvisioningState() {
@@ -238,7 +238,7 @@ public final class CommandJobResponse extends io.pulumi.resources.InvokeArgs {
      * Status of the job.
      * 
      */
-    @InputImport(name="status", required=true)
+    @Import(name="status", required=true)
       private final String status;
 
     public String getStatus() {
@@ -249,7 +249,7 @@ public final class CommandJobResponse extends io.pulumi.resources.InvokeArgs {
      * Tag dictionary. Tags can be added, removed, and updated.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {
@@ -260,7 +260,7 @@ public final class CommandJobResponse extends io.pulumi.resources.InvokeArgs {
      * The max run duration in ISO 8601 format, after which the job will be cancelled. Only supports duration with precision as low as Seconds.
      * 
      */
-    @InputImport(name="timeout")
+    @Import(name="timeout")
       private final @Nullable String timeout;
 
     public Optional<String> getTimeout() {

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.documentdb.inputs.CassandraViewResourceArgs;
 import io.pulumi.azurenative.documentdb.inputs.CreateUpdateOptionsArgs;
 import io.pulumi.azurenative.documentdb.inputs.ManagedServiceIdentityArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class CassandraResourceCassandraViewArgs extends io.pulumi.resource
      * Cosmos DB database account name.
      * 
      */
-    @InputImport(name="accountName", required=true)
+    @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
     public Output<String> getAccountName() {
@@ -33,7 +33,7 @@ public final class CassandraResourceCassandraViewArgs extends io.pulumi.resource
      * Identity for the resource.
      * 
      */
-    @InputImport(name="identity")
+    @Import(name="identity")
       private final @Nullable Output<ManagedServiceIdentityArgs> identity;
 
     public Output<ManagedServiceIdentityArgs> getIdentity() {
@@ -44,7 +44,7 @@ public final class CassandraResourceCassandraViewArgs extends io.pulumi.resource
      * Cosmos DB keyspace name.
      * 
      */
-    @InputImport(name="keyspaceName", required=true)
+    @Import(name="keyspaceName", required=true)
       private final Output<String> keyspaceName;
 
     public Output<String> getKeyspaceName() {
@@ -55,7 +55,7 @@ public final class CassandraResourceCassandraViewArgs extends io.pulumi.resource
      * The location of the resource group to which the resource belongs.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -66,7 +66,7 @@ public final class CassandraResourceCassandraViewArgs extends io.pulumi.resource
      * A key-value pair of options to be applied for the request. This corresponds to the headers sent with the request.
      * 
      */
-    @InputImport(name="options")
+    @Import(name="options")
       private final @Nullable Output<CreateUpdateOptionsArgs> options;
 
     public Output<CreateUpdateOptionsArgs> getOptions() {
@@ -77,7 +77,7 @@ public final class CassandraResourceCassandraViewArgs extends io.pulumi.resource
      * The standard JSON format of a Cassandra view
      * 
      */
-    @InputImport(name="resource", required=true)
+    @Import(name="resource", required=true)
       private final Output<CassandraViewResourceArgs> resource;
 
     public Output<CassandraViewResourceArgs> getResource() {
@@ -88,7 +88,7 @@ public final class CassandraResourceCassandraViewArgs extends io.pulumi.resource
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -99,7 +99,7 @@ public final class CassandraResourceCassandraViewArgs extends io.pulumi.resource
      * Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -110,7 +110,7 @@ public final class CassandraResourceCassandraViewArgs extends io.pulumi.resource
      * Cosmos DB view name.
      * 
      */
-    @InputImport(name="viewName")
+    @Import(name="viewName")
       private final @Nullable Output<String> viewName;
 
     public Output<String> getViewName() {

@@ -8,7 +8,7 @@ import io.pulumi.azurenative.features.SubscriptionFeatureRegistrationArgs;
 import io.pulumi.azurenative.features.outputs.SubscriptionFeatureRegistrationResponseProperties;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +35,7 @@ public class SubscriptionFeatureRegistration extends io.pulumi.resources.CustomR
      * Azure resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -45,7 +45,7 @@ public class SubscriptionFeatureRegistration extends io.pulumi.resources.CustomR
     public Output<String> getName() {
         return this.name;
     }
-    @OutputExport(name="properties", type=SubscriptionFeatureRegistrationResponseProperties.class, parameters={})
+    @Export(name="properties", type=SubscriptionFeatureRegistrationResponseProperties.class, parameters={})
     private Output<SubscriptionFeatureRegistrationResponseProperties> properties;
 
     public Output<SubscriptionFeatureRegistrationResponseProperties> getProperties() {
@@ -55,7 +55,7 @@ public class SubscriptionFeatureRegistration extends io.pulumi.resources.CustomR
      * Azure resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

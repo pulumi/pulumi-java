@@ -7,7 +7,7 @@ import io.pulumi.azurenative.cdn.enums.ActionType;
 import io.pulumi.azurenative.cdn.enums.ManagedRuleEnabledState;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class ManagedRuleOverrideArgs extends io.pulumi.resources.ResourceA
      * Describes the override action to be applied when rule matches.
      * 
      */
-    @InputImport(name="action")
+    @Import(name="action")
       private final @Nullable Output<Either<String,ActionType>> action;
 
     public Output<Either<String,ActionType>> getAction() {
@@ -36,7 +36,7 @@ public final class ManagedRuleOverrideArgs extends io.pulumi.resources.ResourceA
      * Describes if the managed rule is in enabled or disabled state. Defaults to Disabled if not specified.
      * 
      */
-    @InputImport(name="enabledState")
+    @Import(name="enabledState")
       private final @Nullable Output<Either<String,ManagedRuleEnabledState>> enabledState;
 
     public Output<Either<String,ManagedRuleEnabledState>> getEnabledState() {
@@ -47,7 +47,7 @@ public final class ManagedRuleOverrideArgs extends io.pulumi.resources.ResourceA
      * Identifier for the managed rule.
      * 
      */
-    @InputImport(name="ruleId", required=true)
+    @Import(name="ruleId", required=true)
       private final Output<String> ruleId;
 
     public Output<String> getRuleId() {

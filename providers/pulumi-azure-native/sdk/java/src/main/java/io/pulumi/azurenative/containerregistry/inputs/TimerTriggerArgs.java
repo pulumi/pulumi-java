@@ -6,7 +6,7 @@ package io.pulumi.azurenative.containerregistry.inputs;
 import io.pulumi.azurenative.containerregistry.enums.TriggerStatus;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class TimerTriggerArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the trigger.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -35,7 +35,7 @@ public final class TimerTriggerArgs extends io.pulumi.resources.ResourceArgs {
      * The CRON expression for the task schedule
      * 
      */
-    @InputImport(name="schedule", required=true)
+    @Import(name="schedule", required=true)
       private final Output<String> schedule;
 
     public Output<String> getSchedule() {
@@ -46,7 +46,7 @@ public final class TimerTriggerArgs extends io.pulumi.resources.ResourceArgs {
      * The current status of trigger.
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable Output<Either<String,TriggerStatus>> status;
 
     public Output<Either<String,TriggerStatus>> getStatus() {

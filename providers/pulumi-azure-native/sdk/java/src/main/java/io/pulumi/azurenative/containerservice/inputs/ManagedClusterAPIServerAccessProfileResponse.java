@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerservice.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class ManagedClusterAPIServerAccessProfileResponse extends io.pulum
      * Authorized IP Ranges to kubernetes API server.
      * 
      */
-    @InputImport(name="authorizedIPRanges")
+    @Import(name="authorizedIPRanges")
       private final @Nullable List<String> authorizedIPRanges;
 
     public List<String> getAuthorizedIPRanges() {
@@ -35,7 +35,7 @@ public final class ManagedClusterAPIServerAccessProfileResponse extends io.pulum
      * Whether to create the cluster as a private cluster or not.
      * 
      */
-    @InputImport(name="enablePrivateCluster")
+    @Import(name="enablePrivateCluster")
       private final @Nullable Boolean enablePrivateCluster;
 
     public Optional<Boolean> getEnablePrivateCluster() {
@@ -46,7 +46,7 @@ public final class ManagedClusterAPIServerAccessProfileResponse extends io.pulum
      * Private dns zone mode for private cluster.
      * 
      */
-    @InputImport(name="privateDNSZone")
+    @Import(name="privateDNSZone")
       private final @Nullable String privateDNSZone;
 
     public Optional<String> getPrivateDNSZone() {

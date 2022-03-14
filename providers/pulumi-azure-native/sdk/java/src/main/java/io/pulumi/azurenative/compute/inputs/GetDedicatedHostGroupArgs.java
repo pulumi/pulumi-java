@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.compute.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +18,7 @@ public final class GetDedicatedHostGroupArgs extends io.pulumi.resources.InvokeA
      * The expand expression to apply on the operation. The response shows the list of instance view of the dedicated hosts under the dedicated host group.
      * 
      */
-    @InputImport(name="expand")
+    @Import(name="expand")
       private final @Nullable String expand;
 
     public Optional<String> getExpand() {
@@ -29,7 +29,7 @@ public final class GetDedicatedHostGroupArgs extends io.pulumi.resources.InvokeA
      * The name of the dedicated host group.
      * 
      */
-    @InputImport(name="hostGroupName", required=true)
+    @Import(name="hostGroupName", required=true)
       private final String hostGroupName;
 
     public String getHostGroupName() {
@@ -40,7 +40,7 @@ public final class GetDedicatedHostGroupArgs extends io.pulumi.resources.InvokeA
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {

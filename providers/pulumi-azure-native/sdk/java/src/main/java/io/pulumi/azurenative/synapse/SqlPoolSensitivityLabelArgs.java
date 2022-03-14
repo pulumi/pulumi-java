@@ -5,7 +5,7 @@ package io.pulumi.azurenative.synapse;
 
 import io.pulumi.azurenative.synapse.enums.SensitivityLabelRank;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class SqlPoolSensitivityLabelArgs extends io.pulumi.resources.Resou
      * The name of the column.
      * 
      */
-    @InputImport(name="columnName", required=true)
+    @Import(name="columnName", required=true)
       private final Output<String> columnName;
 
     public Output<String> getColumnName() {
@@ -30,7 +30,7 @@ public final class SqlPoolSensitivityLabelArgs extends io.pulumi.resources.Resou
      * The information type.
      * 
      */
-    @InputImport(name="informationType")
+    @Import(name="informationType")
       private final @Nullable Output<String> informationType;
 
     public Output<String> getInformationType() {
@@ -41,7 +41,7 @@ public final class SqlPoolSensitivityLabelArgs extends io.pulumi.resources.Resou
      * The information type ID.
      * 
      */
-    @InputImport(name="informationTypeId")
+    @Import(name="informationTypeId")
       private final @Nullable Output<String> informationTypeId;
 
     public Output<String> getInformationTypeId() {
@@ -52,7 +52,7 @@ public final class SqlPoolSensitivityLabelArgs extends io.pulumi.resources.Resou
      * The label ID.
      * 
      */
-    @InputImport(name="labelId")
+    @Import(name="labelId")
       private final @Nullable Output<String> labelId;
 
     public Output<String> getLabelId() {
@@ -63,14 +63,14 @@ public final class SqlPoolSensitivityLabelArgs extends io.pulumi.resources.Resou
      * The label name.
      * 
      */
-    @InputImport(name="labelName")
+    @Import(name="labelName")
       private final @Nullable Output<String> labelName;
 
     public Output<String> getLabelName() {
         return this.labelName == null ? Output.empty() : this.labelName;
     }
 
-    @InputImport(name="rank")
+    @Import(name="rank")
       private final @Nullable Output<SensitivityLabelRank> rank;
 
     public Output<SensitivityLabelRank> getRank() {
@@ -81,7 +81,7 @@ public final class SqlPoolSensitivityLabelArgs extends io.pulumi.resources.Resou
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -92,7 +92,7 @@ public final class SqlPoolSensitivityLabelArgs extends io.pulumi.resources.Resou
      * The name of the schema.
      * 
      */
-    @InputImport(name="schemaName", required=true)
+    @Import(name="schemaName", required=true)
       private final Output<String> schemaName;
 
     public Output<String> getSchemaName() {
@@ -103,7 +103,7 @@ public final class SqlPoolSensitivityLabelArgs extends io.pulumi.resources.Resou
      * The source of the sensitivity label.
      * 
      */
-    @InputImport(name="sensitivityLabelSource")
+    @Import(name="sensitivityLabelSource")
       private final @Nullable Output<String> sensitivityLabelSource;
 
     public Output<String> getSensitivityLabelSource() {
@@ -114,7 +114,7 @@ public final class SqlPoolSensitivityLabelArgs extends io.pulumi.resources.Resou
      * SQL pool name
      * 
      */
-    @InputImport(name="sqlPoolName", required=true)
+    @Import(name="sqlPoolName", required=true)
       private final Output<String> sqlPoolName;
 
     public Output<String> getSqlPoolName() {
@@ -125,7 +125,7 @@ public final class SqlPoolSensitivityLabelArgs extends io.pulumi.resources.Resou
      * The name of the table.
      * 
      */
-    @InputImport(name="tableName", required=true)
+    @Import(name="tableName", required=true)
       private final Output<String> tableName;
 
     public Output<String> getTableName() {
@@ -136,7 +136,7 @@ public final class SqlPoolSensitivityLabelArgs extends io.pulumi.resources.Resou
      * The name of the workspace
      * 
      */
-    @InputImport(name="workspaceName", required=true)
+    @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;
 
     public Output<String> getWorkspaceName() {

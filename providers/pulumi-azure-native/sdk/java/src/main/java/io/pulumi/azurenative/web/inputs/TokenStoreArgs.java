@@ -6,7 +6,7 @@ package io.pulumi.azurenative.web.inputs;
 import io.pulumi.azurenative.web.inputs.BlobStorageTokenStoreArgs;
 import io.pulumi.azurenative.web.inputs.FileSystemTokenStoreArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class TokenStoreArgs extends io.pulumi.resources.ResourceArgs {
      * The configuration settings of the storage of the tokens if blob storage is used.
      * 
      */
-    @InputImport(name="azureBlobStorage")
+    @Import(name="azureBlobStorage")
       private final @Nullable Output<BlobStorageTokenStoreArgs> azureBlobStorage;
 
     public Output<BlobStorageTokenStoreArgs> getAzureBlobStorage() {
@@ -37,7 +37,7 @@ public final class TokenStoreArgs extends io.pulumi.resources.ResourceArgs {
      *  The default is <code>false</code>.
      * 
      */
-    @InputImport(name="enabled")
+    @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
@@ -48,7 +48,7 @@ public final class TokenStoreArgs extends io.pulumi.resources.ResourceArgs {
      * The configuration settings of the storage of the tokens if a file system is used.
      * 
      */
-    @InputImport(name="fileSystem")
+    @Import(name="fileSystem")
       private final @Nullable Output<FileSystemTokenStoreArgs> fileSystem;
 
     public Output<FileSystemTokenStoreArgs> getFileSystem() {
@@ -60,7 +60,7 @@ public final class TokenStoreArgs extends io.pulumi.resources.ResourceArgs {
      * call the token refresh API. The default is 72 hours.
      * 
      */
-    @InputImport(name="tokenRefreshExtensionHours")
+    @Import(name="tokenRefreshExtensionHours")
       private final @Nullable Output<Double> tokenRefreshExtensionHours;
 
     public Output<Double> getTokenRefreshExtensionHours() {

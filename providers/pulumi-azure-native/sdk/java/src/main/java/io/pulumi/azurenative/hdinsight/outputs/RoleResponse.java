@@ -9,7 +9,7 @@ import io.pulumi.azurenative.hdinsight.outputs.HardwareProfileResponse;
 import io.pulumi.azurenative.hdinsight.outputs.OsProfileResponse;
 import io.pulumi.azurenative.hdinsight.outputs.ScriptActionResponse;
 import io.pulumi.azurenative.hdinsight.outputs.VirtualNetworkProfileResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -18,7 +18,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RoleResponse {
     /**
      * The autoscale configurations.
@@ -76,19 +76,19 @@ public final class RoleResponse {
      */
     private final @Nullable VirtualNetworkProfileResponse virtualNetworkProfile;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RoleResponse(
-        @OutputCustomType.Parameter("autoscaleConfiguration") @Nullable AutoscaleResponse autoscaleConfiguration,
-        @OutputCustomType.Parameter("dataDisksGroups") @Nullable List<DataDisksGroupsResponse> dataDisksGroups,
-        @OutputCustomType.Parameter("encryptDataDisks") @Nullable Boolean encryptDataDisks,
-        @OutputCustomType.Parameter("hardwareProfile") @Nullable HardwareProfileResponse hardwareProfile,
-        @OutputCustomType.Parameter("minInstanceCount") @Nullable Integer minInstanceCount,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("osProfile") @Nullable OsProfileResponse osProfile,
-        @OutputCustomType.Parameter("scriptActions") @Nullable List<ScriptActionResponse> scriptActions,
-        @OutputCustomType.Parameter("targetInstanceCount") @Nullable Integer targetInstanceCount,
-        @OutputCustomType.Parameter("vMGroupName") @Nullable String vMGroupName,
-        @OutputCustomType.Parameter("virtualNetworkProfile") @Nullable VirtualNetworkProfileResponse virtualNetworkProfile) {
+        @CustomType.Parameter("autoscaleConfiguration") @Nullable AutoscaleResponse autoscaleConfiguration,
+        @CustomType.Parameter("dataDisksGroups") @Nullable List<DataDisksGroupsResponse> dataDisksGroups,
+        @CustomType.Parameter("encryptDataDisks") @Nullable Boolean encryptDataDisks,
+        @CustomType.Parameter("hardwareProfile") @Nullable HardwareProfileResponse hardwareProfile,
+        @CustomType.Parameter("minInstanceCount") @Nullable Integer minInstanceCount,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("osProfile") @Nullable OsProfileResponse osProfile,
+        @CustomType.Parameter("scriptActions") @Nullable List<ScriptActionResponse> scriptActions,
+        @CustomType.Parameter("targetInstanceCount") @Nullable Integer targetInstanceCount,
+        @CustomType.Parameter("vMGroupName") @Nullable String vMGroupName,
+        @CustomType.Parameter("virtualNetworkProfile") @Nullable VirtualNetworkProfileResponse virtualNetworkProfile) {
         this.autoscaleConfiguration = autoscaleConfiguration;
         this.dataDisksGroups = dataDisksGroups;
         this.encryptDataDisks = encryptDataDisks;

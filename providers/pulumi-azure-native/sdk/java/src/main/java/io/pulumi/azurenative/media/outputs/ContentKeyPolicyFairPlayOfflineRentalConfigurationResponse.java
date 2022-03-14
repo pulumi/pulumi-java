@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.media.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ContentKeyPolicyFairPlayOfflineRentalConfigurationResponse {
     /**
      * Playback duration
@@ -20,10 +20,10 @@ public final class ContentKeyPolicyFairPlayOfflineRentalConfigurationResponse {
      */
     private final Double storageDurationSeconds;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ContentKeyPolicyFairPlayOfflineRentalConfigurationResponse(
-        @OutputCustomType.Parameter("playbackDurationSeconds") Double playbackDurationSeconds,
-        @OutputCustomType.Parameter("storageDurationSeconds") Double storageDurationSeconds) {
+        @CustomType.Parameter("playbackDurationSeconds") Double playbackDurationSeconds,
+        @CustomType.Parameter("storageDurationSeconds") Double storageDurationSeconds) {
         this.playbackDurationSeconds = playbackDurationSeconds;
         this.storageDurationSeconds = storageDurationSeconds;
     }

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.deviceupdate;
 import io.pulumi.azurenative.deviceupdate.inputs.DiagnosticStoragePropertiesArgs;
 import io.pulumi.azurenative.deviceupdate.inputs.IotHubSettingsArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * Account name.
      * 
      */
-    @InputImport(name="accountName", required=true)
+    @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
     public Output<String> getAccountName() {
@@ -34,7 +34,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * Customer-initiated diagnostic log collection storage properties
      * 
      */
-    @InputImport(name="diagnosticStorageProperties")
+    @Import(name="diagnosticStorageProperties")
       private final @Nullable Output<DiagnosticStoragePropertiesArgs> diagnosticStorageProperties;
 
     public Output<DiagnosticStoragePropertiesArgs> getDiagnosticStorageProperties() {
@@ -45,7 +45,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * Enables or Disables the diagnostic logs collection
      * 
      */
-    @InputImport(name="enableDiagnostics")
+    @Import(name="enableDiagnostics")
       private final @Nullable Output<Boolean> enableDiagnostics;
 
     public Output<Boolean> getEnableDiagnostics() {
@@ -56,7 +56,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * Instance name.
      * 
      */
-    @InputImport(name="instanceName")
+    @Import(name="instanceName")
       private final @Nullable Output<String> instanceName;
 
     public Output<String> getInstanceName() {
@@ -67,7 +67,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * List of IoT Hubs associated with the account.
      * 
      */
-    @InputImport(name="iotHubs")
+    @Import(name="iotHubs")
       private final @Nullable Output<List<IotHubSettingsArgs>> iotHubs;
 
     public Output<List<IotHubSettingsArgs>> getIotHubs() {
@@ -78,7 +78,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * The geo-location where the resource lives
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -89,7 +89,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * The resource group name.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -100,7 +100,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * Resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

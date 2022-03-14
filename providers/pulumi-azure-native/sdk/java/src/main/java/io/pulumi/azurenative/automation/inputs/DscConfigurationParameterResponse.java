@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.automation.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class DscConfigurationParameterResponse extends io.pulumi.resources
      * Gets or sets the default value of parameter.
      * 
      */
-    @InputImport(name="defaultValue")
+    @Import(name="defaultValue")
       private final @Nullable String defaultValue;
 
     public Optional<String> getDefaultValue() {
@@ -35,7 +35,7 @@ public final class DscConfigurationParameterResponse extends io.pulumi.resources
      * Gets or sets a Boolean value to indicate whether the parameter is mandatory or not.
      * 
      */
-    @InputImport(name="isMandatory")
+    @Import(name="isMandatory")
       private final @Nullable Boolean isMandatory;
 
     public Optional<Boolean> getIsMandatory() {
@@ -46,7 +46,7 @@ public final class DscConfigurationParameterResponse extends io.pulumi.resources
      * Get or sets the position of the parameter.
      * 
      */
-    @InputImport(name="position")
+    @Import(name="position")
       private final @Nullable Integer position;
 
     public Optional<Integer> getPosition() {
@@ -57,7 +57,7 @@ public final class DscConfigurationParameterResponse extends io.pulumi.resources
      * Gets or sets the type of the parameter.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable String type;
 
     public Optional<String> getType() {

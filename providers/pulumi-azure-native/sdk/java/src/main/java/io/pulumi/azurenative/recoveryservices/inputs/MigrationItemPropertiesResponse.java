@@ -6,7 +6,7 @@ package io.pulumi.azurenative.recoveryservices.inputs;
 import io.pulumi.azurenative.recoveryservices.inputs.CurrentJobDetailsResponse;
 import io.pulumi.azurenative.recoveryservices.inputs.HealthErrorResponse;
 import io.pulumi.azurenative.recoveryservices.inputs.VMwareCbtMigrationDetailsResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class MigrationItemPropertiesResponse extends io.pulumi.resources.I
      * The allowed operations on the migration item, based on the current migration state of the item.
      * 
      */
-    @InputImport(name="allowedOperations", required=true)
+    @Import(name="allowedOperations", required=true)
       private final List<String> allowedOperations;
 
     public List<String> getAllowedOperations() {
@@ -37,7 +37,7 @@ public final class MigrationItemPropertiesResponse extends io.pulumi.resources.I
      * The current job details.
      * 
      */
-    @InputImport(name="currentJob", required=true)
+    @Import(name="currentJob", required=true)
       private final CurrentJobDetailsResponse currentJob;
 
     public CurrentJobDetailsResponse getCurrentJob() {
@@ -48,7 +48,7 @@ public final class MigrationItemPropertiesResponse extends io.pulumi.resources.I
      * The consolidated health.
      * 
      */
-    @InputImport(name="health", required=true)
+    @Import(name="health", required=true)
       private final String health;
 
     public String getHealth() {
@@ -59,7 +59,7 @@ public final class MigrationItemPropertiesResponse extends io.pulumi.resources.I
      * The list of health errors.
      * 
      */
-    @InputImport(name="healthErrors", required=true)
+    @Import(name="healthErrors", required=true)
       private final List<HealthErrorResponse> healthErrors;
 
     public List<HealthErrorResponse> getHealthErrors() {
@@ -70,7 +70,7 @@ public final class MigrationItemPropertiesResponse extends io.pulumi.resources.I
      * The on-premise virtual machine name.
      * 
      */
-    @InputImport(name="machineName", required=true)
+    @Import(name="machineName", required=true)
       private final String machineName;
 
     public String getMachineName() {
@@ -81,7 +81,7 @@ public final class MigrationItemPropertiesResponse extends io.pulumi.resources.I
      * The migration status.
      * 
      */
-    @InputImport(name="migrationState", required=true)
+    @Import(name="migrationState", required=true)
       private final String migrationState;
 
     public String getMigrationState() {
@@ -92,7 +92,7 @@ public final class MigrationItemPropertiesResponse extends io.pulumi.resources.I
      * The migration state description.
      * 
      */
-    @InputImport(name="migrationStateDescription", required=true)
+    @Import(name="migrationStateDescription", required=true)
       private final String migrationStateDescription;
 
     public String getMigrationStateDescription() {
@@ -103,7 +103,7 @@ public final class MigrationItemPropertiesResponse extends io.pulumi.resources.I
      * The name of policy governing this item.
      * 
      */
-    @InputImport(name="policyFriendlyName", required=true)
+    @Import(name="policyFriendlyName", required=true)
       private final String policyFriendlyName;
 
     public String getPolicyFriendlyName() {
@@ -114,7 +114,7 @@ public final class MigrationItemPropertiesResponse extends io.pulumi.resources.I
      * The ARM Id of policy governing this item.
      * 
      */
-    @InputImport(name="policyId", required=true)
+    @Import(name="policyId", required=true)
       private final String policyId;
 
     public String getPolicyId() {
@@ -125,7 +125,7 @@ public final class MigrationItemPropertiesResponse extends io.pulumi.resources.I
      * The migration provider custom settings.
      * 
      */
-    @InputImport(name="providerSpecificDetails")
+    @Import(name="providerSpecificDetails")
       private final @Nullable VMwareCbtMigrationDetailsResponse providerSpecificDetails;
 
     public Optional<VMwareCbtMigrationDetailsResponse> getProviderSpecificDetails() {
@@ -136,7 +136,7 @@ public final class MigrationItemPropertiesResponse extends io.pulumi.resources.I
      * The recovery services provider ARM Id.
      * 
      */
-    @InputImport(name="recoveryServicesProviderId", required=true)
+    @Import(name="recoveryServicesProviderId", required=true)
       private final String recoveryServicesProviderId;
 
     public String getRecoveryServicesProviderId() {
@@ -147,7 +147,7 @@ public final class MigrationItemPropertiesResponse extends io.pulumi.resources.I
      * The test migrate state.
      * 
      */
-    @InputImport(name="testMigrateState", required=true)
+    @Import(name="testMigrateState", required=true)
       private final String testMigrateState;
 
     public String getTestMigrateState() {
@@ -158,7 +158,7 @@ public final class MigrationItemPropertiesResponse extends io.pulumi.resources.I
      * The test migrate state description.
      * 
      */
-    @InputImport(name="testMigrateStateDescription", required=true)
+    @Import(name="testMigrateStateDescription", required=true)
       private final String testMigrateStateDescription;
 
     public String getTestMigrateStateDescription() {

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.batch.inputs;
 import io.pulumi.azurenative.batch.enums.ContainerWorkingDirectory;
 import io.pulumi.azurenative.batch.inputs.ContainerRegistryArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class TaskContainerSettingsArgs extends io.pulumi.resources.Resourc
      * These additional options are supplied as arguments to the "docker create" command, in addition to those controlled by the Batch Service.
      * 
      */
-    @InputImport(name="containerRunOptions")
+    @Import(name="containerRunOptions")
       private final @Nullable Output<String> containerRunOptions;
 
     public Output<String> getContainerRunOptions() {
@@ -31,7 +31,7 @@ public final class TaskContainerSettingsArgs extends io.pulumi.resources.Resourc
      * This is the full image reference, as would be specified to "docker pull". If no tag is provided as part of the image name, the tag ":latest" is used as a default.
      * 
      */
-    @InputImport(name="imageName", required=true)
+    @Import(name="imageName", required=true)
       private final Output<String> imageName;
 
     public Output<String> getImageName() {
@@ -42,14 +42,14 @@ public final class TaskContainerSettingsArgs extends io.pulumi.resources.Resourc
      * This setting can be omitted if was already provided at pool creation.
      * 
      */
-    @InputImport(name="registry")
+    @Import(name="registry")
       private final @Nullable Output<ContainerRegistryArgs> registry;
 
     public Output<ContainerRegistryArgs> getRegistry() {
         return this.registry == null ? Output.empty() : this.registry;
     }
 
-    @InputImport(name="workingDirectory")
+    @Import(name="workingDirectory")
       private final @Nullable Output<ContainerWorkingDirectory> workingDirectory;
 
     public Output<ContainerWorkingDirectory> getWorkingDirectory() {

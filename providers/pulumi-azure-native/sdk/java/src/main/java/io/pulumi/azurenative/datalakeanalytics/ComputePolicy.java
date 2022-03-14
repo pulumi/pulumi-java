@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.datalakeanalytics.ComputePolicyArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -35,7 +35,7 @@ public class ComputePolicy extends io.pulumi.resources.CustomResource {
      * The maximum degree of parallelism per job this user can use to submit jobs.
      * 
      */
-    @OutputExport(name="maxDegreeOfParallelismPerJob", type=Integer.class, parameters={})
+    @Export(name="maxDegreeOfParallelismPerJob", type=Integer.class, parameters={})
     private Output<Integer> maxDegreeOfParallelismPerJob;
 
     /**
@@ -49,7 +49,7 @@ public class ComputePolicy extends io.pulumi.resources.CustomResource {
      * The minimum priority per job this user can use to submit jobs.
      * 
      */
-    @OutputExport(name="minPriorityPerJob", type=Integer.class, parameters={})
+    @Export(name="minPriorityPerJob", type=Integer.class, parameters={})
     private Output<Integer> minPriorityPerJob;
 
     /**
@@ -63,7 +63,7 @@ public class ComputePolicy extends io.pulumi.resources.CustomResource {
      * The resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -77,7 +77,7 @@ public class ComputePolicy extends io.pulumi.resources.CustomResource {
      * The AAD object identifier for the entity to create a policy for.
      * 
      */
-    @OutputExport(name="objectId", type=String.class, parameters={})
+    @Export(name="objectId", type=String.class, parameters={})
     private Output<String> objectId;
 
     /**
@@ -91,7 +91,7 @@ public class ComputePolicy extends io.pulumi.resources.CustomResource {
      * The type of AAD object the object identifier refers to.
      * 
      */
-    @OutputExport(name="objectType", type=String.class, parameters={})
+    @Export(name="objectType", type=String.class, parameters={})
     private Output<String> objectType;
 
     /**
@@ -105,7 +105,7 @@ public class ComputePolicy extends io.pulumi.resources.CustomResource {
      * The resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

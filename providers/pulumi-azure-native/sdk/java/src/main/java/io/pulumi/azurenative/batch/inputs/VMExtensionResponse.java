@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.batch.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -21,14 +21,14 @@ public final class VMExtensionResponse extends io.pulumi.resources.InvokeArgs {
      * Indicates whether the extension should use a newer minor version if one is available at deployment time. Once deployed, however, the extension will not upgrade minor versions unless redeployed, even with this property set to true.
      * 
      */
-    @InputImport(name="autoUpgradeMinorVersion")
+    @Import(name="autoUpgradeMinorVersion")
       private final @Nullable Boolean autoUpgradeMinorVersion;
 
     public Optional<Boolean> getAutoUpgradeMinorVersion() {
         return this.autoUpgradeMinorVersion == null ? Optional.empty() : Optional.ofNullable(this.autoUpgradeMinorVersion);
     }
 
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -39,7 +39,7 @@ public final class VMExtensionResponse extends io.pulumi.resources.InvokeArgs {
      * The extension can contain either protectedSettings or protectedSettingsFromKeyVault or no protected settings at all.
      * 
      */
-    @InputImport(name="protectedSettings")
+    @Import(name="protectedSettings")
       private final @Nullable Object protectedSettings;
 
     public Optional<Object> getProtectedSettings() {
@@ -50,35 +50,35 @@ public final class VMExtensionResponse extends io.pulumi.resources.InvokeArgs {
      * Collection of extension names after which this extension needs to be provisioned.
      * 
      */
-    @InputImport(name="provisionAfterExtensions")
+    @Import(name="provisionAfterExtensions")
       private final @Nullable List<String> provisionAfterExtensions;
 
     public List<String> getProvisionAfterExtensions() {
         return this.provisionAfterExtensions == null ? List.of() : this.provisionAfterExtensions;
     }
 
-    @InputImport(name="publisher", required=true)
+    @Import(name="publisher", required=true)
       private final String publisher;
 
     public String getPublisher() {
         return this.publisher;
     }
 
-    @InputImport(name="settings")
+    @Import(name="settings")
       private final @Nullable Object settings;
 
     public Optional<Object> getSettings() {
         return this.settings == null ? Optional.empty() : Optional.ofNullable(this.settings);
     }
 
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {
         return this.type;
     }
 
-    @InputImport(name="typeHandlerVersion")
+    @Import(name="typeHandlerVersion")
       private final @Nullable String typeHandlerVersion;
 
     public Optional<String> getTypeHandlerVersion() {

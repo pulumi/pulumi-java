@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.machinelearningexperimentation.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetProjectResult {
     /**
      * The immutable id of the team account which contains this project.
@@ -78,21 +78,21 @@ public final class GetProjectResult {
      */
     private final String workspaceId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetProjectResult(
-        @OutputCustomType.Parameter("accountId") String accountId,
-        @OutputCustomType.Parameter("creationDate") String creationDate,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("friendlyName") String friendlyName,
-        @OutputCustomType.Parameter("gitrepo") @Nullable String gitrepo,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("projectId") String projectId,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("workspaceId") String workspaceId) {
+        @CustomType.Parameter("accountId") String accountId,
+        @CustomType.Parameter("creationDate") String creationDate,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("friendlyName") String friendlyName,
+        @CustomType.Parameter("gitrepo") @Nullable String gitrepo,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("projectId") String projectId,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("workspaceId") String workspaceId) {
         this.accountId = accountId;
         this.creationDate = creationDate;
         this.description = description;

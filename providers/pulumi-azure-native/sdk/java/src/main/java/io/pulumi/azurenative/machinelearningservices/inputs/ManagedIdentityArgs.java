@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class ManagedIdentityArgs extends io.pulumi.resources.ResourceArgs 
      * Specifies a user-assigned identity by client ID. For system-assigned, do not set this field.
      * 
      */
-    @InputImport(name="clientId")
+    @Import(name="clientId")
       private final @Nullable Output<String> clientId;
 
     public Output<String> getClientId() {
@@ -34,7 +34,7 @@ public final class ManagedIdentityArgs extends io.pulumi.resources.ResourceArgs 
      * Expected value is 'Managed'.
      * 
      */
-    @InputImport(name="identityType", required=true)
+    @Import(name="identityType", required=true)
       private final Output<String> identityType;
 
     public Output<String> getIdentityType() {
@@ -45,7 +45,7 @@ public final class ManagedIdentityArgs extends io.pulumi.resources.ResourceArgs 
      * Specifies a user-assigned identity by object ID. For system-assigned, do not set this field.
      * 
      */
-    @InputImport(name="objectId")
+    @Import(name="objectId")
       private final @Nullable Output<String> objectId;
 
     public Output<String> getObjectId() {
@@ -56,7 +56,7 @@ public final class ManagedIdentityArgs extends io.pulumi.resources.ResourceArgs 
      * Specifies a user-assigned identity by ARM resource ID. For system-assigned, do not set this field.
      * 
      */
-    @InputImport(name="resourceId")
+    @Import(name="resourceId")
       private final @Nullable Output<String> resourceId;
 
     public Output<String> getResourceId() {

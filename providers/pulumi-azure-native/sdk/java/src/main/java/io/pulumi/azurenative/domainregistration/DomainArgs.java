@@ -7,7 +7,7 @@ import io.pulumi.azurenative.domainregistration.enums.DnsType;
 import io.pulumi.azurenative.domainregistration.inputs.ContactArgs;
 import io.pulumi.azurenative.domainregistration.inputs.DomainPurchaseConsentArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -19,7 +19,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DomainArgs Empty = new DomainArgs();
 
-    @InputImport(name="authCode")
+    @Import(name="authCode")
       private final @Nullable Output<String> authCode;
 
     public Output<String> getAuthCode() {
@@ -30,7 +30,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * <code>true</code> if the domain should be automatically renewed; otherwise, <code>false</code>.
      * 
      */
-    @InputImport(name="autoRenew")
+    @Import(name="autoRenew")
       private final @Nullable Output<Boolean> autoRenew;
 
     public Output<Boolean> getAutoRenew() {
@@ -41,7 +41,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * Legal agreement consent.
      * 
      */
-    @InputImport(name="consent", required=true)
+    @Import(name="consent", required=true)
       private final Output<DomainPurchaseConsentArgs> consent;
 
     public Output<DomainPurchaseConsentArgs> getConsent() {
@@ -52,7 +52,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * Administrative contact.
      * 
      */
-    @InputImport(name="contactAdmin", required=true)
+    @Import(name="contactAdmin", required=true)
       private final Output<ContactArgs> contactAdmin;
 
     public Output<ContactArgs> getContactAdmin() {
@@ -63,7 +63,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * Billing contact.
      * 
      */
-    @InputImport(name="contactBilling", required=true)
+    @Import(name="contactBilling", required=true)
       private final Output<ContactArgs> contactBilling;
 
     public Output<ContactArgs> getContactBilling() {
@@ -74,7 +74,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * Registrant contact.
      * 
      */
-    @InputImport(name="contactRegistrant", required=true)
+    @Import(name="contactRegistrant", required=true)
       private final Output<ContactArgs> contactRegistrant;
 
     public Output<ContactArgs> getContactRegistrant() {
@@ -85,7 +85,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * Technical contact.
      * 
      */
-    @InputImport(name="contactTech", required=true)
+    @Import(name="contactTech", required=true)
       private final Output<ContactArgs> contactTech;
 
     public Output<ContactArgs> getContactTech() {
@@ -96,7 +96,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * Current DNS type
      * 
      */
-    @InputImport(name="dnsType")
+    @Import(name="dnsType")
       private final @Nullable Output<DnsType> dnsType;
 
     public Output<DnsType> getDnsType() {
@@ -107,7 +107,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * Azure DNS Zone to use
      * 
      */
-    @InputImport(name="dnsZoneId")
+    @Import(name="dnsZoneId")
       private final @Nullable Output<String> dnsZoneId;
 
     public Output<String> getDnsZoneId() {
@@ -118,7 +118,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the domain.
      * 
      */
-    @InputImport(name="domainName")
+    @Import(name="domainName")
       private final @Nullable Output<String> domainName;
 
     public Output<String> getDomainName() {
@@ -129,7 +129,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * Kind of resource.
      * 
      */
-    @InputImport(name="kind")
+    @Import(name="kind")
       private final @Nullable Output<String> kind;
 
     public Output<String> getKind() {
@@ -140,7 +140,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * Resource Location.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -151,7 +151,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * <code>true</code> if domain privacy is enabled for this domain; otherwise, <code>false</code>.
      * 
      */
-    @InputImport(name="privacy")
+    @Import(name="privacy")
       private final @Nullable Output<Boolean> privacy;
 
     public Output<Boolean> getPrivacy() {
@@ -162,7 +162,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the resource group to which the resource belongs.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -173,7 +173,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * Resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -184,7 +184,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * Target DNS type (would be used for migration)
      * 
      */
-    @InputImport(name="targetDnsType")
+    @Import(name="targetDnsType")
       private final @Nullable Output<DnsType> targetDnsType;
 
     public Output<DnsType> getTargetDnsType() {

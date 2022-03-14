@@ -8,7 +8,7 @@ import io.pulumi.azurenative.datashare.SqlDBTableDataSetMappingArgs;
 import io.pulumi.azurenative.datashare.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +35,7 @@ public class SqlDBTableDataSetMapping extends io.pulumi.resources.CustomResource
      * The id of the source data set.
      * 
      */
-    @OutputExport(name="dataSetId", type=String.class, parameters={})
+    @Export(name="dataSetId", type=String.class, parameters={})
     private Output<String> dataSetId;
 
     /**
@@ -49,7 +49,7 @@ public class SqlDBTableDataSetMapping extends io.pulumi.resources.CustomResource
      * Gets the status of the data set mapping.
      * 
      */
-    @OutputExport(name="dataSetMappingStatus", type=String.class, parameters={})
+    @Export(name="dataSetMappingStatus", type=String.class, parameters={})
     private Output<String> dataSetMappingStatus;
 
     /**
@@ -63,7 +63,7 @@ public class SqlDBTableDataSetMapping extends io.pulumi.resources.CustomResource
      * DatabaseName name of the sink data set
      * 
      */
-    @OutputExport(name="databaseName", type=String.class, parameters={})
+    @Export(name="databaseName", type=String.class, parameters={})
     private Output<String> databaseName;
 
     /**
@@ -78,7 +78,7 @@ public class SqlDBTableDataSetMapping extends io.pulumi.resources.CustomResource
      * Expected value is 'SqlDBTable'.
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
     /**
@@ -93,7 +93,7 @@ public class SqlDBTableDataSetMapping extends io.pulumi.resources.CustomResource
      * Name of the azure resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -107,7 +107,7 @@ public class SqlDBTableDataSetMapping extends io.pulumi.resources.CustomResource
      * Provisioning state of the data set mapping.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -121,7 +121,7 @@ public class SqlDBTableDataSetMapping extends io.pulumi.resources.CustomResource
      * Schema of the table. Default value is dbo.
      * 
      */
-    @OutputExport(name="schemaName", type=String.class, parameters={})
+    @Export(name="schemaName", type=String.class, parameters={})
     private Output<String> schemaName;
 
     /**
@@ -135,7 +135,7 @@ public class SqlDBTableDataSetMapping extends io.pulumi.resources.CustomResource
      * Resource id of SQL server
      * 
      */
-    @OutputExport(name="sqlServerResourceId", type=String.class, parameters={})
+    @Export(name="sqlServerResourceId", type=String.class, parameters={})
     private Output<String> sqlServerResourceId;
 
     /**
@@ -149,7 +149,7 @@ public class SqlDBTableDataSetMapping extends io.pulumi.resources.CustomResource
      * System Data of the Azure resource.
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -163,7 +163,7 @@ public class SqlDBTableDataSetMapping extends io.pulumi.resources.CustomResource
      * SQL DB table name.
      * 
      */
-    @OutputExport(name="tableName", type=String.class, parameters={})
+    @Export(name="tableName", type=String.class, parameters={})
     private Output<String> tableName;
 
     /**
@@ -177,7 +177,7 @@ public class SqlDBTableDataSetMapping extends io.pulumi.resources.CustomResource
      * Type of the azure resource
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

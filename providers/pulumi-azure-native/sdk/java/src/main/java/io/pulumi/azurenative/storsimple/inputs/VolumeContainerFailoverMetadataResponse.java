@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.storsimple.inputs;
 
 import io.pulumi.azurenative.storsimple.inputs.VolumeFailoverMetadataResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class VolumeContainerFailoverMetadataResponse extends io.pulumi.res
      * The path ID of the volume container.
      * 
      */
-    @InputImport(name="volumeContainerId")
+    @Import(name="volumeContainerId")
       private final @Nullable String volumeContainerId;
 
     public Optional<String> getVolumeContainerId() {
@@ -35,7 +35,7 @@ public final class VolumeContainerFailoverMetadataResponse extends io.pulumi.res
      * The list of metadata of volumes inside the volume container, which contains valid cloud snapshots.
      * 
      */
-    @InputImport(name="volumes")
+    @Import(name="volumes")
       private final @Nullable List<VolumeFailoverMetadataResponse> volumes;
 
     public List<VolumeFailoverMetadataResponse> getVolumes() {

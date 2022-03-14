@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.security.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DefenderForServersAwsOfferingResponseDefenderForServers {
     /**
      * The cloud role ARN in AWS for this feature
@@ -17,8 +17,8 @@ public final class DefenderForServersAwsOfferingResponseDefenderForServers {
      */
     private final @Nullable String cloudRoleArn;
 
-    @OutputCustomType.Constructor
-    private DefenderForServersAwsOfferingResponseDefenderForServers(@OutputCustomType.Parameter("cloudRoleArn") @Nullable String cloudRoleArn) {
+    @CustomType.Constructor
+    private DefenderForServersAwsOfferingResponseDefenderForServers(@CustomType.Parameter("cloudRoleArn") @Nullable String cloudRoleArn) {
         this.cloudRoleArn = cloudRoleArn;
     }
 

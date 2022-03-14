@@ -6,14 +6,14 @@ package io.pulumi.azurenative.deviceupdate.outputs;
 import io.pulumi.azurenative.deviceupdate.outputs.ConnectionDetailsResponse;
 import io.pulumi.azurenative.deviceupdate.outputs.PrivateLinkServiceConnectionResponse;
 import io.pulumi.azurenative.deviceupdate.outputs.PrivateLinkServiceProxyResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RemotePrivateEndpointResponse {
     /**
      * List of connection details.
@@ -46,14 +46,14 @@ public final class RemotePrivateEndpointResponse {
      */
     private final String vnetTrafficTag;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RemotePrivateEndpointResponse(
-        @OutputCustomType.Parameter("connectionDetails") @Nullable List<ConnectionDetailsResponse> connectionDetails,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("manualPrivateLinkServiceConnections") @Nullable List<PrivateLinkServiceConnectionResponse> manualPrivateLinkServiceConnections,
-        @OutputCustomType.Parameter("privateLinkServiceConnections") @Nullable List<PrivateLinkServiceConnectionResponse> privateLinkServiceConnections,
-        @OutputCustomType.Parameter("privateLinkServiceProxies") @Nullable List<PrivateLinkServiceProxyResponse> privateLinkServiceProxies,
-        @OutputCustomType.Parameter("vnetTrafficTag") String vnetTrafficTag) {
+        @CustomType.Parameter("connectionDetails") @Nullable List<ConnectionDetailsResponse> connectionDetails,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("manualPrivateLinkServiceConnections") @Nullable List<PrivateLinkServiceConnectionResponse> manualPrivateLinkServiceConnections,
+        @CustomType.Parameter("privateLinkServiceConnections") @Nullable List<PrivateLinkServiceConnectionResponse> privateLinkServiceConnections,
+        @CustomType.Parameter("privateLinkServiceProxies") @Nullable List<PrivateLinkServiceProxyResponse> privateLinkServiceProxies,
+        @CustomType.Parameter("vnetTrafficTag") String vnetTrafficTag) {
         this.connectionDetails = connectionDetails;
         this.id = id;
         this.manualPrivateLinkServiceConnections = manualPrivateLinkServiceConnections;

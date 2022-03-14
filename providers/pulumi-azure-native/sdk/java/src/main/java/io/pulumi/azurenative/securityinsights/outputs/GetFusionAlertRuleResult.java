@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.securityinsights.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetFusionAlertRuleResult {
     /**
      * The Name of the alert rule template used to create this rule.
@@ -75,20 +75,20 @@ public final class GetFusionAlertRuleResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetFusionAlertRuleResult(
-        @OutputCustomType.Parameter("alertRuleTemplateName") String alertRuleTemplateName,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("enabled") Boolean enabled,
-        @OutputCustomType.Parameter("etag") @Nullable String etag,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("lastModifiedUtc") String lastModifiedUtc,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("severity") String severity,
-        @OutputCustomType.Parameter("tactics") List<String> tactics,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("alertRuleTemplateName") String alertRuleTemplateName,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("enabled") Boolean enabled,
+        @CustomType.Parameter("etag") @Nullable String etag,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("lastModifiedUtc") String lastModifiedUtc,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("severity") String severity,
+        @CustomType.Parameter("tactics") List<String> tactics,
+        @CustomType.Parameter("type") String type) {
         this.alertRuleTemplateName = alertRuleTemplateName;
         this.description = description;
         this.displayName = displayName;

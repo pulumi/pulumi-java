@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CookieExpirationResponse {
     /**
      * The convention used when determining the session cookie's expiration.
@@ -22,10 +22,10 @@ public final class CookieExpirationResponse {
      */
     private final @Nullable String timeToExpiration;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CookieExpirationResponse(
-        @OutputCustomType.Parameter("convention") @Nullable String convention,
-        @OutputCustomType.Parameter("timeToExpiration") @Nullable String timeToExpiration) {
+        @CustomType.Parameter("convention") @Nullable String convention,
+        @CustomType.Parameter("timeToExpiration") @Nullable String timeToExpiration) {
         this.convention = convention;
         this.timeToExpiration = timeToExpiration;
     }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.cognitiveservices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class KeyVaultPropertiesResponse extends io.pulumi.resources.Invoke
      * Name of the Key from KeyVault
      * 
      */
-    @InputImport(name="keyName")
+    @Import(name="keyName")
       private final @Nullable String keyName;
 
     public Optional<String> getKeyName() {
@@ -33,7 +33,7 @@ public final class KeyVaultPropertiesResponse extends io.pulumi.resources.Invoke
      * Uri of KeyVault
      * 
      */
-    @InputImport(name="keyVaultUri")
+    @Import(name="keyVaultUri")
       private final @Nullable String keyVaultUri;
 
     public Optional<String> getKeyVaultUri() {
@@ -44,7 +44,7 @@ public final class KeyVaultPropertiesResponse extends io.pulumi.resources.Invoke
      * Version of the Key from KeyVault
      * 
      */
-    @InputImport(name="keyVersion")
+    @Import(name="keyVersion")
       private final @Nullable String keyVersion;
 
     public Optional<String> getKeyVersion() {

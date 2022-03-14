@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.changeanalysis.outputs;
 
 import io.pulumi.azurenative.changeanalysis.outputs.NotificationSettingsResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ConfigurationProfileResourcePropertiesResponse {
     /**
      * Settings of change notification configuration for a subscription.
@@ -17,8 +17,8 @@ public final class ConfigurationProfileResourcePropertiesResponse {
      */
     private final @Nullable NotificationSettingsResponse notifications;
 
-    @OutputCustomType.Constructor
-    private ConfigurationProfileResourcePropertiesResponse(@OutputCustomType.Parameter("notifications") @Nullable NotificationSettingsResponse notifications) {
+    @CustomType.Constructor
+    private ConfigurationProfileResourcePropertiesResponse(@CustomType.Parameter("notifications") @Nullable NotificationSettingsResponse notifications) {
         this.notifications = notifications;
     }
 

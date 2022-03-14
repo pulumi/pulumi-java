@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ScaleSettingsResponse {
     /**
      * Max number of nodes to use
@@ -28,11 +28,11 @@ public final class ScaleSettingsResponse {
      */
     private final @Nullable String nodeIdleTimeBeforeScaleDown;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ScaleSettingsResponse(
-        @OutputCustomType.Parameter("maxNodeCount") Integer maxNodeCount,
-        @OutputCustomType.Parameter("minNodeCount") @Nullable Integer minNodeCount,
-        @OutputCustomType.Parameter("nodeIdleTimeBeforeScaleDown") @Nullable String nodeIdleTimeBeforeScaleDown) {
+        @CustomType.Parameter("maxNodeCount") Integer maxNodeCount,
+        @CustomType.Parameter("minNodeCount") @Nullable Integer minNodeCount,
+        @CustomType.Parameter("nodeIdleTimeBeforeScaleDown") @Nullable String nodeIdleTimeBeforeScaleDown) {
         this.maxNodeCount = maxNodeCount;
         this.minNodeCount = minNodeCount;
         this.nodeIdleTimeBeforeScaleDown = nodeIdleTimeBeforeScaleDown;

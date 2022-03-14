@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.connectedvmwarevsphere.outputs;
 
 import io.pulumi.azurenative.connectedvmwarevsphere.outputs.NetworkInterfaceResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class NetworkProfileResponse {
     /**
      * Gets or sets the list of network interfaces associated with the virtual machine.
@@ -17,8 +17,8 @@ public final class NetworkProfileResponse {
      */
     private final @Nullable List<NetworkInterfaceResponse> networkInterfaces;
 
-    @OutputCustomType.Constructor
-    private NetworkProfileResponse(@OutputCustomType.Parameter("networkInterfaces") @Nullable List<NetworkInterfaceResponse> networkInterfaces) {
+    @CustomType.Constructor
+    private NetworkProfileResponse(@CustomType.Parameter("networkInterfaces") @Nullable List<NetworkInterfaceResponse> networkInterfaces) {
         this.networkInterfaces = networkInterfaces;
     }
 

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class HostNameSslStateResponse extends io.pulumi.resources.InvokeAr
      * Indicates whether the hostname is a standard or repository hostname.
      * 
      */
-    @InputImport(name="hostType")
+    @Import(name="hostType")
       private final @Nullable String hostType;
 
     public Optional<String> getHostType() {
@@ -34,7 +34,7 @@ public final class HostNameSslStateResponse extends io.pulumi.resources.InvokeAr
      * Hostname.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -45,7 +45,7 @@ public final class HostNameSslStateResponse extends io.pulumi.resources.InvokeAr
      * SSL type.
      * 
      */
-    @InputImport(name="sslState")
+    @Import(name="sslState")
       private final @Nullable String sslState;
 
     public Optional<String> getSslState() {
@@ -56,7 +56,7 @@ public final class HostNameSslStateResponse extends io.pulumi.resources.InvokeAr
      * SSL certificate thumbprint.
      * 
      */
-    @InputImport(name="thumbprint")
+    @Import(name="thumbprint")
       private final @Nullable String thumbprint;
 
     public Optional<String> getThumbprint() {
@@ -67,7 +67,7 @@ public final class HostNameSslStateResponse extends io.pulumi.resources.InvokeAr
      * Set to <code>true</code> to update existing hostname.
      * 
      */
-    @InputImport(name="toUpdate")
+    @Import(name="toUpdate")
       private final @Nullable Boolean toUpdate;
 
     public Optional<Boolean> getToUpdate() {
@@ -78,7 +78,7 @@ public final class HostNameSslStateResponse extends io.pulumi.resources.InvokeAr
      * Virtual IP address assigned to the hostname if IP based SSL is enabled.
      * 
      */
-    @InputImport(name="virtualIP")
+    @Import(name="virtualIP")
       private final @Nullable String virtualIP;
 
     public Optional<String> getVirtualIP() {

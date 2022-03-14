@@ -6,7 +6,7 @@ package io.pulumi.azurenative.authorization.inputs;
 import io.pulumi.azurenative.authorization.inputs.PolicyAssignmentPropertiesResponsePolicy;
 import io.pulumi.azurenative.authorization.inputs.PolicyAssignmentPropertiesResponseRoleDefinition;
 import io.pulumi.azurenative.authorization.inputs.PolicyAssignmentPropertiesResponseScope;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class PolicyAssignmentPropertiesResponse extends io.pulumi.resource
      * Details of the policy
      * 
      */
-    @InputImport(name="policy")
+    @Import(name="policy")
       private final @Nullable PolicyAssignmentPropertiesResponsePolicy policy;
 
     public Optional<PolicyAssignmentPropertiesResponsePolicy> getPolicy() {
@@ -31,7 +31,7 @@ public final class PolicyAssignmentPropertiesResponse extends io.pulumi.resource
      * Details of role definition
      * 
      */
-    @InputImport(name="roleDefinition")
+    @Import(name="roleDefinition")
       private final @Nullable PolicyAssignmentPropertiesResponseRoleDefinition roleDefinition;
 
     public Optional<PolicyAssignmentPropertiesResponseRoleDefinition> getRoleDefinition() {
@@ -42,7 +42,7 @@ public final class PolicyAssignmentPropertiesResponse extends io.pulumi.resource
      * Details of the resource scope
      * 
      */
-    @InputImport(name="scope")
+    @Import(name="scope")
       private final @Nullable PolicyAssignmentPropertiesResponseScope scope;
 
     public Optional<PolicyAssignmentPropertiesResponseScope> getScope() {

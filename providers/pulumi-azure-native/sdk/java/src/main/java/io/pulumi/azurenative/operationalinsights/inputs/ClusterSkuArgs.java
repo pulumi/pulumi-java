@@ -6,7 +6,7 @@ package io.pulumi.azurenative.operationalinsights.inputs;
 import io.pulumi.azurenative.operationalinsights.enums.ClusterSkuNameEnum;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class ClusterSkuArgs extends io.pulumi.resources.ResourceArgs {
      * The capacity value
      * 
      */
-    @InputImport(name="capacity")
+    @Import(name="capacity")
       private final @Nullable Output<Double> capacity;
 
     public Output<Double> getCapacity() {
@@ -36,7 +36,7 @@ public final class ClusterSkuArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the SKU.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<Either<String,ClusterSkuNameEnum>> name;
 
     public Output<Either<String,ClusterSkuNameEnum>> getName() {

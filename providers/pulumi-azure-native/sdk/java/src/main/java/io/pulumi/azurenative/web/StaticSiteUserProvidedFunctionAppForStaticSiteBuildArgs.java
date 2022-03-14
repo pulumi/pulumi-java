@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class StaticSiteUserProvidedFunctionAppForStaticSiteBuildArgs exten
      * The stage site identifier.
      * 
      */
-    @InputImport(name="environmentName", required=true)
+    @Import(name="environmentName", required=true)
       private final Output<String> environmentName;
 
     public Output<String> getEnvironmentName() {
@@ -30,7 +30,7 @@ public final class StaticSiteUserProvidedFunctionAppForStaticSiteBuildArgs exten
      * Name of the function app to register with the static site build.
      * 
      */
-    @InputImport(name="functionAppName")
+    @Import(name="functionAppName")
       private final @Nullable Output<String> functionAppName;
 
     public Output<String> getFunctionAppName() {
@@ -41,7 +41,7 @@ public final class StaticSiteUserProvidedFunctionAppForStaticSiteBuildArgs exten
      * The region of the function app registered with the static site
      * 
      */
-    @InputImport(name="functionAppRegion")
+    @Import(name="functionAppRegion")
       private final @Nullable Output<String> functionAppRegion;
 
     public Output<String> getFunctionAppRegion() {
@@ -52,7 +52,7 @@ public final class StaticSiteUserProvidedFunctionAppForStaticSiteBuildArgs exten
      * The resource id of the function app registered with the static site
      * 
      */
-    @InputImport(name="functionAppResourceId")
+    @Import(name="functionAppResourceId")
       private final @Nullable Output<String> functionAppResourceId;
 
     public Output<String> getFunctionAppResourceId() {
@@ -63,7 +63,7 @@ public final class StaticSiteUserProvidedFunctionAppForStaticSiteBuildArgs exten
      * Specify <code>true</code> to force the update of the auth configuration on the function app even if an AzureStaticWebApps provider is already configured on the function app. The default is <code>false</code>.
      * 
      */
-    @InputImport(name="isForced")
+    @Import(name="isForced")
       private final @Nullable Output<Boolean> isForced;
 
     public Output<Boolean> getIsForced() {
@@ -74,7 +74,7 @@ public final class StaticSiteUserProvidedFunctionAppForStaticSiteBuildArgs exten
      * Kind of resource.
      * 
      */
-    @InputImport(name="kind")
+    @Import(name="kind")
       private final @Nullable Output<String> kind;
 
     public Output<String> getKind() {
@@ -85,7 +85,7 @@ public final class StaticSiteUserProvidedFunctionAppForStaticSiteBuildArgs exten
      * Name of the static site.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -96,7 +96,7 @@ public final class StaticSiteUserProvidedFunctionAppForStaticSiteBuildArgs exten
      * Name of the resource group to which the resource belongs.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {

@@ -8,7 +8,7 @@ import io.pulumi.azurenative.datafactory.inputs.IntegrationRuntimeReferenceRespo
 import io.pulumi.azurenative.datafactory.inputs.ParameterSpecificationResponse;
 import io.pulumi.azurenative.datafactory.inputs.SecureStringResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -30,7 +30,7 @@ public final class ODataLinkedServiceResponse extends io.pulumi.resources.Invoke
      * Specify the resource you are requesting authorization to use Directory. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="aadResourceId")
+    @Import(name="aadResourceId")
       private final @Nullable Object aadResourceId;
 
     public Optional<Object> getAadResourceId() {
@@ -41,7 +41,7 @@ public final class ODataLinkedServiceResponse extends io.pulumi.resources.Invoke
      * Specify the credential type (key or cert) is used for service principal.
      * 
      */
-    @InputImport(name="aadServicePrincipalCredentialType")
+    @Import(name="aadServicePrincipalCredentialType")
       private final @Nullable String aadServicePrincipalCredentialType;
 
     public Optional<String> getAadServicePrincipalCredentialType() {
@@ -52,7 +52,7 @@ public final class ODataLinkedServiceResponse extends io.pulumi.resources.Invoke
      * List of tags that can be used for describing the linked service.
      * 
      */
-    @InputImport(name="annotations")
+    @Import(name="annotations")
       private final @Nullable List<Object> annotations;
 
     public List<Object> getAnnotations() {
@@ -63,7 +63,7 @@ public final class ODataLinkedServiceResponse extends io.pulumi.resources.Invoke
      * The additional HTTP headers in the request to RESTful API used for authorization. Type: object (or Expression with resultType object).
      * 
      */
-    @InputImport(name="authHeaders")
+    @Import(name="authHeaders")
       private final @Nullable Object authHeaders;
 
     public Optional<Object> getAuthHeaders() {
@@ -74,7 +74,7 @@ public final class ODataLinkedServiceResponse extends io.pulumi.resources.Invoke
      * Type of authentication used to connect to the OData service.
      * 
      */
-    @InputImport(name="authenticationType")
+    @Import(name="authenticationType")
       private final @Nullable String authenticationType;
 
     public Optional<String> getAuthenticationType() {
@@ -85,7 +85,7 @@ public final class ODataLinkedServiceResponse extends io.pulumi.resources.Invoke
      * Indicates the azure cloud type of the service principle auth. Allowed values are AzurePublic, AzureChina, AzureUsGovernment, AzureGermany. Default value is the data factory regions’ cloud type. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="azureCloudType")
+    @Import(name="azureCloudType")
       private final @Nullable Object azureCloudType;
 
     public Optional<Object> getAzureCloudType() {
@@ -96,7 +96,7 @@ public final class ODataLinkedServiceResponse extends io.pulumi.resources.Invoke
      * The integration runtime reference.
      * 
      */
-    @InputImport(name="connectVia")
+    @Import(name="connectVia")
       private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
     public Optional<IntegrationRuntimeReferenceResponse> getConnectVia() {
@@ -107,7 +107,7 @@ public final class ODataLinkedServiceResponse extends io.pulumi.resources.Invoke
      * Linked service description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable String description;
 
     public Optional<String> getDescription() {
@@ -118,7 +118,7 @@ public final class ODataLinkedServiceResponse extends io.pulumi.resources.Invoke
      * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="encryptedCredential")
+    @Import(name="encryptedCredential")
       private final @Nullable Object encryptedCredential;
 
     public Optional<Object> getEncryptedCredential() {
@@ -129,7 +129,7 @@ public final class ODataLinkedServiceResponse extends io.pulumi.resources.Invoke
      * Parameters for linked service.
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
     public Map<String,ParameterSpecificationResponse> getParameters() {
@@ -140,7 +140,7 @@ public final class ODataLinkedServiceResponse extends io.pulumi.resources.Invoke
      * Password of the OData service.
      * 
      */
-    @InputImport(name="password")
+    @Import(name="password")
       private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
 
     public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> getPassword() {
@@ -151,7 +151,7 @@ public final class ODataLinkedServiceResponse extends io.pulumi.resources.Invoke
      * Specify the base64 encoded certificate of your application registered in Azure Active Directory. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="servicePrincipalEmbeddedCert")
+    @Import(name="servicePrincipalEmbeddedCert")
       private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalEmbeddedCert;
 
     public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> getServicePrincipalEmbeddedCert() {
@@ -162,7 +162,7 @@ public final class ODataLinkedServiceResponse extends io.pulumi.resources.Invoke
      * Specify the password of your certificate if your certificate has a password and you are using AadServicePrincipal authentication. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="servicePrincipalEmbeddedCertPassword")
+    @Import(name="servicePrincipalEmbeddedCertPassword")
       private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalEmbeddedCertPassword;
 
     public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> getServicePrincipalEmbeddedCertPassword() {
@@ -173,7 +173,7 @@ public final class ODataLinkedServiceResponse extends io.pulumi.resources.Invoke
      * Specify the application id of your application registered in Azure Active Directory. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="servicePrincipalId")
+    @Import(name="servicePrincipalId")
       private final @Nullable Object servicePrincipalId;
 
     public Optional<Object> getServicePrincipalId() {
@@ -184,7 +184,7 @@ public final class ODataLinkedServiceResponse extends io.pulumi.resources.Invoke
      * Specify the secret of your application registered in Azure Active Directory. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="servicePrincipalKey")
+    @Import(name="servicePrincipalKey")
       private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey;
 
     public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> getServicePrincipalKey() {
@@ -195,7 +195,7 @@ public final class ODataLinkedServiceResponse extends io.pulumi.resources.Invoke
      * Specify the tenant information (domain name or tenant ID) under which your application resides. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="tenant")
+    @Import(name="tenant")
       private final @Nullable Object tenant;
 
     public Optional<Object> getTenant() {
@@ -207,7 +207,7 @@ public final class ODataLinkedServiceResponse extends io.pulumi.resources.Invoke
      * Expected value is 'OData'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {
@@ -218,7 +218,7 @@ public final class ODataLinkedServiceResponse extends io.pulumi.resources.Invoke
      * The URL of the OData service endpoint. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="url", required=true)
+    @Import(name="url", required=true)
       private final Object url;
 
     public Object getUrl() {
@@ -229,7 +229,7 @@ public final class ODataLinkedServiceResponse extends io.pulumi.resources.Invoke
      * User name of the OData service. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="userName")
+    @Import(name="userName")
       private final @Nullable Object userName;
 
     public Optional<Object> getUserName() {

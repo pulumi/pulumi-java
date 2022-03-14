@@ -3,12 +3,12 @@
 
 package io.pulumi.azurenative.datafactory.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ManagedIntegrationRuntimeOperationResultResponse {
     /**
      * The activity id for the operation request.
@@ -41,14 +41,14 @@ public final class ManagedIntegrationRuntimeOperationResultResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ManagedIntegrationRuntimeOperationResultResponse(
-        @OutputCustomType.Parameter("activityId") String activityId,
-        @OutputCustomType.Parameter("errorCode") String errorCode,
-        @OutputCustomType.Parameter("parameters") List<String> parameters,
-        @OutputCustomType.Parameter("result") String result,
-        @OutputCustomType.Parameter("startTime") String startTime,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("activityId") String activityId,
+        @CustomType.Parameter("errorCode") String errorCode,
+        @CustomType.Parameter("parameters") List<String> parameters,
+        @CustomType.Parameter("result") String result,
+        @CustomType.Parameter("startTime") String startTime,
+        @CustomType.Parameter("type") String type) {
         this.activityId = activityId;
         this.errorCode = errorCode;
         this.parameters = parameters;

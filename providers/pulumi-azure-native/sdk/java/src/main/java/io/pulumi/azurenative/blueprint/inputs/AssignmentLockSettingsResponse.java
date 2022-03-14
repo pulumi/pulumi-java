@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.blueprint.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class AssignmentLockSettingsResponse extends io.pulumi.resources.In
      * List of management operations that are excluded from blueprint locks. Up to 200 actions are permitted. If the lock mode is set to 'AllResourcesReadOnly', then the following actions are automatically appended to 'excludedActions': '*{@literal /}read', 'Microsoft.Network/virtualNetworks/subnets/join/action' and 'Microsoft.Authorization/locks/delete'. If the lock mode is set to 'AllResourcesDoNotDelete', then the following actions are automatically appended to 'excludedActions': 'Microsoft.Authorization/locks/delete'. Duplicate actions will get removed.
      * 
      */
-    @InputImport(name="excludedActions")
+    @Import(name="excludedActions")
       private final @Nullable List<String> excludedActions;
 
     public List<String> getExcludedActions() {
@@ -34,7 +34,7 @@ public final class AssignmentLockSettingsResponse extends io.pulumi.resources.In
      * List of AAD principals excluded from blueprint locks. Up to 5 principals are permitted.
      * 
      */
-    @InputImport(name="excludedPrincipals")
+    @Import(name="excludedPrincipals")
       private final @Nullable List<String> excludedPrincipals;
 
     public List<String> getExcludedPrincipals() {
@@ -45,7 +45,7 @@ public final class AssignmentLockSettingsResponse extends io.pulumi.resources.In
      * Lock mode.
      * 
      */
-    @InputImport(name="mode")
+    @Import(name="mode")
       private final @Nullable String mode;
 
     public Optional<String> getMode() {

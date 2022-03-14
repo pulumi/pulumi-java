@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.kubernetesconfiguration.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class HelmOperatorPropertiesResponse extends io.pulumi.resources.In
      * Values override for the operator Helm chart.
      * 
      */
-    @InputImport(name="chartValues")
+    @Import(name="chartValues")
       private final @Nullable String chartValues;
 
     public Optional<String> getChartValues() {
@@ -33,7 +33,7 @@ public final class HelmOperatorPropertiesResponse extends io.pulumi.resources.In
      * Version of the operator Helm chart.
      * 
      */
-    @InputImport(name="chartVersion")
+    @Import(name="chartVersion")
       private final @Nullable String chartVersion;
 
     public Optional<String> getChartVersion() {

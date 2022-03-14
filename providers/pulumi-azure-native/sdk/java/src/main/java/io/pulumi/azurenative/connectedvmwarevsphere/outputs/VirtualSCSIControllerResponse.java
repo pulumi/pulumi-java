@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.connectedvmwarevsphere.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VirtualSCSIControllerResponse {
     /**
      * Gets or sets the bus number of the controller.
@@ -38,13 +38,13 @@ public final class VirtualSCSIControllerResponse {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VirtualSCSIControllerResponse(
-        @OutputCustomType.Parameter("busNumber") @Nullable Integer busNumber,
-        @OutputCustomType.Parameter("controllerKey") @Nullable Integer controllerKey,
-        @OutputCustomType.Parameter("scsiCtlrUnitNumber") @Nullable Integer scsiCtlrUnitNumber,
-        @OutputCustomType.Parameter("sharing") @Nullable String sharing,
-        @OutputCustomType.Parameter("type") @Nullable String type) {
+        @CustomType.Parameter("busNumber") @Nullable Integer busNumber,
+        @CustomType.Parameter("controllerKey") @Nullable Integer controllerKey,
+        @CustomType.Parameter("scsiCtlrUnitNumber") @Nullable Integer scsiCtlrUnitNumber,
+        @CustomType.Parameter("sharing") @Nullable String sharing,
+        @CustomType.Parameter("type") @Nullable String type) {
         this.busNumber = busNumber;
         this.controllerKey = controllerKey;
         this.scsiCtlrUnitNumber = scsiCtlrUnitNumber;

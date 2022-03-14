@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class AzureVmDiskDetailsResponse extends io.pulumi.resources.Invoke
      * The DiskEncryptionSet ARM ID.
      * 
      */
-    @InputImport(name="diskEncryptionSetId")
+    @Import(name="diskEncryptionSetId")
       private final @Nullable String diskEncryptionSetId;
 
     public Optional<String> getDiskEncryptionSetId() {
@@ -33,7 +33,7 @@ public final class AzureVmDiskDetailsResponse extends io.pulumi.resources.Invoke
      * The disk resource id.
      * 
      */
-    @InputImport(name="diskId")
+    @Import(name="diskId")
       private final @Nullable String diskId;
 
     public Optional<String> getDiskId() {
@@ -44,7 +44,7 @@ public final class AzureVmDiskDetailsResponse extends io.pulumi.resources.Invoke
      * Ordinal\LunId of the disk for the Azure VM.
      * 
      */
-    @InputImport(name="lunId")
+    @Import(name="lunId")
       private final @Nullable String lunId;
 
     public Optional<String> getLunId() {
@@ -55,7 +55,7 @@ public final class AzureVmDiskDetailsResponse extends io.pulumi.resources.Invoke
      * Max side in MB.
      * 
      */
-    @InputImport(name="maxSizeMB")
+    @Import(name="maxSizeMB")
       private final @Nullable String maxSizeMB;
 
     public Optional<String> getMaxSizeMB() {
@@ -66,7 +66,7 @@ public final class AzureVmDiskDetailsResponse extends io.pulumi.resources.Invoke
      * Blob uri of the Azure disk.
      * 
      */
-    @InputImport(name="targetDiskLocation")
+    @Import(name="targetDiskLocation")
       private final @Nullable String targetDiskLocation;
 
     public Optional<String> getTargetDiskLocation() {
@@ -77,7 +77,7 @@ public final class AzureVmDiskDetailsResponse extends io.pulumi.resources.Invoke
      * The target Azure disk name.
      * 
      */
-    @InputImport(name="targetDiskName")
+    @Import(name="targetDiskName")
       private final @Nullable String targetDiskName;
 
     public Optional<String> getTargetDiskName() {
@@ -88,7 +88,7 @@ public final class AzureVmDiskDetailsResponse extends io.pulumi.resources.Invoke
      * The VHD id.
      * 
      */
-    @InputImport(name="vhdId")
+    @Import(name="vhdId")
       private final @Nullable String vhdId;
 
     public Optional<String> getVhdId() {
@@ -99,7 +99,7 @@ public final class AzureVmDiskDetailsResponse extends io.pulumi.resources.Invoke
      * VHD name.
      * 
      */
-    @InputImport(name="vhdName")
+    @Import(name="vhdName")
       private final @Nullable String vhdName;
 
     public Optional<String> getVhdName() {
@@ -110,7 +110,7 @@ public final class AzureVmDiskDetailsResponse extends io.pulumi.resources.Invoke
      * VHD type.
      * 
      */
-    @InputImport(name="vhdType")
+    @Import(name="vhdType")
       private final @Nullable String vhdType;
 
     public Optional<String> getVhdType() {

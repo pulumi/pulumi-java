@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.insights.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetActivityLogAlertArgs extends io.pulumi.resources.InvokeArg
      * The name of the Activity Log Alert rule.
      * 
      */
-    @InputImport(name="activityLogAlertName", required=true)
+    @Import(name="activityLogAlertName", required=true)
       private final String activityLogAlertName;
 
     public String getActivityLogAlertName() {
@@ -27,7 +27,7 @@ public final class GetActivityLogAlertArgs extends io.pulumi.resources.InvokeArg
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {

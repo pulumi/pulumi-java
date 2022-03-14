@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.datafactory.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SapTablePartitionSettingsResponse {
     /**
      * The maximum value of partitions the table will be split into. Type: integer (or Expression with resultType string).
@@ -32,12 +32,12 @@ public final class SapTablePartitionSettingsResponse {
      */
     private final @Nullable Object partitionUpperBound;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SapTablePartitionSettingsResponse(
-        @OutputCustomType.Parameter("maxPartitionsNumber") @Nullable Object maxPartitionsNumber,
-        @OutputCustomType.Parameter("partitionColumnName") @Nullable Object partitionColumnName,
-        @OutputCustomType.Parameter("partitionLowerBound") @Nullable Object partitionLowerBound,
-        @OutputCustomType.Parameter("partitionUpperBound") @Nullable Object partitionUpperBound) {
+        @CustomType.Parameter("maxPartitionsNumber") @Nullable Object maxPartitionsNumber,
+        @CustomType.Parameter("partitionColumnName") @Nullable Object partitionColumnName,
+        @CustomType.Parameter("partitionLowerBound") @Nullable Object partitionLowerBound,
+        @CustomType.Parameter("partitionUpperBound") @Nullable Object partitionUpperBound) {
         this.maxPartitionsNumber = maxPartitionsNumber;
         this.partitionColumnName = partitionColumnName;
         this.partitionLowerBound = partitionLowerBound;

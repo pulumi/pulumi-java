@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.datalakestore.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetTrustedIdProviderResult {
     /**
      * The resource identifier.
@@ -30,12 +30,12 @@ public final class GetTrustedIdProviderResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetTrustedIdProviderResult(
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("idProvider") String idProvider,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("idProvider") String idProvider,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("type") String type) {
         this.id = id;
         this.idProvider = idProvider;
         this.name = name;

@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PacketCaptureStorageLocationResponse {
     /**
      * A valid local path on the targeting VM. Must include the name of the capture file (*.cap). For linux virtual machine it must start with /var/captures. Required if no storage ID is provided, otherwise optional.
@@ -27,11 +27,11 @@ public final class PacketCaptureStorageLocationResponse {
      */
     private final @Nullable String storagePath;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PacketCaptureStorageLocationResponse(
-        @OutputCustomType.Parameter("filePath") @Nullable String filePath,
-        @OutputCustomType.Parameter("storageId") @Nullable String storageId,
-        @OutputCustomType.Parameter("storagePath") @Nullable String storagePath) {
+        @CustomType.Parameter("filePath") @Nullable String filePath,
+        @CustomType.Parameter("storageId") @Nullable String storageId,
+        @CustomType.Parameter("storagePath") @Nullable String storagePath) {
         this.filePath = filePath;
         this.storageId = storageId;
         this.storagePath = storagePath;

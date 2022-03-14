@@ -9,7 +9,7 @@ import io.pulumi.azurenative.media.outputs.MediaGraphAssetSinkResponse;
 import io.pulumi.azurenative.media.outputs.MediaGraphRtspSourceResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -36,7 +36,7 @@ public class MediaGraph extends io.pulumi.resources.CustomResource {
      * Date the Media Graph was created.
      * 
      */
-    @OutputExport(name="created", type=String.class, parameters={})
+    @Export(name="created", type=String.class, parameters={})
     private Output<String> created;
 
     /**
@@ -50,7 +50,7 @@ public class MediaGraph extends io.pulumi.resources.CustomResource {
      * Media Graph description.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -64,7 +64,7 @@ public class MediaGraph extends io.pulumi.resources.CustomResource {
      * Date the Media Graph was last modified.
      * 
      */
-    @OutputExport(name="lastModified", type=String.class, parameters={})
+    @Export(name="lastModified", type=String.class, parameters={})
     private Output<String> lastModified;
 
     /**
@@ -78,7 +78,7 @@ public class MediaGraph extends io.pulumi.resources.CustomResource {
      * The name of the resource.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -92,7 +92,7 @@ public class MediaGraph extends io.pulumi.resources.CustomResource {
      * Media Graph sinks.
      * 
      */
-    @OutputExport(name="sinks", type=List.class, parameters={MediaGraphAssetSinkResponse.class})
+    @Export(name="sinks", type=List.class, parameters={MediaGraphAssetSinkResponse.class})
     private Output<List<MediaGraphAssetSinkResponse>> sinks;
 
     /**
@@ -106,7 +106,7 @@ public class MediaGraph extends io.pulumi.resources.CustomResource {
      * Media Graph sources.
      * 
      */
-    @OutputExport(name="sources", type=List.class, parameters={MediaGraphRtspSourceResponse.class})
+    @Export(name="sources", type=List.class, parameters={MediaGraphRtspSourceResponse.class})
     private Output<List<MediaGraphRtspSourceResponse>> sources;
 
     /**
@@ -120,7 +120,7 @@ public class MediaGraph extends io.pulumi.resources.CustomResource {
      * Media Graph state which indicates the resource allocation status for running the media graph pipeline.
      * 
      */
-    @OutputExport(name="state", type=String.class, parameters={})
+    @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
@@ -134,7 +134,7 @@ public class MediaGraph extends io.pulumi.resources.CustomResource {
      * The type of the resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

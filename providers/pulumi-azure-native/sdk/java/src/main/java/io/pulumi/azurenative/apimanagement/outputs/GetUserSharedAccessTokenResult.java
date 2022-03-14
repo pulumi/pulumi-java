@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.apimanagement.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetUserSharedAccessTokenResult {
     /**
      * Shared Access Authorization token for the User.
@@ -17,8 +17,8 @@ public final class GetUserSharedAccessTokenResult {
      */
     private final @Nullable String value;
 
-    @OutputCustomType.Constructor
-    private GetUserSharedAccessTokenResult(@OutputCustomType.Parameter("value") @Nullable String value) {
+    @CustomType.Constructor
+    private GetUserSharedAccessTokenResult(@CustomType.Parameter("value") @Nullable String value) {
         this.value = value;
     }
 

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.hanaonazure;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -20,7 +20,7 @@ public final class SapMonitorArgs extends io.pulumi.resources.ResourceArgs {
      * The value indicating whether to send analytics to Microsoft
      * 
      */
-    @InputImport(name="enableCustomerAnalytics")
+    @Import(name="enableCustomerAnalytics")
       private final @Nullable Output<Boolean> enableCustomerAnalytics;
 
     public Output<Boolean> getEnableCustomerAnalytics() {
@@ -31,7 +31,7 @@ public final class SapMonitorArgs extends io.pulumi.resources.ResourceArgs {
      * The geo-location where the resource lives
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -42,7 +42,7 @@ public final class SapMonitorArgs extends io.pulumi.resources.ResourceArgs {
      * The ARM ID of the Log Analytics Workspace that is used for monitoring
      * 
      */
-    @InputImport(name="logAnalyticsWorkspaceArmId")
+    @Import(name="logAnalyticsWorkspaceArmId")
       private final @Nullable Output<String> logAnalyticsWorkspaceArmId;
 
     public Output<String> getLogAnalyticsWorkspaceArmId() {
@@ -53,7 +53,7 @@ public final class SapMonitorArgs extends io.pulumi.resources.ResourceArgs {
      * The workspace ID of the log analytics workspace to be used for monitoring
      * 
      */
-    @InputImport(name="logAnalyticsWorkspaceId")
+    @Import(name="logAnalyticsWorkspaceId")
       private final @Nullable Output<String> logAnalyticsWorkspaceId;
 
     public Output<String> getLogAnalyticsWorkspaceId() {
@@ -64,7 +64,7 @@ public final class SapMonitorArgs extends io.pulumi.resources.ResourceArgs {
      * The shared key of the log analytics workspace that is used for monitoring
      * 
      */
-    @InputImport(name="logAnalyticsWorkspaceSharedKey")
+    @Import(name="logAnalyticsWorkspaceSharedKey")
       private final @Nullable Output<String> logAnalyticsWorkspaceSharedKey;
 
     public Output<String> getLogAnalyticsWorkspaceSharedKey() {
@@ -75,7 +75,7 @@ public final class SapMonitorArgs extends io.pulumi.resources.ResourceArgs {
      * The subnet which the SAP monitor will be deployed in
      * 
      */
-    @InputImport(name="monitorSubnet")
+    @Import(name="monitorSubnet")
       private final @Nullable Output<String> monitorSubnet;
 
     public Output<String> getMonitorSubnet() {
@@ -86,7 +86,7 @@ public final class SapMonitorArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -97,7 +97,7 @@ public final class SapMonitorArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the SAP monitor resource.
      * 
      */
-    @InputImport(name="sapMonitorName")
+    @Import(name="sapMonitorName")
       private final @Nullable Output<String> sapMonitorName;
 
     public Output<String> getSapMonitorName() {
@@ -108,7 +108,7 @@ public final class SapMonitorArgs extends io.pulumi.resources.ResourceArgs {
      * Resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

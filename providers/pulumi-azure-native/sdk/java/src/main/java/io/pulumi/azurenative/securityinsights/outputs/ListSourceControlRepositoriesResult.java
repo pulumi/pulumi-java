@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.securityinsights.outputs;
 
 import io.pulumi.azurenative.securityinsights.outputs.RepoResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ListSourceControlRepositoriesResult {
     /**
      * URL to fetch the next set of repositories.
@@ -22,10 +22,10 @@ public final class ListSourceControlRepositoriesResult {
      */
     private final List<RepoResponse> value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ListSourceControlRepositoriesResult(
-        @OutputCustomType.Parameter("nextLink") String nextLink,
-        @OutputCustomType.Parameter("value") List<RepoResponse> value) {
+        @CustomType.Parameter("nextLink") String nextLink,
+        @CustomType.Parameter("value") List<RepoResponse> value) {
         this.nextLink = nextLink;
         this.value = value;
     }

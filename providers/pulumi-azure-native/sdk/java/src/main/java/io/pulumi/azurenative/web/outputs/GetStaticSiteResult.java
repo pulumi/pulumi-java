@@ -9,7 +9,7 @@ import io.pulumi.azurenative.web.outputs.SkuDescriptionResponse;
 import io.pulumi.azurenative.web.outputs.StaticSiteBuildPropertiesResponse;
 import io.pulumi.azurenative.web.outputs.StaticSiteTemplateOptionsResponse;
 import io.pulumi.azurenative.web.outputs.StaticSiteUserProvidedFunctionAppResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -18,7 +18,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetStaticSiteResult {
     /**
      * <code>false</code> if config file is locked for this static web app; otherwise, <code>true</code>.
@@ -131,30 +131,30 @@ public final class GetStaticSiteResult {
      */
     private final List<StaticSiteUserProvidedFunctionAppResponse> userProvidedFunctionApps;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetStaticSiteResult(
-        @OutputCustomType.Parameter("allowConfigFileUpdates") @Nullable Boolean allowConfigFileUpdates,
-        @OutputCustomType.Parameter("branch") @Nullable String branch,
-        @OutputCustomType.Parameter("buildProperties") @Nullable StaticSiteBuildPropertiesResponse buildProperties,
-        @OutputCustomType.Parameter("contentDistributionEndpoint") String contentDistributionEndpoint,
-        @OutputCustomType.Parameter("customDomains") List<String> customDomains,
-        @OutputCustomType.Parameter("defaultHostname") String defaultHostname,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("identity") @Nullable ManagedServiceIdentityResponse identity,
-        @OutputCustomType.Parameter("keyVaultReferenceIdentity") String keyVaultReferenceIdentity,
-        @OutputCustomType.Parameter("kind") @Nullable String kind,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("privateEndpointConnections") List<ResponseMessageEnvelopeRemotePrivateEndpointConnectionResponse> privateEndpointConnections,
-        @OutputCustomType.Parameter("provider") String provider,
-        @OutputCustomType.Parameter("repositoryToken") @Nullable String repositoryToken,
-        @OutputCustomType.Parameter("repositoryUrl") @Nullable String repositoryUrl,
-        @OutputCustomType.Parameter("sku") @Nullable SkuDescriptionResponse sku,
-        @OutputCustomType.Parameter("stagingEnvironmentPolicy") @Nullable String stagingEnvironmentPolicy,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("templateProperties") @Nullable StaticSiteTemplateOptionsResponse templateProperties,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("userProvidedFunctionApps") List<StaticSiteUserProvidedFunctionAppResponse> userProvidedFunctionApps) {
+        @CustomType.Parameter("allowConfigFileUpdates") @Nullable Boolean allowConfigFileUpdates,
+        @CustomType.Parameter("branch") @Nullable String branch,
+        @CustomType.Parameter("buildProperties") @Nullable StaticSiteBuildPropertiesResponse buildProperties,
+        @CustomType.Parameter("contentDistributionEndpoint") String contentDistributionEndpoint,
+        @CustomType.Parameter("customDomains") List<String> customDomains,
+        @CustomType.Parameter("defaultHostname") String defaultHostname,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("identity") @Nullable ManagedServiceIdentityResponse identity,
+        @CustomType.Parameter("keyVaultReferenceIdentity") String keyVaultReferenceIdentity,
+        @CustomType.Parameter("kind") @Nullable String kind,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("privateEndpointConnections") List<ResponseMessageEnvelopeRemotePrivateEndpointConnectionResponse> privateEndpointConnections,
+        @CustomType.Parameter("provider") String provider,
+        @CustomType.Parameter("repositoryToken") @Nullable String repositoryToken,
+        @CustomType.Parameter("repositoryUrl") @Nullable String repositoryUrl,
+        @CustomType.Parameter("sku") @Nullable SkuDescriptionResponse sku,
+        @CustomType.Parameter("stagingEnvironmentPolicy") @Nullable String stagingEnvironmentPolicy,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("templateProperties") @Nullable StaticSiteTemplateOptionsResponse templateProperties,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("userProvidedFunctionApps") List<StaticSiteUserProvidedFunctionAppResponse> userProvidedFunctionApps) {
         this.allowConfigFileUpdates = allowConfigFileUpdates;
         this.branch = branch;
         this.buildProperties = buildProperties;

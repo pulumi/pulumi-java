@@ -7,7 +7,7 @@ import io.pulumi.azurenative.datafactory.inputs.AzureKeyVaultSecretReferenceArgs
 import io.pulumi.azurenative.datafactory.inputs.SecureStringArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.util.Objects;
 
@@ -24,7 +24,7 @@ public final class SSISAccessCredentialArgs extends io.pulumi.resources.Resource
      * Domain for windows authentication.
      * 
      */
-    @InputImport(name="domain", required=true)
+    @Import(name="domain", required=true)
       private final Output<Object> domain;
 
     public Output<Object> getDomain() {
@@ -35,7 +35,7 @@ public final class SSISAccessCredentialArgs extends io.pulumi.resources.Resource
      * Password for windows authentication.
      * 
      */
-    @InputImport(name="password", required=true)
+    @Import(name="password", required=true)
       private final Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
 
     public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getPassword() {
@@ -46,7 +46,7 @@ public final class SSISAccessCredentialArgs extends io.pulumi.resources.Resource
      * UseName for windows authentication.
      * 
      */
-    @InputImport(name="userName", required=true)
+    @Import(name="userName", required=true)
       private final Output<Object> userName;
 
     public Output<Object> getUserName() {

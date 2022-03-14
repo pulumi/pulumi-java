@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.customerinsights.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ConnectorMappingErrorManagementResponse {
     /**
      * The error limit allowed while importing data.
@@ -23,10 +23,10 @@ public final class ConnectorMappingErrorManagementResponse {
      */
     private final String errorManagementType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ConnectorMappingErrorManagementResponse(
-        @OutputCustomType.Parameter("errorLimit") @Nullable Integer errorLimit,
-        @OutputCustomType.Parameter("errorManagementType") String errorManagementType) {
+        @CustomType.Parameter("errorLimit") @Nullable Integer errorLimit,
+        @CustomType.Parameter("errorManagementType") String errorManagementType) {
         this.errorLimit = errorLimit;
         this.errorManagementType = errorManagementType;
     }

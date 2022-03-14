@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.securityinsights.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class ContentPathMapResponse extends io.pulumi.resources.InvokeArgs
      * Content type.
      * 
      */
-    @InputImport(name="contentType")
+    @Import(name="contentType")
       private final @Nullable String contentType;
 
     public Optional<String> getContentType() {
@@ -33,7 +33,7 @@ public final class ContentPathMapResponse extends io.pulumi.resources.InvokeArgs
      * The path to the content.
      * 
      */
-    @InputImport(name="path")
+    @Import(name="path")
       private final @Nullable String path;
 
     public Optional<String> getPath() {

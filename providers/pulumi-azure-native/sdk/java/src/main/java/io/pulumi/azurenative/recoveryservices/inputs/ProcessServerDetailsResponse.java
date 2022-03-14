@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.recoveryservices.inputs;
 
 import io.pulumi.azurenative.recoveryservices.inputs.HealthErrorResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class ProcessServerDetailsResponse extends io.pulumi.resources.Invo
      * The available memory.
      * 
      */
-    @InputImport(name="availableMemoryInBytes", required=true)
+    @Import(name="availableMemoryInBytes", required=true)
       private final Double availableMemoryInBytes;
 
     public Double getAvailableMemoryInBytes() {
@@ -34,7 +34,7 @@ public final class ProcessServerDetailsResponse extends io.pulumi.resources.Invo
      * The available disk space.
      * 
      */
-    @InputImport(name="availableSpaceInBytes", required=true)
+    @Import(name="availableSpaceInBytes", required=true)
       private final Double availableSpaceInBytes;
 
     public Double getAvailableSpaceInBytes() {
@@ -45,7 +45,7 @@ public final class ProcessServerDetailsResponse extends io.pulumi.resources.Invo
      * The free disk space percentage.
      * 
      */
-    @InputImport(name="freeSpacePercentage", required=true)
+    @Import(name="freeSpacePercentage", required=true)
       private final Double freeSpacePercentage;
 
     public Double getFreeSpacePercentage() {
@@ -56,7 +56,7 @@ public final class ProcessServerDetailsResponse extends io.pulumi.resources.Invo
      * The health of the process server.
      * 
      */
-    @InputImport(name="health", required=true)
+    @Import(name="health", required=true)
       private final String health;
 
     public String getHealth() {
@@ -67,7 +67,7 @@ public final class ProcessServerDetailsResponse extends io.pulumi.resources.Invo
      * The health errors.
      * 
      */
-    @InputImport(name="healthErrors", required=true)
+    @Import(name="healthErrors", required=true)
       private final List<HealthErrorResponse> healthErrors;
 
     public List<HealthErrorResponse> getHealthErrors() {
@@ -78,7 +78,7 @@ public final class ProcessServerDetailsResponse extends io.pulumi.resources.Invo
      * The historic health of the process server based on the health in last 24 hours.
      * 
      */
-    @InputImport(name="historicHealth", required=true)
+    @Import(name="historicHealth", required=true)
       private final String historicHealth;
 
     public String getHistoricHealth() {
@@ -89,7 +89,7 @@ public final class ProcessServerDetailsResponse extends io.pulumi.resources.Invo
      * The process server Id.
      * 
      */
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final String id;
 
     public String getId() {
@@ -100,7 +100,7 @@ public final class ProcessServerDetailsResponse extends io.pulumi.resources.Invo
      * The last heartbeat received from the process server.
      * 
      */
-    @InputImport(name="lastHeartbeatUtc", required=true)
+    @Import(name="lastHeartbeatUtc", required=true)
       private final String lastHeartbeatUtc;
 
     public String getLastHeartbeatUtc() {
@@ -111,7 +111,7 @@ public final class ProcessServerDetailsResponse extends io.pulumi.resources.Invo
      * The memory usage percentage.
      * 
      */
-    @InputImport(name="memoryUsagePercentage", required=true)
+    @Import(name="memoryUsagePercentage", required=true)
       private final Double memoryUsagePercentage;
 
     public Double getMemoryUsagePercentage() {
@@ -122,7 +122,7 @@ public final class ProcessServerDetailsResponse extends io.pulumi.resources.Invo
      * The process server name.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -133,7 +133,7 @@ public final class ProcessServerDetailsResponse extends io.pulumi.resources.Invo
      * The processor usage percentage.
      * 
      */
-    @InputImport(name="processorUsagePercentage", required=true)
+    @Import(name="processorUsagePercentage", required=true)
       private final Double processorUsagePercentage;
 
     public Double getProcessorUsagePercentage() {
@@ -144,7 +144,7 @@ public final class ProcessServerDetailsResponse extends io.pulumi.resources.Invo
      * The throughput in bytes.
      * 
      */
-    @InputImport(name="throughputInBytes", required=true)
+    @Import(name="throughputInBytes", required=true)
       private final Double throughputInBytes;
 
     public Double getThroughputInBytes() {
@@ -155,7 +155,7 @@ public final class ProcessServerDetailsResponse extends io.pulumi.resources.Invo
      * The uploading pending data in bytes.
      * 
      */
-    @InputImport(name="throughputUploadPendingDataInBytes", required=true)
+    @Import(name="throughputUploadPendingDataInBytes", required=true)
       private final Double throughputUploadPendingDataInBytes;
 
     public Double getThroughputUploadPendingDataInBytes() {
@@ -166,7 +166,7 @@ public final class ProcessServerDetailsResponse extends io.pulumi.resources.Invo
      * The total memory.
      * 
      */
-    @InputImport(name="totalMemoryInBytes", required=true)
+    @Import(name="totalMemoryInBytes", required=true)
       private final Double totalMemoryInBytes;
 
     public Double getTotalMemoryInBytes() {
@@ -177,7 +177,7 @@ public final class ProcessServerDetailsResponse extends io.pulumi.resources.Invo
      * The total disk space.
      * 
      */
-    @InputImport(name="totalSpaceInBytes", required=true)
+    @Import(name="totalSpaceInBytes", required=true)
       private final Double totalSpaceInBytes;
 
     public Double getTotalSpaceInBytes() {
@@ -188,7 +188,7 @@ public final class ProcessServerDetailsResponse extends io.pulumi.resources.Invo
      * The used memory.
      * 
      */
-    @InputImport(name="usedMemoryInBytes", required=true)
+    @Import(name="usedMemoryInBytes", required=true)
       private final Double usedMemoryInBytes;
 
     public Double getUsedMemoryInBytes() {
@@ -199,7 +199,7 @@ public final class ProcessServerDetailsResponse extends io.pulumi.resources.Invo
      * The used disk space.
      * 
      */
-    @InputImport(name="usedSpaceInBytes", required=true)
+    @Import(name="usedSpaceInBytes", required=true)
       private final Double usedSpaceInBytes;
 
     public Double getUsedSpaceInBytes() {
@@ -210,7 +210,7 @@ public final class ProcessServerDetailsResponse extends io.pulumi.resources.Invo
      * The process server version.
      * 
      */
-    @InputImport(name="version", required=true)
+    @Import(name="version", required=true)
       private final String version;
 
     public String getVersion() {

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.automation.inputs;
 import io.pulumi.azurenative.automation.enums.WindowsUpdateClasses;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class WindowsPropertiesArgs extends io.pulumi.resources.ResourceArg
      * KB numbers excluded from the software update configuration.
      * 
      */
-    @InputImport(name="excludedKbNumbers")
+    @Import(name="excludedKbNumbers")
       private final @Nullable Output<List<String>> excludedKbNumbers;
 
     public Output<List<String>> getExcludedKbNumbers() {
@@ -36,7 +36,7 @@ public final class WindowsPropertiesArgs extends io.pulumi.resources.ResourceArg
      * KB numbers included from the software update configuration.
      * 
      */
-    @InputImport(name="includedKbNumbers")
+    @Import(name="includedKbNumbers")
       private final @Nullable Output<List<String>> includedKbNumbers;
 
     public Output<List<String>> getIncludedKbNumbers() {
@@ -47,7 +47,7 @@ public final class WindowsPropertiesArgs extends io.pulumi.resources.ResourceArg
      * Update classification included in the software update configuration. A comma separated string with required values
      * 
      */
-    @InputImport(name="includedUpdateClassifications")
+    @Import(name="includedUpdateClassifications")
       private final @Nullable Output<Either<String,WindowsUpdateClasses>> includedUpdateClassifications;
 
     public Output<Either<String,WindowsUpdateClasses>> getIncludedUpdateClassifications() {
@@ -58,7 +58,7 @@ public final class WindowsPropertiesArgs extends io.pulumi.resources.ResourceArg
      * Reboot setting for the software update configuration.
      * 
      */
-    @InputImport(name="rebootSetting")
+    @Import(name="rebootSetting")
       private final @Nullable Output<String> rebootSetting;
 
     public Output<String> getRebootSetting() {

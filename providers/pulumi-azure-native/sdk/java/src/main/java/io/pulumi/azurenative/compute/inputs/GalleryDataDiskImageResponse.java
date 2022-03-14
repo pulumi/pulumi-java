@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.azurenative.compute.inputs.GalleryArtifactVersionSourceResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class GalleryDataDiskImageResponse extends io.pulumi.resources.Invo
      * The host caching of the disk. Valid values are 'None', 'ReadOnly', and 'ReadWrite'
      * 
      */
-    @InputImport(name="hostCaching")
+    @Import(name="hostCaching")
       private final @Nullable String hostCaching;
 
     public Optional<String> getHostCaching() {
@@ -35,7 +35,7 @@ public final class GalleryDataDiskImageResponse extends io.pulumi.resources.Invo
      * This property specifies the logical unit number of the data disk. This value is used to identify data disks within the Virtual Machine and therefore must be unique for each data disk attached to the Virtual Machine.
      * 
      */
-    @InputImport(name="lun", required=true)
+    @Import(name="lun", required=true)
       private final Integer lun;
 
     public Integer getLun() {
@@ -46,7 +46,7 @@ public final class GalleryDataDiskImageResponse extends io.pulumi.resources.Invo
      * This property indicates the size of the VHD to be created.
      * 
      */
-    @InputImport(name="sizeInGB", required=true)
+    @Import(name="sizeInGB", required=true)
       private final Integer sizeInGB;
 
     public Integer getSizeInGB() {
@@ -57,7 +57,7 @@ public final class GalleryDataDiskImageResponse extends io.pulumi.resources.Invo
      * The gallery artifact version source.
      * 
      */
-    @InputImport(name="source")
+    @Import(name="source")
       private final @Nullable GalleryArtifactVersionSourceResponse source;
 
     public Optional<GalleryArtifactVersionSourceResponse> getSource() {

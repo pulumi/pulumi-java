@@ -5,7 +5,7 @@ package io.pulumi.azurenative.servicefabricmesh.inputs;
 
 import io.pulumi.azurenative.servicefabricmesh.inputs.AddRemoveReplicaScalingMechanismResponse;
 import io.pulumi.azurenative.servicefabricmesh.inputs.AverageLoadScalingTriggerResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class AutoScalingPolicyResponse extends io.pulumi.resources.InvokeA
      * The mechanism that is used to scale when auto scaling operation is invoked.
      * 
      */
-    @InputImport(name="mechanism", required=true)
+    @Import(name="mechanism", required=true)
       private final AddRemoveReplicaScalingMechanismResponse mechanism;
 
     public AddRemoveReplicaScalingMechanismResponse getMechanism() {
@@ -33,7 +33,7 @@ public final class AutoScalingPolicyResponse extends io.pulumi.resources.InvokeA
      * The name of the auto scaling policy.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -44,7 +44,7 @@ public final class AutoScalingPolicyResponse extends io.pulumi.resources.InvokeA
      * Determines when auto scaling operation will be invoked.
      * 
      */
-    @InputImport(name="trigger", required=true)
+    @Import(name="trigger", required=true)
       private final AverageLoadScalingTriggerResponse trigger;
 
     public AverageLoadScalingTriggerResponse getTrigger() {

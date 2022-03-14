@@ -13,7 +13,7 @@ import io.pulumi.azurenative.cdn.inputs.CompressionSettingsArgs;
 import io.pulumi.azurenative.cdn.inputs.ResourceReferenceArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -28,7 +28,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * compression settings.
      * 
      */
-    @InputImport(name="compressionSettings")
+    @Import(name="compressionSettings")
       private final @Nullable Output<CompressionSettingsArgs> compressionSettings;
 
     public Output<CompressionSettingsArgs> getCompressionSettings() {
@@ -39,7 +39,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * Domains referenced by this endpoint.
      * 
      */
-    @InputImport(name="customDomains")
+    @Import(name="customDomains")
       private final @Nullable Output<List<ResourceReferenceArgs>> customDomains;
 
     public Output<List<ResourceReferenceArgs>> getCustomDomains() {
@@ -50,7 +50,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * Whether to enable use of this rule. Permitted values are 'Enabled' or 'Disabled'
      * 
      */
-    @InputImport(name="enabledState")
+    @Import(name="enabledState")
       private final @Nullable Output<Either<String,EnabledState>> enabledState;
 
     public Output<Either<String,EnabledState>> getEnabledState() {
@@ -61,7 +61,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the endpoint under the profile which is unique globally.
      * 
      */
-    @InputImport(name="endpointName", required=true)
+    @Import(name="endpointName", required=true)
       private final Output<String> endpointName;
 
     public Output<String> getEndpointName() {
@@ -72,7 +72,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * Protocol this rule will use when forwarding traffic to backends.
      * 
      */
-    @InputImport(name="forwardingProtocol")
+    @Import(name="forwardingProtocol")
       private final @Nullable Output<Either<String,ForwardingProtocol>> forwardingProtocol;
 
     public Output<Either<String,ForwardingProtocol>> getForwardingProtocol() {
@@ -83,7 +83,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * Whether to automatically redirect HTTP traffic to HTTPS traffic. Note that this is a easy way to set up this rule and it will be the first rule that gets executed.
      * 
      */
-    @InputImport(name="httpsRedirect")
+    @Import(name="httpsRedirect")
       private final @Nullable Output<Either<String,HttpsRedirect>> httpsRedirect;
 
     public Output<Either<String,HttpsRedirect>> getHttpsRedirect() {
@@ -94,7 +94,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * whether this route will be linked to the default endpoint domain.
      * 
      */
-    @InputImport(name="linkToDefaultDomain")
+    @Import(name="linkToDefaultDomain")
       private final @Nullable Output<Either<String,LinkToDefaultDomain>> linkToDefaultDomain;
 
     public Output<Either<String,LinkToDefaultDomain>> getLinkToDefaultDomain() {
@@ -105,7 +105,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * A reference to the origin group.
      * 
      */
-    @InputImport(name="originGroup", required=true)
+    @Import(name="originGroup", required=true)
       private final Output<ResourceReferenceArgs> originGroup;
 
     public Output<ResourceReferenceArgs> getOriginGroup() {
@@ -116,7 +116,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * A directory path on the origin that AzureFrontDoor can use to retrieve content from, e.g. contoso.cloudapp.net/originpath.
      * 
      */
-    @InputImport(name="originPath")
+    @Import(name="originPath")
       private final @Nullable Output<String> originPath;
 
     public Output<String> getOriginPath() {
@@ -127,7 +127,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * The route patterns of the rule.
      * 
      */
-    @InputImport(name="patternsToMatch")
+    @Import(name="patternsToMatch")
       private final @Nullable Output<List<String>> patternsToMatch;
 
     public Output<List<String>> getPatternsToMatch() {
@@ -138,7 +138,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the CDN profile which is unique within the resource group.
      * 
      */
-    @InputImport(name="profileName", required=true)
+    @Import(name="profileName", required=true)
       private final Output<String> profileName;
 
     public Output<String> getProfileName() {
@@ -149,7 +149,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * Defines how CDN caches requests that include query strings. You can ignore any query strings when caching, bypass caching to prevent requests that contain query strings from being cached, or cache every request with a unique URL.
      * 
      */
-    @InputImport(name="queryStringCachingBehavior")
+    @Import(name="queryStringCachingBehavior")
       private final @Nullable Output<AfdQueryStringCachingBehavior> queryStringCachingBehavior;
 
     public Output<AfdQueryStringCachingBehavior> getQueryStringCachingBehavior() {
@@ -160,7 +160,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the Resource group within the Azure subscription.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -171,7 +171,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the routing rule.
      * 
      */
-    @InputImport(name="routeName")
+    @Import(name="routeName")
       private final @Nullable Output<String> routeName;
 
     public Output<String> getRouteName() {
@@ -182,7 +182,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * rule sets referenced by this endpoint.
      * 
      */
-    @InputImport(name="ruleSets")
+    @Import(name="ruleSets")
       private final @Nullable Output<List<ResourceReferenceArgs>> ruleSets;
 
     public Output<List<ResourceReferenceArgs>> getRuleSets() {
@@ -193,7 +193,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * List of supported protocols for this route.
      * 
      */
-    @InputImport(name="supportedProtocols")
+    @Import(name="supportedProtocols")
       private final @Nullable Output<List<Either<String,AFDEndpointProtocols>>> supportedProtocols;
 
     public Output<List<Either<String,AFDEndpointProtocols>>> getSupportedProtocols() {

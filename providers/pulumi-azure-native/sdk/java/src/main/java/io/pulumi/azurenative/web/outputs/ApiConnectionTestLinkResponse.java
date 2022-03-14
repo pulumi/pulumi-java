@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ApiConnectionTestLinkResponse {
     /**
      * HTTP Method
@@ -22,10 +22,10 @@ public final class ApiConnectionTestLinkResponse {
      */
     private final @Nullable String requestUri;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ApiConnectionTestLinkResponse(
-        @OutputCustomType.Parameter("method") @Nullable String method,
-        @OutputCustomType.Parameter("requestUri") @Nullable String requestUri) {
+        @CustomType.Parameter("method") @Nullable String method,
+        @CustomType.Parameter("requestUri") @Nullable String requestUri) {
         this.method = method;
         this.requestUri = requestUri;
     }

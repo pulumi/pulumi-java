@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.autonomousdevelopmentplatform.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DataPoolEncryptionResponse {
     /**
      * The name of Key Vault key
@@ -32,12 +32,12 @@ public final class DataPoolEncryptionResponse {
      */
     private final String userAssignedIdentity;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DataPoolEncryptionResponse(
-        @OutputCustomType.Parameter("keyName") String keyName,
-        @OutputCustomType.Parameter("keyVaultUri") String keyVaultUri,
-        @OutputCustomType.Parameter("keyVersion") @Nullable String keyVersion,
-        @OutputCustomType.Parameter("userAssignedIdentity") String userAssignedIdentity) {
+        @CustomType.Parameter("keyName") String keyName,
+        @CustomType.Parameter("keyVaultUri") String keyVaultUri,
+        @CustomType.Parameter("keyVersion") @Nullable String keyVersion,
+        @CustomType.Parameter("userAssignedIdentity") String userAssignedIdentity) {
         this.keyName = keyName;
         this.keyVaultUri = keyVaultUri;
         this.keyVersion = keyVersion;

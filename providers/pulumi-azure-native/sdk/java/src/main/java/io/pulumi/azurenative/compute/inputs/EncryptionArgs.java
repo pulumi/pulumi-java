@@ -6,7 +6,7 @@ package io.pulumi.azurenative.compute.inputs;
 import io.pulumi.azurenative.compute.enums.EncryptionType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class EncryptionArgs extends io.pulumi.resources.ResourceArgs {
      * ResourceId of the disk encryption set to use for enabling encryption at rest.
      * 
      */
-    @InputImport(name="diskEncryptionSetId")
+    @Import(name="diskEncryptionSetId")
       private final @Nullable Output<String> diskEncryptionSetId;
 
     public Output<String> getDiskEncryptionSetId() {
@@ -35,7 +35,7 @@ public final class EncryptionArgs extends io.pulumi.resources.ResourceArgs {
      * The type of key used to encrypt the data of the disk.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<Either<String,EncryptionType>> type;
 
     public Output<Either<String,EncryptionType>> getType() {

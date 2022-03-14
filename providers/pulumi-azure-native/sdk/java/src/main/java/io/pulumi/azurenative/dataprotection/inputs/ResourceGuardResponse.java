@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.dataprotection.inputs;
 
 import io.pulumi.azurenative.dataprotection.inputs.ResourceGuardOperationResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -19,7 +19,7 @@ public final class ResourceGuardResponse extends io.pulumi.resources.InvokeArgs 
      * This flag indicates whether auto approval is allowed or not.
      * 
      */
-    @InputImport(name="allowAutoApprovals", required=true)
+    @Import(name="allowAutoApprovals", required=true)
       private final Boolean allowAutoApprovals;
 
     public Boolean getAllowAutoApprovals() {
@@ -30,7 +30,7 @@ public final class ResourceGuardResponse extends io.pulumi.resources.InvokeArgs 
      * Description about the pre-req steps to perform all the critical operations.
      * 
      */
-    @InputImport(name="description", required=true)
+    @Import(name="description", required=true)
       private final String description;
 
     public String getDescription() {
@@ -41,7 +41,7 @@ public final class ResourceGuardResponse extends io.pulumi.resources.InvokeArgs 
      * Provisioning state of the BackupVault resource
      * 
      */
-    @InputImport(name="provisioningState", required=true)
+    @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
     public String getProvisioningState() {
@@ -52,7 +52,7 @@ public final class ResourceGuardResponse extends io.pulumi.resources.InvokeArgs 
      * {readonly} List of operation details those are protected by the ResourceGuard resource
      * 
      */
-    @InputImport(name="resourceGuardOperations", required=true)
+    @Import(name="resourceGuardOperations", required=true)
       private final List<ResourceGuardOperationResponse> resourceGuardOperations;
 
     public List<ResourceGuardOperationResponse> getResourceGuardOperations() {
@@ -63,7 +63,7 @@ public final class ResourceGuardResponse extends io.pulumi.resources.InvokeArgs 
      * List of critical operations which are not protected by this resourceGuard
      * 
      */
-    @InputImport(name="vaultCriticalOperationExclusionList", required=true)
+    @Import(name="vaultCriticalOperationExclusionList", required=true)
       private final List<String> vaultCriticalOperationExclusionList;
 
     public List<String> getVaultCriticalOperationExclusionList() {

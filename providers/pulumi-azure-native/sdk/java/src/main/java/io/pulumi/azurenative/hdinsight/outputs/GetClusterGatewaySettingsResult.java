@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.hdinsight.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetClusterGatewaySettingsResult {
     /**
      * Indicates whether or not the gateway settings based authorization is enabled.
@@ -25,11 +25,11 @@ public final class GetClusterGatewaySettingsResult {
      */
     private final String userName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetClusterGatewaySettingsResult(
-        @OutputCustomType.Parameter("isCredentialEnabled") String isCredentialEnabled,
-        @OutputCustomType.Parameter("password") String password,
-        @OutputCustomType.Parameter("userName") String userName) {
+        @CustomType.Parameter("isCredentialEnabled") String isCredentialEnabled,
+        @CustomType.Parameter("password") String password,
+        @CustomType.Parameter("userName") String userName) {
         this.isCredentialEnabled = isCredentialEnabled;
         this.password = password;
         this.userName = userName;

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerinstance.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class EventResponse extends io.pulumi.resources.InvokeArgs {
      * The count of the event.
      * 
      */
-    @InputImport(name="count", required=true)
+    @Import(name="count", required=true)
       private final Integer count;
 
     public Integer getCount() {
@@ -32,7 +32,7 @@ public final class EventResponse extends io.pulumi.resources.InvokeArgs {
      * The date-time of the earliest logged event.
      * 
      */
-    @InputImport(name="firstTimestamp", required=true)
+    @Import(name="firstTimestamp", required=true)
       private final String firstTimestamp;
 
     public String getFirstTimestamp() {
@@ -43,7 +43,7 @@ public final class EventResponse extends io.pulumi.resources.InvokeArgs {
      * The date-time of the latest logged event.
      * 
      */
-    @InputImport(name="lastTimestamp", required=true)
+    @Import(name="lastTimestamp", required=true)
       private final String lastTimestamp;
 
     public String getLastTimestamp() {
@@ -54,7 +54,7 @@ public final class EventResponse extends io.pulumi.resources.InvokeArgs {
      * The event message.
      * 
      */
-    @InputImport(name="message", required=true)
+    @Import(name="message", required=true)
       private final String message;
 
     public String getMessage() {
@@ -65,7 +65,7 @@ public final class EventResponse extends io.pulumi.resources.InvokeArgs {
      * The event name.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -76,7 +76,7 @@ public final class EventResponse extends io.pulumi.resources.InvokeArgs {
      * The event type.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

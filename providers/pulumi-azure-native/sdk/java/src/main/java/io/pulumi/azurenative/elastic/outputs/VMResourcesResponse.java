@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.elastic.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VMResourcesResponse {
     /**
      * The ARM id of the VM resource.
@@ -17,8 +17,8 @@ public final class VMResourcesResponse {
      */
     private final @Nullable String vmResourceId;
 
-    @OutputCustomType.Constructor
-    private VMResourcesResponse(@OutputCustomType.Parameter("vmResourceId") @Nullable String vmResourceId) {
+    @CustomType.Constructor
+    private VMResourcesResponse(@CustomType.Parameter("vmResourceId") @Nullable String vmResourceId) {
         this.vmResourceId = vmResourceId;
     }
 

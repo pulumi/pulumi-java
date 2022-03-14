@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.logic.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class EdifactAcknowledgementSettingsResponse extends io.pulumi.reso
      * The acknowledgement control number lower bound.
      * 
      */
-    @InputImport(name="acknowledgementControlNumberLowerBound", required=true)
+    @Import(name="acknowledgementControlNumberLowerBound", required=true)
       private final Integer acknowledgementControlNumberLowerBound;
 
     public Integer getAcknowledgementControlNumberLowerBound() {
@@ -35,7 +35,7 @@ public final class EdifactAcknowledgementSettingsResponse extends io.pulumi.reso
      * The acknowledgement control number prefix.
      * 
      */
-    @InputImport(name="acknowledgementControlNumberPrefix")
+    @Import(name="acknowledgementControlNumberPrefix")
       private final @Nullable String acknowledgementControlNumberPrefix;
 
     public Optional<String> getAcknowledgementControlNumberPrefix() {
@@ -46,7 +46,7 @@ public final class EdifactAcknowledgementSettingsResponse extends io.pulumi.reso
      * The acknowledgement control number suffix.
      * 
      */
-    @InputImport(name="acknowledgementControlNumberSuffix")
+    @Import(name="acknowledgementControlNumberSuffix")
       private final @Nullable String acknowledgementControlNumberSuffix;
 
     public Optional<String> getAcknowledgementControlNumberSuffix() {
@@ -57,7 +57,7 @@ public final class EdifactAcknowledgementSettingsResponse extends io.pulumi.reso
      * The acknowledgement control number upper bound.
      * 
      */
-    @InputImport(name="acknowledgementControlNumberUpperBound", required=true)
+    @Import(name="acknowledgementControlNumberUpperBound", required=true)
       private final Integer acknowledgementControlNumberUpperBound;
 
     public Integer getAcknowledgementControlNumberUpperBound() {
@@ -68,7 +68,7 @@ public final class EdifactAcknowledgementSettingsResponse extends io.pulumi.reso
      * The value indicating whether to batch functional acknowledgements.
      * 
      */
-    @InputImport(name="batchFunctionalAcknowledgements", required=true)
+    @Import(name="batchFunctionalAcknowledgements", required=true)
       private final Boolean batchFunctionalAcknowledgements;
 
     public Boolean getBatchFunctionalAcknowledgements() {
@@ -79,7 +79,7 @@ public final class EdifactAcknowledgementSettingsResponse extends io.pulumi.reso
      * The value indicating whether to batch the technical acknowledgements.
      * 
      */
-    @InputImport(name="batchTechnicalAcknowledgements", required=true)
+    @Import(name="batchTechnicalAcknowledgements", required=true)
       private final Boolean batchTechnicalAcknowledgements;
 
     public Boolean getBatchTechnicalAcknowledgements() {
@@ -90,7 +90,7 @@ public final class EdifactAcknowledgementSettingsResponse extends io.pulumi.reso
      * The value indicating whether functional acknowledgement is needed.
      * 
      */
-    @InputImport(name="needFunctionalAcknowledgement", required=true)
+    @Import(name="needFunctionalAcknowledgement", required=true)
       private final Boolean needFunctionalAcknowledgement;
 
     public Boolean getNeedFunctionalAcknowledgement() {
@@ -101,7 +101,7 @@ public final class EdifactAcknowledgementSettingsResponse extends io.pulumi.reso
      * The value indicating whether a loop is needed for valid messages.
      * 
      */
-    @InputImport(name="needLoopForValidMessages", required=true)
+    @Import(name="needLoopForValidMessages", required=true)
       private final Boolean needLoopForValidMessages;
 
     public Boolean getNeedLoopForValidMessages() {
@@ -112,7 +112,7 @@ public final class EdifactAcknowledgementSettingsResponse extends io.pulumi.reso
      * The value indicating whether technical acknowledgement is needed.
      * 
      */
-    @InputImport(name="needTechnicalAcknowledgement", required=true)
+    @Import(name="needTechnicalAcknowledgement", required=true)
       private final Boolean needTechnicalAcknowledgement;
 
     public Boolean getNeedTechnicalAcknowledgement() {
@@ -123,7 +123,7 @@ public final class EdifactAcknowledgementSettingsResponse extends io.pulumi.reso
      * The value indicating whether to rollover acknowledgement control number.
      * 
      */
-    @InputImport(name="rolloverAcknowledgementControlNumber", required=true)
+    @Import(name="rolloverAcknowledgementControlNumber", required=true)
       private final Boolean rolloverAcknowledgementControlNumber;
 
     public Boolean getRolloverAcknowledgementControlNumber() {
@@ -134,7 +134,7 @@ public final class EdifactAcknowledgementSettingsResponse extends io.pulumi.reso
      * The value indicating whether to send synchronous acknowledgement.
      * 
      */
-    @InputImport(name="sendSynchronousAcknowledgement", required=true)
+    @Import(name="sendSynchronousAcknowledgement", required=true)
       private final Boolean sendSynchronousAcknowledgement;
 
     public Boolean getSendSynchronousAcknowledgement() {

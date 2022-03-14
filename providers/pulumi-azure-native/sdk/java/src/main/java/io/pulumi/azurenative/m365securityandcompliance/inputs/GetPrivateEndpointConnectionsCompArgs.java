@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.m365securityandcompliance.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetPrivateEndpointConnectionsCompArgs extends io.pulumi.resou
      * The name of the private endpoint connection associated with the Azure resource
      * 
      */
-    @InputImport(name="privateEndpointConnectionName", required=true)
+    @Import(name="privateEndpointConnectionName", required=true)
       private final String privateEndpointConnectionName;
 
     public String getPrivateEndpointConnectionName() {
@@ -27,7 +27,7 @@ public final class GetPrivateEndpointConnectionsCompArgs extends io.pulumi.resou
      * The name of the resource group that contains the service instance.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {
@@ -38,7 +38,7 @@ public final class GetPrivateEndpointConnectionsCompArgs extends io.pulumi.resou
      * The name of the service instance.
      * 
      */
-    @InputImport(name="resourceName", required=true)
+    @Import(name="resourceName", required=true)
       private final String resourceName;
 
     public String getPropResourceName() {

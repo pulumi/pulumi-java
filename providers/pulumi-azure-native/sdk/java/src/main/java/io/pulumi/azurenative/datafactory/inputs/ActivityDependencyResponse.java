@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class ActivityDependencyResponse extends io.pulumi.resources.Invoke
      * Activity name.
      * 
      */
-    @InputImport(name="activity", required=true)
+    @Import(name="activity", required=true)
       private final String activity;
 
     public String getActivity() {
@@ -32,7 +32,7 @@ public final class ActivityDependencyResponse extends io.pulumi.resources.Invoke
      * Match-Condition for the dependency.
      * 
      */
-    @InputImport(name="dependencyConditions", required=true)
+    @Import(name="dependencyConditions", required=true)
       private final List<String> dependencyConditions;
 
     public List<String> getDependencyConditions() {

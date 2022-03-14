@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class MedianStoppingPolicyResponse {
     /**
      * Number of intervals by which to delay the first evaluation.
@@ -28,11 +28,11 @@ public final class MedianStoppingPolicyResponse {
      */
     private final String policyType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MedianStoppingPolicyResponse(
-        @OutputCustomType.Parameter("delayEvaluation") @Nullable Integer delayEvaluation,
-        @OutputCustomType.Parameter("evaluationInterval") @Nullable Integer evaluationInterval,
-        @OutputCustomType.Parameter("policyType") String policyType) {
+        @CustomType.Parameter("delayEvaluation") @Nullable Integer delayEvaluation,
+        @CustomType.Parameter("evaluationInterval") @Nullable Integer evaluationInterval,
+        @CustomType.Parameter("policyType") String policyType) {
         this.delayEvaluation = delayEvaluation;
         this.evaluationInterval = evaluationInterval;
         this.policyType = policyType;

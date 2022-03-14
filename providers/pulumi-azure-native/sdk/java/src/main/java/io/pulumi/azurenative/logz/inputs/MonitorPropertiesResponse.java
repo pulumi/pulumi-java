@@ -6,7 +6,7 @@ package io.pulumi.azurenative.logz.inputs;
 import io.pulumi.azurenative.logz.inputs.LogzOrganizationPropertiesResponse;
 import io.pulumi.azurenative.logz.inputs.PlanDataResponse;
 import io.pulumi.azurenative.logz.inputs.UserInfoResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class MonitorPropertiesResponse extends io.pulumi.resources.InvokeA
 
     public static final MonitorPropertiesResponse Empty = new MonitorPropertiesResponse();
 
-    @InputImport(name="liftrResourceCategory", required=true)
+    @Import(name="liftrResourceCategory", required=true)
       private final String liftrResourceCategory;
 
     public String getLiftrResourceCategory() {
@@ -33,14 +33,14 @@ public final class MonitorPropertiesResponse extends io.pulumi.resources.InvokeA
      * The priority of the resource.
      * 
      */
-    @InputImport(name="liftrResourcePreference", required=true)
+    @Import(name="liftrResourcePreference", required=true)
       private final Integer liftrResourcePreference;
 
     public Integer getLiftrResourcePreference() {
         return this.liftrResourcePreference;
     }
 
-    @InputImport(name="logzOrganizationProperties")
+    @Import(name="logzOrganizationProperties")
       private final @Nullable LogzOrganizationPropertiesResponse logzOrganizationProperties;
 
     public Optional<LogzOrganizationPropertiesResponse> getLogzOrganizationProperties() {
@@ -51,7 +51,7 @@ public final class MonitorPropertiesResponse extends io.pulumi.resources.InvokeA
      * Flag specifying the Marketplace Subscription Status of the resource. If payment is not made in time, the resource will go in Suspended state.
      * 
      */
-    @InputImport(name="marketplaceSubscriptionStatus")
+    @Import(name="marketplaceSubscriptionStatus")
       private final @Nullable String marketplaceSubscriptionStatus;
 
     public Optional<String> getMarketplaceSubscriptionStatus() {
@@ -62,14 +62,14 @@ public final class MonitorPropertiesResponse extends io.pulumi.resources.InvokeA
      * Flag specifying if the resource monitoring is enabled or disabled.
      * 
      */
-    @InputImport(name="monitoringStatus")
+    @Import(name="monitoringStatus")
       private final @Nullable String monitoringStatus;
 
     public Optional<String> getMonitoringStatus() {
         return this.monitoringStatus == null ? Optional.empty() : Optional.ofNullable(this.monitoringStatus);
     }
 
-    @InputImport(name="planData")
+    @Import(name="planData")
       private final @Nullable PlanDataResponse planData;
 
     public Optional<PlanDataResponse> getPlanData() {
@@ -80,14 +80,14 @@ public final class MonitorPropertiesResponse extends io.pulumi.resources.InvokeA
      * Flag specifying if the resource provisioning state as tracked by ARM.
      * 
      */
-    @InputImport(name="provisioningState", required=true)
+    @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
     public String getProvisioningState() {
         return this.provisioningState;
     }
 
-    @InputImport(name="userInfo")
+    @Import(name="userInfo")
       private final @Nullable UserInfoResponse userInfo;
 
     public Optional<UserInfoResponse> getUserInfo() {

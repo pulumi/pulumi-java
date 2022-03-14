@@ -3,12 +3,12 @@
 
 package io.pulumi.azurenative.datamigration.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ODataErrorResponse {
     /**
      * The machine-readable description of the error, such as 'InvalidRequest' or 'InternalServerError'
@@ -26,11 +26,11 @@ public final class ODataErrorResponse {
      */
     private final String message;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ODataErrorResponse(
-        @OutputCustomType.Parameter("code") String code,
-        @OutputCustomType.Parameter("details") List<ODataErrorResponse> details,
-        @OutputCustomType.Parameter("message") String message) {
+        @CustomType.Parameter("code") String code,
+        @CustomType.Parameter("details") List<ODataErrorResponse> details,
+        @CustomType.Parameter("message") String message) {
         this.code = code;
         this.details = details;
         this.message = message;

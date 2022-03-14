@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.security.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VmRecommendationResponse {
     /**
      * The configuration status of the machines group or machine or rule
@@ -32,12 +32,12 @@ public final class VmRecommendationResponse {
      */
     private final @Nullable String resourceId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VmRecommendationResponse(
-        @OutputCustomType.Parameter("configurationStatus") @Nullable String configurationStatus,
-        @OutputCustomType.Parameter("enforcementSupport") @Nullable String enforcementSupport,
-        @OutputCustomType.Parameter("recommendationAction") @Nullable String recommendationAction,
-        @OutputCustomType.Parameter("resourceId") @Nullable String resourceId) {
+        @CustomType.Parameter("configurationStatus") @Nullable String configurationStatus,
+        @CustomType.Parameter("enforcementSupport") @Nullable String enforcementSupport,
+        @CustomType.Parameter("recommendationAction") @Nullable String recommendationAction,
+        @CustomType.Parameter("resourceId") @Nullable String resourceId) {
         this.configurationStatus = configurationStatus;
         this.enforcementSupport = enforcementSupport;
         this.recommendationAction = recommendationAction;

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.avs.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class ScriptSecureStringExecutionParameterArgs extends io.pulumi.re
      * The parameter name
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -33,7 +33,7 @@ public final class ScriptSecureStringExecutionParameterArgs extends io.pulumi.re
      * A secure value for the passed parameter, not to be stored in logs
      * 
      */
-    @InputImport(name="secureValue")
+    @Import(name="secureValue")
       private final @Nullable Output<String> secureValue;
 
     public Output<String> getSecureValue() {
@@ -45,7 +45,7 @@ public final class ScriptSecureStringExecutionParameterArgs extends io.pulumi.re
      * Expected value is 'SecureValue'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {

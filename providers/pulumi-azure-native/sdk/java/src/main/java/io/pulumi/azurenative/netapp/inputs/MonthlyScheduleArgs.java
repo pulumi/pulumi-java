@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.netapp.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class MonthlyScheduleArgs extends io.pulumi.resources.ResourceArgs 
      * Indicates which days of the month snapshot should be taken. A comma delimited string.
      * 
      */
-    @InputImport(name="daysOfMonth")
+    @Import(name="daysOfMonth")
       private final @Nullable Output<String> daysOfMonth;
 
     public Output<String> getDaysOfMonth() {
@@ -35,7 +35,7 @@ public final class MonthlyScheduleArgs extends io.pulumi.resources.ResourceArgs 
      * Indicates which hour in UTC timezone a snapshot should be taken
      * 
      */
-    @InputImport(name="hour")
+    @Import(name="hour")
       private final @Nullable Output<Integer> hour;
 
     public Output<Integer> getHour() {
@@ -46,7 +46,7 @@ public final class MonthlyScheduleArgs extends io.pulumi.resources.ResourceArgs 
      * Indicates which minute snapshot should be taken
      * 
      */
-    @InputImport(name="minute")
+    @Import(name="minute")
       private final @Nullable Output<Integer> minute;
 
     public Output<Integer> getMinute() {
@@ -57,7 +57,7 @@ public final class MonthlyScheduleArgs extends io.pulumi.resources.ResourceArgs 
      * Monthly snapshot count to keep
      * 
      */
-    @InputImport(name="snapshotsToKeep")
+    @Import(name="snapshotsToKeep")
       private final @Nullable Output<Integer> snapshotsToKeep;
 
     public Output<Integer> getSnapshotsToKeep() {
@@ -68,7 +68,7 @@ public final class MonthlyScheduleArgs extends io.pulumi.resources.ResourceArgs 
      * Resource size in bytes, current storage usage for the volume in bytes
      * 
      */
-    @InputImport(name="usedBytes")
+    @Import(name="usedBytes")
       private final @Nullable Output<Double> usedBytes;
 
     public Output<Double> getUsedBytes() {

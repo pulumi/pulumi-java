@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.SubnetResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class IPConfigurationProfileResponse extends io.pulumi.resources.In
      * A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    @InputImport(name="etag", required=true)
+    @Import(name="etag", required=true)
       private final String etag;
 
     public String getEtag() {
@@ -34,7 +34,7 @@ public final class IPConfigurationProfileResponse extends io.pulumi.resources.In
      * Resource ID.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable String id;
 
     public Optional<String> getId() {
@@ -45,7 +45,7 @@ public final class IPConfigurationProfileResponse extends io.pulumi.resources.In
      * The name of the resource. This name can be used to access the resource.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -56,7 +56,7 @@ public final class IPConfigurationProfileResponse extends io.pulumi.resources.In
      * The provisioning state of the IP configuration profile resource.
      * 
      */
-    @InputImport(name="provisioningState", required=true)
+    @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
     public String getProvisioningState() {
@@ -67,7 +67,7 @@ public final class IPConfigurationProfileResponse extends io.pulumi.resources.In
      * The reference to the subnet resource to create a container network interface ip configuration.
      * 
      */
-    @InputImport(name="subnet")
+    @Import(name="subnet")
       private final @Nullable SubnetResponse subnet;
 
     public Optional<SubnetResponse> getSubnet() {
@@ -78,7 +78,7 @@ public final class IPConfigurationProfileResponse extends io.pulumi.resources.In
      * Sub Resource type.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

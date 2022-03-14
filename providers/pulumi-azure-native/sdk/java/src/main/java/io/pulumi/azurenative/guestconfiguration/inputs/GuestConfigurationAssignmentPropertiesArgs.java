@@ -5,7 +5,7 @@ package io.pulumi.azurenative.guestconfiguration.inputs;
 
 import io.pulumi.azurenative.guestconfiguration.inputs.GuestConfigurationNavigationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class GuestConfigurationAssignmentPropertiesArgs extends io.pulumi.
      * The source which initiated the guest configuration assignment. Ex: Azure Policy
      * 
      */
-    @InputImport(name="context")
+    @Import(name="context")
       private final @Nullable Output<String> context;
 
     public Output<String> getContext() {
@@ -34,7 +34,7 @@ public final class GuestConfigurationAssignmentPropertiesArgs extends io.pulumi.
      * The guest configuration to assign.
      * 
      */
-    @InputImport(name="guestConfiguration")
+    @Import(name="guestConfiguration")
       private final @Nullable Output<GuestConfigurationNavigationArgs> guestConfiguration;
 
     public Output<GuestConfigurationNavigationArgs> getGuestConfiguration() {

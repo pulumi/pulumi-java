@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.appplatform.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class TemporaryDiskArgs extends io.pulumi.resources.ResourceArgs {
      * Mount path of the temporary disk
      * 
      */
-    @InputImport(name="mountPath")
+    @Import(name="mountPath")
       private final @Nullable Output<String> mountPath;
 
     public Output<String> getMountPath() {
@@ -34,7 +34,7 @@ public final class TemporaryDiskArgs extends io.pulumi.resources.ResourceArgs {
      * Size of the temporary disk in GB
      * 
      */
-    @InputImport(name="sizeInGB")
+    @Import(name="sizeInGB")
       private final @Nullable Output<Integer> sizeInGB;
 
     public Output<Integer> getSizeInGB() {

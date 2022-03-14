@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.recoveryservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class VmmDetailsResponse {
     /**
      * Gets the class type. Overridden in derived classes.
@@ -16,8 +16,8 @@ public final class VmmDetailsResponse {
      */
     private final String instanceType;
 
-    @OutputCustomType.Constructor
-    private VmmDetailsResponse(@OutputCustomType.Parameter("instanceType") String instanceType) {
+    @CustomType.Constructor
+    private VmmDetailsResponse(@CustomType.Parameter("instanceType") String instanceType) {
         this.instanceType = instanceType;
     }
 

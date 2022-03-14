@@ -5,7 +5,7 @@ package io.pulumi.azurenative.compute.outputs;
 
 import io.pulumi.azurenative.compute.outputs.EncryptionSetIdentityResponse;
 import io.pulumi.azurenative.compute.outputs.KeyForDiskEncryptionSetResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -14,7 +14,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetDiskEncryptionSetResult {
     /**
      * The key vault key which is currently used by this disk encryption set.
@@ -77,20 +77,20 @@ public final class GetDiskEncryptionSetResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDiskEncryptionSetResult(
-        @OutputCustomType.Parameter("activeKey") @Nullable KeyForDiskEncryptionSetResponse activeKey,
-        @OutputCustomType.Parameter("encryptionType") @Nullable String encryptionType,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("identity") @Nullable EncryptionSetIdentityResponse identity,
-        @OutputCustomType.Parameter("lastKeyRotationTimestamp") String lastKeyRotationTimestamp,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("previousKeys") List<KeyForDiskEncryptionSetResponse> previousKeys,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("rotationToLatestKeyVersionEnabled") @Nullable Boolean rotationToLatestKeyVersionEnabled,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("activeKey") @Nullable KeyForDiskEncryptionSetResponse activeKey,
+        @CustomType.Parameter("encryptionType") @Nullable String encryptionType,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("identity") @Nullable EncryptionSetIdentityResponse identity,
+        @CustomType.Parameter("lastKeyRotationTimestamp") String lastKeyRotationTimestamp,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("previousKeys") List<KeyForDiskEncryptionSetResponse> previousKeys,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("rotationToLatestKeyVersionEnabled") @Nullable Boolean rotationToLatestKeyVersionEnabled,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type) {
         this.activeKey = activeKey;
         this.encryptionType = encryptionType;
         this.id = id;

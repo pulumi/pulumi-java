@@ -4,11 +4,11 @@
 package io.pulumi.azurenative.datafactory.outputs;
 
 import io.pulumi.azurenative.datafactory.outputs.LinkedServiceReferenceResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RedshiftUnloadSettingsResponse {
     /**
      * The bucket of the interim Amazon S3 which will be used to store the unloaded data from Amazon Redshift source. The bucket must be in the same region as the Amazon Redshift source. Type: string (or Expression with resultType string).
@@ -21,10 +21,10 @@ public final class RedshiftUnloadSettingsResponse {
      */
     private final LinkedServiceReferenceResponse s3LinkedServiceName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RedshiftUnloadSettingsResponse(
-        @OutputCustomType.Parameter("bucketName") Object bucketName,
-        @OutputCustomType.Parameter("s3LinkedServiceName") LinkedServiceReferenceResponse s3LinkedServiceName) {
+        @CustomType.Parameter("bucketName") Object bucketName,
+        @CustomType.Parameter("s3LinkedServiceName") LinkedServiceReferenceResponse s3LinkedServiceName) {
         this.bucketName = bucketName;
         this.s3LinkedServiceName = s3LinkedServiceName;
     }

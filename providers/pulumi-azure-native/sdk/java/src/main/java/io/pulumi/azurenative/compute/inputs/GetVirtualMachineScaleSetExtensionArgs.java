@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.compute.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +18,7 @@ public final class GetVirtualMachineScaleSetExtensionArgs extends io.pulumi.reso
      * The expand expression to apply on the operation.
      * 
      */
-    @InputImport(name="expand")
+    @Import(name="expand")
       private final @Nullable String expand;
 
     public Optional<String> getExpand() {
@@ -29,7 +29,7 @@ public final class GetVirtualMachineScaleSetExtensionArgs extends io.pulumi.reso
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {
@@ -40,7 +40,7 @@ public final class GetVirtualMachineScaleSetExtensionArgs extends io.pulumi.reso
      * The name of the VM scale set containing the extension.
      * 
      */
-    @InputImport(name="vmScaleSetName", required=true)
+    @Import(name="vmScaleSetName", required=true)
       private final String vmScaleSetName;
 
     public String getVmScaleSetName() {
@@ -51,7 +51,7 @@ public final class GetVirtualMachineScaleSetExtensionArgs extends io.pulumi.reso
      * The name of the VM scale set extension.
      * 
      */
-    @InputImport(name="vmssExtensionName", required=true)
+    @Import(name="vmssExtensionName", required=true)
       private final String vmssExtensionName;
 
     public String getVmssExtensionName() {

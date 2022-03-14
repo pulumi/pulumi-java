@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.security.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class AutomationScopeResponse extends io.pulumi.resources.InvokeArg
      * The resources scope description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable String description;
 
     public Optional<String> getDescription() {
@@ -33,7 +33,7 @@ public final class AutomationScopeResponse extends io.pulumi.resources.InvokeArg
      * The resources scope path. Can be the subscription on which the automation is defined on or a resource group under that subscription (fully qualified Azure resource IDs).
      * 
      */
-    @InputImport(name="scopePath")
+    @Import(name="scopePath")
       private final @Nullable String scopePath;
 
     public Optional<String> getScopePath() {

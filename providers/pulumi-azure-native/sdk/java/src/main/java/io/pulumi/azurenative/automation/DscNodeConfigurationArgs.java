@@ -6,7 +6,7 @@ package io.pulumi.azurenative.automation;
 import io.pulumi.azurenative.automation.inputs.ContentSourceArgs;
 import io.pulumi.azurenative.automation.inputs.DscConfigurationAssociationPropertyArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -22,7 +22,7 @@ public final class DscNodeConfigurationArgs extends io.pulumi.resources.Resource
      * The name of the automation account.
      * 
      */
-    @InputImport(name="automationAccountName", required=true)
+    @Import(name="automationAccountName", required=true)
       private final Output<String> automationAccountName;
 
     public Output<String> getAutomationAccountName() {
@@ -33,7 +33,7 @@ public final class DscNodeConfigurationArgs extends io.pulumi.resources.Resource
      * Gets or sets the configuration of the node.
      * 
      */
-    @InputImport(name="configuration", required=true)
+    @Import(name="configuration", required=true)
       private final Output<DscConfigurationAssociationPropertyArgs> configuration;
 
     public Output<DscConfigurationAssociationPropertyArgs> getConfiguration() {
@@ -44,7 +44,7 @@ public final class DscNodeConfigurationArgs extends io.pulumi.resources.Resource
      * If a new build version of NodeConfiguration is required.
      * 
      */
-    @InputImport(name="incrementNodeConfigurationBuild")
+    @Import(name="incrementNodeConfigurationBuild")
       private final @Nullable Output<Boolean> incrementNodeConfigurationBuild;
 
     public Output<Boolean> getIncrementNodeConfigurationBuild() {
@@ -55,7 +55,7 @@ public final class DscNodeConfigurationArgs extends io.pulumi.resources.Resource
      * Name of the node configuration.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -66,7 +66,7 @@ public final class DscNodeConfigurationArgs extends io.pulumi.resources.Resource
      * The Dsc node configuration name.
      * 
      */
-    @InputImport(name="nodeConfigurationName")
+    @Import(name="nodeConfigurationName")
       private final @Nullable Output<String> nodeConfigurationName;
 
     public Output<String> getNodeConfigurationName() {
@@ -77,7 +77,7 @@ public final class DscNodeConfigurationArgs extends io.pulumi.resources.Resource
      * Name of an Azure Resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -88,7 +88,7 @@ public final class DscNodeConfigurationArgs extends io.pulumi.resources.Resource
      * Gets or sets the source.
      * 
      */
-    @InputImport(name="source", required=true)
+    @Import(name="source", required=true)
       private final Output<ContentSourceArgs> source;
 
     public Output<ContentSourceArgs> getSource() {
@@ -99,7 +99,7 @@ public final class DscNodeConfigurationArgs extends io.pulumi.resources.Resource
      * Gets or sets the tags attached to the resource.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

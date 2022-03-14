@@ -7,7 +7,7 @@ import io.pulumi.azurenative.migrate.inputs.DatabasesSolutionSummaryResponse;
 import io.pulumi.azurenative.migrate.inputs.ServersSolutionSummaryResponse;
 import io.pulumi.azurenative.migrate.inputs.SolutionDetailsResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -26,7 +26,7 @@ public final class SolutionPropertiesResponse extends io.pulumi.resources.Invoke
      * Gets or sets the cleanup state of the solution.
      * 
      */
-    @InputImport(name="cleanupState")
+    @Import(name="cleanupState")
       private final @Nullable String cleanupState;
 
     public Optional<String> getCleanupState() {
@@ -37,7 +37,7 @@ public final class SolutionPropertiesResponse extends io.pulumi.resources.Invoke
      * Gets or sets the details of the solution.
      * 
      */
-    @InputImport(name="details")
+    @Import(name="details")
       private final @Nullable SolutionDetailsResponse details;
 
     public Optional<SolutionDetailsResponse> getDetails() {
@@ -48,7 +48,7 @@ public final class SolutionPropertiesResponse extends io.pulumi.resources.Invoke
      * Gets or sets the goal of the solution.
      * 
      */
-    @InputImport(name="goal")
+    @Import(name="goal")
       private final @Nullable String goal;
 
     public Optional<String> getGoal() {
@@ -59,7 +59,7 @@ public final class SolutionPropertiesResponse extends io.pulumi.resources.Invoke
      * Gets or sets the purpose of the solution.
      * 
      */
-    @InputImport(name="purpose")
+    @Import(name="purpose")
       private final @Nullable String purpose;
 
     public Optional<String> getPurpose() {
@@ -70,7 +70,7 @@ public final class SolutionPropertiesResponse extends io.pulumi.resources.Invoke
      * Gets or sets the current status of the solution.
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable String status;
 
     public Optional<String> getStatus() {
@@ -81,7 +81,7 @@ public final class SolutionPropertiesResponse extends io.pulumi.resources.Invoke
      * Gets or sets the summary of the solution.
      * 
      */
-    @InputImport(name="summary")
+    @Import(name="summary")
       private final @Nullable Either<DatabasesSolutionSummaryResponse,ServersSolutionSummaryResponse> summary;
 
     public Either<DatabasesSolutionSummaryResponse,ServersSolutionSummaryResponse> getSummary() {
@@ -92,7 +92,7 @@ public final class SolutionPropertiesResponse extends io.pulumi.resources.Invoke
      * Gets or sets the tool being used in the solution.
      * 
      */
-    @InputImport(name="tool")
+    @Import(name="tool")
       private final @Nullable String tool;
 
     public Optional<String> getTool() {

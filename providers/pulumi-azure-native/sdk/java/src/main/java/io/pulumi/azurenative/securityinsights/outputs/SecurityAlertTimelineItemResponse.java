@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.securityinsights.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SecurityAlertTimelineItemResponse {
     /**
      * The name of the alert type.
@@ -63,18 +63,18 @@ public final class SecurityAlertTimelineItemResponse {
      */
     private final String timeGenerated;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SecurityAlertTimelineItemResponse(
-        @OutputCustomType.Parameter("alertType") String alertType,
-        @OutputCustomType.Parameter("azureResourceId") String azureResourceId,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("endTimeUtc") String endTimeUtc,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("productName") @Nullable String productName,
-        @OutputCustomType.Parameter("severity") String severity,
-        @OutputCustomType.Parameter("startTimeUtc") String startTimeUtc,
-        @OutputCustomType.Parameter("timeGenerated") String timeGenerated) {
+        @CustomType.Parameter("alertType") String alertType,
+        @CustomType.Parameter("azureResourceId") String azureResourceId,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("endTimeUtc") String endTimeUtc,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("productName") @Nullable String productName,
+        @CustomType.Parameter("severity") String severity,
+        @CustomType.Parameter("startTimeUtc") String startTimeUtc,
+        @CustomType.Parameter("timeGenerated") String timeGenerated) {
         this.alertType = alertType;
         this.azureResourceId = azureResourceId;
         this.description = description;

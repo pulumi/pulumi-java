@@ -9,7 +9,7 @@ import io.pulumi.azurenative.compute.outputs.ApiEntityReferenceResponse;
 import io.pulumi.azurenative.compute.outputs.RestorePointSourceMetadataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -36,7 +36,7 @@ public class RestorePoint extends io.pulumi.resources.CustomResource {
      * Gets the consistency mode for the restore point. Please refer to https://aka.ms/RestorePoints for more details.
      * 
      */
-    @OutputExport(name="consistencyMode", type=String.class, parameters={})
+    @Export(name="consistencyMode", type=String.class, parameters={})
     private Output<String> consistencyMode;
 
     /**
@@ -50,7 +50,7 @@ public class RestorePoint extends io.pulumi.resources.CustomResource {
      * List of disk resource ids that the customer wishes to exclude from the restore point. If no disks are specified, all disks will be included.
      * 
      */
-    @OutputExport(name="excludeDisks", type=List.class, parameters={ApiEntityReferenceResponse.class})
+    @Export(name="excludeDisks", type=List.class, parameters={ApiEntityReferenceResponse.class})
     private Output</* @Nullable */ List<ApiEntityReferenceResponse>> excludeDisks;
 
     /**
@@ -64,7 +64,7 @@ public class RestorePoint extends io.pulumi.resources.CustomResource {
      * Resource name
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -78,7 +78,7 @@ public class RestorePoint extends io.pulumi.resources.CustomResource {
      * Gets the provisioning state of the restore point.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -92,7 +92,7 @@ public class RestorePoint extends io.pulumi.resources.CustomResource {
      * Gets the details of the VM captured at the time of the restore point creation.
      * 
      */
-    @OutputExport(name="sourceMetadata", type=RestorePointSourceMetadataResponse.class, parameters={})
+    @Export(name="sourceMetadata", type=RestorePointSourceMetadataResponse.class, parameters={})
     private Output<RestorePointSourceMetadataResponse> sourceMetadata;
 
     /**
@@ -106,7 +106,7 @@ public class RestorePoint extends io.pulumi.resources.CustomResource {
      * Gets the creation time of the restore point.
      * 
      */
-    @OutputExport(name="timeCreated", type=String.class, parameters={})
+    @Export(name="timeCreated", type=String.class, parameters={})
     private Output</* @Nullable */ String> timeCreated;
 
     /**
@@ -120,7 +120,7 @@ public class RestorePoint extends io.pulumi.resources.CustomResource {
      * Resource type
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

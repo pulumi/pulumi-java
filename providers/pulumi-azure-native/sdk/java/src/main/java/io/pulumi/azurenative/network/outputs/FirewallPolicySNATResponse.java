@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FirewallPolicySNATResponse {
     /**
      * List of private IP addresses/IP address ranges to not be SNAT.
@@ -17,8 +17,8 @@ public final class FirewallPolicySNATResponse {
      */
     private final @Nullable List<String> privateRanges;
 
-    @OutputCustomType.Constructor
-    private FirewallPolicySNATResponse(@OutputCustomType.Parameter("privateRanges") @Nullable List<String> privateRanges) {
+    @CustomType.Constructor
+    private FirewallPolicySNATResponse(@CustomType.Parameter("privateRanges") @Nullable List<String> privateRanges) {
         this.privateRanges = privateRanges;
     }
 

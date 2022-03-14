@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class A2AProtectionContainerMappingDetailsResponse extends io.pulum
      * A value indicating whether the auto update is enabled.
      * 
      */
-    @InputImport(name="agentAutoUpdateStatus")
+    @Import(name="agentAutoUpdateStatus")
       private final @Nullable String agentAutoUpdateStatus;
 
     public Optional<String> getAgentAutoUpdateStatus() {
@@ -33,7 +33,7 @@ public final class A2AProtectionContainerMappingDetailsResponse extends io.pulum
      * The automation account arm id.
      * 
      */
-    @InputImport(name="automationAccountArmId")
+    @Import(name="automationAccountArmId")
       private final @Nullable String automationAccountArmId;
 
     public Optional<String> getAutomationAccountArmId() {
@@ -45,7 +45,7 @@ public final class A2AProtectionContainerMappingDetailsResponse extends io.pulum
      * Expected value is 'A2A'.
      * 
      */
-    @InputImport(name="instanceType", required=true)
+    @Import(name="instanceType", required=true)
       private final String instanceType;
 
     public String getInstanceType() {
@@ -56,7 +56,7 @@ public final class A2AProtectionContainerMappingDetailsResponse extends io.pulum
      * The job schedule arm name.
      * 
      */
-    @InputImport(name="jobScheduleName")
+    @Import(name="jobScheduleName")
       private final @Nullable String jobScheduleName;
 
     public Optional<String> getJobScheduleName() {
@@ -67,7 +67,7 @@ public final class A2AProtectionContainerMappingDetailsResponse extends io.pulum
      * The schedule arm name.
      * 
      */
-    @InputImport(name="scheduleName")
+    @Import(name="scheduleName")
       private final @Nullable String scheduleName;
 
     public Optional<String> getScheduleName() {

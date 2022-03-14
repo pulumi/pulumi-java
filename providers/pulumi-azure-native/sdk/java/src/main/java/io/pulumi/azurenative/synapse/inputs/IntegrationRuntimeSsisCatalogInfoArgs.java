@@ -7,7 +7,7 @@ import io.pulumi.azurenative.synapse.enums.IntegrationRuntimeSsisCatalogPricingT
 import io.pulumi.azurenative.synapse.inputs.SecureStringArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class IntegrationRuntimeSsisCatalogInfoArgs extends io.pulumi.resou
      * The password of the administrator user account of the catalog database.
      * 
      */
-    @InputImport(name="catalogAdminPassword")
+    @Import(name="catalogAdminPassword")
       private final @Nullable Output<SecureStringArgs> catalogAdminPassword;
 
     public Output<SecureStringArgs> getCatalogAdminPassword() {
@@ -36,7 +36,7 @@ public final class IntegrationRuntimeSsisCatalogInfoArgs extends io.pulumi.resou
      * The administrator user name of catalog database.
      * 
      */
-    @InputImport(name="catalogAdminUserName")
+    @Import(name="catalogAdminUserName")
       private final @Nullable Output<String> catalogAdminUserName;
 
     public Output<String> getCatalogAdminUserName() {
@@ -47,7 +47,7 @@ public final class IntegrationRuntimeSsisCatalogInfoArgs extends io.pulumi.resou
      * The pricing tier for the catalog database. The valid values could be found in https://azure.microsoft.com/en-us/pricing/details/sql-database/
      * 
      */
-    @InputImport(name="catalogPricingTier")
+    @Import(name="catalogPricingTier")
       private final @Nullable Output<Either<String,IntegrationRuntimeSsisCatalogPricingTier>> catalogPricingTier;
 
     public Output<Either<String,IntegrationRuntimeSsisCatalogPricingTier>> getCatalogPricingTier() {
@@ -58,7 +58,7 @@ public final class IntegrationRuntimeSsisCatalogInfoArgs extends io.pulumi.resou
      * The catalog database server URL.
      * 
      */
-    @InputImport(name="catalogServerEndpoint")
+    @Import(name="catalogServerEndpoint")
       private final @Nullable Output<String> catalogServerEndpoint;
 
     public Output<String> getCatalogServerEndpoint() {

@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TwitterRegistrationResponse {
     /**
      * The OAuth 1.0a consumer key of the Twitter application used for sign-in.
@@ -25,10 +25,10 @@ public final class TwitterRegistrationResponse {
      */
     private final @Nullable String consumerSecretSettingName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TwitterRegistrationResponse(
-        @OutputCustomType.Parameter("consumerKey") @Nullable String consumerKey,
-        @OutputCustomType.Parameter("consumerSecretSettingName") @Nullable String consumerSecretSettingName) {
+        @CustomType.Parameter("consumerKey") @Nullable String consumerKey,
+        @CustomType.Parameter("consumerSecretSettingName") @Nullable String consumerSecretSettingName) {
         this.consumerKey = consumerKey;
         this.consumerSecretSettingName = consumerSecretSettingName;
     }

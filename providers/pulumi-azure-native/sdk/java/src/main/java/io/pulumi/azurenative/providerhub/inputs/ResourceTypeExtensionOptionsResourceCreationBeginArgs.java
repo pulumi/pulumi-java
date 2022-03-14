@@ -6,7 +6,7 @@ package io.pulumi.azurenative.providerhub.inputs;
 import io.pulumi.azurenative.providerhub.enums.ExtensionOptionType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,14 +17,14 @@ public final class ResourceTypeExtensionOptionsResourceCreationBeginArgs extends
 
     public static final ResourceTypeExtensionOptionsResourceCreationBeginArgs Empty = new ResourceTypeExtensionOptionsResourceCreationBeginArgs();
 
-    @InputImport(name="request")
+    @Import(name="request")
       private final @Nullable Output<List<Either<String,ExtensionOptionType>>> request;
 
     public Output<List<Either<String,ExtensionOptionType>>> getRequest() {
         return this.request == null ? Output.empty() : this.request;
     }
 
-    @InputImport(name="response")
+    @Import(name="response")
       private final @Nullable Output<List<Either<String,ExtensionOptionType>>> response;
 
     public Output<List<Either<String,ExtensionOptionType>>> getResponse() {

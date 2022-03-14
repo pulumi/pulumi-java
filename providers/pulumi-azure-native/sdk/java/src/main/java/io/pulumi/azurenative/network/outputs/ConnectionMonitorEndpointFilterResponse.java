@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.ConnectionMonitorEndpointFilterItemResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ConnectionMonitorEndpointFilterResponse {
     /**
      * List of items in the filter.
@@ -24,10 +24,10 @@ public final class ConnectionMonitorEndpointFilterResponse {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ConnectionMonitorEndpointFilterResponse(
-        @OutputCustomType.Parameter("items") @Nullable List<ConnectionMonitorEndpointFilterItemResponse> items,
-        @OutputCustomType.Parameter("type") @Nullable String type) {
+        @CustomType.Parameter("items") @Nullable List<ConnectionMonitorEndpointFilterItemResponse> items,
+        @CustomType.Parameter("type") @Nullable String type) {
         this.items = items;
         this.type = type;
     }

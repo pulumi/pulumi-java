@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.connectedvmwarevsphere.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class HttpProxyConfigurationArgs extends io.pulumi.resources.Resour
      * Gets or sets httpsProxy url.
      * 
      */
-    @InputImport(name="httpsProxy")
+    @Import(name="httpsProxy")
       private final @Nullable Output<String> httpsProxy;
 
     public Output<String> getHttpsProxy() {

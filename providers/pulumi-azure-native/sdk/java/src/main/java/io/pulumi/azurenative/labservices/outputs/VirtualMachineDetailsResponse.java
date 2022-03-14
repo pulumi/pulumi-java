@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.labservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class VirtualMachineDetailsResponse {
     /**
      * Last known compute power state captured in DTL
@@ -40,14 +40,14 @@ public final class VirtualMachineDetailsResponse {
      */
     private final String userName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VirtualMachineDetailsResponse(
-        @OutputCustomType.Parameter("lastKnownPowerState") String lastKnownPowerState,
-        @OutputCustomType.Parameter("privateIpAddress") String privateIpAddress,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("rdpAuthority") String rdpAuthority,
-        @OutputCustomType.Parameter("sshAuthority") String sshAuthority,
-        @OutputCustomType.Parameter("userName") String userName) {
+        @CustomType.Parameter("lastKnownPowerState") String lastKnownPowerState,
+        @CustomType.Parameter("privateIpAddress") String privateIpAddress,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("rdpAuthority") String rdpAuthority,
+        @CustomType.Parameter("sshAuthority") String sshAuthority,
+        @CustomType.Parameter("userName") String userName) {
         this.lastKnownPowerState = lastKnownPowerState;
         this.privateIpAddress = privateIpAddress;
         this.provisioningState = provisioningState;

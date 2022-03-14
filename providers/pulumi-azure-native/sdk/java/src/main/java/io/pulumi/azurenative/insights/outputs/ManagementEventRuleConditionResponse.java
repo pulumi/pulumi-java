@@ -7,13 +7,13 @@ import io.pulumi.azurenative.insights.outputs.ManagementEventAggregationConditio
 import io.pulumi.azurenative.insights.outputs.RuleManagementEventDataSourceResponse;
 import io.pulumi.azurenative.insights.outputs.RuleMetricDataSourceResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ManagementEventRuleConditionResponse {
     /**
      * How the data that is collected should be combined over time and when the alert is activated. Note that for management event alerts aggregation is optional – if it is not provided then any event will cause the alert to activate.
@@ -32,11 +32,11 @@ public final class ManagementEventRuleConditionResponse {
      */
     private final String odataType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ManagementEventRuleConditionResponse(
-        @OutputCustomType.Parameter("aggregation") @Nullable ManagementEventAggregationConditionResponse aggregation,
-        @OutputCustomType.Parameter("dataSource") @Nullable Either<RuleManagementEventDataSourceResponse,RuleMetricDataSourceResponse> dataSource,
-        @OutputCustomType.Parameter("odataType") String odataType) {
+        @CustomType.Parameter("aggregation") @Nullable ManagementEventAggregationConditionResponse aggregation,
+        @CustomType.Parameter("dataSource") @Nullable Either<RuleManagementEventDataSourceResponse,RuleMetricDataSourceResponse> dataSource,
+        @CustomType.Parameter("odataType") String odataType) {
         this.aggregation = aggregation;
         this.dataSource = dataSource;
         this.odataType = odataType;

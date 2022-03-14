@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.webpubsub.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class WebPubSubTlsSettingsResponse {
     /**
      * Request client certificate during TLS handshake if enabled
@@ -17,8 +17,8 @@ public final class WebPubSubTlsSettingsResponse {
      */
     private final @Nullable Boolean clientCertEnabled;
 
-    @OutputCustomType.Constructor
-    private WebPubSubTlsSettingsResponse(@OutputCustomType.Parameter("clientCertEnabled") @Nullable Boolean clientCertEnabled) {
+    @CustomType.Constructor
+    private WebPubSubTlsSettingsResponse(@CustomType.Parameter("clientCertEnabled") @Nullable Boolean clientCertEnabled) {
         this.clientCertEnabled = clientCertEnabled;
     }
 

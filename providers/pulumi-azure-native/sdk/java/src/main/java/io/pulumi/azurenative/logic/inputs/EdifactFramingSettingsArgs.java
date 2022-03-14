@@ -8,7 +8,7 @@ import io.pulumi.azurenative.logic.enums.EdifactDecimalIndicator;
 import io.pulumi.azurenative.logic.enums.SegmentTerminatorSuffix;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +27,7 @@ public final class EdifactFramingSettingsArgs extends io.pulumi.resources.Resour
      * The character encoding.
      * 
      */
-    @InputImport(name="characterEncoding")
+    @Import(name="characterEncoding")
       private final @Nullable Output<String> characterEncoding;
 
     public Output<String> getCharacterEncoding() {
@@ -38,7 +38,7 @@ public final class EdifactFramingSettingsArgs extends io.pulumi.resources.Resour
      * The EDIFACT frame setting characterSet.
      * 
      */
-    @InputImport(name="characterSet", required=true)
+    @Import(name="characterSet", required=true)
       private final Output<Either<String,EdifactCharacterSet>> characterSet;
 
     public Output<Either<String,EdifactCharacterSet>> getCharacterSet() {
@@ -49,7 +49,7 @@ public final class EdifactFramingSettingsArgs extends io.pulumi.resources.Resour
      * The component separator.
      * 
      */
-    @InputImport(name="componentSeparator", required=true)
+    @Import(name="componentSeparator", required=true)
       private final Output<Integer> componentSeparator;
 
     public Output<Integer> getComponentSeparator() {
@@ -60,7 +60,7 @@ public final class EdifactFramingSettingsArgs extends io.pulumi.resources.Resour
      * The data element separator.
      * 
      */
-    @InputImport(name="dataElementSeparator", required=true)
+    @Import(name="dataElementSeparator", required=true)
       private final Output<Integer> dataElementSeparator;
 
     public Output<Integer> getDataElementSeparator() {
@@ -71,7 +71,7 @@ public final class EdifactFramingSettingsArgs extends io.pulumi.resources.Resour
      * The EDIFACT frame setting decimal indicator.
      * 
      */
-    @InputImport(name="decimalPointIndicator", required=true)
+    @Import(name="decimalPointIndicator", required=true)
       private final Output<EdifactDecimalIndicator> decimalPointIndicator;
 
     public Output<EdifactDecimalIndicator> getDecimalPointIndicator() {
@@ -82,7 +82,7 @@ public final class EdifactFramingSettingsArgs extends io.pulumi.resources.Resour
      * The protocol version.
      * 
      */
-    @InputImport(name="protocolVersion", required=true)
+    @Import(name="protocolVersion", required=true)
       private final Output<Integer> protocolVersion;
 
     public Output<Integer> getProtocolVersion() {
@@ -93,7 +93,7 @@ public final class EdifactFramingSettingsArgs extends io.pulumi.resources.Resour
      * The release indicator.
      * 
      */
-    @InputImport(name="releaseIndicator", required=true)
+    @Import(name="releaseIndicator", required=true)
       private final Output<Integer> releaseIndicator;
 
     public Output<Integer> getReleaseIndicator() {
@@ -104,7 +104,7 @@ public final class EdifactFramingSettingsArgs extends io.pulumi.resources.Resour
      * The repetition separator.
      * 
      */
-    @InputImport(name="repetitionSeparator", required=true)
+    @Import(name="repetitionSeparator", required=true)
       private final Output<Integer> repetitionSeparator;
 
     public Output<Integer> getRepetitionSeparator() {
@@ -115,7 +115,7 @@ public final class EdifactFramingSettingsArgs extends io.pulumi.resources.Resour
      * The segment terminator.
      * 
      */
-    @InputImport(name="segmentTerminator", required=true)
+    @Import(name="segmentTerminator", required=true)
       private final Output<Integer> segmentTerminator;
 
     public Output<Integer> getSegmentTerminator() {
@@ -126,7 +126,7 @@ public final class EdifactFramingSettingsArgs extends io.pulumi.resources.Resour
      * The EDIFACT frame setting segment terminator suffix.
      * 
      */
-    @InputImport(name="segmentTerminatorSuffix", required=true)
+    @Import(name="segmentTerminatorSuffix", required=true)
       private final Output<SegmentTerminatorSuffix> segmentTerminatorSuffix;
 
     public Output<SegmentTerminatorSuffix> getSegmentTerminatorSuffix() {
@@ -137,7 +137,7 @@ public final class EdifactFramingSettingsArgs extends io.pulumi.resources.Resour
      * The service code list directory version.
      * 
      */
-    @InputImport(name="serviceCodeListDirectoryVersion")
+    @Import(name="serviceCodeListDirectoryVersion")
       private final @Nullable Output<String> serviceCodeListDirectoryVersion;
 
     public Output<String> getServiceCodeListDirectoryVersion() {

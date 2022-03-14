@@ -10,7 +10,7 @@ import io.pulumi.azurenative.recoveryservices.inputs.PushInstallerDetailsRespons
 import io.pulumi.azurenative.recoveryservices.inputs.RcmProxyDetailsResponse;
 import io.pulumi.azurenative.recoveryservices.inputs.ReplicationAgentDetailsResponse;
 import io.pulumi.azurenative.recoveryservices.inputs.ReprotectAgentDetailsResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -28,7 +28,7 @@ public final class InMageRcmFabricSpecificDetailsResponse extends io.pulumi.reso
      * The list of agent details.
      * 
      */
-    @InputImport(name="agentDetails", required=true)
+    @Import(name="agentDetails", required=true)
       private final List<AgentDetailsResponse> agentDetails;
 
     public List<AgentDetailsResponse> getAgentDetails() {
@@ -39,7 +39,7 @@ public final class InMageRcmFabricSpecificDetailsResponse extends io.pulumi.reso
      * The control plane Uri.
      * 
      */
-    @InputImport(name="controlPlaneUri", required=true)
+    @Import(name="controlPlaneUri", required=true)
       private final String controlPlaneUri;
 
     public String getControlPlaneUri() {
@@ -50,7 +50,7 @@ public final class InMageRcmFabricSpecificDetailsResponse extends io.pulumi.reso
      * The data plane Uri.
      * 
      */
-    @InputImport(name="dataPlaneUri", required=true)
+    @Import(name="dataPlaneUri", required=true)
       private final String dataPlaneUri;
 
     public String getDataPlaneUri() {
@@ -61,7 +61,7 @@ public final class InMageRcmFabricSpecificDetailsResponse extends io.pulumi.reso
      * The list of DRAs.
      * 
      */
-    @InputImport(name="dras", required=true)
+    @Import(name="dras", required=true)
       private final List<DraDetailsResponse> dras;
 
     public List<DraDetailsResponse> getDras() {
@@ -73,7 +73,7 @@ public final class InMageRcmFabricSpecificDetailsResponse extends io.pulumi.reso
      * Expected value is 'InMageRcm'.
      * 
      */
-    @InputImport(name="instanceType", required=true)
+    @Import(name="instanceType", required=true)
       private final String instanceType;
 
     public String getInstanceType() {
@@ -84,7 +84,7 @@ public final class InMageRcmFabricSpecificDetailsResponse extends io.pulumi.reso
      * The ARM Id of the physical site.
      * 
      */
-    @InputImport(name="physicalSiteId", required=true)
+    @Import(name="physicalSiteId", required=true)
       private final String physicalSiteId;
 
     public String getPhysicalSiteId() {
@@ -95,7 +95,7 @@ public final class InMageRcmFabricSpecificDetailsResponse extends io.pulumi.reso
      * The list of process servers.
      * 
      */
-    @InputImport(name="processServers", required=true)
+    @Import(name="processServers", required=true)
       private final List<ProcessServerDetailsResponse> processServers;
 
     public List<ProcessServerDetailsResponse> getProcessServers() {
@@ -106,7 +106,7 @@ public final class InMageRcmFabricSpecificDetailsResponse extends io.pulumi.reso
      * The list of push installers.
      * 
      */
-    @InputImport(name="pushInstallers", required=true)
+    @Import(name="pushInstallers", required=true)
       private final List<PushInstallerDetailsResponse> pushInstallers;
 
     public List<PushInstallerDetailsResponse> getPushInstallers() {
@@ -117,7 +117,7 @@ public final class InMageRcmFabricSpecificDetailsResponse extends io.pulumi.reso
      * The list of RCM proxies.
      * 
      */
-    @InputImport(name="rcmProxies", required=true)
+    @Import(name="rcmProxies", required=true)
       private final List<RcmProxyDetailsResponse> rcmProxies;
 
     public List<RcmProxyDetailsResponse> getRcmProxies() {
@@ -128,7 +128,7 @@ public final class InMageRcmFabricSpecificDetailsResponse extends io.pulumi.reso
      * The list of replication agents.
      * 
      */
-    @InputImport(name="replicationAgents", required=true)
+    @Import(name="replicationAgents", required=true)
       private final List<ReplicationAgentDetailsResponse> replicationAgents;
 
     public List<ReplicationAgentDetailsResponse> getReplicationAgents() {
@@ -139,7 +139,7 @@ public final class InMageRcmFabricSpecificDetailsResponse extends io.pulumi.reso
      * The list of reprotect agents.
      * 
      */
-    @InputImport(name="reprotectAgents", required=true)
+    @Import(name="reprotectAgents", required=true)
       private final List<ReprotectAgentDetailsResponse> reprotectAgents;
 
     public List<ReprotectAgentDetailsResponse> getReprotectAgents() {
@@ -150,7 +150,7 @@ public final class InMageRcmFabricSpecificDetailsResponse extends io.pulumi.reso
      * The service container Id.
      * 
      */
-    @InputImport(name="serviceContainerId", required=true)
+    @Import(name="serviceContainerId", required=true)
       private final String serviceContainerId;
 
     public String getServiceContainerId() {
@@ -161,7 +161,7 @@ public final class InMageRcmFabricSpecificDetailsResponse extends io.pulumi.reso
      * The service endpoint.
      * 
      */
-    @InputImport(name="serviceEndpoint", required=true)
+    @Import(name="serviceEndpoint", required=true)
       private final String serviceEndpoint;
 
     public String getServiceEndpoint() {
@@ -172,7 +172,7 @@ public final class InMageRcmFabricSpecificDetailsResponse extends io.pulumi.reso
      * The service resource Id.
      * 
      */
-    @InputImport(name="serviceResourceId", required=true)
+    @Import(name="serviceResourceId", required=true)
       private final String serviceResourceId;
 
     public String getServiceResourceId() {
@@ -183,7 +183,7 @@ public final class InMageRcmFabricSpecificDetailsResponse extends io.pulumi.reso
      * The ARM Id of the VMware site.
      * 
      */
-    @InputImport(name="vmwareSiteId", required=true)
+    @Import(name="vmwareSiteId", required=true)
       private final String vmwareSiteId;
 
     public String getVmwareSiteId() {

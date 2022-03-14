@@ -9,7 +9,7 @@ import io.pulumi.azurenative.datafactory.outputs.IntegrationRuntimeReferenceResp
 import io.pulumi.azurenative.datafactory.outputs.ParameterSpecificationResponse;
 import io.pulumi.azurenative.datafactory.outputs.SecureStringResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -18,7 +18,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AzureDataLakeStoreLinkedServiceResponse {
     /**
      * Data Lake Store account name. Type: string (or Expression with resultType string).
@@ -97,23 +97,23 @@ public final class AzureDataLakeStoreLinkedServiceResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AzureDataLakeStoreLinkedServiceResponse(
-        @OutputCustomType.Parameter("accountName") @Nullable Object accountName,
-        @OutputCustomType.Parameter("annotations") @Nullable List<Object> annotations,
-        @OutputCustomType.Parameter("azureCloudType") @Nullable Object azureCloudType,
-        @OutputCustomType.Parameter("connectVia") @Nullable IntegrationRuntimeReferenceResponse connectVia,
-        @OutputCustomType.Parameter("credential") @Nullable CredentialReferenceResponse credential,
-        @OutputCustomType.Parameter("dataLakeStoreUri") Object dataLakeStoreUri,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("encryptedCredential") @Nullable Object encryptedCredential,
-        @OutputCustomType.Parameter("parameters") @Nullable Map<String,ParameterSpecificationResponse> parameters,
-        @OutputCustomType.Parameter("resourceGroupName") @Nullable Object resourceGroupName,
-        @OutputCustomType.Parameter("servicePrincipalId") @Nullable Object servicePrincipalId,
-        @OutputCustomType.Parameter("servicePrincipalKey") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey,
-        @OutputCustomType.Parameter("subscriptionId") @Nullable Object subscriptionId,
-        @OutputCustomType.Parameter("tenant") @Nullable Object tenant,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("accountName") @Nullable Object accountName,
+        @CustomType.Parameter("annotations") @Nullable List<Object> annotations,
+        @CustomType.Parameter("azureCloudType") @Nullable Object azureCloudType,
+        @CustomType.Parameter("connectVia") @Nullable IntegrationRuntimeReferenceResponse connectVia,
+        @CustomType.Parameter("credential") @Nullable CredentialReferenceResponse credential,
+        @CustomType.Parameter("dataLakeStoreUri") Object dataLakeStoreUri,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("encryptedCredential") @Nullable Object encryptedCredential,
+        @CustomType.Parameter("parameters") @Nullable Map<String,ParameterSpecificationResponse> parameters,
+        @CustomType.Parameter("resourceGroupName") @Nullable Object resourceGroupName,
+        @CustomType.Parameter("servicePrincipalId") @Nullable Object servicePrincipalId,
+        @CustomType.Parameter("servicePrincipalKey") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey,
+        @CustomType.Parameter("subscriptionId") @Nullable Object subscriptionId,
+        @CustomType.Parameter("tenant") @Nullable Object tenant,
+        @CustomType.Parameter("type") String type) {
         this.accountName = accountName;
         this.annotations = annotations;
         this.azureCloudType = azureCloudType;

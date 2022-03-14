@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.devtestlab.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class UserSecretStoreResponse {
     /**
      * The ID of the user's Key vault.
@@ -22,10 +22,10 @@ public final class UserSecretStoreResponse {
      */
     private final @Nullable String keyVaultUri;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private UserSecretStoreResponse(
-        @OutputCustomType.Parameter("keyVaultId") @Nullable String keyVaultId,
-        @OutputCustomType.Parameter("keyVaultUri") @Nullable String keyVaultUri) {
+        @CustomType.Parameter("keyVaultId") @Nullable String keyVaultId,
+        @CustomType.Parameter("keyVaultUri") @Nullable String keyVaultUri) {
         this.keyVaultId = keyVaultId;
         this.keyVaultUri = keyVaultUri;
     }

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.containerregistry.enums.AuditLogStatus;
 import io.pulumi.azurenative.containerregistry.enums.LogLevel;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class LoggingPropertiesArgs extends io.pulumi.resources.ResourceArg
      * Indicates whether audit logs are enabled on the connected registry.
      * 
      */
-    @InputImport(name="auditLogStatus")
+    @Import(name="auditLogStatus")
       private final @Nullable Output<Either<String,AuditLogStatus>> auditLogStatus;
 
     public Output<Either<String,AuditLogStatus>> getAuditLogStatus() {
@@ -36,7 +36,7 @@ public final class LoggingPropertiesArgs extends io.pulumi.resources.ResourceArg
      * The verbosity of logs persisted on the connected registry.
      * 
      */
-    @InputImport(name="logLevel")
+    @Import(name="logLevel")
       private final @Nullable Output<Either<String,LogLevel>> logLevel;
 
     public Output<Either<String,LogLevel>> getLogLevel() {

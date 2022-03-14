@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DatasetStateResponseDeprecatedBy {
     /**
      * Unique Dataset identifier.
@@ -22,10 +22,10 @@ public final class DatasetStateResponseDeprecatedBy {
      */
     private final @Nullable String definitionVersion;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DatasetStateResponseDeprecatedBy(
-        @OutputCustomType.Parameter("datasetId") String datasetId,
-        @OutputCustomType.Parameter("definitionVersion") @Nullable String definitionVersion) {
+        @CustomType.Parameter("datasetId") String datasetId,
+        @CustomType.Parameter("definitionVersion") @Nullable String definitionVersion) {
         this.datasetId = datasetId;
         this.definitionVersion = definitionVersion;
     }

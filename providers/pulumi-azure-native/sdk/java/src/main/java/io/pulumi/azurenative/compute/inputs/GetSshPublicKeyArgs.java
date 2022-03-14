@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.compute.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetSshPublicKeyArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {
@@ -27,7 +27,7 @@ public final class GetSshPublicKeyArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the SSH public key.
      * 
      */
-    @InputImport(name="sshPublicKeyName", required=true)
+    @Import(name="sshPublicKeyName", required=true)
       private final String sshPublicKeyName;
 
     public String getSshPublicKeyName() {

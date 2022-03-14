@@ -5,7 +5,7 @@ package io.pulumi.azurenative.batch.inputs;
 
 import io.pulumi.azurenative.batch.enums.DiskEncryptionTarget;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class DiskEncryptionConfigurationArgs extends io.pulumi.resources.R
      * On Linux pool, only "TemporaryDisk" is supported; on Windows pool, "OsDisk" and "TemporaryDisk" must be specified.
      * 
      */
-    @InputImport(name="targets")
+    @Import(name="targets")
       private final @Nullable Output<List<DiskEncryptionTarget>> targets;
 
     public Output<List<DiskEncryptionTarget>> getTargets() {

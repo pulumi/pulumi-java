@@ -7,7 +7,7 @@ import io.pulumi.azurenative.cache.enums.SkuFamily;
 import io.pulumi.azurenative.cache.enums.SkuName;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
      * The size of the Redis cache to deploy. Valid values: for C (Basic/Standard) family (0, 1, 2, 3, 4, 5, 6), for P (Premium) family (1, 2, 3, 4).
      * 
      */
-    @InputImport(name="capacity", required=true)
+    @Import(name="capacity", required=true)
       private final Output<Integer> capacity;
 
     public Output<Integer> getCapacity() {
@@ -36,7 +36,7 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
      * The SKU family to use. Valid values: (C, P). (C = Basic/Standard, P = Premium).
      * 
      */
-    @InputImport(name="family", required=true)
+    @Import(name="family", required=true)
       private final Output<Either<String,SkuFamily>> family;
 
     public Output<Either<String,SkuFamily>> getFamily() {
@@ -47,7 +47,7 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
      * The type of Redis cache to deploy. Valid values: (Basic, Standard, Premium)
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<Either<String,SkuName>> name;
 
     public Output<Either<String,SkuName>> getName() {

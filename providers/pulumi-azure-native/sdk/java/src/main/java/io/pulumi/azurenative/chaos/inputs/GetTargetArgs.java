@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.chaos.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetTargetArgs extends io.pulumi.resources.InvokeArgs {
      * String that represents a resource provider namespace.
      * 
      */
-    @InputImport(name="parentProviderNamespace", required=true)
+    @Import(name="parentProviderNamespace", required=true)
       private final String parentProviderNamespace;
 
     public String getParentProviderNamespace() {
@@ -27,7 +27,7 @@ public final class GetTargetArgs extends io.pulumi.resources.InvokeArgs {
      * String that represents a resource name.
      * 
      */
-    @InputImport(name="parentResourceName", required=true)
+    @Import(name="parentResourceName", required=true)
       private final String parentResourceName;
 
     public String getParentResourceName() {
@@ -38,7 +38,7 @@ public final class GetTargetArgs extends io.pulumi.resources.InvokeArgs {
      * String that represents a resource type.
      * 
      */
-    @InputImport(name="parentResourceType", required=true)
+    @Import(name="parentResourceType", required=true)
       private final String parentResourceType;
 
     public String getParentResourceType() {
@@ -49,7 +49,7 @@ public final class GetTargetArgs extends io.pulumi.resources.InvokeArgs {
      * String that represents an Azure resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {
@@ -60,7 +60,7 @@ public final class GetTargetArgs extends io.pulumi.resources.InvokeArgs {
      * String that represents a Target resource name.
      * 
      */
-    @InputImport(name="targetName", required=true)
+    @Import(name="targetName", required=true)
       private final String targetName;
 
     public String getTargetName() {

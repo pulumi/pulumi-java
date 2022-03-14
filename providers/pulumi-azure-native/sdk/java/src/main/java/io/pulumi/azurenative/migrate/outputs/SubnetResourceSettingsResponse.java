@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.migrate.outputs;
 
 import io.pulumi.azurenative.migrate.outputs.NsgReferenceResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SubnetResourceSettingsResponse {
     /**
      * Gets or sets address prefix for the subnet.
@@ -28,11 +28,11 @@ public final class SubnetResourceSettingsResponse {
      */
     private final @Nullable NsgReferenceResponse networkSecurityGroup;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SubnetResourceSettingsResponse(
-        @OutputCustomType.Parameter("addressPrefix") @Nullable String addressPrefix,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("networkSecurityGroup") @Nullable NsgReferenceResponse networkSecurityGroup) {
+        @CustomType.Parameter("addressPrefix") @Nullable String addressPrefix,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("networkSecurityGroup") @Nullable NsgReferenceResponse networkSecurityGroup) {
         this.addressPrefix = addressPrefix;
         this.name = name;
         this.networkSecurityGroup = networkSecurityGroup;

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.operationalinsights.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class WorkspaceSkuResponse extends io.pulumi.resources.InvokeArgs {
      * The capacity reservation level for this workspace, when CapacityReservation sku is selected.
      * 
      */
-    @InputImport(name="capacityReservationLevel")
+    @Import(name="capacityReservationLevel")
       private final @Nullable Integer capacityReservationLevel;
 
     public Optional<Integer> getCapacityReservationLevel() {
@@ -34,7 +34,7 @@ public final class WorkspaceSkuResponse extends io.pulumi.resources.InvokeArgs {
      * The last time when the sku was updated.
      * 
      */
-    @InputImport(name="lastSkuUpdate", required=true)
+    @Import(name="lastSkuUpdate", required=true)
       private final String lastSkuUpdate;
 
     public String getLastSkuUpdate() {
@@ -45,7 +45,7 @@ public final class WorkspaceSkuResponse extends io.pulumi.resources.InvokeArgs {
      * The name of the SKU.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {

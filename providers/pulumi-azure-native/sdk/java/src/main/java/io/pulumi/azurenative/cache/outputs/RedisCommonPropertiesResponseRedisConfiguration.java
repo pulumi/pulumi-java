@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.cache.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RedisCommonPropertiesResponseRedisConfiguration {
     /**
      * First storage account connection string
@@ -67,19 +67,19 @@ public final class RedisCommonPropertiesResponseRedisConfiguration {
      */
     private final @Nullable String rdbStorageConnectionString;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RedisCommonPropertiesResponseRedisConfiguration(
-        @OutputCustomType.Parameter("aofStorageConnectionString0") @Nullable String aofStorageConnectionString0,
-        @OutputCustomType.Parameter("aofStorageConnectionString1") @Nullable String aofStorageConnectionString1,
-        @OutputCustomType.Parameter("maxclients") String maxclients,
-        @OutputCustomType.Parameter("maxfragmentationmemoryReserved") @Nullable String maxfragmentationmemoryReserved,
-        @OutputCustomType.Parameter("maxmemoryDelta") @Nullable String maxmemoryDelta,
-        @OutputCustomType.Parameter("maxmemoryPolicy") @Nullable String maxmemoryPolicy,
-        @OutputCustomType.Parameter("maxmemoryReserved") @Nullable String maxmemoryReserved,
-        @OutputCustomType.Parameter("rdbBackupEnabled") @Nullable String rdbBackupEnabled,
-        @OutputCustomType.Parameter("rdbBackupFrequency") @Nullable String rdbBackupFrequency,
-        @OutputCustomType.Parameter("rdbBackupMaxSnapshotCount") @Nullable String rdbBackupMaxSnapshotCount,
-        @OutputCustomType.Parameter("rdbStorageConnectionString") @Nullable String rdbStorageConnectionString) {
+        @CustomType.Parameter("aofStorageConnectionString0") @Nullable String aofStorageConnectionString0,
+        @CustomType.Parameter("aofStorageConnectionString1") @Nullable String aofStorageConnectionString1,
+        @CustomType.Parameter("maxclients") String maxclients,
+        @CustomType.Parameter("maxfragmentationmemoryReserved") @Nullable String maxfragmentationmemoryReserved,
+        @CustomType.Parameter("maxmemoryDelta") @Nullable String maxmemoryDelta,
+        @CustomType.Parameter("maxmemoryPolicy") @Nullable String maxmemoryPolicy,
+        @CustomType.Parameter("maxmemoryReserved") @Nullable String maxmemoryReserved,
+        @CustomType.Parameter("rdbBackupEnabled") @Nullable String rdbBackupEnabled,
+        @CustomType.Parameter("rdbBackupFrequency") @Nullable String rdbBackupFrequency,
+        @CustomType.Parameter("rdbBackupMaxSnapshotCount") @Nullable String rdbBackupMaxSnapshotCount,
+        @CustomType.Parameter("rdbStorageConnectionString") @Nullable String rdbStorageConnectionString) {
         this.aofStorageConnectionString0 = aofStorageConnectionString0;
         this.aofStorageConnectionString1 = aofStorageConnectionString1;
         this.maxclients = maxclients;

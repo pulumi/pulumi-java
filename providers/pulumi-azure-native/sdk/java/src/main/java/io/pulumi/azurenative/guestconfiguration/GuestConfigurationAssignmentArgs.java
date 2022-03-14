@@ -5,7 +5,7 @@ package io.pulumi.azurenative.guestconfiguration;
 
 import io.pulumi.azurenative.guestconfiguration.inputs.GuestConfigurationAssignmentPropertiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class GuestConfigurationAssignmentArgs extends io.pulumi.resources.
      * Name of the guest configuration assignment.
      * 
      */
-    @InputImport(name="guestConfigurationAssignmentName")
+    @Import(name="guestConfigurationAssignmentName")
       private final @Nullable Output<String> guestConfigurationAssignmentName;
 
     public Output<String> getGuestConfigurationAssignmentName() {
@@ -30,7 +30,7 @@ public final class GuestConfigurationAssignmentArgs extends io.pulumi.resources.
      * Region where the VM is located.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -41,7 +41,7 @@ public final class GuestConfigurationAssignmentArgs extends io.pulumi.resources.
      * Name of the guest configuration assignment.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -52,7 +52,7 @@ public final class GuestConfigurationAssignmentArgs extends io.pulumi.resources.
      * Properties of the Guest configuration assignment.
      * 
      */
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable Output<GuestConfigurationAssignmentPropertiesArgs> properties;
 
     public Output<GuestConfigurationAssignmentPropertiesArgs> getProperties() {
@@ -63,7 +63,7 @@ public final class GuestConfigurationAssignmentArgs extends io.pulumi.resources.
      * The resource group name.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -74,7 +74,7 @@ public final class GuestConfigurationAssignmentArgs extends io.pulumi.resources.
      * The name of the virtual machine.
      * 
      */
-    @InputImport(name="vmName", required=true)
+    @Import(name="vmName", required=true)
       private final Output<String> vmName;
 
     public Output<String> getVmName() {

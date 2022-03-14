@@ -7,14 +7,14 @@ import io.pulumi.azurenative.security.outputs.AwAssumeRoleAuthenticationDetailsP
 import io.pulumi.azurenative.security.outputs.AwsCredsAuthenticationDetailsPropertiesResponse;
 import io.pulumi.azurenative.security.outputs.GcpCredentialsDetailsPropertiesResponse;
 import io.pulumi.azurenative.security.outputs.HybridComputeSettingsPropertiesResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetConnectorResult {
     /**
      * Settings for authentication management, these settings are relevant only for the cloud connector.
@@ -42,13 +42,13 @@ public final class GetConnectorResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetConnectorResult(
-        @OutputCustomType.Parameter("authenticationDetails") @Nullable Object authenticationDetails,
-        @OutputCustomType.Parameter("hybridComputeSettings") @Nullable HybridComputeSettingsPropertiesResponse hybridComputeSettings,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("authenticationDetails") @Nullable Object authenticationDetails,
+        @CustomType.Parameter("hybridComputeSettings") @Nullable HybridComputeSettingsPropertiesResponse hybridComputeSettings,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("type") String type) {
         this.authenticationDetails = authenticationDetails;
         this.hybridComputeSettings = hybridComputeSettings;
         this.id = id;

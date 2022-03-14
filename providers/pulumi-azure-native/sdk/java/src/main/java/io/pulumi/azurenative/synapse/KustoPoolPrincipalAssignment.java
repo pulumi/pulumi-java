@@ -8,7 +8,7 @@ import io.pulumi.azurenative.synapse.KustoPoolPrincipalAssignmentArgs;
 import io.pulumi.azurenative.synapse.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +35,7 @@ public class KustoPoolPrincipalAssignment extends io.pulumi.resources.CustomReso
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -49,7 +49,7 @@ public class KustoPoolPrincipalAssignment extends io.pulumi.resources.CustomReso
      * The principal ID assigned to the cluster principal. It can be a user email, application ID, or security group name.
      * 
      */
-    @OutputExport(name="principalId", type=String.class, parameters={})
+    @Export(name="principalId", type=String.class, parameters={})
     private Output<String> principalId;
 
     /**
@@ -63,7 +63,7 @@ public class KustoPoolPrincipalAssignment extends io.pulumi.resources.CustomReso
      * The principal name
      * 
      */
-    @OutputExport(name="principalName", type=String.class, parameters={})
+    @Export(name="principalName", type=String.class, parameters={})
     private Output<String> principalName;
 
     /**
@@ -77,7 +77,7 @@ public class KustoPoolPrincipalAssignment extends io.pulumi.resources.CustomReso
      * Principal type.
      * 
      */
-    @OutputExport(name="principalType", type=String.class, parameters={})
+    @Export(name="principalType", type=String.class, parameters={})
     private Output<String> principalType;
 
     /**
@@ -91,7 +91,7 @@ public class KustoPoolPrincipalAssignment extends io.pulumi.resources.CustomReso
      * The provisioned state of the resource.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -105,7 +105,7 @@ public class KustoPoolPrincipalAssignment extends io.pulumi.resources.CustomReso
      * Cluster principal role.
      * 
      */
-    @OutputExport(name="role", type=String.class, parameters={})
+    @Export(name="role", type=String.class, parameters={})
     private Output<String> role;
 
     /**
@@ -119,7 +119,7 @@ public class KustoPoolPrincipalAssignment extends io.pulumi.resources.CustomReso
      * Azure Resource Manager metadata containing createdBy and modifiedBy information.
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -133,7 +133,7 @@ public class KustoPoolPrincipalAssignment extends io.pulumi.resources.CustomReso
      * The tenant id of the principal
      * 
      */
-    @OutputExport(name="tenantId", type=String.class, parameters={})
+    @Export(name="tenantId", type=String.class, parameters={})
     private Output</* @Nullable */ String> tenantId;
 
     /**
@@ -147,7 +147,7 @@ public class KustoPoolPrincipalAssignment extends io.pulumi.resources.CustomReso
      * The tenant name of the principal
      * 
      */
-    @OutputExport(name="tenantName", type=String.class, parameters={})
+    @Export(name="tenantName", type=String.class, parameters={})
     private Output<String> tenantName;
 
     /**
@@ -161,7 +161,7 @@ public class KustoPoolPrincipalAssignment extends io.pulumi.resources.CustomReso
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

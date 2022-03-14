@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.elastic.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class MonitoredResourceResponse {
     /**
      * The ARM id of the resource.
@@ -27,11 +27,11 @@ public final class MonitoredResourceResponse {
      */
     private final @Nullable String sendingLogs;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MonitoredResourceResponse(
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("reasonForLogsStatus") @Nullable String reasonForLogsStatus,
-        @OutputCustomType.Parameter("sendingLogs") @Nullable String sendingLogs) {
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("reasonForLogsStatus") @Nullable String reasonForLogsStatus,
+        @CustomType.Parameter("sendingLogs") @Nullable String sendingLogs) {
         this.id = id;
         this.reasonForLogsStatus = reasonForLogsStatus;
         this.sendingLogs = sendingLogs;

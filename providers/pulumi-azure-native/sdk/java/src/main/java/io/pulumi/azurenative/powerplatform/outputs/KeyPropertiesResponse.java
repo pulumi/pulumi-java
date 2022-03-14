@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.powerplatform.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class KeyPropertiesResponse {
     /**
      * The identifier of the key vault key used to encrypt data.
@@ -22,10 +22,10 @@ public final class KeyPropertiesResponse {
      */
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private KeyPropertiesResponse(
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("version") @Nullable String version) {
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("version") @Nullable String version) {
         this.name = name;
         this.version = version;
     }

@@ -12,7 +12,7 @@ import io.pulumi.azurenative.devices.inputs.SharedAccessSignatureAuthorizationRu
 import io.pulumi.azurenative.devices.inputs.TargetIpFilterRuleArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -31,7 +31,7 @@ public final class IotDpsPropertiesDescriptionArgs extends io.pulumi.resources.R
      * Allocation policy to be used by this provisioning service.
      * 
      */
-    @InputImport(name="allocationPolicy")
+    @Import(name="allocationPolicy")
       private final @Nullable Output<Either<String,AllocationPolicy>> allocationPolicy;
 
     public Output<Either<String,AllocationPolicy>> getAllocationPolicy() {
@@ -42,7 +42,7 @@ public final class IotDpsPropertiesDescriptionArgs extends io.pulumi.resources.R
      * List of authorization keys for a provisioning service.
      * 
      */
-    @InputImport(name="authorizationPolicies")
+    @Import(name="authorizationPolicies")
       private final @Nullable Output<List<SharedAccessSignatureAuthorizationRuleAccessRightsDescriptionArgs>> authorizationPolicies;
 
     public Output<List<SharedAccessSignatureAuthorizationRuleAccessRightsDescriptionArgs>> getAuthorizationPolicies() {
@@ -53,7 +53,7 @@ public final class IotDpsPropertiesDescriptionArgs extends io.pulumi.resources.R
      * List of IoT hubs associated with this provisioning service.
      * 
      */
-    @InputImport(name="iotHubs")
+    @Import(name="iotHubs")
       private final @Nullable Output<List<IotHubDefinitionDescriptionArgs>> iotHubs;
 
     public Output<List<IotHubDefinitionDescriptionArgs>> getIotHubs() {
@@ -64,7 +64,7 @@ public final class IotDpsPropertiesDescriptionArgs extends io.pulumi.resources.R
      * The IP filter rules.
      * 
      */
-    @InputImport(name="ipFilterRules")
+    @Import(name="ipFilterRules")
       private final @Nullable Output<List<TargetIpFilterRuleArgs>> ipFilterRules;
 
     public Output<List<TargetIpFilterRuleArgs>> getIpFilterRules() {
@@ -75,7 +75,7 @@ public final class IotDpsPropertiesDescriptionArgs extends io.pulumi.resources.R
      * Private endpoint connections created on this IotHub
      * 
      */
-    @InputImport(name="privateEndpointConnections")
+    @Import(name="privateEndpointConnections")
       private final @Nullable Output<List<PrivateEndpointConnectionArgs>> privateEndpointConnections;
 
     public Output<List<PrivateEndpointConnectionArgs>> getPrivateEndpointConnections() {
@@ -86,7 +86,7 @@ public final class IotDpsPropertiesDescriptionArgs extends io.pulumi.resources.R
      * The ARM provisioning state of the provisioning service.
      * 
      */
-    @InputImport(name="provisioningState")
+    @Import(name="provisioningState")
       private final @Nullable Output<String> provisioningState;
 
     public Output<String> getProvisioningState() {
@@ -97,7 +97,7 @@ public final class IotDpsPropertiesDescriptionArgs extends io.pulumi.resources.R
      * Whether requests from Public Network are allowed
      * 
      */
-    @InputImport(name="publicNetworkAccess")
+    @Import(name="publicNetworkAccess")
       private final @Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess;
 
     public Output<Either<String,PublicNetworkAccess>> getPublicNetworkAccess() {
@@ -108,7 +108,7 @@ public final class IotDpsPropertiesDescriptionArgs extends io.pulumi.resources.R
      * Current state of the provisioning service.
      * 
      */
-    @InputImport(name="state")
+    @Import(name="state")
       private final @Nullable Output<Either<String,State>> state;
 
     public Output<Either<String,State>> getState() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.netapp.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Map;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetPoolResult {
     /**
      * Resource Id
@@ -74,20 +74,20 @@ public final class GetPoolResult {
      */
     private final Double utilizedThroughputMibps;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetPoolResult(
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("poolId") String poolId,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("qosType") @Nullable String qosType,
-        @OutputCustomType.Parameter("serviceLevel") String serviceLevel,
-        @OutputCustomType.Parameter("size") Double size,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("totalThroughputMibps") Double totalThroughputMibps,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("utilizedThroughputMibps") Double utilizedThroughputMibps) {
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("poolId") String poolId,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("qosType") @Nullable String qosType,
+        @CustomType.Parameter("serviceLevel") String serviceLevel,
+        @CustomType.Parameter("size") Double size,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("totalThroughputMibps") Double totalThroughputMibps,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("utilizedThroughputMibps") Double utilizedThroughputMibps) {
         this.id = id;
         this.location = location;
         this.name = name;

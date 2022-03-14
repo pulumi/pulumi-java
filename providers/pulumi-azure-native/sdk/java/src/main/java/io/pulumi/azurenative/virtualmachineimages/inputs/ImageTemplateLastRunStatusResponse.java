@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.virtualmachineimages.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class ImageTemplateLastRunStatusResponse extends io.pulumi.resource
      * End time of the last run (UTC)
      * 
      */
-    @InputImport(name="endTime")
+    @Import(name="endTime")
       private final @Nullable String endTime;
 
     public Optional<String> getEndTime() {
@@ -33,7 +33,7 @@ public final class ImageTemplateLastRunStatusResponse extends io.pulumi.resource
      * Verbose information about the last run state
      * 
      */
-    @InputImport(name="message")
+    @Import(name="message")
       private final @Nullable String message;
 
     public Optional<String> getMessage() {
@@ -44,7 +44,7 @@ public final class ImageTemplateLastRunStatusResponse extends io.pulumi.resource
      * State of the last run
      * 
      */
-    @InputImport(name="runState")
+    @Import(name="runState")
       private final @Nullable String runState;
 
     public Optional<String> getRunState() {
@@ -55,7 +55,7 @@ public final class ImageTemplateLastRunStatusResponse extends io.pulumi.resource
      * Sub-state of the last run
      * 
      */
-    @InputImport(name="runSubState")
+    @Import(name="runSubState")
       private final @Nullable String runSubState;
 
     public Optional<String> getRunSubState() {
@@ -66,7 +66,7 @@ public final class ImageTemplateLastRunStatusResponse extends io.pulumi.resource
      * Start time of the last run (UTC)
      * 
      */
-    @InputImport(name="startTime")
+    @Import(name="startTime")
       private final @Nullable String startTime;
 
     public Optional<String> getStartTime() {

@@ -13,7 +13,7 @@ import io.pulumi.azurenative.recoveryservices.inputs.HyperVReplicaReplicationDet
 import io.pulumi.azurenative.recoveryservices.inputs.InMageAzureV2ReplicationDetailsResponse;
 import io.pulumi.azurenative.recoveryservices.inputs.InMageRcmReplicationDetailsResponse;
 import io.pulumi.azurenative.recoveryservices.inputs.InMageReplicationDetailsResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -34,7 +34,7 @@ public final class ReplicationProtectedItemPropertiesResponse extends io.pulumi.
      * The Current active location of the PE.
      * 
      */
-    @InputImport(name="activeLocation")
+    @Import(name="activeLocation")
       private final @Nullable String activeLocation;
 
     public Optional<String> getActiveLocation() {
@@ -45,7 +45,7 @@ public final class ReplicationProtectedItemPropertiesResponse extends io.pulumi.
      * The allowed operations on the Replication protected item.
      * 
      */
-    @InputImport(name="allowedOperations")
+    @Import(name="allowedOperations")
       private final @Nullable List<String> allowedOperations;
 
     public List<String> getAllowedOperations() {
@@ -56,7 +56,7 @@ public final class ReplicationProtectedItemPropertiesResponse extends io.pulumi.
      * The current scenario.
      * 
      */
-    @InputImport(name="currentScenario")
+    @Import(name="currentScenario")
       private final @Nullable CurrentScenarioDetailsResponse currentScenario;
 
     public Optional<CurrentScenarioDetailsResponse> getCurrentScenario() {
@@ -67,7 +67,7 @@ public final class ReplicationProtectedItemPropertiesResponse extends io.pulumi.
      * The consolidated failover health for the VM.
      * 
      */
-    @InputImport(name="failoverHealth")
+    @Import(name="failoverHealth")
       private final @Nullable String failoverHealth;
 
     public Optional<String> getFailoverHealth() {
@@ -78,7 +78,7 @@ public final class ReplicationProtectedItemPropertiesResponse extends io.pulumi.
      * The recovery point ARM Id to which the Vm was failed over.
      * 
      */
-    @InputImport(name="failoverRecoveryPointId")
+    @Import(name="failoverRecoveryPointId")
       private final @Nullable String failoverRecoveryPointId;
 
     public Optional<String> getFailoverRecoveryPointId() {
@@ -89,7 +89,7 @@ public final class ReplicationProtectedItemPropertiesResponse extends io.pulumi.
      * The name.
      * 
      */
-    @InputImport(name="friendlyName")
+    @Import(name="friendlyName")
       private final @Nullable String friendlyName;
 
     public Optional<String> getFriendlyName() {
@@ -100,7 +100,7 @@ public final class ReplicationProtectedItemPropertiesResponse extends io.pulumi.
      * List of health errors.
      * 
      */
-    @InputImport(name="healthErrors")
+    @Import(name="healthErrors")
       private final @Nullable List<HealthErrorResponse> healthErrors;
 
     public List<HealthErrorResponse> getHealthErrors() {
@@ -111,7 +111,7 @@ public final class ReplicationProtectedItemPropertiesResponse extends io.pulumi.
      * The Last successful failover time.
      * 
      */
-    @InputImport(name="lastSuccessfulFailoverTime")
+    @Import(name="lastSuccessfulFailoverTime")
       private final @Nullable String lastSuccessfulFailoverTime;
 
     public Optional<String> getLastSuccessfulFailoverTime() {
@@ -122,7 +122,7 @@ public final class ReplicationProtectedItemPropertiesResponse extends io.pulumi.
      * The Last successful test failover time.
      * 
      */
-    @InputImport(name="lastSuccessfulTestFailoverTime")
+    @Import(name="lastSuccessfulTestFailoverTime")
       private final @Nullable String lastSuccessfulTestFailoverTime;
 
     public Optional<String> getLastSuccessfulTestFailoverTime() {
@@ -133,7 +133,7 @@ public final class ReplicationProtectedItemPropertiesResponse extends io.pulumi.
      * The name of Policy governing this PE.
      * 
      */
-    @InputImport(name="policyFriendlyName")
+    @Import(name="policyFriendlyName")
       private final @Nullable String policyFriendlyName;
 
     public Optional<String> getPolicyFriendlyName() {
@@ -144,7 +144,7 @@ public final class ReplicationProtectedItemPropertiesResponse extends io.pulumi.
      * The ID of Policy governing this PE.
      * 
      */
-    @InputImport(name="policyId")
+    @Import(name="policyId")
       private final @Nullable String policyId;
 
     public Optional<String> getPolicyId() {
@@ -155,7 +155,7 @@ public final class ReplicationProtectedItemPropertiesResponse extends io.pulumi.
      * The friendly name of the primary fabric.
      * 
      */
-    @InputImport(name="primaryFabricFriendlyName")
+    @Import(name="primaryFabricFriendlyName")
       private final @Nullable String primaryFabricFriendlyName;
 
     public Optional<String> getPrimaryFabricFriendlyName() {
@@ -166,7 +166,7 @@ public final class ReplicationProtectedItemPropertiesResponse extends io.pulumi.
      * The fabric provider of the primary fabric.
      * 
      */
-    @InputImport(name="primaryFabricProvider")
+    @Import(name="primaryFabricProvider")
       private final @Nullable String primaryFabricProvider;
 
     public Optional<String> getPrimaryFabricProvider() {
@@ -177,7 +177,7 @@ public final class ReplicationProtectedItemPropertiesResponse extends io.pulumi.
      * The name of primary protection container friendly name.
      * 
      */
-    @InputImport(name="primaryProtectionContainerFriendlyName")
+    @Import(name="primaryProtectionContainerFriendlyName")
       private final @Nullable String primaryProtectionContainerFriendlyName;
 
     public Optional<String> getPrimaryProtectionContainerFriendlyName() {
@@ -188,7 +188,7 @@ public final class ReplicationProtectedItemPropertiesResponse extends io.pulumi.
      * The protected item ARM Id.
      * 
      */
-    @InputImport(name="protectableItemId")
+    @Import(name="protectableItemId")
       private final @Nullable String protectableItemId;
 
     public Optional<String> getProtectableItemId() {
@@ -199,7 +199,7 @@ public final class ReplicationProtectedItemPropertiesResponse extends io.pulumi.
      * The type of protected item type.
      * 
      */
-    @InputImport(name="protectedItemType")
+    @Import(name="protectedItemType")
       private final @Nullable String protectedItemType;
 
     public Optional<String> getProtectedItemType() {
@@ -210,7 +210,7 @@ public final class ReplicationProtectedItemPropertiesResponse extends io.pulumi.
      * The protection status.
      * 
      */
-    @InputImport(name="protectionState")
+    @Import(name="protectionState")
       private final @Nullable String protectionState;
 
     public Optional<String> getProtectionState() {
@@ -221,7 +221,7 @@ public final class ReplicationProtectedItemPropertiesResponse extends io.pulumi.
      * The protection state description.
      * 
      */
-    @InputImport(name="protectionStateDescription")
+    @Import(name="protectionStateDescription")
       private final @Nullable String protectionStateDescription;
 
     public Optional<String> getProtectionStateDescription() {
@@ -232,7 +232,7 @@ public final class ReplicationProtectedItemPropertiesResponse extends io.pulumi.
      * The Replication provider custom settings.
      * 
      */
-    @InputImport(name="providerSpecificDetails")
+    @Import(name="providerSpecificDetails")
       private final @Nullable Object providerSpecificDetails;
 
     public Object getProviderSpecificDetails() {
@@ -243,7 +243,7 @@ public final class ReplicationProtectedItemPropertiesResponse extends io.pulumi.
      * The recovery container Id.
      * 
      */
-    @InputImport(name="recoveryContainerId")
+    @Import(name="recoveryContainerId")
       private final @Nullable String recoveryContainerId;
 
     public Optional<String> getRecoveryContainerId() {
@@ -254,7 +254,7 @@ public final class ReplicationProtectedItemPropertiesResponse extends io.pulumi.
      * The friendly name of recovery fabric.
      * 
      */
-    @InputImport(name="recoveryFabricFriendlyName")
+    @Import(name="recoveryFabricFriendlyName")
       private final @Nullable String recoveryFabricFriendlyName;
 
     public Optional<String> getRecoveryFabricFriendlyName() {
@@ -265,7 +265,7 @@ public final class ReplicationProtectedItemPropertiesResponse extends io.pulumi.
      * The Arm Id of recovery fabric.
      * 
      */
-    @InputImport(name="recoveryFabricId")
+    @Import(name="recoveryFabricId")
       private final @Nullable String recoveryFabricId;
 
     public Optional<String> getRecoveryFabricId() {
@@ -276,7 +276,7 @@ public final class ReplicationProtectedItemPropertiesResponse extends io.pulumi.
      * The name of recovery container friendly name.
      * 
      */
-    @InputImport(name="recoveryProtectionContainerFriendlyName")
+    @Import(name="recoveryProtectionContainerFriendlyName")
       private final @Nullable String recoveryProtectionContainerFriendlyName;
 
     public Optional<String> getRecoveryProtectionContainerFriendlyName() {
@@ -287,7 +287,7 @@ public final class ReplicationProtectedItemPropertiesResponse extends io.pulumi.
      * The recovery provider ARM Id.
      * 
      */
-    @InputImport(name="recoveryServicesProviderId")
+    @Import(name="recoveryServicesProviderId")
       private final @Nullable String recoveryServicesProviderId;
 
     public Optional<String> getRecoveryServicesProviderId() {
@@ -298,7 +298,7 @@ public final class ReplicationProtectedItemPropertiesResponse extends io.pulumi.
      * The consolidated protection health for the VM taking any issues with SRS as well as all the replication units associated with the VM's replication group into account. This is a string representation of the ProtectionHealth enumeration.
      * 
      */
-    @InputImport(name="replicationHealth")
+    @Import(name="replicationHealth")
       private final @Nullable String replicationHealth;
 
     public Optional<String> getReplicationHealth() {
@@ -309,7 +309,7 @@ public final class ReplicationProtectedItemPropertiesResponse extends io.pulumi.
      * The Test failover state.
      * 
      */
-    @InputImport(name="testFailoverState")
+    @Import(name="testFailoverState")
       private final @Nullable String testFailoverState;
 
     public Optional<String> getTestFailoverState() {
@@ -320,7 +320,7 @@ public final class ReplicationProtectedItemPropertiesResponse extends io.pulumi.
      * The Test failover state description.
      * 
      */
-    @InputImport(name="testFailoverStateDescription")
+    @Import(name="testFailoverStateDescription")
       private final @Nullable String testFailoverStateDescription;
 
     public Optional<String> getTestFailoverStateDescription() {

@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.compute.outputs;
 
 import io.pulumi.azurenative.compute.outputs.SharingProfileGroupResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SharingProfileResponse {
     /**
      * A list of sharing profile groups.
@@ -24,10 +24,10 @@ public final class SharingProfileResponse {
      */
     private final @Nullable String permissions;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SharingProfileResponse(
-        @OutputCustomType.Parameter("groups") List<SharingProfileGroupResponse> groups,
-        @OutputCustomType.Parameter("permissions") @Nullable String permissions) {
+        @CustomType.Parameter("groups") List<SharingProfileGroupResponse> groups,
+        @CustomType.Parameter("permissions") @Nullable String permissions) {
         this.groups = groups;
         this.permissions = permissions;
     }

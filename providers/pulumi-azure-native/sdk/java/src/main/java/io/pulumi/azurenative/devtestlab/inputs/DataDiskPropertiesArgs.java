@@ -7,7 +7,7 @@ import io.pulumi.azurenative.devtestlab.enums.HostCachingOptions;
 import io.pulumi.azurenative.devtestlab.inputs.AttachNewDataDiskOptionsArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class DataDiskPropertiesArgs extends io.pulumi.resources.ResourceAr
      * Specifies options to attach a new disk to the virtual machine.
      * 
      */
-    @InputImport(name="attachNewDataDiskOptions")
+    @Import(name="attachNewDataDiskOptions")
       private final @Nullable Output<AttachNewDataDiskOptionsArgs> attachNewDataDiskOptions;
 
     public Output<AttachNewDataDiskOptionsArgs> getAttachNewDataDiskOptions() {
@@ -36,7 +36,7 @@ public final class DataDiskPropertiesArgs extends io.pulumi.resources.ResourceAr
      * Specifies the existing lab disk id to attach to virtual machine.
      * 
      */
-    @InputImport(name="existingLabDiskId")
+    @Import(name="existingLabDiskId")
       private final @Nullable Output<String> existingLabDiskId;
 
     public Output<String> getExistingLabDiskId() {
@@ -47,7 +47,7 @@ public final class DataDiskPropertiesArgs extends io.pulumi.resources.ResourceAr
      * Caching option for a data disk (i.e. None, ReadOnly, ReadWrite).
      * 
      */
-    @InputImport(name="hostCaching")
+    @Import(name="hostCaching")
       private final @Nullable Output<Either<String,HostCachingOptions>> hostCaching;
 
     public Output<Either<String,HostCachingOptions>> getHostCaching() {

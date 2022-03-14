@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DiskSkuResponse {
     /**
      * The sku name.
@@ -22,10 +22,10 @@ public final class DiskSkuResponse {
      */
     private final String tier;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DiskSkuResponse(
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("tier") String tier) {
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("tier") String tier) {
         this.name = name;
         this.tier = tier;
     }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.recoveryservices.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class HyperVReplicaPolicyInputArgs extends io.pulumi.resources.Reso
      * A value indicating the authentication type.
      * 
      */
-    @InputImport(name="allowedAuthenticationType")
+    @Import(name="allowedAuthenticationType")
       private final @Nullable Output<Integer> allowedAuthenticationType;
 
     public Output<Integer> getAllowedAuthenticationType() {
@@ -34,7 +34,7 @@ public final class HyperVReplicaPolicyInputArgs extends io.pulumi.resources.Reso
      * A value indicating the application consistent frequency.
      * 
      */
-    @InputImport(name="applicationConsistentSnapshotFrequencyInHours")
+    @Import(name="applicationConsistentSnapshotFrequencyInHours")
       private final @Nullable Output<Integer> applicationConsistentSnapshotFrequencyInHours;
 
     public Output<Integer> getApplicationConsistentSnapshotFrequencyInHours() {
@@ -45,7 +45,7 @@ public final class HyperVReplicaPolicyInputArgs extends io.pulumi.resources.Reso
      * A value indicating whether compression has to be enabled.
      * 
      */
-    @InputImport(name="compression")
+    @Import(name="compression")
       private final @Nullable Output<String> compression;
 
     public Output<String> getCompression() {
@@ -56,7 +56,7 @@ public final class HyperVReplicaPolicyInputArgs extends io.pulumi.resources.Reso
      * A value indicating whether IR is online.
      * 
      */
-    @InputImport(name="initialReplicationMethod")
+    @Import(name="initialReplicationMethod")
       private final @Nullable Output<String> initialReplicationMethod;
 
     public Output<String> getInitialReplicationMethod() {
@@ -68,7 +68,7 @@ public final class HyperVReplicaPolicyInputArgs extends io.pulumi.resources.Reso
      * Expected value is 'HyperVReplica2012'.
      * 
      */
-    @InputImport(name="instanceType")
+    @Import(name="instanceType")
       private final @Nullable Output<String> instanceType;
 
     public Output<String> getInstanceType() {
@@ -79,7 +79,7 @@ public final class HyperVReplicaPolicyInputArgs extends io.pulumi.resources.Reso
      * A value indicating the offline IR export path.
      * 
      */
-    @InputImport(name="offlineReplicationExportPath")
+    @Import(name="offlineReplicationExportPath")
       private final @Nullable Output<String> offlineReplicationExportPath;
 
     public Output<String> getOfflineReplicationExportPath() {
@@ -90,7 +90,7 @@ public final class HyperVReplicaPolicyInputArgs extends io.pulumi.resources.Reso
      * A value indicating the offline IR import path.
      * 
      */
-    @InputImport(name="offlineReplicationImportPath")
+    @Import(name="offlineReplicationImportPath")
       private final @Nullable Output<String> offlineReplicationImportPath;
 
     public Output<String> getOfflineReplicationImportPath() {
@@ -101,7 +101,7 @@ public final class HyperVReplicaPolicyInputArgs extends io.pulumi.resources.Reso
      * A value indicating the online IR start time.
      * 
      */
-    @InputImport(name="onlineReplicationStartTime")
+    @Import(name="onlineReplicationStartTime")
       private final @Nullable Output<String> onlineReplicationStartTime;
 
     public Output<String> getOnlineReplicationStartTime() {
@@ -112,7 +112,7 @@ public final class HyperVReplicaPolicyInputArgs extends io.pulumi.resources.Reso
      * A value indicating the number of recovery points.
      * 
      */
-    @InputImport(name="recoveryPoints")
+    @Import(name="recoveryPoints")
       private final @Nullable Output<Integer> recoveryPoints;
 
     public Output<Integer> getRecoveryPoints() {
@@ -123,7 +123,7 @@ public final class HyperVReplicaPolicyInputArgs extends io.pulumi.resources.Reso
      * A value indicating whether the VM has to be auto deleted.
      * 
      */
-    @InputImport(name="replicaDeletion")
+    @Import(name="replicaDeletion")
       private final @Nullable Output<String> replicaDeletion;
 
     public Output<String> getReplicaDeletion() {
@@ -134,7 +134,7 @@ public final class HyperVReplicaPolicyInputArgs extends io.pulumi.resources.Reso
      * A value indicating the recovery HTTPS port.
      * 
      */
-    @InputImport(name="replicationPort")
+    @Import(name="replicationPort")
       private final @Nullable Output<Integer> replicationPort;
 
     public Output<Integer> getReplicationPort() {

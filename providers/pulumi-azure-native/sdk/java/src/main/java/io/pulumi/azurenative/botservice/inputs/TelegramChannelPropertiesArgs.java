@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.botservice.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class TelegramChannelPropertiesArgs extends io.pulumi.resources.Res
      * The Telegram access token. Value only returned through POST to the action Channel List API, otherwise empty.
      * 
      */
-    @InputImport(name="accessToken")
+    @Import(name="accessToken")
       private final @Nullable Output<String> accessToken;
 
     public Output<String> getAccessToken() {
@@ -34,7 +34,7 @@ public final class TelegramChannelPropertiesArgs extends io.pulumi.resources.Res
      * Whether this channel is enabled for the bot
      * 
      */
-    @InputImport(name="isEnabled", required=true)
+    @Import(name="isEnabled", required=true)
       private final Output<Boolean> isEnabled;
 
     public Output<Boolean> getIsEnabled() {
@@ -45,7 +45,7 @@ public final class TelegramChannelPropertiesArgs extends io.pulumi.resources.Res
      * Whether this channel is validated for the bot
      * 
      */
-    @InputImport(name="isValidated")
+    @Import(name="isValidated")
       private final @Nullable Output<Boolean> isValidated;
 
     public Output<Boolean> getIsValidated() {

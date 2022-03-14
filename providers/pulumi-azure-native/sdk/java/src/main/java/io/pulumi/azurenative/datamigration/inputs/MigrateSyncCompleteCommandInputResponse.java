@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datamigration.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class MigrateSyncCompleteCommandInputResponse extends io.pulumi.res
      * Time stamp to complete
      * 
      */
-    @InputImport(name="commitTimeStamp")
+    @Import(name="commitTimeStamp")
       private final @Nullable String commitTimeStamp;
 
     public Optional<String> getCommitTimeStamp() {
@@ -33,7 +33,7 @@ public final class MigrateSyncCompleteCommandInputResponse extends io.pulumi.res
      * Name of database
      * 
      */
-    @InputImport(name="databaseName", required=true)
+    @Import(name="databaseName", required=true)
       private final String databaseName;
 
     public String getDatabaseName() {

@@ -8,7 +8,7 @@ import io.pulumi.azurenative.sql.inputs.ElasticPoolPerDatabaseSettingsArgs;
 import io.pulumi.azurenative.sql.inputs.SkuArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class ElasticPoolArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the elastic pool.
      * 
      */
-    @InputImport(name="elasticPoolName")
+    @Import(name="elasticPoolName")
       private final @Nullable Output<String> elasticPoolName;
 
     public Output<String> getElasticPoolName() {
@@ -36,7 +36,7 @@ public final class ElasticPoolArgs extends io.pulumi.resources.ResourceArgs {
      * The license type to apply for this elastic pool.
      * 
      */
-    @InputImport(name="licenseType")
+    @Import(name="licenseType")
       private final @Nullable Output<Either<String,ElasticPoolLicenseType>> licenseType;
 
     public Output<Either<String,ElasticPoolLicenseType>> getLicenseType() {
@@ -47,7 +47,7 @@ public final class ElasticPoolArgs extends io.pulumi.resources.ResourceArgs {
      * Resource location.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -58,7 +58,7 @@ public final class ElasticPoolArgs extends io.pulumi.resources.ResourceArgs {
      * Maintenance configuration id assigned to the elastic pool. This configuration defines the period when the maintenance updates will will occur.
      * 
      */
-    @InputImport(name="maintenanceConfigurationId")
+    @Import(name="maintenanceConfigurationId")
       private final @Nullable Output<String> maintenanceConfigurationId;
 
     public Output<String> getMaintenanceConfigurationId() {
@@ -69,7 +69,7 @@ public final class ElasticPoolArgs extends io.pulumi.resources.ResourceArgs {
      * The storage limit for the database elastic pool in bytes.
      * 
      */
-    @InputImport(name="maxSizeBytes")
+    @Import(name="maxSizeBytes")
       private final @Nullable Output<Double> maxSizeBytes;
 
     public Output<Double> getMaxSizeBytes() {
@@ -80,7 +80,7 @@ public final class ElasticPoolArgs extends io.pulumi.resources.ResourceArgs {
      * The per database settings for the elastic pool.
      * 
      */
-    @InputImport(name="perDatabaseSettings")
+    @Import(name="perDatabaseSettings")
       private final @Nullable Output<ElasticPoolPerDatabaseSettingsArgs> perDatabaseSettings;
 
     public Output<ElasticPoolPerDatabaseSettingsArgs> getPerDatabaseSettings() {
@@ -91,7 +91,7 @@ public final class ElasticPoolArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -102,7 +102,7 @@ public final class ElasticPoolArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the server.
      * 
      */
-    @InputImport(name="serverName", required=true)
+    @Import(name="serverName", required=true)
       private final Output<String> serverName;
 
     public Output<String> getServerName() {
@@ -115,7 +115,7 @@ public final class ElasticPoolArgs extends io.pulumi.resources.ResourceArgs {
      * The list of SKUs may vary by region and support offer. To determine the SKUs (including the SKU name, tier/edition, family, and capacity) that are available to your subscription in an Azure region, use the `Capabilities_ListByLocation` REST API or the following command:
      * 
      */
-    @InputImport(name="sku")
+    @Import(name="sku")
       private final @Nullable Output<SkuArgs> sku;
 
     public Output<SkuArgs> getSku() {
@@ -126,7 +126,7 @@ public final class ElasticPoolArgs extends io.pulumi.resources.ResourceArgs {
      * Resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -137,7 +137,7 @@ public final class ElasticPoolArgs extends io.pulumi.resources.ResourceArgs {
      * Whether or not this elastic pool is zone redundant, which means the replicas of this elastic pool will be spread across multiple availability zones.
      * 
      */
-    @InputImport(name="zoneRedundant")
+    @Import(name="zoneRedundant")
       private final @Nullable Output<Boolean> zoneRedundant;
 
     public Output<Boolean> getZoneRedundant() {

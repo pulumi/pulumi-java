@@ -5,7 +5,7 @@ package io.pulumi.azurenative.vmwarecloudsimple.inputs;
 
 import io.pulumi.azurenative.vmwarecloudsimple.inputs.GuestOSNICCustomizationResponse;
 import io.pulumi.azurenative.vmwarecloudsimple.inputs.VirtualNetworkResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +26,7 @@ public final class VirtualNicResponse extends io.pulumi.resources.InvokeArgs {
      * guest OS customization for nic
      * 
      */
-    @InputImport(name="customization")
+    @Import(name="customization")
       private final @Nullable GuestOSNICCustomizationResponse customization;
 
     public Optional<GuestOSNICCustomizationResponse> getCustomization() {
@@ -37,7 +37,7 @@ public final class VirtualNicResponse extends io.pulumi.resources.InvokeArgs {
      * NIC ip address
      * 
      */
-    @InputImport(name="ipAddresses")
+    @Import(name="ipAddresses")
       private final @Nullable List<String> ipAddresses;
 
     public List<String> getIpAddresses() {
@@ -48,7 +48,7 @@ public final class VirtualNicResponse extends io.pulumi.resources.InvokeArgs {
      * NIC MAC address
      * 
      */
-    @InputImport(name="macAddress")
+    @Import(name="macAddress")
       private final @Nullable String macAddress;
 
     public Optional<String> getMacAddress() {
@@ -59,7 +59,7 @@ public final class VirtualNicResponse extends io.pulumi.resources.InvokeArgs {
      * Virtual Network
      * 
      */
-    @InputImport(name="network", required=true)
+    @Import(name="network", required=true)
       private final VirtualNetworkResponse network;
 
     public VirtualNetworkResponse getNetwork() {
@@ -70,7 +70,7 @@ public final class VirtualNicResponse extends io.pulumi.resources.InvokeArgs {
      * NIC type
      * 
      */
-    @InputImport(name="nicType", required=true)
+    @Import(name="nicType", required=true)
       private final String nicType;
 
     public String getNicType() {
@@ -81,7 +81,7 @@ public final class VirtualNicResponse extends io.pulumi.resources.InvokeArgs {
      * Is NIC powered on/off on boot
      * 
      */
-    @InputImport(name="powerOnBoot")
+    @Import(name="powerOnBoot")
       private final @Nullable Boolean powerOnBoot;
 
     public Optional<Boolean> getPowerOnBoot() {
@@ -92,7 +92,7 @@ public final class VirtualNicResponse extends io.pulumi.resources.InvokeArgs {
      * NIC id
      * 
      */
-    @InputImport(name="virtualNicId")
+    @Import(name="virtualNicId")
       private final @Nullable String virtualNicId;
 
     public Optional<String> getVirtualNicId() {
@@ -103,7 +103,7 @@ public final class VirtualNicResponse extends io.pulumi.resources.InvokeArgs {
      * NIC name
      * 
      */
-    @InputImport(name="virtualNicName", required=true)
+    @Import(name="virtualNicName", required=true)
       private final String virtualNicName;
 
     public String getVirtualNicName() {

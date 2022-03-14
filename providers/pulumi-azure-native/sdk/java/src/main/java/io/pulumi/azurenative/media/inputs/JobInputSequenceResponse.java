@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.media.inputs;
 
 import io.pulumi.azurenative.media.inputs.JobInputClipResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class JobInputSequenceResponse extends io.pulumi.resources.InvokeAr
      * JobInputs that make up the timeline.
      * 
      */
-    @InputImport(name="inputs")
+    @Import(name="inputs")
       private final @Nullable List<JobInputClipResponse> inputs;
 
     public List<JobInputClipResponse> getInputs() {
@@ -36,7 +36,7 @@ public final class JobInputSequenceResponse extends io.pulumi.resources.InvokeAr
      * Expected value is '#Microsoft.Media.JobInputSequence'.
      * 
      */
-    @InputImport(name="odataType", required=true)
+    @Import(name="odataType", required=true)
       private final String odataType;
 
     public String getOdataType() {

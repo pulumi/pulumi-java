@@ -8,7 +8,7 @@ import io.pulumi.azurenative.network.outputs.ExtendedLocationResponse;
 import io.pulumi.azurenative.network.outputs.NetworkInterfaceResponse;
 import io.pulumi.azurenative.network.outputs.PrivateLinkServiceConnectionResponse;
 import io.pulumi.azurenative.network.outputs.SubnetResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -16,7 +16,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PrivateEndpointResponse {
     /**
      * An array of custom dns configurations.
@@ -84,21 +84,21 @@ public final class PrivateEndpointResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PrivateEndpointResponse(
-        @OutputCustomType.Parameter("customDnsConfigs") @Nullable List<CustomDnsConfigPropertiesFormatResponse> customDnsConfigs,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("extendedLocation") @Nullable ExtendedLocationResponse extendedLocation,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("manualPrivateLinkServiceConnections") @Nullable List<PrivateLinkServiceConnectionResponse> manualPrivateLinkServiceConnections,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("networkInterfaces") List<NetworkInterfaceResponse> networkInterfaces,
-        @OutputCustomType.Parameter("privateLinkServiceConnections") @Nullable List<PrivateLinkServiceConnectionResponse> privateLinkServiceConnections,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("subnet") @Nullable SubnetResponse subnet,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("customDnsConfigs") @Nullable List<CustomDnsConfigPropertiesFormatResponse> customDnsConfigs,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("extendedLocation") @Nullable ExtendedLocationResponse extendedLocation,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("manualPrivateLinkServiceConnections") @Nullable List<PrivateLinkServiceConnectionResponse> manualPrivateLinkServiceConnections,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("networkInterfaces") List<NetworkInterfaceResponse> networkInterfaces,
+        @CustomType.Parameter("privateLinkServiceConnections") @Nullable List<PrivateLinkServiceConnectionResponse> privateLinkServiceConnections,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("subnet") @Nullable SubnetResponse subnet,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type) {
         this.customDnsConfigs = customDnsConfigs;
         this.etag = etag;
         this.extendedLocation = extendedLocation;

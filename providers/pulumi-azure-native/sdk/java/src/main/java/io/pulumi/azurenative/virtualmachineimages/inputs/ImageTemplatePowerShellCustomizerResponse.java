@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.virtualmachineimages.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class ImageTemplatePowerShellCustomizerResponse extends io.pulumi.r
      * Array of PowerShell commands to execute
      * 
      */
-    @InputImport(name="inline")
+    @Import(name="inline")
       private final @Nullable List<String> inline;
 
     public List<String> getInline() {
@@ -36,7 +36,7 @@ public final class ImageTemplatePowerShellCustomizerResponse extends io.pulumi.r
      * Friendly Name to provide context on what this customization step does
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -47,7 +47,7 @@ public final class ImageTemplatePowerShellCustomizerResponse extends io.pulumi.r
      * If specified, the PowerShell script will be run with elevated privileges using the Local System user. Can only be true when the runElevated field above is set to true.
      * 
      */
-    @InputImport(name="runAsSystem")
+    @Import(name="runAsSystem")
       private final @Nullable Boolean runAsSystem;
 
     public Optional<Boolean> getRunAsSystem() {
@@ -58,7 +58,7 @@ public final class ImageTemplatePowerShellCustomizerResponse extends io.pulumi.r
      * If specified, the PowerShell script will be run with elevated privileges
      * 
      */
-    @InputImport(name="runElevated")
+    @Import(name="runElevated")
       private final @Nullable Boolean runElevated;
 
     public Optional<Boolean> getRunElevated() {
@@ -69,7 +69,7 @@ public final class ImageTemplatePowerShellCustomizerResponse extends io.pulumi.r
      * URI of the PowerShell script to be run for customizing. It can be a github link, SAS URI for Azure Storage, etc
      * 
      */
-    @InputImport(name="scriptUri")
+    @Import(name="scriptUri")
       private final @Nullable String scriptUri;
 
     public Optional<String> getScriptUri() {
@@ -80,7 +80,7 @@ public final class ImageTemplatePowerShellCustomizerResponse extends io.pulumi.r
      * SHA256 checksum of the power shell script provided in the scriptUri field above
      * 
      */
-    @InputImport(name="sha256Checksum")
+    @Import(name="sha256Checksum")
       private final @Nullable String sha256Checksum;
 
     public Optional<String> getSha256Checksum() {
@@ -92,7 +92,7 @@ public final class ImageTemplatePowerShellCustomizerResponse extends io.pulumi.r
      * Expected value is 'PowerShell'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {
@@ -103,7 +103,7 @@ public final class ImageTemplatePowerShellCustomizerResponse extends io.pulumi.r
      * Valid exit codes for the PowerShell script. [Default: 0]
      * 
      */
-    @InputImport(name="validExitCodes")
+    @Import(name="validExitCodes")
       private final @Nullable List<Integer> validExitCodes;
 
     public List<Integer> getValidExitCodes() {

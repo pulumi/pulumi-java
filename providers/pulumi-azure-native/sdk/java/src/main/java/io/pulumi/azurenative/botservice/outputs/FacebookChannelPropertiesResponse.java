@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.botservice.outputs;
 
 import io.pulumi.azurenative.botservice.outputs.FacebookPageResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FacebookChannelPropertiesResponse {
     /**
      * Facebook application id
@@ -45,14 +45,14 @@ public final class FacebookChannelPropertiesResponse {
      */
     private final String verifyToken;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FacebookChannelPropertiesResponse(
-        @OutputCustomType.Parameter("appId") String appId,
-        @OutputCustomType.Parameter("appSecret") @Nullable String appSecret,
-        @OutputCustomType.Parameter("callbackUrl") String callbackUrl,
-        @OutputCustomType.Parameter("isEnabled") Boolean isEnabled,
-        @OutputCustomType.Parameter("pages") @Nullable List<FacebookPageResponse> pages,
-        @OutputCustomType.Parameter("verifyToken") String verifyToken) {
+        @CustomType.Parameter("appId") String appId,
+        @CustomType.Parameter("appSecret") @Nullable String appSecret,
+        @CustomType.Parameter("callbackUrl") String callbackUrl,
+        @CustomType.Parameter("isEnabled") Boolean isEnabled,
+        @CustomType.Parameter("pages") @Nullable List<FacebookPageResponse> pages,
+        @CustomType.Parameter("verifyToken") String verifyToken) {
         this.appId = appId;
         this.appSecret = appSecret;
         this.callbackUrl = callbackUrl;

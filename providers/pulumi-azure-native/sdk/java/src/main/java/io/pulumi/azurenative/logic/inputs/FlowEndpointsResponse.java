@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.logic.inputs;
 
 import io.pulumi.azurenative.logic.inputs.IpAddressResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class FlowEndpointsResponse extends io.pulumi.resources.InvokeArgs 
      * The access endpoint ip address.
      * 
      */
-    @InputImport(name="accessEndpointIpAddresses")
+    @Import(name="accessEndpointIpAddresses")
       private final @Nullable List<IpAddressResponse> accessEndpointIpAddresses;
 
     public List<IpAddressResponse> getAccessEndpointIpAddresses() {
@@ -34,7 +34,7 @@ public final class FlowEndpointsResponse extends io.pulumi.resources.InvokeArgs 
      * The outgoing ip address.
      * 
      */
-    @InputImport(name="outgoingIpAddresses")
+    @Import(name="outgoingIpAddresses")
       private final @Nullable List<IpAddressResponse> outgoingIpAddresses;
 
     public List<IpAddressResponse> getOutgoingIpAddresses() {

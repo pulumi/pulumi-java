@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.connectedvmwarevsphere.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class HardwareProfileResponse extends io.pulumi.resources.InvokeArg
      * Gets or sets a value indicating whether virtual processors can be added while this virtual machine is running.
      * 
      */
-    @InputImport(name="cpuHotAddEnabled", required=true)
+    @Import(name="cpuHotAddEnabled", required=true)
       private final Boolean cpuHotAddEnabled;
 
     public Boolean getCpuHotAddEnabled() {
@@ -34,7 +34,7 @@ public final class HardwareProfileResponse extends io.pulumi.resources.InvokeArg
      * Gets or sets a value indicating whether virtual processors can be removed while this virtual machine is running.
      * 
      */
-    @InputImport(name="cpuHotRemoveEnabled", required=true)
+    @Import(name="cpuHotRemoveEnabled", required=true)
       private final Boolean cpuHotRemoveEnabled;
 
     public Boolean getCpuHotRemoveEnabled() {
@@ -45,7 +45,7 @@ public final class HardwareProfileResponse extends io.pulumi.resources.InvokeArg
      * Gets or sets a value indicating whether memory can be added while this virtual machine is running.
      * 
      */
-    @InputImport(name="memoryHotAddEnabled", required=true)
+    @Import(name="memoryHotAddEnabled", required=true)
       private final Boolean memoryHotAddEnabled;
 
     public Boolean getMemoryHotAddEnabled() {
@@ -56,7 +56,7 @@ public final class HardwareProfileResponse extends io.pulumi.resources.InvokeArg
      * Gets or sets memory size in MBs for the vm.
      * 
      */
-    @InputImport(name="memorySizeMB")
+    @Import(name="memorySizeMB")
       private final @Nullable Integer memorySizeMB;
 
     public Optional<Integer> getMemorySizeMB() {
@@ -67,7 +67,7 @@ public final class HardwareProfileResponse extends io.pulumi.resources.InvokeArg
      * Gets or sets the number of vCPUs for the vm.
      * 
      */
-    @InputImport(name="numCPUs")
+    @Import(name="numCPUs")
       private final @Nullable Integer numCPUs;
 
     public Optional<Integer> getNumCPUs() {
@@ -78,7 +78,7 @@ public final class HardwareProfileResponse extends io.pulumi.resources.InvokeArg
      * Gets or sets the number of cores per socket for the vm. Defaults to 1 if unspecified.
      * 
      */
-    @InputImport(name="numCoresPerSocket")
+    @Import(name="numCoresPerSocket")
       private final @Nullable Integer numCoresPerSocket;
 
     public Optional<Integer> getNumCoresPerSocket() {

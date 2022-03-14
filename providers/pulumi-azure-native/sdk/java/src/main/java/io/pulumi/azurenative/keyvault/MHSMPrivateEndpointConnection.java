@@ -11,7 +11,7 @@ import io.pulumi.azurenative.keyvault.outputs.ManagedHsmSkuResponse;
 import io.pulumi.azurenative.keyvault.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -39,7 +39,7 @@ public class MHSMPrivateEndpointConnection extends io.pulumi.resources.CustomRes
      * Modified whenever there is a change in the state of private endpoint connection.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output</* @Nullable */ String> etag;
 
     /**
@@ -53,7 +53,7 @@ public class MHSMPrivateEndpointConnection extends io.pulumi.resources.CustomRes
      * The supported Azure location where the managed HSM Pool should be created.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -67,7 +67,7 @@ public class MHSMPrivateEndpointConnection extends io.pulumi.resources.CustomRes
      * The name of the managed HSM Pool.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -81,7 +81,7 @@ public class MHSMPrivateEndpointConnection extends io.pulumi.resources.CustomRes
      * Properties of the private endpoint object.
      * 
      */
-    @OutputExport(name="privateEndpoint", type=MHSMPrivateEndpointResponse.class, parameters={})
+    @Export(name="privateEndpoint", type=MHSMPrivateEndpointResponse.class, parameters={})
     private Output</* @Nullable */ MHSMPrivateEndpointResponse> privateEndpoint;
 
     /**
@@ -95,7 +95,7 @@ public class MHSMPrivateEndpointConnection extends io.pulumi.resources.CustomRes
      * Approval state of the private link connection.
      * 
      */
-    @OutputExport(name="privateLinkServiceConnectionState", type=MHSMPrivateLinkServiceConnectionStateResponse.class, parameters={})
+    @Export(name="privateLinkServiceConnectionState", type=MHSMPrivateLinkServiceConnectionStateResponse.class, parameters={})
     private Output</* @Nullable */ MHSMPrivateLinkServiceConnectionStateResponse> privateLinkServiceConnectionState;
 
     /**
@@ -109,7 +109,7 @@ public class MHSMPrivateEndpointConnection extends io.pulumi.resources.CustomRes
      * Provisioning state of the private endpoint connection.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -123,7 +123,7 @@ public class MHSMPrivateEndpointConnection extends io.pulumi.resources.CustomRes
      * SKU details
      * 
      */
-    @OutputExport(name="sku", type=ManagedHsmSkuResponse.class, parameters={})
+    @Export(name="sku", type=ManagedHsmSkuResponse.class, parameters={})
     private Output</* @Nullable */ ManagedHsmSkuResponse> sku;
 
     /**
@@ -137,7 +137,7 @@ public class MHSMPrivateEndpointConnection extends io.pulumi.resources.CustomRes
      * Metadata pertaining to creation and last modification of the key vault resource.
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -151,7 +151,7 @@ public class MHSMPrivateEndpointConnection extends io.pulumi.resources.CustomRes
      * Resource tags
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -165,7 +165,7 @@ public class MHSMPrivateEndpointConnection extends io.pulumi.resources.CustomRes
      * The resource type of the managed HSM Pool.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

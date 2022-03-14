@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.redhatopenshift.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class IngressProfileResponse {
     /**
      * The IP of the ingress (immutable).
@@ -27,11 +27,11 @@ public final class IngressProfileResponse {
      */
     private final @Nullable String visibility;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private IngressProfileResponse(
-        @OutputCustomType.Parameter("ip") @Nullable String ip,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("visibility") @Nullable String visibility) {
+        @CustomType.Parameter("ip") @Nullable String ip,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("visibility") @Nullable String visibility) {
         this.ip = ip;
         this.name = name;
         this.visibility = visibility;

@@ -12,7 +12,7 @@ import io.pulumi.azurenative.network.outputs.SubResourceResponse;
 import io.pulumi.azurenative.network.outputs.WebApplicationFirewallCustomRuleResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -40,7 +40,7 @@ public class WebApplicationFirewallPolicy extends io.pulumi.resources.CustomReso
      * A collection of references to application gateways.
      * 
      */
-    @OutputExport(name="applicationGateways", type=List.class, parameters={ApplicationGatewayResponse.class})
+    @Export(name="applicationGateways", type=List.class, parameters={ApplicationGatewayResponse.class})
     private Output<List<ApplicationGatewayResponse>> applicationGateways;
 
     /**
@@ -54,7 +54,7 @@ public class WebApplicationFirewallPolicy extends io.pulumi.resources.CustomReso
      * The custom rules inside the policy.
      * 
      */
-    @OutputExport(name="customRules", type=List.class, parameters={WebApplicationFirewallCustomRuleResponse.class})
+    @Export(name="customRules", type=List.class, parameters={WebApplicationFirewallCustomRuleResponse.class})
     private Output</* @Nullable */ List<WebApplicationFirewallCustomRuleResponse>> customRules;
 
     /**
@@ -68,7 +68,7 @@ public class WebApplicationFirewallPolicy extends io.pulumi.resources.CustomReso
      * A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -82,7 +82,7 @@ public class WebApplicationFirewallPolicy extends io.pulumi.resources.CustomReso
      * A collection of references to application gateway http listeners.
      * 
      */
-    @OutputExport(name="httpListeners", type=List.class, parameters={SubResourceResponse.class})
+    @Export(name="httpListeners", type=List.class, parameters={SubResourceResponse.class})
     private Output<List<SubResourceResponse>> httpListeners;
 
     /**
@@ -96,7 +96,7 @@ public class WebApplicationFirewallPolicy extends io.pulumi.resources.CustomReso
      * Resource location.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -110,7 +110,7 @@ public class WebApplicationFirewallPolicy extends io.pulumi.resources.CustomReso
      * Describes the managedRules structure.
      * 
      */
-    @OutputExport(name="managedRules", type=ManagedRulesDefinitionResponse.class, parameters={})
+    @Export(name="managedRules", type=ManagedRulesDefinitionResponse.class, parameters={})
     private Output<ManagedRulesDefinitionResponse> managedRules;
 
     /**
@@ -124,7 +124,7 @@ public class WebApplicationFirewallPolicy extends io.pulumi.resources.CustomReso
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -138,7 +138,7 @@ public class WebApplicationFirewallPolicy extends io.pulumi.resources.CustomReso
      * A collection of references to application gateway path rules.
      * 
      */
-    @OutputExport(name="pathBasedRules", type=List.class, parameters={SubResourceResponse.class})
+    @Export(name="pathBasedRules", type=List.class, parameters={SubResourceResponse.class})
     private Output<List<SubResourceResponse>> pathBasedRules;
 
     /**
@@ -152,7 +152,7 @@ public class WebApplicationFirewallPolicy extends io.pulumi.resources.CustomReso
      * The PolicySettings for policy.
      * 
      */
-    @OutputExport(name="policySettings", type=PolicySettingsResponse.class, parameters={})
+    @Export(name="policySettings", type=PolicySettingsResponse.class, parameters={})
     private Output</* @Nullable */ PolicySettingsResponse> policySettings;
 
     /**
@@ -166,7 +166,7 @@ public class WebApplicationFirewallPolicy extends io.pulumi.resources.CustomReso
      * The provisioning state of the web application firewall policy resource.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -180,7 +180,7 @@ public class WebApplicationFirewallPolicy extends io.pulumi.resources.CustomReso
      * Resource status of the policy.
      * 
      */
-    @OutputExport(name="resourceState", type=String.class, parameters={})
+    @Export(name="resourceState", type=String.class, parameters={})
     private Output<String> resourceState;
 
     /**
@@ -194,7 +194,7 @@ public class WebApplicationFirewallPolicy extends io.pulumi.resources.CustomReso
      * Resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -208,7 +208,7 @@ public class WebApplicationFirewallPolicy extends io.pulumi.resources.CustomReso
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

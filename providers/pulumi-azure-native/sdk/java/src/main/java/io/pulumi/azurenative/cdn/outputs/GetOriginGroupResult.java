@@ -7,7 +7,7 @@ import io.pulumi.azurenative.cdn.outputs.HealthProbeParametersResponse;
 import io.pulumi.azurenative.cdn.outputs.ResourceReferenceResponse;
 import io.pulumi.azurenative.cdn.outputs.ResponseBasedOriginErrorDetectionParametersResponse;
 import io.pulumi.azurenative.cdn.outputs.SystemDataResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -15,7 +15,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetOriginGroupResult {
     /**
      * Health probe settings to the origin that is used to determine the health of the origin.
@@ -68,18 +68,18 @@ public final class GetOriginGroupResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetOriginGroupResult(
-        @OutputCustomType.Parameter("healthProbeSettings") @Nullable HealthProbeParametersResponse healthProbeSettings,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("origins") List<ResourceReferenceResponse> origins,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("resourceState") String resourceState,
-        @OutputCustomType.Parameter("responseBasedOriginErrorDetectionSettings") @Nullable ResponseBasedOriginErrorDetectionParametersResponse responseBasedOriginErrorDetectionSettings,
-        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
-        @OutputCustomType.Parameter("trafficRestorationTimeToHealedOrNewEndpointsInMinutes") @Nullable Integer trafficRestorationTimeToHealedOrNewEndpointsInMinutes,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("healthProbeSettings") @Nullable HealthProbeParametersResponse healthProbeSettings,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("origins") List<ResourceReferenceResponse> origins,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("resourceState") String resourceState,
+        @CustomType.Parameter("responseBasedOriginErrorDetectionSettings") @Nullable ResponseBasedOriginErrorDetectionParametersResponse responseBasedOriginErrorDetectionSettings,
+        @CustomType.Parameter("systemData") SystemDataResponse systemData,
+        @CustomType.Parameter("trafficRestorationTimeToHealedOrNewEndpointsInMinutes") @Nullable Integer trafficRestorationTimeToHealedOrNewEndpointsInMinutes,
+        @CustomType.Parameter("type") String type) {
         this.healthProbeSettings = healthProbeSettings;
         this.id = id;
         this.name = name;

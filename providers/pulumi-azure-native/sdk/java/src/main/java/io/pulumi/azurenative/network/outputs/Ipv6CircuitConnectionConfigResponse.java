@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class Ipv6CircuitConnectionConfigResponse {
     /**
      * /125 IP address space to carve out customer addresses for global reach.
@@ -22,10 +22,10 @@ public final class Ipv6CircuitConnectionConfigResponse {
      */
     private final String circuitConnectionStatus;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private Ipv6CircuitConnectionConfigResponse(
-        @OutputCustomType.Parameter("addressPrefix") @Nullable String addressPrefix,
-        @OutputCustomType.Parameter("circuitConnectionStatus") String circuitConnectionStatus) {
+        @CustomType.Parameter("addressPrefix") @Nullable String addressPrefix,
+        @CustomType.Parameter("circuitConnectionStatus") String circuitConnectionStatus) {
         this.addressPrefix = addressPrefix;
         this.circuitConnectionStatus = circuitConnectionStatus;
     }

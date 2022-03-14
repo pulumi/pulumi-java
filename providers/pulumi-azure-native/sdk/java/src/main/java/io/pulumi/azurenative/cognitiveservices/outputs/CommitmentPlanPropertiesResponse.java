@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.cognitiveservices.outputs;
 
 import io.pulumi.azurenative.cognitiveservices.outputs.CommitmentPeriodResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CommitmentPlanPropertiesResponse {
     /**
      * AutoRenew commitment plan.
@@ -44,14 +44,14 @@ public final class CommitmentPlanPropertiesResponse {
      */
     private final @Nullable String planType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CommitmentPlanPropertiesResponse(
-        @OutputCustomType.Parameter("autoRenew") @Nullable Boolean autoRenew,
-        @OutputCustomType.Parameter("current") @Nullable CommitmentPeriodResponse current,
-        @OutputCustomType.Parameter("hostingModel") @Nullable String hostingModel,
-        @OutputCustomType.Parameter("last") CommitmentPeriodResponse last,
-        @OutputCustomType.Parameter("next") @Nullable CommitmentPeriodResponse next,
-        @OutputCustomType.Parameter("planType") @Nullable String planType) {
+        @CustomType.Parameter("autoRenew") @Nullable Boolean autoRenew,
+        @CustomType.Parameter("current") @Nullable CommitmentPeriodResponse current,
+        @CustomType.Parameter("hostingModel") @Nullable String hostingModel,
+        @CustomType.Parameter("last") CommitmentPeriodResponse last,
+        @CustomType.Parameter("next") @Nullable CommitmentPeriodResponse next,
+        @CustomType.Parameter("planType") @Nullable String planType) {
         this.autoRenew = autoRenew;
         this.current = current;
         this.hostingModel = hostingModel;

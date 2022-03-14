@@ -5,7 +5,7 @@ package io.pulumi.azurenative.appplatform.inputs;
 
 import io.pulumi.azurenative.appplatform.inputs.GatewayInstanceResponse;
 import io.pulumi.azurenative.appplatform.inputs.GatewayOperatorResourceRequestsResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class GatewayOperatorPropertiesResponse extends io.pulumi.resources
      * Collection of instances belong to Spring Cloud Gateway operator.
      * 
      */
-    @InputImport(name="instances", required=true)
+    @Import(name="instances", required=true)
       private final List<GatewayInstanceResponse> instances;
 
     public List<GatewayInstanceResponse> getInstances() {
@@ -33,7 +33,7 @@ public final class GatewayOperatorPropertiesResponse extends io.pulumi.resources
      * The requested resource quantity for required CPU and Memory.
      * 
      */
-    @InputImport(name="resourceRequests", required=true)
+    @Import(name="resourceRequests", required=true)
       private final GatewayOperatorResourceRequestsResponse resourceRequests;
 
     public GatewayOperatorResourceRequestsResponse getResourceRequests() {

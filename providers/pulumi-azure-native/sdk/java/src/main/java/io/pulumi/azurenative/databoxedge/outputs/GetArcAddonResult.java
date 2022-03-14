@@ -4,11 +4,11 @@
 package io.pulumi.azurenative.databoxedge.outputs;
 
 import io.pulumi.azurenative.databoxedge.outputs.SystemDataResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetArcAddonResult {
     /**
      * Host OS supported by the Arc addon.
@@ -77,21 +77,21 @@ public final class GetArcAddonResult {
      */
     private final String version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetArcAddonResult(
-        @OutputCustomType.Parameter("hostPlatform") String hostPlatform,
-        @OutputCustomType.Parameter("hostPlatformType") String hostPlatformType,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("resourceGroupName") String resourceGroupName,
-        @OutputCustomType.Parameter("resourceLocation") String resourceLocation,
-        @OutputCustomType.Parameter("resourceName") String resourceName,
-        @OutputCustomType.Parameter("subscriptionId") String subscriptionId,
-        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("version") String version) {
+        @CustomType.Parameter("hostPlatform") String hostPlatform,
+        @CustomType.Parameter("hostPlatformType") String hostPlatformType,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("resourceGroupName") String resourceGroupName,
+        @CustomType.Parameter("resourceLocation") String resourceLocation,
+        @CustomType.Parameter("resourceName") String resourceName,
+        @CustomType.Parameter("subscriptionId") String subscriptionId,
+        @CustomType.Parameter("systemData") SystemDataResponse systemData,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("version") String version) {
         this.hostPlatform = hostPlatform;
         this.hostPlatformType = hostPlatformType;
         this.id = id;

@@ -3,12 +3,12 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RoutingPolicyResponse {
     /**
      * List of all destinations which this routing policy is applicable to (for example: Internet, PrivateTraffic).
@@ -26,11 +26,11 @@ public final class RoutingPolicyResponse {
      */
     private final String nextHop;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RoutingPolicyResponse(
-        @OutputCustomType.Parameter("destinations") List<String> destinations,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("nextHop") String nextHop) {
+        @CustomType.Parameter("destinations") List<String> destinations,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("nextHop") String nextHop) {
         this.destinations = destinations;
         this.name = name;
         this.nextHop = nextHop;

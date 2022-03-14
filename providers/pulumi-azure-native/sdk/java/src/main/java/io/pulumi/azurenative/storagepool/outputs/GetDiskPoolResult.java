@@ -5,14 +5,14 @@ package io.pulumi.azurenative.storagepool.outputs;
 
 import io.pulumi.azurenative.storagepool.outputs.DiskResponse;
 import io.pulumi.azurenative.storagepool.outputs.SystemMetadataResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetDiskPoolResult {
     /**
      * List of additional capabilities for Disk pool.
@@ -80,21 +80,21 @@ public final class GetDiskPoolResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDiskPoolResult(
-        @OutputCustomType.Parameter("additionalCapabilities") @Nullable List<String> additionalCapabilities,
-        @OutputCustomType.Parameter("availabilityZones") List<String> availabilityZones,
-        @OutputCustomType.Parameter("disks") @Nullable List<DiskResponse> disks,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("status") String status,
-        @OutputCustomType.Parameter("subnetId") String subnetId,
-        @OutputCustomType.Parameter("systemData") SystemMetadataResponse systemData,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("tier") String tier,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("additionalCapabilities") @Nullable List<String> additionalCapabilities,
+        @CustomType.Parameter("availabilityZones") List<String> availabilityZones,
+        @CustomType.Parameter("disks") @Nullable List<DiskResponse> disks,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("status") String status,
+        @CustomType.Parameter("subnetId") String subnetId,
+        @CustomType.Parameter("systemData") SystemMetadataResponse systemData,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("tier") String tier,
+        @CustomType.Parameter("type") String type) {
         this.additionalCapabilities = additionalCapabilities;
         this.availabilityZones = availabilityZones;
         this.disks = disks;

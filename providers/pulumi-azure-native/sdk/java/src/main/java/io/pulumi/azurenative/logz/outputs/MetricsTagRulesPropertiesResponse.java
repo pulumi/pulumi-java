@@ -5,7 +5,7 @@ package io.pulumi.azurenative.logz.outputs;
 
 import io.pulumi.azurenative.logz.outputs.MetricRulesResponse;
 import io.pulumi.azurenative.logz.outputs.SystemDataResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class MetricsTagRulesPropertiesResponse {
     private final @Nullable List<MetricRulesResponse> metricRules;
     /**
@@ -32,12 +32,12 @@ public final class MetricsTagRulesPropertiesResponse {
      */
     private final SystemDataResponse systemData;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MetricsTagRulesPropertiesResponse(
-        @OutputCustomType.Parameter("metricRules") @Nullable List<MetricRulesResponse> metricRules,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("sendMetrics") @Nullable Boolean sendMetrics,
-        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData) {
+        @CustomType.Parameter("metricRules") @Nullable List<MetricRulesResponse> metricRules,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("sendMetrics") @Nullable Boolean sendMetrics,
+        @CustomType.Parameter("systemData") SystemDataResponse systemData) {
         this.metricRules = metricRules;
         this.provisioningState = provisioningState;
         this.sendMetrics = sendMetrics;

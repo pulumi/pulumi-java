@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datalakestore;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class VirtualNetworkRuleArgs extends io.pulumi.resources.ResourceAr
      * The name of the Data Lake Store account.
      * 
      */
-    @InputImport(name="accountName", required=true)
+    @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
     public Output<String> getAccountName() {
@@ -29,7 +29,7 @@ public final class VirtualNetworkRuleArgs extends io.pulumi.resources.ResourceAr
      * The name of the Azure resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -40,7 +40,7 @@ public final class VirtualNetworkRuleArgs extends io.pulumi.resources.ResourceAr
      * The resource identifier for the subnet.
      * 
      */
-    @InputImport(name="subnetId", required=true)
+    @Import(name="subnetId", required=true)
       private final Output<String> subnetId;
 
     public Output<String> getSubnetId() {
@@ -51,7 +51,7 @@ public final class VirtualNetworkRuleArgs extends io.pulumi.resources.ResourceAr
      * The name of the virtual network rule to create or update.
      * 
      */
-    @InputImport(name="virtualNetworkRuleName")
+    @Import(name="virtualNetworkRuleName")
       private final @Nullable Output<String> virtualNetworkRuleName;
 
     public Output<String> getVirtualNetworkRuleName() {

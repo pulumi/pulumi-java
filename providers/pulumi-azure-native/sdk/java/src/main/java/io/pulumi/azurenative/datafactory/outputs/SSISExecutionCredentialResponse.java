@@ -4,11 +4,11 @@
 package io.pulumi.azurenative.datafactory.outputs;
 
 import io.pulumi.azurenative.datafactory.outputs.SecureStringResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SSISExecutionCredentialResponse {
     /**
      * Domain for windows authentication.
@@ -26,11 +26,11 @@ public final class SSISExecutionCredentialResponse {
      */
     private final Object userName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SSISExecutionCredentialResponse(
-        @OutputCustomType.Parameter("domain") Object domain,
-        @OutputCustomType.Parameter("password") SecureStringResponse password,
-        @OutputCustomType.Parameter("userName") Object userName) {
+        @CustomType.Parameter("domain") Object domain,
+        @CustomType.Parameter("password") SecureStringResponse password,
+        @CustomType.Parameter("userName") Object userName) {
         this.domain = domain;
         this.password = password;
         this.userName = userName;

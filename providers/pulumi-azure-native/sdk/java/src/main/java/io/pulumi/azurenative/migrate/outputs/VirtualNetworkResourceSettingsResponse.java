@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.migrate.outputs;
 
 import io.pulumi.azurenative.migrate.outputs.SubnetResourceSettingsResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VirtualNetworkResourceSettingsResponse {
     /**
      * Gets or sets the address prefixes for the virtual network.
@@ -48,14 +48,14 @@ public final class VirtualNetworkResourceSettingsResponse {
      */
     private final String targetResourceName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VirtualNetworkResourceSettingsResponse(
-        @OutputCustomType.Parameter("addressSpace") @Nullable List<String> addressSpace,
-        @OutputCustomType.Parameter("dnsServers") @Nullable List<String> dnsServers,
-        @OutputCustomType.Parameter("enableDdosProtection") @Nullable Boolean enableDdosProtection,
-        @OutputCustomType.Parameter("resourceType") String resourceType,
-        @OutputCustomType.Parameter("subnets") @Nullable List<SubnetResourceSettingsResponse> subnets,
-        @OutputCustomType.Parameter("targetResourceName") String targetResourceName) {
+        @CustomType.Parameter("addressSpace") @Nullable List<String> addressSpace,
+        @CustomType.Parameter("dnsServers") @Nullable List<String> dnsServers,
+        @CustomType.Parameter("enableDdosProtection") @Nullable Boolean enableDdosProtection,
+        @CustomType.Parameter("resourceType") String resourceType,
+        @CustomType.Parameter("subnets") @Nullable List<SubnetResourceSettingsResponse> subnets,
+        @CustomType.Parameter("targetResourceName") String targetResourceName) {
         this.addressSpace = addressSpace;
         this.dnsServers = dnsServers;
         this.enableDdosProtection = enableDdosProtection;

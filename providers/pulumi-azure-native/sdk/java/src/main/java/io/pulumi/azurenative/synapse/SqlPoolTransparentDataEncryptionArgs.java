@@ -6,7 +6,7 @@ package io.pulumi.azurenative.synapse;
 import io.pulumi.azurenative.synapse.enums.TransparentDataEncryptionStatus;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class SqlPoolTransparentDataEncryptionArgs extends io.pulumi.resour
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -31,7 +31,7 @@ public final class SqlPoolTransparentDataEncryptionArgs extends io.pulumi.resour
      * SQL pool name
      * 
      */
-    @InputImport(name="sqlPoolName", required=true)
+    @Import(name="sqlPoolName", required=true)
       private final Output<String> sqlPoolName;
 
     public Output<String> getSqlPoolName() {
@@ -42,7 +42,7 @@ public final class SqlPoolTransparentDataEncryptionArgs extends io.pulumi.resour
      * The status of the database transparent data encryption.
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable Output<Either<String,TransparentDataEncryptionStatus>> status;
 
     public Output<Either<String,TransparentDataEncryptionStatus>> getStatus() {
@@ -53,7 +53,7 @@ public final class SqlPoolTransparentDataEncryptionArgs extends io.pulumi.resour
      * The name of the transparent data encryption configuration.
      * 
      */
-    @InputImport(name="transparentDataEncryptionName")
+    @Import(name="transparentDataEncryptionName")
       private final @Nullable Output<String> transparentDataEncryptionName;
 
     public Output<String> getTransparentDataEncryptionName() {
@@ -64,7 +64,7 @@ public final class SqlPoolTransparentDataEncryptionArgs extends io.pulumi.resour
      * The name of the workspace
      * 
      */
-    @InputImport(name="workspaceName", required=true)
+    @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;
 
     public Output<String> getWorkspaceName() {

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.relay;
 
 import io.pulumi.azurenative.relay.enums.Relaytype;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class WCFRelayArgs extends io.pulumi.resources.ResourceArgs {
      * The namespace name
      * 
      */
-    @InputImport(name="namespaceName", required=true)
+    @Import(name="namespaceName", required=true)
       private final Output<String> namespaceName;
 
     public Output<String> getNamespaceName() {
@@ -31,7 +31,7 @@ public final class WCFRelayArgs extends io.pulumi.resources.ResourceArgs {
      * The relay name.
      * 
      */
-    @InputImport(name="relayName")
+    @Import(name="relayName")
       private final @Nullable Output<String> relayName;
 
     public Output<String> getRelayName() {
@@ -42,7 +42,7 @@ public final class WCFRelayArgs extends io.pulumi.resources.ResourceArgs {
      * WCF relay type.
      * 
      */
-    @InputImport(name="relayType")
+    @Import(name="relayType")
       private final @Nullable Output<Relaytype> relayType;
 
     public Output<Relaytype> getRelayType() {
@@ -53,7 +53,7 @@ public final class WCFRelayArgs extends io.pulumi.resources.ResourceArgs {
      * Returns true if client authorization is needed for this relay; otherwise, false.
      * 
      */
-    @InputImport(name="requiresClientAuthorization")
+    @Import(name="requiresClientAuthorization")
       private final @Nullable Output<Boolean> requiresClientAuthorization;
 
     public Output<Boolean> getRequiresClientAuthorization() {
@@ -64,7 +64,7 @@ public final class WCFRelayArgs extends io.pulumi.resources.ResourceArgs {
      * Returns true if transport security is needed for this relay; otherwise, false.
      * 
      */
-    @InputImport(name="requiresTransportSecurity")
+    @Import(name="requiresTransportSecurity")
       private final @Nullable Output<Boolean> requiresTransportSecurity;
 
     public Output<Boolean> getRequiresTransportSecurity() {
@@ -75,7 +75,7 @@ public final class WCFRelayArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the Resource group within the Azure subscription.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -86,7 +86,7 @@ public final class WCFRelayArgs extends io.pulumi.resources.ResourceArgs {
      * The usermetadata is a placeholder to store user-defined string data for the WCF Relay endpoint. For example, it can be used to store descriptive data, such as list of teams and their contact information. Also, user-defined configuration settings can be stored.
      * 
      */
-    @InputImport(name="userMetadata")
+    @Import(name="userMetadata")
       private final @Nullable Output<String> userMetadata;
 
     public Output<String> getUserMetadata() {

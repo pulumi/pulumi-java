@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.media.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class StreamingPathResponse extends io.pulumi.resources.InvokeArgs 
      * Encryption scheme
      * 
      */
-    @InputImport(name="encryptionScheme", required=true)
+    @Import(name="encryptionScheme", required=true)
       private final String encryptionScheme;
 
     public String getEncryptionScheme() {
@@ -34,7 +34,7 @@ public final class StreamingPathResponse extends io.pulumi.resources.InvokeArgs 
      * Streaming paths for each protocol and encryptionScheme pair
      * 
      */
-    @InputImport(name="paths")
+    @Import(name="paths")
       private final @Nullable List<String> paths;
 
     public List<String> getPaths() {
@@ -45,7 +45,7 @@ public final class StreamingPathResponse extends io.pulumi.resources.InvokeArgs 
      * Streaming protocol
      * 
      */
-    @InputImport(name="streamingProtocol", required=true)
+    @Import(name="streamingProtocol", required=true)
       private final String streamingProtocol;
 
     public String getStreamingProtocol() {

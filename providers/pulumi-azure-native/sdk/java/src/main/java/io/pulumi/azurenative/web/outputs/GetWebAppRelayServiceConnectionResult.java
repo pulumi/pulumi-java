@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetWebAppRelayServiceConnectionResult {
     private final @Nullable String biztalkUri;
     private final @Nullable String entityConnectionString;
@@ -40,19 +40,19 @@ public final class GetWebAppRelayServiceConnectionResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetWebAppRelayServiceConnectionResult(
-        @OutputCustomType.Parameter("biztalkUri") @Nullable String biztalkUri,
-        @OutputCustomType.Parameter("entityConnectionString") @Nullable String entityConnectionString,
-        @OutputCustomType.Parameter("entityName") @Nullable String entityName,
-        @OutputCustomType.Parameter("hostname") @Nullable String hostname,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("kind") @Nullable String kind,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("port") @Nullable Integer port,
-        @OutputCustomType.Parameter("resourceConnectionString") @Nullable String resourceConnectionString,
-        @OutputCustomType.Parameter("resourceType") @Nullable String resourceType,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("biztalkUri") @Nullable String biztalkUri,
+        @CustomType.Parameter("entityConnectionString") @Nullable String entityConnectionString,
+        @CustomType.Parameter("entityName") @Nullable String entityName,
+        @CustomType.Parameter("hostname") @Nullable String hostname,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("kind") @Nullable String kind,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("port") @Nullable Integer port,
+        @CustomType.Parameter("resourceConnectionString") @Nullable String resourceConnectionString,
+        @CustomType.Parameter("resourceType") @Nullable String resourceType,
+        @CustomType.Parameter("type") String type) {
         this.biztalkUri = biztalkUri;
         this.entityConnectionString = entityConnectionString;
         this.entityName = entityName;

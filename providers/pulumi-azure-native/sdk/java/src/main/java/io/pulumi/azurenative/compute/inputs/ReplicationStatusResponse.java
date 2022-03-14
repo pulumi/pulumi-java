@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.azurenative.compute.inputs.RegionalReplicationStatusResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class ReplicationStatusResponse extends io.pulumi.resources.InvokeA
      * This is the aggregated replication status based on all the regional replication status flags.
      * 
      */
-    @InputImport(name="aggregatedState", required=true)
+    @Import(name="aggregatedState", required=true)
       private final String aggregatedState;
 
     public String getAggregatedState() {
@@ -33,7 +33,7 @@ public final class ReplicationStatusResponse extends io.pulumi.resources.InvokeA
      * This is a summary of replication status for each region.
      * 
      */
-    @InputImport(name="summary", required=true)
+    @Import(name="summary", required=true)
       private final List<RegionalReplicationStatusResponse> summary;
 
     public List<RegionalReplicationStatusResponse> getSummary() {

@@ -8,7 +8,7 @@ import io.pulumi.azurenative.network.enums.FrontDoorProtocol;
 import io.pulumi.azurenative.network.enums.HealthProbeEnabled;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +27,7 @@ public final class HealthProbeSettingsModelArgs extends io.pulumi.resources.Reso
      * Whether to enable health probes to be made against backends defined under backendPools. Health probes can only be disabled if there is a single enabled backend in single enabled backend pool.
      * 
      */
-    @InputImport(name="enabledState")
+    @Import(name="enabledState")
       private final @Nullable Output<Either<String,HealthProbeEnabled>> enabledState;
 
     public Output<Either<String,HealthProbeEnabled>> getEnabledState() {
@@ -38,7 +38,7 @@ public final class HealthProbeSettingsModelArgs extends io.pulumi.resources.Reso
      * Configures which HTTP method to use to probe the backends defined under backendPools.
      * 
      */
-    @InputImport(name="healthProbeMethod")
+    @Import(name="healthProbeMethod")
       private final @Nullable Output<Either<String,FrontDoorHealthProbeMethod>> healthProbeMethod;
 
     public Output<Either<String,FrontDoorHealthProbeMethod>> getHealthProbeMethod() {
@@ -49,7 +49,7 @@ public final class HealthProbeSettingsModelArgs extends io.pulumi.resources.Reso
      * Resource ID.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
@@ -60,7 +60,7 @@ public final class HealthProbeSettingsModelArgs extends io.pulumi.resources.Reso
      * The number of seconds between health probes.
      * 
      */
-    @InputImport(name="intervalInSeconds")
+    @Import(name="intervalInSeconds")
       private final @Nullable Output<Integer> intervalInSeconds;
 
     public Output<Integer> getIntervalInSeconds() {
@@ -71,7 +71,7 @@ public final class HealthProbeSettingsModelArgs extends io.pulumi.resources.Reso
      * Resource name.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -82,7 +82,7 @@ public final class HealthProbeSettingsModelArgs extends io.pulumi.resources.Reso
      * The path to use for the health probe. Default is /
      * 
      */
-    @InputImport(name="path")
+    @Import(name="path")
       private final @Nullable Output<String> path;
 
     public Output<String> getPath() {
@@ -93,7 +93,7 @@ public final class HealthProbeSettingsModelArgs extends io.pulumi.resources.Reso
      * Protocol scheme to use for this probe
      * 
      */
-    @InputImport(name="protocol")
+    @Import(name="protocol")
       private final @Nullable Output<Either<String,FrontDoorProtocol>> protocol;
 
     public Output<Either<String,FrontDoorProtocol>> getProtocol() {

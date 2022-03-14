@@ -9,7 +9,7 @@ import io.pulumi.azurenative.insights.outputs.RuleEmailActionResponse;
 import io.pulumi.azurenative.insights.outputs.RuleWebhookActionResponse;
 import io.pulumi.azurenative.insights.outputs.ThresholdRuleConditionResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -19,7 +19,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetAlertRuleResult {
     /**
      * action that is performed when the alert rule becomes active, and when an alert condition is resolved.
@@ -82,20 +82,20 @@ public final class GetAlertRuleResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetAlertRuleResult(
-        @OutputCustomType.Parameter("action") @Nullable Either<RuleEmailActionResponse,RuleWebhookActionResponse> action,
-        @OutputCustomType.Parameter("actions") @Nullable List<Either<RuleEmailActionResponse,RuleWebhookActionResponse>> actions,
-        @OutputCustomType.Parameter("condition") Object condition,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("isEnabled") Boolean isEnabled,
-        @OutputCustomType.Parameter("lastUpdatedTime") String lastUpdatedTime,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("provisioningState") @Nullable String provisioningState,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("action") @Nullable Either<RuleEmailActionResponse,RuleWebhookActionResponse> action,
+        @CustomType.Parameter("actions") @Nullable List<Either<RuleEmailActionResponse,RuleWebhookActionResponse>> actions,
+        @CustomType.Parameter("condition") Object condition,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("isEnabled") Boolean isEnabled,
+        @CustomType.Parameter("lastUpdatedTime") String lastUpdatedTime,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("provisioningState") @Nullable String provisioningState,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type) {
         this.action = action;
         this.actions = actions;
         this.condition = condition;

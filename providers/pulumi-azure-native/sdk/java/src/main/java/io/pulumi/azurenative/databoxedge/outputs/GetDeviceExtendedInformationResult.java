@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.databoxedge.outputs;
 
 import io.pulumi.azurenative.databoxedge.outputs.DeviceSecretsResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetDeviceExtendedInformationResult {
     /**
      * The name of Channel Integrity Key stored in the Client Key Vault
@@ -73,20 +73,20 @@ public final class GetDeviceExtendedInformationResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDeviceExtendedInformationResult(
-        @OutputCustomType.Parameter("channelIntegrityKeyName") @Nullable String channelIntegrityKeyName,
-        @OutputCustomType.Parameter("channelIntegrityKeyVersion") @Nullable String channelIntegrityKeyVersion,
-        @OutputCustomType.Parameter("clientSecretStoreId") @Nullable String clientSecretStoreId,
-        @OutputCustomType.Parameter("clientSecretStoreUrl") @Nullable String clientSecretStoreUrl,
-        @OutputCustomType.Parameter("deviceSecrets") DeviceSecretsResponse deviceSecrets,
-        @OutputCustomType.Parameter("encryptionKey") @Nullable String encryptionKey,
-        @OutputCustomType.Parameter("encryptionKeyThumbprint") @Nullable String encryptionKeyThumbprint,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("keyVaultSyncStatus") @Nullable String keyVaultSyncStatus,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("resourceKey") String resourceKey,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("channelIntegrityKeyName") @Nullable String channelIntegrityKeyName,
+        @CustomType.Parameter("channelIntegrityKeyVersion") @Nullable String channelIntegrityKeyVersion,
+        @CustomType.Parameter("clientSecretStoreId") @Nullable String clientSecretStoreId,
+        @CustomType.Parameter("clientSecretStoreUrl") @Nullable String clientSecretStoreUrl,
+        @CustomType.Parameter("deviceSecrets") DeviceSecretsResponse deviceSecrets,
+        @CustomType.Parameter("encryptionKey") @Nullable String encryptionKey,
+        @CustomType.Parameter("encryptionKeyThumbprint") @Nullable String encryptionKeyThumbprint,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("keyVaultSyncStatus") @Nullable String keyVaultSyncStatus,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("resourceKey") String resourceKey,
+        @CustomType.Parameter("type") String type) {
         this.channelIntegrityKeyName = channelIntegrityKeyName;
         this.channelIntegrityKeyVersion = channelIntegrityKeyVersion;
         this.clientSecretStoreId = clientSecretStoreId;

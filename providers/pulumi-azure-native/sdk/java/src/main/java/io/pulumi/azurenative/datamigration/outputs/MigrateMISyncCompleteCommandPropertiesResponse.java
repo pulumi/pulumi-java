@@ -6,14 +6,14 @@ package io.pulumi.azurenative.datamigration.outputs;
 import io.pulumi.azurenative.datamigration.outputs.MigrateMISyncCompleteCommandInputResponse;
 import io.pulumi.azurenative.datamigration.outputs.MigrateMISyncCompleteCommandOutputResponse;
 import io.pulumi.azurenative.datamigration.outputs.ODataErrorResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class MigrateMISyncCompleteCommandPropertiesResponse {
     /**
      * Command type.
@@ -42,13 +42,13 @@ public final class MigrateMISyncCompleteCommandPropertiesResponse {
      */
     private final String state;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MigrateMISyncCompleteCommandPropertiesResponse(
-        @OutputCustomType.Parameter("commandType") String commandType,
-        @OutputCustomType.Parameter("errors") List<ODataErrorResponse> errors,
-        @OutputCustomType.Parameter("input") @Nullable MigrateMISyncCompleteCommandInputResponse input,
-        @OutputCustomType.Parameter("output") MigrateMISyncCompleteCommandOutputResponse output,
-        @OutputCustomType.Parameter("state") String state) {
+        @CustomType.Parameter("commandType") String commandType,
+        @CustomType.Parameter("errors") List<ODataErrorResponse> errors,
+        @CustomType.Parameter("input") @Nullable MigrateMISyncCompleteCommandInputResponse input,
+        @CustomType.Parameter("output") MigrateMISyncCompleteCommandOutputResponse output,
+        @CustomType.Parameter("state") String state) {
         this.commandType = commandType;
         this.errors = errors;
         this.input = input;

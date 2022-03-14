@@ -7,14 +7,14 @@ import io.pulumi.azurenative.media.outputs.FilterTrackSelectionResponse;
 import io.pulumi.azurenative.media.outputs.FirstQualityResponse;
 import io.pulumi.azurenative.media.outputs.PresentationTimeRangeResponse;
 import io.pulumi.azurenative.media.outputs.SystemDataResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetAssetFilterResult {
     /**
      * The first quality.
@@ -52,15 +52,15 @@ public final class GetAssetFilterResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetAssetFilterResult(
-        @OutputCustomType.Parameter("firstQuality") @Nullable FirstQualityResponse firstQuality,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("presentationTimeRange") @Nullable PresentationTimeRangeResponse presentationTimeRange,
-        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
-        @OutputCustomType.Parameter("tracks") @Nullable List<FilterTrackSelectionResponse> tracks,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("firstQuality") @Nullable FirstQualityResponse firstQuality,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("presentationTimeRange") @Nullable PresentationTimeRangeResponse presentationTimeRange,
+        @CustomType.Parameter("systemData") SystemDataResponse systemData,
+        @CustomType.Parameter("tracks") @Nullable List<FilterTrackSelectionResponse> tracks,
+        @CustomType.Parameter("type") String type) {
         this.firstQuality = firstQuality;
         this.id = id;
         this.name = name;

@@ -12,7 +12,7 @@ import io.pulumi.azurenative.blueprint.outputs.ParameterValueResponse;
 import io.pulumi.azurenative.blueprint.outputs.ResourceGroupValueResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -40,7 +40,7 @@ public class Assignment extends io.pulumi.resources.CustomResource {
      * ID of the published version of a blueprint definition.
      * 
      */
-    @OutputExport(name="blueprintId", type=String.class, parameters={})
+    @Export(name="blueprintId", type=String.class, parameters={})
     private Output</* @Nullable */ String> blueprintId;
 
     /**
@@ -54,7 +54,7 @@ public class Assignment extends io.pulumi.resources.CustomResource {
      * Multi-line explain this resource.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -68,7 +68,7 @@ public class Assignment extends io.pulumi.resources.CustomResource {
      * One-liner string explain this resource.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output</* @Nullable */ String> displayName;
 
     /**
@@ -82,7 +82,7 @@ public class Assignment extends io.pulumi.resources.CustomResource {
      * Managed identity for this blueprint assignment.
      * 
      */
-    @OutputExport(name="identity", type=ManagedServiceIdentityResponse.class, parameters={})
+    @Export(name="identity", type=ManagedServiceIdentityResponse.class, parameters={})
     private Output<ManagedServiceIdentityResponse> identity;
 
     /**
@@ -96,7 +96,7 @@ public class Assignment extends io.pulumi.resources.CustomResource {
      * The location of this blueprint assignment.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -110,7 +110,7 @@ public class Assignment extends io.pulumi.resources.CustomResource {
      * Defines how resources deployed by a blueprint assignment are locked.
      * 
      */
-    @OutputExport(name="locks", type=AssignmentLockSettingsResponse.class, parameters={})
+    @Export(name="locks", type=AssignmentLockSettingsResponse.class, parameters={})
     private Output</* @Nullable */ AssignmentLockSettingsResponse> locks;
 
     /**
@@ -124,7 +124,7 @@ public class Assignment extends io.pulumi.resources.CustomResource {
      * Name of this resource.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -138,7 +138,7 @@ public class Assignment extends io.pulumi.resources.CustomResource {
      * Blueprint assignment parameter values.
      * 
      */
-    @OutputExport(name="parameters", type=Map.class, parameters={String.class, ParameterValueResponse.class})
+    @Export(name="parameters", type=Map.class, parameters={String.class, ParameterValueResponse.class})
     private Output<Map<String,ParameterValueResponse>> parameters;
 
     /**
@@ -152,7 +152,7 @@ public class Assignment extends io.pulumi.resources.CustomResource {
      * State of the blueprint assignment.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -166,7 +166,7 @@ public class Assignment extends io.pulumi.resources.CustomResource {
      * Names and locations of resource group placeholders.
      * 
      */
-    @OutputExport(name="resourceGroups", type=Map.class, parameters={String.class, ResourceGroupValueResponse.class})
+    @Export(name="resourceGroups", type=Map.class, parameters={String.class, ResourceGroupValueResponse.class})
     private Output<Map<String,ResourceGroupValueResponse>> resourceGroups;
 
     /**
@@ -180,7 +180,7 @@ public class Assignment extends io.pulumi.resources.CustomResource {
      * The target subscription scope of the blueprint assignment (format: '/subscriptions/{subscriptionId}'). For management group level assignments, the property is required.
      * 
      */
-    @OutputExport(name="scope", type=String.class, parameters={})
+    @Export(name="scope", type=String.class, parameters={})
     private Output</* @Nullable */ String> scope;
 
     /**
@@ -194,7 +194,7 @@ public class Assignment extends io.pulumi.resources.CustomResource {
      * Status of blueprint assignment. This field is readonly.
      * 
      */
-    @OutputExport(name="status", type=AssignmentStatusResponse.class, parameters={})
+    @Export(name="status", type=AssignmentStatusResponse.class, parameters={})
     private Output<AssignmentStatusResponse> status;
 
     /**
@@ -208,7 +208,7 @@ public class Assignment extends io.pulumi.resources.CustomResource {
      * Type of this resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

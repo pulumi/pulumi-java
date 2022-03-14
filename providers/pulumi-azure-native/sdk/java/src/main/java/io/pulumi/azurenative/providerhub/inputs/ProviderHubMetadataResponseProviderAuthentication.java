@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.providerhub.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -13,7 +13,7 @@ public final class ProviderHubMetadataResponseProviderAuthentication extends io.
 
     public static final ProviderHubMetadataResponseProviderAuthentication Empty = new ProviderHubMetadataResponseProviderAuthentication();
 
-    @InputImport(name="allowedAudiences", required=true)
+    @Import(name="allowedAudiences", required=true)
       private final List<String> allowedAudiences;
 
     public List<String> getAllowedAudiences() {

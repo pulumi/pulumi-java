@@ -9,7 +9,7 @@ import io.pulumi.azurenative.powerbidedicated.inputs.DedicatedCapacityAdministra
 import io.pulumi.azurenative.powerbidedicated.inputs.SystemDataArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class CapacityDetailsArgs extends io.pulumi.resources.ResourceArgs 
      * A collection of Dedicated capacity administrators
      * 
      */
-    @InputImport(name="administration")
+    @Import(name="administration")
       private final @Nullable Output<DedicatedCapacityAdministratorsArgs> administration;
 
     public Output<DedicatedCapacityAdministratorsArgs> getAdministration() {
@@ -35,7 +35,7 @@ public final class CapacityDetailsArgs extends io.pulumi.resources.ResourceArgs 
      * The name of the Dedicated capacity. It must be a minimum of 3 characters, and a maximum of 63.
      * 
      */
-    @InputImport(name="dedicatedCapacityName")
+    @Import(name="dedicatedCapacityName")
       private final @Nullable Output<String> dedicatedCapacityName;
 
     public Output<String> getDedicatedCapacityName() {
@@ -46,7 +46,7 @@ public final class CapacityDetailsArgs extends io.pulumi.resources.ResourceArgs 
      * Location of the PowerBI Dedicated resource.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -57,7 +57,7 @@ public final class CapacityDetailsArgs extends io.pulumi.resources.ResourceArgs 
      * Specifies the generation of the Power BI Embedded capacity. If no value is specified, the default value 'Gen2' is used. [Learn More](https://docs.microsoft.com/power-bi/developer/embedded/power-bi-embedded-generation-2)
      * 
      */
-    @InputImport(name="mode")
+    @Import(name="mode")
       private final @Nullable Output<Either<String,Mode>> mode;
 
     public Output<Either<String,Mode>> getMode() {
@@ -68,7 +68,7 @@ public final class CapacityDetailsArgs extends io.pulumi.resources.ResourceArgs 
      * The name of the Azure Resource group of which a given PowerBIDedicated capacity is part. This name must be at least 1 character in length, and no more than 90.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -79,7 +79,7 @@ public final class CapacityDetailsArgs extends io.pulumi.resources.ResourceArgs 
      * The SKU of the PowerBI Dedicated capacity resource.
      * 
      */
-    @InputImport(name="sku", required=true)
+    @Import(name="sku", required=true)
       private final Output<CapacitySkuArgs> sku;
 
     public Output<CapacitySkuArgs> getSku() {
@@ -90,7 +90,7 @@ public final class CapacityDetailsArgs extends io.pulumi.resources.ResourceArgs 
      * Metadata pertaining to creation and last modification of the resource.
      * 
      */
-    @InputImport(name="systemData")
+    @Import(name="systemData")
       private final @Nullable Output<SystemDataArgs> systemData;
 
     public Output<SystemDataArgs> getSystemData() {
@@ -101,7 +101,7 @@ public final class CapacityDetailsArgs extends io.pulumi.resources.ResourceArgs 
      * Key-value pairs of additional resource provisioning properties.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

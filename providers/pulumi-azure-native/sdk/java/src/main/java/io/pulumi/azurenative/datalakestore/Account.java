@@ -12,7 +12,7 @@ import io.pulumi.azurenative.datalakestore.outputs.TrustedIdProviderResponse;
 import io.pulumi.azurenative.datalakestore.outputs.VirtualNetworkRuleResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -40,7 +40,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * The unique identifier associated with this Data Lake Store account.
      * 
      */
-    @OutputExport(name="accountId", type=String.class, parameters={})
+    @Export(name="accountId", type=String.class, parameters={})
     private Output<String> accountId;
 
     /**
@@ -54,7 +54,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * The account creation time.
      * 
      */
-    @OutputExport(name="creationTime", type=String.class, parameters={})
+    @Export(name="creationTime", type=String.class, parameters={})
     private Output<String> creationTime;
 
     /**
@@ -68,7 +68,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * The commitment tier in use for the current month.
      * 
      */
-    @OutputExport(name="currentTier", type=String.class, parameters={})
+    @Export(name="currentTier", type=String.class, parameters={})
     private Output<String> currentTier;
 
     /**
@@ -82,7 +82,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * The default owner group for all new folders and files created in the Data Lake Store account.
      * 
      */
-    @OutputExport(name="defaultGroup", type=String.class, parameters={})
+    @Export(name="defaultGroup", type=String.class, parameters={})
     private Output<String> defaultGroup;
 
     /**
@@ -96,7 +96,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * The Key Vault encryption configuration.
      * 
      */
-    @OutputExport(name="encryptionConfig", type=EncryptionConfigResponse.class, parameters={})
+    @Export(name="encryptionConfig", type=EncryptionConfigResponse.class, parameters={})
     private Output<EncryptionConfigResponse> encryptionConfig;
 
     /**
@@ -110,7 +110,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * The current state of encryption provisioning for this Data Lake Store account.
      * 
      */
-    @OutputExport(name="encryptionProvisioningState", type=String.class, parameters={})
+    @Export(name="encryptionProvisioningState", type=String.class, parameters={})
     private Output<String> encryptionProvisioningState;
 
     /**
@@ -124,7 +124,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * The current state of encryption for this Data Lake Store account.
      * 
      */
-    @OutputExport(name="encryptionState", type=String.class, parameters={})
+    @Export(name="encryptionState", type=String.class, parameters={})
     private Output<String> encryptionState;
 
     /**
@@ -138,7 +138,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * The full CName endpoint for this account.
      * 
      */
-    @OutputExport(name="endpoint", type=String.class, parameters={})
+    @Export(name="endpoint", type=String.class, parameters={})
     private Output<String> endpoint;
 
     /**
@@ -152,7 +152,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * The current state of allowing or disallowing IPs originating within Azure through the firewall. If the firewall is disabled, this is not enforced.
      * 
      */
-    @OutputExport(name="firewallAllowAzureIps", type=String.class, parameters={})
+    @Export(name="firewallAllowAzureIps", type=String.class, parameters={})
     private Output<String> firewallAllowAzureIps;
 
     /**
@@ -166,7 +166,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * The list of firewall rules associated with this Data Lake Store account.
      * 
      */
-    @OutputExport(name="firewallRules", type=List.class, parameters={FirewallRuleResponse.class})
+    @Export(name="firewallRules", type=List.class, parameters={FirewallRuleResponse.class})
     private Output<List<FirewallRuleResponse>> firewallRules;
 
     /**
@@ -180,7 +180,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * The current state of the IP address firewall for this Data Lake Store account.
      * 
      */
-    @OutputExport(name="firewallState", type=String.class, parameters={})
+    @Export(name="firewallState", type=String.class, parameters={})
     private Output<String> firewallState;
 
     /**
@@ -194,7 +194,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * The Key Vault encryption identity, if any.
      * 
      */
-    @OutputExport(name="identity", type=EncryptionIdentityResponse.class, parameters={})
+    @Export(name="identity", type=EncryptionIdentityResponse.class, parameters={})
     private Output<EncryptionIdentityResponse> identity;
 
     /**
@@ -208,7 +208,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * The account last modified time.
      * 
      */
-    @OutputExport(name="lastModifiedTime", type=String.class, parameters={})
+    @Export(name="lastModifiedTime", type=String.class, parameters={})
     private Output<String> lastModifiedTime;
 
     /**
@@ -222,7 +222,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * The resource location.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -236,7 +236,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * The resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -250,7 +250,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * The commitment tier to use for next month.
      * 
      */
-    @OutputExport(name="newTier", type=String.class, parameters={})
+    @Export(name="newTier", type=String.class, parameters={})
     private Output<String> newTier;
 
     /**
@@ -264,7 +264,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * The provisioning status of the Data Lake Store account.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -278,7 +278,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * The state of the Data Lake Store account.
      * 
      */
-    @OutputExport(name="state", type=String.class, parameters={})
+    @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
@@ -292,7 +292,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * The resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tags;
 
     /**
@@ -306,7 +306,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * The current state of the trusted identity provider feature for this Data Lake Store account.
      * 
      */
-    @OutputExport(name="trustedIdProviderState", type=String.class, parameters={})
+    @Export(name="trustedIdProviderState", type=String.class, parameters={})
     private Output<String> trustedIdProviderState;
 
     /**
@@ -320,7 +320,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * The list of trusted identity providers associated with this Data Lake Store account.
      * 
      */
-    @OutputExport(name="trustedIdProviders", type=List.class, parameters={TrustedIdProviderResponse.class})
+    @Export(name="trustedIdProviders", type=List.class, parameters={TrustedIdProviderResponse.class})
     private Output<List<TrustedIdProviderResponse>> trustedIdProviders;
 
     /**
@@ -334,7 +334,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * The resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -348,7 +348,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * The list of virtual network rules associated with this Data Lake Store account.
      * 
      */
-    @OutputExport(name="virtualNetworkRules", type=List.class, parameters={VirtualNetworkRuleResponse.class})
+    @Export(name="virtualNetworkRules", type=List.class, parameters={VirtualNetworkRuleResponse.class})
     private Output<List<VirtualNetworkRuleResponse>> virtualNetworkRules;
 
     /**

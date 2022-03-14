@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.servicefabric.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CertificateDescriptionResponse {
     /**
      * Thumbprint of the primary certificate.
@@ -27,11 +27,11 @@ public final class CertificateDescriptionResponse {
      */
     private final @Nullable String x509StoreName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CertificateDescriptionResponse(
-        @OutputCustomType.Parameter("thumbprint") String thumbprint,
-        @OutputCustomType.Parameter("thumbprintSecondary") @Nullable String thumbprintSecondary,
-        @OutputCustomType.Parameter("x509StoreName") @Nullable String x509StoreName) {
+        @CustomType.Parameter("thumbprint") String thumbprint,
+        @CustomType.Parameter("thumbprintSecondary") @Nullable String thumbprintSecondary,
+        @CustomType.Parameter("x509StoreName") @Nullable String x509StoreName) {
         this.thumbprint = thumbprint;
         this.thumbprintSecondary = thumbprintSecondary;
         this.x509StoreName = x509StoreName;

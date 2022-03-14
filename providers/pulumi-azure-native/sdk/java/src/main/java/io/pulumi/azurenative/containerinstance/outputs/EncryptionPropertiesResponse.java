@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.containerinstance.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class EncryptionPropertiesResponse {
     /**
      * The encryption key name.
@@ -25,11 +25,11 @@ public final class EncryptionPropertiesResponse {
      */
     private final String vaultBaseUrl;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EncryptionPropertiesResponse(
-        @OutputCustomType.Parameter("keyName") String keyName,
-        @OutputCustomType.Parameter("keyVersion") String keyVersion,
-        @OutputCustomType.Parameter("vaultBaseUrl") String vaultBaseUrl) {
+        @CustomType.Parameter("keyName") String keyName,
+        @CustomType.Parameter("keyVersion") String keyVersion,
+        @CustomType.Parameter("vaultBaseUrl") String vaultBaseUrl) {
         this.keyName = keyName;
         this.keyVersion = keyVersion;
         this.vaultBaseUrl = vaultBaseUrl;

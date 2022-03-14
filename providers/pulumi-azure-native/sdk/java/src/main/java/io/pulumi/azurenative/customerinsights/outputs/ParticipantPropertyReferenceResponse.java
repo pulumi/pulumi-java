@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.customerinsights.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ParticipantPropertyReferenceResponse {
     /**
      * The source property that maps to the target property.
@@ -20,10 +20,10 @@ public final class ParticipantPropertyReferenceResponse {
      */
     private final String targetPropertyName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ParticipantPropertyReferenceResponse(
-        @OutputCustomType.Parameter("sourcePropertyName") String sourcePropertyName,
-        @OutputCustomType.Parameter("targetPropertyName") String targetPropertyName) {
+        @CustomType.Parameter("sourcePropertyName") String sourcePropertyName,
+        @CustomType.Parameter("targetPropertyName") String targetPropertyName) {
         this.sourcePropertyName = sourcePropertyName;
         this.targetPropertyName = targetPropertyName;
     }

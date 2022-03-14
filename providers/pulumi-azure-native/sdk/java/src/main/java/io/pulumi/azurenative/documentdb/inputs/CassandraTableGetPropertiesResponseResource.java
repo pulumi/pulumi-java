@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.documentdb.inputs;
 
 import io.pulumi.azurenative.documentdb.inputs.CassandraSchemaResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class CassandraTableGetPropertiesResponseResource extends io.pulumi
      * Analytical TTL.
      * 
      */
-    @InputImport(name="analyticalStorageTtl")
+    @Import(name="analyticalStorageTtl")
       private final @Nullable Integer analyticalStorageTtl;
 
     public Optional<Integer> getAnalyticalStorageTtl() {
@@ -32,7 +32,7 @@ public final class CassandraTableGetPropertiesResponseResource extends io.pulumi
      * Time to live of the Cosmos DB Cassandra table
      * 
      */
-    @InputImport(name="defaultTtl")
+    @Import(name="defaultTtl")
       private final @Nullable Integer defaultTtl;
 
     public Optional<Integer> getDefaultTtl() {
@@ -43,7 +43,7 @@ public final class CassandraTableGetPropertiesResponseResource extends io.pulumi
      * A system generated property representing the resource etag required for optimistic concurrency control.
      * 
      */
-    @InputImport(name="etag", required=true)
+    @Import(name="etag", required=true)
       private final String etag;
 
     public String getEtag() {
@@ -54,7 +54,7 @@ public final class CassandraTableGetPropertiesResponseResource extends io.pulumi
      * Name of the Cosmos DB Cassandra table
      * 
      */
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final String id;
 
     public String getId() {
@@ -65,7 +65,7 @@ public final class CassandraTableGetPropertiesResponseResource extends io.pulumi
      * A system generated property. A unique identifier.
      * 
      */
-    @InputImport(name="rid", required=true)
+    @Import(name="rid", required=true)
       private final String rid;
 
     public String getRid() {
@@ -76,7 +76,7 @@ public final class CassandraTableGetPropertiesResponseResource extends io.pulumi
      * Schema of the Cosmos DB Cassandra table
      * 
      */
-    @InputImport(name="schema")
+    @Import(name="schema")
       private final @Nullable CassandraSchemaResponse schema;
 
     public Optional<CassandraSchemaResponse> getSchema() {
@@ -87,7 +87,7 @@ public final class CassandraTableGetPropertiesResponseResource extends io.pulumi
      * A system generated property that denotes the last updated timestamp of the resource.
      * 
      */
-    @InputImport(name="ts", required=true)
+    @Import(name="ts", required=true)
       private final Double ts;
 
     public Double getTs() {

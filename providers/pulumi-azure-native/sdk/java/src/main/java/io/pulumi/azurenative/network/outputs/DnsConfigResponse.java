@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DnsConfigResponse {
     /**
      * The fully-qualified domain name (FQDN) of the Traffic Manager profile. This is formed from the concatenation of the RelativeName with the DNS domain used by Azure Traffic Manager.
@@ -28,11 +28,11 @@ public final class DnsConfigResponse {
      */
     private final @Nullable Double ttl;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DnsConfigResponse(
-        @OutputCustomType.Parameter("fqdn") String fqdn,
-        @OutputCustomType.Parameter("relativeName") @Nullable String relativeName,
-        @OutputCustomType.Parameter("ttl") @Nullable Double ttl) {
+        @CustomType.Parameter("fqdn") String fqdn,
+        @CustomType.Parameter("relativeName") @Nullable String relativeName,
+        @CustomType.Parameter("ttl") @Nullable Double ttl) {
         this.fqdn = fqdn;
         this.relativeName = relativeName;
         this.ttl = ttl;

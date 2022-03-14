@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.apimanagement.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetContentItemArgs extends io.pulumi.resources.InvokeArgs {
      * Content item identifier.
      * 
      */
-    @InputImport(name="contentItemId", required=true)
+    @Import(name="contentItemId", required=true)
       private final String contentItemId;
 
     public String getContentItemId() {
@@ -27,7 +27,7 @@ public final class GetContentItemArgs extends io.pulumi.resources.InvokeArgs {
      * Content type identifier.
      * 
      */
-    @InputImport(name="contentTypeId", required=true)
+    @Import(name="contentTypeId", required=true)
       private final String contentTypeId;
 
     public String getContentTypeId() {
@@ -38,7 +38,7 @@ public final class GetContentItemArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {
@@ -49,7 +49,7 @@ public final class GetContentItemArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the API Management service.
      * 
      */
-    @InputImport(name="serviceName", required=true)
+    @Import(name="serviceName", required=true)
       private final String serviceName;
 
     public String getServiceName() {

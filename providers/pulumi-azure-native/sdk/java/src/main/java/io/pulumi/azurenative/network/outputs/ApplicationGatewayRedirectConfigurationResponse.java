@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.SubResourceResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ApplicationGatewayRedirectConfigurationResponse {
     /**
      * A unique read-only string that changes whenever the resource is updated.
@@ -75,20 +75,20 @@ public final class ApplicationGatewayRedirectConfigurationResponse {
      */
     private final @Nullable List<SubResourceResponse> urlPathMaps;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ApplicationGatewayRedirectConfigurationResponse(
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("includePath") @Nullable Boolean includePath,
-        @OutputCustomType.Parameter("includeQueryString") @Nullable Boolean includeQueryString,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("pathRules") @Nullable List<SubResourceResponse> pathRules,
-        @OutputCustomType.Parameter("redirectType") @Nullable String redirectType,
-        @OutputCustomType.Parameter("requestRoutingRules") @Nullable List<SubResourceResponse> requestRoutingRules,
-        @OutputCustomType.Parameter("targetListener") @Nullable SubResourceResponse targetListener,
-        @OutputCustomType.Parameter("targetUrl") @Nullable String targetUrl,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("urlPathMaps") @Nullable List<SubResourceResponse> urlPathMaps) {
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("includePath") @Nullable Boolean includePath,
+        @CustomType.Parameter("includeQueryString") @Nullable Boolean includeQueryString,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("pathRules") @Nullable List<SubResourceResponse> pathRules,
+        @CustomType.Parameter("redirectType") @Nullable String redirectType,
+        @CustomType.Parameter("requestRoutingRules") @Nullable List<SubResourceResponse> requestRoutingRules,
+        @CustomType.Parameter("targetListener") @Nullable SubResourceResponse targetListener,
+        @CustomType.Parameter("targetUrl") @Nullable String targetUrl,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("urlPathMaps") @Nullable List<SubResourceResponse> urlPathMaps) {
         this.etag = etag;
         this.id = id;
         this.includePath = includePath;

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.securityinsights.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class IncidentAdditionalDataResponse extends io.pulumi.resources.In
      * List of product names of alerts in the incident
      * 
      */
-    @InputImport(name="alertProductNames", required=true)
+    @Import(name="alertProductNames", required=true)
       private final List<String> alertProductNames;
 
     public List<String> getAlertProductNames() {
@@ -33,7 +33,7 @@ public final class IncidentAdditionalDataResponse extends io.pulumi.resources.In
      * The number of alerts in the incident
      * 
      */
-    @InputImport(name="alertsCount", required=true)
+    @Import(name="alertsCount", required=true)
       private final Integer alertsCount;
 
     public Integer getAlertsCount() {
@@ -44,7 +44,7 @@ public final class IncidentAdditionalDataResponse extends io.pulumi.resources.In
      * The number of bookmarks in the incident
      * 
      */
-    @InputImport(name="bookmarksCount", required=true)
+    @Import(name="bookmarksCount", required=true)
       private final Integer bookmarksCount;
 
     public Integer getBookmarksCount() {
@@ -55,7 +55,7 @@ public final class IncidentAdditionalDataResponse extends io.pulumi.resources.In
      * The number of comments in the incident
      * 
      */
-    @InputImport(name="commentsCount", required=true)
+    @Import(name="commentsCount", required=true)
       private final Integer commentsCount;
 
     public Integer getCommentsCount() {
@@ -66,7 +66,7 @@ public final class IncidentAdditionalDataResponse extends io.pulumi.resources.In
      * The tactics associated with incident
      * 
      */
-    @InputImport(name="tactics", required=true)
+    @Import(name="tactics", required=true)
       private final List<String> tactics;
 
     public List<String> getTactics() {

@@ -9,7 +9,7 @@ import io.pulumi.azurenative.compute.outputs.InstanceViewStatusResponse;
 import io.pulumi.azurenative.compute.outputs.SubResourceWithColocationStatusResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -37,7 +37,7 @@ public class ProximityPlacementGroup extends io.pulumi.resources.CustomResource 
      * A list of references to all availability sets in the proximity placement group.
      * 
      */
-    @OutputExport(name="availabilitySets", type=List.class, parameters={SubResourceWithColocationStatusResponse.class})
+    @Export(name="availabilitySets", type=List.class, parameters={SubResourceWithColocationStatusResponse.class})
     private Output<List<SubResourceWithColocationStatusResponse>> availabilitySets;
 
     /**
@@ -51,7 +51,7 @@ public class ProximityPlacementGroup extends io.pulumi.resources.CustomResource 
      * Describes colocation status of the Proximity Placement Group.
      * 
      */
-    @OutputExport(name="colocationStatus", type=InstanceViewStatusResponse.class, parameters={})
+    @Export(name="colocationStatus", type=InstanceViewStatusResponse.class, parameters={})
     private Output</* @Nullable */ InstanceViewStatusResponse> colocationStatus;
 
     /**
@@ -65,7 +65,7 @@ public class ProximityPlacementGroup extends io.pulumi.resources.CustomResource 
      * Resource location
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -79,7 +79,7 @@ public class ProximityPlacementGroup extends io.pulumi.resources.CustomResource 
      * Resource name
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -93,7 +93,7 @@ public class ProximityPlacementGroup extends io.pulumi.resources.CustomResource 
      * Specifies the type of the proximity placement group. <br><br> Possible values are: <br><br> **Standard** : Co-locate resources within an Azure region or Availability Zone. <br><br> **Ultra** : For future use.
      * 
      */
-    @OutputExport(name="proximityPlacementGroupType", type=String.class, parameters={})
+    @Export(name="proximityPlacementGroupType", type=String.class, parameters={})
     private Output</* @Nullable */ String> proximityPlacementGroupType;
 
     /**
@@ -107,7 +107,7 @@ public class ProximityPlacementGroup extends io.pulumi.resources.CustomResource 
      * Resource tags
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -121,7 +121,7 @@ public class ProximityPlacementGroup extends io.pulumi.resources.CustomResource 
      * Resource type
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -135,7 +135,7 @@ public class ProximityPlacementGroup extends io.pulumi.resources.CustomResource 
      * A list of references to all virtual machine scale sets in the proximity placement group.
      * 
      */
-    @OutputExport(name="virtualMachineScaleSets", type=List.class, parameters={SubResourceWithColocationStatusResponse.class})
+    @Export(name="virtualMachineScaleSets", type=List.class, parameters={SubResourceWithColocationStatusResponse.class})
     private Output<List<SubResourceWithColocationStatusResponse>> virtualMachineScaleSets;
 
     /**
@@ -149,7 +149,7 @@ public class ProximityPlacementGroup extends io.pulumi.resources.CustomResource 
      * A list of references to all virtual machines in the proximity placement group.
      * 
      */
-    @OutputExport(name="virtualMachines", type=List.class, parameters={SubResourceWithColocationStatusResponse.class})
+    @Export(name="virtualMachines", type=List.class, parameters={SubResourceWithColocationStatusResponse.class})
     private Output<List<SubResourceWithColocationStatusResponse>> virtualMachines;
 
     /**

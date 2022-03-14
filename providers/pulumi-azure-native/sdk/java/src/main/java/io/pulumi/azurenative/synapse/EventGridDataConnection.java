@@ -8,7 +8,7 @@ import io.pulumi.azurenative.synapse.EventGridDataConnectionArgs;
 import io.pulumi.azurenative.synapse.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -36,7 +36,7 @@ public class EventGridDataConnection extends io.pulumi.resources.CustomResource 
      * The name of blob storage event type to process.
      * 
      */
-    @OutputExport(name="blobStorageEventType", type=String.class, parameters={})
+    @Export(name="blobStorageEventType", type=String.class, parameters={})
     private Output</* @Nullable */ String> blobStorageEventType;
 
     /**
@@ -50,7 +50,7 @@ public class EventGridDataConnection extends io.pulumi.resources.CustomResource 
      * The event hub consumer group.
      * 
      */
-    @OutputExport(name="consumerGroup", type=String.class, parameters={})
+    @Export(name="consumerGroup", type=String.class, parameters={})
     private Output<String> consumerGroup;
 
     /**
@@ -64,7 +64,7 @@ public class EventGridDataConnection extends io.pulumi.resources.CustomResource 
      * The data format of the message. Optionally the data format can be added to each message.
      * 
      */
-    @OutputExport(name="dataFormat", type=String.class, parameters={})
+    @Export(name="dataFormat", type=String.class, parameters={})
     private Output</* @Nullable */ String> dataFormat;
 
     /**
@@ -78,7 +78,7 @@ public class EventGridDataConnection extends io.pulumi.resources.CustomResource 
      * The resource ID where the event grid is configured to send events.
      * 
      */
-    @OutputExport(name="eventHubResourceId", type=String.class, parameters={})
+    @Export(name="eventHubResourceId", type=String.class, parameters={})
     private Output<String> eventHubResourceId;
 
     /**
@@ -92,7 +92,7 @@ public class EventGridDataConnection extends io.pulumi.resources.CustomResource 
      * A Boolean value that, if set to true, indicates that ingestion should ignore the first record of every file
      * 
      */
-    @OutputExport(name="ignoreFirstRecord", type=Boolean.class, parameters={})
+    @Export(name="ignoreFirstRecord", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> ignoreFirstRecord;
 
     /**
@@ -107,7 +107,7 @@ public class EventGridDataConnection extends io.pulumi.resources.CustomResource 
      * Expected value is 'EventGrid'.
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
     /**
@@ -122,7 +122,7 @@ public class EventGridDataConnection extends io.pulumi.resources.CustomResource 
      * Resource location.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -136,7 +136,7 @@ public class EventGridDataConnection extends io.pulumi.resources.CustomResource 
      * The mapping rule to be used to ingest the data. Optionally the mapping information can be added to each message.
      * 
      */
-    @OutputExport(name="mappingRuleName", type=String.class, parameters={})
+    @Export(name="mappingRuleName", type=String.class, parameters={})
     private Output</* @Nullable */ String> mappingRuleName;
 
     /**
@@ -150,7 +150,7 @@ public class EventGridDataConnection extends io.pulumi.resources.CustomResource 
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -164,7 +164,7 @@ public class EventGridDataConnection extends io.pulumi.resources.CustomResource 
      * The provisioned state of the resource.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -178,7 +178,7 @@ public class EventGridDataConnection extends io.pulumi.resources.CustomResource 
      * The resource ID of the storage account where the data resides.
      * 
      */
-    @OutputExport(name="storageAccountResourceId", type=String.class, parameters={})
+    @Export(name="storageAccountResourceId", type=String.class, parameters={})
     private Output<String> storageAccountResourceId;
 
     /**
@@ -192,7 +192,7 @@ public class EventGridDataConnection extends io.pulumi.resources.CustomResource 
      * Azure Resource Manager metadata containing createdBy and modifiedBy information.
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -206,7 +206,7 @@ public class EventGridDataConnection extends io.pulumi.resources.CustomResource 
      * The table where the data should be ingested. Optionally the table information can be added to each message.
      * 
      */
-    @OutputExport(name="tableName", type=String.class, parameters={})
+    @Export(name="tableName", type=String.class, parameters={})
     private Output</* @Nullable */ String> tableName;
 
     /**
@@ -220,7 +220,7 @@ public class EventGridDataConnection extends io.pulumi.resources.CustomResource 
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

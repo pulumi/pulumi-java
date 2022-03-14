@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.devtestlab.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class LabAnnouncementPropertiesResponse {
     /**
      * Is the lab announcement active/enabled at this time?
@@ -48,15 +48,15 @@ public final class LabAnnouncementPropertiesResponse {
      */
     private final String uniqueIdentifier;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LabAnnouncementPropertiesResponse(
-        @OutputCustomType.Parameter("enabled") @Nullable String enabled,
-        @OutputCustomType.Parameter("expirationDate") @Nullable String expirationDate,
-        @OutputCustomType.Parameter("expired") @Nullable Boolean expired,
-        @OutputCustomType.Parameter("markdown") @Nullable String markdown,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("title") @Nullable String title,
-        @OutputCustomType.Parameter("uniqueIdentifier") String uniqueIdentifier) {
+        @CustomType.Parameter("enabled") @Nullable String enabled,
+        @CustomType.Parameter("expirationDate") @Nullable String expirationDate,
+        @CustomType.Parameter("expired") @Nullable Boolean expired,
+        @CustomType.Parameter("markdown") @Nullable String markdown,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("title") @Nullable String title,
+        @CustomType.Parameter("uniqueIdentifier") String uniqueIdentifier) {
         this.enabled = enabled;
         this.expirationDate = expirationDate;
         this.expired = expired;

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.storage.inputs;
 
 import io.pulumi.azurenative.storage.inputs.TagFilterResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ManagementPolicyFilterResponse extends io.pulumi.resources.In
      * An array of blob index tag based filters, there can be at most 10 tag filters
      * 
      */
-    @InputImport(name="blobIndexMatch")
+    @Import(name="blobIndexMatch")
       private final @Nullable List<TagFilterResponse> blobIndexMatch;
 
     public List<TagFilterResponse> getBlobIndexMatch() {
@@ -35,7 +35,7 @@ public final class ManagementPolicyFilterResponse extends io.pulumi.resources.In
      * An array of predefined enum values. Currently blockBlob supports all tiering and delete actions. Only delete actions are supported for appendBlob.
      * 
      */
-    @InputImport(name="blobTypes", required=true)
+    @Import(name="blobTypes", required=true)
       private final List<String> blobTypes;
 
     public List<String> getBlobTypes() {
@@ -46,7 +46,7 @@ public final class ManagementPolicyFilterResponse extends io.pulumi.resources.In
      * An array of strings for prefixes to be match.
      * 
      */
-    @InputImport(name="prefixMatch")
+    @Import(name="prefixMatch")
       private final @Nullable List<String> prefixMatch;
 
     public List<String> getPrefixMatch() {

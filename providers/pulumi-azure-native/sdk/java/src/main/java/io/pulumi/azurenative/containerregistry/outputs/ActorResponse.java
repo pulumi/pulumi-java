@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.containerregistry.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ActorResponse {
     /**
      * The subject or username associated with the request context that generated the event.
@@ -17,8 +17,8 @@ public final class ActorResponse {
      */
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor
-    private ActorResponse(@OutputCustomType.Parameter("name") @Nullable String name) {
+    @CustomType.Constructor
+    private ActorResponse(@CustomType.Parameter("name") @Nullable String name) {
         this.name = name;
     }
 

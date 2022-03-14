@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.notificationhubs.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetNotificationHubAuthorizationRuleArgs extends io.pulumi.res
      * authorization rule name.
      * 
      */
-    @InputImport(name="authorizationRuleName", required=true)
+    @Import(name="authorizationRuleName", required=true)
       private final String authorizationRuleName;
 
     public String getAuthorizationRuleName() {
@@ -27,7 +27,7 @@ public final class GetNotificationHubAuthorizationRuleArgs extends io.pulumi.res
      * The namespace name
      * 
      */
-    @InputImport(name="namespaceName", required=true)
+    @Import(name="namespaceName", required=true)
       private final String namespaceName;
 
     public String getNamespaceName() {
@@ -38,7 +38,7 @@ public final class GetNotificationHubAuthorizationRuleArgs extends io.pulumi.res
      * The notification hub name.
      * 
      */
-    @InputImport(name="notificationHubName", required=true)
+    @Import(name="notificationHubName", required=true)
       private final String notificationHubName;
 
     public String getNotificationHubName() {
@@ -49,7 +49,7 @@ public final class GetNotificationHubAuthorizationRuleArgs extends io.pulumi.res
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {

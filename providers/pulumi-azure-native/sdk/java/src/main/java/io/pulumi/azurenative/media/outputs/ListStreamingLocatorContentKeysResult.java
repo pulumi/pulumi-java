@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.media.outputs;
 
 import io.pulumi.azurenative.media.outputs.StreamingLocatorContentKeyResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ListStreamingLocatorContentKeysResult {
     /**
      * ContentKeys used by current Streaming Locator
@@ -17,8 +17,8 @@ public final class ListStreamingLocatorContentKeysResult {
      */
     private final @Nullable List<StreamingLocatorContentKeyResponse> contentKeys;
 
-    @OutputCustomType.Constructor
-    private ListStreamingLocatorContentKeysResult(@OutputCustomType.Parameter("contentKeys") @Nullable List<StreamingLocatorContentKeyResponse> contentKeys) {
+    @CustomType.Constructor
+    private ListStreamingLocatorContentKeysResult(@CustomType.Parameter("contentKeys") @Nullable List<StreamingLocatorContentKeyResponse> contentKeys) {
         this.contentKeys = contentKeys;
     }
 

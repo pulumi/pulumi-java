@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.security.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class UserDefinedResourcesPropertiesArgs extends io.pulumi.resource
      * Azure Resource Graph query which represents the security solution's user defined resources. Required to start with "where type != "Microsoft.Devices/IotHubs""
      * 
      */
-    @InputImport(name="query", required=true)
+    @Import(name="query", required=true)
       private final Output<String> query;
 
     public Output<String> getQuery() {
@@ -33,7 +33,7 @@ public final class UserDefinedResourcesPropertiesArgs extends io.pulumi.resource
      * List of Azure subscription ids on which the user defined resources query should be executed.
      * 
      */
-    @InputImport(name="querySubscriptions", required=true)
+    @Import(name="querySubscriptions", required=true)
       private final Output<List<String>> querySubscriptions;
 
     public Output<List<String>> getQuerySubscriptions() {

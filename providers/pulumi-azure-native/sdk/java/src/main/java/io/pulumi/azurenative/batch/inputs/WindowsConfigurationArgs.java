@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.batch.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class WindowsConfigurationArgs extends io.pulumi.resources.Resource
      * If omitted, the default value is true.
      * 
      */
-    @InputImport(name="enableAutomaticUpdates")
+    @Import(name="enableAutomaticUpdates")
       private final @Nullable Output<Boolean> enableAutomaticUpdates;
 
     public Output<Boolean> getEnableAutomaticUpdates() {

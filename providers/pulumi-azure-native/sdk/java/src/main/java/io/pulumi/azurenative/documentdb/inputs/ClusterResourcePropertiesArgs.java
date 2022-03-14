@@ -9,7 +9,7 @@ import io.pulumi.azurenative.documentdb.inputs.CertificateArgs;
 import io.pulumi.azurenative.documentdb.inputs.SeedNodeArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -30,7 +30,7 @@ public final class ClusterResourcePropertiesArgs extends io.pulumi.resources.Res
      * Which authentication method Cassandra should use to authenticate clients. 'None' turns off authentication, so should not be used except in emergencies. 'Cassandra' is the default password based authentication. The default is 'Cassandra'.
      * 
      */
-    @InputImport(name="authenticationMethod")
+    @Import(name="authenticationMethod")
       private final @Nullable Output<Either<String,AuthenticationMethod>> authenticationMethod;
 
     public Output<Either<String,AuthenticationMethod>> getAuthenticationMethod() {
@@ -41,7 +41,7 @@ public final class ClusterResourcePropertiesArgs extends io.pulumi.resources.Res
      * Which version of Cassandra should this cluster converge to running (e.g., 3.11). When updated, the cluster may take some time to migrate to the new version.
      * 
      */
-    @InputImport(name="cassandraVersion")
+    @Import(name="cassandraVersion")
       private final @Nullable Output<String> cassandraVersion;
 
     public Output<String> getCassandraVersion() {
@@ -52,7 +52,7 @@ public final class ClusterResourcePropertiesArgs extends io.pulumi.resources.Res
      * List of TLS certificates used to authorize clients connecting to the cluster. All connections are TLS encrypted whether clientCertificates is set or not, but if clientCertificates is set, the managed Cassandra cluster will reject all connections not bearing a TLS client certificate that can be validated from one or more of the public certificates in this property.
      * 
      */
-    @InputImport(name="clientCertificates")
+    @Import(name="clientCertificates")
       private final @Nullable Output<List<CertificateArgs>> clientCertificates;
 
     public Output<List<CertificateArgs>> getClientCertificates() {
@@ -63,7 +63,7 @@ public final class ClusterResourcePropertiesArgs extends io.pulumi.resources.Res
      * If you need to set the clusterName property in cassandra.yaml to something besides the resource name of the cluster, set the value to use on this property.
      * 
      */
-    @InputImport(name="clusterNameOverride")
+    @Import(name="clusterNameOverride")
       private final @Nullable Output<String> clusterNameOverride;
 
     public Output<String> getClusterNameOverride() {
@@ -74,7 +74,7 @@ public final class ClusterResourcePropertiesArgs extends io.pulumi.resources.Res
      * Resource id of a subnet that this cluster's management service should have its network interface attached to. The subnet must be routable to all subnets that will be delegated to data centers. The resource id must be of the form '/subscriptions/<subscription id>/resourceGroups/<resource group>/providers/Microsoft.Network/virtualNetworks/<virtual network>/subnets/<subnet>'
      * 
      */
-    @InputImport(name="delegatedManagementSubnetId")
+    @Import(name="delegatedManagementSubnetId")
       private final @Nullable Output<String> delegatedManagementSubnetId;
 
     public Output<String> getDelegatedManagementSubnetId() {
@@ -85,7 +85,7 @@ public final class ClusterResourcePropertiesArgs extends io.pulumi.resources.Res
      * List of TLS certificates used to authorize gossip from unmanaged data centers. The TLS certificates of all nodes in unmanaged data centers must be verifiable using one of the certificates provided in this property.
      * 
      */
-    @InputImport(name="externalGossipCertificates")
+    @Import(name="externalGossipCertificates")
       private final @Nullable Output<List<CertificateArgs>> externalGossipCertificates;
 
     public Output<List<CertificateArgs>> getExternalGossipCertificates() {
@@ -96,7 +96,7 @@ public final class ClusterResourcePropertiesArgs extends io.pulumi.resources.Res
      * List of IP addresses of seed nodes in unmanaged data centers. These will be added to the seed node lists of all managed nodes.
      * 
      */
-    @InputImport(name="externalSeedNodes")
+    @Import(name="externalSeedNodes")
       private final @Nullable Output<List<SeedNodeArgs>> externalSeedNodes;
 
     public Output<List<SeedNodeArgs>> getExternalSeedNodes() {
@@ -107,7 +107,7 @@ public final class ClusterResourcePropertiesArgs extends io.pulumi.resources.Res
      * Number of hours to wait between taking a backup of the cluster. To disable backups, set this property to 0.
      * 
      */
-    @InputImport(name="hoursBetweenBackups")
+    @Import(name="hoursBetweenBackups")
       private final @Nullable Output<Integer> hoursBetweenBackups;
 
     public Output<Integer> getHoursBetweenBackups() {
@@ -118,7 +118,7 @@ public final class ClusterResourcePropertiesArgs extends io.pulumi.resources.Res
      * Initial password for clients connecting as admin to the cluster. Should be changed after cluster creation. Returns null on GET. This field only applies when the authenticationMethod field is 'Cassandra'.
      * 
      */
-    @InputImport(name="initialCassandraAdminPassword")
+    @Import(name="initialCassandraAdminPassword")
       private final @Nullable Output<String> initialCassandraAdminPassword;
 
     public Output<String> getInitialCassandraAdminPassword() {
@@ -129,7 +129,7 @@ public final class ClusterResourcePropertiesArgs extends io.pulumi.resources.Res
      * Hostname or IP address where the Prometheus endpoint containing data about the managed Cassandra nodes can be reached.
      * 
      */
-    @InputImport(name="prometheusEndpoint")
+    @Import(name="prometheusEndpoint")
       private final @Nullable Output<SeedNodeArgs> prometheusEndpoint;
 
     public Output<SeedNodeArgs> getPrometheusEndpoint() {
@@ -140,7 +140,7 @@ public final class ClusterResourcePropertiesArgs extends io.pulumi.resources.Res
      * The status of the resource at the time the operation was called.
      * 
      */
-    @InputImport(name="provisioningState")
+    @Import(name="provisioningState")
       private final @Nullable Output<Either<String,ManagedCassandraProvisioningState>> provisioningState;
 
     public Output<Either<String,ManagedCassandraProvisioningState>> getProvisioningState() {
@@ -151,7 +151,7 @@ public final class ClusterResourcePropertiesArgs extends io.pulumi.resources.Res
      * Should automatic repairs run on this cluster? If omitted, this is true, and should stay true unless you are running a hybrid cluster where you are already doing your own repairs.
      * 
      */
-    @InputImport(name="repairEnabled")
+    @Import(name="repairEnabled")
       private final @Nullable Output<Boolean> repairEnabled;
 
     public Output<Boolean> getRepairEnabled() {
@@ -162,7 +162,7 @@ public final class ClusterResourcePropertiesArgs extends io.pulumi.resources.Res
      * To create an empty cluster, omit this field or set it to null. To restore a backup into a new cluster, set this field to the resource id of the backup.
      * 
      */
-    @InputImport(name="restoreFromBackupId")
+    @Import(name="restoreFromBackupId")
       private final @Nullable Output<String> restoreFromBackupId;
 
     public Output<String> getRestoreFromBackupId() {

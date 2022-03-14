@@ -5,7 +5,7 @@ package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.azurenative.machinelearningservices.inputs.SparkMavenPackageArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class ModelEnvironmentDefinitionSparkArgs extends io.pulumi.resourc
      * The Spark packages to use.
      * 
      */
-    @InputImport(name="packages")
+    @Import(name="packages")
       private final @Nullable Output<List<SparkMavenPackageArgs>> packages;
 
     public Output<List<SparkMavenPackageArgs>> getPackages() {
@@ -36,7 +36,7 @@ public final class ModelEnvironmentDefinitionSparkArgs extends io.pulumi.resourc
      * Whether to precache the packages.
      * 
      */
-    @InputImport(name="precachePackages")
+    @Import(name="precachePackages")
       private final @Nullable Output<Boolean> precachePackages;
 
     public Output<Boolean> getPrecachePackages() {
@@ -47,7 +47,7 @@ public final class ModelEnvironmentDefinitionSparkArgs extends io.pulumi.resourc
      * The list of spark repositories.
      * 
      */
-    @InputImport(name="repositories")
+    @Import(name="repositories")
       private final @Nullable Output<List<String>> repositories;
 
     public Output<List<String>> getRepositories() {

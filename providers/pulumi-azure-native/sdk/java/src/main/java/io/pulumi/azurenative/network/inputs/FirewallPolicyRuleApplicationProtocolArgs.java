@@ -6,7 +6,7 @@ package io.pulumi.azurenative.network.inputs;
 import io.pulumi.azurenative.network.enums.FirewallPolicyRuleApplicationProtocolType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class FirewallPolicyRuleApplicationProtocolArgs extends io.pulumi.r
      * Port number for the protocol, cannot be greater than 64000.
      * 
      */
-    @InputImport(name="port")
+    @Import(name="port")
       private final @Nullable Output<Integer> port;
 
     public Output<Integer> getPort() {
@@ -36,7 +36,7 @@ public final class FirewallPolicyRuleApplicationProtocolArgs extends io.pulumi.r
      * Protocol type.
      * 
      */
-    @InputImport(name="protocolType")
+    @Import(name="protocolType")
       private final @Nullable Output<Either<String,FirewallPolicyRuleApplicationProtocolType>> protocolType;
 
     public Output<Either<String,FirewallPolicyRuleApplicationProtocolType>> getProtocolType() {

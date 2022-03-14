@@ -3,12 +3,12 @@
 
 package io.pulumi.azurenative.securityinsights.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class TimelineAggregationResponse {
     /**
      * the total items found for a kind
@@ -21,10 +21,10 @@ public final class TimelineAggregationResponse {
      */
     private final String kind;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TimelineAggregationResponse(
-        @OutputCustomType.Parameter("count") Integer count,
-        @OutputCustomType.Parameter("kind") String kind) {
+        @CustomType.Parameter("count") Integer count,
+        @CustomType.Parameter("kind") String kind) {
         this.count = count;
         this.kind = kind;
     }

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.videoanalyzer.inputs;
 import io.pulumi.azurenative.videoanalyzer.enums.VideoScaleMode;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class VideoScaleArgs extends io.pulumi.resources.ResourceArgs {
      * The desired output video height.
      * 
      */
-    @InputImport(name="height")
+    @Import(name="height")
       private final @Nullable Output<String> height;
 
     public Output<String> getHeight() {
@@ -35,7 +35,7 @@ public final class VideoScaleArgs extends io.pulumi.resources.ResourceArgs {
      * Describes the video scaling mode to be applied. Default mode is 'Pad'. If the mode is 'Pad' or 'Stretch' then both width and height must be specified. Else if the mode is 'PreserveAspectRatio' then only one of width or height need be provided.
      * 
      */
-    @InputImport(name="mode")
+    @Import(name="mode")
       private final @Nullable Output<Either<String,VideoScaleMode>> mode;
 
     public Output<Either<String,VideoScaleMode>> getMode() {
@@ -46,7 +46,7 @@ public final class VideoScaleArgs extends io.pulumi.resources.ResourceArgs {
      * The desired output video width.
      * 
      */
-    @InputImport(name="width")
+    @Import(name="width")
       private final @Nullable Output<String> width;
 
     public Output<String> getWidth() {

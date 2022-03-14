@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.sql.WorkloadClassifierArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -34,7 +34,7 @@ public class WorkloadClassifier extends io.pulumi.resources.CustomResource {
      * The workload classifier context.
      * 
      */
-    @OutputExport(name="context", type=String.class, parameters={})
+    @Export(name="context", type=String.class, parameters={})
     private Output</* @Nullable */ String> context;
 
     /**
@@ -48,7 +48,7 @@ public class WorkloadClassifier extends io.pulumi.resources.CustomResource {
      * The workload classifier end time for classification.
      * 
      */
-    @OutputExport(name="endTime", type=String.class, parameters={})
+    @Export(name="endTime", type=String.class, parameters={})
     private Output</* @Nullable */ String> endTime;
 
     /**
@@ -62,7 +62,7 @@ public class WorkloadClassifier extends io.pulumi.resources.CustomResource {
      * The workload classifier importance.
      * 
      */
-    @OutputExport(name="importance", type=String.class, parameters={})
+    @Export(name="importance", type=String.class, parameters={})
     private Output</* @Nullable */ String> importance;
 
     /**
@@ -76,7 +76,7 @@ public class WorkloadClassifier extends io.pulumi.resources.CustomResource {
      * The workload classifier label.
      * 
      */
-    @OutputExport(name="label", type=String.class, parameters={})
+    @Export(name="label", type=String.class, parameters={})
     private Output</* @Nullable */ String> label;
 
     /**
@@ -90,7 +90,7 @@ public class WorkloadClassifier extends io.pulumi.resources.CustomResource {
      * The workload classifier member name.
      * 
      */
-    @OutputExport(name="memberName", type=String.class, parameters={})
+    @Export(name="memberName", type=String.class, parameters={})
     private Output<String> memberName;
 
     /**
@@ -104,7 +104,7 @@ public class WorkloadClassifier extends io.pulumi.resources.CustomResource {
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -118,7 +118,7 @@ public class WorkloadClassifier extends io.pulumi.resources.CustomResource {
      * The workload classifier start time for classification.
      * 
      */
-    @OutputExport(name="startTime", type=String.class, parameters={})
+    @Export(name="startTime", type=String.class, parameters={})
     private Output</* @Nullable */ String> startTime;
 
     /**
@@ -132,7 +132,7 @@ public class WorkloadClassifier extends io.pulumi.resources.CustomResource {
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

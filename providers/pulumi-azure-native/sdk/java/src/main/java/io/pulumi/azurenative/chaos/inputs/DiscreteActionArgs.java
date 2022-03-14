@@ -5,7 +5,7 @@ package io.pulumi.azurenative.chaos.inputs;
 
 import io.pulumi.azurenative.chaos.inputs.KeyValuePairArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class DiscreteActionArgs extends io.pulumi.resources.ResourceArgs {
      * String that represents a Capability URN.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -34,7 +34,7 @@ public final class DiscreteActionArgs extends io.pulumi.resources.ResourceArgs {
      * List of key value pairs.
      * 
      */
-    @InputImport(name="parameters", required=true)
+    @Import(name="parameters", required=true)
       private final Output<List<KeyValuePairArgs>> parameters;
 
     public Output<List<KeyValuePairArgs>> getParameters() {
@@ -45,7 +45,7 @@ public final class DiscreteActionArgs extends io.pulumi.resources.ResourceArgs {
      * String that represents a selector.
      * 
      */
-    @InputImport(name="selectorId", required=true)
+    @Import(name="selectorId", required=true)
       private final Output<String> selectorId;
 
     public Output<String> getSelectorId() {
@@ -57,7 +57,7 @@ public final class DiscreteActionArgs extends io.pulumi.resources.ResourceArgs {
      * Expected value is 'discrete'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {

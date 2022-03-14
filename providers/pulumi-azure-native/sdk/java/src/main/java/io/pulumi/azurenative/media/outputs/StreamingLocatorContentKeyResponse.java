@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.media.outputs;
 
 import io.pulumi.azurenative.media.outputs.TrackSelectionResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class StreamingLocatorContentKeyResponse {
     /**
      * ID of Content Key
@@ -44,14 +44,14 @@ public final class StreamingLocatorContentKeyResponse {
      */
     private final @Nullable String value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private StreamingLocatorContentKeyResponse(
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("labelReferenceInStreamingPolicy") @Nullable String labelReferenceInStreamingPolicy,
-        @OutputCustomType.Parameter("policyName") String policyName,
-        @OutputCustomType.Parameter("tracks") List<TrackSelectionResponse> tracks,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("value") @Nullable String value) {
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("labelReferenceInStreamingPolicy") @Nullable String labelReferenceInStreamingPolicy,
+        @CustomType.Parameter("policyName") String policyName,
+        @CustomType.Parameter("tracks") List<TrackSelectionResponse> tracks,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("value") @Nullable String value) {
         this.id = id;
         this.labelReferenceInStreamingPolicy = labelReferenceInStreamingPolicy;
         this.policyName = policyName;

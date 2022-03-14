@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.hybridnetwork.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DataDiskResponse {
     /**
      * Specifies how the virtual machine should be created.
@@ -28,11 +28,11 @@ public final class DataDiskResponse {
      */
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DataDiskResponse(
-        @OutputCustomType.Parameter("createOption") @Nullable String createOption,
-        @OutputCustomType.Parameter("diskSizeGB") @Nullable Integer diskSizeGB,
-        @OutputCustomType.Parameter("name") @Nullable String name) {
+        @CustomType.Parameter("createOption") @Nullable String createOption,
+        @CustomType.Parameter("diskSizeGB") @Nullable Integer diskSizeGB,
+        @CustomType.Parameter("name") @Nullable String name) {
         this.createOption = createOption;
         this.diskSizeGB = diskSizeGB;
         this.name = name;

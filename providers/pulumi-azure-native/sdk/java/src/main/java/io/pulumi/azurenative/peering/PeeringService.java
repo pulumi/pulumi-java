@@ -8,7 +8,7 @@ import io.pulumi.azurenative.peering.PeeringServiceArgs;
 import io.pulumi.azurenative.peering.outputs.PeeringServiceSkuResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -36,7 +36,7 @@ public class PeeringService extends io.pulumi.resources.CustomResource {
      * The location of the resource.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -50,7 +50,7 @@ public class PeeringService extends io.pulumi.resources.CustomResource {
      * The name of the resource.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -64,7 +64,7 @@ public class PeeringService extends io.pulumi.resources.CustomResource {
      * The location (state/province) of the customer.
      * 
      */
-    @OutputExport(name="peeringServiceLocation", type=String.class, parameters={})
+    @Export(name="peeringServiceLocation", type=String.class, parameters={})
     private Output</* @Nullable */ String> peeringServiceLocation;
 
     /**
@@ -78,7 +78,7 @@ public class PeeringService extends io.pulumi.resources.CustomResource {
      * The name of the service provider.
      * 
      */
-    @OutputExport(name="peeringServiceProvider", type=String.class, parameters={})
+    @Export(name="peeringServiceProvider", type=String.class, parameters={})
     private Output</* @Nullable */ String> peeringServiceProvider;
 
     /**
@@ -92,7 +92,7 @@ public class PeeringService extends io.pulumi.resources.CustomResource {
      * The backup peering (Microsoft/service provider) location to be used for customer traffic.
      * 
      */
-    @OutputExport(name="providerBackupPeeringLocation", type=String.class, parameters={})
+    @Export(name="providerBackupPeeringLocation", type=String.class, parameters={})
     private Output</* @Nullable */ String> providerBackupPeeringLocation;
 
     /**
@@ -106,7 +106,7 @@ public class PeeringService extends io.pulumi.resources.CustomResource {
      * The primary peering (Microsoft/service provider) location to be used for customer traffic.
      * 
      */
-    @OutputExport(name="providerPrimaryPeeringLocation", type=String.class, parameters={})
+    @Export(name="providerPrimaryPeeringLocation", type=String.class, parameters={})
     private Output</* @Nullable */ String> providerPrimaryPeeringLocation;
 
     /**
@@ -120,7 +120,7 @@ public class PeeringService extends io.pulumi.resources.CustomResource {
      * The provisioning state of the resource.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -134,7 +134,7 @@ public class PeeringService extends io.pulumi.resources.CustomResource {
      * The SKU that defines the type of the peering service.
      * 
      */
-    @OutputExport(name="sku", type=PeeringServiceSkuResponse.class, parameters={})
+    @Export(name="sku", type=PeeringServiceSkuResponse.class, parameters={})
     private Output</* @Nullable */ PeeringServiceSkuResponse> sku;
 
     /**
@@ -148,7 +148,7 @@ public class PeeringService extends io.pulumi.resources.CustomResource {
      * The resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -162,7 +162,7 @@ public class PeeringService extends io.pulumi.resources.CustomResource {
      * The type of the resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

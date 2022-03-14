@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class AgentDiskDetailsResponse extends io.pulumi.resources.InvokeAr
      * The disk capacity in bytes.
      * 
      */
-    @InputImport(name="capacityInBytes", required=true)
+    @Import(name="capacityInBytes", required=true)
       private final Double capacityInBytes;
 
     public Double getCapacityInBytes() {
@@ -33,7 +33,7 @@ public final class AgentDiskDetailsResponse extends io.pulumi.resources.InvokeAr
      * The disk Id.
      * 
      */
-    @InputImport(name="diskId", required=true)
+    @Import(name="diskId", required=true)
       private final String diskId;
 
     public String getDiskId() {
@@ -44,7 +44,7 @@ public final class AgentDiskDetailsResponse extends io.pulumi.resources.InvokeAr
      * The disk name.
      * 
      */
-    @InputImport(name="diskName", required=true)
+    @Import(name="diskName", required=true)
       private final String diskName;
 
     public String getDiskName() {
@@ -55,7 +55,7 @@ public final class AgentDiskDetailsResponse extends io.pulumi.resources.InvokeAr
      * A value indicating whether the disk is the OS disk.
      * 
      */
-    @InputImport(name="isOSDisk", required=true)
+    @Import(name="isOSDisk", required=true)
       private final String isOSDisk;
 
     public String getIsOSDisk() {
@@ -66,7 +66,7 @@ public final class AgentDiskDetailsResponse extends io.pulumi.resources.InvokeAr
      * The lun of disk.
      * 
      */
-    @InputImport(name="lunId", required=true)
+    @Import(name="lunId", required=true)
       private final Integer lunId;
 
     public Integer getLunId() {

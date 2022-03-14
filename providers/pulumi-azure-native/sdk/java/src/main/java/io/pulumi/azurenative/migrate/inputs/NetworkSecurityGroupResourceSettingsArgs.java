@@ -5,7 +5,7 @@ package io.pulumi.azurenative.migrate.inputs;
 
 import io.pulumi.azurenative.migrate.inputs.NsgSecurityRuleArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class NetworkSecurityGroupResourceSettingsArgs extends io.pulumi.re
      * Expected value is 'Microsoft.Network/networkSecurityGroups'.
      * 
      */
-    @InputImport(name="resourceType", required=true)
+    @Import(name="resourceType", required=true)
       private final Output<String> resourceType;
 
     public Output<String> getPropResourceType() {
@@ -36,7 +36,7 @@ public final class NetworkSecurityGroupResourceSettingsArgs extends io.pulumi.re
      * Gets or sets Security rules of network security group.
      * 
      */
-    @InputImport(name="securityRules")
+    @Import(name="securityRules")
       private final @Nullable Output<List<NsgSecurityRuleArgs>> securityRules;
 
     public Output<List<NsgSecurityRuleArgs>> getSecurityRules() {
@@ -47,7 +47,7 @@ public final class NetworkSecurityGroupResourceSettingsArgs extends io.pulumi.re
      * Gets or sets the target Resource name.
      * 
      */
-    @InputImport(name="targetResourceName", required=true)
+    @Import(name="targetResourceName", required=true)
       private final Output<String> targetResourceName;
 
     public Output<String> getTargetResourceName() {

@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.botservice.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FacebookPageResponse {
     /**
      * Facebook application access token. Value only returned through POST to the action Channel List API, otherwise empty.
@@ -22,10 +22,10 @@ public final class FacebookPageResponse {
      */
     private final String id;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FacebookPageResponse(
-        @OutputCustomType.Parameter("accessToken") @Nullable String accessToken,
-        @OutputCustomType.Parameter("id") String id) {
+        @CustomType.Parameter("accessToken") @Nullable String accessToken,
+        @CustomType.Parameter("id") String id) {
         this.accessToken = accessToken;
         this.id = id;
     }

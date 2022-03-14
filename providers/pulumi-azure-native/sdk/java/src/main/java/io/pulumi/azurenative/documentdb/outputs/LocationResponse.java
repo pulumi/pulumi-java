@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.documentdb.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class LocationResponse {
     /**
      * The connection endpoint for the specific region. Example: https://&lt;accountName&gt;-&lt;locationName&gt;.documents.azure.com:443/
@@ -44,14 +44,14 @@ public final class LocationResponse {
      */
     private final String provisioningState;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LocationResponse(
-        @OutputCustomType.Parameter("documentEndpoint") String documentEndpoint,
-        @OutputCustomType.Parameter("failoverPriority") @Nullable Integer failoverPriority,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("isZoneRedundant") @Nullable Boolean isZoneRedundant,
-        @OutputCustomType.Parameter("locationName") @Nullable String locationName,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState) {
+        @CustomType.Parameter("documentEndpoint") String documentEndpoint,
+        @CustomType.Parameter("failoverPriority") @Nullable Integer failoverPriority,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("isZoneRedundant") @Nullable Boolean isZoneRedundant,
+        @CustomType.Parameter("locationName") @Nullable String locationName,
+        @CustomType.Parameter("provisioningState") String provisioningState) {
         this.documentEndpoint = documentEndpoint;
         this.failoverPriority = failoverPriority;
         this.id = id;

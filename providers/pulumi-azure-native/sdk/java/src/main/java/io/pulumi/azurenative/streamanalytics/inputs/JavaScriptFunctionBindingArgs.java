@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.streamanalytics.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class JavaScriptFunctionBindingArgs extends io.pulumi.resources.Res
      * The JavaScript code containing a single function definition. For example: 'function (x, y) { return x + y; }'
      * 
      */
-    @InputImport(name="script")
+    @Import(name="script")
       private final @Nullable Output<String> script;
 
     public Output<String> getScript() {
@@ -34,7 +34,7 @@ public final class JavaScriptFunctionBindingArgs extends io.pulumi.resources.Res
      * Expected value is 'Microsoft.StreamAnalytics/JavascriptUdf'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {

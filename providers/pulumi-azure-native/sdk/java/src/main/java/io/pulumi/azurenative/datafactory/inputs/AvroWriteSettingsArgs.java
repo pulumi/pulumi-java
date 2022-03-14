@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class AvroWriteSettingsArgs extends io.pulumi.resources.ResourceArg
      * Specifies the file name pattern <fileNamePrefix>_<fileIndex>.<fileExtension> when copy from non-file based store without partitionOptions. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="fileNamePrefix")
+    @Import(name="fileNamePrefix")
       private final @Nullable Output<Object> fileNamePrefix;
 
     public Output<Object> getFileNamePrefix() {
@@ -34,7 +34,7 @@ public final class AvroWriteSettingsArgs extends io.pulumi.resources.ResourceArg
      * Limit the written file's row count to be smaller than or equal to the specified count. Type: integer (or Expression with resultType integer).
      * 
      */
-    @InputImport(name="maxRowsPerFile")
+    @Import(name="maxRowsPerFile")
       private final @Nullable Output<Object> maxRowsPerFile;
 
     public Output<Object> getMaxRowsPerFile() {
@@ -45,7 +45,7 @@ public final class AvroWriteSettingsArgs extends io.pulumi.resources.ResourceArg
      * Top level record name in write result, which is required in AVRO spec.
      * 
      */
-    @InputImport(name="recordName")
+    @Import(name="recordName")
       private final @Nullable Output<String> recordName;
 
     public Output<String> getRecordName() {
@@ -56,7 +56,7 @@ public final class AvroWriteSettingsArgs extends io.pulumi.resources.ResourceArg
      * Record namespace in the write result.
      * 
      */
-    @InputImport(name="recordNamespace")
+    @Import(name="recordNamespace")
       private final @Nullable Output<String> recordNamespace;
 
     public Output<String> getRecordNamespace() {
@@ -68,7 +68,7 @@ public final class AvroWriteSettingsArgs extends io.pulumi.resources.ResourceArg
      * Expected value is 'AvroWriteSettings'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {

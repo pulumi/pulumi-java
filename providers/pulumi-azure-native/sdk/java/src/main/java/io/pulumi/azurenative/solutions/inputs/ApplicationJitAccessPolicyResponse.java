@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.solutions.inputs;
 
 import io.pulumi.azurenative.solutions.inputs.JitApproverDefinitionResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class ApplicationJitAccessPolicyResponse extends io.pulumi.resource
      * Whether the JIT access is enabled.
      * 
      */
-    @InputImport(name="jitAccessEnabled", required=true)
+    @Import(name="jitAccessEnabled", required=true)
       private final Boolean jitAccessEnabled;
 
     public Boolean getJitAccessEnabled() {
@@ -36,7 +36,7 @@ public final class ApplicationJitAccessPolicyResponse extends io.pulumi.resource
      * JIT approval mode.
      * 
      */
-    @InputImport(name="jitApprovalMode")
+    @Import(name="jitApprovalMode")
       private final @Nullable String jitApprovalMode;
 
     public Optional<String> getJitApprovalMode() {
@@ -47,7 +47,7 @@ public final class ApplicationJitAccessPolicyResponse extends io.pulumi.resource
      * The JIT approvers
      * 
      */
-    @InputImport(name="jitApprovers")
+    @Import(name="jitApprovers")
       private final @Nullable List<JitApproverDefinitionResponse> jitApprovers;
 
     public List<JitApproverDefinitionResponse> getJitApprovers() {
@@ -58,7 +58,7 @@ public final class ApplicationJitAccessPolicyResponse extends io.pulumi.resource
      * The maximum duration JIT access is granted. This is an ISO8601 time period value.
      * 
      */
-    @InputImport(name="maximumJitAccessDuration")
+    @Import(name="maximumJitAccessDuration")
       private final @Nullable String maximumJitAccessDuration;
 
     public Optional<String> getMaximumJitAccessDuration() {

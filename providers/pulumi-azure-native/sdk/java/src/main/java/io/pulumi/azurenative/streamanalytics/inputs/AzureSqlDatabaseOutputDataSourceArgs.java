@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.streamanalytics.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class AzureSqlDatabaseOutputDataSourceArgs extends io.pulumi.resour
      * The name of the Azure SQL database. Required on PUT (CreateOrReplace) requests.
      * 
      */
-    @InputImport(name="database")
+    @Import(name="database")
       private final @Nullable Output<String> database;
 
     public Output<String> getDatabase() {
@@ -33,7 +33,7 @@ public final class AzureSqlDatabaseOutputDataSourceArgs extends io.pulumi.resour
      * The password that will be used to connect to the Azure SQL database. Required on PUT (CreateOrReplace) requests.
      * 
      */
-    @InputImport(name="password")
+    @Import(name="password")
       private final @Nullable Output<String> password;
 
     public Output<String> getPassword() {
@@ -44,7 +44,7 @@ public final class AzureSqlDatabaseOutputDataSourceArgs extends io.pulumi.resour
      * The name of the SQL server containing the Azure SQL database. Required on PUT (CreateOrReplace) requests.
      * 
      */
-    @InputImport(name="server")
+    @Import(name="server")
       private final @Nullable Output<String> server;
 
     public Output<String> getServer() {
@@ -55,7 +55,7 @@ public final class AzureSqlDatabaseOutputDataSourceArgs extends io.pulumi.resour
      * The name of the table in the Azure SQL database. Required on PUT (CreateOrReplace) requests.
      * 
      */
-    @InputImport(name="table")
+    @Import(name="table")
       private final @Nullable Output<String> table;
 
     public Output<String> getTable() {
@@ -67,7 +67,7 @@ public final class AzureSqlDatabaseOutputDataSourceArgs extends io.pulumi.resour
      * Expected value is 'Microsoft.Sql/Server/Database'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {
@@ -78,7 +78,7 @@ public final class AzureSqlDatabaseOutputDataSourceArgs extends io.pulumi.resour
      * The user name that will be used to connect to the Azure SQL database. Required on PUT (CreateOrReplace) requests.
      * 
      */
-    @InputImport(name="user")
+    @Import(name="user")
       private final @Nullable Output<String> user;
 
     public Output<String> getUser() {

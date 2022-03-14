@@ -10,7 +10,7 @@ import io.pulumi.azurenative.dataprotection.enums.WeekNumber;
 import io.pulumi.azurenative.dataprotection.inputs.DayArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -30,7 +30,7 @@ public final class ScheduleBasedBackupCriteriaArgs extends io.pulumi.resources.R
      * and should be part of AbsoluteMarker enum
      * 
      */
-    @InputImport(name="absoluteCriteria")
+    @Import(name="absoluteCriteria")
       private final @Nullable Output<List<Either<String,AbsoluteMarker>>> absoluteCriteria;
 
     public Output<List<Either<String,AbsoluteMarker>>> getAbsoluteCriteria() {
@@ -41,7 +41,7 @@ public final class ScheduleBasedBackupCriteriaArgs extends io.pulumi.resources.R
      * This is day of the month from 1 to 28 other wise last of month
      * 
      */
-    @InputImport(name="daysOfMonth")
+    @Import(name="daysOfMonth")
       private final @Nullable Output<List<DayArgs>> daysOfMonth;
 
     public Output<List<DayArgs>> getDaysOfMonth() {
@@ -52,7 +52,7 @@ public final class ScheduleBasedBackupCriteriaArgs extends io.pulumi.resources.R
      * It should be Sunday/Monday/T..../Saturday
      * 
      */
-    @InputImport(name="daysOfTheWeek")
+    @Import(name="daysOfTheWeek")
       private final @Nullable Output<List<Either<String,DayOfWeek>>> daysOfTheWeek;
 
     public Output<List<Either<String,DayOfWeek>>> getDaysOfTheWeek() {
@@ -63,7 +63,7 @@ public final class ScheduleBasedBackupCriteriaArgs extends io.pulumi.resources.R
      * It should be January/February/....../December
      * 
      */
-    @InputImport(name="monthsOfYear")
+    @Import(name="monthsOfYear")
       private final @Nullable Output<List<Either<String,Month>>> monthsOfYear;
 
     public Output<List<Either<String,Month>>> getMonthsOfYear() {
@@ -75,7 +75,7 @@ public final class ScheduleBasedBackupCriteriaArgs extends io.pulumi.resources.R
      * Expected value is 'ScheduleBasedBackupCriteria'.
      * 
      */
-    @InputImport(name="objectType", required=true)
+    @Import(name="objectType", required=true)
       private final Output<String> objectType;
 
     public Output<String> getObjectType() {
@@ -86,7 +86,7 @@ public final class ScheduleBasedBackupCriteriaArgs extends io.pulumi.resources.R
      * List of schedule times for backup
      * 
      */
-    @InputImport(name="scheduleTimes")
+    @Import(name="scheduleTimes")
       private final @Nullable Output<List<String>> scheduleTimes;
 
     public Output<List<String>> getScheduleTimes() {
@@ -97,7 +97,7 @@ public final class ScheduleBasedBackupCriteriaArgs extends io.pulumi.resources.R
      * It should be First/Second/Third/Fourth/Last
      * 
      */
-    @InputImport(name="weeksOfTheMonth")
+    @Import(name="weeksOfTheMonth")
       private final @Nullable Output<List<Either<String,WeekNumber>>> weeksOfTheMonth;
 
     public Output<List<Either<String,WeekNumber>>> getWeeksOfTheMonth() {

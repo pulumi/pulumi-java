@@ -6,7 +6,7 @@ package io.pulumi.azurenative.migrate.inputs;
 import io.pulumi.azurenative.migrate.enums.ResourceIdentityType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class IdentityArgs extends io.pulumi.resources.ResourceArgs {
      * Gets or sets the principal id.
      * 
      */
-    @InputImport(name="principalId")
+    @Import(name="principalId")
       private final @Nullable Output<String> principalId;
 
     public Output<String> getPrincipalId() {
@@ -35,7 +35,7 @@ public final class IdentityArgs extends io.pulumi.resources.ResourceArgs {
      * Gets or sets the tenant id.
      * 
      */
-    @InputImport(name="tenantId")
+    @Import(name="tenantId")
       private final @Nullable Output<String> tenantId;
 
     public Output<String> getTenantId() {
@@ -46,7 +46,7 @@ public final class IdentityArgs extends io.pulumi.resources.ResourceArgs {
      * The type of identity used for the resource mover service.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<Either<String,ResourceIdentityType>> type;
 
     public Output<Either<String,ResourceIdentityType>> getType() {

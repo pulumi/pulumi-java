@@ -14,7 +14,7 @@ import io.pulumi.azurenative.servicefabricmesh.inputs.ReliableCollectionsRefResp
 import io.pulumi.azurenative.servicefabricmesh.inputs.ResourceRequirementsResponse;
 import io.pulumi.azurenative.servicefabricmesh.inputs.SettingResponse;
 import io.pulumi.azurenative.servicefabricmesh.inputs.VolumeReferenceResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -34,7 +34,7 @@ public final class ContainerCodePackagePropertiesResponse extends io.pulumi.reso
      * Command array to execute within the container in exec form.
      * 
      */
-    @InputImport(name="commands")
+    @Import(name="commands")
       private final @Nullable List<String> commands;
 
     public List<String> getCommands() {
@@ -45,7 +45,7 @@ public final class ContainerCodePackagePropertiesResponse extends io.pulumi.reso
      * Reference to sinks in DiagnosticsDescription.
      * 
      */
-    @InputImport(name="diagnostics")
+    @Import(name="diagnostics")
       private final @Nullable DiagnosticsRefResponse diagnostics;
 
     public Optional<DiagnosticsRefResponse> getDiagnostics() {
@@ -56,7 +56,7 @@ public final class ContainerCodePackagePropertiesResponse extends io.pulumi.reso
      * The endpoints exposed by this container.
      * 
      */
-    @InputImport(name="endpoints")
+    @Import(name="endpoints")
       private final @Nullable List<EndpointPropertiesResponse> endpoints;
 
     public List<EndpointPropertiesResponse> getEndpoints() {
@@ -67,7 +67,7 @@ public final class ContainerCodePackagePropertiesResponse extends io.pulumi.reso
      * Override for the default entry point in the container.
      * 
      */
-    @InputImport(name="entrypoint")
+    @Import(name="entrypoint")
       private final @Nullable String entrypoint;
 
     public Optional<String> getEntrypoint() {
@@ -78,7 +78,7 @@ public final class ContainerCodePackagePropertiesResponse extends io.pulumi.reso
      * The environment variables to set in this container
      * 
      */
-    @InputImport(name="environmentVariables")
+    @Import(name="environmentVariables")
       private final @Nullable List<EnvironmentVariableResponse> environmentVariables;
 
     public List<EnvironmentVariableResponse> getEnvironmentVariables() {
@@ -89,7 +89,7 @@ public final class ContainerCodePackagePropertiesResponse extends io.pulumi.reso
      * The Container image to use.
      * 
      */
-    @InputImport(name="image", required=true)
+    @Import(name="image", required=true)
       private final String image;
 
     public String getImage() {
@@ -100,7 +100,7 @@ public final class ContainerCodePackagePropertiesResponse extends io.pulumi.reso
      * Image registry credential.
      * 
      */
-    @InputImport(name="imageRegistryCredential")
+    @Import(name="imageRegistryCredential")
       private final @Nullable ImageRegistryCredentialResponse imageRegistryCredential;
 
     public Optional<ImageRegistryCredentialResponse> getImageRegistryCredential() {
@@ -111,7 +111,7 @@ public final class ContainerCodePackagePropertiesResponse extends io.pulumi.reso
      * Runtime information of a container instance.
      * 
      */
-    @InputImport(name="instanceView", required=true)
+    @Import(name="instanceView", required=true)
       private final ContainerInstanceViewResponse instanceView;
 
     public ContainerInstanceViewResponse getInstanceView() {
@@ -122,7 +122,7 @@ public final class ContainerCodePackagePropertiesResponse extends io.pulumi.reso
      * The labels to set in this container.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable List<ContainerLabelResponse> labels;
 
     public List<ContainerLabelResponse> getLabels() {
@@ -133,7 +133,7 @@ public final class ContainerCodePackagePropertiesResponse extends io.pulumi.reso
      * The name of the code package.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -144,7 +144,7 @@ public final class ContainerCodePackagePropertiesResponse extends io.pulumi.reso
      * A list of ReliableCollection resources used by this particular code package. Please refer to ReliableCollectionsRef for more details.
      * 
      */
-    @InputImport(name="reliableCollectionsRefs")
+    @Import(name="reliableCollectionsRefs")
       private final @Nullable List<ReliableCollectionsRefResponse> reliableCollectionsRefs;
 
     public List<ReliableCollectionsRefResponse> getReliableCollectionsRefs() {
@@ -155,7 +155,7 @@ public final class ContainerCodePackagePropertiesResponse extends io.pulumi.reso
      * The resources required by this container.
      * 
      */
-    @InputImport(name="resources", required=true)
+    @Import(name="resources", required=true)
       private final ResourceRequirementsResponse resources;
 
     public ResourceRequirementsResponse getResources() {
@@ -166,7 +166,7 @@ public final class ContainerCodePackagePropertiesResponse extends io.pulumi.reso
      * The settings to set in this container. The setting file path can be fetched from environment variable "Fabric_SettingPath". The path for Windows container is "C:\\secrets". The path for Linux container is "/var/secrets".
      * 
      */
-    @InputImport(name="settings")
+    @Import(name="settings")
       private final @Nullable List<SettingResponse> settings;
 
     public List<SettingResponse> getSettings() {
@@ -177,7 +177,7 @@ public final class ContainerCodePackagePropertiesResponse extends io.pulumi.reso
      * Volumes to be attached to the container. The lifetime of these volumes is independent of the application's lifetime.
      * 
      */
-    @InputImport(name="volumeRefs")
+    @Import(name="volumeRefs")
       private final @Nullable List<VolumeReferenceResponse> volumeRefs;
 
     public List<VolumeReferenceResponse> getVolumeRefs() {
@@ -188,7 +188,7 @@ public final class ContainerCodePackagePropertiesResponse extends io.pulumi.reso
      * Volumes to be attached to the container. The lifetime of these volumes is scoped to the application's lifetime.
      * 
      */
-    @InputImport(name="volumes")
+    @Import(name="volumes")
       private final @Nullable List<ApplicationScopedVolumeResponse> volumes;
 
     public List<ApplicationScopedVolumeResponse> getVolumes() {

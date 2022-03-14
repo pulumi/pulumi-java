@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.chaos.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class DelayActionResponse extends io.pulumi.resources.InvokeArgs {
      * ISO8601 formatted string that represents a duration.
      * 
      */
-    @InputImport(name="duration", required=true)
+    @Import(name="duration", required=true)
       private final String duration;
 
     public String getDuration() {
@@ -31,7 +31,7 @@ public final class DelayActionResponse extends io.pulumi.resources.InvokeArgs {
      * String that represents a Capability URN.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -43,7 +43,7 @@ public final class DelayActionResponse extends io.pulumi.resources.InvokeArgs {
      * Expected value is 'delay'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

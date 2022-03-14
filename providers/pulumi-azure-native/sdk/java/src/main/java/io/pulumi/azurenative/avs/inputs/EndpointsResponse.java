@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.avs.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class EndpointsResponse extends io.pulumi.resources.InvokeArgs {
      * Endpoint for the HCX Cloud Manager
      * 
      */
-    @InputImport(name="hcxCloudManager", required=true)
+    @Import(name="hcxCloudManager", required=true)
       private final String hcxCloudManager;
 
     public String getHcxCloudManager() {
@@ -31,7 +31,7 @@ public final class EndpointsResponse extends io.pulumi.resources.InvokeArgs {
      * Endpoint for the NSX-T Data Center manager
      * 
      */
-    @InputImport(name="nsxtManager", required=true)
+    @Import(name="nsxtManager", required=true)
       private final String nsxtManager;
 
     public String getNsxtManager() {
@@ -42,7 +42,7 @@ public final class EndpointsResponse extends io.pulumi.resources.InvokeArgs {
      * Endpoint for Virtual Center Server Appliance
      * 
      */
-    @InputImport(name="vcsa", required=true)
+    @Import(name="vcsa", required=true)
       private final String vcsa;
 
     public String getVcsa() {

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.webpubsub.inputs;
 
 import io.pulumi.azurenative.webpubsub.inputs.EventHandlerArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class WebPubSubHubPropertiesArgs extends io.pulumi.resources.Resour
      * The settings for configuring if anonymous connections are allowed for this hub: "allow" or "deny". Default to "deny".
      * 
      */
-    @InputImport(name="anonymousConnectPolicy")
+    @Import(name="anonymousConnectPolicy")
       private final @Nullable Output<String> anonymousConnectPolicy;
 
     public Output<String> getAnonymousConnectPolicy() {
@@ -35,7 +35,7 @@ public final class WebPubSubHubPropertiesArgs extends io.pulumi.resources.Resour
      * Event handler of a hub.
      * 
      */
-    @InputImport(name="eventHandlers")
+    @Import(name="eventHandlers")
       private final @Nullable Output<List<EventHandlerArgs>> eventHandlers;
 
     public Output<List<EventHandlerArgs>> getEventHandlers() {

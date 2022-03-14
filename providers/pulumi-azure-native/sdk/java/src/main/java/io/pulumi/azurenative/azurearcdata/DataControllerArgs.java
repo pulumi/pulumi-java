@@ -6,7 +6,7 @@ package io.pulumi.azurenative.azurearcdata;
 import io.pulumi.azurenative.azurearcdata.inputs.DataControllerPropertiesArgs;
 import io.pulumi.azurenative.azurearcdata.inputs.ExtendedLocationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -17,7 +17,7 @@ public final class DataControllerArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DataControllerArgs Empty = new DataControllerArgs();
 
-    @InputImport(name="dataControllerName")
+    @Import(name="dataControllerName")
       private final @Nullable Output<String> dataControllerName;
 
     public Output<String> getDataControllerName() {
@@ -28,7 +28,7 @@ public final class DataControllerArgs extends io.pulumi.resources.ResourceArgs {
      * The extendedLocation of the resource.
      * 
      */
-    @InputImport(name="extendedLocation")
+    @Import(name="extendedLocation")
       private final @Nullable Output<ExtendedLocationArgs> extendedLocation;
 
     public Output<ExtendedLocationArgs> getExtendedLocation() {
@@ -39,7 +39,7 @@ public final class DataControllerArgs extends io.pulumi.resources.ResourceArgs {
      * The geo-location where the resource lives
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -50,7 +50,7 @@ public final class DataControllerArgs extends io.pulumi.resources.ResourceArgs {
      * The data controller's properties
      * 
      */
-    @InputImport(name="properties", required=true)
+    @Import(name="properties", required=true)
       private final Output<DataControllerPropertiesArgs> properties;
 
     public Output<DataControllerPropertiesArgs> getProperties() {
@@ -61,7 +61,7 @@ public final class DataControllerArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the Azure resource group
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -72,7 +72,7 @@ public final class DataControllerArgs extends io.pulumi.resources.ResourceArgs {
      * Resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

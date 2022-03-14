@@ -5,7 +5,7 @@ package io.pulumi.azurenative.deploymentmanager.inputs;
 
 import io.pulumi.azurenative.deploymentmanager.enums.RestMatchQuantifier;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class RestResponseRegexArgs extends io.pulumi.resources.ResourceArg
      * Indicates whether any or all of the expressions should match with the response content.
      * 
      */
-    @InputImport(name="matchQuantifier")
+    @Import(name="matchQuantifier")
       private final @Nullable Output<RestMatchQuantifier> matchQuantifier;
 
     public Output<RestMatchQuantifier> getMatchQuantifier() {
@@ -35,7 +35,7 @@ public final class RestResponseRegexArgs extends io.pulumi.resources.ResourceArg
      * The list of regular expressions.
      * 
      */
-    @InputImport(name="matches")
+    @Import(name="matches")
       private final @Nullable Output<List<String>> matches;
 
     public Output<List<String>> getMatches() {

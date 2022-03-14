@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.hybridconnectivity.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class ListEndpointCredentialsArgs extends io.pulumi.resources.Invok
      * The endpoint name.
      * 
      */
-    @InputImport(name="endpointName", required=true)
+    @Import(name="endpointName", required=true)
       private final String endpointName;
 
     public String getEndpointName() {
@@ -30,7 +30,7 @@ public final class ListEndpointCredentialsArgs extends io.pulumi.resources.Invok
      * The is how long the endpoint access token is valid (in seconds).
      * 
      */
-    @InputImport(name="expiresin")
+    @Import(name="expiresin")
       private final @Nullable Integer expiresin;
 
     public Optional<Integer> getExpiresin() {
@@ -41,7 +41,7 @@ public final class ListEndpointCredentialsArgs extends io.pulumi.resources.Invok
      * The fully qualified Azure Resource manager identifier of the resource to be connected.
      * 
      */
-    @InputImport(name="resourceUri", required=true)
+    @Import(name="resourceUri", required=true)
       private final String resourceUri;
 
     public String getResourceUri() {

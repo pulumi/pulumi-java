@@ -9,7 +9,7 @@ import io.pulumi.azurenative.confidentialledger.outputs.LedgerPropertiesResponse
 import io.pulumi.azurenative.confidentialledger.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -37,7 +37,7 @@ public class Ledger extends io.pulumi.resources.CustomResource {
      * The Azure location where the Confidential Ledger is running.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -51,7 +51,7 @@ public class Ledger extends io.pulumi.resources.CustomResource {
      * Name of the Resource.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -65,7 +65,7 @@ public class Ledger extends io.pulumi.resources.CustomResource {
      * Properties of Confidential Ledger Resource.
      * 
      */
-    @OutputExport(name="properties", type=LedgerPropertiesResponse.class, parameters={})
+    @Export(name="properties", type=LedgerPropertiesResponse.class, parameters={})
     private Output<LedgerPropertiesResponse> properties;
 
     /**
@@ -79,7 +79,7 @@ public class Ledger extends io.pulumi.resources.CustomResource {
      * Metadata pertaining to creation and last modification of the resource
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -93,7 +93,7 @@ public class Ledger extends io.pulumi.resources.CustomResource {
      * Additional tags for Confidential Ledger
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -107,7 +107,7 @@ public class Ledger extends io.pulumi.resources.CustomResource {
      * The type of the resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

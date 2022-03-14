@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.databox.inputs;
 
 import io.pulumi.azurenative.databox.inputs.UserAssignedIdentityResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ResourceIdentityResponse extends io.pulumi.resources.InvokeAr
      * Service Principal Id backing the Msi
      * 
      */
-    @InputImport(name="principalId", required=true)
+    @Import(name="principalId", required=true)
       private final String principalId;
 
     public String getPrincipalId() {
@@ -35,7 +35,7 @@ public final class ResourceIdentityResponse extends io.pulumi.resources.InvokeAr
      * Home Tenant Id
      * 
      */
-    @InputImport(name="tenantId", required=true)
+    @Import(name="tenantId", required=true)
       private final String tenantId;
 
     public String getTenantId() {
@@ -46,7 +46,7 @@ public final class ResourceIdentityResponse extends io.pulumi.resources.InvokeAr
      * Identity type
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable String type;
 
     public Optional<String> getType() {
@@ -57,7 +57,7 @@ public final class ResourceIdentityResponse extends io.pulumi.resources.InvokeAr
      * User Assigned Identities
      * 
      */
-    @InputImport(name="userAssignedIdentities")
+    @Import(name="userAssignedIdentities")
       private final @Nullable Map<String,UserAssignedIdentityResponse> userAssignedIdentities;
 
     public Map<String,UserAssignedIdentityResponse> getUserAssignedIdentities() {

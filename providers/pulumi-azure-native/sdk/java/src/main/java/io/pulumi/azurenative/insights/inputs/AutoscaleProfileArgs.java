@@ -8,7 +8,7 @@ import io.pulumi.azurenative.insights.inputs.ScaleCapacityArgs;
 import io.pulumi.azurenative.insights.inputs.ScaleRuleArgs;
 import io.pulumi.azurenative.insights.inputs.TimeWindowArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +27,7 @@ public final class AutoscaleProfileArgs extends io.pulumi.resources.ResourceArgs
      * the number of instances that can be used during this profile.
      * 
      */
-    @InputImport(name="capacity", required=true)
+    @Import(name="capacity", required=true)
       private final Output<ScaleCapacityArgs> capacity;
 
     public Output<ScaleCapacityArgs> getCapacity() {
@@ -38,7 +38,7 @@ public final class AutoscaleProfileArgs extends io.pulumi.resources.ResourceArgs
      * the specific date-time for the profile. This element is not used if the Recurrence element is used.
      * 
      */
-    @InputImport(name="fixedDate")
+    @Import(name="fixedDate")
       private final @Nullable Output<TimeWindowArgs> fixedDate;
 
     public Output<TimeWindowArgs> getFixedDate() {
@@ -49,7 +49,7 @@ public final class AutoscaleProfileArgs extends io.pulumi.resources.ResourceArgs
      * the name of the profile.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -60,7 +60,7 @@ public final class AutoscaleProfileArgs extends io.pulumi.resources.ResourceArgs
      * the repeating times at which this profile begins. This element is not used if the FixedDate element is used.
      * 
      */
-    @InputImport(name="recurrence")
+    @Import(name="recurrence")
       private final @Nullable Output<RecurrenceArgs> recurrence;
 
     public Output<RecurrenceArgs> getRecurrence() {
@@ -71,7 +71,7 @@ public final class AutoscaleProfileArgs extends io.pulumi.resources.ResourceArgs
      * the collection of rules that provide the triggers and parameters for the scaling action. A maximum of 10 rules can be specified.
      * 
      */
-    @InputImport(name="rules", required=true)
+    @Import(name="rules", required=true)
       private final Output<List<ScaleRuleArgs>> rules;
 
     public Output<List<ScaleRuleArgs>> getRules() {

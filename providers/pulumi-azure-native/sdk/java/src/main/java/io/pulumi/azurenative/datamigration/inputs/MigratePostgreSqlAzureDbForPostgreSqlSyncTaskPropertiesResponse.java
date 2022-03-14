@@ -13,7 +13,7 @@ import io.pulumi.azurenative.datamigration.inputs.MigratePostgreSqlAzureDbForPos
 import io.pulumi.azurenative.datamigration.inputs.MigrateSyncCompleteCommandPropertiesResponse;
 import io.pulumi.azurenative.datamigration.inputs.ODataErrorResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -34,7 +34,7 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskPropertiesRespon
      * Array of command properties.
      * 
      */
-    @InputImport(name="commands", required=true)
+    @Import(name="commands", required=true)
       private final List<Either<MigrateMISyncCompleteCommandPropertiesResponse,MigrateSyncCompleteCommandPropertiesResponse>> commands;
 
     public List<Either<MigrateMISyncCompleteCommandPropertiesResponse,MigrateSyncCompleteCommandPropertiesResponse>> getCommands() {
@@ -45,7 +45,7 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskPropertiesRespon
      * Array of errors. This is ignored if submitted.
      * 
      */
-    @InputImport(name="errors", required=true)
+    @Import(name="errors", required=true)
       private final List<ODataErrorResponse> errors;
 
     public List<ODataErrorResponse> getErrors() {
@@ -56,7 +56,7 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskPropertiesRespon
      * Task input
      * 
      */
-    @InputImport(name="input")
+    @Import(name="input")
       private final @Nullable MigratePostgreSqlAzureDbForPostgreSqlSyncTaskInputResponse input;
 
     public Optional<MigratePostgreSqlAzureDbForPostgreSqlSyncTaskInputResponse> getInput() {
@@ -67,7 +67,7 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskPropertiesRespon
      * Task output. This is ignored if submitted.
      * 
      */
-    @InputImport(name="output", required=true)
+    @Import(name="output", required=true)
       private final List<Object> output;
 
     public List<Object> getOutput() {
@@ -78,7 +78,7 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskPropertiesRespon
      * The state of the task. This is ignored if submitted.
      * 
      */
-    @InputImport(name="state", required=true)
+    @Import(name="state", required=true)
       private final String state;
 
     public String getState() {
@@ -90,7 +90,7 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskPropertiesRespon
      * Expected value is 'Migrate.PostgreSql.AzureDbForPostgreSql.Sync'.
      * 
      */
-    @InputImport(name="taskType", required=true)
+    @Import(name="taskType", required=true)
       private final String taskType;
 
     public String getTaskType() {

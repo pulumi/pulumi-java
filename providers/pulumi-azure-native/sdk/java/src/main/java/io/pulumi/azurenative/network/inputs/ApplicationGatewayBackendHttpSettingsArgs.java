@@ -9,7 +9,7 @@ import io.pulumi.azurenative.network.inputs.ApplicationGatewayConnectionDraining
 import io.pulumi.azurenative.network.inputs.SubResourceArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -30,7 +30,7 @@ public final class ApplicationGatewayBackendHttpSettingsArgs extends io.pulumi.r
      * Cookie name to use for the affinity cookie.
      * 
      */
-    @InputImport(name="affinityCookieName")
+    @Import(name="affinityCookieName")
       private final @Nullable Output<String> affinityCookieName;
 
     public Output<String> getAffinityCookieName() {
@@ -41,7 +41,7 @@ public final class ApplicationGatewayBackendHttpSettingsArgs extends io.pulumi.r
      * Array of references to application gateway authentication certificates.
      * 
      */
-    @InputImport(name="authenticationCertificates")
+    @Import(name="authenticationCertificates")
       private final @Nullable Output<List<SubResourceArgs>> authenticationCertificates;
 
     public Output<List<SubResourceArgs>> getAuthenticationCertificates() {
@@ -52,7 +52,7 @@ public final class ApplicationGatewayBackendHttpSettingsArgs extends io.pulumi.r
      * Connection draining of the backend http settings resource.
      * 
      */
-    @InputImport(name="connectionDraining")
+    @Import(name="connectionDraining")
       private final @Nullable Output<ApplicationGatewayConnectionDrainingArgs> connectionDraining;
 
     public Output<ApplicationGatewayConnectionDrainingArgs> getConnectionDraining() {
@@ -63,7 +63,7 @@ public final class ApplicationGatewayBackendHttpSettingsArgs extends io.pulumi.r
      * Cookie based affinity.
      * 
      */
-    @InputImport(name="cookieBasedAffinity")
+    @Import(name="cookieBasedAffinity")
       private final @Nullable Output<Either<String,ApplicationGatewayCookieBasedAffinity>> cookieBasedAffinity;
 
     public Output<Either<String,ApplicationGatewayCookieBasedAffinity>> getCookieBasedAffinity() {
@@ -74,7 +74,7 @@ public final class ApplicationGatewayBackendHttpSettingsArgs extends io.pulumi.r
      * Host header to be sent to the backend servers.
      * 
      */
-    @InputImport(name="hostName")
+    @Import(name="hostName")
       private final @Nullable Output<String> hostName;
 
     public Output<String> getHostName() {
@@ -85,7 +85,7 @@ public final class ApplicationGatewayBackendHttpSettingsArgs extends io.pulumi.r
      * Resource ID.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
@@ -96,7 +96,7 @@ public final class ApplicationGatewayBackendHttpSettingsArgs extends io.pulumi.r
      * Name of the backend http settings that is unique within an Application Gateway.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -107,7 +107,7 @@ public final class ApplicationGatewayBackendHttpSettingsArgs extends io.pulumi.r
      * Path which should be used as a prefix for all HTTP requests. Null means no path will be prefixed. Default value is null.
      * 
      */
-    @InputImport(name="path")
+    @Import(name="path")
       private final @Nullable Output<String> path;
 
     public Output<String> getPath() {
@@ -118,7 +118,7 @@ public final class ApplicationGatewayBackendHttpSettingsArgs extends io.pulumi.r
      * Whether to pick host header should be picked from the host name of the backend server. Default value is false.
      * 
      */
-    @InputImport(name="pickHostNameFromBackendAddress")
+    @Import(name="pickHostNameFromBackendAddress")
       private final @Nullable Output<Boolean> pickHostNameFromBackendAddress;
 
     public Output<Boolean> getPickHostNameFromBackendAddress() {
@@ -129,7 +129,7 @@ public final class ApplicationGatewayBackendHttpSettingsArgs extends io.pulumi.r
      * The destination port on the backend.
      * 
      */
-    @InputImport(name="port")
+    @Import(name="port")
       private final @Nullable Output<Integer> port;
 
     public Output<Integer> getPort() {
@@ -140,7 +140,7 @@ public final class ApplicationGatewayBackendHttpSettingsArgs extends io.pulumi.r
      * Probe resource of an application gateway.
      * 
      */
-    @InputImport(name="probe")
+    @Import(name="probe")
       private final @Nullable Output<SubResourceArgs> probe;
 
     public Output<SubResourceArgs> getProbe() {
@@ -151,7 +151,7 @@ public final class ApplicationGatewayBackendHttpSettingsArgs extends io.pulumi.r
      * Whether the probe is enabled. Default value is false.
      * 
      */
-    @InputImport(name="probeEnabled")
+    @Import(name="probeEnabled")
       private final @Nullable Output<Boolean> probeEnabled;
 
     public Output<Boolean> getProbeEnabled() {
@@ -162,7 +162,7 @@ public final class ApplicationGatewayBackendHttpSettingsArgs extends io.pulumi.r
      * The protocol used to communicate with the backend.
      * 
      */
-    @InputImport(name="protocol")
+    @Import(name="protocol")
       private final @Nullable Output<Either<String,ApplicationGatewayProtocol>> protocol;
 
     public Output<Either<String,ApplicationGatewayProtocol>> getProtocol() {
@@ -173,7 +173,7 @@ public final class ApplicationGatewayBackendHttpSettingsArgs extends io.pulumi.r
      * Request timeout in seconds. Application Gateway will fail the request if response is not received within RequestTimeout. Acceptable values are from 1 second to 86400 seconds.
      * 
      */
-    @InputImport(name="requestTimeout")
+    @Import(name="requestTimeout")
       private final @Nullable Output<Integer> requestTimeout;
 
     public Output<Integer> getRequestTimeout() {
@@ -184,7 +184,7 @@ public final class ApplicationGatewayBackendHttpSettingsArgs extends io.pulumi.r
      * Array of references to application gateway trusted root certificates.
      * 
      */
-    @InputImport(name="trustedRootCertificates")
+    @Import(name="trustedRootCertificates")
       private final @Nullable Output<List<SubResourceArgs>> trustedRootCertificates;
 
     public Output<List<SubResourceArgs>> getTrustedRootCertificates() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class InMageRcmMobilityAgentDetailsResponse extends io.pulumi.resou
      * The agent version expiry date.
      * 
      */
-    @InputImport(name="agentVersionExpiryDate", required=true)
+    @Import(name="agentVersionExpiryDate", required=true)
       private final String agentVersionExpiryDate;
 
     public String getAgentVersionExpiryDate() {
@@ -32,7 +32,7 @@ public final class InMageRcmMobilityAgentDetailsResponse extends io.pulumi.resou
      * The driver version.
      * 
      */
-    @InputImport(name="driverVersion", required=true)
+    @Import(name="driverVersion", required=true)
       private final String driverVersion;
 
     public String getDriverVersion() {
@@ -43,7 +43,7 @@ public final class InMageRcmMobilityAgentDetailsResponse extends io.pulumi.resou
      * The driver version expiry date.
      * 
      */
-    @InputImport(name="driverVersionExpiryDate", required=true)
+    @Import(name="driverVersionExpiryDate", required=true)
       private final String driverVersionExpiryDate;
 
     public String getDriverVersionExpiryDate() {
@@ -54,7 +54,7 @@ public final class InMageRcmMobilityAgentDetailsResponse extends io.pulumi.resou
      * A value indicating whether agent is upgradeable or not.
      * 
      */
-    @InputImport(name="isUpgradeable", required=true)
+    @Import(name="isUpgradeable", required=true)
       private final String isUpgradeable;
 
     public String getIsUpgradeable() {
@@ -65,7 +65,7 @@ public final class InMageRcmMobilityAgentDetailsResponse extends io.pulumi.resou
      * The time of the last heartbeat received from the agent.
      * 
      */
-    @InputImport(name="lastHeartbeatUtc", required=true)
+    @Import(name="lastHeartbeatUtc", required=true)
       private final String lastHeartbeatUtc;
 
     public String getLastHeartbeatUtc() {
@@ -76,7 +76,7 @@ public final class InMageRcmMobilityAgentDetailsResponse extends io.pulumi.resou
      * The latest upgradeable version available without reboot.
      * 
      */
-    @InputImport(name="latestUpgradableVersionWithoutReboot", required=true)
+    @Import(name="latestUpgradableVersionWithoutReboot", required=true)
       private final String latestUpgradableVersionWithoutReboot;
 
     public String getLatestUpgradableVersionWithoutReboot() {
@@ -87,7 +87,7 @@ public final class InMageRcmMobilityAgentDetailsResponse extends io.pulumi.resou
      * The latest agent version available.
      * 
      */
-    @InputImport(name="latestVersion", required=true)
+    @Import(name="latestVersion", required=true)
       private final String latestVersion;
 
     public String getLatestVersion() {
@@ -98,7 +98,7 @@ public final class InMageRcmMobilityAgentDetailsResponse extends io.pulumi.resou
      * The whether update is possible or not.
      * 
      */
-    @InputImport(name="reasonsBlockingUpgrade", required=true)
+    @Import(name="reasonsBlockingUpgrade", required=true)
       private final List<String> reasonsBlockingUpgrade;
 
     public List<String> getReasonsBlockingUpgrade() {
@@ -109,7 +109,7 @@ public final class InMageRcmMobilityAgentDetailsResponse extends io.pulumi.resou
      * The agent version.
      * 
      */
-    @InputImport(name="version", required=true)
+    @Import(name="version", required=true)
       private final String version;
 
     public String getVersion() {

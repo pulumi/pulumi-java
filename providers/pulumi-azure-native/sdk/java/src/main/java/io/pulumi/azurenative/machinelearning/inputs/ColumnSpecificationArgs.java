@@ -7,7 +7,7 @@ import io.pulumi.azurenative.machinelearning.enums.ColumnFormat;
 import io.pulumi.azurenative.machinelearning.enums.ColumnType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -28,7 +28,7 @@ public final class ColumnSpecificationArgs extends io.pulumi.resources.ResourceA
      * If the data type is categorical, this provides the list of accepted categories.
      * 
      */
-    @InputImport(name="enum")
+    @Import(name="enum")
       private final @Nullable Output<List<Object>> $enum;
 
     public Output<List<Object>> get$enum() {
@@ -39,7 +39,7 @@ public final class ColumnSpecificationArgs extends io.pulumi.resources.ResourceA
      * Additional format information for the data type.
      * 
      */
-    @InputImport(name="format")
+    @Import(name="format")
       private final @Nullable Output<Either<String,ColumnFormat>> format;
 
     public Output<Either<String,ColumnFormat>> getFormat() {
@@ -50,7 +50,7 @@ public final class ColumnSpecificationArgs extends io.pulumi.resources.ResourceA
      * Data type of the column.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<Either<String,ColumnType>> type;
 
     public Output<Either<String,ColumnType>> getType() {
@@ -61,7 +61,7 @@ public final class ColumnSpecificationArgs extends io.pulumi.resources.ResourceA
      * Flag indicating if the type supports null values or not.
      * 
      */
-    @InputImport(name="xMsIsnullable")
+    @Import(name="xMsIsnullable")
       private final @Nullable Output<Boolean> xMsIsnullable;
 
     public Output<Boolean> getXMsIsnullable() {
@@ -72,7 +72,7 @@ public final class ColumnSpecificationArgs extends io.pulumi.resources.ResourceA
      * Flag indicating whether the categories are treated as an ordered set or not, if this is a categorical column.
      * 
      */
-    @InputImport(name="xMsIsordered")
+    @Import(name="xMsIsordered")
       private final @Nullable Output<Boolean> xMsIsordered;
 
     public Output<Boolean> getXMsIsordered() {

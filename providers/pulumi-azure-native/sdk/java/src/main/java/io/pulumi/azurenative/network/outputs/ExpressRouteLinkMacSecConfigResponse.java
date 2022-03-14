@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ExpressRouteLinkMacSecConfigResponse {
     /**
      * Keyvault Secret Identifier URL containing Mac security CAK key.
@@ -32,12 +32,12 @@ public final class ExpressRouteLinkMacSecConfigResponse {
      */
     private final @Nullable String sciState;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ExpressRouteLinkMacSecConfigResponse(
-        @OutputCustomType.Parameter("cakSecretIdentifier") @Nullable String cakSecretIdentifier,
-        @OutputCustomType.Parameter("cipher") @Nullable String cipher,
-        @OutputCustomType.Parameter("cknSecretIdentifier") @Nullable String cknSecretIdentifier,
-        @OutputCustomType.Parameter("sciState") @Nullable String sciState) {
+        @CustomType.Parameter("cakSecretIdentifier") @Nullable String cakSecretIdentifier,
+        @CustomType.Parameter("cipher") @Nullable String cipher,
+        @CustomType.Parameter("cknSecretIdentifier") @Nullable String cknSecretIdentifier,
+        @CustomType.Parameter("sciState") @Nullable String sciState) {
         this.cakSecretIdentifier = cakSecretIdentifier;
         this.cipher = cipher;
         this.cknSecretIdentifier = cknSecretIdentifier;

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.azurenative.web.enums.ConnectionStringType;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class ConnStringInfoArgs extends io.pulumi.resources.ResourceArgs {
      * Connection string value.
      * 
      */
-    @InputImport(name="connectionString")
+    @Import(name="connectionString")
       private final @Nullable Output<String> connectionString;
 
     public Output<String> getConnectionString() {
@@ -34,7 +34,7 @@ public final class ConnStringInfoArgs extends io.pulumi.resources.ResourceArgs {
      * Name of connection string.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -45,7 +45,7 @@ public final class ConnStringInfoArgs extends io.pulumi.resources.ResourceArgs {
      * Type of database.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<ConnectionStringType> type;
 
     public Output<ConnectionStringType> getType() {

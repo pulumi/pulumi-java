@@ -7,14 +7,14 @@ import io.pulumi.azurenative.devtestlab.outputs.DayDetailsResponse;
 import io.pulumi.azurenative.devtestlab.outputs.HourDetailsResponse;
 import io.pulumi.azurenative.devtestlab.outputs.NotificationSettingsResponse;
 import io.pulumi.azurenative.devtestlab.outputs.WeekDetailsResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetVirtualMachineScheduleResult {
     /**
      * The creation date of the schedule.
@@ -97,24 +97,24 @@ public final class GetVirtualMachineScheduleResult {
      */
     private final @Nullable WeekDetailsResponse weeklyRecurrence;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetVirtualMachineScheduleResult(
-        @OutputCustomType.Parameter("createdDate") String createdDate,
-        @OutputCustomType.Parameter("dailyRecurrence") @Nullable DayDetailsResponse dailyRecurrence,
-        @OutputCustomType.Parameter("hourlyRecurrence") @Nullable HourDetailsResponse hourlyRecurrence,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("notificationSettings") @Nullable NotificationSettingsResponse notificationSettings,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("status") @Nullable String status,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("targetResourceId") @Nullable String targetResourceId,
-        @OutputCustomType.Parameter("taskType") @Nullable String taskType,
-        @OutputCustomType.Parameter("timeZoneId") @Nullable String timeZoneId,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("uniqueIdentifier") String uniqueIdentifier,
-        @OutputCustomType.Parameter("weeklyRecurrence") @Nullable WeekDetailsResponse weeklyRecurrence) {
+        @CustomType.Parameter("createdDate") String createdDate,
+        @CustomType.Parameter("dailyRecurrence") @Nullable DayDetailsResponse dailyRecurrence,
+        @CustomType.Parameter("hourlyRecurrence") @Nullable HourDetailsResponse hourlyRecurrence,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("notificationSettings") @Nullable NotificationSettingsResponse notificationSettings,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("status") @Nullable String status,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("targetResourceId") @Nullable String targetResourceId,
+        @CustomType.Parameter("taskType") @Nullable String taskType,
+        @CustomType.Parameter("timeZoneId") @Nullable String timeZoneId,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("uniqueIdentifier") String uniqueIdentifier,
+        @CustomType.Parameter("weeklyRecurrence") @Nullable WeekDetailsResponse weeklyRecurrence) {
         this.createdDate = createdDate;
         this.dailyRecurrence = dailyRecurrence;
         this.hourlyRecurrence = hourlyRecurrence;

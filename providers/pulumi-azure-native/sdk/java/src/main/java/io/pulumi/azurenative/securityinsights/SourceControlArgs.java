@@ -9,7 +9,7 @@ import io.pulumi.azurenative.securityinsights.enums.RepoType;
 import io.pulumi.azurenative.securityinsights.inputs.RepositoryArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
      * Array of source control content types.
      * 
      */
-    @InputImport(name="contentTypes", required=true)
+    @Import(name="contentTypes", required=true)
       private final Output<List<Either<String,ContentType>>> contentTypes;
 
     public Output<List<Either<String,ContentType>>> getContentTypes() {
@@ -35,7 +35,7 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
      * The timestamp of resource creation (UTC).
      * 
      */
-    @InputImport(name="createdAt")
+    @Import(name="createdAt")
       private final @Nullable Output<String> createdAt;
 
     public Output<String> getCreatedAt() {
@@ -46,7 +46,7 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
      * The identity that created the resource.
      * 
      */
-    @InputImport(name="createdBy")
+    @Import(name="createdBy")
       private final @Nullable Output<String> createdBy;
 
     public Output<String> getCreatedBy() {
@@ -57,7 +57,7 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
      * The type of identity that created the resource.
      * 
      */
-    @InputImport(name="createdByType")
+    @Import(name="createdByType")
       private final @Nullable Output<Either<String,CreatedByType>> createdByType;
 
     public Output<Either<String,CreatedByType>> getCreatedByType() {
@@ -68,7 +68,7 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
      * A description of the source control
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -79,7 +79,7 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
      * The display name of the source control
      * 
      */
-    @InputImport(name="displayName", required=true)
+    @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -90,7 +90,7 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
      * The id (a Guid) of the source control
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
@@ -101,7 +101,7 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
      * The timestamp of resource last modification (UTC)
      * 
      */
-    @InputImport(name="lastModifiedAt")
+    @Import(name="lastModifiedAt")
       private final @Nullable Output<String> lastModifiedAt;
 
     public Output<String> getLastModifiedAt() {
@@ -112,7 +112,7 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
      * The identity that last modified the resource.
      * 
      */
-    @InputImport(name="lastModifiedBy")
+    @Import(name="lastModifiedBy")
       private final @Nullable Output<String> lastModifiedBy;
 
     public Output<String> getLastModifiedBy() {
@@ -123,7 +123,7 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
      * The type of identity that last modified the resource.
      * 
      */
-    @InputImport(name="lastModifiedByType")
+    @Import(name="lastModifiedByType")
       private final @Nullable Output<Either<String,CreatedByType>> lastModifiedByType;
 
     public Output<Either<String,CreatedByType>> getLastModifiedByType() {
@@ -134,7 +134,7 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
      * The namespace of workspaces resource provider- Microsoft.OperationalInsights.
      * 
      */
-    @InputImport(name="operationalInsightsResourceProvider", required=true)
+    @Import(name="operationalInsightsResourceProvider", required=true)
       private final Output<String> operationalInsightsResourceProvider;
 
     public Output<String> getOperationalInsightsResourceProvider() {
@@ -145,7 +145,7 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
      * The repository type of the source control
      * 
      */
-    @InputImport(name="repoType", required=true)
+    @Import(name="repoType", required=true)
       private final Output<Either<String,RepoType>> repoType;
 
     public Output<Either<String,RepoType>> getRepoType() {
@@ -156,7 +156,7 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
      * Repository metadata.
      * 
      */
-    @InputImport(name="repository", required=true)
+    @Import(name="repository", required=true)
       private final Output<RepositoryArgs> repository;
 
     public Output<RepositoryArgs> getRepository() {
@@ -167,7 +167,7 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -178,7 +178,7 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
      * Source control Id
      * 
      */
-    @InputImport(name="sourceControlId")
+    @Import(name="sourceControlId")
       private final @Nullable Output<String> sourceControlId;
 
     public Output<String> getSourceControlId() {
@@ -189,7 +189,7 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the workspace.
      * 
      */
-    @InputImport(name="workspaceName", required=true)
+    @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;
 
     public Output<String> getWorkspaceName() {

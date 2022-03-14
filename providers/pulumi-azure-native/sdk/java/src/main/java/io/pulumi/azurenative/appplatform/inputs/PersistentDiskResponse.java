@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.appplatform.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class PersistentDiskResponse extends io.pulumi.resources.InvokeArgs
      * Mount path of the persistent disk
      * 
      */
-    @InputImport(name="mountPath")
+    @Import(name="mountPath")
       private final @Nullable String mountPath;
 
     public Optional<String> getMountPath() {
@@ -34,7 +34,7 @@ public final class PersistentDiskResponse extends io.pulumi.resources.InvokeArgs
      * Size of the persistent disk in GB
      * 
      */
-    @InputImport(name="sizeInGB")
+    @Import(name="sizeInGB")
       private final @Nullable Integer sizeInGB;
 
     public Optional<Integer> getSizeInGB() {
@@ -45,7 +45,7 @@ public final class PersistentDiskResponse extends io.pulumi.resources.InvokeArgs
      * Size of the used persistent disk in GB
      * 
      */
-    @InputImport(name="usedInGB", required=true)
+    @Import(name="usedInGB", required=true)
       private final Integer usedInGB;
 
     public Integer getUsedInGB() {

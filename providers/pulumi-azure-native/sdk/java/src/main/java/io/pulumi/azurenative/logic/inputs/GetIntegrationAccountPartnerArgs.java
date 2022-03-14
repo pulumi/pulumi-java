@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.logic.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetIntegrationAccountPartnerArgs extends io.pulumi.resources.
      * The integration account name.
      * 
      */
-    @InputImport(name="integrationAccountName", required=true)
+    @Import(name="integrationAccountName", required=true)
       private final String integrationAccountName;
 
     public String getIntegrationAccountName() {
@@ -27,7 +27,7 @@ public final class GetIntegrationAccountPartnerArgs extends io.pulumi.resources.
      * The integration account partner name.
      * 
      */
-    @InputImport(name="partnerName", required=true)
+    @Import(name="partnerName", required=true)
       private final String partnerName;
 
     public String getPartnerName() {
@@ -38,7 +38,7 @@ public final class GetIntegrationAccountPartnerArgs extends io.pulumi.resources.
      * The resource group name.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {

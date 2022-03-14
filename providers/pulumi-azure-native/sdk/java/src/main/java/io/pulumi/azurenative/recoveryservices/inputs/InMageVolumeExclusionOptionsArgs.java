@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.recoveryservices.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class InMageVolumeExclusionOptionsArgs extends io.pulumi.resources.
      * The value indicating whether to exclude multi volume disk or not. If a disk has multiple volumes and one of the volume has label matching with VolumeLabel this disk will be excluded from replication if OnlyExcludeIfSingleVolume is false.
      * 
      */
-    @InputImport(name="onlyExcludeIfSingleVolume")
+    @Import(name="onlyExcludeIfSingleVolume")
       private final @Nullable Output<String> onlyExcludeIfSingleVolume;
 
     public Output<String> getOnlyExcludeIfSingleVolume() {
@@ -33,7 +33,7 @@ public final class InMageVolumeExclusionOptionsArgs extends io.pulumi.resources.
      * The volume label. The disk having any volume with this label will be excluded from replication.
      * 
      */
-    @InputImport(name="volumeLabel")
+    @Import(name="volumeLabel")
       private final @Nullable Output<String> volumeLabel;
 
     public Output<String> getVolumeLabel() {

@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.media.outputs;
 
 import io.pulumi.azurenative.media.outputs.EnabledProtocolsResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class NoEncryptionResponse {
     /**
      * Representing supported protocols
@@ -17,8 +17,8 @@ public final class NoEncryptionResponse {
      */
     private final @Nullable EnabledProtocolsResponse enabledProtocols;
 
-    @OutputCustomType.Constructor
-    private NoEncryptionResponse(@OutputCustomType.Parameter("enabledProtocols") @Nullable EnabledProtocolsResponse enabledProtocols) {
+    @CustomType.Constructor
+    private NoEncryptionResponse(@CustomType.Parameter("enabledProtocols") @Nullable EnabledProtocolsResponse enabledProtocols) {
         this.enabledProtocols = enabledProtocols;
     }
 

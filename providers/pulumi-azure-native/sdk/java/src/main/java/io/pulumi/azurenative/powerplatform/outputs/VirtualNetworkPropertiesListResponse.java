@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.powerplatform.outputs;
 
 import io.pulumi.azurenative.powerplatform.outputs.VirtualNetworkPropertiesResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VirtualNetworkPropertiesListResponse {
     /**
      * Next page link if any.
@@ -24,10 +24,10 @@ public final class VirtualNetworkPropertiesListResponse {
      */
     private final @Nullable List<VirtualNetworkPropertiesResponse> value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VirtualNetworkPropertiesListResponse(
-        @OutputCustomType.Parameter("nextLink") @Nullable String nextLink,
-        @OutputCustomType.Parameter("value") @Nullable List<VirtualNetworkPropertiesResponse> value) {
+        @CustomType.Parameter("nextLink") @Nullable String nextLink,
+        @CustomType.Parameter("value") @Nullable List<VirtualNetworkPropertiesResponse> value) {
         this.nextLink = nextLink;
         this.value = value;
     }

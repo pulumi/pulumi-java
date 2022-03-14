@@ -5,7 +5,7 @@ package io.pulumi.azurenative.apimanagement.inputs;
 
 import io.pulumi.azurenative.apimanagement.inputs.ParameterContractResponse;
 import io.pulumi.azurenative.apimanagement.inputs.RepresentationContractResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class RequestContractResponse extends io.pulumi.resources.InvokeArg
      * Operation request description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable String description;
 
     public Optional<String> getDescription() {
@@ -36,7 +36,7 @@ public final class RequestContractResponse extends io.pulumi.resources.InvokeArg
      * Collection of operation request headers.
      * 
      */
-    @InputImport(name="headers")
+    @Import(name="headers")
       private final @Nullable List<ParameterContractResponse> headers;
 
     public List<ParameterContractResponse> getHeaders() {
@@ -47,7 +47,7 @@ public final class RequestContractResponse extends io.pulumi.resources.InvokeArg
      * Collection of operation request query parameters.
      * 
      */
-    @InputImport(name="queryParameters")
+    @Import(name="queryParameters")
       private final @Nullable List<ParameterContractResponse> queryParameters;
 
     public List<ParameterContractResponse> getQueryParameters() {
@@ -58,7 +58,7 @@ public final class RequestContractResponse extends io.pulumi.resources.InvokeArg
      * Collection of operation request representations.
      * 
      */
-    @InputImport(name="representations")
+    @Import(name="representations")
       private final @Nullable List<RepresentationContractResponse> representations;
 
     public List<RepresentationContractResponse> getRepresentations() {

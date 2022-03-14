@@ -6,7 +6,7 @@ package io.pulumi.azurenative.documentdb;
 import io.pulumi.azurenative.documentdb.enums.RoleDefinitionType;
 import io.pulumi.azurenative.documentdb.inputs.PermissionArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class SqlResourceSqlRoleDefinitionArgs extends io.pulumi.resources.
      * Cosmos DB database account name.
      * 
      */
-    @InputImport(name="accountName", required=true)
+    @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
     public Output<String> getAccountName() {
@@ -32,7 +32,7 @@ public final class SqlResourceSqlRoleDefinitionArgs extends io.pulumi.resources.
      * A set of fully qualified Scopes at or below which Role Assignments may be created using this Role Definition. This will allow application of this Role Definition on the entire database account or any underlying Database / Collection. Must have at least one element. Scopes higher than Database account are not enforceable as assignable Scopes. Note that resources referenced in assignable Scopes need not exist.
      * 
      */
-    @InputImport(name="assignableScopes")
+    @Import(name="assignableScopes")
       private final @Nullable Output<List<String>> assignableScopes;
 
     public Output<List<String>> getAssignableScopes() {
@@ -43,7 +43,7 @@ public final class SqlResourceSqlRoleDefinitionArgs extends io.pulumi.resources.
      * The set of operations allowed through this Role Definition.
      * 
      */
-    @InputImport(name="permissions")
+    @Import(name="permissions")
       private final @Nullable Output<List<PermissionArgs>> permissions;
 
     public Output<List<PermissionArgs>> getPermissions() {
@@ -54,7 +54,7 @@ public final class SqlResourceSqlRoleDefinitionArgs extends io.pulumi.resources.
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -65,7 +65,7 @@ public final class SqlResourceSqlRoleDefinitionArgs extends io.pulumi.resources.
      * The GUID for the Role Definition.
      * 
      */
-    @InputImport(name="roleDefinitionId")
+    @Import(name="roleDefinitionId")
       private final @Nullable Output<String> roleDefinitionId;
 
     public Output<String> getRoleDefinitionId() {
@@ -76,7 +76,7 @@ public final class SqlResourceSqlRoleDefinitionArgs extends io.pulumi.resources.
      * A user-friendly name for the Role Definition. Must be unique for the database account.
      * 
      */
-    @InputImport(name="roleName")
+    @Import(name="roleName")
       private final @Nullable Output<String> roleName;
 
     public Output<String> getRoleName() {
@@ -87,7 +87,7 @@ public final class SqlResourceSqlRoleDefinitionArgs extends io.pulumi.resources.
      * Indicates whether the Role Definition was built-in or user created.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<RoleDefinitionType> type;
 
     public Output<RoleDefinitionType> getType() {

@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.portal.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetTenantConfigurationResult {
     /**
      * When flag is set to true Markdown tile will require external storage configuration (URI). The inline content configuration will be prohibited.
@@ -33,12 +33,12 @@ public final class GetTenantConfigurationResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetTenantConfigurationResult(
-        @OutputCustomType.Parameter("enforcePrivateMarkdownStorage") @Nullable Boolean enforcePrivateMarkdownStorage,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("enforcePrivateMarkdownStorage") @Nullable Boolean enforcePrivateMarkdownStorage,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("type") String type) {
         this.enforcePrivateMarkdownStorage = enforcePrivateMarkdownStorage;
         this.id = id;
         this.name = name;

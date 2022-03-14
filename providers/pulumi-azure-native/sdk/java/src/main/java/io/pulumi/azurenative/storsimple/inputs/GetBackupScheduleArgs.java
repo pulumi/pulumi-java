@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storsimple.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetBackupScheduleArgs extends io.pulumi.resources.InvokeArgs 
      * The backup policy name.
      * 
      */
-    @InputImport(name="backupPolicyName", required=true)
+    @Import(name="backupPolicyName", required=true)
       private final String backupPolicyName;
 
     public String getBackupPolicyName() {
@@ -27,7 +27,7 @@ public final class GetBackupScheduleArgs extends io.pulumi.resources.InvokeArgs 
      * The name of the backup schedule to be fetched
      * 
      */
-    @InputImport(name="backupScheduleName", required=true)
+    @Import(name="backupScheduleName", required=true)
       private final String backupScheduleName;
 
     public String getBackupScheduleName() {
@@ -38,7 +38,7 @@ public final class GetBackupScheduleArgs extends io.pulumi.resources.InvokeArgs 
      * The device name
      * 
      */
-    @InputImport(name="deviceName", required=true)
+    @Import(name="deviceName", required=true)
       private final String deviceName;
 
     public String getDeviceName() {
@@ -49,7 +49,7 @@ public final class GetBackupScheduleArgs extends io.pulumi.resources.InvokeArgs 
      * The manager name
      * 
      */
-    @InputImport(name="managerName", required=true)
+    @Import(name="managerName", required=true)
       private final String managerName;
 
     public String getManagerName() {
@@ -60,7 +60,7 @@ public final class GetBackupScheduleArgs extends io.pulumi.resources.InvokeArgs 
      * The resource group name
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {

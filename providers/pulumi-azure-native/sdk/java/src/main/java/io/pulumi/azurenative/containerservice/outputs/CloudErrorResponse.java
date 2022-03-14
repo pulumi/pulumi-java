@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.containerservice.outputs;
 
 import io.pulumi.azurenative.containerservice.outputs.CloudErrorBodyResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CloudErrorResponse {
     /**
      * Details about the error.
@@ -17,8 +17,8 @@ public final class CloudErrorResponse {
      */
     private final @Nullable CloudErrorBodyResponse error;
 
-    @OutputCustomType.Constructor
-    private CloudErrorResponse(@OutputCustomType.Parameter("error") @Nullable CloudErrorBodyResponse error) {
+    @CustomType.Constructor
+    private CloudErrorResponse(@CustomType.Parameter("error") @Nullable CloudErrorBodyResponse error) {
         this.error = error;
     }
 

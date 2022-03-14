@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.recoveryservices.inputs;
 
 import io.pulumi.azurenative.recoveryservices.inputs.InputEndpointResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -25,7 +25,7 @@ public final class AzureToAzureVmSyncedConfigDetailsResponse extends io.pulumi.r
      * The Azure VM input endpoints.
      * 
      */
-    @InputImport(name="inputEndpoints")
+    @Import(name="inputEndpoints")
       private final @Nullable List<InputEndpointResponse> inputEndpoints;
 
     public List<InputEndpointResponse> getInputEndpoints() {
@@ -36,7 +36,7 @@ public final class AzureToAzureVmSyncedConfigDetailsResponse extends io.pulumi.r
      * The Azure VM tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {

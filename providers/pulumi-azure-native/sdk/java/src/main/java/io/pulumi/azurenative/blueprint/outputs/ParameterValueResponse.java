@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.blueprint.outputs;
 
 import io.pulumi.azurenative.blueprint.outputs.SecretValueReferenceResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ParameterValueResponse {
     /**
      * Parameter value as reference type.
@@ -23,10 +23,10 @@ public final class ParameterValueResponse {
      */
     private final @Nullable Object value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ParameterValueResponse(
-        @OutputCustomType.Parameter("reference") @Nullable SecretValueReferenceResponse reference,
-        @OutputCustomType.Parameter("value") @Nullable Object value) {
+        @CustomType.Parameter("reference") @Nullable SecretValueReferenceResponse reference,
+        @CustomType.Parameter("value") @Nullable Object value) {
         this.reference = reference;
         this.value = value;
     }

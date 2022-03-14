@@ -8,7 +8,7 @@ import io.pulumi.azurenative.containerregistry.enums.TriggerStatus;
 import io.pulumi.azurenative.containerregistry.enums.UpdateTriggerPayloadType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +26,7 @@ public final class BaseImageTriggerArgs extends io.pulumi.resources.ResourceArgs
      * The type of the auto trigger for base image dependency updates.
      * 
      */
-    @InputImport(name="baseImageTriggerType", required=true)
+    @Import(name="baseImageTriggerType", required=true)
       private final Output<Either<String,BaseImageTriggerType>> baseImageTriggerType;
 
     public Output<Either<String,BaseImageTriggerType>> getBaseImageTriggerType() {
@@ -37,7 +37,7 @@ public final class BaseImageTriggerArgs extends io.pulumi.resources.ResourceArgs
      * The name of the trigger.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -48,7 +48,7 @@ public final class BaseImageTriggerArgs extends io.pulumi.resources.ResourceArgs
      * The current status of trigger.
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable Output<Either<String,TriggerStatus>> status;
 
     public Output<Either<String,TriggerStatus>> getStatus() {
@@ -59,7 +59,7 @@ public final class BaseImageTriggerArgs extends io.pulumi.resources.ResourceArgs
      * The endpoint URL for receiving update triggers.
      * 
      */
-    @InputImport(name="updateTriggerEndpoint")
+    @Import(name="updateTriggerEndpoint")
       private final @Nullable Output<String> updateTriggerEndpoint;
 
     public Output<String> getUpdateTriggerEndpoint() {
@@ -70,7 +70,7 @@ public final class BaseImageTriggerArgs extends io.pulumi.resources.ResourceArgs
      * Type of Payload body for Base image update triggers.
      * 
      */
-    @InputImport(name="updateTriggerPayloadType")
+    @Import(name="updateTriggerPayloadType")
       private final @Nullable Output<Either<String,UpdateTriggerPayloadType>> updateTriggerPayloadType;
 
     public Output<Either<String,UpdateTriggerPayloadType>> getUpdateTriggerPayloadType() {

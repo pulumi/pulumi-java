@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class MpiArgs extends io.pulumi.resources.ResourceArgs {
      * Expected value is 'Mpi'.
      * 
      */
-    @InputImport(name="distributionType", required=true)
+    @Import(name="distributionType", required=true)
       private final Output<String> distributionType;
 
     public Output<String> getDistributionType() {
@@ -35,7 +35,7 @@ public final class MpiArgs extends io.pulumi.resources.ResourceArgs {
      * Number of processes per MPI node.
      * 
      */
-    @InputImport(name="processCountPerInstance")
+    @Import(name="processCountPerInstance")
       private final @Nullable Output<Integer> processCountPerInstance;
 
     public Output<Integer> getProcessCountPerInstance() {

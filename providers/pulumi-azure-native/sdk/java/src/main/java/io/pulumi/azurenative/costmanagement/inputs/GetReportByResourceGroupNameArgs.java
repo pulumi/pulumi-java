@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.costmanagement.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetReportByResourceGroupNameArgs extends io.pulumi.resources.
      * Report Name.
      * 
      */
-    @InputImport(name="reportName", required=true)
+    @Import(name="reportName", required=true)
       private final String reportName;
 
     public String getReportName() {
@@ -27,7 +27,7 @@ public final class GetReportByResourceGroupNameArgs extends io.pulumi.resources.
      * Azure Resource Group Name.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {

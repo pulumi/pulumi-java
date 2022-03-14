@@ -10,7 +10,7 @@ import io.pulumi.azurenative.cdn.outputs.PolicySettingsResponse;
 import io.pulumi.azurenative.cdn.outputs.RateLimitRuleListResponse;
 import io.pulumi.azurenative.cdn.outputs.SkuResponse;
 import io.pulumi.azurenative.cdn.outputs.SystemDataResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -18,7 +18,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetPolicyResult {
     /**
      * Describes custom rules inside the policy.
@@ -92,23 +92,23 @@ public final class GetPolicyResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetPolicyResult(
-        @OutputCustomType.Parameter("customRules") @Nullable CustomRuleListResponse customRules,
-        @OutputCustomType.Parameter("endpointLinks") List<CdnEndpointResponse> endpointLinks,
-        @OutputCustomType.Parameter("etag") @Nullable String etag,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("managedRules") @Nullable ManagedRuleSetListResponse managedRules,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("policySettings") @Nullable PolicySettingsResponse policySettings,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("rateLimitRules") @Nullable RateLimitRuleListResponse rateLimitRules,
-        @OutputCustomType.Parameter("resourceState") String resourceState,
-        @OutputCustomType.Parameter("sku") SkuResponse sku,
-        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("customRules") @Nullable CustomRuleListResponse customRules,
+        @CustomType.Parameter("endpointLinks") List<CdnEndpointResponse> endpointLinks,
+        @CustomType.Parameter("etag") @Nullable String etag,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("managedRules") @Nullable ManagedRuleSetListResponse managedRules,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("policySettings") @Nullable PolicySettingsResponse policySettings,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("rateLimitRules") @Nullable RateLimitRuleListResponse rateLimitRules,
+        @CustomType.Parameter("resourceState") String resourceState,
+        @CustomType.Parameter("sku") SkuResponse sku,
+        @CustomType.Parameter("systemData") SystemDataResponse systemData,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type) {
         this.customRules = customRules;
         this.endpointLinks = endpointLinks;
         this.etag = etag;

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datamigration.inputs;
 
 import io.pulumi.azurenative.datamigration.inputs.WaitStatisticsResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -27,7 +27,7 @@ public final class ExecutionStatisticsResponse extends io.pulumi.resources.Invok
      * CPU Time in millisecond(s) for the query execution
      * 
      */
-    @InputImport(name="cpuTimeMs", required=true)
+    @Import(name="cpuTimeMs", required=true)
       private final Double cpuTimeMs;
 
     public Double getCpuTimeMs() {
@@ -38,7 +38,7 @@ public final class ExecutionStatisticsResponse extends io.pulumi.resources.Invok
      * Time taken in millisecond(s) for executing the query
      * 
      */
-    @InputImport(name="elapsedTimeMs", required=true)
+    @Import(name="elapsedTimeMs", required=true)
       private final Double elapsedTimeMs;
 
     public Double getElapsedTimeMs() {
@@ -49,7 +49,7 @@ public final class ExecutionStatisticsResponse extends io.pulumi.resources.Invok
      * No. of query executions
      * 
      */
-    @InputImport(name="executionCount", required=true)
+    @Import(name="executionCount", required=true)
       private final Double executionCount;
 
     public Double getExecutionCount() {
@@ -60,7 +60,7 @@ public final class ExecutionStatisticsResponse extends io.pulumi.resources.Invok
      * Indicates whether the query resulted in an error
      * 
      */
-    @InputImport(name="hasErrors", required=true)
+    @Import(name="hasErrors", required=true)
       private final Boolean hasErrors;
 
     public Boolean getHasErrors() {
@@ -71,7 +71,7 @@ public final class ExecutionStatisticsResponse extends io.pulumi.resources.Invok
      * List of sql Errors
      * 
      */
-    @InputImport(name="sqlErrors", required=true)
+    @Import(name="sqlErrors", required=true)
       private final List<String> sqlErrors;
 
     public List<String> getSqlErrors() {
@@ -82,7 +82,7 @@ public final class ExecutionStatisticsResponse extends io.pulumi.resources.Invok
      * Dictionary of sql query execution wait types and the respective statistics
      * 
      */
-    @InputImport(name="waitStats")
+    @Import(name="waitStats")
       private final @Nullable Map<String,WaitStatisticsResponse> waitStats;
 
     public Map<String,WaitStatisticsResponse> getWaitStats() {

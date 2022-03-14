@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datafactory.outputs;
 
 import io.pulumi.azurenative.datafactory.outputs.SsisParameterResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SsisPackageResponse {
     /**
      * Metadata description.
@@ -56,16 +56,16 @@ public final class SsisPackageResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SsisPackageResponse(
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("folderId") @Nullable Double folderId,
-        @OutputCustomType.Parameter("id") @Nullable Double id,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("parameters") @Nullable List<SsisParameterResponse> parameters,
-        @OutputCustomType.Parameter("projectId") @Nullable Double projectId,
-        @OutputCustomType.Parameter("projectVersion") @Nullable Double projectVersion,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("folderId") @Nullable Double folderId,
+        @CustomType.Parameter("id") @Nullable Double id,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("parameters") @Nullable List<SsisParameterResponse> parameters,
+        @CustomType.Parameter("projectId") @Nullable Double projectId,
+        @CustomType.Parameter("projectVersion") @Nullable Double projectVersion,
+        @CustomType.Parameter("type") String type) {
         this.description = description;
         this.folderId = folderId;
         this.id = id;

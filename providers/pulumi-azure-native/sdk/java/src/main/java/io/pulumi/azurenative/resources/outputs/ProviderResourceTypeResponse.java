@@ -7,7 +7,7 @@ import io.pulumi.azurenative.resources.outputs.AliasResponse;
 import io.pulumi.azurenative.resources.outputs.ApiProfileResponse;
 import io.pulumi.azurenative.resources.outputs.ProviderExtendedLocationResponse;
 import io.pulumi.azurenative.resources.outputs.ZoneMappingResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -15,7 +15,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ProviderResourceTypeResponse {
     /**
      * The aliases that are supported by this resource type.
@@ -64,18 +64,18 @@ public final class ProviderResourceTypeResponse {
     private final @Nullable String resourceType;
     private final @Nullable List<ZoneMappingResponse> zoneMappings;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ProviderResourceTypeResponse(
-        @OutputCustomType.Parameter("aliases") @Nullable List<AliasResponse> aliases,
-        @OutputCustomType.Parameter("apiProfiles") List<ApiProfileResponse> apiProfiles,
-        @OutputCustomType.Parameter("apiVersions") @Nullable List<String> apiVersions,
-        @OutputCustomType.Parameter("capabilities") @Nullable String capabilities,
-        @OutputCustomType.Parameter("defaultApiVersion") String defaultApiVersion,
-        @OutputCustomType.Parameter("locationMappings") @Nullable List<ProviderExtendedLocationResponse> locationMappings,
-        @OutputCustomType.Parameter("locations") @Nullable List<String> locations,
-        @OutputCustomType.Parameter("properties") @Nullable Map<String,String> properties,
-        @OutputCustomType.Parameter("resourceType") @Nullable String resourceType,
-        @OutputCustomType.Parameter("zoneMappings") @Nullable List<ZoneMappingResponse> zoneMappings) {
+        @CustomType.Parameter("aliases") @Nullable List<AliasResponse> aliases,
+        @CustomType.Parameter("apiProfiles") List<ApiProfileResponse> apiProfiles,
+        @CustomType.Parameter("apiVersions") @Nullable List<String> apiVersions,
+        @CustomType.Parameter("capabilities") @Nullable String capabilities,
+        @CustomType.Parameter("defaultApiVersion") String defaultApiVersion,
+        @CustomType.Parameter("locationMappings") @Nullable List<ProviderExtendedLocationResponse> locationMappings,
+        @CustomType.Parameter("locations") @Nullable List<String> locations,
+        @CustomType.Parameter("properties") @Nullable Map<String,String> properties,
+        @CustomType.Parameter("resourceType") @Nullable String resourceType,
+        @CustomType.Parameter("zoneMappings") @Nullable List<ZoneMappingResponse> zoneMappings) {
         this.aliases = aliases;
         this.apiProfiles = apiProfiles;
         this.apiVersions = apiVersions;

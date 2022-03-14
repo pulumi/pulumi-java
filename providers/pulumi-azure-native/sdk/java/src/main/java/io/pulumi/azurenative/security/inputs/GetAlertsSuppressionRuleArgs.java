@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.security.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetAlertsSuppressionRuleArgs extends io.pulumi.resources.Invo
      * The unique name of the suppression alert rule
      * 
      */
-    @InputImport(name="alertsSuppressionRuleName", required=true)
+    @Import(name="alertsSuppressionRuleName", required=true)
       private final String alertsSuppressionRuleName;
 
     public String getAlertsSuppressionRuleName() {

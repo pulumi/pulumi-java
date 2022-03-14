@@ -15,12 +15,12 @@ import io.pulumi.azurenative.logic.outputs.X12SchemaReferenceResponse;
 import io.pulumi.azurenative.logic.outputs.X12SecuritySettingsResponse;
 import io.pulumi.azurenative.logic.outputs.X12ValidationOverrideResponse;
 import io.pulumi.azurenative.logic.outputs.X12ValidationSettingsResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class X12ProtocolSettingsResponse {
     /**
      * The X12 acknowledgment settings.
@@ -83,20 +83,20 @@ public final class X12ProtocolSettingsResponse {
      */
     private final @Nullable List<X12DelimiterOverridesResponse> x12DelimiterOverrides;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private X12ProtocolSettingsResponse(
-        @OutputCustomType.Parameter("acknowledgementSettings") X12AcknowledgementSettingsResponse acknowledgementSettings,
-        @OutputCustomType.Parameter("envelopeOverrides") @Nullable List<X12EnvelopeOverrideResponse> envelopeOverrides,
-        @OutputCustomType.Parameter("envelopeSettings") X12EnvelopeSettingsResponse envelopeSettings,
-        @OutputCustomType.Parameter("framingSettings") X12FramingSettingsResponse framingSettings,
-        @OutputCustomType.Parameter("messageFilter") X12MessageFilterResponse messageFilter,
-        @OutputCustomType.Parameter("messageFilterList") @Nullable List<X12MessageIdentifierResponse> messageFilterList,
-        @OutputCustomType.Parameter("processingSettings") X12ProcessingSettingsResponse processingSettings,
-        @OutputCustomType.Parameter("schemaReferences") List<X12SchemaReferenceResponse> schemaReferences,
-        @OutputCustomType.Parameter("securitySettings") X12SecuritySettingsResponse securitySettings,
-        @OutputCustomType.Parameter("validationOverrides") @Nullable List<X12ValidationOverrideResponse> validationOverrides,
-        @OutputCustomType.Parameter("validationSettings") X12ValidationSettingsResponse validationSettings,
-        @OutputCustomType.Parameter("x12DelimiterOverrides") @Nullable List<X12DelimiterOverridesResponse> x12DelimiterOverrides) {
+        @CustomType.Parameter("acknowledgementSettings") X12AcknowledgementSettingsResponse acknowledgementSettings,
+        @CustomType.Parameter("envelopeOverrides") @Nullable List<X12EnvelopeOverrideResponse> envelopeOverrides,
+        @CustomType.Parameter("envelopeSettings") X12EnvelopeSettingsResponse envelopeSettings,
+        @CustomType.Parameter("framingSettings") X12FramingSettingsResponse framingSettings,
+        @CustomType.Parameter("messageFilter") X12MessageFilterResponse messageFilter,
+        @CustomType.Parameter("messageFilterList") @Nullable List<X12MessageIdentifierResponse> messageFilterList,
+        @CustomType.Parameter("processingSettings") X12ProcessingSettingsResponse processingSettings,
+        @CustomType.Parameter("schemaReferences") List<X12SchemaReferenceResponse> schemaReferences,
+        @CustomType.Parameter("securitySettings") X12SecuritySettingsResponse securitySettings,
+        @CustomType.Parameter("validationOverrides") @Nullable List<X12ValidationOverrideResponse> validationOverrides,
+        @CustomType.Parameter("validationSettings") X12ValidationSettingsResponse validationSettings,
+        @CustomType.Parameter("x12DelimiterOverrides") @Nullable List<X12DelimiterOverridesResponse> x12DelimiterOverrides) {
         this.acknowledgementSettings = acknowledgementSettings;
         this.envelopeOverrides = envelopeOverrides;
         this.envelopeSettings = envelopeSettings;

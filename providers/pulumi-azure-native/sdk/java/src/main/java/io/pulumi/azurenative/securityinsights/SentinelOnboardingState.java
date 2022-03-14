@@ -8,7 +8,7 @@ import io.pulumi.azurenative.securityinsights.SentinelOnboardingStateArgs;
 import io.pulumi.azurenative.securityinsights.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -36,7 +36,7 @@ public class SentinelOnboardingState extends io.pulumi.resources.CustomResource 
      * Flag that indicates the status of the CMK setting
      * 
      */
-    @OutputExport(name="customerManagedKey", type=Boolean.class, parameters={})
+    @Export(name="customerManagedKey", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> customerManagedKey;
 
     /**
@@ -50,7 +50,7 @@ public class SentinelOnboardingState extends io.pulumi.resources.CustomResource 
      * Etag of the azure resource
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output</* @Nullable */ String> etag;
 
     /**
@@ -64,7 +64,7 @@ public class SentinelOnboardingState extends io.pulumi.resources.CustomResource 
      * Azure resource name
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -78,7 +78,7 @@ public class SentinelOnboardingState extends io.pulumi.resources.CustomResource 
      * Azure Resource Manager metadata containing createdBy and modifiedBy information.
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -92,7 +92,7 @@ public class SentinelOnboardingState extends io.pulumi.resources.CustomResource 
      * Azure resource type
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

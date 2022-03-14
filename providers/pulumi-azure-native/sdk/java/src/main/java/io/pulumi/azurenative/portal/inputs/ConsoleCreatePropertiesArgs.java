@@ -7,7 +7,7 @@ import io.pulumi.azurenative.portal.enums.OsType;
 import io.pulumi.azurenative.portal.enums.ProvisioningState;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class ConsoleCreatePropertiesArgs extends io.pulumi.resources.Resou
      * The operating system type of the cloud shell.
      * 
      */
-    @InputImport(name="osType", required=true)
+    @Import(name="osType", required=true)
       private final Output<Either<String,OsType>> osType;
 
     public Output<Either<String,OsType>> getOsType() {
@@ -36,7 +36,7 @@ public final class ConsoleCreatePropertiesArgs extends io.pulumi.resources.Resou
      * Provisioning state of the console.
      * 
      */
-    @InputImport(name="provisioningState")
+    @Import(name="provisioningState")
       private final @Nullable Output<Either<String,ProvisioningState>> provisioningState;
 
     public Output<Either<String,ProvisioningState>> getProvisioningState() {
@@ -47,7 +47,7 @@ public final class ConsoleCreatePropertiesArgs extends io.pulumi.resources.Resou
      * Uri of the console.
      * 
      */
-    @InputImport(name="uri")
+    @Import(name="uri")
       private final @Nullable Output<String> uri;
 
     public Output<String> getUri() {

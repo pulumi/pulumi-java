@@ -5,7 +5,7 @@ package io.pulumi.azurenative.deploymentmanager.inputs;
 
 import io.pulumi.azurenative.deploymentmanager.inputs.PrePostStepArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class StepGroupArgs extends io.pulumi.resources.ResourceArgs {
      * The list of step group names on which this step group depends on.
      * 
      */
-    @InputImport(name="dependsOnStepGroups")
+    @Import(name="dependsOnStepGroups")
       private final @Nullable Output<List<String>> dependsOnStepGroups;
 
     public Output<List<String>> getDependsOnStepGroups() {
@@ -35,7 +35,7 @@ public final class StepGroupArgs extends io.pulumi.resources.ResourceArgs {
      * The resource Id of service unit to be deployed. The service unit should be from the service topology referenced in targetServiceTopologyId
      * 
      */
-    @InputImport(name="deploymentTargetId", required=true)
+    @Import(name="deploymentTargetId", required=true)
       private final Output<String> deploymentTargetId;
 
     public Output<String> getDeploymentTargetId() {
@@ -46,7 +46,7 @@ public final class StepGroupArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the step group.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -57,7 +57,7 @@ public final class StepGroupArgs extends io.pulumi.resources.ResourceArgs {
      * The list of steps to be run after deploying the target.
      * 
      */
-    @InputImport(name="postDeploymentSteps")
+    @Import(name="postDeploymentSteps")
       private final @Nullable Output<List<PrePostStepArgs>> postDeploymentSteps;
 
     public Output<List<PrePostStepArgs>> getPostDeploymentSteps() {
@@ -68,7 +68,7 @@ public final class StepGroupArgs extends io.pulumi.resources.ResourceArgs {
      * The list of steps to be run before deploying the target.
      * 
      */
-    @InputImport(name="preDeploymentSteps")
+    @Import(name="preDeploymentSteps")
       private final @Nullable Output<List<PrePostStepArgs>> preDeploymentSteps;
 
     public Output<List<PrePostStepArgs>> getPreDeploymentSteps() {

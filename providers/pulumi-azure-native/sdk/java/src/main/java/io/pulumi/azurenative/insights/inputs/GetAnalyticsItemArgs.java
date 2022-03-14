@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.insights.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +18,7 @@ public final class GetAnalyticsItemArgs extends io.pulumi.resources.InvokeArgs {
      * The Id of a specific item defined in the Application Insights component
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable String id;
 
     public Optional<String> getId() {
@@ -29,7 +29,7 @@ public final class GetAnalyticsItemArgs extends io.pulumi.resources.InvokeArgs {
      * The name of a specific item defined in the Application Insights component
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -40,7 +40,7 @@ public final class GetAnalyticsItemArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {
@@ -51,7 +51,7 @@ public final class GetAnalyticsItemArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the Application Insights component resource.
      * 
      */
-    @InputImport(name="resourceName", required=true)
+    @Import(name="resourceName", required=true)
       private final String resourceName;
 
     public String getPropResourceName() {
@@ -62,7 +62,7 @@ public final class GetAnalyticsItemArgs extends io.pulumi.resources.InvokeArgs {
      * Enum indicating if this item definition is owned by a specific user or is shared between all users with access to the Application Insights component.
      * 
      */
-    @InputImport(name="scopePath", required=true)
+    @Import(name="scopePath", required=true)
       private final String scopePath;
 
     public String getScopePath() {

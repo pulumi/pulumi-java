@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ContainerResourcesResponse extends io.pulumi.resources.Invoke
      * Required CPU in cores, e.g. 0.5
      * 
      */
-    @InputImport(name="cpu")
+    @Import(name="cpu")
       private final @Nullable Double cpu;
 
     public Optional<Double> getCpu() {
@@ -34,7 +34,7 @@ public final class ContainerResourcesResponse extends io.pulumi.resources.Invoke
      * Required memory, e.g. "250Mb"
      * 
      */
-    @InputImport(name="memory")
+    @Import(name="memory")
       private final @Nullable String memory;
 
     public Optional<String> getMemory() {

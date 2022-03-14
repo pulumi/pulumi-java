@@ -6,7 +6,7 @@ package io.pulumi.azurenative.insights;
 import io.pulumi.azurenative.insights.inputs.WorkbookTemplateGalleryArgs;
 import io.pulumi.azurenative.insights.inputs.WorkbookTemplateLocalizedGalleryArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class WorkbookTemplateArgs extends io.pulumi.resources.ResourceArgs
      * Information about the author of the workbook template.
      * 
      */
-    @InputImport(name="author")
+    @Import(name="author")
       private final @Nullable Output<String> author;
 
     public Output<String> getAuthor() {
@@ -35,7 +35,7 @@ public final class WorkbookTemplateArgs extends io.pulumi.resources.ResourceArgs
      * Workbook galleries supported by the template.
      * 
      */
-    @InputImport(name="galleries", required=true)
+    @Import(name="galleries", required=true)
       private final Output<List<WorkbookTemplateGalleryArgs>> galleries;
 
     public Output<List<WorkbookTemplateGalleryArgs>> getGalleries() {
@@ -46,7 +46,7 @@ public final class WorkbookTemplateArgs extends io.pulumi.resources.ResourceArgs
      * Key value pair of localized gallery. Each key is the locale code of languages supported by the Azure portal.
      * 
      */
-    @InputImport(name="localized")
+    @Import(name="localized")
       private final @Nullable Output<Map<String,List<WorkbookTemplateLocalizedGalleryArgs>>> localized;
 
     public Output<Map<String,List<WorkbookTemplateLocalizedGalleryArgs>>> getLocalized() {
@@ -57,7 +57,7 @@ public final class WorkbookTemplateArgs extends io.pulumi.resources.ResourceArgs
      * Resource location
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -68,7 +68,7 @@ public final class WorkbookTemplateArgs extends io.pulumi.resources.ResourceArgs
      * Priority of the template. Determines which template to open when a workbook gallery is opened in viewer mode.
      * 
      */
-    @InputImport(name="priority")
+    @Import(name="priority")
       private final @Nullable Output<Integer> priority;
 
     public Output<Integer> getPriority() {
@@ -79,7 +79,7 @@ public final class WorkbookTemplateArgs extends io.pulumi.resources.ResourceArgs
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -90,7 +90,7 @@ public final class WorkbookTemplateArgs extends io.pulumi.resources.ResourceArgs
      * The name of the Application Insights component resource.
      * 
      */
-    @InputImport(name="resourceName")
+    @Import(name="resourceName")
       private final @Nullable Output<String> resourceName;
 
     public Output<String> getPropResourceName() {
@@ -101,7 +101,7 @@ public final class WorkbookTemplateArgs extends io.pulumi.resources.ResourceArgs
      * Resource tags
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -112,7 +112,7 @@ public final class WorkbookTemplateArgs extends io.pulumi.resources.ResourceArgs
      * Valid JSON object containing workbook template payload.
      * 
      */
-    @InputImport(name="templateData", required=true)
+    @Import(name="templateData", required=true)
       private final Output<Object> templateData;
 
     public Output<Object> getTemplateData() {

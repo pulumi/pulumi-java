@@ -6,7 +6,7 @@ package io.pulumi.azurenative.videoanalyzer.inputs;
 import io.pulumi.azurenative.videoanalyzer.enums.EncoderSystemPresetType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class EncoderSystemPresetArgs extends io.pulumi.resources.ResourceA
      * Name of the built-in encoding preset.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<Either<String,EncoderSystemPresetType>> name;
 
     public Output<Either<String,EncoderSystemPresetType>> getName() {
@@ -35,7 +35,7 @@ public final class EncoderSystemPresetArgs extends io.pulumi.resources.ResourceA
      * Expected value is '#Microsoft.VideoAnalyzer.EncoderSystemPreset'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {

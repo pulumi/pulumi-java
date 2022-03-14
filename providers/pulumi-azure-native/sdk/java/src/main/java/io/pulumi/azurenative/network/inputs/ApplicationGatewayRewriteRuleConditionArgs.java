@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ApplicationGatewayRewriteRuleConditionArgs extends io.pulumi.
      * Setting this parameter to truth value with force the pattern to do a case in-sensitive comparison.
      * 
      */
-    @InputImport(name="ignoreCase")
+    @Import(name="ignoreCase")
       private final @Nullable Output<Boolean> ignoreCase;
 
     public Output<Boolean> getIgnoreCase() {
@@ -34,7 +34,7 @@ public final class ApplicationGatewayRewriteRuleConditionArgs extends io.pulumi.
      * Setting this value as truth will force to check the negation of the condition given by the user.
      * 
      */
-    @InputImport(name="negate")
+    @Import(name="negate")
       private final @Nullable Output<Boolean> negate;
 
     public Output<Boolean> getNegate() {
@@ -45,7 +45,7 @@ public final class ApplicationGatewayRewriteRuleConditionArgs extends io.pulumi.
      * The pattern, either fixed string or regular expression, that evaluates the truthfulness of the condition.
      * 
      */
-    @InputImport(name="pattern")
+    @Import(name="pattern")
       private final @Nullable Output<String> pattern;
 
     public Output<String> getPattern() {
@@ -56,7 +56,7 @@ public final class ApplicationGatewayRewriteRuleConditionArgs extends io.pulumi.
      * The condition parameter of the RewriteRuleCondition.
      * 
      */
-    @InputImport(name="variable")
+    @Import(name="variable")
       private final @Nullable Output<String> variable;
 
     public Output<String> getVariable() {

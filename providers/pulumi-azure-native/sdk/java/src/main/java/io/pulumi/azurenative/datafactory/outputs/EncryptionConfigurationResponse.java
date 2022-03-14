@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.datafactory.outputs;
 
 import io.pulumi.azurenative.datafactory.outputs.CMKIdentityDefinitionResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EncryptionConfigurationResponse {
     /**
      * User assigned identity to use to authenticate to customer's key vault. If not provided Managed Service Identity will be used.
@@ -33,12 +33,12 @@ public final class EncryptionConfigurationResponse {
      */
     private final String vaultBaseUrl;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EncryptionConfigurationResponse(
-        @OutputCustomType.Parameter("identity") @Nullable CMKIdentityDefinitionResponse identity,
-        @OutputCustomType.Parameter("keyName") String keyName,
-        @OutputCustomType.Parameter("keyVersion") @Nullable String keyVersion,
-        @OutputCustomType.Parameter("vaultBaseUrl") String vaultBaseUrl) {
+        @CustomType.Parameter("identity") @Nullable CMKIdentityDefinitionResponse identity,
+        @CustomType.Parameter("keyName") String keyName,
+        @CustomType.Parameter("keyVersion") @Nullable String keyVersion,
+        @CustomType.Parameter("vaultBaseUrl") String vaultBaseUrl) {
         this.identity = identity;
         this.keyName = keyName;
         this.keyVersion = keyVersion;

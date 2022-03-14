@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.aadiam.PrivateLinkForAzureAdArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -36,7 +36,7 @@ public class PrivateLinkForAzureAd extends io.pulumi.resources.CustomResource {
      * Flag indicating whether all tenants are allowed
      * 
      */
-    @OutputExport(name="allTenants", type=Boolean.class, parameters={})
+    @Export(name="allTenants", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> allTenants;
 
     /**
@@ -50,7 +50,7 @@ public class PrivateLinkForAzureAd extends io.pulumi.resources.CustomResource {
      * Name of this resource.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
@@ -64,7 +64,7 @@ public class PrivateLinkForAzureAd extends io.pulumi.resources.CustomResource {
      * Guid of the owner tenant
      * 
      */
-    @OutputExport(name="ownerTenantId", type=String.class, parameters={})
+    @Export(name="ownerTenantId", type=String.class, parameters={})
     private Output</* @Nullable */ String> ownerTenantId;
 
     /**
@@ -78,7 +78,7 @@ public class PrivateLinkForAzureAd extends io.pulumi.resources.CustomResource {
      * Name of the resource group
      * 
      */
-    @OutputExport(name="resourceGroup", type=String.class, parameters={})
+    @Export(name="resourceGroup", type=String.class, parameters={})
     private Output</* @Nullable */ String> resourceGroup;
 
     /**
@@ -92,7 +92,7 @@ public class PrivateLinkForAzureAd extends io.pulumi.resources.CustomResource {
      * Name of the private link policy resource
      * 
      */
-    @OutputExport(name="resourceName", type=String.class, parameters={})
+    @Export(name="resourceName", type=String.class, parameters={})
     private Output</* @Nullable */ String> resourceName;
 
     /**
@@ -106,7 +106,7 @@ public class PrivateLinkForAzureAd extends io.pulumi.resources.CustomResource {
      * Subscription Identifier
      * 
      */
-    @OutputExport(name="subscriptionId", type=String.class, parameters={})
+    @Export(name="subscriptionId", type=String.class, parameters={})
     private Output</* @Nullable */ String> subscriptionId;
 
     /**
@@ -120,7 +120,7 @@ public class PrivateLinkForAzureAd extends io.pulumi.resources.CustomResource {
      * Resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -134,7 +134,7 @@ public class PrivateLinkForAzureAd extends io.pulumi.resources.CustomResource {
      * The list of tenantIds.
      * 
      */
-    @OutputExport(name="tenants", type=List.class, parameters={String.class})
+    @Export(name="tenants", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> tenants;
 
     /**
@@ -148,7 +148,7 @@ public class PrivateLinkForAzureAd extends io.pulumi.resources.CustomResource {
      * Type of this resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

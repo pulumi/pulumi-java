@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.insights.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AzureAppPushReceiverResponse {
     /**
      * The email address registered for the Azure mobile app.
@@ -20,10 +20,10 @@ public final class AzureAppPushReceiverResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AzureAppPushReceiverResponse(
-        @OutputCustomType.Parameter("emailAddress") String emailAddress,
-        @OutputCustomType.Parameter("name") String name) {
+        @CustomType.Parameter("emailAddress") String emailAddress,
+        @CustomType.Parameter("name") String name) {
         this.emailAddress = emailAddress;
         this.name = name;
     }

@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.peering.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ContactDetailResponse {
     /**
      * The e-mail address of the contact.
@@ -27,11 +27,11 @@ public final class ContactDetailResponse {
      */
     private final @Nullable String role;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ContactDetailResponse(
-        @OutputCustomType.Parameter("email") @Nullable String email,
-        @OutputCustomType.Parameter("phone") @Nullable String phone,
-        @OutputCustomType.Parameter("role") @Nullable String role) {
+        @CustomType.Parameter("email") @Nullable String email,
+        @CustomType.Parameter("phone") @Nullable String phone,
+        @CustomType.Parameter("role") @Nullable String role) {
         this.email = email;
         this.phone = phone;
         this.role = role;

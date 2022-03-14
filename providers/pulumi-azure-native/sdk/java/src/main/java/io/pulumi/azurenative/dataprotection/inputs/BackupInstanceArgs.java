@@ -7,7 +7,7 @@ import io.pulumi.azurenative.dataprotection.inputs.DatasourceArgs;
 import io.pulumi.azurenative.dataprotection.inputs.DatasourceSetArgs;
 import io.pulumi.azurenative.dataprotection.inputs.PolicyInfoArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class BackupInstanceArgs extends io.pulumi.resources.ResourceArgs {
      * Gets or sets the data source information.
      * 
      */
-    @InputImport(name="dataSourceInfo", required=true)
+    @Import(name="dataSourceInfo", required=true)
       private final Output<DatasourceArgs> dataSourceInfo;
 
     public Output<DatasourceArgs> getDataSourceInfo() {
@@ -36,7 +36,7 @@ public final class BackupInstanceArgs extends io.pulumi.resources.ResourceArgs {
      * Gets or sets the data source set information.
      * 
      */
-    @InputImport(name="dataSourceSetInfo")
+    @Import(name="dataSourceSetInfo")
       private final @Nullable Output<DatasourceSetArgs> dataSourceSetInfo;
 
     public Output<DatasourceSetArgs> getDataSourceSetInfo() {
@@ -47,14 +47,14 @@ public final class BackupInstanceArgs extends io.pulumi.resources.ResourceArgs {
      * Gets or sets the Backup Instance friendly name.
      * 
      */
-    @InputImport(name="friendlyName")
+    @Import(name="friendlyName")
       private final @Nullable Output<String> friendlyName;
 
     public Output<String> getFriendlyName() {
         return this.friendlyName == null ? Output.empty() : this.friendlyName;
     }
 
-    @InputImport(name="objectType", required=true)
+    @Import(name="objectType", required=true)
       private final Output<String> objectType;
 
     public Output<String> getObjectType() {
@@ -65,7 +65,7 @@ public final class BackupInstanceArgs extends io.pulumi.resources.ResourceArgs {
      * Gets or sets the policy information.
      * 
      */
-    @InputImport(name="policyInfo", required=true)
+    @Import(name="policyInfo", required=true)
       private final Output<PolicyInfoArgs> policyInfo;
 
     public Output<PolicyInfoArgs> getPolicyInfo() {

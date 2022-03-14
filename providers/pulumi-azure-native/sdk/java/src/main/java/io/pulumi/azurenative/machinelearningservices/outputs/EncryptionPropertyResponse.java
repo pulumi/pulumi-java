@@ -5,13 +5,13 @@ package io.pulumi.azurenative.machinelearningservices.outputs;
 
 import io.pulumi.azurenative.machinelearningservices.outputs.IdentityForCmkResponse;
 import io.pulumi.azurenative.machinelearningservices.outputs.KeyVaultPropertiesResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EncryptionPropertyResponse {
     /**
      * The identity that will be used to access the key vault for encryption at rest.
@@ -29,11 +29,11 @@ public final class EncryptionPropertyResponse {
      */
     private final String status;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EncryptionPropertyResponse(
-        @OutputCustomType.Parameter("identity") @Nullable IdentityForCmkResponse identity,
-        @OutputCustomType.Parameter("keyVaultProperties") KeyVaultPropertiesResponse keyVaultProperties,
-        @OutputCustomType.Parameter("status") String status) {
+        @CustomType.Parameter("identity") @Nullable IdentityForCmkResponse identity,
+        @CustomType.Parameter("keyVaultProperties") KeyVaultPropertiesResponse keyVaultProperties,
+        @CustomType.Parameter("status") String status) {
         this.identity = identity;
         this.keyVaultProperties = keyVaultProperties;
         this.status = status;

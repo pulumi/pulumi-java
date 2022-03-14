@@ -6,7 +6,7 @@ package io.pulumi.azurenative.eventhub.inputs;
 import io.pulumi.azurenative.eventhub.enums.PrivateLinkConnectionStatus;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class ConnectionStateArgs extends io.pulumi.resources.ResourceArgs 
      * Description of the connection state.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -35,7 +35,7 @@ public final class ConnectionStateArgs extends io.pulumi.resources.ResourceArgs 
      * Status of the connection.
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable Output<Either<String,PrivateLinkConnectionStatus>> status;
 
     public Output<Either<String,PrivateLinkConnectionStatus>> getStatus() {

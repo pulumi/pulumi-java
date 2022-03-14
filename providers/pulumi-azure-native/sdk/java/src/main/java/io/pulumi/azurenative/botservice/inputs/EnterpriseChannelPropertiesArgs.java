@@ -7,7 +7,7 @@ import io.pulumi.azurenative.botservice.enums.EnterpriseChannelState;
 import io.pulumi.azurenative.botservice.inputs.EnterpriseChannelNodeArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class EnterpriseChannelPropertiesArgs extends io.pulumi.resources.R
      * The nodes associated with the Enterprise Channel.
      * 
      */
-    @InputImport(name="nodes", required=true)
+    @Import(name="nodes", required=true)
       private final Output<List<EnterpriseChannelNodeArgs>> nodes;
 
     public Output<List<EnterpriseChannelNodeArgs>> getNodes() {
@@ -37,7 +37,7 @@ public final class EnterpriseChannelPropertiesArgs extends io.pulumi.resources.R
      * The current state of the Enterprise Channel.
      * 
      */
-    @InputImport(name="state")
+    @Import(name="state")
       private final @Nullable Output<Either<String,EnterpriseChannelState>> state;
 
     public Output<Either<String,EnterpriseChannelState>> getState() {

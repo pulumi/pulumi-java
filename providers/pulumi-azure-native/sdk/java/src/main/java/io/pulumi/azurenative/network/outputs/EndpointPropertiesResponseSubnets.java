@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EndpointPropertiesResponseSubnets {
     /**
      * First address in the subnet.
@@ -28,11 +28,11 @@ public final class EndpointPropertiesResponseSubnets {
      */
     private final @Nullable Integer scope;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EndpointPropertiesResponseSubnets(
-        @OutputCustomType.Parameter("first") @Nullable String first,
-        @OutputCustomType.Parameter("last") @Nullable String last,
-        @OutputCustomType.Parameter("scope") @Nullable Integer scope) {
+        @CustomType.Parameter("first") @Nullable String first,
+        @CustomType.Parameter("last") @Nullable String last,
+        @CustomType.Parameter("scope") @Nullable Integer scope) {
         this.first = first;
         this.last = last;
         this.scope = scope;

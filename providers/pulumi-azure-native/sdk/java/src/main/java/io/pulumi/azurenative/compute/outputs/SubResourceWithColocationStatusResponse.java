@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.compute.outputs;
 
 import io.pulumi.azurenative.compute.outputs.InstanceViewStatusResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SubResourceWithColocationStatusResponse {
     /**
      * Describes colocation status of a resource in the Proximity Placement Group.
@@ -23,10 +23,10 @@ public final class SubResourceWithColocationStatusResponse {
      */
     private final @Nullable String id;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SubResourceWithColocationStatusResponse(
-        @OutputCustomType.Parameter("colocationStatus") @Nullable InstanceViewStatusResponse colocationStatus,
-        @OutputCustomType.Parameter("id") @Nullable String id) {
+        @CustomType.Parameter("colocationStatus") @Nullable InstanceViewStatusResponse colocationStatus,
+        @CustomType.Parameter("id") @Nullable String id) {
         this.colocationStatus = colocationStatus;
         this.id = id;
     }

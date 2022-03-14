@@ -9,7 +9,7 @@ import io.pulumi.azurenative.videoanalyzer.outputs.ParameterDefinitionResponse;
 import io.pulumi.azurenative.videoanalyzer.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -37,7 +37,7 @@ public class LivePipeline extends io.pulumi.resources.CustomResource {
      * Maximum bitrate capacity in Kbps reserved for the live pipeline. The allowed range is from 500 to 3000 Kbps in increments of 100 Kbps. If the RTSP camera exceeds this capacity, then the service will disconnect temporarily from the camera. It will retry to re-establish connection (with exponential backoff), checking to see if the camera bitrate is now below the reserved capacity. Doing so will ensure that one 'noisy neighbor' does not affect other live pipelines in your account.
      * 
      */
-    @OutputExport(name="bitrateKbps", type=Integer.class, parameters={})
+    @Export(name="bitrateKbps", type=Integer.class, parameters={})
     private Output<Integer> bitrateKbps;
 
     /**
@@ -51,7 +51,7 @@ public class LivePipeline extends io.pulumi.resources.CustomResource {
      * An optional description for the pipeline.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -65,7 +65,7 @@ public class LivePipeline extends io.pulumi.resources.CustomResource {
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -79,7 +79,7 @@ public class LivePipeline extends io.pulumi.resources.CustomResource {
      * List of the instance level parameter values for the user-defined topology parameters. A pipeline can only define or override parameters values for parameters which have been declared in the referenced topology. Topology parameters without a default value must be defined. Topology parameters with a default value can be optionally be overridden.
      * 
      */
-    @OutputExport(name="parameters", type=List.class, parameters={ParameterDefinitionResponse.class})
+    @Export(name="parameters", type=List.class, parameters={ParameterDefinitionResponse.class})
     private Output</* @Nullable */ List<ParameterDefinitionResponse>> parameters;
 
     /**
@@ -93,7 +93,7 @@ public class LivePipeline extends io.pulumi.resources.CustomResource {
      * Current state of the pipeline (read-only).
      * 
      */
-    @OutputExport(name="state", type=String.class, parameters={})
+    @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
@@ -107,7 +107,7 @@ public class LivePipeline extends io.pulumi.resources.CustomResource {
      * Azure Resource Manager metadata containing createdBy and modifiedBy information.
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -121,7 +121,7 @@ public class LivePipeline extends io.pulumi.resources.CustomResource {
      * The reference to an existing pipeline topology defined for real-time content processing. When activated, this live pipeline will process content according to the pipeline topology definition.
      * 
      */
-    @OutputExport(name="topologyName", type=String.class, parameters={})
+    @Export(name="topologyName", type=String.class, parameters={})
     private Output<String> topologyName;
 
     /**
@@ -135,7 +135,7 @@ public class LivePipeline extends io.pulumi.resources.CustomResource {
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

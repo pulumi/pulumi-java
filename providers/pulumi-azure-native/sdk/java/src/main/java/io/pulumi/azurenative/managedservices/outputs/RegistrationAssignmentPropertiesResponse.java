@@ -4,11 +4,11 @@
 package io.pulumi.azurenative.managedservices.outputs;
 
 import io.pulumi.azurenative.managedservices.outputs.RegistrationAssignmentPropertiesResponseRegistrationDefinition;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RegistrationAssignmentPropertiesResponse {
     /**
      * Current state of the registration assignment.
@@ -26,11 +26,11 @@ public final class RegistrationAssignmentPropertiesResponse {
      */
     private final String registrationDefinitionId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RegistrationAssignmentPropertiesResponse(
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("registrationDefinition") RegistrationAssignmentPropertiesResponseRegistrationDefinition registrationDefinition,
-        @OutputCustomType.Parameter("registrationDefinitionId") String registrationDefinitionId) {
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("registrationDefinition") RegistrationAssignmentPropertiesResponseRegistrationDefinition registrationDefinition,
+        @CustomType.Parameter("registrationDefinitionId") String registrationDefinitionId) {
         this.provisioningState = provisioningState;
         this.registrationDefinition = registrationDefinition;
         this.registrationDefinitionId = registrationDefinitionId;

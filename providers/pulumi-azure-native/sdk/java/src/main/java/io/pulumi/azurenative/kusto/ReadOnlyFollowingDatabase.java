@@ -8,7 +8,7 @@ import io.pulumi.azurenative.kusto.ReadOnlyFollowingDatabaseArgs;
 import io.pulumi.azurenative.kusto.outputs.DatabaseStatisticsResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +35,7 @@ public class ReadOnlyFollowingDatabase extends io.pulumi.resources.CustomResourc
      * The name of the attached database configuration cluster
      * 
      */
-    @OutputExport(name="attachedDatabaseConfigurationName", type=String.class, parameters={})
+    @Export(name="attachedDatabaseConfigurationName", type=String.class, parameters={})
     private Output<String> attachedDatabaseConfigurationName;
 
     /**
@@ -49,7 +49,7 @@ public class ReadOnlyFollowingDatabase extends io.pulumi.resources.CustomResourc
      * The time the data should be kept in cache for fast queries in TimeSpan.
      * 
      */
-    @OutputExport(name="hotCachePeriod", type=String.class, parameters={})
+    @Export(name="hotCachePeriod", type=String.class, parameters={})
     private Output</* @Nullable */ String> hotCachePeriod;
 
     /**
@@ -64,7 +64,7 @@ public class ReadOnlyFollowingDatabase extends io.pulumi.resources.CustomResourc
      * Expected value is 'ReadOnlyFollowing'.
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
     /**
@@ -79,7 +79,7 @@ public class ReadOnlyFollowingDatabase extends io.pulumi.resources.CustomResourc
      * The name of the leader cluster
      * 
      */
-    @OutputExport(name="leaderClusterResourceId", type=String.class, parameters={})
+    @Export(name="leaderClusterResourceId", type=String.class, parameters={})
     private Output<String> leaderClusterResourceId;
 
     /**
@@ -93,7 +93,7 @@ public class ReadOnlyFollowingDatabase extends io.pulumi.resources.CustomResourc
      * Resource location.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -107,7 +107,7 @@ public class ReadOnlyFollowingDatabase extends io.pulumi.resources.CustomResourc
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -121,7 +121,7 @@ public class ReadOnlyFollowingDatabase extends io.pulumi.resources.CustomResourc
      * The principals modification kind of the database
      * 
      */
-    @OutputExport(name="principalsModificationKind", type=String.class, parameters={})
+    @Export(name="principalsModificationKind", type=String.class, parameters={})
     private Output<String> principalsModificationKind;
 
     /**
@@ -135,7 +135,7 @@ public class ReadOnlyFollowingDatabase extends io.pulumi.resources.CustomResourc
      * The provisioned state of the resource.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -149,7 +149,7 @@ public class ReadOnlyFollowingDatabase extends io.pulumi.resources.CustomResourc
      * The time the data should be kept before it stops being accessible to queries in TimeSpan.
      * 
      */
-    @OutputExport(name="softDeletePeriod", type=String.class, parameters={})
+    @Export(name="softDeletePeriod", type=String.class, parameters={})
     private Output<String> softDeletePeriod;
 
     /**
@@ -163,7 +163,7 @@ public class ReadOnlyFollowingDatabase extends io.pulumi.resources.CustomResourc
      * The statistics of the database.
      * 
      */
-    @OutputExport(name="statistics", type=DatabaseStatisticsResponse.class, parameters={})
+    @Export(name="statistics", type=DatabaseStatisticsResponse.class, parameters={})
     private Output<DatabaseStatisticsResponse> statistics;
 
     /**
@@ -177,7 +177,7 @@ public class ReadOnlyFollowingDatabase extends io.pulumi.resources.CustomResourc
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

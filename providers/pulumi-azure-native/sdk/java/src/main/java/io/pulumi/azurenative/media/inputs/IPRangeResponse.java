@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.media.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class IPRangeResponse extends io.pulumi.resources.InvokeArgs {
      * The IP address.
      * 
      */
-    @InputImport(name="address")
+    @Import(name="address")
       private final @Nullable String address;
 
     public Optional<String> getAddress() {
@@ -34,7 +34,7 @@ public final class IPRangeResponse extends io.pulumi.resources.InvokeArgs {
      * The friendly name for the IP address range.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -45,7 +45,7 @@ public final class IPRangeResponse extends io.pulumi.resources.InvokeArgs {
      * The subnet mask prefix length (see CIDR notation).
      * 
      */
-    @InputImport(name="subnetPrefixLength")
+    @Import(name="subnetPrefixLength")
       private final @Nullable Integer subnetPrefixLength;
 
     public Optional<Integer> getSubnetPrefixLength() {

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.batch.enums.ElevationLevel;
 import io.pulumi.azurenative.batch.inputs.LinuxUserConfigurationArgs;
 import io.pulumi.azurenative.batch.inputs.WindowsUserConfigurationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public final class UserAccountArgs extends io.pulumi.resources.ResourceArgs {
      * nonAdmin - The auto user is a standard user without elevated access. admin - The auto user is a user with elevated access and operates with full Administrator permissions. The default value is nonAdmin.
      * 
      */
-    @InputImport(name="elevationLevel")
+    @Import(name="elevationLevel")
       private final @Nullable Output<ElevationLevel> elevationLevel;
 
     public Output<ElevationLevel> getElevationLevel() {
@@ -32,21 +32,21 @@ public final class UserAccountArgs extends io.pulumi.resources.ResourceArgs {
      * This property is ignored if specified on a Windows pool. If not specified, the user is created with the default options.
      * 
      */
-    @InputImport(name="linuxUserConfiguration")
+    @Import(name="linuxUserConfiguration")
       private final @Nullable Output<LinuxUserConfigurationArgs> linuxUserConfiguration;
 
     public Output<LinuxUserConfigurationArgs> getLinuxUserConfiguration() {
         return this.linuxUserConfiguration == null ? Output.empty() : this.linuxUserConfiguration;
     }
 
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
         return this.name;
     }
 
-    @InputImport(name="password", required=true)
+    @Import(name="password", required=true)
       private final Output<String> password;
 
     public Output<String> getPassword() {
@@ -57,7 +57,7 @@ public final class UserAccountArgs extends io.pulumi.resources.ResourceArgs {
      * This property can only be specified if the user is on a Windows pool. If not specified and on a Windows pool, the user is created with the default options.
      * 
      */
-    @InputImport(name="windowsUserConfiguration")
+    @Import(name="windowsUserConfiguration")
       private final @Nullable Output<WindowsUserConfigurationArgs> windowsUserConfiguration;
 
     public Output<WindowsUserConfigurationArgs> getWindowsUserConfiguration() {

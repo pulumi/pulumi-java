@@ -6,7 +6,7 @@ package io.pulumi.azurenative.web;
 import io.pulumi.azurenative.web.enums.BuiltInAuthenticationProvider;
 import io.pulumi.azurenative.web.enums.UnauthenticatedClientAction;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class WebAppAuthSettingsSlotArgs extends io.pulumi.resources.Resour
      * Gets a JSON string containing the Azure AD Acl settings.
      * 
      */
-    @InputImport(name="aadClaimsAuthorization")
+    @Import(name="aadClaimsAuthorization")
       private final @Nullable Output<String> aadClaimsAuthorization;
 
     public Output<String> getAadClaimsAuthorization() {
@@ -35,7 +35,7 @@ public final class WebAppAuthSettingsSlotArgs extends io.pulumi.resources.Resour
      * a user logs in. Each parameter must be in the form "key=value".
      * 
      */
-    @InputImport(name="additionalLoginParams")
+    @Import(name="additionalLoginParams")
       private final @Nullable Output<List<String>> additionalLoginParams;
 
     public Output<List<String>> getAdditionalLoginParams() {
@@ -48,7 +48,7 @@ public final class WebAppAuthSettingsSlotArgs extends io.pulumi.resources.Resour
      * allowed audience, regardless of this setting.
      * 
      */
-    @InputImport(name="allowedAudiences")
+    @Import(name="allowedAudiences")
       private final @Nullable Output<List<String>> allowedAudiences;
 
     public Output<List<String>> getAllowedAudiences() {
@@ -61,7 +61,7 @@ public final class WebAppAuthSettingsSlotArgs extends io.pulumi.resources.Resour
      * Note that URLs within the current domain are always implicitly allowed.
      * 
      */
-    @InputImport(name="allowedExternalRedirectUrls")
+    @Import(name="allowedExternalRedirectUrls")
       private final @Nullable Output<List<String>> allowedExternalRedirectUrls;
 
     public Output<List<String>> getAllowedExternalRedirectUrls() {
@@ -73,7 +73,7 @@ public final class WebAppAuthSettingsSlotArgs extends io.pulumi.resources.Resour
      * If the path is relative, base will the site's root directory.
      * 
      */
-    @InputImport(name="authFilePath")
+    @Import(name="authFilePath")
       private final @Nullable Output<String> authFilePath;
 
     public Output<String> getAuthFilePath() {
@@ -87,7 +87,7 @@ public final class WebAppAuthSettingsSlotArgs extends io.pulumi.resources.Resour
      * More information on OpenID Connect: http://openid.net/specs/openid-connect-core-1_0.html
      * 
      */
-    @InputImport(name="clientId")
+    @Import(name="clientId")
       private final @Nullable Output<String> clientId;
 
     public Output<String> getClientId() {
@@ -101,7 +101,7 @@ public final class WebAppAuthSettingsSlotArgs extends io.pulumi.resources.Resour
      * More information on OpenID Connect: http://openid.net/specs/openid-connect-core-1_0.html
      * 
      */
-    @InputImport(name="clientSecret")
+    @Import(name="clientSecret")
       private final @Nullable Output<String> clientSecret;
 
     public Output<String> getClientSecret() {
@@ -113,7 +113,7 @@ public final class WebAppAuthSettingsSlotArgs extends io.pulumi.resources.Resour
      * a replacement for the Client Secret. It is also optional.
      * 
      */
-    @InputImport(name="clientSecretCertificateThumbprint")
+    @Import(name="clientSecretCertificateThumbprint")
       private final @Nullable Output<String> clientSecretCertificateThumbprint;
 
     public Output<String> getClientSecretCertificateThumbprint() {
@@ -124,7 +124,7 @@ public final class WebAppAuthSettingsSlotArgs extends io.pulumi.resources.Resour
      * The app setting name that contains the client secret of the relying party application.
      * 
      */
-    @InputImport(name="clientSecretSettingName")
+    @Import(name="clientSecretSettingName")
       private final @Nullable Output<String> clientSecretSettingName;
 
     public Output<String> getClientSecretSettingName() {
@@ -136,7 +136,7 @@ public final class WebAppAuthSettingsSlotArgs extends io.pulumi.resources.Resour
      * The setting in this value can control the behavior of the control plane for Authentication / Authorization.
      * 
      */
-    @InputImport(name="configVersion")
+    @Import(name="configVersion")
       private final @Nullable Output<String> configVersion;
 
     public Output<String> getConfigVersion() {
@@ -149,7 +149,7 @@ public final class WebAppAuthSettingsSlotArgs extends io.pulumi.resources.Resour
      * action is set to "RedirectToLoginPage".
      * 
      */
-    @InputImport(name="defaultProvider")
+    @Import(name="defaultProvider")
       private final @Nullable Output<BuiltInAuthenticationProvider> defaultProvider;
 
     public Output<BuiltInAuthenticationProvider> getDefaultProvider() {
@@ -160,7 +160,7 @@ public final class WebAppAuthSettingsSlotArgs extends io.pulumi.resources.Resour
      * <code>true</code> if the Authentication / Authorization feature is enabled for the current app; otherwise, <code>false</code>.
      * 
      */
-    @InputImport(name="enabled")
+    @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
@@ -173,7 +173,7 @@ public final class WebAppAuthSettingsSlotArgs extends io.pulumi.resources.Resour
      * Facebook Login documentation: https://developers.facebook.com/docs/facebook-login
      * 
      */
-    @InputImport(name="facebookAppId")
+    @Import(name="facebookAppId")
       private final @Nullable Output<String> facebookAppId;
 
     public Output<String> getFacebookAppId() {
@@ -186,7 +186,7 @@ public final class WebAppAuthSettingsSlotArgs extends io.pulumi.resources.Resour
      * Facebook Login documentation: https://developers.facebook.com/docs/facebook-login
      * 
      */
-    @InputImport(name="facebookAppSecret")
+    @Import(name="facebookAppSecret")
       private final @Nullable Output<String> facebookAppSecret;
 
     public Output<String> getFacebookAppSecret() {
@@ -197,7 +197,7 @@ public final class WebAppAuthSettingsSlotArgs extends io.pulumi.resources.Resour
      * The app setting name that contains the app secret used for Facebook Login.
      * 
      */
-    @InputImport(name="facebookAppSecretSettingName")
+    @Import(name="facebookAppSecretSettingName")
       private final @Nullable Output<String> facebookAppSecretSettingName;
 
     public Output<String> getFacebookAppSecretSettingName() {
@@ -210,7 +210,7 @@ public final class WebAppAuthSettingsSlotArgs extends io.pulumi.resources.Resour
      * Facebook Login documentation: https://developers.facebook.com/docs/facebook-login
      * 
      */
-    @InputImport(name="facebookOAuthScopes")
+    @Import(name="facebookOAuthScopes")
       private final @Nullable Output<List<String>> facebookOAuthScopes;
 
     public Output<List<String>> getFacebookOAuthScopes() {
@@ -222,7 +222,7 @@ public final class WebAppAuthSettingsSlotArgs extends io.pulumi.resources.Resour
      * This setting is required for enabling Github login
      * 
      */
-    @InputImport(name="gitHubClientId")
+    @Import(name="gitHubClientId")
       private final @Nullable Output<String> gitHubClientId;
 
     public Output<String> getGitHubClientId() {
@@ -234,7 +234,7 @@ public final class WebAppAuthSettingsSlotArgs extends io.pulumi.resources.Resour
      * This setting is required for enabling Github login.
      * 
      */
-    @InputImport(name="gitHubClientSecret")
+    @Import(name="gitHubClientSecret")
       private final @Nullable Output<String> gitHubClientSecret;
 
     public Output<String> getGitHubClientSecret() {
@@ -246,7 +246,7 @@ public final class WebAppAuthSettingsSlotArgs extends io.pulumi.resources.Resour
      * app used for GitHub Login.
      * 
      */
-    @InputImport(name="gitHubClientSecretSettingName")
+    @Import(name="gitHubClientSecretSettingName")
       private final @Nullable Output<String> gitHubClientSecretSettingName;
 
     public Output<String> getGitHubClientSecretSettingName() {
@@ -258,7 +258,7 @@ public final class WebAppAuthSettingsSlotArgs extends io.pulumi.resources.Resour
      * This setting is optional
      * 
      */
-    @InputImport(name="gitHubOAuthScopes")
+    @Import(name="gitHubOAuthScopes")
       private final @Nullable Output<List<String>> gitHubOAuthScopes;
 
     public Output<List<String>> getGitHubOAuthScopes() {
@@ -271,7 +271,7 @@ public final class WebAppAuthSettingsSlotArgs extends io.pulumi.resources.Resour
      * Google Sign-In documentation: https://developers.google.com/identity/sign-in/web/
      * 
      */
-    @InputImport(name="googleClientId")
+    @Import(name="googleClientId")
       private final @Nullable Output<String> googleClientId;
 
     public Output<String> getGoogleClientId() {
@@ -284,7 +284,7 @@ public final class WebAppAuthSettingsSlotArgs extends io.pulumi.resources.Resour
      * Google Sign-In documentation: https://developers.google.com/identity/sign-in/web/
      * 
      */
-    @InputImport(name="googleClientSecret")
+    @Import(name="googleClientSecret")
       private final @Nullable Output<String> googleClientSecret;
 
     public Output<String> getGoogleClientSecret() {
@@ -296,7 +296,7 @@ public final class WebAppAuthSettingsSlotArgs extends io.pulumi.resources.Resour
      * the Google web application.
      * 
      */
-    @InputImport(name="googleClientSecretSettingName")
+    @Import(name="googleClientSecretSettingName")
       private final @Nullable Output<String> googleClientSecretSettingName;
 
     public Output<String> getGoogleClientSecretSettingName() {
@@ -309,7 +309,7 @@ public final class WebAppAuthSettingsSlotArgs extends io.pulumi.resources.Resour
      * Google Sign-In documentation: https://developers.google.com/identity/sign-in/web/
      * 
      */
-    @InputImport(name="googleOAuthScopes")
+    @Import(name="googleOAuthScopes")
       private final @Nullable Output<List<String>> googleOAuthScopes;
 
     public Output<List<String>> getGoogleOAuthScopes() {
@@ -321,7 +321,7 @@ public final class WebAppAuthSettingsSlotArgs extends io.pulumi.resources.Resour
      * "false" otherwise
      * 
      */
-    @InputImport(name="isAuthFromFile")
+    @Import(name="isAuthFromFile")
       private final @Nullable Output<String> isAuthFromFile;
 
     public Output<String> getIsAuthFromFile() {
@@ -335,7 +335,7 @@ public final class WebAppAuthSettingsSlotArgs extends io.pulumi.resources.Resour
      * More information on OpenID Connect Discovery: http://openid.net/specs/openid-connect-discovery-1_0.html
      * 
      */
-    @InputImport(name="issuer")
+    @Import(name="issuer")
       private final @Nullable Output<String> issuer;
 
     public Output<String> getIssuer() {
@@ -346,7 +346,7 @@ public final class WebAppAuthSettingsSlotArgs extends io.pulumi.resources.Resour
      * Kind of resource.
      * 
      */
-    @InputImport(name="kind")
+    @Import(name="kind")
       private final @Nullable Output<String> kind;
 
     public Output<String> getKind() {
@@ -359,7 +359,7 @@ public final class WebAppAuthSettingsSlotArgs extends io.pulumi.resources.Resour
      * Microsoft Account OAuth documentation: https://dev.onedrive.com/auth/msa_oauth.htm
      * 
      */
-    @InputImport(name="microsoftAccountClientId")
+    @Import(name="microsoftAccountClientId")
       private final @Nullable Output<String> microsoftAccountClientId;
 
     public Output<String> getMicrosoftAccountClientId() {
@@ -372,7 +372,7 @@ public final class WebAppAuthSettingsSlotArgs extends io.pulumi.resources.Resour
      * Microsoft Account OAuth documentation: https://dev.onedrive.com/auth/msa_oauth.htm
      * 
      */
-    @InputImport(name="microsoftAccountClientSecret")
+    @Import(name="microsoftAccountClientSecret")
       private final @Nullable Output<String> microsoftAccountClientSecret;
 
     public Output<String> getMicrosoftAccountClientSecret() {
@@ -384,7 +384,7 @@ public final class WebAppAuthSettingsSlotArgs extends io.pulumi.resources.Resour
      * app used for authentication.
      * 
      */
-    @InputImport(name="microsoftAccountClientSecretSettingName")
+    @Import(name="microsoftAccountClientSecretSettingName")
       private final @Nullable Output<String> microsoftAccountClientSecretSettingName;
 
     public Output<String> getMicrosoftAccountClientSecretSettingName() {
@@ -397,7 +397,7 @@ public final class WebAppAuthSettingsSlotArgs extends io.pulumi.resources.Resour
      * Microsoft Account Scopes and permissions documentation: https://msdn.microsoft.com/en-us/library/dn631845.aspx
      * 
      */
-    @InputImport(name="microsoftAccountOAuthScopes")
+    @Import(name="microsoftAccountOAuthScopes")
       private final @Nullable Output<List<String>> microsoftAccountOAuthScopes;
 
     public Output<List<String>> getMicrosoftAccountOAuthScopes() {
@@ -408,7 +408,7 @@ public final class WebAppAuthSettingsSlotArgs extends io.pulumi.resources.Resour
      * Name of web app.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -419,7 +419,7 @@ public final class WebAppAuthSettingsSlotArgs extends io.pulumi.resources.Resour
      * Name of the resource group to which the resource belongs.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -431,7 +431,7 @@ public final class WebAppAuthSettingsSlotArgs extends io.pulumi.resources.Resour
      * The setting in this value can control the behavior of certain features in the Authentication / Authorization module.
      * 
      */
-    @InputImport(name="runtimeVersion")
+    @Import(name="runtimeVersion")
       private final @Nullable Output<String> runtimeVersion;
 
     public Output<String> getRuntimeVersion() {
@@ -442,7 +442,7 @@ public final class WebAppAuthSettingsSlotArgs extends io.pulumi.resources.Resour
      * Name of web app slot. If not specified then will default to production slot.
      * 
      */
-    @InputImport(name="slot", required=true)
+    @Import(name="slot", required=true)
       private final Output<String> slot;
 
     public Output<String> getSlot() {
@@ -454,7 +454,7 @@ public final class WebAppAuthSettingsSlotArgs extends io.pulumi.resources.Resour
      * call the token refresh API. The default is 72 hours.
      * 
      */
-    @InputImport(name="tokenRefreshExtensionHours")
+    @Import(name="tokenRefreshExtensionHours")
       private final @Nullable Output<Double> tokenRefreshExtensionHours;
 
     public Output<Double> getTokenRefreshExtensionHours() {
@@ -466,7 +466,7 @@ public final class WebAppAuthSettingsSlotArgs extends io.pulumi.resources.Resour
      *  The default is <code>false</code>.
      * 
      */
-    @InputImport(name="tokenStoreEnabled")
+    @Import(name="tokenStoreEnabled")
       private final @Nullable Output<Boolean> tokenStoreEnabled;
 
     public Output<Boolean> getTokenStoreEnabled() {
@@ -479,7 +479,7 @@ public final class WebAppAuthSettingsSlotArgs extends io.pulumi.resources.Resour
      * Twitter Sign-In documentation: https://dev.twitter.com/web/sign-in
      * 
      */
-    @InputImport(name="twitterConsumerKey")
+    @Import(name="twitterConsumerKey")
       private final @Nullable Output<String> twitterConsumerKey;
 
     public Output<String> getTwitterConsumerKey() {
@@ -492,7 +492,7 @@ public final class WebAppAuthSettingsSlotArgs extends io.pulumi.resources.Resour
      * Twitter Sign-In documentation: https://dev.twitter.com/web/sign-in
      * 
      */
-    @InputImport(name="twitterConsumerSecret")
+    @Import(name="twitterConsumerSecret")
       private final @Nullable Output<String> twitterConsumerSecret;
 
     public Output<String> getTwitterConsumerSecret() {
@@ -504,7 +504,7 @@ public final class WebAppAuthSettingsSlotArgs extends io.pulumi.resources.Resour
      * application used for sign-in.
      * 
      */
-    @InputImport(name="twitterConsumerSecretSettingName")
+    @Import(name="twitterConsumerSecretSettingName")
       private final @Nullable Output<String> twitterConsumerSecretSettingName;
 
     public Output<String> getTwitterConsumerSecretSettingName() {
@@ -515,7 +515,7 @@ public final class WebAppAuthSettingsSlotArgs extends io.pulumi.resources.Resour
      * The action to take when an unauthenticated client attempts to access the app.
      * 
      */
-    @InputImport(name="unauthenticatedClientAction")
+    @Import(name="unauthenticatedClientAction")
       private final @Nullable Output<UnauthenticatedClientAction> unauthenticatedClientAction;
 
     public Output<UnauthenticatedClientAction> getUnauthenticatedClientAction() {
@@ -526,7 +526,7 @@ public final class WebAppAuthSettingsSlotArgs extends io.pulumi.resources.Resour
      * Gets a value indicating whether the issuer should be a valid HTTPS url and be validated as such.
      * 
      */
-    @InputImport(name="validateIssuer")
+    @Import(name="validateIssuer")
       private final @Nullable Output<Boolean> validateIssuer;
 
     public Output<Boolean> getValidateIssuer() {

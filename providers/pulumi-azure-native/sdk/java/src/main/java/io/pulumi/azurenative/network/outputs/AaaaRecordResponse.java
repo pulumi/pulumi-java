@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AaaaRecordResponse {
     /**
      * The IPv6 address of this AAAA record.
@@ -17,8 +17,8 @@ public final class AaaaRecordResponse {
      */
     private final @Nullable String ipv6Address;
 
-    @OutputCustomType.Constructor
-    private AaaaRecordResponse(@OutputCustomType.Parameter("ipv6Address") @Nullable String ipv6Address) {
+    @CustomType.Constructor
+    private AaaaRecordResponse(@CustomType.Parameter("ipv6Address") @Nullable String ipv6Address) {
         this.ipv6Address = ipv6Address;
     }
 

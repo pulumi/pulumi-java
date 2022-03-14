@@ -6,14 +6,14 @@ package io.pulumi.azurenative.datafactory.outputs;
 import io.pulumi.azurenative.datafactory.outputs.TarGZipReadSettingsResponse;
 import io.pulumi.azurenative.datafactory.outputs.TarReadSettingsResponse;
 import io.pulumi.azurenative.datafactory.outputs.ZipDeflateReadSettingsResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class XmlReadSettingsResponse {
     /**
      * Compression settings.
@@ -47,14 +47,14 @@ public final class XmlReadSettingsResponse {
      */
     private final @Nullable Object validationMode;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private XmlReadSettingsResponse(
-        @OutputCustomType.Parameter("compressionProperties") @Nullable Object compressionProperties,
-        @OutputCustomType.Parameter("detectDataType") @Nullable Object detectDataType,
-        @OutputCustomType.Parameter("namespacePrefixes") @Nullable Object namespacePrefixes,
-        @OutputCustomType.Parameter("namespaces") @Nullable Object namespaces,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("validationMode") @Nullable Object validationMode) {
+        @CustomType.Parameter("compressionProperties") @Nullable Object compressionProperties,
+        @CustomType.Parameter("detectDataType") @Nullable Object detectDataType,
+        @CustomType.Parameter("namespacePrefixes") @Nullable Object namespacePrefixes,
+        @CustomType.Parameter("namespaces") @Nullable Object namespaces,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("validationMode") @Nullable Object validationMode) {
         this.compressionProperties = compressionProperties;
         this.detectDataType = detectDataType;
         this.namespacePrefixes = namespacePrefixes;

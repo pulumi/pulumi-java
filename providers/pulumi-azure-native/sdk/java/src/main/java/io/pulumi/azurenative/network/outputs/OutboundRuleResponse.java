@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.SubResourceResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class OutboundRuleResponse {
     /**
      * The number of outbound ports to be used for NAT.
@@ -71,19 +71,19 @@ public final class OutboundRuleResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private OutboundRuleResponse(
-        @OutputCustomType.Parameter("allocatedOutboundPorts") @Nullable Integer allocatedOutboundPorts,
-        @OutputCustomType.Parameter("backendAddressPool") SubResourceResponse backendAddressPool,
-        @OutputCustomType.Parameter("enableTcpReset") @Nullable Boolean enableTcpReset,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("frontendIPConfigurations") List<SubResourceResponse> frontendIPConfigurations,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("idleTimeoutInMinutes") @Nullable Integer idleTimeoutInMinutes,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("protocol") String protocol,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("allocatedOutboundPorts") @Nullable Integer allocatedOutboundPorts,
+        @CustomType.Parameter("backendAddressPool") SubResourceResponse backendAddressPool,
+        @CustomType.Parameter("enableTcpReset") @Nullable Boolean enableTcpReset,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("frontendIPConfigurations") List<SubResourceResponse> frontendIPConfigurations,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("idleTimeoutInMinutes") @Nullable Integer idleTimeoutInMinutes,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("protocol") String protocol,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("type") String type) {
         this.allocatedOutboundPorts = allocatedOutboundPorts;
         this.backendAddressPool = backendAddressPool;
         this.enableTcpReset = enableTcpReset;

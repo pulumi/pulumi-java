@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.synapse.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EntityReferenceResponse {
     /**
      * The name of this referenced entity.
@@ -22,10 +22,10 @@ public final class EntityReferenceResponse {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EntityReferenceResponse(
-        @OutputCustomType.Parameter("referenceName") @Nullable String referenceName,
-        @OutputCustomType.Parameter("type") @Nullable String type) {
+        @CustomType.Parameter("referenceName") @Nullable String referenceName,
+        @CustomType.Parameter("type") @Nullable String type) {
         this.referenceName = referenceName;
         this.type = type;
     }

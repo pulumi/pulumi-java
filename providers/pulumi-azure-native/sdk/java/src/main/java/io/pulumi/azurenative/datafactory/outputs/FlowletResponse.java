@@ -7,7 +7,7 @@ import io.pulumi.azurenative.datafactory.outputs.DataFlowResponseFolder;
 import io.pulumi.azurenative.datafactory.outputs.DataFlowSinkResponse;
 import io.pulumi.azurenative.datafactory.outputs.DataFlowSourceResponse;
 import io.pulumi.azurenative.datafactory.outputs.TransformationResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -15,7 +15,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FlowletResponse {
     /**
      * List of tags that can be used for describing the data flow.
@@ -64,17 +64,17 @@ public final class FlowletResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FlowletResponse(
-        @OutputCustomType.Parameter("annotations") @Nullable List<Object> annotations,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("folder") @Nullable DataFlowResponseFolder folder,
-        @OutputCustomType.Parameter("script") @Nullable String script,
-        @OutputCustomType.Parameter("scriptLines") @Nullable List<String> scriptLines,
-        @OutputCustomType.Parameter("sinks") @Nullable List<DataFlowSinkResponse> sinks,
-        @OutputCustomType.Parameter("sources") @Nullable List<DataFlowSourceResponse> sources,
-        @OutputCustomType.Parameter("transformations") @Nullable List<TransformationResponse> transformations,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("annotations") @Nullable List<Object> annotations,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("folder") @Nullable DataFlowResponseFolder folder,
+        @CustomType.Parameter("script") @Nullable String script,
+        @CustomType.Parameter("scriptLines") @Nullable List<String> scriptLines,
+        @CustomType.Parameter("sinks") @Nullable List<DataFlowSinkResponse> sinks,
+        @CustomType.Parameter("sources") @Nullable List<DataFlowSourceResponse> sources,
+        @CustomType.Parameter("transformations") @Nullable List<TransformationResponse> transformations,
+        @CustomType.Parameter("type") String type) {
         this.annotations = annotations;
         this.description = description;
         this.folder = folder;

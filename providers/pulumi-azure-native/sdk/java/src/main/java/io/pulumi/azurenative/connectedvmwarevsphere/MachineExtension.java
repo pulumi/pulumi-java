@@ -9,7 +9,7 @@ import io.pulumi.azurenative.connectedvmwarevsphere.outputs.MachineExtensionProp
 import io.pulumi.azurenative.connectedvmwarevsphere.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Object;
@@ -39,7 +39,7 @@ public class MachineExtension extends io.pulumi.resources.CustomResource {
      * Indicates whether the extension should use a newer minor version if one is available at deployment time. Once deployed, however, the extension will not upgrade minor versions unless redeployed, even with this property set to true.
      * 
      */
-    @OutputExport(name="autoUpgradeMinorVersion", type=Boolean.class, parameters={})
+    @Export(name="autoUpgradeMinorVersion", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> autoUpgradeMinorVersion;
 
     /**
@@ -53,7 +53,7 @@ public class MachineExtension extends io.pulumi.resources.CustomResource {
      * How the extension handler should be forced to update even if the extension configuration has not changed.
      * 
      */
-    @OutputExport(name="forceUpdateTag", type=String.class, parameters={})
+    @Export(name="forceUpdateTag", type=String.class, parameters={})
     private Output</* @Nullable */ String> forceUpdateTag;
 
     /**
@@ -67,7 +67,7 @@ public class MachineExtension extends io.pulumi.resources.CustomResource {
      * The machine extension instance view.
      * 
      */
-    @OutputExport(name="instanceView", type=MachineExtensionPropertiesResponseInstanceView.class, parameters={})
+    @Export(name="instanceView", type=MachineExtensionPropertiesResponseInstanceView.class, parameters={})
     private Output</* @Nullable */ MachineExtensionPropertiesResponseInstanceView> instanceView;
 
     /**
@@ -81,7 +81,7 @@ public class MachineExtension extends io.pulumi.resources.CustomResource {
      * Gets or sets the location.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -95,7 +95,7 @@ public class MachineExtension extends io.pulumi.resources.CustomResource {
      * Gets or sets the name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -109,7 +109,7 @@ public class MachineExtension extends io.pulumi.resources.CustomResource {
      * The extension can contain either protectedSettings or protectedSettingsFromKeyVault or no protected settings at all.
      * 
      */
-    @OutputExport(name="protectedSettings", type=Object.class, parameters={})
+    @Export(name="protectedSettings", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> protectedSettings;
 
     /**
@@ -123,7 +123,7 @@ public class MachineExtension extends io.pulumi.resources.CustomResource {
      * The provisioning state, which only appears in the response.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -137,7 +137,7 @@ public class MachineExtension extends io.pulumi.resources.CustomResource {
      * The name of the extension handler publisher.
      * 
      */
-    @OutputExport(name="publisher", type=String.class, parameters={})
+    @Export(name="publisher", type=String.class, parameters={})
     private Output</* @Nullable */ String> publisher;
 
     /**
@@ -151,7 +151,7 @@ public class MachineExtension extends io.pulumi.resources.CustomResource {
      * Json formatted public settings for the extension.
      * 
      */
-    @OutputExport(name="settings", type=Object.class, parameters={})
+    @Export(name="settings", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> settings;
 
     /**
@@ -165,7 +165,7 @@ public class MachineExtension extends io.pulumi.resources.CustomResource {
      * The system data.
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -179,7 +179,7 @@ public class MachineExtension extends io.pulumi.resources.CustomResource {
      * Gets or sets the Resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -193,7 +193,7 @@ public class MachineExtension extends io.pulumi.resources.CustomResource {
      * Gets or sets the type of the resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -207,7 +207,7 @@ public class MachineExtension extends io.pulumi.resources.CustomResource {
      * Specifies the version of the script handler.
      * 
      */
-    @OutputExport(name="typeHandlerVersion", type=String.class, parameters={})
+    @Export(name="typeHandlerVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> typeHandlerVersion;
 
     /**

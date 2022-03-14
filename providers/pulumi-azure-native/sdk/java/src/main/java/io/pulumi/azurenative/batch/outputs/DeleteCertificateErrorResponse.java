@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.batch.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DeleteCertificateErrorResponse {
     /**
      * An identifier for the error. Codes are invariant and are intended to be consumed programmatically.
@@ -33,12 +33,12 @@ public final class DeleteCertificateErrorResponse {
      */
     private final @Nullable String target;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DeleteCertificateErrorResponse(
-        @OutputCustomType.Parameter("code") String code,
-        @OutputCustomType.Parameter("details") @Nullable List<DeleteCertificateErrorResponse> details,
-        @OutputCustomType.Parameter("message") String message,
-        @OutputCustomType.Parameter("target") @Nullable String target) {
+        @CustomType.Parameter("code") String code,
+        @CustomType.Parameter("details") @Nullable List<DeleteCertificateErrorResponse> details,
+        @CustomType.Parameter("message") String message,
+        @CustomType.Parameter("target") @Nullable String target) {
         this.code = code;
         this.details = details;
         this.message = message;

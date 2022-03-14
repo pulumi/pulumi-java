@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class ApplicationGatewayHeaderConfigurationResponse extends io.pulu
      * Header name of the header configuration.
      * 
      */
-    @InputImport(name="headerName")
+    @Import(name="headerName")
       private final @Nullable String headerName;
 
     public Optional<String> getHeaderName() {
@@ -33,7 +33,7 @@ public final class ApplicationGatewayHeaderConfigurationResponse extends io.pulu
      * Header value of the header configuration.
      * 
      */
-    @InputImport(name="headerValue")
+    @Import(name="headerValue")
       private final @Nullable String headerValue;
 
     public Optional<String> getHeaderValue() {

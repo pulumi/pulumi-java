@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.customerinsights.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RelationshipTypeFieldMappingResponse {
     /**
      * Specifies the fieldName in profile.
@@ -20,10 +20,10 @@ public final class RelationshipTypeFieldMappingResponse {
      */
     private final String relatedProfileKeyProperty;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RelationshipTypeFieldMappingResponse(
-        @OutputCustomType.Parameter("profileFieldName") String profileFieldName,
-        @OutputCustomType.Parameter("relatedProfileKeyProperty") String relatedProfileKeyProperty) {
+        @CustomType.Parameter("profileFieldName") String profileFieldName,
+        @CustomType.Parameter("relatedProfileKeyProperty") String relatedProfileKeyProperty) {
         this.profileFieldName = profileFieldName;
         this.relatedProfileKeyProperty = relatedProfileKeyProperty;
     }

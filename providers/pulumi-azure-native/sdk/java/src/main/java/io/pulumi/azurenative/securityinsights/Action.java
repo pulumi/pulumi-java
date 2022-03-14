@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.securityinsights.ActionArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -34,7 +34,7 @@ public class Action extends io.pulumi.resources.CustomResource {
      * Etag of the action.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output</* @Nullable */ String> etag;
 
     /**
@@ -48,7 +48,7 @@ public class Action extends io.pulumi.resources.CustomResource {
      * Logic App Resource Id, /subscriptions/{my-subscription}/resourceGroups/{my-resource-group}/providers/Microsoft.Logic/workflows/{my-workflow-id}.
      * 
      */
-    @OutputExport(name="logicAppResourceId", type=String.class, parameters={})
+    @Export(name="logicAppResourceId", type=String.class, parameters={})
     private Output<String> logicAppResourceId;
 
     /**
@@ -62,7 +62,7 @@ public class Action extends io.pulumi.resources.CustomResource {
      * Azure resource name
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -76,7 +76,7 @@ public class Action extends io.pulumi.resources.CustomResource {
      * Azure resource type
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -90,7 +90,7 @@ public class Action extends io.pulumi.resources.CustomResource {
      * The name of the logic app's workflow.
      * 
      */
-    @OutputExport(name="workflowId", type=String.class, parameters={})
+    @Export(name="workflowId", type=String.class, parameters={})
     private Output</* @Nullable */ String> workflowId;
 
     /**

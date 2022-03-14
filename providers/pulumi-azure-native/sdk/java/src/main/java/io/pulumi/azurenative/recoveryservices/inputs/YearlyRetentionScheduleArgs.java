@@ -10,7 +10,7 @@ import io.pulumi.azurenative.recoveryservices.inputs.RetentionDurationArgs;
 import io.pulumi.azurenative.recoveryservices.inputs.WeeklyRetentionFormatArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -29,7 +29,7 @@ public final class YearlyRetentionScheduleArgs extends io.pulumi.resources.Resou
      * List of months of year of yearly retention policy.
      * 
      */
-    @InputImport(name="monthsOfYear")
+    @Import(name="monthsOfYear")
       private final @Nullable Output<List<MonthOfYear>> monthsOfYear;
 
     public Output<List<MonthOfYear>> getMonthsOfYear() {
@@ -40,7 +40,7 @@ public final class YearlyRetentionScheduleArgs extends io.pulumi.resources.Resou
      * Retention duration of retention Policy.
      * 
      */
-    @InputImport(name="retentionDuration")
+    @Import(name="retentionDuration")
       private final @Nullable Output<RetentionDurationArgs> retentionDuration;
 
     public Output<RetentionDurationArgs> getRetentionDuration() {
@@ -51,7 +51,7 @@ public final class YearlyRetentionScheduleArgs extends io.pulumi.resources.Resou
      * Daily retention format for yearly retention policy.
      * 
      */
-    @InputImport(name="retentionScheduleDaily")
+    @Import(name="retentionScheduleDaily")
       private final @Nullable Output<DailyRetentionFormatArgs> retentionScheduleDaily;
 
     public Output<DailyRetentionFormatArgs> getRetentionScheduleDaily() {
@@ -62,7 +62,7 @@ public final class YearlyRetentionScheduleArgs extends io.pulumi.resources.Resou
      * Retention schedule format for yearly retention policy.
      * 
      */
-    @InputImport(name="retentionScheduleFormatType")
+    @Import(name="retentionScheduleFormatType")
       private final @Nullable Output<Either<String,RetentionScheduleFormat>> retentionScheduleFormatType;
 
     public Output<Either<String,RetentionScheduleFormat>> getRetentionScheduleFormatType() {
@@ -73,7 +73,7 @@ public final class YearlyRetentionScheduleArgs extends io.pulumi.resources.Resou
      * Weekly retention format for yearly retention policy.
      * 
      */
-    @InputImport(name="retentionScheduleWeekly")
+    @Import(name="retentionScheduleWeekly")
       private final @Nullable Output<WeeklyRetentionFormatArgs> retentionScheduleWeekly;
 
     public Output<WeeklyRetentionFormatArgs> getRetentionScheduleWeekly() {
@@ -84,7 +84,7 @@ public final class YearlyRetentionScheduleArgs extends io.pulumi.resources.Resou
      * Retention times of retention policy.
      * 
      */
-    @InputImport(name="retentionTimes")
+    @Import(name="retentionTimes")
       private final @Nullable Output<List<String>> retentionTimes;
 
     public Output<List<String>> getRetentionTimes() {

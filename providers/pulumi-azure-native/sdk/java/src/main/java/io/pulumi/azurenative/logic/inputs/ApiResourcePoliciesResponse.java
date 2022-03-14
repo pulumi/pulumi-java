@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.logic.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class ApiResourcePoliciesResponse extends io.pulumi.resources.Invok
      * The API level only policies XML as embedded content.
      * 
      */
-    @InputImport(name="content")
+    @Import(name="content")
       private final @Nullable String content;
 
     public Optional<String> getContent() {
@@ -33,7 +33,7 @@ public final class ApiResourcePoliciesResponse extends io.pulumi.resources.Invok
      * The content link to the policies.
      * 
      */
-    @InputImport(name="contentLink")
+    @Import(name="contentLink")
       private final @Nullable String contentLink;
 
     public Optional<String> getContentLink() {

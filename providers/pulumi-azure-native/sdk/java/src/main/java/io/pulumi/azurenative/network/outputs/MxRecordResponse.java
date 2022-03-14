@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class MxRecordResponse {
     /**
      * The domain name of the mail host for this MX record.
@@ -23,10 +23,10 @@ public final class MxRecordResponse {
      */
     private final @Nullable Integer preference;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MxRecordResponse(
-        @OutputCustomType.Parameter("exchange") @Nullable String exchange,
-        @OutputCustomType.Parameter("preference") @Nullable Integer preference) {
+        @CustomType.Parameter("exchange") @Nullable String exchange,
+        @CustomType.Parameter("preference") @Nullable Integer preference) {
         this.exchange = exchange;
         this.preference = preference;
     }

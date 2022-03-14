@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.recoveryservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AzureSqlContainerResponse {
     /**
      * Type of backup management for the container.
@@ -41,13 +41,13 @@ public final class AzureSqlContainerResponse {
      */
     private final @Nullable String registrationStatus;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AzureSqlContainerResponse(
-        @OutputCustomType.Parameter("backupManagementType") @Nullable String backupManagementType,
-        @OutputCustomType.Parameter("containerType") String containerType,
-        @OutputCustomType.Parameter("friendlyName") @Nullable String friendlyName,
-        @OutputCustomType.Parameter("healthStatus") @Nullable String healthStatus,
-        @OutputCustomType.Parameter("registrationStatus") @Nullable String registrationStatus) {
+        @CustomType.Parameter("backupManagementType") @Nullable String backupManagementType,
+        @CustomType.Parameter("containerType") String containerType,
+        @CustomType.Parameter("friendlyName") @Nullable String friendlyName,
+        @CustomType.Parameter("healthStatus") @Nullable String healthStatus,
+        @CustomType.Parameter("registrationStatus") @Nullable String registrationStatus) {
         this.backupManagementType = backupManagementType;
         this.containerType = containerType;
         this.friendlyName = friendlyName;

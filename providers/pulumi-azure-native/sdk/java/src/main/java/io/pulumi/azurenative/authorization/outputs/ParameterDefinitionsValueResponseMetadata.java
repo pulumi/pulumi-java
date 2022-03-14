@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.authorization.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ParameterDefinitionsValueResponseMetadata {
     /**
      * Set to true to have Azure portal create role assignments on the resource ID or resource scope value of this parameter during policy assignment. This property is useful in case you wish to assign permissions outside the assignment scope.
@@ -33,12 +33,12 @@ public final class ParameterDefinitionsValueResponseMetadata {
      */
     private final @Nullable String strongType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ParameterDefinitionsValueResponseMetadata(
-        @OutputCustomType.Parameter("assignPermissions") @Nullable Boolean assignPermissions,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
-        @OutputCustomType.Parameter("strongType") @Nullable String strongType) {
+        @CustomType.Parameter("assignPermissions") @Nullable Boolean assignPermissions,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("displayName") @Nullable String displayName,
+        @CustomType.Parameter("strongType") @Nullable String strongType) {
         this.assignPermissions = assignPermissions;
         this.description = description;
         this.displayName = displayName;

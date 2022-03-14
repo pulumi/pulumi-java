@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.sql.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SyncGroupSchemaTableColumnResponse {
     /**
      * Data size of the column.
@@ -27,11 +27,11 @@ public final class SyncGroupSchemaTableColumnResponse {
      */
     private final @Nullable String quotedName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SyncGroupSchemaTableColumnResponse(
-        @OutputCustomType.Parameter("dataSize") @Nullable String dataSize,
-        @OutputCustomType.Parameter("dataType") @Nullable String dataType,
-        @OutputCustomType.Parameter("quotedName") @Nullable String quotedName) {
+        @CustomType.Parameter("dataSize") @Nullable String dataSize,
+        @CustomType.Parameter("dataType") @Nullable String dataType,
+        @CustomType.Parameter("quotedName") @Nullable String quotedName) {
         this.dataSize = dataSize;
         this.dataType = dataType;
         this.quotedName = quotedName;

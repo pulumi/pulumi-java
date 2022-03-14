@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.storsimple.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ManagerIntrinsicSettingsResponse {
     /**
      * The type of StorSimple Manager.
@@ -15,8 +15,8 @@ public final class ManagerIntrinsicSettingsResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
-    private ManagerIntrinsicSettingsResponse(@OutputCustomType.Parameter("type") String type) {
+    @CustomType.Constructor
+    private ManagerIntrinsicSettingsResponse(@CustomType.Parameter("type") String type) {
         this.type = type;
     }
 

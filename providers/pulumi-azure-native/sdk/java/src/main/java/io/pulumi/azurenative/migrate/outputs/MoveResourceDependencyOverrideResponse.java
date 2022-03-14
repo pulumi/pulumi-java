@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.migrate.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class MoveResourceDependencyOverrideResponse {
     /**
      * Gets or sets the ARM ID of the dependent resource.
@@ -23,10 +23,10 @@ public final class MoveResourceDependencyOverrideResponse {
      */
     private final @Nullable String targetId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MoveResourceDependencyOverrideResponse(
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("targetId") @Nullable String targetId) {
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("targetId") @Nullable String targetId) {
         this.id = id;
         this.targetId = targetId;
     }

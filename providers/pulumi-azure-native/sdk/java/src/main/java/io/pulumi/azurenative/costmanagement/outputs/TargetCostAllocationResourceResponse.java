@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.costmanagement.outputs;
 
 import io.pulumi.azurenative.costmanagement.outputs.CostAllocationProportionResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class TargetCostAllocationResourceResponse {
     /**
      * If resource type is dimension, this must be either ResourceGroupName or SubscriptionId. If resource type is tag, this must be a valid Azure tag
@@ -32,12 +32,12 @@ public final class TargetCostAllocationResourceResponse {
      */
     private final List<CostAllocationProportionResponse> values;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TargetCostAllocationResourceResponse(
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("policyType") String policyType,
-        @OutputCustomType.Parameter("resourceType") String resourceType,
-        @OutputCustomType.Parameter("values") List<CostAllocationProportionResponse> values) {
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("policyType") String policyType,
+        @CustomType.Parameter("resourceType") String resourceType,
+        @CustomType.Parameter("values") List<CostAllocationProportionResponse> values) {
         this.name = name;
         this.policyType = policyType;
         this.resourceType = resourceType;

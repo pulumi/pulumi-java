@@ -3,12 +3,12 @@
 
 package io.pulumi.azurenative.dataprotection.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BackupScheduleResponse {
     /**
      * ISO 8601 repeating time interval format
@@ -16,8 +16,8 @@ public final class BackupScheduleResponse {
      */
     private final List<String> repeatingTimeIntervals;
 
-    @OutputCustomType.Constructor
-    private BackupScheduleResponse(@OutputCustomType.Parameter("repeatingTimeIntervals") List<String> repeatingTimeIntervals) {
+    @CustomType.Constructor
+    private BackupScheduleResponse(@CustomType.Parameter("repeatingTimeIntervals") List<String> repeatingTimeIntervals) {
         this.repeatingTimeIntervals = repeatingTimeIntervals;
     }
 

@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.media.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class EnabledProtocolsResponse {
     /**
      * Enable DASH protocol or not
@@ -30,12 +30,12 @@ public final class EnabledProtocolsResponse {
      */
     private final Boolean smoothStreaming;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EnabledProtocolsResponse(
-        @OutputCustomType.Parameter("dash") Boolean dash,
-        @OutputCustomType.Parameter("download") Boolean download,
-        @OutputCustomType.Parameter("hls") Boolean hls,
-        @OutputCustomType.Parameter("smoothStreaming") Boolean smoothStreaming) {
+        @CustomType.Parameter("dash") Boolean dash,
+        @CustomType.Parameter("download") Boolean download,
+        @CustomType.Parameter("hls") Boolean hls,
+        @CustomType.Parameter("smoothStreaming") Boolean smoothStreaming) {
         this.dash = dash;
         this.download = download;
         this.hls = hls;

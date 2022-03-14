@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.documentdb.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class CassandraViewResourceArgs extends io.pulumi.resources.Resourc
      * Name of the Cosmos DB Cassandra view
      * 
      */
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final Output<String> id;
 
     public Output<String> getId() {
@@ -32,7 +32,7 @@ public final class CassandraViewResourceArgs extends io.pulumi.resources.Resourc
      * View Definition of the Cosmos DB Cassandra view
      * 
      */
-    @InputImport(name="viewDefinition", required=true)
+    @Import(name="viewDefinition", required=true)
       private final Output<String> viewDefinition;
 
     public Output<String> getViewDefinition() {

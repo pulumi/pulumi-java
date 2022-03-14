@@ -9,7 +9,7 @@ import io.pulumi.azurenative.datafactory.inputs.IntegrationRuntimeReferenceRespo
 import io.pulumi.azurenative.datafactory.inputs.ParameterSpecificationResponse;
 import io.pulumi.azurenative.datafactory.inputs.SecureStringResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -31,7 +31,7 @@ public final class AzureDatabricksDeltaLakeLinkedServiceResponse extends io.pulu
      * Access token for databricks REST API. Refer to https://docs.azuredatabricks.net/api/latest/authentication.html. Type: string, SecureString or AzureKeyVaultSecretReference.
      * 
      */
-    @InputImport(name="accessToken")
+    @Import(name="accessToken")
       private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> accessToken;
 
     public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> getAccessToken() {
@@ -42,7 +42,7 @@ public final class AzureDatabricksDeltaLakeLinkedServiceResponse extends io.pulu
      * List of tags that can be used for describing the linked service.
      * 
      */
-    @InputImport(name="annotations")
+    @Import(name="annotations")
       private final @Nullable List<Object> annotations;
 
     public List<Object> getAnnotations() {
@@ -53,7 +53,7 @@ public final class AzureDatabricksDeltaLakeLinkedServiceResponse extends io.pulu
      * The id of an existing interactive cluster that will be used for all runs of this job. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="clusterId")
+    @Import(name="clusterId")
       private final @Nullable Object clusterId;
 
     public Optional<Object> getClusterId() {
@@ -64,7 +64,7 @@ public final class AzureDatabricksDeltaLakeLinkedServiceResponse extends io.pulu
      * The integration runtime reference.
      * 
      */
-    @InputImport(name="connectVia")
+    @Import(name="connectVia")
       private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
     public Optional<IntegrationRuntimeReferenceResponse> getConnectVia() {
@@ -75,7 +75,7 @@ public final class AzureDatabricksDeltaLakeLinkedServiceResponse extends io.pulu
      * The credential reference containing authentication information.
      * 
      */
-    @InputImport(name="credential")
+    @Import(name="credential")
       private final @Nullable CredentialReferenceResponse credential;
 
     public Optional<CredentialReferenceResponse> getCredential() {
@@ -86,7 +86,7 @@ public final class AzureDatabricksDeltaLakeLinkedServiceResponse extends io.pulu
      * Linked service description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable String description;
 
     public Optional<String> getDescription() {
@@ -97,7 +97,7 @@ public final class AzureDatabricksDeltaLakeLinkedServiceResponse extends io.pulu
      * <REGION>.azuredatabricks.net, domain name of your Databricks deployment. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="domain", required=true)
+    @Import(name="domain", required=true)
       private final Object domain;
 
     public Object getDomain() {
@@ -108,7 +108,7 @@ public final class AzureDatabricksDeltaLakeLinkedServiceResponse extends io.pulu
      * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="encryptedCredential")
+    @Import(name="encryptedCredential")
       private final @Nullable Object encryptedCredential;
 
     public Optional<Object> getEncryptedCredential() {
@@ -119,7 +119,7 @@ public final class AzureDatabricksDeltaLakeLinkedServiceResponse extends io.pulu
      * Parameters for linked service.
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
     public Map<String,ParameterSpecificationResponse> getParameters() {
@@ -131,7 +131,7 @@ public final class AzureDatabricksDeltaLakeLinkedServiceResponse extends io.pulu
      * Expected value is 'AzureDatabricksDeltaLake'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {
@@ -142,7 +142,7 @@ public final class AzureDatabricksDeltaLakeLinkedServiceResponse extends io.pulu
      * Workspace resource id for databricks REST API. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="workspaceResourceId")
+    @Import(name="workspaceResourceId")
       private final @Nullable Object workspaceResourceId;
 
     public Optional<Object> getWorkspaceResourceId() {

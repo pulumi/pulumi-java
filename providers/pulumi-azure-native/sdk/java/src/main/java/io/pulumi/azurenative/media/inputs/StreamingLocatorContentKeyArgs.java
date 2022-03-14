@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.media.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class StreamingLocatorContentKeyArgs extends io.pulumi.resources.Re
      * ID of Content Key
      * 
      */
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final Output<String> id;
 
     public Output<String> getId() {
@@ -33,7 +33,7 @@ public final class StreamingLocatorContentKeyArgs extends io.pulumi.resources.Re
      * Label of Content Key as specified in the Streaming Policy
      * 
      */
-    @InputImport(name="labelReferenceInStreamingPolicy")
+    @Import(name="labelReferenceInStreamingPolicy")
       private final @Nullable Output<String> labelReferenceInStreamingPolicy;
 
     public Output<String> getLabelReferenceInStreamingPolicy() {
@@ -44,7 +44,7 @@ public final class StreamingLocatorContentKeyArgs extends io.pulumi.resources.Re
      * Value of Content Key
      * 
      */
-    @InputImport(name="value")
+    @Import(name="value")
       private final @Nullable Output<String> value;
 
     public Output<String> getValue() {

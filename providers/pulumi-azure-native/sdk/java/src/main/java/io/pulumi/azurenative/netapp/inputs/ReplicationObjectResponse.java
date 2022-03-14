@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.netapp.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class ReplicationObjectResponse extends io.pulumi.resources.InvokeA
      * Indicates whether the local volume is the source or destination for the Volume Replication
      * 
      */
-    @InputImport(name="endpointType")
+    @Import(name="endpointType")
       private final @Nullable String endpointType;
 
     public Optional<String> getEndpointType() {
@@ -33,7 +33,7 @@ public final class ReplicationObjectResponse extends io.pulumi.resources.InvokeA
      * The remote region for the other end of the Volume Replication.
      * 
      */
-    @InputImport(name="remoteVolumeRegion")
+    @Import(name="remoteVolumeRegion")
       private final @Nullable String remoteVolumeRegion;
 
     public Optional<String> getRemoteVolumeRegion() {
@@ -44,7 +44,7 @@ public final class ReplicationObjectResponse extends io.pulumi.resources.InvokeA
      * The resource ID of the remote volume.
      * 
      */
-    @InputImport(name="remoteVolumeResourceId", required=true)
+    @Import(name="remoteVolumeResourceId", required=true)
       private final String remoteVolumeResourceId;
 
     public String getRemoteVolumeResourceId() {
@@ -55,7 +55,7 @@ public final class ReplicationObjectResponse extends io.pulumi.resources.InvokeA
      * Id
      * 
      */
-    @InputImport(name="replicationId")
+    @Import(name="replicationId")
       private final @Nullable String replicationId;
 
     public Optional<String> getReplicationId() {
@@ -66,7 +66,7 @@ public final class ReplicationObjectResponse extends io.pulumi.resources.InvokeA
      * Schedule
      * 
      */
-    @InputImport(name="replicationSchedule", required=true)
+    @Import(name="replicationSchedule", required=true)
       private final String replicationSchedule;
 
     public String getReplicationSchedule() {

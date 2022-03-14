@@ -12,7 +12,7 @@ import io.pulumi.azurenative.datafactory.outputs.OrcFormatResponse;
 import io.pulumi.azurenative.datafactory.outputs.ParameterSpecificationResponse;
 import io.pulumi.azurenative.datafactory.outputs.ParquetFormatResponse;
 import io.pulumi.azurenative.datafactory.outputs.TextFormatResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FileShareDatasetResponse {
     /**
      * List of tags that can be used for describing the Dataset.
@@ -100,23 +100,23 @@ public final class FileShareDatasetResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FileShareDatasetResponse(
-        @OutputCustomType.Parameter("annotations") @Nullable List<Object> annotations,
-        @OutputCustomType.Parameter("compression") @Nullable DatasetCompressionResponse compression,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("fileFilter") @Nullable Object fileFilter,
-        @OutputCustomType.Parameter("fileName") @Nullable Object fileName,
-        @OutputCustomType.Parameter("folder") @Nullable DatasetResponseFolder folder,
-        @OutputCustomType.Parameter("folderPath") @Nullable Object folderPath,
-        @OutputCustomType.Parameter("format") @Nullable Object format,
-        @OutputCustomType.Parameter("linkedServiceName") LinkedServiceReferenceResponse linkedServiceName,
-        @OutputCustomType.Parameter("modifiedDatetimeEnd") @Nullable Object modifiedDatetimeEnd,
-        @OutputCustomType.Parameter("modifiedDatetimeStart") @Nullable Object modifiedDatetimeStart,
-        @OutputCustomType.Parameter("parameters") @Nullable Map<String,ParameterSpecificationResponse> parameters,
-        @OutputCustomType.Parameter("schema") @Nullable Object schema,
-        @OutputCustomType.Parameter("structure") @Nullable Object structure,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("annotations") @Nullable List<Object> annotations,
+        @CustomType.Parameter("compression") @Nullable DatasetCompressionResponse compression,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("fileFilter") @Nullable Object fileFilter,
+        @CustomType.Parameter("fileName") @Nullable Object fileName,
+        @CustomType.Parameter("folder") @Nullable DatasetResponseFolder folder,
+        @CustomType.Parameter("folderPath") @Nullable Object folderPath,
+        @CustomType.Parameter("format") @Nullable Object format,
+        @CustomType.Parameter("linkedServiceName") LinkedServiceReferenceResponse linkedServiceName,
+        @CustomType.Parameter("modifiedDatetimeEnd") @Nullable Object modifiedDatetimeEnd,
+        @CustomType.Parameter("modifiedDatetimeStart") @Nullable Object modifiedDatetimeStart,
+        @CustomType.Parameter("parameters") @Nullable Map<String,ParameterSpecificationResponse> parameters,
+        @CustomType.Parameter("schema") @Nullable Object schema,
+        @CustomType.Parameter("structure") @Nullable Object structure,
+        @CustomType.Parameter("type") String type) {
         this.annotations = annotations;
         this.compression = compression;
         this.description = description;

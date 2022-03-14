@@ -10,7 +10,7 @@ import io.pulumi.azurenative.datafactory.inputs.ParameterSpecificationArgs;
 import io.pulumi.azurenative.datafactory.inputs.SecureStringArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -31,7 +31,7 @@ public final class AzureDataLakeStoreLinkedServiceArgs extends io.pulumi.resourc
      * Data Lake Store account name. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="accountName")
+    @Import(name="accountName")
       private final @Nullable Output<Object> accountName;
 
     public Output<Object> getAccountName() {
@@ -42,7 +42,7 @@ public final class AzureDataLakeStoreLinkedServiceArgs extends io.pulumi.resourc
      * List of tags that can be used for describing the linked service.
      * 
      */
-    @InputImport(name="annotations")
+    @Import(name="annotations")
       private final @Nullable Output<List<Object>> annotations;
 
     public Output<List<Object>> getAnnotations() {
@@ -53,7 +53,7 @@ public final class AzureDataLakeStoreLinkedServiceArgs extends io.pulumi.resourc
      * Indicates the azure cloud type of the service principle auth. Allowed values are AzurePublic, AzureChina, AzureUsGovernment, AzureGermany. Default value is the data factory regions’ cloud type. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="azureCloudType")
+    @Import(name="azureCloudType")
       private final @Nullable Output<Object> azureCloudType;
 
     public Output<Object> getAzureCloudType() {
@@ -64,7 +64,7 @@ public final class AzureDataLakeStoreLinkedServiceArgs extends io.pulumi.resourc
      * The integration runtime reference.
      * 
      */
-    @InputImport(name="connectVia")
+    @Import(name="connectVia")
       private final @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
 
     public Output<IntegrationRuntimeReferenceArgs> getConnectVia() {
@@ -75,7 +75,7 @@ public final class AzureDataLakeStoreLinkedServiceArgs extends io.pulumi.resourc
      * The credential reference containing authentication information.
      * 
      */
-    @InputImport(name="credential")
+    @Import(name="credential")
       private final @Nullable Output<CredentialReferenceArgs> credential;
 
     public Output<CredentialReferenceArgs> getCredential() {
@@ -86,7 +86,7 @@ public final class AzureDataLakeStoreLinkedServiceArgs extends io.pulumi.resourc
      * Data Lake Store service URI. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="dataLakeStoreUri", required=true)
+    @Import(name="dataLakeStoreUri", required=true)
       private final Output<Object> dataLakeStoreUri;
 
     public Output<Object> getDataLakeStoreUri() {
@@ -97,7 +97,7 @@ public final class AzureDataLakeStoreLinkedServiceArgs extends io.pulumi.resourc
      * Linked service description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -108,7 +108,7 @@ public final class AzureDataLakeStoreLinkedServiceArgs extends io.pulumi.resourc
      * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="encryptedCredential")
+    @Import(name="encryptedCredential")
       private final @Nullable Output<Object> encryptedCredential;
 
     public Output<Object> getEncryptedCredential() {
@@ -119,7 +119,7 @@ public final class AzureDataLakeStoreLinkedServiceArgs extends io.pulumi.resourc
      * Parameters for linked service.
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
     public Output<Map<String,ParameterSpecificationArgs>> getParameters() {
@@ -130,7 +130,7 @@ public final class AzureDataLakeStoreLinkedServiceArgs extends io.pulumi.resourc
      * Data Lake Store account resource group name (if different from Data Factory account). Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="resourceGroupName")
+    @Import(name="resourceGroupName")
       private final @Nullable Output<Object> resourceGroupName;
 
     public Output<Object> getResourceGroupName() {
@@ -141,7 +141,7 @@ public final class AzureDataLakeStoreLinkedServiceArgs extends io.pulumi.resourc
      * The ID of the application used to authenticate against the Azure Data Lake Store account. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="servicePrincipalId")
+    @Import(name="servicePrincipalId")
       private final @Nullable Output<Object> servicePrincipalId;
 
     public Output<Object> getServicePrincipalId() {
@@ -152,7 +152,7 @@ public final class AzureDataLakeStoreLinkedServiceArgs extends io.pulumi.resourc
      * The Key of the application used to authenticate against the Azure Data Lake Store account.
      * 
      */
-    @InputImport(name="servicePrincipalKey")
+    @Import(name="servicePrincipalKey")
       private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalKey;
 
     public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getServicePrincipalKey() {
@@ -163,7 +163,7 @@ public final class AzureDataLakeStoreLinkedServiceArgs extends io.pulumi.resourc
      * Data Lake Store account subscription ID (if different from Data Factory account). Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="subscriptionId")
+    @Import(name="subscriptionId")
       private final @Nullable Output<Object> subscriptionId;
 
     public Output<Object> getSubscriptionId() {
@@ -174,7 +174,7 @@ public final class AzureDataLakeStoreLinkedServiceArgs extends io.pulumi.resourc
      * The name or ID of the tenant to which the service principal belongs. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="tenant")
+    @Import(name="tenant")
       private final @Nullable Output<Object> tenant;
 
     public Output<Object> getTenant() {
@@ -186,7 +186,7 @@ public final class AzureDataLakeStoreLinkedServiceArgs extends io.pulumi.resourc
      * Expected value is 'AzureDataLakeStore'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {

@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.migrate.outputs;
 
 import io.pulumi.azurenative.migrate.outputs.SubnetReferenceResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class LBFrontendIPConfigurationResourceSettingsResponse {
     /**
      * Gets or sets the frontend IP configuration name.
@@ -39,13 +39,13 @@ public final class LBFrontendIPConfigurationResourceSettingsResponse {
      */
     private final @Nullable String zones;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LBFrontendIPConfigurationResourceSettingsResponse(
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("privateIpAddress") @Nullable String privateIpAddress,
-        @OutputCustomType.Parameter("privateIpAllocationMethod") @Nullable String privateIpAllocationMethod,
-        @OutputCustomType.Parameter("subnet") @Nullable SubnetReferenceResponse subnet,
-        @OutputCustomType.Parameter("zones") @Nullable String zones) {
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("privateIpAddress") @Nullable String privateIpAddress,
+        @CustomType.Parameter("privateIpAllocationMethod") @Nullable String privateIpAllocationMethod,
+        @CustomType.Parameter("subnet") @Nullable SubnetReferenceResponse subnet,
+        @CustomType.Parameter("zones") @Nullable String zones) {
         this.name = name;
         this.privateIpAddress = privateIpAddress;
         this.privateIpAllocationMethod = privateIpAllocationMethod;

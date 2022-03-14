@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.media.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class AssetStreamingLocatorResponse extends io.pulumi.resources.Inv
      * Asset Name.
      * 
      */
-    @InputImport(name="assetName", required=true)
+    @Import(name="assetName", required=true)
       private final String assetName;
 
     public String getAssetName() {
@@ -31,7 +31,7 @@ public final class AssetStreamingLocatorResponse extends io.pulumi.resources.Inv
      * The creation time of the Streaming Locator.
      * 
      */
-    @InputImport(name="created", required=true)
+    @Import(name="created", required=true)
       private final String created;
 
     public String getCreated() {
@@ -42,7 +42,7 @@ public final class AssetStreamingLocatorResponse extends io.pulumi.resources.Inv
      * Name of the default ContentKeyPolicy used by this Streaming Locator.
      * 
      */
-    @InputImport(name="defaultContentKeyPolicyName", required=true)
+    @Import(name="defaultContentKeyPolicyName", required=true)
       private final String defaultContentKeyPolicyName;
 
     public String getDefaultContentKeyPolicyName() {
@@ -53,7 +53,7 @@ public final class AssetStreamingLocatorResponse extends io.pulumi.resources.Inv
      * The end time of the Streaming Locator.
      * 
      */
-    @InputImport(name="endTime", required=true)
+    @Import(name="endTime", required=true)
       private final String endTime;
 
     public String getEndTime() {
@@ -64,7 +64,7 @@ public final class AssetStreamingLocatorResponse extends io.pulumi.resources.Inv
      * Streaming Locator name.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -75,7 +75,7 @@ public final class AssetStreamingLocatorResponse extends io.pulumi.resources.Inv
      * The start time of the Streaming Locator.
      * 
      */
-    @InputImport(name="startTime", required=true)
+    @Import(name="startTime", required=true)
       private final String startTime;
 
     public String getStartTime() {
@@ -86,7 +86,7 @@ public final class AssetStreamingLocatorResponse extends io.pulumi.resources.Inv
      * StreamingLocatorId of the Streaming Locator.
      * 
      */
-    @InputImport(name="streamingLocatorId", required=true)
+    @Import(name="streamingLocatorId", required=true)
       private final String streamingLocatorId;
 
     public String getStreamingLocatorId() {
@@ -97,7 +97,7 @@ public final class AssetStreamingLocatorResponse extends io.pulumi.resources.Inv
      * Name of the Streaming Policy used by this Streaming Locator.
      * 
      */
-    @InputImport(name="streamingPolicyName", required=true)
+    @Import(name="streamingPolicyName", required=true)
       private final String streamingPolicyName;
 
     public String getStreamingPolicyName() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.insights.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ManagementEventAggregationConditionResponse extends io.pulumi
      * the condition operator.
      * 
      */
-    @InputImport(name="operator")
+    @Import(name="operator")
       private final @Nullable String operator;
 
     public Optional<String> getOperator() {
@@ -34,7 +34,7 @@ public final class ManagementEventAggregationConditionResponse extends io.pulumi
      * The threshold value that activates the alert.
      * 
      */
-    @InputImport(name="threshold")
+    @Import(name="threshold")
       private final @Nullable Double threshold;
 
     public Optional<Double> getThreshold() {
@@ -45,7 +45,7 @@ public final class ManagementEventAggregationConditionResponse extends io.pulumi
      * the period of time (in ISO 8601 duration format) that is used to monitor alert activity based on the threshold. If specified then it must be between 5 minutes and 1 day.
      * 
      */
-    @InputImport(name="windowSize")
+    @Import(name="windowSize")
       private final @Nullable String windowSize;
 
     public Optional<String> getWindowSize() {

@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FlavorDataResponse {
     /**
      * Model flavor-specific data.
@@ -17,8 +17,8 @@ public final class FlavorDataResponse {
      */
     private final @Nullable Map<String,String> data;
 
-    @OutputCustomType.Constructor
-    private FlavorDataResponse(@OutputCustomType.Parameter("data") @Nullable Map<String,String> data) {
+    @CustomType.Constructor
+    private FlavorDataResponse(@CustomType.Parameter("data") @Nullable Map<String,String> data) {
         this.data = data;
     }
 

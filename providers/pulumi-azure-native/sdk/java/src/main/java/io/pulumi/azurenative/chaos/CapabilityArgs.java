@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.chaos;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class CapabilityArgs extends io.pulumi.resources.ResourceArgs {
      * String that represents a Capability resource name.
      * 
      */
-    @InputImport(name="capabilityName")
+    @Import(name="capabilityName")
       private final @Nullable Output<String> capabilityName;
 
     public Output<String> getCapabilityName() {
@@ -29,7 +29,7 @@ public final class CapabilityArgs extends io.pulumi.resources.ResourceArgs {
      * String that represents a resource provider namespace.
      * 
      */
-    @InputImport(name="parentProviderNamespace", required=true)
+    @Import(name="parentProviderNamespace", required=true)
       private final Output<String> parentProviderNamespace;
 
     public Output<String> getParentProviderNamespace() {
@@ -40,7 +40,7 @@ public final class CapabilityArgs extends io.pulumi.resources.ResourceArgs {
      * String that represents a resource name.
      * 
      */
-    @InputImport(name="parentResourceName", required=true)
+    @Import(name="parentResourceName", required=true)
       private final Output<String> parentResourceName;
 
     public Output<String> getParentResourceName() {
@@ -51,7 +51,7 @@ public final class CapabilityArgs extends io.pulumi.resources.ResourceArgs {
      * String that represents a resource type.
      * 
      */
-    @InputImport(name="parentResourceType", required=true)
+    @Import(name="parentResourceType", required=true)
       private final Output<String> parentResourceType;
 
     public Output<String> getParentResourceType() {
@@ -62,7 +62,7 @@ public final class CapabilityArgs extends io.pulumi.resources.ResourceArgs {
      * String that represents an Azure resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -73,7 +73,7 @@ public final class CapabilityArgs extends io.pulumi.resources.ResourceArgs {
      * String that represents a Target resource name.
      * 
      */
-    @InputImport(name="targetName", required=true)
+    @Import(name="targetName", required=true)
       private final Output<String> targetName;
 
     public Output<String> getTargetName() {

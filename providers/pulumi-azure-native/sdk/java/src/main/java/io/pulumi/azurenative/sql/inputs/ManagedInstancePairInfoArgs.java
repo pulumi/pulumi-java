@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.sql.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class ManagedInstancePairInfoArgs extends io.pulumi.resources.Resou
      * Id of Partner Managed Instance in pair.
      * 
      */
-    @InputImport(name="partnerManagedInstanceId")
+    @Import(name="partnerManagedInstanceId")
       private final @Nullable Output<String> partnerManagedInstanceId;
 
     public Output<String> getPartnerManagedInstanceId() {
@@ -33,7 +33,7 @@ public final class ManagedInstancePairInfoArgs extends io.pulumi.resources.Resou
      * Id of Primary Managed Instance in pair.
      * 
      */
-    @InputImport(name="primaryManagedInstanceId")
+    @Import(name="primaryManagedInstanceId")
       private final @Nullable Output<String> primaryManagedInstanceId;
 
     public Output<String> getPrimaryManagedInstanceId() {

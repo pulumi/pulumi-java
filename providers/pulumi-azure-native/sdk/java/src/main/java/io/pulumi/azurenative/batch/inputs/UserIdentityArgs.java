@@ -5,7 +5,7 @@ package io.pulumi.azurenative.batch.inputs;
 
 import io.pulumi.azurenative.batch.inputs.AutoUserSpecificationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class UserIdentityArgs extends io.pulumi.resources.ResourceArgs {
      * The userName and autoUser properties are mutually exclusive; you must specify one but not both.
      * 
      */
-    @InputImport(name="autoUser")
+    @Import(name="autoUser")
       private final @Nullable Output<AutoUserSpecificationArgs> autoUser;
 
     public Output<AutoUserSpecificationArgs> getAutoUser() {
@@ -34,7 +34,7 @@ public final class UserIdentityArgs extends io.pulumi.resources.ResourceArgs {
      * The userName and autoUser properties are mutually exclusive; you must specify one but not both.
      * 
      */
-    @InputImport(name="userName")
+    @Import(name="userName")
       private final @Nullable Output<String> userName;
 
     public Output<String> getUserName() {

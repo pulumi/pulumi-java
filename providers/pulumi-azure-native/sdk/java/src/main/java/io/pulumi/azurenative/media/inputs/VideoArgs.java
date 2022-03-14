@@ -7,7 +7,7 @@ import io.pulumi.azurenative.media.enums.StretchMode;
 import io.pulumi.azurenative.media.enums.VideoSyncMode;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class VideoArgs extends io.pulumi.resources.ResourceArgs {
      * The distance between two key frames. The value should be non-zero in the range [0.5, 20] seconds, specified in ISO 8601 format. The default is 2 seconds(PT2S). Note that this setting is ignored if VideoSyncMode.Passthrough is set, where the KeyFrameInterval value will follow the input source setting.
      * 
      */
-    @InputImport(name="keyFrameInterval")
+    @Import(name="keyFrameInterval")
       private final @Nullable Output<String> keyFrameInterval;
 
     public Output<String> getKeyFrameInterval() {
@@ -36,7 +36,7 @@ public final class VideoArgs extends io.pulumi.resources.ResourceArgs {
      * An optional label for the codec. The label can be used to control muxing behavior.
      * 
      */
-    @InputImport(name="label")
+    @Import(name="label")
       private final @Nullable Output<String> label;
 
     public Output<String> getLabel() {
@@ -48,7 +48,7 @@ public final class VideoArgs extends io.pulumi.resources.ResourceArgs {
      * Expected value is '#Microsoft.Media.Video'.
      * 
      */
-    @InputImport(name="odataType", required=true)
+    @Import(name="odataType", required=true)
       private final Output<String> odataType;
 
     public Output<String> getOdataType() {
@@ -59,7 +59,7 @@ public final class VideoArgs extends io.pulumi.resources.ResourceArgs {
      * The resizing mode - how the input video will be resized to fit the desired output resolution(s). Default is AutoSize
      * 
      */
-    @InputImport(name="stretchMode")
+    @Import(name="stretchMode")
       private final @Nullable Output<Either<String,StretchMode>> stretchMode;
 
     public Output<Either<String,StretchMode>> getStretchMode() {
@@ -70,7 +70,7 @@ public final class VideoArgs extends io.pulumi.resources.ResourceArgs {
      * The Video Sync Mode
      * 
      */
-    @InputImport(name="syncMode")
+    @Import(name="syncMode")
       private final @Nullable Output<Either<String,VideoSyncMode>> syncMode;
 
     public Output<Either<String,VideoSyncMode>> getSyncMode() {

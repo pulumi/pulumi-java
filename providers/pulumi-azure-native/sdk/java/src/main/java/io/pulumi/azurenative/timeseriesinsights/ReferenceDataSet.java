@@ -8,7 +8,7 @@ import io.pulumi.azurenative.timeseriesinsights.ReferenceDataSetArgs;
 import io.pulumi.azurenative.timeseriesinsights.outputs.ReferenceDataSetKeyPropertyResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -36,7 +36,7 @@ public class ReferenceDataSet extends io.pulumi.resources.CustomResource {
      * The time the resource was created.
      * 
      */
-    @OutputExport(name="creationTime", type=String.class, parameters={})
+    @Export(name="creationTime", type=String.class, parameters={})
     private Output<String> creationTime;
 
     /**
@@ -50,7 +50,7 @@ public class ReferenceDataSet extends io.pulumi.resources.CustomResource {
      * The reference data set key comparison behavior can be set using this property. By default, the value is 'Ordinal' - which means case sensitive key comparison will be performed while joining reference data with events or while adding new reference data. When 'OrdinalIgnoreCase' is set, case insensitive comparison will be used.
      * 
      */
-    @OutputExport(name="dataStringComparisonBehavior", type=String.class, parameters={})
+    @Export(name="dataStringComparisonBehavior", type=String.class, parameters={})
     private Output</* @Nullable */ String> dataStringComparisonBehavior;
 
     /**
@@ -64,7 +64,7 @@ public class ReferenceDataSet extends io.pulumi.resources.CustomResource {
      * The list of key properties for the reference data set.
      * 
      */
-    @OutputExport(name="keyProperties", type=List.class, parameters={ReferenceDataSetKeyPropertyResponse.class})
+    @Export(name="keyProperties", type=List.class, parameters={ReferenceDataSetKeyPropertyResponse.class})
     private Output<List<ReferenceDataSetKeyPropertyResponse>> keyProperties;
 
     /**
@@ -78,7 +78,7 @@ public class ReferenceDataSet extends io.pulumi.resources.CustomResource {
      * Resource location
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -92,7 +92,7 @@ public class ReferenceDataSet extends io.pulumi.resources.CustomResource {
      * Resource name
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -106,7 +106,7 @@ public class ReferenceDataSet extends io.pulumi.resources.CustomResource {
      * Provisioning state of the resource.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -120,7 +120,7 @@ public class ReferenceDataSet extends io.pulumi.resources.CustomResource {
      * Resource tags
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -134,7 +134,7 @@ public class ReferenceDataSet extends io.pulumi.resources.CustomResource {
      * Resource type
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

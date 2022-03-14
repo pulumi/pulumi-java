@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.devtestlab.inputs;
 
 import io.pulumi.azurenative.devtestlab.inputs.AttachNewDataDiskOptionsResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class DataDiskPropertiesResponse extends io.pulumi.resources.Invoke
      * Specifies options to attach a new disk to the virtual machine.
      * 
      */
-    @InputImport(name="attachNewDataDiskOptions")
+    @Import(name="attachNewDataDiskOptions")
       private final @Nullable AttachNewDataDiskOptionsResponse attachNewDataDiskOptions;
 
     public Optional<AttachNewDataDiskOptionsResponse> getAttachNewDataDiskOptions() {
@@ -34,7 +34,7 @@ public final class DataDiskPropertiesResponse extends io.pulumi.resources.Invoke
      * Specifies the existing lab disk id to attach to virtual machine.
      * 
      */
-    @InputImport(name="existingLabDiskId")
+    @Import(name="existingLabDiskId")
       private final @Nullable String existingLabDiskId;
 
     public Optional<String> getExistingLabDiskId() {
@@ -45,7 +45,7 @@ public final class DataDiskPropertiesResponse extends io.pulumi.resources.Invoke
      * Caching option for a data disk (i.e. None, ReadOnly, ReadWrite).
      * 
      */
-    @InputImport(name="hostCaching")
+    @Import(name="hostCaching")
       private final @Nullable String hostCaching;
 
     public Optional<String> getHostCaching() {

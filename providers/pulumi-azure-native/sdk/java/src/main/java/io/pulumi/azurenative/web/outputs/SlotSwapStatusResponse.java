@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SlotSwapStatusResponse {
     /**
      * The destination slot of the last swap operation.
@@ -25,11 +25,11 @@ public final class SlotSwapStatusResponse {
      */
     private final String timestampUtc;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SlotSwapStatusResponse(
-        @OutputCustomType.Parameter("destinationSlotName") String destinationSlotName,
-        @OutputCustomType.Parameter("sourceSlotName") String sourceSlotName,
-        @OutputCustomType.Parameter("timestampUtc") String timestampUtc) {
+        @CustomType.Parameter("destinationSlotName") String destinationSlotName,
+        @CustomType.Parameter("sourceSlotName") String sourceSlotName,
+        @CustomType.Parameter("timestampUtc") String timestampUtc) {
         this.destinationSlotName = destinationSlotName;
         this.sourceSlotName = sourceSlotName;
         this.timestampUtc = timestampUtc;

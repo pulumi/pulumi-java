@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.videoanalyzer.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class UserAssignedManagedIdentityResponse {
     /**
      * The client ID.
@@ -20,10 +20,10 @@ public final class UserAssignedManagedIdentityResponse {
      */
     private final String principalId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private UserAssignedManagedIdentityResponse(
-        @OutputCustomType.Parameter("clientId") String clientId,
-        @OutputCustomType.Parameter("principalId") String principalId) {
+        @CustomType.Parameter("clientId") String clientId,
+        @CustomType.Parameter("principalId") String principalId) {
         this.clientId = clientId;
         this.principalId = principalId;
     }

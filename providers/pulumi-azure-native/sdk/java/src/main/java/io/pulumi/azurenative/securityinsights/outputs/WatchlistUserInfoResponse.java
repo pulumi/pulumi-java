@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.securityinsights.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class WatchlistUserInfoResponse {
     /**
      * The email of the user.
@@ -27,11 +27,11 @@ public final class WatchlistUserInfoResponse {
      */
     private final @Nullable String objectId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WatchlistUserInfoResponse(
-        @OutputCustomType.Parameter("email") String email,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("objectId") @Nullable String objectId) {
+        @CustomType.Parameter("email") String email,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("objectId") @Nullable String objectId) {
         this.email = email;
         this.name = name;
         this.objectId = objectId;

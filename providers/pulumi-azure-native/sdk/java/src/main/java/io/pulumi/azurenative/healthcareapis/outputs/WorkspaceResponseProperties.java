@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.healthcareapis.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class WorkspaceResponseProperties {
     /**
      * The provisioning state.
@@ -15,8 +15,8 @@ public final class WorkspaceResponseProperties {
      */
     private final String provisioningState;
 
-    @OutputCustomType.Constructor
-    private WorkspaceResponseProperties(@OutputCustomType.Parameter("provisioningState") String provisioningState) {
+    @CustomType.Constructor
+    private WorkspaceResponseProperties(@CustomType.Parameter("provisioningState") String provisioningState) {
         this.provisioningState = provisioningState;
     }
 

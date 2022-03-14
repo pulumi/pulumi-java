@@ -14,7 +14,7 @@ import io.pulumi.azurenative.datalakestore.inputs.CreateVirtualNetworkRuleWithAc
 import io.pulumi.azurenative.datalakestore.inputs.EncryptionConfigArgs;
 import io.pulumi.azurenative.datalakestore.inputs.EncryptionIdentityArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -30,7 +30,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the Data Lake Store account.
      * 
      */
-    @InputImport(name="accountName")
+    @Import(name="accountName")
       private final @Nullable Output<String> accountName;
 
     public Output<String> getAccountName() {
@@ -41,7 +41,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * The default owner group for all new folders and files created in the Data Lake Store account.
      * 
      */
-    @InputImport(name="defaultGroup")
+    @Import(name="defaultGroup")
       private final @Nullable Output<String> defaultGroup;
 
     public Output<String> getDefaultGroup() {
@@ -52,7 +52,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * The Key Vault encryption configuration.
      * 
      */
-    @InputImport(name="encryptionConfig")
+    @Import(name="encryptionConfig")
       private final @Nullable Output<EncryptionConfigArgs> encryptionConfig;
 
     public Output<EncryptionConfigArgs> getEncryptionConfig() {
@@ -63,7 +63,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * The current state of encryption for this Data Lake Store account.
      * 
      */
-    @InputImport(name="encryptionState")
+    @Import(name="encryptionState")
       private final @Nullable Output<EncryptionState> encryptionState;
 
     public Output<EncryptionState> getEncryptionState() {
@@ -74,7 +74,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * The current state of allowing or disallowing IPs originating within Azure through the firewall. If the firewall is disabled, this is not enforced.
      * 
      */
-    @InputImport(name="firewallAllowAzureIps")
+    @Import(name="firewallAllowAzureIps")
       private final @Nullable Output<FirewallAllowAzureIpsState> firewallAllowAzureIps;
 
     public Output<FirewallAllowAzureIpsState> getFirewallAllowAzureIps() {
@@ -85,7 +85,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * The list of firewall rules associated with this Data Lake Store account.
      * 
      */
-    @InputImport(name="firewallRules")
+    @Import(name="firewallRules")
       private final @Nullable Output<List<CreateFirewallRuleWithAccountParametersArgs>> firewallRules;
 
     public Output<List<CreateFirewallRuleWithAccountParametersArgs>> getFirewallRules() {
@@ -96,7 +96,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * The current state of the IP address firewall for this Data Lake Store account.
      * 
      */
-    @InputImport(name="firewallState")
+    @Import(name="firewallState")
       private final @Nullable Output<FirewallState> firewallState;
 
     public Output<FirewallState> getFirewallState() {
@@ -107,7 +107,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * The Key Vault encryption identity, if any.
      * 
      */
-    @InputImport(name="identity")
+    @Import(name="identity")
       private final @Nullable Output<EncryptionIdentityArgs> identity;
 
     public Output<EncryptionIdentityArgs> getIdentity() {
@@ -118,7 +118,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * The resource location.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -129,7 +129,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * The commitment tier to use for next month.
      * 
      */
-    @InputImport(name="newTier")
+    @Import(name="newTier")
       private final @Nullable Output<TierType> newTier;
 
     public Output<TierType> getNewTier() {
@@ -140,7 +140,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the Azure resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -151,7 +151,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * The resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -162,7 +162,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * The current state of the trusted identity provider feature for this Data Lake Store account.
      * 
      */
-    @InputImport(name="trustedIdProviderState")
+    @Import(name="trustedIdProviderState")
       private final @Nullable Output<TrustedIdProviderState> trustedIdProviderState;
 
     public Output<TrustedIdProviderState> getTrustedIdProviderState() {
@@ -173,7 +173,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * The list of trusted identity providers associated with this Data Lake Store account.
      * 
      */
-    @InputImport(name="trustedIdProviders")
+    @Import(name="trustedIdProviders")
       private final @Nullable Output<List<CreateTrustedIdProviderWithAccountParametersArgs>> trustedIdProviders;
 
     public Output<List<CreateTrustedIdProviderWithAccountParametersArgs>> getTrustedIdProviders() {
@@ -184,7 +184,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * The list of virtual network rules associated with this Data Lake Store account.
      * 
      */
-    @InputImport(name="virtualNetworkRules")
+    @Import(name="virtualNetworkRules")
       private final @Nullable Output<List<CreateVirtualNetworkRuleWithAccountParametersArgs>> virtualNetworkRules;
 
     public Output<List<CreateVirtualNetworkRuleWithAccountParametersArgs>> getVirtualNetworkRules() {

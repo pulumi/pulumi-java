@@ -6,14 +6,14 @@ package io.pulumi.azurenative.insights.outputs;
 import io.pulumi.azurenative.insights.outputs.RuleManagementEventDataSourceResponse;
 import io.pulumi.azurenative.insights.outputs.RuleMetricDataSourceResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class LocationThresholdRuleConditionResponse {
     /**
      * the resource from which the rule collects its data. For this type dataSource will always be of type RuleMetricDataSource.
@@ -37,12 +37,12 @@ public final class LocationThresholdRuleConditionResponse {
      */
     private final @Nullable String windowSize;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LocationThresholdRuleConditionResponse(
-        @OutputCustomType.Parameter("dataSource") @Nullable Either<RuleManagementEventDataSourceResponse,RuleMetricDataSourceResponse> dataSource,
-        @OutputCustomType.Parameter("failedLocationCount") Integer failedLocationCount,
-        @OutputCustomType.Parameter("odataType") String odataType,
-        @OutputCustomType.Parameter("windowSize") @Nullable String windowSize) {
+        @CustomType.Parameter("dataSource") @Nullable Either<RuleManagementEventDataSourceResponse,RuleMetricDataSourceResponse> dataSource,
+        @CustomType.Parameter("failedLocationCount") Integer failedLocationCount,
+        @CustomType.Parameter("odataType") String odataType,
+        @CustomType.Parameter("windowSize") @Nullable String windowSize) {
         this.dataSource = dataSource;
         this.failedLocationCount = failedLocationCount;
         this.odataType = odataType;

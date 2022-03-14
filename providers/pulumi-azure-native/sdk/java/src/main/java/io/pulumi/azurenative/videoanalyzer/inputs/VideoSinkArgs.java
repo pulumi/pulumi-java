@@ -7,7 +7,7 @@ import io.pulumi.azurenative.videoanalyzer.inputs.NodeInputArgs;
 import io.pulumi.azurenative.videoanalyzer.inputs.VideoCreationPropertiesArgs;
 import io.pulumi.azurenative.videoanalyzer.inputs.VideoPublishingOptionsArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class VideoSinkArgs extends io.pulumi.resources.ResourceArgs {
      * An array of upstream node references within the topology to be used as inputs for this node.
      * 
      */
-    @InputImport(name="inputs", required=true)
+    @Import(name="inputs", required=true)
       private final Output<List<NodeInputArgs>> inputs;
 
     public Output<List<NodeInputArgs>> getInputs() {
@@ -37,7 +37,7 @@ public final class VideoSinkArgs extends io.pulumi.resources.ResourceArgs {
      * Node name. Must be unique within the topology.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -49,7 +49,7 @@ public final class VideoSinkArgs extends io.pulumi.resources.ResourceArgs {
      * Expected value is '#Microsoft.VideoAnalyzer.VideoSink'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {
@@ -60,7 +60,7 @@ public final class VideoSinkArgs extends io.pulumi.resources.ResourceArgs {
      * Optional video properties to be used in case a new video resource needs to be created on the service.
      * 
      */
-    @InputImport(name="videoCreationProperties")
+    @Import(name="videoCreationProperties")
       private final @Nullable Output<VideoCreationPropertiesArgs> videoCreationProperties;
 
     public Output<VideoCreationPropertiesArgs> getVideoCreationProperties() {
@@ -71,7 +71,7 @@ public final class VideoSinkArgs extends io.pulumi.resources.ResourceArgs {
      * Name of a new or existing video resource used to capture and publish content. Note: if downstream of RTSP source, and if disableArchive is set to true, then no content is archived.
      * 
      */
-    @InputImport(name="videoName", required=true)
+    @Import(name="videoName", required=true)
       private final Output<String> videoName;
 
     public Output<String> getVideoName() {
@@ -82,7 +82,7 @@ public final class VideoSinkArgs extends io.pulumi.resources.ResourceArgs {
      * Options to change how the video sink publishes content via the video resource. This property is only allowed for topologies where "kind" is set to "live".
      * 
      */
-    @InputImport(name="videoPublishingOptions")
+    @Import(name="videoPublishingOptions")
       private final @Nullable Output<VideoPublishingOptionsArgs> videoPublishingOptions;
 
     public Output<VideoPublishingOptionsArgs> getVideoPublishingOptions() {

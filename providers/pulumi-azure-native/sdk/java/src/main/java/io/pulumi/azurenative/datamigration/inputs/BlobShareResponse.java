@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datamigration.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class BlobShareResponse extends io.pulumi.resources.InvokeArgs {
      * SAS URI of Azure Storage Account Container.
      * 
      */
-    @InputImport(name="sasUri", required=true)
+    @Import(name="sasUri", required=true)
       private final String sasUri;
 
     public String getSasUri() {

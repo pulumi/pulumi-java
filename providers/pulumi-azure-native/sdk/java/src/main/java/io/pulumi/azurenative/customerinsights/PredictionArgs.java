@@ -6,7 +6,7 @@ package io.pulumi.azurenative.customerinsights;
 import io.pulumi.azurenative.customerinsights.inputs.PredictionGradesArgs;
 import io.pulumi.azurenative.customerinsights.inputs.PredictionMappingsArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class PredictionArgs extends io.pulumi.resources.ResourceArgs {
      * Whether do auto analyze.
      * 
      */
-    @InputImport(name="autoAnalyze", required=true)
+    @Import(name="autoAnalyze", required=true)
       private final Output<Boolean> autoAnalyze;
 
     public Output<Boolean> getAutoAnalyze() {
@@ -34,7 +34,7 @@ public final class PredictionArgs extends io.pulumi.resources.ResourceArgs {
      * Description of the prediction.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<Map<String,String>> description;
 
     public Output<Map<String,String>> getDescription() {
@@ -45,7 +45,7 @@ public final class PredictionArgs extends io.pulumi.resources.ResourceArgs {
      * Display name of the prediction.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<Map<String,String>> displayName;
 
     public Output<Map<String,String>> getDisplayName() {
@@ -56,7 +56,7 @@ public final class PredictionArgs extends io.pulumi.resources.ResourceArgs {
      * The prediction grades.
      * 
      */
-    @InputImport(name="grades")
+    @Import(name="grades")
       private final @Nullable Output<List<PredictionGradesArgs>> grades;
 
     public Output<List<PredictionGradesArgs>> getGrades() {
@@ -67,7 +67,7 @@ public final class PredictionArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the hub.
      * 
      */
-    @InputImport(name="hubName", required=true)
+    @Import(name="hubName", required=true)
       private final Output<String> hubName;
 
     public Output<String> getHubName() {
@@ -78,7 +78,7 @@ public final class PredictionArgs extends io.pulumi.resources.ResourceArgs {
      * Interaction types involved in the prediction.
      * 
      */
-    @InputImport(name="involvedInteractionTypes")
+    @Import(name="involvedInteractionTypes")
       private final @Nullable Output<List<String>> involvedInteractionTypes;
 
     public Output<List<String>> getInvolvedInteractionTypes() {
@@ -89,7 +89,7 @@ public final class PredictionArgs extends io.pulumi.resources.ResourceArgs {
      * KPI types involved in the prediction.
      * 
      */
-    @InputImport(name="involvedKpiTypes")
+    @Import(name="involvedKpiTypes")
       private final @Nullable Output<List<String>> involvedKpiTypes;
 
     public Output<List<String>> getInvolvedKpiTypes() {
@@ -100,7 +100,7 @@ public final class PredictionArgs extends io.pulumi.resources.ResourceArgs {
      * Relationships involved in the prediction.
      * 
      */
-    @InputImport(name="involvedRelationships")
+    @Import(name="involvedRelationships")
       private final @Nullable Output<List<String>> involvedRelationships;
 
     public Output<List<String>> getInvolvedRelationships() {
@@ -111,7 +111,7 @@ public final class PredictionArgs extends io.pulumi.resources.ResourceArgs {
      * Definition of the link mapping of prediction.
      * 
      */
-    @InputImport(name="mappings", required=true)
+    @Import(name="mappings", required=true)
       private final Output<PredictionMappingsArgs> mappings;
 
     public Output<PredictionMappingsArgs> getMappings() {
@@ -122,7 +122,7 @@ public final class PredictionArgs extends io.pulumi.resources.ResourceArgs {
      * Negative outcome expression.
      * 
      */
-    @InputImport(name="negativeOutcomeExpression", required=true)
+    @Import(name="negativeOutcomeExpression", required=true)
       private final Output<String> negativeOutcomeExpression;
 
     public Output<String> getNegativeOutcomeExpression() {
@@ -133,7 +133,7 @@ public final class PredictionArgs extends io.pulumi.resources.ResourceArgs {
      * Positive outcome expression.
      * 
      */
-    @InputImport(name="positiveOutcomeExpression", required=true)
+    @Import(name="positiveOutcomeExpression", required=true)
       private final Output<String> positiveOutcomeExpression;
 
     public Output<String> getPositiveOutcomeExpression() {
@@ -144,7 +144,7 @@ public final class PredictionArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the prediction.
      * 
      */
-    @InputImport(name="predictionName")
+    @Import(name="predictionName")
       private final @Nullable Output<String> predictionName;
 
     public Output<String> getPredictionName() {
@@ -155,7 +155,7 @@ public final class PredictionArgs extends io.pulumi.resources.ResourceArgs {
      * Primary profile type.
      * 
      */
-    @InputImport(name="primaryProfileType", required=true)
+    @Import(name="primaryProfileType", required=true)
       private final Output<String> primaryProfileType;
 
     public Output<String> getPrimaryProfileType() {
@@ -166,7 +166,7 @@ public final class PredictionArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -177,7 +177,7 @@ public final class PredictionArgs extends io.pulumi.resources.ResourceArgs {
      * Scope expression.
      * 
      */
-    @InputImport(name="scopeExpression", required=true)
+    @Import(name="scopeExpression", required=true)
       private final Output<String> scopeExpression;
 
     public Output<String> getScopeExpression() {
@@ -188,7 +188,7 @@ public final class PredictionArgs extends io.pulumi.resources.ResourceArgs {
      * Score label.
      * 
      */
-    @InputImport(name="scoreLabel", required=true)
+    @Import(name="scoreLabel", required=true)
       private final Output<String> scoreLabel;
 
     public Output<String> getScoreLabel() {

@@ -11,7 +11,7 @@ import io.pulumi.azurenative.cdn.outputs.UserManagedHttpsParametersResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -38,7 +38,7 @@ public class CustomDomain extends io.pulumi.resources.CustomResource {
      * Certificate parameters for securing custom HTTPS
      * 
      */
-    @OutputExport(name="customHttpsParameters", type=Either.class, parameters={CdnManagedHttpsParametersResponse.class, UserManagedHttpsParametersResponse.class})
+    @Export(name="customHttpsParameters", type=Either.class, parameters={CdnManagedHttpsParametersResponse.class, UserManagedHttpsParametersResponse.class})
     private Output</* @Nullable */ Either<CdnManagedHttpsParametersResponse,UserManagedHttpsParametersResponse>> customHttpsParameters;
 
     /**
@@ -52,7 +52,7 @@ public class CustomDomain extends io.pulumi.resources.CustomResource {
      * Provisioning status of Custom Https of the custom domain.
      * 
      */
-    @OutputExport(name="customHttpsProvisioningState", type=String.class, parameters={})
+    @Export(name="customHttpsProvisioningState", type=String.class, parameters={})
     private Output<String> customHttpsProvisioningState;
 
     /**
@@ -66,7 +66,7 @@ public class CustomDomain extends io.pulumi.resources.CustomResource {
      * Provisioning substate shows the progress of custom HTTPS enabling/disabling process step by step.
      * 
      */
-    @OutputExport(name="customHttpsProvisioningSubstate", type=String.class, parameters={})
+    @Export(name="customHttpsProvisioningSubstate", type=String.class, parameters={})
     private Output<String> customHttpsProvisioningSubstate;
 
     /**
@@ -80,7 +80,7 @@ public class CustomDomain extends io.pulumi.resources.CustomResource {
      * The host name of the custom domain. Must be a domain name.
      * 
      */
-    @OutputExport(name="hostName", type=String.class, parameters={})
+    @Export(name="hostName", type=String.class, parameters={})
     private Output<String> hostName;
 
     /**
@@ -94,7 +94,7 @@ public class CustomDomain extends io.pulumi.resources.CustomResource {
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -108,7 +108,7 @@ public class CustomDomain extends io.pulumi.resources.CustomResource {
      * Provisioning status of the custom domain.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -122,7 +122,7 @@ public class CustomDomain extends io.pulumi.resources.CustomResource {
      * Resource status of the custom domain.
      * 
      */
-    @OutputExport(name="resourceState", type=String.class, parameters={})
+    @Export(name="resourceState", type=String.class, parameters={})
     private Output<String> resourceState;
 
     /**
@@ -136,7 +136,7 @@ public class CustomDomain extends io.pulumi.resources.CustomResource {
      * Read only system data
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -150,7 +150,7 @@ public class CustomDomain extends io.pulumi.resources.CustomResource {
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -164,7 +164,7 @@ public class CustomDomain extends io.pulumi.resources.CustomResource {
      * Special validation or data may be required when delivering CDN to some regions due to local compliance reasons. E.g. ICP license number of a custom domain is required to deliver content in China.
      * 
      */
-    @OutputExport(name="validationData", type=String.class, parameters={})
+    @Export(name="validationData", type=String.class, parameters={})
     private Output</* @Nullable */ String> validationData;
 
     /**

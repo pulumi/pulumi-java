@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class TrafficAnalyticsConfigurationPropertiesArgs extends io.pulumi
      * Flag to enable/disable traffic analytics.
      * 
      */
-    @InputImport(name="enabled")
+    @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
@@ -35,7 +35,7 @@ public final class TrafficAnalyticsConfigurationPropertiesArgs extends io.pulumi
      * The interval in minutes which would decide how frequently TA service should do flow analytics.
      * 
      */
-    @InputImport(name="trafficAnalyticsInterval")
+    @Import(name="trafficAnalyticsInterval")
       private final @Nullable Output<Integer> trafficAnalyticsInterval;
 
     public Output<Integer> getTrafficAnalyticsInterval() {
@@ -46,7 +46,7 @@ public final class TrafficAnalyticsConfigurationPropertiesArgs extends io.pulumi
      * The resource guid of the attached workspace.
      * 
      */
-    @InputImport(name="workspaceId")
+    @Import(name="workspaceId")
       private final @Nullable Output<String> workspaceId;
 
     public Output<String> getWorkspaceId() {
@@ -57,7 +57,7 @@ public final class TrafficAnalyticsConfigurationPropertiesArgs extends io.pulumi
      * The location of the attached workspace.
      * 
      */
-    @InputImport(name="workspaceRegion")
+    @Import(name="workspaceRegion")
       private final @Nullable Output<String> workspaceRegion;
 
     public Output<String> getWorkspaceRegion() {
@@ -68,7 +68,7 @@ public final class TrafficAnalyticsConfigurationPropertiesArgs extends io.pulumi
      * Resource Id of the attached workspace.
      * 
      */
-    @InputImport(name="workspaceResourceId")
+    @Import(name="workspaceResourceId")
       private final @Nullable Output<String> workspaceResourceId;
 
     public Output<String> getWorkspaceResourceId() {

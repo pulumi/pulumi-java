@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.security.inputs;
 
 import io.pulumi.azurenative.security.inputs.SecurityAssessmentMetadataPartnerDataResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -25,14 +25,14 @@ public final class SecurityAssessmentMetadataPropertiesResponse extends io.pulum
      * BuiltIn if the assessment based on built-in Azure Policy definition, Custom if the assessment based on custom Azure Policy definition
      * 
      */
-    @InputImport(name="assessmentType", required=true)
+    @Import(name="assessmentType", required=true)
       private final String assessmentType;
 
     public String getAssessmentType() {
         return this.assessmentType;
     }
 
-    @InputImport(name="categories")
+    @Import(name="categories")
       private final @Nullable List<String> categories;
 
     public List<String> getCategories() {
@@ -43,7 +43,7 @@ public final class SecurityAssessmentMetadataPropertiesResponse extends io.pulum
      * Human readable description of the assessment
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable String description;
 
     public Optional<String> getDescription() {
@@ -54,7 +54,7 @@ public final class SecurityAssessmentMetadataPropertiesResponse extends io.pulum
      * User friendly display name of the assessment
      * 
      */
-    @InputImport(name="displayName", required=true)
+    @Import(name="displayName", required=true)
       private final String displayName;
 
     public String getDisplayName() {
@@ -65,7 +65,7 @@ public final class SecurityAssessmentMetadataPropertiesResponse extends io.pulum
      * The implementation effort required to remediate this assessment
      * 
      */
-    @InputImport(name="implementationEffort")
+    @Import(name="implementationEffort")
       private final @Nullable String implementationEffort;
 
     public Optional<String> getImplementationEffort() {
@@ -76,7 +76,7 @@ public final class SecurityAssessmentMetadataPropertiesResponse extends io.pulum
      * Describes the partner that created the assessment
      * 
      */
-    @InputImport(name="partnerData")
+    @Import(name="partnerData")
       private final @Nullable SecurityAssessmentMetadataPartnerDataResponse partnerData;
 
     public Optional<SecurityAssessmentMetadataPartnerDataResponse> getPartnerData() {
@@ -87,7 +87,7 @@ public final class SecurityAssessmentMetadataPropertiesResponse extends io.pulum
      * Azure resource ID of the policy definition that turns this assessment calculation on
      * 
      */
-    @InputImport(name="policyDefinitionId", required=true)
+    @Import(name="policyDefinitionId", required=true)
       private final String policyDefinitionId;
 
     public String getPolicyDefinitionId() {
@@ -98,7 +98,7 @@ public final class SecurityAssessmentMetadataPropertiesResponse extends io.pulum
      * True if this assessment is in preview release status
      * 
      */
-    @InputImport(name="preview")
+    @Import(name="preview")
       private final @Nullable Boolean preview;
 
     public Optional<Boolean> getPreview() {
@@ -109,7 +109,7 @@ public final class SecurityAssessmentMetadataPropertiesResponse extends io.pulum
      * Human readable description of what you should do to mitigate this security issue
      * 
      */
-    @InputImport(name="remediationDescription")
+    @Import(name="remediationDescription")
       private final @Nullable String remediationDescription;
 
     public Optional<String> getRemediationDescription() {
@@ -120,14 +120,14 @@ public final class SecurityAssessmentMetadataPropertiesResponse extends io.pulum
      * The severity level of the assessment
      * 
      */
-    @InputImport(name="severity", required=true)
+    @Import(name="severity", required=true)
       private final String severity;
 
     public String getSeverity() {
         return this.severity;
     }
 
-    @InputImport(name="threats")
+    @Import(name="threats")
       private final @Nullable List<String> threats;
 
     public List<String> getThreats() {
@@ -138,7 +138,7 @@ public final class SecurityAssessmentMetadataPropertiesResponse extends io.pulum
      * The user impact of the assessment
      * 
      */
-    @InputImport(name="userImpact")
+    @Import(name="userImpact")
       private final @Nullable String userImpact;
 
     public Optional<String> getUserImpact() {

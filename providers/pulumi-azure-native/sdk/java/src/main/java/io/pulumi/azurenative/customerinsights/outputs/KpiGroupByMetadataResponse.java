@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.customerinsights.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class KpiGroupByMetadataResponse {
     /**
      * The display name.
@@ -28,11 +28,11 @@ public final class KpiGroupByMetadataResponse {
      */
     private final @Nullable String fieldType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private KpiGroupByMetadataResponse(
-        @OutputCustomType.Parameter("displayName") @Nullable Map<String,String> displayName,
-        @OutputCustomType.Parameter("fieldName") @Nullable String fieldName,
-        @OutputCustomType.Parameter("fieldType") @Nullable String fieldType) {
+        @CustomType.Parameter("displayName") @Nullable Map<String,String> displayName,
+        @CustomType.Parameter("fieldName") @Nullable String fieldName,
+        @CustomType.Parameter("fieldType") @Nullable String fieldType) {
         this.displayName = displayName;
         this.fieldName = fieldName;
         this.fieldType = fieldType;

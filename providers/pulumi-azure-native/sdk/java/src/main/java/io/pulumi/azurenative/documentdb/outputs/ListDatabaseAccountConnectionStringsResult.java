@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.documentdb.outputs;
 
 import io.pulumi.azurenative.documentdb.outputs.DatabaseAccountConnectionStringResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ListDatabaseAccountConnectionStringsResult {
     /**
      * An array that contains the connection strings for the Cosmos DB account.
@@ -17,8 +17,8 @@ public final class ListDatabaseAccountConnectionStringsResult {
      */
     private final @Nullable List<DatabaseAccountConnectionStringResponse> connectionStrings;
 
-    @OutputCustomType.Constructor
-    private ListDatabaseAccountConnectionStringsResult(@OutputCustomType.Parameter("connectionStrings") @Nullable List<DatabaseAccountConnectionStringResponse> connectionStrings) {
+    @CustomType.Constructor
+    private ListDatabaseAccountConnectionStringsResult(@CustomType.Parameter("connectionStrings") @Nullable List<DatabaseAccountConnectionStringResponse> connectionStrings) {
         this.connectionStrings = connectionStrings;
     }
 

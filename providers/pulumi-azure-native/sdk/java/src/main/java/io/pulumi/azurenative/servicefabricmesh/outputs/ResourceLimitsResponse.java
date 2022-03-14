@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.servicefabricmesh.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ResourceLimitsResponse {
     /**
      * CPU limits in cores. At present, only full cores are supported.
@@ -22,10 +22,10 @@ public final class ResourceLimitsResponse {
      */
     private final @Nullable Double memoryInGB;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ResourceLimitsResponse(
-        @OutputCustomType.Parameter("cpu") @Nullable Double cpu,
-        @OutputCustomType.Parameter("memoryInGB") @Nullable Double memoryInGB) {
+        @CustomType.Parameter("cpu") @Nullable Double cpu,
+        @CustomType.Parameter("memoryInGB") @Nullable Double memoryInGB) {
         this.cpu = cpu;
         this.memoryInGB = memoryInGB;
     }

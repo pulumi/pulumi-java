@@ -8,7 +8,7 @@ import io.pulumi.azurenative.storsimple.BackupScheduleArgs;
 import io.pulumi.azurenative.storsimple.outputs.ScheduleRecurrenceResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Double;
 import java.lang.String;
@@ -36,7 +36,7 @@ public class BackupSchedule extends io.pulumi.resources.CustomResource {
      * The type of backup which needs to be taken.
      * 
      */
-    @OutputExport(name="backupType", type=String.class, parameters={})
+    @Export(name="backupType", type=String.class, parameters={})
     private Output<String> backupType;
 
     /**
@@ -50,7 +50,7 @@ public class BackupSchedule extends io.pulumi.resources.CustomResource {
      * The Kind of the object. Currently only Series8000 is supported
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
     /**
@@ -64,7 +64,7 @@ public class BackupSchedule extends io.pulumi.resources.CustomResource {
      * The last successful backup run which was triggered for the schedule.
      * 
      */
-    @OutputExport(name="lastSuccessfulRun", type=String.class, parameters={})
+    @Export(name="lastSuccessfulRun", type=String.class, parameters={})
     private Output<String> lastSuccessfulRun;
 
     /**
@@ -78,7 +78,7 @@ public class BackupSchedule extends io.pulumi.resources.CustomResource {
      * The name of the object.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -92,7 +92,7 @@ public class BackupSchedule extends io.pulumi.resources.CustomResource {
      * The number of backups to be retained.
      * 
      */
-    @OutputExport(name="retentionCount", type=Double.class, parameters={})
+    @Export(name="retentionCount", type=Double.class, parameters={})
     private Output<Double> retentionCount;
 
     /**
@@ -106,7 +106,7 @@ public class BackupSchedule extends io.pulumi.resources.CustomResource {
      * The schedule recurrence.
      * 
      */
-    @OutputExport(name="scheduleRecurrence", type=ScheduleRecurrenceResponse.class, parameters={})
+    @Export(name="scheduleRecurrence", type=ScheduleRecurrenceResponse.class, parameters={})
     private Output<ScheduleRecurrenceResponse> scheduleRecurrence;
 
     /**
@@ -120,7 +120,7 @@ public class BackupSchedule extends io.pulumi.resources.CustomResource {
      * The schedule status.
      * 
      */
-    @OutputExport(name="scheduleStatus", type=String.class, parameters={})
+    @Export(name="scheduleStatus", type=String.class, parameters={})
     private Output<String> scheduleStatus;
 
     /**
@@ -134,7 +134,7 @@ public class BackupSchedule extends io.pulumi.resources.CustomResource {
      * The start time of the schedule.
      * 
      */
-    @OutputExport(name="startTime", type=String.class, parameters={})
+    @Export(name="startTime", type=String.class, parameters={})
     private Output<String> startTime;
 
     /**
@@ -148,7 +148,7 @@ public class BackupSchedule extends io.pulumi.resources.CustomResource {
      * The hierarchical type of the object.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

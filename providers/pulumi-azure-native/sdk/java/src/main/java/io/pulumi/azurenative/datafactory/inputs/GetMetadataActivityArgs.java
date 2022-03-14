@@ -26,7 +26,7 @@ import io.pulumi.azurenative.datafactory.inputs.SftpReadSettingsArgs;
 import io.pulumi.azurenative.datafactory.inputs.UserPropertyArgs;
 import io.pulumi.azurenative.datafactory.inputs.XmlReadSettingsArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -46,7 +46,7 @@ public final class GetMetadataActivityArgs extends io.pulumi.resources.ResourceA
      * GetMetadata activity dataset reference.
      * 
      */
-    @InputImport(name="dataset", required=true)
+    @Import(name="dataset", required=true)
       private final Output<DatasetReferenceArgs> dataset;
 
     public Output<DatasetReferenceArgs> getDataset() {
@@ -57,7 +57,7 @@ public final class GetMetadataActivityArgs extends io.pulumi.resources.ResourceA
      * Activity depends on condition.
      * 
      */
-    @InputImport(name="dependsOn")
+    @Import(name="dependsOn")
       private final @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
 
     public Output<List<ActivityDependencyArgs>> getDependsOn() {
@@ -68,7 +68,7 @@ public final class GetMetadataActivityArgs extends io.pulumi.resources.ResourceA
      * Activity description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -79,7 +79,7 @@ public final class GetMetadataActivityArgs extends io.pulumi.resources.ResourceA
      * Fields of metadata to get from dataset.
      * 
      */
-    @InputImport(name="fieldList")
+    @Import(name="fieldList")
       private final @Nullable Output<List<Object>> fieldList;
 
     public Output<List<Object>> getFieldList() {
@@ -90,7 +90,7 @@ public final class GetMetadataActivityArgs extends io.pulumi.resources.ResourceA
      * GetMetadata activity format settings.
      * 
      */
-    @InputImport(name="formatSettings")
+    @Import(name="formatSettings")
       private final @Nullable Output<Object> formatSettings;
 
     public Output<Object> getFormatSettings() {
@@ -101,7 +101,7 @@ public final class GetMetadataActivityArgs extends io.pulumi.resources.ResourceA
      * Linked service reference.
      * 
      */
-    @InputImport(name="linkedServiceName")
+    @Import(name="linkedServiceName")
       private final @Nullable Output<LinkedServiceReferenceArgs> linkedServiceName;
 
     public Output<LinkedServiceReferenceArgs> getLinkedServiceName() {
@@ -112,7 +112,7 @@ public final class GetMetadataActivityArgs extends io.pulumi.resources.ResourceA
      * Activity name.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -123,7 +123,7 @@ public final class GetMetadataActivityArgs extends io.pulumi.resources.ResourceA
      * Activity policy.
      * 
      */
-    @InputImport(name="policy")
+    @Import(name="policy")
       private final @Nullable Output<ActivityPolicyArgs> policy;
 
     public Output<ActivityPolicyArgs> getPolicy() {
@@ -134,7 +134,7 @@ public final class GetMetadataActivityArgs extends io.pulumi.resources.ResourceA
      * GetMetadata activity store settings.
      * 
      */
-    @InputImport(name="storeSettings")
+    @Import(name="storeSettings")
       private final @Nullable Output<Object> storeSettings;
 
     public Output<Object> getStoreSettings() {
@@ -146,7 +146,7 @@ public final class GetMetadataActivityArgs extends io.pulumi.resources.ResourceA
      * Expected value is 'GetMetadata'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {
@@ -157,7 +157,7 @@ public final class GetMetadataActivityArgs extends io.pulumi.resources.ResourceA
      * Activity user properties.
      * 
      */
-    @InputImport(name="userProperties")
+    @Import(name="userProperties")
       private final @Nullable Output<List<UserPropertyArgs>> userProperties;
 
     public Output<List<UserPropertyArgs>> getUserProperties() {

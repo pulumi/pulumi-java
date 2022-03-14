@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.servicefabric.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class AzureActiveDirectoryArgs extends io.pulumi.resources.Resource
      * Azure active directory client application id.
      * 
      */
-    @InputImport(name="clientApplication")
+    @Import(name="clientApplication")
       private final @Nullable Output<String> clientApplication;
 
     public Output<String> getClientApplication() {
@@ -33,7 +33,7 @@ public final class AzureActiveDirectoryArgs extends io.pulumi.resources.Resource
      * Azure active directory cluster application id.
      * 
      */
-    @InputImport(name="clusterApplication")
+    @Import(name="clusterApplication")
       private final @Nullable Output<String> clusterApplication;
 
     public Output<String> getClusterApplication() {
@@ -44,7 +44,7 @@ public final class AzureActiveDirectoryArgs extends io.pulumi.resources.Resource
      * Azure active directory tenant id.
      * 
      */
-    @InputImport(name="tenantId")
+    @Import(name="tenantId")
       private final @Nullable Output<String> tenantId;
 
     public Output<String> getTenantId() {

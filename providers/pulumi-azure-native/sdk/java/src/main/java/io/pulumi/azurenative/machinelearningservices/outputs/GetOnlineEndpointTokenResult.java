@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetOnlineEndpointTokenResult {
     /**
      * Access token.
@@ -33,12 +33,12 @@ public final class GetOnlineEndpointTokenResult {
      */
     private final @Nullable String tokenType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetOnlineEndpointTokenResult(
-        @OutputCustomType.Parameter("accessToken") @Nullable String accessToken,
-        @OutputCustomType.Parameter("expiryTimeUtc") @Nullable Double expiryTimeUtc,
-        @OutputCustomType.Parameter("refreshAfterTimeUtc") @Nullable Double refreshAfterTimeUtc,
-        @OutputCustomType.Parameter("tokenType") @Nullable String tokenType) {
+        @CustomType.Parameter("accessToken") @Nullable String accessToken,
+        @CustomType.Parameter("expiryTimeUtc") @Nullable Double expiryTimeUtc,
+        @CustomType.Parameter("refreshAfterTimeUtc") @Nullable Double refreshAfterTimeUtc,
+        @CustomType.Parameter("tokenType") @Nullable String tokenType) {
         this.accessToken = accessToken;
         this.expiryTimeUtc = expiryTimeUtc;
         this.refreshAfterTimeUtc = refreshAfterTimeUtc;

@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ErrorEntityResponse {
     /**
      * Basic error code.
@@ -43,14 +43,14 @@ public final class ErrorEntityResponse {
      */
     private final @Nullable List<String> parameters;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ErrorEntityResponse(
-        @OutputCustomType.Parameter("code") @Nullable String code,
-        @OutputCustomType.Parameter("extendedCode") @Nullable String extendedCode,
-        @OutputCustomType.Parameter("innerErrors") @Nullable List<ErrorEntityResponse> innerErrors,
-        @OutputCustomType.Parameter("message") @Nullable String message,
-        @OutputCustomType.Parameter("messageTemplate") @Nullable String messageTemplate,
-        @OutputCustomType.Parameter("parameters") @Nullable List<String> parameters) {
+        @CustomType.Parameter("code") @Nullable String code,
+        @CustomType.Parameter("extendedCode") @Nullable String extendedCode,
+        @CustomType.Parameter("innerErrors") @Nullable List<ErrorEntityResponse> innerErrors,
+        @CustomType.Parameter("message") @Nullable String message,
+        @CustomType.Parameter("messageTemplate") @Nullable String messageTemplate,
+        @CustomType.Parameter("parameters") @Nullable List<String> parameters) {
         this.code = code;
         this.extendedCode = extendedCode;
         this.innerErrors = innerErrors;

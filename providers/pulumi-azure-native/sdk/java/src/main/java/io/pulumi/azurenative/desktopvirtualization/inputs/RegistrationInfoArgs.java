@@ -6,7 +6,7 @@ package io.pulumi.azurenative.desktopvirtualization.inputs;
 import io.pulumi.azurenative.desktopvirtualization.enums.RegistrationTokenOperation;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class RegistrationInfoArgs extends io.pulumi.resources.ResourceArgs
      * Expiration time of registration token.
      * 
      */
-    @InputImport(name="expirationTime")
+    @Import(name="expirationTime")
       private final @Nullable Output<String> expirationTime;
 
     public Output<String> getExpirationTime() {
@@ -35,7 +35,7 @@ public final class RegistrationInfoArgs extends io.pulumi.resources.ResourceArgs
      * The type of resetting the token.
      * 
      */
-    @InputImport(name="registrationTokenOperation")
+    @Import(name="registrationTokenOperation")
       private final @Nullable Output<Either<String,RegistrationTokenOperation>> registrationTokenOperation;
 
     public Output<Either<String,RegistrationTokenOperation>> getRegistrationTokenOperation() {
@@ -46,7 +46,7 @@ public final class RegistrationInfoArgs extends io.pulumi.resources.ResourceArgs
      * The registration token base64 encoded string.
      * 
      */
-    @InputImport(name="token")
+    @Import(name="token")
       private final @Nullable Output<String> token;
 
     public Output<String> getToken() {

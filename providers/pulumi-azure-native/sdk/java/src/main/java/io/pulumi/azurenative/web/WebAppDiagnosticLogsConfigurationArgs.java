@@ -7,7 +7,7 @@ import io.pulumi.azurenative.web.inputs.ApplicationLogsConfigArgs;
 import io.pulumi.azurenative.web.inputs.EnabledConfigArgs;
 import io.pulumi.azurenative.web.inputs.HttpLogsConfigArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public final class WebAppDiagnosticLogsConfigurationArgs extends io.pulumi.resou
      * Application logs configuration.
      * 
      */
-    @InputImport(name="applicationLogs")
+    @Import(name="applicationLogs")
       private final @Nullable Output<ApplicationLogsConfigArgs> applicationLogs;
 
     public Output<ApplicationLogsConfigArgs> getApplicationLogs() {
@@ -32,7 +32,7 @@ public final class WebAppDiagnosticLogsConfigurationArgs extends io.pulumi.resou
      * Detailed error messages configuration.
      * 
      */
-    @InputImport(name="detailedErrorMessages")
+    @Import(name="detailedErrorMessages")
       private final @Nullable Output<EnabledConfigArgs> detailedErrorMessages;
 
     public Output<EnabledConfigArgs> getDetailedErrorMessages() {
@@ -43,7 +43,7 @@ public final class WebAppDiagnosticLogsConfigurationArgs extends io.pulumi.resou
      * Failed requests tracing configuration.
      * 
      */
-    @InputImport(name="failedRequestsTracing")
+    @Import(name="failedRequestsTracing")
       private final @Nullable Output<EnabledConfigArgs> failedRequestsTracing;
 
     public Output<EnabledConfigArgs> getFailedRequestsTracing() {
@@ -54,7 +54,7 @@ public final class WebAppDiagnosticLogsConfigurationArgs extends io.pulumi.resou
      * HTTP logs configuration.
      * 
      */
-    @InputImport(name="httpLogs")
+    @Import(name="httpLogs")
       private final @Nullable Output<HttpLogsConfigArgs> httpLogs;
 
     public Output<HttpLogsConfigArgs> getHttpLogs() {
@@ -65,7 +65,7 @@ public final class WebAppDiagnosticLogsConfigurationArgs extends io.pulumi.resou
      * Kind of resource.
      * 
      */
-    @InputImport(name="kind")
+    @Import(name="kind")
       private final @Nullable Output<String> kind;
 
     public Output<String> getKind() {
@@ -76,7 +76,7 @@ public final class WebAppDiagnosticLogsConfigurationArgs extends io.pulumi.resou
      * Name of the app.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -87,7 +87,7 @@ public final class WebAppDiagnosticLogsConfigurationArgs extends io.pulumi.resou
      * Name of the resource group to which the resource belongs.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {

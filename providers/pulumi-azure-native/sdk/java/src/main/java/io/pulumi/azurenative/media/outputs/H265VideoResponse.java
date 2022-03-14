@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.media.outputs;
 
 import io.pulumi.azurenative.media.outputs.H265LayerResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class H265VideoResponse {
     /**
      * Tells the encoder how to choose its encoding settings.  Quality will provide for a higher compression ratio but at a higher cost and longer compute time.  Speed will produce a relatively larger file but is faster and more economical. The default value is Balanced.
@@ -56,16 +56,16 @@ public final class H265VideoResponse {
      */
     private final @Nullable String syncMode;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private H265VideoResponse(
-        @OutputCustomType.Parameter("complexity") @Nullable String complexity,
-        @OutputCustomType.Parameter("keyFrameInterval") @Nullable String keyFrameInterval,
-        @OutputCustomType.Parameter("label") @Nullable String label,
-        @OutputCustomType.Parameter("layers") @Nullable List<H265LayerResponse> layers,
-        @OutputCustomType.Parameter("odataType") String odataType,
-        @OutputCustomType.Parameter("sceneChangeDetection") @Nullable Boolean sceneChangeDetection,
-        @OutputCustomType.Parameter("stretchMode") @Nullable String stretchMode,
-        @OutputCustomType.Parameter("syncMode") @Nullable String syncMode) {
+        @CustomType.Parameter("complexity") @Nullable String complexity,
+        @CustomType.Parameter("keyFrameInterval") @Nullable String keyFrameInterval,
+        @CustomType.Parameter("label") @Nullable String label,
+        @CustomType.Parameter("layers") @Nullable List<H265LayerResponse> layers,
+        @CustomType.Parameter("odataType") String odataType,
+        @CustomType.Parameter("sceneChangeDetection") @Nullable Boolean sceneChangeDetection,
+        @CustomType.Parameter("stretchMode") @Nullable String stretchMode,
+        @CustomType.Parameter("syncMode") @Nullable String syncMode) {
         this.complexity = complexity;
         this.keyFrameInterval = keyFrameInterval;
         this.label = label;

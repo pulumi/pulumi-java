@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class PrivateEndpointResponse {
     /**
      * The ARM identifier for Private Endpoint
@@ -20,10 +20,10 @@ public final class PrivateEndpointResponse {
      */
     private final String subnetArmId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PrivateEndpointResponse(
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("subnetArmId") String subnetArmId) {
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("subnetArmId") String subnetArmId) {
         this.id = id;
         this.subnetArmId = subnetArmId;
     }

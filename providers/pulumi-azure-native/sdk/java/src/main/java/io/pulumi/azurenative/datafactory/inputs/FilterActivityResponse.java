@@ -6,7 +6,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 import io.pulumi.azurenative.datafactory.inputs.ActivityDependencyResponse;
 import io.pulumi.azurenative.datafactory.inputs.ExpressionResponse;
 import io.pulumi.azurenative.datafactory.inputs.UserPropertyResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class FilterActivityResponse extends io.pulumi.resources.InvokeArgs
      * Condition to be used for filtering the input.
      * 
      */
-    @InputImport(name="condition", required=true)
+    @Import(name="condition", required=true)
       private final ExpressionResponse condition;
 
     public ExpressionResponse getCondition() {
@@ -37,7 +37,7 @@ public final class FilterActivityResponse extends io.pulumi.resources.InvokeArgs
      * Activity depends on condition.
      * 
      */
-    @InputImport(name="dependsOn")
+    @Import(name="dependsOn")
       private final @Nullable List<ActivityDependencyResponse> dependsOn;
 
     public List<ActivityDependencyResponse> getDependsOn() {
@@ -48,7 +48,7 @@ public final class FilterActivityResponse extends io.pulumi.resources.InvokeArgs
      * Activity description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable String description;
 
     public Optional<String> getDescription() {
@@ -59,7 +59,7 @@ public final class FilterActivityResponse extends io.pulumi.resources.InvokeArgs
      * Input array on which filter should be applied.
      * 
      */
-    @InputImport(name="items", required=true)
+    @Import(name="items", required=true)
       private final ExpressionResponse items;
 
     public ExpressionResponse getItems() {
@@ -70,7 +70,7 @@ public final class FilterActivityResponse extends io.pulumi.resources.InvokeArgs
      * Activity name.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -82,7 +82,7 @@ public final class FilterActivityResponse extends io.pulumi.resources.InvokeArgs
      * Expected value is 'Filter'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {
@@ -93,7 +93,7 @@ public final class FilterActivityResponse extends io.pulumi.resources.InvokeArgs
      * Activity user properties.
      * 
      */
-    @InputImport(name="userProperties")
+    @Import(name="userProperties")
       private final @Nullable List<UserPropertyResponse> userProperties;
 
     public List<UserPropertyResponse> getUserProperties() {

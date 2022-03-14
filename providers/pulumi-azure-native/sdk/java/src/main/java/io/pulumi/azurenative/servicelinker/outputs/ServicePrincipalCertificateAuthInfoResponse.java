@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.servicelinker.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ServicePrincipalCertificateAuthInfoResponse {
     /**
      * The authentication type.
@@ -31,12 +31,12 @@ public final class ServicePrincipalCertificateAuthInfoResponse {
      */
     private final String principalId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServicePrincipalCertificateAuthInfoResponse(
-        @OutputCustomType.Parameter("authType") String authType,
-        @OutputCustomType.Parameter("certificate") String certificate,
-        @OutputCustomType.Parameter("clientId") String clientId,
-        @OutputCustomType.Parameter("principalId") String principalId) {
+        @CustomType.Parameter("authType") String authType,
+        @CustomType.Parameter("certificate") String certificate,
+        @CustomType.Parameter("clientId") String clientId,
+        @CustomType.Parameter("principalId") String principalId) {
         this.authType = authType;
         this.certificate = certificate;
         this.clientId = clientId;

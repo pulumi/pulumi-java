@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.eventhub.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class DestinationArgs extends io.pulumi.resources.ResourceArgs {
      * Blob naming convention for archive, e.g. {Namespace}/{EventHub}/{PartitionId}/{Year}/{Month}/{Day}/{Hour}/{Minute}/{Second}. Here all the parameters (Namespace,EventHub .. etc) are mandatory irrespective of order
      * 
      */
-    @InputImport(name="archiveNameFormat")
+    @Import(name="archiveNameFormat")
       private final @Nullable Output<String> archiveNameFormat;
 
     public Output<String> getArchiveNameFormat() {
@@ -33,7 +33,7 @@ public final class DestinationArgs extends io.pulumi.resources.ResourceArgs {
      * Blob container Name
      * 
      */
-    @InputImport(name="blobContainer")
+    @Import(name="blobContainer")
       private final @Nullable Output<String> blobContainer;
 
     public Output<String> getBlobContainer() {
@@ -44,7 +44,7 @@ public final class DestinationArgs extends io.pulumi.resources.ResourceArgs {
      * Name for capture destination
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -55,7 +55,7 @@ public final class DestinationArgs extends io.pulumi.resources.ResourceArgs {
      * Resource id of the storage account to be used to create the blobs
      * 
      */
-    @InputImport(name="storageAccountResourceId")
+    @Import(name="storageAccountResourceId")
       private final @Nullable Output<String> storageAccountResourceId;
 
     public Output<String> getStorageAccountResourceId() {

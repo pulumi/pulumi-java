@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.costmanagement.inputs;
 
 import io.pulumi.azurenative.costmanagement.inputs.CostAllocationRuleDetailsResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class CostAllocationRulePropertiesResponse extends io.pulumi.resour
      * Time at which the rule was created. Rules that change cost for the same resource are applied in order of creation.
      * 
      */
-    @InputImport(name="createdDate", required=true)
+    @Import(name="createdDate", required=true)
       private final String createdDate;
 
     public String getCreatedDate() {
@@ -34,7 +34,7 @@ public final class CostAllocationRulePropertiesResponse extends io.pulumi.resour
      * Description of a cost allocation rule.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable String description;
 
     public Optional<String> getDescription() {
@@ -45,7 +45,7 @@ public final class CostAllocationRulePropertiesResponse extends io.pulumi.resour
      * Resource information for the cost allocation rule
      * 
      */
-    @InputImport(name="details", required=true)
+    @Import(name="details", required=true)
       private final CostAllocationRuleDetailsResponse details;
 
     public CostAllocationRuleDetailsResponse getDetails() {
@@ -56,7 +56,7 @@ public final class CostAllocationRulePropertiesResponse extends io.pulumi.resour
      * Status of the rule
      * 
      */
-    @InputImport(name="status", required=true)
+    @Import(name="status", required=true)
       private final String status;
 
     public String getStatus() {
@@ -67,7 +67,7 @@ public final class CostAllocationRulePropertiesResponse extends io.pulumi.resour
      * Time at which the rule was last updated.
      * 
      */
-    @InputImport(name="updatedDate", required=true)
+    @Import(name="updatedDate", required=true)
       private final String updatedDate;
 
     public String getUpdatedDate() {

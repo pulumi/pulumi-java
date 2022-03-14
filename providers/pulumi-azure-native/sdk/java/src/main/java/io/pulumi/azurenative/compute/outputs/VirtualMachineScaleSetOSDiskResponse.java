@@ -6,7 +6,7 @@ package io.pulumi.azurenative.compute.outputs;
 import io.pulumi.azurenative.compute.outputs.DiffDiskSettingsResponse;
 import io.pulumi.azurenative.compute.outputs.VirtualHardDiskResponse;
 import io.pulumi.azurenative.compute.outputs.VirtualMachineScaleSetManagedDiskParametersResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -15,7 +15,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VirtualMachineScaleSetOSDiskResponse {
     /**
      * Specifies the caching requirements. <br><br> Possible values are: <br><br> **None** <br><br> **ReadOnly** <br><br> **ReadWrite** <br><br> Default: **None for Standard storage. ReadOnly for Premium storage**
@@ -68,18 +68,18 @@ public final class VirtualMachineScaleSetOSDiskResponse {
      */
     private final @Nullable Boolean writeAcceleratorEnabled;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VirtualMachineScaleSetOSDiskResponse(
-        @OutputCustomType.Parameter("caching") @Nullable String caching,
-        @OutputCustomType.Parameter("createOption") String createOption,
-        @OutputCustomType.Parameter("diffDiskSettings") @Nullable DiffDiskSettingsResponse diffDiskSettings,
-        @OutputCustomType.Parameter("diskSizeGB") @Nullable Integer diskSizeGB,
-        @OutputCustomType.Parameter("image") @Nullable VirtualHardDiskResponse image,
-        @OutputCustomType.Parameter("managedDisk") @Nullable VirtualMachineScaleSetManagedDiskParametersResponse managedDisk,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("osType") @Nullable String osType,
-        @OutputCustomType.Parameter("vhdContainers") @Nullable List<String> vhdContainers,
-        @OutputCustomType.Parameter("writeAcceleratorEnabled") @Nullable Boolean writeAcceleratorEnabled) {
+        @CustomType.Parameter("caching") @Nullable String caching,
+        @CustomType.Parameter("createOption") String createOption,
+        @CustomType.Parameter("diffDiskSettings") @Nullable DiffDiskSettingsResponse diffDiskSettings,
+        @CustomType.Parameter("diskSizeGB") @Nullable Integer diskSizeGB,
+        @CustomType.Parameter("image") @Nullable VirtualHardDiskResponse image,
+        @CustomType.Parameter("managedDisk") @Nullable VirtualMachineScaleSetManagedDiskParametersResponse managedDisk,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("osType") @Nullable String osType,
+        @CustomType.Parameter("vhdContainers") @Nullable List<String> vhdContainers,
+        @CustomType.Parameter("writeAcceleratorEnabled") @Nullable Boolean writeAcceleratorEnabled) {
         this.caching = caching;
         this.createOption = createOption;
         this.diffDiskSettings = diffDiskSettings;

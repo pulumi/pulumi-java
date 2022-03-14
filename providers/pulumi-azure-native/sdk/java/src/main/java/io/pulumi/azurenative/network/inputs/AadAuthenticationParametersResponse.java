@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class AadAuthenticationParametersResponse extends io.pulumi.resourc
      * AAD Vpn authentication parameter AAD audience.
      * 
      */
-    @InputImport(name="aadAudience")
+    @Import(name="aadAudience")
       private final @Nullable String aadAudience;
 
     public Optional<String> getAadAudience() {
@@ -33,7 +33,7 @@ public final class AadAuthenticationParametersResponse extends io.pulumi.resourc
      * AAD Vpn authentication parameter AAD issuer.
      * 
      */
-    @InputImport(name="aadIssuer")
+    @Import(name="aadIssuer")
       private final @Nullable String aadIssuer;
 
     public Optional<String> getAadIssuer() {
@@ -44,7 +44,7 @@ public final class AadAuthenticationParametersResponse extends io.pulumi.resourc
      * AAD Vpn authentication parameter AAD tenant.
      * 
      */
-    @InputImport(name="aadTenant")
+    @Import(name="aadTenant")
       private final @Nullable String aadTenant;
 
     public Optional<String> getAadTenant() {

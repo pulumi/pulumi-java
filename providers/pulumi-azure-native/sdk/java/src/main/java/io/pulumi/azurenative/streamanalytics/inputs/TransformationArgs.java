@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.streamanalytics.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class TransformationArgs extends io.pulumi.resources.ResourceArgs {
      * Resource name
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -34,7 +34,7 @@ public final class TransformationArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the query that will be run in the streaming job. You can learn more about the Stream Analytics Query Language (SAQL) here: https://msdn.microsoft.com/library/azure/dn834998 . Required on PUT (CreateOrReplace) requests.
      * 
      */
-    @InputImport(name="query")
+    @Import(name="query")
       private final @Nullable Output<String> query;
 
     public Output<String> getQuery() {
@@ -45,7 +45,7 @@ public final class TransformationArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the number of streaming units that the streaming job uses.
      * 
      */
-    @InputImport(name="streamingUnits")
+    @Import(name="streamingUnits")
       private final @Nullable Output<Integer> streamingUnits;
 
     public Output<Integer> getStreamingUnits() {

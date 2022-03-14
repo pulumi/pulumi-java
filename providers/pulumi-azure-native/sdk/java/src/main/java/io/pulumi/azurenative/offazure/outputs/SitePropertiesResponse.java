@@ -5,13 +5,13 @@ package io.pulumi.azurenative.offazure.outputs;
 
 import io.pulumi.azurenative.offazure.outputs.SiteAgentPropertiesResponse;
 import io.pulumi.azurenative.offazure.outputs.SiteSpnPropertiesResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SitePropertiesResponse {
     /**
      * On-premises agent details.
@@ -39,13 +39,13 @@ public final class SitePropertiesResponse {
      */
     private final @Nullable SiteSpnPropertiesResponse servicePrincipalIdentityDetails;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SitePropertiesResponse(
-        @OutputCustomType.Parameter("agentDetails") @Nullable SiteAgentPropertiesResponse agentDetails,
-        @OutputCustomType.Parameter("applianceName") @Nullable String applianceName,
-        @OutputCustomType.Parameter("discoverySolutionId") @Nullable String discoverySolutionId,
-        @OutputCustomType.Parameter("serviceEndpoint") String serviceEndpoint,
-        @OutputCustomType.Parameter("servicePrincipalIdentityDetails") @Nullable SiteSpnPropertiesResponse servicePrincipalIdentityDetails) {
+        @CustomType.Parameter("agentDetails") @Nullable SiteAgentPropertiesResponse agentDetails,
+        @CustomType.Parameter("applianceName") @Nullable String applianceName,
+        @CustomType.Parameter("discoverySolutionId") @Nullable String discoverySolutionId,
+        @CustomType.Parameter("serviceEndpoint") String serviceEndpoint,
+        @CustomType.Parameter("servicePrincipalIdentityDetails") @Nullable SiteSpnPropertiesResponse servicePrincipalIdentityDetails) {
         this.agentDetails = agentDetails;
         this.applianceName = applianceName;
         this.discoverySolutionId = discoverySolutionId;

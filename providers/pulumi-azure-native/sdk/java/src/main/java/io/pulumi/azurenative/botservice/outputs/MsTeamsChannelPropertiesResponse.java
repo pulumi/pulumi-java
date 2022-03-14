@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.botservice.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class MsTeamsChannelPropertiesResponse {
     /**
      * Whether this channel accepted terms
@@ -43,14 +43,14 @@ public final class MsTeamsChannelPropertiesResponse {
      */
     private final Boolean isEnabled;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MsTeamsChannelPropertiesResponse(
-        @OutputCustomType.Parameter("acceptedTerms") @Nullable Boolean acceptedTerms,
-        @OutputCustomType.Parameter("callingWebHook") @Nullable String callingWebHook,
-        @OutputCustomType.Parameter("deploymentEnvironment") @Nullable String deploymentEnvironment,
-        @OutputCustomType.Parameter("enableCalling") @Nullable Boolean enableCalling,
-        @OutputCustomType.Parameter("incomingCallRoute") @Nullable String incomingCallRoute,
-        @OutputCustomType.Parameter("isEnabled") Boolean isEnabled) {
+        @CustomType.Parameter("acceptedTerms") @Nullable Boolean acceptedTerms,
+        @CustomType.Parameter("callingWebHook") @Nullable String callingWebHook,
+        @CustomType.Parameter("deploymentEnvironment") @Nullable String deploymentEnvironment,
+        @CustomType.Parameter("enableCalling") @Nullable Boolean enableCalling,
+        @CustomType.Parameter("incomingCallRoute") @Nullable String incomingCallRoute,
+        @CustomType.Parameter("isEnabled") Boolean isEnabled) {
         this.acceptedTerms = acceptedTerms;
         this.callingWebHook = callingWebHook;
         this.deploymentEnvironment = deploymentEnvironment;

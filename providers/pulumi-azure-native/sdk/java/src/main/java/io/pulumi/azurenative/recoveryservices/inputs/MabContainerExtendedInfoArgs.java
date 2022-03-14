@@ -6,7 +6,7 @@ package io.pulumi.azurenative.recoveryservices.inputs;
 import io.pulumi.azurenative.recoveryservices.enums.BackupItemType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class MabContainerExtendedInfoArgs extends io.pulumi.resources.Reso
      * Type of backup items associated with this container.
      * 
      */
-    @InputImport(name="backupItemType")
+    @Import(name="backupItemType")
       private final @Nullable Output<Either<String,BackupItemType>> backupItemType;
 
     public Output<Either<String,BackupItemType>> getBackupItemType() {
@@ -36,7 +36,7 @@ public final class MabContainerExtendedInfoArgs extends io.pulumi.resources.Reso
      * List of backup items associated with this container.
      * 
      */
-    @InputImport(name="backupItems")
+    @Import(name="backupItems")
       private final @Nullable Output<List<String>> backupItems;
 
     public Output<List<String>> getBackupItems() {
@@ -47,7 +47,7 @@ public final class MabContainerExtendedInfoArgs extends io.pulumi.resources.Reso
      * Latest backup status of this container.
      * 
      */
-    @InputImport(name="lastBackupStatus")
+    @Import(name="lastBackupStatus")
       private final @Nullable Output<String> lastBackupStatus;
 
     public Output<String> getLastBackupStatus() {
@@ -58,7 +58,7 @@ public final class MabContainerExtendedInfoArgs extends io.pulumi.resources.Reso
      * Time stamp when this container was refreshed.
      * 
      */
-    @InputImport(name="lastRefreshedAt")
+    @Import(name="lastRefreshedAt")
       private final @Nullable Output<String> lastRefreshedAt;
 
     public Output<String> getLastRefreshedAt() {
@@ -69,7 +69,7 @@ public final class MabContainerExtendedInfoArgs extends io.pulumi.resources.Reso
      * Backup policy associated with this container.
      * 
      */
-    @InputImport(name="policyName")
+    @Import(name="policyName")
       private final @Nullable Output<String> policyName;
 
     public Output<String> getPolicyName() {

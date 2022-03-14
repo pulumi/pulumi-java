@@ -3,23 +3,23 @@
 
 package io.pulumi.azurenative.providerhub.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ResourceProviderCapabilitiesResponse {
     private final String effect;
     private final String quotaId;
     private final @Nullable List<String> requiredFeatures;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ResourceProviderCapabilitiesResponse(
-        @OutputCustomType.Parameter("effect") String effect,
-        @OutputCustomType.Parameter("quotaId") String quotaId,
-        @OutputCustomType.Parameter("requiredFeatures") @Nullable List<String> requiredFeatures) {
+        @CustomType.Parameter("effect") String effect,
+        @CustomType.Parameter("quotaId") String quotaId,
+        @CustomType.Parameter("requiredFeatures") @Nullable List<String> requiredFeatures) {
         this.effect = effect;
         this.quotaId = quotaId;
         this.requiredFeatures = requiredFeatures;

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storagesync.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class ServerEndpointRecallErrorResponse extends io.pulumi.resources
      * Count of occurences of the error
      * 
      */
-    @InputImport(name="count", required=true)
+    @Import(name="count", required=true)
       private final Double count;
 
     public Double getCount() {
@@ -32,7 +32,7 @@ public final class ServerEndpointRecallErrorResponse extends io.pulumi.resources
      * Error code (HResult)
      * 
      */
-    @InputImport(name="errorCode", required=true)
+    @Import(name="errorCode", required=true)
       private final Integer errorCode;
 
     public Integer getErrorCode() {

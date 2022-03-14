@@ -8,7 +8,7 @@ import io.pulumi.azurenative.sql.inputs.InstanceFailoverGroupReadWriteEndpointAr
 import io.pulumi.azurenative.sql.inputs.ManagedInstancePairInfoArgs;
 import io.pulumi.azurenative.sql.inputs.PartnerRegionInfoArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class InstanceFailoverGroupArgs extends io.pulumi.resources.Resourc
      * The name of the failover group.
      * 
      */
-    @InputImport(name="failoverGroupName")
+    @Import(name="failoverGroupName")
       private final @Nullable Output<String> failoverGroupName;
 
     public Output<String> getFailoverGroupName() {
@@ -34,7 +34,7 @@ public final class InstanceFailoverGroupArgs extends io.pulumi.resources.Resourc
      * The name of the region where the resource is located.
      * 
      */
-    @InputImport(name="locationName", required=true)
+    @Import(name="locationName", required=true)
       private final Output<String> locationName;
 
     public Output<String> getLocationName() {
@@ -45,7 +45,7 @@ public final class InstanceFailoverGroupArgs extends io.pulumi.resources.Resourc
      * List of managed instance pairs in the failover group.
      * 
      */
-    @InputImport(name="managedInstancePairs", required=true)
+    @Import(name="managedInstancePairs", required=true)
       private final Output<List<ManagedInstancePairInfoArgs>> managedInstancePairs;
 
     public Output<List<ManagedInstancePairInfoArgs>> getManagedInstancePairs() {
@@ -56,7 +56,7 @@ public final class InstanceFailoverGroupArgs extends io.pulumi.resources.Resourc
      * Partner region information for the failover group.
      * 
      */
-    @InputImport(name="partnerRegions", required=true)
+    @Import(name="partnerRegions", required=true)
       private final Output<List<PartnerRegionInfoArgs>> partnerRegions;
 
     public Output<List<PartnerRegionInfoArgs>> getPartnerRegions() {
@@ -67,7 +67,7 @@ public final class InstanceFailoverGroupArgs extends io.pulumi.resources.Resourc
      * Read-only endpoint of the failover group instance.
      * 
      */
-    @InputImport(name="readOnlyEndpoint")
+    @Import(name="readOnlyEndpoint")
       private final @Nullable Output<InstanceFailoverGroupReadOnlyEndpointArgs> readOnlyEndpoint;
 
     public Output<InstanceFailoverGroupReadOnlyEndpointArgs> getReadOnlyEndpoint() {
@@ -78,7 +78,7 @@ public final class InstanceFailoverGroupArgs extends io.pulumi.resources.Resourc
      * Read-write endpoint of the failover group instance.
      * 
      */
-    @InputImport(name="readWriteEndpoint", required=true)
+    @Import(name="readWriteEndpoint", required=true)
       private final Output<InstanceFailoverGroupReadWriteEndpointArgs> readWriteEndpoint;
 
     public Output<InstanceFailoverGroupReadWriteEndpointArgs> getReadWriteEndpoint() {
@@ -89,7 +89,7 @@ public final class InstanceFailoverGroupArgs extends io.pulumi.resources.Resourc
      * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {

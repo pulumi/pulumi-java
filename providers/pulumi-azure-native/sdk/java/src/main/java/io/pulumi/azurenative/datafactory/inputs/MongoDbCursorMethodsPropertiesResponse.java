@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class MongoDbCursorMethodsPropertiesResponse extends io.pulumi.reso
      * Specifies the maximum number of documents the server returns. limit() is analogous to the LIMIT statement in a SQL database. Type: integer (or Expression with resultType integer).
      * 
      */
-    @InputImport(name="limit")
+    @Import(name="limit")
       private final @Nullable Object limit;
 
     public Optional<Object> getLimit() {
@@ -33,7 +33,7 @@ public final class MongoDbCursorMethodsPropertiesResponse extends io.pulumi.reso
      * Specifies the fields to return in the documents that match the query filter. To return all fields in the matching documents, omit this parameter. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Object project;
 
     public Optional<Object> getProject() {
@@ -44,7 +44,7 @@ public final class MongoDbCursorMethodsPropertiesResponse extends io.pulumi.reso
      * Specifies the how many documents skipped and where MongoDB begins returning results. This approach may be useful in implementing paginated results. Type: integer (or Expression with resultType integer).
      * 
      */
-    @InputImport(name="skip")
+    @Import(name="skip")
       private final @Nullable Object skip;
 
     public Optional<Object> getSkip() {
@@ -55,7 +55,7 @@ public final class MongoDbCursorMethodsPropertiesResponse extends io.pulumi.reso
      * Specifies the order in which the query returns matching documents. Type: string (or Expression with resultType string). Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="sort")
+    @Import(name="sort")
       private final @Nullable Object sort;
 
     public Optional<Object> getSort() {

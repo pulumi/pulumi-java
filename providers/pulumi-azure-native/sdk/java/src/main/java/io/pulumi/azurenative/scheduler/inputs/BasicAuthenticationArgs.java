@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.scheduler.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class BasicAuthenticationArgs extends io.pulumi.resources.ResourceA
      * Gets or sets the password, return value will always be empty.
      * 
      */
-    @InputImport(name="password")
+    @Import(name="password")
       private final @Nullable Output<String> password;
 
     public Output<String> getPassword() {
@@ -30,7 +30,7 @@ public final class BasicAuthenticationArgs extends io.pulumi.resources.ResourceA
      * Expected value is 'Basic'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {
@@ -41,7 +41,7 @@ public final class BasicAuthenticationArgs extends io.pulumi.resources.ResourceA
      * Gets or sets the username.
      * 
      */
-    @InputImport(name="username")
+    @Import(name="username")
       private final @Nullable Output<String> username;
 
     public Output<String> getUsername() {

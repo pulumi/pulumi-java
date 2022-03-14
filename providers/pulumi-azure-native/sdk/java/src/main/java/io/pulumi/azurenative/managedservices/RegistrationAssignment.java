@@ -8,7 +8,7 @@ import io.pulumi.azurenative.managedservices.RegistrationAssignmentArgs;
 import io.pulumi.azurenative.managedservices.outputs.RegistrationAssignmentPropertiesResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +35,7 @@ public class RegistrationAssignment extends io.pulumi.resources.CustomResource {
      * Name of the registration assignment.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -49,7 +49,7 @@ public class RegistrationAssignment extends io.pulumi.resources.CustomResource {
      * Properties of a registration assignment.
      * 
      */
-    @OutputExport(name="properties", type=RegistrationAssignmentPropertiesResponse.class, parameters={})
+    @Export(name="properties", type=RegistrationAssignmentPropertiesResponse.class, parameters={})
     private Output<RegistrationAssignmentPropertiesResponse> properties;
 
     /**
@@ -63,7 +63,7 @@ public class RegistrationAssignment extends io.pulumi.resources.CustomResource {
      * Type of the resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

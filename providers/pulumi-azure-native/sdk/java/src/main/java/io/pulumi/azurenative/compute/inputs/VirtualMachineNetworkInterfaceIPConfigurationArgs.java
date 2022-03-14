@@ -8,7 +8,7 @@ import io.pulumi.azurenative.compute.inputs.SubResourceArgs;
 import io.pulumi.azurenative.compute.inputs.VirtualMachinePublicIPAddressConfigurationArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -28,7 +28,7 @@ public final class VirtualMachineNetworkInterfaceIPConfigurationArgs extends io.
      * Specifies an array of references to backend address pools of application gateways. A virtual machine can reference backend address pools of multiple application gateways. Multiple virtual machines cannot use the same application gateway.
      * 
      */
-    @InputImport(name="applicationGatewayBackendAddressPools")
+    @Import(name="applicationGatewayBackendAddressPools")
       private final @Nullable Output<List<SubResourceArgs>> applicationGatewayBackendAddressPools;
 
     public Output<List<SubResourceArgs>> getApplicationGatewayBackendAddressPools() {
@@ -39,7 +39,7 @@ public final class VirtualMachineNetworkInterfaceIPConfigurationArgs extends io.
      * Specifies an array of references to application security group.
      * 
      */
-    @InputImport(name="applicationSecurityGroups")
+    @Import(name="applicationSecurityGroups")
       private final @Nullable Output<List<SubResourceArgs>> applicationSecurityGroups;
 
     public Output<List<SubResourceArgs>> getApplicationSecurityGroups() {
@@ -50,7 +50,7 @@ public final class VirtualMachineNetworkInterfaceIPConfigurationArgs extends io.
      * Specifies an array of references to backend address pools of load balancers. A virtual machine can reference backend address pools of one public and one internal load balancer. [Multiple virtual machines cannot use the same basic sku load balancer].
      * 
      */
-    @InputImport(name="loadBalancerBackendAddressPools")
+    @Import(name="loadBalancerBackendAddressPools")
       private final @Nullable Output<List<SubResourceArgs>> loadBalancerBackendAddressPools;
 
     public Output<List<SubResourceArgs>> getLoadBalancerBackendAddressPools() {
@@ -61,7 +61,7 @@ public final class VirtualMachineNetworkInterfaceIPConfigurationArgs extends io.
      * The IP configuration name.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -72,7 +72,7 @@ public final class VirtualMachineNetworkInterfaceIPConfigurationArgs extends io.
      * Specifies the primary network interface in case the virtual machine has more than 1 network interface.
      * 
      */
-    @InputImport(name="primary")
+    @Import(name="primary")
       private final @Nullable Output<Boolean> primary;
 
     public Output<Boolean> getPrimary() {
@@ -83,7 +83,7 @@ public final class VirtualMachineNetworkInterfaceIPConfigurationArgs extends io.
      * Available from Api-Version 2017-03-30 onwards, it represents whether the specific ipconfiguration is IPv4 or IPv6. Default is taken as IPv4.  Possible values are: 'IPv4' and 'IPv6'.
      * 
      */
-    @InputImport(name="privateIPAddressVersion")
+    @Import(name="privateIPAddressVersion")
       private final @Nullable Output<Either<String,IPVersions>> privateIPAddressVersion;
 
     public Output<Either<String,IPVersions>> getPrivateIPAddressVersion() {
@@ -94,7 +94,7 @@ public final class VirtualMachineNetworkInterfaceIPConfigurationArgs extends io.
      * The publicIPAddressConfiguration.
      * 
      */
-    @InputImport(name="publicIPAddressConfiguration")
+    @Import(name="publicIPAddressConfiguration")
       private final @Nullable Output<VirtualMachinePublicIPAddressConfigurationArgs> publicIPAddressConfiguration;
 
     public Output<VirtualMachinePublicIPAddressConfigurationArgs> getPublicIPAddressConfiguration() {
@@ -105,7 +105,7 @@ public final class VirtualMachineNetworkInterfaceIPConfigurationArgs extends io.
      * Specifies the identifier of the subnet.
      * 
      */
-    @InputImport(name="subnet")
+    @Import(name="subnet")
       private final @Nullable Output<SubResourceArgs> subnet;
 
     public Output<SubResourceArgs> getSubnet() {

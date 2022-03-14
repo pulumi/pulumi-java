@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datamigration.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetFileArgs extends io.pulumi.resources.InvokeArgs {
      * Name of the File
      * 
      */
-    @InputImport(name="fileName", required=true)
+    @Import(name="fileName", required=true)
       private final String fileName;
 
     public String getFileName() {
@@ -27,7 +27,7 @@ public final class GetFileArgs extends io.pulumi.resources.InvokeArgs {
      * Name of the resource group
      * 
      */
-    @InputImport(name="groupName", required=true)
+    @Import(name="groupName", required=true)
       private final String groupName;
 
     public String getGroupName() {
@@ -38,7 +38,7 @@ public final class GetFileArgs extends io.pulumi.resources.InvokeArgs {
      * Name of the project
      * 
      */
-    @InputImport(name="projectName", required=true)
+    @Import(name="projectName", required=true)
       private final String projectName;
 
     public String getProjectName() {
@@ -49,7 +49,7 @@ public final class GetFileArgs extends io.pulumi.resources.InvokeArgs {
      * Name of the service
      * 
      */
-    @InputImport(name="serviceName", required=true)
+    @Import(name="serviceName", required=true)
       private final String serviceName;
 
     public String getServiceName() {

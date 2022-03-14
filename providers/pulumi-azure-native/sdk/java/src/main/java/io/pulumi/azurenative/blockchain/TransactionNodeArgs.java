@@ -5,7 +5,7 @@ package io.pulumi.azurenative.blockchain;
 
 import io.pulumi.azurenative.blockchain.inputs.FirewallRuleArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class TransactionNodeArgs extends io.pulumi.resources.ResourceArgs 
      * Blockchain member name.
      * 
      */
-    @InputImport(name="blockchainMemberName", required=true)
+    @Import(name="blockchainMemberName", required=true)
       private final Output<String> blockchainMemberName;
 
     public Output<String> getBlockchainMemberName() {
@@ -31,7 +31,7 @@ public final class TransactionNodeArgs extends io.pulumi.resources.ResourceArgs 
      * Gets or sets the firewall rules.
      * 
      */
-    @InputImport(name="firewallRules")
+    @Import(name="firewallRules")
       private final @Nullable Output<List<FirewallRuleArgs>> firewallRules;
 
     public Output<List<FirewallRuleArgs>> getFirewallRules() {
@@ -42,7 +42,7 @@ public final class TransactionNodeArgs extends io.pulumi.resources.ResourceArgs 
      * Gets or sets the transaction node location.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -53,7 +53,7 @@ public final class TransactionNodeArgs extends io.pulumi.resources.ResourceArgs 
      * Sets the transaction node dns endpoint basic auth password.
      * 
      */
-    @InputImport(name="password")
+    @Import(name="password")
       private final @Nullable Output<String> password;
 
     public Output<String> getPassword() {
@@ -64,7 +64,7 @@ public final class TransactionNodeArgs extends io.pulumi.resources.ResourceArgs 
      * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -75,7 +75,7 @@ public final class TransactionNodeArgs extends io.pulumi.resources.ResourceArgs 
      * Transaction node name.
      * 
      */
-    @InputImport(name="transactionNodeName")
+    @Import(name="transactionNodeName")
       private final @Nullable Output<String> transactionNodeName;
 
     public Output<String> getTransactionNodeName() {

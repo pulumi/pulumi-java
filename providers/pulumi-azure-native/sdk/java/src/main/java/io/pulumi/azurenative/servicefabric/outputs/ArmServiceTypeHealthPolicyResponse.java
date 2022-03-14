@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.servicefabric.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ArmServiceTypeHealthPolicyResponse {
     /**
      * The maximum percentage of partitions per service allowed to be unhealthy before your application is considered in error.
@@ -27,11 +27,11 @@ public final class ArmServiceTypeHealthPolicyResponse {
      */
     private final @Nullable Integer maxPercentUnhealthyServices;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ArmServiceTypeHealthPolicyResponse(
-        @OutputCustomType.Parameter("maxPercentUnhealthyPartitionsPerService") @Nullable Integer maxPercentUnhealthyPartitionsPerService,
-        @OutputCustomType.Parameter("maxPercentUnhealthyReplicasPerPartition") @Nullable Integer maxPercentUnhealthyReplicasPerPartition,
-        @OutputCustomType.Parameter("maxPercentUnhealthyServices") @Nullable Integer maxPercentUnhealthyServices) {
+        @CustomType.Parameter("maxPercentUnhealthyPartitionsPerService") @Nullable Integer maxPercentUnhealthyPartitionsPerService,
+        @CustomType.Parameter("maxPercentUnhealthyReplicasPerPartition") @Nullable Integer maxPercentUnhealthyReplicasPerPartition,
+        @CustomType.Parameter("maxPercentUnhealthyServices") @Nullable Integer maxPercentUnhealthyServices) {
         this.maxPercentUnhealthyPartitionsPerService = maxPercentUnhealthyPartitionsPerService;
         this.maxPercentUnhealthyReplicasPerPartition = maxPercentUnhealthyReplicasPerPartition;
         this.maxPercentUnhealthyServices = maxPercentUnhealthyServices;

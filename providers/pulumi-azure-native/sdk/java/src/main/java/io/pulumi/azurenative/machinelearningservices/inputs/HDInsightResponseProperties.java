@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.azurenative.machinelearningservices.inputs.VirtualMachineSshCredentialsResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class HDInsightResponseProperties extends io.pulumi.resources.Invok
      * Public IP address of the master node of the cluster.
      * 
      */
-    @InputImport(name="address")
+    @Import(name="address")
       private final @Nullable String address;
 
     public Optional<String> getAddress() {
@@ -31,7 +31,7 @@ public final class HDInsightResponseProperties extends io.pulumi.resources.Invok
      * Admin credentials for master node of the cluster
      * 
      */
-    @InputImport(name="administratorAccount")
+    @Import(name="administratorAccount")
       private final @Nullable VirtualMachineSshCredentialsResponse administratorAccount;
 
     public Optional<VirtualMachineSshCredentialsResponse> getAdministratorAccount() {
@@ -42,7 +42,7 @@ public final class HDInsightResponseProperties extends io.pulumi.resources.Invok
      * Port open for ssh connections on the master node of the cluster.
      * 
      */
-    @InputImport(name="sshPort")
+    @Import(name="sshPort")
       private final @Nullable Integer sshPort;
 
     public Optional<Integer> getSshPort() {

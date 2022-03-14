@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.media.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AkamaiSignatureHeaderAuthenticationKeyResponse {
     /**
      * authentication key
@@ -27,11 +27,11 @@ public final class AkamaiSignatureHeaderAuthenticationKeyResponse {
      */
     private final @Nullable String identifier;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AkamaiSignatureHeaderAuthenticationKeyResponse(
-        @OutputCustomType.Parameter("base64Key") @Nullable String base64Key,
-        @OutputCustomType.Parameter("expiration") @Nullable String expiration,
-        @OutputCustomType.Parameter("identifier") @Nullable String identifier) {
+        @CustomType.Parameter("base64Key") @Nullable String base64Key,
+        @CustomType.Parameter("expiration") @Nullable String expiration,
+        @CustomType.Parameter("identifier") @Nullable String identifier) {
         this.base64Key = base64Key;
         this.expiration = expiration;
         this.identifier = identifier;

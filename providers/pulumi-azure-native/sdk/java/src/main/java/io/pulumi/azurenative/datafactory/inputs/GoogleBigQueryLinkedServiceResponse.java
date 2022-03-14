@@ -8,7 +8,7 @@ import io.pulumi.azurenative.datafactory.inputs.IntegrationRuntimeReferenceRespo
 import io.pulumi.azurenative.datafactory.inputs.ParameterSpecificationResponse;
 import io.pulumi.azurenative.datafactory.inputs.SecureStringResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -30,7 +30,7 @@ public final class GoogleBigQueryLinkedServiceResponse extends io.pulumi.resourc
      * A comma-separated list of public BigQuery projects to access.
      * 
      */
-    @InputImport(name="additionalProjects")
+    @Import(name="additionalProjects")
       private final @Nullable Object additionalProjects;
 
     public Optional<Object> getAdditionalProjects() {
@@ -41,7 +41,7 @@ public final class GoogleBigQueryLinkedServiceResponse extends io.pulumi.resourc
      * List of tags that can be used for describing the linked service.
      * 
      */
-    @InputImport(name="annotations")
+    @Import(name="annotations")
       private final @Nullable List<Object> annotations;
 
     public List<Object> getAnnotations() {
@@ -52,7 +52,7 @@ public final class GoogleBigQueryLinkedServiceResponse extends io.pulumi.resourc
      * The OAuth 2.0 authentication mechanism used for authentication. ServiceAuthentication can only be used on self-hosted IR.
      * 
      */
-    @InputImport(name="authenticationType", required=true)
+    @Import(name="authenticationType", required=true)
       private final String authenticationType;
 
     public String getAuthenticationType() {
@@ -63,7 +63,7 @@ public final class GoogleBigQueryLinkedServiceResponse extends io.pulumi.resourc
      * The client id of the google application used to acquire the refresh token. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="clientId")
+    @Import(name="clientId")
       private final @Nullable Object clientId;
 
     public Optional<Object> getClientId() {
@@ -74,7 +74,7 @@ public final class GoogleBigQueryLinkedServiceResponse extends io.pulumi.resourc
      * The client secret of the google application used to acquire the refresh token.
      * 
      */
-    @InputImport(name="clientSecret")
+    @Import(name="clientSecret")
       private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> clientSecret;
 
     public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> getClientSecret() {
@@ -85,7 +85,7 @@ public final class GoogleBigQueryLinkedServiceResponse extends io.pulumi.resourc
      * The integration runtime reference.
      * 
      */
-    @InputImport(name="connectVia")
+    @Import(name="connectVia")
       private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
     public Optional<IntegrationRuntimeReferenceResponse> getConnectVia() {
@@ -96,7 +96,7 @@ public final class GoogleBigQueryLinkedServiceResponse extends io.pulumi.resourc
      * Linked service description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable String description;
 
     public Optional<String> getDescription() {
@@ -107,7 +107,7 @@ public final class GoogleBigQueryLinkedServiceResponse extends io.pulumi.resourc
      * The service account email ID that is used for ServiceAuthentication and can only be used on self-hosted IR.
      * 
      */
-    @InputImport(name="email")
+    @Import(name="email")
       private final @Nullable Object email;
 
     public Optional<Object> getEmail() {
@@ -118,7 +118,7 @@ public final class GoogleBigQueryLinkedServiceResponse extends io.pulumi.resourc
      * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="encryptedCredential")
+    @Import(name="encryptedCredential")
       private final @Nullable Object encryptedCredential;
 
     public Optional<Object> getEncryptedCredential() {
@@ -129,7 +129,7 @@ public final class GoogleBigQueryLinkedServiceResponse extends io.pulumi.resourc
      * The full path to the .p12 key file that is used to authenticate the service account email address and can only be used on self-hosted IR.
      * 
      */
-    @InputImport(name="keyFilePath")
+    @Import(name="keyFilePath")
       private final @Nullable Object keyFilePath;
 
     public Optional<Object> getKeyFilePath() {
@@ -140,7 +140,7 @@ public final class GoogleBigQueryLinkedServiceResponse extends io.pulumi.resourc
      * Parameters for linked service.
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
     public Map<String,ParameterSpecificationResponse> getParameters() {
@@ -151,7 +151,7 @@ public final class GoogleBigQueryLinkedServiceResponse extends io.pulumi.resourc
      * The default BigQuery project to query against.
      * 
      */
-    @InputImport(name="project", required=true)
+    @Import(name="project", required=true)
       private final Object project;
 
     public Object getProject() {
@@ -162,7 +162,7 @@ public final class GoogleBigQueryLinkedServiceResponse extends io.pulumi.resourc
      * The refresh token obtained from Google for authorizing access to BigQuery for UserAuthentication.
      * 
      */
-    @InputImport(name="refreshToken")
+    @Import(name="refreshToken")
       private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> refreshToken;
 
     public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> getRefreshToken() {
@@ -173,7 +173,7 @@ public final class GoogleBigQueryLinkedServiceResponse extends io.pulumi.resourc
      * Whether to request access to Google Drive. Allowing Google Drive access enables support for federated tables that combine BigQuery data with data from Google Drive. The default value is false.
      * 
      */
-    @InputImport(name="requestGoogleDriveScope")
+    @Import(name="requestGoogleDriveScope")
       private final @Nullable Object requestGoogleDriveScope;
 
     public Optional<Object> getRequestGoogleDriveScope() {
@@ -184,7 +184,7 @@ public final class GoogleBigQueryLinkedServiceResponse extends io.pulumi.resourc
      * The full path of the .pem file containing trusted CA certificates for verifying the server when connecting over SSL. This property can only be set when using SSL on self-hosted IR. The default value is the cacerts.pem file installed with the IR.
      * 
      */
-    @InputImport(name="trustedCertPath")
+    @Import(name="trustedCertPath")
       private final @Nullable Object trustedCertPath;
 
     public Optional<Object> getTrustedCertPath() {
@@ -196,7 +196,7 @@ public final class GoogleBigQueryLinkedServiceResponse extends io.pulumi.resourc
      * Expected value is 'GoogleBigQuery'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {
@@ -207,7 +207,7 @@ public final class GoogleBigQueryLinkedServiceResponse extends io.pulumi.resourc
      * Specifies whether to use a CA certificate from the system trust store or from a specified PEM file. The default value is false.
      * 
      */
-    @InputImport(name="useSystemTrustStore")
+    @Import(name="useSystemTrustStore")
       private final @Nullable Object useSystemTrustStore;
 
     public Optional<Object> getUseSystemTrustStore() {

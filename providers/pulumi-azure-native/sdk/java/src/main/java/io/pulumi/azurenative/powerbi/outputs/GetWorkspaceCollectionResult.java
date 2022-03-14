@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.powerbi.outputs;
 
 import io.pulumi.azurenative.powerbi.outputs.AzureSkuResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetWorkspaceCollectionResult {
     /**
      * Resource id
@@ -42,15 +42,15 @@ public final class GetWorkspaceCollectionResult {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetWorkspaceCollectionResult(
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("properties") Object properties,
-        @OutputCustomType.Parameter("sku") @Nullable AzureSkuResponse sku,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") @Nullable String type) {
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("properties") Object properties,
+        @CustomType.Parameter("sku") @Nullable AzureSkuResponse sku,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") @Nullable String type) {
         this.id = id;
         this.location = location;
         this.name = name;

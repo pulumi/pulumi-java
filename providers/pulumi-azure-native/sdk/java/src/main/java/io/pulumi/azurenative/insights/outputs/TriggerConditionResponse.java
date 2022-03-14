@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.insights.outputs;
 
 import io.pulumi.azurenative.insights.outputs.LogMetricTriggerResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TriggerConditionResponse {
     /**
      * Trigger condition for metric query rule
@@ -29,11 +29,11 @@ public final class TriggerConditionResponse {
      */
     private final String thresholdOperator;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TriggerConditionResponse(
-        @OutputCustomType.Parameter("metricTrigger") @Nullable LogMetricTriggerResponse metricTrigger,
-        @OutputCustomType.Parameter("threshold") Double threshold,
-        @OutputCustomType.Parameter("thresholdOperator") String thresholdOperator) {
+        @CustomType.Parameter("metricTrigger") @Nullable LogMetricTriggerResponse metricTrigger,
+        @CustomType.Parameter("threshold") Double threshold,
+        @CustomType.Parameter("thresholdOperator") String thresholdOperator) {
         this.metricTrigger = metricTrigger;
         this.threshold = threshold;
         this.thresholdOperator = thresholdOperator;

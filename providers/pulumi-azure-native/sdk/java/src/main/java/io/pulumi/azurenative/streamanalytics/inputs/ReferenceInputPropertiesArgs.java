@@ -8,7 +8,7 @@ import io.pulumi.azurenative.streamanalytics.inputs.BlobReferenceInputDataSource
 import io.pulumi.azurenative.streamanalytics.inputs.CsvSerializationArgs;
 import io.pulumi.azurenative.streamanalytics.inputs.JsonSerializationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +27,7 @@ public final class ReferenceInputPropertiesArgs extends io.pulumi.resources.Reso
      * Describes an input data source that contains reference data. Required on PUT (CreateOrReplace) requests.
      * 
      */
-    @InputImport(name="datasource")
+    @Import(name="datasource")
       private final @Nullable Output<BlobReferenceInputDataSourceArgs> datasource;
 
     public Output<BlobReferenceInputDataSourceArgs> getDatasource() {
@@ -38,7 +38,7 @@ public final class ReferenceInputPropertiesArgs extends io.pulumi.resources.Reso
      * Describes how data from an input is serialized or how data is serialized when written to an output. Required on PUT (CreateOrReplace) requests.
      * 
      */
-    @InputImport(name="serialization")
+    @Import(name="serialization")
       private final @Nullable Output<Object> serialization;
 
     public Output<Object> getSerialization() {
@@ -50,7 +50,7 @@ public final class ReferenceInputPropertiesArgs extends io.pulumi.resources.Reso
      * Expected value is 'Reference'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datalakestore;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class TrustedIdProviderArgs extends io.pulumi.resources.ResourceArg
      * The name of the Data Lake Store account.
      * 
      */
-    @InputImport(name="accountName", required=true)
+    @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
     public Output<String> getAccountName() {
@@ -29,7 +29,7 @@ public final class TrustedIdProviderArgs extends io.pulumi.resources.ResourceArg
      * The URL of this trusted identity provider.
      * 
      */
-    @InputImport(name="idProvider", required=true)
+    @Import(name="idProvider", required=true)
       private final Output<String> idProvider;
 
     public Output<String> getIdProvider() {
@@ -40,7 +40,7 @@ public final class TrustedIdProviderArgs extends io.pulumi.resources.ResourceArg
      * The name of the Azure resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -51,7 +51,7 @@ public final class TrustedIdProviderArgs extends io.pulumi.resources.ResourceArg
      * The name of the trusted identity provider. This is used for differentiation of providers in the account.
      * 
      */
-    @InputImport(name="trustedIdProviderName")
+    @Import(name="trustedIdProviderName")
       private final @Nullable Output<String> trustedIdProviderName;
 
     public Output<String> getTrustedIdProviderName() {

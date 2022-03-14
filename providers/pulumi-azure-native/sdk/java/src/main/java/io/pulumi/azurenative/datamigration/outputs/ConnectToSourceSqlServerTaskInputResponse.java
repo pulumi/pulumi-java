@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.datamigration.outputs;
 
 import io.pulumi.azurenative.datamigration.outputs.SqlConnectionInfoResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ConnectToSourceSqlServerTaskInputResponse {
     /**
      * Permission group for validations
@@ -34,12 +34,12 @@ public final class ConnectToSourceSqlServerTaskInputResponse {
      */
     private final SqlConnectionInfoResponse sourceConnectionInfo;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ConnectToSourceSqlServerTaskInputResponse(
-        @OutputCustomType.Parameter("checkPermissionsGroup") @Nullable String checkPermissionsGroup,
-        @OutputCustomType.Parameter("collectAgentJobs") @Nullable Boolean collectAgentJobs,
-        @OutputCustomType.Parameter("collectLogins") @Nullable Boolean collectLogins,
-        @OutputCustomType.Parameter("sourceConnectionInfo") SqlConnectionInfoResponse sourceConnectionInfo) {
+        @CustomType.Parameter("checkPermissionsGroup") @Nullable String checkPermissionsGroup,
+        @CustomType.Parameter("collectAgentJobs") @Nullable Boolean collectAgentJobs,
+        @CustomType.Parameter("collectLogins") @Nullable Boolean collectLogins,
+        @CustomType.Parameter("sourceConnectionInfo") SqlConnectionInfoResponse sourceConnectionInfo) {
         this.checkPermissionsGroup = checkPermissionsGroup;
         this.collectAgentJobs = collectAgentJobs;
         this.collectLogins = collectLogins;

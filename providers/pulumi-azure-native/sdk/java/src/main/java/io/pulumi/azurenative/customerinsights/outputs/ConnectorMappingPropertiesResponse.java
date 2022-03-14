@@ -8,7 +8,7 @@ import io.pulumi.azurenative.customerinsights.outputs.ConnectorMappingCompleteOp
 import io.pulumi.azurenative.customerinsights.outputs.ConnectorMappingErrorManagementResponse;
 import io.pulumi.azurenative.customerinsights.outputs.ConnectorMappingFormatResponse;
 import io.pulumi.azurenative.customerinsights.outputs.ConnectorMappingStructureResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -16,7 +16,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ConnectorMappingPropertiesResponse {
     /**
      * The availability of mapping property.
@@ -59,16 +59,16 @@ public final class ConnectorMappingPropertiesResponse {
      */
     private final List<ConnectorMappingStructureResponse> structure;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ConnectorMappingPropertiesResponse(
-        @OutputCustomType.Parameter("availability") ConnectorMappingAvailabilityResponse availability,
-        @OutputCustomType.Parameter("completeOperation") ConnectorMappingCompleteOperationResponse completeOperation,
-        @OutputCustomType.Parameter("errorManagement") ConnectorMappingErrorManagementResponse errorManagement,
-        @OutputCustomType.Parameter("fileFilter") @Nullable String fileFilter,
-        @OutputCustomType.Parameter("folderPath") @Nullable String folderPath,
-        @OutputCustomType.Parameter("format") ConnectorMappingFormatResponse format,
-        @OutputCustomType.Parameter("hasHeader") @Nullable Boolean hasHeader,
-        @OutputCustomType.Parameter("structure") List<ConnectorMappingStructureResponse> structure) {
+        @CustomType.Parameter("availability") ConnectorMappingAvailabilityResponse availability,
+        @CustomType.Parameter("completeOperation") ConnectorMappingCompleteOperationResponse completeOperation,
+        @CustomType.Parameter("errorManagement") ConnectorMappingErrorManagementResponse errorManagement,
+        @CustomType.Parameter("fileFilter") @Nullable String fileFilter,
+        @CustomType.Parameter("folderPath") @Nullable String folderPath,
+        @CustomType.Parameter("format") ConnectorMappingFormatResponse format,
+        @CustomType.Parameter("hasHeader") @Nullable Boolean hasHeader,
+        @CustomType.Parameter("structure") List<ConnectorMappingStructureResponse> structure) {
         this.availability = availability;
         this.completeOperation = completeOperation;
         this.errorManagement = errorManagement;

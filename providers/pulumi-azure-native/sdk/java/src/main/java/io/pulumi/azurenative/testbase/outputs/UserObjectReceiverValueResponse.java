@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.testbase.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class UserObjectReceiverValueResponse {
     /**
      * user object ids.
@@ -17,8 +17,8 @@ public final class UserObjectReceiverValueResponse {
      */
     private final @Nullable List<String> userObjectIds;
 
-    @OutputCustomType.Constructor
-    private UserObjectReceiverValueResponse(@OutputCustomType.Parameter("userObjectIds") @Nullable List<String> userObjectIds) {
+    @CustomType.Constructor
+    private UserObjectReceiverValueResponse(@CustomType.Parameter("userObjectIds") @Nullable List<String> userObjectIds) {
         this.userObjectIds = userObjectIds;
     }
 

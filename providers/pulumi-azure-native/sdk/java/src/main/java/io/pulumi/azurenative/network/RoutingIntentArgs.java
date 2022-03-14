@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network;
 
 import io.pulumi.azurenative.network.inputs.RoutingPolicyArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class RoutingIntentArgs extends io.pulumi.resources.ResourceArgs {
      * Resource ID.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
@@ -31,7 +31,7 @@ public final class RoutingIntentArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -42,7 +42,7 @@ public final class RoutingIntentArgs extends io.pulumi.resources.ResourceArgs {
      * The resource group name of the RoutingIntent.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -53,7 +53,7 @@ public final class RoutingIntentArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the per VirtualHub singleton Routing Intent resource.
      * 
      */
-    @InputImport(name="routingIntentName")
+    @Import(name="routingIntentName")
       private final @Nullable Output<String> routingIntentName;
 
     public Output<String> getRoutingIntentName() {
@@ -64,7 +64,7 @@ public final class RoutingIntentArgs extends io.pulumi.resources.ResourceArgs {
      * List of routing policies.
      * 
      */
-    @InputImport(name="routingPolicies")
+    @Import(name="routingPolicies")
       private final @Nullable Output<List<RoutingPolicyArgs>> routingPolicies;
 
     public Output<List<RoutingPolicyArgs>> getRoutingPolicies() {
@@ -75,7 +75,7 @@ public final class RoutingIntentArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the VirtualHub.
      * 
      */
-    @InputImport(name="virtualHubName", required=true)
+    @Import(name="virtualHubName", required=true)
       private final Output<String> virtualHubName;
 
     public Output<String> getVirtualHubName() {

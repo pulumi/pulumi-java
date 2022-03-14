@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.authorization.inputs;
 
 import io.pulumi.azurenative.authorization.inputs.ParameterDefinitionsValueResponseMetadata;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class ParameterDefinitionsValueResponse extends io.pulumi.resources
      * The allowed values for the parameter.
      * 
      */
-    @InputImport(name="allowedValues")
+    @Import(name="allowedValues")
       private final @Nullable List<Object> allowedValues;
 
     public List<Object> getAllowedValues() {
@@ -36,7 +36,7 @@ public final class ParameterDefinitionsValueResponse extends io.pulumi.resources
      * The default value for the parameter if no value is provided.
      * 
      */
-    @InputImport(name="defaultValue")
+    @Import(name="defaultValue")
       private final @Nullable Object defaultValue;
 
     public Optional<Object> getDefaultValue() {
@@ -47,7 +47,7 @@ public final class ParameterDefinitionsValueResponse extends io.pulumi.resources
      * General metadata for the parameter.
      * 
      */
-    @InputImport(name="metadata")
+    @Import(name="metadata")
       private final @Nullable ParameterDefinitionsValueResponseMetadata metadata;
 
     public Optional<ParameterDefinitionsValueResponseMetadata> getMetadata() {
@@ -58,7 +58,7 @@ public final class ParameterDefinitionsValueResponse extends io.pulumi.resources
      * The data type of the parameter.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable String type;
 
     public Optional<String> getType() {

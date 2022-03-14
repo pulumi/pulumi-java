@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class VpnClientConnectionHealthResponse extends io.pulumi.resources
      * List of allocated ip addresses to the connected p2s vpn clients.
      * 
      */
-    @InputImport(name="allocatedIpAddresses")
+    @Import(name="allocatedIpAddresses")
       private final @Nullable List<String> allocatedIpAddresses;
 
     public List<String> getAllocatedIpAddresses() {
@@ -36,7 +36,7 @@ public final class VpnClientConnectionHealthResponse extends io.pulumi.resources
      * Total of the Egress Bytes Transferred in this connection.
      * 
      */
-    @InputImport(name="totalEgressBytesTransferred", required=true)
+    @Import(name="totalEgressBytesTransferred", required=true)
       private final Double totalEgressBytesTransferred;
 
     public Double getTotalEgressBytesTransferred() {
@@ -47,7 +47,7 @@ public final class VpnClientConnectionHealthResponse extends io.pulumi.resources
      * Total of the Ingress Bytes Transferred in this P2S Vpn connection.
      * 
      */
-    @InputImport(name="totalIngressBytesTransferred", required=true)
+    @Import(name="totalIngressBytesTransferred", required=true)
       private final Double totalIngressBytesTransferred;
 
     public Double getTotalIngressBytesTransferred() {
@@ -58,7 +58,7 @@ public final class VpnClientConnectionHealthResponse extends io.pulumi.resources
      * The total of p2s vpn clients connected at this time to this P2SVpnGateway.
      * 
      */
-    @InputImport(name="vpnClientConnectionsCount")
+    @Import(name="vpnClientConnectionsCount")
       private final @Nullable Integer vpnClientConnectionsCount;
 
     public Optional<Integer> getVpnClientConnectionsCount() {

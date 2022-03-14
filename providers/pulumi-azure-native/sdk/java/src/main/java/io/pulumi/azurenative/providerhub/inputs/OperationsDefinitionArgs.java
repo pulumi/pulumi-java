@@ -5,7 +5,7 @@ package io.pulumi.azurenative.providerhub.inputs;
 
 import io.pulumi.azurenative.providerhub.inputs.OperationsDefinitionDisplayArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class OperationsDefinitionArgs extends io.pulumi.resources.Resource
 
     public static final OperationsDefinitionArgs Empty = new OperationsDefinitionArgs();
 
-    @InputImport(name="actionType")
+    @Import(name="actionType")
       private final @Nullable Output<String> actionType;
 
     public Output<String> getActionType() {
@@ -32,7 +32,7 @@ public final class OperationsDefinitionArgs extends io.pulumi.resources.Resource
      * Display information of the operation.
      * 
      */
-    @InputImport(name="display", required=true)
+    @Import(name="display", required=true)
       private final Output<OperationsDefinitionDisplayArgs> display;
 
     public Output<OperationsDefinitionDisplayArgs> getDisplay() {
@@ -43,7 +43,7 @@ public final class OperationsDefinitionArgs extends io.pulumi.resources.Resource
      * Indicates whether the operation applies to data-plane.
      * 
      */
-    @InputImport(name="isDataAction")
+    @Import(name="isDataAction")
       private final @Nullable Output<Boolean> isDataAction;
 
     public Output<Boolean> getIsDataAction() {
@@ -54,21 +54,21 @@ public final class OperationsDefinitionArgs extends io.pulumi.resources.Resource
      * Name of the operation.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
         return this.name;
     }
 
-    @InputImport(name="origin")
+    @Import(name="origin")
       private final @Nullable Output<String> origin;
 
     public Output<String> getOrigin() {
         return this.origin == null ? Output.empty() : this.origin;
     }
 
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable Output<Object> properties;
 
     public Output<Object> getProperties() {

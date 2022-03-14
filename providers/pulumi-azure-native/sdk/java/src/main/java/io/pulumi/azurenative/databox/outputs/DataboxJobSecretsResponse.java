@@ -6,13 +6,13 @@ package io.pulumi.azurenative.databox.outputs;
 import io.pulumi.azurenative.databox.outputs.CloudErrorResponse;
 import io.pulumi.azurenative.databox.outputs.DataBoxSecretResponse;
 import io.pulumi.azurenative.databox.outputs.DcAccessSecurityCodeResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DataboxJobSecretsResponse {
     /**
      * Dc Access Security Code for Customer Managed Shipping
@@ -36,12 +36,12 @@ public final class DataboxJobSecretsResponse {
      */
     private final @Nullable List<DataBoxSecretResponse> podSecrets;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DataboxJobSecretsResponse(
-        @OutputCustomType.Parameter("dcAccessSecurityCode") DcAccessSecurityCodeResponse dcAccessSecurityCode,
-        @OutputCustomType.Parameter("error") CloudErrorResponse error,
-        @OutputCustomType.Parameter("jobSecretsType") String jobSecretsType,
-        @OutputCustomType.Parameter("podSecrets") @Nullable List<DataBoxSecretResponse> podSecrets) {
+        @CustomType.Parameter("dcAccessSecurityCode") DcAccessSecurityCodeResponse dcAccessSecurityCode,
+        @CustomType.Parameter("error") CloudErrorResponse error,
+        @CustomType.Parameter("jobSecretsType") String jobSecretsType,
+        @CustomType.Parameter("podSecrets") @Nullable List<DataBoxSecretResponse> podSecrets) {
         this.dcAccessSecurityCode = dcAccessSecurityCode;
         this.error = error;
         this.jobSecretsType = jobSecretsType;

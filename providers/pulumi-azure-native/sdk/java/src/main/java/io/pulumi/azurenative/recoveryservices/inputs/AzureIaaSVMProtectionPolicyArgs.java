@@ -11,7 +11,7 @@ import io.pulumi.azurenative.recoveryservices.inputs.SimpleRetentionPolicyArgs;
 import io.pulumi.azurenative.recoveryservices.inputs.SimpleSchedulePolicyArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -32,14 +32,14 @@ public final class AzureIaaSVMProtectionPolicyArgs extends io.pulumi.resources.R
      * Expected value is 'AzureIaasVM'.
      * 
      */
-    @InputImport(name="backupManagementType", required=true)
+    @Import(name="backupManagementType", required=true)
       private final Output<String> backupManagementType;
 
     public Output<String> getBackupManagementType() {
         return this.backupManagementType;
     }
 
-    @InputImport(name="instantRPDetails")
+    @Import(name="instantRPDetails")
       private final @Nullable Output<InstantRPAdditionalDetailsArgs> instantRPDetails;
 
     public Output<InstantRPAdditionalDetailsArgs> getInstantRPDetails() {
@@ -50,7 +50,7 @@ public final class AzureIaaSVMProtectionPolicyArgs extends io.pulumi.resources.R
      * Instant RP retention policy range in days
      * 
      */
-    @InputImport(name="instantRpRetentionRangeInDays")
+    @Import(name="instantRpRetentionRangeInDays")
       private final @Nullable Output<Integer> instantRpRetentionRangeInDays;
 
     public Output<Integer> getInstantRpRetentionRangeInDays() {
@@ -61,7 +61,7 @@ public final class AzureIaaSVMProtectionPolicyArgs extends io.pulumi.resources.R
      * Number of items associated with this policy.
      * 
      */
-    @InputImport(name="protectedItemsCount")
+    @Import(name="protectedItemsCount")
       private final @Nullable Output<Integer> protectedItemsCount;
 
     public Output<Integer> getProtectedItemsCount() {
@@ -72,7 +72,7 @@ public final class AzureIaaSVMProtectionPolicyArgs extends io.pulumi.resources.R
      * Retention policy with the details on backup copy retention ranges.
      * 
      */
-    @InputImport(name="retentionPolicy")
+    @Import(name="retentionPolicy")
       private final @Nullable Output<Either<LongTermRetentionPolicyArgs,SimpleRetentionPolicyArgs>> retentionPolicy;
 
     public Output<Either<LongTermRetentionPolicyArgs,SimpleRetentionPolicyArgs>> getRetentionPolicy() {
@@ -83,7 +83,7 @@ public final class AzureIaaSVMProtectionPolicyArgs extends io.pulumi.resources.R
      * Backup schedule specified as part of backup policy.
      * 
      */
-    @InputImport(name="schedulePolicy")
+    @Import(name="schedulePolicy")
       private final @Nullable Output<Object> schedulePolicy;
 
     public Output<Object> getSchedulePolicy() {
@@ -94,7 +94,7 @@ public final class AzureIaaSVMProtectionPolicyArgs extends io.pulumi.resources.R
      * TimeZone optional input as string. For example: TimeZone = "Pacific Standard Time".
      * 
      */
-    @InputImport(name="timeZone")
+    @Import(name="timeZone")
       private final @Nullable Output<String> timeZone;
 
     public Output<String> getTimeZone() {

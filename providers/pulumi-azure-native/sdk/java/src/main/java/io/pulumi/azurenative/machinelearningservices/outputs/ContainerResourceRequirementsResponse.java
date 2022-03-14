@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ContainerResourceRequirementsResponse {
     /**
      * The minimum amount of CPU cores to be used by the container. More info:
@@ -47,14 +47,14 @@ public final class ContainerResourceRequirementsResponse {
      */
     private final @Nullable Double memoryInGBLimit;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ContainerResourceRequirementsResponse(
-        @OutputCustomType.Parameter("cpu") @Nullable Double cpu,
-        @OutputCustomType.Parameter("cpuLimit") @Nullable Double cpuLimit,
-        @OutputCustomType.Parameter("fpga") @Nullable Integer fpga,
-        @OutputCustomType.Parameter("gpu") @Nullable Integer gpu,
-        @OutputCustomType.Parameter("memoryInGB") @Nullable Double memoryInGB,
-        @OutputCustomType.Parameter("memoryInGBLimit") @Nullable Double memoryInGBLimit) {
+        @CustomType.Parameter("cpu") @Nullable Double cpu,
+        @CustomType.Parameter("cpuLimit") @Nullable Double cpuLimit,
+        @CustomType.Parameter("fpga") @Nullable Integer fpga,
+        @CustomType.Parameter("gpu") @Nullable Integer gpu,
+        @CustomType.Parameter("memoryInGB") @Nullable Double memoryInGB,
+        @CustomType.Parameter("memoryInGBLimit") @Nullable Double memoryInGBLimit) {
         this.cpu = cpu;
         this.cpuLimit = cpuLimit;
         this.fpga = fpga;

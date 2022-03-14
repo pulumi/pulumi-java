@@ -42,7 +42,7 @@ import io.pulumi.azurenative.datafactory.inputs.WaitActivityArgs;
 import io.pulumi.azurenative.datafactory.inputs.WebActivityArgs;
 import io.pulumi.azurenative.datafactory.inputs.WebHookActivityArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -62,7 +62,7 @@ public final class SwitchCaseArgs extends io.pulumi.resources.ResourceArgs {
      * List of activities to execute for satisfied case condition.
      * 
      */
-    @InputImport(name="activities")
+    @Import(name="activities")
       private final @Nullable Output<List<Object>> activities;
 
     public Output<List<Object>> getActivities() {
@@ -73,7 +73,7 @@ public final class SwitchCaseArgs extends io.pulumi.resources.ResourceArgs {
      * Expected value that satisfies the expression result of the 'on' property.
      * 
      */
-    @InputImport(name="value")
+    @Import(name="value")
       private final @Nullable Output<String> value;
 
     public Output<String> getValue() {

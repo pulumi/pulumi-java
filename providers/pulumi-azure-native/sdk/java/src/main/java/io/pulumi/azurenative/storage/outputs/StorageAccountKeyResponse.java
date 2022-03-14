@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.storage.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class StorageAccountKeyResponse {
     /**
      * Creation time of the key, in round trip date format.
@@ -30,12 +30,12 @@ public final class StorageAccountKeyResponse {
      */
     private final String value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private StorageAccountKeyResponse(
-        @OutputCustomType.Parameter("creationTime") String creationTime,
-        @OutputCustomType.Parameter("keyName") String keyName,
-        @OutputCustomType.Parameter("permissions") String permissions,
-        @OutputCustomType.Parameter("value") String value) {
+        @CustomType.Parameter("creationTime") String creationTime,
+        @CustomType.Parameter("keyName") String keyName,
+        @CustomType.Parameter("permissions") String permissions,
+        @CustomType.Parameter("value") String value) {
         this.creationTime = creationTime;
         this.keyName = keyName;
         this.permissions = permissions;

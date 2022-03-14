@@ -8,7 +8,7 @@ import io.pulumi.azurenative.consumption.outputs.BudgetTimePeriodResponse;
 import io.pulumi.azurenative.consumption.outputs.CurrentSpendResponse;
 import io.pulumi.azurenative.consumption.outputs.ForecastSpendResponse;
 import io.pulumi.azurenative.consumption.outputs.NotificationResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Map;
@@ -16,7 +16,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetBudgetResult {
     /**
      * The total amount of cost to track with the budget
@@ -79,20 +79,20 @@ public final class GetBudgetResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetBudgetResult(
-        @OutputCustomType.Parameter("amount") Double amount,
-        @OutputCustomType.Parameter("category") String category,
-        @OutputCustomType.Parameter("currentSpend") CurrentSpendResponse currentSpend,
-        @OutputCustomType.Parameter("eTag") @Nullable String eTag,
-        @OutputCustomType.Parameter("filter") @Nullable BudgetFilterResponse filter,
-        @OutputCustomType.Parameter("forecastSpend") ForecastSpendResponse forecastSpend,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("notifications") @Nullable Map<String,NotificationResponse> notifications,
-        @OutputCustomType.Parameter("timeGrain") String timeGrain,
-        @OutputCustomType.Parameter("timePeriod") BudgetTimePeriodResponse timePeriod,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("amount") Double amount,
+        @CustomType.Parameter("category") String category,
+        @CustomType.Parameter("currentSpend") CurrentSpendResponse currentSpend,
+        @CustomType.Parameter("eTag") @Nullable String eTag,
+        @CustomType.Parameter("filter") @Nullable BudgetFilterResponse filter,
+        @CustomType.Parameter("forecastSpend") ForecastSpendResponse forecastSpend,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("notifications") @Nullable Map<String,NotificationResponse> notifications,
+        @CustomType.Parameter("timeGrain") String timeGrain,
+        @CustomType.Parameter("timePeriod") BudgetTimePeriodResponse timePeriod,
+        @CustomType.Parameter("type") String type) {
         this.amount = amount;
         this.category = category;
         this.currentSpend = currentSpend;

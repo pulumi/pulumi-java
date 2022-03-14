@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.datafactory.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DynamicsCrmSinkResponse {
     /**
      * The logical name of the alternate key which will be used when upserting records. Type: string (or Expression with resultType string).
@@ -64,18 +64,18 @@ public final class DynamicsCrmSinkResponse {
      */
     private final String writeBehavior;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DynamicsCrmSinkResponse(
-        @OutputCustomType.Parameter("alternateKeyName") @Nullable Object alternateKeyName,
-        @OutputCustomType.Parameter("disableMetricsCollection") @Nullable Object disableMetricsCollection,
-        @OutputCustomType.Parameter("ignoreNullValues") @Nullable Object ignoreNullValues,
-        @OutputCustomType.Parameter("maxConcurrentConnections") @Nullable Object maxConcurrentConnections,
-        @OutputCustomType.Parameter("sinkRetryCount") @Nullable Object sinkRetryCount,
-        @OutputCustomType.Parameter("sinkRetryWait") @Nullable Object sinkRetryWait,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("writeBatchSize") @Nullable Object writeBatchSize,
-        @OutputCustomType.Parameter("writeBatchTimeout") @Nullable Object writeBatchTimeout,
-        @OutputCustomType.Parameter("writeBehavior") String writeBehavior) {
+        @CustomType.Parameter("alternateKeyName") @Nullable Object alternateKeyName,
+        @CustomType.Parameter("disableMetricsCollection") @Nullable Object disableMetricsCollection,
+        @CustomType.Parameter("ignoreNullValues") @Nullable Object ignoreNullValues,
+        @CustomType.Parameter("maxConcurrentConnections") @Nullable Object maxConcurrentConnections,
+        @CustomType.Parameter("sinkRetryCount") @Nullable Object sinkRetryCount,
+        @CustomType.Parameter("sinkRetryWait") @Nullable Object sinkRetryWait,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("writeBatchSize") @Nullable Object writeBatchSize,
+        @CustomType.Parameter("writeBatchTimeout") @Nullable Object writeBatchTimeout,
+        @CustomType.Parameter("writeBehavior") String writeBehavior) {
         this.alternateKeyName = alternateKeyName;
         this.disableMetricsCollection = disableMetricsCollection;
         this.ignoreNullValues = ignoreNullValues;

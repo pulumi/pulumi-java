@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class ManagedIntegrationRuntimeOperationResultResponse extends io.p
      * The activity id for the operation request.
      * 
      */
-    @InputImport(name="activityId", required=true)
+    @Import(name="activityId", required=true)
       private final String activityId;
 
     public String getActivityId() {
@@ -32,7 +32,7 @@ public final class ManagedIntegrationRuntimeOperationResultResponse extends io.p
      * The error code.
      * 
      */
-    @InputImport(name="errorCode", required=true)
+    @Import(name="errorCode", required=true)
       private final String errorCode;
 
     public String getErrorCode() {
@@ -43,7 +43,7 @@ public final class ManagedIntegrationRuntimeOperationResultResponse extends io.p
      * Managed integration runtime error parameters.
      * 
      */
-    @InputImport(name="parameters", required=true)
+    @Import(name="parameters", required=true)
       private final List<String> parameters;
 
     public List<String> getParameters() {
@@ -54,7 +54,7 @@ public final class ManagedIntegrationRuntimeOperationResultResponse extends io.p
      * The operation result.
      * 
      */
-    @InputImport(name="result", required=true)
+    @Import(name="result", required=true)
       private final String result;
 
     public String getResult() {
@@ -65,7 +65,7 @@ public final class ManagedIntegrationRuntimeOperationResultResponse extends io.p
      * The start time of the operation.
      * 
      */
-    @InputImport(name="startTime", required=true)
+    @Import(name="startTime", required=true)
       private final String startTime;
 
     public String getStartTime() {
@@ -76,7 +76,7 @@ public final class ManagedIntegrationRuntimeOperationResultResponse extends io.p
      * The operation type. Could be start or stop.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

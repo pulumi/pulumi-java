@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.devices.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class EventHubPropertiesArgs extends io.pulumi.resources.ResourceAr
      * The number of partitions for receiving device-to-cloud messages in the Event Hub-compatible endpoint. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#device-to-cloud-messages.
      * 
      */
-    @InputImport(name="partitionCount")
+    @Import(name="partitionCount")
       private final @Nullable Output<Integer> partitionCount;
 
     public Output<Integer> getPartitionCount() {
@@ -34,7 +34,7 @@ public final class EventHubPropertiesArgs extends io.pulumi.resources.ResourceAr
      * The retention time for device-to-cloud messages in days. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#device-to-cloud-messages
      * 
      */
-    @InputImport(name="retentionTimeInDays")
+    @Import(name="retentionTimeInDays")
       private final @Nullable Output<Double> retentionTimeInDays;
 
     public Output<Double> getRetentionTimeInDays() {

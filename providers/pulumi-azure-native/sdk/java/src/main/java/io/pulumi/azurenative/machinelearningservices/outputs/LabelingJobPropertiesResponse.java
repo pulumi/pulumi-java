@@ -10,7 +10,7 @@ import io.pulumi.azurenative.machinelearningservices.outputs.LabelingJobInstruct
 import io.pulumi.azurenative.machinelearningservices.outputs.MLAssistConfigurationResponse;
 import io.pulumi.azurenative.machinelearningservices.outputs.ProgressMetricsResponse;
 import io.pulumi.azurenative.machinelearningservices.outputs.StatusMessageResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -18,7 +18,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class LabelingJobPropertiesResponse {
     /**
      * Created time of the job in UTC timezone.
@@ -81,20 +81,20 @@ public final class LabelingJobPropertiesResponse {
      */
     private final @Nullable Map<String,String> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LabelingJobPropertiesResponse(
-        @OutputCustomType.Parameter("createdTimeUtc") String createdTimeUtc,
-        @OutputCustomType.Parameter("datasetConfiguration") LabelingDatasetConfigurationResponse datasetConfiguration,
-        @OutputCustomType.Parameter("jobInstructions") LabelingJobInstructionsResponse jobInstructions,
-        @OutputCustomType.Parameter("labelCategories") Map<String,LabelCategoryResponse> labelCategories,
-        @OutputCustomType.Parameter("labelingJobMediaProperties") LabelingJobImagePropertiesResponse labelingJobMediaProperties,
-        @OutputCustomType.Parameter("mlAssistConfiguration") @Nullable MLAssistConfigurationResponse mlAssistConfiguration,
-        @OutputCustomType.Parameter("progressMetrics") ProgressMetricsResponse progressMetrics,
-        @OutputCustomType.Parameter("projectId") String projectId,
-        @OutputCustomType.Parameter("properties") @Nullable Map<String,String> properties,
-        @OutputCustomType.Parameter("status") String status,
-        @OutputCustomType.Parameter("statusMessages") List<StatusMessageResponse> statusMessages,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags) {
+        @CustomType.Parameter("createdTimeUtc") String createdTimeUtc,
+        @CustomType.Parameter("datasetConfiguration") LabelingDatasetConfigurationResponse datasetConfiguration,
+        @CustomType.Parameter("jobInstructions") LabelingJobInstructionsResponse jobInstructions,
+        @CustomType.Parameter("labelCategories") Map<String,LabelCategoryResponse> labelCategories,
+        @CustomType.Parameter("labelingJobMediaProperties") LabelingJobImagePropertiesResponse labelingJobMediaProperties,
+        @CustomType.Parameter("mlAssistConfiguration") @Nullable MLAssistConfigurationResponse mlAssistConfiguration,
+        @CustomType.Parameter("progressMetrics") ProgressMetricsResponse progressMetrics,
+        @CustomType.Parameter("projectId") String projectId,
+        @CustomType.Parameter("properties") @Nullable Map<String,String> properties,
+        @CustomType.Parameter("status") String status,
+        @CustomType.Parameter("statusMessages") List<StatusMessageResponse> statusMessages,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags) {
         this.createdTimeUtc = createdTimeUtc;
         this.datasetConfiguration = datasetConfiguration;
         this.jobInstructions = jobInstructions;

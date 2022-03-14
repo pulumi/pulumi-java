@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.appplatform.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class ApiPortalResourceRequestsResponse extends io.pulumi.resources
      * Cpu allocated to each API portal instance
      * 
      */
-    @InputImport(name="cpu", required=true)
+    @Import(name="cpu", required=true)
       private final String cpu;
 
     public String getCpu() {
@@ -31,7 +31,7 @@ public final class ApiPortalResourceRequestsResponse extends io.pulumi.resources
      * Memory allocated to each API portal instance
      * 
      */
-    @InputImport(name="memory", required=true)
+    @Import(name="memory", required=true)
       private final String memory;
 
     public String getMemory() {

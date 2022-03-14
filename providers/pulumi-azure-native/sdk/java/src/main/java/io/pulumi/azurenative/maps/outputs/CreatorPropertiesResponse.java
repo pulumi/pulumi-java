@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.maps.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CreatorPropertiesResponse {
     /**
      * The state of the resource provisioning, terminal states: Succeeded, Failed, Canceled
@@ -17,8 +17,8 @@ public final class CreatorPropertiesResponse {
      */
     private final @Nullable String provisioningState;
 
-    @OutputCustomType.Constructor
-    private CreatorPropertiesResponse(@OutputCustomType.Parameter("provisioningState") @Nullable String provisioningState) {
+    @CustomType.Constructor
+    private CreatorPropertiesResponse(@CustomType.Parameter("provisioningState") @Nullable String provisioningState) {
         this.provisioningState = provisioningState;
     }
 

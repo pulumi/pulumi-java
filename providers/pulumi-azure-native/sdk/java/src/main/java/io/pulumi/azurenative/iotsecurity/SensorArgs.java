@@ -6,7 +6,7 @@ package io.pulumi.azurenative.iotsecurity;
 import io.pulumi.azurenative.iotsecurity.enums.SensorType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class SensorArgs extends io.pulumi.resources.ResourceArgs {
      * Scope of the query (IoT Hub, /providers/Microsoft.Devices/iotHubs/myHub)
      * 
      */
-    @InputImport(name="scope", required=true)
+    @Import(name="scope", required=true)
       private final Output<String> scope;
 
     public Output<String> getScope() {
@@ -32,7 +32,7 @@ public final class SensorArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the IoT sensor
      * 
      */
-    @InputImport(name="sensorName")
+    @Import(name="sensorName")
       private final @Nullable Output<String> sensorName;
 
     public Output<String> getSensorName() {
@@ -43,7 +43,7 @@ public final class SensorArgs extends io.pulumi.resources.ResourceArgs {
      * Type of sensor
      * 
      */
-    @InputImport(name="sensorType")
+    @Import(name="sensorType")
       private final @Nullable Output<Either<String,SensorType>> sensorType;
 
     public Output<Either<String,SensorType>> getSensorType() {
@@ -54,7 +54,7 @@ public final class SensorArgs extends io.pulumi.resources.ResourceArgs {
      * TI Automatic mode status of the IoT sensor
      * 
      */
-    @InputImport(name="tiAutomaticUpdates")
+    @Import(name="tiAutomaticUpdates")
       private final @Nullable Output<Boolean> tiAutomaticUpdates;
 
     public Output<Boolean> getTiAutomaticUpdates() {
@@ -65,7 +65,7 @@ public final class SensorArgs extends io.pulumi.resources.ResourceArgs {
      * Zone of the IoT sensor
      * 
      */
-    @InputImport(name="zone")
+    @Import(name="zone")
       private final @Nullable Output<String> zone;
 
     public Output<String> getZone() {

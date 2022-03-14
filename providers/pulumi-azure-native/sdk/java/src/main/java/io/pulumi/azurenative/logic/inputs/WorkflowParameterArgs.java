@@ -6,7 +6,7 @@ package io.pulumi.azurenative.logic.inputs;
 import io.pulumi.azurenative.logic.enums.ParameterType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class WorkflowParameterArgs extends io.pulumi.resources.ResourceArg
      * The description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -36,7 +36,7 @@ public final class WorkflowParameterArgs extends io.pulumi.resources.ResourceArg
      * The metadata.
      * 
      */
-    @InputImport(name="metadata")
+    @Import(name="metadata")
       private final @Nullable Output<Object> metadata;
 
     public Output<Object> getMetadata() {
@@ -47,7 +47,7 @@ public final class WorkflowParameterArgs extends io.pulumi.resources.ResourceArg
      * The type.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<Either<String,ParameterType>> type;
 
     public Output<Either<String,ParameterType>> getType() {
@@ -58,7 +58,7 @@ public final class WorkflowParameterArgs extends io.pulumi.resources.ResourceArg
      * The value.
      * 
      */
-    @InputImport(name="value")
+    @Import(name="value")
       private final @Nullable Output<Object> value;
 
     public Output<Object> getValue() {

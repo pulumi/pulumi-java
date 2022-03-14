@@ -12,7 +12,7 @@ import io.pulumi.azurenative.notificationhubs.inputs.SharedAccessAuthorizationRu
 import io.pulumi.azurenative.notificationhubs.inputs.SkuArgs;
 import io.pulumi.azurenative.notificationhubs.inputs.WnsCredentialArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -28,7 +28,7 @@ public final class NotificationHubArgs extends io.pulumi.resources.ResourceArgs 
      * The AdmCredential of the created NotificationHub
      * 
      */
-    @InputImport(name="admCredential")
+    @Import(name="admCredential")
       private final @Nullable Output<AdmCredentialArgs> admCredential;
 
     public Output<AdmCredentialArgs> getAdmCredential() {
@@ -39,7 +39,7 @@ public final class NotificationHubArgs extends io.pulumi.resources.ResourceArgs 
      * The ApnsCredential of the created NotificationHub
      * 
      */
-    @InputImport(name="apnsCredential")
+    @Import(name="apnsCredential")
       private final @Nullable Output<ApnsCredentialArgs> apnsCredential;
 
     public Output<ApnsCredentialArgs> getApnsCredential() {
@@ -50,7 +50,7 @@ public final class NotificationHubArgs extends io.pulumi.resources.ResourceArgs 
      * The AuthorizationRules of the created NotificationHub
      * 
      */
-    @InputImport(name="authorizationRules")
+    @Import(name="authorizationRules")
       private final @Nullable Output<List<SharedAccessAuthorizationRulePropertiesArgs>> authorizationRules;
 
     public Output<List<SharedAccessAuthorizationRulePropertiesArgs>> getAuthorizationRules() {
@@ -61,7 +61,7 @@ public final class NotificationHubArgs extends io.pulumi.resources.ResourceArgs 
      * The BaiduCredential of the created NotificationHub
      * 
      */
-    @InputImport(name="baiduCredential")
+    @Import(name="baiduCredential")
       private final @Nullable Output<BaiduCredentialArgs> baiduCredential;
 
     public Output<BaiduCredentialArgs> getBaiduCredential() {
@@ -72,7 +72,7 @@ public final class NotificationHubArgs extends io.pulumi.resources.ResourceArgs 
      * The GcmCredential of the created NotificationHub
      * 
      */
-    @InputImport(name="gcmCredential")
+    @Import(name="gcmCredential")
       private final @Nullable Output<GcmCredentialArgs> gcmCredential;
 
     public Output<GcmCredentialArgs> getGcmCredential() {
@@ -83,7 +83,7 @@ public final class NotificationHubArgs extends io.pulumi.resources.ResourceArgs 
      * Resource location
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -94,7 +94,7 @@ public final class NotificationHubArgs extends io.pulumi.resources.ResourceArgs 
      * The MpnsCredential of the created NotificationHub
      * 
      */
-    @InputImport(name="mpnsCredential")
+    @Import(name="mpnsCredential")
       private final @Nullable Output<MpnsCredentialArgs> mpnsCredential;
 
     public Output<MpnsCredentialArgs> getMpnsCredential() {
@@ -105,7 +105,7 @@ public final class NotificationHubArgs extends io.pulumi.resources.ResourceArgs 
      * The NotificationHub name.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -116,7 +116,7 @@ public final class NotificationHubArgs extends io.pulumi.resources.ResourceArgs 
      * The namespace name.
      * 
      */
-    @InputImport(name="namespaceName", required=true)
+    @Import(name="namespaceName", required=true)
       private final Output<String> namespaceName;
 
     public Output<String> getNamespaceName() {
@@ -127,7 +127,7 @@ public final class NotificationHubArgs extends io.pulumi.resources.ResourceArgs 
      * The notification hub name.
      * 
      */
-    @InputImport(name="notificationHubName")
+    @Import(name="notificationHubName")
       private final @Nullable Output<String> notificationHubName;
 
     public Output<String> getNotificationHubName() {
@@ -138,7 +138,7 @@ public final class NotificationHubArgs extends io.pulumi.resources.ResourceArgs 
      * The RegistrationTtl of the created NotificationHub
      * 
      */
-    @InputImport(name="registrationTtl")
+    @Import(name="registrationTtl")
       private final @Nullable Output<String> registrationTtl;
 
     public Output<String> getRegistrationTtl() {
@@ -149,7 +149,7 @@ public final class NotificationHubArgs extends io.pulumi.resources.ResourceArgs 
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -160,7 +160,7 @@ public final class NotificationHubArgs extends io.pulumi.resources.ResourceArgs 
      * The sku of the created namespace
      * 
      */
-    @InputImport(name="sku")
+    @Import(name="sku")
       private final @Nullable Output<SkuArgs> sku;
 
     public Output<SkuArgs> getSku() {
@@ -171,7 +171,7 @@ public final class NotificationHubArgs extends io.pulumi.resources.ResourceArgs 
      * Resource tags
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -182,7 +182,7 @@ public final class NotificationHubArgs extends io.pulumi.resources.ResourceArgs 
      * The WnsCredential of the created NotificationHub
      * 
      */
-    @InputImport(name="wnsCredential")
+    @Import(name="wnsCredential")
       private final @Nullable Output<WnsCredentialArgs> wnsCredential;
 
     public Output<WnsCredentialArgs> getWnsCredential() {

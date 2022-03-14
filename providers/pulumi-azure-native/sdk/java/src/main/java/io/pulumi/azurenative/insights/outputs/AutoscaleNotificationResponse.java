@@ -5,14 +5,14 @@ package io.pulumi.azurenative.insights.outputs;
 
 import io.pulumi.azurenative.insights.outputs.EmailNotificationResponse;
 import io.pulumi.azurenative.insights.outputs.WebhookNotificationResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AutoscaleNotificationResponse {
     /**
      * the email notification.
@@ -30,11 +30,11 @@ public final class AutoscaleNotificationResponse {
      */
     private final @Nullable List<WebhookNotificationResponse> webhooks;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AutoscaleNotificationResponse(
-        @OutputCustomType.Parameter("email") @Nullable EmailNotificationResponse email,
-        @OutputCustomType.Parameter("operation") String operation,
-        @OutputCustomType.Parameter("webhooks") @Nullable List<WebhookNotificationResponse> webhooks) {
+        @CustomType.Parameter("email") @Nullable EmailNotificationResponse email,
+        @CustomType.Parameter("operation") String operation,
+        @CustomType.Parameter("webhooks") @Nullable List<WebhookNotificationResponse> webhooks) {
         this.email = email;
         this.operation = operation;
         this.webhooks = webhooks;

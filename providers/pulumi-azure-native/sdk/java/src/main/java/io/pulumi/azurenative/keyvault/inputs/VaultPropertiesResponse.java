@@ -7,7 +7,7 @@ import io.pulumi.azurenative.keyvault.inputs.AccessPolicyEntryResponse;
 import io.pulumi.azurenative.keyvault.inputs.NetworkRuleSetResponse;
 import io.pulumi.azurenative.keyvault.inputs.PrivateEndpointConnectionItemResponse;
 import io.pulumi.azurenative.keyvault.inputs.SkuResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -29,7 +29,7 @@ public final class VaultPropertiesResponse extends io.pulumi.resources.InvokeArg
      * An array of 0 to 1024 identities that have access to the key vault. All identities in the array must use the same tenant ID as the key vault's tenant ID. When `createMode` is set to `recover`, access policies are not required. Otherwise, access policies are required.
      * 
      */
-    @InputImport(name="accessPolicies")
+    @Import(name="accessPolicies")
       private final @Nullable List<AccessPolicyEntryResponse> accessPolicies;
 
     public List<AccessPolicyEntryResponse> getAccessPolicies() {
@@ -40,7 +40,7 @@ public final class VaultPropertiesResponse extends io.pulumi.resources.InvokeArg
      * Property specifying whether protection against purge is enabled for this vault. Setting this property to true activates protection against purge for this vault and its content - only the Key Vault service may initiate a hard, irrecoverable deletion. The setting is effective only if soft delete is also enabled. Enabling this functionality is irreversible - that is, the property does not accept false as its value.
      * 
      */
-    @InputImport(name="enablePurgeProtection")
+    @Import(name="enablePurgeProtection")
       private final @Nullable Boolean enablePurgeProtection;
 
     public Optional<Boolean> getEnablePurgeProtection() {
@@ -51,7 +51,7 @@ public final class VaultPropertiesResponse extends io.pulumi.resources.InvokeArg
      * Property that controls how data actions are authorized. When true, the key vault will use Role Based Access Control (RBAC) for authorization of data actions, and the access policies specified in vault properties will be  ignored. When false, the key vault will use the access policies specified in vault properties, and any policy stored on Azure Resource Manager will be ignored. If null or not specified, the vault is created with the default value of false. Note that management actions are always authorized with RBAC.
      * 
      */
-    @InputImport(name="enableRbacAuthorization")
+    @Import(name="enableRbacAuthorization")
       private final @Nullable Boolean enableRbacAuthorization;
 
     public Optional<Boolean> getEnableRbacAuthorization() {
@@ -62,7 +62,7 @@ public final class VaultPropertiesResponse extends io.pulumi.resources.InvokeArg
      * Property to specify whether the 'soft delete' functionality is enabled for this key vault. If it's not set to any value(true or false) when creating new key vault, it will be set to true by default. Once set to true, it cannot be reverted to false.
      * 
      */
-    @InputImport(name="enableSoftDelete")
+    @Import(name="enableSoftDelete")
       private final @Nullable Boolean enableSoftDelete;
 
     public Optional<Boolean> getEnableSoftDelete() {
@@ -73,7 +73,7 @@ public final class VaultPropertiesResponse extends io.pulumi.resources.InvokeArg
      * Property to specify whether Azure Virtual Machines are permitted to retrieve certificates stored as secrets from the key vault.
      * 
      */
-    @InputImport(name="enabledForDeployment")
+    @Import(name="enabledForDeployment")
       private final @Nullable Boolean enabledForDeployment;
 
     public Optional<Boolean> getEnabledForDeployment() {
@@ -84,7 +84,7 @@ public final class VaultPropertiesResponse extends io.pulumi.resources.InvokeArg
      * Property to specify whether Azure Disk Encryption is permitted to retrieve secrets from the vault and unwrap keys.
      * 
      */
-    @InputImport(name="enabledForDiskEncryption")
+    @Import(name="enabledForDiskEncryption")
       private final @Nullable Boolean enabledForDiskEncryption;
 
     public Optional<Boolean> getEnabledForDiskEncryption() {
@@ -95,7 +95,7 @@ public final class VaultPropertiesResponse extends io.pulumi.resources.InvokeArg
      * Property to specify whether Azure Resource Manager is permitted to retrieve secrets from the key vault.
      * 
      */
-    @InputImport(name="enabledForTemplateDeployment")
+    @Import(name="enabledForTemplateDeployment")
       private final @Nullable Boolean enabledForTemplateDeployment;
 
     public Optional<Boolean> getEnabledForTemplateDeployment() {
@@ -106,7 +106,7 @@ public final class VaultPropertiesResponse extends io.pulumi.resources.InvokeArg
      * The resource id of HSM Pool.
      * 
      */
-    @InputImport(name="hsmPoolResourceId", required=true)
+    @Import(name="hsmPoolResourceId", required=true)
       private final String hsmPoolResourceId;
 
     public String getHsmPoolResourceId() {
@@ -117,7 +117,7 @@ public final class VaultPropertiesResponse extends io.pulumi.resources.InvokeArg
      * Rules governing the accessibility of the key vault from specific network locations.
      * 
      */
-    @InputImport(name="networkAcls")
+    @Import(name="networkAcls")
       private final @Nullable NetworkRuleSetResponse networkAcls;
 
     public Optional<NetworkRuleSetResponse> getNetworkAcls() {
@@ -128,7 +128,7 @@ public final class VaultPropertiesResponse extends io.pulumi.resources.InvokeArg
      * List of private endpoint connections associated with the key vault.
      * 
      */
-    @InputImport(name="privateEndpointConnections", required=true)
+    @Import(name="privateEndpointConnections", required=true)
       private final List<PrivateEndpointConnectionItemResponse> privateEndpointConnections;
 
     public List<PrivateEndpointConnectionItemResponse> getPrivateEndpointConnections() {
@@ -139,7 +139,7 @@ public final class VaultPropertiesResponse extends io.pulumi.resources.InvokeArg
      * Provisioning state of the vault.
      * 
      */
-    @InputImport(name="provisioningState")
+    @Import(name="provisioningState")
       private final @Nullable String provisioningState;
 
     public Optional<String> getProvisioningState() {
@@ -150,7 +150,7 @@ public final class VaultPropertiesResponse extends io.pulumi.resources.InvokeArg
      * SKU details
      * 
      */
-    @InputImport(name="sku", required=true)
+    @Import(name="sku", required=true)
       private final SkuResponse sku;
 
     public SkuResponse getSku() {
@@ -161,7 +161,7 @@ public final class VaultPropertiesResponse extends io.pulumi.resources.InvokeArg
      * softDelete data retention days. It accepts >=7 and <=90.
      * 
      */
-    @InputImport(name="softDeleteRetentionInDays")
+    @Import(name="softDeleteRetentionInDays")
       private final @Nullable Integer softDeleteRetentionInDays;
 
     public Optional<Integer> getSoftDeleteRetentionInDays() {
@@ -172,7 +172,7 @@ public final class VaultPropertiesResponse extends io.pulumi.resources.InvokeArg
      * The Azure Active Directory tenant ID that should be used for authenticating requests to the key vault.
      * 
      */
-    @InputImport(name="tenantId", required=true)
+    @Import(name="tenantId", required=true)
       private final String tenantId;
 
     public String getTenantId() {
@@ -183,7 +183,7 @@ public final class VaultPropertiesResponse extends io.pulumi.resources.InvokeArg
      * The URI of the vault for performing operations on keys and secrets. This property is readonly
      * 
      */
-    @InputImport(name="vaultUri")
+    @Import(name="vaultUri")
       private final @Nullable String vaultUri;
 
     public Optional<String> getVaultUri() {

@@ -15,7 +15,7 @@ import io.pulumi.azurenative.databox.outputs.KeyEncryptionKeyResponse;
 import io.pulumi.azurenative.databox.outputs.PackageShippingDetailsResponse;
 import io.pulumi.azurenative.databox.outputs.PreferencesResponse;
 import io.pulumi.azurenative.databox.outputs.ShippingAddressResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -25,7 +25,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DataBoxDiskJobDetailsResponse {
     /**
      * Shared access key to download the chain of custody logs
@@ -119,26 +119,26 @@ public final class DataBoxDiskJobDetailsResponse {
      */
     private final @Nullable ShippingAddressResponse shippingAddress;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DataBoxDiskJobDetailsResponse(
-        @OutputCustomType.Parameter("chainOfCustodySasKey") String chainOfCustodySasKey,
-        @OutputCustomType.Parameter("contactDetails") ContactDetailsResponse contactDetails,
-        @OutputCustomType.Parameter("copyLogDetails") List<Object> copyLogDetails,
-        @OutputCustomType.Parameter("copyProgress") List<DataBoxDiskCopyProgressResponse> copyProgress,
-        @OutputCustomType.Parameter("dataExportDetails") @Nullable List<DataExportDetailsResponse> dataExportDetails,
-        @OutputCustomType.Parameter("dataImportDetails") @Nullable List<DataImportDetailsResponse> dataImportDetails,
-        @OutputCustomType.Parameter("deliveryPackage") PackageShippingDetailsResponse deliveryPackage,
-        @OutputCustomType.Parameter("disksAndSizeDetails") Map<String,Integer> disksAndSizeDetails,
-        @OutputCustomType.Parameter("expectedDataSizeInTeraBytes") @Nullable Integer expectedDataSizeInTeraBytes,
-        @OutputCustomType.Parameter("jobDetailsType") String jobDetailsType,
-        @OutputCustomType.Parameter("jobStages") List<JobStagesResponse> jobStages,
-        @OutputCustomType.Parameter("keyEncryptionKey") @Nullable KeyEncryptionKeyResponse keyEncryptionKey,
-        @OutputCustomType.Parameter("passkey") @Nullable String passkey,
-        @OutputCustomType.Parameter("preferences") @Nullable PreferencesResponse preferences,
-        @OutputCustomType.Parameter("preferredDisks") @Nullable Map<String,Integer> preferredDisks,
-        @OutputCustomType.Parameter("returnPackage") PackageShippingDetailsResponse returnPackage,
-        @OutputCustomType.Parameter("reverseShipmentLabelSasKey") String reverseShipmentLabelSasKey,
-        @OutputCustomType.Parameter("shippingAddress") @Nullable ShippingAddressResponse shippingAddress) {
+        @CustomType.Parameter("chainOfCustodySasKey") String chainOfCustodySasKey,
+        @CustomType.Parameter("contactDetails") ContactDetailsResponse contactDetails,
+        @CustomType.Parameter("copyLogDetails") List<Object> copyLogDetails,
+        @CustomType.Parameter("copyProgress") List<DataBoxDiskCopyProgressResponse> copyProgress,
+        @CustomType.Parameter("dataExportDetails") @Nullable List<DataExportDetailsResponse> dataExportDetails,
+        @CustomType.Parameter("dataImportDetails") @Nullable List<DataImportDetailsResponse> dataImportDetails,
+        @CustomType.Parameter("deliveryPackage") PackageShippingDetailsResponse deliveryPackage,
+        @CustomType.Parameter("disksAndSizeDetails") Map<String,Integer> disksAndSizeDetails,
+        @CustomType.Parameter("expectedDataSizeInTeraBytes") @Nullable Integer expectedDataSizeInTeraBytes,
+        @CustomType.Parameter("jobDetailsType") String jobDetailsType,
+        @CustomType.Parameter("jobStages") List<JobStagesResponse> jobStages,
+        @CustomType.Parameter("keyEncryptionKey") @Nullable KeyEncryptionKeyResponse keyEncryptionKey,
+        @CustomType.Parameter("passkey") @Nullable String passkey,
+        @CustomType.Parameter("preferences") @Nullable PreferencesResponse preferences,
+        @CustomType.Parameter("preferredDisks") @Nullable Map<String,Integer> preferredDisks,
+        @CustomType.Parameter("returnPackage") PackageShippingDetailsResponse returnPackage,
+        @CustomType.Parameter("reverseShipmentLabelSasKey") String reverseShipmentLabelSasKey,
+        @CustomType.Parameter("shippingAddress") @Nullable ShippingAddressResponse shippingAddress) {
         this.chainOfCustodySasKey = chainOfCustodySasKey;
         this.contactDetails = contactDetails;
         this.copyLogDetails = copyLogDetails;

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.servicefabricmesh.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class AddRemoveReplicaScalingMechanismArgs extends io.pulumi.resour
      * Expected value is 'AddRemoveReplica'.
      * 
      */
-    @InputImport(name="kind", required=true)
+    @Import(name="kind", required=true)
       private final Output<String> kind;
 
     public Output<String> getKind() {
@@ -34,7 +34,7 @@ public final class AddRemoveReplicaScalingMechanismArgs extends io.pulumi.resour
      * Maximum number of containers (scale up won't be performed above this number).
      * 
      */
-    @InputImport(name="maxCount", required=true)
+    @Import(name="maxCount", required=true)
       private final Output<Integer> maxCount;
 
     public Output<Integer> getMaxCount() {
@@ -45,7 +45,7 @@ public final class AddRemoveReplicaScalingMechanismArgs extends io.pulumi.resour
      * Minimum number of containers (scale down won't be performed below this number).
      * 
      */
-    @InputImport(name="minCount", required=true)
+    @Import(name="minCount", required=true)
       private final Output<Integer> minCount;
 
     public Output<Integer> getMinCount() {
@@ -56,7 +56,7 @@ public final class AddRemoveReplicaScalingMechanismArgs extends io.pulumi.resour
      * Each time auto scaling is performed, this number of containers will be added or removed.
      * 
      */
-    @InputImport(name="scaleIncrement", required=true)
+    @Import(name="scaleIncrement", required=true)
       private final Output<Integer> scaleIncrement;
 
     public Output<Integer> getScaleIncrement() {

@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.videoindexer.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class MediaServicesForPutRequestResponse {
     /**
      * The media services resource id
@@ -22,10 +22,10 @@ public final class MediaServicesForPutRequestResponse {
      */
     private final @Nullable String userAssignedIdentity;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MediaServicesForPutRequestResponse(
-        @OutputCustomType.Parameter("resourceId") @Nullable String resourceId,
-        @OutputCustomType.Parameter("userAssignedIdentity") @Nullable String userAssignedIdentity) {
+        @CustomType.Parameter("resourceId") @Nullable String resourceId,
+        @CustomType.Parameter("userAssignedIdentity") @Nullable String userAssignedIdentity) {
         this.resourceId = resourceId;
         this.userAssignedIdentity = userAssignedIdentity;
     }

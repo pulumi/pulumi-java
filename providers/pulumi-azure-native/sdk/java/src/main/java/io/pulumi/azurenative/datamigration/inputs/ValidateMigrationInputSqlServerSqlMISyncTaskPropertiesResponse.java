@@ -9,7 +9,7 @@ import io.pulumi.azurenative.datamigration.inputs.ODataErrorResponse;
 import io.pulumi.azurenative.datamigration.inputs.ValidateMigrationInputSqlServerSqlMISyncTaskInputResponse;
 import io.pulumi.azurenative.datamigration.inputs.ValidateMigrationInputSqlServerSqlMISyncTaskOutputResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -29,7 +29,7 @@ public final class ValidateMigrationInputSqlServerSqlMISyncTaskPropertiesRespons
      * Array of command properties.
      * 
      */
-    @InputImport(name="commands", required=true)
+    @Import(name="commands", required=true)
       private final List<Either<MigrateMISyncCompleteCommandPropertiesResponse,MigrateSyncCompleteCommandPropertiesResponse>> commands;
 
     public List<Either<MigrateMISyncCompleteCommandPropertiesResponse,MigrateSyncCompleteCommandPropertiesResponse>> getCommands() {
@@ -40,7 +40,7 @@ public final class ValidateMigrationInputSqlServerSqlMISyncTaskPropertiesRespons
      * Array of errors. This is ignored if submitted.
      * 
      */
-    @InputImport(name="errors", required=true)
+    @Import(name="errors", required=true)
       private final List<ODataErrorResponse> errors;
 
     public List<ODataErrorResponse> getErrors() {
@@ -51,7 +51,7 @@ public final class ValidateMigrationInputSqlServerSqlMISyncTaskPropertiesRespons
      * Task input
      * 
      */
-    @InputImport(name="input")
+    @Import(name="input")
       private final @Nullable ValidateMigrationInputSqlServerSqlMISyncTaskInputResponse input;
 
     public Optional<ValidateMigrationInputSqlServerSqlMISyncTaskInputResponse> getInput() {
@@ -62,7 +62,7 @@ public final class ValidateMigrationInputSqlServerSqlMISyncTaskPropertiesRespons
      * Task output. This is ignored if submitted.
      * 
      */
-    @InputImport(name="output", required=true)
+    @Import(name="output", required=true)
       private final List<ValidateMigrationInputSqlServerSqlMISyncTaskOutputResponse> output;
 
     public List<ValidateMigrationInputSqlServerSqlMISyncTaskOutputResponse> getOutput() {
@@ -73,7 +73,7 @@ public final class ValidateMigrationInputSqlServerSqlMISyncTaskPropertiesRespons
      * The state of the task. This is ignored if submitted.
      * 
      */
-    @InputImport(name="state", required=true)
+    @Import(name="state", required=true)
       private final String state;
 
     public String getState() {
@@ -85,7 +85,7 @@ public final class ValidateMigrationInputSqlServerSqlMISyncTaskPropertiesRespons
      * Expected value is 'ValidateMigrationInput.SqlServer.AzureSqlDbMI.Sync.LRS'.
      * 
      */
-    @InputImport(name="taskType", required=true)
+    @Import(name="taskType", required=true)
       private final String taskType;
 
     public String getTaskType() {

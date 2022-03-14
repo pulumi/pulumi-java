@@ -8,7 +8,7 @@ import io.pulumi.azurenative.datafactory.inputs.IntegrationRuntimeReferenceRespo
 import io.pulumi.azurenative.datafactory.inputs.ParameterSpecificationResponse;
 import io.pulumi.azurenative.datafactory.inputs.SecureStringResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -30,7 +30,7 @@ public final class AzureMLServiceLinkedServiceResponse extends io.pulumi.resourc
      * List of tags that can be used for describing the linked service.
      * 
      */
-    @InputImport(name="annotations")
+    @Import(name="annotations")
       private final @Nullable List<Object> annotations;
 
     public List<Object> getAnnotations() {
@@ -41,7 +41,7 @@ public final class AzureMLServiceLinkedServiceResponse extends io.pulumi.resourc
      * The integration runtime reference.
      * 
      */
-    @InputImport(name="connectVia")
+    @Import(name="connectVia")
       private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
     public Optional<IntegrationRuntimeReferenceResponse> getConnectVia() {
@@ -52,7 +52,7 @@ public final class AzureMLServiceLinkedServiceResponse extends io.pulumi.resourc
      * Linked service description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable String description;
 
     public Optional<String> getDescription() {
@@ -63,7 +63,7 @@ public final class AzureMLServiceLinkedServiceResponse extends io.pulumi.resourc
      * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="encryptedCredential")
+    @Import(name="encryptedCredential")
       private final @Nullable Object encryptedCredential;
 
     public Optional<Object> getEncryptedCredential() {
@@ -74,7 +74,7 @@ public final class AzureMLServiceLinkedServiceResponse extends io.pulumi.resourc
      * Azure ML Service workspace name. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="mlWorkspaceName", required=true)
+    @Import(name="mlWorkspaceName", required=true)
       private final Object mlWorkspaceName;
 
     public Object getMlWorkspaceName() {
@@ -85,7 +85,7 @@ public final class AzureMLServiceLinkedServiceResponse extends io.pulumi.resourc
      * Parameters for linked service.
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
     public Map<String,ParameterSpecificationResponse> getParameters() {
@@ -96,7 +96,7 @@ public final class AzureMLServiceLinkedServiceResponse extends io.pulumi.resourc
      * Azure ML Service workspace resource group name. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Object resourceGroupName;
 
     public Object getResourceGroupName() {
@@ -107,7 +107,7 @@ public final class AzureMLServiceLinkedServiceResponse extends io.pulumi.resourc
      * The ID of the service principal used to authenticate against the endpoint of a published Azure ML Service pipeline. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="servicePrincipalId")
+    @Import(name="servicePrincipalId")
       private final @Nullable Object servicePrincipalId;
 
     public Optional<Object> getServicePrincipalId() {
@@ -118,7 +118,7 @@ public final class AzureMLServiceLinkedServiceResponse extends io.pulumi.resourc
      * The key of the service principal used to authenticate against the endpoint of a published Azure ML Service pipeline.
      * 
      */
-    @InputImport(name="servicePrincipalKey")
+    @Import(name="servicePrincipalKey")
       private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey;
 
     public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> getServicePrincipalKey() {
@@ -129,7 +129,7 @@ public final class AzureMLServiceLinkedServiceResponse extends io.pulumi.resourc
      * Azure ML Service workspace subscription ID. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="subscriptionId", required=true)
+    @Import(name="subscriptionId", required=true)
       private final Object subscriptionId;
 
     public Object getSubscriptionId() {
@@ -140,7 +140,7 @@ public final class AzureMLServiceLinkedServiceResponse extends io.pulumi.resourc
      * The name or ID of the tenant to which the service principal belongs. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="tenant")
+    @Import(name="tenant")
       private final @Nullable Object tenant;
 
     public Optional<Object> getTenant() {
@@ -152,7 +152,7 @@ public final class AzureMLServiceLinkedServiceResponse extends io.pulumi.resourc
      * Expected value is 'AzureMLService'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

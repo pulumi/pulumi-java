@@ -6,7 +6,7 @@ package io.pulumi.azurenative.azurestack;
 import io.pulumi.azurenative.azurestack.enums.Location;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class RegistrationArgs extends io.pulumi.resources.ResourceArgs {
      * Location of the resource.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<Either<String,Location>> location;
 
     public Output<Either<String,Location>> getLocation() {
@@ -31,7 +31,7 @@ public final class RegistrationArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the Azure Stack registration.
      * 
      */
-    @InputImport(name="registrationName")
+    @Import(name="registrationName")
       private final @Nullable Output<String> registrationName;
 
     public Output<String> getRegistrationName() {
@@ -42,7 +42,7 @@ public final class RegistrationArgs extends io.pulumi.resources.ResourceArgs {
      * The token identifying registered Azure Stack
      * 
      */
-    @InputImport(name="registrationToken", required=true)
+    @Import(name="registrationToken", required=true)
       private final Output<String> registrationToken;
 
     public Output<String> getRegistrationToken() {
@@ -53,7 +53,7 @@ public final class RegistrationArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroup", required=true)
+    @Import(name="resourceGroup", required=true)
       private final Output<String> resourceGroup;
 
     public Output<String> getResourceGroup() {

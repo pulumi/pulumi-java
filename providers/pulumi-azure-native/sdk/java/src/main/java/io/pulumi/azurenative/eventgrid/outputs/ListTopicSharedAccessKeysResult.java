@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.eventgrid.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ListTopicSharedAccessKeysResult {
     /**
      * Shared access key1 for the topic.
@@ -22,10 +22,10 @@ public final class ListTopicSharedAccessKeysResult {
      */
     private final @Nullable String key2;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ListTopicSharedAccessKeysResult(
-        @OutputCustomType.Parameter("key1") @Nullable String key1,
-        @OutputCustomType.Parameter("key2") @Nullable String key2) {
+        @CustomType.Parameter("key1") @Nullable String key1,
+        @CustomType.Parameter("key2") @Nullable String key2) {
         this.key1 = key1;
         this.key2 = key2;
     }

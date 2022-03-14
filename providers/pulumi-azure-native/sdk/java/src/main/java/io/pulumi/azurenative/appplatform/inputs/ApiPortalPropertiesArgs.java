@@ -5,7 +5,7 @@ package io.pulumi.azurenative.appplatform.inputs;
 
 import io.pulumi.azurenative.appplatform.inputs.SsoPropertiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class ApiPortalPropertiesArgs extends io.pulumi.resources.ResourceA
      * The array of resource Ids of gateway to integrate with API portal.
      * 
      */
-    @InputImport(name="gatewayIds")
+    @Import(name="gatewayIds")
       private final @Nullable Output<List<String>> gatewayIds;
 
     public Output<List<String>> getGatewayIds() {
@@ -36,7 +36,7 @@ public final class ApiPortalPropertiesArgs extends io.pulumi.resources.ResourceA
      * Indicate if only https is allowed.
      * 
      */
-    @InputImport(name="httpsOnly")
+    @Import(name="httpsOnly")
       private final @Nullable Output<Boolean> httpsOnly;
 
     public Output<Boolean> getHttpsOnly() {
@@ -47,7 +47,7 @@ public final class ApiPortalPropertiesArgs extends io.pulumi.resources.ResourceA
      * Indicates whether the API portal exposes endpoint.
      * 
      */
-    @InputImport(name="public")
+    @Import(name="public")
       private final @Nullable Output<Boolean> $public;
 
     public Output<Boolean> get$public() {
@@ -58,7 +58,7 @@ public final class ApiPortalPropertiesArgs extends io.pulumi.resources.ResourceA
      * Collection of OpenAPI source URL locations.
      * 
      */
-    @InputImport(name="sourceUrls")
+    @Import(name="sourceUrls")
       private final @Nullable Output<List<String>> sourceUrls;
 
     public Output<List<String>> getSourceUrls() {
@@ -69,7 +69,7 @@ public final class ApiPortalPropertiesArgs extends io.pulumi.resources.ResourceA
      * Single sign-on related configuration
      * 
      */
-    @InputImport(name="ssoProperties")
+    @Import(name="ssoProperties")
       private final @Nullable Output<SsoPropertiesArgs> ssoProperties;
 
     public Output<SsoPropertiesArgs> getSsoProperties() {

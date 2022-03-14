@@ -6,7 +6,7 @@ package io.pulumi.azurenative.media.inputs;
 import io.pulumi.azurenative.media.enums.EncoderNamedPreset;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -24,7 +24,7 @@ public final class BuiltInStandardEncoderPresetArgs extends io.pulumi.resources.
      * Expected value is '#Microsoft.Media.BuiltInStandardEncoderPreset'.
      * 
      */
-    @InputImport(name="odataType", required=true)
+    @Import(name="odataType", required=true)
       private final Output<String> odataType;
 
     public Output<String> getOdataType() {
@@ -35,7 +35,7 @@ public final class BuiltInStandardEncoderPresetArgs extends io.pulumi.resources.
      * The built-in preset to be used for encoding videos.
      * 
      */
-    @InputImport(name="presetName", required=true)
+    @Import(name="presetName", required=true)
       private final Output<Either<String,EncoderNamedPreset>> presetName;
 
     public Output<Either<String,EncoderNamedPreset>> getPresetName() {

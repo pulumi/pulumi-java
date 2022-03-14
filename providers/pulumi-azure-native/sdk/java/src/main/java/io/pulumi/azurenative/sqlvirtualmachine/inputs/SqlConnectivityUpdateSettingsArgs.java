@@ -6,7 +6,7 @@ package io.pulumi.azurenative.sqlvirtualmachine.inputs;
 import io.pulumi.azurenative.sqlvirtualmachine.enums.ConnectivityType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class SqlConnectivityUpdateSettingsArgs extends io.pulumi.resources
      * SQL Server connectivity option.
      * 
      */
-    @InputImport(name="connectivityType")
+    @Import(name="connectivityType")
       private final @Nullable Output<Either<String,ConnectivityType>> connectivityType;
 
     public Output<Either<String,ConnectivityType>> getConnectivityType() {
@@ -36,7 +36,7 @@ public final class SqlConnectivityUpdateSettingsArgs extends io.pulumi.resources
      * SQL Server port.
      * 
      */
-    @InputImport(name="port")
+    @Import(name="port")
       private final @Nullable Output<Integer> port;
 
     public Output<Integer> getPort() {
@@ -47,7 +47,7 @@ public final class SqlConnectivityUpdateSettingsArgs extends io.pulumi.resources
      * SQL Server sysadmin login password.
      * 
      */
-    @InputImport(name="sqlAuthUpdatePassword")
+    @Import(name="sqlAuthUpdatePassword")
       private final @Nullable Output<String> sqlAuthUpdatePassword;
 
     public Output<String> getSqlAuthUpdatePassword() {
@@ -58,7 +58,7 @@ public final class SqlConnectivityUpdateSettingsArgs extends io.pulumi.resources
      * SQL Server sysadmin login to create.
      * 
      */
-    @InputImport(name="sqlAuthUpdateUserName")
+    @Import(name="sqlAuthUpdateUserName")
       private final @Nullable Output<String> sqlAuthUpdateUserName;
 
     public Output<String> getSqlAuthUpdateUserName() {

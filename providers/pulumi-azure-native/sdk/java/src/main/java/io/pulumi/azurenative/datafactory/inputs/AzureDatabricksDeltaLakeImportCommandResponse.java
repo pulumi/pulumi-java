@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class AzureDatabricksDeltaLakeImportCommandResponse extends io.pulu
      * Specify the date format for csv in Azure Databricks Delta Lake Copy. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="dateFormat")
+    @Import(name="dateFormat")
       private final @Nullable Object dateFormat;
 
     public Optional<Object> getDateFormat() {
@@ -34,7 +34,7 @@ public final class AzureDatabricksDeltaLakeImportCommandResponse extends io.pulu
      * Specify the timestamp format for csv in Azure Databricks Delta Lake Copy. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="timestampFormat")
+    @Import(name="timestampFormat")
       private final @Nullable Object timestampFormat;
 
     public Optional<Object> getTimestampFormat() {
@@ -46,7 +46,7 @@ public final class AzureDatabricksDeltaLakeImportCommandResponse extends io.pulu
      * Expected value is 'AzureDatabricksDeltaLakeImportCommand'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

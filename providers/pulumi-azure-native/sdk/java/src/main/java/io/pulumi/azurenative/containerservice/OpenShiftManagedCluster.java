@@ -13,7 +13,7 @@ import io.pulumi.azurenative.containerservice.outputs.OpenShiftRouterProfileResp
 import io.pulumi.azurenative.containerservice.outputs.PurchasePlanResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -41,7 +41,7 @@ public class OpenShiftManagedCluster extends io.pulumi.resources.CustomResource 
      * Configuration of OpenShift cluster VMs.
      * 
      */
-    @OutputExport(name="agentPoolProfiles", type=List.class, parameters={OpenShiftManagedClusterAgentPoolProfileResponse.class})
+    @Export(name="agentPoolProfiles", type=List.class, parameters={OpenShiftManagedClusterAgentPoolProfileResponse.class})
     private Output</* @Nullable */ List<OpenShiftManagedClusterAgentPoolProfileResponse>> agentPoolProfiles;
 
     /**
@@ -55,7 +55,7 @@ public class OpenShiftManagedCluster extends io.pulumi.resources.CustomResource 
      * Configures OpenShift authentication.
      * 
      */
-    @OutputExport(name="authProfile", type=OpenShiftManagedClusterAuthProfileResponse.class, parameters={})
+    @Export(name="authProfile", type=OpenShiftManagedClusterAuthProfileResponse.class, parameters={})
     private Output</* @Nullable */ OpenShiftManagedClusterAuthProfileResponse> authProfile;
 
     /**
@@ -69,7 +69,7 @@ public class OpenShiftManagedCluster extends io.pulumi.resources.CustomResource 
      * Version of OpenShift specified when creating the cluster.
      * 
      */
-    @OutputExport(name="clusterVersion", type=String.class, parameters={})
+    @Export(name="clusterVersion", type=String.class, parameters={})
     private Output<String> clusterVersion;
 
     /**
@@ -83,7 +83,7 @@ public class OpenShiftManagedCluster extends io.pulumi.resources.CustomResource 
      * Service generated FQDN for OpenShift API server loadbalancer internal hostname.
      * 
      */
-    @OutputExport(name="fqdn", type=String.class, parameters={})
+    @Export(name="fqdn", type=String.class, parameters={})
     private Output<String> fqdn;
 
     /**
@@ -97,7 +97,7 @@ public class OpenShiftManagedCluster extends io.pulumi.resources.CustomResource 
      * Resource location
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -111,7 +111,7 @@ public class OpenShiftManagedCluster extends io.pulumi.resources.CustomResource 
      * Configuration for OpenShift master VMs.
      * 
      */
-    @OutputExport(name="masterPoolProfile", type=OpenShiftManagedClusterMasterPoolProfileResponse.class, parameters={})
+    @Export(name="masterPoolProfile", type=OpenShiftManagedClusterMasterPoolProfileResponse.class, parameters={})
     private Output</* @Nullable */ OpenShiftManagedClusterMasterPoolProfileResponse> masterPoolProfile;
 
     /**
@@ -125,7 +125,7 @@ public class OpenShiftManagedCluster extends io.pulumi.resources.CustomResource 
      * Resource name
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -139,7 +139,7 @@ public class OpenShiftManagedCluster extends io.pulumi.resources.CustomResource 
      * Configuration for OpenShift networking.
      * 
      */
-    @OutputExport(name="networkProfile", type=NetworkProfileResponse.class, parameters={})
+    @Export(name="networkProfile", type=NetworkProfileResponse.class, parameters={})
     private Output</* @Nullable */ NetworkProfileResponse> networkProfile;
 
     /**
@@ -153,7 +153,7 @@ public class OpenShiftManagedCluster extends io.pulumi.resources.CustomResource 
      * Version of OpenShift specified when creating the cluster.
      * 
      */
-    @OutputExport(name="openShiftVersion", type=String.class, parameters={})
+    @Export(name="openShiftVersion", type=String.class, parameters={})
     private Output<String> openShiftVersion;
 
     /**
@@ -167,7 +167,7 @@ public class OpenShiftManagedCluster extends io.pulumi.resources.CustomResource 
      * Define the resource plan as required by ARM for billing purposes
      * 
      */
-    @OutputExport(name="plan", type=PurchasePlanResponse.class, parameters={})
+    @Export(name="plan", type=PurchasePlanResponse.class, parameters={})
     private Output</* @Nullable */ PurchasePlanResponse> plan;
 
     /**
@@ -181,7 +181,7 @@ public class OpenShiftManagedCluster extends io.pulumi.resources.CustomResource 
      * The current deployment or provisioning state, which only appears in the response.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -195,7 +195,7 @@ public class OpenShiftManagedCluster extends io.pulumi.resources.CustomResource 
      * Service generated FQDN for OpenShift API server.
      * 
      */
-    @OutputExport(name="publicHostname", type=String.class, parameters={})
+    @Export(name="publicHostname", type=String.class, parameters={})
     private Output<String> publicHostname;
 
     /**
@@ -209,7 +209,7 @@ public class OpenShiftManagedCluster extends io.pulumi.resources.CustomResource 
      * Configuration for OpenShift router(s).
      * 
      */
-    @OutputExport(name="routerProfiles", type=List.class, parameters={OpenShiftRouterProfileResponse.class})
+    @Export(name="routerProfiles", type=List.class, parameters={OpenShiftRouterProfileResponse.class})
     private Output</* @Nullable */ List<OpenShiftRouterProfileResponse>> routerProfiles;
 
     /**
@@ -223,7 +223,7 @@ public class OpenShiftManagedCluster extends io.pulumi.resources.CustomResource 
      * Resource tags
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -237,7 +237,7 @@ public class OpenShiftManagedCluster extends io.pulumi.resources.CustomResource 
      * Resource type
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

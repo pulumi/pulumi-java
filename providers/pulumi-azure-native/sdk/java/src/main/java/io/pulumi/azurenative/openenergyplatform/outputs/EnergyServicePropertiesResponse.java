@@ -4,26 +4,26 @@
 package io.pulumi.azurenative.openenergyplatform.outputs;
 
 import io.pulumi.azurenative.openenergyplatform.outputs.DataPartitionNamesResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EnergyServicePropertiesResponse {
     private final @Nullable String authAppId;
     private final @Nullable List<DataPartitionNamesResponse> dataPartitionNames;
     private final String dnsName;
     private final String provisioningState;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EnergyServicePropertiesResponse(
-        @OutputCustomType.Parameter("authAppId") @Nullable String authAppId,
-        @OutputCustomType.Parameter("dataPartitionNames") @Nullable List<DataPartitionNamesResponse> dataPartitionNames,
-        @OutputCustomType.Parameter("dnsName") String dnsName,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState) {
+        @CustomType.Parameter("authAppId") @Nullable String authAppId,
+        @CustomType.Parameter("dataPartitionNames") @Nullable List<DataPartitionNamesResponse> dataPartitionNames,
+        @CustomType.Parameter("dnsName") String dnsName,
+        @CustomType.Parameter("provisioningState") String provisioningState) {
         this.authAppId = authAppId;
         this.dataPartitionNames = dataPartitionNames;
         this.dnsName = dnsName;

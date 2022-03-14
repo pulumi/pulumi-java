@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.servicefabricmesh.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ResourceRequestsResponse {
     /**
      * Requested number of CPU cores. At present, only full cores are supported.
@@ -20,10 +20,10 @@ public final class ResourceRequestsResponse {
      */
     private final Double memoryInGB;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ResourceRequestsResponse(
-        @OutputCustomType.Parameter("cpu") Double cpu,
-        @OutputCustomType.Parameter("memoryInGB") Double memoryInGB) {
+        @CustomType.Parameter("cpu") Double cpu,
+        @CustomType.Parameter("memoryInGB") Double memoryInGB) {
         this.cpu = cpu;
         this.memoryInGB = memoryInGB;
     }

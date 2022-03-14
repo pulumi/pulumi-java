@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.keyvault.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class MHSMPrivateEndpointResponse {
     /**
      * Full identifier of the private endpoint resource.
@@ -15,8 +15,8 @@ public final class MHSMPrivateEndpointResponse {
      */
     private final String id;
 
-    @OutputCustomType.Constructor
-    private MHSMPrivateEndpointResponse(@OutputCustomType.Parameter("id") String id) {
+    @CustomType.Constructor
+    private MHSMPrivateEndpointResponse(@CustomType.Parameter("id") String id) {
         this.id = id;
     }
 

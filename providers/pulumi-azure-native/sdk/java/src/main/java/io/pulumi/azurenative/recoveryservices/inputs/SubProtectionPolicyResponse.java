@@ -9,7 +9,7 @@ import io.pulumi.azurenative.recoveryservices.inputs.LongTermSchedulePolicyRespo
 import io.pulumi.azurenative.recoveryservices.inputs.SimpleRetentionPolicyResponse;
 import io.pulumi.azurenative.recoveryservices.inputs.SimpleSchedulePolicyResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -29,7 +29,7 @@ public final class SubProtectionPolicyResponse extends io.pulumi.resources.Invok
      * Type of backup policy type
      * 
      */
-    @InputImport(name="policyType")
+    @Import(name="policyType")
       private final @Nullable String policyType;
 
     public Optional<String> getPolicyType() {
@@ -40,7 +40,7 @@ public final class SubProtectionPolicyResponse extends io.pulumi.resources.Invok
      * Retention policy with the details on backup copy retention ranges.
      * 
      */
-    @InputImport(name="retentionPolicy")
+    @Import(name="retentionPolicy")
       private final @Nullable Either<LongTermRetentionPolicyResponse,SimpleRetentionPolicyResponse> retentionPolicy;
 
     public Either<LongTermRetentionPolicyResponse,SimpleRetentionPolicyResponse> getRetentionPolicy() {
@@ -51,7 +51,7 @@ public final class SubProtectionPolicyResponse extends io.pulumi.resources.Invok
      * Backup schedule specified as part of backup policy.
      * 
      */
-    @InputImport(name="schedulePolicy")
+    @Import(name="schedulePolicy")
       private final @Nullable Object schedulePolicy;
 
     public Object getSchedulePolicy() {

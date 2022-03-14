@@ -9,7 +9,7 @@ import io.pulumi.azurenative.storagepool.outputs.DiskResponse;
 import io.pulumi.azurenative.storagepool.outputs.SystemMetadataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -37,7 +37,7 @@ public class DiskPool extends io.pulumi.resources.CustomResource {
      * List of additional capabilities for Disk pool.
      * 
      */
-    @OutputExport(name="additionalCapabilities", type=List.class, parameters={String.class})
+    @Export(name="additionalCapabilities", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> additionalCapabilities;
 
     /**
@@ -51,7 +51,7 @@ public class DiskPool extends io.pulumi.resources.CustomResource {
      * Logical zone for Disk pool resource; example: ["1"].
      * 
      */
-    @OutputExport(name="availabilityZones", type=List.class, parameters={String.class})
+    @Export(name="availabilityZones", type=List.class, parameters={String.class})
     private Output<List<String>> availabilityZones;
 
     /**
@@ -65,7 +65,7 @@ public class DiskPool extends io.pulumi.resources.CustomResource {
      * List of Azure Managed Disks to attach to a Disk pool. Can attach 8 disks at most.
      * 
      */
-    @OutputExport(name="disks", type=List.class, parameters={DiskResponse.class})
+    @Export(name="disks", type=List.class, parameters={DiskResponse.class})
     private Output</* @Nullable */ List<DiskResponse>> disks;
 
     /**
@@ -79,7 +79,7 @@ public class DiskPool extends io.pulumi.resources.CustomResource {
      * The geo-location where the resource lives.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -93,7 +93,7 @@ public class DiskPool extends io.pulumi.resources.CustomResource {
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -107,7 +107,7 @@ public class DiskPool extends io.pulumi.resources.CustomResource {
      * State of the operation on the resource.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -121,7 +121,7 @@ public class DiskPool extends io.pulumi.resources.CustomResource {
      * Operational status of the Disk pool.
      * 
      */
-    @OutputExport(name="status", type=String.class, parameters={})
+    @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
     /**
@@ -135,7 +135,7 @@ public class DiskPool extends io.pulumi.resources.CustomResource {
      * Azure Resource ID of a Subnet for the Disk pool.
      * 
      */
-    @OutputExport(name="subnetId", type=String.class, parameters={})
+    @Export(name="subnetId", type=String.class, parameters={})
     private Output<String> subnetId;
 
     /**
@@ -149,7 +149,7 @@ public class DiskPool extends io.pulumi.resources.CustomResource {
      * Resource metadata required by ARM RPC
      * 
      */
-    @OutputExport(name="systemData", type=SystemMetadataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemMetadataResponse.class, parameters={})
     private Output<SystemMetadataResponse> systemData;
 
     /**
@@ -163,7 +163,7 @@ public class DiskPool extends io.pulumi.resources.CustomResource {
      * Resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -177,7 +177,7 @@ public class DiskPool extends io.pulumi.resources.CustomResource {
      * Determines the SKU of VM deployed for Disk pool
      * 
      */
-    @OutputExport(name="tier", type=String.class, parameters={})
+    @Export(name="tier", type=String.class, parameters={})
     private Output<String> tier;
 
     /**
@@ -191,7 +191,7 @@ public class DiskPool extends io.pulumi.resources.CustomResource {
      * The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

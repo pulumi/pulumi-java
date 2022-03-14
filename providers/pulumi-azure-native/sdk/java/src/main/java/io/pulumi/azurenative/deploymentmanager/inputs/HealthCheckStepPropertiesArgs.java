@@ -5,7 +5,7 @@ package io.pulumi.azurenative.deploymentmanager.inputs;
 
 import io.pulumi.azurenative.deploymentmanager.inputs.RestHealthCheckStepAttributesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class HealthCheckStepPropertiesArgs extends io.pulumi.resources.Res
      * The health check step attributes
      * 
      */
-    @InputImport(name="attributes", required=true)
+    @Import(name="attributes", required=true)
       private final Output<RestHealthCheckStepAttributesArgs> attributes;
 
     public Output<RestHealthCheckStepAttributesArgs> getAttributes() {
@@ -34,7 +34,7 @@ public final class HealthCheckStepPropertiesArgs extends io.pulumi.resources.Res
      * Expected value is 'HealthCheck'.
      * 
      */
-    @InputImport(name="stepType", required=true)
+    @Import(name="stepType", required=true)
       private final Output<String> stepType;
 
     public Output<String> getStepType() {

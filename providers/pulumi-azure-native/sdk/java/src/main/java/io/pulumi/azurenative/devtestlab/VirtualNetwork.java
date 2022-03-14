@@ -10,7 +10,7 @@ import io.pulumi.azurenative.devtestlab.outputs.SubnetOverrideResponse;
 import io.pulumi.azurenative.devtestlab.outputs.SubnetResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -38,7 +38,7 @@ public class VirtualNetwork extends io.pulumi.resources.CustomResource {
      * The allowed subnets of the virtual network.
      * 
      */
-    @OutputExport(name="allowedSubnets", type=List.class, parameters={SubnetResponse.class})
+    @Export(name="allowedSubnets", type=List.class, parameters={SubnetResponse.class})
     private Output</* @Nullable */ List<SubnetResponse>> allowedSubnets;
 
     /**
@@ -52,7 +52,7 @@ public class VirtualNetwork extends io.pulumi.resources.CustomResource {
      * The creation date of the virtual network.
      * 
      */
-    @OutputExport(name="createdDate", type=String.class, parameters={})
+    @Export(name="createdDate", type=String.class, parameters={})
     private Output<String> createdDate;
 
     /**
@@ -66,7 +66,7 @@ public class VirtualNetwork extends io.pulumi.resources.CustomResource {
      * The description of the virtual network.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -80,7 +80,7 @@ public class VirtualNetwork extends io.pulumi.resources.CustomResource {
      * The Microsoft.Network resource identifier of the virtual network.
      * 
      */
-    @OutputExport(name="externalProviderResourceId", type=String.class, parameters={})
+    @Export(name="externalProviderResourceId", type=String.class, parameters={})
     private Output</* @Nullable */ String> externalProviderResourceId;
 
     /**
@@ -94,7 +94,7 @@ public class VirtualNetwork extends io.pulumi.resources.CustomResource {
      * The external subnet properties.
      * 
      */
-    @OutputExport(name="externalSubnets", type=List.class, parameters={ExternalSubnetResponse.class})
+    @Export(name="externalSubnets", type=List.class, parameters={ExternalSubnetResponse.class})
     private Output<List<ExternalSubnetResponse>> externalSubnets;
 
     /**
@@ -108,7 +108,7 @@ public class VirtualNetwork extends io.pulumi.resources.CustomResource {
      * The location of the resource.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -122,7 +122,7 @@ public class VirtualNetwork extends io.pulumi.resources.CustomResource {
      * The name of the resource.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -136,7 +136,7 @@ public class VirtualNetwork extends io.pulumi.resources.CustomResource {
      * The provisioning status of the resource.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -150,7 +150,7 @@ public class VirtualNetwork extends io.pulumi.resources.CustomResource {
      * The subnet overrides of the virtual network.
      * 
      */
-    @OutputExport(name="subnetOverrides", type=List.class, parameters={SubnetOverrideResponse.class})
+    @Export(name="subnetOverrides", type=List.class, parameters={SubnetOverrideResponse.class})
     private Output</* @Nullable */ List<SubnetOverrideResponse>> subnetOverrides;
 
     /**
@@ -164,7 +164,7 @@ public class VirtualNetwork extends io.pulumi.resources.CustomResource {
      * The tags of the resource.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -178,7 +178,7 @@ public class VirtualNetwork extends io.pulumi.resources.CustomResource {
      * The type of the resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -192,7 +192,7 @@ public class VirtualNetwork extends io.pulumi.resources.CustomResource {
      * The unique immutable identifier of a resource (Guid).
      * 
      */
-    @OutputExport(name="uniqueIdentifier", type=String.class, parameters={})
+    @Export(name="uniqueIdentifier", type=String.class, parameters={})
     private Output<String> uniqueIdentifier;
 
     /**

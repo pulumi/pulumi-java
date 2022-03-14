@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.storagesync.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class CloudTieringDatePolicyStatusResponse {
     /**
      * Last updated timestamp
@@ -20,10 +20,10 @@ public final class CloudTieringDatePolicyStatusResponse {
      */
     private final String tieredFilesMostRecentAccessTimestamp;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CloudTieringDatePolicyStatusResponse(
-        @OutputCustomType.Parameter("lastUpdatedTimestamp") String lastUpdatedTimestamp,
-        @OutputCustomType.Parameter("tieredFilesMostRecentAccessTimestamp") String tieredFilesMostRecentAccessTimestamp) {
+        @CustomType.Parameter("lastUpdatedTimestamp") String lastUpdatedTimestamp,
+        @CustomType.Parameter("tieredFilesMostRecentAccessTimestamp") String tieredFilesMostRecentAccessTimestamp) {
         this.lastUpdatedTimestamp = lastUpdatedTimestamp;
         this.tieredFilesMostRecentAccessTimestamp = tieredFilesMostRecentAccessTimestamp;
     }

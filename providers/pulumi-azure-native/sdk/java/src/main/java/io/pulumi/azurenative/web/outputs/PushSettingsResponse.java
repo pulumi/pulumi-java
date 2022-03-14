@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PushSettingsResponse {
     /**
      * Gets or sets a JSON string containing a list of dynamic tags that will be evaluated from user claims in the push registration endpoint.
@@ -56,16 +56,16 @@ public final class PushSettingsResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PushSettingsResponse(
-        @OutputCustomType.Parameter("dynamicTagsJson") @Nullable String dynamicTagsJson,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("isPushEnabled") Boolean isPushEnabled,
-        @OutputCustomType.Parameter("kind") @Nullable String kind,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("tagWhitelistJson") @Nullable String tagWhitelistJson,
-        @OutputCustomType.Parameter("tagsRequiringAuth") @Nullable String tagsRequiringAuth,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("dynamicTagsJson") @Nullable String dynamicTagsJson,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("isPushEnabled") Boolean isPushEnabled,
+        @CustomType.Parameter("kind") @Nullable String kind,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("tagWhitelistJson") @Nullable String tagWhitelistJson,
+        @CustomType.Parameter("tagsRequiringAuth") @Nullable String tagsRequiringAuth,
+        @CustomType.Parameter("type") String type) {
         this.dynamicTagsJson = dynamicTagsJson;
         this.id = id;
         this.isPushEnabled = isPushEnabled;

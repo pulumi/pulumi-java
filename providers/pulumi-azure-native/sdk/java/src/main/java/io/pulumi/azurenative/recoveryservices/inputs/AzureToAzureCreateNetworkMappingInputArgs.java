@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.recoveryservices.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class AzureToAzureCreateNetworkMappingInputArgs extends io.pulumi.r
      * Expected value is 'AzureToAzure'.
      * 
      */
-    @InputImport(name="instanceType")
+    @Import(name="instanceType")
       private final @Nullable Output<String> instanceType;
 
     public Output<String> getInstanceType() {
@@ -34,7 +34,7 @@ public final class AzureToAzureCreateNetworkMappingInputArgs extends io.pulumi.r
      * The primary azure vnet Id.
      * 
      */
-    @InputImport(name="primaryNetworkId")
+    @Import(name="primaryNetworkId")
       private final @Nullable Output<String> primaryNetworkId;
 
     public Output<String> getPrimaryNetworkId() {

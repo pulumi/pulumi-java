@@ -7,7 +7,7 @@ import io.pulumi.azurenative.eventgrid.enums.IdentityType;
 import io.pulumi.azurenative.eventgrid.inputs.UserIdentityPropertiesArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class IdentityInfoArgs extends io.pulumi.resources.ResourceArgs {
      * The principal ID of resource identity.
      * 
      */
-    @InputImport(name="principalId")
+    @Import(name="principalId")
       private final @Nullable Output<String> principalId;
 
     public Output<String> getPrincipalId() {
@@ -37,7 +37,7 @@ public final class IdentityInfoArgs extends io.pulumi.resources.ResourceArgs {
      * The tenant ID of resource.
      * 
      */
-    @InputImport(name="tenantId")
+    @Import(name="tenantId")
       private final @Nullable Output<String> tenantId;
 
     public Output<String> getTenantId() {
@@ -48,7 +48,7 @@ public final class IdentityInfoArgs extends io.pulumi.resources.ResourceArgs {
      * The type of managed identity used. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user-assigned identities. The type 'None' will remove any identity.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<Either<String,IdentityType>> type;
 
     public Output<Either<String,IdentityType>> getType() {
@@ -61,7 +61,7 @@ public final class IdentityInfoArgs extends io.pulumi.resources.ResourceArgs {
      * This property is currently not used and reserved for future usage.
      * 
      */
-    @InputImport(name="userAssignedIdentities")
+    @Import(name="userAssignedIdentities")
       private final @Nullable Output<Map<String,UserIdentityPropertiesArgs>> userAssignedIdentities;
 
     public Output<Map<String,UserIdentityPropertiesArgs>> getUserAssignedIdentities() {

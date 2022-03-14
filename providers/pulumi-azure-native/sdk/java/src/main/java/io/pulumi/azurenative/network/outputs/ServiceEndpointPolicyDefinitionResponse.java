@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ServiceEndpointPolicyDefinitionResponse {
     /**
      * A description for this rule. Restricted to 140 chars.
@@ -48,15 +48,15 @@ public final class ServiceEndpointPolicyDefinitionResponse {
      */
     private final @Nullable List<String> serviceResources;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServiceEndpointPolicyDefinitionResponse(
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("service") @Nullable String service,
-        @OutputCustomType.Parameter("serviceResources") @Nullable List<String> serviceResources) {
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("service") @Nullable String service,
+        @CustomType.Parameter("serviceResources") @Nullable List<String> serviceResources) {
         this.description = description;
         this.etag = etag;
         this.id = id;

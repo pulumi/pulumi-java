@@ -6,7 +6,7 @@ package io.pulumi.azurenative.storage;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.storage.StorageAccountStaticWebsiteArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -28,7 +28,7 @@ public class StorageAccountStaticWebsite extends io.pulumi.resources.CustomResou
      * The name of the container to upload blobs to.
      * 
      */
-    @OutputExport(name="containerName", type=String.class, parameters={})
+    @Export(name="containerName", type=String.class, parameters={})
     private Output<String> containerName;
 
     /**
@@ -42,7 +42,7 @@ public class StorageAccountStaticWebsite extends io.pulumi.resources.CustomResou
      * The absolute path to a custom webpage that should be used when a request is made which does not correspond to an existing file.
      * 
      */
-    @OutputExport(name="error404Document", type=String.class, parameters={})
+    @Export(name="error404Document", type=String.class, parameters={})
     private Output</* @Nullable */ String> error404Document;
 
     /**
@@ -56,7 +56,7 @@ public class StorageAccountStaticWebsite extends io.pulumi.resources.CustomResou
      * The webpage that Azure Storage serves for requests to the root of a website or any sub-folder. For example, 'index.html'. The value is case-sensitive.
      * 
      */
-    @OutputExport(name="indexDocument", type=String.class, parameters={})
+    @Export(name="indexDocument", type=String.class, parameters={})
     private Output</* @Nullable */ String> indexDocument;
 
     /**

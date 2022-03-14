@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.storage.outputs;
 
 import io.pulumi.azurenative.storage.outputs.ObjectReplicationPolicyRuleResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetObjectReplicationPolicyResult {
     /**
      * Required. Destination account name.
@@ -53,16 +53,16 @@ public final class GetObjectReplicationPolicyResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetObjectReplicationPolicyResult(
-        @OutputCustomType.Parameter("destinationAccount") String destinationAccount,
-        @OutputCustomType.Parameter("enabledTime") String enabledTime,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("policyId") String policyId,
-        @OutputCustomType.Parameter("rules") @Nullable List<ObjectReplicationPolicyRuleResponse> rules,
-        @OutputCustomType.Parameter("sourceAccount") String sourceAccount,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("destinationAccount") String destinationAccount,
+        @CustomType.Parameter("enabledTime") String enabledTime,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("policyId") String policyId,
+        @CustomType.Parameter("rules") @Nullable List<ObjectReplicationPolicyRuleResponse> rules,
+        @CustomType.Parameter("sourceAccount") String sourceAccount,
+        @CustomType.Parameter("type") String type) {
         this.destinationAccount = destinationAccount;
         this.enabledTime = enabledTime;
         this.id = id;

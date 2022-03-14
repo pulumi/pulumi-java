@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.virtualmachineimages.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ImageTemplateManagedImageDistributorArgs extends io.pulumi.re
      * Tags that will be applied to the artifact once it has been created/updated by the distributor.
      * 
      */
-    @InputImport(name="artifactTags")
+    @Import(name="artifactTags")
       private final @Nullable Output<Map<String,String>> artifactTags;
 
     public Output<Map<String,String>> getArtifactTags() {
@@ -34,7 +34,7 @@ public final class ImageTemplateManagedImageDistributorArgs extends io.pulumi.re
      * Resource Id of the Managed Disk Image
      * 
      */
-    @InputImport(name="imageId", required=true)
+    @Import(name="imageId", required=true)
       private final Output<String> imageId;
 
     public Output<String> getImageId() {
@@ -45,7 +45,7 @@ public final class ImageTemplateManagedImageDistributorArgs extends io.pulumi.re
      * Azure location for the image, should match if image already exists
      * 
      */
-    @InputImport(name="location", required=true)
+    @Import(name="location", required=true)
       private final Output<String> location;
 
     public Output<String> getLocation() {
@@ -56,7 +56,7 @@ public final class ImageTemplateManagedImageDistributorArgs extends io.pulumi.re
      * The name to be used for the associated RunOutput.
      * 
      */
-    @InputImport(name="runOutputName", required=true)
+    @Import(name="runOutputName", required=true)
       private final Output<String> runOutputName;
 
     public Output<String> getRunOutputName() {
@@ -68,7 +68,7 @@ public final class ImageTemplateManagedImageDistributorArgs extends io.pulumi.re
      * Expected value is 'ManagedImage'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {

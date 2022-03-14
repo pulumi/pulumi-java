@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.sqlvirtualmachine.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class AutoBackupSettingsResponse extends io.pulumi.resources.Invoke
      * Backup schedule type.
      * 
      */
-    @InputImport(name="backupScheduleType")
+    @Import(name="backupScheduleType")
       private final @Nullable String backupScheduleType;
 
     public Optional<String> getBackupScheduleType() {
@@ -35,7 +35,7 @@ public final class AutoBackupSettingsResponse extends io.pulumi.resources.Invoke
      * Include or exclude system databases from auto backup.
      * 
      */
-    @InputImport(name="backupSystemDbs")
+    @Import(name="backupSystemDbs")
       private final @Nullable Boolean backupSystemDbs;
 
     public Optional<Boolean> getBackupSystemDbs() {
@@ -46,7 +46,7 @@ public final class AutoBackupSettingsResponse extends io.pulumi.resources.Invoke
      * Enable or disable autobackup on SQL virtual machine.
      * 
      */
-    @InputImport(name="enable")
+    @Import(name="enable")
       private final @Nullable Boolean enable;
 
     public Optional<Boolean> getEnable() {
@@ -57,7 +57,7 @@ public final class AutoBackupSettingsResponse extends io.pulumi.resources.Invoke
      * Enable or disable encryption for backup on SQL virtual machine.
      * 
      */
-    @InputImport(name="enableEncryption")
+    @Import(name="enableEncryption")
       private final @Nullable Boolean enableEncryption;
 
     public Optional<Boolean> getEnableEncryption() {
@@ -68,7 +68,7 @@ public final class AutoBackupSettingsResponse extends io.pulumi.resources.Invoke
      * Frequency of full backups. In both cases, full backups begin during the next scheduled time window.
      * 
      */
-    @InputImport(name="fullBackupFrequency")
+    @Import(name="fullBackupFrequency")
       private final @Nullable String fullBackupFrequency;
 
     public Optional<String> getFullBackupFrequency() {
@@ -79,7 +79,7 @@ public final class AutoBackupSettingsResponse extends io.pulumi.resources.Invoke
      * Start time of a given day during which full backups can take place. 0-23 hours.
      * 
      */
-    @InputImport(name="fullBackupStartTime")
+    @Import(name="fullBackupStartTime")
       private final @Nullable Integer fullBackupStartTime;
 
     public Optional<Integer> getFullBackupStartTime() {
@@ -90,7 +90,7 @@ public final class AutoBackupSettingsResponse extends io.pulumi.resources.Invoke
      * Duration of the time window of a given day during which full backups can take place. 1-23 hours.
      * 
      */
-    @InputImport(name="fullBackupWindowHours")
+    @Import(name="fullBackupWindowHours")
       private final @Nullable Integer fullBackupWindowHours;
 
     public Optional<Integer> getFullBackupWindowHours() {
@@ -101,7 +101,7 @@ public final class AutoBackupSettingsResponse extends io.pulumi.resources.Invoke
      * Frequency of log backups. 5-60 minutes.
      * 
      */
-    @InputImport(name="logBackupFrequency")
+    @Import(name="logBackupFrequency")
       private final @Nullable Integer logBackupFrequency;
 
     public Optional<Integer> getLogBackupFrequency() {
@@ -112,7 +112,7 @@ public final class AutoBackupSettingsResponse extends io.pulumi.resources.Invoke
      * Retention period of backup: 1-30 days.
      * 
      */
-    @InputImport(name="retentionPeriod")
+    @Import(name="retentionPeriod")
       private final @Nullable Integer retentionPeriod;
 
     public Optional<Integer> getRetentionPeriod() {
@@ -123,7 +123,7 @@ public final class AutoBackupSettingsResponse extends io.pulumi.resources.Invoke
      * Storage account url where backup will be taken to.
      * 
      */
-    @InputImport(name="storageAccountUrl")
+    @Import(name="storageAccountUrl")
       private final @Nullable String storageAccountUrl;
 
     public Optional<String> getStorageAccountUrl() {

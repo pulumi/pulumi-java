@@ -3,23 +3,23 @@
 
 package io.pulumi.azurenative.batch.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PrivateLinkServiceConnectionStateResponse {
     private final String actionRequired;
     private final @Nullable String description;
     private final String status;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PrivateLinkServiceConnectionStateResponse(
-        @OutputCustomType.Parameter("actionRequired") String actionRequired,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("status") String status) {
+        @CustomType.Parameter("actionRequired") String actionRequired,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("status") String status) {
         this.actionRequired = actionRequired;
         this.description = description;
         this.status = status;

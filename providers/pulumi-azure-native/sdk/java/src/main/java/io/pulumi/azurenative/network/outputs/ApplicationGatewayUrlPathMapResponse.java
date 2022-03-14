@@ -5,14 +5,14 @@ package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.ApplicationGatewayPathRuleResponse;
 import io.pulumi.azurenative.network.outputs.SubResourceResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ApplicationGatewayUrlPathMapResponse {
     /**
      * Default backend address pool resource of URL path map.
@@ -65,18 +65,18 @@ public final class ApplicationGatewayUrlPathMapResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ApplicationGatewayUrlPathMapResponse(
-        @OutputCustomType.Parameter("defaultBackendAddressPool") @Nullable SubResourceResponse defaultBackendAddressPool,
-        @OutputCustomType.Parameter("defaultBackendHttpSettings") @Nullable SubResourceResponse defaultBackendHttpSettings,
-        @OutputCustomType.Parameter("defaultRedirectConfiguration") @Nullable SubResourceResponse defaultRedirectConfiguration,
-        @OutputCustomType.Parameter("defaultRewriteRuleSet") @Nullable SubResourceResponse defaultRewriteRuleSet,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("pathRules") @Nullable List<ApplicationGatewayPathRuleResponse> pathRules,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("defaultBackendAddressPool") @Nullable SubResourceResponse defaultBackendAddressPool,
+        @CustomType.Parameter("defaultBackendHttpSettings") @Nullable SubResourceResponse defaultBackendHttpSettings,
+        @CustomType.Parameter("defaultRedirectConfiguration") @Nullable SubResourceResponse defaultRedirectConfiguration,
+        @CustomType.Parameter("defaultRewriteRuleSet") @Nullable SubResourceResponse defaultRewriteRuleSet,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("pathRules") @Nullable List<ApplicationGatewayPathRuleResponse> pathRules,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("type") String type) {
         this.defaultBackendAddressPool = defaultBackendAddressPool;
         this.defaultBackendHttpSettings = defaultBackendHttpSettings;
         this.defaultRedirectConfiguration = defaultRedirectConfiguration;

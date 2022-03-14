@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.appplatform.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class ConfigurationServiceGitRepositoryArgs extends io.pulumi.resou
      * Public sshKey of git repository.
      * 
      */
-    @InputImport(name="hostKey")
+    @Import(name="hostKey")
       private final @Nullable Output<String> hostKey;
 
     public Output<String> getHostKey() {
@@ -35,7 +35,7 @@ public final class ConfigurationServiceGitRepositoryArgs extends io.pulumi.resou
      * SshKey algorithm of git repository.
      * 
      */
-    @InputImport(name="hostKeyAlgorithm")
+    @Import(name="hostKeyAlgorithm")
       private final @Nullable Output<String> hostKeyAlgorithm;
 
     public Output<String> getHostKeyAlgorithm() {
@@ -46,7 +46,7 @@ public final class ConfigurationServiceGitRepositoryArgs extends io.pulumi.resou
      * Label of the repository
      * 
      */
-    @InputImport(name="label", required=true)
+    @Import(name="label", required=true)
       private final Output<String> label;
 
     public Output<String> getLabel() {
@@ -57,7 +57,7 @@ public final class ConfigurationServiceGitRepositoryArgs extends io.pulumi.resou
      * Name of the repository
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -68,7 +68,7 @@ public final class ConfigurationServiceGitRepositoryArgs extends io.pulumi.resou
      * Password of git repository basic auth.
      * 
      */
-    @InputImport(name="password")
+    @Import(name="password")
       private final @Nullable Output<String> password;
 
     public Output<String> getPassword() {
@@ -79,7 +79,7 @@ public final class ConfigurationServiceGitRepositoryArgs extends io.pulumi.resou
      * Collection of patterns of the repository
      * 
      */
-    @InputImport(name="patterns", required=true)
+    @Import(name="patterns", required=true)
       private final Output<List<String>> patterns;
 
     public Output<List<String>> getPatterns() {
@@ -90,7 +90,7 @@ public final class ConfigurationServiceGitRepositoryArgs extends io.pulumi.resou
      * Private sshKey algorithm of git repository.
      * 
      */
-    @InputImport(name="privateKey")
+    @Import(name="privateKey")
       private final @Nullable Output<String> privateKey;
 
     public Output<String> getPrivateKey() {
@@ -101,7 +101,7 @@ public final class ConfigurationServiceGitRepositoryArgs extends io.pulumi.resou
      * Searching path of the repository
      * 
      */
-    @InputImport(name="searchPaths")
+    @Import(name="searchPaths")
       private final @Nullable Output<List<String>> searchPaths;
 
     public Output<List<String>> getSearchPaths() {
@@ -112,7 +112,7 @@ public final class ConfigurationServiceGitRepositoryArgs extends io.pulumi.resou
      * Strict host key checking or not.
      * 
      */
-    @InputImport(name="strictHostKeyChecking")
+    @Import(name="strictHostKeyChecking")
       private final @Nullable Output<Boolean> strictHostKeyChecking;
 
     public Output<Boolean> getStrictHostKeyChecking() {
@@ -123,7 +123,7 @@ public final class ConfigurationServiceGitRepositoryArgs extends io.pulumi.resou
      * URI of the repository
      * 
      */
-    @InputImport(name="uri", required=true)
+    @Import(name="uri", required=true)
       private final Output<String> uri;
 
     public Output<String> getUri() {
@@ -134,7 +134,7 @@ public final class ConfigurationServiceGitRepositoryArgs extends io.pulumi.resou
      * Username of git repository basic auth.
      * 
      */
-    @InputImport(name="username")
+    @Import(name="username")
       private final @Nullable Output<String> username;
 
     public Output<String> getUsername() {

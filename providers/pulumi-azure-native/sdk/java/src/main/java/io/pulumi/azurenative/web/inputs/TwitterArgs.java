@@ -5,7 +5,7 @@ package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.azurenative.web.inputs.TwitterRegistrationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class TwitterArgs extends io.pulumi.resources.ResourceArgs {
      * <code>false</code> if the Twitter provider should not be enabled despite the set registration; otherwise, <code>true</code>.
      * 
      */
-    @InputImport(name="enabled")
+    @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
@@ -34,7 +34,7 @@ public final class TwitterArgs extends io.pulumi.resources.ResourceArgs {
      * The configuration settings of the app registration for the Twitter provider.
      * 
      */
-    @InputImport(name="registration")
+    @Import(name="registration")
       private final @Nullable Output<TwitterRegistrationArgs> registration;
 
     public Output<TwitterRegistrationArgs> getRegistration() {

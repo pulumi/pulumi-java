@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.orbital.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class EndPointResponse extends io.pulumi.resources.InvokeArgs {
      * Name of an end point.
      * 
      */
-    @InputImport(name="endPointName", required=true)
+    @Import(name="endPointName", required=true)
       private final String endPointName;
 
     public String getEndPointName() {
@@ -31,7 +31,7 @@ public final class EndPointResponse extends io.pulumi.resources.InvokeArgs {
      * IP Address.
      * 
      */
-    @InputImport(name="ipAddress", required=true)
+    @Import(name="ipAddress", required=true)
       private final String ipAddress;
 
     public String getIpAddress() {
@@ -42,7 +42,7 @@ public final class EndPointResponse extends io.pulumi.resources.InvokeArgs {
      * TCP port to listen on to receive data.
      * 
      */
-    @InputImport(name="port", required=true)
+    @Import(name="port", required=true)
       private final String port;
 
     public String getPort() {
@@ -53,7 +53,7 @@ public final class EndPointResponse extends io.pulumi.resources.InvokeArgs {
      * Protocol either UDP or TCP.
      * 
      */
-    @InputImport(name="protocol", required=true)
+    @Import(name="protocol", required=true)
       private final String protocol;
 
     public String getProtocol() {

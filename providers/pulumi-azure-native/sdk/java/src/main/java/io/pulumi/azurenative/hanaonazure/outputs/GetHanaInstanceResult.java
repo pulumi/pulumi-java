@@ -7,14 +7,14 @@ import io.pulumi.azurenative.hanaonazure.outputs.HardwareProfileResponse;
 import io.pulumi.azurenative.hanaonazure.outputs.NetworkProfileResponse;
 import io.pulumi.azurenative.hanaonazure.outputs.OSProfileResponse;
 import io.pulumi.azurenative.hanaonazure.outputs.StorageProfileResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetHanaInstanceResult {
     /**
      * Specifies the HANA instance unique ID.
@@ -92,23 +92,23 @@ public final class GetHanaInstanceResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetHanaInstanceResult(
-        @OutputCustomType.Parameter("hanaInstanceId") String hanaInstanceId,
-        @OutputCustomType.Parameter("hardwareProfile") @Nullable HardwareProfileResponse hardwareProfile,
-        @OutputCustomType.Parameter("hwRevision") String hwRevision,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("networkProfile") @Nullable NetworkProfileResponse networkProfile,
-        @OutputCustomType.Parameter("osProfile") @Nullable OSProfileResponse osProfile,
-        @OutputCustomType.Parameter("partnerNodeId") @Nullable String partnerNodeId,
-        @OutputCustomType.Parameter("powerState") String powerState,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("proximityPlacementGroup") String proximityPlacementGroup,
-        @OutputCustomType.Parameter("storageProfile") @Nullable StorageProfileResponse storageProfile,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("hanaInstanceId") String hanaInstanceId,
+        @CustomType.Parameter("hardwareProfile") @Nullable HardwareProfileResponse hardwareProfile,
+        @CustomType.Parameter("hwRevision") String hwRevision,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("networkProfile") @Nullable NetworkProfileResponse networkProfile,
+        @CustomType.Parameter("osProfile") @Nullable OSProfileResponse osProfile,
+        @CustomType.Parameter("partnerNodeId") @Nullable String partnerNodeId,
+        @CustomType.Parameter("powerState") String powerState,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("proximityPlacementGroup") String proximityPlacementGroup,
+        @CustomType.Parameter("storageProfile") @Nullable StorageProfileResponse storageProfile,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type) {
         this.hanaInstanceId = hanaInstanceId;
         this.hardwareProfile = hardwareProfile;
         this.hwRevision = hwRevision;

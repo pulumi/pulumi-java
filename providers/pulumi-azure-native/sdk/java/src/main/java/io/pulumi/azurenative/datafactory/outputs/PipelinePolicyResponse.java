@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.datafactory.outputs;
 
 import io.pulumi.azurenative.datafactory.outputs.PipelineElapsedTimeMetricPolicyResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PipelinePolicyResponse {
     /**
      * Pipeline ElapsedTime Metric Policy.
@@ -17,8 +17,8 @@ public final class PipelinePolicyResponse {
      */
     private final @Nullable PipelineElapsedTimeMetricPolicyResponse elapsedTimeMetric;
 
-    @OutputCustomType.Constructor
-    private PipelinePolicyResponse(@OutputCustomType.Parameter("elapsedTimeMetric") @Nullable PipelineElapsedTimeMetricPolicyResponse elapsedTimeMetric) {
+    @CustomType.Constructor
+    private PipelinePolicyResponse(@CustomType.Parameter("elapsedTimeMetric") @Nullable PipelineElapsedTimeMetricPolicyResponse elapsedTimeMetric) {
         this.elapsedTimeMetric = elapsedTimeMetric;
     }
 

@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VpnNatRuleMappingResponse {
     /**
      * Address space for Vpn NatRule mapping.
@@ -17,8 +17,8 @@ public final class VpnNatRuleMappingResponse {
      */
     private final @Nullable String addressSpace;
 
-    @OutputCustomType.Constructor
-    private VpnNatRuleMappingResponse(@OutputCustomType.Parameter("addressSpace") @Nullable String addressSpace) {
+    @CustomType.Constructor
+    private VpnNatRuleMappingResponse(@CustomType.Parameter("addressSpace") @Nullable String addressSpace) {
         this.addressSpace = addressSpace;
     }
 

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.timeseriesinsights.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class Gen2StorageConfigurationInputArgs extends io.pulumi.resources
      * The name of the storage account that will hold the environment's Gen2 data.
      * 
      */
-    @InputImport(name="accountName", required=true)
+    @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
     public Output<String> getAccountName() {
@@ -32,7 +32,7 @@ public final class Gen2StorageConfigurationInputArgs extends io.pulumi.resources
      * The value of the management key that grants the Time Series Insights service write access to the storage account. This property is not shown in environment responses.
      * 
      */
-    @InputImport(name="managementKey", required=true)
+    @Import(name="managementKey", required=true)
       private final Output<String> managementKey;
 
     public Output<String> getManagementKey() {

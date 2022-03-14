@@ -9,7 +9,7 @@ import io.pulumi.azurenative.devtestlab.outputs.FormulaPropertiesFromVmResponse;
 import io.pulumi.azurenative.devtestlab.outputs.LabVirtualMachineCreationParameterResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -37,7 +37,7 @@ public class Formula extends io.pulumi.resources.CustomResource {
      * The author of the formula.
      * 
      */
-    @OutputExport(name="author", type=String.class, parameters={})
+    @Export(name="author", type=String.class, parameters={})
     private Output<String> author;
 
     /**
@@ -51,7 +51,7 @@ public class Formula extends io.pulumi.resources.CustomResource {
      * The creation date of the formula.
      * 
      */
-    @OutputExport(name="creationDate", type=String.class, parameters={})
+    @Export(name="creationDate", type=String.class, parameters={})
     private Output<String> creationDate;
 
     /**
@@ -65,7 +65,7 @@ public class Formula extends io.pulumi.resources.CustomResource {
      * The description of the formula.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -79,7 +79,7 @@ public class Formula extends io.pulumi.resources.CustomResource {
      * The content of the formula.
      * 
      */
-    @OutputExport(name="formulaContent", type=LabVirtualMachineCreationParameterResponse.class, parameters={})
+    @Export(name="formulaContent", type=LabVirtualMachineCreationParameterResponse.class, parameters={})
     private Output</* @Nullable */ LabVirtualMachineCreationParameterResponse> formulaContent;
 
     /**
@@ -93,7 +93,7 @@ public class Formula extends io.pulumi.resources.CustomResource {
      * The location of the resource.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -107,7 +107,7 @@ public class Formula extends io.pulumi.resources.CustomResource {
      * The name of the resource.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -121,7 +121,7 @@ public class Formula extends io.pulumi.resources.CustomResource {
      * The OS type of the formula.
      * 
      */
-    @OutputExport(name="osType", type=String.class, parameters={})
+    @Export(name="osType", type=String.class, parameters={})
     private Output</* @Nullable */ String> osType;
 
     /**
@@ -135,7 +135,7 @@ public class Formula extends io.pulumi.resources.CustomResource {
      * The provisioning status of the resource.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -149,7 +149,7 @@ public class Formula extends io.pulumi.resources.CustomResource {
      * The tags of the resource.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -163,7 +163,7 @@ public class Formula extends io.pulumi.resources.CustomResource {
      * The type of the resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -177,7 +177,7 @@ public class Formula extends io.pulumi.resources.CustomResource {
      * The unique immutable identifier of a resource (Guid).
      * 
      */
-    @OutputExport(name="uniqueIdentifier", type=String.class, parameters={})
+    @Export(name="uniqueIdentifier", type=String.class, parameters={})
     private Output<String> uniqueIdentifier;
 
     /**
@@ -191,7 +191,7 @@ public class Formula extends io.pulumi.resources.CustomResource {
      * Information about a VM from which a formula is to be created.
      * 
      */
-    @OutputExport(name="vm", type=FormulaPropertiesFromVmResponse.class, parameters={})
+    @Export(name="vm", type=FormulaPropertiesFromVmResponse.class, parameters={})
     private Output</* @Nullable */ FormulaPropertiesFromVmResponse> vm;
 
     /**

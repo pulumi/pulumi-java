@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ComputeInstanceCreatedByResponse {
     /**
      * Uniquely identifies the user within his/her organization.
@@ -25,11 +25,11 @@ public final class ComputeInstanceCreatedByResponse {
      */
     private final String userOrgId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ComputeInstanceCreatedByResponse(
-        @OutputCustomType.Parameter("userId") String userId,
-        @OutputCustomType.Parameter("userName") String userName,
-        @OutputCustomType.Parameter("userOrgId") String userOrgId) {
+        @CustomType.Parameter("userId") String userId,
+        @CustomType.Parameter("userName") String userName,
+        @CustomType.Parameter("userOrgId") String userOrgId) {
         this.userId = userId;
         this.userName = userName;
         this.userOrgId = userOrgId;

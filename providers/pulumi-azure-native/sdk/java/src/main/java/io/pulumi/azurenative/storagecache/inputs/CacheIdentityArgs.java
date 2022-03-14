@@ -5,7 +5,7 @@ package io.pulumi.azurenative.storagecache.inputs;
 
 import io.pulumi.azurenative.storagecache.enums.CacheIdentityType;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -22,7 +22,7 @@ public final class CacheIdentityArgs extends io.pulumi.resources.ResourceArgs {
      * The type of identity used for the cache
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<CacheIdentityType> type;
 
     public Output<CacheIdentityType> getType() {

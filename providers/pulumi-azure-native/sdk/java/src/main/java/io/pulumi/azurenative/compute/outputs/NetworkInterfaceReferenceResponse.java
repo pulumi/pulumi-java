@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class NetworkInterfaceReferenceResponse {
     /**
      * Specify what happens to the network interface when the VM is deleted
@@ -28,11 +28,11 @@ public final class NetworkInterfaceReferenceResponse {
      */
     private final @Nullable Boolean primary;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NetworkInterfaceReferenceResponse(
-        @OutputCustomType.Parameter("deleteOption") @Nullable String deleteOption,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("primary") @Nullable Boolean primary) {
+        @CustomType.Parameter("deleteOption") @Nullable String deleteOption,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("primary") @Nullable Boolean primary) {
         this.deleteOption = deleteOption;
         this.id = id;
         this.primary = primary;

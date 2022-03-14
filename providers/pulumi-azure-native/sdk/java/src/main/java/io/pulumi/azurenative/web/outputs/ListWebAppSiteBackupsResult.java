@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.web.outputs;
 
 import io.pulumi.azurenative.web.outputs.BackupItemResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ListWebAppSiteBackupsResult {
     /**
      * Link to next page of resources.
@@ -22,10 +22,10 @@ public final class ListWebAppSiteBackupsResult {
      */
     private final List<BackupItemResponse> value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ListWebAppSiteBackupsResult(
-        @OutputCustomType.Parameter("nextLink") String nextLink,
-        @OutputCustomType.Parameter("value") List<BackupItemResponse> value) {
+        @CustomType.Parameter("nextLink") String nextLink,
+        @CustomType.Parameter("value") List<BackupItemResponse> value) {
         this.nextLink = nextLink;
         this.value = value;
     }

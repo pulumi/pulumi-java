@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.media.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AssetFileEncryptionMetadataResponse {
     /**
      * The Asset File Id.
@@ -27,11 +27,11 @@ public final class AssetFileEncryptionMetadataResponse {
      */
     private final @Nullable String initializationVector;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AssetFileEncryptionMetadataResponse(
-        @OutputCustomType.Parameter("assetFileId") String assetFileId,
-        @OutputCustomType.Parameter("assetFileName") @Nullable String assetFileName,
-        @OutputCustomType.Parameter("initializationVector") @Nullable String initializationVector) {
+        @CustomType.Parameter("assetFileId") String assetFileId,
+        @CustomType.Parameter("assetFileName") @Nullable String assetFileName,
+        @CustomType.Parameter("initializationVector") @Nullable String initializationVector) {
         this.assetFileId = assetFileId;
         this.assetFileName = assetFileName;
         this.initializationVector = initializationVector;

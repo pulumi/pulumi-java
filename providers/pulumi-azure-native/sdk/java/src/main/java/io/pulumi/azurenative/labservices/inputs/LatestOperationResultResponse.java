@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.labservices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class LatestOperationResultResponse extends io.pulumi.resources.Inv
      * Error code on failure.
      * 
      */
-    @InputImport(name="errorCode", required=true)
+    @Import(name="errorCode", required=true)
       private final String errorCode;
 
     public String getErrorCode() {
@@ -31,7 +31,7 @@ public final class LatestOperationResultResponse extends io.pulumi.resources.Inv
      * The error message.
      * 
      */
-    @InputImport(name="errorMessage", required=true)
+    @Import(name="errorMessage", required=true)
       private final String errorMessage;
 
     public String getErrorMessage() {
@@ -42,7 +42,7 @@ public final class LatestOperationResultResponse extends io.pulumi.resources.Inv
      * The HttpMethod - PUT/POST/DELETE for the operation.
      * 
      */
-    @InputImport(name="httpMethod", required=true)
+    @Import(name="httpMethod", required=true)
       private final String httpMethod;
 
     public String getHttpMethod() {
@@ -53,7 +53,7 @@ public final class LatestOperationResultResponse extends io.pulumi.resources.Inv
      * The URL to use to check long-running operation status
      * 
      */
-    @InputImport(name="operationUrl", required=true)
+    @Import(name="operationUrl", required=true)
       private final String operationUrl;
 
     public String getOperationUrl() {
@@ -64,7 +64,7 @@ public final class LatestOperationResultResponse extends io.pulumi.resources.Inv
      * Request URI of the operation.
      * 
      */
-    @InputImport(name="requestUri", required=true)
+    @Import(name="requestUri", required=true)
       private final String requestUri;
 
     public String getRequestUri() {
@@ -75,7 +75,7 @@ public final class LatestOperationResultResponse extends io.pulumi.resources.Inv
      * The current status of the operation.
      * 
      */
-    @InputImport(name="status", required=true)
+    @Import(name="status", required=true)
       private final String status;
 
     public String getStatus() {

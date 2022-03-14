@@ -10,7 +10,7 @@ import io.pulumi.azurenative.machinelearningservices.outputs.ACIServiceResponseR
 import io.pulumi.azurenative.machinelearningservices.outputs.ContainerResourceRequirementsResponse;
 import io.pulumi.azurenative.machinelearningservices.outputs.ModelResponse;
 import io.pulumi.azurenative.machinelearningservices.outputs.ServiceResponseBaseResponseError;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -20,7 +20,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ACIServiceResponseResponse {
     /**
      * Whether or not Application Insights is enabled.
@@ -149,33 +149,33 @@ public final class ACIServiceResponseResponse {
      */
     private final @Nullable ACIServiceResponseResponseVnetConfiguration vnetConfiguration;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ACIServiceResponseResponse(
-        @OutputCustomType.Parameter("appInsightsEnabled") @Nullable Boolean appInsightsEnabled,
-        @OutputCustomType.Parameter("authEnabled") @Nullable Boolean authEnabled,
-        @OutputCustomType.Parameter("cname") @Nullable String cname,
-        @OutputCustomType.Parameter("computeType") String computeType,
-        @OutputCustomType.Parameter("containerResourceRequirements") @Nullable ContainerResourceRequirementsResponse containerResourceRequirements,
-        @OutputCustomType.Parameter("dataCollection") @Nullable ACIServiceResponseResponseDataCollection dataCollection,
-        @OutputCustomType.Parameter("deploymentType") @Nullable String deploymentType,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("encryptionProperties") @Nullable ACIServiceResponseResponseEncryptionProperties encryptionProperties,
-        @OutputCustomType.Parameter("environmentImageRequest") @Nullable ACIServiceResponseResponseEnvironmentImageRequest environmentImageRequest,
-        @OutputCustomType.Parameter("error") ServiceResponseBaseResponseError error,
-        @OutputCustomType.Parameter("kvTags") @Nullable Map<String,String> kvTags,
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("modelConfigMap") Map<String,Object> modelConfigMap,
-        @OutputCustomType.Parameter("models") @Nullable List<ModelResponse> models,
-        @OutputCustomType.Parameter("properties") @Nullable Map<String,String> properties,
-        @OutputCustomType.Parameter("publicFqdn") @Nullable String publicFqdn,
-        @OutputCustomType.Parameter("publicIp") @Nullable String publicIp,
-        @OutputCustomType.Parameter("scoringUri") String scoringUri,
-        @OutputCustomType.Parameter("sslCertificate") @Nullable String sslCertificate,
-        @OutputCustomType.Parameter("sslEnabled") @Nullable Boolean sslEnabled,
-        @OutputCustomType.Parameter("sslKey") @Nullable String sslKey,
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("swaggerUri") String swaggerUri,
-        @OutputCustomType.Parameter("vnetConfiguration") @Nullable ACIServiceResponseResponseVnetConfiguration vnetConfiguration) {
+        @CustomType.Parameter("appInsightsEnabled") @Nullable Boolean appInsightsEnabled,
+        @CustomType.Parameter("authEnabled") @Nullable Boolean authEnabled,
+        @CustomType.Parameter("cname") @Nullable String cname,
+        @CustomType.Parameter("computeType") String computeType,
+        @CustomType.Parameter("containerResourceRequirements") @Nullable ContainerResourceRequirementsResponse containerResourceRequirements,
+        @CustomType.Parameter("dataCollection") @Nullable ACIServiceResponseResponseDataCollection dataCollection,
+        @CustomType.Parameter("deploymentType") @Nullable String deploymentType,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("encryptionProperties") @Nullable ACIServiceResponseResponseEncryptionProperties encryptionProperties,
+        @CustomType.Parameter("environmentImageRequest") @Nullable ACIServiceResponseResponseEnvironmentImageRequest environmentImageRequest,
+        @CustomType.Parameter("error") ServiceResponseBaseResponseError error,
+        @CustomType.Parameter("kvTags") @Nullable Map<String,String> kvTags,
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("modelConfigMap") Map<String,Object> modelConfigMap,
+        @CustomType.Parameter("models") @Nullable List<ModelResponse> models,
+        @CustomType.Parameter("properties") @Nullable Map<String,String> properties,
+        @CustomType.Parameter("publicFqdn") @Nullable String publicFqdn,
+        @CustomType.Parameter("publicIp") @Nullable String publicIp,
+        @CustomType.Parameter("scoringUri") String scoringUri,
+        @CustomType.Parameter("sslCertificate") @Nullable String sslCertificate,
+        @CustomType.Parameter("sslEnabled") @Nullable Boolean sslEnabled,
+        @CustomType.Parameter("sslKey") @Nullable String sslKey,
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("swaggerUri") String swaggerUri,
+        @CustomType.Parameter("vnetConfiguration") @Nullable ACIServiceResponseResponseVnetConfiguration vnetConfiguration) {
         this.appInsightsEnabled = appInsightsEnabled;
         this.authEnabled = authEnabled;
         this.cname = cname;

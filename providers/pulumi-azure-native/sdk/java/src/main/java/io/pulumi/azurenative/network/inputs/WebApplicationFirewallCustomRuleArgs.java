@@ -8,7 +8,7 @@ import io.pulumi.azurenative.network.enums.WebApplicationFirewallRuleType;
 import io.pulumi.azurenative.network.inputs.MatchConditionArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -28,7 +28,7 @@ public final class WebApplicationFirewallCustomRuleArgs extends io.pulumi.resour
      * Type of Actions.
      * 
      */
-    @InputImport(name="action", required=true)
+    @Import(name="action", required=true)
       private final Output<Either<String,WebApplicationFirewallAction>> action;
 
     public Output<Either<String,WebApplicationFirewallAction>> getAction() {
@@ -39,7 +39,7 @@ public final class WebApplicationFirewallCustomRuleArgs extends io.pulumi.resour
      * List of match conditions.
      * 
      */
-    @InputImport(name="matchConditions", required=true)
+    @Import(name="matchConditions", required=true)
       private final Output<List<MatchConditionArgs>> matchConditions;
 
     public Output<List<MatchConditionArgs>> getMatchConditions() {
@@ -50,7 +50,7 @@ public final class WebApplicationFirewallCustomRuleArgs extends io.pulumi.resour
      * The name of the resource that is unique within a policy. This name can be used to access the resource.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -61,7 +61,7 @@ public final class WebApplicationFirewallCustomRuleArgs extends io.pulumi.resour
      * Priority of the rule. Rules with a lower value will be evaluated before rules with a higher value.
      * 
      */
-    @InputImport(name="priority", required=true)
+    @Import(name="priority", required=true)
       private final Output<Integer> priority;
 
     public Output<Integer> getPriority() {
@@ -72,7 +72,7 @@ public final class WebApplicationFirewallCustomRuleArgs extends io.pulumi.resour
      * The rule type.
      * 
      */
-    @InputImport(name="ruleType", required=true)
+    @Import(name="ruleType", required=true)
       private final Output<Either<String,WebApplicationFirewallRuleType>> ruleType;
 
     public Output<Either<String,WebApplicationFirewallRuleType>> getRuleType() {

@@ -8,7 +8,7 @@ import io.pulumi.azurenative.automation.inputs.SUCSchedulePropertiesArgs;
 import io.pulumi.azurenative.automation.inputs.SoftwareUpdateConfigurationTasksArgs;
 import io.pulumi.azurenative.automation.inputs.UpdateConfigurationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class SoftwareUpdateConfigurationByNameArgs extends io.pulumi.resou
      * The name of the automation account.
      * 
      */
-    @InputImport(name="automationAccountName", required=true)
+    @Import(name="automationAccountName", required=true)
       private final Output<String> automationAccountName;
 
     public Output<String> getAutomationAccountName() {
@@ -33,7 +33,7 @@ public final class SoftwareUpdateConfigurationByNameArgs extends io.pulumi.resou
      * Details of provisioning error
      * 
      */
-    @InputImport(name="error")
+    @Import(name="error")
       private final @Nullable Output<ErrorResponseArgs> error;
 
     public Output<ErrorResponseArgs> getError() {
@@ -44,7 +44,7 @@ public final class SoftwareUpdateConfigurationByNameArgs extends io.pulumi.resou
      * Name of an Azure Resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -55,7 +55,7 @@ public final class SoftwareUpdateConfigurationByNameArgs extends io.pulumi.resou
      * Schedule information for the Software update configuration
      * 
      */
-    @InputImport(name="scheduleInfo", required=true)
+    @Import(name="scheduleInfo", required=true)
       private final Output<SUCSchedulePropertiesArgs> scheduleInfo;
 
     public Output<SUCSchedulePropertiesArgs> getScheduleInfo() {
@@ -66,7 +66,7 @@ public final class SoftwareUpdateConfigurationByNameArgs extends io.pulumi.resou
      * The name of the software update configuration to be created.
      * 
      */
-    @InputImport(name="softwareUpdateConfigurationName")
+    @Import(name="softwareUpdateConfigurationName")
       private final @Nullable Output<String> softwareUpdateConfigurationName;
 
     public Output<String> getSoftwareUpdateConfigurationName() {
@@ -77,7 +77,7 @@ public final class SoftwareUpdateConfigurationByNameArgs extends io.pulumi.resou
      * Tasks information for the Software update configuration.
      * 
      */
-    @InputImport(name="tasks")
+    @Import(name="tasks")
       private final @Nullable Output<SoftwareUpdateConfigurationTasksArgs> tasks;
 
     public Output<SoftwareUpdateConfigurationTasksArgs> getTasks() {
@@ -88,7 +88,7 @@ public final class SoftwareUpdateConfigurationByNameArgs extends io.pulumi.resou
      * update specific properties for the Software update configuration
      * 
      */
-    @InputImport(name="updateConfiguration", required=true)
+    @Import(name="updateConfiguration", required=true)
       private final Output<UpdateConfigurationArgs> updateConfiguration;
 
     public Output<UpdateConfigurationArgs> getUpdateConfiguration() {

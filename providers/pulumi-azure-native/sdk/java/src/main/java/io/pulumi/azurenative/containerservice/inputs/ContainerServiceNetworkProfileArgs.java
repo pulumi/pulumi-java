@@ -11,7 +11,7 @@ import io.pulumi.azurenative.containerservice.enums.OutboundType;
 import io.pulumi.azurenative.containerservice.inputs.ManagedClusterLoadBalancerProfileArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -29,7 +29,7 @@ public final class ContainerServiceNetworkProfileArgs extends io.pulumi.resource
      * An IP address assigned to the Kubernetes DNS service. It must be within the Kubernetes service address range specified in serviceCidr.
      * 
      */
-    @InputImport(name="dnsServiceIP")
+    @Import(name="dnsServiceIP")
       private final @Nullable Output<String> dnsServiceIP;
 
     public Output<String> getDnsServiceIP() {
@@ -40,7 +40,7 @@ public final class ContainerServiceNetworkProfileArgs extends io.pulumi.resource
      * A CIDR notation IP range assigned to the Docker bridge network. It must not overlap with any Subnet IP ranges or the Kubernetes service address range.
      * 
      */
-    @InputImport(name="dockerBridgeCidr")
+    @Import(name="dockerBridgeCidr")
       private final @Nullable Output<String> dockerBridgeCidr;
 
     public Output<String> getDockerBridgeCidr() {
@@ -51,7 +51,7 @@ public final class ContainerServiceNetworkProfileArgs extends io.pulumi.resource
      * Profile of the cluster load balancer.
      * 
      */
-    @InputImport(name="loadBalancerProfile")
+    @Import(name="loadBalancerProfile")
       private final @Nullable Output<ManagedClusterLoadBalancerProfileArgs> loadBalancerProfile;
 
     public Output<ManagedClusterLoadBalancerProfileArgs> getLoadBalancerProfile() {
@@ -62,7 +62,7 @@ public final class ContainerServiceNetworkProfileArgs extends io.pulumi.resource
      * The load balancer sku for the managed cluster.
      * 
      */
-    @InputImport(name="loadBalancerSku")
+    @Import(name="loadBalancerSku")
       private final @Nullable Output<Either<String,LoadBalancerSku>> loadBalancerSku;
 
     public Output<Either<String,LoadBalancerSku>> getLoadBalancerSku() {
@@ -73,7 +73,7 @@ public final class ContainerServiceNetworkProfileArgs extends io.pulumi.resource
      * Network mode used for building Kubernetes network.
      * 
      */
-    @InputImport(name="networkMode")
+    @Import(name="networkMode")
       private final @Nullable Output<Either<String,NetworkMode>> networkMode;
 
     public Output<Either<String,NetworkMode>> getNetworkMode() {
@@ -84,7 +84,7 @@ public final class ContainerServiceNetworkProfileArgs extends io.pulumi.resource
      * Network plugin used for building Kubernetes network.
      * 
      */
-    @InputImport(name="networkPlugin")
+    @Import(name="networkPlugin")
       private final @Nullable Output<Either<String,NetworkPlugin>> networkPlugin;
 
     public Output<Either<String,NetworkPlugin>> getNetworkPlugin() {
@@ -95,7 +95,7 @@ public final class ContainerServiceNetworkProfileArgs extends io.pulumi.resource
      * Network policy used for building Kubernetes network.
      * 
      */
-    @InputImport(name="networkPolicy")
+    @Import(name="networkPolicy")
       private final @Nullable Output<Either<String,NetworkPolicy>> networkPolicy;
 
     public Output<Either<String,NetworkPolicy>> getNetworkPolicy() {
@@ -106,7 +106,7 @@ public final class ContainerServiceNetworkProfileArgs extends io.pulumi.resource
      * The outbound (egress) routing method.
      * 
      */
-    @InputImport(name="outboundType")
+    @Import(name="outboundType")
       private final @Nullable Output<Either<String,OutboundType>> outboundType;
 
     public Output<Either<String,OutboundType>> getOutboundType() {
@@ -117,7 +117,7 @@ public final class ContainerServiceNetworkProfileArgs extends io.pulumi.resource
      * A CIDR notation IP range from which to assign pod IPs when kubenet is used.
      * 
      */
-    @InputImport(name="podCidr")
+    @Import(name="podCidr")
       private final @Nullable Output<String> podCidr;
 
     public Output<String> getPodCidr() {
@@ -128,7 +128,7 @@ public final class ContainerServiceNetworkProfileArgs extends io.pulumi.resource
      * A CIDR notation IP range from which to assign service cluster IPs. It must not overlap with any Subnet IP ranges.
      * 
      */
-    @InputImport(name="serviceCidr")
+    @Import(name="serviceCidr")
       private final @Nullable Output<String> serviceCidr;
 
     public Output<String> getServiceCidr() {

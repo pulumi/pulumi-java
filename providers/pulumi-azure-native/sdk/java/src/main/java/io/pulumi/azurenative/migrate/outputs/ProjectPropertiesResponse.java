@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.migrate.outputs;
 
 import io.pulumi.azurenative.migrate.outputs.PrivateEndpointConnectionResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ProjectPropertiesResponse {
     /**
      * Assessment solution ARM id tracked by Microsoft.Migrate/migrateProjects.
@@ -90,23 +90,23 @@ public final class ProjectPropertiesResponse {
      */
     private final String updatedTimestamp;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ProjectPropertiesResponse(
-        @OutputCustomType.Parameter("assessmentSolutionId") @Nullable String assessmentSolutionId,
-        @OutputCustomType.Parameter("createdTimestamp") String createdTimestamp,
-        @OutputCustomType.Parameter("customerStorageAccountArmId") @Nullable String customerStorageAccountArmId,
-        @OutputCustomType.Parameter("customerWorkspaceId") @Nullable String customerWorkspaceId,
-        @OutputCustomType.Parameter("customerWorkspaceLocation") @Nullable String customerWorkspaceLocation,
-        @OutputCustomType.Parameter("lastAssessmentTimestamp") String lastAssessmentTimestamp,
-        @OutputCustomType.Parameter("numberOfAssessments") Integer numberOfAssessments,
-        @OutputCustomType.Parameter("numberOfGroups") Integer numberOfGroups,
-        @OutputCustomType.Parameter("numberOfMachines") Integer numberOfMachines,
-        @OutputCustomType.Parameter("privateEndpointConnections") List<PrivateEndpointConnectionResponse> privateEndpointConnections,
-        @OutputCustomType.Parameter("projectStatus") @Nullable String projectStatus,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("publicNetworkAccess") @Nullable String publicNetworkAccess,
-        @OutputCustomType.Parameter("serviceEndpoint") String serviceEndpoint,
-        @OutputCustomType.Parameter("updatedTimestamp") String updatedTimestamp) {
+        @CustomType.Parameter("assessmentSolutionId") @Nullable String assessmentSolutionId,
+        @CustomType.Parameter("createdTimestamp") String createdTimestamp,
+        @CustomType.Parameter("customerStorageAccountArmId") @Nullable String customerStorageAccountArmId,
+        @CustomType.Parameter("customerWorkspaceId") @Nullable String customerWorkspaceId,
+        @CustomType.Parameter("customerWorkspaceLocation") @Nullable String customerWorkspaceLocation,
+        @CustomType.Parameter("lastAssessmentTimestamp") String lastAssessmentTimestamp,
+        @CustomType.Parameter("numberOfAssessments") Integer numberOfAssessments,
+        @CustomType.Parameter("numberOfGroups") Integer numberOfGroups,
+        @CustomType.Parameter("numberOfMachines") Integer numberOfMachines,
+        @CustomType.Parameter("privateEndpointConnections") List<PrivateEndpointConnectionResponse> privateEndpointConnections,
+        @CustomType.Parameter("projectStatus") @Nullable String projectStatus,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("publicNetworkAccess") @Nullable String publicNetworkAccess,
+        @CustomType.Parameter("serviceEndpoint") String serviceEndpoint,
+        @CustomType.Parameter("updatedTimestamp") String updatedTimestamp) {
         this.assessmentSolutionId = assessmentSolutionId;
         this.createdTimestamp = createdTimestamp;
         this.customerStorageAccountArmId = customerStorageAccountArmId;

@@ -8,7 +8,7 @@ import io.pulumi.azurenative.datafactory.inputs.IntegrationRuntimeReferenceRespo
 import io.pulumi.azurenative.datafactory.inputs.ParameterSpecificationResponse;
 import io.pulumi.azurenative.datafactory.inputs.SecureStringResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -30,7 +30,7 @@ public final class SapHanaLinkedServiceResponse extends io.pulumi.resources.Invo
      * List of tags that can be used for describing the linked service.
      * 
      */
-    @InputImport(name="annotations")
+    @Import(name="annotations")
       private final @Nullable List<Object> annotations;
 
     public List<Object> getAnnotations() {
@@ -41,7 +41,7 @@ public final class SapHanaLinkedServiceResponse extends io.pulumi.resources.Invo
      * The authentication type to be used to connect to the SAP HANA server.
      * 
      */
-    @InputImport(name="authenticationType")
+    @Import(name="authenticationType")
       private final @Nullable String authenticationType;
 
     public Optional<String> getAuthenticationType() {
@@ -52,7 +52,7 @@ public final class SapHanaLinkedServiceResponse extends io.pulumi.resources.Invo
      * The integration runtime reference.
      * 
      */
-    @InputImport(name="connectVia")
+    @Import(name="connectVia")
       private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
     public Optional<IntegrationRuntimeReferenceResponse> getConnectVia() {
@@ -63,7 +63,7 @@ public final class SapHanaLinkedServiceResponse extends io.pulumi.resources.Invo
      * SAP HANA ODBC connection string. Type: string, SecureString or AzureKeyVaultSecretReference.
      * 
      */
-    @InputImport(name="connectionString")
+    @Import(name="connectionString")
       private final @Nullable Object connectionString;
 
     public Optional<Object> getConnectionString() {
@@ -74,7 +74,7 @@ public final class SapHanaLinkedServiceResponse extends io.pulumi.resources.Invo
      * Linked service description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable String description;
 
     public Optional<String> getDescription() {
@@ -85,7 +85,7 @@ public final class SapHanaLinkedServiceResponse extends io.pulumi.resources.Invo
      * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="encryptedCredential")
+    @Import(name="encryptedCredential")
       private final @Nullable Object encryptedCredential;
 
     public Optional<Object> getEncryptedCredential() {
@@ -96,7 +96,7 @@ public final class SapHanaLinkedServiceResponse extends io.pulumi.resources.Invo
      * Parameters for linked service.
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
     public Map<String,ParameterSpecificationResponse> getParameters() {
@@ -107,7 +107,7 @@ public final class SapHanaLinkedServiceResponse extends io.pulumi.resources.Invo
      * Password to access the SAP HANA server.
      * 
      */
-    @InputImport(name="password")
+    @Import(name="password")
       private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
 
     public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> getPassword() {
@@ -118,7 +118,7 @@ public final class SapHanaLinkedServiceResponse extends io.pulumi.resources.Invo
      * Host name of the SAP HANA server. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="server")
+    @Import(name="server")
       private final @Nullable Object server;
 
     public Optional<Object> getServer() {
@@ -130,7 +130,7 @@ public final class SapHanaLinkedServiceResponse extends io.pulumi.resources.Invo
      * Expected value is 'SapHana'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {
@@ -141,7 +141,7 @@ public final class SapHanaLinkedServiceResponse extends io.pulumi.resources.Invo
      * Username to access the SAP HANA server. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="userName")
+    @Import(name="userName")
       private final @Nullable Object userName;
 
     public Optional<Object> getUserName() {

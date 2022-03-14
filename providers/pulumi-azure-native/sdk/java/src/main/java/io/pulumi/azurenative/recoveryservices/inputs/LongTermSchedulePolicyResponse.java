@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class LongTermSchedulePolicyResponse extends io.pulumi.resources.In
      * Expected value is 'LongTermSchedulePolicy'.
      * 
      */
-    @InputImport(name="schedulePolicyType", required=true)
+    @Import(name="schedulePolicyType", required=true)
       private final String schedulePolicyType;
 
     public String getSchedulePolicyType() {

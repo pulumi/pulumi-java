@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.documentdb.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ExcludedPathResponse {
     /**
      * The path for which the indexing behavior applies to. Index paths typically start with root and end with wildcard (/path/*)
@@ -17,8 +17,8 @@ public final class ExcludedPathResponse {
      */
     private final @Nullable String path;
 
-    @OutputCustomType.Constructor
-    private ExcludedPathResponse(@OutputCustomType.Parameter("path") @Nullable String path) {
+    @CustomType.Constructor
+    private ExcludedPathResponse(@CustomType.Parameter("path") @Nullable String path) {
         this.path = path;
     }
 

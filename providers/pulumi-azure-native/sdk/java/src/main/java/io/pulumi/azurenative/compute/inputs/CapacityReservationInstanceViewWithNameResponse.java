@@ -5,7 +5,7 @@ package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.azurenative.compute.inputs.CapacityReservationUtilizationResponse;
 import io.pulumi.azurenative.compute.inputs.InstanceViewStatusResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class CapacityReservationInstanceViewWithNameResponse extends io.pu
      * The name of the capacity reservation.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -36,7 +36,7 @@ public final class CapacityReservationInstanceViewWithNameResponse extends io.pu
      * The resource status information.
      * 
      */
-    @InputImport(name="statuses")
+    @Import(name="statuses")
       private final @Nullable List<InstanceViewStatusResponse> statuses;
 
     public List<InstanceViewStatusResponse> getStatuses() {
@@ -47,7 +47,7 @@ public final class CapacityReservationInstanceViewWithNameResponse extends io.pu
      * Unutilized capacity of the capacity reservation.
      * 
      */
-    @InputImport(name="utilizationInfo")
+    @Import(name="utilizationInfo")
       private final @Nullable CapacityReservationUtilizationResponse utilizationInfo;
 
     public Optional<CapacityReservationUtilizationResponse> getUtilizationInfo() {

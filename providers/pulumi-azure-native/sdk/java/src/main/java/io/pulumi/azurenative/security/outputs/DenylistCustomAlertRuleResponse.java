@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.security.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DenylistCustomAlertRuleResponse {
     /**
      * The values to deny. The format of the values depends on the rule type.
@@ -43,14 +43,14 @@ public final class DenylistCustomAlertRuleResponse {
      */
     private final String valueType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DenylistCustomAlertRuleResponse(
-        @OutputCustomType.Parameter("denylistValues") List<String> denylistValues,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("isEnabled") Boolean isEnabled,
-        @OutputCustomType.Parameter("ruleType") String ruleType,
-        @OutputCustomType.Parameter("valueType") String valueType) {
+        @CustomType.Parameter("denylistValues") List<String> denylistValues,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("isEnabled") Boolean isEnabled,
+        @CustomType.Parameter("ruleType") String ruleType,
+        @CustomType.Parameter("valueType") String valueType) {
         this.denylistValues = denylistValues;
         this.description = description;
         this.displayName = displayName;

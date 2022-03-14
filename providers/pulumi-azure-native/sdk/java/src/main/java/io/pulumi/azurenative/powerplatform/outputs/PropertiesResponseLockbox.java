@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.powerplatform.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PropertiesResponseLockbox {
     /**
      * lockbox configuration
@@ -17,8 +17,8 @@ public final class PropertiesResponseLockbox {
      */
     private final @Nullable String state;
 
-    @OutputCustomType.Constructor
-    private PropertiesResponseLockbox(@OutputCustomType.Parameter("state") @Nullable String state) {
+    @CustomType.Constructor
+    private PropertiesResponseLockbox(@CustomType.Parameter("state") @Nullable String state) {
         this.state = state;
     }
 

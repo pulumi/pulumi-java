@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.apimanagement.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetApiManagementServiceDomainOwnershipIdentifierResult {
     /**
      * The domain ownership identifier value.
@@ -15,8 +15,8 @@ public final class GetApiManagementServiceDomainOwnershipIdentifierResult {
      */
     private final String domainOwnershipIdentifier;
 
-    @OutputCustomType.Constructor
-    private GetApiManagementServiceDomainOwnershipIdentifierResult(@OutputCustomType.Parameter("domainOwnershipIdentifier") String domainOwnershipIdentifier) {
+    @CustomType.Constructor
+    private GetApiManagementServiceDomainOwnershipIdentifierResult(@CustomType.Parameter("domainOwnershipIdentifier") String domainOwnershipIdentifier) {
         this.domainOwnershipIdentifier = domainOwnershipIdentifier;
     }
 

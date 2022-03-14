@@ -8,7 +8,7 @@ import io.pulumi.azurenative.containerregistry.inputs.ArgumentArgs;
 import io.pulumi.azurenative.containerregistry.inputs.CredentialsArgs;
 import io.pulumi.azurenative.containerregistry.inputs.PlatformPropertiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -29,7 +29,7 @@ public final class DockerBuildRequestArgs extends io.pulumi.resources.ResourceAr
      * The machine configuration of the run agent.
      * 
      */
-    @InputImport(name="agentConfiguration")
+    @Import(name="agentConfiguration")
       private final @Nullable Output<AgentPropertiesArgs> agentConfiguration;
 
     public Output<AgentPropertiesArgs> getAgentConfiguration() {
@@ -40,7 +40,7 @@ public final class DockerBuildRequestArgs extends io.pulumi.resources.ResourceAr
      * The dedicated agent pool for the run.
      * 
      */
-    @InputImport(name="agentPoolName")
+    @Import(name="agentPoolName")
       private final @Nullable Output<String> agentPoolName;
 
     public Output<String> getAgentPoolName() {
@@ -51,7 +51,7 @@ public final class DockerBuildRequestArgs extends io.pulumi.resources.ResourceAr
      * The collection of override arguments to be used when executing the run.
      * 
      */
-    @InputImport(name="arguments")
+    @Import(name="arguments")
       private final @Nullable Output<List<ArgumentArgs>> arguments;
 
     public Output<List<ArgumentArgs>> getArguments() {
@@ -62,7 +62,7 @@ public final class DockerBuildRequestArgs extends io.pulumi.resources.ResourceAr
      * The properties that describes a set of credentials that will be used when this run is invoked.
      * 
      */
-    @InputImport(name="credentials")
+    @Import(name="credentials")
       private final @Nullable Output<CredentialsArgs> credentials;
 
     public Output<CredentialsArgs> getCredentials() {
@@ -73,7 +73,7 @@ public final class DockerBuildRequestArgs extends io.pulumi.resources.ResourceAr
      * The Docker file path relative to the source location.
      * 
      */
-    @InputImport(name="dockerFilePath", required=true)
+    @Import(name="dockerFilePath", required=true)
       private final Output<String> dockerFilePath;
 
     public Output<String> getDockerFilePath() {
@@ -84,7 +84,7 @@ public final class DockerBuildRequestArgs extends io.pulumi.resources.ResourceAr
      * The fully qualified image names including the repository and tag.
      * 
      */
-    @InputImport(name="imageNames")
+    @Import(name="imageNames")
       private final @Nullable Output<List<String>> imageNames;
 
     public Output<List<String>> getImageNames() {
@@ -95,7 +95,7 @@ public final class DockerBuildRequestArgs extends io.pulumi.resources.ResourceAr
      * The value that indicates whether archiving is enabled for the run or not.
      * 
      */
-    @InputImport(name="isArchiveEnabled")
+    @Import(name="isArchiveEnabled")
       private final @Nullable Output<Boolean> isArchiveEnabled;
 
     public Output<Boolean> getIsArchiveEnabled() {
@@ -106,7 +106,7 @@ public final class DockerBuildRequestArgs extends io.pulumi.resources.ResourceAr
      * The value of this property indicates whether the image built should be pushed to the registry or not.
      * 
      */
-    @InputImport(name="isPushEnabled")
+    @Import(name="isPushEnabled")
       private final @Nullable Output<Boolean> isPushEnabled;
 
     public Output<Boolean> getIsPushEnabled() {
@@ -117,7 +117,7 @@ public final class DockerBuildRequestArgs extends io.pulumi.resources.ResourceAr
      * The template that describes the repository and tag information for run log artifact.
      * 
      */
-    @InputImport(name="logTemplate")
+    @Import(name="logTemplate")
       private final @Nullable Output<String> logTemplate;
 
     public Output<String> getLogTemplate() {
@@ -128,7 +128,7 @@ public final class DockerBuildRequestArgs extends io.pulumi.resources.ResourceAr
      * The value of this property indicates whether the image cache is enabled or not.
      * 
      */
-    @InputImport(name="noCache")
+    @Import(name="noCache")
       private final @Nullable Output<Boolean> noCache;
 
     public Output<Boolean> getNoCache() {
@@ -139,7 +139,7 @@ public final class DockerBuildRequestArgs extends io.pulumi.resources.ResourceAr
      * The platform properties against which the run has to happen.
      * 
      */
-    @InputImport(name="platform", required=true)
+    @Import(name="platform", required=true)
       private final Output<PlatformPropertiesArgs> platform;
 
     public Output<PlatformPropertiesArgs> getPlatform() {
@@ -151,7 +151,7 @@ public final class DockerBuildRequestArgs extends io.pulumi.resources.ResourceAr
      * If it is relative URL, the relative path should be obtained from calling listBuildSourceUploadUrl API.
      * 
      */
-    @InputImport(name="sourceLocation")
+    @Import(name="sourceLocation")
       private final @Nullable Output<String> sourceLocation;
 
     public Output<String> getSourceLocation() {
@@ -162,7 +162,7 @@ public final class DockerBuildRequestArgs extends io.pulumi.resources.ResourceAr
      * The name of the target build stage for the docker build.
      * 
      */
-    @InputImport(name="target")
+    @Import(name="target")
       private final @Nullable Output<String> target;
 
     public Output<String> getTarget() {
@@ -173,7 +173,7 @@ public final class DockerBuildRequestArgs extends io.pulumi.resources.ResourceAr
      * Run timeout in seconds.
      * 
      */
-    @InputImport(name="timeout")
+    @Import(name="timeout")
       private final @Nullable Output<Integer> timeout;
 
     public Output<Integer> getTimeout() {
@@ -185,7 +185,7 @@ public final class DockerBuildRequestArgs extends io.pulumi.resources.ResourceAr
      * Expected value is 'DockerBuildRequest'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {

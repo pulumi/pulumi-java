@@ -8,7 +8,7 @@ import io.pulumi.azurenative.customerinsights.HubArgs;
 import io.pulumi.azurenative.customerinsights.outputs.HubBillingInfoFormatResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -37,7 +37,7 @@ public class Hub extends io.pulumi.resources.CustomResource {
      * API endpoint URL of the hub.
      * 
      */
-    @OutputExport(name="apiEndpoint", type=String.class, parameters={})
+    @Export(name="apiEndpoint", type=String.class, parameters={})
     private Output<String> apiEndpoint;
 
     /**
@@ -51,7 +51,7 @@ public class Hub extends io.pulumi.resources.CustomResource {
      * Billing settings of the hub.
      * 
      */
-    @OutputExport(name="hubBillingInfo", type=HubBillingInfoFormatResponse.class, parameters={})
+    @Export(name="hubBillingInfo", type=HubBillingInfoFormatResponse.class, parameters={})
     private Output</* @Nullable */ HubBillingInfoFormatResponse> hubBillingInfo;
 
     /**
@@ -65,7 +65,7 @@ public class Hub extends io.pulumi.resources.CustomResource {
      * Resource location.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -79,7 +79,7 @@ public class Hub extends io.pulumi.resources.CustomResource {
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -93,7 +93,7 @@ public class Hub extends io.pulumi.resources.CustomResource {
      * Provisioning state of the hub.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -107,7 +107,7 @@ public class Hub extends io.pulumi.resources.CustomResource {
      * Resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -121,7 +121,7 @@ public class Hub extends io.pulumi.resources.CustomResource {
      * The bit flags for enabled hub features. Bit 0 is set to 1 indicates graph is enabled, or disabled if set to 0. Bit 1 is set to 1 indicates the hub is disabled, or enabled if set to 0.
      * 
      */
-    @OutputExport(name="tenantFeatures", type=Integer.class, parameters={})
+    @Export(name="tenantFeatures", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> tenantFeatures;
 
     /**
@@ -135,7 +135,7 @@ public class Hub extends io.pulumi.resources.CustomResource {
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -149,7 +149,7 @@ public class Hub extends io.pulumi.resources.CustomResource {
      * Web endpoint URL of the hub.
      * 
      */
-    @OutputExport(name="webEndpoint", type=String.class, parameters={})
+    @Export(name="webEndpoint", type=String.class, parameters={})
     private Output<String> webEndpoint;
 
     /**

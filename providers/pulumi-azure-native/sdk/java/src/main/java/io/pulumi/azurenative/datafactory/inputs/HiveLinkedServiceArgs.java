@@ -12,7 +12,7 @@ import io.pulumi.azurenative.datafactory.inputs.ParameterSpecificationArgs;
 import io.pulumi.azurenative.datafactory.inputs.SecureStringArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -33,7 +33,7 @@ public final class HiveLinkedServiceArgs extends io.pulumi.resources.ResourceArg
      * Specifies whether to require a CA-issued SSL certificate name to match the host name of the server when connecting over SSL. The default value is false.
      * 
      */
-    @InputImport(name="allowHostNameCNMismatch")
+    @Import(name="allowHostNameCNMismatch")
       private final @Nullable Output<Object> allowHostNameCNMismatch;
 
     public Output<Object> getAllowHostNameCNMismatch() {
@@ -44,7 +44,7 @@ public final class HiveLinkedServiceArgs extends io.pulumi.resources.ResourceArg
      * Specifies whether to allow self-signed certificates from the server. The default value is false.
      * 
      */
-    @InputImport(name="allowSelfSignedServerCert")
+    @Import(name="allowSelfSignedServerCert")
       private final @Nullable Output<Object> allowSelfSignedServerCert;
 
     public Output<Object> getAllowSelfSignedServerCert() {
@@ -55,7 +55,7 @@ public final class HiveLinkedServiceArgs extends io.pulumi.resources.ResourceArg
      * List of tags that can be used for describing the linked service.
      * 
      */
-    @InputImport(name="annotations")
+    @Import(name="annotations")
       private final @Nullable Output<List<Object>> annotations;
 
     public Output<List<Object>> getAnnotations() {
@@ -66,7 +66,7 @@ public final class HiveLinkedServiceArgs extends io.pulumi.resources.ResourceArg
      * The authentication method used to access the Hive server.
      * 
      */
-    @InputImport(name="authenticationType", required=true)
+    @Import(name="authenticationType", required=true)
       private final Output<Either<String,HiveAuthenticationType>> authenticationType;
 
     public Output<Either<String,HiveAuthenticationType>> getAuthenticationType() {
@@ -77,7 +77,7 @@ public final class HiveLinkedServiceArgs extends io.pulumi.resources.ResourceArg
      * The integration runtime reference.
      * 
      */
-    @InputImport(name="connectVia")
+    @Import(name="connectVia")
       private final @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
 
     public Output<IntegrationRuntimeReferenceArgs> getConnectVia() {
@@ -88,7 +88,7 @@ public final class HiveLinkedServiceArgs extends io.pulumi.resources.ResourceArg
      * Linked service description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -99,7 +99,7 @@ public final class HiveLinkedServiceArgs extends io.pulumi.resources.ResourceArg
      * Specifies whether the connections to the server are encrypted using SSL. The default value is false.
      * 
      */
-    @InputImport(name="enableSsl")
+    @Import(name="enableSsl")
       private final @Nullable Output<Object> enableSsl;
 
     public Output<Object> getEnableSsl() {
@@ -110,7 +110,7 @@ public final class HiveLinkedServiceArgs extends io.pulumi.resources.ResourceArg
      * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="encryptedCredential")
+    @Import(name="encryptedCredential")
       private final @Nullable Output<Object> encryptedCredential;
 
     public Output<Object> getEncryptedCredential() {
@@ -121,7 +121,7 @@ public final class HiveLinkedServiceArgs extends io.pulumi.resources.ResourceArg
      * IP address or host name of the Hive server, separated by ';' for multiple hosts (only when serviceDiscoveryMode is enable).
      * 
      */
-    @InputImport(name="host", required=true)
+    @Import(name="host", required=true)
       private final Output<Object> host;
 
     public Output<Object> getHost() {
@@ -132,7 +132,7 @@ public final class HiveLinkedServiceArgs extends io.pulumi.resources.ResourceArg
      * The partial URL corresponding to the Hive server.
      * 
      */
-    @InputImport(name="httpPath")
+    @Import(name="httpPath")
       private final @Nullable Output<Object> httpPath;
 
     public Output<Object> getHttpPath() {
@@ -143,7 +143,7 @@ public final class HiveLinkedServiceArgs extends io.pulumi.resources.ResourceArg
      * Parameters for linked service.
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
     public Output<Map<String,ParameterSpecificationArgs>> getParameters() {
@@ -154,7 +154,7 @@ public final class HiveLinkedServiceArgs extends io.pulumi.resources.ResourceArg
      * The password corresponding to the user name that you provided in the Username field
      * 
      */
-    @InputImport(name="password")
+    @Import(name="password")
       private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
 
     public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getPassword() {
@@ -165,7 +165,7 @@ public final class HiveLinkedServiceArgs extends io.pulumi.resources.ResourceArg
      * The TCP port that the Hive server uses to listen for client connections.
      * 
      */
-    @InputImport(name="port")
+    @Import(name="port")
       private final @Nullable Output<Object> port;
 
     public Output<Object> getPort() {
@@ -176,7 +176,7 @@ public final class HiveLinkedServiceArgs extends io.pulumi.resources.ResourceArg
      * The type of Hive server.
      * 
      */
-    @InputImport(name="serverType")
+    @Import(name="serverType")
       private final @Nullable Output<Either<String,HiveServerType>> serverType;
 
     public Output<Either<String,HiveServerType>> getServerType() {
@@ -187,7 +187,7 @@ public final class HiveLinkedServiceArgs extends io.pulumi.resources.ResourceArg
      * true to indicate using the ZooKeeper service, false not.
      * 
      */
-    @InputImport(name="serviceDiscoveryMode")
+    @Import(name="serviceDiscoveryMode")
       private final @Nullable Output<Object> serviceDiscoveryMode;
 
     public Output<Object> getServiceDiscoveryMode() {
@@ -198,7 +198,7 @@ public final class HiveLinkedServiceArgs extends io.pulumi.resources.ResourceArg
      * The transport protocol to use in the Thrift layer.
      * 
      */
-    @InputImport(name="thriftTransportProtocol")
+    @Import(name="thriftTransportProtocol")
       private final @Nullable Output<Either<String,HiveThriftTransportProtocol>> thriftTransportProtocol;
 
     public Output<Either<String,HiveThriftTransportProtocol>> getThriftTransportProtocol() {
@@ -209,7 +209,7 @@ public final class HiveLinkedServiceArgs extends io.pulumi.resources.ResourceArg
      * The full path of the .pem file containing trusted CA certificates for verifying the server when connecting over SSL. This property can only be set when using SSL on self-hosted IR. The default value is the cacerts.pem file installed with the IR.
      * 
      */
-    @InputImport(name="trustedCertPath")
+    @Import(name="trustedCertPath")
       private final @Nullable Output<Object> trustedCertPath;
 
     public Output<Object> getTrustedCertPath() {
@@ -221,7 +221,7 @@ public final class HiveLinkedServiceArgs extends io.pulumi.resources.ResourceArg
      * Expected value is 'Hive'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {
@@ -232,7 +232,7 @@ public final class HiveLinkedServiceArgs extends io.pulumi.resources.ResourceArg
      * Specifies whether the driver uses native HiveQL queries,or converts them into an equivalent form in HiveQL.
      * 
      */
-    @InputImport(name="useNativeQuery")
+    @Import(name="useNativeQuery")
       private final @Nullable Output<Object> useNativeQuery;
 
     public Output<Object> getUseNativeQuery() {
@@ -243,7 +243,7 @@ public final class HiveLinkedServiceArgs extends io.pulumi.resources.ResourceArg
      * Specifies whether to use a CA certificate from the system trust store or from a specified PEM file. The default value is false.
      * 
      */
-    @InputImport(name="useSystemTrustStore")
+    @Import(name="useSystemTrustStore")
       private final @Nullable Output<Object> useSystemTrustStore;
 
     public Output<Object> getUseSystemTrustStore() {
@@ -254,7 +254,7 @@ public final class HiveLinkedServiceArgs extends io.pulumi.resources.ResourceArg
      * The user name that you use to access Hive Server.
      * 
      */
-    @InputImport(name="username")
+    @Import(name="username")
       private final @Nullable Output<Object> username;
 
     public Output<Object> getUsername() {
@@ -265,7 +265,7 @@ public final class HiveLinkedServiceArgs extends io.pulumi.resources.ResourceArg
      * The namespace on ZooKeeper under which Hive Server 2 nodes are added.
      * 
      */
-    @InputImport(name="zooKeeperNameSpace")
+    @Import(name="zooKeeperNameSpace")
       private final @Nullable Output<Object> zooKeeperNameSpace;
 
     public Output<Object> getZooKeeperNameSpace() {

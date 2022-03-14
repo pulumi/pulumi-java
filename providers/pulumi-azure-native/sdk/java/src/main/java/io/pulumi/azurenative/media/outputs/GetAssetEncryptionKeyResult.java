@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.media.outputs;
 
 import io.pulumi.azurenative.media.outputs.AssetFileEncryptionMetadataResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetAssetEncryptionKeyResult {
     /**
      * Asset File encryption metadata.
@@ -24,10 +24,10 @@ public final class GetAssetEncryptionKeyResult {
      */
     private final @Nullable String key;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetAssetEncryptionKeyResult(
-        @OutputCustomType.Parameter("assetFileEncryptionMetadata") @Nullable List<AssetFileEncryptionMetadataResponse> assetFileEncryptionMetadata,
-        @OutputCustomType.Parameter("key") @Nullable String key) {
+        @CustomType.Parameter("assetFileEncryptionMetadata") @Nullable List<AssetFileEncryptionMetadataResponse> assetFileEncryptionMetadata,
+        @CustomType.Parameter("key") @Nullable String key) {
         this.assetFileEncryptionMetadata = assetFileEncryptionMetadata;
         this.key = key;
     }

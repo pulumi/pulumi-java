@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.sql.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class SyncGroupSchemaTableColumnArgs extends io.pulumi.resources.Re
      * Data size of the column.
      * 
      */
-    @InputImport(name="dataSize")
+    @Import(name="dataSize")
       private final @Nullable Output<String> dataSize;
 
     public Output<String> getDataSize() {
@@ -33,7 +33,7 @@ public final class SyncGroupSchemaTableColumnArgs extends io.pulumi.resources.Re
      * Data type of the column.
      * 
      */
-    @InputImport(name="dataType")
+    @Import(name="dataType")
       private final @Nullable Output<String> dataType;
 
     public Output<String> getDataType() {
@@ -44,7 +44,7 @@ public final class SyncGroupSchemaTableColumnArgs extends io.pulumi.resources.Re
      * Quoted name of sync group table column.
      * 
      */
-    @InputImport(name="quotedName")
+    @Import(name="quotedName")
       private final @Nullable Output<String> quotedName;
 
     public Output<String> getQuotedName() {

@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.recoveryservices.outputs;
 
 import io.pulumi.azurenative.recoveryservices.outputs.HealthErrorResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VCenterPropertiesResponse {
     /**
      * The VCenter discovery status.
@@ -69,19 +69,19 @@ public final class VCenterPropertiesResponse {
      */
     private final @Nullable String runAsAccountId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VCenterPropertiesResponse(
-        @OutputCustomType.Parameter("discoveryStatus") @Nullable String discoveryStatus,
-        @OutputCustomType.Parameter("fabricArmResourceName") @Nullable String fabricArmResourceName,
-        @OutputCustomType.Parameter("friendlyName") @Nullable String friendlyName,
-        @OutputCustomType.Parameter("healthErrors") @Nullable List<HealthErrorResponse> healthErrors,
-        @OutputCustomType.Parameter("infrastructureId") @Nullable String infrastructureId,
-        @OutputCustomType.Parameter("internalId") @Nullable String internalId,
-        @OutputCustomType.Parameter("ipAddress") @Nullable String ipAddress,
-        @OutputCustomType.Parameter("lastHeartbeat") @Nullable String lastHeartbeat,
-        @OutputCustomType.Parameter("port") @Nullable String port,
-        @OutputCustomType.Parameter("processServerId") @Nullable String processServerId,
-        @OutputCustomType.Parameter("runAsAccountId") @Nullable String runAsAccountId) {
+        @CustomType.Parameter("discoveryStatus") @Nullable String discoveryStatus,
+        @CustomType.Parameter("fabricArmResourceName") @Nullable String fabricArmResourceName,
+        @CustomType.Parameter("friendlyName") @Nullable String friendlyName,
+        @CustomType.Parameter("healthErrors") @Nullable List<HealthErrorResponse> healthErrors,
+        @CustomType.Parameter("infrastructureId") @Nullable String infrastructureId,
+        @CustomType.Parameter("internalId") @Nullable String internalId,
+        @CustomType.Parameter("ipAddress") @Nullable String ipAddress,
+        @CustomType.Parameter("lastHeartbeat") @Nullable String lastHeartbeat,
+        @CustomType.Parameter("port") @Nullable String port,
+        @CustomType.Parameter("processServerId") @Nullable String processServerId,
+        @CustomType.Parameter("runAsAccountId") @Nullable String runAsAccountId) {
         this.discoveryStatus = discoveryStatus;
         this.fabricArmResourceName = fabricArmResourceName;
         this.friendlyName = friendlyName;

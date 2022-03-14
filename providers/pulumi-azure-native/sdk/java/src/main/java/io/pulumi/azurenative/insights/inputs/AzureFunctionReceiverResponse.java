@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.insights.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class AzureFunctionReceiverResponse extends io.pulumi.resources.Inv
      * The azure resource id of the function app.
      * 
      */
-    @InputImport(name="functionAppResourceId", required=true)
+    @Import(name="functionAppResourceId", required=true)
       private final String functionAppResourceId;
 
     public String getFunctionAppResourceId() {
@@ -34,7 +34,7 @@ public final class AzureFunctionReceiverResponse extends io.pulumi.resources.Inv
      * The function name in the function app.
      * 
      */
-    @InputImport(name="functionName", required=true)
+    @Import(name="functionName", required=true)
       private final String functionName;
 
     public String getFunctionName() {
@@ -45,7 +45,7 @@ public final class AzureFunctionReceiverResponse extends io.pulumi.resources.Inv
      * The http trigger url where http request sent to.
      * 
      */
-    @InputImport(name="httpTriggerUrl", required=true)
+    @Import(name="httpTriggerUrl", required=true)
       private final String httpTriggerUrl;
 
     public String getHttpTriggerUrl() {
@@ -56,7 +56,7 @@ public final class AzureFunctionReceiverResponse extends io.pulumi.resources.Inv
      * The name of the azure function receiver. Names must be unique across all receivers within an action group.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -67,7 +67,7 @@ public final class AzureFunctionReceiverResponse extends io.pulumi.resources.Inv
      * Indicates whether to use common alert schema.
      * 
      */
-    @InputImport(name="useCommonAlertSchema")
+    @Import(name="useCommonAlertSchema")
       private final @Nullable Boolean useCommonAlertSchema;
 
     public Optional<Boolean> getUseCommonAlertSchema() {

@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.recoveryservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class HyperVReplicaPolicyDetailsResponse {
     /**
      * A value indicating the authentication type.
@@ -69,19 +69,19 @@ public final class HyperVReplicaPolicyDetailsResponse {
      */
     private final @Nullable Integer replicationPort;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private HyperVReplicaPolicyDetailsResponse(
-        @OutputCustomType.Parameter("allowedAuthenticationType") @Nullable Integer allowedAuthenticationType,
-        @OutputCustomType.Parameter("applicationConsistentSnapshotFrequencyInHours") @Nullable Integer applicationConsistentSnapshotFrequencyInHours,
-        @OutputCustomType.Parameter("compression") @Nullable String compression,
-        @OutputCustomType.Parameter("initialReplicationMethod") @Nullable String initialReplicationMethod,
-        @OutputCustomType.Parameter("instanceType") String instanceType,
-        @OutputCustomType.Parameter("offlineReplicationExportPath") @Nullable String offlineReplicationExportPath,
-        @OutputCustomType.Parameter("offlineReplicationImportPath") @Nullable String offlineReplicationImportPath,
-        @OutputCustomType.Parameter("onlineReplicationStartTime") @Nullable String onlineReplicationStartTime,
-        @OutputCustomType.Parameter("recoveryPoints") @Nullable Integer recoveryPoints,
-        @OutputCustomType.Parameter("replicaDeletionOption") @Nullable String replicaDeletionOption,
-        @OutputCustomType.Parameter("replicationPort") @Nullable Integer replicationPort) {
+        @CustomType.Parameter("allowedAuthenticationType") @Nullable Integer allowedAuthenticationType,
+        @CustomType.Parameter("applicationConsistentSnapshotFrequencyInHours") @Nullable Integer applicationConsistentSnapshotFrequencyInHours,
+        @CustomType.Parameter("compression") @Nullable String compression,
+        @CustomType.Parameter("initialReplicationMethod") @Nullable String initialReplicationMethod,
+        @CustomType.Parameter("instanceType") String instanceType,
+        @CustomType.Parameter("offlineReplicationExportPath") @Nullable String offlineReplicationExportPath,
+        @CustomType.Parameter("offlineReplicationImportPath") @Nullable String offlineReplicationImportPath,
+        @CustomType.Parameter("onlineReplicationStartTime") @Nullable String onlineReplicationStartTime,
+        @CustomType.Parameter("recoveryPoints") @Nullable Integer recoveryPoints,
+        @CustomType.Parameter("replicaDeletionOption") @Nullable String replicaDeletionOption,
+        @CustomType.Parameter("replicationPort") @Nullable Integer replicationPort) {
         this.allowedAuthenticationType = allowedAuthenticationType;
         this.applicationConsistentSnapshotFrequencyInHours = applicationConsistentSnapshotFrequencyInHours;
         this.compression = compression;

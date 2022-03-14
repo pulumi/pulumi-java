@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datamigration.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class DatabaseSummaryResultResponse extends io.pulumi.resources.Inv
      * Migration end time
      * 
      */
-    @InputImport(name="endedOn", required=true)
+    @Import(name="endedOn", required=true)
       private final String endedOn;
 
     public String getEndedOn() {
@@ -32,7 +32,7 @@ public final class DatabaseSummaryResultResponse extends io.pulumi.resources.Inv
      * Wildcard string prefix to use for querying all errors of the item
      * 
      */
-    @InputImport(name="errorPrefix", required=true)
+    @Import(name="errorPrefix", required=true)
       private final String errorPrefix;
 
     public String getErrorPrefix() {
@@ -43,7 +43,7 @@ public final class DatabaseSummaryResultResponse extends io.pulumi.resources.Inv
      * Number of successfully completed items
      * 
      */
-    @InputImport(name="itemsCompletedCount", required=true)
+    @Import(name="itemsCompletedCount", required=true)
       private final Double itemsCompletedCount;
 
     public Double getItemsCompletedCount() {
@@ -54,7 +54,7 @@ public final class DatabaseSummaryResultResponse extends io.pulumi.resources.Inv
      * Number of items
      * 
      */
-    @InputImport(name="itemsCount", required=true)
+    @Import(name="itemsCount", required=true)
       private final Double itemsCount;
 
     public Double getItemsCount() {
@@ -65,7 +65,7 @@ public final class DatabaseSummaryResultResponse extends io.pulumi.resources.Inv
      * Name of the item
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -76,7 +76,7 @@ public final class DatabaseSummaryResultResponse extends io.pulumi.resources.Inv
      * Wildcard string prefix to use for querying all sub-tem results of the item
      * 
      */
-    @InputImport(name="resultPrefix", required=true)
+    @Import(name="resultPrefix", required=true)
       private final String resultPrefix;
 
     public String getResultPrefix() {
@@ -87,7 +87,7 @@ public final class DatabaseSummaryResultResponse extends io.pulumi.resources.Inv
      * Size of the database in megabytes
      * 
      */
-    @InputImport(name="sizeMB", required=true)
+    @Import(name="sizeMB", required=true)
       private final Double sizeMB;
 
     public Double getSizeMB() {
@@ -98,7 +98,7 @@ public final class DatabaseSummaryResultResponse extends io.pulumi.resources.Inv
      * Migration start time
      * 
      */
-    @InputImport(name="startedOn", required=true)
+    @Import(name="startedOn", required=true)
       private final String startedOn;
 
     public String getStartedOn() {
@@ -109,7 +109,7 @@ public final class DatabaseSummaryResultResponse extends io.pulumi.resources.Inv
      * Current state of migration
      * 
      */
-    @InputImport(name="state", required=true)
+    @Import(name="state", required=true)
       private final String state;
 
     public String getState() {
@@ -120,7 +120,7 @@ public final class DatabaseSummaryResultResponse extends io.pulumi.resources.Inv
      * Status message
      * 
      */
-    @InputImport(name="statusMessage", required=true)
+    @Import(name="statusMessage", required=true)
       private final String statusMessage;
 
     public String getStatusMessage() {

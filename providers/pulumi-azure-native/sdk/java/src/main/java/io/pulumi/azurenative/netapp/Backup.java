@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.netapp.BackupArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Double;
 import java.lang.String;
@@ -35,7 +35,7 @@ public class Backup extends io.pulumi.resources.CustomResource {
      * UUID v4 used to identify the Backup
      * 
      */
-    @OutputExport(name="backupId", type=String.class, parameters={})
+    @Export(name="backupId", type=String.class, parameters={})
     private Output<String> backupId;
 
     /**
@@ -49,7 +49,7 @@ public class Backup extends io.pulumi.resources.CustomResource {
      * Type of backup Manual or Scheduled
      * 
      */
-    @OutputExport(name="backupType", type=String.class, parameters={})
+    @Export(name="backupType", type=String.class, parameters={})
     private Output<String> backupType;
 
     /**
@@ -63,7 +63,7 @@ public class Backup extends io.pulumi.resources.CustomResource {
      * The creation date of the backup
      * 
      */
-    @OutputExport(name="creationDate", type=String.class, parameters={})
+    @Export(name="creationDate", type=String.class, parameters={})
     private Output<String> creationDate;
 
     /**
@@ -77,7 +77,7 @@ public class Backup extends io.pulumi.resources.CustomResource {
      * Failure reason
      * 
      */
-    @OutputExport(name="failureReason", type=String.class, parameters={})
+    @Export(name="failureReason", type=String.class, parameters={})
     private Output<String> failureReason;
 
     /**
@@ -91,7 +91,7 @@ public class Backup extends io.pulumi.resources.CustomResource {
      * Label for backup
      * 
      */
-    @OutputExport(name="label", type=String.class, parameters={})
+    @Export(name="label", type=String.class, parameters={})
     private Output</* @Nullable */ String> label;
 
     /**
@@ -105,7 +105,7 @@ public class Backup extends io.pulumi.resources.CustomResource {
      * Resource location
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -119,7 +119,7 @@ public class Backup extends io.pulumi.resources.CustomResource {
      * Resource name
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -133,7 +133,7 @@ public class Backup extends io.pulumi.resources.CustomResource {
      * Azure lifecycle management
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -147,7 +147,7 @@ public class Backup extends io.pulumi.resources.CustomResource {
      * Size of backup
      * 
      */
-    @OutputExport(name="size", type=Double.class, parameters={})
+    @Export(name="size", type=Double.class, parameters={})
     private Output<Double> size;
 
     /**
@@ -161,7 +161,7 @@ public class Backup extends io.pulumi.resources.CustomResource {
      * Resource type
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -175,7 +175,7 @@ public class Backup extends io.pulumi.resources.CustomResource {
      * Volume name
      * 
      */
-    @OutputExport(name="volumeName", type=String.class, parameters={})
+    @Export(name="volumeName", type=String.class, parameters={})
     private Output<String> volumeName;
 
     /**

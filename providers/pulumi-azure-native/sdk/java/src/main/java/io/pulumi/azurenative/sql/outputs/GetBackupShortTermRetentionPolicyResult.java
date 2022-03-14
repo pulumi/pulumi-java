@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.sql.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetBackupShortTermRetentionPolicyResult {
     /**
      * Resource ID.
@@ -33,12 +33,12 @@ public final class GetBackupShortTermRetentionPolicyResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetBackupShortTermRetentionPolicyResult(
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("retentionDays") @Nullable Integer retentionDays,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("retentionDays") @Nullable Integer retentionDays,
+        @CustomType.Parameter("type") String type) {
         this.id = id;
         this.name = name;
         this.retentionDays = retentionDays;

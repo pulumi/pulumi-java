@@ -7,7 +7,7 @@ import io.pulumi.azurenative.datafactory.inputs.AzureKeyVaultSecretReferenceResp
 import io.pulumi.azurenative.datafactory.inputs.CredentialReferenceResponse;
 import io.pulumi.azurenative.datafactory.inputs.SecureStringResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +27,7 @@ public final class SqlAlwaysEncryptedPropertiesResponse extends io.pulumi.resour
      * Sql always encrypted AKV authentication type. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="alwaysEncryptedAkvAuthType", required=true)
+    @Import(name="alwaysEncryptedAkvAuthType", required=true)
       private final String alwaysEncryptedAkvAuthType;
 
     public String getAlwaysEncryptedAkvAuthType() {
@@ -38,7 +38,7 @@ public final class SqlAlwaysEncryptedPropertiesResponse extends io.pulumi.resour
      * The credential reference containing authentication information.
      * 
      */
-    @InputImport(name="credential")
+    @Import(name="credential")
       private final @Nullable CredentialReferenceResponse credential;
 
     public Optional<CredentialReferenceResponse> getCredential() {
@@ -49,7 +49,7 @@ public final class SqlAlwaysEncryptedPropertiesResponse extends io.pulumi.resour
      * The client ID of the application in Azure Active Directory used for Azure Key Vault authentication. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="servicePrincipalId")
+    @Import(name="servicePrincipalId")
       private final @Nullable Object servicePrincipalId;
 
     public Optional<Object> getServicePrincipalId() {
@@ -60,7 +60,7 @@ public final class SqlAlwaysEncryptedPropertiesResponse extends io.pulumi.resour
      * The key of the service principal used to authenticate against Azure Key Vault.
      * 
      */
-    @InputImport(name="servicePrincipalKey")
+    @Import(name="servicePrincipalKey")
       private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey;
 
     public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> getServicePrincipalKey() {

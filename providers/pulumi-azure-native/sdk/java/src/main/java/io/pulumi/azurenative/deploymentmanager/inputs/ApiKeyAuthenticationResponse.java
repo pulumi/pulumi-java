@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.deploymentmanager.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class ApiKeyAuthenticationResponse extends io.pulumi.resources.Invo
      * The location of the authentication key/value pair in the request.
      * 
      */
-    @InputImport(name="in", required=true)
+    @Import(name="in", required=true)
       private final String in;
 
     public String getIn() {
@@ -31,7 +31,7 @@ public final class ApiKeyAuthenticationResponse extends io.pulumi.resources.Invo
      * The key name of the authentication key/value pair.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -43,7 +43,7 @@ public final class ApiKeyAuthenticationResponse extends io.pulumi.resources.Invo
      * Expected value is 'ApiKey'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {
@@ -54,7 +54,7 @@ public final class ApiKeyAuthenticationResponse extends io.pulumi.resources.Invo
      * The value of the authentication key/value pair.
      * 
      */
-    @InputImport(name="value", required=true)
+    @Import(name="value", required=true)
       private final String value;
 
     public String getValue() {

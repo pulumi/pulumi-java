@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.policyinsights.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetAttestationAtSubscriptionArgs extends io.pulumi.resources.
      * The name of the attestation.
      * 
      */
-    @InputImport(name="attestationName", required=true)
+    @Import(name="attestationName", required=true)
       private final String attestationName;
 
     public String getAttestationName() {

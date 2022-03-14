@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.botservice.outputs;
 
 import io.pulumi.azurenative.botservice.outputs.ServiceProviderParameterResponseConstraints;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ServiceProviderParameterResponseMetadata {
     /**
      * the constraints of the bot meta data.
@@ -17,8 +17,8 @@ public final class ServiceProviderParameterResponseMetadata {
      */
     private final @Nullable ServiceProviderParameterResponseConstraints constraints;
 
-    @OutputCustomType.Constructor
-    private ServiceProviderParameterResponseMetadata(@OutputCustomType.Parameter("constraints") @Nullable ServiceProviderParameterResponseConstraints constraints) {
+    @CustomType.Constructor
+    private ServiceProviderParameterResponseMetadata(@CustomType.Parameter("constraints") @Nullable ServiceProviderParameterResponseConstraints constraints) {
         this.constraints = constraints;
     }
 

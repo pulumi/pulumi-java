@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.documentdb.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class MongoIndexOptionsResponse extends io.pulumi.resources.InvokeA
      * Expire after seconds
      * 
      */
-    @InputImport(name="expireAfterSeconds")
+    @Import(name="expireAfterSeconds")
       private final @Nullable Integer expireAfterSeconds;
 
     public Optional<Integer> getExpireAfterSeconds() {
@@ -34,7 +34,7 @@ public final class MongoIndexOptionsResponse extends io.pulumi.resources.InvokeA
      * Is unique or not
      * 
      */
-    @InputImport(name="unique")
+    @Import(name="unique")
       private final @Nullable Boolean unique;
 
     public Optional<Boolean> getUnique() {

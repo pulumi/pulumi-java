@@ -6,7 +6,7 @@ package io.pulumi.azurenative.cdn.inputs;
 import io.pulumi.azurenative.cdn.enums.RequestMethodOperator;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +26,7 @@ public final class RequestMethodMatchConditionParametersArgs extends io.pulumi.r
      * The match value for the condition of the delivery rule
      * 
      */
-    @InputImport(name="matchValues")
+    @Import(name="matchValues")
       private final @Nullable Output<List<String>> matchValues;
 
     public Output<List<String>> getMatchValues() {
@@ -37,14 +37,14 @@ public final class RequestMethodMatchConditionParametersArgs extends io.pulumi.r
      * Describes if this is negate condition or not
      * 
      */
-    @InputImport(name="negateCondition")
+    @Import(name="negateCondition")
       private final @Nullable Output<Boolean> negateCondition;
 
     public Output<Boolean> getNegateCondition() {
         return this.negateCondition == null ? Output.empty() : this.negateCondition;
     }
 
-    @InputImport(name="odataType", required=true)
+    @Import(name="odataType", required=true)
       private final Output<String> odataType;
 
     public Output<String> getOdataType() {
@@ -55,7 +55,7 @@ public final class RequestMethodMatchConditionParametersArgs extends io.pulumi.r
      * Describes operator to be matched
      * 
      */
-    @InputImport(name="operator", required=true)
+    @Import(name="operator", required=true)
       private final Output<Either<String,RequestMethodOperator>> operator;
 
     public Output<Either<String,RequestMethodOperator>> getOperator() {

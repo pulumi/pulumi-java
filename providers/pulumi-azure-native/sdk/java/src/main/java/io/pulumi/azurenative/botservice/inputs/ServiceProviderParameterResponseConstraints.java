@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.botservice.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class ServiceProviderParameterResponseConstraints extends io.pulumi
      * Whether required the constraints of the bot meta data.
      * 
      */
-    @InputImport(name="required")
+    @Import(name="required")
       private final @Nullable Boolean required;
 
     public Optional<Boolean> getRequired() {

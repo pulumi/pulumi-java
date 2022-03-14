@@ -8,7 +8,7 @@ import io.pulumi.azurenative.network.inputs.ApplicationGatewayFirewallDisabledRu
 import io.pulumi.azurenative.network.inputs.ApplicationGatewayFirewallExclusionArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -29,7 +29,7 @@ public final class ApplicationGatewayWebApplicationFirewallConfigurationArgs ext
      * The disabled rule groups.
      * 
      */
-    @InputImport(name="disabledRuleGroups")
+    @Import(name="disabledRuleGroups")
       private final @Nullable Output<List<ApplicationGatewayFirewallDisabledRuleGroupArgs>> disabledRuleGroups;
 
     public Output<List<ApplicationGatewayFirewallDisabledRuleGroupArgs>> getDisabledRuleGroups() {
@@ -40,7 +40,7 @@ public final class ApplicationGatewayWebApplicationFirewallConfigurationArgs ext
      * Whether the web application firewall is enabled or not.
      * 
      */
-    @InputImport(name="enabled", required=true)
+    @Import(name="enabled", required=true)
       private final Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
@@ -51,7 +51,7 @@ public final class ApplicationGatewayWebApplicationFirewallConfigurationArgs ext
      * The exclusion list.
      * 
      */
-    @InputImport(name="exclusions")
+    @Import(name="exclusions")
       private final @Nullable Output<List<ApplicationGatewayFirewallExclusionArgs>> exclusions;
 
     public Output<List<ApplicationGatewayFirewallExclusionArgs>> getExclusions() {
@@ -62,7 +62,7 @@ public final class ApplicationGatewayWebApplicationFirewallConfigurationArgs ext
      * Maximum file upload size in Mb for WAF.
      * 
      */
-    @InputImport(name="fileUploadLimitInMb")
+    @Import(name="fileUploadLimitInMb")
       private final @Nullable Output<Integer> fileUploadLimitInMb;
 
     public Output<Integer> getFileUploadLimitInMb() {
@@ -73,7 +73,7 @@ public final class ApplicationGatewayWebApplicationFirewallConfigurationArgs ext
      * Web application firewall mode.
      * 
      */
-    @InputImport(name="firewallMode", required=true)
+    @Import(name="firewallMode", required=true)
       private final Output<Either<String,ApplicationGatewayFirewallMode>> firewallMode;
 
     public Output<Either<String,ApplicationGatewayFirewallMode>> getFirewallMode() {
@@ -84,7 +84,7 @@ public final class ApplicationGatewayWebApplicationFirewallConfigurationArgs ext
      * Maximum request body size for WAF.
      * 
      */
-    @InputImport(name="maxRequestBodySize")
+    @Import(name="maxRequestBodySize")
       private final @Nullable Output<Integer> maxRequestBodySize;
 
     public Output<Integer> getMaxRequestBodySize() {
@@ -95,7 +95,7 @@ public final class ApplicationGatewayWebApplicationFirewallConfigurationArgs ext
      * Maximum request body size in Kb for WAF.
      * 
      */
-    @InputImport(name="maxRequestBodySizeInKb")
+    @Import(name="maxRequestBodySizeInKb")
       private final @Nullable Output<Integer> maxRequestBodySizeInKb;
 
     public Output<Integer> getMaxRequestBodySizeInKb() {
@@ -106,7 +106,7 @@ public final class ApplicationGatewayWebApplicationFirewallConfigurationArgs ext
      * Whether allow WAF to check request Body.
      * 
      */
-    @InputImport(name="requestBodyCheck")
+    @Import(name="requestBodyCheck")
       private final @Nullable Output<Boolean> requestBodyCheck;
 
     public Output<Boolean> getRequestBodyCheck() {
@@ -117,7 +117,7 @@ public final class ApplicationGatewayWebApplicationFirewallConfigurationArgs ext
      * The type of the web application firewall rule set. Possible values are: 'OWASP'.
      * 
      */
-    @InputImport(name="ruleSetType", required=true)
+    @Import(name="ruleSetType", required=true)
       private final Output<String> ruleSetType;
 
     public Output<String> getRuleSetType() {
@@ -128,7 +128,7 @@ public final class ApplicationGatewayWebApplicationFirewallConfigurationArgs ext
      * The version of the rule set type.
      * 
      */
-    @InputImport(name="ruleSetVersion", required=true)
+    @Import(name="ruleSetVersion", required=true)
       private final Output<String> ruleSetVersion;
 
     public Output<String> getRuleSetVersion() {

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.hybridnetwork.enums.OperatingSystemTypes;
 import io.pulumi.azurenative.hybridnetwork.inputs.VirtualHardDiskArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class OsDiskArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the size of os disk in gigabytes. This is the fully expanded disk size needed of the VHD image on the ASE. This disk size should be greater than the size of the VHD provided in vhdUri.
      * 
      */
-    @InputImport(name="diskSizeGB")
+    @Import(name="diskSizeGB")
       private final @Nullable Output<Integer> diskSizeGB;
 
     public Output<Integer> getDiskSizeGB() {
@@ -37,7 +37,7 @@ public final class OsDiskArgs extends io.pulumi.resources.ResourceArgs {
      * The VHD name.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -48,7 +48,7 @@ public final class OsDiskArgs extends io.pulumi.resources.ResourceArgs {
      * The OS type.
      * 
      */
-    @InputImport(name="osType")
+    @Import(name="osType")
       private final @Nullable Output<Either<String,OperatingSystemTypes>> osType;
 
     public Output<Either<String,OperatingSystemTypes>> getOsType() {
@@ -59,7 +59,7 @@ public final class OsDiskArgs extends io.pulumi.resources.ResourceArgs {
      * The virtual hard disk.
      * 
      */
-    @InputImport(name="vhd")
+    @Import(name="vhd")
       private final @Nullable Output<VirtualHardDiskArgs> vhd;
 
     public Output<VirtualHardDiskArgs> getVhd() {

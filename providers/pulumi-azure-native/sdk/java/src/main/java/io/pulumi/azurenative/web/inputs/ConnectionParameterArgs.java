@@ -6,7 +6,7 @@ package io.pulumi.azurenative.web.inputs;
 import io.pulumi.azurenative.web.enums.ConnectionParameterType;
 import io.pulumi.azurenative.web.inputs.ApiOAuthSettingsArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -23,7 +23,7 @@ public final class ConnectionParameterArgs extends io.pulumi.resources.ResourceA
      * OAuth settings for the connection provider
      * 
      */
-    @InputImport(name="oAuthSettings")
+    @Import(name="oAuthSettings")
       private final @Nullable Output<ApiOAuthSettingsArgs> oAuthSettings;
 
     public Output<ApiOAuthSettingsArgs> getOAuthSettings() {
@@ -34,7 +34,7 @@ public final class ConnectionParameterArgs extends io.pulumi.resources.ResourceA
      * Type of the parameter
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<ConnectionParameterType> type;
 
     public Output<ConnectionParameterType> getType() {

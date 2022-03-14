@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ApplicationGatewayProbeHealthResponseMatch extends io.pulumi.
      * Body that must be contained in the health response. Default value is empty.
      * 
      */
-    @InputImport(name="body")
+    @Import(name="body")
       private final @Nullable String body;
 
     public Optional<String> getBody() {
@@ -34,7 +34,7 @@ public final class ApplicationGatewayProbeHealthResponseMatch extends io.pulumi.
      * Allowed ranges of healthy status codes. Default range of healthy status codes is 200-399.
      * 
      */
-    @InputImport(name="statusCodes")
+    @Import(name="statusCodes")
       private final @Nullable List<String> statusCodes;
 
     public List<String> getStatusCodes() {

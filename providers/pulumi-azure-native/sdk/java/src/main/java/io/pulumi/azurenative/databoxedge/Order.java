@@ -11,7 +11,7 @@ import io.pulumi.azurenative.databoxedge.outputs.OrderStatusResponse;
 import io.pulumi.azurenative.databoxedge.outputs.TrackingInfoResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -38,7 +38,7 @@ public class Order extends io.pulumi.resources.CustomResource {
      * The contact details.
      * 
      */
-    @OutputExport(name="contactInformation", type=ContactDetailsResponse.class, parameters={})
+    @Export(name="contactInformation", type=ContactDetailsResponse.class, parameters={})
     private Output<ContactDetailsResponse> contactInformation;
 
     /**
@@ -52,7 +52,7 @@ public class Order extends io.pulumi.resources.CustomResource {
      * Current status of the order.
      * 
      */
-    @OutputExport(name="currentStatus", type=OrderStatusResponse.class, parameters={})
+    @Export(name="currentStatus", type=OrderStatusResponse.class, parameters={})
     private Output<OrderStatusResponse> currentStatus;
 
     /**
@@ -66,7 +66,7 @@ public class Order extends io.pulumi.resources.CustomResource {
      * Tracking information for the package delivered to the customer whether it has an original or a replacement device.
      * 
      */
-    @OutputExport(name="deliveryTrackingInfo", type=List.class, parameters={TrackingInfoResponse.class})
+    @Export(name="deliveryTrackingInfo", type=List.class, parameters={TrackingInfoResponse.class})
     private Output<List<TrackingInfoResponse>> deliveryTrackingInfo;
 
     /**
@@ -80,7 +80,7 @@ public class Order extends io.pulumi.resources.CustomResource {
      * The object name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -94,7 +94,7 @@ public class Order extends io.pulumi.resources.CustomResource {
      * List of status changes in the order.
      * 
      */
-    @OutputExport(name="orderHistory", type=List.class, parameters={OrderStatusResponse.class})
+    @Export(name="orderHistory", type=List.class, parameters={OrderStatusResponse.class})
     private Output<List<OrderStatusResponse>> orderHistory;
 
     /**
@@ -108,7 +108,7 @@ public class Order extends io.pulumi.resources.CustomResource {
      * Tracking information for the package returned from the customer whether it has an original or a replacement device.
      * 
      */
-    @OutputExport(name="returnTrackingInfo", type=List.class, parameters={TrackingInfoResponse.class})
+    @Export(name="returnTrackingInfo", type=List.class, parameters={TrackingInfoResponse.class})
     private Output<List<TrackingInfoResponse>> returnTrackingInfo;
 
     /**
@@ -122,7 +122,7 @@ public class Order extends io.pulumi.resources.CustomResource {
      * Serial number of the device.
      * 
      */
-    @OutputExport(name="serialNumber", type=String.class, parameters={})
+    @Export(name="serialNumber", type=String.class, parameters={})
     private Output<String> serialNumber;
 
     /**
@@ -136,7 +136,7 @@ public class Order extends io.pulumi.resources.CustomResource {
      * ShipmentType of the order
      * 
      */
-    @OutputExport(name="shipmentType", type=String.class, parameters={})
+    @Export(name="shipmentType", type=String.class, parameters={})
     private Output</* @Nullable */ String> shipmentType;
 
     /**
@@ -150,7 +150,7 @@ public class Order extends io.pulumi.resources.CustomResource {
      * The shipping address.
      * 
      */
-    @OutputExport(name="shippingAddress", type=AddressResponse.class, parameters={})
+    @Export(name="shippingAddress", type=AddressResponse.class, parameters={})
     private Output</* @Nullable */ AddressResponse> shippingAddress;
 
     /**
@@ -164,7 +164,7 @@ public class Order extends io.pulumi.resources.CustomResource {
      * The hierarchical type of the object.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

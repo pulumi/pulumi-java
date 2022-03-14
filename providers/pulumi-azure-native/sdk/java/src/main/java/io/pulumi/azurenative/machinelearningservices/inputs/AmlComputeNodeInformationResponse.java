@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class AmlComputeNodeInformationResponse extends io.pulumi.resources
      * ID of the compute node.
      * 
      */
-    @InputImport(name="nodeId", required=true)
+    @Import(name="nodeId", required=true)
       private final String nodeId;
 
     public String getNodeId() {
@@ -32,7 +32,7 @@ public final class AmlComputeNodeInformationResponse extends io.pulumi.resources
      * State of the compute node. Values are idle, running, preparing, unusable, leaving and preempted.
      * 
      */
-    @InputImport(name="nodeState", required=true)
+    @Import(name="nodeState", required=true)
       private final String nodeState;
 
     public String getNodeState() {
@@ -43,7 +43,7 @@ public final class AmlComputeNodeInformationResponse extends io.pulumi.resources
      * SSH port number of the node.
      * 
      */
-    @InputImport(name="port", required=true)
+    @Import(name="port", required=true)
       private final Double port;
 
     public Double getPort() {
@@ -54,7 +54,7 @@ public final class AmlComputeNodeInformationResponse extends io.pulumi.resources
      * Private IP address of the compute node.
      * 
      */
-    @InputImport(name="privateIpAddress", required=true)
+    @Import(name="privateIpAddress", required=true)
       private final String privateIpAddress;
 
     public String getPrivateIpAddress() {
@@ -65,7 +65,7 @@ public final class AmlComputeNodeInformationResponse extends io.pulumi.resources
      * Public IP address of the compute node.
      * 
      */
-    @InputImport(name="publicIpAddress", required=true)
+    @Import(name="publicIpAddress", required=true)
       private final String publicIpAddress;
 
     public String getPublicIpAddress() {
@@ -76,7 +76,7 @@ public final class AmlComputeNodeInformationResponse extends io.pulumi.resources
      * ID of the Experiment running on the node, if any else null.
      * 
      */
-    @InputImport(name="runId", required=true)
+    @Import(name="runId", required=true)
       private final String runId;
 
     public String getRunId() {

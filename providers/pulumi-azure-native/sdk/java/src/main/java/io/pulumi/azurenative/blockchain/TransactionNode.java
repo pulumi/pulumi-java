@@ -8,7 +8,7 @@ import io.pulumi.azurenative.blockchain.TransactionNodeArgs;
 import io.pulumi.azurenative.blockchain.outputs.FirewallRuleResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +35,7 @@ public class TransactionNode extends io.pulumi.resources.CustomResource {
      * Gets or sets the transaction node dns endpoint.
      * 
      */
-    @OutputExport(name="dns", type=String.class, parameters={})
+    @Export(name="dns", type=String.class, parameters={})
     private Output<String> dns;
 
     /**
@@ -49,7 +49,7 @@ public class TransactionNode extends io.pulumi.resources.CustomResource {
      * Gets or sets the firewall rules.
      * 
      */
-    @OutputExport(name="firewallRules", type=List.class, parameters={FirewallRuleResponse.class})
+    @Export(name="firewallRules", type=List.class, parameters={FirewallRuleResponse.class})
     private Output</* @Nullable */ List<FirewallRuleResponse>> firewallRules;
 
     /**
@@ -63,7 +63,7 @@ public class TransactionNode extends io.pulumi.resources.CustomResource {
      * Gets or sets the transaction node location.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -77,7 +77,7 @@ public class TransactionNode extends io.pulumi.resources.CustomResource {
      * The name of the resource.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -91,7 +91,7 @@ public class TransactionNode extends io.pulumi.resources.CustomResource {
      * Sets the transaction node dns endpoint basic auth password.
      * 
      */
-    @OutputExport(name="password", type=String.class, parameters={})
+    @Export(name="password", type=String.class, parameters={})
     private Output</* @Nullable */ String> password;
 
     /**
@@ -105,7 +105,7 @@ public class TransactionNode extends io.pulumi.resources.CustomResource {
      * Gets or sets the blockchain member provision state.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -119,7 +119,7 @@ public class TransactionNode extends io.pulumi.resources.CustomResource {
      * Gets or sets the transaction node public key.
      * 
      */
-    @OutputExport(name="publicKey", type=String.class, parameters={})
+    @Export(name="publicKey", type=String.class, parameters={})
     private Output<String> publicKey;
 
     /**
@@ -133,7 +133,7 @@ public class TransactionNode extends io.pulumi.resources.CustomResource {
      * The type of the service - e.g. "Microsoft.Blockchain"
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -147,7 +147,7 @@ public class TransactionNode extends io.pulumi.resources.CustomResource {
      * Gets or sets the transaction node dns endpoint basic auth user name.
      * 
      */
-    @OutputExport(name="userName", type=String.class, parameters={})
+    @Export(name="userName", type=String.class, parameters={})
     private Output<String> userName;
 
     /**

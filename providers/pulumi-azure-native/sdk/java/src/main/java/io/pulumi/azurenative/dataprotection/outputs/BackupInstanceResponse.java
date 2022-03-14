@@ -8,13 +8,13 @@ import io.pulumi.azurenative.dataprotection.outputs.DatasourceSetResponse;
 import io.pulumi.azurenative.dataprotection.outputs.PolicyInfoResponse;
 import io.pulumi.azurenative.dataprotection.outputs.ProtectionStatusDetailsResponse;
 import io.pulumi.azurenative.dataprotection.outputs.UserFacingErrorResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BackupInstanceResponse {
     /**
      * Specifies the current protection state of the resource
@@ -58,17 +58,17 @@ public final class BackupInstanceResponse {
      */
     private final String provisioningState;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BackupInstanceResponse(
-        @OutputCustomType.Parameter("currentProtectionState") String currentProtectionState,
-        @OutputCustomType.Parameter("dataSourceInfo") DatasourceResponse dataSourceInfo,
-        @OutputCustomType.Parameter("dataSourceSetInfo") @Nullable DatasourceSetResponse dataSourceSetInfo,
-        @OutputCustomType.Parameter("friendlyName") @Nullable String friendlyName,
-        @OutputCustomType.Parameter("objectType") String objectType,
-        @OutputCustomType.Parameter("policyInfo") PolicyInfoResponse policyInfo,
-        @OutputCustomType.Parameter("protectionErrorDetails") UserFacingErrorResponse protectionErrorDetails,
-        @OutputCustomType.Parameter("protectionStatus") ProtectionStatusDetailsResponse protectionStatus,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState) {
+        @CustomType.Parameter("currentProtectionState") String currentProtectionState,
+        @CustomType.Parameter("dataSourceInfo") DatasourceResponse dataSourceInfo,
+        @CustomType.Parameter("dataSourceSetInfo") @Nullable DatasourceSetResponse dataSourceSetInfo,
+        @CustomType.Parameter("friendlyName") @Nullable String friendlyName,
+        @CustomType.Parameter("objectType") String objectType,
+        @CustomType.Parameter("policyInfo") PolicyInfoResponse policyInfo,
+        @CustomType.Parameter("protectionErrorDetails") UserFacingErrorResponse protectionErrorDetails,
+        @CustomType.Parameter("protectionStatus") ProtectionStatusDetailsResponse protectionStatus,
+        @CustomType.Parameter("provisioningState") String provisioningState) {
         this.currentProtectionState = currentProtectionState;
         this.dataSourceInfo = dataSourceInfo;
         this.dataSourceSetInfo = dataSourceSetInfo;

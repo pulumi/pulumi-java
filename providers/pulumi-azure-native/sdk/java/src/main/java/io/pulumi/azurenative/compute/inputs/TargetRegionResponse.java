@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.azurenative.compute.inputs.EncryptionImagesResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class TargetRegionResponse extends io.pulumi.resources.InvokeArgs {
      * Optional. Allows users to provide customer managed keys for encrypting the OS and data disks in the gallery artifact.
      * 
      */
-    @InputImport(name="encryption")
+    @Import(name="encryption")
       private final @Nullable EncryptionImagesResponse encryption;
 
     public Optional<EncryptionImagesResponse> getEncryption() {
@@ -35,7 +35,7 @@ public final class TargetRegionResponse extends io.pulumi.resources.InvokeArgs {
      * The name of the region.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -46,7 +46,7 @@ public final class TargetRegionResponse extends io.pulumi.resources.InvokeArgs {
      * The number of replicas of the Image Version to be created per region. This property is updatable.
      * 
      */
-    @InputImport(name="regionalReplicaCount")
+    @Import(name="regionalReplicaCount")
       private final @Nullable Integer regionalReplicaCount;
 
     public Optional<Integer> getRegionalReplicaCount() {
@@ -57,7 +57,7 @@ public final class TargetRegionResponse extends io.pulumi.resources.InvokeArgs {
      * Specifies the storage account type to be used to store the image. This property is not updatable.
      * 
      */
-    @InputImport(name="storageAccountType")
+    @Import(name="storageAccountType")
       private final @Nullable String storageAccountType;
 
     public Optional<String> getStorageAccountType() {

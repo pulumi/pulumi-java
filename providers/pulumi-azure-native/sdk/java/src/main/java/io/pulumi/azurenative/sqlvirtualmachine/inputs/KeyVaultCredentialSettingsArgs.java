@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.sqlvirtualmachine.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class KeyVaultCredentialSettingsArgs extends io.pulumi.resources.Re
      * Azure Key Vault url.
      * 
      */
-    @InputImport(name="azureKeyVaultUrl")
+    @Import(name="azureKeyVaultUrl")
       private final @Nullable Output<String> azureKeyVaultUrl;
 
     public Output<String> getAzureKeyVaultUrl() {
@@ -34,7 +34,7 @@ public final class KeyVaultCredentialSettingsArgs extends io.pulumi.resources.Re
      * Credential name.
      * 
      */
-    @InputImport(name="credentialName")
+    @Import(name="credentialName")
       private final @Nullable Output<String> credentialName;
 
     public Output<String> getCredentialName() {
@@ -45,7 +45,7 @@ public final class KeyVaultCredentialSettingsArgs extends io.pulumi.resources.Re
      * Enable or disable key vault credential setting.
      * 
      */
-    @InputImport(name="enable")
+    @Import(name="enable")
       private final @Nullable Output<Boolean> enable;
 
     public Output<Boolean> getEnable() {
@@ -56,7 +56,7 @@ public final class KeyVaultCredentialSettingsArgs extends io.pulumi.resources.Re
      * Service principal name to access key vault.
      * 
      */
-    @InputImport(name="servicePrincipalName")
+    @Import(name="servicePrincipalName")
       private final @Nullable Output<String> servicePrincipalName;
 
     public Output<String> getServicePrincipalName() {
@@ -67,7 +67,7 @@ public final class KeyVaultCredentialSettingsArgs extends io.pulumi.resources.Re
      * Service principal name secret to access key vault.
      * 
      */
-    @InputImport(name="servicePrincipalSecret")
+    @Import(name="servicePrincipalSecret")
       private final @Nullable Output<String> servicePrincipalSecret;
 
     public Output<String> getServicePrincipalSecret() {

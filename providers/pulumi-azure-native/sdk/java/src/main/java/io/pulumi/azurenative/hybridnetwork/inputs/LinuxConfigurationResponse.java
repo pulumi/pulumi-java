@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.hybridnetwork.inputs;
 
 import io.pulumi.azurenative.hybridnetwork.inputs.SshConfigurationResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class LinuxConfigurationResponse extends io.pulumi.resources.Invoke
      * Specifies the ssh key configuration for a Linux OS.
      * 
      */
-    @InputImport(name="ssh")
+    @Import(name="ssh")
       private final @Nullable SshConfigurationResponse ssh;
 
     public Optional<SshConfigurationResponse> getSsh() {

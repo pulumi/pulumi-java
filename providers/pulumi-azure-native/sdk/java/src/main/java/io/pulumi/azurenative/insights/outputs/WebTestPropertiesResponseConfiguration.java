@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.insights.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class WebTestPropertiesResponseConfiguration {
     /**
      * The XML specification of a WebTest to run against an application.
@@ -17,8 +17,8 @@ public final class WebTestPropertiesResponseConfiguration {
      */
     private final @Nullable String webTest;
 
-    @OutputCustomType.Constructor
-    private WebTestPropertiesResponseConfiguration(@OutputCustomType.Parameter("webTest") @Nullable String webTest) {
+    @CustomType.Constructor
+    private WebTestPropertiesResponseConfiguration(@CustomType.Parameter("webTest") @Nullable String webTest) {
         this.webTest = webTest;
     }
 

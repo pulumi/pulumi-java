@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.cdn.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class KeyVaultSigningKeyParametersResponse extends io.pulumi.resour
 
     public static final KeyVaultSigningKeyParametersResponse Empty = new KeyVaultSigningKeyParametersResponse();
 
-    @InputImport(name="odataType", required=true)
+    @Import(name="odataType", required=true)
       private final String odataType;
 
     public String getOdataType() {
@@ -27,7 +27,7 @@ public final class KeyVaultSigningKeyParametersResponse extends io.pulumi.resour
      * Resource group of the user's Key Vault containing the secret
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {
@@ -38,7 +38,7 @@ public final class KeyVaultSigningKeyParametersResponse extends io.pulumi.resour
      * The name of secret in Key Vault.
      * 
      */
-    @InputImport(name="secretName", required=true)
+    @Import(name="secretName", required=true)
       private final String secretName;
 
     public String getSecretName() {
@@ -49,7 +49,7 @@ public final class KeyVaultSigningKeyParametersResponse extends io.pulumi.resour
      * The version(GUID) of secret in Key Vault.
      * 
      */
-    @InputImport(name="secretVersion", required=true)
+    @Import(name="secretVersion", required=true)
       private final String secretVersion;
 
     public String getSecretVersion() {
@@ -60,7 +60,7 @@ public final class KeyVaultSigningKeyParametersResponse extends io.pulumi.resour
      * Subscription Id of the user's Key Vault containing the secret
      * 
      */
-    @InputImport(name="subscriptionId", required=true)
+    @Import(name="subscriptionId", required=true)
       private final String subscriptionId;
 
     public String getSubscriptionId() {
@@ -71,7 +71,7 @@ public final class KeyVaultSigningKeyParametersResponse extends io.pulumi.resour
      * The name of the user's Key Vault containing the secret
      * 
      */
-    @InputImport(name="vaultName", required=true)
+    @Import(name="vaultName", required=true)
       private final String vaultName;
 
     public String getVaultName() {

@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.authorization.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PolicyAssignmentPropertiesResponseScope {
     /**
      * Display name of the resource
@@ -27,11 +27,11 @@ public final class PolicyAssignmentPropertiesResponseScope {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PolicyAssignmentPropertiesResponseScope(
-        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("type") @Nullable String type) {
+        @CustomType.Parameter("displayName") @Nullable String displayName,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("type") @Nullable String type) {
         this.displayName = displayName;
         this.id = id;
         this.type = type;

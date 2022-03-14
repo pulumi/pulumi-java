@@ -7,7 +7,7 @@ import io.pulumi.azurenative.datafactory.outputs.ActivityDependencyResponse;
 import io.pulumi.azurenative.datafactory.outputs.ActivityPolicyResponse;
 import io.pulumi.azurenative.datafactory.outputs.LinkedServiceReferenceResponse;
 import io.pulumi.azurenative.datafactory.outputs.UserPropertyResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -15,7 +15,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AzureMLExecutePipelineActivityResponse {
     /**
      * Whether to continue execution of other steps in the PipelineRun if a step fails. This information will be passed in the continueOnStepFailure property of the published pipeline execution request. Type: boolean (or Expression with resultType boolean).
@@ -94,23 +94,23 @@ public final class AzureMLExecutePipelineActivityResponse {
      */
     private final @Nullable Object version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AzureMLExecutePipelineActivityResponse(
-        @OutputCustomType.Parameter("continueOnStepFailure") @Nullable Object continueOnStepFailure,
-        @OutputCustomType.Parameter("dataPathAssignments") @Nullable Object dataPathAssignments,
-        @OutputCustomType.Parameter("dependsOn") @Nullable List<ActivityDependencyResponse> dependsOn,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("experimentName") @Nullable Object experimentName,
-        @OutputCustomType.Parameter("linkedServiceName") @Nullable LinkedServiceReferenceResponse linkedServiceName,
-        @OutputCustomType.Parameter("mlParentRunId") @Nullable Object mlParentRunId,
-        @OutputCustomType.Parameter("mlPipelineEndpointId") @Nullable Object mlPipelineEndpointId,
-        @OutputCustomType.Parameter("mlPipelineId") @Nullable Object mlPipelineId,
-        @OutputCustomType.Parameter("mlPipelineParameters") @Nullable Object mlPipelineParameters,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("policy") @Nullable ActivityPolicyResponse policy,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("userProperties") @Nullable List<UserPropertyResponse> userProperties,
-        @OutputCustomType.Parameter("version") @Nullable Object version) {
+        @CustomType.Parameter("continueOnStepFailure") @Nullable Object continueOnStepFailure,
+        @CustomType.Parameter("dataPathAssignments") @Nullable Object dataPathAssignments,
+        @CustomType.Parameter("dependsOn") @Nullable List<ActivityDependencyResponse> dependsOn,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("experimentName") @Nullable Object experimentName,
+        @CustomType.Parameter("linkedServiceName") @Nullable LinkedServiceReferenceResponse linkedServiceName,
+        @CustomType.Parameter("mlParentRunId") @Nullable Object mlParentRunId,
+        @CustomType.Parameter("mlPipelineEndpointId") @Nullable Object mlPipelineEndpointId,
+        @CustomType.Parameter("mlPipelineId") @Nullable Object mlPipelineId,
+        @CustomType.Parameter("mlPipelineParameters") @Nullable Object mlPipelineParameters,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("policy") @Nullable ActivityPolicyResponse policy,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("userProperties") @Nullable List<UserPropertyResponse> userProperties,
+        @CustomType.Parameter("version") @Nullable Object version) {
         this.continueOnStepFailure = continueOnStepFailure;
         this.dataPathAssignments = dataPathAssignments;
         this.dependsOn = dependsOn;

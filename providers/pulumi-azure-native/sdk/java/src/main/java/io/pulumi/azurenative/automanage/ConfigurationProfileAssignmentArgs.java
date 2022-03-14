@@ -5,7 +5,7 @@ package io.pulumi.azurenative.automanage;
 
 import io.pulumi.azurenative.automanage.inputs.ConfigurationProfileAssignmentPropertiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class ConfigurationProfileAssignmentArgs extends io.pulumi.resource
      * Name of the configuration profile assignment. Only default is supported.
      * 
      */
-    @InputImport(name="configurationProfileAssignmentName")
+    @Import(name="configurationProfileAssignmentName")
       private final @Nullable Output<String> configurationProfileAssignmentName;
 
     public Output<String> getConfigurationProfileAssignmentName() {
@@ -30,7 +30,7 @@ public final class ConfigurationProfileAssignmentArgs extends io.pulumi.resource
      * Properties of the configuration profile assignment.
      * 
      */
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable Output<ConfigurationProfileAssignmentPropertiesArgs> properties;
 
     public Output<ConfigurationProfileAssignmentPropertiesArgs> getProperties() {
@@ -41,7 +41,7 @@ public final class ConfigurationProfileAssignmentArgs extends io.pulumi.resource
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -52,7 +52,7 @@ public final class ConfigurationProfileAssignmentArgs extends io.pulumi.resource
      * The name of the virtual machine.
      * 
      */
-    @InputImport(name="vmName", required=true)
+    @Import(name="vmName", required=true)
       private final Output<String> vmName;
 
     public Output<String> getVmName() {

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.servicefabric.inputs;
 
 import io.pulumi.azurenative.servicefabric.inputs.ArmApplicationHealthPolicyResponse;
 import io.pulumi.azurenative.servicefabric.inputs.ArmRollingUpgradeMonitoringPolicyResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class ApplicationUpgradePolicyResponse extends io.pulumi.resources.
      * Defines a health policy used to evaluate the health of an application or one of its children entities.
      * 
      */
-    @InputImport(name="applicationHealthPolicy")
+    @Import(name="applicationHealthPolicy")
       private final @Nullable ArmApplicationHealthPolicyResponse applicationHealthPolicy;
 
     public Optional<ArmApplicationHealthPolicyResponse> getApplicationHealthPolicy() {
@@ -36,7 +36,7 @@ public final class ApplicationUpgradePolicyResponse extends io.pulumi.resources.
      * If true, then processes are forcefully restarted during upgrade even when the code version has not changed (the upgrade only changes configuration or data).
      * 
      */
-    @InputImport(name="forceRestart")
+    @Import(name="forceRestart")
       private final @Nullable Boolean forceRestart;
 
     public Optional<Boolean> getForceRestart() {
@@ -47,7 +47,7 @@ public final class ApplicationUpgradePolicyResponse extends io.pulumi.resources.
      * Determines whether the application should be recreated on update. If value=true, the rest of the upgrade policy parameters are not allowed and it will result in availability loss.
      * 
      */
-    @InputImport(name="recreateApplication")
+    @Import(name="recreateApplication")
       private final @Nullable Boolean recreateApplication;
 
     public Optional<Boolean> getRecreateApplication() {
@@ -58,7 +58,7 @@ public final class ApplicationUpgradePolicyResponse extends io.pulumi.resources.
      * The policy used for monitoring the application upgrade
      * 
      */
-    @InputImport(name="rollingUpgradeMonitoringPolicy")
+    @Import(name="rollingUpgradeMonitoringPolicy")
       private final @Nullable ArmRollingUpgradeMonitoringPolicyResponse rollingUpgradeMonitoringPolicy;
 
     public Optional<ArmRollingUpgradeMonitoringPolicyResponse> getRollingUpgradeMonitoringPolicy() {
@@ -69,7 +69,7 @@ public final class ApplicationUpgradePolicyResponse extends io.pulumi.resources.
      * The mode used to monitor health during a rolling upgrade. The values are UnmonitoredAuto, UnmonitoredManual, and Monitored.
      * 
      */
-    @InputImport(name="upgradeMode")
+    @Import(name="upgradeMode")
       private final @Nullable String upgradeMode;
 
     public Optional<String> getUpgradeMode() {
@@ -80,7 +80,7 @@ public final class ApplicationUpgradePolicyResponse extends io.pulumi.resources.
      * The maximum amount of time to block processing of an upgrade domain and prevent loss of availability when there are unexpected issues. When this timeout expires, processing of the upgrade domain will proceed regardless of availability loss issues. The timeout is reset at the start of each upgrade domain. Valid values are between 0 and 42949672925 inclusive. (unsigned 32-bit integer).
      * 
      */
-    @InputImport(name="upgradeReplicaSetCheckTimeout")
+    @Import(name="upgradeReplicaSetCheckTimeout")
       private final @Nullable String upgradeReplicaSetCheckTimeout;
 
     public Optional<String> getUpgradeReplicaSetCheckTimeout() {

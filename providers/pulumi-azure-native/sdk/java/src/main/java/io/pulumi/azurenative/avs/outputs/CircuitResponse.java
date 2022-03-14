@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.avs.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class CircuitResponse {
     /**
      * Identifier of the ExpressRoute Circuit (Microsoft Colo only)
@@ -30,12 +30,12 @@ public final class CircuitResponse {
      */
     private final String secondarySubnet;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CircuitResponse(
-        @OutputCustomType.Parameter("expressRouteID") String expressRouteID,
-        @OutputCustomType.Parameter("expressRoutePrivatePeeringID") String expressRoutePrivatePeeringID,
-        @OutputCustomType.Parameter("primarySubnet") String primarySubnet,
-        @OutputCustomType.Parameter("secondarySubnet") String secondarySubnet) {
+        @CustomType.Parameter("expressRouteID") String expressRouteID,
+        @CustomType.Parameter("expressRoutePrivatePeeringID") String expressRoutePrivatePeeringID,
+        @CustomType.Parameter("primarySubnet") String primarySubnet,
+        @CustomType.Parameter("secondarySubnet") String secondarySubnet) {
         this.expressRouteID = expressRouteID;
         this.expressRoutePrivatePeeringID = expressRoutePrivatePeeringID;
         this.primarySubnet = primarySubnet;

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.databoxedge.enums.DataPolicy;
 import io.pulumi.azurenative.databoxedge.enums.StorageAccountStatus;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
      * Data policy of the storage Account.
      * 
      */
-    @InputImport(name="dataPolicy", required=true)
+    @Import(name="dataPolicy", required=true)
       private final Output<Either<String,DataPolicy>> dataPolicy;
 
     public Output<Either<String,DataPolicy>> getDataPolicy() {
@@ -32,7 +32,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
      * Description for the storage Account.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -43,7 +43,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
      * The device name.
      * 
      */
-    @InputImport(name="deviceName", required=true)
+    @Import(name="deviceName", required=true)
       private final Output<String> deviceName;
 
     public Output<String> getDeviceName() {
@@ -54,7 +54,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
      * The resource group name.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -65,7 +65,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
      * Storage Account Credential Id
      * 
      */
-    @InputImport(name="storageAccountCredentialId")
+    @Import(name="storageAccountCredentialId")
       private final @Nullable Output<String> storageAccountCredentialId;
 
     public Output<String> getStorageAccountCredentialId() {
@@ -76,7 +76,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
      * The StorageAccount name.
      * 
      */
-    @InputImport(name="storageAccountName")
+    @Import(name="storageAccountName")
       private final @Nullable Output<String> storageAccountName;
 
     public Output<String> getStorageAccountName() {
@@ -87,7 +87,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
      * Current status of the storage account
      * 
      */
-    @InputImport(name="storageAccountStatus")
+    @Import(name="storageAccountStatus")
       private final @Nullable Output<Either<String,StorageAccountStatus>> storageAccountStatus;
 
     public Output<Either<String,StorageAccountStatus>> getStorageAccountStatus() {

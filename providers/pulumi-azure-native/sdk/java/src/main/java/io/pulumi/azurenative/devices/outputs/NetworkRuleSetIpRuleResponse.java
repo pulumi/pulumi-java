@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.devices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class NetworkRuleSetIpRuleResponse {
     /**
      * IP Filter Action
@@ -27,11 +27,11 @@ public final class NetworkRuleSetIpRuleResponse {
      */
     private final String ipMask;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NetworkRuleSetIpRuleResponse(
-        @OutputCustomType.Parameter("action") @Nullable String action,
-        @OutputCustomType.Parameter("filterName") String filterName,
-        @OutputCustomType.Parameter("ipMask") String ipMask) {
+        @CustomType.Parameter("action") @Nullable String action,
+        @CustomType.Parameter("filterName") String filterName,
+        @CustomType.Parameter("ipMask") String ipMask) {
         this.action = action;
         this.filterName = filterName;
         this.ipMask = ipMask;

@@ -9,7 +9,7 @@ import io.pulumi.azurenative.automation.outputs.PrivateEndpointPropertyResponse;
 import io.pulumi.azurenative.automation.outputs.PrivateLinkServiceConnectionStatePropertyResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -36,7 +36,7 @@ public class PrivateEndpointConnection extends io.pulumi.resources.CustomResourc
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -50,7 +50,7 @@ public class PrivateEndpointConnection extends io.pulumi.resources.CustomResourc
      * Private endpoint which the connection belongs to.
      * 
      */
-    @OutputExport(name="privateEndpoint", type=PrivateEndpointPropertyResponse.class, parameters={})
+    @Export(name="privateEndpoint", type=PrivateEndpointPropertyResponse.class, parameters={})
     private Output</* @Nullable */ PrivateEndpointPropertyResponse> privateEndpoint;
 
     /**
@@ -64,7 +64,7 @@ public class PrivateEndpointConnection extends io.pulumi.resources.CustomResourc
      * Connection State of the Private Endpoint Connection.
      * 
      */
-    @OutputExport(name="privateLinkServiceConnectionState", type=PrivateLinkServiceConnectionStatePropertyResponse.class, parameters={})
+    @Export(name="privateLinkServiceConnectionState", type=PrivateLinkServiceConnectionStatePropertyResponse.class, parameters={})
     private Output</* @Nullable */ PrivateLinkServiceConnectionStatePropertyResponse> privateLinkServiceConnectionState;
 
     /**
@@ -78,7 +78,7 @@ public class PrivateEndpointConnection extends io.pulumi.resources.CustomResourc
      * The type of the resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

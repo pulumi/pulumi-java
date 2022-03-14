@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.authorization.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AccessReviewHistoryInstanceResponse {
     /**
      * The display name for the parent history definition.
@@ -67,19 +67,19 @@ public final class AccessReviewHistoryInstanceResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AccessReviewHistoryInstanceResponse(
-        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
-        @OutputCustomType.Parameter("downloadUri") String downloadUri,
-        @OutputCustomType.Parameter("expiration") @Nullable String expiration,
-        @OutputCustomType.Parameter("fulfilledDateTime") @Nullable String fulfilledDateTime,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("reviewHistoryPeriodEndDateTime") @Nullable String reviewHistoryPeriodEndDateTime,
-        @OutputCustomType.Parameter("reviewHistoryPeriodStartDateTime") @Nullable String reviewHistoryPeriodStartDateTime,
-        @OutputCustomType.Parameter("runDateTime") @Nullable String runDateTime,
-        @OutputCustomType.Parameter("status") String status,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("displayName") @Nullable String displayName,
+        @CustomType.Parameter("downloadUri") String downloadUri,
+        @CustomType.Parameter("expiration") @Nullable String expiration,
+        @CustomType.Parameter("fulfilledDateTime") @Nullable String fulfilledDateTime,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("reviewHistoryPeriodEndDateTime") @Nullable String reviewHistoryPeriodEndDateTime,
+        @CustomType.Parameter("reviewHistoryPeriodStartDateTime") @Nullable String reviewHistoryPeriodStartDateTime,
+        @CustomType.Parameter("runDateTime") @Nullable String runDateTime,
+        @CustomType.Parameter("status") String status,
+        @CustomType.Parameter("type") String type) {
         this.displayName = displayName;
         this.downloadUri = downloadUri;
         this.expiration = expiration;

@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ExpressRouteCircuitStatsResponse {
     /**
      * The Primary BytesIn of the peering.
@@ -32,12 +32,12 @@ public final class ExpressRouteCircuitStatsResponse {
      */
     private final @Nullable Double secondarybytesOut;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ExpressRouteCircuitStatsResponse(
-        @OutputCustomType.Parameter("primarybytesIn") @Nullable Double primarybytesIn,
-        @OutputCustomType.Parameter("primarybytesOut") @Nullable Double primarybytesOut,
-        @OutputCustomType.Parameter("secondarybytesIn") @Nullable Double secondarybytesIn,
-        @OutputCustomType.Parameter("secondarybytesOut") @Nullable Double secondarybytesOut) {
+        @CustomType.Parameter("primarybytesIn") @Nullable Double primarybytesIn,
+        @CustomType.Parameter("primarybytesOut") @Nullable Double primarybytesOut,
+        @CustomType.Parameter("secondarybytesIn") @Nullable Double secondarybytesIn,
+        @CustomType.Parameter("secondarybytesOut") @Nullable Double secondarybytesOut) {
         this.primarybytesIn = primarybytesIn;
         this.primarybytesOut = primarybytesOut;
         this.secondarybytesIn = secondarybytesIn;

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.eventhub.inputs;
 
 import io.pulumi.azurenative.eventhub.inputs.SubnetResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class NWRuleSetVirtualNetworkRulesResponse extends io.pulumi.resour
      * Value that indicates whether to ignore missing VNet Service Endpoint
      * 
      */
-    @InputImport(name="ignoreMissingVnetServiceEndpoint")
+    @Import(name="ignoreMissingVnetServiceEndpoint")
       private final @Nullable Boolean ignoreMissingVnetServiceEndpoint;
 
     public Optional<Boolean> getIgnoreMissingVnetServiceEndpoint() {
@@ -34,7 +34,7 @@ public final class NWRuleSetVirtualNetworkRulesResponse extends io.pulumi.resour
      * Subnet properties
      * 
      */
-    @InputImport(name="subnet")
+    @Import(name="subnet")
       private final @Nullable SubnetResponse subnet;
 
     public Optional<SubnetResponse> getSubnet() {

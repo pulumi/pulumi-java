@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class InputEndpointResponse extends io.pulumi.resources.InvokeArgs 
      * The input endpoint name.
      * 
      */
-    @InputImport(name="endpointName")
+    @Import(name="endpointName")
       private final @Nullable String endpointName;
 
     public Optional<String> getEndpointName() {
@@ -34,7 +34,7 @@ public final class InputEndpointResponse extends io.pulumi.resources.InvokeArgs 
      * The input endpoint private port.
      * 
      */
-    @InputImport(name="privatePort")
+    @Import(name="privatePort")
       private final @Nullable Integer privatePort;
 
     public Optional<Integer> getPrivatePort() {
@@ -45,7 +45,7 @@ public final class InputEndpointResponse extends io.pulumi.resources.InvokeArgs 
      * The input endpoint protocol.
      * 
      */
-    @InputImport(name="protocol")
+    @Import(name="protocol")
       private final @Nullable String protocol;
 
     public Optional<String> getProtocol() {
@@ -56,7 +56,7 @@ public final class InputEndpointResponse extends io.pulumi.resources.InvokeArgs 
      * The input endpoint public port.
      * 
      */
-    @InputImport(name="publicPort")
+    @Import(name="publicPort")
       private final @Nullable Integer publicPort;
 
     public Optional<Integer> getPublicPort() {

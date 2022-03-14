@@ -43,7 +43,7 @@ import io.pulumi.azurenative.datafactory.inputs.ValidationActivityResponse;
 import io.pulumi.azurenative.datafactory.inputs.WaitActivityResponse;
 import io.pulumi.azurenative.datafactory.inputs.WebActivityResponse;
 import io.pulumi.azurenative.datafactory.inputs.WebHookActivityResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -64,7 +64,7 @@ public final class UntilActivityResponse extends io.pulumi.resources.InvokeArgs 
      * List of activities to execute.
      * 
      */
-    @InputImport(name="activities", required=true)
+    @Import(name="activities", required=true)
       private final List<Object> activities;
 
     public List<Object> getActivities() {
@@ -75,7 +75,7 @@ public final class UntilActivityResponse extends io.pulumi.resources.InvokeArgs 
      * Activity depends on condition.
      * 
      */
-    @InputImport(name="dependsOn")
+    @Import(name="dependsOn")
       private final @Nullable List<ActivityDependencyResponse> dependsOn;
 
     public List<ActivityDependencyResponse> getDependsOn() {
@@ -86,7 +86,7 @@ public final class UntilActivityResponse extends io.pulumi.resources.InvokeArgs 
      * Activity description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable String description;
 
     public Optional<String> getDescription() {
@@ -97,7 +97,7 @@ public final class UntilActivityResponse extends io.pulumi.resources.InvokeArgs 
      * An expression that would evaluate to Boolean. The loop will continue until this expression evaluates to true
      * 
      */
-    @InputImport(name="expression", required=true)
+    @Import(name="expression", required=true)
       private final ExpressionResponse expression;
 
     public ExpressionResponse getExpression() {
@@ -108,7 +108,7 @@ public final class UntilActivityResponse extends io.pulumi.resources.InvokeArgs 
      * Activity name.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -119,7 +119,7 @@ public final class UntilActivityResponse extends io.pulumi.resources.InvokeArgs 
      * Specifies the timeout for the activity to run. If there is no value specified, it takes the value of TimeSpan.FromDays(7) which is 1 week as default. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])). Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
      * 
      */
-    @InputImport(name="timeout")
+    @Import(name="timeout")
       private final @Nullable Object timeout;
 
     public Optional<Object> getTimeout() {
@@ -131,7 +131,7 @@ public final class UntilActivityResponse extends io.pulumi.resources.InvokeArgs 
      * Expected value is 'Until'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {
@@ -142,7 +142,7 @@ public final class UntilActivityResponse extends io.pulumi.resources.InvokeArgs 
      * Activity user properties.
      * 
      */
-    @InputImport(name="userProperties")
+    @Import(name="userProperties")
       private final @Nullable List<UserPropertyResponse> userProperties;
 
     public List<UserPropertyResponse> getUserProperties() {

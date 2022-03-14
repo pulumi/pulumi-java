@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.migrate.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class SubnetReferenceResponse extends io.pulumi.resources.InvokeArg
      * Gets the name of the proxy resource on the target side.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -33,7 +33,7 @@ public final class SubnetReferenceResponse extends io.pulumi.resources.InvokeArg
      * Gets the ARM resource ID of the tracked resource being referenced.
      * 
      */
-    @InputImport(name="sourceArmResourceId", required=true)
+    @Import(name="sourceArmResourceId", required=true)
       private final String sourceArmResourceId;
 
     public String getSourceArmResourceId() {

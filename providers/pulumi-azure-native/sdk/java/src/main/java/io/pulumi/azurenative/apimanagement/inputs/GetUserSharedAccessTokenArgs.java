@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.apimanagement.inputs;
 
 import io.pulumi.azurenative.apimanagement.enums.KeyType;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetUserSharedAccessTokenArgs extends io.pulumi.resources.Invo
      * The Expiry time of the Token. Maximum token expiry time is set to 30 days. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
      * 
      */
-    @InputImport(name="expiry", required=true)
+    @Import(name="expiry", required=true)
       private final String expiry;
 
     public String getExpiry() {
@@ -28,7 +28,7 @@ public final class GetUserSharedAccessTokenArgs extends io.pulumi.resources.Invo
      * The Key to be used to generate token for user.
      * 
      */
-    @InputImport(name="keyType", required=true)
+    @Import(name="keyType", required=true)
       private final KeyType keyType;
 
     public KeyType getKeyType() {
@@ -39,7 +39,7 @@ public final class GetUserSharedAccessTokenArgs extends io.pulumi.resources.Invo
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {
@@ -50,7 +50,7 @@ public final class GetUserSharedAccessTokenArgs extends io.pulumi.resources.Invo
      * The name of the API Management service.
      * 
      */
-    @InputImport(name="serviceName", required=true)
+    @Import(name="serviceName", required=true)
       private final String serviceName;
 
     public String getServiceName() {
@@ -61,7 +61,7 @@ public final class GetUserSharedAccessTokenArgs extends io.pulumi.resources.Invo
      * User identifier. Must be unique in the current API Management service instance.
      * 
      */
-    @InputImport(name="userId", required=true)
+    @Import(name="userId", required=true)
       private final String userId;
 
     public String getUserId() {

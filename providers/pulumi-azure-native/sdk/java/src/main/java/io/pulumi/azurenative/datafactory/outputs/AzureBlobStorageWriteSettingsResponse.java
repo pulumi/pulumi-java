@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.datafactory.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AzureBlobStorageWriteSettingsResponse {
     /**
      * Indicates the block size(MB) when writing data to blob. Type: integer (or Expression with resultType integer).
@@ -39,13 +39,13 @@ public final class AzureBlobStorageWriteSettingsResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AzureBlobStorageWriteSettingsResponse(
-        @OutputCustomType.Parameter("blockSizeInMB") @Nullable Object blockSizeInMB,
-        @OutputCustomType.Parameter("copyBehavior") @Nullable Object copyBehavior,
-        @OutputCustomType.Parameter("disableMetricsCollection") @Nullable Object disableMetricsCollection,
-        @OutputCustomType.Parameter("maxConcurrentConnections") @Nullable Object maxConcurrentConnections,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("blockSizeInMB") @Nullable Object blockSizeInMB,
+        @CustomType.Parameter("copyBehavior") @Nullable Object copyBehavior,
+        @CustomType.Parameter("disableMetricsCollection") @Nullable Object disableMetricsCollection,
+        @CustomType.Parameter("maxConcurrentConnections") @Nullable Object maxConcurrentConnections,
+        @CustomType.Parameter("type") String type) {
         this.blockSizeInMB = blockSizeInMB;
         this.copyBehavior = copyBehavior;
         this.disableMetricsCollection = disableMetricsCollection;

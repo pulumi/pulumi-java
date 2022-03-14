@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ConnectionErrorResponse extends io.pulumi.resources.InvokeArg
      * Code of the status
      * 
      */
-    @InputImport(name="code")
+    @Import(name="code")
       private final @Nullable String code;
 
     public Optional<String> getCode() {
@@ -34,7 +34,7 @@ public final class ConnectionErrorResponse extends io.pulumi.resources.InvokeArg
      * Resource ETag
      * 
      */
-    @InputImport(name="etag")
+    @Import(name="etag")
       private final @Nullable String etag;
 
     public Optional<String> getEtag() {
@@ -45,7 +45,7 @@ public final class ConnectionErrorResponse extends io.pulumi.resources.InvokeArg
      * Resource id
      * 
      */
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final String id;
 
     public String getId() {
@@ -56,7 +56,7 @@ public final class ConnectionErrorResponse extends io.pulumi.resources.InvokeArg
      * Resource location
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable String location;
 
     public Optional<String> getLocation() {
@@ -67,7 +67,7 @@ public final class ConnectionErrorResponse extends io.pulumi.resources.InvokeArg
      * Description of the status
      * 
      */
-    @InputImport(name="message")
+    @Import(name="message")
       private final @Nullable String message;
 
     public Optional<String> getMessage() {
@@ -78,7 +78,7 @@ public final class ConnectionErrorResponse extends io.pulumi.resources.InvokeArg
      * Resource name
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -89,7 +89,7 @@ public final class ConnectionErrorResponse extends io.pulumi.resources.InvokeArg
      * Resource tags
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {
@@ -100,7 +100,7 @@ public final class ConnectionErrorResponse extends io.pulumi.resources.InvokeArg
      * Resource type
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.alertsmanagement.outputs;
 
 import io.pulumi.azurenative.alertsmanagement.outputs.SuppressionScheduleResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SuppressionConfigResponse {
     /**
      * Specifies when the suppression should be applied
@@ -23,10 +23,10 @@ public final class SuppressionConfigResponse {
      */
     private final @Nullable SuppressionScheduleResponse schedule;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SuppressionConfigResponse(
-        @OutputCustomType.Parameter("recurrenceType") String recurrenceType,
-        @OutputCustomType.Parameter("schedule") @Nullable SuppressionScheduleResponse schedule) {
+        @CustomType.Parameter("recurrenceType") String recurrenceType,
+        @CustomType.Parameter("schedule") @Nullable SuppressionScheduleResponse schedule) {
         this.recurrenceType = recurrenceType;
         this.schedule = schedule;
     }

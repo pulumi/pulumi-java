@@ -8,7 +8,7 @@ import io.pulumi.azurenative.connectedvmwarevsphere.enums.PowerOnBootOption;
 import io.pulumi.azurenative.connectedvmwarevsphere.inputs.NicIPSettingsArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +27,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
      * Gets or sets the device key value.
      * 
      */
-    @InputImport(name="deviceKey")
+    @Import(name="deviceKey")
       private final @Nullable Output<Integer> deviceKey;
 
     public Output<Integer> getDeviceKey() {
@@ -38,7 +38,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
      * Gets or sets the ipsettings.
      * 
      */
-    @InputImport(name="ipSettings")
+    @Import(name="ipSettings")
       private final @Nullable Output<NicIPSettingsArgs> ipSettings;
 
     public Output<NicIPSettingsArgs> getIpSettings() {
@@ -49,7 +49,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
      * Gets or sets the name of the network interface.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -60,7 +60,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
      * Gets or sets the ARM Id of the network resource to connect the virtual machine.
      * 
      */
-    @InputImport(name="networkId")
+    @Import(name="networkId")
       private final @Nullable Output<String> networkId;
 
     public Output<String> getNetworkId() {
@@ -71,7 +71,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
      * NIC type
      * 
      */
-    @InputImport(name="nicType")
+    @Import(name="nicType")
       private final @Nullable Output<Either<String,NICType>> nicType;
 
     public Output<Either<String,NICType>> getNicType() {
@@ -82,7 +82,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
      * Gets or sets the power on boot.
      * 
      */
-    @InputImport(name="powerOnBoot")
+    @Import(name="powerOnBoot")
       private final @Nullable Output<Either<String,PowerOnBootOption>> powerOnBoot;
 
     public Output<Either<String,PowerOnBootOption>> getPowerOnBoot() {

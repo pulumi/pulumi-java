@@ -5,12 +5,12 @@ package io.pulumi.azurenative.automanage.outputs;
 
 import io.pulumi.azurenative.automanage.outputs.ConfigurationProfilePreferenceAntiMalwareResponse;
 import io.pulumi.azurenative.automanage.outputs.ConfigurationProfilePreferenceVmBackupResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ConfigurationProfilePreferencePropertiesResponse {
     /**
      * The custom preferences for Azure Antimalware.
@@ -23,10 +23,10 @@ public final class ConfigurationProfilePreferencePropertiesResponse {
      */
     private final @Nullable ConfigurationProfilePreferenceVmBackupResponse vmBackup;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ConfigurationProfilePreferencePropertiesResponse(
-        @OutputCustomType.Parameter("antiMalware") @Nullable ConfigurationProfilePreferenceAntiMalwareResponse antiMalware,
-        @OutputCustomType.Parameter("vmBackup") @Nullable ConfigurationProfilePreferenceVmBackupResponse vmBackup) {
+        @CustomType.Parameter("antiMalware") @Nullable ConfigurationProfilePreferenceAntiMalwareResponse antiMalware,
+        @CustomType.Parameter("vmBackup") @Nullable ConfigurationProfilePreferenceVmBackupResponse vmBackup) {
         this.antiMalware = antiMalware;
         this.vmBackup = vmBackup;
     }

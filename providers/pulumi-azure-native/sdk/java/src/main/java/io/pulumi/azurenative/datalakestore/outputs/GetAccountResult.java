@@ -8,13 +8,13 @@ import io.pulumi.azurenative.datalakestore.outputs.EncryptionIdentityResponse;
 import io.pulumi.azurenative.datalakestore.outputs.FirewallRuleResponse;
 import io.pulumi.azurenative.datalakestore.outputs.TrustedIdProviderResponse;
 import io.pulumi.azurenative.datalakestore.outputs.VirtualNetworkRuleResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetAccountResult {
     /**
      * The unique identifier associated with this Data Lake Store account.
@@ -137,32 +137,32 @@ public final class GetAccountResult {
      */
     private final List<VirtualNetworkRuleResponse> virtualNetworkRules;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetAccountResult(
-        @OutputCustomType.Parameter("accountId") String accountId,
-        @OutputCustomType.Parameter("creationTime") String creationTime,
-        @OutputCustomType.Parameter("currentTier") String currentTier,
-        @OutputCustomType.Parameter("defaultGroup") String defaultGroup,
-        @OutputCustomType.Parameter("encryptionConfig") EncryptionConfigResponse encryptionConfig,
-        @OutputCustomType.Parameter("encryptionProvisioningState") String encryptionProvisioningState,
-        @OutputCustomType.Parameter("encryptionState") String encryptionState,
-        @OutputCustomType.Parameter("endpoint") String endpoint,
-        @OutputCustomType.Parameter("firewallAllowAzureIps") String firewallAllowAzureIps,
-        @OutputCustomType.Parameter("firewallRules") List<FirewallRuleResponse> firewallRules,
-        @OutputCustomType.Parameter("firewallState") String firewallState,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("identity") EncryptionIdentityResponse identity,
-        @OutputCustomType.Parameter("lastModifiedTime") String lastModifiedTime,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("newTier") String newTier,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("tags") Map<String,String> tags,
-        @OutputCustomType.Parameter("trustedIdProviderState") String trustedIdProviderState,
-        @OutputCustomType.Parameter("trustedIdProviders") List<TrustedIdProviderResponse> trustedIdProviders,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("virtualNetworkRules") List<VirtualNetworkRuleResponse> virtualNetworkRules) {
+        @CustomType.Parameter("accountId") String accountId,
+        @CustomType.Parameter("creationTime") String creationTime,
+        @CustomType.Parameter("currentTier") String currentTier,
+        @CustomType.Parameter("defaultGroup") String defaultGroup,
+        @CustomType.Parameter("encryptionConfig") EncryptionConfigResponse encryptionConfig,
+        @CustomType.Parameter("encryptionProvisioningState") String encryptionProvisioningState,
+        @CustomType.Parameter("encryptionState") String encryptionState,
+        @CustomType.Parameter("endpoint") String endpoint,
+        @CustomType.Parameter("firewallAllowAzureIps") String firewallAllowAzureIps,
+        @CustomType.Parameter("firewallRules") List<FirewallRuleResponse> firewallRules,
+        @CustomType.Parameter("firewallState") String firewallState,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("identity") EncryptionIdentityResponse identity,
+        @CustomType.Parameter("lastModifiedTime") String lastModifiedTime,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("newTier") String newTier,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("tags") Map<String,String> tags,
+        @CustomType.Parameter("trustedIdProviderState") String trustedIdProviderState,
+        @CustomType.Parameter("trustedIdProviders") List<TrustedIdProviderResponse> trustedIdProviders,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("virtualNetworkRules") List<VirtualNetworkRuleResponse> virtualNetworkRules) {
         this.accountId = accountId;
         this.creationTime = creationTime;
         this.currentTier = currentTier;

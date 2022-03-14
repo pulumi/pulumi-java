@@ -6,7 +6,7 @@ package io.pulumi.azurenative.operationalinsights;
 import io.pulumi.azurenative.operationalinsights.enums.LinkedServiceEntityStatus;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class LinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the linkedServices resource
      * 
      */
-    @InputImport(name="linkedServiceName")
+    @Import(name="linkedServiceName")
       private final @Nullable Output<String> linkedServiceName;
 
     public Output<String> getLinkedServiceName() {
@@ -32,7 +32,7 @@ public final class LinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
      * The provisioning state of the linked service.
      * 
      */
-    @InputImport(name="provisioningState")
+    @Import(name="provisioningState")
       private final @Nullable Output<Either<String,LinkedServiceEntityStatus>> provisioningState;
 
     public Output<Either<String,LinkedServiceEntityStatus>> getProvisioningState() {
@@ -43,7 +43,7 @@ public final class LinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -54,7 +54,7 @@ public final class LinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
      * The resource id of the resource that will be linked to the workspace. This should be used for linking resources which require read access
      * 
      */
-    @InputImport(name="resourceId")
+    @Import(name="resourceId")
       private final @Nullable Output<String> resourceId;
 
     public Output<String> getResourceId() {
@@ -65,7 +65,7 @@ public final class LinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
      * Resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -76,7 +76,7 @@ public final class LinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the workspace.
      * 
      */
-    @InputImport(name="workspaceName", required=true)
+    @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;
 
     public Output<String> getWorkspaceName() {
@@ -87,7 +87,7 @@ public final class LinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
      * The resource id of the resource that will be linked to the workspace. This should be used for linking resources which require write access
      * 
      */
-    @InputImport(name="writeAccessResourceId")
+    @Import(name="writeAccessResourceId")
       private final @Nullable Output<String> writeAccessResourceId;
 
     public Output<String> getWriteAccessResourceId() {

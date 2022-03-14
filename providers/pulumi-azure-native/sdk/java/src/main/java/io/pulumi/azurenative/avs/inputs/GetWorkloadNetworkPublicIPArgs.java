@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.avs.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetWorkloadNetworkPublicIPArgs extends io.pulumi.resources.In
      * Name of the private cloud
      * 
      */
-    @InputImport(name="privateCloudName", required=true)
+    @Import(name="privateCloudName", required=true)
       private final String privateCloudName;
 
     public String getPrivateCloudName() {
@@ -27,7 +27,7 @@ public final class GetWorkloadNetworkPublicIPArgs extends io.pulumi.resources.In
      * NSX Public IP Block identifier. Generally the same as the Public IP Block's display name
      * 
      */
-    @InputImport(name="publicIPId", required=true)
+    @Import(name="publicIPId", required=true)
       private final String publicIPId;
 
     public String getPublicIPId() {
@@ -38,7 +38,7 @@ public final class GetWorkloadNetworkPublicIPArgs extends io.pulumi.resources.In
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {

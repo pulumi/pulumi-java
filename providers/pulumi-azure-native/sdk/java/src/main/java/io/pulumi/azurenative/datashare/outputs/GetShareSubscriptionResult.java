@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.datashare.outputs;
 
 import io.pulumi.azurenative.datashare.outputs.SystemDataResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetShareSubscriptionResult {
     /**
      * Time at which the share subscription was created.
@@ -108,27 +108,27 @@ public final class GetShareSubscriptionResult {
      */
     private final String userName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetShareSubscriptionResult(
-        @OutputCustomType.Parameter("createdAt") String createdAt,
-        @OutputCustomType.Parameter("expirationDate") @Nullable String expirationDate,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("invitationId") String invitationId,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("providerEmail") String providerEmail,
-        @OutputCustomType.Parameter("providerName") String providerName,
-        @OutputCustomType.Parameter("providerTenantName") String providerTenantName,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("shareDescription") String shareDescription,
-        @OutputCustomType.Parameter("shareKind") String shareKind,
-        @OutputCustomType.Parameter("shareName") String shareName,
-        @OutputCustomType.Parameter("shareSubscriptionStatus") String shareSubscriptionStatus,
-        @OutputCustomType.Parameter("shareTerms") String shareTerms,
-        @OutputCustomType.Parameter("sourceShareLocation") String sourceShareLocation,
-        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("userEmail") String userEmail,
-        @OutputCustomType.Parameter("userName") String userName) {
+        @CustomType.Parameter("createdAt") String createdAt,
+        @CustomType.Parameter("expirationDate") @Nullable String expirationDate,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("invitationId") String invitationId,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("providerEmail") String providerEmail,
+        @CustomType.Parameter("providerName") String providerName,
+        @CustomType.Parameter("providerTenantName") String providerTenantName,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("shareDescription") String shareDescription,
+        @CustomType.Parameter("shareKind") String shareKind,
+        @CustomType.Parameter("shareName") String shareName,
+        @CustomType.Parameter("shareSubscriptionStatus") String shareSubscriptionStatus,
+        @CustomType.Parameter("shareTerms") String shareTerms,
+        @CustomType.Parameter("sourceShareLocation") String sourceShareLocation,
+        @CustomType.Parameter("systemData") SystemDataResponse systemData,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("userEmail") String userEmail,
+        @CustomType.Parameter("userName") String userName) {
         this.createdAt = createdAt;
         this.expirationDate = expirationDate;
         this.id = id;

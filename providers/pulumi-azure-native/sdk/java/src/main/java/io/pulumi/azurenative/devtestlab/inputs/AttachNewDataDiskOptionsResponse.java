@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.devtestlab.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class AttachNewDataDiskOptionsResponse extends io.pulumi.resources.
      * The name of the disk to be attached.
      * 
      */
-    @InputImport(name="diskName")
+    @Import(name="diskName")
       private final @Nullable String diskName;
 
     public Optional<String> getDiskName() {
@@ -34,7 +34,7 @@ public final class AttachNewDataDiskOptionsResponse extends io.pulumi.resources.
      * Size of the disk to be attached in Gibibytes.
      * 
      */
-    @InputImport(name="diskSizeGiB")
+    @Import(name="diskSizeGiB")
       private final @Nullable Integer diskSizeGiB;
 
     public Optional<Integer> getDiskSizeGiB() {
@@ -45,7 +45,7 @@ public final class AttachNewDataDiskOptionsResponse extends io.pulumi.resources.
      * The storage type for the disk (i.e. Standard, Premium).
      * 
      */
-    @InputImport(name="diskType")
+    @Import(name="diskType")
       private final @Nullable String diskType;
 
     public Optional<String> getDiskType() {

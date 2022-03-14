@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.providerhub.outputs;
 
 import io.pulumi.azurenative.providerhub.outputs.TypedErrorInfoResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ExtendedErrorInfoResponse {
     private final @Nullable List<TypedErrorInfoResponse> additionalInfo;
     private final @Nullable String code;
@@ -19,13 +19,13 @@ public final class ExtendedErrorInfoResponse {
     private final @Nullable String message;
     private final @Nullable String target;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ExtendedErrorInfoResponse(
-        @OutputCustomType.Parameter("additionalInfo") @Nullable List<TypedErrorInfoResponse> additionalInfo,
-        @OutputCustomType.Parameter("code") @Nullable String code,
-        @OutputCustomType.Parameter("details") @Nullable List<ExtendedErrorInfoResponse> details,
-        @OutputCustomType.Parameter("message") @Nullable String message,
-        @OutputCustomType.Parameter("target") @Nullable String target) {
+        @CustomType.Parameter("additionalInfo") @Nullable List<TypedErrorInfoResponse> additionalInfo,
+        @CustomType.Parameter("code") @Nullable String code,
+        @CustomType.Parameter("details") @Nullable List<ExtendedErrorInfoResponse> details,
+        @CustomType.Parameter("message") @Nullable String message,
+        @CustomType.Parameter("target") @Nullable String target) {
         this.additionalInfo = additionalInfo;
         this.code = code;
         this.details = details;

@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.recoveryservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EncryptionDetailsResponse {
     /**
      * The key encryption key certificate expiry date.
@@ -27,11 +27,11 @@ public final class EncryptionDetailsResponse {
      */
     private final @Nullable String kekState;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EncryptionDetailsResponse(
-        @OutputCustomType.Parameter("kekCertExpiryDate") @Nullable String kekCertExpiryDate,
-        @OutputCustomType.Parameter("kekCertThumbprint") @Nullable String kekCertThumbprint,
-        @OutputCustomType.Parameter("kekState") @Nullable String kekState) {
+        @CustomType.Parameter("kekCertExpiryDate") @Nullable String kekCertExpiryDate,
+        @CustomType.Parameter("kekCertThumbprint") @Nullable String kekCertThumbprint,
+        @CustomType.Parameter("kekState") @Nullable String kekState) {
         this.kekCertExpiryDate = kekCertExpiryDate;
         this.kekCertThumbprint = kekCertThumbprint;
         this.kekState = kekState;

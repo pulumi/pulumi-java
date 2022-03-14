@@ -9,7 +9,7 @@ import io.pulumi.azurenative.extendedlocation.outputs.CustomLocationPropertiesRe
 import io.pulumi.azurenative.extendedlocation.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -37,7 +37,7 @@ public class CustomLocation extends io.pulumi.resources.CustomResource {
      * This is optional input that contains the authentication that should be used to generate the namespace.
      * 
      */
-    @OutputExport(name="authentication", type=CustomLocationPropertiesResponseAuthentication.class, parameters={})
+    @Export(name="authentication", type=CustomLocationPropertiesResponseAuthentication.class, parameters={})
     private Output</* @Nullable */ CustomLocationPropertiesResponseAuthentication> authentication;
 
     /**
@@ -51,7 +51,7 @@ public class CustomLocation extends io.pulumi.resources.CustomResource {
      * Contains the reference to the add-on that contains charts to deploy CRDs and operators.
      * 
      */
-    @OutputExport(name="clusterExtensionIds", type=List.class, parameters={String.class})
+    @Export(name="clusterExtensionIds", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> clusterExtensionIds;
 
     /**
@@ -65,7 +65,7 @@ public class CustomLocation extends io.pulumi.resources.CustomResource {
      * Display name for the Custom Locations location.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output</* @Nullable */ String> displayName;
 
     /**
@@ -79,7 +79,7 @@ public class CustomLocation extends io.pulumi.resources.CustomResource {
      * Connected Cluster or AKS Cluster. The Custom Locations RP will perform a checkAccess API for listAdminCredentials permissions.
      * 
      */
-    @OutputExport(name="hostResourceId", type=String.class, parameters={})
+    @Export(name="hostResourceId", type=String.class, parameters={})
     private Output</* @Nullable */ String> hostResourceId;
 
     /**
@@ -93,7 +93,7 @@ public class CustomLocation extends io.pulumi.resources.CustomResource {
      * Type of host the Custom Locations is referencing (Kubernetes, etc...).
      * 
      */
-    @OutputExport(name="hostType", type=String.class, parameters={})
+    @Export(name="hostType", type=String.class, parameters={})
     private Output</* @Nullable */ String> hostType;
 
     /**
@@ -107,7 +107,7 @@ public class CustomLocation extends io.pulumi.resources.CustomResource {
      * The geo-location where the resource lives
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -121,7 +121,7 @@ public class CustomLocation extends io.pulumi.resources.CustomResource {
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -135,7 +135,7 @@ public class CustomLocation extends io.pulumi.resources.CustomResource {
      * Kubernetes namespace that will be created on the specified cluster.
      * 
      */
-    @OutputExport(name="namespace", type=String.class, parameters={})
+    @Export(name="namespace", type=String.class, parameters={})
     private Output</* @Nullable */ String> namespace;
 
     /**
@@ -149,7 +149,7 @@ public class CustomLocation extends io.pulumi.resources.CustomResource {
      * Provisioning State for the Custom Location.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output</* @Nullable */ String> provisioningState;
 
     /**
@@ -163,7 +163,7 @@ public class CustomLocation extends io.pulumi.resources.CustomResource {
      * Metadata pertaining to creation and last modification of the resource
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -177,7 +177,7 @@ public class CustomLocation extends io.pulumi.resources.CustomResource {
      * Resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -191,7 +191,7 @@ public class CustomLocation extends io.pulumi.resources.CustomResource {
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

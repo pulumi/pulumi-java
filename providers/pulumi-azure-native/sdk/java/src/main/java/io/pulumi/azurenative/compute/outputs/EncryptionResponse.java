@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EncryptionResponse {
     /**
      * ResourceId of the disk encryption set to use for enabling encryption at rest.
@@ -22,10 +22,10 @@ public final class EncryptionResponse {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EncryptionResponse(
-        @OutputCustomType.Parameter("diskEncryptionSetId") @Nullable String diskEncryptionSetId,
-        @OutputCustomType.Parameter("type") @Nullable String type) {
+        @CustomType.Parameter("diskEncryptionSetId") @Nullable String diskEncryptionSetId,
+        @CustomType.Parameter("type") @Nullable String type) {
         this.diskEncryptionSetId = diskEncryptionSetId;
         this.type = type;
     }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FtpReadSettingsResponse {
     /**
      * Indicates whether the source files need to be deleted after copy completion. Default is false. Type: boolean (or Expression with resultType boolean).
@@ -75,20 +75,20 @@ public final class FtpReadSettingsResponse {
      */
     private final @Nullable Object wildcardFolderPath;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FtpReadSettingsResponse(
-        @OutputCustomType.Parameter("deleteFilesAfterCompletion") @Nullable Object deleteFilesAfterCompletion,
-        @OutputCustomType.Parameter("disableChunking") @Nullable Object disableChunking,
-        @OutputCustomType.Parameter("disableMetricsCollection") @Nullable Object disableMetricsCollection,
-        @OutputCustomType.Parameter("enablePartitionDiscovery") @Nullable Boolean enablePartitionDiscovery,
-        @OutputCustomType.Parameter("fileListPath") @Nullable Object fileListPath,
-        @OutputCustomType.Parameter("maxConcurrentConnections") @Nullable Object maxConcurrentConnections,
-        @OutputCustomType.Parameter("partitionRootPath") @Nullable Object partitionRootPath,
-        @OutputCustomType.Parameter("recursive") @Nullable Object recursive,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("useBinaryTransfer") @Nullable Boolean useBinaryTransfer,
-        @OutputCustomType.Parameter("wildcardFileName") @Nullable Object wildcardFileName,
-        @OutputCustomType.Parameter("wildcardFolderPath") @Nullable Object wildcardFolderPath) {
+        @CustomType.Parameter("deleteFilesAfterCompletion") @Nullable Object deleteFilesAfterCompletion,
+        @CustomType.Parameter("disableChunking") @Nullable Object disableChunking,
+        @CustomType.Parameter("disableMetricsCollection") @Nullable Object disableMetricsCollection,
+        @CustomType.Parameter("enablePartitionDiscovery") @Nullable Boolean enablePartitionDiscovery,
+        @CustomType.Parameter("fileListPath") @Nullable Object fileListPath,
+        @CustomType.Parameter("maxConcurrentConnections") @Nullable Object maxConcurrentConnections,
+        @CustomType.Parameter("partitionRootPath") @Nullable Object partitionRootPath,
+        @CustomType.Parameter("recursive") @Nullable Object recursive,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("useBinaryTransfer") @Nullable Boolean useBinaryTransfer,
+        @CustomType.Parameter("wildcardFileName") @Nullable Object wildcardFileName,
+        @CustomType.Parameter("wildcardFolderPath") @Nullable Object wildcardFolderPath) {
         this.deleteFilesAfterCompletion = deleteFilesAfterCompletion;
         this.disableChunking = disableChunking;
         this.disableMetricsCollection = disableMetricsCollection;

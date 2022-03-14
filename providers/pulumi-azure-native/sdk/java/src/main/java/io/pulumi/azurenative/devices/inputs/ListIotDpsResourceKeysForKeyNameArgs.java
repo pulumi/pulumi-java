@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.devices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class ListIotDpsResourceKeysForKeyNameArgs extends io.pulumi.resour
      * Logical key name to get key-values for.
      * 
      */
-    @InputImport(name="keyName", required=true)
+    @Import(name="keyName", required=true)
       private final String keyName;
 
     public String getKeyName() {
@@ -27,7 +27,7 @@ public final class ListIotDpsResourceKeysForKeyNameArgs extends io.pulumi.resour
      * Name of the provisioning service.
      * 
      */
-    @InputImport(name="provisioningServiceName", required=true)
+    @Import(name="provisioningServiceName", required=true)
       private final String provisioningServiceName;
 
     public String getProvisioningServiceName() {
@@ -38,7 +38,7 @@ public final class ListIotDpsResourceKeysForKeyNameArgs extends io.pulumi.resour
      * The name of the resource group that contains the provisioning service.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {

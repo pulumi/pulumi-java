@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.netapp.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class VolumeSnapshotPropertiesArgs extends io.pulumi.resources.Reso
      * Snapshot Policy ResourceId
      * 
      */
-    @InputImport(name="snapshotPolicyId")
+    @Import(name="snapshotPolicyId")
       private final @Nullable Output<String> snapshotPolicyId;
 
     public Output<String> getSnapshotPolicyId() {

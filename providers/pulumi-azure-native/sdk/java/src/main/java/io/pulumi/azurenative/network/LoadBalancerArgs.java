@@ -13,7 +13,7 @@ import io.pulumi.azurenative.network.inputs.LoadBalancingRuleArgs;
 import io.pulumi.azurenative.network.inputs.OutboundRuleArgs;
 import io.pulumi.azurenative.network.inputs.ProbeArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -29,7 +29,7 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
      * Collection of backend address pools used by a load balancer.
      * 
      */
-    @InputImport(name="backendAddressPools")
+    @Import(name="backendAddressPools")
       private final @Nullable Output<List<BackendAddressPoolArgs>> backendAddressPools;
 
     public Output<List<BackendAddressPoolArgs>> getBackendAddressPools() {
@@ -40,7 +40,7 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
      * The extended location of the load balancer.
      * 
      */
-    @InputImport(name="extendedLocation")
+    @Import(name="extendedLocation")
       private final @Nullable Output<ExtendedLocationArgs> extendedLocation;
 
     public Output<ExtendedLocationArgs> getExtendedLocation() {
@@ -51,7 +51,7 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
      * Object representing the frontend IPs to be used for the load balancer.
      * 
      */
-    @InputImport(name="frontendIPConfigurations")
+    @Import(name="frontendIPConfigurations")
       private final @Nullable Output<List<FrontendIPConfigurationArgs>> frontendIPConfigurations;
 
     public Output<List<FrontendIPConfigurationArgs>> getFrontendIPConfigurations() {
@@ -62,7 +62,7 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
      * Resource ID.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
@@ -73,7 +73,7 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
      * Defines an external port range for inbound NAT to a single backend port on NICs associated with a load balancer. Inbound NAT rules are created automatically for each NIC associated with the Load Balancer using an external port from this range. Defining an Inbound NAT pool on your Load Balancer is mutually exclusive with defining inbound Nat rules. Inbound NAT pools are referenced from virtual machine scale sets. NICs that are associated with individual virtual machines cannot reference an inbound NAT pool. They have to reference individual inbound NAT rules.
      * 
      */
-    @InputImport(name="inboundNatPools")
+    @Import(name="inboundNatPools")
       private final @Nullable Output<List<InboundNatPoolArgs>> inboundNatPools;
 
     public Output<List<InboundNatPoolArgs>> getInboundNatPools() {
@@ -84,7 +84,7 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
      * Collection of inbound NAT Rules used by a load balancer. Defining inbound NAT rules on your load balancer is mutually exclusive with defining an inbound NAT pool. Inbound NAT pools are referenced from virtual machine scale sets. NICs that are associated with individual virtual machines cannot reference an Inbound NAT pool. They have to reference individual inbound NAT rules.
      * 
      */
-    @InputImport(name="inboundNatRules")
+    @Import(name="inboundNatRules")
       private final @Nullable Output<List<InboundNatRuleArgs>> inboundNatRules;
 
     public Output<List<InboundNatRuleArgs>> getInboundNatRules() {
@@ -95,7 +95,7 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the load balancer.
      * 
      */
-    @InputImport(name="loadBalancerName")
+    @Import(name="loadBalancerName")
       private final @Nullable Output<String> loadBalancerName;
 
     public Output<String> getLoadBalancerName() {
@@ -106,7 +106,7 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
      * Object collection representing the load balancing rules Gets the provisioning.
      * 
      */
-    @InputImport(name="loadBalancingRules")
+    @Import(name="loadBalancingRules")
       private final @Nullable Output<List<LoadBalancingRuleArgs>> loadBalancingRules;
 
     public Output<List<LoadBalancingRuleArgs>> getLoadBalancingRules() {
@@ -117,7 +117,7 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
      * Resource location.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -128,7 +128,7 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
      * The outbound rules.
      * 
      */
-    @InputImport(name="outboundRules")
+    @Import(name="outboundRules")
       private final @Nullable Output<List<OutboundRuleArgs>> outboundRules;
 
     public Output<List<OutboundRuleArgs>> getOutboundRules() {
@@ -139,7 +139,7 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
      * Collection of probe objects used in the load balancer.
      * 
      */
-    @InputImport(name="probes")
+    @Import(name="probes")
       private final @Nullable Output<List<ProbeArgs>> probes;
 
     public Output<List<ProbeArgs>> getProbes() {
@@ -150,7 +150,7 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -161,7 +161,7 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
      * The load balancer SKU.
      * 
      */
-    @InputImport(name="sku")
+    @Import(name="sku")
       private final @Nullable Output<LoadBalancerSkuArgs> sku;
 
     public Output<LoadBalancerSkuArgs> getSku() {
@@ -172,7 +172,7 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
      * Resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

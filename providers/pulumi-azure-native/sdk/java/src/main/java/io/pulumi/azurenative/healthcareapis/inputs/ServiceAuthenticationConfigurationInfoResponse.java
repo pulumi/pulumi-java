@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.healthcareapis.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ServiceAuthenticationConfigurationInfoResponse extends io.pul
      * The audience url for the service
      * 
      */
-    @InputImport(name="audience")
+    @Import(name="audience")
       private final @Nullable String audience;
 
     public Optional<String> getAudience() {
@@ -34,7 +34,7 @@ public final class ServiceAuthenticationConfigurationInfoResponse extends io.pul
      * The authority url for the service
      * 
      */
-    @InputImport(name="authority")
+    @Import(name="authority")
       private final @Nullable String authority;
 
     public Optional<String> getAuthority() {
@@ -45,7 +45,7 @@ public final class ServiceAuthenticationConfigurationInfoResponse extends io.pul
      * If the SMART on FHIR proxy is enabled
      * 
      */
-    @InputImport(name="smartProxyEnabled")
+    @Import(name="smartProxyEnabled")
       private final @Nullable Boolean smartProxyEnabled;
 
     public Optional<Boolean> getSmartProxyEnabled() {

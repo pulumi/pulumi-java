@@ -5,7 +5,7 @@ package io.pulumi.azurenative.recoveryservices.inputs;
 
 import io.pulumi.azurenative.recoveryservices.inputs.WorkloadInquiryDetailsArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class InquiryInfoArgs extends io.pulumi.resources.ResourceArgs {
      * For e.g. - For SQL and oracle this will contain different details.
      * 
      */
-    @InputImport(name="inquiryDetails")
+    @Import(name="inquiryDetails")
       private final @Nullable Output<List<WorkloadInquiryDetailsArgs>> inquiryDetails;
 
     public Output<List<WorkloadInquiryDetailsArgs>> getInquiryDetails() {
@@ -37,7 +37,7 @@ public final class InquiryInfoArgs extends io.pulumi.resources.ResourceArgs {
      * InProgress | Failed | Succeeded
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable Output<String> status;
 
     public Output<String> getStatus() {

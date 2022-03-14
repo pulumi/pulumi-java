@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.blueprint.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ParameterDefinitionResponse {
     /**
      * Array of allowed values for this parameter.
@@ -44,14 +44,14 @@ public final class ParameterDefinitionResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ParameterDefinitionResponse(
-        @OutputCustomType.Parameter("allowedValues") @Nullable List<Object> allowedValues,
-        @OutputCustomType.Parameter("defaultValue") @Nullable Object defaultValue,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
-        @OutputCustomType.Parameter("strongType") @Nullable String strongType,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("allowedValues") @Nullable List<Object> allowedValues,
+        @CustomType.Parameter("defaultValue") @Nullable Object defaultValue,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("displayName") @Nullable String displayName,
+        @CustomType.Parameter("strongType") @Nullable String strongType,
+        @CustomType.Parameter("type") String type) {
         this.allowedValues = allowedValues;
         this.defaultValue = defaultValue;
         this.description = description;

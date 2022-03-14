@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class RulesEngineMatchConditionResponse extends io.pulumi.resources
      * Describes if this is negate condition or not
      * 
      */
-    @InputImport(name="negateCondition")
+    @Import(name="negateCondition")
       private final @Nullable Boolean negateCondition;
 
     public Optional<Boolean> getNegateCondition() {
@@ -35,7 +35,7 @@ public final class RulesEngineMatchConditionResponse extends io.pulumi.resources
      * Match values to match against. The operator will apply to each value in here with OR semantics. If any of them match the variable with the given operator this match condition is considered a match.
      * 
      */
-    @InputImport(name="rulesEngineMatchValue", required=true)
+    @Import(name="rulesEngineMatchValue", required=true)
       private final List<String> rulesEngineMatchValue;
 
     public List<String> getRulesEngineMatchValue() {
@@ -46,7 +46,7 @@ public final class RulesEngineMatchConditionResponse extends io.pulumi.resources
      * Match Variable
      * 
      */
-    @InputImport(name="rulesEngineMatchVariable", required=true)
+    @Import(name="rulesEngineMatchVariable", required=true)
       private final String rulesEngineMatchVariable;
 
     public String getRulesEngineMatchVariable() {
@@ -57,7 +57,7 @@ public final class RulesEngineMatchConditionResponse extends io.pulumi.resources
      * Describes operator to apply to the match condition.
      * 
      */
-    @InputImport(name="rulesEngineOperator", required=true)
+    @Import(name="rulesEngineOperator", required=true)
       private final String rulesEngineOperator;
 
     public String getRulesEngineOperator() {
@@ -68,7 +68,7 @@ public final class RulesEngineMatchConditionResponse extends io.pulumi.resources
      * Name of selector in RequestHeader or RequestBody to be matched
      * 
      */
-    @InputImport(name="selector")
+    @Import(name="selector")
       private final @Nullable String selector;
 
     public Optional<String> getSelector() {
@@ -79,7 +79,7 @@ public final class RulesEngineMatchConditionResponse extends io.pulumi.resources
      * List of transforms
      * 
      */
-    @InputImport(name="transforms")
+    @Import(name="transforms")
       private final @Nullable List<String> transforms;
 
     public List<String> getTransforms() {

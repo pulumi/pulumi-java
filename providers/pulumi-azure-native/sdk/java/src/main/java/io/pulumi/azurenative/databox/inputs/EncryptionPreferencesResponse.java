@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.databox.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class EncryptionPreferencesResponse extends io.pulumi.resources.Inv
      * Defines secondary layer of software-based encryption enablement.
      * 
      */
-    @InputImport(name="doubleEncryption")
+    @Import(name="doubleEncryption")
       private final @Nullable String doubleEncryption;
 
     public Optional<String> getDoubleEncryption() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.sql.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetServerTrustGroupArgs extends io.pulumi.resources.InvokeArg
      * The name of the region where the resource is located.
      * 
      */
-    @InputImport(name="locationName", required=true)
+    @Import(name="locationName", required=true)
       private final String locationName;
 
     public String getLocationName() {
@@ -27,7 +27,7 @@ public final class GetServerTrustGroupArgs extends io.pulumi.resources.InvokeArg
      * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {
@@ -38,7 +38,7 @@ public final class GetServerTrustGroupArgs extends io.pulumi.resources.InvokeArg
      * The name of the server trust group.
      * 
      */
-    @InputImport(name="serverTrustGroupName", required=true)
+    @Import(name="serverTrustGroupName", required=true)
       private final String serverTrustGroupName;
 
     public String getServerTrustGroupName() {

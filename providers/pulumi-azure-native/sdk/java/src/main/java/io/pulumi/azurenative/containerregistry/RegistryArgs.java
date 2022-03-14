@@ -8,7 +8,7 @@ import io.pulumi.azurenative.containerregistry.inputs.PoliciesArgs;
 import io.pulumi.azurenative.containerregistry.inputs.SkuArgs;
 import io.pulumi.azurenative.containerregistry.inputs.StorageAccountPropertiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -24,7 +24,7 @@ public final class RegistryArgs extends io.pulumi.resources.ResourceArgs {
      * The value that indicates whether the admin user is enabled.
      * 
      */
-    @InputImport(name="adminUserEnabled")
+    @Import(name="adminUserEnabled")
       private final @Nullable Output<Boolean> adminUserEnabled;
 
     public Output<Boolean> getAdminUserEnabled() {
@@ -35,7 +35,7 @@ public final class RegistryArgs extends io.pulumi.resources.ResourceArgs {
      * The location of the resource. This cannot be changed after the resource is created.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -46,7 +46,7 @@ public final class RegistryArgs extends io.pulumi.resources.ResourceArgs {
      * The network rule set for a container registry.
      * 
      */
-    @InputImport(name="networkRuleSet")
+    @Import(name="networkRuleSet")
       private final @Nullable Output<NetworkRuleSetArgs> networkRuleSet;
 
     public Output<NetworkRuleSetArgs> getNetworkRuleSet() {
@@ -57,7 +57,7 @@ public final class RegistryArgs extends io.pulumi.resources.ResourceArgs {
      * The policies for a container registry.
      * 
      */
-    @InputImport(name="policies")
+    @Import(name="policies")
       private final @Nullable Output<PoliciesArgs> policies;
 
     public Output<PoliciesArgs> getPolicies() {
@@ -68,7 +68,7 @@ public final class RegistryArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the container registry.
      * 
      */
-    @InputImport(name="registryName")
+    @Import(name="registryName")
       private final @Nullable Output<String> registryName;
 
     public Output<String> getRegistryName() {
@@ -79,7 +79,7 @@ public final class RegistryArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group to which the container registry belongs.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -90,7 +90,7 @@ public final class RegistryArgs extends io.pulumi.resources.ResourceArgs {
      * The SKU of the container registry.
      * 
      */
-    @InputImport(name="sku", required=true)
+    @Import(name="sku", required=true)
       private final Output<SkuArgs> sku;
 
     public Output<SkuArgs> getSku() {
@@ -101,7 +101,7 @@ public final class RegistryArgs extends io.pulumi.resources.ResourceArgs {
      * The properties of the storage account for the container registry. Only applicable to Classic SKU.
      * 
      */
-    @InputImport(name="storageAccount")
+    @Import(name="storageAccount")
       private final @Nullable Output<StorageAccountPropertiesArgs> storageAccount;
 
     public Output<StorageAccountPropertiesArgs> getStorageAccount() {
@@ -112,7 +112,7 @@ public final class RegistryArgs extends io.pulumi.resources.ResourceArgs {
      * The tags of the resource.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

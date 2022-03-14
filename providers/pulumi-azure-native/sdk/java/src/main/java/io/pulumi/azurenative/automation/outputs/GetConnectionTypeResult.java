@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.automation.outputs;
 
 import io.pulumi.azurenative.automation.outputs.FieldDefinitionResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetConnectionTypeResult {
     /**
      * Gets the creation time.
@@ -55,16 +55,16 @@ public final class GetConnectionTypeResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetConnectionTypeResult(
-        @OutputCustomType.Parameter("creationTime") String creationTime,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("fieldDefinitions") Map<String,FieldDefinitionResponse> fieldDefinitions,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("isGlobal") @Nullable Boolean isGlobal,
-        @OutputCustomType.Parameter("lastModifiedTime") @Nullable String lastModifiedTime,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("creationTime") String creationTime,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("fieldDefinitions") Map<String,FieldDefinitionResponse> fieldDefinitions,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("isGlobal") @Nullable Boolean isGlobal,
+        @CustomType.Parameter("lastModifiedTime") @Nullable String lastModifiedTime,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("type") String type) {
         this.creationTime = creationTime;
         this.description = description;
         this.fieldDefinitions = fieldDefinitions;

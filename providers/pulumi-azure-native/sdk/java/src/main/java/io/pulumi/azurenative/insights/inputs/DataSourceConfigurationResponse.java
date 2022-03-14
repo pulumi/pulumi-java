@@ -6,7 +6,7 @@ package io.pulumi.azurenative.insights.inputs;
 import io.pulumi.azurenative.insights.inputs.EtwProviderConfigurationResponse;
 import io.pulumi.azurenative.insights.inputs.EventLogConfigurationResponse;
 import io.pulumi.azurenative.insights.inputs.PerformanceCounterConfigurationResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -21,7 +21,7 @@ public final class DataSourceConfigurationResponse extends io.pulumi.resources.I
      * Windows event logs configuration.
      * 
      */
-    @InputImport(name="eventLogs")
+    @Import(name="eventLogs")
       private final @Nullable List<EventLogConfigurationResponse> eventLogs;
 
     public List<EventLogConfigurationResponse> getEventLogs() {
@@ -32,7 +32,7 @@ public final class DataSourceConfigurationResponse extends io.pulumi.resources.I
      * Performance counter configuration
      * 
      */
-    @InputImport(name="perfCounters")
+    @Import(name="perfCounters")
       private final @Nullable List<PerformanceCounterConfigurationResponse> perfCounters;
 
     public List<PerformanceCounterConfigurationResponse> getPerfCounters() {
@@ -43,7 +43,7 @@ public final class DataSourceConfigurationResponse extends io.pulumi.resources.I
      * ETW providers configuration
      * 
      */
-    @InputImport(name="providers")
+    @Import(name="providers")
       private final @Nullable List<EtwProviderConfigurationResponse> providers;
 
     public List<EtwProviderConfigurationResponse> getProviders() {

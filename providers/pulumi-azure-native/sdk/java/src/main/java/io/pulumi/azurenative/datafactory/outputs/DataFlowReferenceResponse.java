@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DataFlowReferenceResponse {
     /**
      * Reference data flow parameters from dataset.
@@ -34,12 +34,12 @@ public final class DataFlowReferenceResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DataFlowReferenceResponse(
-        @OutputCustomType.Parameter("datasetParameters") @Nullable Object datasetParameters,
-        @OutputCustomType.Parameter("parameters") @Nullable Map<String,Object> parameters,
-        @OutputCustomType.Parameter("referenceName") String referenceName,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("datasetParameters") @Nullable Object datasetParameters,
+        @CustomType.Parameter("parameters") @Nullable Map<String,Object> parameters,
+        @CustomType.Parameter("referenceName") String referenceName,
+        @CustomType.Parameter("type") String type) {
         this.datasetParameters = datasetParameters;
         this.parameters = parameters;
         this.referenceName = referenceName;

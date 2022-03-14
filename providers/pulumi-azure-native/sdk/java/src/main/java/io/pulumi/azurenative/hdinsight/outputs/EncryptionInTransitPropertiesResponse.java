@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.hdinsight.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EncryptionInTransitPropertiesResponse {
     /**
      * Indicates whether or not inter cluster node communication is encrypted in transit.
@@ -17,8 +17,8 @@ public final class EncryptionInTransitPropertiesResponse {
      */
     private final @Nullable Boolean isEncryptionInTransitEnabled;
 
-    @OutputCustomType.Constructor
-    private EncryptionInTransitPropertiesResponse(@OutputCustomType.Parameter("isEncryptionInTransitEnabled") @Nullable Boolean isEncryptionInTransitEnabled) {
+    @CustomType.Constructor
+    private EncryptionInTransitPropertiesResponse(@CustomType.Parameter("isEncryptionInTransitEnabled") @Nullable Boolean isEncryptionInTransitEnabled) {
         this.isEncryptionInTransitEnabled = isEncryptionInTransitEnabled;
     }
 

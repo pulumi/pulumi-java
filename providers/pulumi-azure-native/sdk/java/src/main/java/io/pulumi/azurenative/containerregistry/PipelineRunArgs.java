@@ -5,7 +5,7 @@ package io.pulumi.azurenative.containerregistry;
 
 import io.pulumi.azurenative.containerregistry.inputs.PipelineRunRequestArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class PipelineRunArgs extends io.pulumi.resources.ResourceArgs {
      * How the pipeline run should be forced to recreate even if the pipeline run configuration has not changed.
      * 
      */
-    @InputImport(name="forceUpdateTag")
+    @Import(name="forceUpdateTag")
       private final @Nullable Output<String> forceUpdateTag;
 
     public Output<String> getForceUpdateTag() {
@@ -30,7 +30,7 @@ public final class PipelineRunArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the pipeline run.
      * 
      */
-    @InputImport(name="pipelineRunName")
+    @Import(name="pipelineRunName")
       private final @Nullable Output<String> pipelineRunName;
 
     public Output<String> getPipelineRunName() {
@@ -41,7 +41,7 @@ public final class PipelineRunArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the container registry.
      * 
      */
-    @InputImport(name="registryName", required=true)
+    @Import(name="registryName", required=true)
       private final Output<String> registryName;
 
     public Output<String> getRegistryName() {
@@ -52,7 +52,7 @@ public final class PipelineRunArgs extends io.pulumi.resources.ResourceArgs {
      * The request parameters for a pipeline run.
      * 
      */
-    @InputImport(name="request")
+    @Import(name="request")
       private final @Nullable Output<PipelineRunRequestArgs> request;
 
     public Output<PipelineRunRequestArgs> getRequest() {
@@ -63,7 +63,7 @@ public final class PipelineRunArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group to which the container registry belongs.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {

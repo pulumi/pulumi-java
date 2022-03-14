@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.batch.outputs;
 
 import io.pulumi.azurenative.batch.outputs.ResizeErrorResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ResizeOperationStatusResponse {
     /**
      * This property is set only if an error occurred during the last pool resize, and only when the pool allocationState is Steady.
@@ -33,14 +33,14 @@ public final class ResizeOperationStatusResponse {
     private final @Nullable Integer targetDedicatedNodes;
     private final @Nullable Integer targetLowPriorityNodes;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ResizeOperationStatusResponse(
-        @OutputCustomType.Parameter("errors") @Nullable List<ResizeErrorResponse> errors,
-        @OutputCustomType.Parameter("nodeDeallocationOption") @Nullable String nodeDeallocationOption,
-        @OutputCustomType.Parameter("resizeTimeout") @Nullable String resizeTimeout,
-        @OutputCustomType.Parameter("startTime") @Nullable String startTime,
-        @OutputCustomType.Parameter("targetDedicatedNodes") @Nullable Integer targetDedicatedNodes,
-        @OutputCustomType.Parameter("targetLowPriorityNodes") @Nullable Integer targetLowPriorityNodes) {
+        @CustomType.Parameter("errors") @Nullable List<ResizeErrorResponse> errors,
+        @CustomType.Parameter("nodeDeallocationOption") @Nullable String nodeDeallocationOption,
+        @CustomType.Parameter("resizeTimeout") @Nullable String resizeTimeout,
+        @CustomType.Parameter("startTime") @Nullable String startTime,
+        @CustomType.Parameter("targetDedicatedNodes") @Nullable Integer targetDedicatedNodes,
+        @CustomType.Parameter("targetLowPriorityNodes") @Nullable Integer targetLowPriorityNodes) {
         this.errors = errors;
         this.nodeDeallocationOption = nodeDeallocationOption;
         this.resizeTimeout = resizeTimeout;

@@ -7,13 +7,13 @@ import io.pulumi.azurenative.security.outputs.DefenderForContainersAwsOfferingRe
 import io.pulumi.azurenative.security.outputs.DefenderForContainersAwsOfferingResponseKinesisToS3;
 import io.pulumi.azurenative.security.outputs.DefenderForContainersAwsOfferingResponseKubernetesScubaReader;
 import io.pulumi.azurenative.security.outputs.DefenderForContainersAwsOfferingResponseKubernetesService;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DefenderForContainersAwsOfferingResponse {
     /**
      * The cloudwatch to kinesis connection configuration
@@ -47,14 +47,14 @@ public final class DefenderForContainersAwsOfferingResponse {
      */
     private final String offeringType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DefenderForContainersAwsOfferingResponse(
-        @OutputCustomType.Parameter("cloudWatchToKinesis") @Nullable DefenderForContainersAwsOfferingResponseCloudWatchToKinesis cloudWatchToKinesis,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("kinesisToS3") @Nullable DefenderForContainersAwsOfferingResponseKinesisToS3 kinesisToS3,
-        @OutputCustomType.Parameter("kubernetesScubaReader") @Nullable DefenderForContainersAwsOfferingResponseKubernetesScubaReader kubernetesScubaReader,
-        @OutputCustomType.Parameter("kubernetesService") @Nullable DefenderForContainersAwsOfferingResponseKubernetesService kubernetesService,
-        @OutputCustomType.Parameter("offeringType") String offeringType) {
+        @CustomType.Parameter("cloudWatchToKinesis") @Nullable DefenderForContainersAwsOfferingResponseCloudWatchToKinesis cloudWatchToKinesis,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("kinesisToS3") @Nullable DefenderForContainersAwsOfferingResponseKinesisToS3 kinesisToS3,
+        @CustomType.Parameter("kubernetesScubaReader") @Nullable DefenderForContainersAwsOfferingResponseKubernetesScubaReader kubernetesScubaReader,
+        @CustomType.Parameter("kubernetesService") @Nullable DefenderForContainersAwsOfferingResponseKubernetesService kubernetesService,
+        @CustomType.Parameter("offeringType") String offeringType) {
         this.cloudWatchToKinesis = cloudWatchToKinesis;
         this.description = description;
         this.kinesisToS3 = kinesisToS3;

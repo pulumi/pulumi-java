@@ -5,7 +5,7 @@ package io.pulumi.azurenative.storage.inputs;
 
 import io.pulumi.azurenative.storage.inputs.ManagementPolicyActionResponse;
 import io.pulumi.azurenative.storage.inputs.ManagementPolicyFilterResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class ManagementPolicyDefinitionResponse extends io.pulumi.resource
      * An object that defines the action set.
      * 
      */
-    @InputImport(name="actions", required=true)
+    @Import(name="actions", required=true)
       private final ManagementPolicyActionResponse actions;
 
     public ManagementPolicyActionResponse getActions() {
@@ -34,7 +34,7 @@ public final class ManagementPolicyDefinitionResponse extends io.pulumi.resource
      * An object that defines the filter set.
      * 
      */
-    @InputImport(name="filters")
+    @Import(name="filters")
       private final @Nullable ManagementPolicyFilterResponse filters;
 
     public Optional<ManagementPolicyFilterResponse> getFilters() {

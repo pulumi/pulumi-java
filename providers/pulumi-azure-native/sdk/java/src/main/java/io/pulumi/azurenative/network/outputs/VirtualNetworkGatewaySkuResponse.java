@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VirtualNetworkGatewaySkuResponse {
     /**
      * The capacity.
@@ -28,11 +28,11 @@ public final class VirtualNetworkGatewaySkuResponse {
      */
     private final @Nullable String tier;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VirtualNetworkGatewaySkuResponse(
-        @OutputCustomType.Parameter("capacity") Integer capacity,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("tier") @Nullable String tier) {
+        @CustomType.Parameter("capacity") Integer capacity,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("tier") @Nullable String tier) {
         this.capacity = capacity;
         this.name = name;
         this.tier = tier;

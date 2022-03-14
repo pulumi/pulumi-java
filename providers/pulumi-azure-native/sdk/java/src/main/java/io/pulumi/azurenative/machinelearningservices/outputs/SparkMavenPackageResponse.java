@@ -3,23 +3,23 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SparkMavenPackageResponse {
     private final @Nullable String artifact;
     private final @Nullable String group;
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SparkMavenPackageResponse(
-        @OutputCustomType.Parameter("artifact") @Nullable String artifact,
-        @OutputCustomType.Parameter("group") @Nullable String group,
-        @OutputCustomType.Parameter("version") @Nullable String version) {
+        @CustomType.Parameter("artifact") @Nullable String artifact,
+        @CustomType.Parameter("group") @Nullable String group,
+        @CustomType.Parameter("version") @Nullable String version) {
         this.artifact = artifact;
         this.group = group;
         this.version = version;

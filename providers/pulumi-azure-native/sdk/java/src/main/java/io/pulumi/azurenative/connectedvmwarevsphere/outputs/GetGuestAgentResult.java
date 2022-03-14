@@ -7,14 +7,14 @@ import io.pulumi.azurenative.connectedvmwarevsphere.outputs.GuestCredentialRespo
 import io.pulumi.azurenative.connectedvmwarevsphere.outputs.HttpProxyConfigurationResponse;
 import io.pulumi.azurenative.connectedvmwarevsphere.outputs.ResourceStatusResponse;
 import io.pulumi.azurenative.connectedvmwarevsphere.outputs.SystemDataResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetGuestAgentResult {
     /**
      * Username / Password Credentials to provision guest agent.
@@ -77,20 +77,20 @@ public final class GetGuestAgentResult {
      */
     private final String uuid;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetGuestAgentResult(
-        @OutputCustomType.Parameter("credentials") @Nullable GuestCredentialResponse credentials,
-        @OutputCustomType.Parameter("customResourceName") String customResourceName,
-        @OutputCustomType.Parameter("httpProxyConfig") @Nullable HttpProxyConfigurationResponse httpProxyConfig,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("provisioningAction") @Nullable String provisioningAction,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("status") String status,
-        @OutputCustomType.Parameter("statuses") List<ResourceStatusResponse> statuses,
-        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("uuid") String uuid) {
+        @CustomType.Parameter("credentials") @Nullable GuestCredentialResponse credentials,
+        @CustomType.Parameter("customResourceName") String customResourceName,
+        @CustomType.Parameter("httpProxyConfig") @Nullable HttpProxyConfigurationResponse httpProxyConfig,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("provisioningAction") @Nullable String provisioningAction,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("status") String status,
+        @CustomType.Parameter("statuses") List<ResourceStatusResponse> statuses,
+        @CustomType.Parameter("systemData") SystemDataResponse systemData,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("uuid") String uuid) {
         this.credentials = credentials;
         this.customResourceName = customResourceName;
         this.httpProxyConfig = httpProxyConfig;

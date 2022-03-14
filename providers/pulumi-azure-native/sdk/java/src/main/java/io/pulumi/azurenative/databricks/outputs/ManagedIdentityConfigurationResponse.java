@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.databricks.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ManagedIdentityConfigurationResponse {
     /**
      * The objectId of the Managed Identity that is linked to the Managed Storage account.
@@ -25,11 +25,11 @@ public final class ManagedIdentityConfigurationResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ManagedIdentityConfigurationResponse(
-        @OutputCustomType.Parameter("principalId") String principalId,
-        @OutputCustomType.Parameter("tenantId") String tenantId,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("principalId") String principalId,
+        @CustomType.Parameter("tenantId") String tenantId,
+        @CustomType.Parameter("type") String type) {
         this.principalId = principalId;
         this.tenantId = tenantId;
         this.type = type;

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.security.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class AllowlistCustomAlertRuleResponse extends io.pulumi.resources.
      * The values to allow. The format of the values depends on the rule type.
      * 
      */
-    @InputImport(name="allowlistValues", required=true)
+    @Import(name="allowlistValues", required=true)
       private final List<String> allowlistValues;
 
     public List<String> getAllowlistValues() {
@@ -33,7 +33,7 @@ public final class AllowlistCustomAlertRuleResponse extends io.pulumi.resources.
      * The description of the custom alert.
      * 
      */
-    @InputImport(name="description", required=true)
+    @Import(name="description", required=true)
       private final String description;
 
     public String getDescription() {
@@ -44,7 +44,7 @@ public final class AllowlistCustomAlertRuleResponse extends io.pulumi.resources.
      * The display name of the custom alert.
      * 
      */
-    @InputImport(name="displayName", required=true)
+    @Import(name="displayName", required=true)
       private final String displayName;
 
     public String getDisplayName() {
@@ -55,7 +55,7 @@ public final class AllowlistCustomAlertRuleResponse extends io.pulumi.resources.
      * Status of the custom alert.
      * 
      */
-    @InputImport(name="isEnabled", required=true)
+    @Import(name="isEnabled", required=true)
       private final Boolean isEnabled;
 
     public Boolean getIsEnabled() {
@@ -67,7 +67,7 @@ public final class AllowlistCustomAlertRuleResponse extends io.pulumi.resources.
      * Expected value is 'AllowlistCustomAlertRule'.
      * 
      */
-    @InputImport(name="ruleType", required=true)
+    @Import(name="ruleType", required=true)
       private final String ruleType;
 
     public String getRuleType() {
@@ -78,7 +78,7 @@ public final class AllowlistCustomAlertRuleResponse extends io.pulumi.resources.
      * The value type of the items in the list.
      * 
      */
-    @InputImport(name="valueType", required=true)
+    @Import(name="valueType", required=true)
       private final String valueType;
 
     public String getValueType() {

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.machinelearningservices.outputs.DockerBuildResponse
 import io.pulumi.azurenative.machinelearningservices.outputs.DockerImageResponse;
 import io.pulumi.azurenative.machinelearningservices.outputs.InferenceContainerPropertiesResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -15,7 +15,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EnvironmentSpecificationVersionResponse {
     /**
      * Standard configuration file used by Conda that lets you install any kind of package, including Python, R, and C/C++ packages.
@@ -60,16 +60,16 @@ public final class EnvironmentSpecificationVersionResponse {
      */
     private final @Nullable Map<String,String> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EnvironmentSpecificationVersionResponse(
-        @OutputCustomType.Parameter("condaFile") @Nullable String condaFile,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("docker") @Nullable Either<DockerBuildResponse,DockerImageResponse> docker,
-        @OutputCustomType.Parameter("environmentSpecificationType") String environmentSpecificationType,
-        @OutputCustomType.Parameter("inferenceContainerProperties") @Nullable InferenceContainerPropertiesResponse inferenceContainerProperties,
-        @OutputCustomType.Parameter("isAnonymous") @Nullable Boolean isAnonymous,
-        @OutputCustomType.Parameter("properties") @Nullable Map<String,String> properties,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags) {
+        @CustomType.Parameter("condaFile") @Nullable String condaFile,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("docker") @Nullable Either<DockerBuildResponse,DockerImageResponse> docker,
+        @CustomType.Parameter("environmentSpecificationType") String environmentSpecificationType,
+        @CustomType.Parameter("inferenceContainerProperties") @Nullable InferenceContainerPropertiesResponse inferenceContainerProperties,
+        @CustomType.Parameter("isAnonymous") @Nullable Boolean isAnonymous,
+        @CustomType.Parameter("properties") @Nullable Map<String,String> properties,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags) {
         this.condaFile = condaFile;
         this.description = description;
         this.docker = docker;

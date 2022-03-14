@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FirewallPolicyIntrusionDetectionSignatureSpecificationResponse {
     /**
      * Signature id.
@@ -22,10 +22,10 @@ public final class FirewallPolicyIntrusionDetectionSignatureSpecificationRespons
      */
     private final @Nullable String mode;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FirewallPolicyIntrusionDetectionSignatureSpecificationResponse(
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("mode") @Nullable String mode) {
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("mode") @Nullable String mode) {
         this.id = id;
         this.mode = mode;
     }

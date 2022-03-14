@@ -7,14 +7,14 @@ import io.pulumi.azurenative.devices.outputs.IotHubDefinitionDescriptionResponse
 import io.pulumi.azurenative.devices.outputs.PrivateEndpointConnectionResponse;
 import io.pulumi.azurenative.devices.outputs.SharedAccessSignatureAuthorizationRuleAccessRightsDescriptionResponse;
 import io.pulumi.azurenative.devices.outputs.TargetIpFilterRuleResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class IotDpsPropertiesDescriptionResponse {
     /**
      * Allocation policy to be used by this provisioning service.
@@ -72,19 +72,19 @@ public final class IotDpsPropertiesDescriptionResponse {
      */
     private final @Nullable String state;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private IotDpsPropertiesDescriptionResponse(
-        @OutputCustomType.Parameter("allocationPolicy") @Nullable String allocationPolicy,
-        @OutputCustomType.Parameter("authorizationPolicies") @Nullable List<SharedAccessSignatureAuthorizationRuleAccessRightsDescriptionResponse> authorizationPolicies,
-        @OutputCustomType.Parameter("deviceProvisioningHostName") String deviceProvisioningHostName,
-        @OutputCustomType.Parameter("idScope") String idScope,
-        @OutputCustomType.Parameter("iotHubs") @Nullable List<IotHubDefinitionDescriptionResponse> iotHubs,
-        @OutputCustomType.Parameter("ipFilterRules") @Nullable List<TargetIpFilterRuleResponse> ipFilterRules,
-        @OutputCustomType.Parameter("privateEndpointConnections") @Nullable List<PrivateEndpointConnectionResponse> privateEndpointConnections,
-        @OutputCustomType.Parameter("provisioningState") @Nullable String provisioningState,
-        @OutputCustomType.Parameter("publicNetworkAccess") @Nullable String publicNetworkAccess,
-        @OutputCustomType.Parameter("serviceOperationsHostName") String serviceOperationsHostName,
-        @OutputCustomType.Parameter("state") @Nullable String state) {
+        @CustomType.Parameter("allocationPolicy") @Nullable String allocationPolicy,
+        @CustomType.Parameter("authorizationPolicies") @Nullable List<SharedAccessSignatureAuthorizationRuleAccessRightsDescriptionResponse> authorizationPolicies,
+        @CustomType.Parameter("deviceProvisioningHostName") String deviceProvisioningHostName,
+        @CustomType.Parameter("idScope") String idScope,
+        @CustomType.Parameter("iotHubs") @Nullable List<IotHubDefinitionDescriptionResponse> iotHubs,
+        @CustomType.Parameter("ipFilterRules") @Nullable List<TargetIpFilterRuleResponse> ipFilterRules,
+        @CustomType.Parameter("privateEndpointConnections") @Nullable List<PrivateEndpointConnectionResponse> privateEndpointConnections,
+        @CustomType.Parameter("provisioningState") @Nullable String provisioningState,
+        @CustomType.Parameter("publicNetworkAccess") @Nullable String publicNetworkAccess,
+        @CustomType.Parameter("serviceOperationsHostName") String serviceOperationsHostName,
+        @CustomType.Parameter("state") @Nullable String state) {
         this.allocationPolicy = allocationPolicy;
         this.authorizationPolicies = authorizationPolicies;
         this.deviceProvisioningHostName = deviceProvisioningHostName;

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.CustomHttpsConfigurationResponse;
 import io.pulumi.azurenative.network.inputs.FrontendEndpointUpdateParametersResponseWebApplicationFirewallPolicyLink;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class FrontendEndpointResponse extends io.pulumi.resources.InvokeAr
      * The configuration specifying how to enable HTTPS
      * 
      */
-    @InputImport(name="customHttpsConfiguration", required=true)
+    @Import(name="customHttpsConfiguration", required=true)
       private final CustomHttpsConfigurationResponse customHttpsConfiguration;
 
     public CustomHttpsConfigurationResponse getCustomHttpsConfiguration() {
@@ -36,7 +36,7 @@ public final class FrontendEndpointResponse extends io.pulumi.resources.InvokeAr
      * Provisioning status of Custom Https of the frontendEndpoint.
      * 
      */
-    @InputImport(name="customHttpsProvisioningState", required=true)
+    @Import(name="customHttpsProvisioningState", required=true)
       private final String customHttpsProvisioningState;
 
     public String getCustomHttpsProvisioningState() {
@@ -47,7 +47,7 @@ public final class FrontendEndpointResponse extends io.pulumi.resources.InvokeAr
      * Provisioning substate shows the progress of custom HTTPS enabling/disabling process step by step.
      * 
      */
-    @InputImport(name="customHttpsProvisioningSubstate", required=true)
+    @Import(name="customHttpsProvisioningSubstate", required=true)
       private final String customHttpsProvisioningSubstate;
 
     public String getCustomHttpsProvisioningSubstate() {
@@ -58,7 +58,7 @@ public final class FrontendEndpointResponse extends io.pulumi.resources.InvokeAr
      * The host name of the frontendEndpoint. Must be a domain name.
      * 
      */
-    @InputImport(name="hostName")
+    @Import(name="hostName")
       private final @Nullable String hostName;
 
     public Optional<String> getHostName() {
@@ -69,7 +69,7 @@ public final class FrontendEndpointResponse extends io.pulumi.resources.InvokeAr
      * Resource ID.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable String id;
 
     public Optional<String> getId() {
@@ -80,7 +80,7 @@ public final class FrontendEndpointResponse extends io.pulumi.resources.InvokeAr
      * Resource name.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -91,7 +91,7 @@ public final class FrontendEndpointResponse extends io.pulumi.resources.InvokeAr
      * Resource status.
      * 
      */
-    @InputImport(name="resourceState", required=true)
+    @Import(name="resourceState", required=true)
       private final String resourceState;
 
     public String getResourceState() {
@@ -102,7 +102,7 @@ public final class FrontendEndpointResponse extends io.pulumi.resources.InvokeAr
      * Whether to allow session affinity on this host. Valid options are 'Enabled' or 'Disabled'
      * 
      */
-    @InputImport(name="sessionAffinityEnabledState")
+    @Import(name="sessionAffinityEnabledState")
       private final @Nullable String sessionAffinityEnabledState;
 
     public Optional<String> getSessionAffinityEnabledState() {
@@ -113,7 +113,7 @@ public final class FrontendEndpointResponse extends io.pulumi.resources.InvokeAr
      * UNUSED. This field will be ignored. The TTL to use in seconds for session affinity, if applicable.
      * 
      */
-    @InputImport(name="sessionAffinityTtlSeconds")
+    @Import(name="sessionAffinityTtlSeconds")
       private final @Nullable Integer sessionAffinityTtlSeconds;
 
     public Optional<Integer> getSessionAffinityTtlSeconds() {
@@ -124,7 +124,7 @@ public final class FrontendEndpointResponse extends io.pulumi.resources.InvokeAr
      * Resource type.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {
@@ -135,7 +135,7 @@ public final class FrontendEndpointResponse extends io.pulumi.resources.InvokeAr
      * Defines the Web Application Firewall policy for each host (if applicable)
      * 
      */
-    @InputImport(name="webApplicationFirewallPolicyLink")
+    @Import(name="webApplicationFirewallPolicyLink")
       private final @Nullable FrontendEndpointUpdateParametersResponseWebApplicationFirewallPolicyLink webApplicationFirewallPolicyLink;
 
     public Optional<FrontendEndpointUpdateParametersResponseWebApplicationFirewallPolicyLink> getWebApplicationFirewallPolicyLink() {

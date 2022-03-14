@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.migrate.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class VirtualMachineResourceSettingsResponse extends io.pulumi.reso
      * Expected value is 'Microsoft.Compute/virtualMachines'.
      * 
      */
-    @InputImport(name="resourceType", required=true)
+    @Import(name="resourceType", required=true)
       private final String resourceType;
 
     public String getPropResourceType() {
@@ -34,7 +34,7 @@ public final class VirtualMachineResourceSettingsResponse extends io.pulumi.reso
      * Gets or sets the target availability set id for virtual machines not in an availability set at source.
      * 
      */
-    @InputImport(name="targetAvailabilitySetId")
+    @Import(name="targetAvailabilitySetId")
       private final @Nullable String targetAvailabilitySetId;
 
     public Optional<String> getTargetAvailabilitySetId() {
@@ -45,7 +45,7 @@ public final class VirtualMachineResourceSettingsResponse extends io.pulumi.reso
      * Gets or sets the target availability zone.
      * 
      */
-    @InputImport(name="targetAvailabilityZone")
+    @Import(name="targetAvailabilityZone")
       private final @Nullable String targetAvailabilityZone;
 
     public Optional<String> getTargetAvailabilityZone() {
@@ -56,7 +56,7 @@ public final class VirtualMachineResourceSettingsResponse extends io.pulumi.reso
      * Gets or sets the target Resource name.
      * 
      */
-    @InputImport(name="targetResourceName", required=true)
+    @Import(name="targetResourceName", required=true)
       private final String targetResourceName;
 
     public String getTargetResourceName() {
@@ -67,7 +67,7 @@ public final class VirtualMachineResourceSettingsResponse extends io.pulumi.reso
      * Gets or sets the target virtual machine size.
      * 
      */
-    @InputImport(name="targetVmSize")
+    @Import(name="targetVmSize")
       private final @Nullable String targetVmSize;
 
     public Optional<String> getTargetVmSize() {

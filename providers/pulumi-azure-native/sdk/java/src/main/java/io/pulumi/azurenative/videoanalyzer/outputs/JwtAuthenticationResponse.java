@@ -7,13 +7,13 @@ import io.pulumi.azurenative.videoanalyzer.outputs.EccTokenKeyResponse;
 import io.pulumi.azurenative.videoanalyzer.outputs.RsaTokenKeyResponse;
 import io.pulumi.azurenative.videoanalyzer.outputs.TokenClaimResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class JwtAuthenticationResponse {
     /**
      * List of expected token audiences. Token audience is valid if it matches at least one of the given values.
@@ -42,13 +42,13 @@ public final class JwtAuthenticationResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private JwtAuthenticationResponse(
-        @OutputCustomType.Parameter("audiences") @Nullable List<String> audiences,
-        @OutputCustomType.Parameter("claims") @Nullable List<TokenClaimResponse> claims,
-        @OutputCustomType.Parameter("issuers") @Nullable List<String> issuers,
-        @OutputCustomType.Parameter("keys") @Nullable List<Either<EccTokenKeyResponse,RsaTokenKeyResponse>> keys,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("audiences") @Nullable List<String> audiences,
+        @CustomType.Parameter("claims") @Nullable List<TokenClaimResponse> claims,
+        @CustomType.Parameter("issuers") @Nullable List<String> issuers,
+        @CustomType.Parameter("keys") @Nullable List<Either<EccTokenKeyResponse,RsaTokenKeyResponse>> keys,
+        @CustomType.Parameter("type") String type) {
         this.audiences = audiences;
         this.claims = claims;
         this.issuers = issuers;

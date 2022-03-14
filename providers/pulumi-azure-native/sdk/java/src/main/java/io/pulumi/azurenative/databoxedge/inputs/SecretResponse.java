@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.databoxedge.inputs;
 
 import io.pulumi.azurenative.databoxedge.inputs.AsymmetricEncryptedSecretResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class SecretResponse extends io.pulumi.resources.InvokeArgs {
      * Encrypted (using device public key) secret value.
      * 
      */
-    @InputImport(name="encryptedSecret")
+    @Import(name="encryptedSecret")
       private final @Nullable AsymmetricEncryptedSecretResponse encryptedSecret;
 
     public Optional<AsymmetricEncryptedSecretResponse> getEncryptedSecret() {
@@ -34,7 +34,7 @@ public final class SecretResponse extends io.pulumi.resources.InvokeArgs {
      * Id of the Key-Vault where secret is stored (ex: secrets/AuthClientSecret/82ef4346187a4033a10d629cde07d740).
      * 
      */
-    @InputImport(name="keyVaultId")
+    @Import(name="keyVaultId")
       private final @Nullable String keyVaultId;
 
     public Optional<String> getKeyVaultId() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.databox.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class SystemDataResponse extends io.pulumi.resources.InvokeArgs {
      * The timestamp of resource creation (UTC)
      * 
      */
-    @InputImport(name="createdAt", required=true)
+    @Import(name="createdAt", required=true)
       private final String createdAt;
 
     public String getCreatedAt() {
@@ -31,7 +31,7 @@ public final class SystemDataResponse extends io.pulumi.resources.InvokeArgs {
      * A string identifier for the identity that created the resource
      * 
      */
-    @InputImport(name="createdBy", required=true)
+    @Import(name="createdBy", required=true)
       private final String createdBy;
 
     public String getCreatedBy() {
@@ -42,7 +42,7 @@ public final class SystemDataResponse extends io.pulumi.resources.InvokeArgs {
      * The type of identity that created the resource: user, application, managedIdentity
      * 
      */
-    @InputImport(name="createdByType", required=true)
+    @Import(name="createdByType", required=true)
       private final String createdByType;
 
     public String getCreatedByType() {
@@ -53,7 +53,7 @@ public final class SystemDataResponse extends io.pulumi.resources.InvokeArgs {
      * The timestamp of resource last modification (UTC)
      * 
      */
-    @InputImport(name="lastModifiedAt", required=true)
+    @Import(name="lastModifiedAt", required=true)
       private final String lastModifiedAt;
 
     public String getLastModifiedAt() {
@@ -64,7 +64,7 @@ public final class SystemDataResponse extends io.pulumi.resources.InvokeArgs {
      * A string identifier for the identity that last modified the resource
      * 
      */
-    @InputImport(name="lastModifiedBy", required=true)
+    @Import(name="lastModifiedBy", required=true)
       private final String lastModifiedBy;
 
     public String getLastModifiedBy() {
@@ -75,7 +75,7 @@ public final class SystemDataResponse extends io.pulumi.resources.InvokeArgs {
      * The type of identity that last modified the resource: user, application, managedIdentity
      * 
      */
-    @InputImport(name="lastModifiedByType", required=true)
+    @Import(name="lastModifiedByType", required=true)
       private final String lastModifiedByType;
 
     public String getLastModifiedByType() {

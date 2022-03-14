@@ -6,7 +6,7 @@ package io.pulumi.azurenative.sql;
 import io.pulumi.azurenative.sql.enums.AdministratorType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class ServerAzureADAdministratorArgs extends io.pulumi.resources.Re
      * The name of server active directory administrator.
      * 
      */
-    @InputImport(name="administratorName")
+    @Import(name="administratorName")
       private final @Nullable Output<String> administratorName;
 
     public Output<String> getAdministratorName() {
@@ -31,7 +31,7 @@ public final class ServerAzureADAdministratorArgs extends io.pulumi.resources.Re
      * Type of the sever administrator.
      * 
      */
-    @InputImport(name="administratorType", required=true)
+    @Import(name="administratorType", required=true)
       private final Output<Either<String,AdministratorType>> administratorType;
 
     public Output<Either<String,AdministratorType>> getAdministratorType() {
@@ -42,7 +42,7 @@ public final class ServerAzureADAdministratorArgs extends io.pulumi.resources.Re
      * Login name of the server administrator.
      * 
      */
-    @InputImport(name="login", required=true)
+    @Import(name="login", required=true)
       private final Output<String> login;
 
     public Output<String> getLogin() {
@@ -53,7 +53,7 @@ public final class ServerAzureADAdministratorArgs extends io.pulumi.resources.Re
      * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -64,7 +64,7 @@ public final class ServerAzureADAdministratorArgs extends io.pulumi.resources.Re
      * The name of the server.
      * 
      */
-    @InputImport(name="serverName", required=true)
+    @Import(name="serverName", required=true)
       private final Output<String> serverName;
 
     public Output<String> getServerName() {
@@ -75,7 +75,7 @@ public final class ServerAzureADAdministratorArgs extends io.pulumi.resources.Re
      * SID (object ID) of the server administrator.
      * 
      */
-    @InputImport(name="sid", required=true)
+    @Import(name="sid", required=true)
       private final Output<String> sid;
 
     public Output<String> getSid() {
@@ -86,7 +86,7 @@ public final class ServerAzureADAdministratorArgs extends io.pulumi.resources.Re
      * Tenant ID of the administrator.
      * 
      */
-    @InputImport(name="tenantId")
+    @Import(name="tenantId")
       private final @Nullable Output<String> tenantId;
 
     public Output<String> getTenantId() {

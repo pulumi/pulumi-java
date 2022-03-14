@@ -15,7 +15,7 @@ import io.pulumi.azurenative.hdinsight.inputs.NetworkPropertiesArgs;
 import io.pulumi.azurenative.hdinsight.inputs.SecurityProfileArgs;
 import io.pulumi.azurenative.hdinsight.inputs.StorageProfileArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -33,7 +33,7 @@ public final class ClusterCreatePropertiesArgs extends io.pulumi.resources.Resou
      * The cluster definition.
      * 
      */
-    @InputImport(name="clusterDefinition")
+    @Import(name="clusterDefinition")
       private final @Nullable Output<ClusterDefinitionArgs> clusterDefinition;
 
     public Output<ClusterDefinitionArgs> getClusterDefinition() {
@@ -44,7 +44,7 @@ public final class ClusterCreatePropertiesArgs extends io.pulumi.resources.Resou
      * The version of the cluster.
      * 
      */
-    @InputImport(name="clusterVersion")
+    @Import(name="clusterVersion")
       private final @Nullable Output<String> clusterVersion;
 
     public Output<String> getClusterVersion() {
@@ -55,7 +55,7 @@ public final class ClusterCreatePropertiesArgs extends io.pulumi.resources.Resou
      * The compute isolation properties.
      * 
      */
-    @InputImport(name="computeIsolationProperties")
+    @Import(name="computeIsolationProperties")
       private final @Nullable Output<ComputeIsolationPropertiesArgs> computeIsolationProperties;
 
     public Output<ComputeIsolationPropertiesArgs> getComputeIsolationProperties() {
@@ -66,7 +66,7 @@ public final class ClusterCreatePropertiesArgs extends io.pulumi.resources.Resou
      * The compute profile.
      * 
      */
-    @InputImport(name="computeProfile")
+    @Import(name="computeProfile")
       private final @Nullable Output<ComputeProfileArgs> computeProfile;
 
     public Output<ComputeProfileArgs> getComputeProfile() {
@@ -77,7 +77,7 @@ public final class ClusterCreatePropertiesArgs extends io.pulumi.resources.Resou
      * The disk encryption properties.
      * 
      */
-    @InputImport(name="diskEncryptionProperties")
+    @Import(name="diskEncryptionProperties")
       private final @Nullable Output<DiskEncryptionPropertiesArgs> diskEncryptionProperties;
 
     public Output<DiskEncryptionPropertiesArgs> getDiskEncryptionProperties() {
@@ -88,7 +88,7 @@ public final class ClusterCreatePropertiesArgs extends io.pulumi.resources.Resou
      * The encryption-in-transit properties.
      * 
      */
-    @InputImport(name="encryptionInTransitProperties")
+    @Import(name="encryptionInTransitProperties")
       private final @Nullable Output<EncryptionInTransitPropertiesArgs> encryptionInTransitProperties;
 
     public Output<EncryptionInTransitPropertiesArgs> getEncryptionInTransitProperties() {
@@ -99,7 +99,7 @@ public final class ClusterCreatePropertiesArgs extends io.pulumi.resources.Resou
      * The cluster kafka rest proxy configuration.
      * 
      */
-    @InputImport(name="kafkaRestProperties")
+    @Import(name="kafkaRestProperties")
       private final @Nullable Output<KafkaRestPropertiesArgs> kafkaRestProperties;
 
     public Output<KafkaRestPropertiesArgs> getKafkaRestProperties() {
@@ -110,7 +110,7 @@ public final class ClusterCreatePropertiesArgs extends io.pulumi.resources.Resou
      * The minimal supported tls version.
      * 
      */
-    @InputImport(name="minSupportedTlsVersion")
+    @Import(name="minSupportedTlsVersion")
       private final @Nullable Output<String> minSupportedTlsVersion;
 
     public Output<String> getMinSupportedTlsVersion() {
@@ -121,7 +121,7 @@ public final class ClusterCreatePropertiesArgs extends io.pulumi.resources.Resou
      * The network properties.
      * 
      */
-    @InputImport(name="networkProperties")
+    @Import(name="networkProperties")
       private final @Nullable Output<NetworkPropertiesArgs> networkProperties;
 
     public Output<NetworkPropertiesArgs> getNetworkProperties() {
@@ -132,7 +132,7 @@ public final class ClusterCreatePropertiesArgs extends io.pulumi.resources.Resou
      * The type of operating system.
      * 
      */
-    @InputImport(name="osType")
+    @Import(name="osType")
       private final @Nullable Output<OSType> osType;
 
     public Output<OSType> getOsType() {
@@ -143,7 +143,7 @@ public final class ClusterCreatePropertiesArgs extends io.pulumi.resources.Resou
      * The security profile.
      * 
      */
-    @InputImport(name="securityProfile")
+    @Import(name="securityProfile")
       private final @Nullable Output<SecurityProfileArgs> securityProfile;
 
     public Output<SecurityProfileArgs> getSecurityProfile() {
@@ -154,7 +154,7 @@ public final class ClusterCreatePropertiesArgs extends io.pulumi.resources.Resou
      * The storage profile.
      * 
      */
-    @InputImport(name="storageProfile")
+    @Import(name="storageProfile")
       private final @Nullable Output<StorageProfileArgs> storageProfile;
 
     public Output<StorageProfileArgs> getStorageProfile() {
@@ -165,7 +165,7 @@ public final class ClusterCreatePropertiesArgs extends io.pulumi.resources.Resou
      * The cluster tier.
      * 
      */
-    @InputImport(name="tier")
+    @Import(name="tier")
       private final @Nullable Output<Tier> tier;
 
     public Output<Tier> getTier() {

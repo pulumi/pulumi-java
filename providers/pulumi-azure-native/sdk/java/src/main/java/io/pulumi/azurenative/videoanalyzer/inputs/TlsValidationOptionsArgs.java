@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.videoanalyzer.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class TlsValidationOptionsArgs extends io.pulumi.resources.Resource
      * When set to 'true' causes the certificate subject name validation to be skipped. Default is 'false'.
      * 
      */
-    @InputImport(name="ignoreHostname")
+    @Import(name="ignoreHostname")
       private final @Nullable Output<String> ignoreHostname;
 
     public Output<String> getIgnoreHostname() {
@@ -33,7 +33,7 @@ public final class TlsValidationOptionsArgs extends io.pulumi.resources.Resource
      * When set to 'true' causes the certificate chain trust validation to be skipped. Default is 'false'.
      * 
      */
-    @InputImport(name="ignoreSignature")
+    @Import(name="ignoreSignature")
       private final @Nullable Output<String> ignoreSignature;
 
     public Output<String> getIgnoreSignature() {

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.azurenative.compute.inputs.CloudServiceRoleSkuResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class CloudServiceRoleProfilePropertiesResponse extends io.pulumi.r
      * Resource name.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -34,7 +34,7 @@ public final class CloudServiceRoleProfilePropertiesResponse extends io.pulumi.r
      * Describes the cloud service role sku.
      * 
      */
-    @InputImport(name="sku")
+    @Import(name="sku")
       private final @Nullable CloudServiceRoleSkuResponse sku;
 
     public Optional<CloudServiceRoleSkuResponse> getSku() {

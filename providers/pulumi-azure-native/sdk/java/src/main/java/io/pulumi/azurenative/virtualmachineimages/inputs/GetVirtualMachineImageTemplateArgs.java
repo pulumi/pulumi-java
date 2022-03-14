@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.virtualmachineimages.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetVirtualMachineImageTemplateArgs extends io.pulumi.resource
      * The name of the image Template
      * 
      */
-    @InputImport(name="imageTemplateName", required=true)
+    @Import(name="imageTemplateName", required=true)
       private final String imageTemplateName;
 
     public String getImageTemplateName() {
@@ -27,7 +27,7 @@ public final class GetVirtualMachineImageTemplateArgs extends io.pulumi.resource
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {

@@ -9,7 +9,7 @@ import io.pulumi.azurenative.avs.outputs.WorkloadNetworkSegmentPortVifResponse;
 import io.pulumi.azurenative.avs.outputs.WorkloadNetworkSegmentSubnetResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Double;
 import java.lang.String;
@@ -37,7 +37,7 @@ public class WorkloadNetworkSegment extends io.pulumi.resources.CustomResource {
      * Gateway which to connect segment to.
      * 
      */
-    @OutputExport(name="connectedGateway", type=String.class, parameters={})
+    @Export(name="connectedGateway", type=String.class, parameters={})
     private Output</* @Nullable */ String> connectedGateway;
 
     /**
@@ -51,7 +51,7 @@ public class WorkloadNetworkSegment extends io.pulumi.resources.CustomResource {
      * Display name of the segment.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output</* @Nullable */ String> displayName;
 
     /**
@@ -65,7 +65,7 @@ public class WorkloadNetworkSegment extends io.pulumi.resources.CustomResource {
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -79,7 +79,7 @@ public class WorkloadNetworkSegment extends io.pulumi.resources.CustomResource {
      * Port Vif which segment is associated with.
      * 
      */
-    @OutputExport(name="portVif", type=List.class, parameters={WorkloadNetworkSegmentPortVifResponse.class})
+    @Export(name="portVif", type=List.class, parameters={WorkloadNetworkSegmentPortVifResponse.class})
     private Output<List<WorkloadNetworkSegmentPortVifResponse>> portVif;
 
     /**
@@ -93,7 +93,7 @@ public class WorkloadNetworkSegment extends io.pulumi.resources.CustomResource {
      * The provisioning state
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -107,7 +107,7 @@ public class WorkloadNetworkSegment extends io.pulumi.resources.CustomResource {
      * NSX revision number.
      * 
      */
-    @OutputExport(name="revision", type=Double.class, parameters={})
+    @Export(name="revision", type=Double.class, parameters={})
     private Output</* @Nullable */ Double> revision;
 
     /**
@@ -121,7 +121,7 @@ public class WorkloadNetworkSegment extends io.pulumi.resources.CustomResource {
      * Segment status.
      * 
      */
-    @OutputExport(name="status", type=String.class, parameters={})
+    @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
     /**
@@ -135,7 +135,7 @@ public class WorkloadNetworkSegment extends io.pulumi.resources.CustomResource {
      * Subnet which to connect segment to.
      * 
      */
-    @OutputExport(name="subnet", type=WorkloadNetworkSegmentSubnetResponse.class, parameters={})
+    @Export(name="subnet", type=WorkloadNetworkSegmentSubnetResponse.class, parameters={})
     private Output</* @Nullable */ WorkloadNetworkSegmentSubnetResponse> subnet;
 
     /**
@@ -149,7 +149,7 @@ public class WorkloadNetworkSegment extends io.pulumi.resources.CustomResource {
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

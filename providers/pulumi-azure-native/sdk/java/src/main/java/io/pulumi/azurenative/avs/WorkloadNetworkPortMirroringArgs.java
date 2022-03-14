@@ -6,7 +6,7 @@ package io.pulumi.azurenative.avs;
 import io.pulumi.azurenative.avs.enums.PortMirroringDirectionEnum;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class WorkloadNetworkPortMirroringArgs extends io.pulumi.resources.
      * Destination VM Group.
      * 
      */
-    @InputImport(name="destination")
+    @Import(name="destination")
       private final @Nullable Output<String> destination;
 
     public Output<String> getDestination() {
@@ -32,7 +32,7 @@ public final class WorkloadNetworkPortMirroringArgs extends io.pulumi.resources.
      * Direction of port mirroring profile.
      * 
      */
-    @InputImport(name="direction")
+    @Import(name="direction")
       private final @Nullable Output<Either<String,PortMirroringDirectionEnum>> direction;
 
     public Output<Either<String,PortMirroringDirectionEnum>> getDirection() {
@@ -43,7 +43,7 @@ public final class WorkloadNetworkPortMirroringArgs extends io.pulumi.resources.
      * Display name of the port mirroring profile.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -54,7 +54,7 @@ public final class WorkloadNetworkPortMirroringArgs extends io.pulumi.resources.
      * NSX Port Mirroring identifier. Generally the same as the Port Mirroring display name
      * 
      */
-    @InputImport(name="portMirroringId")
+    @Import(name="portMirroringId")
       private final @Nullable Output<String> portMirroringId;
 
     public Output<String> getPortMirroringId() {
@@ -65,7 +65,7 @@ public final class WorkloadNetworkPortMirroringArgs extends io.pulumi.resources.
      * Name of the private cloud
      * 
      */
-    @InputImport(name="privateCloudName", required=true)
+    @Import(name="privateCloudName", required=true)
       private final Output<String> privateCloudName;
 
     public Output<String> getPrivateCloudName() {
@@ -76,7 +76,7 @@ public final class WorkloadNetworkPortMirroringArgs extends io.pulumi.resources.
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -87,7 +87,7 @@ public final class WorkloadNetworkPortMirroringArgs extends io.pulumi.resources.
      * NSX revision number.
      * 
      */
-    @InputImport(name="revision")
+    @Import(name="revision")
       private final @Nullable Output<Double> revision;
 
     public Output<Double> getRevision() {
@@ -98,7 +98,7 @@ public final class WorkloadNetworkPortMirroringArgs extends io.pulumi.resources.
      * Source VM Group.
      * 
      */
-    @InputImport(name="source")
+    @Import(name="source")
       private final @Nullable Output<String> source;
 
     public Output<String> getSource() {

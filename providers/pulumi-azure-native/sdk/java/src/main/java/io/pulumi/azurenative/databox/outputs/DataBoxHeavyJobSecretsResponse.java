@@ -6,12 +6,12 @@ package io.pulumi.azurenative.databox.outputs;
 import io.pulumi.azurenative.databox.outputs.CloudErrorResponse;
 import io.pulumi.azurenative.databox.outputs.DataBoxHeavySecretResponse;
 import io.pulumi.azurenative.databox.outputs.DcAccessSecurityCodeResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DataBoxHeavyJobSecretsResponse {
     /**
      * Contains the list of secret objects for a databox heavy job.
@@ -35,12 +35,12 @@ public final class DataBoxHeavyJobSecretsResponse {
      */
     private final String jobSecretsType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DataBoxHeavyJobSecretsResponse(
-        @OutputCustomType.Parameter("cabinetPodSecrets") List<DataBoxHeavySecretResponse> cabinetPodSecrets,
-        @OutputCustomType.Parameter("dcAccessSecurityCode") DcAccessSecurityCodeResponse dcAccessSecurityCode,
-        @OutputCustomType.Parameter("error") CloudErrorResponse error,
-        @OutputCustomType.Parameter("jobSecretsType") String jobSecretsType) {
+        @CustomType.Parameter("cabinetPodSecrets") List<DataBoxHeavySecretResponse> cabinetPodSecrets,
+        @CustomType.Parameter("dcAccessSecurityCode") DcAccessSecurityCodeResponse dcAccessSecurityCode,
+        @CustomType.Parameter("error") CloudErrorResponse error,
+        @CustomType.Parameter("jobSecretsType") String jobSecretsType) {
         this.cabinetPodSecrets = cabinetPodSecrets;
         this.dcAccessSecurityCode = dcAccessSecurityCode;
         this.error = error;

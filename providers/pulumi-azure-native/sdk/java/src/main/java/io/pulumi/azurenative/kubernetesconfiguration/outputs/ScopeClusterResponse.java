@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.kubernetesconfiguration.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ScopeClusterResponse {
     /**
      * Namespace where the extension Release must be placed, for a Cluster scoped extensionInstance.  If this namespace does not exist, it will be created
@@ -17,8 +17,8 @@ public final class ScopeClusterResponse {
      */
     private final @Nullable String releaseNamespace;
 
-    @OutputCustomType.Constructor
-    private ScopeClusterResponse(@OutputCustomType.Parameter("releaseNamespace") @Nullable String releaseNamespace) {
+    @CustomType.Constructor
+    private ScopeClusterResponse(@CustomType.Parameter("releaseNamespace") @Nullable String releaseNamespace) {
         this.releaseNamespace = releaseNamespace;
     }
 

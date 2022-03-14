@@ -11,7 +11,7 @@ import io.pulumi.azurenative.aad.inputs.ReplicaSetArgs;
 import io.pulumi.azurenative.aad.inputs.ResourceForestSettingsArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -27,7 +27,7 @@ public final class DomainServiceArgs extends io.pulumi.resources.ResourceArgs {
      * Domain Configuration Type
      * 
      */
-    @InputImport(name="domainConfigurationType")
+    @Import(name="domainConfigurationType")
       private final @Nullable Output<String> domainConfigurationType;
 
     public Output<String> getDomainConfigurationType() {
@@ -38,7 +38,7 @@ public final class DomainServiceArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the Azure domain that the user would like to deploy Domain Services to.
      * 
      */
-    @InputImport(name="domainName")
+    @Import(name="domainName")
       private final @Nullable Output<String> domainName;
 
     public Output<String> getDomainName() {
@@ -49,7 +49,7 @@ public final class DomainServiceArgs extends io.pulumi.resources.ResourceArgs {
      * DomainSecurity Settings
      * 
      */
-    @InputImport(name="domainSecuritySettings")
+    @Import(name="domainSecuritySettings")
       private final @Nullable Output<DomainSecuritySettingsArgs> domainSecuritySettings;
 
     public Output<DomainSecuritySettingsArgs> getDomainSecuritySettings() {
@@ -60,7 +60,7 @@ public final class DomainServiceArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the domain service.
      * 
      */
-    @InputImport(name="domainServiceName")
+    @Import(name="domainServiceName")
       private final @Nullable Output<String> domainServiceName;
 
     public Output<String> getDomainServiceName() {
@@ -71,7 +71,7 @@ public final class DomainServiceArgs extends io.pulumi.resources.ResourceArgs {
      * Enabled or Disabled flag to turn on Group-based filtered sync
      * 
      */
-    @InputImport(name="filteredSync")
+    @Import(name="filteredSync")
       private final @Nullable Output<Either<String,FilteredSync>> filteredSync;
 
     public Output<Either<String,FilteredSync>> getFilteredSync() {
@@ -82,7 +82,7 @@ public final class DomainServiceArgs extends io.pulumi.resources.ResourceArgs {
      * Secure LDAP Settings
      * 
      */
-    @InputImport(name="ldapsSettings")
+    @Import(name="ldapsSettings")
       private final @Nullable Output<LdapsSettingsArgs> ldapsSettings;
 
     public Output<LdapsSettingsArgs> getLdapsSettings() {
@@ -93,7 +93,7 @@ public final class DomainServiceArgs extends io.pulumi.resources.ResourceArgs {
      * Resource location
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -104,7 +104,7 @@ public final class DomainServiceArgs extends io.pulumi.resources.ResourceArgs {
      * Notification Settings
      * 
      */
-    @InputImport(name="notificationSettings")
+    @Import(name="notificationSettings")
       private final @Nullable Output<NotificationSettingsArgs> notificationSettings;
 
     public Output<NotificationSettingsArgs> getNotificationSettings() {
@@ -115,7 +115,7 @@ public final class DomainServiceArgs extends io.pulumi.resources.ResourceArgs {
      * List of ReplicaSets
      * 
      */
-    @InputImport(name="replicaSets")
+    @Import(name="replicaSets")
       private final @Nullable Output<List<ReplicaSetArgs>> replicaSets;
 
     public Output<List<ReplicaSetArgs>> getReplicaSets() {
@@ -126,7 +126,7 @@ public final class DomainServiceArgs extends io.pulumi.resources.ResourceArgs {
      * Resource Forest Settings
      * 
      */
-    @InputImport(name="resourceForestSettings")
+    @Import(name="resourceForestSettings")
       private final @Nullable Output<ResourceForestSettingsArgs> resourceForestSettings;
 
     public Output<ResourceForestSettingsArgs> getResourceForestSettings() {
@@ -137,7 +137,7 @@ public final class DomainServiceArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group within the user's subscription. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -148,7 +148,7 @@ public final class DomainServiceArgs extends io.pulumi.resources.ResourceArgs {
      * Sku Type
      * 
      */
-    @InputImport(name="sku")
+    @Import(name="sku")
       private final @Nullable Output<String> sku;
 
     public Output<String> getSku() {
@@ -159,7 +159,7 @@ public final class DomainServiceArgs extends io.pulumi.resources.ResourceArgs {
      * Resource tags
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

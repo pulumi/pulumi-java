@@ -6,7 +6,7 @@ package io.pulumi.azurenative.datafactory.outputs;
 import io.pulumi.azurenative.datafactory.outputs.ActivityDependencyResponse;
 import io.pulumi.azurenative.datafactory.outputs.PipelineReferenceResponse;
 import io.pulumi.azurenative.datafactory.outputs.UserPropertyResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -16,7 +16,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ExecutePipelineActivityResponse {
     /**
      * Activity depends on condition.
@@ -60,16 +60,16 @@ public final class ExecutePipelineActivityResponse {
      */
     private final @Nullable Boolean waitOnCompletion;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ExecutePipelineActivityResponse(
-        @OutputCustomType.Parameter("dependsOn") @Nullable List<ActivityDependencyResponse> dependsOn,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("parameters") @Nullable Map<String,Object> parameters,
-        @OutputCustomType.Parameter("pipeline") PipelineReferenceResponse pipeline,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("userProperties") @Nullable List<UserPropertyResponse> userProperties,
-        @OutputCustomType.Parameter("waitOnCompletion") @Nullable Boolean waitOnCompletion) {
+        @CustomType.Parameter("dependsOn") @Nullable List<ActivityDependencyResponse> dependsOn,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("parameters") @Nullable Map<String,Object> parameters,
+        @CustomType.Parameter("pipeline") PipelineReferenceResponse pipeline,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("userProperties") @Nullable List<UserPropertyResponse> userProperties,
+        @CustomType.Parameter("waitOnCompletion") @Nullable Boolean waitOnCompletion) {
         this.dependsOn = dependsOn;
         this.description = description;
         this.name = name;

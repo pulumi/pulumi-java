@@ -6,12 +6,12 @@ package io.pulumi.azurenative.network.outputs;
 import io.pulumi.azurenative.network.outputs.PropagatedRouteTableResponse;
 import io.pulumi.azurenative.network.outputs.SubResourceResponse;
 import io.pulumi.azurenative.network.outputs.VnetRouteResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RoutingConfigurationResponse {
     /**
      * The resource id RouteTable associated with this RoutingConfiguration.
@@ -29,11 +29,11 @@ public final class RoutingConfigurationResponse {
      */
     private final @Nullable VnetRouteResponse vnetRoutes;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RoutingConfigurationResponse(
-        @OutputCustomType.Parameter("associatedRouteTable") @Nullable SubResourceResponse associatedRouteTable,
-        @OutputCustomType.Parameter("propagatedRouteTables") @Nullable PropagatedRouteTableResponse propagatedRouteTables,
-        @OutputCustomType.Parameter("vnetRoutes") @Nullable VnetRouteResponse vnetRoutes) {
+        @CustomType.Parameter("associatedRouteTable") @Nullable SubResourceResponse associatedRouteTable,
+        @CustomType.Parameter("propagatedRouteTables") @Nullable PropagatedRouteTableResponse propagatedRouteTables,
+        @CustomType.Parameter("vnetRoutes") @Nullable VnetRouteResponse vnetRoutes) {
         this.associatedRouteTable = associatedRouteTable;
         this.propagatedRouteTables = propagatedRouteTables;
         this.vnetRoutes = vnetRoutes;

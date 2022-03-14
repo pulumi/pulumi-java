@@ -5,7 +5,7 @@ package io.pulumi.azurenative.datamigration.inputs;
 
 import io.pulumi.azurenative.datamigration.inputs.DataItemMigrationSummaryResultResponse;
 import io.pulumi.azurenative.datamigration.inputs.ReportableExceptionResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelResponse extends 
      * Name of the item
      * 
      */
-    @InputImport(name="databaseName", required=true)
+    @Import(name="databaseName", required=true)
       private final String databaseName;
 
     public String getDatabaseName() {
@@ -36,7 +36,7 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelResponse extends 
      * Migration end time
      * 
      */
-    @InputImport(name="endedOn", required=true)
+    @Import(name="endedOn", required=true)
       private final String endedOn;
 
     public String getEndedOn() {
@@ -47,7 +47,7 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelResponse extends 
      * Number of database/object errors.
      * 
      */
-    @InputImport(name="errorCount", required=true)
+    @Import(name="errorCount", required=true)
       private final Double errorCount;
 
     public Double getErrorCount() {
@@ -58,7 +58,7 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelResponse extends 
      * Wildcard string prefix to use for querying all errors of the item
      * 
      */
-    @InputImport(name="errorPrefix", required=true)
+    @Import(name="errorPrefix", required=true)
       private final String errorPrefix;
 
     public String getErrorPrefix() {
@@ -69,7 +69,7 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelResponse extends 
      * Migration exceptions and warnings.
      * 
      */
-    @InputImport(name="exceptionsAndWarnings", required=true)
+    @Import(name="exceptionsAndWarnings", required=true)
       private final List<ReportableExceptionResponse> exceptionsAndWarnings;
 
     public List<ReportableExceptionResponse> getExceptionsAndWarnings() {
@@ -80,7 +80,7 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelResponse extends 
      * Result identifier
      * 
      */
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final String id;
 
     public String getId() {
@@ -91,7 +91,7 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelResponse extends 
      * Migration progress message
      * 
      */
-    @InputImport(name="message", required=true)
+    @Import(name="message", required=true)
       private final String message;
 
     public String getMessage() {
@@ -102,7 +102,7 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelResponse extends 
      * Number of objects
      * 
      */
-    @InputImport(name="numberOfObjects", required=true)
+    @Import(name="numberOfObjects", required=true)
       private final Double numberOfObjects;
 
     public Double getNumberOfObjects() {
@@ -113,7 +113,7 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelResponse extends 
      * Number of successfully completed objects
      * 
      */
-    @InputImport(name="numberOfObjectsCompleted", required=true)
+    @Import(name="numberOfObjectsCompleted", required=true)
       private final Double numberOfObjectsCompleted;
 
     public Double getNumberOfObjectsCompleted() {
@@ -124,7 +124,7 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelResponse extends 
      * Summary of object results in the migration
      * 
      */
-    @InputImport(name="objectSummary", required=true)
+    @Import(name="objectSummary", required=true)
       private final Map<String,DataItemMigrationSummaryResultResponse> objectSummary;
 
     public Map<String,DataItemMigrationSummaryResultResponse> getObjectSummary() {
@@ -135,7 +135,7 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelResponse extends 
      * Wildcard string prefix to use for querying all sub-tem results of the item
      * 
      */
-    @InputImport(name="resultPrefix", required=true)
+    @Import(name="resultPrefix", required=true)
       private final String resultPrefix;
 
     public String getResultPrefix() {
@@ -147,7 +147,7 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelResponse extends 
      * Expected value is 'DatabaseLevelOutput'.
      * 
      */
-    @InputImport(name="resultType", required=true)
+    @Import(name="resultType", required=true)
       private final String resultType;
 
     public String getResultType() {
@@ -158,7 +158,7 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelResponse extends 
      * Migration stage that this database is in
      * 
      */
-    @InputImport(name="stage", required=true)
+    @Import(name="stage", required=true)
       private final String stage;
 
     public String getStage() {
@@ -169,7 +169,7 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelResponse extends 
      * Migration start time
      * 
      */
-    @InputImport(name="startedOn", required=true)
+    @Import(name="startedOn", required=true)
       private final String startedOn;
 
     public String getStartedOn() {
@@ -180,7 +180,7 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelResponse extends 
      * Current state of migration
      * 
      */
-    @InputImport(name="state", required=true)
+    @Import(name="state", required=true)
       private final String state;
 
     public String getState() {
@@ -191,7 +191,7 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelResponse extends 
      * Status message
      * 
      */
-    @InputImport(name="statusMessage", required=true)
+    @Import(name="statusMessage", required=true)
       private final String statusMessage;
 
     public String getStatusMessage() {

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.customerinsights.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class PredictionGradesArgs extends io.pulumi.resources.ResourceArgs
      * Name of the grade.
      * 
      */
-    @InputImport(name="gradeName")
+    @Import(name="gradeName")
       private final @Nullable Output<String> gradeName;
 
     public Output<String> getGradeName() {
@@ -34,7 +34,7 @@ public final class PredictionGradesArgs extends io.pulumi.resources.ResourceArgs
      * Maximum score threshold.
      * 
      */
-    @InputImport(name="maxScoreThreshold")
+    @Import(name="maxScoreThreshold")
       private final @Nullable Output<Integer> maxScoreThreshold;
 
     public Output<Integer> getMaxScoreThreshold() {
@@ -45,7 +45,7 @@ public final class PredictionGradesArgs extends io.pulumi.resources.ResourceArgs
      * Minimum score threshold.
      * 
      */
-    @InputImport(name="minScoreThreshold")
+    @Import(name="minScoreThreshold")
       private final @Nullable Output<Integer> minScoreThreshold;
 
     public Output<Integer> getMinScoreThreshold() {

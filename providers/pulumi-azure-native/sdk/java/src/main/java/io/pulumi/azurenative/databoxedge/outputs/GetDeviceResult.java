@@ -8,7 +8,7 @@ import io.pulumi.azurenative.databoxedge.outputs.ResourceIdentityResponse;
 import io.pulumi.azurenative.databoxedge.outputs.ResourceMoveDetailsResponse;
 import io.pulumi.azurenative.databoxedge.outputs.SkuResponse;
 import io.pulumi.azurenative.databoxedge.outputs.SystemDataResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -18,7 +18,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetDeviceResult {
     /**
      * Type of compute roles configured.
@@ -151,34 +151,34 @@ public final class GetDeviceResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDeviceResult(
-        @OutputCustomType.Parameter("configuredRoleTypes") List<String> configuredRoleTypes,
-        @OutputCustomType.Parameter("culture") String culture,
-        @OutputCustomType.Parameter("dataBoxEdgeDeviceStatus") @Nullable String dataBoxEdgeDeviceStatus,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("deviceHcsVersion") String deviceHcsVersion,
-        @OutputCustomType.Parameter("deviceLocalCapacity") Double deviceLocalCapacity,
-        @OutputCustomType.Parameter("deviceModel") String deviceModel,
-        @OutputCustomType.Parameter("deviceSoftwareVersion") String deviceSoftwareVersion,
-        @OutputCustomType.Parameter("deviceType") String deviceType,
-        @OutputCustomType.Parameter("edgeProfile") EdgeProfileResponse edgeProfile,
-        @OutputCustomType.Parameter("etag") @Nullable String etag,
-        @OutputCustomType.Parameter("friendlyName") String friendlyName,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("identity") @Nullable ResourceIdentityResponse identity,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("modelDescription") String modelDescription,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("nodeCount") Integer nodeCount,
-        @OutputCustomType.Parameter("resourceMoveDetails") ResourceMoveDetailsResponse resourceMoveDetails,
-        @OutputCustomType.Parameter("serialNumber") String serialNumber,
-        @OutputCustomType.Parameter("sku") @Nullable SkuResponse sku,
-        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("timeZone") String timeZone,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("configuredRoleTypes") List<String> configuredRoleTypes,
+        @CustomType.Parameter("culture") String culture,
+        @CustomType.Parameter("dataBoxEdgeDeviceStatus") @Nullable String dataBoxEdgeDeviceStatus,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("deviceHcsVersion") String deviceHcsVersion,
+        @CustomType.Parameter("deviceLocalCapacity") Double deviceLocalCapacity,
+        @CustomType.Parameter("deviceModel") String deviceModel,
+        @CustomType.Parameter("deviceSoftwareVersion") String deviceSoftwareVersion,
+        @CustomType.Parameter("deviceType") String deviceType,
+        @CustomType.Parameter("edgeProfile") EdgeProfileResponse edgeProfile,
+        @CustomType.Parameter("etag") @Nullable String etag,
+        @CustomType.Parameter("friendlyName") String friendlyName,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("identity") @Nullable ResourceIdentityResponse identity,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("modelDescription") String modelDescription,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("nodeCount") Integer nodeCount,
+        @CustomType.Parameter("resourceMoveDetails") ResourceMoveDetailsResponse resourceMoveDetails,
+        @CustomType.Parameter("serialNumber") String serialNumber,
+        @CustomType.Parameter("sku") @Nullable SkuResponse sku,
+        @CustomType.Parameter("systemData") SystemDataResponse systemData,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("timeZone") String timeZone,
+        @CustomType.Parameter("type") String type) {
         this.configuredRoleTypes = configuredRoleTypes;
         this.culture = culture;
         this.dataBoxEdgeDeviceStatus = dataBoxEdgeDeviceStatus;

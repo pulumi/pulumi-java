@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.GatewayRouteResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetVirtualNetworkGatewayAdvertisedRoutesResult {
     /**
      * List of gateway routes.
@@ -17,8 +17,8 @@ public final class GetVirtualNetworkGatewayAdvertisedRoutesResult {
      */
     private final @Nullable List<GatewayRouteResponse> value;
 
-    @OutputCustomType.Constructor
-    private GetVirtualNetworkGatewayAdvertisedRoutesResult(@OutputCustomType.Parameter("value") @Nullable List<GatewayRouteResponse> value) {
+    @CustomType.Constructor
+    private GetVirtualNetworkGatewayAdvertisedRoutesResult(@CustomType.Parameter("value") @Nullable List<GatewayRouteResponse> value) {
         this.value = value;
     }
 

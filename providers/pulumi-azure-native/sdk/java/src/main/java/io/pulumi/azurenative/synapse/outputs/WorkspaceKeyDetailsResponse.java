@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.synapse.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class WorkspaceKeyDetailsResponse {
     /**
      * Workspace Key sub-resource key vault url
@@ -22,10 +22,10 @@ public final class WorkspaceKeyDetailsResponse {
      */
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WorkspaceKeyDetailsResponse(
-        @OutputCustomType.Parameter("keyVaultUrl") @Nullable String keyVaultUrl,
-        @OutputCustomType.Parameter("name") @Nullable String name) {
+        @CustomType.Parameter("keyVaultUrl") @Nullable String keyVaultUrl,
+        @CustomType.Parameter("name") @Nullable String name) {
         this.keyVaultUrl = keyVaultUrl;
         this.name = name;
     }

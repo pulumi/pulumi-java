@@ -5,7 +5,7 @@ package io.pulumi.azurenative.migrate;
 
 import io.pulumi.azurenative.migrate.inputs.MoveResourcePropertiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class MoveResourceArgs extends io.pulumi.resources.ResourceArgs {
      * The Move Collection Name.
      * 
      */
-    @InputImport(name="moveCollectionName", required=true)
+    @Import(name="moveCollectionName", required=true)
       private final Output<String> moveCollectionName;
 
     public Output<String> getMoveCollectionName() {
@@ -30,7 +30,7 @@ public final class MoveResourceArgs extends io.pulumi.resources.ResourceArgs {
      * The Move Resource Name.
      * 
      */
-    @InputImport(name="moveResourceName")
+    @Import(name="moveResourceName")
       private final @Nullable Output<String> moveResourceName;
 
     public Output<String> getMoveResourceName() {
@@ -41,7 +41,7 @@ public final class MoveResourceArgs extends io.pulumi.resources.ResourceArgs {
      * Defines the move resource properties.
      * 
      */
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable Output<MoveResourcePropertiesArgs> properties;
 
     public Output<MoveResourcePropertiesArgs> getProperties() {
@@ -52,7 +52,7 @@ public final class MoveResourceArgs extends io.pulumi.resources.ResourceArgs {
      * The Resource Group Name.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {

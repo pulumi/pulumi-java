@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AzureTableStorageApplicationLogsConfigResponse {
     /**
      * Log level.
@@ -22,10 +22,10 @@ public final class AzureTableStorageApplicationLogsConfigResponse {
      */
     private final String sasUrl;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AzureTableStorageApplicationLogsConfigResponse(
-        @OutputCustomType.Parameter("level") @Nullable String level,
-        @OutputCustomType.Parameter("sasUrl") String sasUrl) {
+        @CustomType.Parameter("level") @Nullable String level,
+        @CustomType.Parameter("sasUrl") String sasUrl) {
         this.level = level;
         this.sasUrl = sasUrl;
     }

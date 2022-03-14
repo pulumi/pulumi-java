@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storage.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetBlobContainerImmutabilityPolicyResult {
     /**
      * This property can only be changed for unlocked time-based retention policies. When enabled, new blocks can be written to an append blob while maintaining immutability protection and compliance. Only new blocks can be added and any existing blocks cannot be modified or deleted. This property cannot be changed with ExtendImmutabilityPolicy API
@@ -49,15 +49,15 @@ public final class GetBlobContainerImmutabilityPolicyResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetBlobContainerImmutabilityPolicyResult(
-        @OutputCustomType.Parameter("allowProtectedAppendWrites") @Nullable Boolean allowProtectedAppendWrites,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("immutabilityPeriodSinceCreationInDays") @Nullable Integer immutabilityPeriodSinceCreationInDays,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("allowProtectedAppendWrites") @Nullable Boolean allowProtectedAppendWrites,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("immutabilityPeriodSinceCreationInDays") @Nullable Integer immutabilityPeriodSinceCreationInDays,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("type") String type) {
         this.allowProtectedAppendWrites = allowProtectedAppendWrites;
         this.etag = etag;
         this.id = id;

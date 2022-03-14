@@ -5,11 +5,11 @@ package io.pulumi.azurenative.databoxedge.outputs;
 
 import io.pulumi.azurenative.databoxedge.outputs.RefreshDetailsResponse;
 import io.pulumi.azurenative.databoxedge.outputs.SystemDataResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetContainerResult {
     /**
      * Current status of the container.
@@ -52,16 +52,16 @@ public final class GetContainerResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetContainerResult(
-        @OutputCustomType.Parameter("containerStatus") String containerStatus,
-        @OutputCustomType.Parameter("createdDateTime") String createdDateTime,
-        @OutputCustomType.Parameter("dataFormat") String dataFormat,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("refreshDetails") RefreshDetailsResponse refreshDetails,
-        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("containerStatus") String containerStatus,
+        @CustomType.Parameter("createdDateTime") String createdDateTime,
+        @CustomType.Parameter("dataFormat") String dataFormat,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("refreshDetails") RefreshDetailsResponse refreshDetails,
+        @CustomType.Parameter("systemData") SystemDataResponse systemData,
+        @CustomType.Parameter("type") String type) {
         this.containerStatus = containerStatus;
         this.createdDateTime = createdDateTime;
         this.dataFormat = dataFormat;

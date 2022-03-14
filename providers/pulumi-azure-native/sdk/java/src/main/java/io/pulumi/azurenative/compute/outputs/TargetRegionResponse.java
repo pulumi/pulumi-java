@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.compute.outputs;
 
 import io.pulumi.azurenative.compute.outputs.EncryptionImagesResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TargetRegionResponse {
     /**
      * Optional. Allows users to provide customer managed keys for encrypting the OS and data disks in the gallery artifact.
@@ -34,12 +34,12 @@ public final class TargetRegionResponse {
      */
     private final @Nullable String storageAccountType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TargetRegionResponse(
-        @OutputCustomType.Parameter("encryption") @Nullable EncryptionImagesResponse encryption,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("regionalReplicaCount") @Nullable Integer regionalReplicaCount,
-        @OutputCustomType.Parameter("storageAccountType") @Nullable String storageAccountType) {
+        @CustomType.Parameter("encryption") @Nullable EncryptionImagesResponse encryption,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("regionalReplicaCount") @Nullable Integer regionalReplicaCount,
+        @CustomType.Parameter("storageAccountType") @Nullable String storageAccountType) {
         this.encryption = encryption;
         this.name = name;
         this.regionalReplicaCount = regionalReplicaCount;

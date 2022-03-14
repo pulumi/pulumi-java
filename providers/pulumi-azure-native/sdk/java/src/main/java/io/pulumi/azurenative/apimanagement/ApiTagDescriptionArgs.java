@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.apimanagement;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class ApiTagDescriptionArgs extends io.pulumi.resources.ResourceArg
      * API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.
      * 
      */
-    @InputImport(name="apiId", required=true)
+    @Import(name="apiId", required=true)
       private final Output<String> apiId;
 
     public Output<String> getApiId() {
@@ -29,7 +29,7 @@ public final class ApiTagDescriptionArgs extends io.pulumi.resources.ResourceArg
      * Description of the Tag.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -40,7 +40,7 @@ public final class ApiTagDescriptionArgs extends io.pulumi.resources.ResourceArg
      * Description of the external resources describing the tag.
      * 
      */
-    @InputImport(name="externalDocsDescription")
+    @Import(name="externalDocsDescription")
       private final @Nullable Output<String> externalDocsDescription;
 
     public Output<String> getExternalDocsDescription() {
@@ -51,7 +51,7 @@ public final class ApiTagDescriptionArgs extends io.pulumi.resources.ResourceArg
      * Absolute URL of external resources describing the tag.
      * 
      */
-    @InputImport(name="externalDocsUrl")
+    @Import(name="externalDocsUrl")
       private final @Nullable Output<String> externalDocsUrl;
 
     public Output<String> getExternalDocsUrl() {
@@ -62,7 +62,7 @@ public final class ApiTagDescriptionArgs extends io.pulumi.resources.ResourceArg
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -73,7 +73,7 @@ public final class ApiTagDescriptionArgs extends io.pulumi.resources.ResourceArg
      * The name of the API Management service.
      * 
      */
-    @InputImport(name="serviceName", required=true)
+    @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
 
     public Output<String> getServiceName() {
@@ -84,7 +84,7 @@ public final class ApiTagDescriptionArgs extends io.pulumi.resources.ResourceArg
      * Tag description identifier. Used when creating tagDescription for API/Tag association. Based on API and Tag names.
      * 
      */
-    @InputImport(name="tagDescriptionId")
+    @Import(name="tagDescriptionId")
       private final @Nullable Output<String> tagDescriptionId;
 
     public Output<String> getTagDescriptionId() {

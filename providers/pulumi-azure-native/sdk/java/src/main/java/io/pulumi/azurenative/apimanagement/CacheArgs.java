@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.apimanagement;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class CacheArgs extends io.pulumi.resources.ResourceArgs {
      * Identifier of the Cache entity. Cache identifier (should be either 'default' or valid Azure region identifier).
      * 
      */
-    @InputImport(name="cacheId")
+    @Import(name="cacheId")
       private final @Nullable Output<String> cacheId;
 
     public Output<String> getCacheId() {
@@ -29,7 +29,7 @@ public final class CacheArgs extends io.pulumi.resources.ResourceArgs {
      * Runtime connection string to cache
      * 
      */
-    @InputImport(name="connectionString", required=true)
+    @Import(name="connectionString", required=true)
       private final Output<String> connectionString;
 
     public Output<String> getConnectionString() {
@@ -40,7 +40,7 @@ public final class CacheArgs extends io.pulumi.resources.ResourceArgs {
      * Cache description
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -51,7 +51,7 @@ public final class CacheArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -62,7 +62,7 @@ public final class CacheArgs extends io.pulumi.resources.ResourceArgs {
      * Original uri of entity in external system cache points to
      * 
      */
-    @InputImport(name="resourceId")
+    @Import(name="resourceId")
       private final @Nullable Output<String> resourceId;
 
     public Output<String> getResourceId() {
@@ -73,7 +73,7 @@ public final class CacheArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the API Management service.
      * 
      */
-    @InputImport(name="serviceName", required=true)
+    @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
 
     public Output<String> getServiceName() {
@@ -84,7 +84,7 @@ public final class CacheArgs extends io.pulumi.resources.ResourceArgs {
      * Location identifier to use cache from (should be either 'default' or valid Azure region identifier)
      * 
      */
-    @InputImport(name="useFromLocation", required=true)
+    @Import(name="useFromLocation", required=true)
       private final Output<String> useFromLocation;
 
     public Output<String> getUseFromLocation() {

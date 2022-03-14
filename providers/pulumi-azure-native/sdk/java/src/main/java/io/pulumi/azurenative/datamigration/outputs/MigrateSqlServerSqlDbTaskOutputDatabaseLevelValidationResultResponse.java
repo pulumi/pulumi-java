@@ -6,11 +6,11 @@ package io.pulumi.azurenative.datamigration.outputs;
 import io.pulumi.azurenative.datamigration.outputs.DataIntegrityValidationResultResponse;
 import io.pulumi.azurenative.datamigration.outputs.QueryAnalysisValidationResultResponse;
 import io.pulumi.azurenative.datamigration.outputs.SchemaComparisonValidationResultResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelValidationResultResponse {
     /**
      * Provides data integrity validation result between the source and target tables that are migrated.
@@ -69,19 +69,19 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelValidationResultR
      */
     private final String targetDatabaseName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MigrateSqlServerSqlDbTaskOutputDatabaseLevelValidationResultResponse(
-        @OutputCustomType.Parameter("dataIntegrityValidationResult") DataIntegrityValidationResultResponse dataIntegrityValidationResult,
-        @OutputCustomType.Parameter("endedOn") String endedOn,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("migrationId") String migrationId,
-        @OutputCustomType.Parameter("queryAnalysisValidationResult") QueryAnalysisValidationResultResponse queryAnalysisValidationResult,
-        @OutputCustomType.Parameter("resultType") String resultType,
-        @OutputCustomType.Parameter("schemaValidationResult") SchemaComparisonValidationResultResponse schemaValidationResult,
-        @OutputCustomType.Parameter("sourceDatabaseName") String sourceDatabaseName,
-        @OutputCustomType.Parameter("startedOn") String startedOn,
-        @OutputCustomType.Parameter("status") String status,
-        @OutputCustomType.Parameter("targetDatabaseName") String targetDatabaseName) {
+        @CustomType.Parameter("dataIntegrityValidationResult") DataIntegrityValidationResultResponse dataIntegrityValidationResult,
+        @CustomType.Parameter("endedOn") String endedOn,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("migrationId") String migrationId,
+        @CustomType.Parameter("queryAnalysisValidationResult") QueryAnalysisValidationResultResponse queryAnalysisValidationResult,
+        @CustomType.Parameter("resultType") String resultType,
+        @CustomType.Parameter("schemaValidationResult") SchemaComparisonValidationResultResponse schemaValidationResult,
+        @CustomType.Parameter("sourceDatabaseName") String sourceDatabaseName,
+        @CustomType.Parameter("startedOn") String startedOn,
+        @CustomType.Parameter("status") String status,
+        @CustomType.Parameter("targetDatabaseName") String targetDatabaseName) {
         this.dataIntegrityValidationResult = dataIntegrityValidationResult;
         this.endedOn = endedOn;
         this.id = id;

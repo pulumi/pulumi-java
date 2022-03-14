@@ -5,7 +5,7 @@ package io.pulumi.azurenative.batch.inputs;
 
 import io.pulumi.azurenative.batch.enums.NodePlacementPolicyType;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -22,7 +22,7 @@ public final class NodePlacementConfigurationArgs extends io.pulumi.resources.Re
      * Allocation policy used by Batch Service to provision the nodes. If not specified, Batch will use the regional policy.
      * 
      */
-    @InputImport(name="policy")
+    @Import(name="policy")
       private final @Nullable Output<NodePlacementPolicyType> policy;
 
     public Output<NodePlacementPolicyType> getPolicy() {

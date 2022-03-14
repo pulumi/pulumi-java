@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.containerservice.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ManagedClusterHTTPProxyConfigArgs extends io.pulumi.resources
      * HTTP proxy server endpoint to use.
      * 
      */
-    @InputImport(name="httpProxy")
+    @Import(name="httpProxy")
       private final @Nullable Output<String> httpProxy;
 
     public Output<String> getHttpProxy() {
@@ -34,7 +34,7 @@ public final class ManagedClusterHTTPProxyConfigArgs extends io.pulumi.resources
      * HTTPS proxy server endpoint to use.
      * 
      */
-    @InputImport(name="httpsProxy")
+    @Import(name="httpsProxy")
       private final @Nullable Output<String> httpsProxy;
 
     public Output<String> getHttpsProxy() {
@@ -45,7 +45,7 @@ public final class ManagedClusterHTTPProxyConfigArgs extends io.pulumi.resources
      * Endpoints that should not go through proxy.
      * 
      */
-    @InputImport(name="noProxy")
+    @Import(name="noProxy")
       private final @Nullable Output<List<String>> noProxy;
 
     public Output<List<String>> getNoProxy() {
@@ -56,7 +56,7 @@ public final class ManagedClusterHTTPProxyConfigArgs extends io.pulumi.resources
      * Alternative CA cert to use for connecting to proxy servers.
      * 
      */
-    @InputImport(name="trustedCa")
+    @Import(name="trustedCa")
       private final @Nullable Output<String> trustedCa;
 
     public Output<String> getTrustedCa() {

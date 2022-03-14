@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.insights.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ManagementEventAggregationConditionResponse {
     /**
      * the condition operator.
@@ -28,11 +28,11 @@ public final class ManagementEventAggregationConditionResponse {
      */
     private final @Nullable String windowSize;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ManagementEventAggregationConditionResponse(
-        @OutputCustomType.Parameter("operator") @Nullable String operator,
-        @OutputCustomType.Parameter("threshold") @Nullable Double threshold,
-        @OutputCustomType.Parameter("windowSize") @Nullable String windowSize) {
+        @CustomType.Parameter("operator") @Nullable String operator,
+        @CustomType.Parameter("threshold") @Nullable Double threshold,
+        @CustomType.Parameter("windowSize") @Nullable String windowSize) {
         this.operator = operator;
         this.threshold = threshold;
         this.windowSize = windowSize;

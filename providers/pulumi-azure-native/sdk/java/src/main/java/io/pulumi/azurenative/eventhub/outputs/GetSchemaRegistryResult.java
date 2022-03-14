@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.eventhub.outputs;
 
 import io.pulumi.azurenative.eventhub.outputs.SystemDataResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetSchemaRegistryResult {
     /**
      * Exact time the Schema Group was created.
@@ -61,19 +61,19 @@ public final class GetSchemaRegistryResult {
      */
     private final String updatedAtUtc;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetSchemaRegistryResult(
-        @OutputCustomType.Parameter("createdAtUtc") String createdAtUtc,
-        @OutputCustomType.Parameter("eTag") String eTag,
-        @OutputCustomType.Parameter("groupProperties") @Nullable Map<String,String> groupProperties,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("schemaCompatibility") @Nullable String schemaCompatibility,
-        @OutputCustomType.Parameter("schemaType") @Nullable String schemaType,
-        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("updatedAtUtc") String updatedAtUtc) {
+        @CustomType.Parameter("createdAtUtc") String createdAtUtc,
+        @CustomType.Parameter("eTag") String eTag,
+        @CustomType.Parameter("groupProperties") @Nullable Map<String,String> groupProperties,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("schemaCompatibility") @Nullable String schemaCompatibility,
+        @CustomType.Parameter("schemaType") @Nullable String schemaType,
+        @CustomType.Parameter("systemData") SystemDataResponse systemData,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("updatedAtUtc") String updatedAtUtc) {
         this.createdAtUtc = createdAtUtc;
         this.eTag = eTag;
         this.groupProperties = groupProperties;

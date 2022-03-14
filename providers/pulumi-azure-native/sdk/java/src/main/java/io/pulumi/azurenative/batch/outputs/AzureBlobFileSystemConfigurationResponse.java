@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.batch.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AzureBlobFileSystemConfigurationResponse {
     /**
      * This property is mutually exclusive with sasKey and one must be specified.
@@ -34,14 +34,14 @@ public final class AzureBlobFileSystemConfigurationResponse {
      */
     private final @Nullable String sasKey;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AzureBlobFileSystemConfigurationResponse(
-        @OutputCustomType.Parameter("accountKey") @Nullable String accountKey,
-        @OutputCustomType.Parameter("accountName") String accountName,
-        @OutputCustomType.Parameter("blobfuseOptions") @Nullable String blobfuseOptions,
-        @OutputCustomType.Parameter("containerName") String containerName,
-        @OutputCustomType.Parameter("relativeMountPath") String relativeMountPath,
-        @OutputCustomType.Parameter("sasKey") @Nullable String sasKey) {
+        @CustomType.Parameter("accountKey") @Nullable String accountKey,
+        @CustomType.Parameter("accountName") String accountName,
+        @CustomType.Parameter("blobfuseOptions") @Nullable String blobfuseOptions,
+        @CustomType.Parameter("containerName") String containerName,
+        @CustomType.Parameter("relativeMountPath") String relativeMountPath,
+        @CustomType.Parameter("sasKey") @Nullable String sasKey) {
         this.accountKey = accountKey;
         this.accountName = accountName;
         this.blobfuseOptions = blobfuseOptions;

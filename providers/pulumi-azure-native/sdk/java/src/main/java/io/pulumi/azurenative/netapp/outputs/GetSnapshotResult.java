@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.netapp.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetSnapshotResult {
     /**
      * The creation date of the snapshot
@@ -45,15 +45,15 @@ public final class GetSnapshotResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetSnapshotResult(
-        @OutputCustomType.Parameter("created") String created,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("snapshotId") String snapshotId,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("created") String created,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("snapshotId") String snapshotId,
+        @CustomType.Parameter("type") String type) {
         this.created = created;
         this.id = id;
         this.location = location;

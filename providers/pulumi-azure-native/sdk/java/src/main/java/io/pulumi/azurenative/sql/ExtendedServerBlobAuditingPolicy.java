@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.sql.ExtendedServerBlobAuditingPolicyArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -92,7 +92,7 @@ public class ExtendedServerBlobAuditingPolicy extends io.pulumi.resources.Custom
      * For more information, see [Database-Level Audit Actions](https://docs.microsoft.com/en-us/sql/relational-databases/security/auditing/sql-server-audit-action-groups-and-actions#database-level-audit-actions)
      * 
      */
-    @OutputExport(name="auditActionsAndGroups", type=List.class, parameters={String.class})
+    @Export(name="auditActionsAndGroups", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> auditActionsAndGroups;
 
     /**
@@ -172,7 +172,7 @@ public class ExtendedServerBlobAuditingPolicy extends io.pulumi.resources.Custom
      * or [Diagnostic Settings PowerShell](https://go.microsoft.com/fwlink/?linkid=2033043)
      * 
      */
-    @OutputExport(name="isAzureMonitorTargetEnabled", type=Boolean.class, parameters={})
+    @Export(name="isAzureMonitorTargetEnabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> isAzureMonitorTargetEnabled;
 
     /**
@@ -205,7 +205,7 @@ public class ExtendedServerBlobAuditingPolicy extends io.pulumi.resources.Custom
      * or [Diagnostic Settings PowerShell](https://go.microsoft.com/fwlink/?linkid=2033043)
      * 
      */
-    @OutputExport(name="isDevopsAuditEnabled", type=Boolean.class, parameters={})
+    @Export(name="isDevopsAuditEnabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> isDevopsAuditEnabled;
 
     /**
@@ -228,7 +228,7 @@ public class ExtendedServerBlobAuditingPolicy extends io.pulumi.resources.Custom
      * Specifies whether storageAccountAccessKey value is the storage's secondary key.
      * 
      */
-    @OutputExport(name="isStorageSecondaryKeyInUse", type=Boolean.class, parameters={})
+    @Export(name="isStorageSecondaryKeyInUse", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> isStorageSecondaryKeyInUse;
 
     /**
@@ -242,7 +242,7 @@ public class ExtendedServerBlobAuditingPolicy extends io.pulumi.resources.Custom
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -256,7 +256,7 @@ public class ExtendedServerBlobAuditingPolicy extends io.pulumi.resources.Custom
      * Specifies condition of where clause when creating an audit.
      * 
      */
-    @OutputExport(name="predicateExpression", type=String.class, parameters={})
+    @Export(name="predicateExpression", type=String.class, parameters={})
     private Output</* @Nullable */ String> predicateExpression;
 
     /**
@@ -271,7 +271,7 @@ public class ExtendedServerBlobAuditingPolicy extends io.pulumi.resources.Custom
      * The default minimum value is 1000 (1 second). The maximum is 2,147,483,647.
      * 
      */
-    @OutputExport(name="queueDelayMs", type=Integer.class, parameters={})
+    @Export(name="queueDelayMs", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> queueDelayMs;
 
     /**
@@ -286,7 +286,7 @@ public class ExtendedServerBlobAuditingPolicy extends io.pulumi.resources.Custom
      * Specifies the number of days to keep in the audit logs in the storage account.
      * 
      */
-    @OutputExport(name="retentionDays", type=Integer.class, parameters={})
+    @Export(name="retentionDays", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> retentionDays;
 
     /**
@@ -300,7 +300,7 @@ public class ExtendedServerBlobAuditingPolicy extends io.pulumi.resources.Custom
      * Specifies the state of the audit. If state is Enabled, storageEndpoint or isAzureMonitorTargetEnabled are required.
      * 
      */
-    @OutputExport(name="state", type=String.class, parameters={})
+    @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
@@ -314,7 +314,7 @@ public class ExtendedServerBlobAuditingPolicy extends io.pulumi.resources.Custom
      * Specifies the blob storage subscription Id.
      * 
      */
-    @OutputExport(name="storageAccountSubscriptionId", type=String.class, parameters={})
+    @Export(name="storageAccountSubscriptionId", type=String.class, parameters={})
     private Output</* @Nullable */ String> storageAccountSubscriptionId;
 
     /**
@@ -328,7 +328,7 @@ public class ExtendedServerBlobAuditingPolicy extends io.pulumi.resources.Custom
      * Specifies the blob storage endpoint (e.g. https://MyAccount.blob.core.windows.net). If state is Enabled, storageEndpoint or isAzureMonitorTargetEnabled is required.
      * 
      */
-    @OutputExport(name="storageEndpoint", type=String.class, parameters={})
+    @Export(name="storageEndpoint", type=String.class, parameters={})
     private Output</* @Nullable */ String> storageEndpoint;
 
     /**
@@ -342,7 +342,7 @@ public class ExtendedServerBlobAuditingPolicy extends io.pulumi.resources.Custom
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

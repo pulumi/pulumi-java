@@ -5,7 +5,7 @@ package io.pulumi.azurenative.cache;
 
 import io.pulumi.azurenative.cache.enums.ReplicationRole;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class LinkedServerArgs extends io.pulumi.resources.ResourceArgs {
      * Fully qualified resourceId of the linked redis cache.
      * 
      */
-    @InputImport(name="linkedRedisCacheId", required=true)
+    @Import(name="linkedRedisCacheId", required=true)
       private final Output<String> linkedRedisCacheId;
 
     public Output<String> getLinkedRedisCacheId() {
@@ -30,7 +30,7 @@ public final class LinkedServerArgs extends io.pulumi.resources.ResourceArgs {
      * Location of the linked redis cache.
      * 
      */
-    @InputImport(name="linkedRedisCacheLocation", required=true)
+    @Import(name="linkedRedisCacheLocation", required=true)
       private final Output<String> linkedRedisCacheLocation;
 
     public Output<String> getLinkedRedisCacheLocation() {
@@ -41,7 +41,7 @@ public final class LinkedServerArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the linked server that is being added to the Redis cache.
      * 
      */
-    @InputImport(name="linkedServerName")
+    @Import(name="linkedServerName")
       private final @Nullable Output<String> linkedServerName;
 
     public Output<String> getLinkedServerName() {
@@ -52,7 +52,7 @@ public final class LinkedServerArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the Redis cache.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -63,7 +63,7 @@ public final class LinkedServerArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -74,7 +74,7 @@ public final class LinkedServerArgs extends io.pulumi.resources.ResourceArgs {
      * Role of the linked server.
      * 
      */
-    @InputImport(name="serverRole", required=true)
+    @Import(name="serverRole", required=true)
       private final Output<ReplicationRole> serverRole;
 
     public Output<ReplicationRole> getServerRole() {

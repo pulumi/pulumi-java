@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.datamigration.outputs;
 
 import io.pulumi.azurenative.datamigration.outputs.ValidationErrorResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DataIntegrityValidationResultResponse {
     /**
      * List of failed table names of source and target pair
@@ -22,10 +22,10 @@ public final class DataIntegrityValidationResultResponse {
      */
     private final ValidationErrorResponse validationErrors;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DataIntegrityValidationResultResponse(
-        @OutputCustomType.Parameter("failedObjects") Map<String,String> failedObjects,
-        @OutputCustomType.Parameter("validationErrors") ValidationErrorResponse validationErrors) {
+        @CustomType.Parameter("failedObjects") Map<String,String> failedObjects,
+        @CustomType.Parameter("validationErrors") ValidationErrorResponse validationErrors) {
         this.failedObjects = failedObjects;
         this.validationErrors = validationErrors;
     }

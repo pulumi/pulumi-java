@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.insights.inputs;
 
 import io.pulumi.azurenative.insights.inputs.AlertRuleLeafConditionResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -30,7 +30,7 @@ public final class AlertRuleAnyOfOrLeafConditionResponse extends io.pulumi.resou
      * An Activity Log Alert rule condition that is met when at least one of its member leaf conditions are met.
      * 
      */
-    @InputImport(name="anyOf")
+    @Import(name="anyOf")
       private final @Nullable List<AlertRuleLeafConditionResponse> anyOf;
 
     public List<AlertRuleLeafConditionResponse> getAnyOf() {
@@ -41,7 +41,7 @@ public final class AlertRuleAnyOfOrLeafConditionResponse extends io.pulumi.resou
      * The value of the event's field will be compared to the values in this array (case-insensitive) to determine if the condition is met.
      * 
      */
-    @InputImport(name="containsAny")
+    @Import(name="containsAny")
       private final @Nullable List<String> containsAny;
 
     public List<String> getContainsAny() {
@@ -52,7 +52,7 @@ public final class AlertRuleAnyOfOrLeafConditionResponse extends io.pulumi.resou
      * The value of the event's field will be compared to this value (case-insensitive) to determine if the condition is met.
      * 
      */
-    @InputImport(name="equals")
+    @Import(name="equals")
       private final @Nullable String equals;
 
     public Optional<String> getEquals() {
@@ -64,7 +64,7 @@ public final class AlertRuleAnyOfOrLeafConditionResponse extends io.pulumi.resou
      * The possible values for this field are (case-insensitive): 'resourceId', 'category', 'caller', 'level', 'operationName', 'resourceGroup', 'resourceProvider', 'status', 'subStatus', 'resourceType', or anything beginning with 'properties'.
      * 
      */
-    @InputImport(name="field")
+    @Import(name="field")
       private final @Nullable String field;
 
     public Optional<String> getField() {

@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.edgeorder.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class HierarchyInformationResponse {
     /**
      * Represents configuration name that uniquely identifies configuration
@@ -32,12 +32,12 @@ public final class HierarchyInformationResponse {
      */
     private final @Nullable String productName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private HierarchyInformationResponse(
-        @OutputCustomType.Parameter("configurationName") @Nullable String configurationName,
-        @OutputCustomType.Parameter("productFamilyName") @Nullable String productFamilyName,
-        @OutputCustomType.Parameter("productLineName") @Nullable String productLineName,
-        @OutputCustomType.Parameter("productName") @Nullable String productName) {
+        @CustomType.Parameter("configurationName") @Nullable String configurationName,
+        @CustomType.Parameter("productFamilyName") @Nullable String productFamilyName,
+        @CustomType.Parameter("productLineName") @Nullable String productLineName,
+        @CustomType.Parameter("productName") @Nullable String productName) {
         this.configurationName = configurationName;
         this.productFamilyName = productFamilyName;
         this.productLineName = productLineName;

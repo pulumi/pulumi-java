@@ -14,7 +14,7 @@ import io.pulumi.azurenative.eventgrid.outputs.StorageBlobDeadLetterDestinationR
 import io.pulumi.azurenative.eventgrid.outputs.StorageQueueEventSubscriptionDestinationResponse;
 import io.pulumi.azurenative.eventgrid.outputs.SystemDataResponse;
 import io.pulumi.azurenative.eventgrid.outputs.WebHookEventSubscriptionDestinationResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetEventSubscriptionResult {
     /**
      * The DeadLetter destination of the event subscription.
@@ -90,21 +90,21 @@ public final class GetEventSubscriptionResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetEventSubscriptionResult(
-        @OutputCustomType.Parameter("deadLetterDestination") @Nullable StorageBlobDeadLetterDestinationResponse deadLetterDestination,
-        @OutputCustomType.Parameter("destination") @Nullable Object destination,
-        @OutputCustomType.Parameter("eventDeliverySchema") @Nullable String eventDeliverySchema,
-        @OutputCustomType.Parameter("expirationTimeUtc") @Nullable String expirationTimeUtc,
-        @OutputCustomType.Parameter("filter") @Nullable EventSubscriptionFilterResponse filter,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("labels") @Nullable List<String> labels,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("retryPolicy") @Nullable RetryPolicyResponse retryPolicy,
-        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
-        @OutputCustomType.Parameter("topic") String topic,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("deadLetterDestination") @Nullable StorageBlobDeadLetterDestinationResponse deadLetterDestination,
+        @CustomType.Parameter("destination") @Nullable Object destination,
+        @CustomType.Parameter("eventDeliverySchema") @Nullable String eventDeliverySchema,
+        @CustomType.Parameter("expirationTimeUtc") @Nullable String expirationTimeUtc,
+        @CustomType.Parameter("filter") @Nullable EventSubscriptionFilterResponse filter,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("labels") @Nullable List<String> labels,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("retryPolicy") @Nullable RetryPolicyResponse retryPolicy,
+        @CustomType.Parameter("systemData") SystemDataResponse systemData,
+        @CustomType.Parameter("topic") String topic,
+        @CustomType.Parameter("type") String type) {
         this.deadLetterDestination = deadLetterDestination;
         this.destination = destination;
         this.eventDeliverySchema = eventDeliverySchema;

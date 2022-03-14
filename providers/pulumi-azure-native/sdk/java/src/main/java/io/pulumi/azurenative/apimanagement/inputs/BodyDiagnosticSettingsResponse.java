@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.apimanagement.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class BodyDiagnosticSettingsResponse extends io.pulumi.resources.In
      * Number of request body bytes to log.
      * 
      */
-    @InputImport(name="bytes")
+    @Import(name="bytes")
       private final @Nullable Integer bytes;
 
     public Optional<Integer> getBytes() {

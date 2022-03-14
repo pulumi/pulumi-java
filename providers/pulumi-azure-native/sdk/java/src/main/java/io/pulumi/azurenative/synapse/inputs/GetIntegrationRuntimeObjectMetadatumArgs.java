@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.synapse.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +18,7 @@ public final class GetIntegrationRuntimeObjectMetadatumArgs extends io.pulumi.re
      * Integration runtime name
      * 
      */
-    @InputImport(name="integrationRuntimeName", required=true)
+    @Import(name="integrationRuntimeName", required=true)
       private final String integrationRuntimeName;
 
     public String getIntegrationRuntimeName() {
@@ -29,7 +29,7 @@ public final class GetIntegrationRuntimeObjectMetadatumArgs extends io.pulumi.re
      * Metadata path.
      * 
      */
-    @InputImport(name="metadataPath")
+    @Import(name="metadataPath")
       private final @Nullable String metadataPath;
 
     public Optional<String> getMetadataPath() {
@@ -40,7 +40,7 @@ public final class GetIntegrationRuntimeObjectMetadatumArgs extends io.pulumi.re
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {
@@ -51,7 +51,7 @@ public final class GetIntegrationRuntimeObjectMetadatumArgs extends io.pulumi.re
      * The name of the workspace.
      * 
      */
-    @InputImport(name="workspaceName", required=true)
+    @Import(name="workspaceName", required=true)
       private final String workspaceName;
 
     public String getWorkspaceName() {

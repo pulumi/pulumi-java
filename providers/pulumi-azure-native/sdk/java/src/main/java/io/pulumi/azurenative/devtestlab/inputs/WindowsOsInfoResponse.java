@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.devtestlab.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class WindowsOsInfoResponse extends io.pulumi.resources.InvokeArgs 
      * The state of the Windows OS (i.e. NonSysprepped, SysprepRequested, SysprepApplied).
      * 
      */
-    @InputImport(name="windowsOsState")
+    @Import(name="windowsOsState")
       private final @Nullable String windowsOsState;
 
     public Optional<String> getWindowsOsState() {

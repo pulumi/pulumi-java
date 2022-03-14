@@ -5,11 +5,11 @@ package io.pulumi.azurenative.managednetwork.outputs;
 
 import io.pulumi.azurenative.managednetwork.outputs.ManagedNetworkGroupResponse;
 import io.pulumi.azurenative.managednetwork.outputs.ManagedNetworkPeeringPolicyResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ConnectivityCollectionResponse {
     /**
      * The collection of connectivity related Managed Network Groups within the Managed Network
@@ -22,10 +22,10 @@ public final class ConnectivityCollectionResponse {
      */
     private final List<ManagedNetworkPeeringPolicyResponse> peerings;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ConnectivityCollectionResponse(
-        @OutputCustomType.Parameter("groups") List<ManagedNetworkGroupResponse> groups,
-        @OutputCustomType.Parameter("peerings") List<ManagedNetworkPeeringPolicyResponse> peerings) {
+        @CustomType.Parameter("groups") List<ManagedNetworkGroupResponse> groups,
+        @CustomType.Parameter("peerings") List<ManagedNetworkPeeringPolicyResponse> peerings) {
         this.groups = groups;
         this.peerings = peerings;
     }

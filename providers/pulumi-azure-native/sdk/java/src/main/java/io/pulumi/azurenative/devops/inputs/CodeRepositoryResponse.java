@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.devops.inputs;
 
 import io.pulumi.azurenative.devops.inputs.AuthorizationResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class CodeRepositoryResponse extends io.pulumi.resources.InvokeArgs
      * Authorization info to access the code repository.
      * 
      */
-    @InputImport(name="authorization")
+    @Import(name="authorization")
       private final @Nullable AuthorizationResponse authorization;
 
     public Optional<AuthorizationResponse> getAuthorization() {
@@ -35,7 +35,7 @@ public final class CodeRepositoryResponse extends io.pulumi.resources.InvokeArgs
      * Default branch used to configure Continuous Integration (CI) in the pipeline.
      * 
      */
-    @InputImport(name="defaultBranch", required=true)
+    @Import(name="defaultBranch", required=true)
       private final String defaultBranch;
 
     public String getDefaultBranch() {
@@ -46,7 +46,7 @@ public final class CodeRepositoryResponse extends io.pulumi.resources.InvokeArgs
      * Unique immutable identifier of the code repository.
      * 
      */
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final String id;
 
     public String getId() {
@@ -57,7 +57,7 @@ public final class CodeRepositoryResponse extends io.pulumi.resources.InvokeArgs
      * Repository-specific properties.
      * 
      */
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable Map<String,String> properties;
 
     public Map<String,String> getProperties() {
@@ -68,7 +68,7 @@ public final class CodeRepositoryResponse extends io.pulumi.resources.InvokeArgs
      * Type of code repository.
      * 
      */
-    @InputImport(name="repositoryType", required=true)
+    @Import(name="repositoryType", required=true)
       private final String repositoryType;
 
     public String getRepositoryType() {

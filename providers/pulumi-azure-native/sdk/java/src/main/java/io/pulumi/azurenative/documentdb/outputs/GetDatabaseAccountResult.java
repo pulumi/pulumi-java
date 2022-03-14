@@ -16,7 +16,7 @@ import io.pulumi.azurenative.documentdb.outputs.PeriodicModeBackupPolicyResponse
 import io.pulumi.azurenative.documentdb.outputs.PrivateEndpointConnectionResponse;
 import io.pulumi.azurenative.documentdb.outputs.VirtualNetworkRuleResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetDatabaseAccountResult {
     /**
      * API specific properties.
@@ -203,43 +203,43 @@ public final class GetDatabaseAccountResult {
      */
     private final List<LocationResponse> writeLocations;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDatabaseAccountResult(
-        @OutputCustomType.Parameter("apiProperties") @Nullable ApiPropertiesResponse apiProperties,
-        @OutputCustomType.Parameter("backupPolicy") @Nullable Either<ContinuousModeBackupPolicyResponse,PeriodicModeBackupPolicyResponse> backupPolicy,
-        @OutputCustomType.Parameter("capabilities") @Nullable List<CapabilityResponse> capabilities,
-        @OutputCustomType.Parameter("connectorOffer") @Nullable String connectorOffer,
-        @OutputCustomType.Parameter("consistencyPolicy") @Nullable ConsistencyPolicyResponse consistencyPolicy,
-        @OutputCustomType.Parameter("cors") @Nullable List<CorsPolicyResponse> cors,
-        @OutputCustomType.Parameter("databaseAccountOfferType") String databaseAccountOfferType,
-        @OutputCustomType.Parameter("defaultIdentity") @Nullable String defaultIdentity,
-        @OutputCustomType.Parameter("disableKeyBasedMetadataWriteAccess") @Nullable Boolean disableKeyBasedMetadataWriteAccess,
-        @OutputCustomType.Parameter("documentEndpoint") String documentEndpoint,
-        @OutputCustomType.Parameter("enableAnalyticalStorage") @Nullable Boolean enableAnalyticalStorage,
-        @OutputCustomType.Parameter("enableAutomaticFailover") @Nullable Boolean enableAutomaticFailover,
-        @OutputCustomType.Parameter("enableCassandraConnector") @Nullable Boolean enableCassandraConnector,
-        @OutputCustomType.Parameter("enableFreeTier") @Nullable Boolean enableFreeTier,
-        @OutputCustomType.Parameter("enableMultipleWriteLocations") @Nullable Boolean enableMultipleWriteLocations,
-        @OutputCustomType.Parameter("failoverPolicies") List<FailoverPolicyResponse> failoverPolicies,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("identity") @Nullable ManagedServiceIdentityResponse identity,
-        @OutputCustomType.Parameter("ipRules") @Nullable List<IpAddressOrRangeResponse> ipRules,
-        @OutputCustomType.Parameter("isVirtualNetworkFilterEnabled") @Nullable Boolean isVirtualNetworkFilterEnabled,
-        @OutputCustomType.Parameter("keyVaultKeyUri") @Nullable String keyVaultKeyUri,
-        @OutputCustomType.Parameter("kind") @Nullable String kind,
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("locations") List<LocationResponse> locations,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("networkAclBypass") @Nullable String networkAclBypass,
-        @OutputCustomType.Parameter("networkAclBypassResourceIds") @Nullable List<String> networkAclBypassResourceIds,
-        @OutputCustomType.Parameter("privateEndpointConnections") List<PrivateEndpointConnectionResponse> privateEndpointConnections,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("publicNetworkAccess") @Nullable String publicNetworkAccess,
-        @OutputCustomType.Parameter("readLocations") List<LocationResponse> readLocations,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("virtualNetworkRules") @Nullable List<VirtualNetworkRuleResponse> virtualNetworkRules,
-        @OutputCustomType.Parameter("writeLocations") List<LocationResponse> writeLocations) {
+        @CustomType.Parameter("apiProperties") @Nullable ApiPropertiesResponse apiProperties,
+        @CustomType.Parameter("backupPolicy") @Nullable Either<ContinuousModeBackupPolicyResponse,PeriodicModeBackupPolicyResponse> backupPolicy,
+        @CustomType.Parameter("capabilities") @Nullable List<CapabilityResponse> capabilities,
+        @CustomType.Parameter("connectorOffer") @Nullable String connectorOffer,
+        @CustomType.Parameter("consistencyPolicy") @Nullable ConsistencyPolicyResponse consistencyPolicy,
+        @CustomType.Parameter("cors") @Nullable List<CorsPolicyResponse> cors,
+        @CustomType.Parameter("databaseAccountOfferType") String databaseAccountOfferType,
+        @CustomType.Parameter("defaultIdentity") @Nullable String defaultIdentity,
+        @CustomType.Parameter("disableKeyBasedMetadataWriteAccess") @Nullable Boolean disableKeyBasedMetadataWriteAccess,
+        @CustomType.Parameter("documentEndpoint") String documentEndpoint,
+        @CustomType.Parameter("enableAnalyticalStorage") @Nullable Boolean enableAnalyticalStorage,
+        @CustomType.Parameter("enableAutomaticFailover") @Nullable Boolean enableAutomaticFailover,
+        @CustomType.Parameter("enableCassandraConnector") @Nullable Boolean enableCassandraConnector,
+        @CustomType.Parameter("enableFreeTier") @Nullable Boolean enableFreeTier,
+        @CustomType.Parameter("enableMultipleWriteLocations") @Nullable Boolean enableMultipleWriteLocations,
+        @CustomType.Parameter("failoverPolicies") List<FailoverPolicyResponse> failoverPolicies,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("identity") @Nullable ManagedServiceIdentityResponse identity,
+        @CustomType.Parameter("ipRules") @Nullable List<IpAddressOrRangeResponse> ipRules,
+        @CustomType.Parameter("isVirtualNetworkFilterEnabled") @Nullable Boolean isVirtualNetworkFilterEnabled,
+        @CustomType.Parameter("keyVaultKeyUri") @Nullable String keyVaultKeyUri,
+        @CustomType.Parameter("kind") @Nullable String kind,
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("locations") List<LocationResponse> locations,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("networkAclBypass") @Nullable String networkAclBypass,
+        @CustomType.Parameter("networkAclBypassResourceIds") @Nullable List<String> networkAclBypassResourceIds,
+        @CustomType.Parameter("privateEndpointConnections") List<PrivateEndpointConnectionResponse> privateEndpointConnections,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("publicNetworkAccess") @Nullable String publicNetworkAccess,
+        @CustomType.Parameter("readLocations") List<LocationResponse> readLocations,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("virtualNetworkRules") @Nullable List<VirtualNetworkRuleResponse> virtualNetworkRules,
+        @CustomType.Parameter("writeLocations") List<LocationResponse> writeLocations) {
         this.apiProperties = apiProperties;
         this.backupPolicy = backupPolicy;
         this.capabilities = capabilities;

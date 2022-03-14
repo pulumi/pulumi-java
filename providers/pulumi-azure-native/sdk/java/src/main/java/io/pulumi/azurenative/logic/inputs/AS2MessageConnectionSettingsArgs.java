@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.logic.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class AS2MessageConnectionSettingsArgs extends io.pulumi.resources.
      * The value indicating whether to ignore mismatch in certificate name.
      * 
      */
-    @InputImport(name="ignoreCertificateNameMismatch", required=true)
+    @Import(name="ignoreCertificateNameMismatch", required=true)
       private final Output<Boolean> ignoreCertificateNameMismatch;
 
     public Output<Boolean> getIgnoreCertificateNameMismatch() {
@@ -32,7 +32,7 @@ public final class AS2MessageConnectionSettingsArgs extends io.pulumi.resources.
      * The value indicating whether to keep the connection alive.
      * 
      */
-    @InputImport(name="keepHttpConnectionAlive", required=true)
+    @Import(name="keepHttpConnectionAlive", required=true)
       private final Output<Boolean> keepHttpConnectionAlive;
 
     public Output<Boolean> getKeepHttpConnectionAlive() {
@@ -43,7 +43,7 @@ public final class AS2MessageConnectionSettingsArgs extends io.pulumi.resources.
      * The value indicating whether to support HTTP status code 'CONTINUE'.
      * 
      */
-    @InputImport(name="supportHttpStatusCodeContinue", required=true)
+    @Import(name="supportHttpStatusCodeContinue", required=true)
       private final Output<Boolean> supportHttpStatusCodeContinue;
 
     public Output<Boolean> getSupportHttpStatusCodeContinue() {
@@ -54,7 +54,7 @@ public final class AS2MessageConnectionSettingsArgs extends io.pulumi.resources.
      * The value indicating whether to unfold the HTTP headers.
      * 
      */
-    @InputImport(name="unfoldHttpHeaders", required=true)
+    @Import(name="unfoldHttpHeaders", required=true)
       private final Output<Boolean> unfoldHttpHeaders;
 
     public Output<Boolean> getUnfoldHttpHeaders() {

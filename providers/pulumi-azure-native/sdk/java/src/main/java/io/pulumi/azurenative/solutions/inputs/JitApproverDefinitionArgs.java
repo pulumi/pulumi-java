@@ -6,7 +6,7 @@ package io.pulumi.azurenative.solutions.inputs;
 import io.pulumi.azurenative.solutions.enums.JitApproverType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class JitApproverDefinitionArgs extends io.pulumi.resources.Resourc
      * The approver display name.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -35,7 +35,7 @@ public final class JitApproverDefinitionArgs extends io.pulumi.resources.Resourc
      * The approver service principal Id.
      * 
      */
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final Output<String> id;
 
     public Output<String> getId() {
@@ -46,7 +46,7 @@ public final class JitApproverDefinitionArgs extends io.pulumi.resources.Resourc
      * The approver type.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<Either<String,JitApproverType>> type;
 
     public Output<Either<String,JitApproverType>> getType() {

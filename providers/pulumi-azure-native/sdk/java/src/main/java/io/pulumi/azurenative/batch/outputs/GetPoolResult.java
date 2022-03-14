@@ -16,7 +16,7 @@ import io.pulumi.azurenative.batch.outputs.ScaleSettingsResponse;
 import io.pulumi.azurenative.batch.outputs.StartTaskResponse;
 import io.pulumi.azurenative.batch.outputs.TaskSchedulingPolicyResponse;
 import io.pulumi.azurenative.batch.outputs.UserAccountResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetPoolResult {
     private final String allocationState;
     private final String allocationStateTransitionTime;
@@ -145,38 +145,38 @@ public final class GetPoolResult {
      */
     private final @Nullable String vmSize;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetPoolResult(
-        @OutputCustomType.Parameter("allocationState") String allocationState,
-        @OutputCustomType.Parameter("allocationStateTransitionTime") String allocationStateTransitionTime,
-        @OutputCustomType.Parameter("applicationLicenses") @Nullable List<String> applicationLicenses,
-        @OutputCustomType.Parameter("applicationPackages") @Nullable List<ApplicationPackageReferenceResponse> applicationPackages,
-        @OutputCustomType.Parameter("autoScaleRun") AutoScaleRunResponse autoScaleRun,
-        @OutputCustomType.Parameter("certificates") @Nullable List<CertificateReferenceResponse> certificates,
-        @OutputCustomType.Parameter("creationTime") String creationTime,
-        @OutputCustomType.Parameter("currentDedicatedNodes") Integer currentDedicatedNodes,
-        @OutputCustomType.Parameter("currentLowPriorityNodes") Integer currentLowPriorityNodes,
-        @OutputCustomType.Parameter("deploymentConfiguration") @Nullable DeploymentConfigurationResponse deploymentConfiguration,
-        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("identity") @Nullable BatchPoolIdentityResponse identity,
-        @OutputCustomType.Parameter("interNodeCommunication") @Nullable String interNodeCommunication,
-        @OutputCustomType.Parameter("lastModified") String lastModified,
-        @OutputCustomType.Parameter("metadata") @Nullable List<MetadataItemResponse> metadata,
-        @OutputCustomType.Parameter("mountConfiguration") @Nullable List<MountConfigurationResponse> mountConfiguration,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("networkConfiguration") @Nullable NetworkConfigurationResponse networkConfiguration,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("provisioningStateTransitionTime") String provisioningStateTransitionTime,
-        @OutputCustomType.Parameter("resizeOperationStatus") ResizeOperationStatusResponse resizeOperationStatus,
-        @OutputCustomType.Parameter("scaleSettings") @Nullable ScaleSettingsResponse scaleSettings,
-        @OutputCustomType.Parameter("startTask") @Nullable StartTaskResponse startTask,
-        @OutputCustomType.Parameter("taskSchedulingPolicy") @Nullable TaskSchedulingPolicyResponse taskSchedulingPolicy,
-        @OutputCustomType.Parameter("taskSlotsPerNode") @Nullable Integer taskSlotsPerNode,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("userAccounts") @Nullable List<UserAccountResponse> userAccounts,
-        @OutputCustomType.Parameter("vmSize") @Nullable String vmSize) {
+        @CustomType.Parameter("allocationState") String allocationState,
+        @CustomType.Parameter("allocationStateTransitionTime") String allocationStateTransitionTime,
+        @CustomType.Parameter("applicationLicenses") @Nullable List<String> applicationLicenses,
+        @CustomType.Parameter("applicationPackages") @Nullable List<ApplicationPackageReferenceResponse> applicationPackages,
+        @CustomType.Parameter("autoScaleRun") AutoScaleRunResponse autoScaleRun,
+        @CustomType.Parameter("certificates") @Nullable List<CertificateReferenceResponse> certificates,
+        @CustomType.Parameter("creationTime") String creationTime,
+        @CustomType.Parameter("currentDedicatedNodes") Integer currentDedicatedNodes,
+        @CustomType.Parameter("currentLowPriorityNodes") Integer currentLowPriorityNodes,
+        @CustomType.Parameter("deploymentConfiguration") @Nullable DeploymentConfigurationResponse deploymentConfiguration,
+        @CustomType.Parameter("displayName") @Nullable String displayName,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("identity") @Nullable BatchPoolIdentityResponse identity,
+        @CustomType.Parameter("interNodeCommunication") @Nullable String interNodeCommunication,
+        @CustomType.Parameter("lastModified") String lastModified,
+        @CustomType.Parameter("metadata") @Nullable List<MetadataItemResponse> metadata,
+        @CustomType.Parameter("mountConfiguration") @Nullable List<MountConfigurationResponse> mountConfiguration,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("networkConfiguration") @Nullable NetworkConfigurationResponse networkConfiguration,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("provisioningStateTransitionTime") String provisioningStateTransitionTime,
+        @CustomType.Parameter("resizeOperationStatus") ResizeOperationStatusResponse resizeOperationStatus,
+        @CustomType.Parameter("scaleSettings") @Nullable ScaleSettingsResponse scaleSettings,
+        @CustomType.Parameter("startTask") @Nullable StartTaskResponse startTask,
+        @CustomType.Parameter("taskSchedulingPolicy") @Nullable TaskSchedulingPolicyResponse taskSchedulingPolicy,
+        @CustomType.Parameter("taskSlotsPerNode") @Nullable Integer taskSlotsPerNode,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("userAccounts") @Nullable List<UserAccountResponse> userAccounts,
+        @CustomType.Parameter("vmSize") @Nullable String vmSize) {
         this.allocationState = allocationState;
         this.allocationStateTransitionTime = allocationStateTransitionTime;
         this.applicationLicenses = applicationLicenses;

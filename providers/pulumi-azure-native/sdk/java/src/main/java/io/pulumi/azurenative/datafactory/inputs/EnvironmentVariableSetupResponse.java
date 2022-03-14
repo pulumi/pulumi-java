@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class EnvironmentVariableSetupResponse extends io.pulumi.resources.
      * Expected value is 'EnvironmentVariableSetup'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {
@@ -32,7 +32,7 @@ public final class EnvironmentVariableSetupResponse extends io.pulumi.resources.
      * The name of the environment variable.
      * 
      */
-    @InputImport(name="variableName", required=true)
+    @Import(name="variableName", required=true)
       private final String variableName;
 
     public String getVariableName() {
@@ -43,7 +43,7 @@ public final class EnvironmentVariableSetupResponse extends io.pulumi.resources.
      * The value of the environment variable.
      * 
      */
-    @InputImport(name="variableValue", required=true)
+    @Import(name="variableValue", required=true)
       private final String variableValue;
 
     public String getVariableValue() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.appplatform.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class NetworkProfileResponseOutboundIPs extends io.pulumi.resources
      * A list of public IP addresses.
      * 
      */
-    @InputImport(name="publicIPs", required=true)
+    @Import(name="publicIPs", required=true)
       private final List<String> publicIPs;
 
     public List<String> getPublicIPs() {

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class VirtualMachineSshCredentialsArgs extends io.pulumi.resources.
      * Password of admin account
      * 
      */
-    @InputImport(name="password")
+    @Import(name="password")
       private final @Nullable Output<String> password;
 
     public Output<String> getPassword() {
@@ -33,7 +33,7 @@ public final class VirtualMachineSshCredentialsArgs extends io.pulumi.resources.
      * Private key data
      * 
      */
-    @InputImport(name="privateKeyData")
+    @Import(name="privateKeyData")
       private final @Nullable Output<String> privateKeyData;
 
     public Output<String> getPrivateKeyData() {
@@ -44,7 +44,7 @@ public final class VirtualMachineSshCredentialsArgs extends io.pulumi.resources.
      * Public key data
      * 
      */
-    @InputImport(name="publicKeyData")
+    @Import(name="publicKeyData")
       private final @Nullable Output<String> publicKeyData;
 
     public Output<String> getPublicKeyData() {
@@ -55,7 +55,7 @@ public final class VirtualMachineSshCredentialsArgs extends io.pulumi.resources.
      * Username of admin account
      * 
      */
-    @InputImport(name="username")
+    @Import(name="username")
       private final @Nullable Output<String> username;
 
     public Output<String> getUsername() {

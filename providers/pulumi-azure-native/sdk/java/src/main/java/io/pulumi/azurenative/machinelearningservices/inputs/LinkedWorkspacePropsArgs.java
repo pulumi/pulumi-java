@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class LinkedWorkspacePropsArgs extends io.pulumi.resources.Resource
      * ResourceId of the link target of the linked workspace.
      * 
      */
-    @InputImport(name="linkedWorkspaceResourceId")
+    @Import(name="linkedWorkspaceResourceId")
       private final @Nullable Output<String> linkedWorkspaceResourceId;
 
     public Output<String> getLinkedWorkspaceResourceId() {
@@ -33,7 +33,7 @@ public final class LinkedWorkspacePropsArgs extends io.pulumi.resources.Resource
      * ResourceId of the user assigned identity for the linked workspace.
      * 
      */
-    @InputImport(name="userAssignedIdentityResourceId")
+    @Import(name="userAssignedIdentityResourceId")
       private final @Nullable Output<String> userAssignedIdentityResourceId;
 
     public Output<String> getUserAssignedIdentityResourceId() {

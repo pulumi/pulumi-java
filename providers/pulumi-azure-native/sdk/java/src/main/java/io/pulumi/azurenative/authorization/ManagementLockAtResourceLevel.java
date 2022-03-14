@@ -8,7 +8,7 @@ import io.pulumi.azurenative.authorization.ManagementLockAtResourceLevelArgs;
 import io.pulumi.azurenative.authorization.outputs.ManagementLockOwnerResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +35,7 @@ public class ManagementLockAtResourceLevel extends io.pulumi.resources.CustomRes
      * The level of the lock. Possible values are: NotSpecified, CanNotDelete, ReadOnly. CanNotDelete means authorized users are able to read and modify the resources, but not delete. ReadOnly means authorized users can only read from a resource, but they can't modify or delete it.
      * 
      */
-    @OutputExport(name="level", type=String.class, parameters={})
+    @Export(name="level", type=String.class, parameters={})
     private Output<String> level;
 
     /**
@@ -49,7 +49,7 @@ public class ManagementLockAtResourceLevel extends io.pulumi.resources.CustomRes
      * The name of the lock.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -63,7 +63,7 @@ public class ManagementLockAtResourceLevel extends io.pulumi.resources.CustomRes
      * Notes about the lock. Maximum of 512 characters.
      * 
      */
-    @OutputExport(name="notes", type=String.class, parameters={})
+    @Export(name="notes", type=String.class, parameters={})
     private Output</* @Nullable */ String> notes;
 
     /**
@@ -77,7 +77,7 @@ public class ManagementLockAtResourceLevel extends io.pulumi.resources.CustomRes
      * The owners of the lock.
      * 
      */
-    @OutputExport(name="owners", type=List.class, parameters={ManagementLockOwnerResponse.class})
+    @Export(name="owners", type=List.class, parameters={ManagementLockOwnerResponse.class})
     private Output</* @Nullable */ List<ManagementLockOwnerResponse>> owners;
 
     /**
@@ -91,7 +91,7 @@ public class ManagementLockAtResourceLevel extends io.pulumi.resources.CustomRes
      * The resource type of the lock - Microsoft.Authorization/locks.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

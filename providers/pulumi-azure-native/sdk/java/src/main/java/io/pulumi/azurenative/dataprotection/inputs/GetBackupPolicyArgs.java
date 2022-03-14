@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.dataprotection.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -12,7 +12,7 @@ public final class GetBackupPolicyArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetBackupPolicyArgs Empty = new GetBackupPolicyArgs();
 
-    @InputImport(name="backupPolicyName", required=true)
+    @Import(name="backupPolicyName", required=true)
       private final String backupPolicyName;
 
     public String getBackupPolicyName() {
@@ -23,7 +23,7 @@ public final class GetBackupPolicyArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the resource group where the backup vault is present.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {
@@ -34,7 +34,7 @@ public final class GetBackupPolicyArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the backup vault.
      * 
      */
-    @InputImport(name="vaultName", required=true)
+    @Import(name="vaultName", required=true)
       private final String vaultName;
 
     public String getVaultName() {

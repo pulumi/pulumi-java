@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.appplatform.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class UserSourceInfoResponse extends io.pulumi.resources.InvokeArgs
      * the relative path to the target module/project.
      * 
      */
-    @InputImport(name="artifactSelector")
+    @Import(name="artifactSelector")
       private final @Nullable String artifactSelector;
 
     public Optional<String> getArtifactSelector() {
@@ -34,7 +34,7 @@ public final class UserSourceInfoResponse extends io.pulumi.resources.InvokeArgs
      * Relative path of the storage which stores the source
      * 
      */
-    @InputImport(name="relativePath")
+    @Import(name="relativePath")
       private final @Nullable String relativePath;
 
     public Optional<String> getRelativePath() {
@@ -45,7 +45,7 @@ public final class UserSourceInfoResponse extends io.pulumi.resources.InvokeArgs
      * Type of the source uploaded
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable String type;
 
     public Optional<String> getType() {
@@ -56,7 +56,7 @@ public final class UserSourceInfoResponse extends io.pulumi.resources.InvokeArgs
      * Version of the source
      * 
      */
-    @InputImport(name="version")
+    @Import(name="version")
       private final @Nullable String version;
 
     public Optional<String> getVersion() {

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.securityinsights.inputs;
 
 import io.pulumi.azurenative.securityinsights.inputs.UserInfoResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class BookmarkTimelineItemResponse extends io.pulumi.resources.Invo
      * The bookmark azure resource id.
      * 
      */
-    @InputImport(name="azureResourceId", required=true)
+    @Import(name="azureResourceId", required=true)
       private final String azureResourceId;
 
     public String getAzureResourceId() {
@@ -35,7 +35,7 @@ public final class BookmarkTimelineItemResponse extends io.pulumi.resources.Invo
      * Describes a user that created the bookmark
      * 
      */
-    @InputImport(name="createdBy")
+    @Import(name="createdBy")
       private final @Nullable UserInfoResponse createdBy;
 
     public Optional<UserInfoResponse> getCreatedBy() {
@@ -46,7 +46,7 @@ public final class BookmarkTimelineItemResponse extends io.pulumi.resources.Invo
      * The bookmark display name.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable String displayName;
 
     public Optional<String> getDisplayName() {
@@ -57,7 +57,7 @@ public final class BookmarkTimelineItemResponse extends io.pulumi.resources.Invo
      * The bookmark end time.
      * 
      */
-    @InputImport(name="endTimeUtc")
+    @Import(name="endTimeUtc")
       private final @Nullable String endTimeUtc;
 
     public Optional<String> getEndTimeUtc() {
@@ -68,7 +68,7 @@ public final class BookmarkTimelineItemResponse extends io.pulumi.resources.Invo
      * The bookmark event time.
      * 
      */
-    @InputImport(name="eventTime")
+    @Import(name="eventTime")
       private final @Nullable String eventTime;
 
     public Optional<String> getEventTime() {
@@ -80,7 +80,7 @@ public final class BookmarkTimelineItemResponse extends io.pulumi.resources.Invo
      * Expected value is 'Bookmark'.
      * 
      */
-    @InputImport(name="kind", required=true)
+    @Import(name="kind", required=true)
       private final String kind;
 
     public String getKind() {
@@ -91,7 +91,7 @@ public final class BookmarkTimelineItemResponse extends io.pulumi.resources.Invo
      * List of labels relevant to this bookmark
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable List<String> labels;
 
     public List<String> getLabels() {
@@ -102,7 +102,7 @@ public final class BookmarkTimelineItemResponse extends io.pulumi.resources.Invo
      * The notes of the bookmark
      * 
      */
-    @InputImport(name="notes")
+    @Import(name="notes")
       private final @Nullable String notes;
 
     public Optional<String> getNotes() {
@@ -113,7 +113,7 @@ public final class BookmarkTimelineItemResponse extends io.pulumi.resources.Invo
      * The bookmark start time.
      * 
      */
-    @InputImport(name="startTimeUtc")
+    @Import(name="startTimeUtc")
       private final @Nullable String startTimeUtc;
 
     public Optional<String> getStartTimeUtc() {

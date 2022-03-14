@@ -8,7 +8,7 @@ import io.pulumi.azurenative.containerservice.enums.OpenShiftAgentPoolProfileRol
 import io.pulumi.azurenative.containerservice.enums.OpenShiftContainerServiceVMSize;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +27,7 @@ public final class OpenShiftManagedClusterAgentPoolProfileArgs extends io.pulumi
      * Number of agents (VMs) to host docker containers.
      * 
      */
-    @InputImport(name="count", required=true)
+    @Import(name="count", required=true)
       private final Output<Integer> count;
 
     public Output<Integer> getCount() {
@@ -38,7 +38,7 @@ public final class OpenShiftManagedClusterAgentPoolProfileArgs extends io.pulumi
      * Unique name of the pool profile in the context of the subscription and resource group.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -49,7 +49,7 @@ public final class OpenShiftManagedClusterAgentPoolProfileArgs extends io.pulumi
      * OsType to be used to specify os type. Choose from Linux and Windows. Default to Linux.
      * 
      */
-    @InputImport(name="osType")
+    @Import(name="osType")
       private final @Nullable Output<Either<String,OSType>> osType;
 
     public Output<Either<String,OSType>> getOsType() {
@@ -60,7 +60,7 @@ public final class OpenShiftManagedClusterAgentPoolProfileArgs extends io.pulumi
      * Define the role of the AgentPoolProfile.
      * 
      */
-    @InputImport(name="role")
+    @Import(name="role")
       private final @Nullable Output<Either<String,OpenShiftAgentPoolProfileRole>> role;
 
     public Output<Either<String,OpenShiftAgentPoolProfileRole>> getRole() {
@@ -71,7 +71,7 @@ public final class OpenShiftManagedClusterAgentPoolProfileArgs extends io.pulumi
      * Subnet CIDR for the peering.
      * 
      */
-    @InputImport(name="subnetCidr")
+    @Import(name="subnetCidr")
       private final @Nullable Output<String> subnetCidr;
 
     public Output<String> getSubnetCidr() {
@@ -82,7 +82,7 @@ public final class OpenShiftManagedClusterAgentPoolProfileArgs extends io.pulumi
      * Size of agent VMs.
      * 
      */
-    @InputImport(name="vmSize", required=true)
+    @Import(name="vmSize", required=true)
       private final Output<Either<String,OpenShiftContainerServiceVMSize>> vmSize;
 
     public Output<Either<String,OpenShiftContainerServiceVMSize>> getVmSize() {

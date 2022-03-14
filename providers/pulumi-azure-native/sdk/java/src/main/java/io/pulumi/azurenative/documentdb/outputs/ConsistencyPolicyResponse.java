@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.documentdb.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ConsistencyPolicyResponse {
     /**
      * The default consistency level and configuration settings of the Cosmos DB account.
@@ -29,11 +29,11 @@ public final class ConsistencyPolicyResponse {
      */
     private final @Nullable Double maxStalenessPrefix;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ConsistencyPolicyResponse(
-        @OutputCustomType.Parameter("defaultConsistencyLevel") String defaultConsistencyLevel,
-        @OutputCustomType.Parameter("maxIntervalInSeconds") @Nullable Integer maxIntervalInSeconds,
-        @OutputCustomType.Parameter("maxStalenessPrefix") @Nullable Double maxStalenessPrefix) {
+        @CustomType.Parameter("defaultConsistencyLevel") String defaultConsistencyLevel,
+        @CustomType.Parameter("maxIntervalInSeconds") @Nullable Integer maxIntervalInSeconds,
+        @CustomType.Parameter("maxStalenessPrefix") @Nullable Double maxStalenessPrefix) {
         this.defaultConsistencyLevel = defaultConsistencyLevel;
         this.maxIntervalInSeconds = maxIntervalInSeconds;
         this.maxStalenessPrefix = maxStalenessPrefix;

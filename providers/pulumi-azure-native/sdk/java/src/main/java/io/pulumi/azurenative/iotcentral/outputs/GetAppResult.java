@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.iotcentral.outputs;
 
 import io.pulumi.azurenative.iotcentral.outputs.AppSkuInfoResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetAppResult {
     /**
      * The ID of the application.
@@ -64,18 +64,18 @@ public final class GetAppResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetAppResult(
-        @OutputCustomType.Parameter("applicationId") String applicationId,
-        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("sku") AppSkuInfoResponse sku,
-        @OutputCustomType.Parameter("subdomain") @Nullable String subdomain,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("template") @Nullable String template,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("applicationId") String applicationId,
+        @CustomType.Parameter("displayName") @Nullable String displayName,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("sku") AppSkuInfoResponse sku,
+        @CustomType.Parameter("subdomain") @Nullable String subdomain,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("template") @Nullable String template,
+        @CustomType.Parameter("type") String type) {
         this.applicationId = applicationId;
         this.displayName = displayName;
         this.id = id;

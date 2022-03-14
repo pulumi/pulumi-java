@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.keyvault.outputs;
 
 import io.pulumi.azurenative.keyvault.outputs.SecretAttributesResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SecretPropertiesResponse {
     /**
      * The attributes of the secret.
@@ -38,13 +38,13 @@ public final class SecretPropertiesResponse {
      */
     private final @Nullable String value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SecretPropertiesResponse(
-        @OutputCustomType.Parameter("attributes") @Nullable SecretAttributesResponse attributes,
-        @OutputCustomType.Parameter("contentType") @Nullable String contentType,
-        @OutputCustomType.Parameter("secretUri") String secretUri,
-        @OutputCustomType.Parameter("secretUriWithVersion") String secretUriWithVersion,
-        @OutputCustomType.Parameter("value") @Nullable String value) {
+        @CustomType.Parameter("attributes") @Nullable SecretAttributesResponse attributes,
+        @CustomType.Parameter("contentType") @Nullable String contentType,
+        @CustomType.Parameter("secretUri") String secretUri,
+        @CustomType.Parameter("secretUriWithVersion") String secretUriWithVersion,
+        @CustomType.Parameter("value") @Nullable String value) {
         this.attributes = attributes;
         this.contentType = contentType;
         this.secretUri = secretUri;

@@ -5,14 +5,14 @@ package io.pulumi.azurenative.insights.outputs;
 
 import io.pulumi.azurenative.insights.outputs.AzNsActionGroupResponse;
 import io.pulumi.azurenative.insights.outputs.TriggerConditionResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AlertingActionResponse {
     /**
      * Azure action group reference.
@@ -41,13 +41,13 @@ public final class AlertingActionResponse {
      */
     private final TriggerConditionResponse trigger;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AlertingActionResponse(
-        @OutputCustomType.Parameter("aznsAction") @Nullable AzNsActionGroupResponse aznsAction,
-        @OutputCustomType.Parameter("odataType") String odataType,
-        @OutputCustomType.Parameter("severity") String severity,
-        @OutputCustomType.Parameter("throttlingInMin") @Nullable Integer throttlingInMin,
-        @OutputCustomType.Parameter("trigger") TriggerConditionResponse trigger) {
+        @CustomType.Parameter("aznsAction") @Nullable AzNsActionGroupResponse aznsAction,
+        @CustomType.Parameter("odataType") String odataType,
+        @CustomType.Parameter("severity") String severity,
+        @CustomType.Parameter("throttlingInMin") @Nullable Integer throttlingInMin,
+        @CustomType.Parameter("trigger") TriggerConditionResponse trigger) {
         this.aznsAction = aznsAction;
         this.odataType = odataType;
         this.severity = severity;

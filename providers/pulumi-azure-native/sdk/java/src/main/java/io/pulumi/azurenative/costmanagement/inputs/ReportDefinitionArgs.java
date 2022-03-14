@@ -9,7 +9,7 @@ import io.pulumi.azurenative.costmanagement.inputs.ReportDatasetArgs;
 import io.pulumi.azurenative.costmanagement.inputs.ReportTimePeriodArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,7 +27,7 @@ public final class ReportDefinitionArgs extends io.pulumi.resources.ResourceArgs
      * Has definition for data in this report.
      * 
      */
-    @InputImport(name="dataset")
+    @Import(name="dataset")
       private final @Nullable Output<ReportDatasetArgs> dataset;
 
     public Output<ReportDatasetArgs> getDataset() {
@@ -38,7 +38,7 @@ public final class ReportDefinitionArgs extends io.pulumi.resources.ResourceArgs
      * Has time period for pulling data for the report.
      * 
      */
-    @InputImport(name="timePeriod")
+    @Import(name="timePeriod")
       private final @Nullable Output<ReportTimePeriodArgs> timePeriod;
 
     public Output<ReportTimePeriodArgs> getTimePeriod() {
@@ -49,7 +49,7 @@ public final class ReportDefinitionArgs extends io.pulumi.resources.ResourceArgs
      * The time frame for pulling data for the report. If custom, then a specific time period must be provided.
      * 
      */
-    @InputImport(name="timeframe", required=true)
+    @Import(name="timeframe", required=true)
       private final Output<Either<String,TimeframeType>> timeframe;
 
     public Output<Either<String,TimeframeType>> getTimeframe() {
@@ -60,7 +60,7 @@ public final class ReportDefinitionArgs extends io.pulumi.resources.ResourceArgs
      * The type of the report.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<Either<String,ReportType>> type;
 
     public Output<Either<String,ReportType>> getType() {

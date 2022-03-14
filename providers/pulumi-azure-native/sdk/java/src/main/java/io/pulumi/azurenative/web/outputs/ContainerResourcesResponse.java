@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ContainerResourcesResponse {
     /**
      * Required CPU in cores, e.g. 0.5
@@ -23,10 +23,10 @@ public final class ContainerResourcesResponse {
      */
     private final @Nullable String memory;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ContainerResourcesResponse(
-        @OutputCustomType.Parameter("cpu") @Nullable Double cpu,
-        @OutputCustomType.Parameter("memory") @Nullable String memory) {
+        @CustomType.Parameter("cpu") @Nullable Double cpu,
+        @CustomType.Parameter("memory") @Nullable String memory) {
         this.cpu = cpu;
         this.memory = memory;
     }

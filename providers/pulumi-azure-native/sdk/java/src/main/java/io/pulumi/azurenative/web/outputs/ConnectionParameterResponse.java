@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.web.outputs;
 
 import io.pulumi.azurenative.web.outputs.ApiOAuthSettingsResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ConnectionParameterResponse {
     /**
      * OAuth settings for the connection provider
@@ -23,10 +23,10 @@ public final class ConnectionParameterResponse {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ConnectionParameterResponse(
-        @OutputCustomType.Parameter("oAuthSettings") @Nullable ApiOAuthSettingsResponse oAuthSettings,
-        @OutputCustomType.Parameter("type") @Nullable String type) {
+        @CustomType.Parameter("oAuthSettings") @Nullable ApiOAuthSettingsResponse oAuthSettings,
+        @CustomType.Parameter("type") @Nullable String type) {
         this.oAuthSettings = oAuthSettings;
         this.type = type;
     }

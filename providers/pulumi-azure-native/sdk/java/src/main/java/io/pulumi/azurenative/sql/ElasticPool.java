@@ -9,7 +9,7 @@ import io.pulumi.azurenative.sql.outputs.ElasticPoolPerDatabaseSettingsResponse;
 import io.pulumi.azurenative.sql.outputs.SkuResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Double;
@@ -39,7 +39,7 @@ public class ElasticPool extends io.pulumi.resources.CustomResource {
      * The creation date of the elastic pool (ISO8601 format).
      * 
      */
-    @OutputExport(name="creationDate", type=String.class, parameters={})
+    @Export(name="creationDate", type=String.class, parameters={})
     private Output<String> creationDate;
 
     /**
@@ -53,7 +53,7 @@ public class ElasticPool extends io.pulumi.resources.CustomResource {
      * Kind of elastic pool. This is metadata used for the Azure portal experience.
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
     /**
@@ -67,7 +67,7 @@ public class ElasticPool extends io.pulumi.resources.CustomResource {
      * The license type to apply for this elastic pool.
      * 
      */
-    @OutputExport(name="licenseType", type=String.class, parameters={})
+    @Export(name="licenseType", type=String.class, parameters={})
     private Output</* @Nullable */ String> licenseType;
 
     /**
@@ -81,7 +81,7 @@ public class ElasticPool extends io.pulumi.resources.CustomResource {
      * Resource location.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -95,7 +95,7 @@ public class ElasticPool extends io.pulumi.resources.CustomResource {
      * Maintenance configuration id assigned to the elastic pool. This configuration defines the period when the maintenance updates will will occur.
      * 
      */
-    @OutputExport(name="maintenanceConfigurationId", type=String.class, parameters={})
+    @Export(name="maintenanceConfigurationId", type=String.class, parameters={})
     private Output</* @Nullable */ String> maintenanceConfigurationId;
 
     /**
@@ -109,7 +109,7 @@ public class ElasticPool extends io.pulumi.resources.CustomResource {
      * The storage limit for the database elastic pool in bytes.
      * 
      */
-    @OutputExport(name="maxSizeBytes", type=Double.class, parameters={})
+    @Export(name="maxSizeBytes", type=Double.class, parameters={})
     private Output</* @Nullable */ Double> maxSizeBytes;
 
     /**
@@ -123,7 +123,7 @@ public class ElasticPool extends io.pulumi.resources.CustomResource {
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -137,7 +137,7 @@ public class ElasticPool extends io.pulumi.resources.CustomResource {
      * The per database settings for the elastic pool.
      * 
      */
-    @OutputExport(name="perDatabaseSettings", type=ElasticPoolPerDatabaseSettingsResponse.class, parameters={})
+    @Export(name="perDatabaseSettings", type=ElasticPoolPerDatabaseSettingsResponse.class, parameters={})
     private Output</* @Nullable */ ElasticPoolPerDatabaseSettingsResponse> perDatabaseSettings;
 
     /**
@@ -153,7 +153,7 @@ public class ElasticPool extends io.pulumi.resources.CustomResource {
      * The list of SKUs may vary by region and support offer. To determine the SKUs (including the SKU name, tier/edition, family, and capacity) that are available to your subscription in an Azure region, use the `Capabilities_ListByLocation` REST API or the following command:
      * 
      */
-    @OutputExport(name="sku", type=SkuResponse.class, parameters={})
+    @Export(name="sku", type=SkuResponse.class, parameters={})
     private Output</* @Nullable */ SkuResponse> sku;
 
     /**
@@ -169,7 +169,7 @@ public class ElasticPool extends io.pulumi.resources.CustomResource {
      * The state of the elastic pool.
      * 
      */
-    @OutputExport(name="state", type=String.class, parameters={})
+    @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
@@ -183,7 +183,7 @@ public class ElasticPool extends io.pulumi.resources.CustomResource {
      * Resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -197,7 +197,7 @@ public class ElasticPool extends io.pulumi.resources.CustomResource {
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -211,7 +211,7 @@ public class ElasticPool extends io.pulumi.resources.CustomResource {
      * Whether or not this elastic pool is zone redundant, which means the replicas of this elastic pool will be spread across multiple availability zones.
      * 
      */
-    @OutputExport(name="zoneRedundant", type=Boolean.class, parameters={})
+    @Export(name="zoneRedundant", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> zoneRedundant;
 
     /**

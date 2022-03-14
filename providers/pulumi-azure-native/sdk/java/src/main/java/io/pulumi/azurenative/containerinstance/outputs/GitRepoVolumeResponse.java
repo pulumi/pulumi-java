@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.containerinstance.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GitRepoVolumeResponse {
     /**
      * Target directory name. Must not contain or start with '..'.  If '.' is supplied, the volume directory will be the git repository.  Otherwise, if specified, the volume will contain the git repository in the subdirectory with the given name.
@@ -27,11 +27,11 @@ public final class GitRepoVolumeResponse {
      */
     private final @Nullable String revision;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GitRepoVolumeResponse(
-        @OutputCustomType.Parameter("directory") @Nullable String directory,
-        @OutputCustomType.Parameter("repository") String repository,
-        @OutputCustomType.Parameter("revision") @Nullable String revision) {
+        @CustomType.Parameter("directory") @Nullable String directory,
+        @CustomType.Parameter("repository") String repository,
+        @CustomType.Parameter("revision") @Nullable String revision) {
         this.directory = directory;
         this.repository = repository;
         this.revision = revision;

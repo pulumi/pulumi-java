@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.apimanagement.ApiReleaseArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -34,7 +34,7 @@ public class ApiRelease extends io.pulumi.resources.CustomResource {
      * Identifier of the API the release belongs to.
      * 
      */
-    @OutputExport(name="apiId", type=String.class, parameters={})
+    @Export(name="apiId", type=String.class, parameters={})
     private Output</* @Nullable */ String> apiId;
 
     /**
@@ -48,7 +48,7 @@ public class ApiRelease extends io.pulumi.resources.CustomResource {
      * The time the API was released. The date conforms to the following format: yyyy-MM-ddTHH:mm:ssZ as specified by the ISO 8601 standard.
      * 
      */
-    @OutputExport(name="createdDateTime", type=String.class, parameters={})
+    @Export(name="createdDateTime", type=String.class, parameters={})
     private Output<String> createdDateTime;
 
     /**
@@ -62,7 +62,7 @@ public class ApiRelease extends io.pulumi.resources.CustomResource {
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -76,7 +76,7 @@ public class ApiRelease extends io.pulumi.resources.CustomResource {
      * Release Notes
      * 
      */
-    @OutputExport(name="notes", type=String.class, parameters={})
+    @Export(name="notes", type=String.class, parameters={})
     private Output</* @Nullable */ String> notes;
 
     /**
@@ -90,7 +90,7 @@ public class ApiRelease extends io.pulumi.resources.CustomResource {
      * Resource type for API Management resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -104,7 +104,7 @@ public class ApiRelease extends io.pulumi.resources.CustomResource {
      * The time the API release was updated.
      * 
      */
-    @OutputExport(name="updatedDateTime", type=String.class, parameters={})
+    @Export(name="updatedDateTime", type=String.class, parameters={})
     private Output<String> updatedDateTime;
 
     /**

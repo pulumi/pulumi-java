@@ -5,7 +5,7 @@ package io.pulumi.azurenative.edgeorder.inputs;
 
 import io.pulumi.azurenative.edgeorder.inputs.HierarchyInformationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 
 
@@ -21,7 +21,7 @@ public final class ProductDetailsArgs extends io.pulumi.resources.ResourceArgs {
      * Hierarchy of the product which uniquely identifies the product
      * 
      */
-    @InputImport(name="hierarchyInformation", required=true)
+    @Import(name="hierarchyInformation", required=true)
       private final Output<HierarchyInformationArgs> hierarchyInformation;
 
     public Output<HierarchyInformationArgs> getHierarchyInformation() {

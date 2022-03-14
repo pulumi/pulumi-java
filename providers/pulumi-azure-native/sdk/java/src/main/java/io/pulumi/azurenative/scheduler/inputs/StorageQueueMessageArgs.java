@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.scheduler.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class StorageQueueMessageArgs extends io.pulumi.resources.ResourceA
      * Gets or sets the message.
      * 
      */
-    @InputImport(name="message")
+    @Import(name="message")
       private final @Nullable Output<String> message;
 
     public Output<String> getMessage() {
@@ -29,7 +29,7 @@ public final class StorageQueueMessageArgs extends io.pulumi.resources.ResourceA
      * Gets or sets the queue name.
      * 
      */
-    @InputImport(name="queueName")
+    @Import(name="queueName")
       private final @Nullable Output<String> queueName;
 
     public Output<String> getQueueName() {
@@ -40,7 +40,7 @@ public final class StorageQueueMessageArgs extends io.pulumi.resources.ResourceA
      * Gets or sets the SAS key.
      * 
      */
-    @InputImport(name="sasToken")
+    @Import(name="sasToken")
       private final @Nullable Output<String> sasToken;
 
     public Output<String> getSasToken() {
@@ -51,7 +51,7 @@ public final class StorageQueueMessageArgs extends io.pulumi.resources.ResourceA
      * Gets or sets the storage account name.
      * 
      */
-    @InputImport(name="storageAccount")
+    @Import(name="storageAccount")
       private final @Nullable Output<String> storageAccount;
 
     public Output<String> getStorageAccount() {

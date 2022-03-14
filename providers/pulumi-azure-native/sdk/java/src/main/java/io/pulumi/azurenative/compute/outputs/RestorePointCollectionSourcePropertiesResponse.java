@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RestorePointCollectionSourcePropertiesResponse {
     /**
      * Resource Id of the source resource used to create this restore point collection
@@ -22,10 +22,10 @@ public final class RestorePointCollectionSourcePropertiesResponse {
      */
     private final String location;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RestorePointCollectionSourcePropertiesResponse(
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("location") String location) {
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("location") String location) {
         this.id = id;
         this.location = location;
     }

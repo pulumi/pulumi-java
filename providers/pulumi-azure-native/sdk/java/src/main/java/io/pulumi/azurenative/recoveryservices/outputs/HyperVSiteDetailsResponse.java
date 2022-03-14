@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.recoveryservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class HyperVSiteDetailsResponse {
     /**
      * Gets the class type. Overridden in derived classes.
@@ -16,8 +16,8 @@ public final class HyperVSiteDetailsResponse {
      */
     private final String instanceType;
 
-    @OutputCustomType.Constructor
-    private HyperVSiteDetailsResponse(@OutputCustomType.Parameter("instanceType") String instanceType) {
+    @CustomType.Constructor
+    private HyperVSiteDetailsResponse(@CustomType.Parameter("instanceType") String instanceType) {
         this.instanceType = instanceType;
     }
 

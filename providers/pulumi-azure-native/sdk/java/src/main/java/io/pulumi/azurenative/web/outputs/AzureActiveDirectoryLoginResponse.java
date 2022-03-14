@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AzureActiveDirectoryLoginResponse {
     /**
      * <code>true</code> if the www-authenticate provider should be omitted from the request; otherwise, <code>false</code>.
@@ -25,10 +25,10 @@ public final class AzureActiveDirectoryLoginResponse {
      */
     private final @Nullable List<String> loginParameters;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AzureActiveDirectoryLoginResponse(
-        @OutputCustomType.Parameter("disableWWWAuthenticate") @Nullable Boolean disableWWWAuthenticate,
-        @OutputCustomType.Parameter("loginParameters") @Nullable List<String> loginParameters) {
+        @CustomType.Parameter("disableWWWAuthenticate") @Nullable Boolean disableWWWAuthenticate,
+        @CustomType.Parameter("loginParameters") @Nullable List<String> loginParameters) {
         this.disableWWWAuthenticate = disableWWWAuthenticate;
         this.loginParameters = loginParameters;
     }

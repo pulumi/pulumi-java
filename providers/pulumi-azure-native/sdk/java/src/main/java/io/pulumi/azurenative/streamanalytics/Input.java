@@ -10,7 +10,7 @@ import io.pulumi.azurenative.streamanalytics.outputs.StreamInputPropertiesRespon
 import io.pulumi.core.Alias;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -37,7 +37,7 @@ public class Input extends io.pulumi.resources.CustomResource {
      * Resource name
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
@@ -51,7 +51,7 @@ public class Input extends io.pulumi.resources.CustomResource {
      * The properties that are associated with an input. Required on PUT (CreateOrReplace) requests.
      * 
      */
-    @OutputExport(name="properties", type=Either.class, parameters={ReferenceInputPropertiesResponse.class, StreamInputPropertiesResponse.class})
+    @Export(name="properties", type=Either.class, parameters={ReferenceInputPropertiesResponse.class, StreamInputPropertiesResponse.class})
     private Output<Either<ReferenceInputPropertiesResponse,StreamInputPropertiesResponse>> properties;
 
     /**
@@ -65,7 +65,7 @@ public class Input extends io.pulumi.resources.CustomResource {
      * Resource type
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

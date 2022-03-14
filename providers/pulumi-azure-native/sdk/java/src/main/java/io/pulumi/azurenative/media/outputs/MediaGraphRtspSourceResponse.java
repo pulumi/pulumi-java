@@ -6,11 +6,11 @@ package io.pulumi.azurenative.media.outputs;
 import io.pulumi.azurenative.media.outputs.MediaGraphClearEndpointResponse;
 import io.pulumi.azurenative.media.outputs.MediaGraphTlsEndpointResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class MediaGraphRtspSourceResponse {
     /**
      * RTSP endpoint of the stream being connected to.
@@ -34,12 +34,12 @@ public final class MediaGraphRtspSourceResponse {
      */
     private final String transport;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MediaGraphRtspSourceResponse(
-        @OutputCustomType.Parameter("endpoint") Either<MediaGraphClearEndpointResponse,MediaGraphTlsEndpointResponse> endpoint,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("odataType") String odataType,
-        @OutputCustomType.Parameter("transport") String transport) {
+        @CustomType.Parameter("endpoint") Either<MediaGraphClearEndpointResponse,MediaGraphTlsEndpointResponse> endpoint,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("odataType") String odataType,
+        @CustomType.Parameter("transport") String transport) {
         this.endpoint = endpoint;
         this.name = name;
         this.odataType = odataType;

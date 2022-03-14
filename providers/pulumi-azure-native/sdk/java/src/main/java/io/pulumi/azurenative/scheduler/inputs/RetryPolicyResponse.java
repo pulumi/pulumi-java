@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.scheduler.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class RetryPolicyResponse extends io.pulumi.resources.InvokeArgs {
      * Gets or sets the number of times a retry should be attempted.
      * 
      */
-    @InputImport(name="retryCount")
+    @Import(name="retryCount")
       private final @Nullable Integer retryCount;
 
     public Optional<Integer> getRetryCount() {
@@ -30,7 +30,7 @@ public final class RetryPolicyResponse extends io.pulumi.resources.InvokeArgs {
      * Gets or sets the retry interval between retries, specify duration in ISO 8601 format.
      * 
      */
-    @InputImport(name="retryInterval")
+    @Import(name="retryInterval")
       private final @Nullable String retryInterval;
 
     public Optional<String> getRetryInterval() {
@@ -41,7 +41,7 @@ public final class RetryPolicyResponse extends io.pulumi.resources.InvokeArgs {
      * Gets or sets the retry strategy to be used.
      * 
      */
-    @InputImport(name="retryType")
+    @Import(name="retryType")
       private final @Nullable String retryType;
 
     public Optional<String> getRetryType() {

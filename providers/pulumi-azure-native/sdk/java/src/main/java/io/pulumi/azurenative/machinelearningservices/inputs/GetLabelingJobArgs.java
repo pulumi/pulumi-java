@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class GetLabelingJobArgs extends io.pulumi.resources.InvokeArgs {
      * Boolean value to indicate whether to include JobInstructions in response.
      * 
      */
-    @InputImport(name="includeJobInstructions")
+    @Import(name="includeJobInstructions")
       private final @Nullable Boolean includeJobInstructions;
 
     public Optional<Boolean> getIncludeJobInstructions() {
@@ -30,7 +30,7 @@ public final class GetLabelingJobArgs extends io.pulumi.resources.InvokeArgs {
      * Boolean value to indicate whether to include LabelCategories in response.
      * 
      */
-    @InputImport(name="includeLabelCategories")
+    @Import(name="includeLabelCategories")
       private final @Nullable Boolean includeLabelCategories;
 
     public Optional<Boolean> getIncludeLabelCategories() {
@@ -41,7 +41,7 @@ public final class GetLabelingJobArgs extends io.pulumi.resources.InvokeArgs {
      * Name and identifier for LabelingJob.
      * 
      */
-    @InputImport(name="labelingJobId", required=true)
+    @Import(name="labelingJobId", required=true)
       private final String labelingJobId;
 
     public String getLabelingJobId() {
@@ -52,7 +52,7 @@ public final class GetLabelingJobArgs extends io.pulumi.resources.InvokeArgs {
      * Name of the resource group in which workspace is located.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {
@@ -63,7 +63,7 @@ public final class GetLabelingJobArgs extends io.pulumi.resources.InvokeArgs {
      * Name of Azure Machine Learning workspace.
      * 
      */
-    @InputImport(name="workspaceName", required=true)
+    @Import(name="workspaceName", required=true)
       private final String workspaceName;
 
     public String getWorkspaceName() {

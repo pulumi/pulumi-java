@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.webpubsub.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PrivateEndpointACLResponse {
     /**
      * Allowed request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.
@@ -27,11 +27,11 @@ public final class PrivateEndpointACLResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PrivateEndpointACLResponse(
-        @OutputCustomType.Parameter("allow") @Nullable List<String> allow,
-        @OutputCustomType.Parameter("deny") @Nullable List<String> deny,
-        @OutputCustomType.Parameter("name") String name) {
+        @CustomType.Parameter("allow") @Nullable List<String> allow,
+        @CustomType.Parameter("deny") @Nullable List<String> deny,
+        @CustomType.Parameter("name") String name) {
         this.allow = allow;
         this.deny = deny;
         this.name = name;

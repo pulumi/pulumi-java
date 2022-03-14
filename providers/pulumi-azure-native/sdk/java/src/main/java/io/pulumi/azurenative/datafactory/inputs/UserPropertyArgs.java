@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class UserPropertyArgs extends io.pulumi.resources.ResourceArgs {
      * User property name.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -33,7 +33,7 @@ public final class UserPropertyArgs extends io.pulumi.resources.ResourceArgs {
      * User property value. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="value", required=true)
+    @Import(name="value", required=true)
       private final Output<Object> value;
 
     public Output<Object> getValue() {

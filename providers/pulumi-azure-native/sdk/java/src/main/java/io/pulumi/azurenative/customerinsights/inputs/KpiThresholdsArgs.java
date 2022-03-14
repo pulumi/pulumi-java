@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.customerinsights.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class KpiThresholdsArgs extends io.pulumi.resources.ResourceArgs {
      * Whether or not the KPI is an increasing KPI.
      * 
      */
-    @InputImport(name="increasingKpi", required=true)
+    @Import(name="increasingKpi", required=true)
       private final Output<Boolean> increasingKpi;
 
     public Output<Boolean> getIncreasingKpi() {
@@ -33,7 +33,7 @@ public final class KpiThresholdsArgs extends io.pulumi.resources.ResourceArgs {
      * The lower threshold limit.
      * 
      */
-    @InputImport(name="lowerLimit", required=true)
+    @Import(name="lowerLimit", required=true)
       private final Output<Double> lowerLimit;
 
     public Output<Double> getLowerLimit() {
@@ -44,7 +44,7 @@ public final class KpiThresholdsArgs extends io.pulumi.resources.ResourceArgs {
      * The upper threshold limit.
      * 
      */
-    @InputImport(name="upperLimit", required=true)
+    @Import(name="upperLimit", required=true)
       private final Output<Double> upperLimit;
 
     public Output<Double> getUpperLimit() {

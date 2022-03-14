@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.portal.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class ConsolePropertiesResponse extends io.pulumi.resources.InvokeA
      * The operating system type of the cloud shell.
      * 
      */
-    @InputImport(name="osType", required=true)
+    @Import(name="osType", required=true)
       private final String osType;
 
     public String getOsType() {
@@ -31,7 +31,7 @@ public final class ConsolePropertiesResponse extends io.pulumi.resources.InvokeA
      * Provisioning state of the console.
      * 
      */
-    @InputImport(name="provisioningState", required=true)
+    @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
     public String getProvisioningState() {
@@ -42,7 +42,7 @@ public final class ConsolePropertiesResponse extends io.pulumi.resources.InvokeA
      * Uri of the console.
      * 
      */
-    @InputImport(name="uri", required=true)
+    @Import(name="uri", required=true)
       private final String uri;
 
     public String getUri() {

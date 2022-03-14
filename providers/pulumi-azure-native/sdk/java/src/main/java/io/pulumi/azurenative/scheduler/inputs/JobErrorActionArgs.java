@@ -10,7 +10,7 @@ import io.pulumi.azurenative.scheduler.inputs.ServiceBusQueueMessageArgs;
 import io.pulumi.azurenative.scheduler.inputs.ServiceBusTopicMessageArgs;
 import io.pulumi.azurenative.scheduler.inputs.StorageQueueMessageArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -23,7 +23,7 @@ public final class JobErrorActionArgs extends io.pulumi.resources.ResourceArgs {
      * Gets or sets the storage queue message.
      * 
      */
-    @InputImport(name="queueMessage")
+    @Import(name="queueMessage")
       private final @Nullable Output<StorageQueueMessageArgs> queueMessage;
 
     public Output<StorageQueueMessageArgs> getQueueMessage() {
@@ -34,7 +34,7 @@ public final class JobErrorActionArgs extends io.pulumi.resources.ResourceArgs {
      * Gets or sets the http requests.
      * 
      */
-    @InputImport(name="request")
+    @Import(name="request")
       private final @Nullable Output<HttpRequestArgs> request;
 
     public Output<HttpRequestArgs> getRequest() {
@@ -45,7 +45,7 @@ public final class JobErrorActionArgs extends io.pulumi.resources.ResourceArgs {
      * Gets or sets the retry policy.
      * 
      */
-    @InputImport(name="retryPolicy")
+    @Import(name="retryPolicy")
       private final @Nullable Output<RetryPolicyArgs> retryPolicy;
 
     public Output<RetryPolicyArgs> getRetryPolicy() {
@@ -56,7 +56,7 @@ public final class JobErrorActionArgs extends io.pulumi.resources.ResourceArgs {
      * Gets or sets the service bus queue message.
      * 
      */
-    @InputImport(name="serviceBusQueueMessage")
+    @Import(name="serviceBusQueueMessage")
       private final @Nullable Output<ServiceBusQueueMessageArgs> serviceBusQueueMessage;
 
     public Output<ServiceBusQueueMessageArgs> getServiceBusQueueMessage() {
@@ -67,7 +67,7 @@ public final class JobErrorActionArgs extends io.pulumi.resources.ResourceArgs {
      * Gets or sets the service bus topic message.
      * 
      */
-    @InputImport(name="serviceBusTopicMessage")
+    @Import(name="serviceBusTopicMessage")
       private final @Nullable Output<ServiceBusTopicMessageArgs> serviceBusTopicMessage;
 
     public Output<ServiceBusTopicMessageArgs> getServiceBusTopicMessage() {
@@ -78,7 +78,7 @@ public final class JobErrorActionArgs extends io.pulumi.resources.ResourceArgs {
      * Gets or sets the job error action type.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<JobActionType> type;
 
     public Output<JobActionType> getType() {

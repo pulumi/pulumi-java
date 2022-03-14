@@ -7,7 +7,7 @@ import io.pulumi.azurenative.documentdb.enums.DataType;
 import io.pulumi.azurenative.documentdb.enums.IndexKind;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class IndexesArgs extends io.pulumi.resources.ResourceArgs {
      * The datatype for which the indexing behavior is applied to.
      * 
      */
-    @InputImport(name="dataType")
+    @Import(name="dataType")
       private final @Nullable Output<Either<String,DataType>> dataType;
 
     public Output<Either<String,DataType>> getDataType() {
@@ -37,7 +37,7 @@ public final class IndexesArgs extends io.pulumi.resources.ResourceArgs {
      * Indicates the type of index.
      * 
      */
-    @InputImport(name="kind")
+    @Import(name="kind")
       private final @Nullable Output<Either<String,IndexKind>> kind;
 
     public Output<Either<String,IndexKind>> getKind() {
@@ -48,7 +48,7 @@ public final class IndexesArgs extends io.pulumi.resources.ResourceArgs {
      * The precision of the index. -1 is maximum precision.
      * 
      */
-    @InputImport(name="precision")
+    @Import(name="precision")
       private final @Nullable Output<Integer> precision;
 
     public Output<Integer> getPrecision() {

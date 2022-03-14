@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.synapse.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class AutoScalePropertiesArgs extends io.pulumi.resources.ResourceA
      * Whether automatic scaling is enabled for the Big Data pool.
      * 
      */
-    @InputImport(name="enabled")
+    @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
@@ -34,7 +34,7 @@ public final class AutoScalePropertiesArgs extends io.pulumi.resources.ResourceA
      * The maximum number of nodes the Big Data pool can support.
      * 
      */
-    @InputImport(name="maxNodeCount")
+    @Import(name="maxNodeCount")
       private final @Nullable Output<Integer> maxNodeCount;
 
     public Output<Integer> getMaxNodeCount() {
@@ -45,7 +45,7 @@ public final class AutoScalePropertiesArgs extends io.pulumi.resources.ResourceA
      * The minimum number of nodes the Big Data pool can support.
      * 
      */
-    @InputImport(name="minNodeCount")
+    @Import(name="minNodeCount")
       private final @Nullable Output<Integer> minNodeCount;
 
     public Output<Integer> getMinNodeCount() {

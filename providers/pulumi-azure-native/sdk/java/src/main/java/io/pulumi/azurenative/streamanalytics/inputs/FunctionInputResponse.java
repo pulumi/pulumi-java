@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.streamanalytics.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class FunctionInputResponse extends io.pulumi.resources.InvokeArgs 
      * The (Azure Stream Analytics supported) data type of the function input parameter. A list of valid Azure Stream Analytics data types are described at https://msdn.microsoft.com/en-us/library/azure/dn835065.aspx
      * 
      */
-    @InputImport(name="dataType")
+    @Import(name="dataType")
       private final @Nullable String dataType;
 
     public Optional<String> getDataType() {
@@ -34,7 +34,7 @@ public final class FunctionInputResponse extends io.pulumi.resources.InvokeArgs 
      * A flag indicating if the parameter is a configuration parameter. True if this input parameter is expected to be a constant. Default is false.
      * 
      */
-    @InputImport(name="isConfigurationParameter")
+    @Import(name="isConfigurationParameter")
       private final @Nullable Boolean isConfigurationParameter;
 
     public Optional<Boolean> getIsConfigurationParameter() {

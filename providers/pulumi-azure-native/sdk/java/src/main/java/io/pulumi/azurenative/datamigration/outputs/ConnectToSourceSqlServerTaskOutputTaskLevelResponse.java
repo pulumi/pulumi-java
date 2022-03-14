@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.datamigration.outputs;
 
 import io.pulumi.azurenative.datamigration.outputs.ReportableExceptionResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ConnectToSourceSqlServerTaskOutputTaskLevelResponse {
     /**
      * Source agent jobs as a map from agent job name to id.
@@ -54,16 +54,16 @@ public final class ConnectToSourceSqlServerTaskOutputTaskLevelResponse {
      */
     private final List<ReportableExceptionResponse> validationErrors;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ConnectToSourceSqlServerTaskOutputTaskLevelResponse(
-        @OutputCustomType.Parameter("agentJobs") Map<String,String> agentJobs,
-        @OutputCustomType.Parameter("databases") Map<String,String> databases,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("logins") Map<String,String> logins,
-        @OutputCustomType.Parameter("resultType") String resultType,
-        @OutputCustomType.Parameter("sourceServerBrandVersion") String sourceServerBrandVersion,
-        @OutputCustomType.Parameter("sourceServerVersion") String sourceServerVersion,
-        @OutputCustomType.Parameter("validationErrors") List<ReportableExceptionResponse> validationErrors) {
+        @CustomType.Parameter("agentJobs") Map<String,String> agentJobs,
+        @CustomType.Parameter("databases") Map<String,String> databases,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("logins") Map<String,String> logins,
+        @CustomType.Parameter("resultType") String resultType,
+        @CustomType.Parameter("sourceServerBrandVersion") String sourceServerBrandVersion,
+        @CustomType.Parameter("sourceServerVersion") String sourceServerVersion,
+        @CustomType.Parameter("validationErrors") List<ReportableExceptionResponse> validationErrors) {
         this.agentJobs = agentJobs;
         this.databases = databases;
         this.id = id;

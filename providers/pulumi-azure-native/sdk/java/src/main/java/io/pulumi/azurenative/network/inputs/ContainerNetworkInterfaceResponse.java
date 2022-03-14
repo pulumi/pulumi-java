@@ -6,7 +6,7 @@ package io.pulumi.azurenative.network.inputs;
 import io.pulumi.azurenative.network.inputs.ContainerNetworkInterfaceConfigurationResponse;
 import io.pulumi.azurenative.network.inputs.ContainerNetworkInterfaceIpConfigurationResponse;
 import io.pulumi.azurenative.network.inputs.ContainerResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class ContainerNetworkInterfaceResponse extends io.pulumi.resources
      * Reference to the container to which this container network interface is attached.
      * 
      */
-    @InputImport(name="container")
+    @Import(name="container")
       private final @Nullable ContainerResponse container;
 
     public Optional<ContainerResponse> getContainer() {
@@ -37,7 +37,7 @@ public final class ContainerNetworkInterfaceResponse extends io.pulumi.resources
      * Container network interface configuration from which this container network interface is created.
      * 
      */
-    @InputImport(name="containerNetworkInterfaceConfiguration", required=true)
+    @Import(name="containerNetworkInterfaceConfiguration", required=true)
       private final ContainerNetworkInterfaceConfigurationResponse containerNetworkInterfaceConfiguration;
 
     public ContainerNetworkInterfaceConfigurationResponse getContainerNetworkInterfaceConfiguration() {
@@ -48,7 +48,7 @@ public final class ContainerNetworkInterfaceResponse extends io.pulumi.resources
      * A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    @InputImport(name="etag", required=true)
+    @Import(name="etag", required=true)
       private final String etag;
 
     public String getEtag() {
@@ -59,7 +59,7 @@ public final class ContainerNetworkInterfaceResponse extends io.pulumi.resources
      * Resource ID.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable String id;
 
     public Optional<String> getId() {
@@ -70,7 +70,7 @@ public final class ContainerNetworkInterfaceResponse extends io.pulumi.resources
      * Reference to the ip configuration on this container nic.
      * 
      */
-    @InputImport(name="ipConfigurations", required=true)
+    @Import(name="ipConfigurations", required=true)
       private final List<ContainerNetworkInterfaceIpConfigurationResponse> ipConfigurations;
 
     public List<ContainerNetworkInterfaceIpConfigurationResponse> getIpConfigurations() {
@@ -81,7 +81,7 @@ public final class ContainerNetworkInterfaceResponse extends io.pulumi.resources
      * The name of the resource. This name can be used to access the resource.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -92,7 +92,7 @@ public final class ContainerNetworkInterfaceResponse extends io.pulumi.resources
      * The provisioning state of the container network interface resource.
      * 
      */
-    @InputImport(name="provisioningState", required=true)
+    @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
     public String getProvisioningState() {
@@ -103,7 +103,7 @@ public final class ContainerNetworkInterfaceResponse extends io.pulumi.resources
      * Sub Resource type.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

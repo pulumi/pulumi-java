@@ -5,14 +5,14 @@ package io.pulumi.azurenative.compute.outputs;
 
 import io.pulumi.azurenative.compute.outputs.DiskEncryptionSetParametersResponse;
 import io.pulumi.azurenative.compute.outputs.SubResourceResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ImageDataDiskResponse {
     /**
      * The Virtual Hard Disk.
@@ -55,16 +55,16 @@ public final class ImageDataDiskResponse {
      */
     private final @Nullable String storageAccountType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ImageDataDiskResponse(
-        @OutputCustomType.Parameter("blobUri") @Nullable String blobUri,
-        @OutputCustomType.Parameter("caching") @Nullable String caching,
-        @OutputCustomType.Parameter("diskEncryptionSet") @Nullable DiskEncryptionSetParametersResponse diskEncryptionSet,
-        @OutputCustomType.Parameter("diskSizeGB") @Nullable Integer diskSizeGB,
-        @OutputCustomType.Parameter("lun") Integer lun,
-        @OutputCustomType.Parameter("managedDisk") @Nullable SubResourceResponse managedDisk,
-        @OutputCustomType.Parameter("snapshot") @Nullable SubResourceResponse snapshot,
-        @OutputCustomType.Parameter("storageAccountType") @Nullable String storageAccountType) {
+        @CustomType.Parameter("blobUri") @Nullable String blobUri,
+        @CustomType.Parameter("caching") @Nullable String caching,
+        @CustomType.Parameter("diskEncryptionSet") @Nullable DiskEncryptionSetParametersResponse diskEncryptionSet,
+        @CustomType.Parameter("diskSizeGB") @Nullable Integer diskSizeGB,
+        @CustomType.Parameter("lun") Integer lun,
+        @CustomType.Parameter("managedDisk") @Nullable SubResourceResponse managedDisk,
+        @CustomType.Parameter("snapshot") @Nullable SubResourceResponse snapshot,
+        @CustomType.Parameter("storageAccountType") @Nullable String storageAccountType) {
         this.blobUri = blobUri;
         this.caching = caching;
         this.diskEncryptionSet = diskEncryptionSet;

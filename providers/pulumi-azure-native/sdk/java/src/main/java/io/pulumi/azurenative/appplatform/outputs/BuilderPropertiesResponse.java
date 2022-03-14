@@ -5,14 +5,14 @@ package io.pulumi.azurenative.appplatform.outputs;
 
 import io.pulumi.azurenative.appplatform.outputs.BuildpacksGroupPropertiesResponse;
 import io.pulumi.azurenative.appplatform.outputs.StackPropertiesResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BuilderPropertiesResponse {
     /**
      * Builder buildpack groups.
@@ -30,11 +30,11 @@ public final class BuilderPropertiesResponse {
      */
     private final @Nullable StackPropertiesResponse stack;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BuilderPropertiesResponse(
-        @OutputCustomType.Parameter("buildpackGroups") @Nullable List<BuildpacksGroupPropertiesResponse> buildpackGroups,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("stack") @Nullable StackPropertiesResponse stack) {
+        @CustomType.Parameter("buildpackGroups") @Nullable List<BuildpacksGroupPropertiesResponse> buildpackGroups,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("stack") @Nullable StackPropertiesResponse stack) {
         this.buildpackGroups = buildpackGroups;
         this.provisioningState = provisioningState;
         this.stack = stack;

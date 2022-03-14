@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network;
 
 import io.pulumi.azurenative.network.inputs.BastionHostIPConfigurationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class BastionHostArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the Bastion Host.
      * 
      */
-    @InputImport(name="bastionHostName")
+    @Import(name="bastionHostName")
       private final @Nullable Output<String> bastionHostName;
 
     public Output<String> getBastionHostName() {
@@ -32,7 +32,7 @@ public final class BastionHostArgs extends io.pulumi.resources.ResourceArgs {
      * FQDN for the endpoint on which bastion host is accessible.
      * 
      */
-    @InputImport(name="dnsName")
+    @Import(name="dnsName")
       private final @Nullable Output<String> dnsName;
 
     public Output<String> getDnsName() {
@@ -43,7 +43,7 @@ public final class BastionHostArgs extends io.pulumi.resources.ResourceArgs {
      * Resource ID.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
@@ -54,7 +54,7 @@ public final class BastionHostArgs extends io.pulumi.resources.ResourceArgs {
      * IP configuration of the Bastion Host resource.
      * 
      */
-    @InputImport(name="ipConfigurations")
+    @Import(name="ipConfigurations")
       private final @Nullable Output<List<BastionHostIPConfigurationArgs>> ipConfigurations;
 
     public Output<List<BastionHostIPConfigurationArgs>> getIpConfigurations() {
@@ -65,7 +65,7 @@ public final class BastionHostArgs extends io.pulumi.resources.ResourceArgs {
      * Resource location.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -76,7 +76,7 @@ public final class BastionHostArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -87,7 +87,7 @@ public final class BastionHostArgs extends io.pulumi.resources.ResourceArgs {
      * Resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

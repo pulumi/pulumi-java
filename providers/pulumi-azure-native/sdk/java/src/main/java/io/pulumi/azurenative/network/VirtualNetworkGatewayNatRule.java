@@ -8,7 +8,7 @@ import io.pulumi.azurenative.network.VirtualNetworkGatewayNatRuleArgs;
 import io.pulumi.azurenative.network.outputs.VpnNatRuleMappingResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +35,7 @@ public class VirtualNetworkGatewayNatRule extends io.pulumi.resources.CustomReso
      * A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -49,7 +49,7 @@ public class VirtualNetworkGatewayNatRule extends io.pulumi.resources.CustomReso
      * The private IP address external mapping for NAT.
      * 
      */
-    @OutputExport(name="externalMappings", type=List.class, parameters={VpnNatRuleMappingResponse.class})
+    @Export(name="externalMappings", type=List.class, parameters={VpnNatRuleMappingResponse.class})
     private Output</* @Nullable */ List<VpnNatRuleMappingResponse>> externalMappings;
 
     /**
@@ -63,7 +63,7 @@ public class VirtualNetworkGatewayNatRule extends io.pulumi.resources.CustomReso
      * The private IP address internal mapping for NAT.
      * 
      */
-    @OutputExport(name="internalMappings", type=List.class, parameters={VpnNatRuleMappingResponse.class})
+    @Export(name="internalMappings", type=List.class, parameters={VpnNatRuleMappingResponse.class})
     private Output</* @Nullable */ List<VpnNatRuleMappingResponse>> internalMappings;
 
     /**
@@ -77,7 +77,7 @@ public class VirtualNetworkGatewayNatRule extends io.pulumi.resources.CustomReso
      * The IP Configuration ID this NAT rule applies to.
      * 
      */
-    @OutputExport(name="ipConfigurationId", type=String.class, parameters={})
+    @Export(name="ipConfigurationId", type=String.class, parameters={})
     private Output</* @Nullable */ String> ipConfigurationId;
 
     /**
@@ -91,7 +91,7 @@ public class VirtualNetworkGatewayNatRule extends io.pulumi.resources.CustomReso
      * The Source NAT direction of a VPN NAT.
      * 
      */
-    @OutputExport(name="mode", type=String.class, parameters={})
+    @Export(name="mode", type=String.class, parameters={})
     private Output</* @Nullable */ String> mode;
 
     /**
@@ -105,7 +105,7 @@ public class VirtualNetworkGatewayNatRule extends io.pulumi.resources.CustomReso
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
@@ -119,7 +119,7 @@ public class VirtualNetworkGatewayNatRule extends io.pulumi.resources.CustomReso
      * The provisioning state of the NAT Rule resource.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -133,7 +133,7 @@ public class VirtualNetworkGatewayNatRule extends io.pulumi.resources.CustomReso
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.servicefabricmesh.inputs;
 
 import io.pulumi.azurenative.servicefabricmesh.inputs.ResourceLimitsResponse;
 import io.pulumi.azurenative.servicefabricmesh.inputs.ResourceRequestsResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class ResourceRequirementsResponse extends io.pulumi.resources.Invo
      * Describes the maximum limits on the resources for a given container.
      * 
      */
-    @InputImport(name="limits")
+    @Import(name="limits")
       private final @Nullable ResourceLimitsResponse limits;
 
     public Optional<ResourceLimitsResponse> getLimits() {
@@ -34,7 +34,7 @@ public final class ResourceRequirementsResponse extends io.pulumi.resources.Invo
      * Describes the requested resources for a given container.
      * 
      */
-    @InputImport(name="requests", required=true)
+    @Import(name="requests", required=true)
       private final ResourceRequestsResponse requests;
 
     public ResourceRequestsResponse getRequests() {

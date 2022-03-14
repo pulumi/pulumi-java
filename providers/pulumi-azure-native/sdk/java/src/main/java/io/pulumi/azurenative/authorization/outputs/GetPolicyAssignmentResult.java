@@ -6,7 +6,7 @@ package io.pulumi.azurenative.authorization.outputs;
 import io.pulumi.azurenative.authorization.outputs.IdentityResponse;
 import io.pulumi.azurenative.authorization.outputs.NonComplianceMessageResponse;
 import io.pulumi.azurenative.authorization.outputs.ParameterValuesValueResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -15,7 +15,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetPolicyAssignmentResult {
     /**
      * This message will be part of response in case of policy violation.
@@ -88,22 +88,22 @@ public final class GetPolicyAssignmentResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetPolicyAssignmentResult(
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
-        @OutputCustomType.Parameter("enforcementMode") @Nullable String enforcementMode,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("identity") @Nullable IdentityResponse identity,
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("metadata") @Nullable Object metadata,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("nonComplianceMessages") @Nullable List<NonComplianceMessageResponse> nonComplianceMessages,
-        @OutputCustomType.Parameter("notScopes") @Nullable List<String> notScopes,
-        @OutputCustomType.Parameter("parameters") @Nullable Map<String,ParameterValuesValueResponse> parameters,
-        @OutputCustomType.Parameter("policyDefinitionId") @Nullable String policyDefinitionId,
-        @OutputCustomType.Parameter("scope") String scope,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("displayName") @Nullable String displayName,
+        @CustomType.Parameter("enforcementMode") @Nullable String enforcementMode,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("identity") @Nullable IdentityResponse identity,
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("metadata") @Nullable Object metadata,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("nonComplianceMessages") @Nullable List<NonComplianceMessageResponse> nonComplianceMessages,
+        @CustomType.Parameter("notScopes") @Nullable List<String> notScopes,
+        @CustomType.Parameter("parameters") @Nullable Map<String,ParameterValuesValueResponse> parameters,
+        @CustomType.Parameter("policyDefinitionId") @Nullable String policyDefinitionId,
+        @CustomType.Parameter("scope") String scope,
+        @CustomType.Parameter("type") String type) {
         this.description = description;
         this.displayName = displayName;
         this.enforcementMode = enforcementMode;

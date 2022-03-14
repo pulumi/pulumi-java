@@ -9,7 +9,7 @@ import io.pulumi.azurenative.securityinsights.outputs.ClientInfoResponse;
 import io.pulumi.azurenative.securityinsights.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -36,7 +36,7 @@ public class IncidentComment extends io.pulumi.resources.CustomResource {
      * Describes the client that created the comment
      * 
      */
-    @OutputExport(name="author", type=ClientInfoResponse.class, parameters={})
+    @Export(name="author", type=ClientInfoResponse.class, parameters={})
     private Output<ClientInfoResponse> author;
 
     /**
@@ -50,7 +50,7 @@ public class IncidentComment extends io.pulumi.resources.CustomResource {
      * The time the comment was created
      * 
      */
-    @OutputExport(name="createdTimeUtc", type=String.class, parameters={})
+    @Export(name="createdTimeUtc", type=String.class, parameters={})
     private Output<String> createdTimeUtc;
 
     /**
@@ -64,7 +64,7 @@ public class IncidentComment extends io.pulumi.resources.CustomResource {
      * Etag of the azure resource
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output</* @Nullable */ String> etag;
 
     /**
@@ -78,7 +78,7 @@ public class IncidentComment extends io.pulumi.resources.CustomResource {
      * The time the comment was updated
      * 
      */
-    @OutputExport(name="lastModifiedTimeUtc", type=String.class, parameters={})
+    @Export(name="lastModifiedTimeUtc", type=String.class, parameters={})
     private Output<String> lastModifiedTimeUtc;
 
     /**
@@ -92,7 +92,7 @@ public class IncidentComment extends io.pulumi.resources.CustomResource {
      * The comment message
      * 
      */
-    @OutputExport(name="message", type=String.class, parameters={})
+    @Export(name="message", type=String.class, parameters={})
     private Output<String> message;
 
     /**
@@ -106,7 +106,7 @@ public class IncidentComment extends io.pulumi.resources.CustomResource {
      * Azure resource name
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -120,7 +120,7 @@ public class IncidentComment extends io.pulumi.resources.CustomResource {
      * Azure Resource Manager metadata containing createdBy and modifiedBy information.
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -134,7 +134,7 @@ public class IncidentComment extends io.pulumi.resources.CustomResource {
      * Azure resource type
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

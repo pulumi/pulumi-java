@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.aad;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class OuContainerArgs extends io.pulumi.resources.ResourceArgs {
      * The account name
      * 
      */
-    @InputImport(name="accountName")
+    @Import(name="accountName")
       private final @Nullable Output<String> accountName;
 
     public Output<String> getAccountName() {
@@ -29,7 +29,7 @@ public final class OuContainerArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the domain service.
      * 
      */
-    @InputImport(name="domainServiceName", required=true)
+    @Import(name="domainServiceName", required=true)
       private final Output<String> domainServiceName;
 
     public Output<String> getDomainServiceName() {
@@ -40,7 +40,7 @@ public final class OuContainerArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the OuContainer.
      * 
      */
-    @InputImport(name="ouContainerName")
+    @Import(name="ouContainerName")
       private final @Nullable Output<String> ouContainerName;
 
     public Output<String> getOuContainerName() {
@@ -51,7 +51,7 @@ public final class OuContainerArgs extends io.pulumi.resources.ResourceArgs {
      * The account password
      * 
      */
-    @InputImport(name="password")
+    @Import(name="password")
       private final @Nullable Output<String> password;
 
     public Output<String> getPassword() {
@@ -62,7 +62,7 @@ public final class OuContainerArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group within the user's subscription. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -73,7 +73,7 @@ public final class OuContainerArgs extends io.pulumi.resources.ResourceArgs {
      * The account spn
      * 
      */
-    @InputImport(name="spn")
+    @Import(name="spn")
       private final @Nullable Output<String> spn;
 
     public Output<String> getSpn() {

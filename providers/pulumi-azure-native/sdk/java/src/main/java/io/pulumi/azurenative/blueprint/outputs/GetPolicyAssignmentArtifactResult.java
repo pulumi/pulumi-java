@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.blueprint.outputs;
 
 import io.pulumi.azurenative.blueprint.outputs.ParameterValueResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetPolicyAssignmentArtifactResult {
     /**
      * Artifacts which need to be deployed before the specified artifact.
@@ -66,18 +66,18 @@ public final class GetPolicyAssignmentArtifactResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetPolicyAssignmentArtifactResult(
-        @OutputCustomType.Parameter("dependsOn") @Nullable List<String> dependsOn,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("parameters") Map<String,ParameterValueResponse> parameters,
-        @OutputCustomType.Parameter("policyDefinitionId") String policyDefinitionId,
-        @OutputCustomType.Parameter("resourceGroup") @Nullable String resourceGroup,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("dependsOn") @Nullable List<String> dependsOn,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("displayName") @Nullable String displayName,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("parameters") Map<String,ParameterValueResponse> parameters,
+        @CustomType.Parameter("policyDefinitionId") String policyDefinitionId,
+        @CustomType.Parameter("resourceGroup") @Nullable String resourceGroup,
+        @CustomType.Parameter("type") String type) {
         this.dependsOn = dependsOn;
         this.description = description;
         this.displayName = displayName;

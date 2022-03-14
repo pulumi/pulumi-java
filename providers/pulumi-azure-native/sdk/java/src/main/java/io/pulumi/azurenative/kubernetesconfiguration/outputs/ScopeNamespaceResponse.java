@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.kubernetesconfiguration.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ScopeNamespaceResponse {
     /**
      * Namespace where the extensionInstance will be created for an Namespace scoped extensionInstance.  If this namespace does not exist, it will be created
@@ -17,8 +17,8 @@ public final class ScopeNamespaceResponse {
      */
     private final @Nullable String targetNamespace;
 
-    @OutputCustomType.Constructor
-    private ScopeNamespaceResponse(@OutputCustomType.Parameter("targetNamespace") @Nullable String targetNamespace) {
+    @CustomType.Constructor
+    private ScopeNamespaceResponse(@CustomType.Parameter("targetNamespace") @Nullable String targetNamespace) {
         this.targetNamespace = targetNamespace;
     }
 

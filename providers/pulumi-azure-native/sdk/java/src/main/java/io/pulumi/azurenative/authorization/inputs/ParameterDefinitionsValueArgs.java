@@ -7,7 +7,7 @@ import io.pulumi.azurenative.authorization.enums.ParameterType;
 import io.pulumi.azurenative.authorization.inputs.ParameterDefinitionsValueMetadataArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -27,7 +27,7 @@ public final class ParameterDefinitionsValueArgs extends io.pulumi.resources.Res
      * The allowed values for the parameter.
      * 
      */
-    @InputImport(name="allowedValues")
+    @Import(name="allowedValues")
       private final @Nullable Output<List<Object>> allowedValues;
 
     public Output<List<Object>> getAllowedValues() {
@@ -38,7 +38,7 @@ public final class ParameterDefinitionsValueArgs extends io.pulumi.resources.Res
      * The default value for the parameter if no value is provided.
      * 
      */
-    @InputImport(name="defaultValue")
+    @Import(name="defaultValue")
       private final @Nullable Output<Object> defaultValue;
 
     public Output<Object> getDefaultValue() {
@@ -49,7 +49,7 @@ public final class ParameterDefinitionsValueArgs extends io.pulumi.resources.Res
      * General metadata for the parameter.
      * 
      */
-    @InputImport(name="metadata")
+    @Import(name="metadata")
       private final @Nullable Output<ParameterDefinitionsValueMetadataArgs> metadata;
 
     public Output<ParameterDefinitionsValueMetadataArgs> getMetadata() {
@@ -60,7 +60,7 @@ public final class ParameterDefinitionsValueArgs extends io.pulumi.resources.Res
      * The data type of the parameter.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<Either<String,ParameterType>> type;
 
     public Output<Either<String,ParameterType>> getType() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.documentdb.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class ConflictResolutionPolicyResponse extends io.pulumi.resources.
      * The conflict resolution path in the case of LastWriterWins mode.
      * 
      */
-    @InputImport(name="conflictResolutionPath")
+    @Import(name="conflictResolutionPath")
       private final @Nullable String conflictResolutionPath;
 
     public Optional<String> getConflictResolutionPath() {
@@ -33,7 +33,7 @@ public final class ConflictResolutionPolicyResponse extends io.pulumi.resources.
      * The procedure to resolve conflicts in the case of custom mode.
      * 
      */
-    @InputImport(name="conflictResolutionProcedure")
+    @Import(name="conflictResolutionProcedure")
       private final @Nullable String conflictResolutionProcedure;
 
     public Optional<String> getConflictResolutionProcedure() {
@@ -44,7 +44,7 @@ public final class ConflictResolutionPolicyResponse extends io.pulumi.resources.
      * Indicates the conflict resolution mode.
      * 
      */
-    @InputImport(name="mode")
+    @Import(name="mode")
       private final @Nullable String mode;
 
     public Optional<String> getMode() {

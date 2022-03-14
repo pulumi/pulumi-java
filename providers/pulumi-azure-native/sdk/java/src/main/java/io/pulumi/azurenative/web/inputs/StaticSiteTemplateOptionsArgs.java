@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class StaticSiteTemplateOptionsArgs extends io.pulumi.resources.Res
      * Description of the newly generated repository.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -34,7 +34,7 @@ public final class StaticSiteTemplateOptionsArgs extends io.pulumi.resources.Res
      * Whether or not the newly generated repository is a private repository. Defaults to false (i.e. public).
      * 
      */
-    @InputImport(name="isPrivate")
+    @Import(name="isPrivate")
       private final @Nullable Output<Boolean> isPrivate;
 
     public Output<Boolean> getIsPrivate() {
@@ -45,7 +45,7 @@ public final class StaticSiteTemplateOptionsArgs extends io.pulumi.resources.Res
      * Owner of the newly generated repository.
      * 
      */
-    @InputImport(name="owner")
+    @Import(name="owner")
       private final @Nullable Output<String> owner;
 
     public Output<String> getOwner() {
@@ -56,7 +56,7 @@ public final class StaticSiteTemplateOptionsArgs extends io.pulumi.resources.Res
      * Name of the newly generated repository.
      * 
      */
-    @InputImport(name="repositoryName")
+    @Import(name="repositoryName")
       private final @Nullable Output<String> repositoryName;
 
     public Output<String> getRepositoryName() {
@@ -67,7 +67,7 @@ public final class StaticSiteTemplateOptionsArgs extends io.pulumi.resources.Res
      * URL of the template repository. The newly generated repository will be based on this one.
      * 
      */
-    @InputImport(name="templateRepositoryUrl")
+    @Import(name="templateRepositoryUrl")
       private final @Nullable Output<String> templateRepositoryUrl;
 
     public Output<String> getTemplateRepositoryUrl() {

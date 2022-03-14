@@ -10,14 +10,14 @@ import io.pulumi.azurenative.batch.outputs.ImageReferenceResponse;
 import io.pulumi.azurenative.batch.outputs.NodePlacementConfigurationResponse;
 import io.pulumi.azurenative.batch.outputs.VMExtensionResponse;
 import io.pulumi.azurenative.batch.outputs.WindowsConfigurationResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VirtualMachineConfigurationResponse {
     /**
      * If specified, setup is performed on each node in the pool to allow tasks to run in containers. All regular tasks and job manager tasks run on this pool must specify the containerSettings property, and all other tasks may specify it.
@@ -64,17 +64,17 @@ public final class VirtualMachineConfigurationResponse {
      */
     private final @Nullable WindowsConfigurationResponse windowsConfiguration;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VirtualMachineConfigurationResponse(
-        @OutputCustomType.Parameter("containerConfiguration") @Nullable ContainerConfigurationResponse containerConfiguration,
-        @OutputCustomType.Parameter("dataDisks") @Nullable List<DataDiskResponse> dataDisks,
-        @OutputCustomType.Parameter("diskEncryptionConfiguration") @Nullable DiskEncryptionConfigurationResponse diskEncryptionConfiguration,
-        @OutputCustomType.Parameter("extensions") @Nullable List<VMExtensionResponse> extensions,
-        @OutputCustomType.Parameter("imageReference") ImageReferenceResponse imageReference,
-        @OutputCustomType.Parameter("licenseType") @Nullable String licenseType,
-        @OutputCustomType.Parameter("nodeAgentSkuId") String nodeAgentSkuId,
-        @OutputCustomType.Parameter("nodePlacementConfiguration") @Nullable NodePlacementConfigurationResponse nodePlacementConfiguration,
-        @OutputCustomType.Parameter("windowsConfiguration") @Nullable WindowsConfigurationResponse windowsConfiguration) {
+        @CustomType.Parameter("containerConfiguration") @Nullable ContainerConfigurationResponse containerConfiguration,
+        @CustomType.Parameter("dataDisks") @Nullable List<DataDiskResponse> dataDisks,
+        @CustomType.Parameter("diskEncryptionConfiguration") @Nullable DiskEncryptionConfigurationResponse diskEncryptionConfiguration,
+        @CustomType.Parameter("extensions") @Nullable List<VMExtensionResponse> extensions,
+        @CustomType.Parameter("imageReference") ImageReferenceResponse imageReference,
+        @CustomType.Parameter("licenseType") @Nullable String licenseType,
+        @CustomType.Parameter("nodeAgentSkuId") String nodeAgentSkuId,
+        @CustomType.Parameter("nodePlacementConfiguration") @Nullable NodePlacementConfigurationResponse nodePlacementConfiguration,
+        @CustomType.Parameter("windowsConfiguration") @Nullable WindowsConfigurationResponse windowsConfiguration) {
         this.containerConfiguration = containerConfiguration;
         this.dataDisks = dataDisks;
         this.diskEncryptionConfiguration = diskEncryptionConfiguration;

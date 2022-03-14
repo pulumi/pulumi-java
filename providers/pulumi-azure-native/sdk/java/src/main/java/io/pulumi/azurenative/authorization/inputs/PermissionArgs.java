@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.authorization.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class PermissionArgs extends io.pulumi.resources.ResourceArgs {
      * Allowed actions.
      * 
      */
-    @InputImport(name="actions")
+    @Import(name="actions")
       private final @Nullable Output<List<String>> actions;
 
     public Output<List<String>> getActions() {
@@ -34,7 +34,7 @@ public final class PermissionArgs extends io.pulumi.resources.ResourceArgs {
      * Allowed Data actions.
      * 
      */
-    @InputImport(name="dataActions")
+    @Import(name="dataActions")
       private final @Nullable Output<List<String>> dataActions;
 
     public Output<List<String>> getDataActions() {
@@ -45,7 +45,7 @@ public final class PermissionArgs extends io.pulumi.resources.ResourceArgs {
      * Denied actions.
      * 
      */
-    @InputImport(name="notActions")
+    @Import(name="notActions")
       private final @Nullable Output<List<String>> notActions;
 
     public Output<List<String>> getNotActions() {
@@ -56,7 +56,7 @@ public final class PermissionArgs extends io.pulumi.resources.ResourceArgs {
      * Denied Data actions.
      * 
      */
-    @InputImport(name="notDataActions")
+    @Import(name="notDataActions")
       private final @Nullable Output<List<String>> notDataActions;
 
     public Output<List<String>> getNotDataActions() {

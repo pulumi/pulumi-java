@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.ExpressRouteLinkMacSecConfigResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class ExpressRouteLinkResponse extends io.pulumi.resources.InvokeAr
      * Administrative state of the physical port.
      * 
      */
-    @InputImport(name="adminState")
+    @Import(name="adminState")
       private final @Nullable String adminState;
 
     public Optional<String> getAdminState() {
@@ -34,7 +34,7 @@ public final class ExpressRouteLinkResponse extends io.pulumi.resources.InvokeAr
      * Physical fiber port type.
      * 
      */
-    @InputImport(name="connectorType", required=true)
+    @Import(name="connectorType", required=true)
       private final String connectorType;
 
     public String getConnectorType() {
@@ -45,7 +45,7 @@ public final class ExpressRouteLinkResponse extends io.pulumi.resources.InvokeAr
      * A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    @InputImport(name="etag", required=true)
+    @Import(name="etag", required=true)
       private final String etag;
 
     public String getEtag() {
@@ -56,7 +56,7 @@ public final class ExpressRouteLinkResponse extends io.pulumi.resources.InvokeAr
      * Resource ID.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable String id;
 
     public Optional<String> getId() {
@@ -67,7 +67,7 @@ public final class ExpressRouteLinkResponse extends io.pulumi.resources.InvokeAr
      * Name of Azure router interface.
      * 
      */
-    @InputImport(name="interfaceName", required=true)
+    @Import(name="interfaceName", required=true)
       private final String interfaceName;
 
     public String getInterfaceName() {
@@ -78,7 +78,7 @@ public final class ExpressRouteLinkResponse extends io.pulumi.resources.InvokeAr
      * MacSec configuration.
      * 
      */
-    @InputImport(name="macSecConfig")
+    @Import(name="macSecConfig")
       private final @Nullable ExpressRouteLinkMacSecConfigResponse macSecConfig;
 
     public Optional<ExpressRouteLinkMacSecConfigResponse> getMacSecConfig() {
@@ -89,7 +89,7 @@ public final class ExpressRouteLinkResponse extends io.pulumi.resources.InvokeAr
      * Name of child port resource that is unique among child port resources of the parent.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -100,7 +100,7 @@ public final class ExpressRouteLinkResponse extends io.pulumi.resources.InvokeAr
      * Mapping between physical port to patch panel port.
      * 
      */
-    @InputImport(name="patchPanelId", required=true)
+    @Import(name="patchPanelId", required=true)
       private final String patchPanelId;
 
     public String getPatchPanelId() {
@@ -111,7 +111,7 @@ public final class ExpressRouteLinkResponse extends io.pulumi.resources.InvokeAr
      * The provisioning state of the express route link resource.
      * 
      */
-    @InputImport(name="provisioningState", required=true)
+    @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
     public String getProvisioningState() {
@@ -122,7 +122,7 @@ public final class ExpressRouteLinkResponse extends io.pulumi.resources.InvokeAr
      * Mapping of physical patch panel to rack.
      * 
      */
-    @InputImport(name="rackId", required=true)
+    @Import(name="rackId", required=true)
       private final String rackId;
 
     public String getRackId() {
@@ -133,7 +133,7 @@ public final class ExpressRouteLinkResponse extends io.pulumi.resources.InvokeAr
      * Name of Azure router associated with physical port.
      * 
      */
-    @InputImport(name="routerName", required=true)
+    @Import(name="routerName", required=true)
       private final String routerName;
 
     public String getRouterName() {

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.machinelearningservices.inputs;
 import io.pulumi.azurenative.machinelearningservices.enums.OperatingSystemType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class DockerImagePlatformArgs extends io.pulumi.resources.ResourceA
      * The OS type the Environment.
      * 
      */
-    @InputImport(name="operatingSystemType")
+    @Import(name="operatingSystemType")
       private final @Nullable Output<Either<String,OperatingSystemType>> operatingSystemType;
 
     public Output<Either<String,OperatingSystemType>> getOperatingSystemType() {

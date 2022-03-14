@@ -7,7 +7,7 @@ import io.pulumi.azurenative.network.enums.ExpressRouteLinkAdminState;
 import io.pulumi.azurenative.network.inputs.ExpressRouteLinkMacSecConfigArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class ExpressRouteLinkArgs extends io.pulumi.resources.ResourceArgs
      * Administrative state of the physical port.
      * 
      */
-    @InputImport(name="adminState")
+    @Import(name="adminState")
       private final @Nullable Output<Either<String,ExpressRouteLinkAdminState>> adminState;
 
     public Output<Either<String,ExpressRouteLinkAdminState>> getAdminState() {
@@ -36,7 +36,7 @@ public final class ExpressRouteLinkArgs extends io.pulumi.resources.ResourceArgs
      * Resource ID.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
@@ -47,7 +47,7 @@ public final class ExpressRouteLinkArgs extends io.pulumi.resources.ResourceArgs
      * MacSec configuration.
      * 
      */
-    @InputImport(name="macSecConfig")
+    @Import(name="macSecConfig")
       private final @Nullable Output<ExpressRouteLinkMacSecConfigArgs> macSecConfig;
 
     public Output<ExpressRouteLinkMacSecConfigArgs> getMacSecConfig() {
@@ -58,7 +58,7 @@ public final class ExpressRouteLinkArgs extends io.pulumi.resources.ResourceArgs
      * Name of child port resource that is unique among child port resources of the parent.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {

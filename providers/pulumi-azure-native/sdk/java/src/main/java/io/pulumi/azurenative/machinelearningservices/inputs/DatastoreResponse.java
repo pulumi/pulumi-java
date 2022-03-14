@@ -11,7 +11,7 @@ import io.pulumi.azurenative.machinelearningservices.inputs.AzureStorageSectionR
 import io.pulumi.azurenative.machinelearningservices.inputs.GlusterFsSectionResponse;
 import io.pulumi.azurenative.machinelearningservices.inputs.LinkedInfoResponse;
 import io.pulumi.azurenative.machinelearningservices.inputs.UserInfoResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -28,35 +28,35 @@ public final class DatastoreResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DatastoreResponse Empty = new DatastoreResponse();
 
-    @InputImport(name="azureDataLakeSection")
+    @Import(name="azureDataLakeSection")
       private final @Nullable AzureDataLakeSectionResponse azureDataLakeSection;
 
     public Optional<AzureDataLakeSectionResponse> getAzureDataLakeSection() {
         return this.azureDataLakeSection == null ? Optional.empty() : Optional.ofNullable(this.azureDataLakeSection);
     }
 
-    @InputImport(name="azureMySqlSection")
+    @Import(name="azureMySqlSection")
       private final @Nullable AzureMySqlSectionResponse azureMySqlSection;
 
     public Optional<AzureMySqlSectionResponse> getAzureMySqlSection() {
         return this.azureMySqlSection == null ? Optional.empty() : Optional.ofNullable(this.azureMySqlSection);
     }
 
-    @InputImport(name="azurePostgreSqlSection")
+    @Import(name="azurePostgreSqlSection")
       private final @Nullable AzurePostgreSqlSectionResponse azurePostgreSqlSection;
 
     public Optional<AzurePostgreSqlSectionResponse> getAzurePostgreSqlSection() {
         return this.azurePostgreSqlSection == null ? Optional.empty() : Optional.ofNullable(this.azurePostgreSqlSection);
     }
 
-    @InputImport(name="azureSqlDatabaseSection")
+    @Import(name="azureSqlDatabaseSection")
       private final @Nullable AzureSqlDatabaseSectionResponse azureSqlDatabaseSection;
 
     public Optional<AzureSqlDatabaseSectionResponse> getAzureSqlDatabaseSection() {
         return this.azureSqlDatabaseSection == null ? Optional.empty() : Optional.ofNullable(this.azureSqlDatabaseSection);
     }
 
-    @InputImport(name="azureStorageSection")
+    @Import(name="azureStorageSection")
       private final @Nullable AzureStorageSectionResponse azureStorageSection;
 
     public Optional<AzureStorageSectionResponse> getAzureStorageSection() {
@@ -67,7 +67,7 @@ public final class DatastoreResponse extends io.pulumi.resources.InvokeArgs {
      * The User who created the datastore.
      * 
      */
-    @InputImport(name="createdBy", required=true)
+    @Import(name="createdBy", required=true)
       private final UserInfoResponse createdBy;
 
     public UserInfoResponse getCreatedBy() {
@@ -78,7 +78,7 @@ public final class DatastoreResponse extends io.pulumi.resources.InvokeArgs {
      * The date and time when the datastore was created.
      * 
      */
-    @InputImport(name="createdTime", required=true)
+    @Import(name="createdTime", required=true)
       private final String createdTime;
 
     public String getCreatedTime() {
@@ -89,7 +89,7 @@ public final class DatastoreResponse extends io.pulumi.resources.InvokeArgs {
      * The datastore type.
      * 
      */
-    @InputImport(name="dataStoreType")
+    @Import(name="dataStoreType")
       private final @Nullable String dataStoreType;
 
     public Optional<String> getDataStoreType() {
@@ -100,7 +100,7 @@ public final class DatastoreResponse extends io.pulumi.resources.InvokeArgs {
      * Description of the datastore.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable String description;
 
     public Optional<String> getDescription() {
@@ -111,7 +111,7 @@ public final class DatastoreResponse extends io.pulumi.resources.InvokeArgs {
      * Data specific to GlusterFS.
      * 
      */
-    @InputImport(name="glusterFsSection")
+    @Import(name="glusterFsSection")
       private final @Nullable GlusterFsSectionResponse glusterFsSection;
 
     public Optional<GlusterFsSectionResponse> getGlusterFsSection() {
@@ -122,7 +122,7 @@ public final class DatastoreResponse extends io.pulumi.resources.InvokeArgs {
      * A read only property that denotes whether the service datastore has been validated with credentials.
      * 
      */
-    @InputImport(name="hasBeenValidated")
+    @Import(name="hasBeenValidated")
       private final @Nullable Boolean hasBeenValidated;
 
     public Optional<Boolean> getHasBeenValidated() {
@@ -133,7 +133,7 @@ public final class DatastoreResponse extends io.pulumi.resources.InvokeArgs {
      * Info about origin if it is linked.
      * 
      */
-    @InputImport(name="linkedInfo")
+    @Import(name="linkedInfo")
       private final @Nullable LinkedInfoResponse linkedInfo;
 
     public Optional<LinkedInfoResponse> getLinkedInfo() {
@@ -144,7 +144,7 @@ public final class DatastoreResponse extends io.pulumi.resources.InvokeArgs {
      * The User who modified the datastore.
      * 
      */
-    @InputImport(name="modifiedBy", required=true)
+    @Import(name="modifiedBy", required=true)
       private final UserInfoResponse modifiedBy;
 
     public UserInfoResponse getModifiedBy() {
@@ -155,7 +155,7 @@ public final class DatastoreResponse extends io.pulumi.resources.InvokeArgs {
      * The date and time when the datastore was last modified.
      * 
      */
-    @InputImport(name="modifiedTime", required=true)
+    @Import(name="modifiedTime", required=true)
       private final String modifiedTime;
 
     public String getModifiedTime() {
@@ -166,7 +166,7 @@ public final class DatastoreResponse extends io.pulumi.resources.InvokeArgs {
      * Name of the datastore.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -177,7 +177,7 @@ public final class DatastoreResponse extends io.pulumi.resources.InvokeArgs {
      * Tags for this datastore.
      * 
      */
-    @InputImport(name="tags", required=true)
+    @Import(name="tags", required=true)
       private final Map<String,String> tags;
 
     public Map<String,String> getTags() {

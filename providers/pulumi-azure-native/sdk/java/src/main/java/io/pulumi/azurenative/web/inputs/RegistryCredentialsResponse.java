@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class RegistryCredentialsResponse extends io.pulumi.resources.Invok
      * The name of the Secret that contains the registry login password
      * 
      */
-    @InputImport(name="passwordSecretRef")
+    @Import(name="passwordSecretRef")
       private final @Nullable String passwordSecretRef;
 
     public Optional<String> getPasswordSecretRef() {
@@ -33,7 +33,7 @@ public final class RegistryCredentialsResponse extends io.pulumi.resources.Invok
      * Container Registry Server
      * 
      */
-    @InputImport(name="server")
+    @Import(name="server")
       private final @Nullable String server;
 
     public Optional<String> getServer() {
@@ -44,7 +44,7 @@ public final class RegistryCredentialsResponse extends io.pulumi.resources.Invok
      * Container Registry Username
      * 
      */
-    @InputImport(name="username")
+    @Import(name="username")
       private final @Nullable String username;
 
     public Optional<String> getUsername() {

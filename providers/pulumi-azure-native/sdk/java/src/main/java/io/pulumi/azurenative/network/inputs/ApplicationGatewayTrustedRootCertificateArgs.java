@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class ApplicationGatewayTrustedRootCertificateArgs extends io.pulum
      * Certificate public data.
      * 
      */
-    @InputImport(name="data")
+    @Import(name="data")
       private final @Nullable Output<String> data;
 
     public Output<String> getData() {
@@ -33,7 +33,7 @@ public final class ApplicationGatewayTrustedRootCertificateArgs extends io.pulum
      * Resource ID.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
@@ -44,7 +44,7 @@ public final class ApplicationGatewayTrustedRootCertificateArgs extends io.pulum
      * Secret Id of (base-64 encoded unencrypted pfx) 'Secret' or 'Certificate' object stored in KeyVault.
      * 
      */
-    @InputImport(name="keyVaultSecretId")
+    @Import(name="keyVaultSecretId")
       private final @Nullable Output<String> keyVaultSecretId;
 
     public Output<String> getKeyVaultSecretId() {
@@ -55,7 +55,7 @@ public final class ApplicationGatewayTrustedRootCertificateArgs extends io.pulum
      * Name of the trusted root certificate that is unique within an Application Gateway.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {

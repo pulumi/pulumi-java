@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.servicefabric.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AzureActiveDirectoryResponse {
     /**
      * Azure active directory client application id.
@@ -27,11 +27,11 @@ public final class AzureActiveDirectoryResponse {
      */
     private final @Nullable String tenantId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AzureActiveDirectoryResponse(
-        @OutputCustomType.Parameter("clientApplication") @Nullable String clientApplication,
-        @OutputCustomType.Parameter("clusterApplication") @Nullable String clusterApplication,
-        @OutputCustomType.Parameter("tenantId") @Nullable String tenantId) {
+        @CustomType.Parameter("clientApplication") @Nullable String clientApplication,
+        @CustomType.Parameter("clusterApplication") @Nullable String clusterApplication,
+        @CustomType.Parameter("tenantId") @Nullable String tenantId) {
         this.clientApplication = clientApplication;
         this.clusterApplication = clusterApplication;
         this.tenantId = tenantId;

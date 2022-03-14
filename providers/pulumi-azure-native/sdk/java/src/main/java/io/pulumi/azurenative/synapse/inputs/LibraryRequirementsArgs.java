@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.synapse.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class LibraryRequirementsArgs extends io.pulumi.resources.ResourceA
      * The library requirements.
      * 
      */
-    @InputImport(name="content")
+    @Import(name="content")
       private final @Nullable Output<String> content;
 
     public Output<String> getContent() {
@@ -33,7 +33,7 @@ public final class LibraryRequirementsArgs extends io.pulumi.resources.ResourceA
      * The filename of the library requirements file.
      * 
      */
-    @InputImport(name="filename")
+    @Import(name="filename")
       private final @Nullable Output<String> filename;
 
     public Output<String> getFilename() {

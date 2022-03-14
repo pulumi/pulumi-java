@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datashare;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class SqlDBTableDataSetMappingArgs extends io.pulumi.resources.Reso
      * The name of the share account.
      * 
      */
-    @InputImport(name="accountName", required=true)
+    @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
     public Output<String> getAccountName() {
@@ -29,7 +29,7 @@ public final class SqlDBTableDataSetMappingArgs extends io.pulumi.resources.Reso
      * The id of the source data set.
      * 
      */
-    @InputImport(name="dataSetId", required=true)
+    @Import(name="dataSetId", required=true)
       private final Output<String> dataSetId;
 
     public Output<String> getDataSetId() {
@@ -40,7 +40,7 @@ public final class SqlDBTableDataSetMappingArgs extends io.pulumi.resources.Reso
      * The name of the data set mapping to be created.
      * 
      */
-    @InputImport(name="dataSetMappingName")
+    @Import(name="dataSetMappingName")
       private final @Nullable Output<String> dataSetMappingName;
 
     public Output<String> getDataSetMappingName() {
@@ -51,7 +51,7 @@ public final class SqlDBTableDataSetMappingArgs extends io.pulumi.resources.Reso
      * DatabaseName name of the sink data set
      * 
      */
-    @InputImport(name="databaseName", required=true)
+    @Import(name="databaseName", required=true)
       private final Output<String> databaseName;
 
     public Output<String> getDatabaseName() {
@@ -63,7 +63,7 @@ public final class SqlDBTableDataSetMappingArgs extends io.pulumi.resources.Reso
      * Expected value is 'SqlDBTable'.
      * 
      */
-    @InputImport(name="kind", required=true)
+    @Import(name="kind", required=true)
       private final Output<String> kind;
 
     public Output<String> getKind() {
@@ -74,7 +74,7 @@ public final class SqlDBTableDataSetMappingArgs extends io.pulumi.resources.Reso
      * The resource group name.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -85,7 +85,7 @@ public final class SqlDBTableDataSetMappingArgs extends io.pulumi.resources.Reso
      * Schema of the table. Default value is dbo.
      * 
      */
-    @InputImport(name="schemaName", required=true)
+    @Import(name="schemaName", required=true)
       private final Output<String> schemaName;
 
     public Output<String> getSchemaName() {
@@ -96,7 +96,7 @@ public final class SqlDBTableDataSetMappingArgs extends io.pulumi.resources.Reso
      * The name of the share subscription which will hold the data set sink.
      * 
      */
-    @InputImport(name="shareSubscriptionName", required=true)
+    @Import(name="shareSubscriptionName", required=true)
       private final Output<String> shareSubscriptionName;
 
     public Output<String> getShareSubscriptionName() {
@@ -107,7 +107,7 @@ public final class SqlDBTableDataSetMappingArgs extends io.pulumi.resources.Reso
      * Resource id of SQL server
      * 
      */
-    @InputImport(name="sqlServerResourceId", required=true)
+    @Import(name="sqlServerResourceId", required=true)
       private final Output<String> sqlServerResourceId;
 
     public Output<String> getSqlServerResourceId() {
@@ -118,7 +118,7 @@ public final class SqlDBTableDataSetMappingArgs extends io.pulumi.resources.Reso
      * SQL DB table name.
      * 
      */
-    @InputImport(name="tableName", required=true)
+    @Import(name="tableName", required=true)
       private final Output<String> tableName;
 
     public Output<String> getTableName() {

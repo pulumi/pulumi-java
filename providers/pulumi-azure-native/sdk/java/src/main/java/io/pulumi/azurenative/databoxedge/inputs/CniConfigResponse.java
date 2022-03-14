@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.databoxedge.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class CniConfigResponse extends io.pulumi.resources.InvokeArgs {
      * Pod Subnet
      * 
      */
-    @InputImport(name="podSubnet", required=true)
+    @Import(name="podSubnet", required=true)
       private final String podSubnet;
 
     public String getPodSubnet() {
@@ -31,7 +31,7 @@ public final class CniConfigResponse extends io.pulumi.resources.InvokeArgs {
      * Service subnet
      * 
      */
-    @InputImport(name="serviceSubnet", required=true)
+    @Import(name="serviceSubnet", required=true)
       private final String serviceSubnet;
 
     public String getServiceSubnet() {
@@ -42,7 +42,7 @@ public final class CniConfigResponse extends io.pulumi.resources.InvokeArgs {
      * Cni type
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {
@@ -53,7 +53,7 @@ public final class CniConfigResponse extends io.pulumi.resources.InvokeArgs {
      * Cni version
      * 
      */
-    @InputImport(name="version", required=true)
+    @Import(name="version", required=true)
       private final String version;
 
     public String getVersion() {

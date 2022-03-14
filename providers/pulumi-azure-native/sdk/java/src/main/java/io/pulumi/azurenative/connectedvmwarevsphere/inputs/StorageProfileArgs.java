@@ -5,7 +5,7 @@ package io.pulumi.azurenative.connectedvmwarevsphere.inputs;
 
 import io.pulumi.azurenative.connectedvmwarevsphere.inputs.VirtualDiskArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class StorageProfileArgs extends io.pulumi.resources.ResourceArgs {
      * Gets or sets the list of virtual disks associated with the virtual machine.
      * 
      */
-    @InputImport(name="disks")
+    @Import(name="disks")
       private final @Nullable Output<List<VirtualDiskArgs>> disks;
 
     public Output<List<VirtualDiskArgs>> getDisks() {

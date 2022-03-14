@@ -6,14 +6,14 @@ package io.pulumi.azurenative.media.outputs;
 import io.pulumi.azurenative.media.outputs.EnabledProtocolsResponse;
 import io.pulumi.azurenative.media.outputs.StreamingPolicyContentKeysResponse;
 import io.pulumi.azurenative.media.outputs.TrackSelectionResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EnvelopeEncryptionResponse {
     /**
      * Representing which tracks should not be encrypted
@@ -36,12 +36,12 @@ public final class EnvelopeEncryptionResponse {
      */
     private final @Nullable EnabledProtocolsResponse enabledProtocols;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EnvelopeEncryptionResponse(
-        @OutputCustomType.Parameter("clearTracks") @Nullable List<TrackSelectionResponse> clearTracks,
-        @OutputCustomType.Parameter("contentKeys") @Nullable StreamingPolicyContentKeysResponse contentKeys,
-        @OutputCustomType.Parameter("customKeyAcquisitionUrlTemplate") @Nullable String customKeyAcquisitionUrlTemplate,
-        @OutputCustomType.Parameter("enabledProtocols") @Nullable EnabledProtocolsResponse enabledProtocols) {
+        @CustomType.Parameter("clearTracks") @Nullable List<TrackSelectionResponse> clearTracks,
+        @CustomType.Parameter("contentKeys") @Nullable StreamingPolicyContentKeysResponse contentKeys,
+        @CustomType.Parameter("customKeyAcquisitionUrlTemplate") @Nullable String customKeyAcquisitionUrlTemplate,
+        @CustomType.Parameter("enabledProtocols") @Nullable EnabledProtocolsResponse enabledProtocols) {
         this.clearTracks = clearTracks;
         this.contentKeys = contentKeys;
         this.customKeyAcquisitionUrlTemplate = customKeyAcquisitionUrlTemplate;

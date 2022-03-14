@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.labservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RecurrencePatternResponse {
     /**
      * When the recurrence will expire. This date is inclusive.
@@ -34,12 +34,12 @@ public final class RecurrencePatternResponse {
      */
     private final @Nullable List<String> weekDays;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RecurrencePatternResponse(
-        @OutputCustomType.Parameter("expirationDate") String expirationDate,
-        @OutputCustomType.Parameter("frequency") String frequency,
-        @OutputCustomType.Parameter("interval") @Nullable Integer interval,
-        @OutputCustomType.Parameter("weekDays") @Nullable List<String> weekDays) {
+        @CustomType.Parameter("expirationDate") String expirationDate,
+        @CustomType.Parameter("frequency") String frequency,
+        @CustomType.Parameter("interval") @Nullable Integer interval,
+        @CustomType.Parameter("weekDays") @Nullable List<String> weekDays) {
         this.expirationDate = expirationDate;
         this.frequency = frequency;
         this.interval = interval;

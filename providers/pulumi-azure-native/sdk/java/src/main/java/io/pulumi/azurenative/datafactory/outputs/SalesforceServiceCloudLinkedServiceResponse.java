@@ -8,7 +8,7 @@ import io.pulumi.azurenative.datafactory.outputs.IntegrationRuntimeReferenceResp
 import io.pulumi.azurenative.datafactory.outputs.ParameterSpecificationResponse;
 import io.pulumi.azurenative.datafactory.outputs.SecureStringResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -17,7 +17,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SalesforceServiceCloudLinkedServiceResponse {
     /**
      * List of tags that can be used for describing the linked service.
@@ -81,20 +81,20 @@ public final class SalesforceServiceCloudLinkedServiceResponse {
      */
     private final @Nullable Object username;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SalesforceServiceCloudLinkedServiceResponse(
-        @OutputCustomType.Parameter("annotations") @Nullable List<Object> annotations,
-        @OutputCustomType.Parameter("apiVersion") @Nullable Object apiVersion,
-        @OutputCustomType.Parameter("connectVia") @Nullable IntegrationRuntimeReferenceResponse connectVia,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("encryptedCredential") @Nullable Object encryptedCredential,
-        @OutputCustomType.Parameter("environmentUrl") @Nullable Object environmentUrl,
-        @OutputCustomType.Parameter("extendedProperties") @Nullable Object extendedProperties,
-        @OutputCustomType.Parameter("parameters") @Nullable Map<String,ParameterSpecificationResponse> parameters,
-        @OutputCustomType.Parameter("password") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password,
-        @OutputCustomType.Parameter("securityToken") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> securityToken,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("username") @Nullable Object username) {
+        @CustomType.Parameter("annotations") @Nullable List<Object> annotations,
+        @CustomType.Parameter("apiVersion") @Nullable Object apiVersion,
+        @CustomType.Parameter("connectVia") @Nullable IntegrationRuntimeReferenceResponse connectVia,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("encryptedCredential") @Nullable Object encryptedCredential,
+        @CustomType.Parameter("environmentUrl") @Nullable Object environmentUrl,
+        @CustomType.Parameter("extendedProperties") @Nullable Object extendedProperties,
+        @CustomType.Parameter("parameters") @Nullable Map<String,ParameterSpecificationResponse> parameters,
+        @CustomType.Parameter("password") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password,
+        @CustomType.Parameter("securityToken") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> securityToken,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("username") @Nullable Object username) {
         this.annotations = annotations;
         this.apiVersion = apiVersion;
         this.connectVia = connectVia;

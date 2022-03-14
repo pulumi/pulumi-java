@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.datafactory.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class IntegrationRuntimeVNetPropertiesResponse {
     /**
      * Resource IDs of the public IP addresses that this integration runtime will use.
@@ -33,12 +33,12 @@ public final class IntegrationRuntimeVNetPropertiesResponse {
      */
     private final @Nullable String vNetId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private IntegrationRuntimeVNetPropertiesResponse(
-        @OutputCustomType.Parameter("publicIPs") @Nullable List<String> publicIPs,
-        @OutputCustomType.Parameter("subnet") @Nullable String subnet,
-        @OutputCustomType.Parameter("subnetId") @Nullable String subnetId,
-        @OutputCustomType.Parameter("vNetId") @Nullable String vNetId) {
+        @CustomType.Parameter("publicIPs") @Nullable List<String> publicIPs,
+        @CustomType.Parameter("subnet") @Nullable String subnet,
+        @CustomType.Parameter("subnetId") @Nullable String subnetId,
+        @CustomType.Parameter("vNetId") @Nullable String vNetId) {
         this.publicIPs = publicIPs;
         this.subnet = subnet;
         this.subnetId = subnetId;

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.providerhub.inputs;
 import io.pulumi.azurenative.providerhub.enums.PreflightOption;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -18,14 +18,14 @@ public final class ResourceProviderManifestPropertiesTemplateDeploymentOptionsAr
 
     public static final ResourceProviderManifestPropertiesTemplateDeploymentOptionsArgs Empty = new ResourceProviderManifestPropertiesTemplateDeploymentOptionsArgs();
 
-    @InputImport(name="preflightOptions")
+    @Import(name="preflightOptions")
       private final @Nullable Output<List<Either<String,PreflightOption>>> preflightOptions;
 
     public Output<List<Either<String,PreflightOption>>> getPreflightOptions() {
         return this.preflightOptions == null ? Output.empty() : this.preflightOptions;
     }
 
-    @InputImport(name="preflightSupported")
+    @Import(name="preflightSupported")
       private final @Nullable Output<Boolean> preflightSupported;
 
     public Output<Boolean> getPreflightSupported() {

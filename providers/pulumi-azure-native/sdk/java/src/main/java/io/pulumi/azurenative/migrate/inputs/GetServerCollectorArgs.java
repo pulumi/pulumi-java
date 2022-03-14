@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.migrate.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetServerCollectorArgs extends io.pulumi.resources.InvokeArgs
      * Name of the Azure Migrate project.
      * 
      */
-    @InputImport(name="projectName", required=true)
+    @Import(name="projectName", required=true)
       private final String projectName;
 
     public String getProjectName() {
@@ -27,7 +27,7 @@ public final class GetServerCollectorArgs extends io.pulumi.resources.InvokeArgs
      * Name of the Azure Resource Group that project is part of.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {
@@ -38,7 +38,7 @@ public final class GetServerCollectorArgs extends io.pulumi.resources.InvokeArgs
      * Unique name of a Server collector within a project.
      * 
      */
-    @InputImport(name="serverCollectorName", required=true)
+    @Import(name="serverCollectorName", required=true)
       private final String serverCollectorName;
 
     public String getServerCollectorName() {

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.automation.enums.SourceType;
 import io.pulumi.azurenative.automation.inputs.SourceControlSecurityTokenPropertiesArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
      * The auto async of the source control. Default is false.
      * 
      */
-    @InputImport(name="autoSync")
+    @Import(name="autoSync")
       private final @Nullable Output<Boolean> autoSync;
 
     public Output<Boolean> getAutoSync() {
@@ -33,7 +33,7 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the automation account.
      * 
      */
-    @InputImport(name="automationAccountName", required=true)
+    @Import(name="automationAccountName", required=true)
       private final Output<String> automationAccountName;
 
     public Output<String> getAutomationAccountName() {
@@ -44,7 +44,7 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
      * The repo branch of the source control. Include branch as empty string for VsoTfvc.
      * 
      */
-    @InputImport(name="branch")
+    @Import(name="branch")
       private final @Nullable Output<String> branch;
 
     public Output<String> getBranch() {
@@ -55,7 +55,7 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
      * The user description of the source control.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -66,7 +66,7 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
      * The folder path of the source control. Path must be relative.
      * 
      */
-    @InputImport(name="folderPath")
+    @Import(name="folderPath")
       private final @Nullable Output<String> folderPath;
 
     public Output<String> getFolderPath() {
@@ -77,7 +77,7 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
      * The auto publish of the source control. Default is true.
      * 
      */
-    @InputImport(name="publishRunbook")
+    @Import(name="publishRunbook")
       private final @Nullable Output<Boolean> publishRunbook;
 
     public Output<Boolean> getPublishRunbook() {
@@ -88,7 +88,7 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
      * The repo url of the source control.
      * 
      */
-    @InputImport(name="repoUrl")
+    @Import(name="repoUrl")
       private final @Nullable Output<String> repoUrl;
 
     public Output<String> getRepoUrl() {
@@ -99,7 +99,7 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
      * Name of an Azure Resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -110,7 +110,7 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
      * The authorization token for the repo of the source control.
      * 
      */
-    @InputImport(name="securityToken")
+    @Import(name="securityToken")
       private final @Nullable Output<SourceControlSecurityTokenPropertiesArgs> securityToken;
 
     public Output<SourceControlSecurityTokenPropertiesArgs> getSecurityToken() {
@@ -121,7 +121,7 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
      * The source control name.
      * 
      */
-    @InputImport(name="sourceControlName")
+    @Import(name="sourceControlName")
       private final @Nullable Output<String> sourceControlName;
 
     public Output<String> getSourceControlName() {
@@ -132,7 +132,7 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
      * The source type. Must be one of VsoGit, VsoTfvc, GitHub, case sensitive.
      * 
      */
-    @InputImport(name="sourceType")
+    @Import(name="sourceType")
       private final @Nullable Output<Either<String,SourceType>> sourceType;
 
     public Output<Either<String,SourceType>> getSourceType() {

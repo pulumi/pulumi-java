@@ -8,7 +8,7 @@ import io.pulumi.azurenative.kusto.AttachedDatabaseConfigurationArgs;
 import io.pulumi.azurenative.kusto.outputs.TableLevelSharingPropertiesResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +35,7 @@ public class AttachedDatabaseConfiguration extends io.pulumi.resources.CustomRes
      * The list of databases from the clusterResourceId which are currently attached to the cluster.
      * 
      */
-    @OutputExport(name="attachedDatabaseNames", type=List.class, parameters={String.class})
+    @Export(name="attachedDatabaseNames", type=List.class, parameters={String.class})
     private Output<List<String>> attachedDatabaseNames;
 
     /**
@@ -49,7 +49,7 @@ public class AttachedDatabaseConfiguration extends io.pulumi.resources.CustomRes
      * The resource id of the cluster where the databases you would like to attach reside.
      * 
      */
-    @OutputExport(name="clusterResourceId", type=String.class, parameters={})
+    @Export(name="clusterResourceId", type=String.class, parameters={})
     private Output<String> clusterResourceId;
 
     /**
@@ -63,7 +63,7 @@ public class AttachedDatabaseConfiguration extends io.pulumi.resources.CustomRes
      * The name of the database which you would like to attach, use * if you want to follow all current and future databases.
      * 
      */
-    @OutputExport(name="databaseName", type=String.class, parameters={})
+    @Export(name="databaseName", type=String.class, parameters={})
     private Output<String> databaseName;
 
     /**
@@ -77,7 +77,7 @@ public class AttachedDatabaseConfiguration extends io.pulumi.resources.CustomRes
      * The default principals modification kind
      * 
      */
-    @OutputExport(name="defaultPrincipalsModificationKind", type=String.class, parameters={})
+    @Export(name="defaultPrincipalsModificationKind", type=String.class, parameters={})
     private Output<String> defaultPrincipalsModificationKind;
 
     /**
@@ -91,7 +91,7 @@ public class AttachedDatabaseConfiguration extends io.pulumi.resources.CustomRes
      * Resource location.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -105,7 +105,7 @@ public class AttachedDatabaseConfiguration extends io.pulumi.resources.CustomRes
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -119,7 +119,7 @@ public class AttachedDatabaseConfiguration extends io.pulumi.resources.CustomRes
      * The provisioned state of the resource.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -133,7 +133,7 @@ public class AttachedDatabaseConfiguration extends io.pulumi.resources.CustomRes
      * Table level sharing specifications
      * 
      */
-    @OutputExport(name="tableLevelSharingProperties", type=TableLevelSharingPropertiesResponse.class, parameters={})
+    @Export(name="tableLevelSharingProperties", type=TableLevelSharingPropertiesResponse.class, parameters={})
     private Output</* @Nullable */ TableLevelSharingPropertiesResponse> tableLevelSharingProperties;
 
     /**
@@ -147,7 +147,7 @@ public class AttachedDatabaseConfiguration extends io.pulumi.resources.CustomRes
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

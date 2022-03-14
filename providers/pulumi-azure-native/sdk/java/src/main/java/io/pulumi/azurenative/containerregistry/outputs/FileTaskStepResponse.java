@@ -5,14 +5,14 @@ package io.pulumi.azurenative.containerregistry.outputs;
 
 import io.pulumi.azurenative.containerregistry.outputs.BaseImageDependencyResponse;
 import io.pulumi.azurenative.containerregistry.outputs.SetValueResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FileTaskStepResponse {
     /**
      * List of base image dependencies for a step.
@@ -51,15 +51,15 @@ public final class FileTaskStepResponse {
      */
     private final @Nullable String valuesFilePath;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FileTaskStepResponse(
-        @OutputCustomType.Parameter("baseImageDependencies") List<BaseImageDependencyResponse> baseImageDependencies,
-        @OutputCustomType.Parameter("contextAccessToken") @Nullable String contextAccessToken,
-        @OutputCustomType.Parameter("contextPath") @Nullable String contextPath,
-        @OutputCustomType.Parameter("taskFilePath") String taskFilePath,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("values") @Nullable List<SetValueResponse> values,
-        @OutputCustomType.Parameter("valuesFilePath") @Nullable String valuesFilePath) {
+        @CustomType.Parameter("baseImageDependencies") List<BaseImageDependencyResponse> baseImageDependencies,
+        @CustomType.Parameter("contextAccessToken") @Nullable String contextAccessToken,
+        @CustomType.Parameter("contextPath") @Nullable String contextPath,
+        @CustomType.Parameter("taskFilePath") String taskFilePath,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("values") @Nullable List<SetValueResponse> values,
+        @CustomType.Parameter("valuesFilePath") @Nullable String valuesFilePath) {
         this.baseImageDependencies = baseImageDependencies;
         this.contextAccessToken = contextAccessToken;
         this.contextPath = contextPath;

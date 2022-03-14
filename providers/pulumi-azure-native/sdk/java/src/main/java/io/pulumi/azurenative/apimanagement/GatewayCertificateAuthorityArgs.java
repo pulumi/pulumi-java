@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.apimanagement;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class GatewayCertificateAuthorityArgs extends io.pulumi.resources.R
      * Identifier of the certificate entity. Must be unique in the current API Management service instance.
      * 
      */
-    @InputImport(name="certificateId")
+    @Import(name="certificateId")
       private final @Nullable Output<String> certificateId;
 
     public Output<String> getCertificateId() {
@@ -30,7 +30,7 @@ public final class GatewayCertificateAuthorityArgs extends io.pulumi.resources.R
      * Gateway entity identifier. Must be unique in the current API Management service instance. Must not have value 'managed'
      * 
      */
-    @InputImport(name="gatewayId", required=true)
+    @Import(name="gatewayId", required=true)
       private final Output<String> gatewayId;
 
     public Output<String> getGatewayId() {
@@ -41,7 +41,7 @@ public final class GatewayCertificateAuthorityArgs extends io.pulumi.resources.R
      * Determines whether certificate authority is trusted.
      * 
      */
-    @InputImport(name="isTrusted")
+    @Import(name="isTrusted")
       private final @Nullable Output<Boolean> isTrusted;
 
     public Output<Boolean> getIsTrusted() {
@@ -52,7 +52,7 @@ public final class GatewayCertificateAuthorityArgs extends io.pulumi.resources.R
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -63,7 +63,7 @@ public final class GatewayCertificateAuthorityArgs extends io.pulumi.resources.R
      * The name of the API Management service.
      * 
      */
-    @InputImport(name="serviceName", required=true)
+    @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
 
     public Output<String> getServiceName() {

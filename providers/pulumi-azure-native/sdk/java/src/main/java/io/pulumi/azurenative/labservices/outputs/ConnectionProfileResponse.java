@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.labservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ConnectionProfileResponse {
     /**
      * The enabled access level for Client Access over RDP.
@@ -32,12 +32,12 @@ public final class ConnectionProfileResponse {
      */
     private final @Nullable String webSshAccess;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ConnectionProfileResponse(
-        @OutputCustomType.Parameter("clientRdpAccess") @Nullable String clientRdpAccess,
-        @OutputCustomType.Parameter("clientSshAccess") @Nullable String clientSshAccess,
-        @OutputCustomType.Parameter("webRdpAccess") @Nullable String webRdpAccess,
-        @OutputCustomType.Parameter("webSshAccess") @Nullable String webSshAccess) {
+        @CustomType.Parameter("clientRdpAccess") @Nullable String clientRdpAccess,
+        @CustomType.Parameter("clientSshAccess") @Nullable String clientSshAccess,
+        @CustomType.Parameter("webRdpAccess") @Nullable String webRdpAccess,
+        @CustomType.Parameter("webSshAccess") @Nullable String webSshAccess) {
         this.clientRdpAccess = clientRdpAccess;
         this.clientSshAccess = clientSshAccess;
         this.webRdpAccess = webRdpAccess;

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.network.inputs.ApplicationRuleConditionResponse;
 import io.pulumi.azurenative.network.inputs.FirewallPolicyFilterRuleActionResponse;
 import io.pulumi.azurenative.network.inputs.NatRuleConditionResponse;
 import io.pulumi.azurenative.network.inputs.NetworkRuleConditionResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -29,7 +29,7 @@ public final class FirewallPolicyFilterRuleResponse extends io.pulumi.resources.
      * The action type of a Filter rule.
      * 
      */
-    @InputImport(name="action")
+    @Import(name="action")
       private final @Nullable FirewallPolicyFilterRuleActionResponse action;
 
     public Optional<FirewallPolicyFilterRuleActionResponse> getAction() {
@@ -40,7 +40,7 @@ public final class FirewallPolicyFilterRuleResponse extends io.pulumi.resources.
      * The name of the rule.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -51,7 +51,7 @@ public final class FirewallPolicyFilterRuleResponse extends io.pulumi.resources.
      * Priority of the Firewall Policy Rule resource.
      * 
      */
-    @InputImport(name="priority")
+    @Import(name="priority")
       private final @Nullable Integer priority;
 
     public Optional<Integer> getPriority() {
@@ -62,7 +62,7 @@ public final class FirewallPolicyFilterRuleResponse extends io.pulumi.resources.
      * Collection of rule conditions used by a rule.
      * 
      */
-    @InputImport(name="ruleConditions")
+    @Import(name="ruleConditions")
       private final @Nullable List<Object> ruleConditions;
 
     public List<Object> getRuleConditions() {
@@ -74,7 +74,7 @@ public final class FirewallPolicyFilterRuleResponse extends io.pulumi.resources.
      * Expected value is 'FirewallPolicyFilterRule'.
      * 
      */
-    @InputImport(name="ruleType", required=true)
+    @Import(name="ruleType", required=true)
       private final String ruleType;
 
     public String getRuleType() {

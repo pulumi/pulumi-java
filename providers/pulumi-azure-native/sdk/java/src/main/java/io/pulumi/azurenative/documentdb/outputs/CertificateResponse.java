@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.documentdb.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CertificateResponse {
     /**
      * PEM formatted public key.
@@ -17,8 +17,8 @@ public final class CertificateResponse {
      */
     private final @Nullable String pem;
 
-    @OutputCustomType.Constructor
-    private CertificateResponse(@OutputCustomType.Parameter("pem") @Nullable String pem) {
+    @CustomType.Constructor
+    private CertificateResponse(@CustomType.Parameter("pem") @Nullable String pem) {
         this.pem = pem;
     }
 

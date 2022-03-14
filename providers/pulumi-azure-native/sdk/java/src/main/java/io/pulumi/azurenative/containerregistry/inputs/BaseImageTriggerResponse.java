@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerregistry.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class BaseImageTriggerResponse extends io.pulumi.resources.InvokeAr
      * The type of the auto trigger for base image dependency updates.
      * 
      */
-    @InputImport(name="baseImageTriggerType", required=true)
+    @Import(name="baseImageTriggerType", required=true)
       private final String baseImageTriggerType;
 
     public String getBaseImageTriggerType() {
@@ -33,7 +33,7 @@ public final class BaseImageTriggerResponse extends io.pulumi.resources.InvokeAr
      * The name of the trigger.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -44,7 +44,7 @@ public final class BaseImageTriggerResponse extends io.pulumi.resources.InvokeAr
      * The current status of trigger.
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable String status;
 
     public Optional<String> getStatus() {
@@ -55,7 +55,7 @@ public final class BaseImageTriggerResponse extends io.pulumi.resources.InvokeAr
      * The endpoint URL for receiving update triggers.
      * 
      */
-    @InputImport(name="updateTriggerEndpoint")
+    @Import(name="updateTriggerEndpoint")
       private final @Nullable String updateTriggerEndpoint;
 
     public Optional<String> getUpdateTriggerEndpoint() {
@@ -66,7 +66,7 @@ public final class BaseImageTriggerResponse extends io.pulumi.resources.InvokeAr
      * Type of Payload body for Base image update triggers.
      * 
      */
-    @InputImport(name="updateTriggerPayloadType")
+    @Import(name="updateTriggerPayloadType")
       private final @Nullable String updateTriggerPayloadType;
 
     public Optional<String> getUpdateTriggerPayloadType() {

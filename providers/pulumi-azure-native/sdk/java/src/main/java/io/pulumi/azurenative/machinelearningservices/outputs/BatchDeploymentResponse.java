@@ -10,7 +10,7 @@ import io.pulumi.azurenative.machinelearningservices.outputs.ComputeConfiguratio
 import io.pulumi.azurenative.machinelearningservices.outputs.DataPathAssetReferenceResponse;
 import io.pulumi.azurenative.machinelearningservices.outputs.IdAssetReferenceResponse;
 import io.pulumi.azurenative.machinelearningservices.outputs.OutputPathAssetReferenceResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.Object;
@@ -21,7 +21,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BatchDeploymentResponse {
     /**
      * Code configuration for the endpoint deployment.
@@ -95,21 +95,21 @@ public final class BatchDeploymentResponse {
      */
     private final @Nullable BatchRetrySettingsResponse retrySettings;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BatchDeploymentResponse(
-        @OutputCustomType.Parameter("codeConfiguration") @Nullable CodeConfigurationResponse codeConfiguration,
-        @OutputCustomType.Parameter("compute") @Nullable ComputeConfigurationResponse compute,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("environmentId") @Nullable String environmentId,
-        @OutputCustomType.Parameter("environmentVariables") @Nullable Map<String,String> environmentVariables,
-        @OutputCustomType.Parameter("errorThreshold") @Nullable Integer errorThreshold,
-        @OutputCustomType.Parameter("loggingLevel") @Nullable String loggingLevel,
-        @OutputCustomType.Parameter("miniBatchSize") @Nullable Double miniBatchSize,
-        @OutputCustomType.Parameter("model") @Nullable Object model,
-        @OutputCustomType.Parameter("outputConfiguration") @Nullable BatchOutputConfigurationResponse outputConfiguration,
-        @OutputCustomType.Parameter("partitionKeys") @Nullable List<String> partitionKeys,
-        @OutputCustomType.Parameter("properties") @Nullable Map<String,String> properties,
-        @OutputCustomType.Parameter("retrySettings") @Nullable BatchRetrySettingsResponse retrySettings) {
+        @CustomType.Parameter("codeConfiguration") @Nullable CodeConfigurationResponse codeConfiguration,
+        @CustomType.Parameter("compute") @Nullable ComputeConfigurationResponse compute,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("environmentId") @Nullable String environmentId,
+        @CustomType.Parameter("environmentVariables") @Nullable Map<String,String> environmentVariables,
+        @CustomType.Parameter("errorThreshold") @Nullable Integer errorThreshold,
+        @CustomType.Parameter("loggingLevel") @Nullable String loggingLevel,
+        @CustomType.Parameter("miniBatchSize") @Nullable Double miniBatchSize,
+        @CustomType.Parameter("model") @Nullable Object model,
+        @CustomType.Parameter("outputConfiguration") @Nullable BatchOutputConfigurationResponse outputConfiguration,
+        @CustomType.Parameter("partitionKeys") @Nullable List<String> partitionKeys,
+        @CustomType.Parameter("properties") @Nullable Map<String,String> properties,
+        @CustomType.Parameter("retrySettings") @Nullable BatchRetrySettingsResponse retrySettings) {
         this.codeConfiguration = codeConfiguration;
         this.compute = compute;
         this.description = description;

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.m365securityandcompliance.enums.Kind;
 import io.pulumi.azurenative.m365securityandcompliance.inputs.ServicesPropertiesArgs;
 import io.pulumi.azurenative.m365securityandcompliance.inputs.ServicesResourceIdentityArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class PrivateLinkServicesForM365SecurityCenterArgs extends io.pulum
      * Setting indicating whether the service has a managed identity associated with it.
      * 
      */
-    @InputImport(name="identity")
+    @Import(name="identity")
       private final @Nullable Output<ServicesResourceIdentityArgs> identity;
 
     public Output<ServicesResourceIdentityArgs> getIdentity() {
@@ -33,7 +33,7 @@ public final class PrivateLinkServicesForM365SecurityCenterArgs extends io.pulum
      * The kind of the service.
      * 
      */
-    @InputImport(name="kind", required=true)
+    @Import(name="kind", required=true)
       private final Output<Kind> kind;
 
     public Output<Kind> getKind() {
@@ -44,7 +44,7 @@ public final class PrivateLinkServicesForM365SecurityCenterArgs extends io.pulum
      * The resource location.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -55,7 +55,7 @@ public final class PrivateLinkServicesForM365SecurityCenterArgs extends io.pulum
      * The common properties of a service.
      * 
      */
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable Output<ServicesPropertiesArgs> properties;
 
     public Output<ServicesPropertiesArgs> getProperties() {
@@ -66,7 +66,7 @@ public final class PrivateLinkServicesForM365SecurityCenterArgs extends io.pulum
      * The name of the resource group that contains the service instance.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -77,7 +77,7 @@ public final class PrivateLinkServicesForM365SecurityCenterArgs extends io.pulum
      * The name of the service instance.
      * 
      */
-    @InputImport(name="resourceName")
+    @Import(name="resourceName")
       private final @Nullable Output<String> resourceName;
 
     public Output<String> getPropResourceName() {
@@ -88,7 +88,7 @@ public final class PrivateLinkServicesForM365SecurityCenterArgs extends io.pulum
      * The resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

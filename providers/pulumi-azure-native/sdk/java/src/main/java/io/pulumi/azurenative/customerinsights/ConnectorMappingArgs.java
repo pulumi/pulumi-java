@@ -8,7 +8,7 @@ import io.pulumi.azurenative.customerinsights.enums.EntityTypes;
 import io.pulumi.azurenative.customerinsights.inputs.ConnectorMappingPropertiesArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class ConnectorMappingArgs extends io.pulumi.resources.ResourceArgs
      * The name of the connector.
      * 
      */
-    @InputImport(name="connectorName", required=true)
+    @Import(name="connectorName", required=true)
       private final Output<String> connectorName;
 
     public Output<String> getConnectorName() {
@@ -33,7 +33,7 @@ public final class ConnectorMappingArgs extends io.pulumi.resources.ResourceArgs
      * Type of connector.
      * 
      */
-    @InputImport(name="connectorType")
+    @Import(name="connectorType")
       private final @Nullable Output<Either<String,ConnectorTypes>> connectorType;
 
     public Output<Either<String,ConnectorTypes>> getConnectorType() {
@@ -44,7 +44,7 @@ public final class ConnectorMappingArgs extends io.pulumi.resources.ResourceArgs
      * The description of the connector mapping.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -55,7 +55,7 @@ public final class ConnectorMappingArgs extends io.pulumi.resources.ResourceArgs
      * Display name for the connector mapping.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -66,7 +66,7 @@ public final class ConnectorMappingArgs extends io.pulumi.resources.ResourceArgs
      * Defines which entity type the file should map to.
      * 
      */
-    @InputImport(name="entityType", required=true)
+    @Import(name="entityType", required=true)
       private final Output<EntityTypes> entityType;
 
     public Output<EntityTypes> getEntityType() {
@@ -77,7 +77,7 @@ public final class ConnectorMappingArgs extends io.pulumi.resources.ResourceArgs
      * The mapping entity name.
      * 
      */
-    @InputImport(name="entityTypeName", required=true)
+    @Import(name="entityTypeName", required=true)
       private final Output<String> entityTypeName;
 
     public Output<String> getEntityTypeName() {
@@ -88,7 +88,7 @@ public final class ConnectorMappingArgs extends io.pulumi.resources.ResourceArgs
      * The name of the hub.
      * 
      */
-    @InputImport(name="hubName", required=true)
+    @Import(name="hubName", required=true)
       private final Output<String> hubName;
 
     public Output<String> getHubName() {
@@ -99,7 +99,7 @@ public final class ConnectorMappingArgs extends io.pulumi.resources.ResourceArgs
      * The name of the connector mapping.
      * 
      */
-    @InputImport(name="mappingName")
+    @Import(name="mappingName")
       private final @Nullable Output<String> mappingName;
 
     public Output<String> getMappingName() {
@@ -110,7 +110,7 @@ public final class ConnectorMappingArgs extends io.pulumi.resources.ResourceArgs
      * The properties of the mapping.
      * 
      */
-    @InputImport(name="mappingProperties", required=true)
+    @Import(name="mappingProperties", required=true)
       private final Output<ConnectorMappingPropertiesArgs> mappingProperties;
 
     public Output<ConnectorMappingPropertiesArgs> getMappingProperties() {
@@ -121,7 +121,7 @@ public final class ConnectorMappingArgs extends io.pulumi.resources.ResourceArgs
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.ApplicationGatewayFirewallDisabledRuleGroupResponse;
 import io.pulumi.azurenative.network.inputs.ApplicationGatewayFirewallExclusionResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -27,7 +27,7 @@ public final class ApplicationGatewayWebApplicationFirewallConfigurationResponse
      * The disabled rule groups.
      * 
      */
-    @InputImport(name="disabledRuleGroups")
+    @Import(name="disabledRuleGroups")
       private final @Nullable List<ApplicationGatewayFirewallDisabledRuleGroupResponse> disabledRuleGroups;
 
     public List<ApplicationGatewayFirewallDisabledRuleGroupResponse> getDisabledRuleGroups() {
@@ -38,7 +38,7 @@ public final class ApplicationGatewayWebApplicationFirewallConfigurationResponse
      * Whether the web application firewall is enabled or not.
      * 
      */
-    @InputImport(name="enabled", required=true)
+    @Import(name="enabled", required=true)
       private final Boolean enabled;
 
     public Boolean getEnabled() {
@@ -49,7 +49,7 @@ public final class ApplicationGatewayWebApplicationFirewallConfigurationResponse
      * The exclusion list.
      * 
      */
-    @InputImport(name="exclusions")
+    @Import(name="exclusions")
       private final @Nullable List<ApplicationGatewayFirewallExclusionResponse> exclusions;
 
     public List<ApplicationGatewayFirewallExclusionResponse> getExclusions() {
@@ -60,7 +60,7 @@ public final class ApplicationGatewayWebApplicationFirewallConfigurationResponse
      * Maximum file upload size in Mb for WAF.
      * 
      */
-    @InputImport(name="fileUploadLimitInMb")
+    @Import(name="fileUploadLimitInMb")
       private final @Nullable Integer fileUploadLimitInMb;
 
     public Optional<Integer> getFileUploadLimitInMb() {
@@ -71,7 +71,7 @@ public final class ApplicationGatewayWebApplicationFirewallConfigurationResponse
      * Web application firewall mode.
      * 
      */
-    @InputImport(name="firewallMode", required=true)
+    @Import(name="firewallMode", required=true)
       private final String firewallMode;
 
     public String getFirewallMode() {
@@ -82,7 +82,7 @@ public final class ApplicationGatewayWebApplicationFirewallConfigurationResponse
      * Maximum request body size for WAF.
      * 
      */
-    @InputImport(name="maxRequestBodySize")
+    @Import(name="maxRequestBodySize")
       private final @Nullable Integer maxRequestBodySize;
 
     public Optional<Integer> getMaxRequestBodySize() {
@@ -93,7 +93,7 @@ public final class ApplicationGatewayWebApplicationFirewallConfigurationResponse
      * Maximum request body size in Kb for WAF.
      * 
      */
-    @InputImport(name="maxRequestBodySizeInKb")
+    @Import(name="maxRequestBodySizeInKb")
       private final @Nullable Integer maxRequestBodySizeInKb;
 
     public Optional<Integer> getMaxRequestBodySizeInKb() {
@@ -104,7 +104,7 @@ public final class ApplicationGatewayWebApplicationFirewallConfigurationResponse
      * Whether allow WAF to check request Body.
      * 
      */
-    @InputImport(name="requestBodyCheck")
+    @Import(name="requestBodyCheck")
       private final @Nullable Boolean requestBodyCheck;
 
     public Optional<Boolean> getRequestBodyCheck() {
@@ -115,7 +115,7 @@ public final class ApplicationGatewayWebApplicationFirewallConfigurationResponse
      * The type of the web application firewall rule set. Possible values are: 'OWASP'.
      * 
      */
-    @InputImport(name="ruleSetType", required=true)
+    @Import(name="ruleSetType", required=true)
       private final String ruleSetType;
 
     public String getRuleSetType() {
@@ -126,7 +126,7 @@ public final class ApplicationGatewayWebApplicationFirewallConfigurationResponse
      * The version of the rule set type.
      * 
      */
-    @InputImport(name="ruleSetVersion", required=true)
+    @Import(name="ruleSetVersion", required=true)
       private final String ruleSetVersion;
 
     public String getRuleSetVersion() {

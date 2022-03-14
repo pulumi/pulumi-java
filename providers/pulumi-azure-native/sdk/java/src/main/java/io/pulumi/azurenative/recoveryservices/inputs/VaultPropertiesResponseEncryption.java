@@ -5,7 +5,7 @@ package io.pulumi.azurenative.recoveryservices.inputs;
 
 import io.pulumi.azurenative.recoveryservices.inputs.CmkKekIdentityResponse;
 import io.pulumi.azurenative.recoveryservices.inputs.CmkKeyVaultPropertiesResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class VaultPropertiesResponseEncryption extends io.pulumi.resources
      * Enabling/Disabling the Double Encryption state
      * 
      */
-    @InputImport(name="infrastructureEncryption")
+    @Import(name="infrastructureEncryption")
       private final @Nullable String infrastructureEncryption;
 
     public Optional<String> getInfrastructureEncryption() {
@@ -35,7 +35,7 @@ public final class VaultPropertiesResponseEncryption extends io.pulumi.resources
      * The details of the identity used for CMK
      * 
      */
-    @InputImport(name="kekIdentity")
+    @Import(name="kekIdentity")
       private final @Nullable CmkKekIdentityResponse kekIdentity;
 
     public Optional<CmkKekIdentityResponse> getKekIdentity() {
@@ -46,7 +46,7 @@ public final class VaultPropertiesResponseEncryption extends io.pulumi.resources
      * The properties of the Key Vault which hosts CMK
      * 
      */
-    @InputImport(name="keyVaultProperties")
+    @Import(name="keyVaultProperties")
       private final @Nullable CmkKeyVaultPropertiesResponse keyVaultProperties;
 
     public Optional<CmkKeyVaultPropertiesResponse> getKeyVaultProperties() {

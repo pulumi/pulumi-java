@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.SubResourceResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class LoadBalancerBackendAddressResponse extends io.pulumi.resource
      * IP Address belonging to the referenced virtual network.
      * 
      */
-    @InputImport(name="ipAddress")
+    @Import(name="ipAddress")
       private final @Nullable String ipAddress;
 
     public Optional<String> getIpAddress() {
@@ -34,7 +34,7 @@ public final class LoadBalancerBackendAddressResponse extends io.pulumi.resource
      * Reference to the frontend ip address configuration defined in regional loadbalancer.
      * 
      */
-    @InputImport(name="loadBalancerFrontendIPConfiguration")
+    @Import(name="loadBalancerFrontendIPConfiguration")
       private final @Nullable SubResourceResponse loadBalancerFrontendIPConfiguration;
 
     public Optional<SubResourceResponse> getLoadBalancerFrontendIPConfiguration() {
@@ -45,7 +45,7 @@ public final class LoadBalancerBackendAddressResponse extends io.pulumi.resource
      * Name of the backend address.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -56,7 +56,7 @@ public final class LoadBalancerBackendAddressResponse extends io.pulumi.resource
      * Reference to IP address defined in network interfaces.
      * 
      */
-    @InputImport(name="networkInterfaceIPConfiguration", required=true)
+    @Import(name="networkInterfaceIPConfiguration", required=true)
       private final SubResourceResponse networkInterfaceIPConfiguration;
 
     public SubResourceResponse getNetworkInterfaceIPConfiguration() {
@@ -67,7 +67,7 @@ public final class LoadBalancerBackendAddressResponse extends io.pulumi.resource
      * Reference to an existing subnet.
      * 
      */
-    @InputImport(name="subnet")
+    @Import(name="subnet")
       private final @Nullable SubResourceResponse subnet;
 
     public Optional<SubResourceResponse> getSubnet() {
@@ -78,7 +78,7 @@ public final class LoadBalancerBackendAddressResponse extends io.pulumi.resource
      * Reference to an existing virtual network.
      * 
      */
-    @InputImport(name="virtualNetwork")
+    @Import(name="virtualNetwork")
       private final @Nullable SubResourceResponse virtualNetwork;
 
     public Optional<SubResourceResponse> getVirtualNetwork() {

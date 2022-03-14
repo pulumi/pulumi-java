@@ -5,12 +5,12 @@ package io.pulumi.azurenative.datafactory.outputs;
 
 import io.pulumi.azurenative.datafactory.outputs.DatasetReferenceResponse;
 import io.pulumi.azurenative.datafactory.outputs.LinkedServiceReferenceResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CustomActivityReferenceObjectResponse {
     /**
      * Dataset references.
@@ -23,10 +23,10 @@ public final class CustomActivityReferenceObjectResponse {
      */
     private final @Nullable List<LinkedServiceReferenceResponse> linkedServices;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CustomActivityReferenceObjectResponse(
-        @OutputCustomType.Parameter("datasets") @Nullable List<DatasetReferenceResponse> datasets,
-        @OutputCustomType.Parameter("linkedServices") @Nullable List<LinkedServiceReferenceResponse> linkedServices) {
+        @CustomType.Parameter("datasets") @Nullable List<DatasetReferenceResponse> datasets,
+        @CustomType.Parameter("linkedServices") @Nullable List<LinkedServiceReferenceResponse> linkedServices) {
         this.datasets = datasets;
         this.linkedServices = linkedServices;
     }

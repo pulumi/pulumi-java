@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.webpubsub.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class WebPubSubFeatureResponse extends io.pulumi.resources.InvokeAr
      *  - EnableLiveTrace: Live Trace allows you to know what's happening inside Azure SignalR service, it will give you live traces in real time, it will be helpful when you developing your own Azure SignalR based web application or self-troubleshooting some issues. Please note that live traces are counted as outbound messages that will be charged. Values allowed: "true"/"false", to enable/disable live trace feature.
      * 
      */
-    @InputImport(name="flag", required=true)
+    @Import(name="flag", required=true)
       private final String flag;
 
     public String getFlag() {
@@ -37,7 +37,7 @@ public final class WebPubSubFeatureResponse extends io.pulumi.resources.InvokeAr
      * Optional properties related to this feature.
      * 
      */
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable Map<String,String> properties;
 
     public Map<String,String> getProperties() {
@@ -48,7 +48,7 @@ public final class WebPubSubFeatureResponse extends io.pulumi.resources.InvokeAr
      * Value of the feature flag. See Azure SignalR service document https://docs.microsoft.com/azure/azure-signalr/ for allowed values.
      * 
      */
-    @InputImport(name="value", required=true)
+    @Import(name="value", required=true)
       private final String value;
 
     public String getValue() {

@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.compute.outputs;
 
 import io.pulumi.azurenative.compute.outputs.CloudServiceExtensionPropertiesResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ExtensionResponse {
     /**
      * The name of the extension.
@@ -23,10 +23,10 @@ public final class ExtensionResponse {
      */
     private final @Nullable CloudServiceExtensionPropertiesResponse properties;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ExtensionResponse(
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("properties") @Nullable CloudServiceExtensionPropertiesResponse properties) {
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("properties") @Nullable CloudServiceExtensionPropertiesResponse properties) {
         this.name = name;
         this.properties = properties;
     }

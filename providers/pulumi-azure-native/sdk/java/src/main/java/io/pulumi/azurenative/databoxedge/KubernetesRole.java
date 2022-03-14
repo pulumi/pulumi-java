@@ -10,7 +10,7 @@ import io.pulumi.azurenative.databoxedge.outputs.KubernetesRoleResourcesResponse
 import io.pulumi.azurenative.databoxedge.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -37,7 +37,7 @@ public class KubernetesRole extends io.pulumi.resources.CustomResource {
      * Host OS supported by the Kubernetes role.
      * 
      */
-    @OutputExport(name="hostPlatform", type=String.class, parameters={})
+    @Export(name="hostPlatform", type=String.class, parameters={})
     private Output<String> hostPlatform;
 
     /**
@@ -51,7 +51,7 @@ public class KubernetesRole extends io.pulumi.resources.CustomResource {
      * Platform where the runtime is hosted.
      * 
      */
-    @OutputExport(name="hostPlatformType", type=String.class, parameters={})
+    @Export(name="hostPlatformType", type=String.class, parameters={})
     private Output<String> hostPlatformType;
 
     /**
@@ -66,7 +66,7 @@ public class KubernetesRole extends io.pulumi.resources.CustomResource {
      * Expected value is 'Kubernetes'.
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
     /**
@@ -81,7 +81,7 @@ public class KubernetesRole extends io.pulumi.resources.CustomResource {
      * Kubernetes cluster configuration
      * 
      */
-    @OutputExport(name="kubernetesClusterInfo", type=KubernetesClusterInfoResponse.class, parameters={})
+    @Export(name="kubernetesClusterInfo", type=KubernetesClusterInfoResponse.class, parameters={})
     private Output<KubernetesClusterInfoResponse> kubernetesClusterInfo;
 
     /**
@@ -95,7 +95,7 @@ public class KubernetesRole extends io.pulumi.resources.CustomResource {
      * Kubernetes role resources
      * 
      */
-    @OutputExport(name="kubernetesRoleResources", type=KubernetesRoleResourcesResponse.class, parameters={})
+    @Export(name="kubernetesRoleResources", type=KubernetesRoleResourcesResponse.class, parameters={})
     private Output<KubernetesRoleResourcesResponse> kubernetesRoleResources;
 
     /**
@@ -109,7 +109,7 @@ public class KubernetesRole extends io.pulumi.resources.CustomResource {
      * The object name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -123,7 +123,7 @@ public class KubernetesRole extends io.pulumi.resources.CustomResource {
      * State of Kubernetes deployment
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -137,7 +137,7 @@ public class KubernetesRole extends io.pulumi.resources.CustomResource {
      * Role status.
      * 
      */
-    @OutputExport(name="roleStatus", type=String.class, parameters={})
+    @Export(name="roleStatus", type=String.class, parameters={})
     private Output<String> roleStatus;
 
     /**
@@ -151,7 +151,7 @@ public class KubernetesRole extends io.pulumi.resources.CustomResource {
      * Role configured on ASE resource
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -165,7 +165,7 @@ public class KubernetesRole extends io.pulumi.resources.CustomResource {
      * The hierarchical type of the object.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

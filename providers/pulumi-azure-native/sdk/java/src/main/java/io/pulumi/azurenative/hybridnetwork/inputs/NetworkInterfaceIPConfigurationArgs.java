@@ -7,7 +7,7 @@ import io.pulumi.azurenative.hybridnetwork.enums.IPAllocationMethod;
 import io.pulumi.azurenative.hybridnetwork.enums.IPVersion;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class NetworkInterfaceIPConfigurationArgs extends io.pulumi.resourc
      * The list of DNS servers IP addresses.
      * 
      */
-    @InputImport(name="dnsServers")
+    @Import(name="dnsServers")
       private final @Nullable Output<List<String>> dnsServers;
 
     public Output<List<String>> getDnsServers() {
@@ -37,7 +37,7 @@ public final class NetworkInterfaceIPConfigurationArgs extends io.pulumi.resourc
      * The value of the gateway.
      * 
      */
-    @InputImport(name="gateway")
+    @Import(name="gateway")
       private final @Nullable Output<String> gateway;
 
     public Output<String> getGateway() {
@@ -48,7 +48,7 @@ public final class NetworkInterfaceIPConfigurationArgs extends io.pulumi.resourc
      * The value of the IP address.
      * 
      */
-    @InputImport(name="ipAddress")
+    @Import(name="ipAddress")
       private final @Nullable Output<String> ipAddress;
 
     public Output<String> getIpAddress() {
@@ -59,7 +59,7 @@ public final class NetworkInterfaceIPConfigurationArgs extends io.pulumi.resourc
      * IP address allocation method.
      * 
      */
-    @InputImport(name="ipAllocationMethod")
+    @Import(name="ipAllocationMethod")
       private final @Nullable Output<Either<String,IPAllocationMethod>> ipAllocationMethod;
 
     public Output<Either<String,IPAllocationMethod>> getIpAllocationMethod() {
@@ -70,7 +70,7 @@ public final class NetworkInterfaceIPConfigurationArgs extends io.pulumi.resourc
      * IP address version.
      * 
      */
-    @InputImport(name="ipVersion")
+    @Import(name="ipVersion")
       private final @Nullable Output<Either<String,IPVersion>> ipVersion;
 
     public Output<Either<String,IPVersion>> getIpVersion() {
@@ -81,7 +81,7 @@ public final class NetworkInterfaceIPConfigurationArgs extends io.pulumi.resourc
      * The value of the subnet.
      * 
      */
-    @InputImport(name="subnet")
+    @Import(name="subnet")
       private final @Nullable Output<String> subnet;
 
     public Output<String> getSubnet() {

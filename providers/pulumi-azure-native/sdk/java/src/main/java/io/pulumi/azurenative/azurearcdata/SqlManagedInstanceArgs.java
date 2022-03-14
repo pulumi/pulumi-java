@@ -7,7 +7,7 @@ import io.pulumi.azurenative.azurearcdata.inputs.ExtendedLocationArgs;
 import io.pulumi.azurenative.azurearcdata.inputs.SqlManagedInstancePropertiesArgs;
 import io.pulumi.azurenative.azurearcdata.inputs.SqlManagedInstanceSkuArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class SqlManagedInstanceArgs extends io.pulumi.resources.ResourceAr
      * The extendedLocation of the resource.
      * 
      */
-    @InputImport(name="extendedLocation")
+    @Import(name="extendedLocation")
       private final @Nullable Output<ExtendedLocationArgs> extendedLocation;
 
     public Output<ExtendedLocationArgs> getExtendedLocation() {
@@ -33,7 +33,7 @@ public final class SqlManagedInstanceArgs extends io.pulumi.resources.ResourceAr
      * The geo-location where the resource lives
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -44,7 +44,7 @@ public final class SqlManagedInstanceArgs extends io.pulumi.resources.ResourceAr
      * null
      * 
      */
-    @InputImport(name="properties", required=true)
+    @Import(name="properties", required=true)
       private final Output<SqlManagedInstancePropertiesArgs> properties;
 
     public Output<SqlManagedInstancePropertiesArgs> getProperties() {
@@ -55,7 +55,7 @@ public final class SqlManagedInstanceArgs extends io.pulumi.resources.ResourceAr
      * The name of the Azure resource group
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -66,7 +66,7 @@ public final class SqlManagedInstanceArgs extends io.pulumi.resources.ResourceAr
      * Resource sku.
      * 
      */
-    @InputImport(name="sku")
+    @Import(name="sku")
       private final @Nullable Output<SqlManagedInstanceSkuArgs> sku;
 
     public Output<SqlManagedInstanceSkuArgs> getSku() {
@@ -77,7 +77,7 @@ public final class SqlManagedInstanceArgs extends io.pulumi.resources.ResourceAr
      * The name of SQL Managed Instances
      * 
      */
-    @InputImport(name="sqlManagedInstanceName")
+    @Import(name="sqlManagedInstanceName")
       private final @Nullable Output<String> sqlManagedInstanceName;
 
     public Output<String> getSqlManagedInstanceName() {
@@ -88,7 +88,7 @@ public final class SqlManagedInstanceArgs extends io.pulumi.resources.ResourceAr
      * Resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

@@ -8,7 +8,7 @@ import io.pulumi.azurenative.datafactory.inputs.IntegrationRuntimeReferenceRespo
 import io.pulumi.azurenative.datafactory.inputs.ParameterSpecificationResponse;
 import io.pulumi.azurenative.datafactory.inputs.SecureStringResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -30,7 +30,7 @@ public final class HttpLinkedServiceResponse extends io.pulumi.resources.InvokeA
      * List of tags that can be used for describing the linked service.
      * 
      */
-    @InputImport(name="annotations")
+    @Import(name="annotations")
       private final @Nullable List<Object> annotations;
 
     public List<Object> getAnnotations() {
@@ -41,7 +41,7 @@ public final class HttpLinkedServiceResponse extends io.pulumi.resources.InvokeA
      * The additional HTTP headers in the request to RESTful API used for authorization. Type: object (or Expression with resultType object).
      * 
      */
-    @InputImport(name="authHeaders")
+    @Import(name="authHeaders")
       private final @Nullable Object authHeaders;
 
     public Optional<Object> getAuthHeaders() {
@@ -52,7 +52,7 @@ public final class HttpLinkedServiceResponse extends io.pulumi.resources.InvokeA
      * The authentication type to be used to connect to the HTTP server.
      * 
      */
-    @InputImport(name="authenticationType")
+    @Import(name="authenticationType")
       private final @Nullable String authenticationType;
 
     public Optional<String> getAuthenticationType() {
@@ -63,7 +63,7 @@ public final class HttpLinkedServiceResponse extends io.pulumi.resources.InvokeA
      * Thumbprint of certificate for ClientCertificate authentication. Only valid for on-premises copy. For on-premises copy with ClientCertificate authentication, either CertThumbprint or EmbeddedCertData/Password should be specified. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="certThumbprint")
+    @Import(name="certThumbprint")
       private final @Nullable Object certThumbprint;
 
     public Optional<Object> getCertThumbprint() {
@@ -74,7 +74,7 @@ public final class HttpLinkedServiceResponse extends io.pulumi.resources.InvokeA
      * The integration runtime reference.
      * 
      */
-    @InputImport(name="connectVia")
+    @Import(name="connectVia")
       private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
     public Optional<IntegrationRuntimeReferenceResponse> getConnectVia() {
@@ -85,7 +85,7 @@ public final class HttpLinkedServiceResponse extends io.pulumi.resources.InvokeA
      * Linked service description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable String description;
 
     public Optional<String> getDescription() {
@@ -96,7 +96,7 @@ public final class HttpLinkedServiceResponse extends io.pulumi.resources.InvokeA
      * Base64 encoded certificate data for ClientCertificate authentication. For on-premises copy with ClientCertificate authentication, either CertThumbprint or EmbeddedCertData/Password should be specified. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="embeddedCertData")
+    @Import(name="embeddedCertData")
       private final @Nullable Object embeddedCertData;
 
     public Optional<Object> getEmbeddedCertData() {
@@ -107,7 +107,7 @@ public final class HttpLinkedServiceResponse extends io.pulumi.resources.InvokeA
      * If true, validate the HTTPS server SSL certificate. Default value is true. Type: boolean (or Expression with resultType boolean).
      * 
      */
-    @InputImport(name="enableServerCertificateValidation")
+    @Import(name="enableServerCertificateValidation")
       private final @Nullable Object enableServerCertificateValidation;
 
     public Optional<Object> getEnableServerCertificateValidation() {
@@ -118,7 +118,7 @@ public final class HttpLinkedServiceResponse extends io.pulumi.resources.InvokeA
      * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="encryptedCredential")
+    @Import(name="encryptedCredential")
       private final @Nullable Object encryptedCredential;
 
     public Optional<Object> getEncryptedCredential() {
@@ -129,7 +129,7 @@ public final class HttpLinkedServiceResponse extends io.pulumi.resources.InvokeA
      * Parameters for linked service.
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
     public Map<String,ParameterSpecificationResponse> getParameters() {
@@ -140,7 +140,7 @@ public final class HttpLinkedServiceResponse extends io.pulumi.resources.InvokeA
      * Password for Basic, Digest, Windows, or ClientCertificate with EmbeddedCertData authentication.
      * 
      */
-    @InputImport(name="password")
+    @Import(name="password")
       private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
 
     public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> getPassword() {
@@ -152,7 +152,7 @@ public final class HttpLinkedServiceResponse extends io.pulumi.resources.InvokeA
      * Expected value is 'HttpServer'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {
@@ -163,7 +163,7 @@ public final class HttpLinkedServiceResponse extends io.pulumi.resources.InvokeA
      * The base URL of the HTTP endpoint, e.g. http://www.microsoft.com. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="url", required=true)
+    @Import(name="url", required=true)
       private final Object url;
 
     public Object getUrl() {
@@ -174,7 +174,7 @@ public final class HttpLinkedServiceResponse extends io.pulumi.resources.InvokeA
      * User name for Basic, Digest, or Windows authentication. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="userName")
+    @Import(name="userName")
       private final @Nullable Object userName;
 
     public Optional<Object> getUserName() {

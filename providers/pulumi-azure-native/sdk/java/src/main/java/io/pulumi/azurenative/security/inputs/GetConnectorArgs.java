@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.security.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetConnectorArgs extends io.pulumi.resources.InvokeArgs {
      * Name of the cloud account connector
      * 
      */
-    @InputImport(name="connectorName", required=true)
+    @Import(name="connectorName", required=true)
       private final String connectorName;
 
     public String getConnectorName() {

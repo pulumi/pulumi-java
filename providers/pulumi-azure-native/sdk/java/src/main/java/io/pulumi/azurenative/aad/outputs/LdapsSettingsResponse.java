@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.aad.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class LdapsSettingsResponse {
     /**
      * NotAfter DateTime of configure ldaps certificate.
@@ -47,15 +47,15 @@ public final class LdapsSettingsResponse {
      */
     private final String publicCertificate;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LdapsSettingsResponse(
-        @OutputCustomType.Parameter("certificateNotAfter") String certificateNotAfter,
-        @OutputCustomType.Parameter("certificateThumbprint") String certificateThumbprint,
-        @OutputCustomType.Parameter("externalAccess") @Nullable String externalAccess,
-        @OutputCustomType.Parameter("ldaps") @Nullable String ldaps,
-        @OutputCustomType.Parameter("pfxCertificate") @Nullable String pfxCertificate,
-        @OutputCustomType.Parameter("pfxCertificatePassword") @Nullable String pfxCertificatePassword,
-        @OutputCustomType.Parameter("publicCertificate") String publicCertificate) {
+        @CustomType.Parameter("certificateNotAfter") String certificateNotAfter,
+        @CustomType.Parameter("certificateThumbprint") String certificateThumbprint,
+        @CustomType.Parameter("externalAccess") @Nullable String externalAccess,
+        @CustomType.Parameter("ldaps") @Nullable String ldaps,
+        @CustomType.Parameter("pfxCertificate") @Nullable String pfxCertificate,
+        @CustomType.Parameter("pfxCertificatePassword") @Nullable String pfxCertificatePassword,
+        @CustomType.Parameter("publicCertificate") String publicCertificate) {
         this.certificateNotAfter = certificateNotAfter;
         this.certificateThumbprint = certificateThumbprint;
         this.externalAccess = externalAccess;

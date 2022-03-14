@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.devtestlab.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class LabSupportPropertiesResponse extends io.pulumi.resources.Invo
      * Is the lab support banner active/enabled at this time?
      * 
      */
-    @InputImport(name="enabled")
+    @Import(name="enabled")
       private final @Nullable String enabled;
 
     public Optional<String> getEnabled() {
@@ -33,7 +33,7 @@ public final class LabSupportPropertiesResponse extends io.pulumi.resources.Invo
      * The markdown text (if any) that this lab displays in the UI. If left empty/null, nothing will be shown.
      * 
      */
-    @InputImport(name="markdown")
+    @Import(name="markdown")
       private final @Nullable String markdown;
 
     public Optional<String> getMarkdown() {

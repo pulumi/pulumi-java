@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.automation.outputs;
 
 import io.pulumi.azurenative.automation.outputs.RunbookAssociationPropertyResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetWebhookResult {
     /**
      * Gets or sets the creation time.
@@ -85,22 +85,22 @@ public final class GetWebhookResult {
      */
     private final @Nullable String uri;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetWebhookResult(
-        @OutputCustomType.Parameter("creationTime") @Nullable String creationTime,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("expiryTime") @Nullable String expiryTime,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("isEnabled") @Nullable Boolean isEnabled,
-        @OutputCustomType.Parameter("lastInvokedTime") @Nullable String lastInvokedTime,
-        @OutputCustomType.Parameter("lastModifiedBy") @Nullable String lastModifiedBy,
-        @OutputCustomType.Parameter("lastModifiedTime") @Nullable String lastModifiedTime,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("parameters") @Nullable Map<String,String> parameters,
-        @OutputCustomType.Parameter("runOn") @Nullable String runOn,
-        @OutputCustomType.Parameter("runbook") @Nullable RunbookAssociationPropertyResponse runbook,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("uri") @Nullable String uri) {
+        @CustomType.Parameter("creationTime") @Nullable String creationTime,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("expiryTime") @Nullable String expiryTime,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("isEnabled") @Nullable Boolean isEnabled,
+        @CustomType.Parameter("lastInvokedTime") @Nullable String lastInvokedTime,
+        @CustomType.Parameter("lastModifiedBy") @Nullable String lastModifiedBy,
+        @CustomType.Parameter("lastModifiedTime") @Nullable String lastModifiedTime,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("parameters") @Nullable Map<String,String> parameters,
+        @CustomType.Parameter("runOn") @Nullable String runOn,
+        @CustomType.Parameter("runbook") @Nullable RunbookAssociationPropertyResponse runbook,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("uri") @Nullable String uri) {
         this.creationTime = creationTime;
         this.description = description;
         this.expiryTime = expiryTime;

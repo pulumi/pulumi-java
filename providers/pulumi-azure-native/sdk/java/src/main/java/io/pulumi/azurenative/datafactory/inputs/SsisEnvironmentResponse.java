@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.azurenative.datafactory.inputs.SsisVariableResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class SsisEnvironmentResponse extends io.pulumi.resources.InvokeArg
      * Metadata description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable String description;
 
     public Optional<String> getDescription() {
@@ -36,7 +36,7 @@ public final class SsisEnvironmentResponse extends io.pulumi.resources.InvokeArg
      * Folder id which contains environment.
      * 
      */
-    @InputImport(name="folderId")
+    @Import(name="folderId")
       private final @Nullable Double folderId;
 
     public Optional<Double> getFolderId() {
@@ -47,7 +47,7 @@ public final class SsisEnvironmentResponse extends io.pulumi.resources.InvokeArg
      * Metadata id.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Double id;
 
     public Optional<Double> getId() {
@@ -58,7 +58,7 @@ public final class SsisEnvironmentResponse extends io.pulumi.resources.InvokeArg
      * Metadata name.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -70,7 +70,7 @@ public final class SsisEnvironmentResponse extends io.pulumi.resources.InvokeArg
      * Expected value is 'Environment'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {
@@ -81,7 +81,7 @@ public final class SsisEnvironmentResponse extends io.pulumi.resources.InvokeArg
      * Variable in environment
      * 
      */
-    @InputImport(name="variables")
+    @Import(name="variables")
       private final @Nullable List<SsisVariableResponse> variables;
 
     public List<SsisVariableResponse> getVariables() {

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.aad.enums.ExternalAccess;
 import io.pulumi.azurenative.aad.enums.Ldaps;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class LdapsSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * A flag to determine whether or not Secure LDAP access over the internet is enabled or disabled.
      * 
      */
-    @InputImport(name="externalAccess")
+    @Import(name="externalAccess")
       private final @Nullable Output<Either<String,ExternalAccess>> externalAccess;
 
     public Output<Either<String,ExternalAccess>> getExternalAccess() {
@@ -36,7 +36,7 @@ public final class LdapsSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * A flag to determine whether or not Secure LDAP is enabled or disabled.
      * 
      */
-    @InputImport(name="ldaps")
+    @Import(name="ldaps")
       private final @Nullable Output<Either<String,Ldaps>> ldaps;
 
     public Output<Either<String,Ldaps>> getLdaps() {
@@ -47,7 +47,7 @@ public final class LdapsSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * The certificate required to configure Secure LDAP. The parameter passed here should be a base64encoded representation of the certificate pfx file.
      * 
      */
-    @InputImport(name="pfxCertificate")
+    @Import(name="pfxCertificate")
       private final @Nullable Output<String> pfxCertificate;
 
     public Output<String> getPfxCertificate() {
@@ -58,7 +58,7 @@ public final class LdapsSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * The password to decrypt the provided Secure LDAP certificate pfx file.
      * 
      */
-    @InputImport(name="pfxCertificatePassword")
+    @Import(name="pfxCertificatePassword")
       private final @Nullable Output<String> pfxCertificatePassword;
 
     public Output<String> getPfxCertificatePassword() {

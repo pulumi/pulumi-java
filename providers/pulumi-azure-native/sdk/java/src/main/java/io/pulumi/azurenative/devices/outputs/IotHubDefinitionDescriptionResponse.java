@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.devices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class IotHubDefinitionDescriptionResponse {
     /**
      * weight to apply for a given iot h.
@@ -39,13 +39,13 @@ public final class IotHubDefinitionDescriptionResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private IotHubDefinitionDescriptionResponse(
-        @OutputCustomType.Parameter("allocationWeight") @Nullable Integer allocationWeight,
-        @OutputCustomType.Parameter("applyAllocationPolicy") @Nullable Boolean applyAllocationPolicy,
-        @OutputCustomType.Parameter("connectionString") String connectionString,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("name") String name) {
+        @CustomType.Parameter("allocationWeight") @Nullable Integer allocationWeight,
+        @CustomType.Parameter("applyAllocationPolicy") @Nullable Boolean applyAllocationPolicy,
+        @CustomType.Parameter("connectionString") String connectionString,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("name") String name) {
         this.allocationWeight = allocationWeight;
         this.applyAllocationPolicy = applyAllocationPolicy;
         this.connectionString = connectionString;

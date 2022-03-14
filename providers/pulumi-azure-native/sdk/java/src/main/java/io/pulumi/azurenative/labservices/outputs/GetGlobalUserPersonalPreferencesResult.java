@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.labservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetGlobalUserPersonalPreferencesResult {
     /**
      * Array of favorite lab resource ids
@@ -23,10 +23,10 @@ public final class GetGlobalUserPersonalPreferencesResult {
      */
     private final @Nullable String id;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetGlobalUserPersonalPreferencesResult(
-        @OutputCustomType.Parameter("favoriteLabResourceIds") @Nullable List<String> favoriteLabResourceIds,
-        @OutputCustomType.Parameter("id") @Nullable String id) {
+        @CustomType.Parameter("favoriteLabResourceIds") @Nullable List<String> favoriteLabResourceIds,
+        @CustomType.Parameter("id") @Nullable String id) {
         this.favoriteLabResourceIds = favoriteLabResourceIds;
         this.id = id;
     }

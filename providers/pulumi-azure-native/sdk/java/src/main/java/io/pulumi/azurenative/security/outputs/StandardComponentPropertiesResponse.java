@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.security.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class StandardComponentPropertiesResponse {
     /**
      * Component Key matching componentMetadata
@@ -17,8 +17,8 @@ public final class StandardComponentPropertiesResponse {
      */
     private final @Nullable String key;
 
-    @OutputCustomType.Constructor
-    private StandardComponentPropertiesResponse(@OutputCustomType.Parameter("key") @Nullable String key) {
+    @CustomType.Constructor
+    private StandardComponentPropertiesResponse(@CustomType.Parameter("key") @Nullable String key) {
         this.key = key;
     }
 

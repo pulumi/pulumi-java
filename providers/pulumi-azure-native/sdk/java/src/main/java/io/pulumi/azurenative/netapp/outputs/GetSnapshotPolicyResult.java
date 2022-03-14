@@ -7,7 +7,7 @@ import io.pulumi.azurenative.netapp.outputs.DailyScheduleResponse;
 import io.pulumi.azurenative.netapp.outputs.HourlyScheduleResponse;
 import io.pulumi.azurenative.netapp.outputs.MonthlyScheduleResponse;
 import io.pulumi.azurenative.netapp.outputs.WeeklyScheduleResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -15,7 +15,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetSnapshotPolicyResult {
     /**
      * Schedule for daily snapshots
@@ -73,19 +73,19 @@ public final class GetSnapshotPolicyResult {
      */
     private final @Nullable WeeklyScheduleResponse weeklySchedule;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetSnapshotPolicyResult(
-        @OutputCustomType.Parameter("dailySchedule") @Nullable DailyScheduleResponse dailySchedule,
-        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
-        @OutputCustomType.Parameter("hourlySchedule") @Nullable HourlyScheduleResponse hourlySchedule,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("monthlySchedule") @Nullable MonthlyScheduleResponse monthlySchedule,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("weeklySchedule") @Nullable WeeklyScheduleResponse weeklySchedule) {
+        @CustomType.Parameter("dailySchedule") @Nullable DailyScheduleResponse dailySchedule,
+        @CustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @CustomType.Parameter("hourlySchedule") @Nullable HourlyScheduleResponse hourlySchedule,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("monthlySchedule") @Nullable MonthlyScheduleResponse monthlySchedule,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("weeklySchedule") @Nullable WeeklyScheduleResponse weeklySchedule) {
         this.dailySchedule = dailySchedule;
         this.enabled = enabled;
         this.hourlySchedule = hourlySchedule;

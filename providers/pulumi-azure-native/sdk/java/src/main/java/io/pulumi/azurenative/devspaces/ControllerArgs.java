@@ -5,7 +5,7 @@ package io.pulumi.azurenative.devspaces;
 
 import io.pulumi.azurenative.devspaces.inputs.SkuArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ControllerArgs extends io.pulumi.resources.ResourceArgs {
      * Region where the Azure resource is located.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -31,7 +31,7 @@ public final class ControllerArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the resource.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -42,7 +42,7 @@ public final class ControllerArgs extends io.pulumi.resources.ResourceArgs {
      * Resource group to which the resource belongs.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -53,7 +53,7 @@ public final class ControllerArgs extends io.pulumi.resources.ResourceArgs {
      * Model representing SKU for Azure Dev Spaces Controller.
      * 
      */
-    @InputImport(name="sku", required=true)
+    @Import(name="sku", required=true)
       private final Output<SkuArgs> sku;
 
     public Output<SkuArgs> getSku() {
@@ -64,7 +64,7 @@ public final class ControllerArgs extends io.pulumi.resources.ResourceArgs {
      * Tags for the Azure resource.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -75,7 +75,7 @@ public final class ControllerArgs extends io.pulumi.resources.ResourceArgs {
      * Credentials of the target container host (base64).
      * 
      */
-    @InputImport(name="targetContainerHostCredentialsBase64", required=true)
+    @Import(name="targetContainerHostCredentialsBase64", required=true)
       private final Output<String> targetContainerHostCredentialsBase64;
 
     public Output<String> getTargetContainerHostCredentialsBase64() {
@@ -86,7 +86,7 @@ public final class ControllerArgs extends io.pulumi.resources.ResourceArgs {
      * Resource ID of the target container host
      * 
      */
-    @InputImport(name="targetContainerHostResourceId", required=true)
+    @Import(name="targetContainerHostResourceId", required=true)
       private final Output<String> targetContainerHostResourceId;
 
     public Output<String> getTargetContainerHostResourceId() {

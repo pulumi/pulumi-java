@@ -5,7 +5,7 @@ package io.pulumi.azurenative.loadtestservice;
 
 import io.pulumi.azurenative.loadtestservice.inputs.SystemAssignedServiceIdentityArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class LoadTestArgs extends io.pulumi.resources.ResourceArgs {
      * Description of the resource.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -31,7 +31,7 @@ public final class LoadTestArgs extends io.pulumi.resources.ResourceArgs {
      * The type of identity used for the resource.
      * 
      */
-    @InputImport(name="identity")
+    @Import(name="identity")
       private final @Nullable Output<SystemAssignedServiceIdentityArgs> identity;
 
     public Output<SystemAssignedServiceIdentityArgs> getIdentity() {
@@ -42,7 +42,7 @@ public final class LoadTestArgs extends io.pulumi.resources.ResourceArgs {
      * Load Test name.
      * 
      */
-    @InputImport(name="loadTestName")
+    @Import(name="loadTestName")
       private final @Nullable Output<String> loadTestName;
 
     public Output<String> getLoadTestName() {
@@ -53,7 +53,7 @@ public final class LoadTestArgs extends io.pulumi.resources.ResourceArgs {
      * The geo-location where the resource lives
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -64,7 +64,7 @@ public final class LoadTestArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -75,7 +75,7 @@ public final class LoadTestArgs extends io.pulumi.resources.ResourceArgs {
      * Resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

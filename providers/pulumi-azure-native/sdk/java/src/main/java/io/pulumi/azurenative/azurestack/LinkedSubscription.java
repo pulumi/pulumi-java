@@ -8,7 +8,7 @@ import io.pulumi.azurenative.azurestack.LinkedSubscriptionArgs;
 import io.pulumi.azurenative.azurestack.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -36,7 +36,7 @@ public class LinkedSubscription extends io.pulumi.resources.CustomResource {
      * The status of the remote management connection of the Azure Stack device.
      * 
      */
-    @OutputExport(name="deviceConnectionStatus", type=String.class, parameters={})
+    @Export(name="deviceConnectionStatus", type=String.class, parameters={})
     private Output<String> deviceConnectionStatus;
 
     /**
@@ -50,7 +50,7 @@ public class LinkedSubscription extends io.pulumi.resources.CustomResource {
      * The identifier of the Azure Stack device for remote management.
      * 
      */
-    @OutputExport(name="deviceId", type=String.class, parameters={})
+    @Export(name="deviceId", type=String.class, parameters={})
     private Output<String> deviceId;
 
     /**
@@ -64,7 +64,7 @@ public class LinkedSubscription extends io.pulumi.resources.CustomResource {
      * The connection state of the Azure Stack device.
      * 
      */
-    @OutputExport(name="deviceLinkState", type=String.class, parameters={})
+    @Export(name="deviceLinkState", type=String.class, parameters={})
     private Output<String> deviceLinkState;
 
     /**
@@ -78,7 +78,7 @@ public class LinkedSubscription extends io.pulumi.resources.CustomResource {
      * The object identifier associated with the Azure Stack device connecting to Azure.
      * 
      */
-    @OutputExport(name="deviceObjectId", type=String.class, parameters={})
+    @Export(name="deviceObjectId", type=String.class, parameters={})
     private Output<String> deviceObjectId;
 
     /**
@@ -92,7 +92,7 @@ public class LinkedSubscription extends io.pulumi.resources.CustomResource {
      * The entity tag used for optimistic concurrency when modifying the resource.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output</* @Nullable */ String> etag;
 
     /**
@@ -106,7 +106,7 @@ public class LinkedSubscription extends io.pulumi.resources.CustomResource {
      * The kind of the resource.
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
     /**
@@ -120,7 +120,7 @@ public class LinkedSubscription extends io.pulumi.resources.CustomResource {
      * The last remote management connection time for the Azure Stack device connected to the linked subscription resource.
      * 
      */
-    @OutputExport(name="lastConnectedTime", type=String.class, parameters={})
+    @Export(name="lastConnectedTime", type=String.class, parameters={})
     private Output<String> lastConnectedTime;
 
     /**
@@ -134,7 +134,7 @@ public class LinkedSubscription extends io.pulumi.resources.CustomResource {
      * The identifier associated with the device subscription.
      * 
      */
-    @OutputExport(name="linkedSubscriptionId", type=String.class, parameters={})
+    @Export(name="linkedSubscriptionId", type=String.class, parameters={})
     private Output</* @Nullable */ String> linkedSubscriptionId;
 
     /**
@@ -148,7 +148,7 @@ public class LinkedSubscription extends io.pulumi.resources.CustomResource {
      * Location of the resource.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -162,7 +162,7 @@ public class LinkedSubscription extends io.pulumi.resources.CustomResource {
      * Name of the resource.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -176,7 +176,7 @@ public class LinkedSubscription extends io.pulumi.resources.CustomResource {
      * The identifier associated with the device registration.
      * 
      */
-    @OutputExport(name="registrationResourceId", type=String.class, parameters={})
+    @Export(name="registrationResourceId", type=String.class, parameters={})
     private Output</* @Nullable */ String> registrationResourceId;
 
     /**
@@ -190,7 +190,7 @@ public class LinkedSubscription extends io.pulumi.resources.CustomResource {
      * Metadata pertaining to creation and last modification of the resource.
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -204,7 +204,7 @@ public class LinkedSubscription extends io.pulumi.resources.CustomResource {
      * Custom tags for the resource.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -218,7 +218,7 @@ public class LinkedSubscription extends io.pulumi.resources.CustomResource {
      * Type of Resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

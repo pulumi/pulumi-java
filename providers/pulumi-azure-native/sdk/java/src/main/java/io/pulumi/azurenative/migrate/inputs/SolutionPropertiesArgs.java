@@ -5,7 +5,7 @@ package io.pulumi.azurenative.migrate.inputs;
 
 import io.pulumi.azurenative.migrate.inputs.SolutionDetailsArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class SolutionPropertiesArgs extends io.pulumi.resources.ResourceAr
      * Gets or sets the cleanup state of the solution.
      * 
      */
-    @InputImport(name="cleanupState")
+    @Import(name="cleanupState")
       private final @Nullable Output<String> cleanupState;
 
     public Output<String> getCleanupState() {
@@ -34,7 +34,7 @@ public final class SolutionPropertiesArgs extends io.pulumi.resources.ResourceAr
      * Gets or sets the details of the solution.
      * 
      */
-    @InputImport(name="details")
+    @Import(name="details")
       private final @Nullable Output<SolutionDetailsArgs> details;
 
     public Output<SolutionDetailsArgs> getDetails() {
@@ -45,7 +45,7 @@ public final class SolutionPropertiesArgs extends io.pulumi.resources.ResourceAr
      * Gets or sets the goal of the solution.
      * 
      */
-    @InputImport(name="goal")
+    @Import(name="goal")
       private final @Nullable Output<String> goal;
 
     public Output<String> getGoal() {
@@ -56,7 +56,7 @@ public final class SolutionPropertiesArgs extends io.pulumi.resources.ResourceAr
      * Gets or sets the purpose of the solution.
      * 
      */
-    @InputImport(name="purpose")
+    @Import(name="purpose")
       private final @Nullable Output<String> purpose;
 
     public Output<String> getPurpose() {
@@ -67,7 +67,7 @@ public final class SolutionPropertiesArgs extends io.pulumi.resources.ResourceAr
      * Gets or sets the current status of the solution.
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable Output<String> status;
 
     public Output<String> getStatus() {
@@ -78,7 +78,7 @@ public final class SolutionPropertiesArgs extends io.pulumi.resources.ResourceAr
      * Gets or sets the tool being used in the solution.
      * 
      */
-    @InputImport(name="tool")
+    @Import(name="tool")
       private final @Nullable Output<String> tool;
 
     public Output<String> getTool() {

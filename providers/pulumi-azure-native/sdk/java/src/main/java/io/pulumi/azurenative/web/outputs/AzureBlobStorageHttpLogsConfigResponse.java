@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AzureBlobStorageHttpLogsConfigResponse {
     /**
      * True if configuration is enabled, false if it is disabled and null if configuration is not set.
@@ -31,11 +31,11 @@ public final class AzureBlobStorageHttpLogsConfigResponse {
      */
     private final @Nullable String sasUrl;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AzureBlobStorageHttpLogsConfigResponse(
-        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
-        @OutputCustomType.Parameter("retentionInDays") @Nullable Integer retentionInDays,
-        @OutputCustomType.Parameter("sasUrl") @Nullable String sasUrl) {
+        @CustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @CustomType.Parameter("retentionInDays") @Nullable Integer retentionInDays,
+        @CustomType.Parameter("sasUrl") @Nullable String sasUrl) {
         this.enabled = enabled;
         this.retentionInDays = retentionInDays;
         this.sasUrl = sasUrl;

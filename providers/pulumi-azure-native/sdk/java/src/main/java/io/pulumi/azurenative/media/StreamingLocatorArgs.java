@@ -5,7 +5,7 @@ package io.pulumi.azurenative.media;
 
 import io.pulumi.azurenative.media.inputs.StreamingLocatorContentKeyArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class StreamingLocatorArgs extends io.pulumi.resources.ResourceArgs
      * The Media Services account name.
      * 
      */
-    @InputImport(name="accountName", required=true)
+    @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
     public Output<String> getAccountName() {
@@ -31,7 +31,7 @@ public final class StreamingLocatorArgs extends io.pulumi.resources.ResourceArgs
      * Alternative Media ID of this Streaming Locator
      * 
      */
-    @InputImport(name="alternativeMediaId")
+    @Import(name="alternativeMediaId")
       private final @Nullable Output<String> alternativeMediaId;
 
     public Output<String> getAlternativeMediaId() {
@@ -42,7 +42,7 @@ public final class StreamingLocatorArgs extends io.pulumi.resources.ResourceArgs
      * Asset Name
      * 
      */
-    @InputImport(name="assetName", required=true)
+    @Import(name="assetName", required=true)
       private final Output<String> assetName;
 
     public Output<String> getAssetName() {
@@ -53,7 +53,7 @@ public final class StreamingLocatorArgs extends io.pulumi.resources.ResourceArgs
      * The ContentKeys used by this Streaming Locator.
      * 
      */
-    @InputImport(name="contentKeys")
+    @Import(name="contentKeys")
       private final @Nullable Output<List<StreamingLocatorContentKeyArgs>> contentKeys;
 
     public Output<List<StreamingLocatorContentKeyArgs>> getContentKeys() {
@@ -64,7 +64,7 @@ public final class StreamingLocatorArgs extends io.pulumi.resources.ResourceArgs
      * Name of the default ContentKeyPolicy used by this Streaming Locator.
      * 
      */
-    @InputImport(name="defaultContentKeyPolicyName")
+    @Import(name="defaultContentKeyPolicyName")
       private final @Nullable Output<String> defaultContentKeyPolicyName;
 
     public Output<String> getDefaultContentKeyPolicyName() {
@@ -75,7 +75,7 @@ public final class StreamingLocatorArgs extends io.pulumi.resources.ResourceArgs
      * The end time of the Streaming Locator.
      * 
      */
-    @InputImport(name="endTime")
+    @Import(name="endTime")
       private final @Nullable Output<String> endTime;
 
     public Output<String> getEndTime() {
@@ -86,7 +86,7 @@ public final class StreamingLocatorArgs extends io.pulumi.resources.ResourceArgs
      * A list of asset or account filters which apply to this streaming locator
      * 
      */
-    @InputImport(name="filters")
+    @Import(name="filters")
       private final @Nullable Output<List<String>> filters;
 
     public Output<List<String>> getFilters() {
@@ -97,7 +97,7 @@ public final class StreamingLocatorArgs extends io.pulumi.resources.ResourceArgs
      * The name of the resource group within the Azure subscription.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -108,7 +108,7 @@ public final class StreamingLocatorArgs extends io.pulumi.resources.ResourceArgs
      * The start time of the Streaming Locator.
      * 
      */
-    @InputImport(name="startTime")
+    @Import(name="startTime")
       private final @Nullable Output<String> startTime;
 
     public Output<String> getStartTime() {
@@ -119,7 +119,7 @@ public final class StreamingLocatorArgs extends io.pulumi.resources.ResourceArgs
      * The StreamingLocatorId of the Streaming Locator.
      * 
      */
-    @InputImport(name="streamingLocatorId")
+    @Import(name="streamingLocatorId")
       private final @Nullable Output<String> streamingLocatorId;
 
     public Output<String> getStreamingLocatorId() {
@@ -130,7 +130,7 @@ public final class StreamingLocatorArgs extends io.pulumi.resources.ResourceArgs
      * The Streaming Locator name.
      * 
      */
-    @InputImport(name="streamingLocatorName")
+    @Import(name="streamingLocatorName")
       private final @Nullable Output<String> streamingLocatorName;
 
     public Output<String> getStreamingLocatorName() {
@@ -141,7 +141,7 @@ public final class StreamingLocatorArgs extends io.pulumi.resources.ResourceArgs
      * Name of the Streaming Policy used by this Streaming Locator. Either specify the name of Streaming Policy you created or use one of the predefined Streaming Policies. The predefined Streaming Policies available are: 'Predefined_DownloadOnly', 'Predefined_ClearStreamingOnly', 'Predefined_DownloadAndClearStreaming', 'Predefined_ClearKey', 'Predefined_MultiDrmCencStreaming' and 'Predefined_MultiDrmStreaming'
      * 
      */
-    @InputImport(name="streamingPolicyName", required=true)
+    @Import(name="streamingPolicyName", required=true)
       private final Output<String> streamingPolicyName;
 
     public Output<String> getStreamingPolicyName() {

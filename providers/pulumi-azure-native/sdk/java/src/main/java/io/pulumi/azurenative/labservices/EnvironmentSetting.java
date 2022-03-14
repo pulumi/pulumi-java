@@ -9,7 +9,7 @@ import io.pulumi.azurenative.labservices.outputs.LatestOperationResultResponse;
 import io.pulumi.azurenative.labservices.outputs.ResourceSettingsResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -34,7 +34,7 @@ public class EnvironmentSetting extends io.pulumi.resources.CustomResource {
      * Describes the user's progress in configuring their environment setting
      * 
      */
-    @OutputExport(name="configurationState", type=String.class, parameters={})
+    @Export(name="configurationState", type=String.class, parameters={})
     private Output</* @Nullable */ String> configurationState;
 
     /**
@@ -48,7 +48,7 @@ public class EnvironmentSetting extends io.pulumi.resources.CustomResource {
      * Describes the environment and its resource settings
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -62,7 +62,7 @@ public class EnvironmentSetting extends io.pulumi.resources.CustomResource {
      * Time when the template VM was last changed.
      * 
      */
-    @OutputExport(name="lastChanged", type=String.class, parameters={})
+    @Export(name="lastChanged", type=String.class, parameters={})
     private Output<String> lastChanged;
 
     /**
@@ -76,7 +76,7 @@ public class EnvironmentSetting extends io.pulumi.resources.CustomResource {
      * Time when the template VM was last sent for publishing.
      * 
      */
-    @OutputExport(name="lastPublished", type=String.class, parameters={})
+    @Export(name="lastPublished", type=String.class, parameters={})
     private Output<String> lastPublished;
 
     /**
@@ -90,7 +90,7 @@ public class EnvironmentSetting extends io.pulumi.resources.CustomResource {
      * The details of the latest operation. ex: status, error
      * 
      */
-    @OutputExport(name="latestOperationResult", type=LatestOperationResultResponse.class, parameters={})
+    @Export(name="latestOperationResult", type=LatestOperationResultResponse.class, parameters={})
     private Output<LatestOperationResultResponse> latestOperationResult;
 
     /**
@@ -104,7 +104,7 @@ public class EnvironmentSetting extends io.pulumi.resources.CustomResource {
      * The location of the resource.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -118,7 +118,7 @@ public class EnvironmentSetting extends io.pulumi.resources.CustomResource {
      * The name of the resource.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -132,7 +132,7 @@ public class EnvironmentSetting extends io.pulumi.resources.CustomResource {
      * The provisioning status of the resource.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output</* @Nullable */ String> provisioningState;
 
     /**
@@ -146,7 +146,7 @@ public class EnvironmentSetting extends io.pulumi.resources.CustomResource {
      * Describes the readiness of this environment setting
      * 
      */
-    @OutputExport(name="publishingState", type=String.class, parameters={})
+    @Export(name="publishingState", type=String.class, parameters={})
     private Output<String> publishingState;
 
     /**
@@ -160,7 +160,7 @@ public class EnvironmentSetting extends io.pulumi.resources.CustomResource {
      * The resource specific settings
      * 
      */
-    @OutputExport(name="resourceSettings", type=ResourceSettingsResponse.class, parameters={})
+    @Export(name="resourceSettings", type=ResourceSettingsResponse.class, parameters={})
     private Output<ResourceSettingsResponse> resourceSettings;
 
     /**
@@ -174,7 +174,7 @@ public class EnvironmentSetting extends io.pulumi.resources.CustomResource {
      * The tags of the resource.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -188,7 +188,7 @@ public class EnvironmentSetting extends io.pulumi.resources.CustomResource {
      * Brief title describing the environment and its resource settings
      * 
      */
-    @OutputExport(name="title", type=String.class, parameters={})
+    @Export(name="title", type=String.class, parameters={})
     private Output</* @Nullable */ String> title;
 
     /**
@@ -202,7 +202,7 @@ public class EnvironmentSetting extends io.pulumi.resources.CustomResource {
      * The type of the resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -216,7 +216,7 @@ public class EnvironmentSetting extends io.pulumi.resources.CustomResource {
      * The unique immutable identifier of a resource (Guid).
      * 
      */
-    @OutputExport(name="uniqueIdentifier", type=String.class, parameters={})
+    @Export(name="uniqueIdentifier", type=String.class, parameters={})
     private Output</* @Nullable */ String> uniqueIdentifier;
 
     /**

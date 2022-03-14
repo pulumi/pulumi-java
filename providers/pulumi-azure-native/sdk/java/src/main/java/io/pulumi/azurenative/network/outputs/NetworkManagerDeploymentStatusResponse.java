@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class NetworkManagerDeploymentStatusResponse {
     /**
      * Commit Time.
@@ -43,14 +43,14 @@ public final class NetworkManagerDeploymentStatusResponse {
      */
     private final @Nullable String region;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NetworkManagerDeploymentStatusResponse(
-        @OutputCustomType.Parameter("commitTime") @Nullable String commitTime,
-        @OutputCustomType.Parameter("configurationIds") @Nullable List<String> configurationIds,
-        @OutputCustomType.Parameter("deploymentStatus") @Nullable String deploymentStatus,
-        @OutputCustomType.Parameter("deploymentType") @Nullable String deploymentType,
-        @OutputCustomType.Parameter("errorMessage") @Nullable String errorMessage,
-        @OutputCustomType.Parameter("region") @Nullable String region) {
+        @CustomType.Parameter("commitTime") @Nullable String commitTime,
+        @CustomType.Parameter("configurationIds") @Nullable List<String> configurationIds,
+        @CustomType.Parameter("deploymentStatus") @Nullable String deploymentStatus,
+        @CustomType.Parameter("deploymentType") @Nullable String deploymentType,
+        @CustomType.Parameter("errorMessage") @Nullable String errorMessage,
+        @CustomType.Parameter("region") @Nullable String region) {
         this.commitTime = commitTime;
         this.configurationIds = configurationIds;
         this.deploymentStatus = deploymentStatus;

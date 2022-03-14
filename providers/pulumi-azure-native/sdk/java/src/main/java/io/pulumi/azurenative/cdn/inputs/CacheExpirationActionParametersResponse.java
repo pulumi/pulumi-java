@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.cdn.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class CacheExpirationActionParametersResponse extends io.pulumi.res
      * Caching behavior for the requests
      * 
      */
-    @InputImport(name="cacheBehavior", required=true)
+    @Import(name="cacheBehavior", required=true)
       private final String cacheBehavior;
 
     public String getCacheBehavior() {
@@ -33,7 +33,7 @@ public final class CacheExpirationActionParametersResponse extends io.pulumi.res
      * The duration for which the content needs to be cached. Allowed format is [d.]hh:mm:ss
      * 
      */
-    @InputImport(name="cacheDuration")
+    @Import(name="cacheDuration")
       private final @Nullable String cacheDuration;
 
     public Optional<String> getCacheDuration() {
@@ -44,14 +44,14 @@ public final class CacheExpirationActionParametersResponse extends io.pulumi.res
      * The level at which the content needs to be cached.
      * 
      */
-    @InputImport(name="cacheType", required=true)
+    @Import(name="cacheType", required=true)
       private final String cacheType;
 
     public String getCacheType() {
         return this.cacheType;
     }
 
-    @InputImport(name="odataType", required=true)
+    @Import(name="odataType", required=true)
       private final String odataType;
 
     public String getOdataType() {

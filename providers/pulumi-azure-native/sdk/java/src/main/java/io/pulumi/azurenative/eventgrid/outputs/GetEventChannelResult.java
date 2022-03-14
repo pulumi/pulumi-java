@@ -7,13 +7,13 @@ import io.pulumi.azurenative.eventgrid.outputs.EventChannelDestinationResponse;
 import io.pulumi.azurenative.eventgrid.outputs.EventChannelFilterResponse;
 import io.pulumi.azurenative.eventgrid.outputs.EventChannelSourceResponse;
 import io.pulumi.azurenative.eventgrid.outputs.SystemDataResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetEventChannelResult {
     /**
      * Represents the destination of an event channel.
@@ -73,19 +73,19 @@ public final class GetEventChannelResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetEventChannelResult(
-        @OutputCustomType.Parameter("destination") @Nullable EventChannelDestinationResponse destination,
-        @OutputCustomType.Parameter("expirationTimeIfNotActivatedUtc") @Nullable String expirationTimeIfNotActivatedUtc,
-        @OutputCustomType.Parameter("filter") @Nullable EventChannelFilterResponse filter,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("partnerTopicFriendlyDescription") @Nullable String partnerTopicFriendlyDescription,
-        @OutputCustomType.Parameter("partnerTopicReadinessState") String partnerTopicReadinessState,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("source") @Nullable EventChannelSourceResponse source,
-        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("destination") @Nullable EventChannelDestinationResponse destination,
+        @CustomType.Parameter("expirationTimeIfNotActivatedUtc") @Nullable String expirationTimeIfNotActivatedUtc,
+        @CustomType.Parameter("filter") @Nullable EventChannelFilterResponse filter,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("partnerTopicFriendlyDescription") @Nullable String partnerTopicFriendlyDescription,
+        @CustomType.Parameter("partnerTopicReadinessState") String partnerTopicReadinessState,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("source") @Nullable EventChannelSourceResponse source,
+        @CustomType.Parameter("systemData") SystemDataResponse systemData,
+        @CustomType.Parameter("type") String type) {
         this.destination = destination;
         this.expirationTimeIfNotActivatedUtc = expirationTimeIfNotActivatedUtc;
         this.filter = filter;

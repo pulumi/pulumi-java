@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.deploymentmanager.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ServiceUnitArtifactsResponse {
     /**
      * The path to the ARM parameters file relative to the artifact source.
@@ -32,12 +32,12 @@ public final class ServiceUnitArtifactsResponse {
      */
     private final @Nullable String templateUri;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServiceUnitArtifactsResponse(
-        @OutputCustomType.Parameter("parametersArtifactSourceRelativePath") @Nullable String parametersArtifactSourceRelativePath,
-        @OutputCustomType.Parameter("parametersUri") @Nullable String parametersUri,
-        @OutputCustomType.Parameter("templateArtifactSourceRelativePath") @Nullable String templateArtifactSourceRelativePath,
-        @OutputCustomType.Parameter("templateUri") @Nullable String templateUri) {
+        @CustomType.Parameter("parametersArtifactSourceRelativePath") @Nullable String parametersArtifactSourceRelativePath,
+        @CustomType.Parameter("parametersUri") @Nullable String parametersUri,
+        @CustomType.Parameter("templateArtifactSourceRelativePath") @Nullable String templateArtifactSourceRelativePath,
+        @CustomType.Parameter("templateUri") @Nullable String templateUri) {
         this.parametersArtifactSourceRelativePath = parametersArtifactSourceRelativePath;
         this.parametersUri = parametersUri;
         this.templateArtifactSourceRelativePath = templateArtifactSourceRelativePath;

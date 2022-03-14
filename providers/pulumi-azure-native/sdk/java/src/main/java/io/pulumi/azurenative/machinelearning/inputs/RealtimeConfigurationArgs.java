@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearning.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class RealtimeConfigurationArgs extends io.pulumi.resources.Resourc
      * Specifies the maximum concurrent calls that can be made to the web service. Minimum value: 4, Maximum value: 200.
      * 
      */
-    @InputImport(name="maxConcurrentCalls")
+    @Import(name="maxConcurrentCalls")
       private final @Nullable Output<Integer> maxConcurrentCalls;
 
     public Output<Integer> getMaxConcurrentCalls() {

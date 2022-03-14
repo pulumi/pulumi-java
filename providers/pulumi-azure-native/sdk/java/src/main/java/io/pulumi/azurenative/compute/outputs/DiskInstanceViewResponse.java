@@ -5,14 +5,14 @@ package io.pulumi.azurenative.compute.outputs;
 
 import io.pulumi.azurenative.compute.outputs.DiskEncryptionSettingsResponse;
 import io.pulumi.azurenative.compute.outputs.InstanceViewStatusResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DiskInstanceViewResponse {
     /**
      * Specifies the encryption settings for the OS Disk. <br><br> Minimum api-version: 2015-06-15
@@ -30,11 +30,11 @@ public final class DiskInstanceViewResponse {
      */
     private final @Nullable List<InstanceViewStatusResponse> statuses;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DiskInstanceViewResponse(
-        @OutputCustomType.Parameter("encryptionSettings") @Nullable List<DiskEncryptionSettingsResponse> encryptionSettings,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("statuses") @Nullable List<InstanceViewStatusResponse> statuses) {
+        @CustomType.Parameter("encryptionSettings") @Nullable List<DiskEncryptionSettingsResponse> encryptionSettings,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("statuses") @Nullable List<InstanceViewStatusResponse> statuses) {
         this.encryptionSettings = encryptionSettings;
         this.name = name;
         this.statuses = statuses;

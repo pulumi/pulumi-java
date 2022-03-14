@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.security.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class AssessmentLinksResponse extends io.pulumi.resources.InvokeArg
      * Link to assessment in Azure Portal
      * 
      */
-    @InputImport(name="azurePortalUri", required=true)
+    @Import(name="azurePortalUri", required=true)
       private final String azurePortalUri;
 
     public String getAzurePortalUri() {

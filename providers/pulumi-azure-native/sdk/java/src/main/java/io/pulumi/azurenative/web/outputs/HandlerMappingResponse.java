@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class HandlerMappingResponse {
     /**
      * Command-line arguments to be passed to the script processor.
@@ -27,11 +27,11 @@ public final class HandlerMappingResponse {
      */
     private final @Nullable String scriptProcessor;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private HandlerMappingResponse(
-        @OutputCustomType.Parameter("arguments") @Nullable String arguments,
-        @OutputCustomType.Parameter("extension") @Nullable String extension,
-        @OutputCustomType.Parameter("scriptProcessor") @Nullable String scriptProcessor) {
+        @CustomType.Parameter("arguments") @Nullable String arguments,
+        @CustomType.Parameter("extension") @Nullable String extension,
+        @CustomType.Parameter("scriptProcessor") @Nullable String scriptProcessor) {
         this.arguments = arguments;
         this.extension = extension;
         this.scriptProcessor = scriptProcessor;

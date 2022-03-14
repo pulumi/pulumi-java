@@ -6,7 +6,7 @@ package io.pulumi.azurenative.web.inputs;
 import io.pulumi.azurenative.web.enums.IpFilterTag;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -27,7 +27,7 @@ public final class IpSecurityRestrictionArgs extends io.pulumi.resources.Resourc
      * Allow or Deny access for this IP range.
      * 
      */
-    @InputImport(name="action")
+    @Import(name="action")
       private final @Nullable Output<String> action;
 
     public Output<String> getAction() {
@@ -38,7 +38,7 @@ public final class IpSecurityRestrictionArgs extends io.pulumi.resources.Resourc
      * IP restriction rule description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -64,7 +64,7 @@ public final class IpSecurityRestrictionArgs extends io.pulumi.resources.Resourc
      * The matching logic is exact match.
      * 
      */
-    @InputImport(name="headers")
+    @Import(name="headers")
       private final @Nullable Output<Map<String,List<String>>> headers;
 
     public Output<Map<String,List<String>>> getHeaders() {
@@ -78,7 +78,7 @@ public final class IpSecurityRestrictionArgs extends io.pulumi.resources.Resourc
      * SubnetMask property must not be specified.
      * 
      */
-    @InputImport(name="ipAddress")
+    @Import(name="ipAddress")
       private final @Nullable Output<String> ipAddress;
 
     public Output<String> getIpAddress() {
@@ -89,7 +89,7 @@ public final class IpSecurityRestrictionArgs extends io.pulumi.resources.Resourc
      * IP restriction rule name.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -100,7 +100,7 @@ public final class IpSecurityRestrictionArgs extends io.pulumi.resources.Resourc
      * Priority of IP restriction rule.
      * 
      */
-    @InputImport(name="priority")
+    @Import(name="priority")
       private final @Nullable Output<Integer> priority;
 
     public Output<Integer> getPriority() {
@@ -111,7 +111,7 @@ public final class IpSecurityRestrictionArgs extends io.pulumi.resources.Resourc
      * Subnet mask for the range of IP addresses the restriction is valid for.
      * 
      */
-    @InputImport(name="subnetMask")
+    @Import(name="subnetMask")
       private final @Nullable Output<String> subnetMask;
 
     public Output<String> getSubnetMask() {
@@ -122,7 +122,7 @@ public final class IpSecurityRestrictionArgs extends io.pulumi.resources.Resourc
      * (internal) Subnet traffic tag
      * 
      */
-    @InputImport(name="subnetTrafficTag")
+    @Import(name="subnetTrafficTag")
       private final @Nullable Output<Integer> subnetTrafficTag;
 
     public Output<Integer> getSubnetTrafficTag() {
@@ -133,7 +133,7 @@ public final class IpSecurityRestrictionArgs extends io.pulumi.resources.Resourc
      * Defines what this IP filter will be used for. This is to support IP filtering on proxies.
      * 
      */
-    @InputImport(name="tag")
+    @Import(name="tag")
       private final @Nullable Output<Either<String,IpFilterTag>> tag;
 
     public Output<Either<String,IpFilterTag>> getTag() {
@@ -144,7 +144,7 @@ public final class IpSecurityRestrictionArgs extends io.pulumi.resources.Resourc
      * Virtual network resource id
      * 
      */
-    @InputImport(name="vnetSubnetResourceId")
+    @Import(name="vnetSubnetResourceId")
       private final @Nullable Output<String> vnetSubnetResourceId;
 
     public Output<String> getVnetSubnetResourceId() {
@@ -155,7 +155,7 @@ public final class IpSecurityRestrictionArgs extends io.pulumi.resources.Resourc
      * (internal) Vnet traffic tag
      * 
      */
-    @InputImport(name="vnetTrafficTag")
+    @Import(name="vnetTrafficTag")
       private final @Nullable Output<Integer> vnetTrafficTag;
 
     public Output<Integer> getVnetTrafficTag() {

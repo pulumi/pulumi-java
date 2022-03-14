@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.recoveryservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CmkKekIdentityResponse {
     /**
      * Indicate that system assigned identity should be used. Mutually exclusive with 'userAssignedIdentity' field
@@ -23,10 +23,10 @@ public final class CmkKekIdentityResponse {
      */
     private final @Nullable String userAssignedIdentity;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CmkKekIdentityResponse(
-        @OutputCustomType.Parameter("useSystemAssignedIdentity") @Nullable Boolean useSystemAssignedIdentity,
-        @OutputCustomType.Parameter("userAssignedIdentity") @Nullable String userAssignedIdentity) {
+        @CustomType.Parameter("useSystemAssignedIdentity") @Nullable Boolean useSystemAssignedIdentity,
+        @CustomType.Parameter("userAssignedIdentity") @Nullable String userAssignedIdentity) {
         this.useSystemAssignedIdentity = useSystemAssignedIdentity;
         this.userAssignedIdentity = userAssignedIdentity;
     }

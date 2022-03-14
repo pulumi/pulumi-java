@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.insights.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RuleWebhookActionResponse {
     /**
      * specifies the type of the action. There are two types of actions: RuleEmailAction and RuleWebhookAction.
@@ -29,11 +29,11 @@ public final class RuleWebhookActionResponse {
      */
     private final @Nullable String serviceUri;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RuleWebhookActionResponse(
-        @OutputCustomType.Parameter("odataType") String odataType,
-        @OutputCustomType.Parameter("properties") @Nullable Map<String,String> properties,
-        @OutputCustomType.Parameter("serviceUri") @Nullable String serviceUri) {
+        @CustomType.Parameter("odataType") String odataType,
+        @CustomType.Parameter("properties") @Nullable Map<String,String> properties,
+        @CustomType.Parameter("serviceUri") @Nullable String serviceUri) {
         this.odataType = odataType;
         this.properties = properties;
         this.serviceUri = serviceUri;

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.logic;
 import io.pulumi.azurenative.logic.enums.SchemaType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -22,7 +22,7 @@ public final class IntegrationAccountSchemaArgs extends io.pulumi.resources.Reso
      * The content.
      * 
      */
-    @InputImport(name="content")
+    @Import(name="content")
       private final @Nullable Output<String> content;
 
     public Output<String> getContent() {
@@ -33,7 +33,7 @@ public final class IntegrationAccountSchemaArgs extends io.pulumi.resources.Reso
      * The content type.
      * 
      */
-    @InputImport(name="contentType")
+    @Import(name="contentType")
       private final @Nullable Output<String> contentType;
 
     public Output<String> getContentType() {
@@ -44,7 +44,7 @@ public final class IntegrationAccountSchemaArgs extends io.pulumi.resources.Reso
      * The document name.
      * 
      */
-    @InputImport(name="documentName")
+    @Import(name="documentName")
       private final @Nullable Output<String> documentName;
 
     public Output<String> getDocumentName() {
@@ -55,7 +55,7 @@ public final class IntegrationAccountSchemaArgs extends io.pulumi.resources.Reso
      * The file name.
      * 
      */
-    @InputImport(name="fileName")
+    @Import(name="fileName")
       private final @Nullable Output<String> fileName;
 
     public Output<String> getFileName() {
@@ -66,7 +66,7 @@ public final class IntegrationAccountSchemaArgs extends io.pulumi.resources.Reso
      * The integration account name.
      * 
      */
-    @InputImport(name="integrationAccountName", required=true)
+    @Import(name="integrationAccountName", required=true)
       private final Output<String> integrationAccountName;
 
     public Output<String> getIntegrationAccountName() {
@@ -77,7 +77,7 @@ public final class IntegrationAccountSchemaArgs extends io.pulumi.resources.Reso
      * The resource location.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -88,7 +88,7 @@ public final class IntegrationAccountSchemaArgs extends io.pulumi.resources.Reso
      * The metadata.
      * 
      */
-    @InputImport(name="metadata")
+    @Import(name="metadata")
       private final @Nullable Output<Object> metadata;
 
     public Output<Object> getMetadata() {
@@ -99,7 +99,7 @@ public final class IntegrationAccountSchemaArgs extends io.pulumi.resources.Reso
      * The resource group name.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -110,7 +110,7 @@ public final class IntegrationAccountSchemaArgs extends io.pulumi.resources.Reso
      * The integration account schema name.
      * 
      */
-    @InputImport(name="schemaName")
+    @Import(name="schemaName")
       private final @Nullable Output<String> schemaName;
 
     public Output<String> getSchemaName() {
@@ -121,7 +121,7 @@ public final class IntegrationAccountSchemaArgs extends io.pulumi.resources.Reso
      * The schema type.
      * 
      */
-    @InputImport(name="schemaType", required=true)
+    @Import(name="schemaType", required=true)
       private final Output<Either<String,SchemaType>> schemaType;
 
     public Output<Either<String,SchemaType>> getSchemaType() {
@@ -132,7 +132,7 @@ public final class IntegrationAccountSchemaArgs extends io.pulumi.resources.Reso
      * The resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -143,7 +143,7 @@ public final class IntegrationAccountSchemaArgs extends io.pulumi.resources.Reso
      * The target namespace of the schema.
      * 
      */
-    @InputImport(name="targetNamespace")
+    @Import(name="targetNamespace")
       private final @Nullable Output<String> targetNamespace;
 
     public Output<String> getTargetNamespace() {

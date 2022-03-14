@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.search.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetSharedPrivateLinkResourceArgs extends io.pulumi.resources.
      * The name of the resource group within the current subscription. You can obtain this value from the Azure Resource Manager API or the portal.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {
@@ -27,7 +27,7 @@ public final class GetSharedPrivateLinkResourceArgs extends io.pulumi.resources.
      * The name of the Azure Cognitive Search service associated with the specified resource group.
      * 
      */
-    @InputImport(name="searchServiceName", required=true)
+    @Import(name="searchServiceName", required=true)
       private final String searchServiceName;
 
     public String getSearchServiceName() {
@@ -38,7 +38,7 @@ public final class GetSharedPrivateLinkResourceArgs extends io.pulumi.resources.
      * The name of the shared private link resource managed by the Azure Cognitive Search service within the specified resource group.
      * 
      */
-    @InputImport(name="sharedPrivateLinkResourceName", required=true)
+    @Import(name="sharedPrivateLinkResourceName", required=true)
       private final String sharedPrivateLinkResourceName;
 
     public String getSharedPrivateLinkResourceName() {

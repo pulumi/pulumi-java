@@ -8,7 +8,7 @@ import io.pulumi.azurenative.cache.PatchScheduleArgs;
 import io.pulumi.azurenative.cache.outputs.ScheduleEntryResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +35,7 @@ public class PatchSchedule extends io.pulumi.resources.CustomResource {
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -49,7 +49,7 @@ public class PatchSchedule extends io.pulumi.resources.CustomResource {
      * List of patch schedules for a Redis cache.
      * 
      */
-    @OutputExport(name="scheduleEntries", type=List.class, parameters={ScheduleEntryResponse.class})
+    @Export(name="scheduleEntries", type=List.class, parameters={ScheduleEntryResponse.class})
     private Output<List<ScheduleEntryResponse>> scheduleEntries;
 
     /**
@@ -63,7 +63,7 @@ public class PatchSchedule extends io.pulumi.resources.CustomResource {
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

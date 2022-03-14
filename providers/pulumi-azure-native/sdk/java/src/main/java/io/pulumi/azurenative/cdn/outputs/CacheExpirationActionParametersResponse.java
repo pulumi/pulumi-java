@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.cdn.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CacheExpirationActionParametersResponse {
     /**
      * Caching behavior for the requests
@@ -28,12 +28,12 @@ public final class CacheExpirationActionParametersResponse {
     private final String cacheType;
     private final String odataType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CacheExpirationActionParametersResponse(
-        @OutputCustomType.Parameter("cacheBehavior") String cacheBehavior,
-        @OutputCustomType.Parameter("cacheDuration") @Nullable String cacheDuration,
-        @OutputCustomType.Parameter("cacheType") String cacheType,
-        @OutputCustomType.Parameter("odataType") String odataType) {
+        @CustomType.Parameter("cacheBehavior") String cacheBehavior,
+        @CustomType.Parameter("cacheDuration") @Nullable String cacheDuration,
+        @CustomType.Parameter("cacheType") String cacheType,
+        @CustomType.Parameter("odataType") String odataType) {
         this.cacheBehavior = cacheBehavior;
         this.cacheDuration = cacheDuration;
         this.cacheType = cacheType;

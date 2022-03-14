@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.securityinsights.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EntityInsightItemResponseQueryTimeInterval {
     /**
      * Insight query end time
@@ -22,10 +22,10 @@ public final class EntityInsightItemResponseQueryTimeInterval {
      */
     private final @Nullable String startTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EntityInsightItemResponseQueryTimeInterval(
-        @OutputCustomType.Parameter("endTime") @Nullable String endTime,
-        @OutputCustomType.Parameter("startTime") @Nullable String startTime) {
+        @CustomType.Parameter("endTime") @Nullable String endTime,
+        @CustomType.Parameter("startTime") @Nullable String startTime) {
         this.endTime = endTime;
         this.startTime = startTime;
     }

@@ -7,13 +7,13 @@ import io.pulumi.azurenative.cdn.outputs.CdnManagedHttpsParametersResponse;
 import io.pulumi.azurenative.cdn.outputs.SystemDataResponse;
 import io.pulumi.azurenative.cdn.outputs.UserManagedHttpsParametersResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetCustomDomainResult {
     /**
      * Certificate parameters for securing custom HTTPS
@@ -71,19 +71,19 @@ public final class GetCustomDomainResult {
      */
     private final @Nullable String validationData;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetCustomDomainResult(
-        @OutputCustomType.Parameter("customHttpsParameters") @Nullable Either<CdnManagedHttpsParametersResponse,UserManagedHttpsParametersResponse> customHttpsParameters,
-        @OutputCustomType.Parameter("customHttpsProvisioningState") String customHttpsProvisioningState,
-        @OutputCustomType.Parameter("customHttpsProvisioningSubstate") String customHttpsProvisioningSubstate,
-        @OutputCustomType.Parameter("hostName") String hostName,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("resourceState") String resourceState,
-        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("validationData") @Nullable String validationData) {
+        @CustomType.Parameter("customHttpsParameters") @Nullable Either<CdnManagedHttpsParametersResponse,UserManagedHttpsParametersResponse> customHttpsParameters,
+        @CustomType.Parameter("customHttpsProvisioningState") String customHttpsProvisioningState,
+        @CustomType.Parameter("customHttpsProvisioningSubstate") String customHttpsProvisioningSubstate,
+        @CustomType.Parameter("hostName") String hostName,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("resourceState") String resourceState,
+        @CustomType.Parameter("systemData") SystemDataResponse systemData,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("validationData") @Nullable String validationData) {
         this.customHttpsParameters = customHttpsParameters;
         this.customHttpsProvisioningState = customHttpsProvisioningState;
         this.customHttpsProvisioningSubstate = customHttpsProvisioningSubstate;

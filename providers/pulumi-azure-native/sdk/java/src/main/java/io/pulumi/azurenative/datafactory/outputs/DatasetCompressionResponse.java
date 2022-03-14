@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.datafactory.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DatasetCompressionResponse {
     /**
      * The dataset compression level. Type: string (or Expression with resultType string).
@@ -22,10 +22,10 @@ public final class DatasetCompressionResponse {
      */
     private final Object type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DatasetCompressionResponse(
-        @OutputCustomType.Parameter("level") @Nullable Object level,
-        @OutputCustomType.Parameter("type") Object type) {
+        @CustomType.Parameter("level") @Nullable Object level,
+        @CustomType.Parameter("type") Object type) {
         this.level = level;
         this.type = type;
     }

@@ -8,7 +8,7 @@ import io.pulumi.azurenative.datafactory.outputs.IntegrationRuntimeReferenceResp
 import io.pulumi.azurenative.datafactory.outputs.ParameterSpecificationResponse;
 import io.pulumi.azurenative.datafactory.outputs.SecureStringResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -17,7 +17,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ODataLinkedServiceResponse {
     /**
      * Specify the resource you are requesting authorization to use Directory. Type: string (or Expression with resultType string).
@@ -116,27 +116,27 @@ public final class ODataLinkedServiceResponse {
      */
     private final @Nullable Object userName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ODataLinkedServiceResponse(
-        @OutputCustomType.Parameter("aadResourceId") @Nullable Object aadResourceId,
-        @OutputCustomType.Parameter("aadServicePrincipalCredentialType") @Nullable String aadServicePrincipalCredentialType,
-        @OutputCustomType.Parameter("annotations") @Nullable List<Object> annotations,
-        @OutputCustomType.Parameter("authHeaders") @Nullable Object authHeaders,
-        @OutputCustomType.Parameter("authenticationType") @Nullable String authenticationType,
-        @OutputCustomType.Parameter("azureCloudType") @Nullable Object azureCloudType,
-        @OutputCustomType.Parameter("connectVia") @Nullable IntegrationRuntimeReferenceResponse connectVia,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("encryptedCredential") @Nullable Object encryptedCredential,
-        @OutputCustomType.Parameter("parameters") @Nullable Map<String,ParameterSpecificationResponse> parameters,
-        @OutputCustomType.Parameter("password") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password,
-        @OutputCustomType.Parameter("servicePrincipalEmbeddedCert") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalEmbeddedCert,
-        @OutputCustomType.Parameter("servicePrincipalEmbeddedCertPassword") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalEmbeddedCertPassword,
-        @OutputCustomType.Parameter("servicePrincipalId") @Nullable Object servicePrincipalId,
-        @OutputCustomType.Parameter("servicePrincipalKey") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey,
-        @OutputCustomType.Parameter("tenant") @Nullable Object tenant,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("url") Object url,
-        @OutputCustomType.Parameter("userName") @Nullable Object userName) {
+        @CustomType.Parameter("aadResourceId") @Nullable Object aadResourceId,
+        @CustomType.Parameter("aadServicePrincipalCredentialType") @Nullable String aadServicePrincipalCredentialType,
+        @CustomType.Parameter("annotations") @Nullable List<Object> annotations,
+        @CustomType.Parameter("authHeaders") @Nullable Object authHeaders,
+        @CustomType.Parameter("authenticationType") @Nullable String authenticationType,
+        @CustomType.Parameter("azureCloudType") @Nullable Object azureCloudType,
+        @CustomType.Parameter("connectVia") @Nullable IntegrationRuntimeReferenceResponse connectVia,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("encryptedCredential") @Nullable Object encryptedCredential,
+        @CustomType.Parameter("parameters") @Nullable Map<String,ParameterSpecificationResponse> parameters,
+        @CustomType.Parameter("password") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password,
+        @CustomType.Parameter("servicePrincipalEmbeddedCert") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalEmbeddedCert,
+        @CustomType.Parameter("servicePrincipalEmbeddedCertPassword") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalEmbeddedCertPassword,
+        @CustomType.Parameter("servicePrincipalId") @Nullable Object servicePrincipalId,
+        @CustomType.Parameter("servicePrincipalKey") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey,
+        @CustomType.Parameter("tenant") @Nullable Object tenant,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("url") Object url,
+        @CustomType.Parameter("userName") @Nullable Object userName) {
         this.aadResourceId = aadResourceId;
         this.aadServicePrincipalCredentialType = aadServicePrincipalCredentialType;
         this.annotations = annotations;

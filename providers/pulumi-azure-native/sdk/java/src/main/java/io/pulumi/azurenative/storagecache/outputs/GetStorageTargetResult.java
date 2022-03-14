@@ -9,14 +9,14 @@ import io.pulumi.azurenative.storagecache.outputs.NamespaceJunctionResponse;
 import io.pulumi.azurenative.storagecache.outputs.Nfs3TargetResponse;
 import io.pulumi.azurenative.storagecache.outputs.SystemDataResponse;
 import io.pulumi.azurenative.storagecache.outputs.UnknownTargetResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetStorageTargetResult {
     /**
      * Properties when targetType is blobNfs.
@@ -79,20 +79,20 @@ public final class GetStorageTargetResult {
      */
     private final @Nullable UnknownTargetResponse unknown;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetStorageTargetResult(
-        @OutputCustomType.Parameter("blobNfs") @Nullable BlobNfsTargetResponse blobNfs,
-        @OutputCustomType.Parameter("clfs") @Nullable ClfsTargetResponse clfs,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("junctions") @Nullable List<NamespaceJunctionResponse> junctions,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("nfs3") @Nullable Nfs3TargetResponse nfs3,
-        @OutputCustomType.Parameter("provisioningState") @Nullable String provisioningState,
-        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
-        @OutputCustomType.Parameter("targetType") String targetType,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("unknown") @Nullable UnknownTargetResponse unknown) {
+        @CustomType.Parameter("blobNfs") @Nullable BlobNfsTargetResponse blobNfs,
+        @CustomType.Parameter("clfs") @Nullable ClfsTargetResponse clfs,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("junctions") @Nullable List<NamespaceJunctionResponse> junctions,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("nfs3") @Nullable Nfs3TargetResponse nfs3,
+        @CustomType.Parameter("provisioningState") @Nullable String provisioningState,
+        @CustomType.Parameter("systemData") SystemDataResponse systemData,
+        @CustomType.Parameter("targetType") String targetType,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("unknown") @Nullable UnknownTargetResponse unknown) {
         this.blobNfs = blobNfs;
         this.clfs = clfs;
         this.id = id;

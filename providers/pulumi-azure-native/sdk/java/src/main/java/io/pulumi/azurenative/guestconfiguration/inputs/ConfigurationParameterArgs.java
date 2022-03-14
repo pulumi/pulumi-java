@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.guestconfiguration.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class ConfigurationParameterArgs extends io.pulumi.resources.Resour
      * Name of the configuration parameter.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -33,7 +33,7 @@ public final class ConfigurationParameterArgs extends io.pulumi.resources.Resour
      * Value of the configuration parameter.
      * 
      */
-    @InputImport(name="value")
+    @Import(name="value")
       private final @Nullable Output<String> value;
 
     public Output<String> getValue() {

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.resourcegraph.GraphQueryArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +35,7 @@ public class GraphQuery extends io.pulumi.resources.CustomResource {
      * The description of a graph query.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -49,7 +49,7 @@ public class GraphQuery extends io.pulumi.resources.CustomResource {
      * This will be used to handle Optimistic Concurrency. If not present, it will always overwrite the existing resource without checking conflict.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output</* @Nullable */ String> etag;
 
     /**
@@ -63,7 +63,7 @@ public class GraphQuery extends io.pulumi.resources.CustomResource {
      * The location of the resource
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -77,7 +77,7 @@ public class GraphQuery extends io.pulumi.resources.CustomResource {
      * Azure resource name. This is GUID value. The display name should be assigned within properties field.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -91,7 +91,7 @@ public class GraphQuery extends io.pulumi.resources.CustomResource {
      * KQL query that will be graph.
      * 
      */
-    @OutputExport(name="query", type=String.class, parameters={})
+    @Export(name="query", type=String.class, parameters={})
     private Output<String> query;
 
     /**
@@ -105,7 +105,7 @@ public class GraphQuery extends io.pulumi.resources.CustomResource {
      * Enum indicating a type of graph query.
      * 
      */
-    @OutputExport(name="resultKind", type=String.class, parameters={})
+    @Export(name="resultKind", type=String.class, parameters={})
     private Output<String> resultKind;
 
     /**
@@ -119,7 +119,7 @@ public class GraphQuery extends io.pulumi.resources.CustomResource {
      * Resource tags
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -133,7 +133,7 @@ public class GraphQuery extends io.pulumi.resources.CustomResource {
      * Date and time in UTC of the last modification that was made to this graph query definition.
      * 
      */
-    @OutputExport(name="timeModified", type=String.class, parameters={})
+    @Export(name="timeModified", type=String.class, parameters={})
     private Output<String> timeModified;
 
     /**
@@ -147,7 +147,7 @@ public class GraphQuery extends io.pulumi.resources.CustomResource {
      * Azure resource type
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

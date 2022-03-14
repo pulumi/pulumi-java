@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.sql;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class WorkloadClassifierArgs extends io.pulumi.resources.ResourceAr
      * The workload classifier context.
      * 
      */
-    @InputImport(name="context")
+    @Import(name="context")
       private final @Nullable Output<String> context;
 
     public Output<String> getContext() {
@@ -29,7 +29,7 @@ public final class WorkloadClassifierArgs extends io.pulumi.resources.ResourceAr
      * The name of the database.
      * 
      */
-    @InputImport(name="databaseName", required=true)
+    @Import(name="databaseName", required=true)
       private final Output<String> databaseName;
 
     public Output<String> getDatabaseName() {
@@ -40,7 +40,7 @@ public final class WorkloadClassifierArgs extends io.pulumi.resources.ResourceAr
      * The workload classifier end time for classification.
      * 
      */
-    @InputImport(name="endTime")
+    @Import(name="endTime")
       private final @Nullable Output<String> endTime;
 
     public Output<String> getEndTime() {
@@ -51,7 +51,7 @@ public final class WorkloadClassifierArgs extends io.pulumi.resources.ResourceAr
      * The workload classifier importance.
      * 
      */
-    @InputImport(name="importance")
+    @Import(name="importance")
       private final @Nullable Output<String> importance;
 
     public Output<String> getImportance() {
@@ -62,7 +62,7 @@ public final class WorkloadClassifierArgs extends io.pulumi.resources.ResourceAr
      * The workload classifier label.
      * 
      */
-    @InputImport(name="label")
+    @Import(name="label")
       private final @Nullable Output<String> label;
 
     public Output<String> getLabel() {
@@ -73,7 +73,7 @@ public final class WorkloadClassifierArgs extends io.pulumi.resources.ResourceAr
      * The workload classifier member name.
      * 
      */
-    @InputImport(name="memberName", required=true)
+    @Import(name="memberName", required=true)
       private final Output<String> memberName;
 
     public Output<String> getMemberName() {
@@ -84,7 +84,7 @@ public final class WorkloadClassifierArgs extends io.pulumi.resources.ResourceAr
      * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -95,7 +95,7 @@ public final class WorkloadClassifierArgs extends io.pulumi.resources.ResourceAr
      * The name of the server.
      * 
      */
-    @InputImport(name="serverName", required=true)
+    @Import(name="serverName", required=true)
       private final Output<String> serverName;
 
     public Output<String> getServerName() {
@@ -106,7 +106,7 @@ public final class WorkloadClassifierArgs extends io.pulumi.resources.ResourceAr
      * The workload classifier start time for classification.
      * 
      */
-    @InputImport(name="startTime")
+    @Import(name="startTime")
       private final @Nullable Output<String> startTime;
 
     public Output<String> getStartTime() {
@@ -117,7 +117,7 @@ public final class WorkloadClassifierArgs extends io.pulumi.resources.ResourceAr
      * The name of the workload classifier to create/update.
      * 
      */
-    @InputImport(name="workloadClassifierName")
+    @Import(name="workloadClassifierName")
       private final @Nullable Output<String> workloadClassifierName;
 
     public Output<String> getWorkloadClassifierName() {
@@ -128,7 +128,7 @@ public final class WorkloadClassifierArgs extends io.pulumi.resources.ResourceAr
      * The name of the workload group from which to receive the classifier from.
      * 
      */
-    @InputImport(name="workloadGroupName", required=true)
+    @Import(name="workloadGroupName", required=true)
       private final Output<String> workloadGroupName;
 
     public Output<String> getWorkloadGroupName() {

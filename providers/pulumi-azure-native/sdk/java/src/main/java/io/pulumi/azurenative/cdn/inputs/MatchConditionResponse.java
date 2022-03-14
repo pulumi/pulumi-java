@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.cdn.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class MatchConditionResponse extends io.pulumi.resources.InvokeArgs
      * List of possible match values.
      * 
      */
-    @InputImport(name="matchValue", required=true)
+    @Import(name="matchValue", required=true)
       private final List<String> matchValue;
 
     public List<String> getMatchValue() {
@@ -35,7 +35,7 @@ public final class MatchConditionResponse extends io.pulumi.resources.InvokeArgs
      * Match variable to compare against.
      * 
      */
-    @InputImport(name="matchVariable", required=true)
+    @Import(name="matchVariable", required=true)
       private final String matchVariable;
 
     public String getMatchVariable() {
@@ -46,7 +46,7 @@ public final class MatchConditionResponse extends io.pulumi.resources.InvokeArgs
      * Describes if the result of this condition should be negated.
      * 
      */
-    @InputImport(name="negateCondition")
+    @Import(name="negateCondition")
       private final @Nullable Boolean negateCondition;
 
     public Optional<Boolean> getNegateCondition() {
@@ -57,7 +57,7 @@ public final class MatchConditionResponse extends io.pulumi.resources.InvokeArgs
      * Describes operator to be matched
      * 
      */
-    @InputImport(name="operator", required=true)
+    @Import(name="operator", required=true)
       private final String operator;
 
     public String getOperator() {
@@ -68,7 +68,7 @@ public final class MatchConditionResponse extends io.pulumi.resources.InvokeArgs
      * Selector can used to match a specific key for QueryString, Cookies, RequestHeader or PostArgs.
      * 
      */
-    @InputImport(name="selector")
+    @Import(name="selector")
       private final @Nullable String selector;
 
     public Optional<String> getSelector() {
@@ -79,7 +79,7 @@ public final class MatchConditionResponse extends io.pulumi.resources.InvokeArgs
      * List of transforms.
      * 
      */
-    @InputImport(name="transforms")
+    @Import(name="transforms")
       private final @Nullable List<String> transforms;
 
     public List<String> getTransforms() {

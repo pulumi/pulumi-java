@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.guestconfiguration.outputs;
 
 import io.pulumi.azurenative.guestconfiguration.outputs.ConfigurationInfoResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AssignmentInfoResponse {
     /**
      * Information about the configuration.
@@ -23,10 +23,10 @@ public final class AssignmentInfoResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AssignmentInfoResponse(
-        @OutputCustomType.Parameter("configuration") @Nullable ConfigurationInfoResponse configuration,
-        @OutputCustomType.Parameter("name") String name) {
+        @CustomType.Parameter("configuration") @Nullable ConfigurationInfoResponse configuration,
+        @CustomType.Parameter("name") String name) {
         this.configuration = configuration;
         this.name = name;
     }

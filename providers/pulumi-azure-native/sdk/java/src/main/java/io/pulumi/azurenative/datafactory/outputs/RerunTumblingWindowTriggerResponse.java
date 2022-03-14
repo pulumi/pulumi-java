@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RerunTumblingWindowTriggerResponse {
     /**
      * List of tags that can be used for describing the trigger.
@@ -56,16 +56,16 @@ public final class RerunTumblingWindowTriggerResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RerunTumblingWindowTriggerResponse(
-        @OutputCustomType.Parameter("annotations") @Nullable List<Object> annotations,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("parentTrigger") Object parentTrigger,
-        @OutputCustomType.Parameter("requestedEndTime") String requestedEndTime,
-        @OutputCustomType.Parameter("requestedStartTime") String requestedStartTime,
-        @OutputCustomType.Parameter("rerunConcurrency") Integer rerunConcurrency,
-        @OutputCustomType.Parameter("runtimeState") String runtimeState,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("annotations") @Nullable List<Object> annotations,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("parentTrigger") Object parentTrigger,
+        @CustomType.Parameter("requestedEndTime") String requestedEndTime,
+        @CustomType.Parameter("requestedStartTime") String requestedStartTime,
+        @CustomType.Parameter("rerunConcurrency") Integer rerunConcurrency,
+        @CustomType.Parameter("runtimeState") String runtimeState,
+        @CustomType.Parameter("type") String type) {
         this.annotations = annotations;
         this.description = description;
         this.parentTrigger = parentTrigger;

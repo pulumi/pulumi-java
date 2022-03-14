@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class StatusMessageResponse extends io.pulumi.resources.InvokeArgs 
      * Service-defined message code.
      * 
      */
-    @InputImport(name="code", required=true)
+    @Import(name="code", required=true)
       private final String code;
 
     public String getCode() {
@@ -31,7 +31,7 @@ public final class StatusMessageResponse extends io.pulumi.resources.InvokeArgs 
      * Time in UTC at which the message was created.
      * 
      */
-    @InputImport(name="createdTimeUtc", required=true)
+    @Import(name="createdTimeUtc", required=true)
       private final String createdTimeUtc;
 
     public String getCreatedTimeUtc() {
@@ -42,7 +42,7 @@ public final class StatusMessageResponse extends io.pulumi.resources.InvokeArgs 
      * Severity level of the status message.
      * 
      */
-    @InputImport(name="level", required=true)
+    @Import(name="level", required=true)
       private final String level;
 
     public String getLevel() {
@@ -53,7 +53,7 @@ public final class StatusMessageResponse extends io.pulumi.resources.InvokeArgs 
      * A human-readable representation of the message code.
      * 
      */
-    @InputImport(name="message", required=true)
+    @Import(name="message", required=true)
       private final String message;
 
     public String getMessage() {

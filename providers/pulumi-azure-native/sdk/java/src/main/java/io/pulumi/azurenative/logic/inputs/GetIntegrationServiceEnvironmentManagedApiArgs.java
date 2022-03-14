@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.logic.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetIntegrationServiceEnvironmentManagedApiArgs extends io.pul
      * The api name.
      * 
      */
-    @InputImport(name="apiName", required=true)
+    @Import(name="apiName", required=true)
       private final String apiName;
 
     public String getApiName() {
@@ -27,7 +27,7 @@ public final class GetIntegrationServiceEnvironmentManagedApiArgs extends io.pul
      * The integration service environment name.
      * 
      */
-    @InputImport(name="integrationServiceEnvironmentName", required=true)
+    @Import(name="integrationServiceEnvironmentName", required=true)
       private final String integrationServiceEnvironmentName;
 
     public String getIntegrationServiceEnvironmentName() {
@@ -38,7 +38,7 @@ public final class GetIntegrationServiceEnvironmentManagedApiArgs extends io.pul
      * The resource group name.
      * 
      */
-    @InputImport(name="resourceGroup", required=true)
+    @Import(name="resourceGroup", required=true)
       private final String resourceGroup;
 
     public String getResourceGroup() {

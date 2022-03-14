@@ -5,7 +5,7 @@ package io.pulumi.azurenative.dbformysql.inputs;
 
 import io.pulumi.azurenative.dbformysql.inputs.PrivateEndpointPropertyResponse;
 import io.pulumi.azurenative.dbformysql.inputs.ServerPrivateLinkServiceConnectionStatePropertyResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class ServerPrivateEndpointConnectionPropertiesResponse extends io.
      * Private endpoint which the connection belongs to.
      * 
      */
-    @InputImport(name="privateEndpoint")
+    @Import(name="privateEndpoint")
       private final @Nullable PrivateEndpointPropertyResponse privateEndpoint;
 
     public Optional<PrivateEndpointPropertyResponse> getPrivateEndpoint() {
@@ -35,7 +35,7 @@ public final class ServerPrivateEndpointConnectionPropertiesResponse extends io.
      * Connection state of the private endpoint connection.
      * 
      */
-    @InputImport(name="privateLinkServiceConnectionState")
+    @Import(name="privateLinkServiceConnectionState")
       private final @Nullable ServerPrivateLinkServiceConnectionStatePropertyResponse privateLinkServiceConnectionState;
 
     public Optional<ServerPrivateLinkServiceConnectionStatePropertyResponse> getPrivateLinkServiceConnectionState() {
@@ -46,7 +46,7 @@ public final class ServerPrivateEndpointConnectionPropertiesResponse extends io.
      * State of the private endpoint connection.
      * 
      */
-    @InputImport(name="provisioningState", required=true)
+    @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
     public String getProvisioningState() {

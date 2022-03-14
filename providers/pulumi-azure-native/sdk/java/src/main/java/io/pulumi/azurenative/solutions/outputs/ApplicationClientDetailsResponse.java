@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.solutions.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ApplicationClientDetailsResponse {
     /**
      * The client application Id.
@@ -27,11 +27,11 @@ public final class ApplicationClientDetailsResponse {
      */
     private final @Nullable String puid;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ApplicationClientDetailsResponse(
-        @OutputCustomType.Parameter("applicationId") @Nullable String applicationId,
-        @OutputCustomType.Parameter("oid") @Nullable String oid,
-        @OutputCustomType.Parameter("puid") @Nullable String puid) {
+        @CustomType.Parameter("applicationId") @Nullable String applicationId,
+        @CustomType.Parameter("oid") @Nullable String oid,
+        @CustomType.Parameter("puid") @Nullable String puid) {
         this.applicationId = applicationId;
         this.oid = oid;
         this.puid = puid;

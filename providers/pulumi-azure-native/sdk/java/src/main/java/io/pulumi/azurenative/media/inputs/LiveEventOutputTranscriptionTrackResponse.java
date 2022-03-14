@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.media.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class LiveEventOutputTranscriptionTrackResponse extends io.pulumi.r
      * The output track name. This property is reserved for future use, any value set on this property will be ignored.
      * 
      */
-    @InputImport(name="trackName", required=true)
+    @Import(name="trackName", required=true)
       private final String trackName;
 
     public String getTrackName() {

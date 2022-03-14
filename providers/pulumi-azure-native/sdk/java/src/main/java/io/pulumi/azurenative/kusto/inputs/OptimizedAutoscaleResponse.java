@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.kusto.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class OptimizedAutoscaleResponse extends io.pulumi.resources.Invoke
      * A boolean value that indicate if the optimized autoscale feature is enabled or not.
      * 
      */
-    @InputImport(name="isEnabled", required=true)
+    @Import(name="isEnabled", required=true)
       private final Boolean isEnabled;
 
     public Boolean getIsEnabled() {
@@ -32,7 +32,7 @@ public final class OptimizedAutoscaleResponse extends io.pulumi.resources.Invoke
      * Maximum allowed instances count.
      * 
      */
-    @InputImport(name="maximum", required=true)
+    @Import(name="maximum", required=true)
       private final Integer maximum;
 
     public Integer getMaximum() {
@@ -43,7 +43,7 @@ public final class OptimizedAutoscaleResponse extends io.pulumi.resources.Invoke
      * Minimum allowed instances count.
      * 
      */
-    @InputImport(name="minimum", required=true)
+    @Import(name="minimum", required=true)
       private final Integer minimum;
 
     public Integer getMinimum() {
@@ -54,7 +54,7 @@ public final class OptimizedAutoscaleResponse extends io.pulumi.resources.Invoke
      * The version of the template defined, for instance 1.
      * 
      */
-    @InputImport(name="version", required=true)
+    @Import(name="version", required=true)
       private final Integer version;
 
     public Integer getVersion() {

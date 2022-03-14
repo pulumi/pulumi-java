@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class AzureActiveDirectoryLoginArgs extends io.pulumi.resources.Res
      * <code>true</code> if the www-authenticate provider should be omitted from the request; otherwise, <code>false</code>.
      * 
      */
-    @InputImport(name="disableWWWAuthenticate")
+    @Import(name="disableWWWAuthenticate")
       private final @Nullable Output<Boolean> disableWWWAuthenticate;
 
     public Output<Boolean> getDisableWWWAuthenticate() {
@@ -36,7 +36,7 @@ public final class AzureActiveDirectoryLoginArgs extends io.pulumi.resources.Res
      * a user logs in. Each parameter must be in the form "key=value".
      * 
      */
-    @InputImport(name="loginParameters")
+    @Import(name="loginParameters")
       private final @Nullable Output<List<String>> loginParameters;
 
     public Output<List<String>> getLoginParameters() {

@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.media.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ListMediaServiceKeysResult {
     /**
      * The primary authorization endpoint.
@@ -37,13 +37,13 @@ public final class ListMediaServiceKeysResult {
      */
     private final @Nullable String secondaryKey;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ListMediaServiceKeysResult(
-        @OutputCustomType.Parameter("primaryAuthEndpoint") @Nullable String primaryAuthEndpoint,
-        @OutputCustomType.Parameter("primaryKey") @Nullable String primaryKey,
-        @OutputCustomType.Parameter("scope") @Nullable String scope,
-        @OutputCustomType.Parameter("secondaryAuthEndpoint") @Nullable String secondaryAuthEndpoint,
-        @OutputCustomType.Parameter("secondaryKey") @Nullable String secondaryKey) {
+        @CustomType.Parameter("primaryAuthEndpoint") @Nullable String primaryAuthEndpoint,
+        @CustomType.Parameter("primaryKey") @Nullable String primaryKey,
+        @CustomType.Parameter("scope") @Nullable String scope,
+        @CustomType.Parameter("secondaryAuthEndpoint") @Nullable String secondaryAuthEndpoint,
+        @CustomType.Parameter("secondaryKey") @Nullable String secondaryKey) {
         this.primaryAuthEndpoint = primaryAuthEndpoint;
         this.primaryKey = primaryKey;
         this.scope = scope;

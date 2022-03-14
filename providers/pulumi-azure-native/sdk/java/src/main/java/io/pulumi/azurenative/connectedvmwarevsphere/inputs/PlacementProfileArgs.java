@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.connectedvmwarevsphere.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class PlacementProfileArgs extends io.pulumi.resources.ResourceArgs
      * Gets or sets the ARM Id of the cluster resource on which this virtual machine will deploy.
      * 
      */
-    @InputImport(name="clusterId")
+    @Import(name="clusterId")
       private final @Nullable Output<String> clusterId;
 
     public Output<String> getClusterId() {
@@ -33,7 +33,7 @@ public final class PlacementProfileArgs extends io.pulumi.resources.ResourceArgs
      * Gets or sets the ARM Id of the datastore resource on which the data for the virtual machine will be kept.
      * 
      */
-    @InputImport(name="datastoreId")
+    @Import(name="datastoreId")
       private final @Nullable Output<String> datastoreId;
 
     public Output<String> getDatastoreId() {
@@ -44,7 +44,7 @@ public final class PlacementProfileArgs extends io.pulumi.resources.ResourceArgs
      * Gets or sets the ARM Id of the host resource on which this virtual machine will deploy.
      * 
      */
-    @InputImport(name="hostId")
+    @Import(name="hostId")
       private final @Nullable Output<String> hostId;
 
     public Output<String> getHostId() {
@@ -55,7 +55,7 @@ public final class PlacementProfileArgs extends io.pulumi.resources.ResourceArgs
      * Gets or sets the ARM Id of the resourcePool resource on which this virtual machine will deploy.
      * 
      */
-    @InputImport(name="resourcePoolId")
+    @Import(name="resourcePoolId")
       private final @Nullable Output<String> resourcePoolId;
 
     public Output<String> getResourcePoolId() {

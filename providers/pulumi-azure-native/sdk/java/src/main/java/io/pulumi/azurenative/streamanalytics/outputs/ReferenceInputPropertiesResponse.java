@@ -8,14 +8,14 @@ import io.pulumi.azurenative.streamanalytics.outputs.BlobReferenceInputDataSourc
 import io.pulumi.azurenative.streamanalytics.outputs.CsvSerializationResponse;
 import io.pulumi.azurenative.streamanalytics.outputs.DiagnosticsResponse;
 import io.pulumi.azurenative.streamanalytics.outputs.JsonSerializationResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ReferenceInputPropertiesResponse {
     /**
      * Describes an input data source that contains reference data. Required on PUT (CreateOrReplace) requests.
@@ -44,13 +44,13 @@ public final class ReferenceInputPropertiesResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ReferenceInputPropertiesResponse(
-        @OutputCustomType.Parameter("datasource") @Nullable BlobReferenceInputDataSourceResponse datasource,
-        @OutputCustomType.Parameter("diagnostics") DiagnosticsResponse diagnostics,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("serialization") @Nullable Object serialization,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("datasource") @Nullable BlobReferenceInputDataSourceResponse datasource,
+        @CustomType.Parameter("diagnostics") DiagnosticsResponse diagnostics,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("serialization") @Nullable Object serialization,
+        @CustomType.Parameter("type") String type) {
         this.datasource = datasource;
         this.diagnostics = diagnostics;
         this.etag = etag;

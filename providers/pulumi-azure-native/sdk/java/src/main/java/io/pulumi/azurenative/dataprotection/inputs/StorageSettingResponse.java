@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.dataprotection.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class StorageSettingResponse extends io.pulumi.resources.InvokeArgs
      * Gets or sets the type of the datastore.
      * 
      */
-    @InputImport(name="datastoreType")
+    @Import(name="datastoreType")
       private final @Nullable String datastoreType;
 
     public Optional<String> getDatastoreType() {
@@ -33,7 +33,7 @@ public final class StorageSettingResponse extends io.pulumi.resources.InvokeArgs
      * Gets or sets the type.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable String type;
 
     public Optional<String> getType() {

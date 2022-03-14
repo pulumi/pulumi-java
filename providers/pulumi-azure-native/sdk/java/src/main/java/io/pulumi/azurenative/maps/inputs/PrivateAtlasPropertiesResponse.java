@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.maps.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class PrivateAtlasPropertiesResponse extends io.pulumi.resources.In
      * The state of the resource provisioning, terminal states: Succeeded, Failed, Canceled
      * 
      */
-    @InputImport(name="provisioningState")
+    @Import(name="provisioningState")
       private final @Nullable String provisioningState;
 
     public Optional<String> getProvisioningState() {

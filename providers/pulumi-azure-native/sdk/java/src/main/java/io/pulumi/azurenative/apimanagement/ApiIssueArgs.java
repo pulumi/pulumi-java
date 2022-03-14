@@ -6,7 +6,7 @@ package io.pulumi.azurenative.apimanagement;
 import io.pulumi.azurenative.apimanagement.enums.State;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class ApiIssueArgs extends io.pulumi.resources.ResourceArgs {
      * A resource identifier for the API the issue was created for.
      * 
      */
-    @InputImport(name="apiId", required=true)
+    @Import(name="apiId", required=true)
       private final Output<String> apiId;
 
     public Output<String> getApiId() {
@@ -31,7 +31,7 @@ public final class ApiIssueArgs extends io.pulumi.resources.ResourceArgs {
      * Date and time when the issue was created.
      * 
      */
-    @InputImport(name="createdDate")
+    @Import(name="createdDate")
       private final @Nullable Output<String> createdDate;
 
     public Output<String> getCreatedDate() {
@@ -42,7 +42,7 @@ public final class ApiIssueArgs extends io.pulumi.resources.ResourceArgs {
      * Text describing the issue.
      * 
      */
-    @InputImport(name="description", required=true)
+    @Import(name="description", required=true)
       private final Output<String> description;
 
     public Output<String> getDescription() {
@@ -53,7 +53,7 @@ public final class ApiIssueArgs extends io.pulumi.resources.ResourceArgs {
      * Issue identifier. Must be unique in the current API Management service instance.
      * 
      */
-    @InputImport(name="issueId")
+    @Import(name="issueId")
       private final @Nullable Output<String> issueId;
 
     public Output<String> getIssueId() {
@@ -64,7 +64,7 @@ public final class ApiIssueArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -75,7 +75,7 @@ public final class ApiIssueArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the API Management service.
      * 
      */
-    @InputImport(name="serviceName", required=true)
+    @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
 
     public Output<String> getServiceName() {
@@ -86,7 +86,7 @@ public final class ApiIssueArgs extends io.pulumi.resources.ResourceArgs {
      * Status of the issue.
      * 
      */
-    @InputImport(name="state")
+    @Import(name="state")
       private final @Nullable Output<Either<String,State>> state;
 
     public Output<Either<String,State>> getState() {
@@ -97,7 +97,7 @@ public final class ApiIssueArgs extends io.pulumi.resources.ResourceArgs {
      * The issue title.
      * 
      */
-    @InputImport(name="title", required=true)
+    @Import(name="title", required=true)
       private final Output<String> title;
 
     public Output<String> getTitle() {
@@ -108,7 +108,7 @@ public final class ApiIssueArgs extends io.pulumi.resources.ResourceArgs {
      * A resource identifier for the user created the issue.
      * 
      */
-    @InputImport(name="userId", required=true)
+    @Import(name="userId", required=true)
       private final Output<String> userId;
 
     public Output<String> getUserId() {

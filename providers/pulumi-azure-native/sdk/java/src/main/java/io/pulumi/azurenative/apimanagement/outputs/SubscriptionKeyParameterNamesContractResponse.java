@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.apimanagement.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SubscriptionKeyParameterNamesContractResponse {
     /**
      * Subscription key header name.
@@ -22,10 +22,10 @@ public final class SubscriptionKeyParameterNamesContractResponse {
      */
     private final @Nullable String query;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SubscriptionKeyParameterNamesContractResponse(
-        @OutputCustomType.Parameter("header") @Nullable String header,
-        @OutputCustomType.Parameter("query") @Nullable String query) {
+        @CustomType.Parameter("header") @Nullable String header,
+        @CustomType.Parameter("query") @Nullable String query) {
         this.header = header;
         this.query = query;
     }

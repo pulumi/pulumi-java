@@ -6,7 +6,7 @@ package io.pulumi.azurenative.securityinsights.outputs;
 import io.pulumi.azurenative.securityinsights.outputs.IncidentAdditionalDataResponse;
 import io.pulumi.azurenative.securityinsights.outputs.IncidentLabelResponse;
 import io.pulumi.azurenative.securityinsights.outputs.IncidentOwnerInfoResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -14,7 +14,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetIncidentResult {
     /**
      * Additional data on the incident
@@ -122,29 +122,29 @@ public final class GetIncidentResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetIncidentResult(
-        @OutputCustomType.Parameter("additionalData") IncidentAdditionalDataResponse additionalData,
-        @OutputCustomType.Parameter("classification") @Nullable String classification,
-        @OutputCustomType.Parameter("classificationComment") @Nullable String classificationComment,
-        @OutputCustomType.Parameter("classificationReason") @Nullable String classificationReason,
-        @OutputCustomType.Parameter("createdTimeUtc") String createdTimeUtc,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("etag") @Nullable String etag,
-        @OutputCustomType.Parameter("firstActivityTimeUtc") @Nullable String firstActivityTimeUtc,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("incidentNumber") Integer incidentNumber,
-        @OutputCustomType.Parameter("incidentUrl") String incidentUrl,
-        @OutputCustomType.Parameter("labels") @Nullable List<IncidentLabelResponse> labels,
-        @OutputCustomType.Parameter("lastActivityTimeUtc") @Nullable String lastActivityTimeUtc,
-        @OutputCustomType.Parameter("lastModifiedTimeUtc") String lastModifiedTimeUtc,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("owner") @Nullable IncidentOwnerInfoResponse owner,
-        @OutputCustomType.Parameter("relatedAnalyticRuleIds") List<String> relatedAnalyticRuleIds,
-        @OutputCustomType.Parameter("severity") String severity,
-        @OutputCustomType.Parameter("status") String status,
-        @OutputCustomType.Parameter("title") String title,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("additionalData") IncidentAdditionalDataResponse additionalData,
+        @CustomType.Parameter("classification") @Nullable String classification,
+        @CustomType.Parameter("classificationComment") @Nullable String classificationComment,
+        @CustomType.Parameter("classificationReason") @Nullable String classificationReason,
+        @CustomType.Parameter("createdTimeUtc") String createdTimeUtc,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("etag") @Nullable String etag,
+        @CustomType.Parameter("firstActivityTimeUtc") @Nullable String firstActivityTimeUtc,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("incidentNumber") Integer incidentNumber,
+        @CustomType.Parameter("incidentUrl") String incidentUrl,
+        @CustomType.Parameter("labels") @Nullable List<IncidentLabelResponse> labels,
+        @CustomType.Parameter("lastActivityTimeUtc") @Nullable String lastActivityTimeUtc,
+        @CustomType.Parameter("lastModifiedTimeUtc") String lastModifiedTimeUtc,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("owner") @Nullable IncidentOwnerInfoResponse owner,
+        @CustomType.Parameter("relatedAnalyticRuleIds") List<String> relatedAnalyticRuleIds,
+        @CustomType.Parameter("severity") String severity,
+        @CustomType.Parameter("status") String status,
+        @CustomType.Parameter("title") String title,
+        @CustomType.Parameter("type") String type) {
         this.additionalData = additionalData;
         this.classification = classification;
         this.classificationComment = classificationComment;

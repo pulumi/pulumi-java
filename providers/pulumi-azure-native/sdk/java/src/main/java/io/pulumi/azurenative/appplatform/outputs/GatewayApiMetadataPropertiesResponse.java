@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.appplatform.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GatewayApiMetadataPropertiesResponse {
     /**
      * Detailed description of the APIs available on the Gateway instance (default: `Generated OpenAPI 3 document that describes the API routes configured.`)
@@ -37,13 +37,13 @@ public final class GatewayApiMetadataPropertiesResponse {
      */
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GatewayApiMetadataPropertiesResponse(
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("documentation") @Nullable String documentation,
-        @OutputCustomType.Parameter("serverUrl") @Nullable String serverUrl,
-        @OutputCustomType.Parameter("title") @Nullable String title,
-        @OutputCustomType.Parameter("version") @Nullable String version) {
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("documentation") @Nullable String documentation,
+        @CustomType.Parameter("serverUrl") @Nullable String serverUrl,
+        @CustomType.Parameter("title") @Nullable String title,
+        @CustomType.Parameter("version") @Nullable String version) {
         this.description = description;
         this.documentation = documentation;
         this.serverUrl = serverUrl;

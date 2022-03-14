@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.hdinsight.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class ClientGroupInfoResponse extends io.pulumi.resources.InvokeArg
      * The AAD security group id.
      * 
      */
-    @InputImport(name="groupId")
+    @Import(name="groupId")
       private final @Nullable String groupId;
 
     public Optional<String> getGroupId() {
@@ -33,7 +33,7 @@ public final class ClientGroupInfoResponse extends io.pulumi.resources.InvokeArg
      * The AAD security group name.
      * 
      */
-    @InputImport(name="groupName")
+    @Import(name="groupName")
       private final @Nullable String groupName;
 
     public Optional<String> getGroupName() {

@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.streamanalytics.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class IoTHubStreamInputDataSourceResponse {
     /**
      * The name of an IoT Hub Consumer Group that should be used to read events from the IoT Hub. If not specified, the input uses the Iot Hub’s default consumer group.
@@ -43,14 +43,14 @@ public final class IoTHubStreamInputDataSourceResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private IoTHubStreamInputDataSourceResponse(
-        @OutputCustomType.Parameter("consumerGroupName") @Nullable String consumerGroupName,
-        @OutputCustomType.Parameter("endpoint") @Nullable String endpoint,
-        @OutputCustomType.Parameter("iotHubNamespace") @Nullable String iotHubNamespace,
-        @OutputCustomType.Parameter("sharedAccessPolicyKey") @Nullable String sharedAccessPolicyKey,
-        @OutputCustomType.Parameter("sharedAccessPolicyName") @Nullable String sharedAccessPolicyName,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("consumerGroupName") @Nullable String consumerGroupName,
+        @CustomType.Parameter("endpoint") @Nullable String endpoint,
+        @CustomType.Parameter("iotHubNamespace") @Nullable String iotHubNamespace,
+        @CustomType.Parameter("sharedAccessPolicyKey") @Nullable String sharedAccessPolicyKey,
+        @CustomType.Parameter("sharedAccessPolicyName") @Nullable String sharedAccessPolicyName,
+        @CustomType.Parameter("type") String type) {
         this.consumerGroupName = consumerGroupName;
         this.endpoint = endpoint;
         this.iotHubNamespace = iotHubNamespace;

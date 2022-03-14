@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.RulesEngineRuleResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetRulesEngineResult {
     /**
      * Resource ID.
@@ -38,13 +38,13 @@ public final class GetRulesEngineResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetRulesEngineResult(
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("resourceState") String resourceState,
-        @OutputCustomType.Parameter("rules") @Nullable List<RulesEngineRuleResponse> rules,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("resourceState") String resourceState,
+        @CustomType.Parameter("rules") @Nullable List<RulesEngineRuleResponse> rules,
+        @CustomType.Parameter("type") String type) {
         this.id = id;
         this.name = name;
         this.resourceState = resourceState;

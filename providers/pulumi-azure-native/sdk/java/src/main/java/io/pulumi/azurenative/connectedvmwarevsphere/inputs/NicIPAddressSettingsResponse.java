@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.connectedvmwarevsphere.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class NicIPAddressSettingsResponse extends io.pulumi.resources.Invo
      * Gets the ip address allocation method.
      * 
      */
-    @InputImport(name="allocationMethod", required=true)
+    @Import(name="allocationMethod", required=true)
       private final String allocationMethod;
 
     public String getAllocationMethod() {
@@ -31,7 +31,7 @@ public final class NicIPAddressSettingsResponse extends io.pulumi.resources.Invo
      * Gets the ip address for the nic.
      * 
      */
-    @InputImport(name="ipAddress", required=true)
+    @Import(name="ipAddress", required=true)
       private final String ipAddress;
 
     public String getIpAddress() {
@@ -42,7 +42,7 @@ public final class NicIPAddressSettingsResponse extends io.pulumi.resources.Invo
      * Gets the mask.
      * 
      */
-    @InputImport(name="subnetMask", required=true)
+    @Import(name="subnetMask", required=true)
       private final String subnetMask;
 
     public String getSubnetMask() {

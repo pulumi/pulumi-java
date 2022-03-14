@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.labservices.outputs;
 
 import io.pulumi.azurenative.labservices.outputs.SizeInfoResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EnvironmentSizeResponse {
     /**
      * The pay-as-you-go dollar price per hour this size will cost. It does not include discounts and may not reflect the actual price the size will cost. This is the maximum price of all prices within this tier.
@@ -41,13 +41,13 @@ public final class EnvironmentSizeResponse {
      */
     private final @Nullable List<SizeInfoResponse> vmSizes;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EnvironmentSizeResponse(
-        @OutputCustomType.Parameter("maxPrice") Double maxPrice,
-        @OutputCustomType.Parameter("minMemory") Double minMemory,
-        @OutputCustomType.Parameter("minNumberOfCores") Integer minNumberOfCores,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("vmSizes") @Nullable List<SizeInfoResponse> vmSizes) {
+        @CustomType.Parameter("maxPrice") Double maxPrice,
+        @CustomType.Parameter("minMemory") Double minMemory,
+        @CustomType.Parameter("minNumberOfCores") Integer minNumberOfCores,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("vmSizes") @Nullable List<SizeInfoResponse> vmSizes) {
         this.maxPrice = maxPrice;
         this.minMemory = minMemory;
         this.minNumberOfCores = minNumberOfCores;

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.azurenative.datafactory.inputs.ScheduleTriggerRecurrenceResponse;
 import io.pulumi.azurenative.datafactory.inputs.TriggerPipelineReferenceResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +26,7 @@ public final class ScheduleTriggerResponse extends io.pulumi.resources.InvokeArg
      * List of tags that can be used for describing the trigger.
      * 
      */
-    @InputImport(name="annotations")
+    @Import(name="annotations")
       private final @Nullable List<Object> annotations;
 
     public List<Object> getAnnotations() {
@@ -37,7 +37,7 @@ public final class ScheduleTriggerResponse extends io.pulumi.resources.InvokeArg
      * Trigger description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable String description;
 
     public Optional<String> getDescription() {
@@ -48,7 +48,7 @@ public final class ScheduleTriggerResponse extends io.pulumi.resources.InvokeArg
      * Pipelines that need to be started.
      * 
      */
-    @InputImport(name="pipelines")
+    @Import(name="pipelines")
       private final @Nullable List<TriggerPipelineReferenceResponse> pipelines;
 
     public List<TriggerPipelineReferenceResponse> getPipelines() {
@@ -59,7 +59,7 @@ public final class ScheduleTriggerResponse extends io.pulumi.resources.InvokeArg
      * Recurrence schedule configuration.
      * 
      */
-    @InputImport(name="recurrence", required=true)
+    @Import(name="recurrence", required=true)
       private final ScheduleTriggerRecurrenceResponse recurrence;
 
     public ScheduleTriggerRecurrenceResponse getRecurrence() {
@@ -70,7 +70,7 @@ public final class ScheduleTriggerResponse extends io.pulumi.resources.InvokeArg
      * Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.
      * 
      */
-    @InputImport(name="runtimeState", required=true)
+    @Import(name="runtimeState", required=true)
       private final String runtimeState;
 
     public String getRuntimeState() {
@@ -82,7 +82,7 @@ public final class ScheduleTriggerResponse extends io.pulumi.resources.InvokeArg
      * Expected value is 'ScheduleTrigger'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

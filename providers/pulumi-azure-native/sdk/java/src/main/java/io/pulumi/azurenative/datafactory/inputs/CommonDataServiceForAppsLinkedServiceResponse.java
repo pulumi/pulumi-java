@@ -8,7 +8,7 @@ import io.pulumi.azurenative.datafactory.inputs.IntegrationRuntimeReferenceRespo
 import io.pulumi.azurenative.datafactory.inputs.ParameterSpecificationResponse;
 import io.pulumi.azurenative.datafactory.inputs.SecureStringResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -30,7 +30,7 @@ public final class CommonDataServiceForAppsLinkedServiceResponse extends io.pulu
      * List of tags that can be used for describing the linked service.
      * 
      */
-    @InputImport(name="annotations")
+    @Import(name="annotations")
       private final @Nullable List<Object> annotations;
 
     public List<Object> getAnnotations() {
@@ -41,7 +41,7 @@ public final class CommonDataServiceForAppsLinkedServiceResponse extends io.pulu
      * The authentication type to connect to Common Data Service for Apps server. 'Office365' for online scenario, 'Ifd' for on-premises with Ifd scenario. 'AADServicePrincipal' for Server-To-Server authentication in online scenario. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="authenticationType", required=true)
+    @Import(name="authenticationType", required=true)
       private final Object authenticationType;
 
     public Object getAuthenticationType() {
@@ -52,7 +52,7 @@ public final class CommonDataServiceForAppsLinkedServiceResponse extends io.pulu
      * The integration runtime reference.
      * 
      */
-    @InputImport(name="connectVia")
+    @Import(name="connectVia")
       private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
     public Optional<IntegrationRuntimeReferenceResponse> getConnectVia() {
@@ -63,7 +63,7 @@ public final class CommonDataServiceForAppsLinkedServiceResponse extends io.pulu
      * The deployment type of the Common Data Service for Apps instance. 'Online' for Common Data Service for Apps Online and 'OnPremisesWithIfd' for Common Data Service for Apps on-premises with Ifd. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="deploymentType", required=true)
+    @Import(name="deploymentType", required=true)
       private final Object deploymentType;
 
     public Object getDeploymentType() {
@@ -74,7 +74,7 @@ public final class CommonDataServiceForAppsLinkedServiceResponse extends io.pulu
      * Linked service description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable String description;
 
     public Optional<String> getDescription() {
@@ -85,7 +85,7 @@ public final class CommonDataServiceForAppsLinkedServiceResponse extends io.pulu
      * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="encryptedCredential")
+    @Import(name="encryptedCredential")
       private final @Nullable Object encryptedCredential;
 
     public Optional<Object> getEncryptedCredential() {
@@ -96,7 +96,7 @@ public final class CommonDataServiceForAppsLinkedServiceResponse extends io.pulu
      * The host name of the on-premises Common Data Service for Apps server. The property is required for on-prem and not allowed for online. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="hostName")
+    @Import(name="hostName")
       private final @Nullable Object hostName;
 
     public Optional<Object> getHostName() {
@@ -107,7 +107,7 @@ public final class CommonDataServiceForAppsLinkedServiceResponse extends io.pulu
      * The organization name of the Common Data Service for Apps instance. The property is required for on-prem and required for online when there are more than one Common Data Service for Apps instances associated with the user. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="organizationName")
+    @Import(name="organizationName")
       private final @Nullable Object organizationName;
 
     public Optional<Object> getOrganizationName() {
@@ -118,7 +118,7 @@ public final class CommonDataServiceForAppsLinkedServiceResponse extends io.pulu
      * Parameters for linked service.
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
     public Map<String,ParameterSpecificationResponse> getParameters() {
@@ -129,7 +129,7 @@ public final class CommonDataServiceForAppsLinkedServiceResponse extends io.pulu
      * Password to access the Common Data Service for Apps instance.
      * 
      */
-    @InputImport(name="password")
+    @Import(name="password")
       private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
 
     public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> getPassword() {
@@ -140,7 +140,7 @@ public final class CommonDataServiceForAppsLinkedServiceResponse extends io.pulu
      * The port of on-premises Common Data Service for Apps server. The property is required for on-prem and not allowed for online. Default is 443. Type: integer (or Expression with resultType integer), minimum: 0.
      * 
      */
-    @InputImport(name="port")
+    @Import(name="port")
       private final @Nullable Object port;
 
     public Optional<Object> getPort() {
@@ -151,7 +151,7 @@ public final class CommonDataServiceForAppsLinkedServiceResponse extends io.pulu
      * The credential of the service principal object in Azure Active Directory. If servicePrincipalCredentialType is 'ServicePrincipalKey', servicePrincipalCredential can be SecureString or AzureKeyVaultSecretReference. If servicePrincipalCredentialType is 'ServicePrincipalCert', servicePrincipalCredential can only be AzureKeyVaultSecretReference.
      * 
      */
-    @InputImport(name="servicePrincipalCredential")
+    @Import(name="servicePrincipalCredential")
       private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalCredential;
 
     public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> getServicePrincipalCredential() {
@@ -162,7 +162,7 @@ public final class CommonDataServiceForAppsLinkedServiceResponse extends io.pulu
      * The service principal credential type to use in Server-To-Server authentication. 'ServicePrincipalKey' for key/secret, 'ServicePrincipalCert' for certificate. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="servicePrincipalCredentialType")
+    @Import(name="servicePrincipalCredentialType")
       private final @Nullable Object servicePrincipalCredentialType;
 
     public Optional<Object> getServicePrincipalCredentialType() {
@@ -173,7 +173,7 @@ public final class CommonDataServiceForAppsLinkedServiceResponse extends io.pulu
      * The client ID of the application in Azure Active Directory used for Server-To-Server authentication. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="servicePrincipalId")
+    @Import(name="servicePrincipalId")
       private final @Nullable Object servicePrincipalId;
 
     public Optional<Object> getServicePrincipalId() {
@@ -184,7 +184,7 @@ public final class CommonDataServiceForAppsLinkedServiceResponse extends io.pulu
      * The URL to the Microsoft Common Data Service for Apps server. The property is required for on-line and not allowed for on-prem. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="serviceUri")
+    @Import(name="serviceUri")
       private final @Nullable Object serviceUri;
 
     public Optional<Object> getServiceUri() {
@@ -196,7 +196,7 @@ public final class CommonDataServiceForAppsLinkedServiceResponse extends io.pulu
      * Expected value is 'CommonDataServiceForApps'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {
@@ -207,7 +207,7 @@ public final class CommonDataServiceForAppsLinkedServiceResponse extends io.pulu
      * User name to access the Common Data Service for Apps instance. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="username")
+    @Import(name="username")
       private final @Nullable Object username;
 
     public Optional<Object> getUsername() {

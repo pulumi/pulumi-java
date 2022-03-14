@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.security.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AssignmentPropertiesResponseAdditionalData {
     /**
      * Exemption category of this assignment
@@ -17,8 +17,8 @@ public final class AssignmentPropertiesResponseAdditionalData {
      */
     private final @Nullable String exemptionCategory;
 
-    @OutputCustomType.Constructor
-    private AssignmentPropertiesResponseAdditionalData(@OutputCustomType.Parameter("exemptionCategory") @Nullable String exemptionCategory) {
+    @CustomType.Constructor
+    private AssignmentPropertiesResponseAdditionalData(@CustomType.Parameter("exemptionCategory") @Nullable String exemptionCategory) {
         this.exemptionCategory = exemptionCategory;
     }
 

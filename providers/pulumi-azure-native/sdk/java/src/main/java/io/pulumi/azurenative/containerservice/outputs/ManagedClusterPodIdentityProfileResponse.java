@@ -5,14 +5,14 @@ package io.pulumi.azurenative.containerservice.outputs;
 
 import io.pulumi.azurenative.containerservice.outputs.ManagedClusterPodIdentityExceptionResponse;
 import io.pulumi.azurenative.containerservice.outputs.ManagedClusterPodIdentityResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ManagedClusterPodIdentityProfileResponse {
     /**
      * Customer consent for enabling AAD pod identity addon in cluster using Kubenet network plugin.
@@ -35,12 +35,12 @@ public final class ManagedClusterPodIdentityProfileResponse {
      */
     private final @Nullable List<ManagedClusterPodIdentityExceptionResponse> userAssignedIdentityExceptions;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ManagedClusterPodIdentityProfileResponse(
-        @OutputCustomType.Parameter("allowNetworkPluginKubenet") @Nullable Boolean allowNetworkPluginKubenet,
-        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
-        @OutputCustomType.Parameter("userAssignedIdentities") @Nullable List<ManagedClusterPodIdentityResponse> userAssignedIdentities,
-        @OutputCustomType.Parameter("userAssignedIdentityExceptions") @Nullable List<ManagedClusterPodIdentityExceptionResponse> userAssignedIdentityExceptions) {
+        @CustomType.Parameter("allowNetworkPluginKubenet") @Nullable Boolean allowNetworkPluginKubenet,
+        @CustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @CustomType.Parameter("userAssignedIdentities") @Nullable List<ManagedClusterPodIdentityResponse> userAssignedIdentities,
+        @CustomType.Parameter("userAssignedIdentityExceptions") @Nullable List<ManagedClusterPodIdentityExceptionResponse> userAssignedIdentityExceptions) {
         this.allowNetworkPluginKubenet = allowNetworkPluginKubenet;
         this.enabled = enabled;
         this.userAssignedIdentities = userAssignedIdentities;

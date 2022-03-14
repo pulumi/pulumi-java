@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.peering.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetPeerAsnArgs extends io.pulumi.resources.InvokeArgs {
      * The peer ASN name.
      * 
      */
-    @InputImport(name="peerAsnName", required=true)
+    @Import(name="peerAsnName", required=true)
       private final String peerAsnName;
 
     public String getPeerAsnName() {

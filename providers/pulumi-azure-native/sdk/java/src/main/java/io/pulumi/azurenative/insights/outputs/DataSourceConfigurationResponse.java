@@ -6,12 +6,12 @@ package io.pulumi.azurenative.insights.outputs;
 import io.pulumi.azurenative.insights.outputs.EtwProviderConfigurationResponse;
 import io.pulumi.azurenative.insights.outputs.EventLogConfigurationResponse;
 import io.pulumi.azurenative.insights.outputs.PerformanceCounterConfigurationResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DataSourceConfigurationResponse {
     /**
      * Windows event logs configuration.
@@ -29,11 +29,11 @@ public final class DataSourceConfigurationResponse {
      */
     private final @Nullable List<EtwProviderConfigurationResponse> providers;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DataSourceConfigurationResponse(
-        @OutputCustomType.Parameter("eventLogs") @Nullable List<EventLogConfigurationResponse> eventLogs,
-        @OutputCustomType.Parameter("perfCounters") @Nullable List<PerformanceCounterConfigurationResponse> perfCounters,
-        @OutputCustomType.Parameter("providers") @Nullable List<EtwProviderConfigurationResponse> providers) {
+        @CustomType.Parameter("eventLogs") @Nullable List<EventLogConfigurationResponse> eventLogs,
+        @CustomType.Parameter("perfCounters") @Nullable List<PerformanceCounterConfigurationResponse> perfCounters,
+        @CustomType.Parameter("providers") @Nullable List<EtwProviderConfigurationResponse> providers) {
         this.eventLogs = eventLogs;
         this.perfCounters = perfCounters;
         this.providers = providers;

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.azurenative.web.inputs.ApiOAuthSettingsParameterArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +26,7 @@ public final class ApiOAuthSettingsArgs extends io.pulumi.resources.ResourceArgs
      * Resource provider client id
      * 
      */
-    @InputImport(name="clientId")
+    @Import(name="clientId")
       private final @Nullable Output<String> clientId;
 
     public Output<String> getClientId() {
@@ -37,7 +37,7 @@ public final class ApiOAuthSettingsArgs extends io.pulumi.resources.ResourceArgs
      * Client Secret needed for OAuth
      * 
      */
-    @InputImport(name="clientSecret")
+    @Import(name="clientSecret")
       private final @Nullable Output<String> clientSecret;
 
     public Output<String> getClientSecret() {
@@ -48,7 +48,7 @@ public final class ApiOAuthSettingsArgs extends io.pulumi.resources.ResourceArgs
      * OAuth parameters key is the name of parameter
      * 
      */
-    @InputImport(name="customParameters")
+    @Import(name="customParameters")
       private final @Nullable Output<Map<String,ApiOAuthSettingsParameterArgs>> customParameters;
 
     public Output<Map<String,ApiOAuthSettingsParameterArgs>> getCustomParameters() {
@@ -59,7 +59,7 @@ public final class ApiOAuthSettingsArgs extends io.pulumi.resources.ResourceArgs
      * Identity provider
      * 
      */
-    @InputImport(name="identityProvider")
+    @Import(name="identityProvider")
       private final @Nullable Output<String> identityProvider;
 
     public Output<String> getIdentityProvider() {
@@ -70,7 +70,7 @@ public final class ApiOAuthSettingsArgs extends io.pulumi.resources.ResourceArgs
      * Read only properties for this oauth setting.
      * 
      */
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable Output<Object> properties;
 
     public Output<Object> getProperties() {
@@ -81,7 +81,7 @@ public final class ApiOAuthSettingsArgs extends io.pulumi.resources.ResourceArgs
      * Url
      * 
      */
-    @InputImport(name="redirectUrl")
+    @Import(name="redirectUrl")
       private final @Nullable Output<String> redirectUrl;
 
     public Output<String> getRedirectUrl() {
@@ -92,7 +92,7 @@ public final class ApiOAuthSettingsArgs extends io.pulumi.resources.ResourceArgs
      * OAuth scopes
      * 
      */
-    @InputImport(name="scopes")
+    @Import(name="scopes")
       private final @Nullable Output<List<String>> scopes;
 
     public Output<List<String>> getScopes() {

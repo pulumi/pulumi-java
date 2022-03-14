@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.customerinsights.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DataSourcePrecedenceResponse {
     /**
      * The data source reference id.
@@ -43,14 +43,14 @@ public final class DataSourcePrecedenceResponse {
      */
     private final String status;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DataSourcePrecedenceResponse(
-        @OutputCustomType.Parameter("dataSourceReferenceId") String dataSourceReferenceId,
-        @OutputCustomType.Parameter("dataSourceType") String dataSourceType,
-        @OutputCustomType.Parameter("id") Integer id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("precedence") @Nullable Integer precedence,
-        @OutputCustomType.Parameter("status") String status) {
+        @CustomType.Parameter("dataSourceReferenceId") String dataSourceReferenceId,
+        @CustomType.Parameter("dataSourceType") String dataSourceType,
+        @CustomType.Parameter("id") Integer id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("precedence") @Nullable Integer precedence,
+        @CustomType.Parameter("status") String status) {
         this.dataSourceReferenceId = dataSourceReferenceId;
         this.dataSourceType = dataSourceType;
         this.id = id;

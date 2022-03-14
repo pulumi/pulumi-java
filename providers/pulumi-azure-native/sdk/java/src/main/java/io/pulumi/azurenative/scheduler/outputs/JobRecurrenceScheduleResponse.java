@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.scheduler.outputs;
 
 import io.pulumi.azurenative.scheduler.outputs.JobRecurrenceScheduleMonthlyOccurrenceResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class JobRecurrenceScheduleResponse {
     /**
      * Gets or sets the hours of the day that the job should execute at.
@@ -39,13 +39,13 @@ public final class JobRecurrenceScheduleResponse {
      */
     private final @Nullable List<String> weekDays;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private JobRecurrenceScheduleResponse(
-        @OutputCustomType.Parameter("hours") @Nullable List<Integer> hours,
-        @OutputCustomType.Parameter("minutes") @Nullable List<Integer> minutes,
-        @OutputCustomType.Parameter("monthDays") @Nullable List<Integer> monthDays,
-        @OutputCustomType.Parameter("monthlyOccurrences") @Nullable List<JobRecurrenceScheduleMonthlyOccurrenceResponse> monthlyOccurrences,
-        @OutputCustomType.Parameter("weekDays") @Nullable List<String> weekDays) {
+        @CustomType.Parameter("hours") @Nullable List<Integer> hours,
+        @CustomType.Parameter("minutes") @Nullable List<Integer> minutes,
+        @CustomType.Parameter("monthDays") @Nullable List<Integer> monthDays,
+        @CustomType.Parameter("monthlyOccurrences") @Nullable List<JobRecurrenceScheduleMonthlyOccurrenceResponse> monthlyOccurrences,
+        @CustomType.Parameter("weekDays") @Nullable List<String> weekDays) {
         this.hours = hours;
         this.minutes = minutes;
         this.monthDays = monthDays;

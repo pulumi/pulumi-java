@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.elastic.inputs;
 
 import io.pulumi.azurenative.elastic.inputs.LogRulesResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class MonitoringTagRulesPropertiesResponse extends io.pulumi.resour
      * Rules for sending logs.
      * 
      */
-    @InputImport(name="logRules")
+    @Import(name="logRules")
       private final @Nullable LogRulesResponse logRules;
 
     public Optional<LogRulesResponse> getLogRules() {
@@ -34,7 +34,7 @@ public final class MonitoringTagRulesPropertiesResponse extends io.pulumi.resour
      * Provisioning state of the monitoring tag rules.
      * 
      */
-    @InputImport(name="provisioningState")
+    @Import(name="provisioningState")
       private final @Nullable String provisioningState;
 
     public Optional<String> getProvisioningState() {

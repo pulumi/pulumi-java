@@ -5,7 +5,7 @@ package io.pulumi.azurenative.engagementfabric;
 
 import io.pulumi.azurenative.engagementfabric.inputs.SKUArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * Account Name
      * 
      */
-    @InputImport(name="accountName")
+    @Import(name="accountName")
       private final @Nullable Output<String> accountName;
 
     public Output<String> getAccountName() {
@@ -31,7 +31,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * The location of the resource
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -42,7 +42,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * Resource Group Name
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -53,7 +53,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * The SKU of the resource
      * 
      */
-    @InputImport(name="sku", required=true)
+    @Import(name="sku", required=true)
       private final Output<SKUArgs> sku;
 
     public Output<SKUArgs> getSku() {
@@ -64,7 +64,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * The tags of the resource
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

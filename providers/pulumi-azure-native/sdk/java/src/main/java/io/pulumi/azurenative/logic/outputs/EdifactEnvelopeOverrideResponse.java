@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.logic.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EdifactEnvelopeOverrideResponse {
     /**
      * The application password.
@@ -87,23 +87,23 @@ public final class EdifactEnvelopeOverrideResponse {
      */
     private final @Nullable String targetNamespace;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EdifactEnvelopeOverrideResponse(
-        @OutputCustomType.Parameter("applicationPassword") @Nullable String applicationPassword,
-        @OutputCustomType.Parameter("associationAssignedCode") @Nullable String associationAssignedCode,
-        @OutputCustomType.Parameter("controllingAgencyCode") @Nullable String controllingAgencyCode,
-        @OutputCustomType.Parameter("functionalGroupId") @Nullable String functionalGroupId,
-        @OutputCustomType.Parameter("groupHeaderMessageRelease") @Nullable String groupHeaderMessageRelease,
-        @OutputCustomType.Parameter("groupHeaderMessageVersion") @Nullable String groupHeaderMessageVersion,
-        @OutputCustomType.Parameter("messageAssociationAssignedCode") @Nullable String messageAssociationAssignedCode,
-        @OutputCustomType.Parameter("messageId") @Nullable String messageId,
-        @OutputCustomType.Parameter("messageRelease") @Nullable String messageRelease,
-        @OutputCustomType.Parameter("messageVersion") @Nullable String messageVersion,
-        @OutputCustomType.Parameter("receiverApplicationId") @Nullable String receiverApplicationId,
-        @OutputCustomType.Parameter("receiverApplicationQualifier") @Nullable String receiverApplicationQualifier,
-        @OutputCustomType.Parameter("senderApplicationId") @Nullable String senderApplicationId,
-        @OutputCustomType.Parameter("senderApplicationQualifier") @Nullable String senderApplicationQualifier,
-        @OutputCustomType.Parameter("targetNamespace") @Nullable String targetNamespace) {
+        @CustomType.Parameter("applicationPassword") @Nullable String applicationPassword,
+        @CustomType.Parameter("associationAssignedCode") @Nullable String associationAssignedCode,
+        @CustomType.Parameter("controllingAgencyCode") @Nullable String controllingAgencyCode,
+        @CustomType.Parameter("functionalGroupId") @Nullable String functionalGroupId,
+        @CustomType.Parameter("groupHeaderMessageRelease") @Nullable String groupHeaderMessageRelease,
+        @CustomType.Parameter("groupHeaderMessageVersion") @Nullable String groupHeaderMessageVersion,
+        @CustomType.Parameter("messageAssociationAssignedCode") @Nullable String messageAssociationAssignedCode,
+        @CustomType.Parameter("messageId") @Nullable String messageId,
+        @CustomType.Parameter("messageRelease") @Nullable String messageRelease,
+        @CustomType.Parameter("messageVersion") @Nullable String messageVersion,
+        @CustomType.Parameter("receiverApplicationId") @Nullable String receiverApplicationId,
+        @CustomType.Parameter("receiverApplicationQualifier") @Nullable String receiverApplicationQualifier,
+        @CustomType.Parameter("senderApplicationId") @Nullable String senderApplicationId,
+        @CustomType.Parameter("senderApplicationQualifier") @Nullable String senderApplicationQualifier,
+        @CustomType.Parameter("targetNamespace") @Nullable String targetNamespace) {
         this.applicationPassword = applicationPassword;
         this.associationAssignedCode = associationAssignedCode;
         this.controllingAgencyCode = controllingAgencyCode;

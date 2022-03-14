@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class EncryptionDetailsResponse extends io.pulumi.resources.InvokeA
      * The key encryption key certificate expiry date.
      * 
      */
-    @InputImport(name="kekCertExpiryDate")
+    @Import(name="kekCertExpiryDate")
       private final @Nullable String kekCertExpiryDate;
 
     public Optional<String> getKekCertExpiryDate() {
@@ -33,7 +33,7 @@ public final class EncryptionDetailsResponse extends io.pulumi.resources.InvokeA
      * The key encryption key certificate thumbprint.
      * 
      */
-    @InputImport(name="kekCertThumbprint")
+    @Import(name="kekCertThumbprint")
       private final @Nullable String kekCertThumbprint;
 
     public Optional<String> getKekCertThumbprint() {
@@ -44,7 +44,7 @@ public final class EncryptionDetailsResponse extends io.pulumi.resources.InvokeA
      * The key encryption key state for the Vmm.
      * 
      */
-    @InputImport(name="kekState")
+    @Import(name="kekState")
       private final @Nullable String kekState;
 
     public Optional<String> getKekState() {

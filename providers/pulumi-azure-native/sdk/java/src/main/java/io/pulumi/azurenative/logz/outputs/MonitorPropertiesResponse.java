@@ -6,14 +6,14 @@ package io.pulumi.azurenative.logz.outputs;
 import io.pulumi.azurenative.logz.outputs.LogzOrganizationPropertiesResponse;
 import io.pulumi.azurenative.logz.outputs.PlanDataResponse;
 import io.pulumi.azurenative.logz.outputs.UserInfoResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class MonitorPropertiesResponse {
     private final String liftrResourceCategory;
     /**
@@ -40,16 +40,16 @@ public final class MonitorPropertiesResponse {
     private final String provisioningState;
     private final @Nullable UserInfoResponse userInfo;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MonitorPropertiesResponse(
-        @OutputCustomType.Parameter("liftrResourceCategory") String liftrResourceCategory,
-        @OutputCustomType.Parameter("liftrResourcePreference") Integer liftrResourcePreference,
-        @OutputCustomType.Parameter("logzOrganizationProperties") @Nullable LogzOrganizationPropertiesResponse logzOrganizationProperties,
-        @OutputCustomType.Parameter("marketplaceSubscriptionStatus") @Nullable String marketplaceSubscriptionStatus,
-        @OutputCustomType.Parameter("monitoringStatus") @Nullable String monitoringStatus,
-        @OutputCustomType.Parameter("planData") @Nullable PlanDataResponse planData,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("userInfo") @Nullable UserInfoResponse userInfo) {
+        @CustomType.Parameter("liftrResourceCategory") String liftrResourceCategory,
+        @CustomType.Parameter("liftrResourcePreference") Integer liftrResourcePreference,
+        @CustomType.Parameter("logzOrganizationProperties") @Nullable LogzOrganizationPropertiesResponse logzOrganizationProperties,
+        @CustomType.Parameter("marketplaceSubscriptionStatus") @Nullable String marketplaceSubscriptionStatus,
+        @CustomType.Parameter("monitoringStatus") @Nullable String monitoringStatus,
+        @CustomType.Parameter("planData") @Nullable PlanDataResponse planData,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("userInfo") @Nullable UserInfoResponse userInfo) {
         this.liftrResourceCategory = liftrResourceCategory;
         this.liftrResourcePreference = liftrResourcePreference;
         this.logzOrganizationProperties = logzOrganizationProperties;

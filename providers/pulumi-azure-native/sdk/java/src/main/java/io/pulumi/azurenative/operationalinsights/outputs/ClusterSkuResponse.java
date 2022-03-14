@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.operationalinsights.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ClusterSkuResponse {
     /**
      * The capacity value
@@ -23,10 +23,10 @@ public final class ClusterSkuResponse {
      */
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ClusterSkuResponse(
-        @OutputCustomType.Parameter("capacity") @Nullable Double capacity,
-        @OutputCustomType.Parameter("name") @Nullable String name) {
+        @CustomType.Parameter("capacity") @Nullable Double capacity,
+        @CustomType.Parameter("name") @Nullable String name) {
         this.capacity = capacity;
         this.name = name;
     }

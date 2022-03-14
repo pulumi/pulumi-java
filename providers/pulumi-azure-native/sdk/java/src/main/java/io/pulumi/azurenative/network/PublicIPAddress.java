@@ -16,7 +16,7 @@ import io.pulumi.azurenative.network.outputs.PublicIPAddressSkuResponse;
 import io.pulumi.azurenative.network.outputs.SubResourceResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -45,7 +45,7 @@ public class PublicIPAddress extends io.pulumi.resources.CustomResource {
      * The DDoS protection custom policy associated with the public IP address.
      * 
      */
-    @OutputExport(name="ddosSettings", type=DdosSettingsResponse.class, parameters={})
+    @Export(name="ddosSettings", type=DdosSettingsResponse.class, parameters={})
     private Output</* @Nullable */ DdosSettingsResponse> ddosSettings;
 
     /**
@@ -59,7 +59,7 @@ public class PublicIPAddress extends io.pulumi.resources.CustomResource {
      * The FQDN of the DNS record associated with the public IP address.
      * 
      */
-    @OutputExport(name="dnsSettings", type=PublicIPAddressDnsSettingsResponse.class, parameters={})
+    @Export(name="dnsSettings", type=PublicIPAddressDnsSettingsResponse.class, parameters={})
     private Output</* @Nullable */ PublicIPAddressDnsSettingsResponse> dnsSettings;
 
     /**
@@ -73,7 +73,7 @@ public class PublicIPAddress extends io.pulumi.resources.CustomResource {
      * A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -87,7 +87,7 @@ public class PublicIPAddress extends io.pulumi.resources.CustomResource {
      * The extended location of the public ip address.
      * 
      */
-    @OutputExport(name="extendedLocation", type=ExtendedLocationResponse.class, parameters={})
+    @Export(name="extendedLocation", type=ExtendedLocationResponse.class, parameters={})
     private Output</* @Nullable */ ExtendedLocationResponse> extendedLocation;
 
     /**
@@ -101,7 +101,7 @@ public class PublicIPAddress extends io.pulumi.resources.CustomResource {
      * The idle timeout of the public IP address.
      * 
      */
-    @OutputExport(name="idleTimeoutInMinutes", type=Integer.class, parameters={})
+    @Export(name="idleTimeoutInMinutes", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> idleTimeoutInMinutes;
 
     /**
@@ -115,7 +115,7 @@ public class PublicIPAddress extends io.pulumi.resources.CustomResource {
      * The IP address associated with the public IP address resource.
      * 
      */
-    @OutputExport(name="ipAddress", type=String.class, parameters={})
+    @Export(name="ipAddress", type=String.class, parameters={})
     private Output</* @Nullable */ String> ipAddress;
 
     /**
@@ -129,7 +129,7 @@ public class PublicIPAddress extends io.pulumi.resources.CustomResource {
      * The IP configuration associated with the public IP address.
      * 
      */
-    @OutputExport(name="ipConfiguration", type=IPConfigurationResponse.class, parameters={})
+    @Export(name="ipConfiguration", type=IPConfigurationResponse.class, parameters={})
     private Output<IPConfigurationResponse> ipConfiguration;
 
     /**
@@ -143,7 +143,7 @@ public class PublicIPAddress extends io.pulumi.resources.CustomResource {
      * The list of tags associated with the public IP address.
      * 
      */
-    @OutputExport(name="ipTags", type=List.class, parameters={IpTagResponse.class})
+    @Export(name="ipTags", type=List.class, parameters={IpTagResponse.class})
     private Output</* @Nullable */ List<IpTagResponse>> ipTags;
 
     /**
@@ -157,7 +157,7 @@ public class PublicIPAddress extends io.pulumi.resources.CustomResource {
      * The linked public IP address of the public IP address resource.
      * 
      */
-    @OutputExport(name="linkedPublicIPAddress", type=PublicIPAddressResponse.class, parameters={})
+    @Export(name="linkedPublicIPAddress", type=PublicIPAddressResponse.class, parameters={})
     private Output</* @Nullable */ PublicIPAddressResponse> linkedPublicIPAddress;
 
     /**
@@ -171,7 +171,7 @@ public class PublicIPAddress extends io.pulumi.resources.CustomResource {
      * Resource location.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -185,7 +185,7 @@ public class PublicIPAddress extends io.pulumi.resources.CustomResource {
      * Migration phase of Public IP Address.
      * 
      */
-    @OutputExport(name="migrationPhase", type=String.class, parameters={})
+    @Export(name="migrationPhase", type=String.class, parameters={})
     private Output</* @Nullable */ String> migrationPhase;
 
     /**
@@ -199,7 +199,7 @@ public class PublicIPAddress extends io.pulumi.resources.CustomResource {
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -213,7 +213,7 @@ public class PublicIPAddress extends io.pulumi.resources.CustomResource {
      * The NatGateway for the Public IP address.
      * 
      */
-    @OutputExport(name="natGateway", type=NatGatewayResponse.class, parameters={})
+    @Export(name="natGateway", type=NatGatewayResponse.class, parameters={})
     private Output</* @Nullable */ NatGatewayResponse> natGateway;
 
     /**
@@ -227,7 +227,7 @@ public class PublicIPAddress extends io.pulumi.resources.CustomResource {
      * The provisioning state of the public IP address resource.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -241,7 +241,7 @@ public class PublicIPAddress extends io.pulumi.resources.CustomResource {
      * The public IP address version.
      * 
      */
-    @OutputExport(name="publicIPAddressVersion", type=String.class, parameters={})
+    @Export(name="publicIPAddressVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> publicIPAddressVersion;
 
     /**
@@ -255,7 +255,7 @@ public class PublicIPAddress extends io.pulumi.resources.CustomResource {
      * The public IP address allocation method.
      * 
      */
-    @OutputExport(name="publicIPAllocationMethod", type=String.class, parameters={})
+    @Export(name="publicIPAllocationMethod", type=String.class, parameters={})
     private Output</* @Nullable */ String> publicIPAllocationMethod;
 
     /**
@@ -269,7 +269,7 @@ public class PublicIPAddress extends io.pulumi.resources.CustomResource {
      * The Public IP Prefix this Public IP Address should be allocated from.
      * 
      */
-    @OutputExport(name="publicIPPrefix", type=SubResourceResponse.class, parameters={})
+    @Export(name="publicIPPrefix", type=SubResourceResponse.class, parameters={})
     private Output</* @Nullable */ SubResourceResponse> publicIPPrefix;
 
     /**
@@ -283,7 +283,7 @@ public class PublicIPAddress extends io.pulumi.resources.CustomResource {
      * The resource GUID property of the public IP address resource.
      * 
      */
-    @OutputExport(name="resourceGuid", type=String.class, parameters={})
+    @Export(name="resourceGuid", type=String.class, parameters={})
     private Output<String> resourceGuid;
 
     /**
@@ -297,7 +297,7 @@ public class PublicIPAddress extends io.pulumi.resources.CustomResource {
      * The service public IP address of the public IP address resource.
      * 
      */
-    @OutputExport(name="servicePublicIPAddress", type=PublicIPAddressResponse.class, parameters={})
+    @Export(name="servicePublicIPAddress", type=PublicIPAddressResponse.class, parameters={})
     private Output</* @Nullable */ PublicIPAddressResponse> servicePublicIPAddress;
 
     /**
@@ -311,7 +311,7 @@ public class PublicIPAddress extends io.pulumi.resources.CustomResource {
      * The public IP address SKU.
      * 
      */
-    @OutputExport(name="sku", type=PublicIPAddressSkuResponse.class, parameters={})
+    @Export(name="sku", type=PublicIPAddressSkuResponse.class, parameters={})
     private Output</* @Nullable */ PublicIPAddressSkuResponse> sku;
 
     /**
@@ -325,7 +325,7 @@ public class PublicIPAddress extends io.pulumi.resources.CustomResource {
      * Resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -339,7 +339,7 @@ public class PublicIPAddress extends io.pulumi.resources.CustomResource {
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -353,7 +353,7 @@ public class PublicIPAddress extends io.pulumi.resources.CustomResource {
      * A list of availability zones denoting the IP allocated for the resource needs to come from.
      * 
      */
-    @OutputExport(name="zones", type=List.class, parameters={String.class})
+    @Export(name="zones", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> zones;
 
     /**

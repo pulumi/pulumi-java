@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CodeConfigurationResponse {
     /**
      * ARM resource ID of the code asset.
@@ -22,10 +22,10 @@ public final class CodeConfigurationResponse {
      */
     private final String scoringScript;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CodeConfigurationResponse(
-        @OutputCustomType.Parameter("codeId") @Nullable String codeId,
-        @OutputCustomType.Parameter("scoringScript") String scoringScript) {
+        @CustomType.Parameter("codeId") @Nullable String codeId,
+        @CustomType.Parameter("scoringScript") String scoringScript) {
         this.codeId = codeId;
         this.scoringScript = scoringScript;
     }

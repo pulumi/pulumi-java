@@ -10,7 +10,7 @@ import io.pulumi.azurenative.kusto.outputs.LanguageExtensionsListResponse;
 import io.pulumi.azurenative.kusto.outputs.OptimizedAutoscaleResponse;
 import io.pulumi.azurenative.kusto.outputs.TrustedExternalTenantResponse;
 import io.pulumi.azurenative.kusto.outputs.VirtualNetworkConfigurationResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -19,7 +19,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetClusterResult {
     /**
      * The cluster data ingestion URI.
@@ -142,32 +142,32 @@ public final class GetClusterResult {
      */
     private final @Nullable List<String> zones;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetClusterResult(
-        @OutputCustomType.Parameter("dataIngestionUri") String dataIngestionUri,
-        @OutputCustomType.Parameter("enableDiskEncryption") @Nullable Boolean enableDiskEncryption,
-        @OutputCustomType.Parameter("enableDoubleEncryption") @Nullable Boolean enableDoubleEncryption,
-        @OutputCustomType.Parameter("enablePurge") @Nullable Boolean enablePurge,
-        @OutputCustomType.Parameter("enableStreamingIngest") @Nullable Boolean enableStreamingIngest,
-        @OutputCustomType.Parameter("engineType") @Nullable String engineType,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("identity") @Nullable IdentityResponse identity,
-        @OutputCustomType.Parameter("keyVaultProperties") @Nullable KeyVaultPropertiesResponse keyVaultProperties,
-        @OutputCustomType.Parameter("languageExtensions") LanguageExtensionsListResponse languageExtensions,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("optimizedAutoscale") @Nullable OptimizedAutoscaleResponse optimizedAutoscale,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("sku") AzureSkuResponse sku,
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("stateReason") String stateReason,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("trustedExternalTenants") @Nullable List<TrustedExternalTenantResponse> trustedExternalTenants,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("uri") String uri,
-        @OutputCustomType.Parameter("virtualNetworkConfiguration") @Nullable VirtualNetworkConfigurationResponse virtualNetworkConfiguration,
-        @OutputCustomType.Parameter("zones") @Nullable List<String> zones) {
+        @CustomType.Parameter("dataIngestionUri") String dataIngestionUri,
+        @CustomType.Parameter("enableDiskEncryption") @Nullable Boolean enableDiskEncryption,
+        @CustomType.Parameter("enableDoubleEncryption") @Nullable Boolean enableDoubleEncryption,
+        @CustomType.Parameter("enablePurge") @Nullable Boolean enablePurge,
+        @CustomType.Parameter("enableStreamingIngest") @Nullable Boolean enableStreamingIngest,
+        @CustomType.Parameter("engineType") @Nullable String engineType,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("identity") @Nullable IdentityResponse identity,
+        @CustomType.Parameter("keyVaultProperties") @Nullable KeyVaultPropertiesResponse keyVaultProperties,
+        @CustomType.Parameter("languageExtensions") LanguageExtensionsListResponse languageExtensions,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("optimizedAutoscale") @Nullable OptimizedAutoscaleResponse optimizedAutoscale,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("sku") AzureSkuResponse sku,
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("stateReason") String stateReason,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("trustedExternalTenants") @Nullable List<TrustedExternalTenantResponse> trustedExternalTenants,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("uri") String uri,
+        @CustomType.Parameter("virtualNetworkConfiguration") @Nullable VirtualNetworkConfigurationResponse virtualNetworkConfiguration,
+        @CustomType.Parameter("zones") @Nullable List<String> zones) {
         this.dataIngestionUri = dataIngestionUri;
         this.enableDiskEncryption = enableDiskEncryption;
         this.enableDoubleEncryption = enableDoubleEncryption;
