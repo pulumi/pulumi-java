@@ -99,7 +99,7 @@ public class OutputCompletionSource<T> {
             ImmutableSet<Resource> resources,
             TypeShape<T> fieldTypeShape
     ) {
-        return new OutputCompletionSource<>(Internal.of(output).dataFuture, resources, fieldTypeShape);
+        return new OutputCompletionSource<>(Internal.of(output).getDataAsync(), resources, fieldTypeShape);
     }
 
     public static <T> OutputCompletionSource<T> from(

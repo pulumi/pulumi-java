@@ -22,8 +22,8 @@ public class Internal {
         throw new UnsupportedOperationException("static class");
     }
 
-    public static <T> OutputInternal<T> of(Output<T> output) {
-        return OutputInternal.cast(output);
+    public static <T> OutputDefault<T> of(Output<T> output) {
+        return OutputDefault.cast(output);
     }
 
     public static CallOptions.Internal from(CallOptions o) {
