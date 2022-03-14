@@ -1,14 +1,11 @@
-package io.pulumi.core;
+package io.pulumi.core.internal;
 
 import com.google.common.collect.ImmutableSet;
-import io.pulumi.core.internal.Internal;
-import io.pulumi.core.internal.OutputData;
-import io.pulumi.core.internal.OutputInternal;
+import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.InternalUse;
 import io.pulumi.resources.Resource;
 
 import javax.annotation.ParametersAreNonnullByDefault;
-import java.util.Objects;
 import java.util.Set;
 import java.util.concurrent.CompletableFuture;
 import java.util.function.Function;
@@ -17,24 +14,34 @@ import java.util.function.Function;
 @ParametersAreNonnullByDefault
 public final class OutputDefault<T> extends OutputInternal<T> implements Output<T> {
 
-    OutputDefault(T value) {
+    @InternalUse
+    public OutputDefault(T value) {
         super(value);
     }
 
-    OutputDefault(T value, boolean isSecret) {
+    @InternalUse
+    public OutputDefault(T value, boolean isSecret) {
         super(value, isSecret);
     }
 
-    OutputDefault(CompletableFuture<T> value, boolean isSecret) {
+    @InternalUse
+    public OutputDefault(CompletableFuture<T> value, boolean isSecret) {
         super(value, isSecret);
     }
 
-    OutputDefault(OutputData<T> dataFuture) {
+    @InternalUse
+    public OutputDefault(OutputData<T> dataFuture) {
         super(dataFuture);
     }
 
-    OutputDefault(CompletableFuture<OutputData<T>> dataFuture) {
+    @InternalUse
+    public OutputDefault(CompletableFuture<OutputData<T>> dataFuture) {
         super(dataFuture);
+    }
+
+    @InternalUse
+    public OutputDefault(Set<Resource> resources, T value) {
+        super(CompletableFuture.completedFuture(OutputData.of(ImmutableSet.copyOf(resources), value)));
     }
 
     @Override
@@ -48,19 +55,5 @@ public final class OutputDefault<T> extends OutputInternal<T> implements Output<
                 dataFuture,
                 func.andThen(o -> Internal.of(o).getDataAsync())
         ));
-    }
-
-    // Static section -----
-
-    @InternalUse
-    public static <T> Output<T> of(Set<Resource> resources, T value) {
-        Objects.requireNonNull(value);
-        return new OutputDefault<>(CompletableFuture.completedFuture(
-                OutputData.of(ImmutableSet.copyOf(resources), value)));
-    }
-
-    @InternalUse
-    public static <T> Output<T> of(CompletableFuture<OutputData<T>> dataFuture) {
-        return new OutputDefault<>(dataFuture);
     }
 }

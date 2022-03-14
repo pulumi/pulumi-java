@@ -6,6 +6,7 @@ import io.pulumi.core.Tuples.Tuple2;
 import io.pulumi.core.Tuples.Tuple3;
 import io.pulumi.core.internal.Internal;
 import io.pulumi.core.internal.OutputData;
+import io.pulumi.core.internal.OutputDefault;
 
 public class OutputTests {
 

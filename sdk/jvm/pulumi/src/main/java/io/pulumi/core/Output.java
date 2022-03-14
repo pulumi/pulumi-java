@@ -7,12 +7,10 @@ import com.google.errorprone.annotations.CanIgnoreReturnValue;
 import com.google.gson.Gson;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonNull;
-import io.pulumi.core.internal.CompletableFutures;
-import io.pulumi.core.internal.Copyable;
-import io.pulumi.core.internal.Internal;
-import io.pulumi.core.internal.OutputData;
+import io.pulumi.core.internal.*;
 
 import javax.annotation.Nullable;
+import java.util.Objects;
 import java.util.*;
 import java.util.concurrent.CompletableFuture;
 import java.util.function.Consumer;

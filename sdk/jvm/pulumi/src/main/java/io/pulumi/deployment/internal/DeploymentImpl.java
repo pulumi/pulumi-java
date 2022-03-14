@@ -9,7 +9,6 @@ import com.google.protobuf.Value;
 import io.pulumi.Log;
 import io.pulumi.Stack;
 import io.pulumi.core.Output;
-import io.pulumi.core.OutputDefault;
 import io.pulumi.core.Tuples;
 import io.pulumi.core.Tuples.Tuple4;
 import io.pulumi.core.TypeShape;
@@ -428,7 +427,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         }
 
         public <T> Output<T> invoke(String token, TypeShape<T> targetType, InvokeArgs args, InvokeOptions options) {
-            return OutputDefault.of(rawInvoke(token, targetType, args, options));
+            return new OutputDefault<>(rawInvoke(token, targetType, args, options));
         }
 
         private <T> CompletableFuture<OutputData<T>> rawInvoke(String token, TypeShape<T> targetType, InvokeArgs args, InvokeOptions options) {
@@ -625,7 +624,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         }
 
         void call(String token, CallArgs args, @Nullable Resource self, CallOptions options) {
-            OutputDefault.of(callRawAsync(token, args, self, options).thenApply(unused -> null));
+            new OutputDefault<>(callRawAsync(token, args, self, options).thenApply(unused -> null));
         }
 
         <T> Output<T> call(String token, TypeShape<T> targetType, CallArgs args) {
@@ -637,7 +636,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         }
 
         <T> Output<T> call(String token, TypeShape<T> targetType, CallArgs args, @Nullable Resource self, CallOptions options) {
-            return OutputDefault.of(callAsync(token, targetType, args, self, options));
+            return new OutputDefault<>(callAsync(token, targetType, args, self, options));
         }
 
         private <T> CompletableFuture<OutputData<T>> callAsync(String token, TypeShape<T> targetType, CallArgs args, @Nullable Resource self, CallOptions options) {
