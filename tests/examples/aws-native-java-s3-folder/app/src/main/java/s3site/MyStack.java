@@ -41,17 +41,19 @@ public final class MyStack extends Stack {
         for (var path : Files.walk(Paths.get(sitedir)).filter(Files::isRegularFile).collect(Collectors.toList())) {
                 var contentType = Files.probeContentType(path);
                 new BucketObject(path.toString().replace(sitedir, ""),
-                    $ -> $.bucket(siteBucket.getId().toInput())
+                    $ -> $.bucket(siteBucket.getId())
                         .source(new FileAsset(path.toAbsolutePath().toString()))
                         .contentType(contentType)
                     );
         }
 
         final var bucketPolicy = new BucketPolicy("bucketPolicy",
-                $ -> $.bucket(siteBucket.getId().toInput())
-                        .policy(siteBucket.getArn().applyValue(
-                                bucketArn ->
-                                        "{\"Version\":\"2012-10-17\",\"Statement\":[{\"Effect\":\"Allow\",\"Principal\":\"*\",\"Action\":[\"s3:GetObject\"],\"Resource\":[\"" + bucketArn + "/*\"]}]}").toInput()
+                $ -> $.bucket(siteBucket.getId())
+                        .policy(siteBucket.getArn()
+                                .applyValue(bucketArn ->
+                                            "{\"Version\":\"2012-10-17\",\"Statement\":[{\"Effect\":\"Allow\",\"Principal\":\"*\",\"Action\":[\"s3:GetObject\"],\"Resource\":[\"" +
+                                            bucketArn +
+                                            "/*\"]}]}")
                         ));
 
         this.bucketName = siteBucket.getBucketName();
