@@ -6,10 +6,14 @@ package io.pulumi.random;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.random.RandomIdArgs;
+import io.pulumi.random.Utilities;
 import io.pulumi.random.inputs.RandomIdState;
-
-import javax.annotation.Nullable;
+import java.lang.Integer;
+import java.lang.Object;
+import java.lang.String;
 import java.util.Map;
+import javax.annotation.Nullable;
 
 /**
  * The resource `random.RandomId` generates random numbers that are intended to be
